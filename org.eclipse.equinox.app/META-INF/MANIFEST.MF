@@ -1,0 +1,157 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.equinox.app; singleton:=true
+Archiver-Version: Plexus Archiver
+Built-By: e4Build
+Require-Bundle: org.eclipse.equinox.registry;bundle-version="[3.4.0,4.
+ 0.0)",org.eclipse.equinox.common;bundle-version="[3.2.0,4.0.0)"
+Bundle-ManifestVersion: 2
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: OSGi/Minimum-1.2,CDC-1.1/Foundati
+ on-1.1,J2SE-1.4
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/equino
+ x/rt.equinox.bundles.git;path="bundles/org.eclipse.equinox.app";tag="
+ I20150721-0800";commitId=4155be3c91ed53347dd88f898fd09d0390a0cbae
+Bundle-Vendor: %providerName
+Import-Package: org.eclipse.osgi.framework.console;resolution:=optiona
+ l,org.eclipse.osgi.framework.log,org.eclipse.osgi.service.datalocatio
+ n,org.eclipse.osgi.service.debug,org.eclipse.osgi.service.environment
+ ; version="1.1",org.eclipse.osgi.service.runnable,org.eclipse.osgi.st
+ oragemanager,org.eclipse.osgi.util,org.osgi.framework;version="1.3",o
+ rg.osgi.service.condpermadmin; resolution:=optional,org.osgi.service.
+ event;version="1.0.0";resolution:=optional,org.osgi.service.packagead
+ min;version="1.2",org.osgi.util.tracker
+Comment-DynamicImport: this is only used to allow late binding of the 
+ package
+DynamicImport-Package: org.osgi.service.event;version="1.0.0"
+Eclipse-LazyStart: true
+Export-Package: org.eclipse.equinox.app;version="1.1",org.eclipse.equi
+ nox.internal.app;x-friends:="org.eclipse.core.runtime",org.osgi.servi
+ ce.application;version="1.1"
+Bundle-Name: %pluginName
+Bundle-Version: 1.3.400.v20150715-1528
+Comment-Header: Both Eclipse-LazyStart and Bundle-ActivationPolicy are
+  specified for compatibility with 3.2
+Bundle-Localization: plugin
+Bundle-Activator: org.eclipse.equinox.internal.app.Activator
+Created-By: Apache Maven 3.1.1
+Build-Jdk: 1.8.0_40
+
+Name: plugin.xml
+SHA-256-Digest: kGX6mrPIw6xHdSs40fHMHGNZBBWuQeM/TmZlDroLIZk=
+
+Name: org/eclipse/equinox/internal/app/ProviderExtensionBranding.class
+SHA-256-Digest: DC113ivmSxNmE+xHAXJTbwxGuFT0aPTVnWlWJ0igwco=
+
+Name: org/eclipse/equinox/internal/app/AppPersistence$AppTimer.class
+SHA-256-Digest: IV2Bv8A+YDkitRVMj+Wy6oHuNpkzF2NmwO34JwbeNaY=
+
+Name: about_files/LICENSE-2.0.txt
+SHA-256-Digest: z8d0m5b2O9McPEK1xHG/dWgUBT6EfBDz6wA0F7xSPTA=
+
+Name: org/eclipse/equinox/internal/app/Activator$2.class
+SHA-256-Digest: 9WlfUHjiO5CVqwyLSYTkGxDGekywz9ebm4p2fMlYMnY=
+
+Name: org/eclipse/equinox/app/IApplicationContext.class
+SHA-256-Digest: T+P3rCXWC6fMQ2hSsYAPdIEaUwAaBAk6gn1dwz2FUtM=
+
+Name: org/eclipse/equinox/internal/app/messages.properties
+SHA-256-Digest: YzZ9JwVKH/5LtKS5a58rtSnwF2WY3cveUI64PcI8EuM=
+
+Name: plugin.properties
+SHA-256-Digest: sbd7+ZQXBVrW03bc4f94J28OTfyegSI1nnas4lELoKQ=
+
+Name: org/eclipse/equinox/internal/app/IBranding.class
+SHA-256-Digest: aCJeRPzX2G8SGT5XiesO2FxnqW7SmcqDHwSEufbIphE=
+
+Name: org/eclipse/equinox/internal/app/EclipseAppHandle$2.class
+SHA-256-Digest: M5SS2z7KxExUWsGjijzl/VwUinABsAFy6/GKUSjRe4E=
+
+Name: org/eclipse/equinox/internal/app/EclipseAppContainer.class
+SHA-256-Digest: Ouc7Tkdz0IzbK+V+cuCKNTObje0Ef1O8mYaDxCsM/i4=
+
+Name: org/eclipse/equinox/app/IApplication.class
+SHA-256-Digest: LxJZkCAsjiS6IxiOECR8BhyJ064tPpeuW3dQVPwG0rI=
+
+Name: org/eclipse/equinox/internal/app/AnyThreadAppLauncher.class
+SHA-256-Digest: 7we0QA9w9wa8HIjcq3xvVV03H714zsmnGCDHrZv0XUc=
+
+Name: org/eclipse/equinox/internal/app/Activator$3.class
+SHA-256-Digest: tbjLS2IPP2gwRRBVCGn2CblOou3z9sMbvNW0sBwgvOQ=
+
+Name: org/eclipse/equinox/internal/app/EclipseAppHandle$1.class
+SHA-256-Digest: ExYYHe+DZCY62YNdb9bqMLt4KzUjhNS9/JpddS+qBas=
+
+Name: about.html
+SHA-256-Digest: lMSD1ztLnwx9BHQR/c/xqWRVW19KlCOG3VGLb5Z0kkc=
+
+Name: org/eclipse/equinox/internal/app/ProductExtensionBranding.class
+SHA-256-Digest: 3VyHJFUkdekncT/AqGsOgQw3ndnwXrOp8F1hQr/f/jY=
+
+Name: org/eclipse/equinox/internal/app/Activator.class
+SHA-256-Digest: M/ySS0SYFohhfpuyQUiENsg3jJ9USt8val5I+CCdwX8=
+
+Name: org/eclipse/equinox/internal/app/Messages.class
+SHA-256-Digest: /jkDvdp+U/86Rghfo+5YfJI/CyMEuaZ721seNsaCcN4=
+
+Name: org/eclipse/equinox/internal/app/DefaultApplicationListener.clas
+ s
+SHA-256-Digest: 15qKbpyzZk5atyYLS/j4JIT30UV9eGSEjLf/xooEpU4=
+
+Name: .api_description
+SHA-256-Digest: B88IsfCFeH3/u8OvBhdUhoMe5Hm1+3yKe+kZH+1Do2U=
+
+Name: org/osgi/service/application/ApplicationDescriptor.class
+SHA-256-Digest: npi/kl7vg9+r1OCeYYAWQ22IrUK4bkQeu+FLvylejU8=
+
+Name: org/osgi/service/application/ApplicationAdminPermission$SignerWr
+ apper.class
+SHA-256-Digest: cU5ue3fbDZoXsnVY6LmQOrR+0wg23pWlKxnSGICa+L0=
+
+Name: org/osgi/service/application/ApplicationException.class
+SHA-256-Digest: xpEpv1nukQFdayhNPEFXzTyEr0Rc+UYt2dzDtDNO4Ns=
+
+Name: org/eclipse/equinox/internal/app/MainApplicationLauncher.class
+SHA-256-Digest: w0wZMQhTwh6r/httbWxmKvkO43tfWw5ZdNIWRsSSOTY=
+
+Name: org/eclipse/equinox/internal/app/EclipseAppDescriptor.class
+SHA-256-Digest: etCTkgO+FDPCzwyA6OWFUa11ldkY0nSTHFVKqPvR5KE=
+
+Name: org/osgi/service/application/ScheduledApplication.class
+SHA-256-Digest: /Eg03IrFcLsgmqOO4D9ZoJ7vejABFIcLzQsQAgsP/4U=
+
+Name: org/osgi/service/application/ApplicationAdminPermission.class
+SHA-256-Digest: RFD+D7Ys9uWX2ut70SdtZS7M7DhcoIcT4mYYNUWQajs=
+
+Name: org/eclipse/equinox/internal/app/EclipseScheduledApplication$Tri
+ ggerGuard.class
+SHA-256-Digest: HkGIznG9FwfDUOvGdgfkiQ3LMzXZqgQSVt+v28pcmds=
+
+Name: org/eclipse/equinox/internal/app/EclipseAppHandle.class
+SHA-256-Digest: pjf8rfR9Y4tknCGBs6QWHrNiMrr0Lr9jkgz/RIHg6qo=
+
+Name: org/eclipse/equinox/internal/app/ErrorApplication.class
+SHA-256-Digest: G//yn3Hrmz3gnxw7Z+MfhEI7Hwma37liangzKhpAJe0=
+
+Name: org/eclipse/equinox/internal/app/AppCommands.class
+SHA-256-Digest: Zp/JtNYg3gE18ETvkECcRStBNiScje7vXif7jckEwfM=
+
+Name: org/eclipse/equinox/internal/app/EclipseAppContainer$RegisterSer
+ vice.class
+SHA-256-Digest: EnResEEcEUcPXvH3Ub8UBPteeaIJjS02QoWUckfKTDc=
+
+Name: org/eclipse/equinox/internal/app/EclipseScheduledApplication.cla
+ ss
+SHA-256-Digest: GB9raMxxGlXBUaXBAlWEZdcR5R7QxRqSvl5mNCFHqVY=
+
+Name: org/eclipse/equinox/internal/app/CommandLineArgs.class
+SHA-256-Digest: g6K0VbHtJ5Dj/mffKYQaLo73vkHb2zdTFjmZCDfaZvk=
+
+Name: org/osgi/service/application/ApplicationHandle.class
+SHA-256-Digest: 83PruqMfig2dCJEhKxr2eDNKCNw9W/mclLz1TuB2G/w=
+
+Name: org/eclipse/equinox/internal/app/Activator$1.class
+SHA-256-Digest: UobKAU3J57dSQfE24tRCfI/toPxx7UhVJc9y8/tIj6Y=
+
+Name: org/eclipse/equinox/internal/app/AppPersistence.class
+SHA-256-Digest: v/ldSn3du84cUkTKr8niJ7XCSUpzDehlvBO15yWqgzk=
+

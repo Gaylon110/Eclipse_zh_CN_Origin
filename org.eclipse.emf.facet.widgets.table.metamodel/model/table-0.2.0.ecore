@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="table"
+    nsURI="http://www.eclipse.org/emf/facet/widgets/table/0.2.0.incubation/table"
+    nsPrefix="table">
+  <eClassifiers xsi:type="ecore:EClass" name="Table">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tableConfiguration" eType="ecore:EClass tableConfiguration-0.2.0.ecore#//TableConfiguration"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="customizations" upperBound="-1"
+        eType="ecore:EClass ../../org.eclipse.emf.facet.custom.metamodel/model/custom-0.2.0.ecore#//Customization"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="facetSets" upperBound="-1"
+        eType="ecore:EClass ../../org.eclipse.emf.facet.efacet.metamodel/model/efacet-0.2.0.ecore#//FacetSet"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="context" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Context is the parameter given to the instantiationMethod's query to be the instantiated element's container."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="parameter" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EJavaObject">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The parameterValues parameter contains a value that you can retrieve using the key InstantiationMethodParameters.getEditingDomainParameter().getName()."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="hideEmptyColumns" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Whether to hide columns which don't contain any elements."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="onlyShowCommonColumns"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value=" Whether to show columns which are specific to a few elements (false), or only columns which are common to all the elements (true)."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The description of the tableInstance (content, purpose, uses  ... )"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="columns" upperBound="-1"
+        eType="#//Column" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rows" upperBound="-1" eType="#//Row"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="localCustomizations" lowerBound="1"
+        upperBound="-1" eType="ecore:EClass ../../org.eclipse.emf.facet.custom.metamodel/model/custom-0.2.0.ecore#//Customization"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="canBePresentedInTheTable"
+        eType="ecore:EClass platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//ETypedElement">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="A query that determines which elements are allowed in the table"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NavigationTable" eSuperTypes="#//Table">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A query customized TableInstance, with a reference to some ModelQueryResult"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="queryResults" upperBound="-1"
+        eType="ecore:EClass ../../org.eclipse.emf.facet.efacet.metamodel/model/efacet-0.2.0.ecore#//runtime/ETypedElementResult"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Column" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="width" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="-1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SourceColumn" eSuperTypes="#//Column">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isHidden" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FeatureColumn" eSuperTypes="#//Column">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="feature" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//ETypedElement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Row">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="element" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="height" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="-1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NavigationRow" abstract="true" eSuperTypes="#//Row">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A Row dedicated to the display of queryResult"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="queryResult" eType="ecore:EClass ../../org.eclipse.emf.facet.efacet.metamodel/model/efacet-0.2.0.ecore#//runtime/ETypedElementResult"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PrimitiveTypeQueryRow" eSuperTypes="#//NavigationRow">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A Row dedicated to the display of primitive type result"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EObjectQueryRow" eSuperTypes="#//NavigationRow">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A Row dedicated to the display of EObject results"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ValueColumn" eSuperTypes="#//Column">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A Column dedicated to the display of primitive type results."/>
+    </eAnnotations>
+  </eClassifiers>
+</ecore:EPackage>

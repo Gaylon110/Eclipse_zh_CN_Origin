@@ -1,0 +1,30 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Mylyn Reviews Edit Support
+Bundle-SymbolicName: org.eclipse.mylyn.reviews.edit;singleton:=true
+Bundle-Version: 2.14.0.v20170411-2108
+Bundle-ClassPath: org.eclipse.mylyn.reviews.edit_2.14.0.v20170411-2108.jar
+Bundle-Activator: org.eclipse.mylyn.reviews.edit.ReviewsEditPluginActivator
+Bundle-Vendor: Eclipse Mylyn
+Export-Package: org.eclipse.mylyn.reviews.edit,
+  org.eclipse.mylyn.reviews.edit.provider,
+  org.eclipse.mylyn.reviews.spi.edit.remote;x-friends:="org.eclipse.mylyn.reviews.ui",
+  org.eclipse.mylyn.reviews.spi.edit.remote.review;x-friends:="org.eclipse.mylyn.reviews.ui"
+Require-Bundle: org.eclipse.core.runtime,
+  org.eclipse.mylyn.commons.core;bundle-version="3.9.0",
+  org.eclipse.mylyn.tasks.core;bundle-version="3.9.0",
+  org.eclipse.emf.common;bundle-version="2.5.0",
+  org.eclipse.emf.ecore;bundle-version="2.5.0",
+  org.eclipse.emf.ecore.xmi;bundle-version="2.5.0",
+  org.eclipse.emf.edit;bundle-version="2.5.0",
+  org.eclipse.mylyn.reviews.core;bundle-version="2.0.0",
+  org.eclipse.core.resources
+Built-By: genie.mylyn
+Build-Jdk: 1.8.0_121
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/mylyn/org.eclipse.mylyn.reviews.git;path="org.eclipse.mylyn.reviews.edit";commitId=50d8a6196eecb7f98cfabd13582899ef16f3bf66
+Created-By: Apache Maven 3.0.5
+Archiver-Version: Plexus Archiver
+Import-Package: org.apache.commons.io,
+  org.apache.commons.lang;version="[2.6.0,3.0.0)"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8

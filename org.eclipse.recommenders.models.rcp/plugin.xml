@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+	<extension-point id="org.eclipse.recommenders.models.rcp.models" name="%extension-point.models.name" schema="schema/models.exsd"/>
+	<extension-point id="org.eclipse.recommenders.models.rcp.transformers" name="%extension.point.transformers.name" schema="schema/transformers.exsd"/>
+	<extension point="org.eclipse.ui.views">
+		<view id="org.eclipse.recommenders.models.rcp.views.modelRepositories"
+			category="org.eclipse.recommenders.rcp.views.root"
+			class="org.eclipse.recommenders.injection.ExtensionFactory:org.eclipse.recommenders.internal.models.rcp.ModelRepositoriesView"
+			icon="icons/view16/depinsp.gif"
+			name="%views.modelRepositories.name">
+		</view>
+		<view id="org.eclipse.recommenders.models.rcp.views.dependencyOverview"
+			category="org.eclipse.recommenders.rcp.views.root"
+			class="org.eclipse.recommenders.injection.ExtensionFactory:org.eclipse.recommenders.internal.models.rcp.DependencyOverviewView"
+			restorable="true"
+			icon="icons/view16/depinsp.gif"
+			name="%views.dependencyOverview.name">
+		</view>
+	</extension>
+	<extension point="org.eclipse.ui.preferencePages">
+		<page id="org.eclipse.recommenders.models.rcp.preferencePages.models"
+			category="org.eclipse.recommenders.rcp.preferencePages.root"
+			class="org.eclipse.recommenders.injection.ExtensionFactory:org.eclipse.recommenders.internal.models.rcp.ModelsPreferencePage"
+			name="%preferencePages.models.name">
+			<keywordReference id="org.eclipse.recommenders.models.rcp.keywords.models"/>
+		</page>
+	</extension>
+	<extension point="org.eclipse.ui.keywords">
+		<keyword id="org.eclipse.recommenders.models.rcp.keywords.models"
+			label="%keywords.models.label"/>
+	</extension>
+	<extension point="org.eclipse.core.runtime.preferences">
+		<initializer class="org.eclipse.recommenders.internal.models.rcp.PreferenceInitializer"/>
+	</extension>
+	<extension point="org.eclipse.ui.preferenceTransfer">
+		<transfer id="org.eclipse.recommenders.models.rcp.transfer.all"
+			icon="icons/view16/depinsp.gif"
+			name="%preferenceTransfer.all.name">
+			<description>%preferenceTransfer.all.description</description>
+			<mapping scope="instance">
+				<entry node="org.eclipse.recommenders.coordinates.rcp"/>
+				<entry node="org.eclipse.recommenders.models.rcp"/>
+			</mapping>
+		</transfer>
+	</extension>
+	<extension point="org.eclipse.recommenders.coordinates.rcp.advisors">
+		<advisor id="org.eclipse.recommenders.models.rcp.advisors.sharedManualMappings"
+			class="org.eclipse.recommenders.injection.ExtensionFactory:org.eclipse.recommenders.models.advisors.SharedManualMappingsAdvisor"
+			defaultPriority="10"
+			enabledByDefault="false"
+			name="%advisors.sharedManualMappings.name"
+			description="%advisors.sharedManualMappings.description">
+		</advisor>
+		<advisor id="org.eclipse.recommenders.models.rcp.advisors.modelIndexBundleSymbolicName"
+			class="org.eclipse.recommenders.injection.ExtensionFactory:org.eclipse.recommenders.models.advisors.ModelIndexBundleSymbolicNameAdvisor"
+			defaultPriority="80"
+			name="%advisors.modelIndexBundleSymbolicName.name"
+			description="%advisors.modelIndexBundleSymbolicName.description">
+		</advisor>
+	</extension>
+	<extension point="org.eclipse.recommenders.injection.modules">
+		<module class="org.eclipse.recommenders.internal.models.rcp.ModelsRcpModule"/>
+	</extension>
+</plugin>

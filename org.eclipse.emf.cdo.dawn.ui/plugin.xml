@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<!--
+	Copyright (c) 2010-2012 Eike Stepper (Berlin, Germany) and others.
+	All rights reserved. This program and the accompanying materials
+	are made available under the terms of the Eclipse Public License v1.0
+	which accompanies this distribution, and is available at
+	http://www.eclipse.org/legal/epl-v10.html
+
+	Contributors:
+	  Martin Fluegge - initial API and implementation
+-->
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            id="org.eclipse.emf.cdo.dawn.ui"
+            name="Dawn Category">
+      </category>
+      <view
+            category="org.eclipse.emf.cdo.dawn.ui"
+            class="org.eclipse.emf.cdo.dawn.ui.views.DawnExplorer"
+            icon="icons/dawn_16x16.gif"
+            id="org.eclipse.emf.cdo.dawn.ui.views.DawnExplorer"
+            name="Dawn Explorer">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.help.contexts">
+      <contexts
+            file="contexts.xml">
+      </contexts>
+   </extension>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.cdo.dawn.ui.category.examples"
+            name="Dawn Examples">
+      </category>
+      <category
+            id="org.eclipse.emf.cdo.dawn.ui.category.dawn"
+            name="Dawn">
+      </category>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="org.eclipse.emf.cdo.dawn.ui.handlers.LockObjectsHandler"
+            id="org.eclipse.emf.cdo.dawn.ui.lockobjects"
+            name="Lock objects">
+      </command>
+      <command
+            defaultHandler="org.eclipse.emf.cdo.dawn.ui.handlers.UnLockObjectsHandler"
+            id="org.eclipse.emf.cdo.dawn.ui.unlockobjects"
+            name="Unlock objects">
+      </command>
+   </extension>
+  <extension
+          point="org.eclipse.ui.menus">
+             <menuContribution
+                   locationURI="popup:org.eclipse.ui.popup.any?after=additions">
+         <menu
+               label="Locking">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                     variable="activePart">
+                  <instanceof
+                        value="org.eclipse.emf.cdo.dawn.editors.IDawnEditor">
+                  </instanceof>
+               </with>
+            </visibleWhen>
+            <command
+                  commandId="org.eclipse.emf.cdo.dawn.ui.lockobjects"
+                  label="Lock"
+                  mnemonic="%contributions.view.refresh.mnemonic">
+            </command>
+                   <command
+                  commandId="org.eclipse.emf.cdo.dawn.ui.unlockobjects"
+                  label="Unlock"
+                  mnemonic="%contributions.view.refresh.mnemonic">
+            </command>
+         </menu>
+      </menuContribution>
+
+    </extension>
+        <extension
+          point="org.eclipse.ui.menus">
+             <menuContribution
+                   locationURI="popup:org.eclipse.ui.popup.any?after=additions">
+         <menu
+               label="Conflict">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                     variable="activePart">
+                  <instanceof
+                        value="org.eclipse.emf.cdo.dawn.editors.IDawnEditor">
+                  </instanceof>
+               </with>
+            </visibleWhen>
+            <command
+                  commandId="org.eclipse.emf.cdo.dawn.commands.solveconflict"
+                  label="Solve Conflict"
+                  mnemonic="%contributions.view.refresh.mnemonic">
+            </command>
+         </menu>
+      </menuContribution>
+
+    </extension>
+    <extension
+          point="org.eclipse.ui.commands">
+       <command
+             id="org.eclipse.emf.cdo.dawn.commands.solveconflict"
+             name="Solve Confilct">
+       </command>
+    </extension>
+    <extension
+          point="org.eclipse.ui.handlers">
+       <handler
+             class="org.eclipse.emf.cdo.dawn.ui.handlers.SolveConflictHandler"
+             commandId="org.eclipse.emf.cdo.dawn.commands.solveconflict">
+       </handler>
+    </extension>
+</plugin>

@@ -1,0 +1,837 @@
+Manifest-Version: 1.0
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-SymbolicName: org.eclipse.egf.model;singleton:=true
+Bundle-Activator: org.eclipse.egf.model.EGFModelPlugin$Implementation
+Require-Bundle: org.eclipse.core.runtime,org.eclipse.emf.ecore;visibil
+ ity:=reexport,org.eclipse.emf.ecore.xmi;visibility:=reexport,org.ecli
+ pse.emf.validation;visibility:=reexport,org.eclipse.emf.transaction;v
+ isibility:=reexport,org.eclipse.egf.core;visibility:=reexport
+Export-Package: org.eclipse.egf.model,  org.eclipse.egf.model.domain,o
+ rg.eclipse.egf.model.domain.impl,org.eclipse.egf.model.domain.util, o
+ rg.eclipse.egf.model.fcore,org.eclipse.egf.model.fcore.impl,org.eclip
+ se.egf.model.fcore.util,org.eclipse.egf.model.helper,org.eclipse.egf.
+ model.domain.helper,  org.eclipse.egf.model.mapping,org.eclipse.egf.m
+ odel.mapping.impl,org.eclipse.egf.model.mapping.util,org.eclipse.egf.
+ model.pattern,org.eclipse.egf.model.pattern.impl,org.eclipse.egf.mode
+ l.pattern.util,org.eclipse.egf.model.pattern.template, org.eclipse.eg
+ f.model.types,org.eclipse.egf.model.types.impl,org.eclipse.egf.model.
+ types.util,org.eclipse.egf.model.l10n
+Bundle-Version: 1.5.0.v20170418-1840
+Bundle-ClassPath: .
+Ant-Version: Apache Ant 1.9.6
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: %providerName
+Bundle-Name: %pluginName
+Created-By: 1.8.0_121-b13 (Oracle Corporation)
+Bundle-ManifestVersion: 2
+
+Name: org/eclipse/egf/model/domain/FilesystemDomain.class
+SHA1-Digest: Xb5/nzsCh8DpxocVtF6RPTNNNMc=
+
+Name: org/eclipse/egf/model/domain/helper/TypeGenPackageHelper.class
+SHA1-Digest: roj46EuGqzcyE5ZmV1YLa1RbIrA=
+
+Name: org/eclipse/egf/model/types/impl/TypeURIImpl.class
+SHA1-Digest: 3bW+EN7ZR/jwpl/5vEB3mfzJQ/o=
+
+Name: org/eclipse/egf/model/types/impl/TypesPackageImpl.class
+SHA1-Digest: hmctl2mhUzJYC2CfTupH4PQSAz0=
+
+Name: org/eclipse/egf/model/helper/ValidationHelper.class
+SHA1-Digest: Vqmot3eksucPPushuZEuQvLQahQ=
+
+Name: org/eclipse/egf/model/types/TypeString.class
+SHA1-Digest: /xPnSpLqq14rHnad8W9euNvXnlI=
+
+Name: org/eclipse/egf/model/pattern/impl/BasicQueryImpl.class
+SHA1-Digest: fKoGnwjninbFT1t6PtadGzk8MNc=
+
+Name: org/eclipse/egf/model/pattern/impl/TypePatternSubstitutionImpl.c
+ lass
+SHA1-Digest: NN7y8w2POQe2mZQk+TXKM5j+GZ0=
+
+Name: org/eclipse/egf/model/pattern/BackCall.class
+SHA1-Digest: kzam1STvl9ub6FsdTnYcs3cpkGs=
+
+Name: org/eclipse/egf/model/pattern/util/PatternValidator.class
+SHA1-Digest: DI+lLiG3+nUl2D6NT824YfO5kO0=
+
+Name: org/eclipse/egf/model/fcore/impl/ActivityImpl.class
+SHA1-Digest: IrMWdwzFKnIKMJOjt/mkwLCeRU0=
+
+Name: org/eclipse/egf/model/fcore/impl/InvocationImpl.class
+SHA1-Digest: LY3Xnczp9rkwMNerNyMQ53Fp+Ec=
+
+Name: org/eclipse/egf/model/fcore/InvocationContractContainer.class
+SHA1-Digest: +S0BsGcz7/2Rirtl51cwOLKctbs=
+
+Name: org/eclipse/egf/model/fcore/impl/FactoryComponentImpl.class
+SHA1-Digest: 6e16q/eIvQOhd27nvk+IGzLGXk4=
+
+Name: org/eclipse/egf/model/types/impl/TypeByteImpl.class
+SHA1-Digest: oE0Tlm4wyggtpDEbmGRJ7h2kQRk=
+
+Name: model/Pattern.ecd
+SHA1-Digest: 91u+vY74yama4wcwVYSpuv0d6hI=
+
+Name: model/Domain.ecd
+SHA1-Digest: oSlXEoXnA4SndCqwWulZ+ex7wXs=
+
+Name: org/eclipse/egf/model/domain/impl/DomainPackageImpl.class
+SHA1-Digest: ri6BQNUXt8AGBPnAGLg8kP2KWbU=
+
+Name: org/eclipse/egf/model/pattern/PatternParameter.class
+SHA1-Digest: pU8j9k+wuh/Wk7wJtziG+2CQcsw=
+
+Name: org/eclipse/egf/model/types/impl/TypeStringImpl.class
+SHA1-Digest: k5DS6eMQefUmWMi2hV3ZaMm5qY0=
+
+Name: org/eclipse/egf/model/types/TypesPackage$Literals.class
+SHA1-Digest: khbHXWQLpgv0JSUXr8IL4PtcCWw=
+
+Name: org/eclipse/egf/model/pattern/CallBackHandler.class
+SHA1-Digest: S/MI6FozrccEUsZz6ieFodjYI98=
+
+Name: org/eclipse/egf/model/types/TypeBigDecimal.class
+SHA1-Digest: KmvEDHmIjFeqGjnDZiuujeK4exk=
+
+Name: org/eclipse/egf/model/pattern/impl/PatternFactoryImpl.class
+SHA1-Digest: 9FsKqkVrO5BdppA8WyKBulBeRvQ=
+
+Name: org/eclipse/egf/model/mapping/impl/MappingViewpointImpl.class
+SHA1-Digest: 85F+3SBf8pt5hldVIpNk9r3Qn78=
+
+Name: org/eclipse/egf/model/types/TypeMap.class
+SHA1-Digest: WGxWANPDH72LyfLmwOb+qeUJsWk=
+
+Name: org/eclipse/egf/model/types/TypeFloat.class
+SHA1-Digest: iWORqwh8Sp8Fw2wCjJhXwoNKrEU=
+
+Name: org/eclipse/egf/model/types/impl/TypeListImpl.class
+SHA1-Digest: YWSNfMuBKmjvOEDNeyLY5yJs2mg=
+
+Name: org/eclipse/egf/model/domain/impl/WorkspaceDomainImpl.class
+SHA1-Digest: BwzcPrbgPMew1JOuEiEmJ9wOksQ=
+
+Name: org/eclipse/egf/model/domain/WorkspaceDomain.class
+SHA1-Digest: 4htVR8fR1ZF1rT5Xi/gyOl6T+1o=
+
+Name: org/eclipse/egf/model/pattern/SuperCall.class
+SHA1-Digest: PJHNrVqYOf+ES1MCRGRxOrX93rU=
+
+Name: org/eclipse/egf/model/types/TypeURI.class
+SHA1-Digest: Knfd1po/51Z65rzrTNkNVWxwBhQ=
+
+Name: org/eclipse/egf/model/fcore/FcorePackage$Literals.class
+SHA1-Digest: gz7BpIq1ciDv3UGlJwB/JdNXyR8=
+
+Name: org/eclipse/egf/model/pattern/util/PatternSwitch.class
+SHA1-Digest: qkYEIhu/sJkHyUwDw9FozHjqG0w=
+
+Name: org/eclipse/egf/model/pattern/impl/AbstractPatternCallImpl.class
+SHA1-Digest: 9FlVZ0vAG5IOCQKInSPuLXjDDZU=
+
+Name: org/eclipse/egf/model/pattern/PatternException.class
+SHA1-Digest: M8cMdu3e+w55KBwuYPXkumodm8U=
+
+Name: org/eclipse/egf/model/types/TypeClass.class
+SHA1-Digest: SJP3aGUzAcdf7waHARFIZ7cwNxM=
+
+Name: org/eclipse/egf/model/pattern/impl/PatternImpl.class
+SHA1-Digest: pDYzz1aO9TtjiVQJopPRjHHdfcU=
+
+Name: org/eclipse/egf/model/pattern/impl/TypePatternOutputProcessorImp
+ l.class
+SHA1-Digest: 4iKPt+lkc3I67y+MvhwxHXCLBNE=
+
+Name: org/eclipse/egf/model/types/TypeShort.class
+SHA1-Digest: 63AgW2d0VIvV4bV/ZUl2P9+9zNg=
+
+Name: org/eclipse/egf/model/domain/util/DomainValidator.class
+SHA1-Digest: NgHSVnKkhnWCNPmBXGhznknW2/s=
+
+Name: org/eclipse/egf/model/fcore/impl/NamedModelElementImpl.class
+SHA1-Digest: +6ejqrf+O4gG5phhP87PAaQBZlg=
+
+Name: org/eclipse/egf/model/types/impl/TypesPackageImpl$1.class
+SHA1-Digest: 8TuMdRaUGisevwrFxu4PnI2PiZ0=
+
+Name: org/eclipse/egf/model/pattern/PatternPackage$Literals.class
+SHA1-Digest: ERXQvAM7rmNrFVHygGNiT9L3oIw=
+
+Name: org/eclipse/egf/model/pattern/impl/TypePatternExecutionReporterI
+ mpl.class
+SHA1-Digest: zGWR4LhGao/gjMebBL6dAV9+BD0=
+
+Name: org/eclipse/egf/model/types/TypeBigInteger.class
+SHA1-Digest: sjIU0YGiqhlnaXLOCJalnN+6kk8=
+
+Name: org/eclipse/egf/model/fcore/impl/ContractImpl.class
+SHA1-Digest: uj5roIBeBu0TJLqGOC7w1n3+Jbk=
+
+Name: org/eclipse/egf/model/fcore/FactoryComponentContract.class
+SHA1-Digest: +feehh6plDCPiz3nT969757QZe0=
+
+Name: org/eclipse/egf/model/fcore/FcoreFactory.class
+SHA1-Digest: 3r3uh2wX/geryG7E/oHA81kLjns=
+
+Name: org/eclipse/egf/model/domain/impl/FilesystemDomainImpl.class
+SHA1-Digest: 4HMBl8i0aYY+IzkBWD5/wEHZhBE=
+
+Name: org/eclipse/egf/model/pattern/impl/String2PatternListImpl.class
+SHA1-Digest: 4l40QMjWU9im6qkCpIumCdYSN4k=
+
+Name: org/eclipse/egf/model/domain/impl/EMFDomainImpl.class
+SHA1-Digest: /Qcz6VNZ7DWC76TWx3VPZ3X3tkM=
+
+Name: model/Fcore.genmodel
+SHA1-Digest: gn98XTquzJsVZ1ZPgRoa1neRTDQ=
+
+Name: org/eclipse/egf/model/fcore/impl/OrchestrationImpl.class
+SHA1-Digest: rO2hcZ6xtUFnXaJ+mTIZZq+GvTo=
+
+Name: org/eclipse/egf/model/fcore/Contract.class
+SHA1-Digest: zbaYQullmlPaJ4sjHDjkwuna3Uo=
+
+Name: org/eclipse/egf/model/pattern/PatternContext.class
+SHA1-Digest: RA2nPT9AVTs/OGfem/Vhb6DcLCs=
+
+Name: org/eclipse/egf/model/pattern/impl/PatternPackageImpl.class
+SHA1-Digest: KqzsOED2CrOkWli3I+gdUV9D82Q=
+
+Name: org/eclipse/egf/model/domain/impl/DomainPackageImpl$1.class
+SHA1-Digest: Sw+HjohTGjsIgLvxx3PeEKVuAl4=
+
+Name: org/eclipse/egf/model/pattern/impl/TypePatternListImpl.class
+SHA1-Digest: efqc5ciL/Eryg55/rGpkRlYU6Ow=
+
+Name: org/eclipse/egf/model/fcore/impl/OrchestrationParameterImpl.clas
+ s
+SHA1-Digest: ubdCkVpFqzPLGlgfEj1uyTHXLwk=
+
+Name: org/eclipse/egf/model/domain/Domain.class
+SHA1-Digest: 3nGKuGhLct5+dWmylEslpF84DTw=
+
+Name: org/eclipse/egf/model/types/impl/TypeBigIntegerImpl.class
+SHA1-Digest: XPTwSjnKMhr++2nqE/PN5SRJPdA=
+
+Name: org/eclipse/egf/model/fcore/util/FcoreAdapterFactory$1.class
+SHA1-Digest: cTx7OOA9n+aUMeZX3qrUctwtYiw=
+
+Name: org/eclipse/egf/model/pattern/PatternLibrary.class
+SHA1-Digest: HW2MNt6cSbh3TmZ90yZZL1tYfkE=
+
+Name: org/eclipse/egf/model/types/impl/TypeImpl.class
+SHA1-Digest: Khi7xNXVrdqZGfC8S/JX3JO8jzk=
+
+Name: org/eclipse/egf/model/pattern/TypePatternList.class
+SHA1-Digest: RS169V+UNZ2MQVltww8hwKj3EY4=
+
+Name: org/eclipse/egf/model/fcore/adapter/InvocationContractAdapter$1$
+ 1.class
+SHA1-Digest: TZknVJz0pqvHHhv+YA66auHMYHY=
+
+Name: org/eclipse/egf/model/fcore/util/FcoreXMIHelperImpl.class
+SHA1-Digest: l+thlCQZwipVRBrW6tKa+gJ9sU4=
+
+Name: org/eclipse/egf/model/pattern/impl/QueryImpl.class
+SHA1-Digest: YzWisFc8U3Pj2Jf5kagfWvIHF0k=
+
+Name: org/eclipse/egf/model/pattern/Node$CallBackContainer.class
+SHA1-Digest: +qK+KBSf+YJ+W5ftPLq40qz8Hoc=
+
+Name: model/Pattern.ecorediag
+SHA1-Digest: 1UtHLs2/wu7TkTJ40R0x/UXyjCQ=
+
+Name: org/eclipse/egf/model/mapping/MappingFactory.class
+SHA1-Digest: ACSJBu8TU+ly9WxCpGSoEvG1IJY=
+
+Name: org/eclipse/egf/model/pattern/util/PatternAdapterFactory.class
+SHA1-Digest: Jyz1j+KEVJwHHbB0SrlQGkY2hEA=
+
+Name: org/eclipse/egf/model/pattern/PatternNameHelper.class
+SHA1-Digest: vjHL3SztGUtMIfRMGm3ibL4D6cM=
+
+Name: org/eclipse/egf/model/types/TypeInteger.class
+SHA1-Digest: c59cgtGiRfzqmUjIisiu3sECH8s=
+
+Name: org/eclipse/egf/model/types/impl/TypeLongImpl.class
+SHA1-Digest: GrnosaffnC6b8XacfM1Qsv4Astw=
+
+Name: org/eclipse/egf/model/fcore/FcorePackage.class
+SHA1-Digest: ocyxR9/lDjQb605dNv2EBFZz/8I=
+
+Name: org/eclipse/egf/model/pattern/adapter/SubstitutionAdapter.class
+SHA1-Digest: hYuodDymskGfsIcIbOVF9Xtt4+0=
+
+Name: org/eclipse/egf/model/pattern/TypePatternSubstitution.class
+SHA1-Digest: dLfXuzpsvfuwCYSQLsb7SCebzcc=
+
+Name: org/eclipse/egf/model/pattern/TypePatternDomainVisitor.class
+SHA1-Digest: 8JNg4ivOC7a2bAopevfi3Ws9B50=
+
+Name: org/eclipse/egf/model/pattern/impl/PatternLibraryImpl.class
+SHA1-Digest: ezbi8+4TSRaIQZc8ADPEJSMo0QE=
+
+Name: META-INF/eclipse.inf
+SHA1-Digest: KyT9FF7C7t86NoBoa2kZT3ZJBfw=
+
+Name: org/eclipse/egf/model/fcore/Activity.class
+SHA1-Digest: ISF9cI7afoQYtHLAoCdz3uHtqlM=
+
+Name: org/eclipse/egf/model/domain/impl/DomainViewpointImpl.class
+SHA1-Digest: SK3HhmvCZvC1VO03zXvOOSIdYSg=
+
+Name: org/eclipse/egf/model/domain/DomainFactory.class
+SHA1-Digest: dLSA/CqJboAoUHXQZwR3hWMF/FQ=
+
+Name: org/eclipse/egf/model/pattern/Node$Container.class
+SHA1-Digest: niiJpZvSq1phwqw0d1Rg/NTwb+k=
+
+Name: org/eclipse/egf/model/fcore/util/FcoreValidator.class
+SHA1-Digest: vPlalYcuaQEbqHYXOsmy8hbPL/Y=
+
+Name: org/eclipse/egf/model/fcore/adapter/InvocationContractAdapter$1.
+ class
+SHA1-Digest: IWmt9njHAwciTR5Lu5xVnCNEyxI=
+
+Name: org/eclipse/egf/model/types/impl/TypeFloatImpl.class
+SHA1-Digest: tnZ6B3McH5G66esdzEOloeFvySs=
+
+Name: org/eclipse/egf/model/types/TypeSet.class
+SHA1-Digest: z42IaZXk0RGTWLvAcBmPCPjYU1E=
+
+Name: org/eclipse/egf/model/fcore/impl/ContractContainerImpl.class
+SHA1-Digest: ytwU5uGsOcU1VGRRItxXkF8P02g=
+
+Name: org/eclipse/egf/model/pattern/impl/PatternPackageImpl$1.class
+SHA1-Digest: g7b5aj4Xh2LIn4lxcGui9EJlXyc=
+
+Name: org/eclipse/egf/model/types/TypesException.class
+SHA1-Digest: e+11vxcHnLL+ddL4v+qFM24IKw8=
+
+Name: model/Pattern.genmodel
+SHA1-Digest: 9WK8fVH0XMwPNuT/eREaQCCbXFw=
+
+Name: model/Domain.genmodel
+SHA1-Digest: 4hFTCOHexRR8VFLzPs72uHl1AxQ=
+
+Name: org/eclipse/egf/model/types/TypeObject.class
+SHA1-Digest: N60NRwY8zSXvX5sF2sVa7vp1mc4=
+
+Name: org/eclipse/egf/model/fcore/util/FcoreResourceFactoryImpl.class
+SHA1-Digest: r7LIDMVCfjNLmKN1prNAN2I2G/Q=
+
+Name: org/eclipse/egf/model/fcore/OrchestrationParameter.class
+SHA1-Digest: ZT8CIVGyuZPSlwfvTyYv5YD/Xxg=
+
+Name: org/eclipse/egf/model/types/impl/TypeCharacterImpl.class
+SHA1-Digest: eIPduAiDwO+KNMrUD3BHnDABV4I=
+
+Name: org/eclipse/egf/model/domain/impl/TypeGenPackagesImpl.class
+SHA1-Digest: Hl2YDwKL0uWaSa1eWmP61O3NEGY=
+
+Name: org/eclipse/egf/model/types/TypeByte.class
+SHA1-Digest: K5hxn+FIiYdSFakMrbYDK6MSlXg=
+
+Name: org/eclipse/egf/model/mapping/MappingPackage.class
+SHA1-Digest: FUTDp47g+arJWRq/OO0EYRY5xus=
+
+Name: org/eclipse/egf/model/fcore/Viewpoint.class
+SHA1-Digest: lNmjEm0EYj5KA56LBCW9sizSqaI=
+
+Name: org/eclipse/egf/model/types/impl/TypeBigDecimalImpl.class
+SHA1-Digest: UfYLI+0XTHjc6irc0iLpgnj6Wl8=
+
+Name: org/eclipse/egf/model/pattern/MethodCall.class
+SHA1-Digest: sC7ptwwrFHf2/GnF186UocunFIM=
+
+Name: org/eclipse/egf/model/types/TypeAbstractClass.class
+SHA1-Digest: DqXB4zkS9XJkIpQfFZmqyXKncKk=
+
+Name: plugin.properties
+SHA1-Digest: YcdpTfgimwbY/qiysDXRWDzfJqI=
+
+Name: org/eclipse/egf/model/pattern/PatternOutputProcessor.class
+SHA1-Digest: +lR0RZ+QcwTceN2FXVzJEjziv7c=
+
+Name: org/eclipse/egf/model/fcore/impl/FactoryComponentContractImpl.cl
+ ass
+SHA1-Digest: NZrSMiby9VaLfQbnrG/rn7og1HM=
+
+Name: org/eclipse/egf/model/types/impl/TypeClassImpl.class
+SHA1-Digest: FvK9G99ckSJ0WJuShJdX32gJnEM=
+
+Name: org/eclipse/egf/model/mapping/Mapping.class
+SHA1-Digest: 4mHaI5/kTm9VzUjTcNyNhydNE9E=
+
+Name: org/eclipse/egf/model/domain/LoadableDomain.class
+SHA1-Digest: y5atNLuWVZxFOyBk9qTClNgscyY=
+
+Name: org/eclipse/egf/model/pattern/PatternCall.class
+SHA1-Digest: /MCdB5W2m1jvevUWbmeJ/xgFCZ4=
+
+Name: org/eclipse/egf/model/types/impl/TypeShortImpl.class
+SHA1-Digest: sXhByTvK9pUJOQKP4L9C1SFjGUg=
+
+Name: org/eclipse/egf/model/types/impl/TypeIntegerImpl.class
+SHA1-Digest: 3wHZxhylk5RY888p3CKs1upv3Ck=
+
+Name: plugin.xml
+SHA1-Digest: P6voSDSKSPnNtEwxG3OaFyJaaA0=
+
+Name: org/eclipse/egf/model/types/TypeCollection.class
+SHA1-Digest: /4MkjkurmdtS1/1jC0hATg/zz8o=
+
+Name: org/eclipse/egf/model/domain/DomainPackage.class
+SHA1-Digest: jFi/HHS+Ii+02MdwgJqz0HeA7RY=
+
+Name: org/eclipse/egf/model/pattern/BasicQuery.class
+SHA1-Digest: hpPWwTkV3Ab7HgGzRluS7D3tA2o=
+
+Name: org/eclipse/egf/model/types/TypeDate.class
+SHA1-Digest: SBfP9NC+dnEx+YspF6KURvN3r74=
+
+Name: org/eclipse/egf/model/domain/impl/TypeDomainImpl.class
+SHA1-Digest: ERd5W+G7EnWlEuwqr1nSJ5oQOY8=
+
+Name: org/eclipse/egf/model/pattern/impl/String2StringImpl.class
+SHA1-Digest: Fvdsu27OgKSDLxC3n6We0OhvOZ4=
+
+Name: org/eclipse/egf/model/pattern/impl/PatternViewpointImpl.class
+SHA1-Digest: 0QtcEaeHOvD9tonHa3mF0qXYH+Y=
+
+Name: org/eclipse/egf/model/domain/impl/LoadableDomainImpl.class
+SHA1-Digest: gezomepIuswAUK0xyKLjMgpiiK8=
+
+Name: org/eclipse/egf/model/types/impl/TypeCollectionImpl.class
+SHA1-Digest: 7++WrCnrsHUnqWOXXi5hdazh3ug=
+
+Name: org/eclipse/egf/model/pattern/impl/SuperCallImpl.class
+SHA1-Digest: KiQ/XNUReOryi6zMmPaSrQ1zJ7c=
+
+Name: org/eclipse/egf/model/pattern/impl/Paramerter2ParameterMapImpl.c
+ lass
+SHA1-Digest: QKhGA9s/YGUFYjG6S6v7C/mB8Ho=
+
+Name: org/eclipse/egf/model/mapping/util/MappingSwitch.class
+SHA1-Digest: wRpFlc8zAG+WvdS8EOVra/JlRBc=
+
+Name: org/eclipse/egf/model/pattern/Node$SuperOrchestrationContainer.c
+ lass
+SHA1-Digest: Kh54IlJkLP4W+zQ5XS0a5/CTNzA=
+
+Name: org/eclipse/egf/model/pattern/PatternViewpoint.class
+SHA1-Digest: cGketKHXrW0G/u9cPXTjsUfh6ug=
+
+Name: org/eclipse/egf/model/pattern/DefaultPatternOutputProcessor.clas
+ s
+SHA1-Digest: //juSo+xVlcsHWuAPWWvJffiMgk=
+
+Name: org/eclipse/egf/model/pattern/impl/TypePatternDomainVisitorImpl.
+ class
+SHA1-Digest: 0mtm6SJRioIu0BEUqoWFo9IP8WE=
+
+Name: model/Types.ecd
+SHA1-Digest: 59/iIh0m9OGpMkVWAZltd22Glks=
+
+Name: org/eclipse/egf/model/mapping/MappingViewpoint.class
+SHA1-Digest: 9kGzoB/S8c4rkw+WLlGdNd5RB+o=
+
+Name: org/eclipse/egf/model/mapping/impl/MappingImpl.class
+SHA1-Digest: LTkA1u8JvYUh5XSo6mL3JKKBWxc=
+
+Name: org/eclipse/egf/model/pattern/impl/PatternMethodImpl.class
+SHA1-Digest: YOHHQr60WhDJOp9VtMkJqqxFswI=
+
+Name: org/eclipse/egf/model/pattern/impl/PatternParameterImpl.class
+SHA1-Digest: 1DhQb9uS84FPa7ZyOpuXZgpyqUg=
+
+Name: org/eclipse/egf/model/pattern/impl/SubstitutionImpl.class
+SHA1-Digest: 8lMNVC5T5EBTeisL2NN79QZiWSg=
+
+Name: org/eclipse/egf/model/fcore/util/FcoreXMISaveImpl.class
+SHA1-Digest: /nKxmcY3dUeFblx/xkDnv4FNcbg=
+
+Name: org/eclipse/egf/model/types/impl/TypeElementImpl.class
+SHA1-Digest: NDZddxOWhrrinzkFKS3wKLTZWps=
+
+Name: org/eclipse/egf/model/pattern/util/PatternAdapterFactory$1.class
+SHA1-Digest: OlA/PCrWf/zlahfy5F6je2GMfis=
+
+Name: org/eclipse/egf/model/fcore/impl/ModelElementImpl.class
+SHA1-Digest: NVU56egHSlIa22axTDVjsnUURG4=
+
+Name: org/eclipse/egf/model/pattern/PatternNature.class
+SHA1-Digest: f++/hhLllRkK8V4Ybn0W7604O9U=
+
+Name: org/eclipse/egf/model/pattern/template/TemplateModelFileHelper$F
+ ilenameFormatException.class
+SHA1-Digest: gnMqYPyPTcIuHK6xRv5pLyaKJmI=
+
+Name: model/Pattern.ecore
+SHA1-Digest: nmEyuUCLYa1cIR8Q2yN2gXZVL+U=
+
+Name: model/Domain.ecore
+SHA1-Digest: EXNl7HL9bOPHfwf0OZYGWEvy+fA=
+
+Name: org/eclipse/egf/model/types/util/TypesSwitch.class
+SHA1-Digest: RRzFTHLp+7PYWk2moIxCkA+/Sw0=
+
+Name: org/eclipse/egf/model/pattern/InjectedContext.class
+SHA1-Digest: AtDOPRSU+ylCAQIL8ViWfatWLH0=
+
+Name: org/eclipse/egf/model/fcore/ModelElement.class
+SHA1-Digest: k9ShsNEgthtK8G/WrCltU5pgAO0=
+
+Name: org/eclipse/egf/model/pattern/Node$DataLeaf.class
+SHA1-Digest: 72ezlugnw85e31GT39jNVzh8SYI=
+
+Name: org/eclipse/egf/model/fcore/impl/ViewpointImpl.class
+SHA1-Digest: pfRXemvOn6B3X8m7sEP2oZSLTfg=
+
+Name: org/eclipse/egf/model/pattern/impl/CallImpl.class
+SHA1-Digest: nafxpJd+zoY6lpnbAH1icc2eIbc=
+
+Name: org/eclipse/egf/model/pattern/impl/StringQueryImpl.class
+SHA1-Digest: nmd36w2Uk8kJmsgJaYhcYLVBcf0=
+
+Name: org/eclipse/egf/model/types/util/TypesValidator.class
+SHA1-Digest: WxEDSpaux5bkxTJhgBph+URQ/oc=
+
+Name: org/eclipse/egf/model/types/TypeLong.class
+SHA1-Digest: NmlUdwUKciL+5hFdoeQTrrUT0do=
+
+Name: org/eclipse/egf/model/pattern/TypePatternCallBackHandler.class
+SHA1-Digest: Z4w60wrUCQtZuKT0k8wcy2+rBs8=
+
+Name: org/eclipse/egf/model/pattern/StringQuery.class
+SHA1-Digest: nsAJOl3qwZnxUGlfs+d5PKdohK0=
+
+Name: model/Mapping.genmodel
+SHA1-Digest: hObetx86rot4yB0EB35SLITEv7A=
+
+Name: org/eclipse/egf/model/types/TypeCharacter.class
+SHA1-Digest: 0iyiURqdYGKpbDZo5Bug++eoe/g=
+
+Name: org/eclipse/egf/model/types/impl/TypeBooleanImpl.class
+SHA1-Digest: k/9lsBulRiGG0LpaoOQ9f+7cGG0=
+
+Name: org/eclipse/egf/model/types/impl/TypeDateImpl.class
+SHA1-Digest: tjjFuSntSJJhYWe/au3S86z5dJg=
+
+Name: org/eclipse/egf/model/fcore/impl/InvocationContractContainerImpl
+ .class
+SHA1-Digest: Sse9H1QLoq0VeeLFphRn2ESYWrI=
+
+Name: org/eclipse/egf/model/fcore/ContractContainer.class
+SHA1-Digest: Ir+RMeFCM1B3PlCION4Oi+hNYCU=
+
+Name: org/eclipse/egf/model/mapping/util/MappingAdapterFactory.class
+SHA1-Digest: RLVaMwUiiwlTVjaKW75mp1iC9gU=
+
+Name: org/eclipse/egf/model/pattern/Call.class
+SHA1-Digest: UEUpHjBzUOh/H6gfGIc5EPls6Rc=
+
+Name: org/eclipse/egf/model/pattern/impl/PatternCallImpl.class
+SHA1-Digest: bO3KTRD6aNV+cShK/2HYjPXVXeo=
+
+Name: org/eclipse/egf/model/domain/TypeDomain.class
+SHA1-Digest: dFVsWS/qXcgaacGQCLgHEGN3YEs=
+
+Name: org/eclipse/egf/model/fcore/impl/FcoreFactoryImpl.class
+SHA1-Digest: S43yde0xdSaKo7qPP/5Dr/mk+GM=
+
+Name: org/eclipse/egf/model/types/impl/TypeAbstractClassImpl.class
+SHA1-Digest: OtqFW00I1Vx37CsM2mJC5vsSElo=
+
+Name: model/Fcore.ecore
+SHA1-Digest: 2OWMs6viZeVZfWx30XX3W3oGFRQ=
+
+Name: org/eclipse/egf/model/pattern/impl/PatternNatureImpl.class
+SHA1-Digest: +dulNc7ZnU08szEXnWPJp84/0wk=
+
+Name: org/eclipse/egf/model/pattern/Pattern.class
+SHA1-Digest: PLykCbtbq3zL0az8kIMaUy/Rrl8=
+
+Name: org/eclipse/egf/model/domain/util/DomainAdapterFactory$1.class
+SHA1-Digest: Lx33nK4enWmLz/IgWMnBNOmgziQ=
+
+Name: org/eclipse/egf/model/pattern/impl/PatternInjectedCallImpl.class
+SHA1-Digest: yi/O2sYLL3EAXPnLfjTKxwHm/ZU=
+
+Name: org/eclipse/egf/model/fcore/impl/OrchestrationParameterContainer
+ Impl.class
+SHA1-Digest: Q3lAExCGfK7IQ4e+sdprqWIyNHs=
+
+Name: org/eclipse/egf/model/EGFModelPlugin$Implementation.class
+SHA1-Digest: kpL/T5r6TMcOKNHjiuD/J84soRg=
+
+Name: org/eclipse/egf/model/pattern/Node$Leaf.class
+SHA1-Digest: nx1Z9Nt5HQWUFj6wBk83kRjGO0A=
+
+Name: org/eclipse/egf/model/fcore/NamedModelElement.class
+SHA1-Digest: +1sWCESrwiCjPC+V7Xlro/Yezk4=
+
+Name: org/eclipse/egf/model/types/util/TypesAdapterFactory.class
+SHA1-Digest: 3FysBO4KLeEdeYOP63HIwbi8t8o=
+
+Name: about.html
+SHA1-Digest: NIJtBuujI9i0f1fp1AfGme2MG3w=
+
+Name: org/eclipse/egf/model/mapping/impl/MappingFactoryImpl.class
+SHA1-Digest: fGOZ400Du9/oY8Tmn9WlcSsqZN8=
+
+Name: Dependencies.ucd
+SHA1-Digest: 108vE48gLC2aQ8x06tYRHWVkvh0=
+
+Name: org/eclipse/egf/model/pattern/adapter/SubstitutionAdapter$1$1.cl
+ ass
+SHA1-Digest: SyKE/0mYVUasoacSKQtYRsF5LF4=
+
+Name: model/Types.genmodel
+SHA1-Digest: g+nwLETlv6nP94W33Yex2cGeOC0=
+
+Name: org/eclipse/egf/model/types/TypesFactory.class
+SHA1-Digest: UmMPrG4pfG8T/Yp725zUyPKM584=
+
+Name: org/eclipse/egf/model/pattern/impl/MethodCallImpl.class
+SHA1-Digest: N+/0qI+/QkZFnVdlIvDsWFxXe/0=
+
+Name: org/eclipse/egf/model/domain/DomainPackage$Literals.class
+SHA1-Digest: zia+O3v4MXuxr1w4pAqflL3XtYQ=
+
+Name: org/eclipse/egf/model/types/impl/TypeSetImpl.class
+SHA1-Digest: wYTJoMqAhivNsAPDWD95BBp8nX8=
+
+Name: org/eclipse/egf/model/fcore/Orchestration.class
+SHA1-Digest: V+l6nulSeRTyS6Jsag9iPGA5kBw=
+
+Name: org/eclipse/egf/model/fcore/adapter/InvocationContractAdapter$2$
+ 1.class
+SHA1-Digest: Aqn8eAd2EbPw6PjFckweVgwzRN4=
+
+Name: org/eclipse/egf/model/pattern/PatternFactory.class
+SHA1-Digest: m3ax7vqPrimrpap/iabqLQ6aQ38=
+
+Name: org/eclipse/egf/model/domain/util/DomainSwitch.class
+SHA1-Digest: tKbus88QPZ0FR185UKx818/7AnU=
+
+Name: org/eclipse/egf/model/helper/ActivityCycleFinder.class
+SHA1-Digest: LOYD/3ixduRVs2VaZVeEEB9/uh0=
+
+Name: org/eclipse/egf/model/fcore/util/FcoreResourceImpl$1.class
+SHA1-Digest: I7mHl24FzqQX+lOkvf2Wl3yw/Ak=
+
+Name: org/eclipse/egf/model/fcore/impl/FcorePackageImpl.class
+SHA1-Digest: mZjvEjEgYeDAwpQvM5K/Y9lfXc4=
+
+Name: org/eclipse/egf/model/fcore/ViewpointContainer.class
+SHA1-Digest: qnHuyjXlPSoq/FuXBUA/S7WeFMo=
+
+Name: org/eclipse/egf/model/pattern/PatternRuntimeException.class
+SHA1-Digest: H3ZatNdfjQDWNsK2FNyxLnkn44k=
+
+Name: org/eclipse/egf/model/pattern/DomainVisitor.class
+SHA1-Digest: q6ufMMdQaNY8IjNsP/83rv2xybg=
+
+Name: org/eclipse/egf/model/pattern/template/TemplateModelFileHelper.c
+ lass
+SHA1-Digest: bTX4Cpdg8OFxh7y0lJwtwX9ztLI=
+
+Name: org/eclipse/egf/model/domain/impl/DomainImpl.class
+SHA1-Digest: 7ILZrSZtr5PpBHf+p3qDj4FYJWs=
+
+Name: org/eclipse/egf/model/pattern/PatternExecutionReporter.class
+SHA1-Digest: N0ZNjFJx43SJdqfTwrHWS75BpAo=
+
+Name: model/Fcore.ecd
+SHA1-Digest: 7UP/wvgNRkNoRdom2wdyli8ba9E=
+
+Name: org/eclipse/egf/model/fcore/InvocationContract.class
+SHA1-Digest: Wirpbqbpo+LtePYV83NbNWJYrpY=
+
+Name: org/eclipse/egf/model/types/Type.class
+SHA1-Digest: UBzJY32kH5liHTD4qkTwEYLl8kQ=
+
+Name: org/eclipse/egf/model/pattern/impl/PatternElementImpl.class
+SHA1-Digest: MoYKJJYfAhzrBOfYrWQ7tFTav0c=
+
+Name: org/eclipse/egf/model/fcore/util/FcoreSwitch.class
+SHA1-Digest: HbVa9fP3eQmXPTeMA0ntPqDN/6o=
+
+Name: org/eclipse/egf/model/domain/EMFDomain.class
+SHA1-Digest: CbTJgaMzUgnU966yujmIr4GZAoY=
+
+Name: org/eclipse/egf/model/EGFModelPlugin.class
+SHA1-Digest: 7OHMFZ/zF0+9KWME+R/5TjC2Ys8=
+
+Name: org/eclipse/egf/model/pattern/adapter/SubstitutionAdapter$1.clas
+ s
+SHA1-Digest: lyPo9AWqza3UepY2n4vn3j3jU4Q=
+
+Name: org/eclipse/egf/model/pattern/TypePatternOutputProcessor.class
+SHA1-Digest: 1rt0PVfxKYQjGa7UL4LEI3kjEAo=
+
+Name: org/eclipse/egf/model/fcore/adapter/InvocationContractAdapter.cl
+ ass
+SHA1-Digest: MZA/Tm4OdqyDKlIoffO78DpjPOk=
+
+Name: org/eclipse/egf/model/domain/DomainViewpoint.class
+SHA1-Digest: SmtH9u+tRvt+6D2TPHw2BbH3Tw4=
+
+Name: org/eclipse/egf/model/pattern/Substitution.class
+SHA1-Digest: yTAkZbsLvTHxcIdy4nk/VjsBG9w=
+
+Name: org/eclipse/egf/model/fcore/FactoryComponent.class
+SHA1-Digest: zQ/7Vqgji0NDA1oyGXoLq3G9Zpo=
+
+Name: org/eclipse/egf/model/mapping/impl/MappingPackageImpl.class
+SHA1-Digest: /K/7j3+fItvRf9frfUU4rEmPAQI=
+
+Name: org/eclipse/egf/model/l10n/messages.properties
+SHA1-Digest: DlC2g/KML34JVizHopmE45CaSJE=
+
+Name: org/eclipse/egf/model/types/TypesPackage.class
+SHA1-Digest: FmPniXeszQJM7k1VKvkeiUUdUk0=
+
+Name: org/eclipse/egf/model/fcore/OrchestrationParameterContainer.clas
+ s
+SHA1-Digest: KZpSNyeQurNhZpKApzExAryLJR4=
+
+Name: org/eclipse/egf/model/pattern/Node$NodeVisitor.class
+SHA1-Digest: HtmInB++P+t4KkHckZCHyGpMRGk=
+
+Name: org/eclipse/egf/model/fcore/util/FcoreResourceImpl.class
+SHA1-Digest: Qepe5vbZzAQCU0cNYXuTDTzF5hk=
+
+Name: org/eclipse/egf/model/fcore/impl/ViewpointContainerImpl.class
+SHA1-Digest: ZkBAF7T+AInLdZ9MTc71yqYbMbs=
+
+Name: org/eclipse/egf/model/l10n/EGFModelMessages.class
+SHA1-Digest: mAtk1uW6e8uRaMPFIjMPuzATbac=
+
+Name: org/eclipse/egf/model/pattern/PatternPackage.class
+SHA1-Digest: Hl3ZuiClbvhlfsn8dIyXjJqYeIk=
+
+Name: org/eclipse/egf/model/fcore/adapter/InvocationContractAdapter$1$
+ 2.class
+SHA1-Digest: 7l/AXarmB+UjjLL1TGeAP47GdbA=
+
+Name: org/eclipse/egf/model/domain/TypeGenPackages.class
+SHA1-Digest: ob07PSDowEthJpW7snqsvZ6EnYY=
+
+Name: model/Types.ecore
+SHA1-Digest: c9P4uiMNKo4E3fo9FoRxyGF7rEg=
+
+Name: org/eclipse/egf/model/fcore/impl/InvocationContractImpl.class
+SHA1-Digest: W1x3+EdL3M0NABPAw0hS8dKEWIE=
+
+Name: org/eclipse/egf/model/types/TypeDouble.class
+SHA1-Digest: ZQCqouwow6n4O1TU7F13PFg6Gak=
+
+Name: org/eclipse/egf/model/domain/util/DomainAdapterFactory.class
+SHA1-Digest: 7UflXNKA5lcCDeRrphwlkpfjRJQ=
+
+Name: org/eclipse/egf/model/pattern/Query.class
+SHA1-Digest: 1AJdoVullvO0HMoVIDWN2vzPb7Y=
+
+Name: org/eclipse/egf/model/types/impl/TypesFactoryImpl.class
+SHA1-Digest: c8h4VGv/Fonq4lx14Jef292tJJA=
+
+Name: org/eclipse/egf/model/types/TypeElement.class
+SHA1-Digest: I+3iaBvf7w7umWAjw7rn46a0Gew=
+
+Name: org/eclipse/egf/model/pattern/AbstractPatternCall.class
+SHA1-Digest: cx/fhM1lQlxIx2K5rHL3WfglJ1g=
+
+Name: org/eclipse/egf/model/mapping/MappingPackage$Literals.class
+SHA1-Digest: 6ib+DK9vOvXLuUaOd+Hs1ZrZbHQ=
+
+Name: org/eclipse/egf/model/pattern/impl/CustomQueryImpl.class
+SHA1-Digest: ob7xBCu6EYacybhhoFJe5luY4HQ=
+
+Name: org/eclipse/egf/model/pattern/BundleAccessor.class
+SHA1-Digest: zIsSH0aFCuAaegnii12irq4nSsU=
+
+Name: org/eclipse/egf/model/types/impl/TypeObjectImpl.class
+SHA1-Digest: 4WBTwo7KQ+JNJxaAku0Lma3nvt4=
+
+Name: org/eclipse/egf/model/mapping/util/MappingAdapterFactory$1.class
+SHA1-Digest: mIQ9tCAGio0ZYv5haH2YOyx4zMs=
+
+Name: org/eclipse/egf/model/pattern/PatternMethod.class
+SHA1-Digest: eiZdgocs8zmbe3pdhq8gqe4cmqY=
+
+Name: org/eclipse/egf/model/fcore/impl/FcorePackageImpl$1.class
+SHA1-Digest: 4EyFVc2mx78ooWjm2xHFiUbK97E=
+
+Name: org/eclipse/egf/model/types/TypeList.class
+SHA1-Digest: g+uHWx/XcoBverSJzsg4JIWhinc=
+
+Name: model/Mapping.ecore
+SHA1-Digest: BFdyvwVnZf9F1oib6tDPwuM/q2M=
+
+Name: org/eclipse/egf/model/pattern/CustomQuery.class
+SHA1-Digest: TaTI2b2n3YTGHvdut03/VrTsmAI=
+
+Name: org/eclipse/egf/model/pattern/PatternInjectedCall.class
+SHA1-Digest: c6SH1GXibZcJTwFzT3LLJ/tPGo0=
+
+Name: org/eclipse/egf/model/pattern/impl/TypePatternCallBackHandlerImp
+ l.class
+SHA1-Digest: zcHmGkV+cUBStih2bpUiwP02Aro=
+
+Name: org/eclipse/egf/model/domain/impl/DomainFactoryImpl.class
+SHA1-Digest: jW63EGXz2snXRMh9Nc7eNSwE3Fc=
+
+Name: org/eclipse/egf/model/fcore/Invocation.class
+SHA1-Digest: 0VKTSfITmgBMrL6iBNvBKp6wcLk=
+
+Name: org/eclipse/egf/model/types/impl/TypeDoubleImpl.class
+SHA1-Digest: trgmZ7Pn/VuVslhvteuvSWF8xIo=
+
+Name: org/eclipse/egf/model/pattern/impl/PatternVariableImpl.class
+SHA1-Digest: Lm3HmLNi0gR3nTNCsPEjuA6Mi3M=
+
+Name: org/eclipse/egf/model/fcore/util/FcoreAdapterFactory.class
+SHA1-Digest: AQBb/DWNlt+XDxCVZgv34Sn0FI4=
+
+Name: org/eclipse/egf/model/fcore/ContractMode.class
+SHA1-Digest: L2vOP7rkn1eRgybciUg8nuXzk5c=
+
+Name: org/eclipse/egf/model/pattern/Node.class
+SHA1-Digest: 4KnhddLvOm7aS/K20ZLpIahyfj4=
+
+Name: org/eclipse/egf/model/pattern/TypePatternExecutionReporter.class
+SHA1-Digest: mA6gYY7clqKyeUrsG0zv2bnPe6E=
+
+Name: org/eclipse/egf/model/mapping/impl/MappingDomainImpl.class
+SHA1-Digest: cnotN6DDAkQCBlLzry2WfW2fSCY=
+
+Name: org/eclipse/egf/model/pattern/PatternVariable.class
+SHA1-Digest: MYSt5l9tz2hUD0w7aiEtWQDDZzk=
+
+Name: org/eclipse/egf/model/types/impl/TypeMapImpl.class
+SHA1-Digest: ZPP+biqfJ89kyFR0KPoVpQiJFhY=
+
+Name: org/eclipse/egf/model/mapping/MappingDomain.class
+SHA1-Digest: S5pxaBAuqnEeN0ccaUMaLamnM3U=
+
+Name: org/eclipse/egf/model/fcore/adapter/InvocationContractAdapter$2.
+ class
+SHA1-Digest: KAytCrrdGAihUzZyzRA43Uua/oQ=
+
+Name: org/eclipse/egf/model/types/util/TypesAdapterFactory$1.class
+SHA1-Digest: heFaiLNgv0Z+FnocS5DtcjuqfwQ=
+
+Name: org/eclipse/egf/model/pattern/PatternElement.class
+SHA1-Digest: cHCNUHICqITHLk6boX9g6cwhp3c=
+
+Name: org/eclipse/egf/model/pattern/impl/BackCallImpl.class
+SHA1-Digest: 61+xx3TdUiuOTvuW719HKC+hAmA=
+
+Name: org/eclipse/egf/model/types/TypeBoolean.class
+SHA1-Digest: DbpWPY+P4zoTanLYPd27smrmZzg=
+

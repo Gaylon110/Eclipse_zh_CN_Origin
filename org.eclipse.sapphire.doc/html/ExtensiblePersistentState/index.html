@@ -1,0 +1,347 @@
+<!-- 
+ ******************************************************************************
+ * Copyright (c) 2016 Oracle
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *    Konstantin Komissarchik - initial implementation and ongoing maintenance
+ ******************************************************************************
+-->
+
+<html>
+
+<head>
+  <title>Extensible Persistent State</title>
+  <link rel="StyleSheet" href="../style.css" TYPE="text/css"/>
+</head>
+
+<body>
+
+<h1>Extensible Persistent State</h1>
+
+<p>Editor pages are able to persist user interface state between sessions independent of the data 
+that is being edited. What state is persisted is dependent on editor page type. Two common examples of
+persistent state are sizing of resizable elements and selection. The persistent state is now extensible,
+allowing adopters to persist custom data.</p>
+
+<p>The recommended approach is to extend the page's persistent state element type to add custom properties.
+The custom element type for persistent state is specified in sdef.</p> 
+
+<p style="margin-left: 20px;"><b>Example</b></p>
+
+<p style="margin-left: 20px;">In the catalog sample, a toggle action controls whether the manufacturer name is shown
+in the catalog item label. The state of this toggle is persisted by extending the state of the editor page. The
+persistent state is also used for communication between the toggle and the item label.</p>
+
+<pre class="source-code"><code>public interface CatalogEditorPageState extends MasterDetailsEditorPageState
+{
+    ElementType TYPE = new ElementType( CatalogEditorPageState.class );
+
+    // *** ShowManufacturer ***
+
+    @Type( base = Boolean.class )
+    @DefaultValue( text = "false" )
+
+    ValueProperty PROP_SHOW_MANUFACTURER = new ValueProperty( TYPE, "ShowManufacturer" );
+
+    Value&lt;Boolean> getShowManufacturer();
+    void setShowManufacturer( String value );
+    void setShowManufacturer( Boolean value );
+}</code></pre>
+
+<p style="margin-left: 20px;">The custom state element type is attached to the editor page in sdef.</p>
+
+<pre class="source-code"><code><font color="#888888">&lt;editor-page></font>
+    &lt;persistent-state-element-type>org.eclipse.sapphire.samples.catalog.CatalogEditorPageState&lt;/persistent-state-element-type>
+<font color="#888888">&lt;/editor-page></font></code></pre>
+
+<p style="margin-left: 20px;">The toggle action handler only interacts with the editor page state.</p>
+
+<pre class="source-code"><code>public final class ShowManufacturerActionHandler extends SapphireActionHandler 
+{
+    private CatalogEditorPageState state;
+
+    @Override
+    public void init( final SapphireAction action, final ActionHandlerDef def )
+    {
+        super.init( action, def );
+
+        this.state = (CatalogEditorPageState) getPart().nearest( SapphireEditorPagePart.class ).state();
+
+        final Listener listener = new FilteredListener&lt;PropertyContentEvent>()
+        {
+            @Override
+            protected void handleTypedEvent( final PropertyContentEvent event )
+            {
+                setChecked( ShowManufacturerActionHandler.this.state.getShowManufacturer().getContent() );
+            }
+        };
+
+        this.state.attach( listener, CatalogEditorPageState.PROP_SHOW_MANUFACTURER );
+
+        setChecked( this.state.getShowManufacturer().getContent() );
+
+        attach
+        (
+            new FilteredListener&lt;DisposeEvent>()
+            {
+                @Override
+                protected void handleTypedEvent( final DisposeEvent event )
+                {
+                    ShowManufacturerActionHandler.this.state.detach( listener, CatalogEditorPageState.PROP_SHOW_MANUFACTURER );
+                }
+            }
+        );
+    }
+
+    @Override
+    protected Object run( final SapphireRenderingContext context )
+    {
+        this.state.setShowManufacturer( ! this.state.getShowManufacturer().getContent() );
+
+        return null;
+    }
+}</code></pre>
+
+<p style="margin-left: 20px;">The toggle action and its handler are defined in sdef.</p>
+
+<pre class="source-code"><code><font color="#888888">&lt;editor-page></font>
+    &lt;action>
+        &lt;id>Sample.ShowManufacturer&lt;/id>
+        &lt;label>Show Manufacturer&lt;/label>
+        &lt;image>ShowManufacturer.png&lt;/image>
+        &lt;type>TOGGLE&lt;/type>
+        &lt;context>Sapphire.EditorPage&lt;/context>
+        &lt;location>before:Sapphire.Outline.Hide&lt;/location>
+    &lt;/action>
+    &lt;action-handler>
+        &lt;action>Sample.ShowManufacturer&lt;/action>
+        &lt;id>Sample.ShowManufacturer&lt;/id>
+        &lt;impl>ShowManufacturerActionHandler&lt;/impl>
+    &lt;/action-handler>
+<font color="#888888">&lt;/editor-page></font></code></pre>
+
+<p style="margin-left: 20px;">Finally, the content outline node label for a catalog item is defined using an expression that reads
+the editor page state to determine whether to include the manufacturer in the label. The label automatically updates when any
+of the properties utilized in the expression are changed.</p>
+
+<pre class="source-code"><code><font color="#888888">&lt;node-factory>
+    &lt;property>Items&lt;/property>
+    &lt;case>
+        &lt;label></font>${ Name == null ? &quot;&lt;item&gt;&quot; : ( State().ShowManufacturer &amp;&amp; Manufacturer != null ? Concat( Manufacturer, &quot; &quot;, Name ) : Name ) }<font color="#888888">&lt;/label>
+    &lt;/case>
+&lt;/node-factory></font></code></pre>
+
+<p>Alternatively, custom state can be stored as arbitrary key-value pairs without extending the persistent state element.
+All of the system-provided state element types include an Attributes property for this purpose. To make it easier to
+work with the Attributes property, methods are provided to read and write attributes by name. These methods leverage
+<a href="../services/ConversionService.html">all conversions known to Sapphire</a>, so it is typically not necessary
+to manually convert the values to and from a string.</p>
+
+<p>This approach should only be used in situations when extending the persistent state element is not practical
+or possible. State stored as attributes is harder to access. For instance, unlike actual properties, attributes
+cannot be directly accessed from EL.</p>
+
+<p style="margin-left: 20px;"><b>Example</b></p>
+
+<p style="margin-left: 20px;">In the catalog sample, a toggle action controls whether the catalog items
+are color-coded by manufacturer. The state of this toggle is persisted as an attribute.</p>
+
+<pre class="source-code"><code>public final class ShowManufacturerColorActionHandler extends SapphireActionHandler 
+{
+    public static final String ATTRIBUTE = "ColorCode";
+
+    private CatalogEditorPageState state;
+
+    @Override
+    public void init( final SapphireAction action, final ActionHandlerDef def )
+    {
+        super.init( action, def );
+
+        this.state = (CatalogEditorPageState) getPart().nearest( SapphireEditorPagePart.class ).state();
+
+        final Listener listener = new FilteredListener&lt;PropertyContentEvent>()
+        {
+            @Override
+            protected void handleTypedEvent( final PropertyContentEvent event )
+            {
+                setChecked( ShowManufacturerColorActionHandler.this.state.getAttribute( ATTRIBUTE, false ) );
+            }
+        };
+
+        this.state.attach( listener, CatalogEditorPageState.PROP_ATTRIBUTES.getName() + "/*" );
+
+        setChecked( this.state.getAttribute( ATTRIBUTE, false ) );
+
+        attach
+        (
+            new FilteredListener&lt;DisposeEvent>()
+            {
+                @Override
+                protected void handleTypedEvent( final DisposeEvent event )
+                {
+                    ShowManufacturerColorActionHandler.this.state.detach( listener, CatalogEditorPageState.PROP_ATTRIBUTES.getName() + "/*" );
+                }
+            }
+        );
+    }
+
+    @Override
+    protected Object run( final SapphireRenderingContext context )
+    {
+        this.state.setAttribute( ATTRIBUTE, ! this.state.getAttribute( ATTRIBUTE, false ) );
+
+        return null;
+    }
+}</code></pre>
+
+<p style="margin-left: 20px;">The toggle action and its handler are defined in sdef.</p>
+
+<pre class="source-code"><code><font color="#888888">&lt;editor-page></font>
+    &lt;action>
+        &lt;id>Sample.ShowManufacturerColor&lt;/id>
+        &lt;label>Color Code Manufacturers&lt;/label>
+        &lt;image>ItemPurple.png&lt;/image>
+        &lt;type>TOGGLE&lt;/type>
+        &lt;context>Sapphire.EditorPage&lt;/context>
+        &lt;location>after:Sample.ShowManufacturer&lt;/location>
+        &lt;location>before:Sapphire.Outline.Hide&lt;/location>
+    &lt;/action>
+    &lt;action-handler>
+        &lt;action>Sample.ShowManufacturerColor&lt;/action>
+        &lt;id>Sample.ShowManufacturerColor&lt;/id>
+        &lt;impl>ShowManufacturerColorActionHandler&lt;/impl>
+    &lt;/action-handler>
+<font color="#888888">&lt;/editor-page></font></code></pre>
+
+<p style="margin-left: 20px;">A custom EL function is used to read the state attribute and to derive a color code item image
+based on the manufacturer.</p>
+
+<pre class="source-code"><code>public final class ItemImageFunction extends Function
+{
+    private final ImageData IMAGE_GENERIC = ImageData.createFromClassLoader( ItemImageFunction.class, "Item.png" );
+
+    private final ImageData[] IMAGES =
+    {
+        ImageData.createFromClassLoader( ItemImageFunction.class, "ItemBlue.png" ),
+        ImageData.createFromClassLoader( ItemImageFunction.class, "ItemGreen.png" ),
+        ImageData.createFromClassLoader( ItemImageFunction.class, "ItemOrange.png" ),
+        ImageData.createFromClassLoader( ItemImageFunction.class, "ItemPurple.png" ),
+        ImageData.createFromClassLoader( ItemImageFunction.class, "ItemRed.png" ),
+        ImageData.createFromClassLoader( ItemImageFunction.class, "ItemTurquoise.png" ),
+        ImageData.createFromClassLoader( ItemImageFunction.class, "ItemYellow.png" )
+    };
+
+    @Override
+    public String name()
+    {
+        return "CatalogItemImage";
+    }
+
+    @Override
+    public FunctionResult evaluate( final FunctionContext context )
+    {
+        if( context instanceof PartFunctionContext )
+        {
+            final SapphirePart part = ( (PartFunctionContext) context ).part();
+            final MasterDetailsEditorPagePart page = part.nearest( MasterDetailsEditorPagePart.class );
+
+            if( page != null )
+            {
+                final Element element = part.getLocalModelElement();
+
+                if( element instanceof Item )
+                {
+                    final Item item = (Item) element;
+                    final MasterDetailsEditorPageState state = page.state();
+
+                    return new FunctionResult( this, context )
+                    {
+                        private Listener listener;
+
+                        @Override
+                        protected void init()
+                        {
+                            this.listener = new FilteredListener&lt;PropertyContentEvent>()
+                            {
+                                @Override
+                                protected void handleTypedEvent( final PropertyContentEvent event )
+                                {
+                                    refresh();
+                                }
+                            };
+
+                            state.attach( this.listener, MasterDetailsEditorPageState.PROP_ATTRIBUTES.getName() + "/*" );
+                            element.attach( this.listener, Item.PROP_MANUFACTURER );
+                        }
+
+                        @Override
+                        protected Object evaluate()
+                        {
+                            final boolean color = state.getAttribute( ShowManufacturerColorActionHandler.ATTRIBUTE, false );
+
+                            if( color )
+                            {
+                                final String manufacturer = item.getManufacturer().getContent();
+                                final int hashCode = ( manufacturer == null ? 0 : manufacturer.hashCode() );
+                                final int index = abs( hashCode ) % IMAGES.length;
+
+                                return IMAGES[ index ];
+                            }
+                            else
+                            {
+                                return IMAGE_GENERIC;
+                            }
+                        }
+
+                        @Override
+                        public void dispose()
+                        {
+                            super.dispose();
+
+                            if( this.listener != null )
+                            {
+                                state.detach( this.listener, MasterDetailsEditorPageState.PROP_ATTRIBUTES.getName() + "/*" );
+                                element.detach( this.listener, Item.PROP_MANUFACTURER );
+
+                                this.listener = null;
+                            }
+                        }
+                    };
+                }
+            }
+        }
+
+        throw new FunctionException( "CatalogItemImage() function cannot be used in this context.");
+    }
+}</code></pre>
+
+<p style="margin-left: 20px;">The CatalogItemImage() function is registered as a Sapphire extension.</p>
+
+<pre class="source-code"><code><font color="#888888">&lt;extension></font>
+    &lt;function>
+        &lt;name>CatalogItemImage&lt;/name>
+        &lt;impl>org.eclipse.sapphire.samples.catalog.ItemImageFunction&lt;/impl>
+    &lt;/function>
+<font color="#888888">&lt;/extension></font></code></pre>
+
+<p style="margin-left: 20px;">Finally, the content outline node image for a catalog item is defined using a simple expression 
+that references the CatalogItemImage() function.</p>
+
+<pre class="source-code"><code><font color="#888888">&lt;node-factory>
+    &lt;property>Items&lt;/property>
+    &lt;case>
+        &lt;image></font>${ CatalogItemImage() }<font color="#888888">&lt;/image>
+    &lt;/case>
+&lt;/node-factory></font></code></pre>
+
+
+<div class="copyright">Copyright (c) 2016 Oracle<br/>
+Content made available under the terms of <a href="http://www.eclipse.org/legal/epl-v10.html">Eclipse Public License</a>.</div>
+
+</body>
+
+</html>

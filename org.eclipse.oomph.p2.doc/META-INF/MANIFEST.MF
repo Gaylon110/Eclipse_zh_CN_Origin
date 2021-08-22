@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.eclipse.oomph.p2.doc;singleton:=true
+Bundle-Version: 1.8.0.v20170318-0419
+Bundle-ClassPath: org.eclipse.oomph.p2.doc_1.8.0.v20170318-0419.jar
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Export-Package: org.eclipse.oomph.p2.doc;version="1.8.0";x-internal:=true,
+  org.eclipse.oomph.p2.doc.online;version="1.8.0";x-internal:=true,
+  org.eclipse.oomph.p2.doc.reference;version="1.8.0";x-internal:=true,
+  org.eclipse.oomph.p2.doc.reference.api;version="1.8.0";x-internal:=true,
+  org.eclipse.oomph.p2.doc.reference.schema;version="1.8.0";x-internal:=true
+Require-Bundle: org.eclipse.help;bundle-version="[3.3.0,4.0.0)";resolution:=optional,
+  org.eclipse.oomph.util.doc;bundle-version="[1.8.0,2.0.0)";resolution:=optional;visibility:=reexport,
+  org.eclipse.oomph.p2;bundle-version="[1.8.0,2.0.0)";resolution:=optional;visibility:=reexport,
+  org.eclipse.oomph.p2.core;bundle-version="[1.8.0,2.0.0)";resolution:=optional;visibility:=reexport,
+  org.eclipse.oomph.p2.edit;bundle-version="[1.8.0,2.0.0)";resolution:=optional;visibility:=reexport,
+  org.eclipse.oomph.p2.ui;bundle-version="[1.8.0,2.0.0)";resolution:=optional;visibility:=reexport
+Created-By: Apache Maven 3.0.5
+Archiver-Version: Plexus Archiver
+Build-Jdk: 1.8.0_121
+Eclipse-SourceReferences: scm:git:https://git.eclipse.org/r/p/oomph/org.eclipse.oomph.git;path="plugins/org.eclipse.oomph.p2.doc";commitId=2161405b80cf99ed791602ba56cdf44084f5ca43
+Built-By: genie.oomph
+Bundle-RequiredExecutionEnvironment: J2SE-1.5

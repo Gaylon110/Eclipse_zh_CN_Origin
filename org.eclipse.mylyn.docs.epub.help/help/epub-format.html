@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>epub-format</title><link type="text/css" rel="stylesheet" href="../book.css"/><style type="text/css">/*******************************************************************************
+ * Copyright (c) 2011, 2012 Torkild U. Resheim.
+ * 
+ * All rights reserved. This program and the accompanying materials are made
+ * available under the terms of the Eclipse Public License v2.0 which
+ * accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
+ * 
+ * Contributors: 
+ *     Torkild U. Resheim - initial API and implementation
+ *******************************************************************************/
+
+table, td, th {
+  border-color: gray; 
+  border-style: solid;
+}
+
+table {
+  width: 90%;
+  border-width: 0 0 1px 1px; 
+  border-spacing: 0; 
+  border-collapse: collapse;
+  padding: 1em;
+  }
+
+td, th {
+  margin: 0px; 
+  padding: 4px; 
+  border-width: 1px 1px 0 0; 
+  font-size: 0.9em;
+}
+
+pre {
+  margin: 0px;
+}
+
+th {
+  background-color: #c0c0c0;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+td {
+  background-color: #f0f0f0;
+}
+</style></head><body><h1 id="TheEPUBfileformat">The EPUB file format</h1><p>The <i>EPUB file format</i> is basically a ZIP-file with a defined set of contents. The first file in the container is a file by the ASCII name of &#8220;mimetype&#8221; which holds the MIME type for the ZIP container. This file must be treated a bit special as the contents are defined and the file must not be compressed, nor encrypted and there must be no extra fields in it&#8217;s ZIP header. </p><p>The EPUB also have a META-INF folder that contains a file named <i>container.xml</i>. This declares the format of the publication(s) and points to the main entry, which in most cases is <i>content.opf</i>. If there is a table of contents (<i>toc.ncx</i>) the main entry will point to it. </p><p><a href="http://idpf.org/epub/20/spec/OCF_2.0.1_draft.doc">The OCF (Open Container Format) specification</a> states that one can add multiple publications to one EPUB. For instance an OEBPS (aka EPUB) and one PDF. Or two OEBPS publications in different languages. While the current API does handle this &#8211; the Ant task or UI action does not. </p><p>The actual content of an EPUB version 2.0.1 formatted publication may be of the following OPS Core Media types:</p><ul><li>XHTML (but only with a subset of the full HTML element types).</li><li>Cascading Style Sheets (CSS) for styling of the publication.</li><li>Graphics in the form of SVG, PNG, GIF and JPEG formatted files.</li><li>Fonts as TTF or OTF.</li></ul><p>Other types may be used, but then a <i>fallback</i> item must be specified for reading systems that does not support the type. This tooling currently does not support the fallback mechanism.</p><p><img alt="Contents of a example EPUB container." title="Contents of a example EPUB container." border="0" src="Illustrations.002.jpg"/> </p><p>The illustration shows the contents of an example publication. The marked files and folders marked are ones created by the EPUB tooling.</p></body></html>

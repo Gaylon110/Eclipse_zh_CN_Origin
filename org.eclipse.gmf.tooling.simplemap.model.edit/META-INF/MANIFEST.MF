@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.eclipse.gmf.tooling.simplemap.model.edit;singleton:=true
+Bundle-Version: 1.0.0.201409171321
+Bundle-ClassPath: org.eclipse.gmf.tooling.simplemap.model.edit_1.0.0.201409171321.jar
+Bundle-Activator: org.eclipse.gmf.tooling.simplemap.simplemappings.provider.SimplemapEditPlugin$Implementation
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Export-Package: org.eclipse.gmf.tooling.simplemap.model.edit,
+  org.eclipse.gmf.tooling.simplemap.simplemappings.provider
+Require-Bundle: org.eclipse.gmf.tooling.simplemap.model;visibility:=reexport,
+  org.eclipse.gmf.graphdef.edit;visibility:=reexport,
+  org.eclipse.gmf.map.edit;visibility:=reexport,
+  org.eclipse.gmf.tooldef.edit;visibility:=reexport,
+  org.eclipse.core.runtime;bundle-version="3.7.0"
+Build-Jdk: 1.7.0_51
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Created-By: Apache Maven
+Built-By: genie.modeling.gmp.gmf-tooling
+Archiver-Version: Plexus Archiver

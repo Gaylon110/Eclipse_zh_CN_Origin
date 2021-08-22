@@ -1,0 +1,528 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.jdt.core.manipulation; singleton:=tru
+ e
+Built-By: genie.releng
+Require-Bundle: org.eclipse.core.runtime;bundle-version="[3.11.0,4.0.0
+ )",org.eclipse.core.resources;bundle-version="[3.5.0,4.0.0)",org.ecli
+ pse.ltk.core.refactoring;bundle-version="[3.6.0,4.0.0)",org.eclipse.j
+ dt.core;bundle-version="[3.8.0,4.0.0)",org.eclipse.core.expressions;b
+ undle-version="[3.4.100,4.0.0)",org.eclipse.text;bundle-version="[3.5
+ .0,4.0.0)",org.eclipse.jdt.launching;bundle-version="3.9.0"
+Bundle-ManifestVersion: 2
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/jdt/ec
+ lipse.jdt.ui.git;path="org.eclipse.jdt.core.manipulation";tag="M20180
+ 322-1030";commitId=41345b7261d20e1b7bd41693ed684d3371d992ad
+Bundle-Vendor: %providerName
+Import-Package: com.ibm.icu.text
+Export-Package: org.eclipse.jdt.core.manipulation,org.eclipse.jdt.core
+ .refactoring,org.eclipse.jdt.core.refactoring.descriptors,org.eclipse
+ .jdt.core.refactoring.participants,org.eclipse.jdt.internal.core.mani
+ pulation;x-internal:=true,org.eclipse.jdt.internal.core.manipulation.
+ dom;x-friends:="org.eclipse.jdt.ui",org.eclipse.jdt.internal.core.man
+ ipulation.search;x-friends:="org.eclipse.jdt.ui,org.eclipse.jdt.text.
+ tests",org.eclipse.jdt.internal.core.manipulation.util;x-friends:="or
+ g.eclipse.jdt.junit,org.eclipse.jdt.text.tests,org.eclipse.jdt.ui",or
+ g.eclipse.jdt.internal.core.refactoring.descriptors;x-friends:="org.e
+ clipse.jdt.ui",org.eclipse.jdt.internal.corext.dom;manipulation=split
+ ;mandatory:=manipulation;x-friends:="org.eclipse.jdt.ui,org.eclipse.j
+ dt.junit",org.eclipse.jdt.internal.corext.refactoring.changes;manipul
+ ation=split;mandatory:=manipulation;x-friends:="org.eclipse.jdt.ui.ex
+ amples.javafamily,org.eclipse.jdt.ui",org.eclipse.jdt.internal.corext
+ .refactoring.typeconstraints.types;manipulation=split;mandatory:=mani
+ pulation;x-friends:="org.eclipse.jdt.ui",org.eclipse.jdt.internal.cor
+ ext.refactoring.util;manipulation=split;mandatory:=manipulation;x-fri
+ ends:="org.eclipse.jdt.ui",org.eclipse.jdt.internal.corext.template.j
+ ava;manipulation=split;mandatory:=manipulation;x-friends:="org.eclips
+ e.jdt.ui",org.eclipse.jdt.internal.corext.util;manipulation=split;man
+ datory:=manipulation;x-friends:="org.eclipse.jdt.ui,org.eclipse.jdt.j
+ unit"
+Bundle-Name: %pluginName
+Bundle-Version: 1.9.100.v20180321-0831
+Bundle-Localization: plugin
+Bundle-Activator: org.eclipse.jdt.internal.core.manipulation.JavaManip
+ ulationPlugin
+Created-By: Apache Maven 3.3.3
+Build-Jdk: 1.8.0_162
+
+Name: plugin.xml
+SHA-256-Digest: H4CDpQ2j5f339/oHImFKw4u8imal/bWj++dEi13i8uE=
+
+Name: org/eclipse/jdt/internal/corext/dom/ASTNodes$3.class
+SHA-256-Digest: fZ4JmzjG3Bggy60LSIUco8hX3WdQ6TvJvVn6qwpn660=
+
+Name: org/eclipse/jdt/internal/core/manipulation/JavaManipulationMessa
+ ges.class
+SHA-256-Digest: xdxodI0pIAbqRUHYI9FTeFdklhPV+gQ4qRFythB+Cyo=
+
+Name: org/eclipse/jdt/internal/corext/dom/IASTSharedValues.class
+SHA-256-Digest: QdhgGvmwMkjP+1xdFxclylNGM4mbwV++0VERhvuZkYU=
+
+Name: org/eclipse/jdt/core/refactoring/CompilationUnitChange.class
+SHA-256-Digest: F6VaBICRgFvfyO0MVA8CmZ/CzhL8zhiL3u9UhnthlBk=
+
+Name: org/eclipse/jdt/internal/corext/refactoring/typeconstraints/type
+ s/AbstractTypeVariable.class
+SHA-256-Digest: oZOcTDzXP0btmKsHUtQ0dG3fpb5jhzG0/YClV2XlY3Q=
+
+Name: org/eclipse/jdt/core/refactoring/descriptors/ConvertLocalVariabl
+ eDescriptor.class
+SHA-256-Digest: Xxx+ocQojbGAyHOwa5QORj4HQEGZkcQbRV3i8jxL8Ew=
+
+Name: org/eclipse/jdt/core/refactoring/descriptors/IntroduceParameterD
+ escriptor.class
+SHA-256-Digest: OOilZOpRggOt8UsbxBngUz6MibowOBAPT+FpzGISDEw=
+
+Name: org/eclipse/jdt/internal/corext/dom/ASTNodes$ChildrenCollector.c
+ lass
+SHA-256-Digest: wWpysQyrdTp37fmze0APorDcnAttrMgjFP6mAwXbiwc=
+
+Name: org/eclipse/jdt/internal/core/refactoring/descriptors/RenameReso
+ urceRefactoringContribution.class
+SHA-256-Digest: EHW8TBw+680yRjRqlyeucZkm3EdWCKRoz1XthoTI0QE=
+
+Name: org/eclipse/jdt/core/manipulation/JavaManipulation.class
+SHA-256-Digest: sIBQ2yVtsMiUoNlEE0vGpcmYULJhwyVsc34AaQWE5HQ=
+
+Name: org/eclipse/jdt/internal/corext/util/CodeFormatterUtil.class
+SHA-256-Digest: Lu+9aKlgjxQH6t5LLPJb2xWGA3kVK/K+1ud1AUxsm6U=
+
+Name: org/eclipse/jdt/internal/corext/dom/ASTNodes$AmbiguousTargetMeth
+ odAnalyzer.class
+SHA-256-Digest: H0PiyaXh5XPpk+0ucl7514mYgdYnGeuP596WdQPdab0=
+
+Name: org/eclipse/jdt/internal/core/refactoring/descriptors/Refactorin
+ gSignatureDescriptorFactory.class
+SHA-256-Digest: mIEngT0ANJ3i18Bln3uUJm9tylyJigCanZ3SfoAAZIY=
+
+Name: org/eclipse/jdt/internal/corext/dom/ScopeAnalyzer$ScopeAnalyzerV
+ isitor.class
+SHA-256-Digest: lybcRxw+Umub7U9/0PWyj20ZfCcmvzK+rh6/A8Th/co=
+
+Name: .api_description
+SHA-256-Digest: aBCT4goFDQ3ZNKjpEbbKeuPRY7VDCCrEkVsX0qhnZPA=
+
+Name: org/eclipse/jdt/core/refactoring/UndoCompilationUnitChange.class
+SHA-256-Digest: QDCwguNiIVWXhAPH4I8x0M45feR3n4Y8J9KPLMoribA=
+
+Name: org/eclipse/jdt/internal/corext/refactoring/typeconstraints/type
+ s/TypeEnvironment$2.class
+SHA-256-Digest: tGvdXigiQaACZkV8XACQxg54+Yw8fpSD8F+yQjka/rQ=
+
+Name: org/eclipse/jdt/core/refactoring/descriptors/RenameJavaElementDe
+ scriptor.class
+SHA-256-Digest: 6TxrEc5iuHN8k4nYqSx0TVVMCSJawS7qkG24CtNG6Ho=
+
+Name: org/eclipse/jdt/core/refactoring/descriptors/RenameResourceDescr
+ iptor.class
+SHA-256-Digest: tUma0EwNcj/zCHzreI4fzYYPfk7ADwhqJmbgHE6/ja0=
+
+Name: org/eclipse/jdt/internal/corext/dom/GenericVisitor.class
+SHA-256-Digest: sa+BVjOn4DOshZaNFKcw+dxSzGmeoFrdn9vHXsQ+U/w=
+
+Name: org/eclipse/jdt/internal/corext/refactoring/typeconstraints/type
+ s/RawType.class
+SHA-256-Digest: My1YAjfqJjitenbMZuLjeESHBBwD1bIkut1A5d0vgBM=
+
+Name: org/eclipse/jdt/internal/corext/dom/ScopeAnalyzer$DeclarationsAf
+ terVisitor.class
+SHA-256-Digest: rEB5sBDrfh8ZMpp9XkvyFmPmP/SdPYRTeVZtCII2tt0=
+
+Name: org/eclipse/jdt/core/refactoring/descriptors/ExtractConstantDesc
+ riptor.class
+SHA-256-Digest: UojbdLMoFkUue+9yjsM56T4wM3NiwzjUWY/g/RelODM=
+
+Name: org/eclipse/jdt/core/refactoring/descriptors/ExtractSuperclassDe
+ scriptor.class
+SHA-256-Digest: vwC1VQddZs0vQOU/1HbpFw6OUIocbxnffjzC6tSnIMU=
+
+Name: org/eclipse/jdt/core/refactoring/descriptors/PushDownDescriptor.
+ class
+SHA-256-Digest: F81HcE4yiTG5zA7FUe+JMLBxdSa8/Ch+HsPhTyZsIcw=
+
+Name: org/eclipse/jdt/core/refactoring/descriptors/ExtractClassDescrip
+ tor$Field.class
+SHA-256-Digest: sYBcI+MrbozM4eOotdQ8ATMeNVw+c/166LY+zbF2hak=
+
+Name: org/eclipse/jdt/core/refactoring/descriptors/ConvertAnonymousDes
+ criptor.class
+SHA-256-Digest: Fs/DDnuGF4Dhs5HfgmxBJN+pUlwh9Yfs/MEjEjXSSf8=
+
+Name: org/eclipse/jdt/internal/corext/refactoring/typeconstraints/type
+ s/WildcardType.class
+SHA-256-Digest: prkR2jL+bwt1t/tuiWGyA841075V14Iq74Eu+bOu8xw=
+
+Name: org/eclipse/jdt/internal/corext/util/LRUMap.class
+SHA-256-Digest: P79C4P2/3LuODXY6WNpyN02qrF5i0+eftdPpbIuHe3c=
+
+Name: org/eclipse/jdt/internal/corext/util/MethodOverrideTester.class
+SHA-256-Digest: JMx7ART7h6MJbMIPnjEbjKe49chOkGnZz4SnNfYN5Dc=
+
+Name: org/eclipse/jdt/internal/corext/refactoring/typeconstraints/type
+ s/HierarchyType.class
+SHA-256-Digest: R5Z6veFZ+a7e+s8Wb8P65TQ26y68Bc+UBtCmaV3mMBU=
+
+Name: org/eclipse/jdt/internal/core/manipulation/search/SearchMessages
+ .properties
+SHA-256-Digest: 6YJ+IUdB48aoBY936G4SFgd7fdUvfGLZfyj7oDxGOT0=
+
+Name: org/eclipse/jdt/internal/corext/refactoring/changes/TextChangeCo
+ mpatibility.class
+SHA-256-Digest: 9D7i+60uULN6cViloruBQPXAe4WrzQm/8WKAfXJL3aA=
+
+Name: org/eclipse/jdt/core/refactoring/descriptors/PullUpDescriptor.cl
+ ass
+SHA-256-Digest: smo571SnRnvCvCyKsC/dHUyQpshUnrLWph58KmLquZY=
+
+Name: org/eclipse/jdt/internal/corext/refactoring/util/TextEditUtil.cl
+ ass
+SHA-256-Digest: UyZ5lST+TVBhHMTdfaIXCc7Ke8aCus3VIATgoJlF/mA=
+
+Name: org/eclipse/jdt/core/refactoring/descriptors/ChangeMethodSignatu
+ reDescriptor.class
+SHA-256-Digest: tK9flTd4qT3Kl/J+ZcDpqZMLiFqLvCBN5SzcXfbtR9k=
+
+Name: org/eclipse/jdt/internal/core/refactoring/descriptors/JavaRefact
+ oringDescriptorUtil.class
+SHA-256-Digest: 1YQ8F1O+KEj8BEp5Z1l1mQdREFBSDTG5Cd3HimZIFW0=
+
+Name: org/eclipse/jdt/internal/core/manipulation/util/BasicElementLabe
+ ls.class
+SHA-256-Digest: 2rDPsXQESq6D+xSvI/QzpGFouwBZ4ez5rP+/EFd/seI=
+
+Name: .options
+SHA-256-Digest: QEcAr59G+QuXBalXgmxTMbbYQ3s42GXIM3jF2nyVWu4=
+
+Name: org/eclipse/jdt/internal/corext/dom/ASTNodes$1.class
+SHA-256-Digest: Blke0qYrt/YQwMxMWZdV/WDYzqGTPDkKGt0bnuIO1EE=
+
+Name: org/eclipse/jdt/core/refactoring/descriptors/EncapsulateFieldDes
+ criptor.class
+SHA-256-Digest: 7x2RT+c8SRpFPWMypGsYdzLPul8lrogQO6H8ldcpCQk=
+
+Name: org/eclipse/jdt/core/refactoring/participants/ChangeMethodSignat
+ ureArguments$ThrownException.class
+SHA-256-Digest: KytVxlEbad1SHTBvrGGewTtdhqSHQ2+gwBKamauuxuM=
+
+Name: org/eclipse/jdt/core/refactoring/descriptors/ExtractMethodDescri
+ ptor.class
+SHA-256-Digest: srMnNTrUn4+pclOiLY1JkX9dJdeRT/WaazmDkEF8KdI=
+
+Name: org/eclipse/jdt/internal/corext/refactoring/typeconstraints/type
+ s/ArrayType.class
+SHA-256-Digest: CYVUDd2h1qSYxQfrYD+ly9QVoAXvWU73GYXQXIg9cYQ=
+
+Name: org/eclipse/jdt/internal/corext/dom/HierarchicalASTVisitor.class
+SHA-256-Digest: nul1XUAV2DVsCmslpjMbLCy5cwls3ipo1UvxC3UROP4=
+
+Name: org/eclipse/jdt/internal/corext/refactoring/typeconstraints/type
+ s/ExtendsWildcardType.class
+SHA-256-Digest: BwFgREkEOruO6J1W4AVpeyaKfo33qwpt+HHU1CoZNjk=
+
+Name: org/eclipse/jdt/internal/corext/refactoring/typeconstraints/type
+ s/PrimitiveType.class
+SHA-256-Digest: gRVu5khp+eJTfzKXbNUedylkzfiMDiY4BCjE6dp/0vc=
+
+Name: org/eclipse/jdt/internal/core/manipulation/JavaManipulationPlugi
+ n.class
+SHA-256-Digest: NNOeRwmOH2iWqjJxQyi6z8Ht+RC08mkcXt98XdEHRAg=
+
+Name: org/eclipse/jdt/internal/core/manipulation/dom/ASTResolving$AllB
+ indingsVisitor.class
+SHA-256-Digest: 2O3VPQq945sV5NjDOtFPtB/ezK94r/uAwCHXbwY6Jl8=
+
+Name: org/eclipse/jdt/core/refactoring/descriptors/ConvertMemberTypeDe
+ scriptor.class
+SHA-256-Digest: sUbhYirBtlTSlLkJqdoglmxtxc3UjPy6qd6YchoSRQs=
+
+Name: org/eclipse/jdt/internal/corext/dom/ScopeAnalyzer$SearchRequesto
+ r.class
+SHA-256-Digest: JRXDKOL9sh04q6paIOAQklN9EsaNYImjjmxcNWiR25o=
+
+Name: org/eclipse/jdt/internal/corext/dom/ASTFlattener.class
+SHA-256-Digest: SS2Ee6wUZ5JlbTYtmOjfAym4W0BgbCLonKCzyUXAiv4=
+
+Name: org/eclipse/jdt/internal/corext/refactoring/typeconstraints/type
+ s/TypeEnvironment$ProjectKeyPair.class
+SHA-256-Digest: Wkja2c+STjGGKe4IXXxBWRyE0f9XoN9XMmqg5+epCSg=
+
+Name: org/eclipse/jdt/internal/core/manipulation/dom/ASTResolving$AllB
+ indingsVisitor$VisitCancelledException.class
+SHA-256-Digest: xh0+7NDGpiVkD+nQmHa8ShSH+b3KuEXbgBOTjmAdBVQ=
+
+Name: org/eclipse/jdt/internal/corext/dom/ASTNodes$2.class
+SHA-256-Digest: JhkkYdDGnx1//ZwkSJzj15EvjYsfg/Pqw9IGBRLCZVM=
+
+Name: org/eclipse/jdt/internal/core/manipulation/dom/ASTResolving$1.cl
+ ass
+SHA-256-Digest: qZn/UZoTdnpI3hP1U2z3YHqXNCaCxy5WQ2uNjAKoSUM=
+
+Name: org/eclipse/jdt/internal/corext/dom/ScopeAnalyzer$DefaultBinding
+ Requestor.class
+SHA-256-Digest: q9Iv9xv1d6eMPMQIrDhZvZaJuK+YIxZ5ra480KNeqJA=
+
+Name: org/eclipse/jdt/internal/corext/dom/Bindings.class
+SHA-256-Digest: VPfjsoGduFPS1oeEP/XPL0eH/Wfbzb6STF14DULtR+M=
+
+Name: org/eclipse/jdt/internal/corext/refactoring/typeconstraints/type
+ s/SuperWildcardType.class
+SHA-256-Digest: MV0/VtqXwjpQrkizAs+jBbFzVTMPzHZX/6s/tYZAjGQ=
+
+Name: org/eclipse/jdt/core/refactoring/descriptors/JavaRefactoringCont
+ ribution.class
+SHA-256-Digest: eKTSDGntmKJkhgnWT+7Ta1W89EZ7nX2K3ywMkH294QY=
+
+Name: org/eclipse/jdt/internal/corext/util/MethodOverrideTester$Substi
+ tutions.class
+SHA-256-Digest: 0YjRtPjhpB3ifUkS/Me2btY4rYDFi8AxJx5b508EUKk=
+
+Name: org/eclipse/jdt/core/refactoring/descriptors/DeleteDescriptor.cl
+ ass
+SHA-256-Digest: fgW0y3CO5BvgNp0+dxMSh9w292PNWM8DzvLj9krssp4=
+
+Name: org/eclipse/jdt/internal/corext/util/SuperTypeHierarchyCache$Hie
+ rarchyCacheEntry.class
+SHA-256-Digest: eiMr2v7+280xx6wL/Uvgwd+49Yvd00uCYTlXfocv8v4=
+
+Name: org/eclipse/jdt/internal/corext/refactoring/typeconstraints/type
+ s/UnboundWildcardType.class
+SHA-256-Digest: IVrfIvqCUq+duhEdHN7vs1qAfl/CKKbpWbehLVaKCno=
+
+Name: org/eclipse/jdt/internal/corext/util/JdtFlags.class
+SHA-256-Digest: MVZwgdvAmTQEjPdBHIi9uig7UcW/PYCV3GsvJb9OTP8=
+
+Name: org/eclipse/jdt/internal/core/manipulation/dom/ASTResolving.clas
+ s
+SHA-256-Digest: ElD9VH5lEI9A+QBkZFczPgweb9DE9b1sXt1eQbQA6GY=
+
+Name: org/eclipse/jdt/internal/corext/dom/TypeBindingVisitor.class
+SHA-256-Digest: bLjQvct1M6dzKlelJ/RJLpFOqkmcBkMAojBB9Sx8GEo=
+
+Name: org/eclipse/jdt/internal/corext/refactoring/typeconstraints/type
+ s/VoidType.class
+SHA-256-Digest: FoqvFrt7jbzAO1sb5i8Ch9HH9l/t59BHnjBdOLNMAJo=
+
+Name: org/eclipse/jdt/core/refactoring/descriptors/MoveDescriptor.clas
+ s
+SHA-256-Digest: EWDi3Qvrjl9vlWjUpfsdZHSXFzply1Aeez50zf3gENw=
+
+Name: org/eclipse/jdt/internal/corext/util/JavaModelUtil.class
+SHA-256-Digest: 11jY6K9ELGhpZj8g9hJQ4+fc2NKHf/OtJkgXZfzlJRA=
+
+Name: org/eclipse/jdt/internal/corext/util/SuperTypeHierarchyCache.cla
+ ss
+SHA-256-Digest: YAarx5UX3OSDp6fv4e5wdz2uNFu7bGWvnhi7jF51B8A=
+
+Name: org/eclipse/jdt/internal/core/manipulation/search/IOccurrencesFi
+ nder.class
+SHA-256-Digest: +esYuELHfWmR1nw8GI+fxsZQBfkthpZX4y7QLUPELh4=
+
+Name: org/eclipse/jdt/internal/core/manipulation/Messages.class
+SHA-256-Digest: 8c2iIqTYW4RC+4P5pIQkQmRiIBxwnIrgJspjsDDP/FQ=
+
+Name: plugin.properties
+SHA-256-Digest: qOUFbK24e5DVgrXAcDrBQHnPF/lIWF/iyc0qe9UaWwo=
+
+Name: org/eclipse/jdt/core/refactoring/RenameTypeArguments.class
+SHA-256-Digest: FOFFbyHnzW4c6GrH+ZOq0XI3Ie1FM9sI/ijKhGBGX1M=
+
+Name: org/eclipse/jdt/core/refactoring/descriptors/IntroduceFactoryDes
+ criptor.class
+SHA-256-Digest: HElBMu8/TxSVRVgqwvYC1WpT+H+tJ4P65B6dDNskHAM=
+
+Name: org/eclipse/jdt/internal/core/manipulation/search/IOccurrencesFi
+ nder$OccurrenceLocation.class
+SHA-256-Digest: BnxLyHuxofIQwb9yiH1q2o8++F36aEDJIZVpPLKkfdI=
+
+Name: org/eclipse/jdt/core/refactoring/descriptors/ExtractClassDescrip
+ tor.class
+SHA-256-Digest: sUdmFcPP3xEPG16iviH9T5PuYQHGZHZ9+1MlQHtaWvw=
+
+Name: org/eclipse/jdt/internal/corext/dom/ScopeAnalyzer.class
+SHA-256-Digest: EQa+beYlZ+YgLBvQQmgsyOEOMCPMzc0joV95jjw1o88=
+
+Name: org/eclipse/jdt/internal/corext/refactoring/typeconstraints/type
+ s/NullType.class
+SHA-256-Digest: qs3UfEyvqOZ3JXlRjI0y1fLwCScq1L9+P7K6QbMmQps=
+
+Name: org/eclipse/jdt/internal/corext/refactoring/typeconstraints/type
+ s/ParameterizedType.class
+SHA-256-Digest: H5XGJhXEDg3tBH6dMy53IK8Uhs4ZGf8ygBW2Yj2uJLU=
+
+Name: org/eclipse/jdt/core/refactoring/descriptors/IntroduceParameterO
+ bjectDescriptor.class
+SHA-256-Digest: rBtLf7+DVry6VmdtrWHpWyjlm/+CCh+VoHHJxakKY9Y=
+
+Name: org/eclipse/jdt/core/refactoring/descriptors/InlineMethodDescrip
+ tor.class
+SHA-256-Digest: M+43OBq/gUfzapDqzjCCrAlSOuMnZFWhtKVNyg5snEI=
+
+Name: org/eclipse/jdt/internal/corext/template/java/SignatureUtil.clas
+ s
+SHA-256-Digest: mfNLCHgAeVyheO+gkXns5wcyNKpn+kurf01iOxlGYZY=
+
+Name: org/eclipse/jdt/internal/corext/refactoring/typeconstraints/type
+ s/TypeEnvironment.class
+SHA-256-Digest: appWkgNM8NQL3bIthCLDcZROLxoj08kjnx/fxNWwQ3A=
+
+Name: org/eclipse/jdt/core/refactoring/descriptors/UseSupertypeDescrip
+ tor.class
+SHA-256-Digest: anpH2k1DOm8t+v1ODnx5Q5LV8qUdPmyNkrWmtscwra4=
+
+Name: org/eclipse/jdt/core/refactoring/descriptors/InferTypeArgumentsD
+ escriptor.class
+SHA-256-Digest: M9EfBb70reSXA6wrmc4gBTDI4go6jaN9ucFjWuqKBMw=
+
+Name: org/eclipse/jdt/internal/core/refactoring/descriptors/Descriptor
+ Messages.class
+SHA-256-Digest: jaZvOftVj5Ono4/hWSjIo2qBXEwy69I50uITCufBq5E=
+
+Name: org/eclipse/jdt/internal/corext/dom/ScopeAnalyzer$IBindingReques
+ tor.class
+SHA-256-Digest: OqG1YdKhmugVU4RixXg5Z6H+SWS+pA8XWeH2xtUWCSI=
+
+Name: org/eclipse/jdt/core/refactoring/descriptors/GeneralizeTypeDescr
+ iptor.class
+SHA-256-Digest: 86h2ZCY5k+DwfDQhicOPuPbx8rWsESgFRLkOgS1x62s=
+
+Name: org/eclipse/jdt/internal/corext/refactoring/typeconstraints/type
+ s/TypeTuple.class
+SHA-256-Digest: k7UrazhbC9J+DMSzWXkDHiWkFfQY5ueyVC4XouDq1yk=
+
+Name: org/eclipse/jdt/core/refactoring/descriptors/CopyDescriptor.clas
+ s
+SHA-256-Digest: waws3M01z1qzck/AuR/bGDlUHFqdDUkvfs9ynwk5uw8=
+
+Name: org/eclipse/jdt/core/refactoring/descriptors/RenameLocalVariable
+ Descriptor.class
+SHA-256-Digest: Vn+fB1Ig19ZKi4TGmxgvaOC+fpmv7Sj3bWAhtREm7/U=
+
+Name: org/eclipse/jdt/internal/corext/refactoring/typeconstraints/type
+ s/GenericType.class
+SHA-256-Digest: GqbtGYLLkbrDDmBpkJtGzGTJyKdgM7kcoaGjPkCFyO4=
+
+Name: org/eclipse/jdt/core/refactoring/descriptors/MoveMethodDescripto
+ r.class
+SHA-256-Digest: bZWiPRUl2PIFWBts08iLr6/Yqfy8+n/XX2xE1zH3Abk=
+
+Name: org/eclipse/jdt/core/refactoring/descriptors/ExtractLocalDescrip
+ tor.class
+SHA-256-Digest: +TOg16igAtekgTcsPN7gYjearVojllII91npgtiXsVE=
+
+Name: org/eclipse/jdt/internal/core/refactoring/descriptors/Descriptor
+ Messages.properties
+SHA-256-Digest: y5ps4h2BfLb8lXzZmMwlh68zO5uHrMNU9dV5cbyNumg=
+
+Name: org/eclipse/jdt/internal/core/manipulation/JavaManipulationMessa
+ ges.properties
+SHA-256-Digest: rOrdgoj32Suj4C7jMaRd65AuOEUpbH4FxOmL0qJhLAE=
+
+Name: org/eclipse/jdt/core/refactoring/participants/ChangeMethodSignat
+ ureArguments$Parameter.class
+SHA-256-Digest: +mUg84ehlwjS5SZov2UujKqhFvufgzSX78B4Mv2ohzs=
+
+Name: org/eclipse/jdt/core/refactoring/IJavaRefactorings.class
+SHA-256-Digest: gKJZFitcS06qnPhLVqjUP5oP8ULHMqDZBGENPwAYlqI=
+
+Name: org/eclipse/jdt/core/refactoring/descriptors/IntroduceIndirectio
+ nDescriptor.class
+SHA-256-Digest: TJxQs5MnnknxXUIwz7+s2rD7T9bpvl8b1p7fTmo3E/g=
+
+Name: org/eclipse/jdt/internal/corext/dom/ASTNodes.class
+SHA-256-Digest: GM1mt0TtMBCxfK+j7nhJMz6CwTImnq6IvwoQmoOGEOE=
+
+Name: org/eclipse/jdt/core/refactoring/IJavaElementMapper.class
+SHA-256-Digest: nFL88A0FhNdL6+62r9BEBSkYgInE0ic5i7/e9ivjQXU=
+
+Name: org/eclipse/jdt/internal/corext/refactoring/typeconstraints/type
+ s/StandardType.class
+SHA-256-Digest: mYbP988u05GXLekgfDMFRmqtzFvpPo83m601xEg7pU8=
+
+Name: org/eclipse/jdt/core/refactoring/participants/ChangeMethodSignat
+ ureArguments.class
+SHA-256-Digest: ZmRDFhWWdxq4tQPtvZU2ecNy0zSzMig84SRx/s07df4=
+
+Name: org/eclipse/jdt/internal/corext/refactoring/typeconstraints/type
+ s/TType.class
+SHA-256-Digest: YKiPhDLB7hbDbFW+G8VfqK2w+eMZGNvNhM4gWEOL3oQ=
+
+Name: org/eclipse/jdt/internal/core/manipulation/IStatusConstants.clas
+ s
+SHA-256-Digest: Otq7u1P9+0xKbOuEjCT3LjijOS/7hJSmmKH7LzwiKsc=
+
+Name: org/eclipse/jdt/core/refactoring/participants/ChangeMethodSignat
+ ureParticipant.class
+SHA-256-Digest: o9gJehGVP5PDMdWsmI3fROThDofMIR0t1Hmi5tRfdRU=
+
+Name: org/eclipse/jdt/core/refactoring/participants/JavaParticipantMan
+ ager.class
+SHA-256-Digest: 7RtYOqCkLhwIszKmuyXDQYDQ/BoQx4M0I0DppC2Yxpw=
+
+Name: about.html
+SHA-256-Digest: 0RM1x9lTJa7T8YkysaegPuBIeaEvSZypRDfXoMpsJAU=
+
+Name: org/eclipse/jdt/internal/corext/dom/ASTNodes$4.class
+SHA-256-Digest: i9D6CSVtbVuYMmfIhRMYMOSzg+zmoJGJ6YRSguFJZGI=
+
+Name: org/eclipse/jdt/internal/core/manipulation/util/Strings.class
+SHA-256-Digest: h0MpuzcyUKiCtU1L17g/VAj3iM+5a4LqodxudiD5cls=
+
+Name: org/eclipse/jdt/core/refactoring/descriptors/MoveStaticMembersDe
+ scriptor.class
+SHA-256-Digest: qF3ddLFL13C7MV0NgNBaqd/a2SIan1+xj3Bc070DmUA=
+
+Name: org/eclipse/jdt/core/refactoring/descriptors/ExtractInterfaceDes
+ criptor.class
+SHA-256-Digest: FcjAiYXHETCd3Tvue55KCwjBs/2TPKpcakQ40yaGpCI=
+
+Name: org/eclipse/jdt/internal/corext/dom/TypeRules.class
+SHA-256-Digest: d4PBmYfrch+6qePoAm5i8qP0Bb6eyZY87FDWh6aeLqU=
+
+Name: org/eclipse/jdt/core/refactoring/descriptors/IntroduceParameterO
+ bjectDescriptor$Parameter.class
+SHA-256-Digest: fa2QfURDV+3jRUobztcdpBZ6FOISFHCxVT2MlntQvVM=
+
+Name: org/eclipse/jdt/internal/corext/dom/TokenScanner.class
+SHA-256-Digest: zNe8scAhYiaUqosvySDg/PeQvP3KDeIoRriQaaEx6xQ=
+
+Name: org/eclipse/jdt/internal/core/manipulation/search/OccurrencesFin
+ der.class
+SHA-256-Digest: iqdrHALCjOW/2e3Xc3rRc/0bqMFdYi5FlXVHsikFUrc=
+
+Name: org/eclipse/jdt/internal/core/manipulation/search/SearchMessages
+ .class
+SHA-256-Digest: gOsfoxzA2JKj+uDyceIL3HHTKIXHiDEaD2RNOH+r/Hw=
+
+Name: org/eclipse/jdt/core/refactoring/descriptors/InlineLocalVariable
+ Descriptor.class
+SHA-256-Digest: c98jXcrxh2BGeFmt1DGvf/9oqAd1QlVI0N6XtOSJogI=
+
+Name: org/eclipse/jdt/internal/corext/refactoring/typeconstraints/type
+ s/TypeEnvironment$1.class
+SHA-256-Digest: HrJUGZTmX1NvHJBSkC9g5++DYYf8f3VUgn8wXNimZpE=
+
+Name: org/eclipse/jdt/internal/corext/refactoring/typeconstraints/type
+ s/TypeVariable.class
+SHA-256-Digest: boRbue1FH9eV6A2Egs59YAXHxQwrbcoCQNpNBQ8aWAY=
+
+Name: org/eclipse/jdt/core/refactoring/descriptors/InlineConstantDescr
+ iptor.class
+SHA-256-Digest: kmunIfOFicj49OX/toBOFwpOP8X2g6WvlyGyvTmFKMo=
+
+Name: org/eclipse/jdt/core/refactoring/participants/IRefactoringProces
+ sorIds.class
+SHA-256-Digest: 7GujvShbsww2ob3WmiAPdxVcnSoLOQog+fTrKPFqCHA=
+
+Name: org/eclipse/jdt/internal/corext/refactoring/typeconstraints/type
+ s/CaptureType.class
+SHA-256-Digest: NnwLFXzJJ6Qv9RartsHALVxRSTXx/wwOcK6l2Fx02QM=
+
+Name: org/eclipse/jdt/internal/core/manipulation/JavaElementPropertyTe
+ ster.class
+SHA-256-Digest: 49N5N49JGzjuVUPJNrLOkX8xt/et8OeI9ED7UtJjSiw=
+
+Name: org/eclipse/jdt/core/refactoring/descriptors/JavaRefactoringDesc
+ riptor.class
+SHA-256-Digest: OQnN8r8fCXB07wH6I3caWgxeA0oJFkksYbdCvotc4Js=
+

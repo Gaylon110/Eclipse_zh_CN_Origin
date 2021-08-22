@@ -1,0 +1,1500 @@
+Manifest-Version: 1.0
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-SymbolicName: org.eclipse.ocl.examples.codegen;singleton:=true
+Require-Bundle: org.eclipse.core.resources;bundle-version="[3.5.0,4.0.
+ 0)",org.eclipse.core.runtime;bundle-version="[3.5.0,4.0.0)",org.eclip
+ se.jdt.core;bundle-version="[3.11.0,4.0.0)",org.eclipse.emf.codegen.e
+ core;bundle-version="[2.8.0,3.0.0)";visibility:=reexport,org.eclipse.
+ uml2.codegen.ecore;bundle-version="[1.7.0,3.0.0)",org.eclipse.xtext.u
+ til;bundle-version="[2.4.0,3.0.0)",org.eclipse.ocl.pivot;bundle-versi
+ on="[1.1.0,2.0.0)";visibility:=reexport,org.objectweb.asm;bundle-vers
+ ion="[5.0.0,7.0.0)"
+Bundle-Version: 2.3.0.v20170523-1004
+Export-Package: org.eclipse.ocl.examples.codegen,org.eclipse.ocl.examp
+ les.codegen.analyzer,org.eclipse.ocl.examples.codegen.cgmodel,org.ecl
+ ipse.ocl.examples.codegen.cgmodel.impl,org.eclipse.ocl.examples.codeg
+ en.cgmodel.util,org.eclipse.ocl.examples.codegen.common,org.eclipse.o
+ cl.examples.codegen.cse,org.eclipse.ocl.examples.codegen.dynamic,org.
+ eclipse.ocl.examples.codegen.generator,org.eclipse.ocl.examples.codeg
+ en.java,org.eclipse.ocl.examples.codegen.java.iteration,org.eclipse.o
+ cl.examples.codegen.java.types,org.eclipse.ocl.examples.codegen.libra
+ ry,org.eclipse.ocl.examples.codegen.oclinecore,org.eclipse.ocl.exampl
+ es.codegen.oclinjunit,org.eclipse.ocl.examples.codegen.utilities
+Bundle-ClassPath: .
+Ant-Version: Apache Ant 1.9.4
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: %providerName
+Bundle-Name: %pluginName
+Created-By: 1.8.0_121-b13 (Oracle Corporation)
+Bundle-ManifestVersion: 2
+Import-Package: com.google.common.collect,org.apache.log4j;version="[1
+ .2.15,2.0.0)"
+
+Name: org/eclipse/ocl/examples/codegen/java/types/EnumerationObjectDes
+ criptor.class
+SHA1-Digest: YlRirmb57PB4yh8Ortyu0DgEGfo=
+
+Name: org/eclipse/ocl/examples/codegen/java/Iteration2Java.class
+SHA1-Digest: VA6EO4vSIVyrvreaF6s5tWZr2FE=
+
+Name: org/eclipse/ocl/examples/codegen/analyzer/AS2CGVisitor$Variables
+ .class
+SHA1-Digest: I3GIuLEsmpfO0TpKwDw+C5Ba82I=
+
+Name: org/eclipse/ocl/examples/codegen/utilities/EquivalenceUtil.class
+SHA1-Digest: aaVLAEjW4No/azW1hUeYAV6CTao=
+
+Name: org/eclipse/ocl/examples/codegen/cse/LetPlaces$InPlace.class
+SHA1-Digest: 0WxBMcRJ8GUxXUwovYVy+kN8KSk=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGClassImpl$1.clas
+ s
+SHA1-Digest: /NPi/jwEAo3lUeXSBilkiyvc0fQ=
+
+Name: org/eclipse/ocl/examples/codegen/generator/LocalContext.class
+SHA1-Digest: Q5h4hvxAscqddipXnC2Rrvgc+8I=
+
+Name: org/eclipse/ocl/examples/codegen/java/types/BooleanPrimitiveDesc
+ riptor.class
+SHA1-Digest: GsVRpGIt99SuPrpzLihtJtuxMOU=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGIfExp.class
+SHA1-Digest: 5XahjRm9LRTGox1ZrdK54cx3MpI=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGTypeExp.class
+SHA1-Digest: ZSV9fZ7/u00cP9PWV5KEIlRJDKc=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGFinalVariableImp
+ l.class
+SHA1-Digest: FF2zbTvZpI4zsgQpWFulOHZSuyw=
+
+Name: org/eclipse/ocl/examples/codegen/analyzer/AnalysisVisitor.class
+SHA1-Digest: JhpOK++EFoiTpneHh8L3bQ/t480=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGLocalVariable.class
+SHA1-Digest: 4VAPiqqItPQZC+aDUkDLr4Vou0U=
+
+Name: model/cgmodel.ecorediag
+SHA1-Digest: j6qeTC9FTB32YoLGp5rcxJmbIa0=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGIsUndefinedExpIm
+ pl.class
+SHA1-Digest: rRp3YouMVpvxOwikYIRMPNoHIXE=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGConstant.class
+SHA1-Digest: evpP1XO8J7iODONCH7xsFGVqUjI=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGVariableImpl.cla
+ ss
+SHA1-Digest: RiT/LvPzalImRe56vq5WLD5op8Y=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGExecutorOperation.cla
+ ss
+SHA1-Digest: DzgaZkJRBF+H5Vpi8cmpWaOE124=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGLibraryIterateCa
+ llExpImpl.class
+SHA1-Digest: YO5xVVZ6ktkCWWC2UP6ovqGJiLk=
+
+Name: org/eclipse/ocl/examples/codegen/generator/CodeGenerator.class
+SHA1-Digest: 0AnnqMQtLJk/YOH3Q3oJ6P4QBUE=
+
+Name: org/eclipse/ocl/examples/codegen/analyzer/ReferencesVisitor.clas
+ s
+SHA1-Digest: JdCqAnXszQ6ZSeFY0scMkz/H6/0=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGLibraryIterationCallE
+ xp.class
+SHA1-Digest: 9AE1RPZ/cIzXSJR+Lo1AZzUdSL8=
+
+Name: org/eclipse/ocl/examples/codegen/oclinecore/OCLinEcoreGenModelGe
+ neratorAdapter$OCLinEcoreStateAdapter$SetSettingDelegates.class
+SHA1-Digest: RRa3sZ2L0dm7VuuDcOfggm/R2x8=
+
+Name: org/eclipse/ocl/examples/codegen/analyzer/DependencyVisitor$Id2D
+ ependencyVisitor.class
+SHA1-Digest: AuAzM6f36U4uoIlFwms2/SzXrXU=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGParameter.class
+SHA1-Digest: orNfmcjiA3LRs8n7hOwJywEqBIE=
+
+Name: org/eclipse/ocl/examples/codegen/java/types/SimpleValueDescripto
+ r.class
+SHA1-Digest: Y+VyM0HUfnpdNn53szqP2fF1hjY=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGPropertyImpl.cla
+ ss
+SHA1-Digest: lV422bEzDUAEW7XSKX5C+v8uqHI=
+
+Name: org/eclipse/ocl/examples/codegen/dynamic/JavaFileUtil.class
+SHA1-Digest: FprFp2mn+8Y2Z2eesg2sn/+kvvs=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGNativePropertyCallExp
+ .class
+SHA1-Digest: 4CUxW81ON2iXBfZQdQPP41p9TqM=
+
+Name: org/eclipse/ocl/examples/codegen/dynamic/ExplicitClassLoader.cla
+ ss
+SHA1-Digest: NbaNz70Fkr+UcgHJWvTB6uLn6I8=
+
+Name: org/eclipse/ocl/examples/codegen/analyzer/NameManager.class
+SHA1-Digest: moiZRO2Fzc6ET+Q9nGn2hMerx4k=
+
+Name: org/eclipse/ocl/examples/codegen/analyzer/DependencyVisitor.clas
+ s
+SHA1-Digest: 5Fyjd+Yu4mCYnos7dQMRYPbRtmQ=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGString.class
+SHA1-Digest: Jc7727fASkiJz/BRsvO/MYULhpU=
+
+Name: org/eclipse/ocl/examples/codegen/common/NameQueries$1.class
+SHA1-Digest: HC/GePR93aSiES1gOfuN99La3o0=
+
+Name: org/eclipse/ocl/examples/codegen/cse/HashedAnalyses.class
+SHA1-Digest: uBtusuqFWyd3qiYJrt0rrdGCfSs=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGAssertNonNullExp
+ Impl.class
+SHA1-Digest: vK5vFWiS00aix328Rrio04OS+Uw=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGLibraryOperation
+ CallExpImpl.class
+SHA1-Digest: qyPHewqno5gVJwNAkQB5Dikzphc=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGCollectionExpImp
+ l.class
+SHA1-Digest: 9CG2Nrvr8N8xDwTdQ/cBwRbz7oo=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/util/CGModelSwitch.clas
+ s
+SHA1-Digest: uhBXTFdJhMn2m9GaOWsJaci+CcI=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGLetExpImpl.class
+SHA1-Digest: vcDIAc8ZEvmoDBw4JqSGcyophQg=
+
+Name: org/eclipse/ocl/examples/codegen/cse/ThrowPlace.class
+SHA1-Digest: 5bE93yzWZeaQhhljFp0BTPORlD4=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGEcoreOperationIm
+ pl.class
+SHA1-Digest: iZ5OskVIIoejEFtN0Bc91om92UE=
+
+Name: org/eclipse/ocl/examples/codegen/oclinecore/OCLinEcoreCG2JavaVis
+ itor.class
+SHA1-Digest: AFW604jTOpR1Ooljq/Tp8paeVEc=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGEcoreOperationCallExp
+ .class
+SHA1-Digest: hNbz0jZ1z+I/Qs7Gsvf6JKKPtPM=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGParameterImpl.cl
+ ass
+SHA1-Digest: dF8efg2yPKA/MtLrpgz5FvLSLDM=
+
+Name: org/eclipse/ocl/examples/codegen/asm5/ASM5JavaAnnotationReader$2
+ .class
+SHA1-Digest: YjhQ1jhCgP2ZJcEQVRp+ZhZJy5Q=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGMapPartImpl.clas
+ s
+SHA1-Digest: NPFztMtrcgsD5chIl6Wc1LfG2mI=
+
+Name: org/eclipse/ocl/examples/codegen/cse/InnerStackPlace.class
+SHA1-Digest: HSaw2kv5LiTA0aIj82NEOf6ciC8=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGEcoreOppositeProperty
+ CallExp.class
+SHA1-Digest: qCrNqToPLwSQtTmIQOKQY9YLNL8=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGElementIdImpl.cl
+ ass
+SHA1-Digest: /AOXDE+YJJHREU+KChDzY611PMg=
+
+Name: org/eclipse/ocl/examples/codegen/java/types/AbstractPrimitiveDes
+ criptor.class
+SHA1-Digest: tR/dieOkMBkeK3J2ImhXxGzRWrQ=
+
+Name: org/eclipse/ocl/examples/codegen/cse/AbstractAnalysis.class
+SHA1-Digest: RX0jgULfiN6xiiMwn4voio26l5s=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGModelFactoryImpl
+ .class
+SHA1-Digest: AD6Zr16C5hivboqORZWO/I7760o=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGTypeExpImpl.clas
+ s
+SHA1-Digest: cE2aLEaL/AeKw9pC4QRm5NLeMMA=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGPackageImpl.clas
+ s
+SHA1-Digest: BpXfGWrbsYeR2AoNQiUJ4gOZWvg=
+
+Name: org/eclipse/ocl/examples/codegen/java/types/UnboxedDescriptor.cl
+ ass
+SHA1-Digest: pzYF98pJr+W29kLrenTWGDRC0/U=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGInteger.class
+SHA1-Digest: uGKfOGHtchlP1+8vRaF2IohwOIM=
+
+Name: org/eclipse/ocl/examples/codegen/common/NameQueries$6.class
+SHA1-Digest: Om302mQ+DuK9FwdvNPg4vhsNB90=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGTypeIdImpl.class
+SHA1-Digest: V1SqBGk7KkcsQinc5NE9k1nLdQM=
+
+Name: org/eclipse/ocl/examples/codegen/cse/OuterStackPlace.class
+SHA1-Digest: KW20zJxYrZBFRPsy+8OZY74ovuY=
+
+Name: org/eclipse/ocl/examples/codegen/java/types/EcoreDescriptor.clas
+ s
+SHA1-Digest: 64vx5B1345gKnv/+pR92S0q2UR8=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGShadowExpImpl.cl
+ ass
+SHA1-Digest: xiJWPR6VapLw7x3lqwciOxhwmC4=
+
+Name: org/eclipse/ocl/examples/codegen/oclinecore/OCLinEcoreGenModelGe
+ neratorAdapter.class
+SHA1-Digest: WYOtgauO6vDoKHhEeblsKBt9nZk=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGCastExpImpl.clas
+ s
+SHA1-Digest: wuhWLDvGbMbBeijXvuBzm0qHows=
+
+Name: org/eclipse/ocl/examples/codegen/generator/AbstractCodeGenerator
+ .class
+SHA1-Digest: 3Pt5WavcjWom+JqIofjdORXY2dw=
+
+Name: org/eclipse/ocl/examples/codegen/java/CG2JavaVisitor.class
+SHA1-Digest: C8yienFqG2hTSDBpB1srE4Oc8v8=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/util/CGModelAdapterFact
+ ory.class
+SHA1-Digest: ZCkxeuQCuPSMMGHjHXiWUsHATZk=
+
+Name: org/eclipse/ocl/examples/codegen/utilities/CGModelResourceImpl.c
+ lass
+SHA1-Digest: JpFNRJhThC143WriN8IKRnSctkw=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGOperationImpl.cl
+ ass
+SHA1-Digest: PwAeTyZKaTzm6cbDZSg30I48MRc=
+
+Name: org/eclipse/ocl/examples/codegen/java/iteration/ForAllIteration2
+ Java.class
+SHA1-Digest: hQwttxbYjq74LGitF81lKjq+Pqk=
+
+Name: org/eclipse/ocl/examples/codegen/java/ImportUtils.class
+SHA1-Digest: 9u0q3oMKI/LRX+Zei+x/rhNt6iM=
+
+Name: build.properties
+SHA1-Digest: /VLsFxMh5WeTefEfqHJ7tCINLy4=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGExecutorOpposite
+ PropertyImpl.class
+SHA1-Digest: /vRCiOTQKjF0gYVi2ao7cPbZT+o=
+
+Name: org/eclipse/ocl/examples/codegen/common/NameQueries$NameAllocati
+ on.class
+SHA1-Digest: pjrbik0sB8p6hw6m0GdaqNe5HH0=
+
+Name: org/eclipse/ocl/examples/codegen/oclinecore/OCLinEcoreTablesUtil
+ s$EmitLiteralVisitor.class
+SHA1-Digest: xPdZi1Z2TprqZvPUmzsOG41bqK0=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGModel.class
+SHA1-Digest: mpxEE4dESvHlz2OMvKNdmgWmyfI=
+
+Name: org/eclipse/ocl/examples/codegen/oclinecore/OCLinEcoreTablesUtil
+ s$4.class
+SHA1-Digest: 7lLjy3d6AhW2p6ErAb14VOA7sEQ=
+
+Name: org/eclipse/ocl/examples/codegen/java/types/BoxedMapDescriptor.c
+ lass
+SHA1-Digest: UlmCBPDjEmymwa9t7mFAH6o8f/Y=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGModelPackageImpl
+ .class
+SHA1-Digest: BWJJGqexXaqkNjjrlsUCp8fJtgI=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGIsEqual2Exp.class
+SHA1-Digest: dy4N8KmB4zYKGQnhGYT+EMD9kew=
+
+Name: org/eclipse/ocl/examples/codegen/java/types/BoxedValuesDescripto
+ r.class
+SHA1-Digest: lN18RYcjPvoqBE7R04VOe3IULn0=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGEcorePropertyCal
+ lExpImpl.class
+SHA1-Digest: x9JGjVewqE4EAkMBmam2eiJI/Qk=
+
+Name: org/eclipse/ocl/examples/codegen/analyzer/CodeGenAnalyzer.class
+SHA1-Digest: ANt/NSHJRNVtjsNUGvi11M3BXgE=
+
+Name: org/eclipse/ocl/examples/codegen/generator/GlobalContext.class
+SHA1-Digest: 4hk920qNO2mRZtc8l1QQg8cVVCw=
+
+Name: org/eclipse/ocl/examples/codegen/analyzer/CG2StringVisitor$MyFac
+ tory.class
+SHA1-Digest: ndmU4f1w2q2Hl8cYoVcyj1F4TvM=
+
+Name: org/eclipse/ocl/examples/codegen/oclinecore/OCLinEcoreGenModelGe
+ neratorAdapter$OCLinEcoreStateAdapter.class
+SHA1-Digest: vukmqn60yiPrYWtvjUQeTGt2NdU=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGAccumulator.class
+SHA1-Digest: 8qg8vqN2/sTyOH2kYCFuh5XxgwE=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGTypedElementImpl
+ .class
+SHA1-Digest: 6LfPme5fMOVU+9JLsdCwvClxhpA=
+
+Name: org/eclipse/ocl/examples/codegen/java/types/FutureEObjectDescrip
+ tor.class
+SHA1-Digest: 9uVneCTtg520GVzCoHEBX+HLw0s=
+
+Name: org/eclipse/ocl/examples/codegen/model/CGLibrary$Contents.class
+SHA1-Digest: b2aeMPRmqjcvdLRFga3UDvpV1cs=
+
+Name: org/eclipse/ocl/examples/codegen/java/types/EcoreListDescriptor.
+ class
+SHA1-Digest: lN2i1CHhOqzC7+bN56G3gEu+7Js=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGConstantExpImpl.
+ class
+SHA1-Digest: irJGQDOXqNv783Bn3p8cycCmfZA=
+
+Name: org/eclipse/ocl/examples/codegen/utilities/RereferencingCopier.c
+ lass
+SHA1-Digest: JXzJvf4AMQntxboRirx4DRWWkNg=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGCachedOperationI
+ mpl.class
+SHA1-Digest: 5p+VAujm9Ja5uMRM3TYY0bxU5Xg=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGShadowPart.class
+SHA1-Digest: kphFA1IOXAZ557mqAFI/3+YwM0c=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGSettableVariable
+ Impl.class
+SHA1-Digest: xVP3Z8qoft5eD76XYiPdCbTsscQ=
+
+Name: org/eclipse/ocl/examples/codegen/java/iteration/IsUniqueIteratio
+ n2Java.class
+SHA1-Digest: 5NiGRvaYv0wB9S2wzaVjXa0ZKPA=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGNumberImpl.class
+SHA1-Digest: tjp4Yw1AE3SCih6LxcR8zjQWYNY=
+
+Name: org/eclipse/ocl/examples/codegen/java/types/DoublePrimitiveDescr
+ iptor.class
+SHA1-Digest: DePiI3zeCciE3jTh2zdnkJDAW80=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGTupleExp.class
+SHA1-Digest: 2kohPAKyC8F0Z6xvd7jl0GWbji8=
+
+Name: org/eclipse/ocl/examples/codegen/cse/IfPlaces.class
+SHA1-Digest: iQgR5SxKeevq6LK1bm1Mmgiv3SI=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGOppositePropertyCallE
+ xp.class
+SHA1-Digest: kpvqQPQWvR9DFGPjoOayHGkLeDc=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/util/AbstractNullCGMode
+ lVisitor.class
+SHA1-Digest: LzHoCNFdNaaH/RXALe+8bOP51vo=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGVariable.class
+SHA1-Digest: S+x/beRkxbGFZl5Sh9w/1EQuZ1s=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGEcoreClassShadowExp.c
+ lass
+SHA1-Digest: Mx16yN7gvPX3p+tXvaXNOv9Y6+E=
+
+Name: org/eclipse/ocl/examples/codegen/java/types/ShortPrimitiveDescri
+ ptor.class
+SHA1-Digest: 5ctMOuqEqOb0pk5s7sjIi8U6LMQ=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGInvalidImpl.clas
+ s
+SHA1-Digest: K0phnVf709tAONYhfQvmwuDVN1g=
+
+Name: org/eclipse/ocl/examples/codegen/asm5/ASM5JavaAnnotationReader$2
+ $1.class
+SHA1-Digest: +Qyc8LMh4nxWjX68dLfzaFEP2d4=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGEcoreOperation.class
+SHA1-Digest: 0cddDhuuPgaj7nqD12xq73Mpsh0=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGTuplePartCallExp.clas
+ s
+SHA1-Digest: al9ZACY0ca+48D4Cd8Pc0WnhVeM=
+
+Name: org/eclipse/ocl/examples/codegen/java/iteration/IterateIteration
+ 2Java.class
+SHA1-Digest: SjctpJLJbOfYzYi6n8m3L+V1pUg=
+
+Name: org/eclipse/ocl/examples/codegen/oclinecore/OCLinEcoreGenModelGe
+ neratorAdapter$OCLinEcoreStateAdapter$SetEAnnotationDetail.class
+SHA1-Digest: V2GJcX7VO9nF8FLwNjiykBn5aBM=
+
+Name: org/eclipse/ocl/examples/codegen/generator/CodeGenOptions.class
+SHA1-Digest: SN5yypZHJWsUZroi/UVdu98ttxg=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGVariableExpImpl.
+ class
+SHA1-Digest: 4IrVoqzPlLJF+to0uZVoJqaALds=
+
+Name: org/eclipse/ocl/examples/codegen/java/types/SimpleDataTypeDescri
+ ptor.class
+SHA1-Digest: aRUDMrwmtSsNcjcBHCL/TtOAf/4=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGNativeProperty.class
+SHA1-Digest: D0xA4dcAsJHYwTT4SHztUp8QfxM=
+
+Name: org/eclipse/ocl/examples/codegen/cse/GlobalPlace.class
+SHA1-Digest: osSBMsWLdCxYM74VNEDE0HYixyc=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGExecutorOppositePrope
+ rty.class
+SHA1-Digest: ptrHM6Hl4NplG9DrqUgCa+1g/eQ=
+
+Name: org/eclipse/ocl/examples/codegen/java/types/RealValueDescriptor.
+ class
+SHA1-Digest: QJx05Rnm0Y/yYkqprQSEiYzXQX8=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGExecutorComposit
+ ionPropertyImpl.class
+SHA1-Digest: 9rFhTA9P1cQCGTXeyr8NZPzHxBY=
+
+Name: model/ReadMe.txt
+SHA1-Digest: DsEh8MzRyXrnxojCoehrTcMdCKA=
+
+Name: org/eclipse/ocl/examples/codegen/cse/ControlPlace.class
+SHA1-Digest: RPLBLfnZ0Y6+eiOGJdr5RftpvOo=
+
+Name: org/eclipse/ocl/examples/codegen/analyzer/CG2StringVisitor$Abstr
+ actFactory.class
+SHA1-Digest: s7d1jlS5V/yIaQU0kWd/IMGRk0c=
+
+Name: org/eclipse/ocl/examples/codegen/common/CodeGenHelper.class
+SHA1-Digest: 2X/5dJ+u1igbXiPRJvQgRdRZwoY=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGOperationCallExp
+ Impl.class
+SHA1-Digest: 8EWf+nc2D2JZkx/tRVwcytTwqYI=
+
+Name: org/eclipse/ocl/examples/codegen/oclinecore/OCLinEcoreGenModelGe
+ neratorAdapter$OCLinEcoreStateAdapter$RemoveEAnnotation.class
+SHA1-Digest: Zd8x2yaDx5ELpnKEZpU8r5RY0Ms=
+
+Name: org/eclipse/ocl/examples/codegen/asm5/ASM5JavaAnnotationReader.c
+ lass
+SHA1-Digest: h04dPfwoyPydAvCamP/Jrls8Lvc=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGTuplePartCallExp
+ Impl.class
+SHA1-Digest: JkWwmygT0v+Ndm0QWARUDZczM7Q=
+
+Name: org/eclipse/ocl/examples/codegen/library/NativeStaticOperation.c
+ lass
+SHA1-Digest: OvMKVSjBq92nJAyDNhJ1pDkEWbs=
+
+Name: org/eclipse/ocl/examples/codegen/java/types/RealObjectDescriptor
+ .class
+SHA1-Digest: a1wfz94KbufS9vT3+5AD2dlLSss=
+
+Name: org/eclipse/ocl/examples/codegen/asm5/ASM5JavaAnnotationReader$1
+ .class
+SHA1-Digest: 8yXStxgTZRr/JbU6ZUxkwZIBbG4=
+
+Name: org/eclipse/ocl/examples/codegen/java/types/UnboxedValueDescript
+ or.class
+SHA1-Digest: /4i6CwTZvuXCN2cUpvAZyOZBAdg=
+
+Name: org/eclipse/ocl/examples/codegen/oclinjunit/JUnitCodeGenerator.c
+ lass
+SHA1-Digest: 4DU98NQ4jzcAtSKhB+U3g8BjTWA=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGLibraryPropertyC
+ allExpImpl.class
+SHA1-Digest: bBt7A7WcjBDTLsM99aPSJm147nM=
+
+Name: org/eclipse/ocl/examples/codegen/java/CG2JavaPreVisitor.class
+SHA1-Digest: ngZHv7VPMTygpvGAbXlAKq069Cw=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGIterationCallExp.clas
+ s
+SHA1-Digest: 3mzEt+eXZZvjgA2qaGPc6qolJX8=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGThrowExpImpl.cla
+ ss
+SHA1-Digest: llJvFoX/QQTQv0RNrW5YvkH7FQI=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGRealImpl.class
+SHA1-Digest: DSDFZipvQeHnpO9M/EugZEdHBKg=
+
+Name: org/eclipse/ocl/examples/codegen/common/NameQueries.class
+SHA1-Digest: 8TmEfG4An2wIEvdJC5s+1k9Sqco=
+
+Name: org/eclipse/ocl/examples/codegen/utilities/CGModelResourceFactor
+ y.class
+SHA1-Digest: IipMVR/4Fs386wwNHvgHsX4CTdo=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGAccumulatorImpl.
+ class
+SHA1-Digest: +l6aGYfBCPGBvJsVD03kjx/wJ9s=
+
+Name: org/eclipse/ocl/examples/codegen/oclinecore/OCLinEcoreTablesUtil
+ s$EmitQualifiedLiteralVisitor.class
+SHA1-Digest: lT4N8l+7NV/VcPTi2HkoXeorg1E=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGIsEqualExp.class
+SHA1-Digest: KwFEM95DQif1MD5Yl7Ef8d4II4Y=
+
+Name: org/eclipse/ocl/examples/codegen/common/NameQueries$5.class
+SHA1-Digest: B390MbipEfYDBiAA2CAWtQyoy2Q=
+
+Name: org/eclipse/ocl/examples/codegen/generator/GenModelException.cla
+ ss
+SHA1-Digest: PTfnv2JuAMrmg2HVGqYrtpE0tfc=
+
+Name: org/eclipse/ocl/examples/codegen/utilities/CGUtil.class
+SHA1-Digest: dWyj06+4uf7Jg7fTZIjMxjPhMds=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/util/AbstractExtendingC
+ GModelVisitor.class
+SHA1-Digest: 1R55hyAU6OO1r4f5CZIz7jobbTs=
+
+Name: org/eclipse/ocl/examples/codegen/oclinecore/OCLinEcoreTablesUtil
+ s$DeclareParameterTypeVisitor.class
+SHA1-Digest: 9gV6TyR26QU/EOnU4kBlElWA/Hs=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGModelFactory.class
+SHA1-Digest: tww2cuhLC9fAFYLwdFPw/m9vBjs=
+
+Name: org/eclipse/ocl/examples/codegen/java/types/UnlimitedNaturalValu
+ eDescriptor.class
+SHA1-Digest: aO0d5TT3LT0bN3gntuG+WUT+/M0=
+
+Name: org/eclipse/ocl/examples/codegen/analyzer/AS2CGVisitor$CGTuplePa
+ rtNameComparator.class
+SHA1-Digest: KCRZrKr8RABEl8Y0coqQ4lysLmo=
+
+Name: about.html
+SHA1-Digest: 0vzfRatYPPlKdS0YdNoTlE1GBxU=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGExecutorType.class
+SHA1-Digest: ZoEQgosrKDJfL+xh9IMSo1qG6Ac=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGIterator.class
+SHA1-Digest: mi1MfhODXYWTAPS4I1m9WOHm4kI=
+
+Name: org/eclipse/ocl/examples/codegen/oclinecore/OCLinEcoreTablesUtil
+ s.class
+SHA1-Digest: e54gQATHYqhWQ3HL7/n6f1GHQw4=
+
+Name: org/eclipse/ocl/examples/codegen/cse/LetPlaces.class
+SHA1-Digest: w9ItBWWKevLB9kfgpX2LhZilatI=
+
+Name: org/eclipse/ocl/examples/codegen/utilities/CGModelResource.class
+SHA1-Digest: shvztPZIXaeLRJSQIo2HOmtsgIg=
+
+Name: org/eclipse/ocl/examples/codegen/java/iteration/OneIteration2Jav
+ a.class
+SHA1-Digest: oZ2MUXvZP4hRH3CykGo9ZAryDVI=
+
+Name: org/eclipse/ocl/examples/codegen/library/NativeProperty.class
+SHA1-Digest: Y1ASIqYb1Z7osrOHDLnJnhzU4KA=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGExecutorProperty
+ Impl.class
+SHA1-Digest: vhKkPYFezLA989sPYLzNjggl/S0=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGCallExp.class
+SHA1-Digest: pTFFtMnvI1ICbDtxGOo25DOomnA=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGNavigationCallEx
+ pImpl.class
+SHA1-Digest: pTgsDo+1ZvtcQaVH2MMbK97oVpo=
+
+Name: org/eclipse/ocl/examples/codegen/java/types/RootObjectDescriptor
+ .class
+SHA1-Digest: n2bWhYxdAVfRWJMH1hBZHY9lGnI=
+
+Name: org/eclipse/ocl/examples/codegen/cse/CatchPlace.class
+SHA1-Digest: xeSMT4ry9C+Vrclxqp7YMkIOc9A=
+
+Name: org/eclipse/ocl/examples/codegen/dynamic/OCL2JavaFileObject.clas
+ s
+SHA1-Digest: BB0Ok0/uooH7BXRnvmg44rZos60=
+
+Name: org/eclipse/ocl/examples/codegen/oclinecore/OCLinEcoreTablesUtil
+ s$3.class
+SHA1-Digest: LuLC4anSq3+j845q0pn9tipGY68=
+
+Name: org/eclipse/ocl/examples/codegen/java/types/FutureEnumerationVal
+ ueDescriptor.class
+SHA1-Digest: 4mOwKh5bNwucfy5G5bgH3tPE+Ok=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGLetExp.class
+SHA1-Digest: S822jhqzd9mTxDgIWfswkC23qUw=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGNumber.class
+SHA1-Digest: DNbrvU8OWuM9ZpPGnAs9rSqK0Xc=
+
+Name: org/eclipse/ocl/examples/codegen/utilities/AbstractCGModelResour
+ ceFactory.class
+SHA1-Digest: 9l0mZghNmmSqIdgdA4uLhBEwFk0=
+
+Name: org/eclipse/ocl/examples/codegen/oclinecore/OCLinEcoreGeneratorA
+ dapterFactory.class
+SHA1-Digest: VT2ArymEn3Jkvn/FjWBuiF2V2yg=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGProperty.class
+SHA1-Digest: jrS8SzsVK9Pk2glveWlJ7QLrYiI=
+
+Name: org/eclipse/ocl/examples/codegen/oclinecore/OCLinEcoreGenModelGe
+ neratorAdapter$OCLinEcoreStateAdapter$AddModelPluginVariable.class
+SHA1-Digest: GxnsxNpkASMxGrnpeNKs78PJCrY=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGPackage.class
+SHA1-Digest: b7MGVhAh27V32KHiVFVxo8VHzrY=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGIsInvalidExpImpl
+ .class
+SHA1-Digest: gIkS4enFajwK8xS8Nb6N6dozEes=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGReal.class
+SHA1-Digest: bbxjiuBGHNuMj7MqOieq+lwkQzU=
+
+Name: org/eclipse/ocl/examples/codegen/java/types/UnboxedMapDescriptor
+ .class
+SHA1-Digest: s6rEjEZpYh+dqoplssHOghZfbVo=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGExecutorCompositionPr
+ operty.class
+SHA1-Digest: 5j7HgSiYr3WsMJKWy62oaTzgwdc=
+
+Name: org/eclipse/ocl/examples/codegen/java/types/BooleanObjectDescrip
+ tor.class
+SHA1-Digest: C0ULGG8hRb9KwxWzhf5wuQxF4Ko=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGLibraryIteration
+ CallExpImpl.class
+SHA1-Digest: QNGe+XIiH7jp5P7okPEf4tNsavo=
+
+Name: org/eclipse/ocl/examples/codegen/java/types/UnboxedElementsDescr
+ iptor.class
+SHA1-Digest: uJ+VYeize+gSTS95TXN5AFalhIY=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGExecutorNavigati
+ onPropertyImpl.class
+SHA1-Digest: dGBxcuLSada1YCjvwgzqqmNjNlg=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGExecutorOperationCall
+ Exp.class
+SHA1-Digest: tLWqgS8EML2jxTslk0swmShf4MI=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGAssertNonNullExp.clas
+ s
+SHA1-Digest: S1BPzz9NqvxyEHI8Ugr0WfXcTiw=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGCastExp.class
+SHA1-Digest: 50XyfldN8TN7HV30gl1kjgS2pa0=
+
+Name: org/eclipse/ocl/examples/codegen/java/types/EcoreDoubleObjectDes
+ criptor.class
+SHA1-Digest: rENISDlQccFNeNw4YzTbbzCmXH4=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGCollectionExp.class
+SHA1-Digest: JFmt3v2ZWW04dUtd7ZzRmHVjkw0=
+
+Name: org/eclipse/ocl/examples/codegen/java/iteration/CollectIteration
+ 2Java.class
+SHA1-Digest: XpDFJcW1Wg4L1UPfqzSZAL+6W0Q=
+
+Name: org/eclipse/ocl/examples/codegen/oclinecore/OCLinEcoreGenModelGe
+ neratorAdapter$OCLinEcoreStateAdapter$AddEAnnotation.class
+SHA1-Digest: Q69X/r+9N03lFoCxDcSgnRQHv5w=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGBuiltInIterationCallE
+ xp.class
+SHA1-Digest: 380i0QT3+zAJV2iNiW2SJbJqpwI=
+
+Name: org/eclipse/ocl/examples/codegen/generator/CodeGenException.clas
+ s
+SHA1-Digest: TGvXTGzlhi4grqLU+YYW8rBJvxM=
+
+Name: org/eclipse/ocl/examples/codegen/java/types/MapDescriptor.class
+SHA1-Digest: 7fQEHc/y1MWHz0AXT6gMkohyoeA=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGIsEqual2ExpImpl.
+ class
+SHA1-Digest: Vc8Y5jzFuFSMTDOjDrZunPoyigI=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGModelPackage$Literals
+ .class
+SHA1-Digest: 08GklPQQCvLqlYvqWHDS9WkzbX8=
+
+Name: org/eclipse/ocl/examples/codegen/oclinecore/OCLinEcoreTables$1.c
+ lass
+SHA1-Digest: InBJq6ZEln1QJomLA+koyIsGVao=
+
+Name: org/eclipse/ocl/examples/codegen/oclinecore/OCLinEcoreCodeGenera
+ tor.class
+SHA1-Digest: C0fhzTBTpxf33iavdfwksnd8EDw=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGIsKindOfExpImpl.
+ class
+SHA1-Digest: eAJlziezLSYJTB0vLspGgC3e0fE=
+
+Name: org/eclipse/ocl/examples/codegen/java/JavaStream.class
+SHA1-Digest: cleYfirrPxzqO4ZtDl4a2xpeh04=
+
+Name: org/eclipse/ocl/examples/codegen/java/JavaLocalContext.class
+SHA1-Digest: IYVEznL1abx+gi5RrQPKLp1vuVE=
+
+Name: org/eclipse/ocl/examples/codegen/generator/TypeDescriptor.class
+SHA1-Digest: AsxipFJi04PPUulSavQUw0LAUBs=
+
+Name: org/eclipse/ocl/examples/codegen/model/CGLibrary$Loader.class
+SHA1-Digest: 4KZFkI0NoYN+zck1N93ubexpdgg=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGExecutorOpposite
+ PropertyCallExpImpl.class
+SHA1-Digest: h30ujj7PQAyLuC8BG5RhagrV0/k=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGNativeOperationC
+ allExpImpl.class
+SHA1-Digest: dlpHcvG1vWXeLBzEWUc7Rfeo/zg=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGExecutorOperatio
+ nImpl.class
+SHA1-Digest: FFe9ZRVhROs9T8KMsFQAaHTRxKg=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGShadowPartImpl.c
+ lass
+SHA1-Digest: 3kH9yUTbjd+xVnJoUlMePNTX2AI=
+
+Name: org/eclipse/ocl/examples/codegen/java/types/EObjectDescriptor.cl
+ ass
+SHA1-Digest: do1HatPuMBoQ7bI8W85w0u2iIQA=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGExecutorShadowPart.cl
+ ass
+SHA1-Digest: sO5BQ244qxelHHgZaD8CFNp9QCY=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGLibraryOperationCallE
+ xp.class
+SHA1-Digest: 6vTbNynwnJrUJjFDbcBNW6zFkQs=
+
+Name: org/eclipse/ocl/examples/codegen/java/types/LongPrimitiveDescrip
+ tor.class
+SHA1-Digest: jwnrRO/Cd226Q4Q2DE17UazXkWQ=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGText.class
+SHA1-Digest: NiXDhvFMhvECOmYtyGiZPuNgC5M=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGConstantExp.class
+SHA1-Digest: fhbyLPzpuDzTFtHRQjcBNJ48FDk=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGNamedElementImpl
+ .class
+SHA1-Digest: U74LJTWi68tEkOar/UuSMf7CuDY=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGIsInvalidExp.class
+SHA1-Digest: SNAyUEsejDUpHkpwSjeG3iK83W4=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGBooleanImpl.clas
+ s
+SHA1-Digest: h+f5RkOfXXngmlGF+6u5aqgCztg=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGCollectionPart.class
+SHA1-Digest: d/FzOIGIKFDyBK58SXv00CCay0Q=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGNullImpl.class
+SHA1-Digest: PVihT4m8zEx9mZrxfaLXfmt11/k=
+
+Name: org/eclipse/ocl/examples/codegen/oclinecore/OCLinEcoreTables.cla
+ ss
+SHA1-Digest: RndbVSYDLqh8Msp10NVBUWBiSSY=
+
+Name: org/eclipse/ocl/examples/codegen/java/iteration/AnyIteration2Jav
+ a.class
+SHA1-Digest: bHr9vxQ7JoT/aiBZHQi/m+5lqDs=
+
+Name: org/eclipse/ocl/examples/codegen/java/iteration/AbstractIteratio
+ n2Java.class
+SHA1-Digest: 08zI77f0af+2lY1amFjyhh/v43s=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGValuedElement.class
+SHA1-Digest: tjTzFZggennyAmrlqXtLo5UiH28=
+
+Name: org/eclipse/ocl/examples/codegen/CodeGenConstants.class
+SHA1-Digest: LyELroHGIZWLCFKOY45UBISytj0=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGMapPart.class
+SHA1-Digest: Cl6cE6HPR5am/9nTIlrJ8WLRpuY=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGConstraintImpl.c
+ lass
+SHA1-Digest: bJeX9df5Z+beb8TLETee/k+hxyI=
+
+Name: org/eclipse/ocl/examples/codegen/java/AbstractJavaContext.class
+SHA1-Digest: cIVLWzLuO7YFIyKTzSkoMgb7cCU=
+
+Name: org/eclipse/ocl/examples/codegen/java/AbstractId2JavaClassVisito
+ r.class
+SHA1-Digest: S4e/GilUqkd/8dz4GizWdHt4V08=
+
+Name: org/eclipse/ocl/examples/codegen/java/types/AbstractCollectionDe
+ scriptor.class
+SHA1-Digest: zaTweCl9I3GvVbHlcNVq86L11+U=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGVariableExp.class
+SHA1-Digest: fug25xWfGzd6KodTXYeTZIti/sY=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGTextImpl.class
+SHA1-Digest: DCLS1qTZ70VdTDd69EYC2tiWfEo=
+
+Name: org/eclipse/ocl/examples/codegen/common/NameQueries$4.class
+SHA1-Digest: rnuDjN2V9O+NotfjQ1dmhhIjFZs=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGConstraint.class
+SHA1-Digest: p6zociGXPqETcWg/vO0lokonf54=
+
+Name: org/eclipse/ocl/examples/codegen/analyzer/CG2StringVisitor$Facto
+ ry.class
+SHA1-Digest: TWbvtVioN+DhzmNn311ixVTtyKA=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGTuplePartImpl.cl
+ ass
+SHA1-Digest: ipUa9Xd0xrlB3SX2zn7Kz8Fdhs0=
+
+Name: org/eclipse/ocl/examples/codegen/java/JavaStream$SubStream.class
+SHA1-Digest: z3Dg5EscP8lEB71eids7KMW5EuA=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGTypedElement.class
+SHA1-Digest: LepT5R8tVOM/rStaWkEdAwIHbZM=
+
+Name: org/eclipse/ocl/examples/codegen/model/CGLibrary.class
+SHA1-Digest: sQmJOYSi1TlPP1PWH2Lgp9w2hT4=
+
+Name: org/eclipse/ocl/examples/codegen/library/NativeVisitorOperation.
+ class
+SHA1-Digest: lyaIJ6zhnyjtRmuE61bti5b15C0=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGCallable.class
+SHA1-Digest: e5nfxSSeqBVZ2uZiZDwD+K3A578=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGCachedOperationCallEx
+ p.class
+SHA1-Digest: SmdNaag7Ww7q871AtvGFakzSXV0=
+
+Name: org/eclipse/ocl/examples/codegen/java/types/IntegerObjectDescrip
+ tor.class
+SHA1-Digest: M4ZBKu9LB0ESHoWKek3xC8I6KHo=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/util/CGModelAdapterFact
+ ory$1.class
+SHA1-Digest: f926z8RqHBN5SW2m2KmPjLiP6t0=
+
+Name: org/eclipse/ocl/examples/codegen/oclinecore/OCLinEcoreTablesUtil
+ s$2.class
+SHA1-Digest: /ifmAals5Jx2Kro630/xbQwXnWE=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGIsEqualExpImpl.c
+ lass
+SHA1-Digest: lKqVtK2bOLRy+K52GQDcbzpUc5o=
+
+Name: org/eclipse/ocl/examples/codegen/oclinjunit/JUnitAS2CGVisitor.cl
+ ass
+SHA1-Digest: 3SPhuYxY0kAaNYd1G7Bn7JCnkVI=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGExecutorShadowPa
+ rtImpl.class
+SHA1-Digest: xEgXSb6mCSyZyVXOCwdODF8iXv0=
+
+Name: org/eclipse/ocl/examples/codegen/analyzer/AS2CGVisitor.class
+SHA1-Digest: Om/aZsGQvNE2e/5n49a8zqN9qi4=
+
+Name: org/eclipse/ocl/examples/codegen/analyzer/CG2StringVisitor.class
+SHA1-Digest: lVUXvzPORcm62zJJQcoAWXtwXxE=
+
+Name: org/eclipse/ocl/examples/codegen/java/types/Id2BoxedDescriptorVi
+ sitor.class
+SHA1-Digest: OU6z6XrbIGozUueNAOwc0J/D7zs=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGCollectionPartIm
+ pl.class
+SHA1-Digest: DWWpDCO5qBFi+lf76h8YQYRvamc=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGIsKindOfExp.class
+SHA1-Digest: yzmSQpCdUF6zXgaH6f/RqSNl8q0=
+
+Name: org/eclipse/ocl/examples/codegen/java/types/EObjectsDescriptor.c
+ lass
+SHA1-Digest: UoPWWfxxY1/ZEZ/70u0QyO5qX7Q=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/util/AbstractNonNullExt
+ endingCGModelVisitor.class
+SHA1-Digest: du3KGtTuq9/awMU3+xnyrgy8PNs=
+
+Name: org/eclipse/ocl/examples/codegen/oclinecore/OCLinEcoreCodeGenera
+ tor$EcoreBoxingAnalyzer.class
+SHA1-Digest: Q1JylSv7c6CQcTfUwH433grBdAc=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGIterationCallExp
+ Impl.class
+SHA1-Digest: lDuWfOFI1uGQY8u1gohFHGxeXOs=
+
+Name: org/eclipse/ocl/examples/codegen/oclinecore/OCLinEcoreGlobalCont
+ ext.class
+SHA1-Digest: 1qHAYbTv1V5Mi1G+vjXdHNPN1DE=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGShadowExp.class
+SHA1-Digest: gSe6+VjeFwIDScaVMHEw4ILHW+k=
+
+Name: org/eclipse/ocl/examples/codegen/java/JavaConstants.class
+SHA1-Digest: RFDVYjOctGLfiKuqStq0A1hyx+M=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGCachedOperation.class
+SHA1-Digest: zhs5PxICCPzNgsTwHHaW6nwjVUQ=
+
+Name: org/eclipse/ocl/examples/codegen/java/iteration/AbstractAccumula
+ tion2Java.class
+SHA1-Digest: HsMyq75aapmuCLkiAyi1y8nKE58=
+
+Name: model/cgmodel.genmodel
+SHA1-Digest: qugxfFXsGvXX2bQ4UeBRu8ZGU20=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGExecutorPropertyCallE
+ xp.class
+SHA1-Digest: Hqot5XIdTeDarxOe2rCG50rN4QU=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGInvalid.class
+SHA1-Digest: cud9aU13uW/Wer9vNTFaLcVgCJw=
+
+Name: org/eclipse/ocl/examples/codegen/java/types/AbstractValueDescrip
+ tor.class
+SHA1-Digest: uhkghlvZldX+0KyLPdxtFusHgXA=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGExecutorTypeImpl
+ .class
+SHA1-Digest: 707EiZiYOqX4LO6rrVGSf8TETgM=
+
+Name: org/eclipse/ocl/examples/codegen/analyzer/DependencyVisitor$1.cl
+ ass
+SHA1-Digest: 2Htc7zuwLXA/VkwxC6xJgjEEfuM=
+
+Name: org/eclipse/ocl/examples/codegen/cse/SimpleAnalysis.class
+SHA1-Digest: iSdGWXZ6A+cuscgvpUoROqRc5hc=
+
+Name: org/eclipse/ocl/examples/codegen/java/types/BoxedValueDescriptor
+ .class
+SHA1-Digest: hzxuWwQcvTjLSAkOXsaSgBA/2mI=
+
+Name: org/eclipse/ocl/examples/codegen/oclinecore/OCLinEcoreGeneratorA
+ dapterFactory$1.class
+SHA1-Digest: mh/0Kx/Z6jPqIum/Nf8sf1+6ScA=
+
+Name: org/eclipse/ocl/examples/codegen/java/types/SimpleDataTypeDescri
+ ptor$NamedFuture.class
+SHA1-Digest: ySOvxmA68OgydL1uEO8vn/vzIYQ=
+
+Name: META-INF/eclipse.inf
+SHA1-Digest: KyT9FF7C7t86NoBoa2kZT3ZJBfw=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGEcoreOppositePro
+ pertyCallExpImpl.class
+SHA1-Digest: 5zEWYCKRguayY/1JaeYBdwawfg8=
+
+Name: org/eclipse/ocl/examples/codegen/java/types/EcoreIntegerObjectDe
+ scriptor.class
+SHA1-Digest: 11f0MlYDU63WrVlyMA7yQohSuVo=
+
+Name: .options
+SHA1-Digest: 0j1/SijdrUGhkMnMKC/cK1iuF20=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGIsUndefinedExp.class
+SHA1-Digest: xndTIogozgstW9Ak9ULqxxgA4Js=
+
+Name: org/eclipse/ocl/examples/codegen/java/iteration/RejectIteration2
+ Java.class
+SHA1-Digest: b/BivDEdfJ9vatOns4ME/m2KWHE=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGGuardExp.class
+SHA1-Digest: I/D7RVx/kfXbmKgzQQZTpDNlvps=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGEcoreExp.class
+SHA1-Digest: JyeB0fFRUwN2HIAgYCOM5id1PpI=
+
+Name: org/eclipse/ocl/examples/codegen/java/CG2JavaVisitor$1.class
+SHA1-Digest: 88n2ko3f8EAqR6kZSruq5Dxheh4=
+
+Name: org/eclipse/ocl/examples/codegen/oclinecore/OCLinEcoreGenModelGe
+ neratorAdapter$Edit.class
+SHA1-Digest: JZImb6hIm8He7y0iErLx8FFbQzo=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGBoxExpImpl.class
+SHA1-Digest: jtDcZzovJsf20Msxo+uqjWBiML8=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGEcoreDataTypeSha
+ dowExpImpl.class
+SHA1-Digest: IOAY5OxL0LNuJpv9Ky1d578MvXQ=
+
+Name: org/eclipse/ocl/examples/codegen/java/types/FutureEnumerationObj
+ ectDescriptor.class
+SHA1-Digest: 8FOkgbZRCqvO52gofldPZqBxPHk=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGNull.class
+SHA1-Digest: g+OBNIkYFdC2zN1o/HNaYNW/Bpg=
+
+Name: org/eclipse/ocl/examples/codegen/java/types/IntegerValueDescript
+ or.class
+SHA1-Digest: f8nLd4VQqh7WcdCWsKKVYZqejZk=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGSettableVariable.clas
+ s
+SHA1-Digest: 0eAl57u+6QjcBJ1EGSLDnDrTBv4=
+
+Name: org/eclipse/ocl/examples/codegen/analyzer/BoxingAnalyzer.class
+SHA1-Digest: JM17/E+Kk4ixdFErhJ0oE1yK6M4=
+
+Name: org/eclipse/ocl/examples/codegen/cse/LocalPlace.class
+SHA1-Digest: crSdzY3PF+SCCmPb2AkSndf+ti4=
+
+Name: org/eclipse/ocl/examples/codegen/java/types/BoxedDescriptor.clas
+ s
+SHA1-Digest: 9u6VXF0uJdhBeyMf+fnnLqigxyk=
+
+Name: org/eclipse/ocl/examples/codegen/java/JavaCodeGenerator.class
+SHA1-Digest: 64y6BhZyRUcORo2C1nAY5gJYytE=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGMapExpImpl.class
+SHA1-Digest: MyQGIba3PHqMI6Cx1JOKmr/7tNs=
+
+Name: plugin.properties
+SHA1-Digest: GHIkJo37b9kiUzB4Bivcqzrnh1o=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGLibraryPropertyCallEx
+ p.class
+SHA1-Digest: 9WbT9iqcLMlropMpWFt2AVHmjHQ=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGLocalVariableImp
+ l.class
+SHA1-Digest: 4kOcT5A5je2kNomm484onRzzjt0=
+
+Name: org/eclipse/ocl/examples/codegen/oclinecore/OCLinEcoreLocalConte
+ xt.class
+SHA1-Digest: 4bjky1BQtICthyHFoTNY8kIDO00=
+
+Name: model/CGLibrary.genmodel
+SHA1-Digest: p9rLI/7kKNJJdF2/IbqRZcgt4/0=
+
+Name: org/eclipse/ocl/examples/codegen/analyzer/NameManager$1.class
+SHA1-Digest: ZN8hyy1iVqpixLQh3qPFMKWmneY=
+
+Name: org/eclipse/ocl/examples/codegen/common/NameQueries$3.class
+SHA1-Digest: DjP619w/Qus6tNNRcwlkOvaZ5BE=
+
+Name: plugin.xml
+SHA1-Digest: ZegLyP4h0GFtZzTs4hR53uNL2dQ=
+
+Name: org/eclipse/ocl/examples/codegen/common/NameQueries$TuplePartAll
+ ocation.class
+SHA1-Digest: ovQsW3IA7OaZa/Ue8n2gcWp5shQ=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGNativeOperation.class
+SHA1-Digest: 97AwQIsBDtEllzd6x6zHKA/nbQY=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGExecutorOppositePrope
+ rtyCallExp.class
+SHA1-Digest: ztn5j6BfcnweE+6HOJ8fkRBfxA4=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGFinalVariable.class
+SHA1-Digest: ZKdQKTCFwAfvQrIHtTB0UjMsgaM=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGTuplePart.class
+SHA1-Digest: +iHRsrEGdTW/6i8Jf/In5AtezkQ=
+
+Name: org/eclipse/ocl/examples/codegen/generator/IterationHelper.class
+SHA1-Digest: +2NYfDoZo3hGFOGgUpUlCN9Z7vg=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGEcoreClassShadow
+ ExpImpl.class
+SHA1-Digest: dLpYA2f1kaE8+kwWyW6/LqAm4FI=
+
+Name: org/eclipse/ocl/examples/codegen/java/Id2JavaInterfaceVisitor.cl
+ ass
+SHA1-Digest: f0u1kU1OXDUv3S1iv0vaPja+A/U=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGLibraryIterateCallExp
+ .class
+SHA1-Digest: EhPR9zh7m8/Px+kXSChiD6tXrRY=
+
+Name: org/eclipse/ocl/examples/codegen/java/iteration/ExistsIteration2
+ Java.class
+SHA1-Digest: AEh3nsVl724kmqJCgljDNpOYgxI=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGOperationCallExp.clas
+ s
+SHA1-Digest: OeVl/xQ/txKohTcVyyXc6IvoafI=
+
+Name: org/eclipse/ocl/examples/codegen/oclinecore/OCLinEcoreTablesUtil
+ s$1.class
+SHA1-Digest: SGX6irnItwCvMR9bNn9F45fVI6M=
+
+Name: org/eclipse/ocl/examples/codegen/oclinecore/OCLinEcoreGenModelGe
+ neratorAdapter$OCLinEcoreStateAdapter$SetInvocationDelegates.class
+SHA1-Digest: TGga7oNoH4ERRhF5AN3Y3erm7lM=
+
+Name: org/eclipse/ocl/examples/codegen/oclinecore/OCLinEcoreTablesUtil
+ s$CodeGenString.class
+SHA1-Digest: BRbcEgVaKKnoYzwlyMhn8QCygGI=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGExecutorProperty
+ CallExpImpl.class
+SHA1-Digest: vlbBQ8aV5uXrjCvipLU/IX9+jDY=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGClassImpl.class
+SHA1-Digest: sEnUMjCm0rPiRxRjTpOoGaTCg/w=
+
+Name: org/eclipse/ocl/examples/codegen/analyzer/FieldingAnalyzer$Rewri
+ teVisitor.class
+SHA1-Digest: vPZHcgNOiPuYEK14XDWSFGBCdZ4=
+
+Name: org/eclipse/ocl/examples/codegen/java/types/FutureEObjectsDescri
+ ptor.class
+SHA1-Digest: iuzkOtsEh85ZNgaxegNcy9Fxw6E=
+
+Name: org/eclipse/ocl/examples/codegen/java/iteration/CollectNestedIte
+ ration2Java.class
+SHA1-Digest: 57SIuE9pRCjdJL5Bs8F8D7vCNGY=
+
+Name: org/eclipse/ocl/examples/codegen/java/Id2JavaExpressionVisitor.c
+ lass
+SHA1-Digest: zLRwVfQ8ssNq4WyosXpOdiO57zw=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/util/CGModelVisitor.cla
+ ss
+SHA1-Digest: JoNVwgWEz4LtgT4iOJMpoWJEQ8k=
+
+Name: org/eclipse/ocl/examples/codegen/cse/CommonAnalysis.class
+SHA1-Digest: xU26lJJzNLu6IEQb6CvwfQzNBTs=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGUnboxExpImpl.cla
+ ss
+SHA1-Digest: bT5hl5q3DbGz5pkR+HHcCw2c7OM=
+
+Name: org/eclipse/ocl/examples/codegen/oclinecore/OCLinEcoreGenModelGe
+ neratorAdapter$OCLinEcoreStateAdapter$AddEOperation.class
+SHA1-Digest: VworI3W3XvfBU6eWuXE1y/vLbUQ=
+
+Name: org/eclipse/ocl/examples/codegen/generator/AbstractGenModelHelpe
+ r.class
+SHA1-Digest: prbXJYux1+2fGrli2eDsZU76Zzk=
+
+Name: org/eclipse/ocl/examples/codegen/common/NameQueries$8.class
+SHA1-Digest: 0topgPJvlV0g6J/APNVQMPUOLRw=
+
+Name: org/eclipse/ocl/examples/codegen/java/types/FloatPrimitiveDescri
+ ptor.class
+SHA1-Digest: 5LONZchi5WPpa7FZQrQTi3y/e7A=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGCachedOperationC
+ allExpImpl.class
+SHA1-Digest: M4ChiLDcfbsn+YNjKJABuzSj4lA=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGEcorePropertyCallExp.
+ class
+SHA1-Digest: sZ79IGCseND0GSVnmAevKmrIxLU=
+
+Name: org/eclipse/ocl/examples/codegen/common/PivotQueries.class
+SHA1-Digest: FU39ilZJYlUHn+QB3w0LAWCN8gA=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGBuiltInIteration
+ CallExpImpl.class
+SHA1-Digest: Jk0g4hqEN5Sx6ZUD3RVgLfCe5fQ=
+
+Name: org/eclipse/ocl/examples/codegen/java/types/AbstractDescriptor$N
+ amedFuture.class
+SHA1-Digest: rUKEn0s+5tvhWykm3KLajCODPFY=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGTypeId.class
+SHA1-Digest: ZAMwXhRRpEQNkkv76Kulh0Noflo=
+
+Name: model/cgmodel.ecore
+SHA1-Digest: KQNevBLsr3bsrR+PS/qNYO7MZdc=
+
+Name: org/eclipse/ocl/examples/codegen/analyzer/FieldingAnalyzer.class
+SHA1-Digest: siWRsYudgkWwoL7NwMkBdM6RLVw=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGExecutorNavigationPro
+ perty.class
+SHA1-Digest: 7ZCkxgee71gvX4BUn6WEmH3h1Wo=
+
+Name: model/CGLibrary.oclstdlib
+SHA1-Digest: +YTlvYB9k60ThTr5FaVLfAt7Un8=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGNavigationCallExp.cla
+ ss
+SHA1-Digest: fOeR0FF4Rnw6KDtQngognBUXgGM=
+
+Name: org/eclipse/ocl/examples/codegen/cse/IfPlaces$ElsePlace.class
+SHA1-Digest: IZbHEYY246MM0LNUIuo4gJU5Ad0=
+
+Name: org/eclipse/ocl/examples/codegen/java/JavaConstants$1.class
+SHA1-Digest: DGzOe5ciKhAj5XWN/bhbSZyNBnU=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGExecutorProperty.clas
+ s
+SHA1-Digest: /Qoyf5onDjK7ccGwXEugxFYkJzQ=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGIfExpImpl.class
+SHA1-Digest: zJ2vVtsSZ6G3faZW/TAKIxx6VMA=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGElementId.class
+SHA1-Digest: 2r99FRY9I/gQShFMWDpyZ0YXOdM=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGConstantImpl.cla
+ ss
+SHA1-Digest: EfZG8maAJ0tDvK+vjBSjYwixdbM=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/util/AbstractCGModelVis
+ itor.class
+SHA1-Digest: VkhcNPlYZDdzZPNLYTuwi1iooJA=
+
+Name: org/eclipse/ocl/examples/codegen/java/types/CollectionDescriptor
+ .class
+SHA1-Digest: 1zwsjKzLGlMGvxpibPaKbxd+AGU=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGEcoreDataTypeShadowEx
+ p.class
+SHA1-Digest: 4IZmWrPvHqbIOXI08UINHX6Z6Xc=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGExecutorOperatio
+ nCallExpImpl.class
+SHA1-Digest: 8pIf+TwMh2yG9NMdWd4Q3Vl+QpU=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGMapExp.class
+SHA1-Digest: JtOYiVvUK8UyMaxlEAD1QUZw5Pc=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGCatchExp.class
+SHA1-Digest: tWLWYamUI357+3EL1vLi39CdBbw=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGCallableImpl.cla
+ ss
+SHA1-Digest: wD+0zyTyk9CDEEkp+I1dVIlhsUM=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGEcoreExpImpl.cla
+ ss
+SHA1-Digest: sfl98OjVNZ6DKJSBZrzhBMGp9bc=
+
+Name: org/eclipse/ocl/examples/codegen/oclinecore/OCLinEcoreCodeGenera
+ tor$StatusAnalyzer.class
+SHA1-Digest: 33DOEhqF1nuilfb7BJwO303GSDA=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGUnboxExp.class
+SHA1-Digest: XgMhhycQVaDsJoJDTcaRACbM8Hg=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGLibraryOperation.clas
+ s
+SHA1-Digest: 9zWeha1grXWX+oFnYzKM3vcf/yY=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGOppositeProperty
+ CallExpImpl.class
+SHA1-Digest: nzDOl5odpJe9Tb7gS1ovFLQ85g8=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGNativeOperationCallEx
+ p.class
+SHA1-Digest: 4NcIeiYbWORwpw6JX1ZZoK84GEs=
+
+Name: org/eclipse/ocl/examples/codegen/java/JavaGlobalContext.class
+SHA1-Digest: 4/4k2LseN5+3SNuU77Zga/RvzsM=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGModelImpl.class
+SHA1-Digest: pn4T1UNMC78dFjBJMK0Pa3gMIvw=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGUnlimited.class
+SHA1-Digest: G1lhfD6n2W6sNAbDXGkN176yj6E=
+
+Name: org/eclipse/ocl/examples/codegen/oclinjunit/JUnitCG2JavaClassVis
+ itor.class
+SHA1-Digest: 1AP4vPdBajn5DLG45jz29HioCcM=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGOperation.class
+SHA1-Digest: SRjkB0zj5y38HDdKyAtfEDwNZX8=
+
+Name: org/eclipse/ocl/examples/codegen/cse/CommonSubexpressionEliminat
+ or.class
+SHA1-Digest: Wpcp4zVUc2eXuf6Rg9WLUJm+Dxo=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGIntegerImpl.clas
+ s
+SHA1-Digest: iDBqbrPl+uXeoj+w03pot3DpYnU=
+
+Name: org/eclipse/ocl/examples/codegen/cse/StackPlace.class
+SHA1-Digest: MFR5EhB+WhV4jWBOUqOKH3YOlzc=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGCatchExpImpl.cla
+ ss
+SHA1-Digest: aNQCLtuAUbeLhCULgQWpO5l6Dpw=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGPropertyCallExpI
+ mpl.class
+SHA1-Digest: ZMhwWJXwoTWPU9m3KAqM3IfNFd8=
+
+Name: org/eclipse/ocl/examples/codegen/java/iteration/SelectIteration2
+ Java.class
+SHA1-Digest: 4WmM53Ic2vKN4scAY5W9ICgM00I=
+
+Name: org/eclipse/ocl/examples/codegen/java/types/AbstractDescriptor.c
+ lass
+SHA1-Digest: SkZ3LicVtXTQ6Ke8NQ/4KVdYW1c=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGLibraryOperation
+ Impl.class
+SHA1-Digest: alfJDfy3d+yF++p1XrB8mSQWr0w=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGThrowExp.class
+SHA1-Digest: 0PE0JfgIni+jY+3MxYzaBq4GdLk=
+
+Name: org/eclipse/ocl/examples/codegen/common/NameQueries$2.class
+SHA1-Digest: qCH+ZgX+A409lSA4BOzjueZWIe4=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGIteratorImpl.cla
+ ss
+SHA1-Digest: MY0NU9r6vK21THyq9Zts4cPZ1Fg=
+
+Name: org/eclipse/ocl/examples/codegen/java/types/UnlimitedNaturalObje
+ ctDescriptor.class
+SHA1-Digest: 8LzIzvyHaz2yy+tpGq10bbd9+S4=
+
+Name: org/eclipse/ocl/examples/codegen/oclinecore/OCLinEcoreAS2CGVisit
+ or.class
+SHA1-Digest: 6ctDH5a7oA5p1spP3z7XRhprTmE=
+
+Name: org/eclipse/ocl/examples/codegen/java/types/JavaTypeId.class
+SHA1-Digest: t3peH8WlDOdLDn8eITJ/vFa8ttQ=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGModelPackage.class
+SHA1-Digest: 8nNgFkAGZRRR4wHWqEnh3USe6UE=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGPropertyCallExp.class
+SHA1-Digest: DEomc/un4rVZthJdDrfS494aY/g=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGTupleExpImpl.cla
+ ss
+SHA1-Digest: rQy7zpeU8IMiydaT71iAfuUSDlQ=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGEcoreOperationCa
+ llExpImpl.class
+SHA1-Digest: hKek/QbWX9TWUSWxv2KThAt9/ZM=
+
+Name: org/eclipse/ocl/examples/codegen/dynamic/JavaGenModelCodeGenHelp
+ er.class
+SHA1-Digest: x973ejs5tcSgfAN+w4x+YWNC3S0=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGUnlimitedImpl.cl
+ ass
+SHA1-Digest: CnA0fYZ9UCBiyFNwpJFNWv75/JI=
+
+Name: org/eclipse/ocl/examples/codegen/java/types/IntPrimitiveDescript
+ or.class
+SHA1-Digest: oMT6Qw3vf0fGLSQEZoleY10qLE8=
+
+Name: org/eclipse/ocl/examples/codegen/cse/AbstractPlace.class
+SHA1-Digest: fEMkEFVg0ab3njaqo4nTgngqc7k=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGValuedElementImp
+ l.class
+SHA1-Digest: xQO8nyw3HLK9O/b3epkmew2PU80=
+
+Name: org/eclipse/ocl/examples/codegen/analyzer/CGUtils.class
+SHA1-Digest: EN+3044YyBS7N9rB6KH/ZIeFgEU=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGStringImpl.class
+SHA1-Digest: sLPldfhbF+yryCeSdutPBvCifns=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGNamedElement.class
+SHA1-Digest: H84olcQUZhzVFbKf82g9vOXIq0I=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGElementImpl.clas
+ s
+SHA1-Digest: Mf0E8FV/eywy1dZSDCBRhWG/V3o=
+
+Name: org/eclipse/ocl/examples/codegen/java/JavaDependencyVisitor.clas
+ s
+SHA1-Digest: GdV2SD2ZBnn0b2qokRk5nlqLU7k=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGClass.class
+SHA1-Digest: H7zAdAPNSIZI1IxcpcAdtUz/9Yk=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGElement.class
+SHA1-Digest: DtafWNLneyFjlkatZgU/8fhmIOg=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGBoxExp.class
+SHA1-Digest: UtPyLxYGOCnizkgRkFwkGVLtfUo=
+
+Name: org/eclipse/ocl/examples/codegen/generator/GenModelHelper.class
+SHA1-Digest: cQFNiGXxy8dhRUaLCnoOS9rR0eA=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGNativeOperationI
+ mpl.class
+SHA1-Digest: MmgrsUSgDx0zzIcQe+BrOZPyOas=
+
+Name: org/eclipse/ocl/examples/codegen/cse/IfPlaces$ThenPlace.class
+SHA1-Digest: tb9i/hbzeoyWwQweTwXDMA3KKWI=
+
+Name: org/eclipse/ocl/examples/codegen/common/NameQueries$7.class
+SHA1-Digest: wXsORc+CCX0WoEnCUm7sg2xVwow=
+
+Name: org/eclipse/ocl/examples/codegen/java/types/EnumerationValueDesc
+ riptor.class
+SHA1-Digest: 3B96dSmhQFXo+ytD06Z7VB/lbU4=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGGuardExpImpl.cla
+ ss
+SHA1-Digest: AS4JD1suqgbbP/gFPn/+TdnfiPk=
+
+Name: org/eclipse/ocl/examples/codegen/java/types/SimpleDescriptor.cla
+ ss
+SHA1-Digest: 63eiiWDe07sp6Um2Z0J3Jo0G0NA=
+
+Name: org/eclipse/ocl/examples/codegen/analyzer/FieldingAnalyzer$Analy
+ sisVisitor.class
+SHA1-Digest: Kwf6EdlSxWrFQ9LhRQLmztbKK7o=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGCallExpImpl.clas
+ s
+SHA1-Digest: sQbxqUl4RqTHQxGJJx+oesyHWlI=
+
+Name: org/eclipse/ocl/examples/codegen/java/Id2EClassVisitor.class
+SHA1-Digest: Xn6BfpB/dilc0cktZe/ErQCbXRU=
+
+Name: org/eclipse/ocl/examples/codegen/oclinecore/OCLinEcoreGenModelGe
+ neratorAdapter$OCLinEcoreStateAdapter$SetValidationDelegates.class
+SHA1-Digest: q/yxpgpCYaICt2kufxSi7nVJ/RM=
+
+Name: org/eclipse/ocl/examples/codegen/analyzer/NameManager$Context.cl
+ ass
+SHA1-Digest: tSGOofaBFa0Dx22VKtH/FmUW+BE=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGNativePropertyIm
+ pl.class
+SHA1-Digest: rzGDgIELl9+iXyzcaX4ssXwaduU=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/CGBoolean.class
+SHA1-Digest: El4X+6ofaZLWAZe6Lq1C0w1tPKE=
+
+Name: org/eclipse/ocl/examples/codegen/cgmodel/impl/CGNativePropertyCa
+ llExpImpl.class
+SHA1-Digest: NjF3noe8SqtLjIX7bSMDyZ+sn74=
+
+Name: org/eclipse/ocl/examples/codegen/java/types/PrimitiveValueDescri
+ ptor.class
+SHA1-Digest: lulpWe35WZ0groTJ0PzfeTzLR5M=
+

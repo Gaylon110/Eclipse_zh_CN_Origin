@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Copyright (c) 2013 Obeo.
+ All rights reserved. This program and the accompanying materials
+ are made available under the terms of the Eclipse Public License v1.0
+ which accompanies this distribution, and is available at
+ http://www.eclipse.org/legal/epl-v10.html
+ 
+ Contributors:
+     Obeo - initial API and implementation
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <factory
+            uri="http://www.eclipse.org/emf/compare/diagram/2.0"
+            class="org.eclipse.emf.compare.diagram.internal.extensions.provider.spec.ExtensionsItemProviderAdapterFactorySpec"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource
+               org.eclipse.emf.compare.provider.IItemStyledLabelProvider
+               org.eclipse.emf.compare.provider.IItemDescriptionLabelProvider
+               org.eclipse.emf.compare.provider.ISemanticObjectLabelProvider"/>
+   </extension>
+   <extension
+         point="org.eclipse.emf.compare.edit.adapterFactory">
+      <factory
+            class="org.eclipse.emf.compare.diagram.internal.matchs.provider.spec.DiagramCompareItemProviderAdapterFactorySpec"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource
+               org.eclipse.emf.compare.provider.IItemStyledLabelProvider
+               org.eclipse.emf.compare.provider.IItemDescriptionProvider"
+            ranking="10"
+            label="Notation item provider"
+            description="Customizes the way notation elements are displayed in EMF Compare."
+            uri="http://www.eclipse.org/gmf/runtime/1.0.2/notation">
+      </factory>
+      <factory
+            class="org.eclipse.emf.compare.diagram.internal.tooltips.DiagramTooltipLabelProviderFactory"
+            supportedTypes=
+              "org.eclipse.emf.compare.provider.ITooltipLabelProvider"
+            ranking="10"
+            label="Diagram tooltips item provider"
+            description="Customizes the way diagram linked tooltips are displayed in EMF Compare."
+            uri="http://www.eclipse.org/gmf/runtime/1.0.2/notation">
+      </factory>
+   </extension>
+
+</plugin>

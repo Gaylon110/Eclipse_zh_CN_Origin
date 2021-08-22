@@ -1,0 +1,683 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.gmf.runtime.draw2d.ui
+Archiver-Version: Plexus Archiver
+Built-By: genie.gmf-runtime
+Require-Bundle: org.eclipse.ui;bundle-version="[3.5.0,4.0.0)",org.ecli
+ pse.draw2d;bundle-version="[3.6.0,4.0.0)",org.eclipse.core.runtime;bu
+ ndle-version="[3.5.0,4.0.0)",org.eclipse.gmf.runtime.common.core;bund
+ le-version="[1.2.0,2.0.0)",org.eclipse.gmf.runtime.common.ui;bundle-v
+ ersion="[1.2.0,2.0.0)"
+Bundle-ManifestVersion: 2
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-Vendor: %Plugin.providerName
+Import-Package: com.ibm.icu.text;version="4.0.0",com.ibm.icu.util;vers
+ ion="4.0.0"
+Export-Package: org.eclipse.gmf.runtime.draw2d.ui.figures,org.eclipse.
+ gmf.runtime.draw2d.ui.geometry,org.eclipse.gmf.runtime.draw2d.ui.grap
+ h,org.eclipse.gmf.runtime.draw2d.ui.graphics,org.eclipse.gmf.runtime.
+ draw2d.ui.internal; x-friends:="org.eclipse.gmf.tests.runtime.draw2d.
+ ui,  org.eclipse.gmf.runtime.draw2d.ui.render,  org.eclipse.gmf.runti
+ me.diagram.ui,  org.eclipse.gmf.runtime.gef.ui,  org.eclipse.gmf.runt
+ ime.diagram.ui.render,  org.eclipse.gmf.runtime.diagram.ui.providers,
+   org.eclipse.gmf.runtime.diagram.ui.printing.render,  org.eclipse.gm
+ f.runtime.diagram.ui.printing",org.eclipse.gmf.runtime.draw2d.ui.inte
+ rnal.figures; x-friends:="org.eclipse.gmf.tests.runtime.draw2d.ui,  o
+ rg.eclipse.gmf.runtime.draw2d.ui.render,  org.eclipse.gmf.runtime.dia
+ gram.ui,  org.eclipse.gmf.runtime.gef.ui,  org.eclipse.gmf.runtime.di
+ agram.ui.render,  org.eclipse.gmf.runtime.diagram.ui.providers,  org.
+ eclipse.gmf.runtime.diagram.ui.printing.render,  org.eclipse.gmf.runt
+ ime.diagram.ui.printing",org.eclipse.gmf.runtime.draw2d.ui.internal.g
+ raph; x-friends:="org.eclipse.gmf.tests.runtime.draw2d.ui,  org.eclip
+ se.gmf.runtime.draw2d.ui.render,  org.eclipse.gmf.runtime.diagram.ui,
+   org.eclipse.gmf.runtime.gef.ui,  org.eclipse.gmf.runtime.diagram.ui
+ .render,  org.eclipse.gmf.runtime.diagram.ui.providers,  org.eclipse.
+ gmf.runtime.diagram.ui.printing.render,  org.eclipse.gmf.runtime.diag
+ ram.ui.printing",org.eclipse.gmf.runtime.draw2d.ui.internal.graphics;
+  x-friends:="org.eclipse.gmf.tests.runtime.draw2d.ui,  org.eclipse.gm
+ f.runtime.draw2d.ui.render,  org.eclipse.gmf.runtime.diagram.ui,  org
+ .eclipse.gmf.runtime.gef.ui,  org.eclipse.gmf.runtime.diagram.ui.rend
+ er,  org.eclipse.gmf.runtime.diagram.ui.providers,  org.eclipse.gmf.r
+ untime.diagram.ui.printing.render,  org.eclipse.gmf.runtime.diagram.u
+ i.printing,  org.eclipse.gmf.runtime.draw2d.ui.render.awt",org.eclips
+ e.gmf.runtime.draw2d.ui.internal.l10n; x-friends:="org.eclipse.gmf.te
+ sts.runtime.draw2d.ui,  org.eclipse.gmf.runtime.draw2d.ui.render,  or
+ g.eclipse.gmf.runtime.diagram.ui,  org.eclipse.gmf.runtime.gef.ui,  o
+ rg.eclipse.gmf.runtime.diagram.ui.render,  org.eclipse.gmf.runtime.di
+ agram.ui.providers,  org.eclipse.gmf.runtime.diagram.ui.printing.rend
+ er,  org.eclipse.gmf.runtime.diagram.ui.printing",org.eclipse.gmf.run
+ time.draw2d.ui.internal.mapmode; x-friends:="org.eclipse.gmf.tests.ru
+ ntime.draw2d.ui,  org.eclipse.gmf.runtime.draw2d.ui.render,  org.ecli
+ pse.gmf.runtime.diagram.ui,  org.eclipse.gmf.runtime.gef.ui,  org.ecl
+ ipse.gmf.runtime.diagram.ui.render,  org.eclipse.gmf.runtime.diagram.
+ ui.providers,  org.eclipse.gmf.runtime.diagram.ui.printing.render,  o
+ rg.eclipse.gmf.runtime.diagram.ui.printing",org.eclipse.gmf.runtime.d
+ raw2d.ui.internal.parts;x-friends:="org.eclipse.gmf.runtime.diagram.u
+ i",org.eclipse.gmf.runtime.draw2d.ui.internal.routers; x-friends:="or
+ g.eclipse.gmf.tests.runtime.draw2d.ui,  org.eclipse.gmf.runtime.draw2
+ d.ui.render,  org.eclipse.gmf.runtime.diagram.ui,  org.eclipse.gmf.ru
+ ntime.gef.ui,  org.eclipse.gmf.runtime.diagram.ui.render,  org.eclips
+ e.gmf.runtime.diagram.ui.providers,  org.eclipse.gmf.runtime.diagram.
+ ui.printing.render,  org.eclipse.gmf.runtime.diagram.ui.printing",org
+ .eclipse.gmf.runtime.draw2d.ui.mapmode,org.eclipse.gmf.runtime.draw2d
+ .ui.text
+Bundle-Name: %Plugin.name
+Bundle-Version: 1.9.0.201706061437
+Bundle-Localization: plugin
+Bundle-Activator: org.eclipse.gmf.runtime.draw2d.ui.internal.Draw2dPlu
+ gin
+Created-By: Apache Maven 3.1.1
+Build-Jdk: 1.8.0_121
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/graphics/ScalableFree
+ formLayeredPane.class
+SHA-256-Digest: 7Fc85aL9/u4FSViY53+Aq5gZDK2tWTFdcdLXcKy8eCk=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/graphics/GCUtilities.class
+SHA-256-Digest: +EdZps8CvahlI2hTPhEEnWhTmU4vdHj+FlM7OCVVKjI=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/figures/PolylineConnectionEx$J
+ umpLinkSet.class
+SHA-256-Digest: nTWeY3DQlepztPabIcXPsGuUuxO40txNeHoufEZhRH8=
+
+Name: icons/bottom.gif
+SHA-256-Digest: 11VQzHDlaEaegcXmDsptovFS4ZXbItBJHDGPNpLqpZY=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/routers/FanRouter.cla
+ ss
+SHA-256-Digest: u8d9R/l5uphmRJxjQPqP+/02hcx/RPXoFmloHK0x44o=
+
+Name: icons/rightpressedarrow.gif
+SHA-256-Digest: ohbFjpoekqkJh7rWvQ648g2UJfZ86qnCYhqnlIpVb0w=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/figures/IAnchorableFigure.clas
+ s
+SHA-256-Digest: jIt0QKMUriGkGxrMOGDNQhQ4xW77ai616cCGzjPkmaY=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/figures/WrappingLabel$SingleIc
+ onInfo.class
+SHA-256-Digest: q5RAIGeEf06tCca179jA1Cagf7xu1pPADNlXPF/R1XU=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/graphics/ScaledGraphi
+ cs$FontKey.class
+SHA-256-Digest: Ip3A0/inQhfadN8cCC9TNMS+DQaca+l7/j922jmrbB4=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/graphics/ScaledGraphi
+ cs.class
+SHA-256-Digest: bghG3MSFj7AoQnebukCYsUtvWg8mKpWHvdNUs7ZegTo=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/figures/WrappingLabel$SingleIc
+ onInfo$1.class
+SHA-256-Digest: qxMv1wn9CzSplxVU1pkeFlpf35MdzuJeys4f1R0gEdo=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/mapmode/IdentityMapMo
+ de.class
+SHA-256-Digest: 5hAYVYM2t6+SFpW6I9ReabxnoQhktB0glae9y9IyMwk=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/graphics/ScaledGraphi
+ cs$State.class
+SHA-256-Digest: PqpQRT/acCbOSFyymzdHExsz+D3kz/szQuA2cZ0eFeQ=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/routers/RectilinearRo
+ uter.class
+SHA-256-Digest: VRkcCx9W2QHHsfLjK7RgrA/r7fbtqwAc1ycaMO3svZo=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/package.html
+SHA-256-Digest: ZAvA13cqf4/FCuRbeJHzw/QtDnZcG24u3XaPYzxC+FA=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/figures/IBorderItemLocator.cla
+ ss
+SHA-256-Digest: nS9szat8GepaFEodYhTnQvZTbvlfFMgDN8kRLnWdEIQ=
+
+Name: icons/downarrow.gif
+SHA-256-Digest: tkUqNNBdifUYSDJ7RwYTWxIYnPXTSy7icoiZnyrawnw=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/graph/EdgeEndPointsAssignment.
+ class
+SHA-256-Digest: BrNpWNyYFoRFUlIgc2+N8kYxTukeJK87h6lMc0+Qqcc=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/mapmode/DiagramMapMod
+ eUtil.class
+SHA-256-Digest: 4nIho7Id/vH4QzYffXiiKqJLhqGtepKQE0eom4bcq6Y=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/routers/BorderItemRec
+ tilinearRouter$1.class
+SHA-256-Digest: fCod8ZTxcYYjEQzrGjgeofXzjCpV24JjxCUWlHEiIYI=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/figures/PolylineConnectionEx$J
+ umpLink.class
+SHA-256-Digest: nN/lGLzYka2N2PU/QbQuWUhqlI4TF2RGqPOrR/jGkrU=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/parts/ThumbnailEx.cla
+ ss
+SHA-256-Digest: TzbueNXbR6OHwNOl0ipgWvLo+OLb0+LBk/W+keoPqUE=
+
+Name: icons/rightarrow.gif
+SHA-256-Digest: EEUhZYEzF1LLHwwSRxJBlL6IhLwSB5oFSUZH9v14Cyw=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/routers/ObliqueRouter
+ $ArrayListMap.class
+SHA-256-Digest: cfzbt1s3Ell709AiBqV38dqfkRhWho+66/W1Ph7P27w=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/figures/PolylineConnectionEx$J
+ umpLinkSet$CompareDistance.class
+SHA-256-Digest: 0eO2RYikDcM85iioTIXi1qZXEcEhhMqsa+mMZ2NREF0=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/graphics/ColorRegistry.class
+SHA-256-Digest: 7Ji/3YLa8GXb64J08GAVpfzyCP2MSBEFaRT4AJzj50Q=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/graph/EdgeEndPointsAssignment$
+ 6.class
+SHA-256-Digest: TMfliowaO+5hAJFcMBC5wf+DMPNya5mrsUrezVk6sOA=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/routers/package.html
+SHA-256-Digest: SbZf4HE5cST1lREMZJYHK78aVaSxZ8cQK/jdDUjaTe8=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/figures/RectangularDropShadowL
+ ineBorder.class
+SHA-256-Digest: WO6doSbMh4k5/2O9EicEk0CzByS0jilI/+EFi8+zpNs=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/mapmode/MapModeUtil.class
+SHA-256-Digest: 9HshZt8/vpCPWzeiTL1YbNjFbm1uItD2sR8Eedic3Bw=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/figures/FeedbackConne
+ ction.class
+SHA-256-Digest: yIMnl9Ontzgmv8fd2gxYZMR6tw1Bl/CMc0VyMUo/6oA=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/figures/BaseSlidableAnchor.cla
+ ss
+SHA-256-Digest: NFT/03pgcmefRifF2pS9xEk78NC9cDpZBzznt6Ot3RM=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/routers/ObliqueRouter
+ .class
+SHA-256-Digest: PLDuXlxfJfbSydDIPPU7Yvvqa0IPtt/oLZG3cbLFttM=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/figures/ListScrollBar$2.class
+SHA-256-Digest: KFoJCIrISaJeQg6cSZ8q3XLt+W8+Pp3f5wFlaaZv0UY=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/graph/JointIncomingEdges.class
+SHA-256-Digest: skonGxGUVFTl+1Hk6buKK8xXmXFXxbYKKgsQdXN9eI8=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/figures/OnConnectionL
+ ocator.class
+SHA-256-Digest: /V5+ehj5wjzB2u7OK+RkRbBDMEle7NMYpLzyoy+bbt0=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/figures/ListScrollBar$ThumbDra
+ ggerColors.class
+SHA-256-Digest: 0S5bB2y/PzzWlHVXUfmskMNW1VsB0Hy9Lb3q9LlAg2M=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/mapmode/IMapMode.class
+SHA-256-Digest: HWArhCk7spDL3fhHqF2+hQThRPUzPokPpweYedYyxUc=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/graph/EdgeEndPointsAssignment$
+ 3.class
+SHA-256-Digest: t7s9/mvunvE2HMBfbb85DDudrsvReGKzwPYEHn+k+ic=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/text/TextFlowEx.class
+SHA-256-Digest: 9HHRXi6KVY0V784a4HtQT5a/s9W65mpoYOHxYkA5gBk=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/l10n/Draw2dUIPluginIm
+ ages.class
+SHA-256-Digest: NQ/yh9hfq8Z0d6AbycBjrkz2svLkNhq+OEYq1rdpyZA=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/figures/ImageFigureEx
+ .class
+SHA-256-Digest: MI/jdXU0f+z9xUrHhrX+wF3n3BTae3r3FzWukWCRri0=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/graph/VirtualNode.cla
+ ss
+SHA-256-Digest: lLibbtn2YeOslOruLKKN3Gko9Z1tLjX4W8ry7mxqa2E=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/routers/TreeRouter.cl
+ ass
+SHA-256-Digest: iq35V3dI57b5mSUfBSwCdWnygfQXqY94R0n3Enc1mes=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/figures/IPolygonAnchorableFigu
+ re.class
+SHA-256-Digest: H13+/id3fzNQdPW+w2rAAVjxQvLHRuoCzmf0aUOvn1c=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/mapmode/IMapModeHolde
+ r.class
+SHA-256-Digest: mOl4novYgnh3vqwCwIlelqKlk7kH1c5+ZMtbAtEcBmA=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/Draw2dDebugOptions.cl
+ ass
+SHA-256-Digest: dpy1T94/OtU/se/H9ovecdL7xTZ9ynxJIVa9WIaqFik=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/figures/OverlayScroll
+ PaneLayout.class
+SHA-256-Digest: JzsMUkkjIWSQhxxaB87SYVfLq8Bn3ERRYJZ5hbIGzPw=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/mapmode/package.html
+SHA-256-Digest: TJDdyBIeyPC54JvNpPjrI916btbk8XZDQPPKxykSL+M=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/figures/ListScrollBar.class
+SHA-256-Digest: kXvSjzaOwCAPX8tZP0mdYOzcH3M8WQF2RM/2kqG/N/o=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/figures/LabelEx.class
+SHA-256-Digest: AIsf+Oj6U5eFF73WMEMX90T9smnvLDay+tfOklCTcd8=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/routers/TreeRouter$Or
+ ientation.class
+SHA-256-Digest: LWRXYnR4yRdhYlYokYwJL4YkkUF22uD6NPDUthOJ1RI=
+
+Name: .options
+SHA-256-Digest: hoHOP/j3wNmsBN7lXcpucWZWioD5xkNKW3oeCItZQ4E=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/figures/OneLineBorder.class
+SHA-256-Digest: d7VnJoDAE2P1SER1e/uSY0zUPf3KuKHhhAm9pH14rDw=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/parts/ThumbnailEx$Thu
+ mbnailUpdater.class
+SHA-256-Digest: FmvIaTEmgDKHwsPxxT5q0Wcwow8ZeBXdtu84qH+uY6w=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/figures/ListScrollBar$3.class
+SHA-256-Digest: 4J8KTdux2zIJQicwFA6yAU51YNeYWw6UiDIZumk8vPU=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/graph/PreRouteEdges$1.class
+SHA-256-Digest: Bl2ipm1pTZ6EeAEXV8jne24P+CYR0caykFB37dDWmaI=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/parts/ScrollableThumb
+ nailEx$1.class
+SHA-256-Digest: 08G/31D8+Jd6H9sZ7iMRHDa4rvF7g8cFEfpUCr3i1Gc=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/graphics/ScaledGraphi
+ cs$FontHeightCache.class
+SHA-256-Digest: ovaMQxSodkju41O2B1/SZ3+74R6kQiZ0V7S5Pz1aGXY=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/graph/EdgeEndPointsAssignment$
+ 4.class
+SHA-256-Digest: IqHIg9l1jZdXaYDQXMNkG3RUZ+1rByDuxnCx/oR5Qdc=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/graph/BorderNode.class
+SHA-256-Digest: RydXxiK20LQDSBvuPOUXloW479SKw/8j3wsIpcvkokE=
+
+Name: icons/downgrayarrow.gif
+SHA-256-Digest: lisfJMbBBZOwmkXUtEnKuRDCuDi7HJmQIMHK1gecLqI=
+
+Name: icons/leftgrayarrow.gif
+SHA-256-Digest: W8i/Od7UtobEtDxr8z9S7z7QLTANdfY07HsEMbuBzek=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/figures/GravityConstrainedFlow
+ Layout.class
+SHA-256-Digest: zhflOJ0lBeE9zJ2u8LXK+TBQuSCSY3RvldSkxg1IsN0=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/graph/PreRouteEdges.class
+SHA-256-Digest: XhQaYw6ienECklZfQG7oAxXRO2PRlv2bIh6ojPg6eBA=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/graph/GMFDirectedGraphLayout.c
+ lass
+SHA-256-Digest: Ac0G91Ihuvpr0aRgrvmtNbBLHixaFcwcApOmcLEjYaI=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/parts/ScrollableThumb
+ nailEx$ClickScrollerAndDragTransferrer.class
+SHA-256-Digest: jgxS+4bvHNVZ+gPx0jOXBYEKptzyrH6aYALDvAP/Ioo=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/figures/AnimatableScr
+ ollPane.class
+SHA-256-Digest: 289Rb6djXweG17UIPTZNNllaq+Lj95RaciyI53Jt/Qo=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/graph/ConstrainedEdge.class
+SHA-256-Digest: gKC8nZnWrRCTsQ24tBNceSoHuwwKepS3EFRr1YZitOc=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/routers/BorderItemRec
+ tilinearRouter.class
+SHA-256-Digest: solzSpqrRc9iqaxknzuYVc3ZtCE1cGL7DKK56+bM1g0=
+
+Name: META-INF/maven/org.eclipse.gmf.runtime.draw2d.ui/org.eclipse.gmf
+ .runtime.draw2d.ui/pom.xml
+SHA-256-Digest: 6gstIV2/Ft7MEMC6K1MfoGAHrnmOVe+b6XZwf00fG6g=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/geometry/LineSeg$Sign.class
+SHA-256-Digest: 68nVJ0uLTHubZzniUaA0sv3UTOZTwl4kthCHY7jxfFA=
+
+Name: icons/rightbottom.gif
+SHA-256-Digest: Xd3JFtUFjqvSOZJIBmv9uMr9X0m+rmiFn2/GHxVoxjA=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/figures/PolylineConnectionEx.c
+ lass
+SHA-256-Digest: RplKrGPkvxxzr0e9FWKhpRjhkVPl62uDer7cIQTjK/U=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/l10n/package.html
+SHA-256-Digest: inC5el3AK/qxF0kcjdXeQJhQDuY/il90cbUB4dVMQFM=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/figures/WrappingLabel$MapModeC
+ onstants.class
+SHA-256-Digest: Rkv0Wed3ZT4ePEaR+KFxuuJxfrhZNHWjp1tRODGS5Y8=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/mapmode/HiMetricMapMo
+ de$1.class
+SHA-256-Digest: eIu8yyZ+vIu6m94EgPK2YS09rZYiAUACscdeTMvoPTI=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/routers/OrthogonalRou
+ terUtilities.class
+SHA-256-Digest: ltNjJRc4ZPFBWs2hPPi+qqQo4BcgW1x9RlFNtpFNuT4=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/figures/package.html
+SHA-256-Digest: qXcS7IOWuDtQlgOLhi7mtn/tU1uiyHdZvYMfjhSdJO8=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/graphics/package.html
+SHA-256-Digest: eg/jV2oz/gbyDqVJ8zGtsLJdjWZjxhVbKDh92lrvIzs=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/graph/PreRouteEdges$2.class
+SHA-256-Digest: ihRpBR/ebY4NWHLFV7Zblva9ml7upr+0vJhU9Yu0LEc=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/geometry/PointListUtilities.cl
+ ass
+SHA-256-Digest: F2fM5WDMZoqPU2MUWryl+1ttQwVNxJt3trppFpRPBYg=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/figures/WrappingLabel$IconInfo
+ .class
+SHA-256-Digest: sDFnv2WcIed3wb9tKTS74GGhhKfbwaEce4oxQk34k60=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/graph/JointEdges.class
+SHA-256-Digest: 7RX9IkOPnnC889ptZkfehPCd1mXViOKzpMZF7Bx3qow=
+
+Name: icons/leftarrow.gif
+SHA-256-Digest: 2Ineco0Od7ZD2qJS1lA92HnHbYzWgihqwCIx6Div004=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/figures/RectangularDropShadow.
+ class
+SHA-256-Digest: 1zFjKEv+SmexasCJ+KPHKre/LPmP3S9VfRt7D1M7TvM=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/mapmode/HiMetricMapMo
+ de.class
+SHA-256-Digest: Tu2HxeQVzyH26W07eA3uWLpPkISMXr9X0TnL6aLrPLU=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/figures/ListScrollBar$4.class
+SHA-256-Digest: MZoL9mJ5wQuKzBnY+dtHNcdNxsqib3b7xrlCJlG8vYc=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/figures/WrapLabel.class
+SHA-256-Digest: HdpHNM18A5ojHQbEN/3DI5GZC1I6HCWsnDo7+n6GQpg=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/routers/RouterHelper.
+ class
+SHA-256-Digest: yyPvzYt4eskkK4y1y8G1yvi39CWbtttSmQO36hczXcs=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/geometry/LineSeg$TrigValues.cl
+ ass
+SHA-256-Digest: fAMxZWH7U4s/FY9jw/I66XYnyu6BYFDuqrXGjlnaetE=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/routers/OrthogonalRou
+ ter.class
+SHA-256-Digest: e7lDxgCW8iStFMxhLW9r/+RGDuqCVeALlgYzhUw6hP0=
+
+Name: META-INF/maven/org.eclipse.gmf.runtime.draw2d.ui/org.eclipse.gmf
+ .runtime.draw2d.ui/pom.properties
+SHA-256-Digest: LOSiY/SsVuFWFGmooWzTFy4XlO6a5IAPzlkLhCb8+yE=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/graph/CompositeDirect
+ edGraphLayout.class
+SHA-256-Digest: J7wJVXUuFKvDbyPE7QtTI1Xpd2587a6rX7IkCFUFSH4=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/geometry/LineSeg.class
+SHA-256-Digest: 5NjTv4ZQ8Hm2x+nxUgay3SyB/zvkKRbsPCoZMqCF7KM=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/graph/CleanupBorderNodeEdges.c
+ lass
+SHA-256-Digest: eMPkWghjZSSU9FarBQSzoVr4YxZ4Zwt9Pq4ClrEXwQY=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/graph/EdgeEndPointsAssignment$
+ 2.class
+SHA-256-Digest: 9CVP6HV00rlWTh0QgxUkLX1OU/k+DY/dK1IO/kKa/Hc=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/routers/ForestRouter$
+ AnchorKey.class
+SHA-256-Digest: MU7htagVVtK6k9dNIPsk8a6kEVjwZ9cqI9fbbtiifLU=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/Draw2dPlugin.class
+SHA-256-Digest: GLtOFnzAgZn2aUrPZDMAP8Vdn4t90kFhvZokhdLAj4w=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/parts/ScrollableThumb
+ nailEx$2.class
+SHA-256-Digest: fKVVDeda17qdFSvRwCZ4q0gEmo2yZKRMOmIk/cb3r9U=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/graphics/PrinterGraph
+ ics.class
+SHA-256-Digest: edlaRJHmgpyAZUgBcljSqZ56cL3cbfMNECMG9gKsvAY=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/graph/ConstantSizeNode.class
+SHA-256-Digest: 6BfbHXuLn9brkdNmlSeNYX9mk/yY6fGHhvvus60Znck=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/graph/AdvancedSubGrap
+ h.class
+SHA-256-Digest: ENrXvv0ExllZb4Yaas4FESljXgRY9W+eC3g5kRVJfo0=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/graph/EdgeEndPointsAssignment$
+ 5.class
+SHA-256-Digest: OSLbIfoHDfUqlYGa7xXItGxnaEBcq1BlSo4Czfz4CUs=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/figures/ListScrollBar$1.class
+SHA-256-Digest: wCSOqQAit4FllEkJrmE4msJqSKBN6eABj2RWwqpEWrw=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/geometry/package.html
+SHA-256-Digest: o19k6rTCOdnH04/54IjFcBfOzfQOQGCXN96vV0SbEWk=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/text/FlowUtilitiesEx.class
+SHA-256-Digest: 6TUiDECtrInwj3jGGvTeGAoWhH8U+oY4jB36maWmIrc=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/figures/DropShadowBorder.class
+SHA-256-Digest: P0godn53fjrd2r0BKdcO7g4gsdgi1rBia3EBOSpBiIo=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/figures/LineBorderEx.
+ class
+SHA-256-Digest: N/iqSoyKbXan9BYGud5rPUEpPJ7HONOY8PkqccNp8cw=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/figures/TransparentBo
+ rder.class
+SHA-256-Digest: utj7yvQQfMpW4XIpizbY29wjxQKaeo8G3fxdBwHV560=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/figures/HashedCircle$HashType.
+ class
+SHA-256-Digest: 4vx/Q7GvHh3LezJGDzCni43Xa9aOqn+JfVEDT4PpPWI=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/routers/ITreeConnecti
+ on.class
+SHA-256-Digest: hcTOmsun1Fi/eDf3W3UhzVdyhMw79mrmuCHSmck29eI=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/graphics/MapModeGraph
+ ics.class
+SHA-256-Digest: y5BW+G5IALokJxvp8d8kzPiQ0HRDEl7WGabXUNszJXw=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/figures/AnimationMode
+ l.class
+SHA-256-Digest: 8cEWM7t7K99RCI6tyZpuRbMikHElcsR4CDlzyyhB3Fc=
+
+Name: plugin.properties
+SHA-256-Digest: 4cn5GlpkOAXwU3rVwvL7jf+/sFutHlHq1cFJltFUfMk=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/figures/IOvalAnchorableFigure.
+ class
+SHA-256-Digest: T6zcegCT1t1IrsG/Tv8iim2a7TGDPwRERSZqGL+8LQ4=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/text/TruncatedSingleLineTextLa
+ yout.class
+SHA-256-Digest: iw8eLahOBjLKR7/s2OZjqYUpS+7UyNDFMmt/wMiEno8=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/figures/OrthogonalConnectionAn
+ chor.class
+SHA-256-Digest: tMqCGE33wvvVxB12s6tZd+0U7sfmhM3e28B6lGYDf+k=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/figures/ListScrollBar$ArrowBut
+ ton.class
+SHA-256-Digest: I19PJ2qm02X707F6cW+Obc0S+If41BtdmolSAQ6CMLI=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/graph/JointOutgoingEdges.class
+SHA-256-Digest: 3+PstCe19tX46S5SvIZcxy9mMDtU3GKFUHqupV9tBqA=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/figures/DropShadowBut
+ tonBorder.class
+SHA-256-Digest: LQl8xE8pUIgl2MB6kBcDHLBFlsMQIAYSZWIB3fEmf14=
+
+Name: icons/rightgrayarrow.gif
+SHA-256-Digest: 4tdBA0WLzOVuduVYgsgQ4U2jGtQuMtUN1EyA6wDAF2s=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/geometry/LineSeg$1.class
+SHA-256-Digest: hpynNnDKAgGvMsvynstzNjx+e780QP1pcy2YgoXCAUk=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/figures/FigureUtilities.class
+SHA-256-Digest: z7HmkGXaNNtN919lIepfquTuEvacD07MM7pVFl+qM74=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/graph/GraphUtilities.class
+SHA-256-Digest: DWitCWPaXe2MbTf2BfNXj6tfoIEW1LYTpM2UdoVzUXA=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/figures/ConstrainedToolbarLayo
+ ut.class
+SHA-256-Digest: illNJyvFb8wKtMGFFiKB+CkS0T0gtbzrTJa4lHzIMnc=
+
+Name: icons/right.gif
+SHA-256-Digest: bma3hMO69kM5JcIhkl5TEqyyh4ANLsBv8eJRR8kZWx0=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/geometry/PrecisionPointList.cl
+ ass
+SHA-256-Digest: jcRb5yYcf3BS7t7matei6z9+b4w6X0MBp/KYe13bMYk=
+
+Name: icons/leftpressedarrow.gif
+SHA-256-Digest: nIcjggKSv/up4mJnwc8AW5xDzHKoquIZV4xq2b1hqxg=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/routers/BranchRouter.
+ class
+SHA-256-Digest: AEhlxPNowFwrCoSWquV4vFE6DGHxC5IjVjKf815gC1k=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/figures/HashedCircle.class
+SHA-256-Digest: Ux65KMCXHjKccGVDRoyBgKU8/tnR0RBZKV61A7eMsQ8=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/figures/WrappingLabel$MultiIco
+ nInfo.class
+SHA-256-Digest: wYhenUUeQG5OJMTH624mtughnKTBZ2S6aT/iZKuHy9g=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/mapmode/MapModeTypes.class
+SHA-256-Digest: 50WlR1p4o/SanevF/rD2c+p7wPZJRG2QKsQxQiDyrxE=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/figures/ListScrollBar$ThumbFig
+ ure.class
+SHA-256-Digest: AIV5jy31jUZwv0mczvry9y5PCeyIP0Dx1NLAr0w7UNc=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/parts/ScrollableThumb
+ nailEx.class
+SHA-256-Digest: o0iexgBIcOHs2dM/9UZszhRyjaotZ3IHJtHycxFPyQQ=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/geometry/LineSeg$KeyPoint.clas
+ s
+SHA-256-Digest: dZfxHKpMGOwdBcmDI6bIYDBqWpGmoroePX0Mnew5rVM=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/graph/EdgeEndPointsAssignment$
+ 7.class
+SHA-256-Digest: 3aIADZGyiRuv1CTZJUXYAlv8+Ls1DC5xYNYS2ROeJxM=
+
+Name: icons/uparrow.gif
+SHA-256-Digest: EmK/rOXDgNgZz6yhi35ioObh08gEv6JXtvvsoQz3M2o=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/routers/ObliqueRouter
+ $ArrayListKey.class
+SHA-256-Digest: u6TrfN2ZSczgz7PkHiwLAfqro3S1Tqmfmh1BPeszemE=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/mapmode/package.html
+SHA-256-Digest: SbZf4HE5cST1lREMZJYHK78aVaSxZ8cQK/jdDUjaTe8=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/figures/WrappingLabel.class
+SHA-256-Digest: 3goWBJS5/2yUoVe54dJY15r1TTvTZ3bLadU/8JOUtyE=
+
+Name: icons/downpressedarrow.gif
+SHA-256-Digest: qCNbEHHwDXvZ2kpOWgYi2umbRk1Q6o2KKkDaw1MMfUQ=
+
+Name: icons/uppressedarrow.gif
+SHA-256-Digest: aQwk0479QTviL4vr/ISXHgJEwuyNp6GC+FvEOczPh2s=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/routers/BorderItemRec
+ tilinearRouter$BorderItemConnectionAnchor.class
+SHA-256-Digest: RIY0aMsW9pqT/C1eM9qrM+ar2GVZHJ0QZ01ov5Q3WhE=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/graph/EdgesRouter.class
+SHA-256-Digest: 4CkEmtlaeJ6FGK11+IObRasCZQi9rUT9jksjIxN147E=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/graph/CompositeDirect
+ edGraphLayout$virtualNodesToNodes.class
+SHA-256-Digest: HkcKUifoWMXSAHIbB9iOR77F+M1BFjevGk1P0zhnALo=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/geometry/PointListUtilities$Lo
+ cateInfo.class
+SHA-256-Digest: 20W6jzrsqxZwq+xuIH3Y+DmjnvWiYsJsgaJLn0yfCmw=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/routers/ITreeConnecti
+ on$Orientation.class
+SHA-256-Digest: sWzEjT/jLjZbLVjG35ukn7154BISeaCjFOYQa7TCO1c=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/routers/ForestRouter.
+ class
+SHA-256-Digest: 4SGWKt2yrxuFbJiqBeq7UQGMVdqLzFNP81JpvmKIkyo=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/graphics/FontRegistry
+ .class
+SHA-256-Digest: wfk/FaeMCRAOJWihTSYMeHQ+YK1Z+wGC5InyWfegE4k=
+
+Name: about.html
+SHA-256-Digest: nHFX9V09SN3s1mjLDEYlZfF1cHH95xsX0U6CG6LnGCg=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/graph/EdgeEndPointsAssignment$
+ 8.class
+SHA-256-Digest: KVdovdgpcIDot74gRjFly+O2FTTgi1vFt2n8K/+NJiM=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/mapmode/DiagramMapMod
+ eUtil$TranslatableDouble.class
+SHA-256-Digest: M/i0XFY6uF/rdfncuNdiOGapppmVqtcl++zl1BKd8Jc=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/text/TextUtilitiesEx.class
+SHA-256-Digest: 5U5f9O1sY574p9P+2F39mLyQGE+DdpQhQdCZqipIqCE=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/figures/GravityDirectionType.c
+ lass
+SHA-256-Digest: dkuoh0dKC9X0r4q9X1BcxSPrn5DDsIBn+rW5bJndKEQ=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/parts/ScrollableThumb
+ nailEx$SelectorFigure.class
+SHA-256-Digest: ct6p9t/Zr5fsjiQ05mOB5CSTDKKSd8wDIvOOHXMGCi4=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/figures/RoundedRectangleBorder
+ .class
+SHA-256-Digest: aqv22STuA3MjDS3pgNkY/RRDgqR+iBf01Ix/Mt85sag=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/parts/ScrollableThumb
+ nailEx$ScrollSynchronizer.class
+SHA-256-Digest: c19/E/YTYHEjWRHj64l7d0fP0+zzRPbYcqfSN83sbyo=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/Draw2dStatusCodes.cla
+ ss
+SHA-256-Digest: q00/yuX/fVgTm1LNjtEyTm8CiPkHAO8yXjkOhb4b5CM=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/parts/ScrollableThumb
+ nailEx$3.class
+SHA-256-Digest: FXZznJifwtYKjIQlnNyL2OhM54FTRtAsdUgcKY/Z+Uw=
+
+Name: icons/upgrayarrow.gif
+SHA-256-Digest: zSgLwEpkyxFOm+cQMasGN+gKpHSmgT9vdS6mY2GSp6A=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/graph/EdgeEndPointsAssignment$
+ 1.class
+SHA-256-Digest: lU4l90tHzjiI43kzpM+OIlyIkvuaIz1p1fHluZkWO8E=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/figures/ConnectionLay
+ erEx.class
+SHA-256-Digest: bRoDLuRG6v/vKxxOmUkJIUl5bYvSHwoBDiOEnrMD3+8=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/figures/DelegatingLay
+ out.class
+SHA-256-Digest: idSw6lJyZpE+y0MqpJmjQ85iCgCc9fO2jGzEdZEZFkg=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/figures/package.html
+SHA-256-Digest: eg/jV2oz/gbyDqVJ8zGtsLJdjWZjxhVbKDh92lrvIzs=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/graph/EdgesRouter$EdgeComparat
+ or.class
+SHA-256-Digest: BLBA0nuco67Zys4k8Y1rjEarvKob2HGsvjUDiIaaKDY=
+
+Name: icons/topright.gif
+SHA-256-Digest: 3WqW+KyNoA63tpukeJFoCaJKRTFX3Rmir0HeMACdXCY=
+
+Name: org/eclipse/gmf/runtime/draw2d/ui/internal/routers/BorderItemObl
+ iqueRouter.class
+SHA-256-Digest: M7FvpgnTn2Dlwur8EOhsMakyWW/dQpdXlGM8JLwUFDQ=
+
+Name: icons/leftbottom.gif
+SHA-256-Digest: iprwoLyV+k8pZ7NN+Bkbt7JEhtaARf0XgeAydXFwSzw=
+

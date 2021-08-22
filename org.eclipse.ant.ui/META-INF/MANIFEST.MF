@@ -1,0 +1,2269 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.ant.ui; singleton:=true
+Archiver-Version: Plexus Archiver
+Built-By: genie.releng
+Require-Bundle: org.eclipse.ui.ide;bundle-version="[3.2.0,4.0.0)";reso
+ lution:=optional,org.eclipse.ui.views;bundle-version="[3.2.0,4.0.0)";
+ resolution:=optional,org.eclipse.jface.text;bundle-version="[3.5.0,4.
+ 0.0)";resolution:=optional,org.eclipse.ui.workbench.texteditor;bundle
+ -version="[3.5.0,4.0.0)";resolution:=optional,org.eclipse.ui.editors;
+ bundle-version="[3.2.0,4.0.0)";resolution:=optional,org.apache.ant;bu
+ ndle-version="1.9.4",org.eclipse.ant.core;bundle-version="[3.2.0,4.0.
+ 0)",org.eclipse.core.filesystem;bundle-version="[1.0.0,2.0.0)",org.ec
+ lipse.core.resources;bundle-version="[3.2.0,4.0.0)",org.eclipse.core.
+ variables;bundle-version="[3.1.0,4.0.0)",org.eclipse.ui.externaltools
+ ;bundle-version="[3.2.0,4.0.0)",org.eclipse.ui;bundle-version="[3.2.0
+ ,4.0.0)",org.eclipse.ui.console;bundle-version="[3.1.0,4.0.0)",org.ec
+ lipse.debug.core;bundle-version="[3.6.0,4.0.0)",org.eclipse.debug.ui;
+ bundle-version="[3.6.0,4.0.0)",org.eclipse.jdt.ui;bundle-version="[3.
+ 2.0,4.0.0)",org.eclipse.jdt.debug.ui;bundle-version="[3.2.0,4.0.0)",o
+ rg.eclipse.jdt.launching;bundle-version="[3.2.0,4.0.0)",org.eclipse.c
+ ore.runtime;bundle-version="[3.11.0,4.0.0)",org.eclipse.jdt.core;bund
+ le-version="[3.2.0,4.0.0)",org.eclipse.team.core;bundle-version="[3.2
+ .0,4.0.0)",org.eclipse.ltk.core.refactoring;bundle-version="[3.2.0,4.
+ 0.0)",org.eclipse.core.expressions;bundle-version="[3.2.0,4.0.0)",org
+ .eclipse.jdt.junit;bundle-version="[3.5.0,4.0.0)",org.eclipse.ant.lau
+ nching;bundle-version="[1.0.0,2.0.0)",org.eclipse.core.externaltools;
+ bundle-version="[1.0.0,2.0.0)"
+Bundle-ManifestVersion: 2
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/platfo
+ rm/eclipse.platform.git;path="ant/org.eclipse.ant.ui";tag="I20170420-
+ 2000";commitId=e52e5f81d28bd50972ef6c45c4a66783e9650c91
+Bundle-Vendor: %providerName
+Import-Package: com.ibm.icu.text
+Export-Package: org.eclipse.ant.internal.ui;x-internal:=true,org.eclip
+ se.ant.internal.ui.console;x-internal:=true,org.eclipse.ant.internal.
+ ui.datatransfer;x-internal:=true,org.eclipse.ant.internal.ui.debug.mo
+ del;x-internal:=true,org.eclipse.ant.internal.ui.dtd;x-internal:=true
+ ,org.eclipse.ant.internal.ui.dtd.schema;x-internal:=true,org.eclipse.
+ ant.internal.ui.dtd.util;x-internal:=true,org.eclipse.ant.internal.ui
+ .editor;x-internal:=true,org.eclipse.ant.internal.ui.editor.actions;x
+ -internal:=true,org.eclipse.ant.internal.ui.editor.formatter;x-intern
+ al:=true,org.eclipse.ant.internal.ui.editor.outline;x-internal:=true,
+ org.eclipse.ant.internal.ui.editor.templates;x-internal:=true,org.ecl
+ ipse.ant.internal.ui.editor.text;x-internal:=true,org.eclipse.ant.int
+ ernal.ui.editor.utils;x-internal:=true,org.eclipse.ant.internal.ui.la
+ unchConfigurations;x-internal:=true,org.eclipse.ant.internal.ui.model
+ ;x-friends:="org.eclipse.ant.tests.ui",org.eclipse.ant.internal.ui.pr
+ eferences;x-internal:=true,org.eclipse.ant.internal.ui.refactoring;x-
+ internal:=true,org.eclipse.ant.internal.ui.views;x-internal:=true,org
+ .eclipse.ant.internal.ui.views.actions;x-internal:=true,org.eclipse.a
+ nt.ui.launching
+Bundle-Name: %pluginName
+Bundle-Version: 3.7.0.v20170412-1054
+Bundle-Localization: plugin
+Bundle-Activator: org.eclipse.ant.internal.ui.AntUIPlugin
+Created-By: Apache Maven 3.3.3
+Build-Jdk: 1.8.0_121
+
+Name: org/eclipse/ant/internal/ui/editor/formatter/XmlDocumentFormatte
+ r.class
+SHA-256-Digest: v0Tv54SOyIhiGOdz20x3ITHPZndXkwGfmd69T8LEo2E=
+
+Name: icons/full/dlcl16/add_co.png
+SHA-256-Digest: u5U6vdlZZiUxp5nK36b2Ecb/bXWd+H8ceC5Z5f1E8UQ=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntPreferencePage$AntInt
+ egerFieldEditor.class
+SHA-256-Digest: LSm+xcRth4kmRbtlizBWFFpm8QETYDaZrI+qwBlK/2g=
+
+Name: org/eclipse/ant/internal/ui/editor/DecayCodeCompletionDataStruct
+ uresThread.class
+SHA-256-Digest: eaSp+SV5mY9p/KH454RaeKrQmvGgAHVRsECJ+FXzT/E=
+
+Name: org/eclipse/ant/internal/ui/editor/outline/AntEditorContentOutli
+ nePage$2.class
+SHA-256-Digest: BS/ktD5j5Ocm/ma5PPSiDV6KWWiinxGOJcjbIE+0qVM=
+
+Name: org/eclipse/ant/internal/ui/views/actions/RemoveAllAction.class
+SHA-256-Digest: WYEmGdU2/cg55gTp98g4h9o7Lh9NAtKJmqT/lVf+vfA=
+
+Name: icons/full/elcl16/properties.png
+SHA-256-Digest: vj6900YEUuMWHV2TumAc7ZAkC1YV8UkgLl1yayefYQY=
+
+Name: org/eclipse/ant/internal/ui/ExternalHyperlink.class
+SHA-256-Digest: 7aH2vNvz0q40xp0g3TQN/P+pCwetCEMeRwj1vxwIfTo=
+
+Name: org/eclipse/ant/internal/ui/editor/utils/ProjectHelper$ElementHa
+ ndler.class
+SHA-256-Digest: WVpU/ZTJc4ooqjcHM+jGBqLJLz3rEcDPR4yWmW2vZDw=
+
+Name: icons/full/obj16/template_obj.png
+SHA-256-Digest: yUp9czIFrlMZA0bZO1G5JlgwU9AyuEilD/Y9T/YUde0=
+
+Name: org/eclipse/ant/internal/ui/editor/templates/TargetContextType.c
+ lass
+SHA-256-Digest: oCsZI2AH4pgDvgDCFPIOoS6ogFLMTp+JM/EqAWhlFX0=
+
+Name: icons/full/obj16/defaulttarget_obj@2x.png
+SHA-256-Digest: IsnR2Hc6kw5baVr5ywqW1IH4i6Og25/ExGygVZYax70=
+
+Name: org/eclipse/ant/internal/ui/views/AntViewDropAdapter.class
+SHA-256-Digest: wlg/G82f6aOMJWWo9XKeHIhYhP7zDXZyZGXpcDpdjqg=
+
+Name: icons/full/obj16/task_obj.gif
+SHA-256-Digest: 5IWxzrg6VUPKhGMnobLCqxpvaHi/kqXNOLfdL+iup1Q=
+
+Name: org/eclipse/ant/internal/ui/preferences/MinimizedFileSystemEleme
+ nt.class
+SHA-256-Digest: pMp18Sb+0fwlEnHC1eBfpJrF8GvBYIY/YKCv6Jm6stU=
+
+Name: org/eclipse/ant/internal/ui/console/AbstractJavacPatternMatcher.
+ class
+SHA-256-Digest: bZYsTK03lYJ+SkRiCqvE3ZEpZU4NegFzPISbwqy053s=
+
+Name: org/eclipse/ant/internal/ui/launchConfigurations/AntTargetsTab$3
+ .class
+SHA-256-Digest: 6RPfFMaPgqzPD+ypO6MAyVRP4WjlHFEwTevXSjgK3mg=
+
+Name: icons/full/dview16/ant_view.png
+SHA-256-Digest: x2dGHoqrK1aiW3S7geXr1o2t5XJK5qI7j1l6m58tDuw=
+
+Name: org/eclipse/ant/internal/ui/preferences/SyntaxPreviewCode.txt
+SHA-256-Digest: HRCVBHZZppLglBOTy6Og3nkZcBJpWRwhr0V7cW0bBBY=
+
+Name: icons/full/dlcl16/synced@2x.png
+SHA-256-Digest: cZ5tzB9PbyKDHNTNL518yZJSbfW6FMvbdt64MSBaOlE=
+
+Name: org/eclipse/ant/internal/ui/views/actions/AddBuildFilesAction.cl
+ ass
+SHA-256-Digest: 2kMHoZEm9vzr9ooZTasamtjHQY11iGKQ/O6RID+tFqg=
+
+Name: org/eclipse/ant/internal/ui/editor/TaskDescriptionProvider$1.cla
+ ss
+SHA-256-Digest: c3WwRMJoGJi9N5KZwbqYfGyLtmG41QkXYluOOngvQ74=
+
+Name: icons/full/obj16/classpath@2x.png
+SHA-256-Digest: B4yqcE2319FK+upt8ZF0YggUvD2aJpKCBbFYtP+5NME=
+
+Name: org/eclipse/ant/internal/ui/dtd/util/SortedMap$ArrayIterator.cla
+ ss
+SHA-256-Digest: a4rGTsvZ5qaNfbqygfTrt42y4gzuy6EjPjPc7q9BP6M=
+
+Name: org/eclipse/ant/internal/ui/editor/outline/ToggleSortAntOutlineA
+ ction.class
+SHA-256-Digest: LI4UtVtuWaWJG6InKqhgtRcVDsjisnE3qJ60VO7oODU=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntPropertiesBlock$4.cla
+ ss
+SHA-256-Digest: 31+dbeo8scnU1uCxz6GOKK8eC4gcn88QtDR4oXBloXI=
+
+Name: org/eclipse/ant/internal/ui/editor/utils/ProjectHelper$LexHandle
+ r.class
+SHA-256-Digest: s9ep6rUxlGXSK22QsR22AKTVgPmNFF29UPLbjylYmsQ=
+
+Name: org/eclipse/ant/internal/ui/dtd/Parser$DTDReader.class
+SHA-256-Digest: D3gwy0tsOC5rECovqedptO2Dcnb95uC0zDM17afG6Cw=
+
+Name: org/eclipse/ant/internal/ui/datatransfer/AntNewJavaProjectPage$4
+ .class
+SHA-256-Digest: d596lOXpsUaE7SmZmMTTfhsN11w1KIYcBjRvpq+6EY0=
+
+Name: org/eclipse/ant/internal/ui/model/AntModelProblem.class
+SHA-256-Digest: Eri5rHIZoza0Ed35piJWEfGf2M53ua2mSuw8HyeQ/88=
+
+Name: org/eclipse/ant/internal/ui/launchConfigurations/TargetOrderDial
+ og$2.class
+SHA-256-Digest: dJghm+N2K/rYXFzS7wPtOmzaFW+neVJip9nE1hZFlJE=
+
+Name: org/eclipse/ant/internal/ui/views/actions/SearchForBuildFilesAct
+ ion$1$1.class
+SHA-256-Digest: m4qAL0cTNAQoChY6LuBC9drk2sEYt/wQXEyqcP0LMTY=
+
+Name: icons/full/eview16/ant_view.gif
+SHA-256-Digest: Y2JcaZgGOiTd7pmS9tRDAh1Sc/Tu+SAlucr0LUQ0Ttc=
+
+Name: org/eclipse/ant/internal/ui/model/AntElementNode.class
+SHA-256-Digest: 8QuvaRJpa/LQ8IqA59VEUhbyfqktcsvabjDtRoBkaK8=
+
+Name: icons/full/dlcl16/filter_top_level.gif
+SHA-256-Digest: 3on1N+wWZnSo568Vl8YuMRMga0L64INjCOZ2xqMrmV8=
+
+Name: org/eclipse/ant/internal/ui/model/AntModelLabelProvider.class
+SHA-256-Digest: a3KBccCbcV/icQNdASCUauh3jQbQ8qIN0HP8yAUsj+M=
+
+Name: icons/full/dlcl16/filter_properties.png
+SHA-256-Digest: BJ7Ybqf2QyV3nESSAxJNhtpo0CmrCdTaqOnD65gU7V0=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntPropertiesBlock.class
+SHA-256-Digest: IaFY8K+5bFW9mQizLVU2sdcjTfzipmQDskPz03hhJ5Y=
+
+Name: icons/full/dlcl16/synced.png
+SHA-256-Digest: 9ztqQe2fY5U7S5x1jU1Eyuqq7TwgisFPkf8WraQWwr4=
+
+Name: icons/full/obj16/classpath.gif
+SHA-256-Digest: cABeoN6h/G3tHejId0Rfp60EdexIwFjBwbN/NDXM9ok=
+
+Name: org/eclipse/ant/internal/ui/dtd/schema/Model.class
+SHA-256-Digest: lIchbph7aswGs3JAd2ezWO0Zhr7eFrkgJwCtZILV8oY=
+
+Name: icons/full/elcl16/removeall_co.png
+SHA-256-Digest: ZWFtLPEKtaYdTLo0UmOfQ+cBOm35IqHHQyuHYNiPDk8=
+
+Name: org/eclipse/ant/internal/ui/views/AntView$1.class
+SHA-256-Digest: wGL/Gnx+norl4eGEixQdoR+9zSSoG9zgDdymF7WIq6o=
+
+Name: org/eclipse/ant/internal/ui/editor/text/AntEditorDocumentProvide
+ r$AntFileInfo.class
+SHA-256-Digest: J7g2qLIG3pubawcTRHov0nIb7QCTkwGyR/cT1yCbtIk=
+
+Name: org/eclipse/ant/internal/ui/editor/AntEditorMessages.properties
+SHA-256-Digest: VxyIGxGKlBtlffLfFRpLe/yxIzZ2WLpuUPViLehN+jc=
+
+Name: org/eclipse/ant/internal/ui/datatransfer/ExportUtil$TypeComparat
+ or.class
+SHA-256-Digest: bKhLJxUHMqkUjORigFkvHU3F8UxHrUN41L7wE6LeZpM=
+
+Name: org/eclipse/ant/internal/ui/views/actions/AntOpenWithMenu$1.clas
+ s
+SHA-256-Digest: Oj+LSM/i6pQwHK4ZKTgfCRl8jeKrNwxXrjfzqdrlgio=
+
+Name: org/eclipse/ant/internal/ui/editor/text/IAntEditorColorConstants
+ .class
+SHA-256-Digest: TtdG/AiY3PWuH/2nvgGkIyopD52FJOLhbY37qUfVTJc=
+
+Name: icons/full/elcl16/filter_imported_elements.png
+SHA-256-Digest: LgOE2Yan76UUYuOMxx0nuZ2G3d1V4Lfz2MQd52f9Y18=
+
+Name: icons/full/ovr16/warning_co.gif
+SHA-256-Digest: /h8GlulVNJkQvPIISuZCRPi688o6pLQDZlYfQVEv2nI=
+
+Name: org/eclipse/ant/internal/ui/preferences/AbstractAntEditorPrefere
+ ncePage$3.class
+SHA-256-Digest: +y2nGlYr+Hx8Ny30IxJhFfk0bvRufKkZwYGtoLHgp2M=
+
+Name: icons/full/obj16/targetpublic_obj.gif
+SHA-256-Digest: ugaCk/2HvVtIWqNf1s5bccGnlTdD+XlEzJHsnszJExA=
+
+Name: org/eclipse/ant/internal/ui/views/actions/SearchForBuildFilesAct
+ ion$1.class
+SHA-256-Digest: Zi15LmD1R03So/1dK64kTPumiFnyKvRzjr5L0C/7JZ8=
+
+Name: org/eclipse/ant/internal/ui/AntUIPreferenceInitializer.class
+SHA-256-Digest: IGHsVyUMGmGr8Szqf3XejWrOeuB11J26WrIT4V3I+Nk=
+
+Name: org/eclipse/ant/internal/ui/dtd/util/AntDTDUtilMessages.class
+SHA-256-Digest: h+3751TFoWYMYUzRUdbn3QEUDOXyu6YjN8ByGFa0Qto=
+
+Name: org/eclipse/ant/internal/ui/editor/AntEditor$5.class
+SHA-256-Digest: v/mbMENGVnjrY50XFZj7vWOwJzIgjNoBjs0AqGjsaLo=
+
+Name: icons/full/etool16/segment_edit.gif
+SHA-256-Digest: wlRVs24KOQDh0odX3fvBcDVVY4aStMm3APlsaldTkn8=
+
+Name: org/eclipse/ant/internal/ui/preferences/GlobalClasspathEntries.c
+ lass
+SHA-256-Digest: QV9817rTcNOKgNTXeVl0YrysxP9Ie6NnAY1xyxEz8XQ=
+
+Name: org/eclipse/ant/internal/ui/editor/templates/BuildFileContextTyp
+ e.class
+SHA-256-Digest: XfkMjyiOON+WcmZeGKcKI2ybBFNcF3MIxCaGKQQbOd4=
+
+Name: org/eclipse/ant/internal/ui/launchConfigurations/AntJRETab$1.cla
+ ss
+SHA-256-Digest: 9f5oaW8WQNmllW0q/B2ACEDNND/CJbjmcNCLmY8leTw=
+
+Name: org/eclipse/ant/internal/ui/editor/text/IReconcilingParticipant.
+ class
+SHA-256-Digest: aZn8LZK79H2Pz9x6npE2jXSCDiM2k+BgmkfDzcKhg60=
+
+Name: org/eclipse/ant/internal/ui/dtd/util/SortedMapFactory$IndirectSt
+ ringComparator.class
+SHA-256-Digest: yak4QuEjqVNEkjspjknx7FsU3lJIkp4BWYOGwvrDZ7g=
+
+Name: icons/full/obj16/macrodef_obj.png
+SHA-256-Digest: JakjnIpLOakDwwjS2iDVqgNndLTjaOFjMH/6lcc4Dyo=
+
+Name: org/eclipse/ant/internal/ui/dtd/schema/NfmParser$Conflict.class
+SHA-256-Digest: MjdZHOKPT+Kd/ZXBpL+YSgI9ijT1l6UtjZvdUGc011s=
+
+Name: org/eclipse/ant/internal/ui/debug/model/DebugModelMessages.class
+SHA-256-Digest: +l7qMwPI+rV5qDIBWQvweqfoKnrsHTe+/fx9R8ZXlQY=
+
+Name: icons/full/dlcl16/alpha_mode.gif
+SHA-256-Digest: U5V1vRopsM+FmgyudlzVEHKPaK5HFfB7jYlU12byPAc=
+
+Name: icons/full/obj16/prop_ps.gif
+SHA-256-Digest: 9I7k0Y6xN5zzsksEBZlaOJA30jT+h6r1i8ZWKWRuhTA=
+
+Name: org/eclipse/ant/internal/ui/dtd/schema/Nfm.class
+SHA-256-Digest: ZAcgREmVgn6X00qV/ub0FcdwUh8LsMyz6OOv5j9PhDY=
+
+Name: org/eclipse/ant/internal/ui/views/AntView$6.class
+SHA-256-Digest: sbFeaRD6zx2hjCp+86GZyYnvqkEmojPfUwxa+3ePI+A=
+
+Name: org/eclipse/ant/internal/ui/model/AntModelProject$AntPropertyHel
+ per.class
+SHA-256-Digest: nnwFg0xDcp+5cTV+AMI5n8rkUt2Qxc471r1FrkkAKhw=
+
+Name: org/eclipse/ant/internal/ui/preferences/AbstractAntEditorPrefere
+ ncePage.class
+SHA-256-Digest: SyutoYE2V+Zo9LFhoO3rFixVC0Zu+Acs0i6PDPFNwyI=
+
+Name: org/eclipse/ant/internal/ui/preferences/ClasspathEntry.class
+SHA-256-Digest: ycbROj6kboPFsilPhv2nBgkaUElYzLvEC8WqSZhx4oQ=
+
+Name: icons/full/obj16/main_tab.png
+SHA-256-Digest: 5rGFEcK6sER/q2Qw1Ipzz/PD+czaR+YbsRu0PFwPQ7s=
+
+Name: org/eclipse/ant/internal/ui/datatransfer/AntBuildfileExportPage$
+ 6.class
+SHA-256-Digest: iqNxS525ZMDpPzz+tg4c/xMzEJYiUCO4neRY/v9Fw/4=
+
+Name: org/eclipse/ant/internal/ui/editor/utils/ProjectHelperMessages.c
+ lass
+SHA-256-Digest: vUQWh4hu4xrwRVaUzB7sqGXbuO+g7ega6QO6llgp3iI=
+
+Name: org/eclipse/ant/internal/ui/editor/outline/FilterInternalTargets
+ Action.class
+SHA-256-Digest: m6VqZOwh5jkcrvBhuNZ4l/fye+b0PmWQ6hbmyc7QluI=
+
+Name: org/eclipse/ant/internal/ui/editor/actions/AntEditorActionMessag
+ es.class
+SHA-256-Digest: 5TWg42G7XoqU6i9LCGkfkrhhQ2vliD+NQI0UjCBIkcU=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntPreviewerUpdater$3.cl
+ ass
+SHA-256-Digest: YHjTfztAUZ398IV1CGCrpQ4LvbQi/kn/0FTgo5VYnA0=
+
+Name: icons/full/elcl16/filter_top_level.gif
+SHA-256-Digest: Gm3FQh+3rEuEErqXgTi6EQyY22v0yKyLKiiXnxaro2M=
+
+Name: icons/full/obj16/eclipse16.png
+SHA-256-Digest: /J3RvmGlaYuPpn6gL7yrCohkIZ3gNNth3ztHKMGjcJ0=
+
+Name: org/eclipse/ant/internal/ui/model/AntModel.class
+SHA-256-Digest: QJu1/V8i1wrRmfj8sBkuxnVul6L77q+Qbl2/FD34GAI=
+
+Name: org/eclipse/ant/internal/ui/dtd/IAtom.class
+SHA-256-Digest: ni84fOSr3yqaCLV2QiBo3h8ZVcVpwOPkdf1WspzLVLY=
+
+Name: icons/full/ovr16/warning_co@2x.png
+SHA-256-Digest: WzB0oyLrJzecFrn1s8DoPLWWVb5z4wglX+LwKRGB+sU=
+
+Name: org/eclipse/ant/internal/ui/launchConfigurations/IAntLaunchConfi
+ gurationConstants.class
+SHA-256-Digest: Q4t2O/SrkUBA9O/spGeSyXe4HUIgqJb5+XbDNfX/4fA=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntPreferencePage.class
+SHA-256-Digest: /QDSccDcvuMZsgXzj4SIRcSJjMIKZC6s/DZOiLZCaxQ=
+
+Name: org/eclipse/ant/internal/ui/editor/AntAutoEditStrategy.class
+SHA-256-Digest: UDfX2bAhHBVaYMV+JhNG4lM1D+v/qB7uc3mDr8eRHZI=
+
+Name: org/eclipse/ant/internal/ui/model/AntAugmentTaskNode.class
+SHA-256-Digest: PHH1f3BbpXKv0BWVwMYCehniXdDMAxgEhKUl6ok9PX0=
+
+Name: org/eclipse/ant/internal/ui/preferences/FileSelectionDialog$1.cl
+ ass
+SHA-256-Digest: PE/rJfPeJ6qZ7cMJ2+vf2ldmq12tb+fTs6W+AtE2wbA=
+
+Name: org/eclipse/ant/internal/ui/AntUIPlugin.class
+SHA-256-Digest: Mj/V1a5nhsg0nDMF0NVmxCy3Pdpft6Y6B1hpssD3+SA=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntPage$2.class
+SHA-256-Digest: RfqCQ3hIPqkkOn2kK33OPtQVOH7eMdKVDHjZVYH9icQ=
+
+Name: icons/full/obj16/prop_ps@2x.png
+SHA-256-Digest: Nax+FIwCwAIZx3eUdD/zhRJpP8I9jfZZQ054LNjQrcM=
+
+Name: icons/full/obj16/property_obj@2x.png
+SHA-256-Digest: bPVoFAx6neVyZwi6PDbLj5LA6rQn6em7tt8S/SDTKbs=
+
+Name: icons/full/elcl16/run_tool.gif
+SHA-256-Digest: Tg4q5ZjAkJcBMqlzxjIKbtrhu0jAQPkE69v2KwZukw0=
+
+Name: org/eclipse/ant/internal/ui/editor/AntEditor$StatusLineSourceVie
+ wer.class
+SHA-256-Digest: 2NXP42KfdUTDlPdZJrKxCCm+VLcZb/lAtLpoS6Xvaoc=
+
+Name: org/eclipse/ant/internal/ui/ImageDescriptorRegistry.class
+SHA-256-Digest: +tKhYejftYI9pw3+/l6icX8wZA5vH73d42bzrn5kIX4=
+
+Name: org/eclipse/ant/internal/ui/views/AntView.class
+SHA-256-Digest: VG3GNt0M4D8VWohwvsOM8CO4sPVYwDas413A1w3tOwA=
+
+Name: org/eclipse/ant/internal/ui/dtd/util/IValueHolder.class
+SHA-256-Digest: P/bkqwyHrIzpfr/DmTlzA3/RmVYSl69aghqBytaDd2w=
+
+Name: org/eclipse/ant/internal/ui/console/AntConsoleColorProvider.clas
+ s
+SHA-256-Digest: 6OVDH0xZF8X0Nt6jo1ybla2TrCL/Iqbq++iI+QGZBFs=
+
+Name: icons/full/etool16/mark_occurrences.png
+SHA-256-Digest: sSKb69ssLrNXAPTu6QSFJmnbqxD/eDufEE/vv5S2Jlw=
+
+Name: icons/full/elcl16/filter_properties.gif
+SHA-256-Digest: CxAcl6V74QbXFOzCPat8Va3GCsRfh9RGggb1Fxlts7w=
+
+Name: org/eclipse/ant/internal/ui/model/AntModelMessages.class
+SHA-256-Digest: WOpVt/QCwgweft5IOOdq27EpPJb4Srn5gCXwpB9SiA0=
+
+Name: org/eclipse/ant/internal/ui/views/actions/AntOpenWithMenu$3.clas
+ s
+SHA-256-Digest: UVhlA0neWDH9DC1kJnwrjVtyqjwYGrrEoJyd95tHVhQ=
+
+Name: icons/full/ovr16/error_co@2x.png
+SHA-256-Digest: 7KskI8z3/evYH7/QmGUYBs/T+pRP5OH0Mr9Gax67j2k=
+
+Name: org/eclipse/ant/internal/ui/dtd/ISchema.class
+SHA-256-Digest: BvmyWL1heHxZdqXvYYzAoBg2MlRKEzP+QhSSZxEy7as=
+
+Name: icons/full/dlcl16/filter_imported_elements.gif
+SHA-256-Digest: JhVxFe/bAeOxl0HHu9cX65FVfDyPicel7EgAOcQC0ns=
+
+Name: org/eclipse/ant/internal/ui/editor/outline/FilterImportedElement
+ sAction.class
+SHA-256-Digest: 6bAXtDRLBrxnCMPIRYWMJf+uAAoc0N2ibDAogLh0/hw=
+
+Name: org/eclipse/ant/internal/ui/datatransfer/ExportUtil.class
+SHA-256-Digest: 8yYzwpCaj49x+0Pqot3nC4f2Rt7zWbhqqz5nfE0UiUU=
+
+Name: org/eclipse/ant/internal/ui/preferences/AbstractAntEditorPrefere
+ ncePage$1.class
+SHA-256-Digest: 0FS02jlqTKEXwgIN8SDrM+EOApRBE63CLv5Vz4wLG1c=
+
+Name: org/eclipse/ant/internal/ui/editor/outline/AntEditorContentOutli
+ nePage$3$1.class
+SHA-256-Digest: 5EbYu20gzJP78FUXel3i7ynu0sT4kxKhmnWGAUAbO5c=
+
+Name: icons/full/dlcl16/refresh.gif
+SHA-256-Digest: Uleovs7+DjEdW6/ODRUP3jvMmja6e/YTuNx9g81vpVU=
+
+Name: org/eclipse/ant/internal/ui/refactoring/RefactoringMessages.prop
+ erties
+SHA-256-Digest: THums5gBkA/Dazh9qUHueJy5vxlSnKhoXae7G+tm6G8=
+
+Name: org/eclipse/ant/internal/ui/datatransfer/AntBuildfileExportPage.
+ class
+SHA-256-Digest: Ck3hhQtPUvi8VNi9UoztOiSQa4o763KD79ZJwYWfUKg=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntEditorPreferencePage$
+ 5.class
+SHA-256-Digest: GwsG7IrRqH3CmxTLEHpYiXqsOKgWZuXY+Sq7eF/bK3c=
+
+Name: org/eclipse/ant/internal/ui/editor/templates/AntTemplatePreferen
+ cePage.class
+SHA-256-Digest: cOAKDcHTVmrUZncTJyRy5takob2WAAs19c+KUeUdKcY=
+
+Name: org/eclipse/ant/internal/ui/dtd/util/MapHolder.class
+SHA-256-Digest: sLRxKV+t4Pdx7V3Ila2aDq05ED2UH0wwHjI9mdR3XzY=
+
+Name: org/eclipse/ant/internal/ui/dtd/util/SortedMap.class
+SHA-256-Digest: IlK8jcx/on1nnZVm58DisE+rBSr0H9hV8wf/FAiH7y8=
+
+Name: org/eclipse/ant/internal/ui/editor/AntSourceViewerInformationCon
+ trol.class
+SHA-256-Digest: pIjU8RE730rv0ipU4ytDCtGgagJ7tROxcsSqgTMe5b4=
+
+Name: org/eclipse/ant/internal/ui/views/actions/SearchForBuildFilesDia
+ log$ResourceProxyVisitor.class
+SHA-256-Digest: WZ6Q4aGLcF4fxEI5QPVzzYOMi8babzZWkqV9PDVcUjM=
+
+Name: icons/full/elcl16/remove_co.gif
+SHA-256-Digest: XDJg87msQWxpF2z3XR27GECU0ag2lhLBVdImgAuE1+w=
+
+Name: org/eclipse/ant/internal/ui/launchConfigurations/AddVariableStri
+ ngAction.class
+SHA-256-Digest: BCFcyHvIcyrGNh1MpdKAatcEdMKAAMOcx8f5zcw6PuE=
+
+Name: icons/full/dview16/ant_view@2x.png
+SHA-256-Digest: KLKpvUoLiFtU6yDv4eq7j5SSjE+sTGrk8VBrC8C4uI4=
+
+Name: icons/full/dlcl16/remove_co.gif
+SHA-256-Digest: fDVO1ekn8UOtPXuGfZQV+YemSa8a+BP3kHM/jab1pz8=
+
+Name: org/eclipse/ant/internal/ui/ColumnSorter$1.class
+SHA-256-Digest: sNaVqReW+cNvrj4jGU1lFH4XPsj0GrRvuahFibVKgWE=
+
+Name: icons/full/dlcl16/removeall_co.png
+SHA-256-Digest: wHa4bIA0IGwrINaZQEAnFzA2fLYDEkzEf9XgZxaAaLk=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntPreferencesMessages.p
+ roperties
+SHA-256-Digest: c2JL2+zx10hOEZj5j8FJ9F/qtAdKymVgzzKMBR/6z3E=
+
+Name: org/eclipse/ant/internal/ui/views/actions/SearchForBuildFilesAct
+ ion.class
+SHA-256-Digest: QJJWEtwHXDsdQuDnoWrU/MM7fxeaPTeoHx2ffIIzTqA=
+
+Name: icons/full/obj16/targetinternal_obj.png
+SHA-256-Digest: Ywq4iaGE+FmVzayCp01iTwXqHN+J1KXJ67+D0ERFtak=
+
+Name: icons/full/dtool16/mark_occurrences.gif
+SHA-256-Digest: tglNoiXlMVo1upsaIMgZ0Le0CZPdxfawexRavYl+CRE=
+
+Name: org/eclipse/ant/internal/ui/model/IAntModelConstants.class
+SHA-256-Digest: z7lvE9KDTbXdCtsu5IuB/2BMMrfXdzQG4mpUodoM5TM=
+
+Name: org/eclipse/ant/internal/ui/model/AntModelCore$1.class
+SHA-256-Digest: MIm3t4mu2dxvLCa57BjZ1vkC3RcDJX5gisXNcik6PRg=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntClasspathPage.class
+SHA-256-Digest: 5+77UXGZdzv5k79x13tdOROiT4KL6PWmDvfYvN5rmuA=
+
+Name: org/eclipse/ant/internal/ui/editor/text/MultilineDamagerRepairer
+ .class
+SHA-256-Digest: C9+v09lfexqGrGVHTGr6yL+RBTY0nZgiLcBoCzawgZ0=
+
+Name: org/eclipse/ant/internal/ui/views/actions/SearchForBuildFilesDia
+ log$2.class
+SHA-256-Digest: AdA8u/3w3+SER/ve4TnCWlZ4CQiMFNLt50y1Tlv6KCI=
+
+Name: org/eclipse/ant/internal/ui/editor/utils/ProjectHelper$MainHandl
+ er.class
+SHA-256-Digest: ia1A7wqXRTZGL5sApoq5z/iA+lY2tt4wG0GlEDbqrbg=
+
+Name: org/eclipse/ant/internal/ui/views/actions/RefreshBuildFilesActio
+ n.class
+SHA-256-Digest: qlGk+EhaHzp4hBUZTPLPg9k15iel52PJbwGVqZYkBwI=
+
+Name: icons/full/obj16/property_obj.gif
+SHA-256-Digest: x16IVK/p2gw8J2vD9oTgXo8Fp76LsJE4xtDUADyjIFI=
+
+Name: icons/full/elcl16/search.png
+SHA-256-Digest: QB9q1snYrX8oLqUilCD9SQ7y4zOBpVn5BTlzN3MxXu0=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntEditorPreferencePage$
+ ControlData.class
+SHA-256-Digest: Vkw8Wz9USUTV37fsiBl1YUOzXf58rPGmozTtFwtaKh4=
+
+Name: org/eclipse/ant/internal/ui/IAntUIHelpContextIds.class
+SHA-256-Digest: xRM1kt6dguuPU1+6ttwWjEgK5pnnKWW2STyjzWEBG+w=
+
+Name: org/eclipse/ant/internal/ui/editor/formatter/XmlFormatter.class
+SHA-256-Digest: Y5gWlIPlBs+52q1igZIy6F/02XqjisOPWMkvx8ybxEY=
+
+Name: icons/full/dlcl16/ant_targets.gif
+SHA-256-Digest: JOR1ICxrilOIcdxCgVgi4JMtgkYASbiVqDCz6YBh9Ak=
+
+Name: org/eclipse/ant/internal/ui/launchConfigurations/AntEnvironmentT
+ ab.class
+SHA-256-Digest: oDFYRnjNEOXwrdvn8tqwe+HpPlyLoLqCjg/G8/Tm98I=
+
+Name: org/eclipse/ant/internal/ui/dtd/IElement.class
+SHA-256-Digest: kUnvJBOCJPKllQ9vRCenHza33qhtO6flmUQM/esfgPg=
+
+Name: org/eclipse/ant/internal/ui/AntPropertyValueProvider.class
+SHA-256-Digest: VFFhIlPAABySHA//DD5BH1cuLr64AvMupE5usGiEvnM=
+
+Name: org/eclipse/ant/internal/ui/launchConfigurations/AntTargetsTab$8
+ .class
+SHA-256-Digest: EfZ0ndo7vaGQ6PNVsFhuEFiHC5pV9ki9et52V9zsX9Q=
+
+Name: org/eclipse/ant/internal/ui/editor/text/AntEditorTextMessages.pr
+ operties
+SHA-256-Digest: NiBEhhY8J0QQu9lB7Nvf0/KkyGNOWU2hhUuBax6o2vQ=
+
+Name: org/eclipse/ant/internal/ui/preferences/ClasspathModel.class
+SHA-256-Digest: ulapQVu5zyjFYwkCST+hRwsmpcWe16I7UXCg055+Mog=
+
+Name: org/eclipse/ant/internal/ui/launchConfigurations/AntJRETab.class
+SHA-256-Digest: 2n3cLbzJRUOg5ZMfyySKuzOzsSFxBe7qcJnpRa9QOWs=
+
+Name: org/eclipse/ant/internal/ui/preferences/MessageLine.class
+SHA-256-Digest: hJfMeyQ50+j/kGfljO8HPmdOxVFv5HtMbxMXQEoDOXU=
+
+Name: org/eclipse/ant/internal/ui/preferences/AddPropertyDialog$1.clas
+ s
+SHA-256-Digest: ranP5K4f1oR70MI516OrMekO4oxUxuWx0HXABd5SbyQ=
+
+Name: org/eclipse/ant/internal/ui/model/AntModelCore.class
+SHA-256-Digest: F84P1fO1jmgxC5RmM7yqhsRzqeNlsv3AvmwInZ0T/Vc=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntClasspathBlock$2.clas
+ s
+SHA-256-Digest: BZw0LSQhtDfdAiGg4w3597dHGpiSDX1Mj0y4xp1IKAs=
+
+Name: icons/full/dtool16/segment_edit.png
+SHA-256-Digest: JuWg/5TI2NZKtMnVQkhcFCl+zM/3QIEwiMmWpHurD9k=
+
+Name: org/eclipse/ant/internal/ui/editor/actions/ToggleAutoReconcileAc
+ tion.class
+SHA-256-Digest: tMw6c0nnTw6DFzBgbfVD8rsII6AWpuJ6PaLFvb9iXug=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntCodeFormatterPreferen
+ cePage.class
+SHA-256-Digest: 7YQEgyX6aAsKhXhONPnjeb+Bm8nGl8KIq6uueJhF4AM=
+
+Name: org/eclipse/ant/internal/ui/preferences/URLFieldEditor.class
+SHA-256-Digest: pYj2Y7jMlyBngw94o604L8fUIWB0/4htFFXgVdISlqE=
+
+Name: icons/full/obj16/taskdef_obj.gif
+SHA-256-Digest: AMUnWMZmCXnZe78zydTfNGaNcHf9uAxpJKlJOA9hzfg=
+
+Name: org/eclipse/ant/internal/ui/editor/outline/AntEditorMarkerUpdate
+ r$AntEditorMarkerUpdaterJob.class
+SHA-256-Digest: VA8hWuAEqSEpaEgb7ZokCIg/GgL6EPfqeLRZDjCHnrc=
+
+Name: org/eclipse/ant/internal/ui/editor/actions/FoldingActionGroup.cl
+ ass
+SHA-256-Digest: ZUApoSrKHsahFAng0K/dG6pKkwpPpvFJWCNVjNP1+KU=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntEditorPreferencePage$
+ 3.class
+SHA-256-Digest: TwmrnRCTg53KYBm3+8h+IK19Yn8HGAvSCkxEEI8J2xE=
+
+Name: org/eclipse/ant/internal/ui/editor/AntEditorSourceViewerConfigur
+ ation$2.class
+SHA-256-Digest: ZfKXU++O12GDbsFOMwoQGoQkVgLF1UJGFi+uOug5M94=
+
+Name: org/eclipse/ant/internal/ui/dtd/util/IMapHolder.class
+SHA-256-Digest: m7qkaJ4LTTDPIp8gNXJ+NvQ4lRwcMhqlR341HalyFH8=
+
+Name: org/eclipse/ant/internal/ui/views/AntView$3.class
+SHA-256-Digest: fA46hePcoAWHZ+K7AoJ8S0shmD9QeXDAwiXl+knwgSo=
+
+Name: org/eclipse/ant/internal/ui/WorkbenchAntRunner.class
+SHA-256-Digest: jDKjbYPLxg2HeTO90CF0/qUwONHi6/XrgbPIrgiMmQI=
+
+Name: icons/full/dlcl16/exportAnt_co.png
+SHA-256-Digest: tS9nEh6cO5ZinFzSuNELBSJvlspA65m4s7YGYa6qUoQ=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntEditorPreferencePage$
+ 6.class
+SHA-256-Digest: 1fYihroFOvM9i/I6IaBrvYMtyWdDWvSswnWO9lA6gig=
+
+Name: org/eclipse/ant/internal/ui/editor/AntEditorSourceViewerConfigur
+ ation$1.class
+SHA-256-Digest: lyVWglVmADs35VukUGLA1A/foOXwN1ak1f9oh6U7SJg=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntPropertiesBlock$1.cla
+ ss
+SHA-256-Digest: EurxiGQJKPwUjj3N//DU6wUZ3EzV6LvE+8bxJUrRn9I=
+
+Name: org/eclipse/ant/internal/ui/editor/actions/RunToLineAdapter.clas
+ s
+SHA-256-Digest: QvFgN3PzXg+k+rfJMh/A/7vetoI7JRvj2Urb/lHOY9o=
+
+Name: org/eclipse/ant/internal/ui/editor/AntEditor$EditorSelectionChan
+ gedListener.class
+SHA-256-Digest: 6gsCwtMWzeZqq3/C2oSkpDg3tGIYnblCWubDxoEFvMU=
+
+Name: org/eclipse/ant/internal/ui/preferences/AddPropertyDialog$2.clas
+ s
+SHA-256-Digest: OsyXlmWFlUHgTNe3VA60v1QTLwWOwabokQZZPf0VpI4=
+
+Name: org/eclipse/ant/internal/ui/refactoring/LaunchConfigurationBuild
+ fileChange.class
+SHA-256-Digest: ojrvuhtm6bWK/TEhydYbwDeMWnQtcAdU/F7fpnG9QMs=
+
+Name: org/eclipse/ant/internal/ui/editor/formatter/XmlDocumentFormatte
+ r$ProcessingInstructionReader.class
+SHA-256-Digest: ItrnTQMPCYelAhMTsQzrIBnBfkIPGJ7z4iCK12GEnN4=
+
+Name: org/eclipse/ant/internal/ui/model/AntTargetNode.class
+SHA-256-Digest: +86N/GAo8smmiQXEZlx7snAHoYkwXNi+y32x47jcf1c=
+
+Name: icons/full/dlcl16/filter_internal_targets.png
+SHA-256-Digest: jICulxP1SmEq3Ub5vbchXt/L/1pAtiKyDoqACxiTIxw=
+
+Name: org/eclipse/ant/internal/ui/console/ConsoleMessages.properties
+SHA-256-Digest: OECV/f5NM18ijxHOYAmrKNFAfM0VP2xbVETSFl77dEM=
+
+Name: templates/ant.xml
+SHA-256-Digest: ytInBd3GBPQs8psz4ZafEnJGmVDNaVj70cSErEkr2Ic=
+
+Name: org/eclipse/ant/internal/ui/editor/AntEditorCompletionProcessor$
+ 2.class
+SHA-256-Digest: ZXI5hXlNB/sS3Ct6yoci910RNIxFeOuMRIAXUMmGsD0=
+
+Name: icons/full/elcl16/add_co.gif
+SHA-256-Digest: EKRrkS6jw6YNyl1hDRcqAj76UhivEXUrFRzH1iKkna4=
+
+Name: org/eclipse/ant/internal/ui/editor/AntEditorCompletionProcessor.
+ class
+SHA-256-Digest: YamBBoUaAeS+ttZlqTYwuDSO1L5B0nJgM8Lsibquhsk=
+
+Name: org/eclipse/ant/internal/ui/editor/actions/ToggleLineBreakpointA
+ ction.class
+SHA-256-Digest: 5tMVhUtiV903WGVjT2oOFIRnONnKhZ5w8aqvvsX2wYo=
+
+Name: icons/full/dtool16/mark_occurrences@2x.png
+SHA-256-Digest: HqkUotuxZjb6LBJMUcauUiR2Z7S+I/4nKq38bGB8rMQ=
+
+Name: org/eclipse/ant/internal/ui/datatransfer/BuildFileCreator.class
+SHA-256-Digest: hhQi4z6UALhdIe2Eg5Gjw5/hG6UmU7fZY97D6vFi3mA=
+
+Name: org/eclipse/ant/internal/ui/datatransfer/AntBuildfileExportPage$
+ 2.class
+SHA-256-Digest: oH1zfX9k8y3ByOHyIXV+ZgXhGdq03cT3cbz8ltKS/Y0=
+
+Name: org/eclipse/ant/internal/ui/editor/utils/ProjectHelper$RootHandl
+ er.class
+SHA-256-Digest: H8/Jw4bSBMnzXsbsk96IT00y2TtSpn6u7HaCXv3DXVk=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntRuntimePreferencePage
+ .class
+SHA-256-Digest: dlCVCFBv/V96eRhuaTTa21dF8y0NZe69WW5PfPoUHQE=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntPreferencePage$3.clas
+ s
+SHA-256-Digest: 86fBXl5x/Sqe6FLxFS0tJKoNzfp3rnGIKeQGnfa2I0k=
+
+Name: org/eclipse/ant/internal/ui/editor/outline/FilterTopLevelAction$
+ 1.class
+SHA-256-Digest: /ZsxJRkvCH14u69q9Z+/JJYZ2Nl7iG7PiSOxL6Jyk+c=
+
+Name: org/eclipse/ant/internal/ui/views/AntViewMessages.class
+SHA-256-Digest: 9Bm7X7inWndqDkkzzMBhGe9teyTzfK1usHS4/fBYRr4=
+
+Name: org/eclipse/ant/internal/ui/launchConfigurations/AntLaunchShortc
+ utWithDialog.class
+SHA-256-Digest: N0UN/lyuHk9ISeRatL57urZS3MuUfOsgXBO73rxvCYI=
+
+Name: org/eclipse/ant/internal/ui/views/AntView$4.class
+SHA-256-Digest: om9RXdKzT3zs2fjerCPVrzFRvl5dV0qY0SJUBfdzaVA=
+
+Name: org/eclipse/ant/internal/ui/editor/formatter/XmlDocumentFormatte
+ r$TagReaderFactory.class
+SHA-256-Digest: GMtmp9Fk8vmXF5gMsLcgBi3Ga8RvBzx8IaBLqhbZ4iw=
+
+Name: org/eclipse/ant/internal/ui/editor/AntEditor$OccurrencesFinderJo
+ b.class
+SHA-256-Digest: Bml8Rak4p4xDxWH2V4FPF7S0yxxd6dlHMNKZspkUBz8=
+
+Name: org/eclipse/ant/internal/ui/launchConfigurations/AntTargetsTab$6
+ .class
+SHA-256-Digest: jk/WvLuhaOfAJ/W+oqbxjFydF1+BAO8yFgCgkJlfKS0=
+
+Name: org/eclipse/ant/internal/ui/datatransfer/JavacTableLabelProvider
+ .class
+SHA-256-Digest: tyA//FzmKIy9eQkuag55sA6gv0YPtxciW795OT2CIMk=
+
+Name: org/eclipse/ant/internal/ui/dtd/schema/Element.class
+SHA-256-Digest: 4o42tIYwZN1Zlb7aNjeCaZDmnayT7icjXAy2rQNgmJk=
+
+Name: org/eclipse/ant/internal/ui/model/AntProjectNode.class
+SHA-256-Digest: /g+7/lAd3hSuEmPEr9Y04N4RyY2YJn279/0CUn9im3M=
+
+Name: org/eclipse/ant/internal/ui/dtd/util/AntDTDUtilMessages.properti
+ es
+SHA-256-Digest: 6j9+cztVG5H/APLCglMiQCEGnaXuedHP4Xw4fZde4AY=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntPage$4.class
+SHA-256-Digest: QeTiQipQ6n+VqSotDnHn5sSmPS6xEGN+dNN8SwZhKSc=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntPropertiesPage.class
+SHA-256-Digest: x13Jb2nM6FqF/u3W3VR/2yzENtoHf3ghMlEa83qhBLE=
+
+Name: org/eclipse/ant/internal/ui/editor/text/AntEditorDocumentProvide
+ r.class
+SHA-256-Digest: v7VWfz9JOvJtqmF9kDtiuWn/P/IrGC+KSruyzzj0IA4=
+
+Name: org/eclipse/ant/internal/ui/launchConfigurations/AntBuilderTarge
+ tsTab.class
+SHA-256-Digest: IbkaP9DGY/oPZ70z+ylvg3V2r3UCnUNgTkCtoL98xIg=
+
+Name: icons/full/elcl16/refresh@2x.png
+SHA-256-Digest: 6hJYW6Ao1KUCArumx0bWmfXdI6hfhC0FODoH/ubbkAM=
+
+Name: icons/full/obj16/new_ant_project.gif
+SHA-256-Digest: hhY8skBnIw+6xrqOPNIX/Iu5uZ21lJeFumyGYNXUQbI=
+
+Name: icons/full/obj16/import_obj.gif
+SHA-256-Digest: AeOyo+vV33w/UTCQ+4lAM8l+/075r5sK3Fl33lBFq5A=
+
+Name: icons/full/dlcl16/exportAnt_co@2x.png
+SHA-256-Digest: g4mTM4e0rRls2NsWaC5aNdZCpjqmHZ8SDdy85rlfot0=
+
+Name: org/eclipse/ant/internal/ui/editor/outline/AntEditorMarkerUpdate
+ r.class
+SHA-256-Digest: pFj3aTn7UF/G+zsQnl/0jDJwCJ39zJlxjCLtUmN1rDw=
+
+Name: icons/full/dtool16/segment_edit.gif
+SHA-256-Digest: snfvdc5RHfSq57zQkUZILfIgCavYySiLHJv7zDlrwqw=
+
+Name: org/eclipse/ant/internal/ui/editor/text/AntFoldingStructureProvi
+ der.class
+SHA-256-Digest: zuMVAdL+UzZVlaffepZJepsla5v6PuzM2Zzg9ZsmsWA=
+
+Name: icons/full/obj16/type.gif
+SHA-256-Digest: FLMIJS9/cX4Awf8uRk3b32x0ulNOMpPog8gSmI3fQ/o=
+
+Name: icons/full/obj16/new_ant_project@2x.png
+SHA-256-Digest: SNWXRKw5036lFwJXMUxALkSX3RhhsS0SLKYoX82t+10=
+
+Name: org/eclipse/ant/internal/ui/views/AntView$5.class
+SHA-256-Digest: HmDd3yxhNrQNwKkDpxlJHBnc0A3vKvCXsVwNPtBCcDM=
+
+Name: org/eclipse/ant/internal/ui/model/AntModel$2.class
+SHA-256-Digest: LBbMMiWsfy+NRc3Hh9HF5+yFI9AHDd2yemq87S2uSGg=
+
+Name: lib/antrunner.jar
+SHA-256-Digest: VVk/Dx6UJcaaBaRC8fs6UMK+JJF18KU9KX+rLojc7e0=
+
+Name: icons/full/ovr16/import_co@2x.png
+SHA-256-Digest: SKFRs1ZdRAqmS3tjh4XHFebr4JETR03t087QDA5ZYFc=
+
+Name: org/eclipse/ant/internal/ui/dtd/IDfm.class
+SHA-256-Digest: +7B2nh7jdt+g8XJskd7PRcaSdn4y+q2Q4EgUTp+tLC0=
+
+Name: org/eclipse/ant/internal/ui/launchConfigurations/TargetTableLabe
+ lProvider.class
+SHA-256-Digest: ze3GC/gNdXV/RgjVaOnaLXIUOTlEk0N/CUCI7uojUck=
+
+Name: org/eclipse/ant/internal/ui/model/InternalTargetFilter.class
+SHA-256-Digest: 5GmF9lYliYfrEUm4WbfIiSI6WA0hi63CFluHxMXpTfQ=
+
+Name: org/eclipse/ant/internal/ui/editor/EditorSynchronizer.class
+SHA-256-Digest: W5AK6K3uAJckZpJixvSYYo5fqRWwm90ODsVNz0fgIvU=
+
+Name: org/eclipse/ant/internal/ui/preferences/FormatPreviewCode.txt
+SHA-256-Digest: 0GUKZtyL85QpL+L8I/ZPG5b4nDu+868R789kb/zKu7I=
+
+Name: org/eclipse/ant/internal/ui/dtd/schema/Atom.class
+SHA-256-Digest: 1XX+8tcgIXqaV4qWXXXrtjSEZuvOPNlMCv+jywE3UIo=
+
+Name: org/eclipse/ant/internal/ui/launchConfigurations/AntTargetsTab$5
+ .class
+SHA-256-Digest: baua8dTak3hP7skJj6PzhGnOHS2ImUST/i1nvver1ME=
+
+Name: org/eclipse/ant/internal/ui/editor/anttasks_1.6.0.xml
+SHA-256-Digest: KWRMYtLW0sTEjJ4SQcd6vsbxorLEkxFguYGHWTrY974=
+
+Name: org/eclipse/ant/internal/ui/editor/text/FileScanner.class
+SHA-256-Digest: QcP5ck0d/QiKpMwRnAzm3D0Fuu9UkPuJF2qX+fdu2N4=
+
+Name: icons/full/obj16/ant.png
+SHA-256-Digest: VvXvWkS4ZZe1FjIX/iPbiM3LwuknFuO6PPONHH3KGSI=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntContentProvider.class
+SHA-256-Digest: dyIfcOPLVJ6vYXualwzMGBjxnVNuMy5tQqK30+PMbQM=
+
+Name: org/eclipse/ant/internal/ui/AntImageDescriptor.class
+SHA-256-Digest: JVSeVsoBuwt9KD1J4EX2OJfh2RFQUR+iSnyfS4C0t24=
+
+Name: org/eclipse/ant/internal/ui/datatransfer/DataTransferMessages.cl
+ ass
+SHA-256-Digest: eSNggwOlKPjhUd5Vt2mSR7INCn9Avomv+gkdy0sZ6+o=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntEditorPreferencePage$
+ ColorListContentProvider.class
+SHA-256-Digest: tuGNNUnpKaHwarFahf/SqDG9F3ZwOpinAKDeBhpiOrU=
+
+Name: org/eclipse/ant/internal/ui/AntRunnerWorkbenchAdvisor.class
+SHA-256-Digest: bAxRjFBIOuCcSoqaIv6G0UgbgH6YCVLCRDnUaeBgu9I=
+
+Name: org/eclipse/ant/internal/ui/editor/actions/FoldingToggleRulerAct
+ ion.class
+SHA-256-Digest: /hMWjF3DrheLA6emQjl84WuaQn1Ws5GOob2tEqpVInk=
+
+Name: about_files/NOTICE
+SHA-256-Digest: eLxVugHqrYr2WWd/80kH/w42L1jzJ90czFu+qwhYfJ4=
+
+Name: about_files/asl-v20.txt
+SHA-256-Digest: z8d0m5b2O9McPEK1xHG/dWgUBT6EfBDz6wA0F7xSPTA=
+
+Name: org/eclipse/ant/internal/ui/model/AntImportNode.class
+SHA-256-Digest: NvdYhA8FsDWyuT4XrYzcfajli2saCRU2E2mTJvpbz3I=
+
+Name: icons/full/obj16/defaulttarget_obj.png
+SHA-256-Digest: i7yeDIZoCWDqZrGoo68Ml3VFU5R0AEnDxIC/ZioOj3k=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntPropertiesBlock$2.cla
+ ss
+SHA-256-Digest: Cju39/YEylmzy2VqpoZ5CiBCIgOxP6rAxbwDv0+6e3Y=
+
+Name: org/eclipse/ant/internal/ui/console/JavacMarkerCreator.class
+SHA-256-Digest: ZWAdTkwYXYpedu5rMc+dfqyEz/vnx6LDKHgk3aG4uYg=
+
+Name: org/eclipse/ant/internal/ui/model/AntModel$1.class
+SHA-256-Digest: jgcsdUTq+LYhZvDmowma2AZKc4tHdKztU5Hk0npMJi4=
+
+Name: org/eclipse/ant/internal/ui/dtd/schema/Attribute.class
+SHA-256-Digest: M8Gq/pY3gf+9Gx95IHhn4WvpA2M/JEr2Z5Jkztli8wQ=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntPage$3.class
+SHA-256-Digest: wViaqQth3LBS0ET1VtwWxB5Wv2mTMItlXotwlYNXcE4=
+
+Name: icons/full/elcl16/run_tool.png
+SHA-256-Digest: uO1PHFjIbJZMOrk/lRb2+iJPiGc0kUxgtcs309CHH1E=
+
+Name: org/eclipse/ant/internal/ui/editor/AntElementHyperlink.class
+SHA-256-Digest: T1G6qXYppFHLYW1sDVZa0MB/WarwXFMhxw7Q9e4lBEo=
+
+Name: icons/full/elcl16/exportAnt_co.png
+SHA-256-Digest: +SGWRA5UBviKrrESGX/nKyG/iQd0wHmrXxSwG3T0nz0=
+
+Name: org/eclipse/ant/internal/ui/editor/AntEditorCompletionProcessor$
+ 1.class
+SHA-256-Digest: vdYa+L9FutDcr7T4vrWTGakIcv1ssAzFzOYXDTzmnJE=
+
+Name: icons/full/elcl16/alpha_mode.gif
+SHA-256-Digest: uVsjqQF8yhIyILAhPmyieACXlvVSO2ptZn2/p1Zlvdk=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntClasspathBlock.class
+SHA-256-Digest: NBBC08+4BTMF3ped4FEu7u5ZiIt3h4hRmHVXhlLt1HA=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntEditorPreferencePage$
+ ColorListLabelProvider.class
+SHA-256-Digest: wgLrzmOWeRtZvmEPttv1Cim5ia3OaDOUhVSAQf8YhF0=
+
+Name: org/eclipse/ant/internal/ui/refactoring/LaunchConfigurationBuild
+ fileRenameParticipant.class
+SHA-256-Digest: ZsFiOZkcqUUbPugu3+5C7iQy7XLuz4jPqaLb1DfFqbE=
+
+Name: org/eclipse/ant/internal/ui/dtd/util/SortedMapFactory.class
+SHA-256-Digest: ptmzF6z0XU3k+eG6zkhA8DRWoUIkcZP5M1HBooTPbWc=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntClasspathLabelProvide
+ r.class
+SHA-256-Digest: z/VY0x9OVTJiAbm0IIVHWPM01OaPVr+yuZBPR8kRfbo=
+
+Name: org/eclipse/ant/internal/ui/editor/templates/AntTemplateInformat
+ ionControlCreator.class
+SHA-256-Digest: mJUTQVo7CCh3iYIvaEW3NHE9qotaqrgJixJZ5kbO0Tg=
+
+Name: icons/full/elcl16/exportAnt_co@2x.png
+SHA-256-Digest: Il+xqJ2p/YzSUAuwGCcd3l2emDePql5He5dpktMPT/k=
+
+Name: templates/resolver.gif
+SHA-256-Digest: t076QwNtn1BJbOCAZr2pJxBn7rg3nQVKhY58yjMocSo=
+
+Name: org/eclipse/ant/internal/ui/model/AntElementAdapterFactory.class
+SHA-256-Digest: cMiWg/ZMrTC33+VXsz1Noz/rZAC3tdzqVA+J9fSEhYI=
+
+Name: icons/full/elcl16/alpha_mode@2x.png
+SHA-256-Digest: x3B5rL6t6didNwRB1vQ0pVxkEeD92hsmdKvpVAEMsmk=
+
+Name: org/eclipse/ant/internal/ui/editor/actions/AntEditorActionMessag
+ es.properties
+SHA-256-Digest: K3HG11D4+8LgPDcOQLOqr4II9OJT5scFKqmS6Q6C7Q4=
+
+Name: org/eclipse/ant/internal/ui/editor/text/AntInformationProvider.c
+ lass
+SHA-256-Digest: 11Z3o4AriRJMXMDwESegT8feYD5fmv9GREcyV02mP1E=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntCodeAssistPreferenceP
+ age$1.class
+SHA-256-Digest: +PKr8ieyxjIpyXjDuoAOIl35SDE35cs2d1aPoSsDca0=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntPage$5.class
+SHA-256-Digest: wuBGmzcYw6rXyvJiQe+15af3yka5muYKZhJryieKDrQ=
+
+Name: org/eclipse/ant/internal/ui/editor/formatter/XmlTagFormatter$Par
+ seException.class
+SHA-256-Digest: x0knvaHvNspty+sI47icRoc9sqT68/Pylmft5Vb4i1o=
+
+Name: icons/full/elcl16/properties@2x.png
+SHA-256-Digest: AUqdkEtsldofkAlNtu8rM5s7cqCAaJn1sSskVELgnHM=
+
+Name: icons/full/dlcl16/run_tool@2x.png
+SHA-256-Digest: jfRktnU7HBKS04an/OjM/jZ5lpeUSCEu9cHP20r0VG0=
+
+Name: org/eclipse/ant/internal/ui/editor/outline/AntOutlineMessages.pr
+ operties
+SHA-256-Digest: VmuN3iLG1COhyeS3ifGhmwUGt95a+D6dJc2MADqlQbg=
+
+Name: org/eclipse/ant/internal/ui/model/IAntModelListener.class
+SHA-256-Digest: bFRBm85ZLRfswoSsJkXacpYDxa68g20eNSX23BM5QSs=
+
+Name: icons/full/elcl16/removeall_co.gif
+SHA-256-Digest: tzqWIGdXR1KnmxPQDIzzywYLFPgCll2UXvume3T7Bvc=
+
+Name: icons/full/dlcl16/search.png
+SHA-256-Digest: ASBC7/bqjZjdiHhAKOt3fcj632KFWookiJ5d2eAu8Cs=
+
+Name: org/eclipse/ant/internal/ui/editor/formatter/XmlDocumentFormatte
+ r$CommentReader.class
+SHA-256-Digest: OGgT/iRLRZGwl8DL2kyRcBHm/Z5UPQrOA3kiQpgqRMc=
+
+Name: icons/full/obj16/ant_target_err.gif
+SHA-256-Digest: iiyTDHy3r4F6/pRQ4NF8TlV4o7C1RGg/nKSpfDc7vKw=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntPreviewerUpdater$2.cl
+ ass
+SHA-256-Digest: LpCuEORVsWTxnA1r4ApJjknoH7TYxpriF5m3/p0/gk0=
+
+Name: icons/full/obj16/template_obj.gif
+SHA-256-Digest: ENbI639UZsm5reQPGYFuVcX2Ij/iLlrmWNTpW5ptPOs=
+
+Name: org/eclipse/ant/internal/ui/model/AntCommentNode.class
+SHA-256-Digest: AXxB9BAb0R+Woh8ohRqrOXj8sHwczwUQTVQNsg71HsY=
+
+Name: icons/full/dlcl16/filter_top_level.png
+SHA-256-Digest: LKEISCfiyY0xEYpc8FR1pUqyRbStAHkAvRvpgxV/zmQ=
+
+Name: org/eclipse/ant/internal/ui/editor/text/XMLAnnotationHover.class
+SHA-256-Digest: PdYgX1xbPmus3F/iwYmGMQgs3O2TUWw+HqBQr5mDXZY=
+
+Name: org/eclipse/ant/internal/ui/dtd/AntDTDMessages.class
+SHA-256-Digest: izqkFV53E5fs/MCFOCOl00O6U4SMpsSOMKmxMgWdhc8=
+
+Name: icons/full/elcl16/synced.gif
+SHA-256-Digest: QDqJvieRo8o5BVQKtIHtDSGJ//p3qN7wMrRCCdK5MHY=
+
+Name: org/eclipse/ant/internal/ui/launchConfigurations/AntLaunchConfig
+ urationMessages.properties
+SHA-256-Digest: fd6CTLDwMBMq0kh4FrV2fYOsFCTi9LWpBMvrJV81HnI=
+
+Name: org/eclipse/ant/internal/ui/model/AntPropertyNode.class
+SHA-256-Digest: 1PedmfjgDOxJAGnUZmcso3OFnSK0rT4eRgunzafYM7Q=
+
+Name: org/eclipse/ant/internal/ui/datatransfer/AntBuildfileExportPage$
+ 1.class
+SHA-256-Digest: kBFAY6UK2SdpR9NbVCh+ymbDzeM2rh7tCyJu+DMQ3/Y=
+
+Name: org/eclipse/ant/internal/ui/model/AntModel$3.class
+SHA-256-Digest: jL3J9pmHk6Q60CBdinCY7InXuKWnwKwtCOgcakzJNyY=
+
+Name: org/eclipse/ant/internal/ui/editor/formatter/XmlDocumentFormatte
+ r$TagReader.class
+SHA-256-Digest: R3n9Ko9va2XsnmtCK+3MKfkoVKcuwOGzoBHzCJz/HtQ=
+
+Name: icons/full/obj16/ant_target_err@2x.png
+SHA-256-Digest: IESSjP9fjBDDOjg4Ixmmt3thdu7nGqRZUM2UsPWTYtE=
+
+Name: icons/full/obj16/ant_buildfile@2x.png
+SHA-256-Digest: bnnyKa/X2MvlH8sOEbETaQrgZeTdWBV7721fQY7PF0U=
+
+Name: icons/full/etool16/mark_occurrences@2x.png
+SHA-256-Digest: F8z0XluoZWMKuG+OB9tkot195YaEBlYKBxeUa6aKzOI=
+
+Name: icons/full/dlcl16/properties.gif
+SHA-256-Digest: 10Yh7lGu9xA6YDhiVQ2LaHdTIrhKTB1fXHnOJ54dr0o=
+
+Name: icons/full/elcl16/filter_top_level@2x.png
+SHA-256-Digest: gdAOm0O+8o4k30s+/8PeF/w7MV2Fu+PQgxPsUw2jOP4=
+
+Name: org/eclipse/ant/internal/ui/launchConfigurations/TargetOrderDial
+ og.class
+SHA-256-Digest: PQ6nSOsFKXuWKUMRZft3fJtalrFx5gHnut4FeCMgx2k=
+
+Name: icons/full/elcl16/filter_internal_targets.gif
+SHA-256-Digest: xLk523DITDu+O4Tgj8kqV3OgG58rSVAfAv1vyjHQ890=
+
+Name: icons/full/elcl16/refresh.png
+SHA-256-Digest: CojRjFYzD7WmQCwJT8cEA2R7SMR187OABEX4bLmmcDI=
+
+Name: icons/full/wizban/ant_wiz.png
+SHA-256-Digest: +klO+3PDXBFVKxDEb248kGtNs1WTXnt30qngMs5NBxs=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntPreviewerUpdater$1.cl
+ ass
+SHA-256-Digest: UlMMk/jbhiKMdVrgnC8JCO/Ih9QEZWUuaxtDY0Gxut4=
+
+Name: org/eclipse/ant/internal/ui/ColumnSorter.class
+SHA-256-Digest: PCjyzQLTDFKP+Qgw4V19WXHQs81ZSQeFauwgQzXe7eY=
+
+Name: org/eclipse/ant/internal/ui/datatransfer/AntBuildfileExportPage$
+ 4.class
+SHA-256-Digest: VoxsAZdKHpxwXsH53Nnl20TNJ6ABMs+kpvEgxyn+ZVw=
+
+Name: org/eclipse/ant/internal/ui/dtd/ParseError.class
+SHA-256-Digest: KNcZFWZMSFrCVfvMli0W+mgX37WFWqGcbkvnn4DwQDA=
+
+Name: icons/full/dlcl16/filter_imported_elements@2x.png
+SHA-256-Digest: 7IhkXeFIs/dTxpXVU+qb594KKjvx/hSf/snQ+GZpT1c=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntPreferencePage$2.clas
+ s
+SHA-256-Digest: MulaTWKo2nYnJgt35qm7hji1gOms9ipJj8ovIBJBy/8=
+
+Name: icons/full/elcl16/add_co@2x.png
+SHA-256-Digest: grJPAXJ8AgpvuES7HF373wlaJcg3/D/9ZVdx+RSmGhU=
+
+Name: icons/full/dlcl16/alpha_mode.png
+SHA-256-Digest: V3fKXy1UW2u/4l1sdcXrE5d5+HvWPLFrFAYOUHxDapQ=
+
+Name: org/eclipse/ant/internal/ui/ColorManager.class
+SHA-256-Digest: R01FKnH7LoAhc/fyglooo7yK7FKo339/ejVLnho1JGM=
+
+Name: org/eclipse/ant/internal/ui/launchConfigurations/AntTargetsTab$2
+ .class
+SHA-256-Digest: GY58Y4/CbOPSdHFrxKDvsOWdsaGv3ZOaRNJ50iIOHms=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntClasspathContentProvi
+ der.class
+SHA-256-Digest: aE+0PfsWqKGuqOl+YtNgMbKZoa4gagPH+6ASv6rxQKU=
+
+Name: org/eclipse/ant/internal/ui/dtd/Parser.class
+SHA-256-Digest: mDwYS6DRb5r1IzuB4upUPaoViklZEwW4WChw5AxcZ7U=
+
+Name: org/eclipse/ant/internal/ui/editor/outline/FilterInternalTargets
+ Action$1.class
+SHA-256-Digest: gh0TX3h/9VRK6uhKLsRu4/tZEYl9EkeLEIE4XBvaJt0=
+
+Name: org/eclipse/ant/internal/ui/editor/actions/FoldingExpandAllRuler
+ Action.class
+SHA-256-Digest: SOuaPSspLCLUFiAS710+oeC3GVrqoz6LCfZHyeyxJNU=
+
+Name: org/eclipse/ant/internal/ui/launchConfigurations/AntBuilderTabGr
+ oup.class
+SHA-256-Digest: KGGFhEILg0oRwyYrviCg8xcg1sR+gzVoT7JfJbKBUl8=
+
+Name: org/eclipse/ant/internal/ui/dtd/util/IKeyHolder.class
+SHA-256-Digest: 63BreirF3DRrKZCYYqOeSuJF2/283g4mwD5M2yxFqK0=
+
+Name: org/eclipse/ant/internal/ui/datatransfer/SourceAnalyzer.class
+SHA-256-Digest: Kw8F8g2uj9fMY2fiwvyji+tJbC2A1BsK35FaTU1CvWE=
+
+Name: icons/full/dlcl16/run_tool.png
+SHA-256-Digest: nNbOo1m4yops2SpOcLxZ4AB0ameUftSBy6Z/iVZNWec=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntClasspathPage$1.class
+SHA-256-Digest: YIOj6QSLWjx4EKhGaWvjFF2QWs7roLIP6tcl9bPIWVU=
+
+Name: org/eclipse/ant/internal/ui/IAntUIConstants.class
+SHA-256-Digest: dyRIKSMscyXrk07Lnf8TmerhAUkJADi3mLooN1JeIyE=
+
+Name: org/eclipse/ant/internal/ui/launchConfigurations/AntJavaLaunchDe
+ legate.class
+SHA-256-Digest: UgA/yFjUhC3XXe84FPh8cLhYPMqrpaE0eY+jdzyBP/4=
+
+Name: org/eclipse/ant/internal/ui/launchConfigurations/AntLaunchConfig
+ urationMessages.class
+SHA-256-Digest: KbByqrsZJYqk2D0nscZP7i8oFxVVxcjhMqox7qpIF0s=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntPreviewerUpdater.clas
+ s
+SHA-256-Digest: ugTimVOmafxWEG/537mPOqBxsViyL/U1UfdxJrbqMGo=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntPage.class
+SHA-256-Digest: SzPgmGiERGv5N88byK0QEwMIv0I+2AA6PCucmCkVXx0=
+
+Name: org/eclipse/ant/internal/ui/dtd/util/FactoryObject.class
+SHA-256-Digest: KBMF70Ohtb3u70U1CygJf33jpQHT2Kd1WIvDXbdTKkY=
+
+Name: org/eclipse/ant/internal/ui/launchConfigurations/AntTargetsTab$1
+ .class
+SHA-256-Digest: nZWZBvQVkm+TlOWZobivRzNZwtxpMXUYwf6ydTDs6No=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntPropertiesBlock$5.cla
+ ss
+SHA-256-Digest: zdyXd0iQA4XUN/oXthOpPBSuzDkrrayakGh/LlDUk/o=
+
+Name: icons/full/obj16/import_obj@2x.png
+SHA-256-Digest: jPOo4G4Lag5+sw9DzCKXniZ+bs6lSFnx/tCiUNUI7o8=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntPreferencePage$1.clas
+ s
+SHA-256-Digest: E5mI/hTtIDH5W/yqBeSjAaKtYd57tH744kIBp/e757k=
+
+Name: org/eclipse/ant/internal/ui/model/IProblemRequestor.class
+SHA-256-Digest: OspOzOpCIScv1H69SuRnOtpsdLZc/5hF9ERq+MgE84s=
+
+Name: org/eclipse/ant/internal/ui/preferences/OverlayPreferenceStore.c
+ lass
+SHA-256-Digest: 2DSEL/ENXS1mzTI1lXLvaz5x8IeHLgygoo+SL9ZrmTQ=
+
+Name: icons/full/obj16/targetpublic_obj.png
+SHA-256-Digest: C2X0rNIeOlkAba8abLptDwj1pK+JJ2MsPDC5yKxxjDI=
+
+Name: org/eclipse/ant/internal/ui/editor/formatter/XmlElementFormattin
+ gStrategy.class
+SHA-256-Digest: jZnSUyTUU55rAUn07A4GfClOJJxPeu7K8HljYH1cgio=
+
+Name: org/eclipse/ant/internal/ui/launchConfigurations/AntPropertiesTa
+ b$1.class
+SHA-256-Digest: tSYHVaJ1v+TtV+MTP1gPawA5T8mne7JNx+RZuKY+ATE=
+
+Name: org/eclipse/ant/internal/ui/preferences/FileFilter.class
+SHA-256-Digest: STvXk1Dh1bGkHFZKMIF6Jdf+zMrqjXBweIVjkd5se+s=
+
+Name: org/eclipse/ant/internal/ui/editor/text/AntAnnotationModel.class
+SHA-256-Digest: h7V+e8dfuMjBAxJfJgsmCM5ytrH/XPJbVcE4/02Zy1A=
+
+Name: org/eclipse/ant/internal/ui/ImageDescriptorRegistry$1$1.class
+SHA-256-Digest: E2C10j2t4kP49fAZXjqk2jPBDf422+wygr+zpjoMpoU=
+
+Name: icons/full/dlcl16/search@2x.png
+SHA-256-Digest: X3psB7poheRB2Uu+n8CaPOdlRrf1TAZUoNb4+vuXHtY=
+
+Name: icons/full/elcl16/ant_targets@2x.png
+SHA-256-Digest: NQ8ZTgVAP7VZcmumfuyRzS7Yv0GQexUgs1ZcjgFJP30=
+
+Name: org/eclipse/ant/internal/ui/datatransfer/AntBuildfileExportPage$
+ 3.class
+SHA-256-Digest: S+A2N/YsS+qdPko9/o8Dy/U3RAtOUTjkwZBKuZAeBXg=
+
+Name: org/eclipse/ant/internal/ui/datatransfer/BuildFileCreator$1.clas
+ s
+SHA-256-Digest: DB51NvwljzANRcDG8kZBeYQPfztid+wjutW1mTEkbwQ=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntPage$6.class
+SHA-256-Digest: txFAXiOkJkHeXhbrZ1O7vUflV5PIF1HMb+tsL6odOBQ=
+
+Name: icons/full/dlcl16/filter_top_level@2x.png
+SHA-256-Digest: NRkVXNt+ssRhz+N+t9d+g6vWlChHDYC9IoU6FN9/G+s=
+
+Name: org/eclipse/ant/internal/ui/dtd/schema/NfmNode.class
+SHA-256-Digest: cGS8zLYh8bfdir5BeEjWRDsBl1fUe7Ylm6FT8jR5HaM=
+
+Name: icons/full/elcl16/filter_internal_targets.png
+SHA-256-Digest: DFspXQoDgtskdJIGIsJcB1POxAxtwD4PhNvf0hCmREY=
+
+Name: plugin.xml
+SHA-256-Digest: IAmzAXHExScyunN1h93mYhtbNU5h0lpfWlgUeH6E4qw=
+
+Name: icons/full/obj16/macrodef_obj@2x.png
+SHA-256-Digest: MWshSXwayaArekEE44cGqYJ6kmlsJgE7gZUW9aNJ2K4=
+
+Name: org/eclipse/ant/internal/ui/editor/templates/AntTemplateViewerCo
+ nfiguration.class
+SHA-256-Digest: x+1Dc1ORVdCCMPtZqDVIcFA1iDNyHhYAf+Z14BrgBe8=
+
+Name: icons/full/obj16/prop_ps.png
+SHA-256-Digest: fx9MF1j/6+uZjQHNtmwAZ9xPAhwsLq1MvODGHnkAOaU=
+
+Name: org/eclipse/ant/internal/ui/preferences/FileSelectionDialog.clas
+ s
+SHA-256-Digest: 18eoyL2f8vOT6K9/XFvmvIo5RZh6p4tlPfsqpRgd+p0=
+
+Name: org/eclipse/ant/internal/ui/editor/text/DocTypeRule.class
+SHA-256-Digest: ostvBXJ8ow/+nNMi4Vl5MV29TY0IfDZYBfOL0qZVuJA=
+
+Name: icons/full/etool16/mark_occurrences.gif
+SHA-256-Digest: DEdQDAHhaZK2L5Bx84n4d+azA93tcy5axFBDfoMByBs=
+
+Name: org/eclipse/ant/internal/ui/datatransfer/EclipseClasspath.class
+SHA-256-Digest: Rp/Hp7T/u8UHwjw6UzVfQZgjbvbElzvWCBO/OZC0sLM=
+
+Name: org/eclipse/ant/internal/ui/model/LocationProvider.class
+SHA-256-Digest: jjZo+/+/klrwuXg3+ll8lEu2yGOM0mYEKxqMkEZXLlc=
+
+Name: org/eclipse/ant/internal/ui/editor/utils/ProjectHelperMessages.p
+ roperties
+SHA-256-Digest: 3vENuvsNCpKlAVIWlkj1aUxpnN6MkmnEhls9sOaiVgE=
+
+Name: org/eclipse/ant/internal/ui/console/JikesJavacPatternMatcher.cla
+ ss
+SHA-256-Digest: T9bOg0JN0w9jd6QtsOnTGqLvCp8t8Y2wNs3TFMIjRMs=
+
+Name: org/eclipse/ant/internal/ui/IAntUIPreferenceConstants.class
+SHA-256-Digest: lfqRXU1245rJkMWDEWq1qxe718kSprT0Si0hfl7/0wk=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntPreferencesMessages.c
+ lass
+SHA-256-Digest: gH5DSpoqRBeMd79YrYoGzma6YBQYN6yVRRpK0yD3YMI=
+
+Name: org/eclipse/ant/internal/ui/editor/text/XMLReconcilingStrategy.c
+ lass
+SHA-256-Digest: E1oBYVi4ese2u364lLZZ1pxKh9wE1K6LMyu7yMnEL/o=
+
+Name: org/eclipse/ant/internal/ui/editor/actions/TogglePresentationAct
+ ion.class
+SHA-256-Digest: xW54ewSZh/yyKGHDKDdt3+GPlgRCsPd8s2+vgr9/+pM=
+
+Name: org/eclipse/ant/internal/ui/editor/utils/ProjectHelper.class
+SHA-256-Digest: BJMWauo6/0m6YC6Dca9VJWqComYOSrROLCFbxjfcMEw=
+
+Name: icons/full/obj16/taskdef_obj.png
+SHA-256-Digest: GeOhslhIN8SUTUFYWzhZirUc/LNp5WbNlb0tatGrfKs=
+
+Name: icons/full/elcl16/filter_top_level.png
+SHA-256-Digest: 2L5dfSJu/gR0odOb9EOMSBP7kV/o/qdt0Vl6Q/5QFjg=
+
+Name: org/eclipse/ant/internal/ui/launchConfigurations/TargetOrderDial
+ og$1.class
+SHA-256-Digest: 2Wg04lGLcxNAcLwJ6sMXeHADKxYKd0l5knHBUI2y2Wo=
+
+Name: org/eclipse/ant/internal/ui/views/AntView$7.class
+SHA-256-Digest: 0ZgXbueIrp1UohNZ4GPrfw1MaFOvHKAH0bm+hjo+/ds=
+
+Name: icons/full/obj16/targetinternal_obj.gif
+SHA-256-Digest: eSvoHObXOCP5X5rQhB2M/J66GrunDIYx1V/6bJIsQJs=
+
+Name: org/eclipse/ant/internal/ui/editor/AntEditor$ActivationListener.
+ class
+SHA-256-Digest: T+7GZa9OrSvFKYrbv7WWdKlb0ySZw+een2JbEljVkOI=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntEditorPreferenceConst
+ ants.class
+SHA-256-Digest: lMOkadH45dOTYILUn9LXQsMpqP6tkEde8ZMT4+0XtDo=
+
+Name: org/eclipse/ant/internal/ui/dtd/Parser$DTDEntityResolver.class
+SHA-256-Digest: nqBfZPL4xZ6N20c9/NBZ2EjPPpmCZS+vl3zmZWEamIk=
+
+Name: icons/full/obj16/property_obj.png
+SHA-256-Digest: dJvfrcuZitxKngV1vBcZcfY/7DfVVmq1KYXVHtG1tF0=
+
+Name: org/eclipse/ant/internal/ui/views/actions/SearchForBuildFilesDia
+ log$3.class
+SHA-256-Digest: ylDC4NlYpeq7ApWOFsPFqnp48Gfxc3ep+Vlni00phx8=
+
+Name: icons/full/dlcl16/filter_properties.gif
+SHA-256-Digest: Q37brkldKykUqF5z8mhDdni0YExaiP1UbGy92IQg83g=
+
+Name: org/eclipse/ant/internal/ui/editor/outline/ToggleLinkWithEditorA
+ ction.class
+SHA-256-Digest: PNE0+njzNowBP5dc3LUpf4rqFaZeCbid3xWrCXkdStU=
+
+Name: org/eclipse/ant/internal/ui/views/actions/FilterInternalTargetsA
+ ction.class
+SHA-256-Digest: vGTBEydZwxK8rXtNZwiMCego0CtMh/tlP+DgH8pl7dQ=
+
+Name: icons/full/dtool16/mark_occurrences.png
+SHA-256-Digest: ATBD3qGXCzgT1g8dd2nwYXhJgiIpIDKQFSA+YwICAt4=
+
+Name: org/eclipse/ant/internal/ui/views/AntView$2.class
+SHA-256-Digest: nRbFa/BSrfszsXxSj0h4fWa02JJIXJQGRfe7PVif0SQ=
+
+Name: .api_description
+SHA-256-Digest: xoQMw0s9VDkxdmC8j2yg4NlEIwg07JShuGJGRvgcLYo=
+
+Name: org/eclipse/ant/internal/ui/preferences/AddCustomDialog$6.class
+SHA-256-Digest: nrVd2onTc1WyakJlsQykMtvWYmUpgUJDDXpgYbMaoTk=
+
+Name: org/eclipse/ant/internal/ui/datatransfer/AntBuildfileExportPage$
+ 5.class
+SHA-256-Digest: 25LuSu8x1aqBBGtrpEM4hip788S0zOHq58iw/glcs1c=
+
+Name: org/eclipse/ant/internal/ui/launchConfigurations/VariableInputDi
+ alog$1.class
+SHA-256-Digest: asL3+GE8bCP8aeSJLm8HLQ2b6VM/+q/xbYGCdyzy4lE=
+
+Name: org/eclipse/ant/internal/ui/editor/formatter/XmlFormatter$1.clas
+ s
+SHA-256-Digest: k7JneN+VcjFAoZyWxqxXmFvnwZIVtGptDWKnxCU5EwY=
+
+Name: icons/full/dlcl16/ant_targets.png
+SHA-256-Digest: ki3b5Yx5c3o08hxQzV92pcNKnksIUQROtSWFyLnJD/U=
+
+Name: org/eclipse/ant/internal/ui/editor/templates/AntTemplateAccess.c
+ lass
+SHA-256-Digest: CYVi9qRfvHynJlbBeBmVcaSjbEvlMrbnF8C/RGTGiT4=
+
+Name: lib/remoteAnt.jar
+SHA-256-Digest: Lw+L8TStHB3tcbVLyytrvTs9UQXI7A1y+uT3Nlz0HVs=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntClasspathBlock$3.clas
+ s
+SHA-256-Digest: 5LQJHsyXGut9GymjAFbmFgOojp5/rDtNMDi6viuQv6k=
+
+Name: org/eclipse/ant/internal/ui/launchConfigurations/AntJRETab$2.cla
+ ss
+SHA-256-Digest: k4Pkn1SpDXMXpyj1PHpAchvL9Gxw/mqnCocpVMRjRIs=
+
+Name: org/eclipse/ant/internal/ui/datatransfer/DataTransferMessages.pr
+ operties
+SHA-256-Digest: 6O3BeMsQXfsOVDKKNbTbx89bAB6cjDZGlu8FZokej2A=
+
+Name: org/eclipse/ant/internal/ui/datatransfer/AppletUtil$1.class
+SHA-256-Digest: KEFtG/QSCsKwraiV7kI+IkC+3LxVvqWISvIf3HwquUw=
+
+Name: org/eclipse/ant/internal/ui/editor/AntEditorMessages.class
+SHA-256-Digest: yBVXBjd5P5HfrKi2HcLMcjsnsFLamyoOBeCDuc0gC4M=
+
+Name: org/eclipse/ant/internal/ui/views/actions/RunTargetAction$1.clas
+ s
+SHA-256-Digest: Qap/xR13iHyWKb9kviGf8YhgQ0rfs5gb5UBEmo72xE4=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntPage$1.class
+SHA-256-Digest: JmpGpO2Nvmd1FhBZse4qYg9SUGGIKPanVIUg+EKpkY8=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntObjectLabelProvider.c
+ lass
+SHA-256-Digest: hMTvfQ83LX2a9pJqOJOlHKZjhh8Ct9GGW60aEoONbNs=
+
+Name: org/eclipse/ant/internal/ui/views/actions/AntOpenWithMenu$2.clas
+ s
+SHA-256-Digest: HZkuCea1cMqadP9maR3/hJUiDDFrELcmZDG6+8CPekI=
+
+Name: org/eclipse/ant/internal/ui/views/AntViewDropAdapter$1.class
+SHA-256-Digest: wdEceuawOK6EWyJGo0PR2h0JhvLcPYxaOmuzPiYYmu4=
+
+Name: org/eclipse/ant/internal/ui/views/actions/AntOpenWithMenu.class
+SHA-256-Digest: 0Be31vxutrii1H7I+CMoeRIv3DUwhDgFrULSNBCWyBU=
+
+Name: org/eclipse/ant/internal/ui/editor/formatter/XmlTagFormatter$Tag
+ Parser$1Mode.class
+SHA-256-Digest: JSchjwE5HkK9saVjoG9TeRcbfqMSimLLtKsWeps6HZI=
+
+Name: org/eclipse/ant/internal/ui/editor/outline/AntEditorContentOutli
+ nePage$AntOutlineComparator.class
+SHA-256-Digest: 2PVIlk6okfKqsOAPHEPLz4acEfiQ7hVzZLv7E4CSKTc=
+
+Name: org/eclipse/ant/internal/ui/console/JavacMarkerCreator$1.class
+SHA-256-Digest: 1ELaCvsQS2dgg2s7MQOXn7pQvWAH2bjILf3iSFUYizI=
+
+Name: org/eclipse/ant/internal/ui/dtd/util/SortedSet.class
+SHA-256-Digest: Yt/j8pa8O68/5OTFtJF7GRufTZ5zuoJgYfwer/ZbFTc=
+
+Name: org/eclipse/ant/internal/ui/model/AntModelProject.class
+SHA-256-Digest: z8s3FuuFYhrnE+RXDoWd2KHjppNpIEULV3fw6JfpLFw=
+
+Name: org/eclipse/ant/internal/ui/editor/actions/RenameInFileAction.cl
+ ass
+SHA-256-Digest: al+9+1cw+2BvYWsMLKwNbH6XNQ66urems/T/Voq63cI=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntPropertiesBlock$3.cla
+ ss
+SHA-256-Digest: 7mA6s2atmvtk1W9X09Rsf4oJfYaXyfKg92xBEFmIK/E=
+
+Name: org/eclipse/ant/internal/ui/datatransfer/ExportUtil$JavaProjectC
+ omparator.class
+SHA-256-Digest: G41ktUU7G2TLbaN1pkn9Nnb8/0uyp6hlIpwApXZvjQE=
+
+Name: org/eclipse/ant/internal/ui/editor/text/AntEditorPartitionScanne
+ r.class
+SHA-256-Digest: fI+aWLGvcGwBusdN9mj47NPGaY0bsloSavs5yyDpuHI=
+
+Name: org/eclipse/ant/internal/ui/editor/AntEditor.class
+SHA-256-Digest: usekrv/ZQZEkQ3unRGAm67smia3U5qExRgnevBPyQkg=
+
+Name: icons/full/elcl16/ant_targets.png
+SHA-256-Digest: /gZIJyeyWwn6WdiVE55MzvtUiSZdHyOSBlU9y2rBhrk=
+
+Name: org/eclipse/ant/internal/ui/views/actions/CollapseAllHandler.cla
+ ss
+SHA-256-Digest: Itrccz+Nw1B7Q0iE+mgWROBd/SqjXJ5SS/t5d6Zoy4s=
+
+Name: org/eclipse/ant/internal/ui/datatransfer/AntBuildfileExportWizar
+ d.class
+SHA-256-Digest: vIpvqNPweCwT7ybBtzXMLJ9T91fGKXP+p6MArKocVKU=
+
+Name: org/eclipse/ant/internal/ui/editor/AntEditor$4.class
+SHA-256-Digest: HYz5KnB4VUKEOYlUuqI6A81F+33NICQcHxuU/7jw0JU=
+
+Name: org/eclipse/ant/internal/ui/editor/outline/AntEditorContentOutli
+ nePage$3.class
+SHA-256-Digest: QKbErLPBvPHLZZ21PDggliNmjW++EBcjpDqsPrU85XA=
+
+Name: org/eclipse/ant/internal/ui/launchConfigurations/AntWorkingDirec
+ toryBlock.class
+SHA-256-Digest: I+XG10Q0dV/rpo4P8Wml4wIHptyaxOWri2PDJGacXws=
+
+Name: org/eclipse/ant/internal/ui/AntUIModelMessages.properties
+SHA-256-Digest: Tls7IqKwyi47y0N11ZnanDcUzWGjPMcwewBGgLiha88=
+
+Name: org/eclipse/ant/internal/ui/editor/text/AnnotationModelFactory.c
+ lass
+SHA-256-Digest: 0vdnyMWwTmP8MjjT70Pknk+bI0QyPB3+fXgc+yfxmF8=
+
+Name: org/eclipse/ant/internal/ui/console/JavacMarkerCreator$MarkerInf
+ o.class
+SHA-256-Digest: 8lX9JB04Efo00hOE268W01aDC3gOPAbSn4aCnmQkvW0=
+
+Name: org/eclipse/ant/internal/ui/preferences/AddCustomDialog$1.class
+SHA-256-Digest: m6gOzhXvs7bEr/VwBA1/7VXcggiv/rmBaiFNEgcpNYQ=
+
+Name: org/eclipse/ant/internal/ui/editor/outline/FilterPropertiesActio
+ n$1.class
+SHA-256-Digest: iYiLnBwDfiCcQUALX8QulWGUXgfFExTtNW4MIsgLyV8=
+
+Name: org/eclipse/ant/internal/ui/views/actions/AddBuildFilesAction$1$
+ 1.class
+SHA-256-Digest: jmVewxBvdXUNp5LC8i9CsZJCOzcsY35JVpsGDtkcG7A=
+
+Name: icons/full/dlcl16/filter_properties@2x.png
+SHA-256-Digest: gI65eaNcEwfPIyJWLLCGuw0Yg//uU4AiDGYtmkSneGA=
+
+Name: org/eclipse/ant/internal/ui/editor/templates/AntTemplateProposal
+ .class
+SHA-256-Digest: J0JHpB0vnJtkAYyZPk3olyyJKP+des1wJY87l2NnH5A=
+
+Name: org/eclipse/ant/internal/ui/views/actions/RefreshBuildFilesActio
+ n$1.class
+SHA-256-Digest: 6joWnYB1oqh5UNT2+tiyapTXnRkaCfyZOezSaDq9kMk=
+
+Name: icons/full/elcl16/search.gif
+SHA-256-Digest: uohENWhwuAy5c6lB2xyv/p43V9a8apyY1NuhX332EBw=
+
+Name: org/eclipse/ant/internal/ui/editor/AntCompletionProposal.class
+SHA-256-Digest: lD2wFbqhyYusuHNklfylVJ+27pzthqW1cgKcUT+JA9s=
+
+Name: org/eclipse/ant/internal/ui/dtd/IAttribute.class
+SHA-256-Digest: ws67wl8znu2HhYYBszMBQa2DGl1LxcugyfC2WvmaHY0=
+
+Name: org/eclipse/ant/internal/ui/preferences/AbstractAntEditorPrefere
+ ncePage$2.class
+SHA-256-Digest: a+IGMzhUBmJtV19quB7xezwPvWsJTUCfx1TwTiH8n/A=
+
+Name: org/eclipse/ant/internal/ui/dtd/schema/AntDTDSchemaMessages.prop
+ erties
+SHA-256-Digest: d278fc/ySoRvNxSuXw/phn8DxUWu+rWSDG/DE3bllwg=
+
+Name: org/eclipse/ant/internal/ui/launchConfigurations/AntTargetsTab$4
+ .class
+SHA-256-Digest: QTzoLolgfY1hi+dgLTca4qh7zun0CL2bqW7HruxqOjk=
+
+Name: icons/full/dlcl16/add_co.gif
+SHA-256-Digest: JavWHDu5ff8Vi9NaQAkGuLSV9a/eXPxuDmqzfNn6a9Y=
+
+Name: org/eclipse/ant/internal/ui/launchConfigurations/AntTargetsTab.c
+ lass
+SHA-256-Digest: 3GDJIIxW3evC3+xY02tCuJ2ezyuc8WvK0KVza30yGRU=
+
+Name: org/eclipse/ant/internal/ui/dtd/schema/Schema.class
+SHA-256-Digest: 7Njunr1rAWlMjtlHs96QpIgx0uoEL1iH523fpcA0eoY=
+
+Name: icons/full/elcl16/filter_internal_targets@2x.png
+SHA-256-Digest: PCTmtHZLiNqk4xiuGLw/9wWA6tn4mQc5OI8II8YUGYk=
+
+Name: org/eclipse/ant/internal/ui/launchConfigurations/AntTargetsTab$7
+ .class
+SHA-256-Digest: 6v+TU2+vfjyUnrxqxV9lQ0kXu5QH61uvEkEYiXEFqzg=
+
+Name: org/eclipse/ant/internal/ui/preferences/TabFolderLayout.class
+SHA-256-Digest: ftNEI3LmdK1XnImpTHs6dcTHh0nVOaPH/DRvNOEueto=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntCodeAssistPreferenceP
+ age.class
+SHA-256-Digest: mZYf1TF6XwF0Nmbc/3hGsyoIAXbF302yr4xk36Me0GI=
+
+Name: org/eclipse/ant/internal/ui/preferences/FileFilter$1.class
+SHA-256-Digest: HVbUno7CQl9dLLigAWervc4u4UIYX/YIi5HPrSzD5dc=
+
+Name: org/eclipse/ant/internal/ui/preferences/AddPropertyDialog.class
+SHA-256-Digest: Ld1EtYU6lQf6XkIrI8lk1vdSA4j9lbtrSXAQysWIdgg=
+
+Name: org/eclipse/ant/internal/ui/editor/AntEditor$6.class
+SHA-256-Digest: pyslnxWkpBfWUhB6bRcGjNVFxf4Ocmb0nnMO1OjkQhA=
+
+Name: org/eclipse/ant/internal/ui/datatransfer/AntNewJavaProjectPage$3
+ .class
+SHA-256-Digest: cpPmHRwelN4WJmsrAwbhu86GX+Oi4Fx+BwJzn5Ez6ng=
+
+Name: icons/full/elcl16/filter_properties@2x.png
+SHA-256-Digest: 4JeRhgWSGRcEA4bM4iSLthj1UjAEjWTEzl72yMc3624=
+
+Name: org/eclipse/ant/internal/ui/console/EclipseJavacPatternMatcher.c
+ lass
+SHA-256-Digest: MvZJl2SkiNWCFlcjdznazOFN31vuO8kTxH8zT1dFq/A=
+
+Name: org/eclipse/ant/internal/ui/console/JavacPatternMatcher.class
+SHA-256-Digest: 4+xTbIk0V4nRKj7Xfab+XJ7kDF3V4O96bJHHyG6WV+4=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntEditorPreferencePage$
+ 2.class
+SHA-256-Digest: icsIXR0+yMSqYRx82voD3AoWiF1blxUkXK8jL/+TXYc=
+
+Name: icons/full/obj16/main_tab@2x.png
+SHA-256-Digest: HJcJCIhqk9RmoXw/3FLFUu1nY3or3WmuFAWvA2/9lsg=
+
+Name: org/eclipse/ant/internal/ui/preferences/AddPropertyDialog$3.clas
+ s
+SHA-256-Digest: mXEyCuZrqxn9lXFQ0B90o6Rhtv02+UUN8kgOT1wTs4U=
+
+Name: org/eclipse/ant/internal/ui/editor/TaskDescriptionProvider.class
+SHA-256-Digest: O0LN9mAo9TYgVu61ZSAOh7Kwkk3VTVCRuhHcsb/rqBM=
+
+Name: icons/full/obj16/classpath.png
+SHA-256-Digest: J5cORLTOieBUGqHOA7fb80LHNsgwdygedvDBQBOTcns=
+
+Name: org/eclipse/ant/internal/ui/preferences/OverlayPreferenceStore$O
+ verlayKey.class
+SHA-256-Digest: vaL9c28+AISVxEaCnNfdF46cOe12M2w8OciD/OdMT3o=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntTasksPage.class
+SHA-256-Digest: CAmr9J/84w/0uFe51XLIK3T4z6dgQUwZ3dOv6Xdn/Vo=
+
+Name: org/eclipse/ant/internal/ui/datatransfer/AppletUtil.class
+SHA-256-Digest: 1d9rDaJ7QEFTXvce7dJV8DmhfVur1Lmusm5zeaX2UTc=
+
+Name: icons/full/dlcl16/alpha_mode@2x.png
+SHA-256-Digest: Zeayf+IHbvgfIq0ICByKahMQ5aeBRrr98Km05LcQkY8=
+
+Name: org/eclipse/ant/internal/ui/editor/AntEditor$OccurrencesFinderJo
+ bCanceler.class
+SHA-256-Digest: XCLSbMDf3OjM5NC8kJ0KMCj/TEJQmsMBQJVqrZwDMTI=
+
+Name: org/eclipse/ant/internal/ui/preferences/StatusInfo.class
+SHA-256-Digest: YCBFaEd9JBokq2STxSS/7vIgKiR8bgyxTIqN5SM0qLk=
+
+Name: org/eclipse/ant/internal/ui/AntUtil.class
+SHA-256-Digest: zP3/tNJq4RZzsPhaKpmXo8WuQxLnyVmUDTXjjYwJB/Q=
+
+Name: icons/full/elcl16/filter_imported_elements.gif
+SHA-256-Digest: EzKRtFkwgsqjIoNp/qejONGH8Pcz0MoAAJOdChqVUxA=
+
+Name: icons/full/ovr16/error_co.png
+SHA-256-Digest: 6qUtHhjQCVjcX+74vioqv0aECjQzQE9YpdhrfFVJrgc=
+
+Name: org/eclipse/ant/internal/ui/model/AntModelChangeEvent.class
+SHA-256-Digest: 5BHehfFzyiWNcwCIhc9ALVJwHfIlk518BCCPWBa7fIo=
+
+Name: css/e4-dark_ant_prefstyle.css
+SHA-256-Digest: 7lrxSZ6pDn2lE4eg2T765RHzJxbMqRBtE9vHqGve498=
+
+Name: icons/full/elcl16/run_tool@2x.png
+SHA-256-Digest: r6h0+KyFTZsuxKM0W9EoMLOg6B88lYgn6X2M5x2UuPc=
+
+Name: org/eclipse/ant/internal/ui/editor/actions/OpenAntDeclarationHan
+ der.class
+SHA-256-Digest: jya6ElOsy7pzxOizJmbI6mNdPBMkbXswfmZ943hl9rE=
+
+Name: icons/full/dlcl16/refresh@2x.png
+SHA-256-Digest: QfivYepQft8mxXKdI0d6q19HJyBoqLiuxGpaZ28bi6U=
+
+Name: org/eclipse/ant/internal/ui/editor/text/AntEditorProcInstrScanne
+ r.class
+SHA-256-Digest: AIrabZcFCbC2eaw9YE/n0Fq+C0DsXVMb5UioNb5OZf4=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntClasspathBlock$1.clas
+ s
+SHA-256-Digest: eVR/fvXgrXD3atrIg4+jPrzBjAMj9GsnVe536jphJOQ=
+
+Name: org/eclipse/ant/internal/ui/editor/utils/ProjectHelper$ProjectHa
+ ndler.class
+SHA-256-Digest: UlPwskaFEUtyciiegP/w5PjCUUgtRGCQ5xdft8wCXhk=
+
+Name: icons/full/obj16/macrodef_obj.gif
+SHA-256-Digest: gsp5MsUAfz5C+WteNWm/L0ZNgehxbZg7vHB/8eb3lno=
+
+Name: org/eclipse/ant/internal/ui/datatransfer/AntNewJavaProjectWizard
+ .class
+SHA-256-Digest: UjD3pnnjjeJXHczWwJiJ+qv8xWxtCgi/RN0k4IFJxWs=
+
+Name: org/eclipse/ant/internal/ui/refactoring/RefactoringMessages.clas
+ s
+SHA-256-Digest: oro3EhBP9tuE3XJHd/Cf0WL/QisGzWNRevjw1bKSh6M=
+
+Name: icons/full/dlcl16/ant_targets@2x.png
+SHA-256-Digest: ExlY4gDF+nNfKqXX6W4PRwdASSyd3FNl1uebr3AgELo=
+
+Name: icons/full/dlcl16/properties@2x.png
+SHA-256-Digest: 2Ze2DHQsbB94U4vwYhTbQCDAkduGzWSKKPiPV96ZjOA=
+
+Name: icons/full/elcl16/remove_co.png
+SHA-256-Digest: 3KQ0fWgLmy2/c00pwXnH3uiE/7nBZ999SRKQ2Wyp+qM=
+
+Name: icons/full/etool16/segment_edit@2x.png
+SHA-256-Digest: d5oV5THEfQPodbhhgIDt/5mRHpmFZS/W4DIhwuWt73c=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntTypesPage.class
+SHA-256-Digest: xIW66btFyscQoEvE5bLYDKoS82mDCZHwfwCmhtcR33s=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntEditorPreferencePage$
+ 4.class
+SHA-256-Digest: 4x3iDNuab5SB0Zq12/mxnIlug6BFX3tL4T80T5IeMlA=
+
+Name: icons/full/dlcl16/refresh.png
+SHA-256-Digest: UGRP7vHk5OIL3HdxLoyLBQgzRe22lO8thVN7g3CLF+8=
+
+Name: icons/full/obj16/targetpublic_obj@2x.png
+SHA-256-Digest: hj/M45XZ9wacbSpQgZXTViHMplLP8ouUyVNIvyH6AT8=
+
+Name: icons/full/elcl16/synced@2x.png
+SHA-256-Digest: hVN+bZVH/dy6IiayLY6Xs94Qi7bgmG+eijieTaUQqsU=
+
+Name: icons/full/dlcl16/removeall_co.gif
+SHA-256-Digest: kYanToITrEKGyd2WsU9IdtKRvlj37XhzvS5wWFKod7A=
+
+Name: org/eclipse/ant/internal/ui/editor/text/AntDocumentSetupParticip
+ ant.class
+SHA-256-Digest: 2hPSTm/fQ9P1PToepwx9ndjMg9OkUX+RagSEHwUFYVE=
+
+Name: org/eclipse/ant/internal/ui/editor/templates/AntVariableResolver
+ .class
+SHA-256-Digest: Fcevc3F49g7+3/Biev/Dmx6h8cZomL6hshD3agKBiF0=
+
+Name: icons/full/dlcl16/synced.gif
+SHA-256-Digest: TnF0OVPx7knw7z/LnmAGtvBkK7gS+1EdlXjKjxqQgdw=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntContentProvider$1.cla
+ ss
+SHA-256-Digest: v9G5X4ZMg1tdA+dY0Dtr3HqhbypHNq3Zsir0satNf0g=
+
+Name: org/eclipse/ant/internal/ui/dtd/util/Factory.class
+SHA-256-Digest: UgznvNGub2/NtlBqCyrP2jHmtOEw4oScjNgQo3V5SbY=
+
+Name: icons/full/dtool16/segment_edit@2x.png
+SHA-256-Digest: vkwBuk/2xwa/2z66R6oGXIHN+ysmhXB+lTR8g0gp3ig=
+
+Name: org/eclipse/ant/internal/ui/editor/outline/AntEditorContentOutli
+ nePage$1.class
+SHA-256-Digest: sR+oTAPSmI0HVHiRU3+bQuWupFSIeKAJPagA7JSXVxo=
+
+Name: icons/full/ovr16/warning_co.png
+SHA-256-Digest: PPv3FbjL5z6zUa/TQte3a7HCzS0e73CRsLK5/9Wk+S8=
+
+Name: org/eclipse/ant/internal/ui/editor/text/AntEditorWhitespaceDetec
+ tor.class
+SHA-256-Digest: 8x1TdOIQ9Z3WuIlwkVAvTYO6/GQ5DGILyHk4axiD6CY=
+
+Name: org/eclipse/ant/internal/ui/launchConfigurations/AntMainTab.clas
+ s
+SHA-256-Digest: Ml5aPWTX09MonKYHmvzSHhR/cnPxjRW+E4czU098gyI=
+
+Name: icons/full/dlcl16/filter_imported_elements.png
+SHA-256-Digest: ivBfunhb4m5TF2DjC934QxglCMIc9gHuytQtzFy+EFU=
+
+Name: icons/full/obj16/ant_buildfile.png
+SHA-256-Digest: OKSkjXZyxj+0XvYTegGPMxT72BSntqCbJcur6cir+GE=
+
+Name: org/eclipse/ant/internal/ui/preferences/AbstractClasspathEntry.c
+ lass
+SHA-256-Digest: /LdzQaYvSkSFbpGbepclI3IwtCSBy/N02u2ysy+ygE4=
+
+Name: org/eclipse/ant/internal/ui/editor/formatter/XmlTagFormatter.cla
+ ss
+SHA-256-Digest: Cd7gB1zGl3hdS1F6+8Z/tgTtI/sXFgEaTf5FnFYVX4Y=
+
+Name: org/eclipse/ant/internal/ui/launchConfigurations/AntTargetsTab$A
+ ntTargetsComparator.class
+SHA-256-Digest: 4pT8sY7C/c//QGvcNjcB5SBZCkvWhkMPsmLNY+sfGeM=
+
+Name: org/eclipse/ant/internal/ui/views/actions/SearchForBuildFilesDia
+ log$1.class
+SHA-256-Digest: iKEQPpkWakxqpB5KzFY2cPOSWYmVQf/ihCipfFaApCY=
+
+Name: org/eclipse/ant/internal/ui/editor/formatter/XmlDocumentFormatte
+ r$TextReader.class
+SHA-256-Digest: MI4PGiKnEgKNne2HPl2gQ32Dy/g9NzE8GPNqiAtf71s=
+
+Name: org/eclipse/ant/internal/ui/editor/actions/ToggleMarkOccurrences
+ Action.class
+SHA-256-Digest: UadY+eeiCTZFhcP1ACNMmus+oqwvYgPb4CqIUVrysQ8=
+
+Name: org/eclipse/ant/internal/ui/model/AntDefiningTaskNode.class
+SHA-256-Digest: dlvkF7AkyNk4tA4DtM+46dGtY2njE/bQdy+Ta+YBUTk=
+
+Name: icons/full/ovr16/import_co.png
+SHA-256-Digest: QpgUtucmRRgWjDOymsCjxuEv69VykUCEPE1zbLQ6oPQ=
+
+Name: org/eclipse/ant/internal/ui/editor/formatter/XmlDocumentFormatte
+ r$XmlElementReader.class
+SHA-256-Digest: hrEhf3LIa6Z6BlLkb6MB7IEAjxTwPN/Zt5mAAqxQgZU=
+
+Name: org/eclipse/ant/internal/ui/views/actions/RemoveProjectAction.cl
+ ass
+SHA-256-Digest: NxLqTyDHDkrLAJh5uopJXpPEn344e8K2XCK7PziWwuo=
+
+Name: icons/full/dlcl16/search.gif
+SHA-256-Digest: jhi52S8IMPCaKwh0y8p2l5CgPKxMphIlakfqb4B4lWk=
+
+Name: icons/full/dlcl16/remove_co.png
+SHA-256-Digest: 3KQ0fWgLmy2/c00pwXnH3uiE/7nBZ999SRKQ2Wyp+qM=
+
+Name: icons/full/obj16/ant_buildfile.gif
+SHA-256-Digest: dpnyUE5W6eOvcZntIwIj2EXlm0vyuJiDwyGd27Xs/AI=
+
+Name: icons/full/obj16/eclipse_obj@2x.png
+SHA-256-Digest: KBt9y+5GdtQDSbIc5x1w/JWXmEQbxOOSNeKaUz4r24E=
+
+Name: org/eclipse/ant/internal/ui/editor/AntEditor$2.class
+SHA-256-Digest: 0sh84MgxVPKSiMOqCR/Raw2D4JjkWBC2FDLm6ikmoHo=
+
+Name: org/eclipse/ant/internal/ui/ImageDescriptorRegistry$1.class
+SHA-256-Digest: x84jiEbCTTVpWgNgLWs41w4OTtpBd2vet6COex03iKQ=
+
+Name: icons/full/obj16/defaulttarget_obj.gif
+SHA-256-Digest: wbCo/xvcXAwMLU3mddJpX6rKRHyntABG6AQxmlNGdnc=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntEditorPreferencePage.
+ class
+SHA-256-Digest: /IxrzInhM6nluQqBaWRkBvtzOiHNACdAkHV+jgWgtcg=
+
+Name: org/eclipse/ant/internal/ui/editor/text/AntStorageDocumentProvid
+ er.class
+SHA-256-Digest: yeRPa+zTlzqIHhN+IX7GG89ubC/KNRbm07mmsLhlfsM=
+
+Name: org/eclipse/ant/internal/ui/views/actions/AntViewActionMessages.
+ class
+SHA-256-Digest: +xQsb/fgH9yjunNouQkcVF2gFX2sHTxWn5XzFUAVy1s=
+
+Name: org/eclipse/ant/internal/ui/datatransfer/AntNewJavaProjectPage$I
+ mportOverwriteQuery.class
+SHA-256-Digest: 5jcdahK9iZIfyIDYUZdrx1g7YtDNawfpzCTz/rH6imA=
+
+Name: org/eclipse/ant/internal/ui/preferences/AddCustomDialog$3.class
+SHA-256-Digest: SaQbE1tNPvHYKhVxYX01N9xQcsgrHy5f9dPH/W06iYc=
+
+Name: org/eclipse/ant/internal/ui/launchConfigurations/EditAntHomeEntr
+ yAction.class
+SHA-256-Digest: t15RP0ibPNH41+5t3tupdS5eD8k6fi3IULsiAg82S0s=
+
+Name: icons/full/elcl16/refresh.gif
+SHA-256-Digest: lK3PYkVLOp2+k/8XtInMStq6VyXAavJ71Y8wpnMdJiA=
+
+Name: icons/full/dlcl16/properties.png
+SHA-256-Digest: C0Hi98GaslDMxhkwxkH9wHoL+0RT9imLzEEXUgxc8Hw=
+
+Name: org/eclipse/ant/internal/ui/preferences/IAntBlockContainer.class
+SHA-256-Digest: m9MDLQsOA4lTWm8jGHAGng32UHlJEl/Maj5CP/i+yNI=
+
+Name: icons/full/elcl16/removeall_co@2x.png
+SHA-256-Digest: /ur1TfWfrHvLnwUKalRON0jfdl75v3D1NY6LgnWwba0=
+
+Name: org/eclipse/ant/internal/ui/preferences/OverlayPreferenceStore$P
+ ropertyListener.class
+SHA-256-Digest: ljEhaUamieOKBGoLIFyDOHxYw9p6gxsE1rFOdqUrYzo=
+
+Name: org/eclipse/ant/internal/ui/model/IAntElement.class
+SHA-256-Digest: 2fHftzDtprR7M/Zw789GkXtRcUa8pe+4Bw5D971VJrM=
+
+Name: org/eclipse/ant/internal/ui/model/IAntModel.class
+SHA-256-Digest: kzyXSrDYqjab4wRSw0iq9KoZtO31rUu39/PjhoRFiIc=
+
+Name: org/eclipse/ant/internal/ui/views/actions/AntViewActionMessages.
+ properties
+SHA-256-Digest: qGiSkqFbqorIFvkacheNkVCwXZrdXHaVUcwDW8Wu0IE=
+
+Name: org/eclipse/ant/internal/ui/editor/formatter/XmlDocumentFormatte
+ r$DoctypeDeclarationReader.class
+SHA-256-Digest: 09OhYoc8yjVNyYU2j/3ajqNIq0bk2fFa2Vgc0/k5B4M=
+
+Name: org/eclipse/ant/internal/ui/console/ConsoleMessages.class
+SHA-256-Digest: 5ai49gCSOyc1WPKU00WDM0y3DQXKRPtdJ84t19UZBbA=
+
+Name: org/eclipse/ant/internal/ui/model/AntModelMessages.properties
+SHA-256-Digest: fHsekfkWR17roHIJZim9Law4pM5+KUTVsvt1AClEZto=
+
+Name: icons/full/elcl16/synced.png
+SHA-256-Digest: W613PffXXUt6D9mBJZra767ja+7MAP2LLCG7V+/7FcM=
+
+Name: org/eclipse/ant/internal/ui/dtd/util/Factory$Head.class
+SHA-256-Digest: 5YmjyslYvw/KmddfBFgACEBtwCdbZO2ETevusYbqbVk=
+
+Name: org/eclipse/ant/internal/ui/editor/OccurrencesFinder.class
+SHA-256-Digest: Uuje7qV4fdlm24/XQAs5TkOjJhzXpAbd98g8TX2uQPw=
+
+Name: org/eclipse/ant/internal/ui/launchConfigurations/AntMainTab$1.cl
+ ass
+SHA-256-Digest: qKprfhTdmtwAAyl/lHwzSL026MPAPRQeJ2rnNzqccgA=
+
+Name: icons/full/elcl16/filter_properties.png
+SHA-256-Digest: 79LQE9sLSHenni0j8jOkkLHCWVrdRvxgcsSdeT5c8/I=
+
+Name: org/eclipse/ant/internal/ui/datatransfer/AntNewJavaProjectPage$1
+ .class
+SHA-256-Digest: KxL2XVTfAsPMx1zKgjEyLSzcwqWjnXZfkllpdQhd7As=
+
+Name: org/eclipse/ant/internal/ui/editor/formatter/XmlDocumentFormatti
+ ngStrategy.class
+SHA-256-Digest: fTrqpAXqzfXnQoBgG6hqcMCdtB/wlDd0VLcn8wwqLi4=
+
+Name: org/eclipse/ant/internal/ui/model/AntProjectNodeProxy.class
+SHA-256-Digest: PwqZfD99wWpXJT5pyaEPPOUZFXfWrCga0MsT28s9dSY=
+
+Name: icons/full/obj16/task_obj@2x.png
+SHA-256-Digest: 4tzqKtFyPdemlk29kIufcMCg9VK1vrOdkToK5xykisA=
+
+Name: org/eclipse/ant/internal/ui/preferences/AddCustomDialog$9.class
+SHA-256-Digest: Sc9RfSkCKeO4+ykgzo9/AtLz7AV9M92akF5Wd1BAB4g=
+
+Name: org/eclipse/ant/internal/ui/model/AntDTDNode.class
+SHA-256-Digest: mafevgvAWD11+eFOhh1CWzAeBlGxi6pgnn2J9IDI4xY=
+
+Name: org/eclipse/ant/internal/ui/editor/formatter/XmlTagFormatter$Tag
+ Formatter.class
+SHA-256-Digest: FDW6wYXTjNqRs206n985GSMYv0nZxhdvPWXMRPDrDkU=
+
+Name: org/eclipse/ant/internal/ui/AntUIImages.class
+SHA-256-Digest: zF2yIJrUpMg63ny1PLcaqCRp1IpoN4P7nXYkZm5bvHU=
+
+Name: org/eclipse/ant/internal/ui/editor/outline/FilterTopLevelAction.
+ class
+SHA-256-Digest: Pnt4OxH0y3FcrsdyjFyHpetQDPCEgH1PDmgqkzRIuXw=
+
+Name: org/eclipse/ant/internal/ui/editor/text/XMLProblemAnnotation.cla
+ ss
+SHA-256-Digest: kshqdRpCGB2JdYifuiuekqt1mgzqZGlqTKVTbPnm1Vs=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntEditorPreferencePage$
+ 1.class
+SHA-256-Digest: JCkhz5jZh4y0GIHlktZ0rBs4ES4k9u5kEBLiv7gzfqU=
+
+Name: org/eclipse/ant/internal/ui/console/TaskLineTracker.class
+SHA-256-Digest: csJqgEgx5CgrZDP6roSyxk7L4XVg12oWBlCs8FGdSds=
+
+Name: org/eclipse/ant/internal/ui/debug/model/AntDebugModelPresentatio
+ n.class
+SHA-256-Digest: KxilX6lyX7vdRtZMdJ35DmkVyvRS5IbYVDuzaGh3tDs=
+
+Name: org/eclipse/ant/internal/ui/views/actions/EditorImageDescriptor.
+ class
+SHA-256-Digest: 1nyFEnK0w0OifAf2zhwJuHdyf9+8zQHRKpiqfzyYZa8=
+
+Name: org/eclipse/ant/internal/ui/editor/text/AntEditorTextMessages.cl
+ ass
+SHA-256-Digest: OjPqefGF/vufq+/A4Ks7tVneKcKML/XkJun+fgj5zL0=
+
+Name: org/eclipse/ant/internal/ui/editor/templates/TaskContextType.cla
+ ss
+SHA-256-Digest: gpY0271oxIm5OqOYDG6/xDqS6v0L/6Ocg6+sKbVhges=
+
+Name: org/eclipse/ant/internal/ui/preferences/AddCustomDialog$2.class
+SHA-256-Digest: yyPHYnbqSsQa1PLhy5UNP09kjs2MhmTAmrAVBXzor+c=
+
+Name: icons/full/obj16/ant_target_err.png
+SHA-256-Digest: 0UV9q2giwjZdoHt00hyNktE/BO2SFWZ+AY+guppoJ3I=
+
+Name: org/eclipse/ant/internal/ui/datatransfer/AntNewJavaProjectPage.c
+ lass
+SHA-256-Digest: Sd7pNa5WmoBuMi+86aq5tGEk9TjumWrhBbBKa1xpPH0=
+
+Name: org/eclipse/ant/internal/ui/datatransfer/AntNewJavaProjectPage$2
+ .class
+SHA-256-Digest: qoa2dlQM6MxqcOgwIoT7z/lEMEiwDWJtuEbKd1ngTV4=
+
+Name: org/eclipse/ant/internal/ui/editor/formatter/XmlTagFormatter$Att
+ ributePair.class
+SHA-256-Digest: lfsSLDgx8gEVzLVMsscl7x3PR3BNkwv6wZ/ZAMp3NQA=
+
+Name: org/eclipse/ant/internal/ui/views/AntViewMessages.properties
+SHA-256-Digest: iQVMSu2AeRrw2U8TPTNbbkHWIlsTTKC4TCyMgA/Pn8g=
+
+Name: org/eclipse/ant/internal/ui/dtd/schema/NfmParser.class
+SHA-256-Digest: CqBEamQFpalsC8j584cxbz5JdxHBME0c+IvN/PKncs8=
+
+Name: icons/full/ovr16/error_co.gif
+SHA-256-Digest: XHSAZl3YOLES7udJPZ4d2/Oqalcardq22/1HjZFeQGY=
+
+Name: icons/full/ovr16/import_co.gif
+SHA-256-Digest: 3PoRe25L/u8wPiA6YwFI0mloF8+e4z9VvPZFy8niqDk=
+
+Name: org/eclipse/ant/internal/ui/editor/formatter/XmlTagFormatter$Tag
+ .class
+SHA-256-Digest: at4TWJziQpZGXT+Iwc0rmij597o8bwZq1ypExQPnsqU=
+
+Name: icons/full/wizban/export_ant_wiz.png
+SHA-256-Digest: iwcVSeo4t0HXjHstpDcpPlyUFidq2BILnZZkNzLk1mM=
+
+Name: icons/full/obj16/taskdef_obj@2x.png
+SHA-256-Digest: LLs+vhUmHszc/SVygpUD/Umw3yV0lb04wcpfzXAWHsQ=
+
+Name: icons/full/obj16/import_obj.png
+SHA-256-Digest: k6qBuZ4UH3aNUTna5GaxJ9xjQ73sNmRvQbByOFSAsPI=
+
+Name: org/eclipse/ant/internal/ui/debug/model/DebugModelMessages.prope
+ rties
+SHA-256-Digest: 7Q0MAcQQNftKgl3SrSzNlzXFbfi+mY/1DWpD68Iwd0k=
+
+Name: org/eclipse/ant/internal/ui/editor/templates/AntTemplateVariable
+ TextHover.class
+SHA-256-Digest: PPnMKGmODYYrdYW2oBE33pmRI80DDH+7MjqWc2Vzhb0=
+
+Name: org/eclipse/ant/internal/ui/console/AntConsoleColorProvider$1.cl
+ ass
+SHA-256-Digest: f4Y+Rwab8omUaA1Hybgw3kbHqKuEiAmPDMNxzEoIQEI=
+
+Name: org/eclipse/ant/internal/ui/dtd/IModel.class
+SHA-256-Digest: Rx0bGMOP8W4VDd+0eRW8senwrkRMofZM/vpl0d42TdM=
+
+Name: icons/full/dlcl16/remove_co@2x.png
+SHA-256-Digest: 6e2RkUXZMSy70yOERBq/oLMeeQu4aZoAsSe0gvsGMCo=
+
+Name: org/eclipse/ant/internal/ui/preferences/AddCustomDialog$8.class
+SHA-256-Digest: 78BEIE7H/XFB+hbZES1ZDZ+c0l1Jc61V0Y2T8dCfG8w=
+
+Name: icons/full/dlcl16/exportAnt_co.gif
+SHA-256-Digest: FKpUNNY0d723xcP1nFYS5f0o1hMxsarXB5i50L2wan0=
+
+Name: org/eclipse/ant/internal/ui/AntUIModelMessages.class
+SHA-256-Digest: y+FAUhMycZC0NvBBPQ7zwtjKeujG6UiVk3Fk1xkmHQs=
+
+Name: org/eclipse/ant/internal/ui/launchConfigurations/AntBuilderTarge
+ tsTab$1.class
+SHA-256-Digest: VCY9A8qoc94G0AyM3btla9rYxtb+StrNMtNi1GmIb4E=
+
+Name: org/eclipse/ant/internal/ui/model/AntTaskNode.class
+SHA-256-Digest: 3DILfwIZLLDxq55Z2ISaCCgl5hKLxE3zEgb0Bg0MyUk=
+
+Name: org/eclipse/ant/internal/ui/preferences/FileSelectionDialog$2.cl
+ ass
+SHA-256-Digest: 4vBVSgnA0xErc5u8FCjFT1LJwWBqfO2kZ32tmV8UUNs=
+
+Name: org/eclipse/ant/internal/ui/AntDoubleClickStrategy.class
+SHA-256-Digest: MAfz91xhHQWn0ZrKpX5jDEpbX9Z24QFN5ltaf+GRlz0=
+
+Name: org/eclipse/ant/internal/ui/refactoring/LaunchConfigurationIProj
+ ectRenameParticipant.class
+SHA-256-Digest: t15fwJ9ZGRKCLJBZ0FIccqMbs3IbSxMbGq0ZLl22OrY=
+
+Name: icons/full/elcl16/add_co.png
+SHA-256-Digest: rxNq9JU2Ly+yblG4PsyTnaz6EHtdf0httdLvPmoQW/c=
+
+Name: org/eclipse/ant/internal/ui/editor/ant1.6.2.dtd
+SHA-256-Digest: LLIN2oBEJagTj1OSDTHYVH4PUnxa8pb+uzFlDvDD6Lo=
+
+Name: org/eclipse/ant/internal/ui/editor/utils/ProjectHelper$TargetHan
+ dler.class
+SHA-256-Digest: qWoUJy8d9b11jdtCr8THAP76QwacQFWXC2hPODs3v+E=
+
+Name: org/eclipse/ant/internal/ui/editor/outline/FilterImportedElement
+ sAction$1.class
+SHA-256-Digest: GrMCe46HnM/whpolH5uLOplvCEX3paqyeR7/9AJExVY=
+
+Name: org/eclipse/ant/internal/ui/AntSourceViewerConfiguration.class
+SHA-256-Digest: VMJ5FdXbwkArXO7zcspH6r6KknSM+0TeFp5psnZwyaI=
+
+Name: org/eclipse/ant/internal/ui/editor/templates/AntContext.class
+SHA-256-Digest: OpVMc6lE1AHzFkeXGTi+qkECBRvT0L/34LaPiOf48I4=
+
+Name: org/eclipse/ant/internal/ui/launchConfigurations/RunAntStatusHan
+ dler.class
+SHA-256-Digest: JY+//pMVdRRUz+Nbnh5sluM9p1FkzsN1c7DP0X0CI48=
+
+Name: icons/full/dlcl16/filter_internal_targets.gif
+SHA-256-Digest: ANCPAL5uwUcsW8V0HOiylcbqkZqJEV7JywjvIhWOoY0=
+
+Name: org/eclipse/ant/internal/ui/editor/text/NotifyingReconciler.clas
+ s
+SHA-256-Digest: N1KQWTs8NXAn68kIa4RovS4mMC+xDMI8lDvCeK/kCEQ=
+
+Name: icons/full/obj16/template_obj@2x.png
+SHA-256-Digest: hVzvZVyi/Mr9tpWN2L/sX0DcaNHloKBO6NcbHUq+EmY=
+
+Name: org/eclipse/ant/internal/ui/preferences/IClasspathEntry.class
+SHA-256-Digest: /iJOzOhw/xIa4jSWOiQVtqhHuTtJOUO7iLmiNz2cUVY=
+
+Name: icons/full/dlcl16/add_co@2x.png
+SHA-256-Digest: o8hLa3TsTQFNLSP6dWUr1CFoDW05wTMbUKWkkYjouWA=
+
+Name: org/eclipse/ant/internal/ui/preferences/AddCustomDialog$7.class
+SHA-256-Digest: RE8+4MHzTag196+IFVZCQWV4VrDcxwDTBTH76KboCQs=
+
+Name: icons/full/eview16/ant_view@2x.png
+SHA-256-Digest: vvBLkiNEZhpSqB6XppudhECdAEcXA+q/HlJbJwt7Ph4=
+
+Name: org/eclipse/ant/internal/ui/editor/actions/OpenExternalAntDocHan
+ dler.class
+SHA-256-Digest: /OpRUT+qkeCJRRzfe/A6lMADhazFUFbvdkU9D8Ye+z8=
+
+Name: org/eclipse/ant/internal/ui/views/actions/SearchForBuildFilesDia
+ log.class
+SHA-256-Digest: HXQ2HnFNZF1QkNtAOCJirgu07EEXsXq4wDc76SwYq5I=
+
+Name: icons/full/obj16/main_tab.gif
+SHA-256-Digest: 9RMhX54lJr2BLrk80HoCWEhc+rTXbZiHNQb4w6aKF0Y=
+
+Name: icons/full/etool16/segment_edit.png
+SHA-256-Digest: UpobnMWaPwOFKnwhdMSUUHkeMYg6EndOaDxXdeqe4XM=
+
+Name: org/eclipse/ant/internal/ui/editor/TaskDescriptionProvider$Propo
+ salNode.class
+SHA-256-Digest: ecb1PVtq/MsCSPMJCYsDyIr9wpSoArAXr2yPCR0Sh3U=
+
+Name: templates/ant.properties
+SHA-256-Digest: t9mkS/gCTEcjXICfiWG10noC93zhCgcMgxPS9gE6H2E=
+
+Name: org/eclipse/ant/internal/ui/editor/actions/FoldingActionGroup$1.
+ class
+SHA-256-Digest: sZglIz+Mb25aIHfI3til6Ylsfo0kDniafp64cL+bzv4=
+
+Name: org/eclipse/ant/internal/ui/AntUtil$1.class
+SHA-256-Digest: 4RKd4sLIL4/tLmKZKovysY0pUp2fasnwCdIX6USc0BI=
+
+Name: org/eclipse/ant/internal/ui/editor/outline/AntOutlineMessages.cl
+ ass
+SHA-256-Digest: 0KeuQplL6wB/GIzKXWKQccxepc1P38KDuzs5hs36NQY=
+
+Name: plugin.properties
+SHA-256-Digest: O/BAifauv3r3OfIF9XwUcf1sTZw0/+tGdNSQ4WEMvyI=
+
+Name: org/eclipse/ant/internal/ui/editor/AntEditorActionContributor.cl
+ ass
+SHA-256-Digest: GYiwTJL1p0SmTOnPxi1Jn6Rc9YjFPqn2J+BWnS7O0Lw=
+
+Name: org/eclipse/ant/internal/ui/editor/text/AntEditorTagScanner.clas
+ s
+SHA-256-Digest: eFLzkW68lrdzyV3RQ+HLINowZV3eE/1WmF10kJFFQAg=
+
+Name: org/eclipse/ant/internal/ui/editor/text/XMLTextHover$1.class
+SHA-256-Digest: GfWpcJIBMcjGezLNULJ2Dcr8ZCpgAKE1IdkdV3Ji2Bw=
+
+Name: org/eclipse/ant/internal/ui/editor/templates/AntVariableResolver
+ $1.class
+SHA-256-Digest: Oa9t6vKAx90RmNbT1oW5fmgIXM8iwXaUp1bdTCU4x9o=
+
+Name: org/eclipse/ant/internal/ui/editor/AntEditorSourceViewerConfigur
+ ation.class
+SHA-256-Digest: GSONmOHOGNEJ/HmmYdAEa2dx8lHhJL3sN2zHDAwkDEE=
+
+Name: icons/full/elcl16/properties.gif
+SHA-256-Digest: 9I7k0Y6xN5zzsksEBZlaOJA30jT+h6r1i8ZWKWRuhTA=
+
+Name: icons/full/eview16/ant_view.png
+SHA-256-Digest: VvXvWkS4ZZe1FjIX/iPbiM3LwuknFuO6PPONHH3KGSI=
+
+Name: org/eclipse/ant/internal/ui/model/AntModelContentProvider.class
+SHA-256-Digest: 5RX+oMiqxxk9jQO7e/ATP49JWpoyyRnt4nUytTSuexE=
+
+Name: org/eclipse/ant/internal/ui/editor/utils/ProjectHelper$ErrorHelp
+ er.class
+SHA-256-Digest: gHT2wQ7WUjoy8trWGZ1ti4YSQS4Pd7aGVEH6s7lqY0Q=
+
+Name: icons/full/dlcl16/filter_internal_targets@2x.png
+SHA-256-Digest: +rdqxv5BPA78D9dIEGtRGZ1DqXJphesgLfP1cCf/yMU=
+
+Name: org/eclipse/ant/internal/ui/editor/AntEditor$3.class
+SHA-256-Digest: Ayn5dtl7ZVsJE9k74e8/suFkfgcdFwHdejRu4VR0kKY=
+
+Name: org/eclipse/ant/internal/ui/editor/AntSourceViewerInformationCon
+ trol$1.class
+SHA-256-Digest: qAV/Fq8j7EAoQjXbSjratEvQno0aFPFoFyO2LEOxAjA=
+
+Name: icons/full/obj16/ant@2x.png
+SHA-256-Digest: vvBLkiNEZhpSqB6XppudhECdAEcXA+q/HlJbJwt7Ph4=
+
+Name: org/eclipse/ant/internal/ui/editor/outline/FilterPropertiesActio
+ n.class
+SHA-256-Digest: m5oX98eKcvNcJsJRjwiQth/l0exxF14oKwmSiGr4mGA=
+
+Name: org/eclipse/ant/internal/ui/launchConfigurations/TaskLinkManager
+ .class
+SHA-256-Digest: XUQr4o/p+c0+jw2Ol0+1vBsvQDOSXBqZqrq/tGaEguw=
+
+Name: icons/full/obj16/task_obj.png
+SHA-256-Digest: h8LASYgVQ4RyXQ5IBq6t9j4r18X3Rg1ImakXYLF9/0s=
+
+Name: org/eclipse/ant/internal/ui/dtd/AntDTDMessages.properties
+SHA-256-Digest: U22o0Obofi+RpLKg7oQYeIfEgwdyucdrcxTh1akKBaM=
+
+Name: org/eclipse/ant/internal/ui/editor/outline/AntEditorContentOutli
+ nePage.class
+SHA-256-Digest: 3LC/44dCuSmBHdYN4QGnpmjiSs9rZbFBEQ57/u3iaTw=
+
+Name: org/eclipse/ant/internal/ui/editor/text/AntExternalAnnotationMod
+ el.class
+SHA-256-Digest: FWOUz4lj50QtajcFWwNkUZdgBV3GQFBIqivUSQmP44E=
+
+Name: org/eclipse/ant/internal/ui/dtd/schema/SchemaFactory.class
+SHA-256-Digest: rMTlU/QofuRXWQAsBHC+6Ca+D1Mkdtr0x1rAv83w3Z8=
+
+Name: org/eclipse/ant/internal/ui/editor/formatter/XmlTagFormatter$Tag
+ Parser.class
+SHA-256-Digest: oxeE1ji2n1NVo6orXT9K+b3RLhX/9SnQQpMDFMGBh5g=
+
+Name: org/eclipse/ant/internal/ui/launchConfigurations/AntLaunchShortc
+ ut.class
+SHA-256-Digest: L9aWfLxVisEz56YFgzkSGFlQn9ElXchqrY6SRVcCJ5I=
+
+Name: org/eclipse/ant/internal/ui/datatransfer/ExportUtil$IFileCompara
+ tor.class
+SHA-256-Digest: XbT7mHcrlavwOGn5t0SEMjCnR8yIKb3EHKHSqLIgmeo=
+
+Name: icons/full/dlcl16/run_tool.gif
+SHA-256-Digest: jIDKsgiAyGpWM+SPITByTw9G4y7FGAdELoPtVPXf3MI=
+
+Name: org/eclipse/ant/internal/ui/dtd/schema/AntDTDSchemaMessages.clas
+ s
+SHA-256-Digest: N/PUknfePFcLbDNFVz42ye2f+owe2JxVUL6vAFnGerQ=
+
+Name: org/eclipse/ant/internal/ui/preferences/AntEditorPreferencePage$
+ HighlightingColorListItem.class
+SHA-256-Digest: sdIoe1l7Gjm9ZLV0T9s7BGKs+ng/JKWzfRf9ZmMyy2M=
+
+Name: org/eclipse/ant/internal/ui/views/actions/AddBuildFilesAction$1.
+ class
+SHA-256-Digest: ZvKgXIyBYmhPvzCwqVMYdP4kXYX9fQs66M2JXokxBQA=
+
+Name: icons/full/obj16/targetinternal_obj@2x.png
+SHA-256-Digest: /2VdgUuRyRWu65+sYEs73DiGBfZfoXDr14JcSQKFaU8=
+
+Name: org/eclipse/ant/ui/launching/IAntLaunchConfigurationConstants.cl
+ ass
+SHA-256-Digest: +lxoeFShRvEzaG30AP2zoC3c6dazMAv4Lknond+8miA=
+
+Name: icons/full/obj16/ant.gif
+SHA-256-Digest: aiBtoSm6cPkQS7kb+XKmNiPE505/mFZqZLuNAgmbuuM=
+
+Name: org/eclipse/ant/internal/ui/model/IProblem.class
+SHA-256-Digest: LkpKNO5MEsybmiSO8cdBbplUiOc8VeUQqExg8BdBHIs=
+
+Name: org/eclipse/ant/internal/ui/launchConfigurations/AntPropertiesTa
+ b.class
+SHA-256-Digest: jpTh7pXw26UqyUdtBayD3GDRUPO+f+zBEZ+lHqfRojs=
+
+Name: icons/full/elcl16/alpha_mode.png
+SHA-256-Digest: jTFxJ5ensSmuyhoi6J5sXrriIu1hfFGBdkwaNAAL4Rc=
+
+Name: org/eclipse/ant/internal/ui/editor/outline/AntEditorContentOutli
+ nePage$AntOutlineFilter.class
+SHA-256-Digest: mG6o1gZesUX+gmfx5hFE6D6YFlsWHYnXde2GaftE3hI=
+
+Name: icons/full/elcl16/remove_co@2x.png
+SHA-256-Digest: HgNE2kvS0lZlzdmKJw1R2Yu4O6E7sg7POm4RvN4oEeE=
+
+Name: org/eclipse/ant/internal/ui/dtd/schema/Dfm.class
+SHA-256-Digest: /xJ6k9dPOql69wXAr3avjgQ80EH9GseqeyXwFXknRNY=
+
+Name: org/eclipse/ant/internal/ui/preferences/AddCustomDialog$5.class
+SHA-256-Digest: 1fEaZAVO8Obg113pPtAitpEL2m/Co1R53gVBxjcsBis=
+
+Name: org/eclipse/ant/internal/ui/editor/AntEditor$1.class
+SHA-256-Digest: kDhe+zkdVwLyHbMeAv8erYzdJzx8DKs52e2y8vkQV9s=
+
+Name: icons/full/obj16/type@2x.png
+SHA-256-Digest: 7fFGrFWl1YK+3RDIOv9M4cX6OPox7zUO2fyLMUVklv0=
+
+Name: org/eclipse/ant/internal/ui/launchConfigurations/AntTabGroup.cla
+ ss
+SHA-256-Digest: vmij7BPEGqCNHCUL541N7K10EaYYFsf23k2FsPRyzVc=
+
+Name: org/eclipse/ant/internal/ui/datatransfer/ProjectCreator.class
+SHA-256-Digest: g6S2NP6kAODm5qM/rFQUytF1l9iayazLKueumnjDVrA=
+
+Name: org/eclipse/ant/internal/ui/launchConfigurations/AntClasspathTab
+ .class
+SHA-256-Digest: CsiPNH90yrJmzGwjEJnyhQYKMgVxy7bKpcsliJlP+r4=
+
+Name: org/eclipse/ant/internal/ui/editor/text/TagRule.class
+SHA-256-Digest: tb2UujqfvOT4wNCV0jC+soGqLAXe0Kw1NlmAbbJD87Q=
+
+Name: icons/full/obj16/new_ant_project.png
+SHA-256-Digest: IdWG0+bnlnPuSJroptQd+DsV2EPEZcwos024laHh2/Y=
+
+Name: about.html
+SHA-256-Digest: QtZT/4gXg96yc0M50S9A0l/P1DYniz+DwAWnLprnQeA=
+
+Name: org/eclipse/ant/internal/ui/editor/templates/AntTemplateInformat
+ ionControlCreator$1.class
+SHA-256-Digest: r1+cAHtIfDmgjSRiGGK54k7E42vpk0RIecmXZ9DXXZA=
+
+Name: icons/full/dlcl16/removeall_co@2x.png
+SHA-256-Digest: OWvCgDgE4l0lolBy1ATjA03jX67PcYcucCqfI6a0yPY=
+
+Name: org/eclipse/ant/internal/ui/AntUtil$2.class
+SHA-256-Digest: K2zHq1EIHB3+rlb26TOLDnlQ51V5jtVxBzQS/7ENwR0=
+
+Name: org/eclipse/ant/internal/ui/editor/AntElementHyperlinkDetector.c
+ lass
+SHA-256-Digest: Ss0MClSEnRFGVBc1TRdSeAMl3+oaKiQvkwoy/jwFdL4=
+
+Name: org/eclipse/ant/internal/ui/editor/text/XMLTextHover.class
+SHA-256-Digest: f30bJT9WtsgB5OEeDcRQ+dBoJlX+VtGbEdY/vuxako4=
+
+Name: icons/full/elcl16/exportAnt_co.gif
+SHA-256-Digest: UomCmd/xc9Of1va2eHzzIqM5rHkvacvuJ/sZZqlKD/c=
+
+Name: org/eclipse/ant/internal/ui/editor/formatter/FormattingPreferenc
+ es.class
+SHA-256-Digest: jhqdOKOdL710JXKvAIWDhehgNjmVTSOBD49PMBSgrik=
+
+Name: org/eclipse/ant/internal/ui/launchConfigurations/VariableInputDi
+ alog.class
+SHA-256-Digest: ahlB0xZh+ohoZg8QNlQPzS9LtspJ8kcsoTNQvTIfICw=
+
+Name: org/eclipse/ant/internal/ui/editor/text/AbstractAntEditorScanner
+ .class
+SHA-256-Digest: Vamhh7CTYuql+OkZ8Y3ju4GgqNbOPE6pyxckmyTZ65M=
+
+Name: org/eclipse/ant/internal/ui/launchConfigurations/SetTargetsDialo
+ g.class
+SHA-256-Digest: NENHAMMszqErcRO/5Rup5JoatE17QbjMlbFFAoJilsM=
+
+Name: org/eclipse/ant/internal/ui/preferences/AddCustomDialog.class
+SHA-256-Digest: w7N1IuR/q8o2iE7ouEhT4pzWeCoT0nvX3sVW34fUZ68=
+
+Name: org/eclipse/ant/internal/ui/model/AntAntNode.class
+SHA-256-Digest: hKXtC3pHaWIyvjFsuWz9niGaiDfzVpe3gFboxyUHkdc=
+
+Name: icons/full/elcl16/filter_imported_elements@2x.png
+SHA-256-Digest: F76FSrbEoR1R/dYFEq9jW4SnqcdziW7frDGWPi6tAD8=
+
+Name: org/eclipse/ant/internal/ui/views/actions/RunTargetAction.class
+SHA-256-Digest: hhtAKg4nsbjHGhZkk8wtf2DcZbB+tMVddtCP/5sYpGw=
+
+Name: icons/full/elcl16/ant_targets.gif
+SHA-256-Digest: KZux6yi3I50vsPh//h9i9yiCx6nY5fVWBNZfmHqevWI=
+
+Name: icons/full/obj16/type.png
+SHA-256-Digest: m/BYlQZLp6JXwsYYCCuD6bDbyB2G1dzg8D1Dur/39R8=
+
+Name: org/eclipse/ant/internal/ui/preferences/OverlayPreferenceStore$T
+ ypeDescriptor.class
+SHA-256-Digest: I1stCyt4kpPBBfEZZ+qLhvX6zIMGX/8Ron31sN0vCyo=
+
+Name: icons/full/elcl16/search@2x.png
+SHA-256-Digest: JQgHaxNYjOIdObg4oz+KZjLsrIQLPG5BUtXssY5z6CY=
+
+Name: org/eclipse/ant/internal/ui/preferences/AddCustomDialog$4.class
+SHA-256-Digest: YBOa00JyUehHiyzknwQbdQvnB42hTrhtT4o4rCj+uK4=
+

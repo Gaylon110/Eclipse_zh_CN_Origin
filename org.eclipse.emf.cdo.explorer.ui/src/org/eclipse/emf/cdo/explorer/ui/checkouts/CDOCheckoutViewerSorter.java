@@ -1,0 +1,49 @@
+/*
+ * Copyright (c) 2015, 2016 Eike Stepper (Berlin, Germany) and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *    Eike Stepper - initial API and implementation
+ */
+package org.eclipse.emf.cdo.explorer.ui.checkouts;
+
+import org.eclipse.emf.cdo.eresource.CDOResourceFolder;
+import org.eclipse.emf.cdo.eresource.CDOResourceNode;
+
+import org.eclipse.emf.ecore.EObject;
+
+import org.eclipse.jface.viewers.Viewer;
+
+/**
+ * @author Eike Stepper
+ */
+@SuppressWarnings("deprecation")
+public class CDOCheckoutViewerSorter extends org.eclipse.jface.viewers.ViewerSorter
+{
+  @Override
+  public int category(Object element)
+  {
+    if (element instanceof CDOResourceFolder)
+    {
+      // Sort folders before other elements.
+      return -1;
+    }
+
+    return super.category(element);
+  }
+
+  @Override
+  public int compare(Viewer viewer, Object e1, Object e2)
+  {
+    // Don't sort normal EObjects.
+    if (e1 instanceof EObject && !(e1 instanceof CDOResourceNode))
+    {
+      return 0;
+    }
+
+    return super.compare(viewer, e1, e2);
+  }
+}

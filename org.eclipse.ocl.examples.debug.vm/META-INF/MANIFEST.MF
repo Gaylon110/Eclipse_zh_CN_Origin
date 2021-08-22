@@ -1,0 +1,510 @@
+Manifest-Version: 1.0
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-SymbolicName: org.eclipse.ocl.examples.debug.vm;singleton:=true
+Eclipse-SourceReferences: scm:git:/gitroot/ocl/org.eclipse.ocl.git
+Require-Bundle: org.eclipse.core.runtime;bundle-version="[3.5.0,4.0.0)
+ ",org.eclipse.debug.core;bundle-version="[3.5.0,4.0.0)",org.eclipse.o
+ cl.xtext.base;bundle-version="[1.2.0,2.0.0)"
+Export-Package: org.eclipse.ocl.examples.debug.vm,org.eclipse.ocl.exam
+ ples.debug.vm.core,org.eclipse.ocl.examples.debug.vm.data,org.eclipse
+ .ocl.examples.debug.vm.evaluator,org.eclipse.ocl.examples.debug.vm.ev
+ ent,org.eclipse.ocl.examples.debug.vm.launching,org.eclipse.ocl.examp
+ les.debug.vm.messages,org.eclipse.ocl.examples.debug.vm.request,org.e
+ clipse.ocl.examples.debug.vm.response,org.eclipse.ocl.examples.debug.
+ vm.srclookup,org.eclipse.ocl.examples.debug.vm.utils
+Bundle-Version: 2.3.0.v20170522-1753
+Ant-Version: Apache Ant 1.9.4
+Bundle-Vendor: %providerName
+Bundle-Name: %pluginName
+Created-By: 1.8.0_121-b13 (Oracle Corporation)
+Import-Package: org.apache.log4j;version="[1.2.15,2.0.0)"
+Bundle-ManifestVersion: 2
+
+Name: org/eclipse/ocl/examples/debug/vm/launching/DebuggableRunner.cla
+ ss
+SHA1-Digest: bXqirdK1tiHWZlrnKfkH6f6EZbI=
+
+Name: org/eclipse/ocl/examples/debug/vm/utils/ASTSyntheticNode.class
+SHA1-Digest: m4yrskWfRM1CfJFZDG+QsxT3RyU=
+
+Name: org/eclipse/ocl/examples/debug/vm/srclookup/VMSourcePathComputer
+ .class
+SHA1-Digest: xOGvIz/wji11X1fGdP5kLl0+SPU=
+
+Name: org/eclipse/ocl/examples/debug/vm/core/EvaluationContext.class
+SHA1-Digest: I5LHWzkXktn8MLYyieDlTIEkFv4=
+
+Name: org/eclipse/ocl/examples/debug/vm/utils/Trace.class
+SHA1-Digest: WgCXqi3JY4kj8I1R1KZNnGEqGks=
+
+Name: org/eclipse/ocl/examples/debug/vm/VMBreakpoint.class
+SHA1-Digest: nlizHJWdTldbXGyHDK1pEYtTLMk=
+
+Name: org/eclipse/ocl/examples/debug/vm/VMRemoteClient.class
+SHA1-Digest: ZqG/tGtBlXW2mCCGN7NfJBFrEGA=
+
+Name: org/eclipse/ocl/examples/debug/vm/core/VMValue.class
+SHA1-Digest: TpotRqrPcjjCq0WKoLygdV58JOM=
+
+Name: org/eclipse/ocl/examples/debug/vm/evaluator/VMExecutor.class
+SHA1-Digest: 9PopVC6x/OW3Pq3YlgzaZhfpS9E=
+
+Name: org/eclipse/ocl/examples/debug/vm/response/VMStackFrameResponse.
+ class
+SHA1-Digest: Qre68+KRlEiTMjpqlV3pKPF+nec=
+
+Name: org/eclipse/ocl/examples/debug/vm/core/VMLineBreakpoint.class
+SHA1-Digest: wwZS4OREZeDktS0vorwMnuq/HE8=
+
+Name: org/eclipse/ocl/examples/debug/vm/srclookup/VMSourcePathComputer
+ $1.class
+SHA1-Digest: 4ytYkOAKN7lV84iIGE5U5D6fY60=
+
+Name: org/eclipse/ocl/examples/debug/vm/utils/SocketUtil.class
+SHA1-Digest: VZJXLS8X8pH2/m3GdJ5m2V4AnRM=
+
+Name: org/eclipse/ocl/examples/debug/vm/VMVirtualMachine.class
+SHA1-Digest: kn74DAmtSRTKa0QBNhnyoUMglao=
+
+Name: org/eclipse/ocl/examples/debug/vm/response/VMDetailResponse.clas
+ s
+SHA1-Digest: FPKrvowi/eddNB2nhYzY7AQRyzE=
+
+Name: org/eclipse/ocl/examples/debug/vm/launching/ExecutionContext.cla
+ ss
+SHA1-Digest: RxQvWOX1pUtecdcObBpi71YcekA=
+
+Name: org/eclipse/ocl/examples/debug/vm/evaluator/VMContext.class
+SHA1-Digest: DpZrQJ2gK11E+KiDuEMiGUYAr+M=
+
+Name: org/eclipse/ocl/examples/debug/vm/core/VMStackFrame$1.class
+SHA1-Digest: Ysn0PrDvLG+OlZDQMkYeLogT8ZI=
+
+Name: org/eclipse/ocl/examples/debug/vm/utils/SafeRunner.class
+SHA1-Digest: V4DWj+sc+HUSDgKHHRUtdnfZpbw=
+
+Name: org/eclipse/ocl/examples/debug/vm/data/VMLocationData.class
+SHA1-Digest: c0KhT/Zqw7EUPCJaQfRjNsKQ/i8=
+
+Name: org/eclipse/ocl/examples/debug/vm/evaluator/VMRootEvaluationEnvi
+ ronment.class
+SHA1-Digest: qB/A9PRB8Fyzv1pIz6JDK99fgTA=
+
+Name: org/eclipse/ocl/examples/debug/vm/core/VMLocalVariable.class
+SHA1-Digest: 3MASceMVZpxumCBHBeNs25b+KiA=
+
+Name: org/eclipse/ocl/examples/debug/vm/VMVirtualMachine$1.class
+SHA1-Digest: LeL+TyIcyRsrrM6ydYyc1qOGD94=
+
+Name: org/eclipse/ocl/examples/debug/vm/data/VMVariableData.class
+SHA1-Digest: vQDUVZ1FoZOffPPDAUVrS2cbdv4=
+
+Name: org/eclipse/ocl/examples/debug/vm/utils/VMInterruptedExecutionEx
+ ception.class
+SHA1-Digest: 4zRueUyqT3ozUNypY5McQgOXzSo=
+
+Name: org/eclipse/ocl/examples/debug/vm/response/VMResponse.class
+SHA1-Digest: 1lKK7b06b3LYj/1WNyJlku1e/mc=
+
+Name: org/eclipse/ocl/examples/debug/vm/data/VMStackFrameData$Loc.clas
+ s
+SHA1-Digest: VQ5suQmWX95l1LJZnED/KhuMC4M=
+
+Name: org/eclipse/ocl/examples/debug/vm/utils/SafeRunner$1.class
+SHA1-Digest: 4ZVndeUYDSvKfvcf+JmI5tX8F3M=
+
+Name: org/eclipse/ocl/examples/debug/vm/evaluator/IStepper.class
+SHA1-Digest: tebh6samxU0tPS/04/1r9/jWfxA=
+
+Name: org/eclipse/ocl/examples/debug/vm/utils/VMStackTraceBuilder.clas
+ s
+SHA1-Digest: nYPOB0knd9+aA/Mn4wpTI9IZ8Wc=
+
+Name: org/eclipse/ocl/examples/debug/vm/ValidBreakpointLocator.class
+SHA1-Digest: SF60K5jp+lIHZl6d6H+5CdWXGM8=
+
+Name: org/eclipse/ocl/examples/debug/vm/data/VMStackFrameData.class
+SHA1-Digest: +IgNSBtbp4IAhy1i2vSsxfE7ULo=
+
+Name: org/eclipse/ocl/examples/debug/vm/event/VMEvent.class
+SHA1-Digest: mEKMPhM0o/OzUXdBsd33M/Oxj4c=
+
+Name: org/eclipse/ocl/examples/debug/vm/utils/CompiledUnit.class
+SHA1-Digest: I9uaq5ICYkzGhogx58DMrDpbn0c=
+
+Name: org/eclipse/ocl/examples/debug/vm/response/VMBreakpointResponse.
+ class
+SHA1-Digest: tE2ud6egS/Maa6M5SplbiGCOp+I=
+
+Name: org/eclipse/ocl/examples/debug/vm/BreakpointError.class
+SHA1-Digest: R1xyNTSCWtlOzWWrjEIHFd7OY+o=
+
+Name: org/eclipse/ocl/examples/debug/vm/utils/StreamsProxy.class
+SHA1-Digest: ybYSvL3jlZQV23CJImzBuGV4nAo=
+
+Name: org/eclipse/ocl/examples/debug/vm/utils/ShallowProcess.class
+SHA1-Digest: CaiMf1onboPD7/7DZM73PpsJb8s=
+
+Name: org/eclipse/ocl/examples/debug/vm/request/VMVariableRequest.clas
+ s
+SHA1-Digest: ohUuEj9XI/82Oc17JnmOP7befB8=
+
+Name: org/eclipse/ocl/examples/debug/vm/DebugVMPlugin.class
+SHA1-Digest: Qlzzs5Ry36yPDilQQveBkjAiTkk=
+
+Name: org/eclipse/ocl/examples/debug/vm/utils/BaseProcess$IRunnable.cl
+ ass
+SHA1-Digest: pCGJBnsKN3KEGPrTKpb1zfX/hFY=
+
+Name: org/eclipse/ocl/examples/debug/vm/utils/Log.class
+SHA1-Digest: CmnYeEi+XaZdJzJyUXRehQgevDg=
+
+Name: org/eclipse/ocl/examples/debug/vm/messages/VMMessages.class
+SHA1-Digest: SjC97um/SGC9FlrVL1kHtT1RqbM=
+
+Name: org/eclipse/ocl/examples/debug/vm/utils/ASTSyntheticNodeAccess.c
+ lass
+SHA1-Digest: YDQ/iCND1kAf8Da+F1XvlYc1SGg=
+
+Name: org/eclipse/ocl/examples/debug/vm/request/VMSuspendRequest.class
+SHA1-Digest: qj94feE4NFG6lhEZwD4YO4D4LwE=
+
+Name: org/eclipse/ocl/examples/debug/vm/launching/DebuggableRunner$1.c
+ lass
+SHA1-Digest: 6dxLb2IM+4LubmT3ttGH3qhz5Pw=
+
+Name: org/eclipse/ocl/examples/debug/vm/utils/VMRuntimeException.class
+SHA1-Digest: 9JcD21HuT1WBSbgCyMrQqbvfRY0=
+
+Name: org/eclipse/ocl/examples/debug/vm/core/VMStackFrame.class
+SHA1-Digest: hVktBoTBIROLzyN4eAysuJmDxBM=
+
+Name: org/eclipse/ocl/examples/debug/vm/core/VMThread.class
+SHA1-Digest: Yt9FnOzPuiylq7KL6621XuxsgUw=
+
+Name: org/eclipse/ocl/examples/debug/vm/messages/VMMessages.properties
+SHA1-Digest: GTMSCn36IamI+7k4Z6ZmfX2ifas=
+
+Name: org/eclipse/ocl/examples/debug/vm/request/VMStackFrameRequest.cl
+ ass
+SHA1-Digest: kaL9Buxg5GbK2qo5WjyXKtIKtFI=
+
+Name: org/eclipse/ocl/examples/debug/vm/core/IVMDebugTarget.class
+SHA1-Digest: iIs+MGtQszahruph7VK6Q/n0Gzc=
+
+Name: org/eclipse/ocl/examples/debug/vm/data/VMBreakpointData.class
+SHA1-Digest: nUOI1F/f08zuWtayTehkaY9UI/w=
+
+Name: org/eclipse/ocl/examples/debug/vm/launching/VMDebuggableExecutor
+ Adapter.class
+SHA1-Digest: nAxtf7cw/oKVS2jBzRALpp7cwQs=
+
+Name: org/eclipse/ocl/examples/debug/vm/request/VMRequest.class
+SHA1-Digest: xKio5n+Y3cc2m0Iz/KFCNEa1GqI=
+
+Name: org/eclipse/ocl/examples/debug/vm/request/VMConnectRequest.class
+SHA1-Digest: 27BPzGlQ3e2pD6G5X2nkgKnbb0o=
+
+Name: org/eclipse/ocl/examples/debug/vm/core/VMDebugTarget.class
+SHA1-Digest: pxlChEqUUQ/Wtq3ktOrQAMeatqw=
+
+Name: org/eclipse/ocl/examples/debug/vm/VMVirtualMachine$DebuggerShell
+ .class
+SHA1-Digest: ae9ixuW7IlAgIM3tDuwQMmE2n10=
+
+Name: org/eclipse/ocl/examples/debug/vm/data/VMTypeData.class
+SHA1-Digest: 6b0KEK1M2LhoqdPUtLBnI4lm3Nk=
+
+Name: org/eclipse/ocl/examples/debug/vm/utils/ExecutionDiagnosticImpl.
+ class
+SHA1-Digest: ElccFOiMnY4C2f61dJhf44JPyEg=
+
+Name: about.html
+SHA1-Digest: uxSoR1Q+AbN1HMJKmmtd8bdx1jU=
+
+Name: org/eclipse/ocl/examples/debug/vm/VariableFinder.class
+SHA1-Digest: 02XpRfI5WpF1EqLRGYCP/NkrNDQ=
+
+Name: org/eclipse/ocl/examples/debug/vm/event/VMTerminateEvent.class
+SHA1-Digest: nYGgfFxkhbDu5rIZp2HaD7dFZe4=
+
+Name: org/eclipse/ocl/examples/debug/vm/request/VMResumeRequest.class
+SHA1-Digest: chEf8lo6qzmnyaEzu9DdIDHyGUo=
+
+Name: org/eclipse/ocl/examples/debug/vm/request/VMStepIntoRequest.clas
+ s
+SHA1-Digest: xxJZYT0/Q9LGQ052a+54sWlgg+k=
+
+Name: org/eclipse/ocl/examples/debug/vm/IVMDebuggerShell.class
+SHA1-Digest: woA3C37z3ZCGp8u+xPrt2Ad4rtk=
+
+Name: org/eclipse/ocl/examples/debug/vm/evaluator/IVMContext.class
+SHA1-Digest: AZCaR/iPGaR85bDC3Tw1UZmMbp0=
+
+Name: org/eclipse/ocl/examples/debug/vm/UnitManager$UnitEntry.class
+SHA1-Digest: tHwdrYH0P5a3F6OtVILJdZxhdXw=
+
+Name: org/eclipse/ocl/examples/debug/vm/request/VMStepOverRequest.clas
+ s
+SHA1-Digest: BBcFUUARk+qdzjHwt3k92KZagMU=
+
+Name: org/eclipse/ocl/examples/debug/vm/data/VMSuspension.class
+SHA1-Digest: 7cVBugy/JQE9dMfeIEyFcmjQ5k8=
+
+Name: org/eclipse/ocl/examples/debug/vm/utils/VMException.class
+SHA1-Digest: sJXnq3Vy7lTBAxrCWmhKb4JQ+SM=
+
+Name: org/eclipse/ocl/examples/debug/vm/evaluator/VMEvaluationVisitor.
+ class
+SHA1-Digest: ith0zSmdS38GeijgMWDbAiDoIcs=
+
+Name: org/eclipse/ocl/examples/debug/vm/launching/VMLaunchConfiguratio
+ nDelegate$1.class
+SHA1-Digest: bEaE1Mtit3EhGmVkWafu8Dkp1wY=
+
+Name: org/eclipse/ocl/examples/debug/vm/utils/IModuleSourceInfo.class
+SHA1-Digest: anmrspErAqeqZJN6fm9KWBp8WRQ=
+
+Name: org/eclipse/ocl/examples/debug/vm/core/VMVariable.class
+SHA1-Digest: +75NSkkGiAjSUx22Lort00Xcd1M=
+
+Name: org/eclipse/ocl/examples/debug/vm/utils/Trace$Tracing.class
+SHA1-Digest: fhwVQScIHdFDUQnjxbtaBxy5KQg=
+
+Name: org/eclipse/ocl/examples/debug/vm/request/VMTerminateRequest.cla
+ ss
+SHA1-Digest: /j3yt/fF5WvqW7xnEZXsXrIsRbQ=
+
+Name: org/eclipse/ocl/examples/debug/vm/srclookup/VMSourceLookupDirect
+ or.class
+SHA1-Digest: mxCz0AX5jyZiGvhjT0Hx6bznF4o=
+
+Name: org/eclipse/ocl/examples/debug/vm/utils/Messages.class
+SHA1-Digest: 6bK62i9pR/L7yXm/fmhi2rT0oH8=
+
+Name: org/eclipse/ocl/examples/debug/vm/launching/DebuggableRunner$2.c
+ lass
+SHA1-Digest: WV1YzvOYe8T+h1wWJEjqedAieq4=
+
+Name: org/eclipse/ocl/examples/debug/vm/core/VMLocalValue.class
+SHA1-Digest: TOey5JOnVdljlJF8PlsqhWwXIAI=
+
+Name: org/eclipse/ocl/examples/debug/vm/utils/SafeRunner$IRunner.class
+SHA1-Digest: zWvHWgVuDg1ZytSrikgD6KdnJW8=
+
+Name: org/eclipse/ocl/examples/debug/vm/utils/WriterLog.class
+SHA1-Digest: Ud8FjKbSLshzChWxukB0sXkyXF8=
+
+Name: org/eclipse/ocl/examples/debug/vm/utils/Log$1.class
+SHA1-Digest: LYu3RNRBC8hw8eH4x2GNugKDeNI=
+
+Name: META-INF/eclipse.inf
+SHA1-Digest: KyT9FF7C7t86NoBoa2kZT3ZJBfw=
+
+Name: org/eclipse/ocl/examples/debug/vm/evaluator/AbstractVMEvaluation
+ Stepper.class
+SHA1-Digest: DSTRgnDCA1fK7jK16aMWI1MtFbI=
+
+Name: org/eclipse/ocl/examples/debug/vm/utils/IVMStackTraceElement.cla
+ ss
+SHA1-Digest: IYlWTbOlkjZ0oEk+fBroHJKcUbY=
+
+Name: org/eclipse/ocl/examples/debug/vm/evaluator/VMEvaluationStepper.
+ class
+SHA1-Digest: mZ0ZhfpZ8Wi9P1YiKjfSLepgeyA=
+
+Name: org/eclipse/ocl/examples/debug/vm/data/VMValueData.class
+SHA1-Digest: ebVxPb485LTRBbDXB+mvm5/dLAA=
+
+Name: org/eclipse/ocl/examples/debug/vm/utils/ExecutionDiagnostic.clas
+ s
+SHA1-Digest: T7tOVVmMxzwpRaKBVC/ey7iSB0M=
+
+Name: org/eclipse/ocl/examples/debug/vm/evaluator/IDebuggableRunnerFac
+ tory.class
+SHA1-Digest: 4DVjNg61cEqzPoG9IRlgks6ORC0=
+
+Name: org/eclipse/ocl/examples/debug/vm/request/VMStartRequest.class
+SHA1-Digest: tJyB70HBAKlgozxbUJeFSvP5AKY=
+
+Name: .options
+SHA1-Digest: /otJRqSpJIHAevgp6JjV40AbPs0=
+
+Name: org/eclipse/ocl/examples/debug/vm/evaluator/IStepperVisitor.clas
+ s
+SHA1-Digest: /aFKcNnkHlFKkc+axhDQEUCfS0w=
+
+Name: org/eclipse/ocl/examples/debug/vm/request/VMBreakpointRequest$Ac
+ tionKind.class
+SHA1-Digest: FV6xgOIyB/gb3k/db5BDXJWyV2Y=
+
+Name: org/eclipse/ocl/examples/debug/vm/request/VMBreakpointRequest.cl
+ ass
+SHA1-Digest: aV629DLXb1HGgBE6gKp+CvwVaQ8=
+
+Name: org/eclipse/ocl/examples/debug/vm/utils/WriterMonitor.class
+SHA1-Digest: MFUSQNGwLbQwPaQaxSHikQWKDbI=
+
+Name: build.properties
+SHA1-Digest: jjMbYmH/N/dMMiguMxPm0F5nLwY=
+
+Name: org/eclipse/ocl/examples/debug/vm/UnitManager.class
+SHA1-Digest: Lzvg+CNs8wNCE9iK14nLjjNpa28=
+
+Name: org/eclipse/ocl/examples/debug/vm/evaluator/VMNestedEvaluationEn
+ vironment.class
+SHA1-Digest: CX/rgbP3OfBmW6SC9/+nXoxc16U=
+
+Name: org/eclipse/ocl/examples/debug/vm/event/VMSuspendEvent.class
+SHA1-Digest: 0KBQ+++n7bgIMNo9NirpZMrfcSo=
+
+Name: org/eclipse/ocl/examples/debug/vm/core/VMVirtualProcess.class
+SHA1-Digest: 0Ryc60pfwNctbOklBHE0nlLw/dU=
+
+Name: org/eclipse/ocl/examples/debug/vm/utils/LineNumberProvider.class
+SHA1-Digest: Xmdzw2QPpp4I3OxQTVA+2nor+VM=
+
+Name: org/eclipse/ocl/examples/debug/vm/launching/DebuggableRunnerFact
+ ory.class
+SHA1-Digest: +E8I7a8XvkOgfSnhyakkXHN7jk4=
+
+Name: org/eclipse/ocl/examples/debug/vm/utils/ASTBindingHelper.class
+SHA1-Digest: LANt8msGTtQz1o5OF88c4lfNPFs=
+
+Name: org/eclipse/ocl/examples/debug/vm/VariableFinder$1.class
+SHA1-Digest: 0c9JcV5DYWrrOQDRnaBHOESi3P8=
+
+Name: org/eclipse/ocl/examples/debug/vm/core/VMDebugTarget$EventDispat
+ chJob.class
+SHA1-Digest: dTUBG6l4fZ9ip4QtgS+PMxrXfSM=
+
+Name: org/eclipse/ocl/examples/debug/vm/VMEventListener.class
+SHA1-Digest: 58xcsdewUtQDq2psqWEX6lOlhUA=
+
+Name: org/eclipse/ocl/examples/debug/vm/UnitLocation.class
+SHA1-Digest: 4c+Ylo/uXJi7sHnY0xuWAfIMdQk=
+
+Name: org/eclipse/ocl/examples/debug/vm/ConditionChecker.class
+SHA1-Digest: E6v6WnLVaXXTd6d6wru11XLJZTw=
+
+Name: org/eclipse/ocl/examples/debug/vm/launching/InternalDebuggableEx
+ ecutor.class
+SHA1-Digest: WU3MCBONQzwI6hrxUjAkyiGxMO0=
+
+Name: org/eclipse/ocl/examples/debug/vm/event/VMResumeEvent.class
+SHA1-Digest: vburRGadW63v6A2B8nuTQz/Geks=
+
+Name: org/eclipse/ocl/examples/debug/vm/response/VMVariableResponse.cl
+ ass
+SHA1-Digest: IFaJ9tm65ZoXxNy3xf6TPbTwUWU=
+
+Name: plugin.properties
+SHA1-Digest: l8C42lUEk27p+sv9M+alAhk4GrM=
+
+Name: org/eclipse/ocl/examples/debug/vm/event/VMStartEvent.class
+SHA1-Digest: SvwP2Qs9ocseTmMYaEIFOTFcNVI=
+
+Name: org/eclipse/ocl/examples/debug/vm/VMBreakpointManager.class
+SHA1-Digest: 1qMuchctP5mKk0YWjntM0Lswmnc=
+
+Name: org/eclipse/ocl/examples/debug/vm/evaluator/VMEvaluationEnvironm
+ ent$StepperEntry.class
+SHA1-Digest: uOh9AE2mE5aQYrWMVRu+bnhS0wI=
+
+Name: org/eclipse/ocl/examples/debug/vm/response/VMConnectResponse.cla
+ ss
+SHA1-Digest: mSS1VOpIQJEptGZReBurjvVqZOs=
+
+Name: org/eclipse/ocl/examples/debug/vm/request/VMDetailRequest.class
+SHA1-Digest: shRH+zI7o/b0pSaSfPUPSldL0cs=
+
+Name: org/eclipse/ocl/examples/debug/vm/utils/DebugOptions.class
+SHA1-Digest: h8Ct9e7rHaiY10WPQKqHRrupsCY=
+
+Name: org/eclipse/ocl/examples/debug/vm/utils/VMStackTraceElement.clas
+ s
+SHA1-Digest: A6ywoF6pdOsqOGkBYFPf42AXoLY=
+
+Name: org/eclipse/ocl/examples/debug/vm/launching/SourceModificationLi
+ stener.class
+SHA1-Digest: l4v150Zag6I0+QWtkPh4DExAhVY=
+
+Name: org/eclipse/ocl/examples/debug/vm/utils/MiscUtil.class
+SHA1-Digest: sFchHDtiAVVNuylot6ad81X8Pfw=
+
+Name: org/eclipse/ocl/examples/debug/vm/utils/VMStackOverFlowError.cla
+ ss
+SHA1-Digest: YhpS1B42pzbGyj7qvFQPRiPaSvs=
+
+Name: org/eclipse/ocl/examples/debug/vm/srclookup/VMSourceLookupPartic
+ ipant.class
+SHA1-Digest: XRWHVPdrQuSP0FsgE9zSE3DXFi0=
+
+Name: org/eclipse/ocl/examples/debug/vm/launching/ExecutionContextImpl
+ .class
+SHA1-Digest: Zwizv6LO3kWtOzt+Ddy9uTYhDj0=
+
+Name: org/eclipse/ocl/examples/debug/vm/launching/SourceModificationLi
+ stener$1.class
+SHA1-Digest: 8RDVJszSuvVbYUFETdArsGU7LQc=
+
+Name: org/eclipse/ocl/examples/debug/vm/core/VMLineBreakpoint$1.class
+SHA1-Digest: V7webWq/bosechFl+bCSXxck8gY=
+
+Name: org/eclipse/ocl/examples/debug/vm/evaluator/IterateBreakpointHel
+ per.class
+SHA1-Digest: YSg1qKcXf3LdWmP7yaoKOEYO+yY=
+
+Name: org/eclipse/ocl/examples/debug/vm/core/VMLocalValue$LocalValue.c
+ lass
+SHA1-Digest: VchpzC/0bm75FDzQOj4Dd0t8RFQ=
+
+Name: org/eclipse/ocl/examples/debug/vm/evaluator/AbstractVMEvaluation
+ Environment.class
+SHA1-Digest: gG+HdqST/0+x+2oXC1bWbWQBxE0=
+
+Name: org/eclipse/ocl/examples/debug/vm/data/VMNewBreakpointData.class
+SHA1-Digest: G2JLetcHrXDwvSDrNgI6g4i7CgI=
+
+Name: org/eclipse/ocl/examples/debug/vm/utils/BaseProcess.class
+SHA1-Digest: 2iHRmlS/D4u0p9z04VGRiPW5WkA=
+
+Name: org/eclipse/ocl/examples/debug/vm/evaluator/VMEvaluationEnvironm
+ ent.class
+SHA1-Digest: 0eb6dvvYBRNfg89uG8gAA88acCQ=
+
+Name: org/eclipse/ocl/examples/debug/vm/utils/EmfUtil.class
+SHA1-Digest: sb53h9q8Fy9Httd5GIr3Xsda3yI=
+
+Name: org/eclipse/ocl/examples/debug/vm/utils/ASTBindingHelper$UnitLoc
+ ation2.class
+SHA1-Digest: pGqTexdLIY/tSeH17F8nDNytGL8=
+
+Name: org/eclipse/ocl/examples/debug/vm/utils/SafeRunner$SameThreadRun
+ ner.class
+SHA1-Digest: M2pP724VThqzro9SkswiCeDt2UE=
+
+Name: org/eclipse/ocl/examples/debug/vm/core/VMDebugTarget$1.class
+SHA1-Digest: wFrwlctJpim4rxExXb6jpvm8Bdk=
+
+Name: org/eclipse/ocl/examples/debug/vm/core/VMDebugCore.class
+SHA1-Digest: zmX/gAHqUvuGHVdlHEAFNmT7hEQ=
+
+Name: org/eclipse/ocl/examples/debug/vm/utils/ASTSyntheticNodeAccess$A
+ STSyntheticAdapter.class
+SHA1-Digest: EkBVQwXj/ke5KMjKcsYmZHJd9YQ=
+
+Name: org/eclipse/ocl/examples/debug/vm/core/VMDebugElement.class
+SHA1-Digest: ZqSCKtFH5GXzMmMNPBHqNlT6Qlc=
+
+Name: org/eclipse/ocl/examples/debug/vm/launching/VMLaunchConfiguratio
+ nDelegate.class
+SHA1-Digest: n5HEpji5wUUxSC4ZJFx253NwlUI=
+
+Name: org/eclipse/ocl/examples/debug/vm/event/VMDisconnectEvent.class
+SHA1-Digest: 3aBV9HZ93iAwFZVRYBAU1pqCFGo=
+
+Name: org/eclipse/ocl/examples/debug/vm/IVMVirtualMachineShell.class
+SHA1-Digest: WAb8ez1rcLk4hBJ9MxRGnuPpZW4=
+

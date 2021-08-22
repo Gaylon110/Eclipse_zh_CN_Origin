@@ -1,0 +1,823 @@
+/*********************************************************************
+ * Copyright (c) 2010-2018 Thales Global Services S.A.S.
+ * This program and the accompanying materials are made
+ * available under the terms of the Eclipse Public License 2.0
+ * which is available at https://www.eclipse.org/legal/epl-2.0/
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *
+ * Contributors:
+ *    Thales Global Services S.A.S. - initial API and implementation
+ **********************************************************************/
+package org.eclipse.emf.diffmerge.ui.setup;
+
+import java.lang.reflect.InvocationTargetException;
+import java.util.EventObject;
+import java.util.HashSet;
+import java.util.Set;
+
+import org.eclipse.compare.CompareConfiguration;
+import org.eclipse.compare.CompareEditorInput;
+import org.eclipse.compare.ICompareNavigator;
+import org.eclipse.compare.INavigatable;
+import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.core.runtime.OperationCanceledException;
+import org.eclipse.core.runtime.SubMonitor;
+import org.eclipse.emf.common.command.CommandStackListener;
+import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.common.util.WrappedException;
+import org.eclipse.emf.diffmerge.api.IComparison;
+import org.eclipse.emf.diffmerge.api.Role;
+import org.eclipse.emf.diffmerge.api.scopes.IEditableModelScope;
+import org.eclipse.emf.diffmerge.api.scopes.IPersistentModelScope;
+import org.eclipse.emf.diffmerge.diffdata.EComparison;
+import org.eclipse.emf.diffmerge.ui.EMFDiffMergeUIPlugin;
+import org.eclipse.emf.diffmerge.ui.Messages;
+import org.eclipse.emf.diffmerge.ui.diffuidata.UIComparison;
+import org.eclipse.emf.diffmerge.ui.specification.IComparisonMethod;
+import org.eclipse.emf.diffmerge.ui.specification.IModelScopeDefinition;
+import org.eclipse.emf.diffmerge.ui.util.InconsistencyDialog;
+import org.eclipse.emf.diffmerge.ui.util.MiscUtil;
+import org.eclipse.emf.diffmerge.ui.util.MiscUtil.ExtendedUnloader;
+import org.eclipse.emf.diffmerge.ui.viewers.AbstractComparisonViewer;
+import org.eclipse.emf.diffmerge.ui.viewers.EMFDiffNode;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.ecore.xmi.PackageNotFoundException;
+import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
+import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.emf.edit.domain.IEditingDomainProvider;
+import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
+import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
+import org.eclipse.jface.action.ToolBarManager;
+import org.eclipse.jface.dialogs.IDialogConstants;
+import org.eclipse.jface.dialogs.MessageDialog;
+import org.eclipse.jface.util.IPropertyChangeListener;
+import org.eclipse.jface.util.PropertyChangeEvent;
+import org.eclipse.jface.viewers.ISelection;
+import org.eclipse.swt.custom.BusyIndicator;
+import org.eclipse.swt.events.DisposeEvent;
+import org.eclipse.swt.events.DisposeListener;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Control;
+import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Shell;
+import org.eclipse.ui.IPageLayout;
+import org.eclipse.ui.ISelectionService;
+import org.eclipse.ui.IViewPart;
+import org.eclipse.ui.IViewReference;
+import org.eclipse.ui.IWorkbenchPage;
+import org.eclipse.ui.IWorkbenchPart;
+import org.eclipse.ui.IWorkbenchSite;
+import org.eclipse.ui.part.IPageSite;
+import org.eclipse.ui.views.properties.IPropertySheetPage;
+import org.eclipse.ui.views.properties.PropertySheet;
+
+
+/**
+ * A CompareEditorInput dedicated to model Diff/Merge.
+ * @see CompareEditorInput
+ * @author Olivier Constant
+ */
+public class EMFDiffMergeEditorInput extends CompareEditorInput
+implements IEditingDomainProvider {
+  
+  /** The non-null (unless disposed) comparison method **/
+  protected IComparisonMethod _comparisonMethod;
+  
+  /** The initially null resource that holds the comparison */
+  protected Resource _comparisonResource;
+  
+  /** The left comparison scope (initially null) **/
+  protected IEditableModelScope _leftScope;
+  
+  /** The right comparison scope (initially null) **/
+  protected IEditableModelScope _rightScope;
+  
+  /** The ancestor comparison scope (initially null) **/
+  protected IEditableModelScope _ancestorScope;
+  
+  /** The initially null viewer */
+  protected AbstractComparisonViewer _viewer;
+  
+  /** Whether the comparison originally contained differences (initially true) */
+  private boolean _foundDifferences;
+  
+  /** Whether the editor is dirty (required for compatibility with Indigo) */ //OCO
+  private boolean _isDirty;
+  
+  /** The (initially null) property sheet page to show in the Properties view */
+  protected PropertySheetPage _propertySheetPage;
+  
+  /** The (initially null) command stack listener on the editing domain, if any */
+  protected CommandStackListener _commandStackListener;
+  
+  /** The (initially null) compare navigator for the workbench navigation buttons */
+  private ICompareNavigator _navigator;
+  
+  
+  /**
+   * Constructor
+   * @param method_p a non-null comparison method
+   */
+  public EMFDiffMergeEditorInput(IComparisonMethod method_p) {
+    super(new CompareConfiguration());
+    _comparisonMethod = method_p;
+    _leftScope = null;
+    _rightScope = null;
+    _ancestorScope = null;
+    _comparisonResource = null;
+    _foundDifferences = true;
+    _isDirty = false;
+    _navigator = createNavigator();
+    initializeCompareConfiguration();
+  }
+  
+  /**
+   * @see org.eclipse.compare.CompareEditorInput#canRunAsJob()
+   */
+  @Override
+  public boolean canRunAsJob() {
+    return true;
+  }
+  
+  /**
+   * Ensure that appropriate actions are taken in the case where the given comparison
+   * is not consistent
+   * @param comparison_p a potentially null comparison
+   */
+  public void checkInconsistency(IComparison comparison_p) {
+    if (comparison_p != null && !comparison_p.isConsistent())
+      handleInconsistency(comparison_p);
+  }
+  
+  /**
+   * @see org.eclipse.compare.CompareEditorInput#contentsCreated()
+   */
+  @Override
+  protected void contentsCreated() {
+    super.contentsCreated();
+    _viewer.getControl().addDisposeListener(new DisposeListener() {
+      /**
+       * @see org.eclipse.swt.events.DisposeListener#widgetDisposed(org.eclipse.swt.events.DisposeEvent)
+       */
+      public void widgetDisposed(DisposeEvent ev) {
+        handleDispose();
+      }
+    });
+  }
+  
+  /**
+   * @see org.eclipse.compare.CompareEditorInput#contributeToToolBar(org.eclipse.jface.action.ToolBarManager)
+   */
+  @Override
+  public void contributeToToolBar(ToolBarManager toolBarManager) {
+    // Nothing
+  }
+  
+  /**
+   * @see org.eclipse.compare.CompareEditorInput#createContents(org.eclipse.swt.widgets.Composite)
+   */
+  @Override
+  public Control createContents(Composite parent_p) {
+    // Create viewer
+    _viewer = _comparisonMethod.createComparisonViewer(parent_p, getActionBars());
+    _viewer.addPropertyChangeListener(new IPropertyChangeListener() {
+      /**
+       * @see org.eclipse.jface.util.IPropertyChangeListener#propertyChange(org.eclipse.jface.util.PropertyChangeEvent)
+       */
+      public void propertyChange(PropertyChangeEvent event_p) {
+        String propertyName = event_p.getProperty();
+        if (CompareEditorInput.DIRTY_STATE.equals(propertyName)) {
+          boolean dirty = ((Boolean)event_p.getNewValue()).booleanValue();
+          setDirty(dirty);
+        }
+      }
+    });
+    // Create viewer contents
+    _viewer.setInput(getCompareResult());
+    contentsCreated();
+    return _viewer.getControl();
+  }
+  
+  /**
+   * Create and return a navigator
+   * @see EMFDiffMergeEditorInput#getNavigator()
+   * @return a non-null object
+   */
+  protected ICompareNavigator createNavigator() {
+    return new ICompareNavigator() {
+      /**
+       * @see org.eclipse.compare.ICompareNavigator#selectChange(boolean)
+       */
+      public boolean selectChange(boolean next_p) {
+        boolean result = false;
+        int change = next_p? INavigatable.NEXT_CHANGE: INavigatable.PREVIOUS_CHANGE;
+        if (_viewer != null)
+          result = _viewer.getNavigatable().selectChange(change);
+        return result;
+      }
+    };
+  }
+  
+  /**
+   * Generate a title for the editor
+   * @return a potentially null string
+   */
+  protected String createTitle() {
+    Role leftRole = getLeftRole();
+    String leftDesc = _comparisonMethod.getModelScopeDefinition(leftRole).getShortLabel();
+    String rightDesc = _comparisonMethod.getModelScopeDefinition(leftRole.opposite()).getShortLabel();
+    String result = String.format(Messages.EMFDiffMergeEditorInput_Title, leftDesc, rightDesc);
+    return result;
+  }
+  
+  /**
+   * Dispose the resources which have been added during the comparison process
+   */
+  protected void disposeResources() {
+    final EditingDomain domain = getEditingDomain();
+    final ExtendedUnloader unloader = ExtendedUnloader.getDefault();
+    final Set<Resource> unloaded = new HashSet<Resource>();
+    MiscUtil.executeAndForget(domain, new Runnable() {
+      /**
+       * @see java.lang.Runnable#run()
+       */
+      public void run() {
+        if (_comparisonResource != null) {
+          unloader.unloadResource(_comparisonResource, true);
+          unloaded.add(_comparisonResource);
+        }
+        if (_leftScope instanceof IPersistentModelScope)
+          unloaded.addAll(((IPersistentModelScope)_leftScope).unload());
+        if (_rightScope instanceof IPersistentModelScope)
+          unloaded.addAll(((IPersistentModelScope)_rightScope).unload());
+        if (_ancestorScope instanceof IPersistentModelScope)
+          unloaded.addAll(((IPersistentModelScope)_ancestorScope).unload());
+      }
+    });
+    if (domain != null) {
+      domain.getCommandStack().flush();
+    }
+    unloader.disconnectResources(domain, unloaded);
+  }
+  
+  /**
+   * @see org.eclipse.compare.CompareEditorInput#flushViewers(org.eclipse.core.runtime.IProgressMonitor)
+   */
+  @Override
+  protected void flushViewers(IProgressMonitor monitor_p) {
+    _viewer.flush(monitor_p);
+  }
+  
+  /**
+   * Return whether the comparison originally contained differences
+   * @return true by default before the comparison has actually been computed
+   */
+  public boolean foundDifferences() {
+    return _foundDifferences;
+  }
+  
+  /**
+   * @see org.eclipse.compare.CompareEditorInput#getCompareResult()
+   */
+  @Override
+  public EMFDiffNode getCompareResult() {
+    return (EMFDiffNode)super.getCompareResult();
+  }
+  
+  /**
+   * Return the comparison method of this editor input
+   * @return a non-null (unless the receiver is disposed) comparison method
+   */
+  public IComparisonMethod getComparisonMethod() {
+    return _comparisonMethod;
+  }
+  
+  /**
+   * Return the editing domain in which comparison takes place, if any
+   * @return a potentially null editing domain
+   * @see IEditingDomainProvider#getEditingDomain()
+   */
+  public EditingDomain getEditingDomain() {
+    return _comparisonMethod != null? _comparisonMethod.getEditingDomain(): null;
+  }
+  
+  /**
+   * Return the role that corresponds to the left-hand side
+   * @return TARGET or REFERENCE, or null if disposed
+   */
+  protected Role getLeftRole() {
+    return _comparisonMethod != null? _comparisonMethod.getLeftRole(): null;
+  }
+  
+  /**
+   * @see org.eclipse.compare.CompareEditorInput#getNavigator()
+   */
+  @Override
+  public synchronized ICompareNavigator getNavigator() {
+    return _navigator;
+  }
+  
+  /**
+   * Return a property sheet page for the Properties view if possible
+   * @return a potentially null object
+   */
+  protected IPropertySheetPage getPropertySheetPage() {
+    if (_propertySheetPage == null) {
+      EditingDomain domain = getEditingDomain();
+      if (domain instanceof AdapterFactoryEditingDomain) {
+        // Property sheet page
+        AdapterFactoryEditingDomain afDomain = (AdapterFactoryEditingDomain)domain;
+        _propertySheetPage = new PropertySheetPage(afDomain);
+        _propertySheetPage.setPropertySourceProvider(
+            new AdapterFactoryContentProvider(afDomain.getAdapterFactory()));
+        // Command stack listener for property sheet page update
+        _commandStackListener = new CommandStackListener() {
+          public void commandStackChanged(final EventObject event_p) {
+            Shell shell = getShell();
+            if (shell != null) {
+              shell.getDisplay().asyncExec(new Runnable() {
+                public void run() {
+                  if (_propertySheetPage != null && !_propertySheetPage.getControl().isDisposed())
+                    _propertySheetPage.refresh();
+                }
+              });
+            }
+          }
+        };
+        afDomain.getCommandStack().addCommandStackListener(_commandStackListener);
+      }
+    }
+    return _propertySheetPage;
+  }
+  
+  /**
+   * Return the current shell, if available
+   * @return a potentially null shell
+   */
+  protected Shell getShell() {
+    Shell result = null;
+    IWorkbenchSite site = getSite();
+    if (site != null)
+      result = site.getShell();
+    return result;
+  }
+  
+  /**
+   * Return the contextual workbench site, if any
+   * @return a potentially null workbench site
+   */
+  protected IWorkbenchSite getSite() {
+    IWorkbenchSite result = null;
+    IWorkbenchPart part = getWorkbenchPart();
+    if (part != null)
+      result = part.getSite();
+    return result;
+  }
+  
+  /**
+   * @see org.eclipse.emf.common.ui.viewer.IViewerProvider#getViewer()
+   */
+  public AbstractComparisonViewer getViewer() {
+    return _viewer; // Non-null after createContents(Composite) has returned
+  }
+  
+  /**
+   * @see org.eclipse.compare.CompareEditorInput#handleDispose()
+   */
+  @Override
+  protected void handleDispose() {
+    _navigator = null;
+    Display display = Display.getDefault();
+    if (_propertySheetPage != null)
+      display.asyncExec(new Runnable() {
+        /**
+         * @see java.lang.Runnable#run()
+         */
+        public void run() {
+          _propertySheetPage.dispose();
+        }
+      });
+    _viewer = null;
+    if (_commandStackListener != null && getEditingDomain() != null)
+      getEditingDomain().getCommandStack().removeCommandStackListener(_commandStackListener);
+    super.handleDispose();
+    Runnable disposeBehavior = new Runnable() {
+      /**
+       * @see java.lang.Runnable#run()
+       */
+      public void run() {
+        if (getCompareResult() != null)
+          getCompareResult().dispose();
+        disposeResources();
+        if (_comparisonMethod != null)
+          _comparisonMethod.dispose();
+        _comparisonMethod = null;
+        _ancestorScope = null;
+        _leftScope = null;
+        _rightScope = null;
+        _comparisonResource = null;
+      }
+    };
+    boolean inUIThread = display.getThread() == Thread.currentThread();
+    if (inUIThread)
+      BusyIndicator.showWhile(display, disposeBehavior);
+    else
+      disposeBehavior.run();
+    // Clear the input to avoid memory leak
+    try {
+      super.run(null);
+    } catch (Exception e) {
+      // Nothing
+    }
+  }
+  
+  /**
+   * Display appropriate messages according to the problem that happened during the comparison process
+   */
+  protected void handleExecutionProblem(Throwable problem_p) {
+    Throwable diagnostic = problem_p;
+    if (diagnostic instanceof WrappedException)
+      diagnostic = ((WrappedException)diagnostic).exception();
+    String message;
+    if (diagnostic instanceof PackageNotFoundException) {
+      PackageNotFoundException pnfe = (PackageNotFoundException)diagnostic;
+      message = MiscUtil.buildString(
+          Messages.EMFDiffMergeEditorInput_WrongMetamodel, "\n", //$NON-NLS-1$
+          pnfe.getLocation(), ".\n", //$NON-NLS-1$
+          Messages.EMFDiffMergeEditorInput_MigrationNeeded);
+    } else {
+      String msg = diagnostic.getLocalizedMessage();
+      if (msg == null)
+        msg = diagnostic.toString();
+      message = MiscUtil.buildString(
+          Messages.EMFDiffMergeEditorInput_Failure, "\n", msg);  //$NON-NLS-1$
+    }
+    final Shell shell = getShell();
+    if (shell != null) {
+      final String finalMessage = message;
+      shell.getDisplay().syncExec(new Runnable() {
+        /**
+         * @see java.lang.Runnable#run()
+         */
+        public void run() {
+          MessageDialog.openError(shell, EMFDiffMergeUIPlugin.LABEL, finalMessage);
+        }
+      });
+    }
+  }
+  
+  /**
+   * Initialize the CompareConfiguration of this CompareEditorInput
+   */
+  protected void initializeCompareConfiguration() {
+    CompareConfiguration cc = getCompareConfiguration();
+    Role leftRole = getLeftRole();
+    IModelScopeDefinition leftScopeDefinition =
+        _comparisonMethod.getModelScopeDefinition(leftRole);
+    IModelScopeDefinition rightScopeDefinition =
+        _comparisonMethod.getModelScopeDefinition(leftRole.opposite());
+    IModelScopeDefinition ancestorDefinition =
+        _comparisonMethod.getModelScopeDefinition(Role.ANCESTOR);
+    cc.setLeftLabel(leftScopeDefinition.getLabel());
+    cc.setRightLabel(rightScopeDefinition.getLabel());
+    cc.setAncestorLabel((ancestorDefinition == null) ? "" : ancestorDefinition.getLabel()); //$NON-NLS-1$
+    cc.setLeftEditable(leftScopeDefinition.isEditable());
+    cc.setRightEditable(rightScopeDefinition.isEditable());
+  }
+  
+  /**
+   * Create and return the comparison
+   * @return a non-null comparison
+   */
+  protected EComparison initializeComparison() {
+    boolean leftIsTarget = getLeftRole() == Role.TARGET;
+    IEditableModelScope targetScope = leftIsTarget? _leftScope: _rightScope;
+    IEditableModelScope referenceScope = leftIsTarget? _rightScope: _leftScope;
+    EComparison result = _comparisonMethod.createComparison(
+        targetScope, referenceScope, _ancestorScope);
+    return result;
+  }
+  
+  /**
+   * Create and return the diff node for the given comparison
+   * @param comparison_p a non-null comparison
+   * @return a non-null diff node
+   */
+  protected EMFDiffNode initializeDiffNode(EComparison comparison_p) {
+    ResourceSet resourceSet = (getEditingDomain() != null)? getEditingDomain().getResourceSet(): null;
+    if (resourceSet != null) {
+      URI defaultURI = URI.createPlatformResourceURI("comparison/comparison", true); //$NON-NLS-1$
+      defaultURI = defaultURI.appendFileExtension(
+          EMFDiffMergeUIPlugin.UI_DIFF_DATA_FILE_EXTENSION);
+      _comparisonResource = resourceSet.createResource(defaultURI);
+    }
+    CompareConfiguration cc = getCompareConfiguration();
+    EMFDiffNode result = new EMFDiffNode(comparison_p, getEditingDomain(),
+        cc.isLeftEditable(), cc.isRightEditable(), _comparisonMethod.getLeftRole());
+    result.setReferenceRole(_comparisonMethod.getTwoWayReferenceRole());
+    result.setEditorInput(this);
+    return result;
+  }
+  
+  /**
+   * @see org.eclipse.compare.CompareEditorInput#isSaveNeeded()
+   */
+  @Override
+  public boolean isSaveNeeded() {
+    // Redefined for compatibility with Indigo
+    return _isDirty;
+  }
+  
+  /**
+   * Load the model scopes
+   * @param monitor_p a non-null monitor for reporting progress
+   */
+  protected void loadScopes(IProgressMonitor monitor_p) {
+    EditingDomain domain = getEditingDomain();
+    boolean threeWay = _comparisonMethod.isThreeWay();
+    Role leftRole = getLeftRole();
+    String mainTaskName = Messages.EMFDiffMergeEditorInput_Loading;
+    SubMonitor loadingMonitor = SubMonitor.convert(
+        monitor_p, mainTaskName, threeWay ? 4 : 3);
+    loadingMonitor.worked(1);
+    // Loading left
+    loadingMonitor.subTask(Messages.EMFDiffMergeEditorInput_LoadingLeft);
+    Object leftLoadingContext = (domain != null)? domain: _comparisonMethod.getResourceSet(leftRole);
+    _leftScope = _comparisonMethod.getModelScopeDefinition(leftRole).createScope(leftLoadingContext);
+    if (_leftScope == null)
+      throw new RuntimeException(Messages.EMFDiffMergeEditorInput_LeftScopeNull);
+    if (_leftScope instanceof IPersistentModelScope) {
+      try {
+        ((IPersistentModelScope)_leftScope).load();
+      } catch (Exception e) {
+        throw new WrappedException(e);
+      }
+    }
+    loadingMonitor.worked(1);
+    if (loadingMonitor.isCanceled())
+      throw new OperationCanceledException();
+    // Loading right
+    loadingMonitor.subTask(Messages.EMFDiffMergeEditorInput_LoadingRight);
+    Object rightLoadingContext = (domain != null)? domain: _comparisonMethod.getResourceSet(leftRole.opposite());
+    _rightScope = _comparisonMethod.getModelScopeDefinition(leftRole.opposite()).createScope(rightLoadingContext);
+    if (_rightScope == null)
+      throw new RuntimeException(Messages.EMFDiffMergeEditorInput_RightScopeNull);
+    if (_rightScope instanceof IPersistentModelScope) {
+      try {
+        ((IPersistentModelScope)_rightScope).load();
+      } catch (Exception e) {
+        throw new WrappedException(e);
+      }
+    }
+    loadingMonitor.worked(1);
+    if (loadingMonitor.isCanceled())
+      throw new OperationCanceledException();
+    // Loading ancestor
+    if (threeWay) {
+      loadingMonitor.subTask(Messages.EMFDiffMergeEditorInput_LoadingAncestor);
+      Object ancestorLoadingContext = (domain != null)? domain: _comparisonMethod.getResourceSet(Role.ANCESTOR);
+      _ancestorScope = _comparisonMethod.getModelScopeDefinition(Role.ANCESTOR).createScope(ancestorLoadingContext);
+      if (_ancestorScope == null)
+        throw new RuntimeException(Messages.EMFDiffMergeEditorInput_AncestorScopeNull);
+      if (_ancestorScope instanceof IPersistentModelScope) {
+        try {
+          ((IPersistentModelScope)_ancestorScope).load();
+        } catch (Exception e) {
+          throw new WrappedException(e);
+        }
+      }
+      loadingMonitor.worked(1);
+      if (loadingMonitor.isCanceled())
+        throw new OperationCanceledException();
+    }
+  }
+  
+  /**
+   * Return whether merge can be considered complete
+   */
+  public boolean mergeIsComplete() {
+    return !isDirty() && (_viewer.getInput() == null || _viewer.getInput().isEmpty());
+  }
+  
+  /**
+   * @see org.eclipse.compare.CompareEditorInput#prepareInput(org.eclipse.core.runtime.IProgressMonitor)
+   */
+  @Override
+  protected Object prepareInput(IProgressMonitor monitor_p) throws
+      InvocationTargetException, InterruptedException {
+    if (monitor_p == null) // True when called from handleDispose()
+      return null;
+    String title = createTitle();
+    setTitle(title);
+    boolean scopesReady = _leftScope != null;
+    SubMonitor monitor = SubMonitor.convert(monitor_p, EMFDiffMergeUIPlugin.LABEL, 2);
+    EMFDiffNode result = null;
+    try {
+      if (!scopesReady)
+        loadScopes(monitor.newChild(1));
+      EComparison comparison = initializeComparison();
+      comparison.compute(_comparisonMethod.getMatchPolicy(), _comparisonMethod.getDiffPolicy(),
+          _comparisonMethod.getMergePolicy(), monitor.newChild(scopesReady? 2: 1));
+      checkInconsistency(comparison);
+      _foundDifferences = comparison.hasRemainingDifferences();
+      if (_foundDifferences)
+        result = initializeDiffNode(comparison);
+      else
+        handleDispose();
+    } catch (OperationCanceledException e) {
+      // No user feedback is needed
+      handleDispose();
+    } catch (Throwable t) {
+      // Cannot load models
+      setMessage(Messages.EMFDiffMergeEditorInput_CannotLoad); 
+      handleExecutionProblem(t);
+      handleDispose();
+    }
+    return result;
+  }
+  
+  /**
+   * Warn the user that the comparison is not consistent due to duplicate match IDs
+   * @see IComparison#isConsistent()
+   * @param comparison_p a non-null inconsistent comparison
+   */
+  protected void handleInconsistency(final IComparison comparison_p) {
+    final Shell shell = getShell();
+    if (shell != null) {
+      final int[] pressed = new int[1];
+      shell.getDisplay().syncExec(new Runnable() {
+        /**
+         * @see java.lang.Runnable#run()
+         */
+        public void run() {
+          MessageDialog dialog = new MessageDialog(
+              shell, EMFDiffMergeUIPlugin.LABEL, null,
+              Messages.InconsistencyDialog_DuplicateIDs,
+              MessageDialog.WARNING,
+              new String[] { IDialogConstants.OK_LABEL, IDialogConstants.SHOW_DETAILS_LABEL },
+              0);
+          pressed[0] = dialog.open();
+        }
+      });
+      if (0 != pressed[0])
+        shell.getDisplay().syncExec(new Runnable() {
+          /**
+           * @see java.lang.Runnable#run()
+           */
+          public void run() {
+            InconsistencyDialog dialog = new InconsistencyDialog(shell, comparison_p);
+            dialog.open();
+          }
+        });
+    }
+  }
+  
+  /**
+   * @see org.eclipse.compare.CompareEditorInput#run(org.eclipse.core.runtime.IProgressMonitor)
+   */
+  @Override
+  public void run(IProgressMonitor monitor_p) throws InterruptedException, InvocationTargetException {
+    if (getCompareResult() != null)
+      getCompareResult().dispose();
+    super.run(monitor_p);
+    if (getCompareResult() != null) {
+      if (foundDifferences()) {
+        // This is done here because the compare result must have been assigned:
+        // directly referencing the UIComparison would result in a memory leak
+        if (_comparisonResource != null) {
+          EditingDomain domain = getEditingDomain();
+          if (domain != null) {
+            MiscUtil.executeAndForget(domain, new Runnable() {
+              /**
+               * @see java.lang.Runnable#run()
+               */
+              public void run() {
+                UIComparison uiComparison = getCompareResult().getUIComparison();
+                _comparisonResource.getContents().add(uiComparison);
+                _comparisonResource.getContents().add(uiComparison.getActualComparison());
+              }
+            });
+            domain.getCommandStack().flush();
+          }
+        }
+      }
+    }
+  }
+  
+  /**
+   * Update the comparison method
+   * @param comparisonMethod_p a non-null comparison method
+   */
+  public void setComparisonMethod(IComparisonMethod comparisonMethod_p) {
+    EditingDomain domain = getEditingDomain();
+    if (domain != null) {
+      // Reuse editing domain
+      boolean dedicated = _comparisonMethod == null? false:
+        _comparisonMethod.isDedicatedEditingDomain();
+      comparisonMethod_p.setEditingDomain(domain, dedicated);
+    }
+    _comparisonMethod = comparisonMethod_p;
+  }
+  
+  /**
+   * @see org.eclipse.compare.CompareEditorInput#setDirty(boolean)
+   */
+  @Override
+  public void setDirty(boolean dirty_p) {
+    // Redefined for compatibility with Indigo
+    boolean oldDirty = isDirty();
+    if (dirty_p != oldDirty) {
+      _isDirty = dirty_p;
+      PropertyChangeEvent event = new PropertyChangeEvent(
+          this, DIRTY_STATE, Boolean.valueOf(oldDirty), Boolean.valueOf(_isDirty));
+      firePropertyChange(event);
+    }
+  }
+  
+  /**
+   * @see org.eclipse.compare.CompareEditorInput#setFocus2()
+   */
+  @Override
+  public boolean setFocus2() {
+    boolean result = false;
+    if (_viewer != null)
+      result = _viewer.getControl().setFocus();
+    return result;
+  }
+  
+  
+  /**
+   * A slightly enhanced property sheet page for model elements.
+   */
+  protected static class PropertySheetPage extends ExtendedPropertySheetPage {
+    /** The (initially null) selection service this page is registered to */
+    protected ISelectionService _selectionService;
+    /**
+     * Constructor
+     * @param editingDomain_p a non-null editing domain for the elements
+     */
+    protected PropertySheetPage(AdapterFactoryEditingDomain editingDomain_p) {
+      super(editingDomain_p);
+      _selectionService = null;
+    }
+    /**
+     * @see org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage#dispose()
+     */
+    @Override
+    public void dispose() {
+      super.dispose();
+      if (_selectionService != null) {
+        // Unregister properties page as selection listener
+        _selectionService.removeSelectionListener(this);
+        _selectionService = null;
+      }
+    }
+    /**
+     * Return the Properties view if already opened
+     * @param part_p a potentially null workbench part
+     * @return a potentially null object
+     */
+    protected PropertySheet getPropertySheet(IWorkbenchPart part_p) {
+      PropertySheet result = null;
+      IWorkbenchSite site = part_p.getSite();
+      if (site != null) {
+        IWorkbenchPage page = site.getPage();
+        if (page != null) {
+          IViewReference ref = page.findViewReference(IPageLayout.ID_PROP_SHEET);
+          if (ref != null) {
+            IViewPart view = ref.getView(false);
+            if (view instanceof PropertySheet)
+              result = (PropertySheet)view;
+          }
+        }
+      }
+      return result;
+    }
+    /**
+     * @see org.eclipse.ui.part.Page#init(org.eclipse.ui.part.IPageSite)
+     */
+    @Override
+    public void init(IPageSite pageSite_p) {
+      super.init(pageSite_p);
+      // Register as selection listener
+      _selectionService = pageSite_p.getWorkbenchWindow().getSelectionService();
+      if (_selectionService != null) {
+        _selectionService.addSelectionListener(this);
+      }
+    }
+    /**
+     * @see org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage#selectionChanged(org.eclipse.ui.IWorkbenchPart, org.eclipse.jface.viewers.ISelection)
+     */
+    @Override
+    public void selectionChanged(IWorkbenchPart part_p, ISelection selection_p) {
+      PropertySheet propertiesView = getPropertySheet(part_p);
+      if (propertiesView != null && !propertiesView.isPinned()) {
+        if (!selection_p.isEmpty()) // Do not propagate empty selection
+          super.selectionChanged(part_p, selection_p);
+      }
+    }
+  }
+  
+}

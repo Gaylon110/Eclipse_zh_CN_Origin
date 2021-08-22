@@ -1,0 +1,313 @@
+/*******************************************************************************
+ * Copyright (c) 2008-2011 Chair for Applied Software Engineering,
+ * Technische Universitaet Muenchen.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ * chodnick - initial API and implementation
+ ******************************************************************************/
+package org.eclipse.emf.emfstore.internal.common.model.util;
+
+import java.text.MessageFormat;
+import java.util.List;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
+
+/**
+ * Validates an EMF notification. Optionally generates a status message, describing potential problems.
+ *
+ * @author chodnick
+ */
+final class NotificationValidator {
+
+	/**
+	 * Initializes the singleton statically.
+	 */
+	private static class SingletonHolder {
+		public static final NotificationValidator INSTANCE = new NotificationValidator();
+	}
+
+	/**
+	 * Singleton access.
+	 *
+	 * @return the validator instance
+	 */
+	public static NotificationValidator getInstance() {
+		return SingletonHolder.INSTANCE;
+	}
+
+	/**
+	 * Private constructor.
+	 */
+	private NotificationValidator() {
+
+	}
+
+	/**
+	 * Validates a notification and sets its valid flag and validationmessage string.
+	 *
+	 * @param n the notification to validate
+	 */
+	protected void validate(NotificationInfo n) {
+
+		if (n == null) {
+			throw new IllegalArgumentException(Messages.NotificationValidator_NotificationInfoMustNotBeNull);
+		}
+
+		// assume notification is valid, handlers will reset state and message, if something is wrong
+		n.setValid(true);
+		n.setValidationMessage("OK"); //$NON-NLS-1$
+
+		// consider touch and transient notification to always be valid
+		if (n.isTouch() || n.isTransient()) {
+			return;
+		}
+
+		switch (n.getEventType()) {
+
+		case Notification.SET:
+			handleSetNotification(n);
+			break;
+		case Notification.ADD:
+			handleAddNotification(n);
+			break;
+		case Notification.REMOVE:
+			handleRemoveNotification(n);
+			break;
+		case Notification.ADD_MANY:
+			handleAddManyNotification(n);
+			break;
+		case Notification.REMOVE_MANY:
+			handleRemoveManyNotification(n);
+			break;
+		case Notification.UNSET:
+			handleUnsetNotification(n);
+			break;
+		case Notification.MOVE:
+			handleMoveNotification(n);
+			break;
+		default:
+			handleUnknownNotification(n);
+			break;
+		}
+
+	}
+
+	private void handleUnknownNotification(NotificationInfo n) {
+		n.setValid(false);
+		n.setValidationMessage(Messages.NotificationValidator_UnknownNotificationType + n.toString());
+	}
+
+	private void handleMoveNotification(NotificationInfo n) {
+
+		// if (n.isAttributeNotification()) {
+		// n.setValid(false);
+		// n.setValidationMessage("MOVE notification on attribute feature with multiplicty"
+		// + "greater 1 not supported yet!");
+		// return;
+		// }
+
+		if (n.isReferenceNotification()) {
+			// sanity checks
+			if (n.getNewValue() == null || n.getOldValue() == null) {
+				n.setValid(false);
+				n.setValidationMessage(
+					MessageFormat.format(
+						Messages.NotificationValidator_NullDetected,
+						n.getNotifier().getClass().getCanonicalName(),
+						n.getReference().getName()));
+				return;
+			}
+
+			if (!(n.getNewValue() instanceof EObject)) {
+				// non model element references must be marked transient
+				n.setValid(false);
+				n.setValidationMessage(
+					MessageFormat.format(
+						Messages.NotificationValidator_NonTransientFeatureDetected,
+						n.getNotifier().getClass().getCanonicalName(),
+						n.getReference().getName()));
+				return;
+			}
+
+			if (!(n.getOldValue() instanceof Integer)) {
+				n.setValid(false);
+				n.setValidationMessage(Messages.NotificationValidator_ErrorDuringMove);
+				return;
+			}
+
+		}
+
+	}
+
+	private void handleUnsetNotification(NotificationInfo n) {
+		if (!((EStructuralFeature) n.getFeature()).isUnsettable()) {
+			n.setValidationMessage(Messages.NotificationValidator_FeatureCantBeUnset);
+			n.setValid(false);
+			return;
+		}
+	}
+
+	private void handleRemoveManyNotification(NotificationInfo n) {
+
+		// // attributes not allowed for REMOVE_MANY (yet)
+		// if (n.isAttributeNotification()) {
+		// n.setValid(false);
+		// n.setValidationMessage("REMOVE_MANY on attribute feature with multiplicity greater"
+		// + "than 1 not yet supported.");
+		// return;
+		// }
+
+		// reference validation
+		if (n.isReferenceNotification()) {
+
+			// the new guys must come in a list
+			if (!(n.getOldValue() instanceof List<?>)) {
+				n.setValid(false);
+				n.setValidationMessage(
+					MessageFormat.format(
+						Messages.NotificationValidator_NonListOldValue_REMOVE_MANY,
+						n.getNotifier().getClass().getCanonicalName(),
+						n.getReference().getName()));
+				return;
+			}
+
+			// checking up on EMF, the reference must have max multiplicity greater than 1...
+			if (!n.getReference().isMany()) {
+				n.setValid(false);
+				n.setValidationMessage(
+					Messages.NotificationValidator_UnknownNotificationState_REMOVE_MANY);
+				return;
+			}
+
+		}
+	}
+
+	private void handleAddManyNotification(NotificationInfo n) {
+
+		// TODO add validation
+		// // attributes not allowed for ADD_MANY (yet)
+		// if (n.isAttributeNotification()) {
+		// n.setValid(false);
+		// n.setValidationMessage("ADD_MANY on attribute feature with multiplicity greater than 1 not yet supported.");
+		// return;
+		// }
+
+		// reference validation
+		if (n.isReferenceNotification()) {
+
+			// the new guys must come in a list
+			if (!(n.getNewValue() instanceof List<?>)) {
+				n.setValid(false);
+				n.setValidationMessage(
+					MessageFormat.format(
+						Messages.NotificationValidator_NonListNewValue_REMOVE_MANY,
+						n.getNotifier().getClass().getCanonicalName(),
+						n.getReference().getName()));
+				return;
+			}
+
+			// checking up on EMF, the reference must have max multiplicity greater than 1...
+			if (!n.getReference().isMany()) {
+				n.setValid(false);
+				n.setValidationMessage(
+					Messages.NotificationValidator_UnknownNotificationState_ADD_MANY);
+				return;
+			}
+
+		}
+
+	}
+
+	private void handleRemoveNotification(NotificationInfo n) {
+
+		// validation for REMOVE reference
+		if (n.isReferenceNotification()) {
+
+			// non model element references must be marked transient
+			if (!(n.getOldValue() instanceof EObject)) {
+				n.setValid(false);
+				n.setValidationMessage(
+					MessageFormat.format(
+						Messages.NotificationValidator_NonTransientFeatureDetected,
+						n.getNotifier().getClass().getCanonicalName(),
+						n.getReference().getName()));
+				return;
+
+			}
+
+			// checking up on EMF...
+			if (!n.getReference().isMany()) {
+				n.setValid(false);
+				n.setValidationMessage(
+					Messages.NotificationValidator_UnknownNotificationState_REMOVE);
+			}
+
+		}
+
+		// no validation for REMOVE attribute
+	}
+
+	private void handleAddNotification(NotificationInfo n) {
+
+		// validation for ADD reference
+		if (n.isReferenceNotification()) {
+
+			// non model element references must be marked transient
+			if (!(n.getNewValue() instanceof EObject)) {
+				n.setValid(false);
+				n.setValidationMessage(
+					MessageFormat.format(
+						Messages.NotificationValidator_NonTransientFeatureDetected,
+						n.getNotifier().getClass().getCanonicalName(),
+						n.getReference().getName()));
+				return;
+
+			}
+
+			// checking up on EMF...
+			if (!n.getReference().isMany()) {
+				n.setValid(false);
+				n.setValidationMessage(
+					Messages.NotificationValidator_UnknownNotificationState_ADD);
+			}
+
+		}
+
+		// no validation for ADD attribute
+
+	}
+
+	private void handleSetNotification(NotificationInfo n) {
+
+		// validation for SET reference
+
+		if (n.isReferenceNotification()) {
+
+			// sanity check newValue and oldValue must be ModelElements or null
+			final Object newValueObject = n.getNewValue();
+			final Object oldValueObject = n.getOldValue();
+
+			final boolean newValIsNoME = newValueObject != null && !(newValueObject instanceof EObject);
+			final boolean oldValIsNoME = oldValueObject != null && !(oldValueObject instanceof EObject);
+			if (newValIsNoME || oldValIsNoME) {
+				// non model element references must be marked transient
+				n.setValid(false);
+				n.setValidationMessage(
+					MessageFormat.format(
+						Messages.NotificationValidator_NonTransientFeatureDetected,
+						n.getNotifier().getClass().getCanonicalName(),
+						n.getReference().getName()));
+				return;
+			}
+
+		}
+
+		// no validation for SET attribute
+	}
+}

@@ -1,0 +1,869 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.emf.emfstore.server;singleton:=true
+Archiver-Version: Plexus Archiver
+Built-By: genie.emfstore
+Require-Bundle: org.apache.commons.codec;bundle-version="[1.6.0,2.0.0)
+ ",org.eclipse.emf.emfstore.server.model;bundle-version="[1.9.0,2.0.0)
+ ";visibility:=reexport,org.eclipse.emf.emfstore.migration;bundle-vers
+ ion="[1.9.0,2.0.0)",org.eclipse.emf.emfstore.common;bundle-version="[
+ 1.9.0,2.0.0)";visibility:=reexport,org.eclipse.emf.emfstore.common.mo
+ del;bundle-version="[1.9.0,2.0.0)";visibility:=reexport,org.eclipse.e
+ mf.ecore;bundle-version="[2.5.0,3.0.0)",org.eclipse.emf.emfstore.comm
+ on.model;bundle-version="[1.9.0,2.0.0)";visibility:=reexport,org.ecli
+ pse.core.runtime;bundle-version="[3.5.0,4.0.0)",org.eclipse.emf.ecore
+ .xmi;bundle-version="[2.5.0,3.0.0)"
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: Eclipse Modeling Project
+Import-Package: javax.servlet;version="[2.0.0,4.0.0)";resolution:=opti
+ onal,javax.servlet.http;version="[2.0.0,4.0.0)";resolution:=optional,
+ org.apache.commons.logging;version="[1.0.0,2.0.0)"
+Export-Package: org.apache.xmlrpc;version="3.1.3",org.apache.xmlrpc.cl
+ ient;version="3.1.3",org.apache.xmlrpc.client.util;version="3.1.3",or
+ g.apache.xmlrpc.common;version="3.1.3",org.apache.xmlrpc.jaxb;version
+ ="3.1.3",org.apache.xmlrpc.metadata;version="3.1.3",org.apache.xmlrpc
+ .parser;version="3.1.3",org.apache.xmlrpc.serializer;version="3.1.3",
+ org.apache.xmlrpc.server;version="3.1.3",org.apache.xmlrpc.util;versi
+ on="3.1.3",org.apache.xmlrpc.webserver;version="3.1.3",org.eclipse.em
+ f.emfstore.internal.server;version="1.9.0"; x-friends:="org.eclipse.e
+ mf.emfstore.client,  org.eclipse.emf.emfstore.client.ui,  org.eclipse
+ .emf.emfstore.client.test.common,  org.eclipse.emf.emfstore.server.te
+ st,  org.eclipse.emf.emfstore.test.common,  org.eclipse.emf.ecp.emfst
+ ore.localserver,  org.eclipse.emf.ecp.emfstore.ui,  org.eclipse.emf.e
+ mfstore.client.test",org.eclipse.emf.emfstore.internal.server.accessc
+ ontrol;version="1.9.0";x-friends:="org.eclipse.emf.emfstore.test.comm
+ on,org.eclipse.emf.emfstore.server.test",org.eclipse.emf.emfstore.int
+ ernal.server.accesscontrol.authentication;version="1.9.0";x-friends:=
+ "org.eclipse.emf.emfstore.client.test,org.eclipse.emf.emfstore.test.c
+ ommon",org.eclipse.emf.emfstore.internal.server.accesscontrol.authent
+ ication.verifiers;version="1.9.0";x-friends:="org.eclipse.emf.emfstor
+ e.client.test,org.eclipse.emf.emfstore.server.test",org.eclipse.emf.e
+ mfstore.internal.server.conflictDetection;version="1.9.0"; x-friends:
+ ="org.eclipse.emf.emfstore.client,  org.eclipse.emf.emfstore.client.t
+ est,  org.eclipse.emf.emfstore.client.ui,  org.eclipse.emf.emfstore.c
+ lient.conflictdetection.test,  org.eclipse.emf.emfstore.test.common",
+ org.eclipse.emf.emfstore.internal.server.connection;version="1.9.0";x
+ -friends:="org.eclipse.emf.emfstore.server.test",org.eclipse.emf.emfs
+ tore.internal.server.connection.xmlrpc;version="1.9.0";x-friends:="or
+ g.eclipse.emf.emfstore.client,org.eclipse.emf.emfstore.test.common",o
+ rg.eclipse.emf.emfstore.internal.server.connection.xmlrpc.util;versio
+ n="1.9.0";x-friends:="org.eclipse.emf.emfstore.client,org.eclipse.emf
+ .emfstore.test.common",org.eclipse.emf.emfstore.internal.server.core;
+ version="1.9.0";x-friends:="org.eclipse.emf.emfstore.test.common",org
+ .eclipse.emf.emfstore.internal.server.core.helper;version="1.9.0";x-i
+ nternal:=true,org.eclipse.emf.emfstore.internal.server.core.subinterf
+ aces;version="1.9.0";x-internal:=true,org.eclipse.emf.emfstore.intern
+ al.server.exceptions;version="1.9.0"; x-friends:="org.eclipse.emf.emf
+ store.client,  org.eclipse.emf.emfstore.client.test.common,  org.ecli
+ pse.emf.emfstore.client.test.ui,  org.eclipse.emf.emfstore.client.ui,
+   org.eclipse.emf.emfstore.example.merging,  org.eclipse.emf.emfstore
+ .test.common,  org.eclipse.emf.emfstore.server.test,  org.eclipse.emf
+ .ecp.emfstore.ui,  org.eclipse.emf.emfstore.client.api.test",org.ecli
+ pse.emf.emfstore.internal.server.filetransfer;version="1.9.0";x-frien
+ ds:="org.eclipse.emf.emfstore.client,org.eclipse.emf.emfstore.test.co
+ mmon",org.eclipse.emf.emfstore.internal.server.impl.api;version="1.9.
+ 0";x-friends:="org.eclipse.emf.emfstore.client,org.eclipse.emf.emfsto
+ re.client.ui",org.eclipse.emf.emfstore.internal.server.startup;versio
+ n="1.9.0";x-friends:="org.eclipse.emf.emfstore.client",org.eclipse.em
+ f.emfstore.internal.server.storage;version="1.9.0";x-internal:=true,o
+ rg.eclipse.emf.emfstore.server;version="1.9.0",org.eclipse.emf.emfsto
+ re.server.auth;version="1.9.0",org.eclipse.emf.emfstore.server.except
+ ions;version="1.9.0",org.eclipse.emf.emfstore.server.observer;version
+ ="1.9.0"
+Bundle-Name: EMFStore Server
+Bundle-Version: 1.9.0.v20170530-0703
+Bundle-ClassPath: .,lib/org.apache.ws.commons.util_1.0.1.v20100518-114
+ 0.jar,lib/xmlrpc-client-3.1.3.jar,lib/xmlrpc-common-3.1.3.jar,lib/xml
+ rpc-server-3.1.3.jar
+Bundle-Activator: org.eclipse.emf.emfstore.internal.server.Activator
+Created-By: Apache Maven
+Build-Jdk: 1.8.0_121
+
+Name: org/eclipse/emf/emfstore/internal/server/EMFStoreController.clas
+ s
+SHA-256-Digest: nWSlfzzEFtJAs3Ai62NJSJ66qbLGva1Fba+wfe87Wag=
+
+Name: plugin.xml
+SHA-256-Digest: 6NmTxZE3HxMCO8/yFVeyNOYRL5ueooVd4pdoFY/v0pE=
+
+Name: org/eclipse/emf/emfstore/internal/server/connection/xmlrpc/util/
+ EObjectDeserializer.class
+SHA-256-Digest: n20mh2eSVkPWg7b9CWlxSZNc+vQJE+JF8+dBZBGPSzA=
+
+Name: org/eclipse/emf/emfstore/server/observer/ESServerCallObserver.cl
+ ass
+SHA-256-Digest: wlX9XxCZXiVAPGPnlxmMpfNIP5UpFonUCKdBv5ts+J4=
+
+Name: org/eclipse/emf/emfstore/internal/server/conflictDetection/Model
+ ElementIdReservationMap.class
+SHA-256-Digest: B+PlLIHZhGEAkiW0gpz5qwS5W81h50ZJQNwMQARqqx8=
+
+Name: org/eclipse/emf/emfstore/internal/server/storage/FileDynamicMode
+ lProvider$1.class
+SHA-256-Digest: 1qCiSoUyLTVOVgcdcpogniXKcD2YXWIGrWt3IkFIaag=
+
+Name: org/eclipse/emf/emfstore/server/ESEMFStoreController.class
+SHA-256-Digest: r0CCXeeAyFvzUS6I10ED+S2YcEFKHbmjKpeuTYWlR0M=
+
+Name: org/eclipse/emf/emfstore/internal/server/connection/xmlrpc/util/
+ EObjectTypeConverterFactory.class
+SHA-256-Digest: HfwyMpJpmjcWUwnw6YwyAHaue6HkoJ6E8wWiFxfmBzM=
+
+Name: org/eclipse/emf/emfstore/internal/server/Messages.class
+SHA-256-Digest: g4stIVZeKdaiQWZ1UEwaSEtuOZ6QdjgbR1bOklaptPQ=
+
+Name: org/eclipse/emf/emfstore/server/auth/ESAuthenticationControlType
+ $1.class
+SHA-256-Digest: VHTcPHp/PZ4P/goo9gp0We2tc863oWcNSWGfqSniPVY=
+
+Name: about.ini
+SHA-256-Digest: SLNvFQU8324NuaQqyKAcbDVLL2mOvQAvJe+WNpzlgoQ=
+
+Name: org/eclipse/emf/emfstore/internal/server/connection/xmlrpc/Messa
+ ges.class
+SHA-256-Digest: D4TrNodQotuxKBH8SfgwIYedZNyH+BNIAt8+mj9L9EU=
+
+Name: org/eclipse/emf/emfstore/internal/server/connection/xmlrpc/messa
+ ges.properties
+SHA-256-Digest: D5Lxze1xq+H2JN2E3nE2X7gK5q9t9owYOtYzx9lLuOA=
+
+Name: src/org/eclipse/emf/emfstore/internal/server/accesscontrol/messa
+ ges.properties
+SHA-256-Digest: MFw+ydQdXeeMW4pbebdC9dQO2fnyrQCW8VPLX1fH9bs=
+
+Name: src/org/eclipse/emf/emfstore/internal/server/accesscontrol/authe
+ ntication/verifiers/messages.properties
+SHA-256-Digest: wLi579pX+ndNVcPIVzUNllHSv5GRJQFVKeVSbXTpEtY=
+
+Name: org/eclipse/emf/emfstore/internal/server/core/EMFStoreImpl$3.cla
+ ss
+SHA-256-Digest: AmiBOuNTOKYCY2ouZ7INGQhuaf0pLIqG9tK8z6CACfs=
+
+Name: org/eclipse/emf/emfstore/internal/server/accesscontrol/authentic
+ ation/verifiers/Messages.class
+SHA-256-Digest: ShTVOCZAIJ/qyz74oLoawDzsYQnj0bN7NPKzE5k2AUk=
+
+Name: org/eclipse/emf/emfstore/internal/server/exceptions/InvalidProje
+ ctIdException.class
+SHA-256-Digest: fv8O/zhH5FTty9nKJKwiaYpB1BD5LesIRt+Bd/3dkmk=
+
+Name: org/eclipse/emf/emfstore/server/auth/ESProjectAdminPrivileges.cl
+ ass
+SHA-256-Digest: eNQmYGnVniTnhJWxAWoZ4WusXXD0Df5bdqWL/Xe51TE=
+
+Name: org/eclipse/emf/emfstore/internal/server/core/messages.propertie
+ s
+SHA-256-Digest: IwHetQMC1qssiNbZGuRz/JMfZsYW8FcL49lwFyAVNAs=
+
+Name: org/eclipse/emf/emfstore/internal/server/conflictDetection/Confl
+ ictBucketCandidateStore.class
+SHA-256-Digest: c5D3YG3NuWqpDtfUNxIEuv7fu0CCW5982ydIwYLwZfg=
+
+Name: src/org/eclipse/emf/emfstore/internal/server/connection/xmlrpc/m
+ essages.properties
+SHA-256-Digest: D5Lxze1xq+H2JN2E3nE2X7gK5q9t9owYOtYzx9lLuOA=
+
+Name: org/eclipse/emf/emfstore/server/ESLocationProvider.class
+SHA-256-Digest: w5u0sukZ+FAzP2lGHO/eAGswOaiRjP2kIXlXzeV6P9k=
+
+Name: org/eclipse/emf/emfstore/internal/server/core/AbstractEmfstoreIn
+ terface.class
+SHA-256-Digest: A/f+Guh7frEYG3PHCkCRbCqaDKW2F8BgF/ITrZmpaAM=
+
+Name: org/eclipse/emf/emfstore/internal/server/startup/UpdateXMIAttrib
+ uteRule.class
+SHA-256-Digest: b9FLsUucGnFVCGhO78dtvJPcdi1eaYifWZMbKqweutE=
+
+Name: org/eclipse/emf/emfstore/internal/server/connection/xmlrpc/util/
+ EObjectTypeConverterFactory$EObjectConverter.class
+SHA-256-Digest: MawAjYYc+Wgew7juYCiweuyiUGluW+beQ+hpwWhehe0=
+
+Name: about.mappings
+SHA-256-Digest: UmVD1CT3Xd6ZUvULRh417IeiK/1H8t0DqSwWQH3JyP4=
+
+Name: lib/xmlrpc-server-3.1.3.jar
+SHA-256-Digest: 8O5kzCnUh8BR7+zRlAsAWsWwfndZx2tftrVDFXM1VLw=
+
+Name: org/eclipse/emf/emfstore/internal/server/startup/ServerHrefMigra
+ tor$2.class
+SHA-256-Digest: KzhMMGU5pfw6gm/pNCseXZGNgyXZiX/I1QKyyVybDR0=
+
+Name: org/eclipse/emf/emfstore/internal/server/core/subinterfaces/EPac
+ kageSubInterfaceImpl.class
+SHA-256-Digest: YUIZQSZc+C8B0bClsm7dwqBce6MZcvEE86N+ncOI7l8=
+
+Name: schema/accessControl.exsd
+SHA-256-Digest: WMEcO9Kh2YM8ZnhYyNpWua12YyVLpJpWSq5mgVBj9wg=
+
+Name: org/eclipse/emf/emfstore/internal/server/AdminEmfStore.class
+SHA-256-Digest: 0nWfKUDrrrN/Vc4Ee+DcMp5PQ3XsGcc46gaxqw4Flpg=
+
+Name: org/eclipse/emf/emfstore/internal/server/core/EMFStoreImpl$SubIn
+ terfaceMethod.class
+SHA-256-Digest: EBksyOZmht3N/MRb6zvccW3KLEaxVXaUhpyHRTryVwA=
+
+Name: org/eclipse/emf/emfstore/internal/server/exceptions/FatalESExcep
+ tion.class
+SHA-256-Digest: IQMNmLnmnx2eiXPKpEPao6G5QJ7br9o6ka/aywxePwo=
+
+Name: org/eclipse/emf/emfstore/internal/server/startup/ServerSpaceRule
+ .class
+SHA-256-Digest: K80TL32n8stKz/mmOOwqDLvMwH7zkjqPNsP5ausrw6I=
+
+Name: org/eclipse/emf/emfstore/internal/server/accesscontrol/Messages.
+ class
+SHA-256-Digest: 46f7Cn98JKlFEmep8JbfpRCI20JKRNHHZZ289kjYpl4=
+
+Name: org/eclipse/emf/emfstore/internal/server/conflictDetection/Confl
+ ictBucket.class
+SHA-256-Digest: F9VhJy8aO7Z6r1tTF8OYQLR8MqpoDaPgYEI1yxohVhE=
+
+Name: org/eclipse/emf/emfstore/internal/server/connection/xmlrpc/EMFSt
+ oreWebServer.class
+SHA-256-Digest: 5w6UWmS012+gqFDtIX1D/EfBjC7So/mg/hGBil39BaM=
+
+Name: org/eclipse/emf/emfstore/internal/server/accesscontrol/authentic
+ ation/verifiers/SimplePropertyFileUserVerifier$Hash.class
+SHA-256-Digest: sUQkJYRa3bpbz9N1I4WWJ0o6jlsrhDIauhS7AuVo5vE=
+
+Name: org/eclipse/emf/emfstore/server/auth/ESMethodInvocation.class
+SHA-256-Digest: Qi3XraRimk51BCAP6njGouznzqOojRAvkBDUV6+pQPE=
+
+Name: org/eclipse/emf/emfstore/internal/server/accesscontrol/authentic
+ ation/verifiers/UserVerifier.class
+SHA-256-Digest: tziMkIQBfzpyQNvrYthCr+EWDdblnlWKbLFQ56+6YkU=
+
+Name: org/eclipse/emf/emfstore/internal/server/core/EMFStoreImpl$2.cla
+ ss
+SHA-256-Digest: +9gN5JsDFBekIFP6D7N2E3tppMXGCFFiQ+hrv7ovd1Q=
+
+Name: org/eclipse/emf/emfstore/server/auth/ESPasswordHashGenerator$ESH
+ ashAndSalt.class
+SHA-256-Digest: 3Ov3RfEgKLzXJPi4A/0Fl+llNQg36Z6XPmAflM+pKQ4=
+
+Name: org/eclipse/emf/emfstore/server/exceptions/ESServerInitException
+ .class
+SHA-256-Digest: oxo9GQSdPJienVVaL5WXxXVSYWXwvbYGxhUl2+0Ixsc=
+
+Name: org/eclipse/emf/emfstore/internal/server/exceptions/Serializatio
+ nException.class
+SHA-256-Digest: QGfsJJ/2h74QXI5sVBXdyO6tvyRBkER2/UuCdQb7SLM=
+
+Name: org/eclipse/emf/emfstore/internal/server/startup/ServerHrefMigra
+ tor$1.class
+SHA-256-Digest: gJYYI/z5Jt6/8ukAExCIsNfnnSO2TtbdM46s77fRF9E=
+
+Name: org/eclipse/emf/emfstore/internal/server/accesscontrol/DefaultES
+ OrgUnitResolverService.class
+SHA-256-Digest: jC0W0uAv0wg9qp01wuuAeLU9fDSfrPv7YMd8tCl1LQQ=
+
+Name: org/eclipse/emf/emfstore/internal/server/connection/xmlrpc/XmlRp
+ cAdminConnectionHandler.class
+SHA-256-Digest: gJjGu9VKSV7xTRLmf2UqsUfAZXZr+RWW8AYwLSGQAJ4=
+
+Name: org/eclipse/emf/emfstore/server/exceptions/ESException.class
+SHA-256-Digest: fxu7qPtbCsE0cNUWNr9IkezM9LwPawf3HYoAM2kHKXs=
+
+Name: org/eclipse/emf/emfstore/internal/server/accesscontrol/DefaultES
+ AuthorizationService$AccessLevel.class
+SHA-256-Digest: x71ukgOWH3gdB+k1W+cW8Fvkhh2NqWVQCc+yi44vGwg=
+
+Name: org/eclipse/emf/emfstore/internal/server/core/subinterfaces/Proj
+ ectPropertiesSubInterfaceImpl.class
+SHA-256-Digest: i82zO65zTxN5HsXzSTgo7rxAANWe91aUgfmENtt/ERw=
+
+Name: org/eclipse/emf/emfstore/internal/server/exceptions/InvalidInput
+ Exception.class
+SHA-256-Digest: drPYU64cqaQ3XlSysSwxoi7oJbqII3NMz2yUWbk88fk=
+
+Name: org/eclipse/emf/emfstore/internal/server/exceptions/InvalidVersi
+ onSpecException.class
+SHA-256-Digest: 23yCgLkHzFmWpYhVqOMYgfq6elSH1I7Kh4gbpn7IEKM=
+
+Name: org/eclipse/emf/emfstore/internal/server/impl/api/ESOrgUnitProvi
+ derImpl.class
+SHA-256-Digest: WQ7BOJUsyMS3fU2Bu8zUp0qteu5qmbm2+cXgnuTu/cQ=
+
+Name: org/eclipse/emf/emfstore/server/auth/ESHashAndSalt.class
+SHA-256-Digest: DUO+vedMw0BLtMe15Fz+3jT7Qb7mSzlgyabh6Y+Ha6A=
+
+Name: org/eclipse/emf/emfstore/server/ESXmlRpcWebServerProvider.class
+SHA-256-Digest: mrxsl6Tq+upQ22RgsVuq6NdK2tia1pklMPWMLmePkfc=
+
+Name: org/eclipse/emf/emfstore/internal/server/exceptions/InvalidPrope
+ rtyException.class
+SHA-256-Digest: hL2Zql9gVVn8kYoWmu4S/oD5M61+BAuV1mAB9ccitpk=
+
+Name: org/eclipse/emf/emfstore/server/ESConflict.class
+SHA-256-Digest: oz7feRoFWOiPejW/rPAl5DjhRL8BcIJJ91Ulk4Wqchk=
+
+Name: org/eclipse/emf/emfstore/internal/server/accesscontrol/authentic
+ ation/ESUserVerifierFactory.class
+SHA-256-Digest: 4xTB+gNJKpxVH24Ydgbzoj9JI1ZLQf4e8BBpXYvE5f8=
+
+Name: org/eclipse/emf/emfstore/internal/server/conflictDetection/Chang
+ eConflictSet.class
+SHA-256-Digest: eQ6yarBQJpIbUch0ZqQeXd0tdxujeUi/AcqxAQMXGh8=
+
+Name: org/eclipse/emf/emfstore/internal/server/startup/ServerHrefMigra
+ tor.class
+SHA-256-Digest: ehpfFlRj3a3x1WlrA+j2/4RWNKiI1IzIe8Qntm+JM08=
+
+Name: org/eclipse/emf/emfstore/internal/server/accesscontrol/messages.
+ properties
+SHA-256-Digest: MFw+ydQdXeeMW4pbebdC9dQO2fnyrQCW8VPLX1fH9bs=
+
+Name: org/eclipse/emf/emfstore/internal/server/core/subinterfaces/mess
+ ages.properties
+SHA-256-Digest: m49Pzksffoj2jl2d8gp9/0QaXi04lXJweSR/xaF4Q6k=
+
+Name: org/eclipse/emf/emfstore/internal/server/startup/PostStartupList
+ ener.class
+SHA-256-Digest: x0nXqL8jaKxVf1vb938WNPxJRoYp4UCFsxdv7aF203E=
+
+Name: org/eclipse/emf/emfstore/internal/server/Activator.class
+SHA-256-Digest: nA/23Ag+Iq3lF5ZnOHc4Tb3mAeibQCoj5DqWm0omX18=
+
+Name: org/eclipse/emf/emfstore/server/auth/ESPasswordHashGenerator.cla
+ ss
+SHA-256-Digest: YZDDXfXwHry0L5fU6w2SkuLnGGz/eJc//h3OjYlN1Zs=
+
+Name: src/org/eclipse/emf/emfstore/internal/server/startup/messages.pr
+ operties
+SHA-256-Digest: 7k79GSdwiC1VSeI1nW0+l28TTihsyJzmdoKMquvE7YI=
+
+Name: org/eclipse/emf/emfstore/internal/server/core/subinterfaces/User
+ SubInterfaceImpl.class
+SHA-256-Digest: OZ1byrRDdZ7nVsSTyzXHHC/g8+RUujWEl13eMlvYv6w=
+
+Name: org/eclipse/emf/emfstore/internal/server/conflictDetection/Linke
+ dHashMapWithConflictBucketCandidate.class
+SHA-256-Digest: ax0yVeTQo+pSwyPEPlePUoaaQDmLx5TtVaeKzBv5LIs=
+
+Name: org/eclipse/emf/emfstore/internal/server/conflictDetection/Exist
+ enceOppositeReservationMap.class
+SHA-256-Digest: W0yzzMcxr1VR2JNr6UL5UXPvmNg5D+jBbB94CCpViV4=
+
+Name: org/eclipse/emf/emfstore/internal/server/core/subinterfaces/File
+ TransferSubInterfaceImpl.class
+SHA-256-Digest: h/RUFnqH3S/5Ymdqx5Nr3OhLBg4t8JrGu23i1wZFGqA=
+
+Name: org/eclipse/emf/emfstore/internal/server/exceptions/Messages.cla
+ ss
+SHA-256-Digest: YlYCvwsb21m6apwxwi/cYk5AyAf4EtQuKfKJxMgabFY=
+
+Name: org/eclipse/emf/emfstore/server/ESKeyStoreUtil.class
+SHA-256-Digest: BHIh6Ng1GRljaCv5wz6BAzjOCd2oYhwg15HH+incAwY=
+
+Name: src/org/eclipse/emf/emfstore/internal/server/conflictDetection/m
+ essages.properties
+SHA-256-Digest: PRL7PWNlNK0Ma/EXegnHttZhwM9JjLRw0GLEhfowpmQ=
+
+Name: org/eclipse/emf/emfstore/internal/server/exceptions/ConnectionEx
+ ception.class
+SHA-256-Digest: 57QMX1qsiVRIqg2qWuH8HgM7+DWb3tImhRBQyDTfjGc=
+
+Name: org/eclipse/emf/emfstore/internal/server/filetransfer/FilePartit
+ ionerUtil.class
+SHA-256-Digest: FEb385HSNBMycncs1qsRJNU0FaGHZI7h6k0vsQ6Ldrw=
+
+Name: org/eclipse/emf/emfstore/internal/server/storage/ServerSpaceFile
+ URIHandler.class
+SHA-256-Digest: h8Tul/kAejjGg8hvK8pwMOij0Rdszarf2+bf00Lo+vM=
+
+Name: org/eclipse/emf/emfstore/internal/server/core/subinterfaces/Chan
+ gePackageFragmentUploadAdapter.class
+SHA-256-Digest: 18T/41tTRUMcYpLomBzJ/4MYepd18wE/5ZbNwt8+i0M=
+
+Name: src/org/eclipse/emf/emfstore/internal/server/core/messages.prope
+ rties
+SHA-256-Digest: IwHetQMC1qssiNbZGuRz/JMfZsYW8FcL49lwFyAVNAs=
+
+Name: org/eclipse/emf/emfstore/internal/server/ServerConfiguration.cla
+ ss
+SHA-256-Digest: ma8MA5RWGHPbIXi6pbbTzOlJtNezg9y9pOKYe/B2504=
+
+Name: META-INF/maven/org.eclipse.emf.emfstore/org.eclipse.emf.emfstore
+ .server/pom.xml
+SHA-256-Digest: Zm1LcpHeoi/7oHQAHXbcCnF3yvvygZCTCXCMB3iAqH8=
+
+Name: org/eclipse/emf/emfstore/internal/server/conflictDetection/Reser
+ vationToConflictBucketCandidateMap.class
+SHA-256-Digest: RcNqgEW1LWYJkZyt5q2NlXiWpKWCX33+KUQ1PpOOXtA=
+
+Name: org/eclipse/emf/emfstore/internal/server/core/subinterfaces/Hist
+ orySubInterfaceImpl.class
+SHA-256-Digest: W7vRNmGZVS89LJ3Ja7Hs+YMUQhhibnfNgGs0D+86O7w=
+
+Name: org/eclipse/emf/emfstore/server/auth/ESSessions.class
+SHA-256-Digest: 8q6auZdAsIcuLn5ObL2d9AIRYvGn9vxlOhEZp7sJkzE=
+
+Name: schema/dynamicModelProvider.exsd
+SHA-256-Digest: W4LXf57XnIDZGQueZIXmSlMfIM/+k8BBLnwKZu0uxsQ=
+
+Name: org/eclipse/emf/emfstore/internal/server/core/Messages.class
+SHA-256-Digest: p1UpYgGOQleX3K+rCaWXlyLzMEWF+rYC9f6Vng6gct4=
+
+Name: org/eclipse/emf/emfstore/internal/server/impl/api/ESConflictImpl
+ .class
+SHA-256-Digest: x42I1FP2gANfa+daM74zluu1goWrC62/pva3jam9c6E=
+
+Name: org/eclipse/emf/emfstore/internal/server/ServerConfiguration$1.c
+ lass
+SHA-256-Digest: OevOUEWsVgc+M+GX71sdHBIR61uuf71dWn0b7+goaH0=
+
+Name: org/eclipse/emf/emfstore/server/ESAbstractServerURIConverter.cla
+ ss
+SHA-256-Digest: VD5r5IW/FKlioG7UphvaMBPEq70FQDeAvOIZiom6L8Q=
+
+Name: org/eclipse/emf/emfstore/internal/server/conflictDetection/Featu
+ reNameReservationMap.class
+SHA-256-Digest: VIt7fndqSVMoJ+qGP0DGVUzbNf9DG2wbjtxsog3303E=
+
+Name: org/eclipse/emf/emfstore/server/exceptions/ESUpdateRequiredExcep
+ tion.class
+SHA-256-Digest: mGo7+UbRdfR+DJDHw/jTdnkZfxKj4KqZNI9OOGKdr9w=
+
+Name: schema/serverCallObserver.exsd
+SHA-256-Digest: lx2x4QSIZWW02dO8QabuS1ptt7fc4AnpOqjF9l602So=
+
+Name: org/eclipse/emf/emfstore/internal/server/core/subinterfaces/Proj
+ ectSubInterfaceImpl.class
+SHA-256-Digest: DZU4o4cNizUwmTGJSe/05KiKxSs7mmXrPS1MdQHfbz0=
+
+Name: org/eclipse/emf/emfstore/internal/server/core/subinterfaces/Vers
+ ionSubInterfaceImpl.class
+SHA-256-Digest: bDL+gHf8Jev9RsTO7eQhUwzPmoZWjF7DWF37SXTbIc0=
+
+Name: org/eclipse/emf/emfstore/internal/server/core/ServerCallObserver
+ Notifier.class
+SHA-256-Digest: R4q71aFIlzZIDcDa5JJQ4PhCWtCoBMFHLRal78SS/tY=
+
+Name: org/eclipse/emf/emfstore/internal/server/core/MonitorProvider$Si
+ ngletonHolder.class
+SHA-256-Digest: B1wpHFtnsvJoamm8iqEAQiYXItlriVsLe+fYnr/VCAE=
+
+Name: org/eclipse/emf/emfstore/server/auth/ESMethod.class
+SHA-256-Digest: RphyysIAF69y7OD40i7mZhuCXLB5W0KJaNnyhpxM4w8=
+
+Name: org/eclipse/emf/emfstore/internal/server/EMFStoreInterface.class
+SHA-256-Digest: 8r+CY9YdVgevgmh/c+f347SLQU09eMjgk2LtH64oYvc=
+
+Name: org/eclipse/emf/emfstore/internal/server/accesscontrol/LoginServ
+ ice.class
+SHA-256-Digest: FncPwsnae4zThEKl/s4zc1d3Z05owDz6J8wJqmFfOSc=
+
+Name: org/eclipse/emf/emfstore/internal/server/accesscontrol/authentic
+ ation/verifiers/LDAPUserVerifier.class
+SHA-256-Digest: DjPOhT76t6Sfx9U1zDUama+QP45zsowzqWrpv+wo26U=
+
+Name: org/eclipse/emf/emfstore/internal/server/storage/ServerXMIResour
+ ceSetProvider.class
+SHA-256-Digest: m+Y1c8G1LWVV2TC/M6Cn6eZMD9yplHpOGG6NpNrjyWc=
+
+Name: org/eclipse/emf/emfstore/internal/server/core/AdminEmfStoreImpl.
+ class
+SHA-256-Digest: NTe53cT16+BbS7k2OqEV50lHZXQ8JinTfKlc/igkAVE=
+
+Name: org/eclipse/emf/emfstore/internal/server/filetransfer/FileChunk.
+ class
+SHA-256-Digest: tyFVchOGXKMczU9pS0OFv/4zHTklmWUnUqGorInM5tU=
+
+Name: org/eclipse/emf/emfstore/internal/server/startup/VersionMultiRul
+ e.class
+SHA-256-Digest: QpdA4r7BpeoXfvBRscnZbamLoyQCFkTjq9zQJrDQOIk=
+
+Name: org/eclipse/emf/emfstore/internal/server/connection/xmlrpc/util/
+ messages.properties
+SHA-256-Digest: SswRkafBaJ6piqFPsz16MRUeCc4d6IlXJiNCY58idGw=
+
+Name: org/eclipse/emf/emfstore/internal/server/exceptions/SessionTimed
+ OutException.class
+SHA-256-Digest: dUSXzMazh2+gFKG/2hJcFiG4wQKdV6PpJnE54WAU6EA=
+
+Name: schema/computeChecksum.exsd
+SHA-256-Digest: mSyPTb2cDk7Cv9lqSQDhw0Wf4zYn3yvXsmGzapjxFw8=
+
+Name: org/eclipse/emf/emfstore/internal/server/startup/MigrationManage
+ r.class
+SHA-256-Digest: kj+c59svyeiArHY0LhcaM30obVnxsXv9jAooBMAzY1o=
+
+Name: org/eclipse/emf/emfstore/internal/server/connection/xmlrpc/XmlRp
+ cConnectionHandler.class
+SHA-256-Digest: hnTs7qxYFXcu9UaV/LRkz/W5ldgibvmH/bOPC8fdyVI=
+
+Name: org/eclipse/emf/emfstore/internal/server/accesscontrol/DefaultES
+ PasswordHashGenerator.class
+SHA-256-Digest: 1ALKJfe2zAvpDYvnn5qNDUUIahn0yJTNFDCk5uE0B1w=
+
+Name: org/eclipse/emf/emfstore/internal/server/exceptions/AccessContro
+ lException.class
+SHA-256-Digest: ScIfOxjSoYg/I5KPK8+WOtyDwc5xRO7xO9NaG4G764g=
+
+Name: org/eclipse/emf/emfstore/internal/server/accesscontrol/authentic
+ ation/verifiers/SimplePropertyFileUserVerifier.class
+SHA-256-Digest: qSM6MmCAj69mcijN740FQCgB0rsxJB/KsiK2/NAXKEQ=
+
+Name: org/eclipse/emf/emfstore/internal/server/connection/xmlrpc/XmlRp
+ cAdminEmfStoreImpl.class
+SHA-256-Digest: zb92zRyll68s5QC4V9g+lQ2wP/D7o2E3lFjBNQuQdIs=
+
+Name: META-INF/maven/org.eclipse.emf.emfstore/org.eclipse.emf.emfstore
+ .server/pom.properties
+SHA-256-Digest: ArKXI0mm4hNJ1UrzB115rEgav2qqSoCRbtKMSniU6TM=
+
+Name: org/eclipse/emf/emfstore/internal/server/startup/Messages.class
+SHA-256-Digest: Mw21vnUU9O+m4+V1yd/3bGpXp8CMkZm288Amq9dgw9M=
+
+Name: lib/org.apache.ws.commons.util_1.0.1.v20100518-1140.jar
+SHA-256-Digest: JibCz0lM+QhrLTuX4NgGlHvFPhVk2C0K4hVSuwKJ+Js=
+
+Name: org/eclipse/emf/emfstore/internal/server/startup/messages.proper
+ ties
+SHA-256-Digest: 7k79GSdwiC1VSeI1nW0+l28TTihsyJzmdoKMquvE7YI=
+
+Name: org/eclipse/emf/emfstore/server/ESServerURIUtil.class
+SHA-256-Digest: GEzhWdJsv11iIxuLGNpWeAt1G5UVDbzgB3BCAzAUgKg=
+
+Name: org/eclipse/emf/emfstore/internal/server/storage/XMIServerURICon
+ verter.class
+SHA-256-Digest: 5WPU72s6wJFNZR8MIcK0a3yoweG/RB7ecmLo7ETLJrc=
+
+Name: schema/configurationResource.exsd
+SHA-256-Digest: iP6hloVlCh9Y6radaJz6W5F43GAQg3mejSYNcbfXmFw=
+
+Name: org/eclipse/emf/emfstore/internal/server/connection/xmlrpc/XmlRp
+ cWebserverManager.class
+SHA-256-Digest: Q9ttWgOJ76+60xN9WRbCGMUwcJJYiv3nLmkpe3XAAik=
+
+Name: org/eclipse/emf/emfstore/internal/server/filetransfer/FileTransf
+ erInformation.class
+SHA-256-Digest: dp2QESfOYtvz5etqXW4g2kO4OiC1lWv39Bajm/iLKMk=
+
+Name: org/eclipse/emf/emfstore/internal/server/conflictDetection/Oppos
+ iteReservationMap.class
+SHA-256-Digest: /iNUsP8IcJY31KoXuPBgupg9IZlkHuOSp/3d4tYxrdM=
+
+Name: org/eclipse/emf/emfstore/internal/server/EMFStore.class
+SHA-256-Digest: e1pa9zRdxvrdw6Jo/vPN+RakwtzlmGmia/Vju85oYrU=
+
+Name: org/eclipse/emf/emfstore/internal/server/storage/FileDynamicMode
+ lProvider.class
+SHA-256-Digest: NXfNAuga+AH5QGtln7O9K6MvJjVf6lZ0Gshe5c9YBec=
+
+Name: src/org/eclipse/emf/emfstore/internal/server/es.properties
+SHA-256-Digest: ECVBZ8WisCr6nknB6ql49UJRceaVNZcuxJ1IrBasl68=
+
+Name: org/eclipse/emf/emfstore/internal/server/exceptions/ServerKeySto
+ reException.class
+SHA-256-Digest: gfXYZIBHEkNH85EsI4dSIjJdaJb+i3udm61V3+Pb++o=
+
+Name: org/eclipse/emf/emfstore/internal/server/startup/VersionRule.cla
+ ss
+SHA-256-Digest: 6i0Mwh0zWSNi70PvjyIwgTsMFnr3A/+wePLDQoVN6hc=
+
+Name: org/eclipse/emf/emfstore/internal/server/accesscontrol/authentic
+ ation/ACUserContainer.class
+SHA-256-Digest: lqZKkStcz5CySR8DbTa6/mnWttulvTPZbquL8guiYgg=
+
+Name: org/eclipse/emf/emfstore/internal/server/conflictDetection/Confl
+ ictBucketCandidate.class
+SHA-256-Digest: XxYgEAT7GJdB8ftJDXl7RUIsSuDSQBY5Fw8rPPcTJtY=
+
+Name: org/eclipse/emf/emfstore/internal/server/accesscontrol/authentic
+ ation/messages.properties
+SHA-256-Digest: rwqPmL6AG2HZGmwOpc6jSN6V2Tu8qpMAK06bC7gPrm0=
+
+Name: org/eclipse/emf/emfstore/internal/server/emfstoreServer.keystore
+SHA-256-Digest: mPNdECUu90W49MuxqBPVx+xL1DbU6uzXBH6Nj+mK5iU=
+
+Name: org/eclipse/emf/emfstore/internal/server/connection/ConnectionHa
+ ndler.class
+SHA-256-Digest: aRRDR6yPvQKDW5Ld8bBIYnHtMkdWTJsH8Z9CAqkP5Gc=
+
+Name: lib/xmlrpc-client-3.1.3.jar
+SHA-256-Digest: PLYSfJ/z6H0IVSJeaoh217tclVtcXIq8Kxq92MfFZrs=
+
+Name: org/eclipse/emf/emfstore/internal/server/core/EMFStoreImpl$1.cla
+ ss
+SHA-256-Digest: XlzTe0GLYy6FvSV4k9ohKLExW0XkhIPqx4Xf85cptJg=
+
+Name: modeling32.png
+SHA-256-Digest: saSrfvJ79Uzl2BFpCbuVBho1UTuf14LrjD+wGJG44Ok=
+
+Name: org/eclipse/emf/emfstore/internal/server/conflictDetection/Reser
+ vationToConflictBucketCandidateMap$1.class
+SHA-256-Digest: G+uWkEDfwEB+Ya/m3jQHDrAdx/CsFkdAFjvoERbKBy8=
+
+Name: org/eclipse/emf/emfstore/internal/server/accesscontrol/EMFStoreS
+ essions.class
+SHA-256-Digest: sSducFjmZ4cISfX/MyOXft8eC3/Vpzq4rJixLXUe1l4=
+
+Name: org/eclipse/emf/emfstore/server/auth/ESAuthorizationService.clas
+ s
+SHA-256-Digest: G+bEX5zcq7oINHdXBvacAkjHDmCyoFIQuXdLkYlePWM=
+
+Name: org/eclipse/emf/emfstore/internal/server/accesscontrol/AccessCon
+ trol.class
+SHA-256-Digest: iuNbXE58A+IP6aiWmCXUZCJcoVRuNo/X2Z1QhhfgU3k=
+
+Name: org/eclipse/emf/emfstore/internal/server/connection/xmlrpc/XmlRp
+ cEmfStoreImpl.class
+SHA-256-Digest: Af754u7cP4qGeq815n64VtFi7+615tL+BZP2Z/0JP+8=
+
+Name: org/eclipse/emf/emfstore/server/auth/ESAuthenticationControlType
+ .class
+SHA-256-Digest: GWirwoYLh00q+q02WnCfXIalNkNXOvd0bQgNfLn8SVc=
+
+Name: org/eclipse/emf/emfstore/server/ESConflictSet.class
+SHA-256-Digest: 75r/gwFJb8XlqI7/VbKTiDf7nfcJ2cbdce874Qm+Kjw=
+
+Name: org/eclipse/emf/emfstore/internal/server/core/helper/ResourceHel
+ per.class
+SHA-256-Digest: s5LGTJlWk1kmsCsrAfmg5UbwnBmVQe/SrCJgTvkM+vA=
+
+Name: org/eclipse/emf/emfstore/internal/server/messages.properties
+SHA-256-Digest: xQPpPri/b23yrmRUTq2imcQcXaCA2md0EmfAz33Jq08=
+
+Name: org/eclipse/emf/emfstore/internal/server/startup/EmfStoreValidat
+ or.class
+SHA-256-Digest: fRqJJ6aHH5SMIZJ9rKFdzykYz9fMxqay4MR436GZ4lk=
+
+Name: org/eclipse/emf/emfstore/internal/server/core/AbstractSubEmfstor
+ eInterface.class
+SHA-256-Digest: oVZ9sxuYFswyLje8ehAtFh1a+gL04RxHXiOxAOGNGYk=
+
+Name: org/eclipse/emf/emfstore/internal/server/exceptions/FileTransfer
+ Exception.class
+SHA-256-Digest: lUSv9eaNTNmwyOBVNyX49MHM4ItOntqpTXINAfely64=
+
+Name: org/eclipse/emf/emfstore/internal/server/exceptions/UnknownSessi
+ onException.class
+SHA-256-Digest: AvWmtmiABj/F5s6J9Z+yzHHP2moCZ+cKSf+/5GiC/mw=
+
+Name: src/org/eclipse/emf/emfstore/internal/server/emfstoreServer.keys
+ tore
+SHA-256-Digest: mPNdECUu90W49MuxqBPVx+xL1DbU6uzXBH6Nj+mK5iU=
+
+Name: org/eclipse/emf/emfstore/internal/server/core/subinterfaces/Mess
+ ages.class
+SHA-256-Digest: 5TZkhJT6AVMf7jCx9O+1pxgp2YtKsJtQS90mrg6hL9o=
+
+Name: about.properties
+SHA-256-Digest: ZoF+xuOLm0bG9B5LVa03HFD+6g8Z+WygYhh8jAvmJ8A=
+
+Name: org/eclipse/emf/emfstore/server/auth/ESOrgUnitResolver.class
+SHA-256-Digest: WkQLSsayvC3UD7U5yDemQSx6oCmdK6dh64pb2LJtviE=
+
+Name: org/eclipse/emf/emfstore/internal/server/exceptions/StorageExcep
+ tion.class
+SHA-256-Digest: L4jwpIrQA+19ehHkNXX/7EDhDgB/DcSzOKQwUiybSys=
+
+Name: src/org/eclipse/emf/emfstore/internal/server/messages.properties
+SHA-256-Digest: xQPpPri/b23yrmRUTq2imcQcXaCA2md0EmfAz33Jq08=
+
+Name: org/eclipse/emf/emfstore/internal/server/EMFStoreController$1.cl
+ ass
+SHA-256-Digest: thGXgoF3fTzkS60GNTp2qppra5DhGMG/DQx4ejHMAAw=
+
+Name: lib/xmlrpc-common-3.1.3.jar
+SHA-256-Digest: T0+t6f3hs/kw7YIVKDhga26RSpXpkXKbePs/mg/dENY=
+
+Name: org/eclipse/emf/emfstore/internal/server/exceptions/messages.pro
+ perties
+SHA-256-Digest: jOpm6IbBhVHm0q4sCbcsLgkLl5rDAOfhc847tKY8OU4=
+
+Name: org/eclipse/emf/emfstore/internal/server/connection/xmlrpc/util/
+ Messages.class
+SHA-256-Digest: BCGik5bsOCfWLbeaGGm2lJMDb+lbgxilQvHVzLnrmfM=
+
+Name: org/eclipse/emf/emfstore/internal/server/connection/xmlrpc/util/
+ EObjectSerializer.class
+SHA-256-Digest: Rdq10+5QsrXdX5JffXuYQCM3bP1+OnVF4jjZ7OdFrvs=
+
+Name: org/eclipse/emf/emfstore/internal/server/accesscontrol/authentic
+ ation/verifiers/EMFModelUserVerifier.class
+SHA-256-Digest: SZ+x+RzA9Dho5Slfz/OBFyjuPtaHJ3/aF6RUWuogYRo=
+
+Name: org/eclipse/emf/emfstore/internal/server/connection/ServerKeySto
+ reManager.class
+SHA-256-Digest: 3Eb+7SjWHa9bSm3ubddeRprXp/ETNpM+Bk/v1jCObRY=
+
+Name: org/eclipse/emf/emfstore/internal/server/core/subinterfaces/Hist
+ orySubInterfaceImpl$VersionComparator.class
+SHA-256-Digest: 39Dcxunv1c8tOLMkHDxM898ht/DSuIIl7FNYG5UVWI8=
+
+Name: schema/webServerProvider.exsd
+SHA-256-Digest: z+m3+gpbwkGhdCvDskA4n1/I9XbJ4MESQHzCH7cmv6k=
+
+Name: org/eclipse/emf/emfstore/internal/server/conflictDetection/Confl
+ ictDetector.class
+SHA-256-Digest: 3jg5OKv7lcDSYz9+UmWIr7DnUrpu1iSuDXImUyXcsig=
+
+Name: org/eclipse/emf/emfstore/internal/server/exceptions/ClientVersio
+ nOutOfDateException.class
+SHA-256-Digest: n8UXbmI5J70IOWDp8rBI3WiGze3fc69kA9vIir3Ecls=
+
+Name: schema/locationProvider.exsd
+SHA-256-Digest: t4iE6ow+bYioHvbFNA8lIqkczbHccMpNBbBJD8LIBzQ=
+
+Name: org/eclipse/emf/emfstore/internal/server/accesscontrol/authentic
+ ation/verifiers/PasswordVerifier.class
+SHA-256-Digest: j+fKS4P2Ob1Oer/z/fMogTO4PZbq2mStjNSrhYGghG0=
+
+Name: org/eclipse/emf/emfstore/internal/server/conflictDetection/messa
+ ges.properties
+SHA-256-Digest: PRL7PWNlNK0Ma/EXegnHttZhwM9JjLRw0GLEhfowpmQ=
+
+Name: org/eclipse/emf/emfstore/server/exceptions/ESInitSSLException.cl
+ ass
+SHA-256-Digest: rYgYvTD7dW0+jADRicSeAqCvtB3YMZ3Ws3CKv/BfJqM=
+
+Name: org/eclipse/emf/emfstore/internal/server/accesscontrol/authentic
+ ation/verifiers/UserVerifierChain.class
+SHA-256-Digest: qnpj5fJO5Tiu5Vp7n8DKqpkx7p3cNmtV59IWomITL7A=
+
+Name: org/eclipse/emf/emfstore/internal/server/startup/StartupListener
+ .class
+SHA-256-Digest: PAdKmQMbRZ5uIYwEFxQm2GXXIjByJ2oDnFxOYT378xc=
+
+Name: org/eclipse/emf/emfstore/server/auth/ESAuthenticationControlType
+ $3.class
+SHA-256-Digest: kZNzzVc9waZR/m/iJgjYpOd6HImkpvBFN9tqV+0MeYg=
+
+Name: org/eclipse/emf/emfstore/internal/server/emfstore.txt
+SHA-256-Digest: QlHJJz9ELFmQx+UnHs5JoSMZNEBPS8iUEcNGQtpUENc=
+
+Name: org/eclipse/emf/emfstore/internal/server/accesscontrol/authentic
+ ation/verifiers/VersionVerifier.class
+SHA-256-Digest: Nuu86BzjsBV2oJioGq/AMZcl/5l+TFXMY5u1f6HoD9s=
+
+Name: org/eclipse/emf/emfstore/internal/server/conflictDetection/Reser
+ vationSet.class
+SHA-256-Digest: xiI9a6Tb11R4HAZ6CAIbInmWGgIMNlisL4Kyhpi4EUU=
+
+Name: org/eclipse/emf/emfstore/internal/server/impl/api/ESConflictSetI
+ mpl.class
+SHA-256-Digest: ulvne5N33dPJYWkBZPiZiH2UT6r9kLy4g0LzwRkE6LQ=
+
+Name: org/eclipse/emf/emfstore/internal/server/conflictDetection/Messa
+ ges.class
+SHA-256-Digest: x/OcXgJomvtpNiRE0aGPmWW6qvugo0feYiEOlS9SUS4=
+
+Name: org/eclipse/emf/emfstore/internal/server/conflictDetection/Reser
+ vationSetModifier.class
+SHA-256-Digest: Np6XUFuJUJUrQ8l4nZ4NaoT/ra3W7KMDz/jiGFvQcoY=
+
+Name: org/eclipse/emf/emfstore/internal/server/core/EMFStoreImpl$4.cla
+ ss
+SHA-256-Digest: NEZ+IBysrKCojX1MutvmBCquRTYWmiNqeEzShw/ygvs=
+
+Name: org/eclipse/emf/emfstore/internal/server/accesscontrol/DefaultES
+ AuthorizationService.class
+SHA-256-Digest: GxyRp+ZV25uRGlO9ex3pW3IAw8fdrsw6zaJOhKZthrs=
+
+Name: org/eclipse/emf/emfstore/internal/server/connection/xmlrpc/util/
+ ShareProjectAdapter.class
+SHA-256-Digest: NIn5lP9E1W6Os12bMa5YwkvZwDtKNVYJdPdtFBlGZUY=
+
+Name: org/eclipse/emf/emfstore/internal/server/connection/xmlrpc/util/
+ EObjectTypeFactory.class
+SHA-256-Digest: WfcB0UkfhPytGqJ5IgimNrCAcUQMxHnY8rdgcHjpjuE=
+
+Name: org/eclipse/emf/emfstore/internal/server/accesscontrol/authentic
+ ation/verifiers/LDAPSSLSocketFactory.class
+SHA-256-Digest: Wgvbpvm4jgJ+5f7YkFHcbq1SJDQm8czHYeIUoMMxl+I=
+
+Name: schema/resourceSetProvider.exsd
+SHA-256-Digest: Flarq1VxSaSJ7DzDm94JZ4dbeo5xJVbOj8NmiZrmuqU=
+
+Name: org/eclipse/emf/emfstore/internal/server/connection/xmlrpc/XmlRp
+ cBuiltinWebServer.class
+SHA-256-Digest: 1Xcx7yyNEbY10VwzWpBjE6iil8CKBGXBYvufL5taLd8=
+
+Name: org/eclipse/emf/emfstore/internal/server/core/subinterfaces/EMFS
+ torePropertiesSubInterfaceImpl.class
+SHA-256-Digest: UZROGAipQhEkK6HHvXdpWIzynLPY43h3kcfiWpHsUjE=
+
+Name: org/eclipse/emf/emfstore/internal/server/accesscontrol/authentic
+ ation/verifiers/messages.properties
+SHA-256-Digest: wLi579pX+ndNVcPIVzUNllHSv5GRJQFVKeVSbXTpEtY=
+
+Name: org/eclipse/emf/emfstore/internal/server/exceptions/FileNotOnSer
+ verException.class
+SHA-256-Digest: PfIOAQ7vz7Trkcq64sI0IHqWbwQpGxBZMN87gdnkMbk=
+
+Name: org/eclipse/emf/emfstore/server/ESDynamicModelProvider.class
+SHA-256-Digest: 7Ep3t+qjxwk9JY0jZ+a8W88b2d9Iajdyys++nyfLCXs=
+
+Name: org/eclipse/emf/emfstore/internal/server/core/InternalCommand.cl
+ ass
+SHA-256-Digest: Yq5fMepj9NSVtV3cGCjbcrG85MPU0foaUV10Xjb0/Do=
+
+Name: org/eclipse/emf/emfstore/internal/server/core/EMFStoreImpl.class
+SHA-256-Digest: XUIrD871GU0HQHub1M00qPg6JEGe24As4nMdPA0tPnQ=
+
+Name: org/eclipse/emf/emfstore/internal/server/accesscontrol/authentic
+ ation/Messages.class
+SHA-256-Digest: aWXFjyGZguRTCnZUryuVG/+JYLDpVu/0XUhSbukjqjs=
+
+Name: org/eclipse/emf/emfstore/internal/server/core/helper/EPackageHel
+ per.class
+SHA-256-Digest: pjo6j7PqFAiIR+4bb/em7FYI9q0v7zO56T/pShgLsKs=
+
+Name: org/eclipse/emf/emfstore/internal/server/EMFStoreController$2.cl
+ ass
+SHA-256-Digest: Phual++4YvWOXuFrBB+Z0ddxIqUEKbViv4e1KRAMKfs=
+
+Name: org/eclipse/emf/emfstore/internal/server/accesscontrol/HasRolePr
+ edicate.class
+SHA-256-Digest: hbz/H0IB6Wh/tjucrppfNjmbA3dcNhDI2K8l1Dg9oIk=
+
+Name: org/eclipse/emf/emfstore/server/auth/ESUserVerifier.class
+SHA-256-Digest: U7EdRWMoK3LcXC1vWt041rFkngIdfksdfQbbq/z0bNQ=
+
+Name: about.html
+SHA-256-Digest: ZYczHLHHJbJ2GSLe/MBOpU/zRznwNG9X6G0P5BecAYs=
+
+Name: org/eclipse/emf/emfstore/internal/server/conflictDetection/Model
+ ElementIdToEObjectMappingImpl.class
+SHA-256-Digest: tX8O/U9erXIPFT5qQCqJbjIl/ug/aKdbM0Spo/2bSnI=
+
+Name: org/eclipse/emf/emfstore/internal/server/core/subinterfaces/EMFS
+ toreVersionSubInterface.class
+SHA-256-Digest: jyN86J4FT+VqLjCO2T7bO3XqJ+ahV3lR78Sq1jCzAG0=
+
+Name: org/eclipse/emf/emfstore/internal/server/DefaultServerWorkspaceL
+ ocationProvider.class
+SHA-256-Digest: e7wxhBAiiWzj8WaH1wEXXUkGeOUp+S1YumRk76dwnPo=
+
+Name: schema/resourceOptions.exsd
+SHA-256-Digest: YIJ6pl7OBN7WzIUsikZ4eEl11XQewtENWBvAvlo8MoM=
+
+Name: org/eclipse/emf/emfstore/internal/server/exceptions/BranchInfoMi
+ ssingException.class
+SHA-256-Digest: fUiHueMhaGZxZs4of8oe4HR5hnFxkA1bCsuTO1URTdk=
+
+Name: src/org/eclipse/emf/emfstore/internal/server/accesscontrol/authe
+ ntication/messages.properties
+SHA-256-Digest: rwqPmL6AG2HZGmwOpc6jSN6V2Tu8qpMAK06bC7gPrm0=
+
+Name: org/eclipse/emf/emfstore/internal/server/core/subinterfaces/Chan
+ gePackageFragmentProviderAdapter.class
+SHA-256-Digest: jJHBi5BC4wZe1XvXcRZjm0UoCWAR8R9uxB/3OeTXHaU=
+
+Name: org/eclipse/emf/emfstore/internal/server/core/MonitorProvider.cl
+ ass
+SHA-256-Digest: 9YE9RmeItL+7dKu2lseWDbgfoKDp6O5LIuj6XVilsPE=
+
+Name: org/eclipse/emf/emfstore/internal/server/es.properties
+SHA-256-Digest: ECVBZ8WisCr6nknB6ql49UJRceaVNZcuxJ1IrBasl68=
+
+Name: org/eclipse/emf/emfstore/server/auth/ESAuthenticationControlType
+ $2.class
+SHA-256-Digest: 8iO0XQUJeHj4efI09MXz8yzXqFiXabMyro8gYDeIRWM=
+
+Name: org/eclipse/emf/emfstore/server/auth/ESMethod$MethodId.class
+SHA-256-Digest: j70MSsDKsXHKieBqI+5Jt7/gSGdLhvbI3Hia4Nv9E6A=
+

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2010, 2011, 2012 CEA LIST and Mia-Software.&#xD;&#xA;&#xD;&#xA;All rights reserved. This program and the accompanying materials&#xD;&#xA;are made available under the terms of the Eclipse Public License v1.0&#xD;&#xA;which accompanies this distribution, and is available at&#xD;&#xA;http://www.eclipse.org/legal/epl-v10.html&#xD;&#xA;&#xD;&#xA;Contributors:&#xD;&#xA;   Nicolas Guyomar (Mia-Software) - initial API and implementation&#xD;&#xA;   Nicolas Guyomar (Mia-Software) - Bug 332998 - To be able to add a column and fill it with the result of a query&#xD;&#xA;   Gregoire Dupe (Mia-Software) - Bug 332998 - To be able to add a column and fill it with the result of a query&#xD;&#xA;   Gregoire Dupe (Mia-Software) - Bug 333015 - To be able to hide columns&#xD;&#xA;   Gregoire Dupe (Mia-Software) - Bug 333029 - To be able to save the size of the lines and the columns&#xD;&#xA;   Gregoire Dupe (Mia-Software) - Bug 339918 - To be able to have facet columns and to be able to have a local customization&#xD;&#xA;   Gregoire Dupe (Mia-Software) - Bug 340571 - To be able have more than one localCustomization&#xD;&#xA;   Gregoire Dupe (Mia-Software) - Bug 340572 - Wrong multiplicity in TableInstance.facets&#xD;&#xA;   Nicolas Guyomar (Mia-Software) - Bug 340941 - Need new row and column types in the table&#xD;&#xA;   Gregoire Dupe (Mia-Software) - Bug 366367 - To be able to change the &quot;CanBePresentedInTheTable&quot; query&#xD;&#xA;   Gregoire Dupe (Mia-Software) - Bug 366804 - [Restructuring] Table widget upgrade&#xD;&#xA;   Nicolas Bros (Mia-Software) - Bug 366367 - To be able to change the &quot;CanBePresentedInTheTable&quot; query&#xD;&#xA;   Gregoire Dupe (Mia-Software) - Bug 369987 - [Restructuring][Table] Switch to the new customization and facet framework&#xD;&#xA;   Gregoire Dupe (Mia-Software) - Bug 364325 - [Restructuring] The user must be able to navigate into a model using the Facet.&#xD;&#xA;   Gregoire Dupe (Mia-Software) - Bug 373078 - API Cleaning"
+    modelDirectory="/org.eclipse.emf.facet.widgets.table.metamodel/src" modelPluginID="org.eclipse.emf.facet.widgets.table.metamodel"
+    modelName="Tableinstance-0.2" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    copyrightFields="false" runtimeVersion="2.6" usedGenPackages="platform:/plugin/org.eclipse.emf.facet.widgets.celleditors/model/celleditors.genmodel#//modelCellEditor ../../org.eclipse.emf.facet.custom.metamodel/model/custom-0.2.0.genmodel#//custom platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore ../../org.eclipse.emf.facet.efacet.metamodel/model/efacet-0.2.0.genmodel#//efacet tableConfiguration-0.2.0.genmodel#//tableconfiguration">
+  <foreignModel>table-0.2.0.ecore</foreignModel>
+  <genPackages prefix="Table" basePackage="org.eclipse.emf.facet.widgets.table.metamodel.v0_2_0"
+      disposableProviderFactory="true" ecorePackage="table-0.2.0.ecore#/">
+    <genClasses ecoreClass="table-0.2.0.ecore#//Table">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference table-0.2.0.ecore#//Table/tableConfiguration"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference table-0.2.0.ecore#//Table/customizations"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference table-0.2.0.ecore#//Table/facets"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference table-0.2.0.ecore#//Table/context"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute table-0.2.0.ecore#//Table/parameter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute table-0.2.0.ecore#//Table/hideEmptyColumns"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute table-0.2.0.ecore#//Table/onlyShowCommonColumns"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute table-0.2.0.ecore#//Table/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference table-0.2.0.ecore#//Table/columns"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference table-0.2.0.ecore#//Table/rows"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference table-0.2.0.ecore#//Table/elements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference table-0.2.0.ecore#//Table/localCustomization"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference table-0.2.0.ecore#//Table/localCustomizations"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference table-0.2.0.ecore#//Table/facets2"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference table-0.2.0.ecore#//Table/canBePresentedInTheTable"/>
+    </genClasses>
+    <genClasses ecoreClass="table-0.2.0.ecore#//NavigationTable">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference table-0.2.0.ecore#//NavigationTable/queryResults"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="table-0.2.0.ecore#//Column">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute table-0.2.0.ecore#//Column/isHidden"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute table-0.2.0.ecore#//Column/width"/>
+    </genClasses>
+    <genClasses ecoreClass="table-0.2.0.ecore#//ContextColumn"/>
+    <genClasses image="false" ecoreClass="table-0.2.0.ecore#//FeatureColumn">
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference table-0.2.0.ecore#//FeatureColumn/feature"/>
+    </genClasses>
+    <genClasses ecoreClass="table-0.2.0.ecore#//Row">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference table-0.2.0.ecore#//Row/element"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute table-0.2.0.ecore#//Row/height"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="table-0.2.0.ecore#//NavigationRow">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference table-0.2.0.ecore#//NavigationRow/queryResult"/>
+    </genClasses>
+    <genClasses ecoreClass="table-0.2.0.ecore#//PrimitiveTypeQueryRow">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute table-0.2.0.ecore#//PrimitiveTypeQueryRow/value"/>
+    </genClasses>
+    <genClasses ecoreClass="table-0.2.0.ecore#//EObjectQueryRow"/>
+    <genClasses ecoreClass="table-0.2.0.ecore#//ValueColumn"/>
+  </genPackages>
+</genmodel:GenModel>

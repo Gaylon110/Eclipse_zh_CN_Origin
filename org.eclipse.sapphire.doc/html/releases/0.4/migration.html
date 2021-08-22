@@ -1,0 +1,1481 @@
+<!-- 
+ ******************************************************************************
+ * Copyright (c) 2016 Oracle
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *    Konstantin Komissarchik - initial implementation and ongoing maintenance
+ ******************************************************************************
+-->
+
+<html>
+
+<head>
+  <title>Migration Guide for Sapphire 0.4</title>
+  <link rel="StyleSheet" href="../../style.css" TYPE="text/css"/>
+  <style type="text/css">
+    pre.source-code 
+    {
+      font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; 
+      color: #000000;
+      background-color: #ffffff;
+      font-size: 12px;
+      border: 0px;
+      line-height: 14px;
+      padding: 5px;
+      margin-left: 0px;
+      margin-right: 0px;
+      overflow: auto
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>Migration Guide for Sapphire 0.4</h1>
+
+<p>This documents covers changes that need to be made by Sapphire adopters as part of migrating 
+to Sapphire 0.4 from a prior release. Only changes from the previous major release are covered.</p>
+
+<p>Table of Contents</p>
+
+<ol>
+  <li><a href="#Documentation">Documentation</a></li>
+  <li><a href="#Hints">Hints</a></li>
+  <li><a href="#ValidFileExtensions">ValidFileExtensions</a></li>
+  <li><a href="#Services">Services</a></li>
+  <li><a href="#PossibleTypes">Possible Types</a></li>
+  <li><a href="#ActionHandlerDispose">Action Handler Dispose</a></li>
+  <li><a href="#XmlRootBinding">@XmlRootBinding</a></li>
+  <li><a href="#PropertyEditorAssistContribution">PropertyEditorAssistContribution</a></li>
+</ol>
+
+<h2><a name="Documentation">Documentation</a></h2>
+
+<p>The "href" attribute of the @Documentation.Topic has been renamed to "url" for consistency with
+other API.</p>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">@Documentation
+( 
+    content = "Sample 32-bit integer property.",
+    topics = 
+    {
+        @Topic( label = "wikipedia",</font> href <font color="#888888">= "http://en.wikipedia.org/wiki/Integer" )
+    }
+)
+
+ValueProperty PROP_INTEGER = new ValueProperty( TYPE, "Integer" );
+
+Value<Integer> getInteger();
+void setInteger( String val );
+void setInteger( Integer val );</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">@Documentation
+( 
+    content = "Sample 32-bit integer property.",
+    topics = 
+    {
+        @Topic( label = "wikipedia",</font> url <font color="#888888">= "http://en.wikipedia.org/wiki/Integer" )
+    }
+)
+
+ValueProperty PROP_INTEGER = new ValueProperty( TYPE, "Integer" );
+
+Value<Integer> getInteger();
+void setInteger( String val );
+void setInteger( Integer val );</font></code></pre>
+    </td>
+  </tr>
+</table>
+
+<p>The method for attaching custom code to produce documentation content has changed to align with Sapphire services architecture
+and for general API consistency.</p>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>public class IntegerDocumentationProvider extends DocumentationProviderImpl 
+{
+    @Override
+    public DocumentationData getDocumentationData() 
+    {
+        return new DocumentationData() 
+        {
+            @Override
+            public String getContent() 
+            {
+                return "Sample 32-bit integer property.";
+            }
+
+            @Override
+            public List&lt;DocumentationResource> getTopics() 
+            {
+                final DocumentationResource resource 
+                    = new DocumentationResource( "wikipedia", "http://en.wikipedia.org/wiki/Integer" );
+
+                return Collections.singletonList( resource );
+            }
+        };
+    }
+}</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>public class IntegerDocumentationService extends DocumentationService 
+{
+    @Override
+    public String content()
+    {
+        return "Sample 32-bit integer property.";
+    }
+
+    @Override
+    public List&lt;Topic> topics()
+    {
+        final Topic topic = new Topic( "wikipedia", "http://en.wikipedia.org/wiki/Integer" );
+        return Collections.singletonList( topic );
+    }
+}</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>@DocumentationProvider( impl = IntegerDocumentationProvider.class )
+
+<font color="#888888">ValueProperty PROP_INTEGER = new ValueProperty( TYPE, "Integer" );
+
+Value<Integer> getInteger();
+void setInteger( String val );
+void setInteger( Integer val );</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>@Service( impl = IntegerDocumentationService.class )
+
+<font color="#888888">ValueProperty PROP_INTEGER = new ValueProperty( TYPE, "Integer" );
+
+Value<Integer> getInteger();
+void setInteger( String val );
+void setInteger( Integer val );</font></code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="Hints">Hints</a></h2>
+
+<p>Some of the hints used to customize behavior in the UI definitions have been turned into explicit
+properties.</p>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">&lt;property-editor></font>
+    &lt;hint>
+        &lt;name>show.label&lt;/name>
+        &lt;value>false&lt;/value>
+    &lt;/hint>
+<font color="#888888">&lt;/property-editor></font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">&lt;property-editor></font>
+    &lt;show-label>false&lt;/show-label>
+    &lt;span>true&lt;/span>
+<font color="#888888">&lt;/property-editor></font></code></pre>
+    </td>
+  </tr>
+</table>
+
+<p style="margin-left: 20px;"><code>Scope: &nbsp;&nbsp;&nbsp;*.sdef<br/>
+<nobr>Search: &nbsp;&nbsp;([ \t]*)&lt;hint>\s*&lt;name>\s*show.label\s*&lt;/name>\s*&lt;value>\s*false\s*&lt;/value>\s*&lt;/hint></nobr><br/>
+<nobr>Replace: &nbsp;\1&lt;show-label>false&lt;/show-label>\n\1&lt;span>true&lt;/span></nobr></p>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">&lt;property-editor></font>
+    &lt;hint>
+        &lt;name>show.label.above&lt;/name>
+        &lt;value>true&lt;/value>
+    &lt;/hint>
+<font color="#888888">&lt;/property-editor></font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">&lt;property-editor></font>
+    &lt;span>true&lt;/span>
+<font color="#888888">&lt;/property-editor></font></code></pre>
+    </td>
+  </tr>
+</table>
+
+<p style="margin-left: 20px;"><code>Scope: &nbsp;&nbsp;&nbsp;*.sdef<br/>
+<nobr>Search: &nbsp;&nbsp;([ \t]*)&lt;hint>\s*&lt;name>\s*show.label.above\s*&lt;/name>\s*&lt;value>\s*true\s*&lt;/value>\s*&lt;/hint></nobr><br/>
+<nobr>Replace: &nbsp;\1&lt;span>true&lt;/span></nobr></p>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">&lt;property-editor></font>
+    &lt;hint>
+        &lt;name>width&lt;/name>
+        &lt;value>100&lt;/value>
+    &lt;/hint>
+<font color="#888888">&lt;/property-editor></font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">&lt;property-editor></font>
+    &lt;width>100&lt;/width>
+<font color="#888888">&lt;/property-editor></font></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">&lt;composite></font>
+    &lt;hint>
+        &lt;name>width&lt;/name>
+        &lt;value>100&lt;/value>
+    &lt;/hint>
+<font color="#888888">&lt;/composite></font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">&lt;composite></font>
+    &lt;width>100&lt;/width>
+<font color="#888888">&lt;/composite></font></code></pre>
+    </td>
+  </tr>
+</table>
+
+<p style="margin-left: 20px;"><code>Scope: &nbsp;&nbsp;&nbsp;*.sdef<br/>
+<nobr>Search: &nbsp;&nbsp;([ \t]*)&lt;hint>\s*&lt;name>\s*width\s*&lt;/name>\s*&lt;value>\s*([0-9]*)\s*&lt;/value>\s*&lt;/hint></nobr><br/>
+<nobr>Replace: &nbsp;\1&lt;width>\2&lt;/width></nobr></p>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">&lt;property-editor></font>
+    &lt;hint>
+        &lt;name>height&lt;/name>
+        &lt;value>5&lt;/value>
+    &lt;/hint>
+<font color="#888888">&lt;/property-editor></font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">&lt;property-editor></font>
+    &lt;height>75&lt;/height>
+<font color="#888888">&lt;/property-editor></font></code></pre>
+
+      <p>Multiply the old height hint value by 15 to get the same effect. Only do this conversion
+      for the height hint and only for property editors.</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">&lt;composite></font>
+    &lt;hint>
+        &lt;name>height&lt;/name>
+        &lt;value>100&lt;/value>
+    &lt;/hint>
+<font color="#888888">&lt;/composite></font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">&lt;composite></font>
+    &lt;height>100&lt;/height>
+<font color="#888888">&lt;/composite></font></code></pre>
+    </td>
+  </tr>
+</table>
+
+<p style="margin-left: 20px;"><code>Scope: &nbsp;&nbsp;&nbsp;*.sdef<br/>
+<nobr>Search: &nbsp;&nbsp;([ \t]*)&lt;hint>\s*&lt;name>\s*height\s*&lt;/name>\s*&lt;value>\s*([0-9]*)\s*&lt;/value>\s*&lt;/hint></nobr><br/>
+<nobr>Replace: &nbsp;\1&lt;height>\2&lt;/height></nobr></p>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">&lt;property-editor></font>
+    &lt;hint>
+        &lt;name>margin.left&lt;/name>
+        &lt;value>1u&lt;/value>
+    &lt;/hint>
+<font color="#888888">&lt;/property-editor></font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">&lt;property-editor></font>
+    &lt;margin-left>20&lt;/margin-left>
+<font color="#888888">&lt;/property-editor></font></code></pre>
+
+      <p>The margin.left hint supported two suffixes to designate units. The "px" suffix
+      designated pixels, while "u" suffix designated units of 20 pixels. The new property
+      takes a number of pixels with no units suffix.</p>
+    </td>
+  </tr>
+</table>
+
+<p style="margin-left: 20px;"><code>Scope: &nbsp;&nbsp;&nbsp;*.sdef<br/>
+<nobr>Search: &nbsp;&nbsp;([ \t]*)&lt;hint>\s*&lt;name>\s*margin.left\s*&lt;/name>\s*&lt;value>\s*([0-9a-z]*)\s*&lt;/value>\s*&lt;/hint></nobr><br/>
+<nobr>Replace: &nbsp;\1&lt;margin-left>\2&lt;/margin-left></nobr></p>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">&lt;property-editor></font>
+    &lt;hint>
+        &lt;name>expand.vertically&lt;/name>
+        &lt;value>true&lt;/value>
+    &lt;/hint>
+<font color="#888888">&lt;/property-editor></font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">&lt;property-editor></font>
+    &lt;scale-vertically>true&lt;/scale-vertically>
+<font color="#888888">&lt;/property-editor></font></code></pre>
+    </td>
+  </tr>
+</table>
+
+<p style="margin-left: 20px;"><code>Scope: &nbsp;&nbsp;&nbsp;*.sdef<br/>
+<nobr>Search: &nbsp;&nbsp;([ \t]*)&lt;hint>\s*&lt;name>\s*expand.vertically\s*&lt;/name>\s*&lt;value>\s*([a-z]*)\s*&lt;/value>\s*&lt;/hint></nobr><br/>
+<nobr>Replace: &nbsp;\1&lt;scale-vertically>\2&lt;/scale-vertically></nobr></p>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">&lt;html></font>
+    &lt;expand-vertically/>
+<font color="#888888">&lt;/html></font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">&lt;html></font>
+    &lt;scale-vertically>true&lt;/scale-vertically>
+<font color="#888888">&lt;/html></font></code></pre>
+    </td>
+  </tr>
+</table>
+
+<p style="margin-left: 20px;"><code>Scope: &nbsp;&nbsp;&nbsp;*.sdef<br/>
+<nobr>Search: &nbsp;&nbsp;&lt;expand-vertically */></nobr><br/>
+<nobr>Replace: &nbsp;&lt;scale-vertically>true&lt;/scale-vertically></nobr></p>
+
+<h2><a name="ValidFileExtensions">ValidFileExtensions</a></h2>
+
+<p>The @ValidFileExtensions annotation has been replaced with @FileExtensions annotation that supports Sapphire
+expression language.</p>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">@Type( base = Path.class )
+@ValidFileSystemResourceType( FileSystemResourceType.FILE )</font>
+@ValidFileExtensions( { "png", "gif", "jpeg" } )
+
+<font color="#888888">ValueProperty PROP_FILE_PATH = new ValueProperty( TYPE, "FilePath" );
+
+Value&lt;Path> getFilePath();
+void setFilePath( String value );
+void setFilePath( Path value );</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">@Type( base = Path.class )
+@ValidFileSystemResourceType( FileSystemResourceType.FILE )</font>
+@FileExtensions( expr = "png,gif,jpeg" )
+
+<font color="#888888">ValueProperty PROP_FILE_PATH = new ValueProperty( TYPE, "FilePath" );
+
+Value&lt;Path> getFilePath();
+void setFilePath( String value );
+void setFilePath( Path value );</font></code></pre>
+    </td>
+  </tr>
+</table>
+
+<p><a href="../../services/index.html#FileExtensionsService">See Documentation</a></p>
+
+<h2><a name="Services">Services</a></h2>
+
+<p>The services API has undergone changes to make it more general and to cleanup various inconsistencies.</p>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class CustomService extends</font> ModelElementService
+<font color="#888888">{
+    @Override</font>
+    public <font color="#888888">void init</font>( IModelElement element, String[] params )
+    <font color="#888888">{
+        super.init</font>( element, params )<font color="#888888">;
+
+        String p1 = </font>params[ 0 ]<font color="#888888">;
+        String p2 = </font>params[ 1 ]<font color="#888888">;
+
+        ...
+    }
+
+    public Object perform()
+    {
+        IModelElement element = </font>element()<font color="#888888">;
+
+        ...
+    }
+}</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class CustomService extends</font> Service
+<font color="#888888">{
+    @Override</font>
+    protected <font color="#888888">void init</font>()
+    <font color="#888888">{
+        super.init</font>()<font color="#888888">;
+
+        IModelElement element = </font>context( IModelElement.class )<font color="#888888">;
+
+        String p1 = </font>params( "p1" )<font color="#888888">;
+        String p2 = </font>params( "p2" )<font color="#888888">;
+
+        ...
+    }
+
+    public Object perform()
+    {
+        IModelElement element = </font>context( IModelElement.class )<font color="#888888">;
+
+        ...
+    }
+}</font></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class CustomServiceFactory extends</font> ModelElementServiceFactory
+<font color="#888888">{
+    @Override
+    public boolean applicable(</font> IModelElement element,
+                               Class&lt;? extends ModelElementService> service <font color="#888888">)
+    {
+        ...
+    }
+
+    @Override
+    public</font> ModelElementService <font color="#888888">create(</font> IModelElement element,
+                                       Class&lt;? extends ModelElementService> service <font color="#888888">)
+    {
+        ...
+    }
+}</font></font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class CustomServiceFactory extends</font> ServiceFactory
+<font color="#888888">{
+    @Override
+    public boolean applicable(</font> ServiceContext context,
+                               Class&lt;? extends Service> service <font color="#888888">)
+    {</font>
+        IModelElement element = context.find( IModelElement.class );
+
+        <font color="#888888">...
+    }
+
+    @Override
+    public</font> Service <font color="#888888">create(</font> ServiceContext context,
+                           Class&lt;? extends Service> service <font color="#888888">)
+    {</font>
+        IModelElement element = context.find( IModelElement.class );
+
+        <font color="#888888">...
+    }
+}</font></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">&lt;extension></font>
+    &lt;model-element-service>
+        <font color="#888888">&lt;id>Sample.CustomService&lt;/id>
+        &lt;type>org.eclipse.sapphire.samples.CustomService&lt;/type>
+        &lt;factory>org.eclipse.sapphire.samples.internal.CustomServiceFactory&lt;/factory></font>
+    &lt;/model-element-service>
+<font color="#888888">&lt;/extension></font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">&lt;extension></font>
+    &lt;service>
+        <font color="#888888">&lt;id>Sample.CustomService&lt;/id>
+        &lt;type>org.eclipse.sapphire.samples.CustomService&lt;/type>
+        &lt;factory>org.eclipse.sapphire.samples.internal.CustomServiceFactory&lt;/factory></font>
+        &lt;context>Sapphire.Element.Instance&lt;/context></font>
+    &lt;/service>
+<font color="#888888">&lt;/extension></font></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class CustomService extends</font> ModelPropertyService
+<font color="#888888">{
+    @Override</font>
+    public <font color="#888888">void init</font>( IModelElement element, ModelProperty property, String[] params )
+    <font color="#888888">{
+        super.init</font>( element, property, params )<font color="#888888">;
+
+        String p1 = </font>params[ 0 ]<font color="#888888">;
+        String p2 = </font>params[ 1 ]<font color="#888888">;
+
+        ...
+    }
+
+    public Object perform()
+    {
+        IModelElement element = </font>element()<font color="#888888">;
+        ModelProperty property = </font>property()<font color="#888888">;
+
+        ...
+    }
+}</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class CustomService extends</font> Service
+<font color="#888888">{
+    @Override</font>
+    protected <font color="#888888">void init</font>()
+    <font color="#888888">{
+        super.init</font>()<font color="#888888">;
+
+        IModelElement element = </font>context( IModelElement.class )<font color="#888888">;
+        ModelProperty property = </font>context( ModelProperty.class )<font color="#888888">;
+
+        String p1 = </font>params( "p1" )<font color="#888888">;
+        String p2 = </font>params( "p2" )<font color="#888888">;
+
+        ...
+    }
+
+    public Object perform()
+    {
+        IModelElement element = </font>context( IModelElement.class )<font color="#888888">;
+        ModelProperty property = </font>context( ModelProperty.class )<font color="#888888">;
+
+        ...
+    }
+}</font></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class CustomServiceFactory extends</font> ModelPropertyServiceFactory
+<font color="#888888">{
+    @Override
+    public boolean applicable(</font> IModelElement element,
+                               ModelProperty property,
+                               Class&lt;? extends ModelPropertyService> service <font color="#888888">)
+    {
+        ...
+    }
+
+    @Override
+    public</font> ModelPropertyService <font color="#888888">create(</font> IModelElement element,
+                                        ModelProperty property,
+                                        Class&lt;? extends ModelPropertyService> service <font color="#888888">)
+    {
+        ...
+    }
+}</font></font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class CustomServiceFactory extends</font> ServiceFactory
+<font color="#888888">{
+    @Override
+    public boolean applicable(</font> ServiceContext context,
+                               Class&lt;? extends Service> service <font color="#888888">)
+    {</font>
+        IModelElement element = context.find( IModelElement.class );
+        ModelProperty property = context.find( ModelProperty.class );
+
+        <font color="#888888">...
+    }
+
+    @Override
+    public</font> Service <font color="#888888">create(</font> ServiceContext context,
+                           Class&lt;? extends Service> service <font color="#888888">)
+    {</font>
+        IModelElement element = context.find( IModelElement.class );
+        ModelProperty property = context.find( ModelProperty.class );
+
+        <font color="#888888">...
+    }
+}</font></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">&lt;extension></font>
+    &lt;model-property-service>
+        <font color="#888888">&lt;id>Sample.CustomService&lt;/id>
+        &lt;type>org.eclipse.sapphire.samples.CustomService&lt;/type>
+        &lt;factory>org.eclipse.sapphire.samples.internal.CustomServiceFactory&lt;/factory></font>
+    &lt;/model-property-service>
+<font color="#888888">&lt;/extension></font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">&lt;extension></font>
+    &lt;service>
+        <font color="#888888">&lt;id>Sample.CustomService&lt;/id>
+        &lt;type>org.eclipse.sapphire.samples.CustomService&lt;/type>
+        &lt;factory>org.eclipse.sapphire.samples.internal.CustomServiceFactory&lt;/factory></font>
+        &lt;context>Sapphire.Property.Instance&lt;/context></font>
+    &lt;/service>
+<font color="#888888">&lt;/extension></font></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">ValueProperty PROP_SAMPLE = new ValueProperty( TYPE, "Sample" );
+
+@Service( impl = CustomService.class, params = {</font> "a", "b" <font color="#888888">} )
+
+Value&lt;String> getSample();
+void setSample( String value );</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">ValueProperty PROP_SAMPLE = new ValueProperty( TYPE, "Sample" );
+
+@Service
+(
+    impl = CustomService.class, 
+    params = 
+    {</font> 
+        @Service.Param( name = "p1", value = "a" ), 
+        @Service.Param( name = "p2", value = "b" ) 
+    <font color="#888888">}
+)
+
+Value&lt;String> getSample();
+void setSample( String value );</font></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">&lt;extension></font>
+    &lt;value-serialization-service>
+        &lt;type>org.eclipse.sapphire.samples.Circle&lt;/type>
+        &lt;impl>org.eclipse.sapphire.samples.internal.CircleSerializationService&lt;/impl>
+    &lt;/value-serialization-service>
+<font color="#888888">&lt;/extension></font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">&lt;extension></font>
+    &lt;service>
+        &lt;id>Sample.ValueSerializationService.Circle&lt;/id>
+        &lt;type>org.eclipse.sapphire.services.ValueSerializationService&lt;/type>
+        &lt;context>Sapphire.Property.Instance&lt;/context>
+        &lt;factory>org.eclipse.sapphire.samples.internal.CircleSerializationServiceFactory&lt;/factory>
+    &lt;/service>
+<font color="#888888">&lt;/extension></font>
+
+public class CircleSerializationServiceFactory extends ServiceFactory
+{
+    @Override
+    public boolean applicable( ServiceContext context,
+                               Class&lt;? extends Service> service )
+    {
+        ValueProperty property = context.find( ValueProperty.class ); 
+        return ( property != null && property.isOfType( Circle.class ) );
+    }
+
+    @Override
+    public Service create( ServiceContext context,
+                           Class&lt;? extends Service> service )
+    {
+        return new CircleSerializationService();
+    }
+}</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">ValueProperty PROP_SAMPLE = new ValueProperty( TYPE, "Sample" );
+
+@Type( base = Circle.class )
+</font>@ValueSerialization( service = <font color="#888888">CircleSerializationService.class</font> )
+
+<font color="#888888">Value&lt;Circle> getSample();
+void setSample( String value );
+void setSample( Circle value );</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">ValueProperty PROP_SAMPLE = new ValueProperty( TYPE, "Sample" );
+
+@Type( base = Circle.class )
+</font>@Service( impl = <font color="#888888">CircleSerializationService.class</font> )
+
+<font color="#888888">Value&lt;Circle> getSample();
+void setSample( String value );
+void setSample( Circle value );</font></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">ValueProperty PROP_SAMPLE = new ValueProperty( TYPE, "Sample" );
+
+</font>@DerivedValue( service = <font color="#888888">SampleDerivedValueService.class</font> )
+
+<font color="#888888">Value&lt;String> getSample();</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">ValueProperty PROP_SAMPLE = new ValueProperty( TYPE, "Sample" );
+
+</font>@Derived
+@Service( impl = <font color="#888888">SampleDerivedValueService.class</font> )
+
+<font color="#888888">Value&lt;String> getSample();</font></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class CustomValidationService extends</font> ModelPropertyValidationService&lt;Value&lt;String>>
+<font color="#888888">{
+    @Override
+    public Status validate()
+    {
+        final Value&lt;String> value = </font>target()<font color="#888888">;
+
+        ...
+    }
+}</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class CustomValidationService extends</font> ValidationService
+<font color="#888888">{
+    @Override
+    public Status validate()
+    {
+        final Value&lt;String> value = </font>context( IModelElement.class ).read( context( ValueProperty.class ) )<font color="#888888">;
+
+        ...
+    }
+}</font></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class CustomDefaultValueService extends DefaultValueService
+{
+    @Override</font>
+    public String getDefaultValue<font color="#888888">()
+    {
+        String value;
+
+        ...
+
+        return</font> value<font color="#888888">;
+    }
+
+    ...
+}</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class CustomDefaultValueService extends DefaultValueService
+{</font>
+    @Override
+    protected DefaultValueServiceData data()
+    {
+        refresh();
+        return super.data();
+    }
+
+    <font color="#888888">@Override</font>
+    protected DefaultValueServiceData compute<font color="#888888">()
+    {
+        String value;
+
+        ...
+
+        return</font> new DefaultValueServiceData( value )<font color="#888888">;
+    }
+
+    ...
+}</font></code></pre>
+
+<p>The above represents the quickest way to migrate an existing default value service, but is far from
+ideal. A better solution would be to not override the data() method with a refresh on every invocation.
+To do that, the service would need to listen on changes to data used in the compute() method and call
+refresh() method when that data changes.</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class CustomDependenciesService extends DependenciesService
+{
+    @Override
+    protected</font> void <font color="#888888">compute</font>( Set&lt;ModelPath> dependencies )
+    <font color="#888888">{
+        dependencies.add( ... );
+        dependencies.add( ... );
+
+        ...
+    }
+
+    ...
+}</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class CustomDependenciesService extends DependenciesService
+{
+    @Override
+    protected</font> DependenciesServiceData <font color="#888888">compute</font>()
+    <font color="#888888">{</font>
+        List&lt;ModelPath> dependencies = new ArrayList&lt;ModelPath>();
+
+        <font color="#888888">dependencies.add( ... );
+        dependencies.add( ... );
+
+        ...</font>
+
+        return new DependenciesServiceData( dependencies );
+    <font color="#888888">}
+
+    ...
+}</font></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class CustomDerivedValueService extends DerivedValueService
+{
+    @Override</font>
+    public String getDerivedValue<font color="#888888">()
+    {
+        String value;
+
+        ...
+
+        return</font> value<font color="#888888">;
+    }
+
+    ...
+}</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class CustomDerivedValueService extends DerivedValueService
+{
+    @Override</font>
+    protected DerivedValueServiceData compute<font color="#888888">()
+    {
+        String value;
+
+        ...
+
+        return</font> new DerivedValueServiceData( value )<font color="#888888">;
+    }
+
+    ...
+}</font></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class CustomEnablementService extends EnablementService
+{
+    @Override
+    protected void initEnablementService</font>( IModelElement element,
+                                          ModelProperty property,
+                                          String[] params )<font color="#888888">
+    {
+        ...
+    }
+
+    @Override
+    protected</font> boolean <font color="#888888">compute()
+    {
+        boolean enablement;
+
+        ...
+
+        return</font> enablement<font color="#888888">;
+    }
+
+    ...
+}</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class CustomEnablementService extends EnablementService
+{
+    @Override
+    protected void initEnablementService</font>()<font color="#888888">
+    {</font>
+        final IModelElement element = context( IModelElement.class );
+        final ModelProperty property = context( ModelProperty.class );
+        final String p1 = param( "p1" );
+        final String p2 = param( "p2" );
+
+        <font color="#888888">...
+    }
+
+    @Override
+    protected</font> EnablementServiceData <font color="#888888">compute()
+    {
+        boolean enablement;
+
+        ...
+
+        return</font> new EnablementServiceData( enablement )<font color="#888888">;
+    }
+
+    ...
+}</font></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class CustomFileExtensionsService extends FileExtensionsService
+{
+    @Override
+    protected void initFileExtensionsService</font>( IModelElement element,
+                                              ModelProperty property,
+                                              String[] params )<font color="#888888">
+    {
+        ...
+    }
+
+    @Override
+    protected</font> void <font color="#888888">compute</font>( List&lt;String> extensions )
+    <font color="#888888">{
+        extensions.add( ... );
+        extensions.add( ... );
+
+        ...
+    }
+
+    ...
+}</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class CustomFileExtensionsService extends FileExtensionsService
+{
+    @Override
+    protected void initFileExtensionsService</font>()<font color="#888888">
+    {</font>
+        final IModelElement element = context( IModelElement.class );
+        final ModelProperty property = context( ModelProperty.class );
+        final String p1 = param( "p1" );
+        final String p2 = param( "p2" );
+
+        <font color="#888888">...
+    }
+
+    @Override
+    protected</font> FileExtensionsServiceData <font color="#888888">compute</font>()
+    <font color="#888888">{</font>
+        List&lt;String> extensions = new ArrayList&lt;String>();
+
+        <font color="#888888">extensions.add( ... );
+        extensions.add( ... );
+
+        ...</font>
+
+        return new FileExtensionsServiceData( extensions );
+    <font color="#888888">}
+
+    ...
+}</font></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class CustomImageService extends ImageService
+{
+    @Override
+    protected void</font> init<font color="#888888">()
+    {</font>
+        super.init();
+
+        <font color="#888888">// Listen on entities that influence image choice.
+        // Call </font>broadcast<font color="#888888">() when something has changed.
+
+        ...
+    }
+
+    @Override</font>
+    public ImageData provide<font color="#888888">()
+    {
+        ImageData image;
+
+        ...
+
+        return</font> image<font color="#888888">;
+    }
+
+    ...
+}</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class CustomImageService extends ImageService
+{</font>
+    @Override
+    protected void</font> initImageService<font color="#888888">()
+    {</font>
+        <font color="#888888">// Listen on entities that influence image choice.
+        // Call </font>refresh<font color="#888888">() when something has changed.
+
+        ...
+    }
+
+    <font color="#888888">@Override</font>
+    protected ImageServiceData compute<font color="#888888">()
+    {
+        ImageData image;
+
+        ...
+
+        return</font> new ImageServiceData( image )<font color="#888888">;
+    }
+
+    ...
+}</font></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>ModelService.Listener <font color="#888888">listener = new </font>ModelService.Listener<font color="#888888">()
+{
+    public void</font> handleEvent<font color="#888888">(</font> ModelService.Event <font color="#888888">event )
+    {
+        ...
+    }
+}
+
+service.</font>addListener<font color="#888888">( listener );
+
+...
+
+service.</font>removeListener<font color="#888888">( listener );
+
+...
+
+while inside service
+{</font>
+    notifyListeners( new ModelService.Event( this ) );
+<font color="#888888">}</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>Listener <font color="#888888">listener = new </font>Listener<font color="#888888">()
+{
+    public void</font> handle<font color="#888888">(</font> Event <font color="#888888">event )
+    {
+        ...
+    }
+}
+
+service.</font>attach<font color="#888888">( listener );
+
+...
+
+service.</font>detach<font color="#888888">( listener );
+
+...
+
+while inside service
+{</font>
+    broadcast();
+}<font color="#888888"></font></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">@Type( base = Date.class )</font>
+
+@ValueSerialization
+(
+    service = DateSerializationService.class, 
+    params = { "yyyy.MM.dd", "MM/dd/yyyy" }
+)
+
+<font color="#888888">ValueProperty PROP_DATE = new ValueProperty( TYPE, "Date" );
+
+Value<Date> getDate();
+void setDate( String value );
+void setDate( Date value );</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">@Type( base = Date.class )</font>
+
+@Service
+(
+    impl = DateSerializationService.class, 
+    params =
+    { 
+        @Service.Param( name = "format-1", value = "yyyy.MM.dd" ), 
+        @Service.Param( name = "format-2", value = "MM/dd/yyyy" )
+    }
+)
+
+<font color="#888888">ValueProperty PROP_DATE = new ValueProperty( TYPE, "Date" );
+
+Value<Date> getDate();
+void setDate( String value );
+void setDate( Date value );</font></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class CustomValidationService extends UniqueValueValidationService</font>&lt;String>
+<font color="#888888">{
+    @Override
+    protected boolean isUniqueValue( Value&lt;</font>String<font color="#888888">> value )
+    {
+        ...
+    }
+}</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class CustomValidationService extends UniqueValueValidationService
+{
+    @Override
+    protected boolean isUniqueValue( Value&lt;</font>?<font color="#888888">> value )
+    {
+        ...
+    }
+}</font></code></pre>
+    </td>
+  </tr>
+</table>
+
+<p>All core services have been consolidated in a single package. Some of them were renamed in the process.</p>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td><code><font color="#888888">org.eclipse.sapphire.</font>modeling<font color="#888888">.DefaultValueService</font></code></td>
+    <td><code><font color="#888888">org.eclipse.sapphire.</font>services<font color="#888888">.DefaultValueService</font></code></td>
+  </tr>
+  <tr>
+    <td><code><font color="#888888">org.eclipse.sapphire.</font>modeling<font color="#888888">.DerivedValueService</font></code></td>
+    <td><code><font color="#888888">org.eclipse.sapphire.</font>services<font color="#888888">.DerivedValueService</font></code></td>
+  </tr>
+  <tr>
+    <td><code><font color="#888888">org.eclipse.sapphire.</font>modeling<font color="#888888">.EnablementService</font></code></td>
+    <td><code><font color="#888888">org.eclipse.sapphire.</font>services<font color="#888888">.EnablementService</font></code></td>
+  </tr>
+  <tr>
+    <td><code><font color="#888888">org.eclipse.sapphire.</font>modeling<font color="#888888">.ImageService</font></code></td>
+    <td><code><font color="#888888">org.eclipse.sapphire.</font>services<font color="#888888">.ImageService</font></code></td>
+  </tr>
+  <tr>
+    <td><code><font color="#888888">org.eclipse.sapphire.</font>modeling<font color="#888888">.PossibleValuesService</font></code></td>
+    <td><code><font color="#888888">org.eclipse.sapphire.</font>services<font color="#888888">.PossibleValuesService</font></code></td>
+  </tr>
+  <tr>
+    <td><code><font color="#888888">org.eclipse.sapphire.</font>modeling<font color="#888888">.ReferenceService</font></code></td>
+    <td><code><font color="#888888">org.eclipse.sapphire.</font>services<font color="#888888">.ReferenceService</font></code></td>
+  </tr>
+  <tr>
+    <td><code><font color="#888888">org.eclipse.sapphire.</font>modeling<font color="#888888">.RelativePathService</font></code></td>
+    <td><code><font color="#888888">org.eclipse.sapphire.</font>services<font color="#888888">.RelativePathService</font></code></td>
+  </tr>
+  <tr>
+    <td><code><font color="#888888">org.eclipse.sapphire.</font>modeling<font color="#888888">.StandardValueNormalizationService</font></code></td>
+    <td><code><font color="#888888">org.eclipse.sapphire.</font>services<font color="#888888">.StandardValueNormalizationService</font></code></td>
+  </tr>
+  <tr>
+    <td><code><font color="#888888">org.eclipse.sapphire.</font>modeling.ModelPropertyValidationService</code></td>
+    <td><code><font color="#888888">org.eclipse.sapphire.</font>services.ValidationService</code></td>
+  </tr>
+  <tr>
+    <td><code><font color="#888888">org.eclipse.sapphire.</font>modeling<font color="#888888">.ValueImageService</font></code></td>
+    <td><code><font color="#888888">org.eclipse.sapphire.</font>services<font color="#888888">.ValueImageService</font></code></td>
+  </tr>
+  <tr>
+    <td><code><font color="#888888">org.eclipse.sapphire.</font>modeling<font color="#888888">.ValueLabelService</font></code></td>
+    <td><code><font color="#888888">org.eclipse.sapphire.</font>services<font color="#888888">.ValueLabelService</font></code></td>
+  </tr>
+  <tr>
+    <td><code><font color="#888888">org.eclipse.sapphire.</font>modeling<font color="#888888">.ValueNormalizationService</font></code></td>
+    <td><code><font color="#888888">org.eclipse.sapphire.</font>services<font color="#888888">.ValueNormalizationService</font></code></td>
+  </tr>
+  <tr>
+    <td><code><font color="#888888">org.eclipse.sapphire.</font>modeling.serialization<font color="#888888">.DateSerializationService</font></code></td>
+    <td><code><font color="#888888">org.eclipse.sapphire.</font>services<font color="#888888">.DateSerializationService</font></code></td>
+  </tr>
+  <tr>
+    <td><code><font color="#888888">org.eclipse.sapphire.</font>modeling.serialization<font color="#888888">.ValueSerializationService</font></code></td>
+    <td><code><font color="#888888">org.eclipse.sapphire.</font>services<font color="#888888">.ValueSerializationService</font></code></td>
+  </tr>
+  <tr>
+    <td><code><font color="#888888">org.eclipse.sapphire.</font>modeling.validation<font color="#888888">.PathValidationService</font></code></td>
+    <td><code><font color="#888888">org.eclipse.sapphire.</font>services<font color="#888888">.PathValidationService</font></code></td>
+  </tr>
+  <tr>
+    <td><code><font color="#888888">org.eclipse.sapphire.</font>modeling.validation<font color="#888888">.UniqueValueValidationService</font></code></td>
+    <td><code><font color="#888888">org.eclipse.sapphire.</font>services<font color="#888888">.UniqueValueValidationService</font></code></td>
+  </tr>
+</table>
+
+<h2><a name="PossibleTypes">Possible Types</a></h2>
+
+<p>The set of possible types for a list or an element property is no longer restricted to be static. As such, previous API for
+retrieving possible types for a property has been replaced with a more flexible service API.</p>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>List&lt;ModelElementType> types = property.getAllPossibleTypes();</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>SortedSet&lt;ModelElementType> types = element.service( property, PossibleTypesService.class ).types();</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>List&lt;Class&lt;?>> types = property.getAllPossibleTypeClasses();</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>List&lt;Class&lt;?>> types = new ArrayList&lt;Class&lt;?>>();
+
+for( ModelElementType type : element.service( property, PossibleTypesService.class ).types() )
+{
+    types.add( type.getModelElementClass() );
+}</code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="ActionHandlerDispose">Action Handler Dispose</a></h2>
+
+<p>The pattern of overriding the dispose method on SapphireActionHandler has been replaced with a dispose event. This
+architecture eliminates resource leaks caused by failing to call super.dispose() when overriding the dispose method.</p>  
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class ExampleActionHandler extends SapphireActionHandler
+{
+    ...</font>
+
+    @Override
+    public void dispose()
+    {
+        super.dispose();
+
+        // Dispose logic goes here.
+    }
+<font color="#888888">}</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class ExampleActionHandler extends SapphireActionHandler
+{
+    ...</font>
+
+    @Override
+    public void init( SapphireAction action, ISapphireActionHandlerDef def )
+    {
+        super.init( action, def );
+
+        attach
+        (
+            new Listener()
+            {
+                @Override
+                public void handle( Event event )
+                {
+                    if( event instanceof DisposeEvent )
+                    {
+                        // Dispose logic goes here.
+                    }
+                }
+            }
+        );
+    }
+<font color="#888888">}</font></code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="XmlRootBinding">@XmlRootBinding</a></h2>
+
+<p>The @XmlRootBinding annotation has been re-worked to reduce functional overlap with other annotations and to allow 
+the XML binding API to more easily adapt to different kinds of XML document type specification technologies. Scenarios
+previously handled by @XmlRootBinding annotation are now handled by different combinations of @XmlBinding, @XmlNamespace,
+@XmlSchema and @XmlDocumentType annotations.</p> 
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>@XmlRootBinding( elementName = "root" )</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>@XmlBinding( path = "root" )</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>@XmlRootBinding
+(
+    elementName = "root",
+    namespace = "http://www.eclipse.org/sapphire/example"
+)</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>@XmlNamespace( uri = "http://www.eclipse.org/sapphire/example" )
+@XmlBinding( path = "root" )</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>@XmlRootBinding
+(
+    elementName = "root",
+    namespace = "http://www.eclipse.org/sapphire/example",
+    schemaLocation = "http://www.eclipse.org/sapphire/example/1.0",
+    defaultPrefix = "e"
+)</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>@XmlNamespace( uri = "http://www.eclipse.org/sapphire/example", prefix = "e" )
+
+@XmlSchema
+(
+    namespace = "http://www.eclipse.org/sapphire/example",
+    location = "http://www.eclipse.org/sapphire/example/1.0"
+)
+
+@XmlBinding( path = "e:root" )</code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="PropertyEditorAssistContribution">PropertyEditorAssistContribution</a></h2>
+
+<p>The PropertyEditorAssistContribution API has changed to remove dependencies on SWT/JFace and to make contribution
+immutable once created.</p>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class CustomContributor extends PropertyEditorAssistContributor
+{
+    @Override
+    public void contribute( PropertyEditorAssistContext context )
+    {</font>
+        PropertyEditorAssistContribution <font color="#888888">contribution = </font>new PropertyEditorAssistContribution<font color="#888888">();
+
+        contribution.</font>setText<font color="#888888">( ... );
+        contribution.</font>setImage<font color="#888888">( "CustomImageId", </font>(Image) <font color="#888888">... );</font>
+
+        contribution.setHyperlinkListener
+        (
+            new HyperlinkAdapter()
+            {
+                @Override
+                public void linkActivated( HyperlinkEvent event )
+                {
+                    ...
+                }
+            }
+        );
+
+        <font color="#888888">PropertyEditorAssistSection section = context.getSection( ... );
+        section.addContribution( </font>contribution<font color="#888888"> );
+    }
+}</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class CustomContributor extends PropertyEditorAssistContributor
+{
+    @Override
+    public void contribute( PropertyEditorAssistContext context )
+    {</font>
+        PropertyEditorAssistContribution.Factory <font color="#888888">contribution = </font>PropertyEditorAssistContribution.factory<font color="#888888">();
+
+        contribution.</font>text<font color="#888888">( ... );
+        contribution.</font>image<font color="#888888">( "CustomImageId", </font>(ImageData) <font color="#888888">... );</font>
+
+        contribution.link
+        (
+            "CustomActionId",
+            new Runnable()
+            {
+                public void run()
+                {
+                    ...
+                }
+            }
+        );
+
+        <font color="#888888">PropertyEditorAssistSection section = context.getSection( ... );
+        section.addContribution( </font>contribution.create()<font color="#888888"> );
+    }
+}</code></pre>
+    </td>
+  </tr>
+</table>
+
+<div class="copyright">Copyright (c) 2016 Oracle<br/>
+Content made available under the terms of <a href="http://www.eclipse.org/legal/epl-v10.html">Eclipse Public License</a>.</div>
+
+</body>
+
+</html>

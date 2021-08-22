@@ -1,0 +1,1027 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.emf.facet.efacet.metamodel.edit;singl
+ eton:=true
+Archiver-Version: Plexus Archiver
+Built-By: genie.emf-facet
+Require-Bundle: org.eclipse.core.runtime,org.eclipse.emf.facet.efacet.
+ metamodel;visibility:=reexport,org.eclipse.emf.edit,org.eclipse.emf.e
+ core,org.eclipse.emf.ecore.edit
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: %providerName
+Export-Package: org.eclipse.emf.facet.efacet.metamodel.v0_2_0.efacet.e
+ xtensible.provider;x-friends:="org.eclipse.emf.facet.custom.metamodel
+ .edit,org.eclipse.emf.facet.efacet.metamodel.editor",org.eclipse.emf.
+ facet.efacet.metamodel.v0_2_0.efacet.provider;x-friends:="org.eclipse
+ .emf.facet.custom.metamodel.edit,org.eclipse.emf.facet.efacet.metamod
+ el.editor",org.eclipse.emf.facet.efacet.metamodel.v0_2_0.efacet.query
+ .provider;x-friends:="org.eclipse.emf.facet.efacet.metamodel.editor",
+ org.eclipse.emf.facet.efacet.metamodel.v0_2_0.efacet.runtime.provider
+ ;x-friends:="org.eclipse.emf.facet.efacet.metamodel.editor",org.eclip
+ se.emf.facet.efacet.metamodel.v0_2_0.efacet.serialization.provider;x-
+ friends:="org.eclipse.emf.facet.efacet.metamodel.editor"
+Bundle-Name: %pluginName
+Bundle-Version: 1.2.2.201802191406
+Bundle-ClassPath: .
+Bundle-Localization: plugin
+Bundle-Activator: org.eclipse.emf.facet.efacet.metamodel.v0_2_0.efacet
+ .provider.Efacet2EditPlugin$Implementation
+Created-By: Apache Maven 3.5.2
+Build-Jdk: 1.8.0_162
+
+Name: icons/full/ctool16/CreateOperationCallQuery_arguments_StringLite
+ ralQuery.gif
+SHA-256-Digest: HaCn3Z8WVGFibbVfqTAMohXHyv0EbH014sMudgFQ5zw=
+
+Name: plugin.xml
+SHA-256-Digest: 3Im+6OVJuKm2ztyUcOQEkgkeL+cGYK3T8JE507V41TE=
+
+Name: icons/full/ctool16/CreateDerivedTypedElement_query_TrueLiteralQu
+ ery.gif
+SHA-256-Digest: waHra4f41G8+tg/LungDVK9qAKzIndUrLL7HW9Ey4wc=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_AbstractAttributeInstance.gif
+SHA-256-Digest: TtbzGIJ05eA5v2nJMOw0pTim88JG8RfAMJ+MjU9zPks=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_FalseLiteralQuery.gif
+SHA-256-Digest: zupcseXbYCC7M39ogFUpufyXMGJ4e7+zz///Eb3eHm4=
+
+Name: icons/full/obj16/MultiValuedContainmentReferenceInstance.gif
+SHA-256-Digest: S2q6L2mID//ohID/rqojsI8N6HykAqEAQIl9Z7CNOJs=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_MultiValuedReferenceInstance.gif
+SHA-256-Digest: wfTLlPJH5SXWVCzBXQE/EelMpVZ8isVSEU/qM0WTQlY=
+
+Name: icons/full/obj16/ETypeElementSwitchQuery.gif
+SHA-256-Digest: jp7tj1rvzqmM87VzVDzXsmMBCIKDp7VJW7xR3292v+k=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_EClass.gif
+SHA-256-Digest: BIVYMzYwCQQ4X5hneZd/9kC6zSyAwUOMh07eus7YhvA=
+
+Name: icons/full/obj16/FacetOperation.gif
+SHA-256-Digest: wMm2ZqDf+XGsDGTZn64x6zTMIGvyJf/3NZoIWFR+n2w=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_AbstractReferenceInstance.gif
+SHA-256-Digest: YIUjEmo/Vpfrp88TemersnYyiRu/a0nrpiFhj2aYNKY=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_ETypedElementEObjectResult.gif
+SHA-256-Digest: 2E5/qSfga7Sv7BAkiNzlq+OTZCab1kMTMuxKdYEgims=
+
+Name: icons/full/obj16/AbstractAttributeInstance.gif
+SHA-256-Digest: 67BqrKr8c3mZEgewj//fcOoHexQM9jYtF6sSBaQCSKY=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_ParameterValue.gif
+SHA-256-Digest: POC6qOEAN053565A4znw+OnlRT4mjQ7ZpzlAPGf+WBA=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_AggregatedFacetElement.gif
+SHA-256-Digest: zaSbbK72d5anQjM9gIW/+09zWoqQT808tPGSTyCH0sY=
+
+Name: org/eclipse/emf/facet/efacet/metamodel/v0_2_0/efacet/runtime/pro
+ vider/RuntimeItemProviderAdapterFactory.class
+SHA-256-Digest: 8nwDZStdud0p5UD8U3IHpoFHaKAfxEO7kNcD3zlCm/c=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_ETypedElementPrimitiveTypeResult.gif
+SHA-256-Digest: oI7OGwy0fMRIQ9bSX/ylI+xi+VAmd9mh1dwUd2vFnS0=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_AggregatedFacet.gif
+SHA-256-Digest: 1cVmLd9dfA1b+ddVHlQh5sXjCINP2VxeZsmIqkGTBko=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_FalseLiteralQuery.gif
+SHA-256-Digest: teaDUMZmTab7TVRPwuLQpTwjlFPQzWy0K+kUvOSRaRc=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_StringLiteralQuery.gif
+SHA-256-Digest: uhwEGxOD497tUETkkssmI0VDOgOGj45RaCE13r61dHM=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_TrueLiteralQuery.gif
+SHA-256-Digest: Q/VQHHFjsn4+3SmdThk9yOzLdxWL2ZFQqU9OzonS2HM=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_ETypedElementEObjectResult.gif
+SHA-256-Digest: vJ8Y9fKg1LEs9ZDFC3SnxBosVrmOa00ZqdkplPU7OT4=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_SingleValuedReferenceInstance.gif
+SHA-256-Digest: UkGfwH8sQXNdgTnkcJHUhxCgQqhgADkHgKH6D75fDDY=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_EAnnotation.gif
+SHA-256-Digest: Jm+cA7HOxM8QTrjkFlghExzdlbvKAu+ut3z/xQmlgJ8=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_EClass.gif
+SHA-256-Digest: fkC8dvZ2VaZfVlq9SCi9T5rMM7Hzm4wicg3MeFgfMXc=
+
+Name: org/eclipse/emf/facet/efacet/metamodel/v0_2_0/efacet/query/provi
+ der/FloatLiteralQueryItemProvider.class
+SHA-256-Digest: KXaXQzWisr7tKHveGE4byNQLVDbMZzbsYNPMV1lGsFg=
+
+Name: icons/full/ctool16/CreateDerivedTypedElement_query_ETypedElement
+ SwitchQuery.gif
+SHA-256-Digest: 6l5ziLzL2jqLYVCpllrQIno5dqWngOaOg/Uwexs9Ynw=
+
+Name: icons/full/ctool16/CreateDerivedTypedElement_query_NavigationQue
+ ry.gif
+SHA-256-Digest: waHra4f41G8+tg/LungDVK9qAKzIndUrLL7HW9Ey4wc=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_FacetAttribute.gif
+SHA-256-Digest: 2E5/qSfga7Sv7BAkiNzlq+OTZCab1kMTMuxKdYEgims=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_ETypedElementCase.gif
+SHA-256-Digest: teaDUMZmTab7TVRPwuLQpTwjlFPQzWy0K+kUvOSRaRc=
+
+Name: org/eclipse/emf/facet/efacet/metamodel/v0_2_0/efacet/query/provi
+ der/NullLiteralQueryItemProvider.class
+SHA-256-Digest: bQECH4KIC3YuMkXtq2jP9MYmMQEBwIoVzh4YUVz9mgM=
+
+Name: icons/full/obj16/NullLiteralQuery.gif
+SHA-256-Digest: wOm8H0he4PXmjBBcEfcuUW/rIjRvYhXVY3rrQZwB8DQ=
+
+Name: org/eclipse/emf/facet/efacet/metamodel/v0_2_0/efacet/runtime/pro
+ vider/ETypedElementEObjectListResultItemProvider.class
+SHA-256-Digest: xSKlim8wrSsqrLFG9y4oOkFSKhzk3YRidDhJPt4a4Uo=
+
+Name: icons/full/obj16/AggregatedFacetElement.gif
+SHA-256-Digest: gVfAWXpPTGfOgNwiZn/NotKZcr41cFf2FHavK9YGVFU=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_ETypedElementCase.gif
+SHA-256-Digest: zupcseXbYCC7M39ogFUpufyXMGJ4e7+zz///Eb3eHm4=
+
+Name: icons/full/ctool16/CreateETypedElementCase_value_ETypedElementSw
+ itchQuery.gif
+SHA-256-Digest: abZ1g6nH0JyisrnucdV9oxCNy88qxwDlgqPtVflqjSI=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_ETypeElementCase.gif
+SHA-256-Digest: zaSbbK72d5anQjM9gIW/+09zWoqQT808tPGSTyCH0sY=
+
+Name: org/eclipse/emf/facet/efacet/metamodel/v0_2_0/efacet/runtime/pro
+ vider/ETypedElementPrimitiveTypeListResultItemProvider.class
+SHA-256-Digest: hN5IHw3LbDS5lRnUUv3kn9l+ThNLUiJxAhnwYDGbOE8=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_OperationCallQuery.gif
+SHA-256-Digest: v/SRTZRNT9AsmXvHl+ys2FBtn+lB5YUaT34l/q/x6OE=
+
+Name: org/eclipse/emf/facet/efacet/metamodel/v0_2_0/efacet/serializati
+ on/provider/MultiValuedReferenceInstanceItemProvider.class
+SHA-256-Digest: p1w6wGjSGvEsXKcSk5wzp66YHV0m7Zl9CfX30Ib/PM4=
+
+Name: org/eclipse/emf/facet/efacet/metamodel/v0_2_0/efacet/provider/Do
+ cumentedElementItemProvider.class
+SHA-256-Digest: 6ITgi4QHYI88QEdLXT3dl6nfnBmTdrbTyGdaysPsWwQ=
+
+Name: icons/full/ctool16/CreateETypeElementCase_value_TrueLiteralQuery
+ .gif
+SHA-256-Digest: GPS7JVo0fwp59Mq2Tg3Cdt+dcPvLIiasRgMH+e/aA+0=
+
+Name: org/eclipse/emf/facet/efacet/metamodel/v0_2_0/efacet/provider/De
+ rivedTypedElementItemProvider.class
+SHA-256-Digest: /oMEsxPviyh8qyd+sXex2Azf9J1ibyROrCapEBfQ20w=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_Aggregate.gif
+SHA-256-Digest: ls6l9EmznS/cr+pBWdSVS/x4OM2Uw6NBR5NnYsRp5DU=
+
+Name: icons/full/ctool16/CreateOperationCallQuery_arguments_NullLitera
+ lQuery.gif
+SHA-256-Digest: IcqLZxpCyqhDxMT1X4g2H0Rt3y7ZBnnO68lBN5qa6xo=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_Aggregate.gif
+SHA-256-Digest: yTWtGZRfINExkk6uXVbwJEndVwA3pPVVySCiXKlon3A=
+
+Name: icons/full/ctool16/CreateETypedElementCase_value_TrueLiteralQuer
+ y.gif
+SHA-256-Digest: DYEMr2XIzgc63hyUoyVUosY7NllUC6DSLs9BV0wU+kc=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_DerivedTypedElementEObjectListResult.gif
+SHA-256-Digest: ls6l9EmznS/cr+pBWdSVS/x4OM2Uw6NBR5NnYsRp5DU=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_AggregatedFacetSet.gif
+SHA-256-Digest: 4SR4JSpMyCtqeKqx/m35LKB2K7Ok80YbIRfx9MeppDA=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_ETypedElementSwitchQuery.gif
+SHA-256-Digest: gc5jA/zZTbsXC1Xgs8+7cQV1LCnxZ+KdNVILvzBIEFQ=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_IsOneOfQuery.gif
+SHA-256-Digest: wfTLlPJH5SXWVCzBXQE/EelMpVZ8isVSEU/qM0WTQlY=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_FacetOperation.gif
+SHA-256-Digest: /Z5hMatKL/wv8znzdruuWEGNwegAL0yc12OgYxQDwzw=
+
+Name: icons/full/obj16/ETypedElementCase.gif
+SHA-256-Digest: jp7tj1rvzqmM87VzVDzXsmMBCIKDp7VJW7xR3292v+k=
+
+Name: icons/full/ctool16/CreateOperationCallQuery_arguments_Navigation
+ Query.gif
+SHA-256-Digest: wstK2ht7W3AGiSPAz5BH33a2LIH4vEzoJ44u6/6Qiew=
+
+Name: icons/full/ctool16/CreateDerivedTypedElement_query_StringLiteral
+ Query.gif
+SHA-256-Digest: Z1yA3Agtn8LGZVfIO4lykNlu8ZNL/1mAqZm0h6PxOJM=
+
+Name: META-INF/maven/org.eclipse.emft/org.eclipse.emf.facet.efacet.met
+ amodel.edit/pom.properties
+SHA-256-Digest: Dn+Ygnh9Qm+ubolbS0iVvF+Eonv4f7pNmhrxg3LLV/0=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_ETypedElementPrimitiveTypeListResult.gif
+SHA-256-Digest: 3S7LGcZSf5ACqytGLeC1SW+DMhFWKFJQ1FPBat8dgdY=
+
+Name: icons/full/obj16/FacetReference.gif
+SHA-256-Digest: QKiXKbmy92yFhgv1VcNTNWd5TmKKsWk6uat6D0+LFmY=
+
+Name: icons/full/obj16/SingleValuedAttributeInstance.gif
+SHA-256-Digest: ncEQAw2Ll5NU9qYP3OflDieNkzXSaQgnzqWvmkypmYw=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_IntegerLiteralQuery.gif
+SHA-256-Digest: 4Kca5iy1SyLS8/USSl7mdO6D5W5TWJ8HQWWiQnrKu3I=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_AggregatedFacetElement.gif
+SHA-256-Digest: uT9X/Qr0SpYySaFq2e9mq4jZcGJp0tkSlxrwMlV4xnQ=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_ETypeElementCase.gif
+SHA-256-Digest: uT9X/Qr0SpYySaFq2e9mq4jZcGJp0tkSlxrwMlV4xnQ=
+
+Name: org/eclipse/emf/facet/efacet/metamodel/v0_2_0/efacet/query/provi
+ der/StringLiteralQueryItemProvider.class
+SHA-256-Digest: tnTr4/JLpjcRjtxe4tc9qCyUuftOWzrKi6DSf85XFYc=
+
+Name: icons/full/obj16/Facet.gif
+SHA-256-Digest: kPn6zPXu593ETwa2YoDTa/bCSjXTWAX1oR9FxAtpV00=
+
+Name: org/eclipse/emf/facet/efacet/metamodel/v0_2_0/efacet/serializati
+ on/provider/SingleValuedReferenceInstanceItemProvider.class
+SHA-256-Digest: JR1HH1S7aakuKStGnfnjBuGEAqMkHiqgi08duWM4oVk=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_ExtendedEObjectReference.gif
+SHA-256-Digest: P/xeRLOEXGvceZ8m/XD0VV5dHaQmXKDM6CJVqurZLp0=
+
+Name: icons/full/obj16/FacetAttribute.gif
+SHA-256-Digest: vVUIXeFLrH1lQiec6FTxmRkbBUFPO7xWAlYmwyDXJAE=
+
+Name: icons/full/ctool16/CreateETypedElementCase_value_IsOneOfQuery.gi
+ f
+SHA-256-Digest: 6lNmaMxiRE7ov9bOHKC53P4mEIhZxdvCcdvFvEcopwY=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_FloatLiteralQuery.gif
+SHA-256-Digest: C3bbLlEmJN1E6WUQSYJjvKEiNtlYEAke8fAXudQ3NUw=
+
+Name: icons/full/obj16/NavigationQuery.gif
+SHA-256-Digest: eVEUi5oeHsyG3glR5UXKt2Y7H2d/oAKK4MHp7dYtrDg=
+
+Name: org/eclipse/emf/facet/efacet/metamodel/v0_2_0/efacet/runtime/pro
+ vider/ETypedElementEObjectResultItemProvider.class
+SHA-256-Digest: d2F0SSTd5q11BFXkv6kjLqvLeniFWVITPoGqH1LnEsE=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_IntegerLiteralQuery.gif
+SHA-256-Digest: BoSExdm9ElQpOLrQlJuuEa6GUnBG0fZG4XfKmbds/Co=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_SingleValuedAttributeInstance.gif
+SHA-256-Digest: LhgXnlSEEj0ffOUCwIKa3yh0OmeCXfSe0/moVCp8OZo=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_EObject.gif
+SHA-256-Digest: 1xkZIMPqhEeZkMEp6n4vJP09ol/JfrizOSC83LYJg5o=
+
+Name: org/eclipse/emf/facet/efacet/metamodel/v0_2_0/efacet/serializati
+ on/provider/SingleValuedContainmentReferenceInstanceItemProvider.clas
+ s
+SHA-256-Digest: EnkfWYYAJjKZjmkE4MwqKkBkMi4Vc01/Pkr5a32p6/8=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_EDataType.gif
+SHA-256-Digest: kEannOgpyDPTVFsyiCYEE3L5NvAMvYlgY+gHAaVv3E0=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_StringLiteralQuery.gif
+SHA-256-Digest: uQA6QJMSs3sDA1WWw2eam2WCqo0TdqD1V9UbzrQb2bA=
+
+Name: icons/full/obj16/DerivedTypedElementPrimitiveTypeListResult.gif
+SHA-256-Digest: glM8SDkcxRQD7/vDSILFLd0yautAsngfg11XFVmteis=
+
+Name: icons/full/ctool16/CreateExtendedEObjectReference_referenceInsta
+ nces_AbstractReferenceInstance.gif
+SHA-256-Digest: b9jp0zaUBhhrMs0jOZmyeCP0UrhPXlFdmsKXESbvl8o=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_NullLiteralQuery.gif
+SHA-256-Digest: y9Fq/Vd9r+dyiPlVMMwao84gy7C2ePFUmLVDCxJWYP0=
+
+Name: icons/full/ctool16/CreateOperationCallQuery_arguments_EObjectLit
+ eralQuery.gif
+SHA-256-Digest: u+OODukn82rH+WCo8O9eK4E2Qfxn9+cDGv3nIg4/wpY=
+
+Name: icons/full/ctool16/CreateETypeElementCase_value_NullLiteralQuery
+ .gif
+SHA-256-Digest: DVMyaDcwP2/RlNr8kbvBik9rJKhWR3vMGZMLI5mSPLU=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_ExtendedEObjectReference.gif
+SHA-256-Digest: Do07qOLe7BdKsHfprr9PU32JWYd9ffoTb1eu4rupNSY=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_EEnum.gif
+SHA-256-Digest: 3S7LGcZSf5ACqytGLeC1SW+DMhFWKFJQ1FPBat8dgdY=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_Category.gif
+SHA-256-Digest: uQA6QJMSs3sDA1WWw2eam2WCqo0TdqD1V9UbzrQb2bA=
+
+Name: icons/full/ctool16/CreateExtendedEObjectReference_referenceInsta
+ nces_SingleValuedReferenceInstance.gif
+SHA-256-Digest: NGZDcZ2Qes9S1n62CYF3IhmZfdu4rKT2lNnoWlVfpYs=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_EParameter.gif
+SHA-256-Digest: vJ8Y9fKg1LEs9ZDFC3SnxBosVrmOa00ZqdkplPU7OT4=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_AbstractAttributeInstance.gif
+SHA-256-Digest: 72x71YYXRlVs78HEJuzJIdC69rJCiiJx5ohCJnfPFSQ=
+
+Name: org/eclipse/emf/facet/efacet/metamodel/v0_2_0/efacet/serializati
+ on/provider/AbstractAttributeInstanceItemProvider.class
+SHA-256-Digest: EvgWC18OdY4tRWok7dX3wre6kltyHHL5DcFlj/ZwqyY=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_DerivedTypedElementPrimitiveTypeListResult.gif
+SHA-256-Digest: kEannOgpyDPTVFsyiCYEE3L5NvAMvYlgY+gHAaVv3E0=
+
+Name: icons/full/ctool16/CreateOperationCallQuery_arguments_TrueLitera
+ lQuery.gif
+SHA-256-Digest: wstK2ht7W3AGiSPAz5BH33a2LIH4vEzoJ44u6/6Qiew=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_ETypeParameter.gif
+SHA-256-Digest: aKcYHXh+X31A2dMrCJ/RxoolAqiH2i8YgsnY3LMHj64=
+
+Name: icons/full/obj16/DerivedTypedElementPrimitiveTypeResult.gif
+SHA-256-Digest: One0aRj6sqKsElMOMVR/PvPqyLZcgXnMIwsDFkH2Kpk=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_DerivedTypedElementPrimitiveTypeListResult.gif
+SHA-256-Digest: 3MyI+6860+cg9GjGYTMBZvisdCklYA8PMvnDI5+SSn0=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_SingleValuedContainmentReferenceInstance.gif
+SHA-256-Digest: IvjlaYiw8pOsvlM1mcB9dP+sfhbjdDWlPraoxDjRKFA=
+
+Name: icons/full/ctool16/CreateDerivedTypedElement_query_ETypeElementS
+ witchQuery.gif
+SHA-256-Digest: O9++l/7kUFaGK6SmycO/3SIXhoOalTUAGiAV4sCTynM=
+
+Name: icons/full/ctool16/CreateFacet_facetElements_FacetReference.gif
+SHA-256-Digest: XoXtDSrxEKsFQNJxFxZ14hJ/3ITIrF6ErilxosPCYSQ=
+
+Name: org/eclipse/emf/facet/efacet/metamodel/v0_2_0/efacet/provider/Pa
+ rameterValueItemProvider.class
+SHA-256-Digest: 0ae7IiiloabQ8T4iVVaxkehiVKcbykJxIUAS5pzhZtE=
+
+Name: org/eclipse/emf/facet/efacet/metamodel/v0_2_0/efacet/query/provi
+ der/NavigationQueryItemProvider.class
+SHA-256-Digest: RsNaVGHD0UjjP/lSUDgFIU0z5uX03NuYargzFVuvi8c=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_EEnumLiteral.gif
+SHA-256-Digest: ZAFTqxyp7H5rJR286K/05j+RULzYXUgd/3M+T/q0zMA=
+
+Name: icons/full/ctool16/CreateExtendedEObjectReference_referenceInsta
+ nces_MultiValuedReferenceInstance.gif
+SHA-256-Digest: V0QonCXQbbYOXLWl3NYjWzNEJ0mppkwIsup1Efnsf3E=
+
+Name: icons/full/obj16/DocumentedElement.gif
+SHA-256-Digest: +gKl9hmXOfRClTghbRv71NXX2+xd4lVrlcsHYciruGQ=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_ETypedElementEObjectListResult.gif
+SHA-256-Digest: jVV0eeVdnS5DNSwQm/91EoyPxQhmhQPsIHw0nfa7oC0=
+
+Name: icons/full/ctool16/CreateOperationCallQuery_arguments_OperationC
+ allQuery.gif
+SHA-256-Digest: xab+InfbaTGuzb/WqBq/a82pTIV8PQKwh5+IHOv3wfM=
+
+Name: icons/full/obj16/EObjectLiteralQuery.gif
+SHA-256-Digest: oyoZV2sXnWx6AKDd7HRsTPHEVDG85cGpZILJ8+fjRBo=
+
+Name: org/eclipse/emf/facet/efacet/metamodel/v0_2_0/efacet/query/provi
+ der/IsOneOfQueryItemProvider.class
+SHA-256-Digest: hF2ma8wHVoDeB2Y7ALvMyYnHqvCQJs68r0/aMDjoQ1A=
+
+Name: icons/full/obj16/ETypedElementPrimitiveTypeListResult.gif
+SHA-256-Digest: 1T6cb2tjbaFH4jpUM69DeXetHkCwd6BUTevST4yrs/g=
+
+Name: icons/full/ctool16/CreateOperationCallQuery_arguments_FacetRefer
+ ence.gif
+SHA-256-Digest: niosmRhUNx40JMshap/u/m5YHcsWRQs8nm/GOGk6rks=
+
+Name: icons/full/obj16/AggregatedFacetSet.gif
+SHA-256-Digest: dJBKHzFLoUXSFsk5BQKgccjc1oRRaZVTgqcan3uqHRg=
+
+Name: icons/full/obj16/IntegerLiteralQuery.gif
+SHA-256-Digest: kTEvZfvtWp7b84AkD7V2rKMg9uL+6YV3wyL48ohiQdY=
+
+Name: icons/full/obj16/FalseLiteralQuery.gif
+SHA-256-Digest: jp7tj1rvzqmM87VzVDzXsmMBCIKDp7VJW7xR3292v+k=
+
+Name: icons/full/ctool16/CreateDerivedTypedElement_query_IntegerLitera
+ lQuery.gif
+SHA-256-Digest: MYGifOUx6BMACjqykyn030Dmq8Tzf/htgMP7nDUKLoU=
+
+Name: icons/full/ctool16/CreateDerivedTypedElement_query_IsOneOfQuery.
+ gif
+SHA-256-Digest: cGEBDKxoJnLHyplm4eiin6BIGQaOQtNKfsuNWz1F6fA=
+
+Name: icons/full/ctool16/CreateOperationCallQuery_arguments_FacetOpera
+ tion.gif
+SHA-256-Digest: oj6hqliHvCd/WnA65kOOZM2x56AsmlbO8s98NftOIac=
+
+Name: icons/full/ctool16/CreateDerivedTypedElement_query_EObjectLitera
+ lQuery.gif
+SHA-256-Digest: wt5TuiaNsNwvQawd1R4j9w/1zRS8kz/3x07YhgMBtwQ=
+
+Name: icons/full/ctool16/CreateETypedElementResult_parameterValues_Par
+ ameterValue.gif
+SHA-256-Digest: GTngvf2V0xPq1KPhzoJsFoLfv+MKQaGYNkC2wfgoF8g=
+
+Name: icons/full/ctool16/CreateETypeElementCase_value_FalseLiteralQuer
+ y.gif
+SHA-256-Digest: gDGLmOsc4dbxUwUkSfIJ/9yYXjPJHXcpPQWZhCK/gEY=
+
+Name: org/eclipse/emf/facet/efacet/metamodel/v0_2_0/efacet/serializati
+ on/provider/SingleValuedAttributeInstanceItemProvider.class
+SHA-256-Digest: BYLGKDSV31Zfxu//7zBqNUpUg3Az2BbXwWpNFF74sAQ=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_DerivedTypedElementPrimitiveTypeResult.gif
+SHA-256-Digest: nsnXyyXjpcQoy8170PbtsP+c2f87eZFR/4xPmYPApJ0=
+
+Name: org/eclipse/emf/facet/efacet/metamodel/v0_2_0/efacet/serializati
+ on/provider/MultiValuedContainmentReferenceInstanceItemProvider.class
+SHA-256-Digest: JoBxIm7ybMWjlRLrtVy6MogzUBNfRKX48ZF0HOlo8TM=
+
+Name: icons/full/obj16/FloatLiteralQuery.gif
+SHA-256-Digest: 04ALrgv80Nt64N/xrYLaDjNB/8d4OFaYvKKZsBDoJtc=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_ETypeElementSwitchQuery.gif
+SHA-256-Digest: teaDUMZmTab7TVRPwuLQpTwjlFPQzWy0K+kUvOSRaRc=
+
+Name: icons/full/obj16/ExtendedEObjectReference.gif
+SHA-256-Digest: bk8wC5WxVxXFljvHpVC7Qi/dZW6IUeSCG6V64ut7B6A=
+
+Name: org/eclipse/emf/facet/efacet/metamodel/v0_2_0/efacet/provider/Ca
+ tegoryItemProvider.class
+SHA-256-Digest: CNbC61UQbE7nxLn3fDiYNleG+ljgKsa7dznOmiBLVyE=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_AggregatedFacet.gif
+SHA-256-Digest: oI7OGwy0fMRIQ9bSX/ylI+xi+VAmd9mh1dwUd2vFnS0=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_MultiValuedAttributeInstance.gif
+SHA-256-Digest: aIVH8RtSktWPVsCfkn3So395Y6sEoLY+G+UuqGLiays=
+
+Name: icons/full/ctool16/CreateETypedElementCase_value_NullLiteralQuer
+ y.gif
+SHA-256-Digest: r/YufOEfd8nvgakIzp+GPtuiUFBAL2rUcKP4+3n1wGs=
+
+Name: icons/full/ctool16/CreateETypedElementCase_value_NavigationQuery
+ .gif
+SHA-256-Digest: DYEMr2XIzgc63hyUoyVUosY7NllUC6DSLs9BV0wU+kc=
+
+Name: icons/full/ctool16/CreateETypeElementSwitchQuery_cases_ETypeElem
+ entCase.gif
+SHA-256-Digest: TALcbR0mAmWL1aWoj3FpLdVGp9hFex/52y72SSd/hJg=
+
+Name: icons/full/obj16/AbstractReferenceInstance.gif
+SHA-256-Digest: HTsdPrP5OQbJ4KtRAMAYR159alzVi5Ds5Nr6m+GtXV8=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_EFactory.gif
+SHA-256-Digest: aIVH8RtSktWPVsCfkn3So395Y6sEoLY+G+UuqGLiays=
+
+Name: icons/full/obj16/ParameterValue.gif
+SHA-256-Digest: vBGz4DordqGs36So5wpFg0WbUGl6t/QU7OT0LJo/yQ8=
+
+Name: org/eclipse/emf/facet/efacet/metamodel/v0_2_0/efacet/serializati
+ on/provider/MultiValuedAttributeInstanceItemProvider.class
+SHA-256-Digest: 3Y/Q/4uzHNIf6+SNggU4mtW5udFuUz153Imyt4L4DZs=
+
+Name: icons/full/ctool16/CreateOperationCallQuery_arguments_IntegerLit
+ eralQuery.gif
+SHA-256-Digest: YMtKYbl2yVENfY+NLMa02rD8ZO3LNGnLAlWssLMWSaE=
+
+Name: org/eclipse/emf/facet/efacet/metamodel/v0_2_0/efacet/query/provi
+ der/OperationCallQueryItemProvider.class
+SHA-256-Digest: +UAY5i9ZSsIBevU9Z7XWddY0WKHIIRNrBZlEmRKnix0=
+
+Name: org/eclipse/emf/facet/efacet/metamodel/v0_2_0/efacet/extensible/
+ provider/ExtensibleItemProviderAdapterFactory.class
+SHA-256-Digest: r1b5TCqX7vGDalT0r00kNxhTKZhCPSYcfl9JEgszZSM=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_EEnum.gif
+SHA-256-Digest: MINh7/4x7/V3TxEVrqU3Z1I0l2UAyJ6D2QwF+wtJNsE=
+
+Name: icons/full/obj16/ETypedElementEObjectListResult.gif
+SHA-256-Digest: ncEQAw2Ll5NU9qYP3OflDieNkzXSaQgnzqWvmkypmYw=
+
+Name: icons/full/obj16/TrueLiteralQuery.gif
+SHA-256-Digest: eVEUi5oeHsyG3glR5UXKt2Y7H2d/oAKK4MHp7dYtrDg=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_EOperation.gif
+SHA-256-Digest: JaZ2XAdJ3VkLJcRSPT21UJd59QrLeaPSrtOH89S4Jlw=
+
+Name: icons/full/obj16/OperationCallQuery.gif
+SHA-256-Digest: i+mRSEHZT0ALFE+Z0JQx+wX5UFGJF1OVy4friss2xzY=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_EReference.gif
+SHA-256-Digest: C3bbLlEmJN1E6WUQSYJjvKEiNtlYEAke8fAXudQ3NUw=
+
+Name: icons/full/ctool16/CreateETypedElementCase_value_StringLiteralQu
+ ery.gif
+SHA-256-Digest: kw0ytfbqGl7hgh+g9PUI79oJB+PJ99A3eoqVCAAus1s=
+
+Name: icons/full/ctool16/CreateExtendedEObjectReference_attributeInsta
+ nces_SingleValuedAttributeInstance.gif
+SHA-256-Digest: 9OblzrJBMgnpko3UDKILo41IxgbTt3Q+Cnf8UIR3xtI=
+
+Name: org/eclipse/emf/facet/efacet/metamodel/v0_2_0/efacet/runtime/pro
+ vider/ETypedElementResultItemProvider.class
+SHA-256-Digest: X+PpDD9WQx3vrbECpDeBKQV2PlhMvcikzdS3mNzRd/I=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_NavigationQuery.gif
+SHA-256-Digest: +unXQtI98NYiCmCWMiQ+vh85wg3rK5Q6/8VgiS/IYL4=
+
+Name: icons/full/ctool16/CreateDerivedTypedElement_query_FloatLiteralQ
+ uery.gif
+SHA-256-Digest: HH04HXbtvV3xJqn+Q5gPQepF/GQcMn99KOC/xNrpMVw=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_EReference.gif
+SHA-256-Digest: /hyLlmXiQ0JgO4hYuL4EnbmB77CojAcC58rhmSgGU1E=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_EObjectLiteralQuery.gif
+SHA-256-Digest: oI7OGwy0fMRIQ9bSX/ylI+xi+VAmd9mh1dwUd2vFnS0=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_EOperation.gif
+SHA-256-Digest: EgY89BX8n9Yrp5J+PhRHSj08+LpJIbIztZxAJtPuCr8=
+
+Name: icons/full/ctool16/CreateOperationCallQuery_arguments_FalseLiter
+ alQuery.gif
+SHA-256-Digest: vd5eCsGl0CP5DOTkqek71v4k1tZXMiXl9XhBkJY3qrs=
+
+Name: icons/full/ctool16/CreateAbstractDerivedTypedElementResult_param
+ eterValues_ParameterValue.gif
+SHA-256-Digest: 5Qq+db86+yN/utXEcscoo9dHt/qadtyEw35AuSLSqfA=
+
+Name: icons/full/obj16/SingleValuedReferenceInstance.gif
+SHA-256-Digest: hRrtppFvveAakRixFlML6xuYIeoPat7iEJj8wOW2g0w=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_SingleValuedAttributeInstance.gif
+SHA-256-Digest: jVV0eeVdnS5DNSwQm/91EoyPxQhmhQPsIHw0nfa7oC0=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_EObjectLiteralQuery.gif
+SHA-256-Digest: 1cVmLd9dfA1b+ddVHlQh5sXjCINP2VxeZsmIqkGTBko=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_AggregatedFacetSet.gif
+SHA-256-Digest: lawXGoyD5fIuWV/WtBAZDXqCNRToyo4NsCrcAcNtbbE=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_SingleValuedContainmentReferenceInstance.gif
+SHA-256-Digest: 1xkZIMPqhEeZkMEp6n4vJP09ol/JfrizOSC83LYJg5o=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_EStringToStringMapEntry.gif
+SHA-256-Digest: 72x71YYXRlVs78HEJuzJIdC69rJCiiJx5ohCJnfPFSQ=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_ETypedElementSwitchQuery.gif
+SHA-256-Digest: vFqYa7GA9yntfRGLMzRiEKUvsh32YYa4G1p26pMfsQA=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_ParameterValue.gif
+SHA-256-Digest: ZAFTqxyp7H5rJR286K/05j+RULzYXUgd/3M+T/q0zMA=
+
+Name: icons/full/obj16/Aggregate.gif
+SHA-256-Digest: YUTcBgqv1NokupygZbEkxkJ7DzhdXDQEOefFbA7noO4=
+
+Name: icons/full/obj16/AggregatedFacet.gif
+SHA-256-Digest: oyoZV2sXnWx6AKDd7HRsTPHEVDG85cGpZILJ8+fjRBo=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_EPackage.gif
+SHA-256-Digest: MINh7/4x7/V3TxEVrqU3Z1I0l2UAyJ6D2QwF+wtJNsE=
+
+Name: org/eclipse/emf/facet/efacet/metamodel/v0_2_0/efacet/serializati
+ on/provider/AbstractReferenceInstanceItemProvider.class
+SHA-256-Digest: iREvFCotd/Bic9Pn4i+WUWIvi+Jg9espBMhOcIT6MHo=
+
+Name: org/eclipse/emf/facet/efacet/metamodel/v0_2_0/efacet/serializati
+ on/provider/SerializationItemProviderAdapterFactory.class
+SHA-256-Digest: GX19vKIaJZA8//bHWu4HYcYclkDhclefgKOzuuTh0Rk=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_OperationCallQuery.gif
+SHA-256-Digest: t0w+Ohumo2Y4BbbwMqYEM0mv/ClcCIz8mPDPqa1qXUY=
+
+Name: icons/full/ctool16/CreateExtendedEObjectReference_referenceInsta
+ nces_MultiValuedContainmentReferenceInstance.gif
+SHA-256-Digest: mj2lA099XNJKyaotrIY3zv0+vFiZW+lSsuazJPr2HWI=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_EPackage.gif
+SHA-256-Digest: 3S7LGcZSf5ACqytGLeC1SW+DMhFWKFJQ1FPBat8dgdY=
+
+Name: icons/full/obj16/ETypedElementPrimitiveTypeResult.gif
+SHA-256-Digest: oyoZV2sXnWx6AKDd7HRsTPHEVDG85cGpZILJ8+fjRBo=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_Category.gif
+SHA-256-Digest: uhwEGxOD497tUETkkssmI0VDOgOGj45RaCE13r61dHM=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_MultiValuedContainmentReferenceInstance.gif
+SHA-256-Digest: EgY89BX8n9Yrp5J+PhRHSj08+LpJIbIztZxAJtPuCr8=
+
+Name: icons/full/ctool16/CreateETypedElementCase_value_FalseLiteralQue
+ ry.gif
+SHA-256-Digest: 16nEGkwCdZXhk3Qi4eZsFVAVo/MuyNg+nrxTBF4KsqA=
+
+Name: icons/full/obj16/FacetSet.gif
+SHA-256-Digest: t5ysCn2UeIfa7VnmQ5Xb9GmcdkMwo7CBoFBgCFI7R4Y=
+
+Name: icons/full/ctool16/CreateETypedElementSwitchQuery_cases_ETypedEl
+ ementCase.gif
+SHA-256-Digest: WvDcPxO/PPylBzVAz8k5rTQJo/CN66plaBLhIjnBiyQ=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_EEnumLiteral.gif
+SHA-256-Digest: POC6qOEAN053565A4znw+OnlRT4mjQ7ZpzlAPGf+WBA=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_FacetAttribute.gif
+SHA-256-Digest: vJ8Y9fKg1LEs9ZDFC3SnxBosVrmOa00ZqdkplPU7OT4=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_DerivedTypedElementEObjectListResult.gif
+SHA-256-Digest: yTWtGZRfINExkk6uXVbwJEndVwA3pPVVySCiXKlon3A=
+
+Name: org/eclipse/emf/facet/efacet/metamodel/v0_2_0/efacet/provider/EF
+ acetItemProviderAdapterFactory.class
+SHA-256-Digest: doiRvPmy3QuHOvNC9j9wzlp2l7vltvrkRI/vtAlK3rI=
+
+Name: org/eclipse/emf/facet/efacet/metamodel/v0_2_0/efacet/provider/Fa
+ cetElementItemProvider.class
+SHA-256-Digest: WTD/EhipSOCVQkneGL1PLHCEj3sJlEX0R9xYNqCOGuw=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_SingleValuedReferenceInstance.gif
+SHA-256-Digest: wbPVSCx6yX643yawlnPqiX6Rb0of2vsyDrDtxMYR3yI=
+
+Name: icons/full/ctool16/CreateExtendedEObjectReference_attributeInsta
+ nces_MultiValuedAttributeInstance.gif
+SHA-256-Digest: zWtbVbGmdwmI1DoVSJ4IlXwuIV+h4AOn9gHUKLOsZ8I=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_Facet.gif
+SHA-256-Digest: JAhCVyze+cesk4RjkHopDMsJ2Zstmn2UudUa2A6XKYY=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_ETypedElementEObjectListResult.gif
+SHA-256-Digest: LhgXnlSEEj0ffOUCwIKa3yh0OmeCXfSe0/moVCp8OZo=
+
+Name: icons/full/ctool16/CreateOperationCallQuery_arguments_IsOneOfQue
+ ry.gif
+SHA-256-Digest: HH7KU7SZpIOIuswqYpLSQYL3eHkAJKjld+qOdh7hcX4=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_AbstractReferenceInstance.gif
+SHA-256-Digest: HgD2WfvB31fZiyIjC7hIaUD9RAOch2+4r9H8Vdj4MZA=
+
+Name: org/eclipse/emf/facet/efacet/metamodel/v0_2_0/efacet/query/provi
+ der/FalseLiteralQueryItemProvider.class
+SHA-256-Digest: 3hMAQCoF5nUvNovCOW3hPSZDuEOlLt3TA/r7Ha9BAcE=
+
+Name: icons/full/ctool16/CreateFacet_facetOperations_FacetOperation.gi
+ f
+SHA-256-Digest: GoZFZCcTrHUBZO+dK4MVuyeH7r4su+swGC8GNeYvaLE=
+
+Name: icons/full/obj16/ETypedElementEObjectResult.gif
+SHA-256-Digest: VXUeo95GNCL8yAabvz/nURM3OR4icPH+xMueW92qxhs=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_DerivedTypedElementEObjectResult.gif
+SHA-256-Digest: 7QT5SNdoY7BJwv1oXUMc937ZtVLIHncQvgq4ELc8dr4=
+
+Name: icons/full/obj16/MultiValuedAttributeInstance.gif
+SHA-256-Digest: izB1uVjPF2lKXVH40jqt9Cwiy2Bn0OHJZopesSZMJ38=
+
+Name: icons/full/obj16/IsOneOfQuery.gif
+SHA-256-Digest: UPCE1y75z17C1SVywcADiGilWb6fKYwDlSkHpIfa66g=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_DocumentedElement.gif
+SHA-256-Digest: fejQBtaO1rpzjLe6/yC8jd9DyYP3z5Io5CMjqrCHR3A=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_IsOneOfQuery.gif
+SHA-256-Digest: KP7nOB3MPYaSXXwbvzfe78VsmVjLCzUBWHUASBdrD34=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_ETypedElementPrimitiveTypeListResult.gif
+SHA-256-Digest: MINh7/4x7/V3TxEVrqU3Z1I0l2UAyJ6D2QwF+wtJNsE=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_MultiValuedAttributeInstance.gif
+SHA-256-Digest: aKcYHXh+X31A2dMrCJ/RxoolAqiH2i8YgsnY3LMHj64=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_FacetReference.gif
+SHA-256-Digest: DrAmUbNfaAOk+al9dRCS7e2WMwGbDkApTXHlUYooR+Y=
+
+Name: icons/full/ctool16/CreateETypeElementCase_value_NavigationQuery.
+ gif
+SHA-256-Digest: GPS7JVo0fwp59Mq2Tg3Cdt+dcPvLIiasRgMH+e/aA+0=
+
+Name: icons/full/ctool16/CreateFacetSet_categories_Category.gif
+SHA-256-Digest: kw0ytfbqGl7hgh+g9PUI79oJB+PJ99A3eoqVCAAus1s=
+
+Name: org/eclipse/emf/facet/efacet/metamodel/v0_2_0/efacet/provider/Fa
+ cetOperationItemProvider.class
+SHA-256-Digest: NV379E9aqRdsTlkrG3d6uKBfG7b9x3rk6hiwzI8idtw=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_EFactory.gif
+SHA-256-Digest: aKcYHXh+X31A2dMrCJ/RxoolAqiH2i8YgsnY3LMHj64=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_DerivedTypedElementPrimitiveTypeResult.gif
+SHA-256-Digest: HUAz2Sg4Z4YNdPC4WME7zk/7FopGFvOiSzOO8OX2pk0=
+
+Name: org/eclipse/emf/facet/efacet/metamodel/v0_2_0/efacet/runtime/pro
+ vider/ETypedElementPrimitiveTypeResultItemProvider.class
+SHA-256-Digest: V/BavBoKk6F1RG2jmiUP2udtje2sUSTgwK55+lueYS8=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_FacetSet.gif
+SHA-256-Digest: teaDUMZmTab7TVRPwuLQpTwjlFPQzWy0K+kUvOSRaRc=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_FloatLiteralQuery.gif
+SHA-256-Digest: /hyLlmXiQ0JgO4hYuL4EnbmB77CojAcC58rhmSgGU1E=
+
+Name: org/eclipse/emf/facet/efacet/metamodel/v0_2_0/efacet/provider/Fa
+ cetAttributeItemProvider.class
+SHA-256-Digest: +7JHXLqOXSqWGumzkioB7b0KlwKNP2i+KJ5PoBwORrY=
+
+Name: icons/full/ctool16/CreateOperationCallQuery_arguments_FloatLiter
+ alQuery.gif
+SHA-256-Digest: ejyDmf6yjz835Jg2v8WY7nAYwiDsq3aKqO4pIU04o4s=
+
+Name: org/eclipse/emf/facet/efacet/metamodel/v0_2_0/efacet/query/provi
+ der/TrueLiteralQueryItemProvider.class
+SHA-256-Digest: A/cFmGcTV0lw6EiyFqLjXB1cNwoUHY8l4FJbMMzEKJk=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_NavigationQuery.gif
+SHA-256-Digest: Q/VQHHFjsn4+3SmdThk9yOzLdxWL2ZFQqU9OzonS2HM=
+
+Name: org/eclipse/emf/facet/efacet/metamodel/v0_2_0/efacet/provider/Fa
+ cetItemProvider.class
+SHA-256-Digest: n/EgREI6E7FQB+g2P0/Y9TtFAMKllnNlEbzulz0rpH0=
+
+Name: org/eclipse/emf/facet/efacet/metamodel/v0_2_0/efacet/provider/Ef
+ acet2EditPlugin$Implementation.class
+SHA-256-Digest: LrErudgMdJdfJxmDMmAGzuHHzBCxgW1/gpvFc5wIXEs=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_DerivedTypedElementEObjectResult.gif
+SHA-256-Digest: qtN/NYSdJzexYyhSGmKDjlAy9zajssXepi0e6G2n2Ss=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_ETypeElementSwitchQuery.gif
+SHA-256-Digest: zupcseXbYCC7M39ogFUpufyXMGJ4e7+zz///Eb3eHm4=
+
+Name: icons/full/obj16/DerivedTypedElementEObjectListResult.gif
+SHA-256-Digest: YUTcBgqv1NokupygZbEkxkJ7DzhdXDQEOefFbA7noO4=
+
+Name: org/eclipse/emf/facet/efacet/metamodel/v0_2_0/efacet/provider/Ef
+ acet2EditPlugin.class
+SHA-256-Digest: 3BZlKrynERFmD7+nBJGHJ9QdlW42vt5UY8cKvOrVxDE=
+
+Name: plugin.properties
+SHA-256-Digest: 1VbXv3UcWjUXJHVLPFbF53LEs7lVi8lU2JYAh5/8tfg=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_EAttribute.gif
+SHA-256-Digest: qtN/NYSdJzexYyhSGmKDjlAy9zajssXepi0e6G2n2Ss=
+
+Name: icons/full/ctool16/CreateETypeElementCase_value_IsOneOfQuery.gif
+SHA-256-Digest: 6NwctqWaPYqNqBcXm2oMh5/wdWC1KQNR9QUVHBDEEgQ=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_FacetOperation.gif
+SHA-256-Digest: MeUvlJSN45mCTKmyV3gQhikeCDAyK+95CFcEZaAG7tA=
+
+Name: icons/full/obj16/MultiValuedReferenceInstance.gif
+SHA-256-Digest: UPCE1y75z17C1SVywcADiGilWb6fKYwDlSkHpIfa66g=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_TrueLiteralQuery.gif
+SHA-256-Digest: +unXQtI98NYiCmCWMiQ+vh85wg3rK5Q6/8VgiS/IYL4=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_EParameter.gif
+SHA-256-Digest: 2E5/qSfga7Sv7BAkiNzlq+OTZCab1kMTMuxKdYEgims=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_MultiValuedContainmentReferenceInstance.gif
+SHA-256-Digest: JaZ2XAdJ3VkLJcRSPT21UJd59QrLeaPSrtOH89S4Jlw=
+
+Name: icons/full/ctool16/CreateExtendedEObjectReference_referenceInsta
+ nces_SingleValuedContainmentReferenceInstance.gif
+SHA-256-Digest: yj+7uTSTPZ2cdBv1PVgl5NRuJoCEQ25/KkMgRsjikcM=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_FacetReference.gif
+SHA-256-Digest: WmrakqeGfyhN3Efgxpek3G0EaCjOHy61fdWJw9n0N2c=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_EGenericType.gif
+SHA-256-Digest: ehOOUhfEICbav1p7DbkQOZ7vhIpg8dySBPGPN+y05lU=
+
+Name: icons/full/ctool16/CreateETypeElementCase_value_ETypeElementSwit
+ chQuery.gif
+SHA-256-Digest: gDGLmOsc4dbxUwUkSfIJ/9yYXjPJHXcpPQWZhCK/gEY=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_EGenericType.gif
+SHA-256-Digest: fQp/I+Gc1euERIM+GU7tEa/P8n0TdpRbiwHpj3oHNTY=
+
+Name: icons/full/ctool16/CreateDerivedTypedElement_query_NullLiteralQu
+ ery.gif
+SHA-256-Digest: aktROM5zJsWU54Tr5gjcPXk8xeXf4131iZJE9LZNz5c=
+
+Name: icons/full/obj16/StringLiteralQuery.gif
+SHA-256-Digest: slS4WkUov8CQCEKWZ6ENkgEFho5IKWVWNt5zUM1aFg4=
+
+Name: icons/full/ctool16/CreateFacet_facetElements_FacetAttribute.gif
+SHA-256-Digest: MLoK7LT+kAyAL18Jrzntb08ep2xQEPmfwPPVj5uE/PE=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_EAnnotation.gif
+SHA-256-Digest: 1qRsK10Omlza9CUzSAtuTZOTVbiQGWS6bEk5JYfYjhs=
+
+Name: org/eclipse/emf/facet/efacet/metamodel/v0_2_0/efacet/extensible/
+ provider/QueryItemProvider.class
+SHA-256-Digest: 9ovJ8XudSzBKjocqTx1QIlKxXq5V6b3+awMPRWhv1Ys=
+
+Name: org/eclipse/emf/facet/efacet/metamodel/v0_2_0/efacet/provider/Fa
+ cetSetItemProvider.class
+SHA-256-Digest: 0LSmrFOhQexTkRV1/km0O4jKQQWNV86IaWZr1AASBXs=
+
+Name: org/eclipse/emf/facet/efacet/metamodel/v0_2_0/efacet/query/provi
+ der/QueryItemProviderAdapterFactory.class
+SHA-256-Digest: 75+wSLlLAjAUUSU+0mZw95T5A7kqFomzVR8y271VYSc=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_EObject.gif
+SHA-256-Digest: IvjlaYiw8pOsvlM1mcB9dP+sfhbjdDWlPraoxDjRKFA=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_DocumentedElement.gif
+SHA-256-Digest: iwDqRxmVpSZnsY7jVTcBmEMK5VtH0YFgI6Oob0fHmgo=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_ETypeParameter.gif
+SHA-256-Digest: aIVH8RtSktWPVsCfkn3So395Y6sEoLY+G+UuqGLiays=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_EStringToStringMapEntry.gif
+SHA-256-Digest: TtbzGIJ05eA5v2nJMOw0pTim88JG8RfAMJ+MjU9zPks=
+
+Name: icons/full/obj16/DerivedTypedElementEObjectResult.gif
+SHA-256-Digest: R2u4aIHfGPiWuJzKSJzDYE9bxFFeuTL8vg3pq/MhxCs=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_EDataType.gif
+SHA-256-Digest: 3MyI+6860+cg9GjGYTMBZvisdCklYA8PMvnDI5+SSn0=
+
+Name: icons/full/obj16/ETypeElementCase.gif
+SHA-256-Digest: gVfAWXpPTGfOgNwiZn/NotKZcr41cFf2FHavK9YGVFU=
+
+Name: about.html
+SHA-256-Digest: F6470y9+Fg/oKCqDP3q+IDuJUCJeuOhigIuQ1GPRNtU=
+
+Name: org/eclipse/emf/facet/efacet/metamodel/v0_2_0/efacet/provider/Fa
+ cetReferenceItemProvider.class
+SHA-256-Digest: 7UanjPJEVRYWwL61XzJ4g1ylyviAsUijPtjc/2lrjck=
+
+Name: icons/full/ctool16/CreateDerivedTypedElement_query_OperationCall
+ Query.gif
+SHA-256-Digest: Df+bKEK/D2WIqaoI+6v+YZHqIar8x0alvWAqX/IYUsc=
+
+Name: org/eclipse/emf/facet/efacet/metamodel/v0_2_0/efacet/query/provi
+ der/IntegerLiteralQueryItemProvider.class
+SHA-256-Digest: tF+OkN5P3y8cg+Tc0iZwORuczFczbuKHkTpMd2rIfU0=
+
+Name: icons/full/ctool16/CreateExtendedEObjectReference_attributeInsta
+ nces_AbstractAttributeInstance.gif
+SHA-256-Digest: r3Zlz8TehEiMiYz6qqO2/ZcHzUd80wdyTtJNCGMCU/w=
+
+Name: icons/full/obj16/Category.gif
+SHA-256-Digest: slS4WkUov8CQCEKWZ6ENkgEFho5IKWVWNt5zUM1aFg4=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_ETypedElementPrimitiveTypeResult.gif
+SHA-256-Digest: 1cVmLd9dfA1b+ddVHlQh5sXjCINP2VxeZsmIqkGTBko=
+
+Name: icons/full/ctool16/CreateDerivedTypedElement_query_FalseLiteralQ
+ uery.gif
+SHA-256-Digest: O9++l/7kUFaGK6SmycO/3SIXhoOalTUAGiAV4sCTynM=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_EAttribute.gif
+SHA-256-Digest: 7QT5SNdoY7BJwv1oXUMc937ZtVLIHncQvgq4ELc8dr4=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_FacetSet.gif
+SHA-256-Digest: zupcseXbYCC7M39ogFUpufyXMGJ4e7+zz///Eb3eHm4=
+
+Name: icons/full/ctool16/CreateOperationCallQuery_arguments_FacetAttri
+ bute.gif
+SHA-256-Digest: vbCKz0Qp9pBvyabnwOoLfRCqDW+Lb+H+9iVih0JNfnw=
+
+Name: icons/full/ctool16/CreateETypeElementCase_value_StringLiteralQue
+ ry.gif
+SHA-256-Digest: U9xI+0OMjqZXoQ3+GxczFqyMCPjGvMEgI5mDvm8KOfM=
+
+Name: icons/full/obj16/ETypedElementSwitchQuery.gif
+SHA-256-Digest: ErmdAjgfQvbZedOueOMjq3JxukHI4Hc+WePFs5NQU8w=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_NullLiteralQuery.gif
+SHA-256-Digest: LGS8hbK+NhixjUWc7Dww+Ijp392078NVdQGezQFNLDo=
+
+Name: org/eclipse/emf/facet/efacet/metamodel/v0_2_0/efacet/query/provi
+ der/EObjectLiteralQueryItemProvider.class
+SHA-256-Digest: 7bQZUGgDCPX6neOdS9J6U6AFrUza5RFFIHVe6sc4yq0=
+
+Name: META-INF/maven/org.eclipse.emft/org.eclipse.emf.facet.efacet.met
+ amodel.edit/pom.xml
+SHA-256-Digest: k3220kMkdyIdC/HNSo8dhWh5ZkQNoxqFydFvSgSvhe8=
+
+Name: org/eclipse/emf/facet/efacet/metamodel/v0_2_0/efacet/serializati
+ on/provider/ExtendedEObjectReferenceItemProvider.class
+SHA-256-Digest: eOfJoqVUhrvpO8SgywNGgufbiD1XcPPdZCOICZjsCsk=
+
+Name: icons/full/ctool16/CreateMultiValuedContainmentReferenceInstance
+ _ownedElements_Facet.gif
+SHA-256-Digest: U4TMMHxz6a9knKgW8GuWN+eTgoJZ/IbQjtMe1qk0x2w=
+
+Name: icons/full/obj16/SingleValuedContainmentReferenceInstance.gif
+SHA-256-Digest: q0BMyf3Rb1EmosGXlbMQtNeJu7XViJl8ekujlIdO9cI=
+
+Name: icons/full/ctool16/CreateSingleValuedContainmentReferenceInstanc
+ e_ownedElement_MultiValuedReferenceInstance.gif
+SHA-256-Digest: KP7nOB3MPYaSXXwbvzfe78VsmVjLCzUBWHUASBdrD34=
+

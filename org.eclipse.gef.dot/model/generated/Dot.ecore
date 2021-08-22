@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="dot" nsURI="http://www.eclipse.org/gef/dot/internal/language/Dot"
+    nsPrefix="dot">
+  <eClassifiers xsi:type="ecore:EClass" name="DotAst">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="graphs" upperBound="-1"
+        eType="#//DotGraph" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DotGraph">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="strict" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//GraphType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType ../DotTerminals.ecore#//ID"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="stmts" upperBound="-1"
+        eType="#//Stmt" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Stmt"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EdgeStmtNode" eSuperTypes="#//Stmt">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="node" eType="#//NodeId"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="edgeRHS" upperBound="-1"
+        eType="#//EdgeRhs" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attrLists" upperBound="-1"
+        eType="#//AttrList" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EdgeStmtSubgraph" eSuperTypes="#//SubgraphOrEdgeStmtSubgraph">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subgraph" eType="#//Subgraph"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="edgeRHS" upperBound="-1"
+        eType="#//EdgeRhs" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attrLists" upperBound="-1"
+        eType="#//AttrList" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NodeStmt" eSuperTypes="#//Stmt">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="node" eType="#//NodeId"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attrLists" upperBound="-1"
+        eType="#//AttrList" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttrStmt" eSuperTypes="#//Stmt">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//AttributeType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attrLists" upperBound="-1"
+        eType="#//AttrList" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttrList">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
+        eType="#//Attribute" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Attribute" eSuperTypes="#//Stmt">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType ../DotTerminals.ecore#//ID"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType ../DotTerminals.ecore#//ID"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SubgraphOrEdgeStmtSubgraph" eSuperTypes="#//Stmt"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Subgraph" eSuperTypes="#//SubgraphOrEdgeStmtSubgraph">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType ../DotTerminals.ecore#//ID"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="stmts" upperBound="-1"
+        eType="#//Stmt" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Port">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="compass_pt" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType ../DotTerminals.ecore#//ID"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EdgeRhs">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="op" eType="#//EdgeOp"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EdgeRhsNode" eSuperTypes="#//EdgeRhs">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="node" eType="#//NodeId"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EdgeRhsSubgraph" eSuperTypes="#//EdgeRhs">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subgraph" eType="#//Subgraph"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NodeId">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType ../DotTerminals.ecore#//ID"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="port" eType="#//Port" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EdgeOp">
+    <eLiterals name="directed" literal="->"/>
+    <eLiterals name="undirected" value="1" literal="--"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="GraphType">
+    <eLiterals name="graph" literal="graph"/>
+    <eLiterals name="digraph" value="1" literal="digraph"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="AttributeType">
+    <eLiterals name="graph" literal="graph"/>
+    <eLiterals name="node" value="1" literal="node"/>
+    <eLiterals name="edge" value="2" literal="edge"/>
+  </eClassifiers>
+</ecore:EPackage>

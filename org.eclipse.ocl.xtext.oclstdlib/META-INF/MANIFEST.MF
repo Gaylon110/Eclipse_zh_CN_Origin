@@ -1,0 +1,552 @@
+Manifest-Version: 1.0
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-SymbolicName: org.eclipse.ocl.xtext.oclstdlib;singleton:=true
+Eclipse-SourceReferences: scm:git:/gitroot/ocl/org.eclipse.ocl.git
+Bundle-Activator: org.eclipse.ocl.xtext.oclstdlib.utilities.OCLstdlibP
+ lugin$Implementation
+Require-Bundle: org.eclipse.core.resources;bundle-version="[3.5.0,4.0.
+ 0)",org.eclipse.core.runtime;bundle-version="[3.5.0,4.0.0)",org.eclip
+ se.jdt.core;bundle-version="[3.5.0,4.0.0)",org.eclipse.ocl.xtext.esse
+ ntialocl;bundle-version="[1.3.0,2.0.0)";visibility:=reexport
+Bundle-Version: 1.3.0.v20170522-1753
+Export-Package: org.eclipse.ocl.xtext.oclstdlib,org.eclipse.ocl.xtext.
+ oclstdlib.cs2as,org.eclipse.ocl.xtext.oclstdlib.formatting,org.eclips
+ e.ocl.xtext.oclstdlib.parser.antlr,org.eclipse.ocl.xtext.oclstdlib.pa
+ rser.antlr.internal;x-friends:="org.eclipse.ocl.xtext.oclstdlib.ui",o
+ rg.eclipse.ocl.xtext.oclstdlib.scoping,org.eclipse.ocl.xtext.oclstdli
+ b.serializer,org.eclipse.ocl.xtext.oclstdlib.services,org.eclipse.ocl
+ .xtext.oclstdlib.utilities,org.eclipse.ocl.xtext.oclstdlib.validation
+ ,org.eclipse.ocl.xtext.oclstdlibcs,org.eclipse.ocl.xtext.oclstdlibcs.
+ impl,org.eclipse.ocl.xtext.oclstdlibcs.util
+Ant-Version: Apache Ant 1.9.4
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: %providerName
+Bundle-Name: %pluginName
+Created-By: 1.8.0_121-b13 (Oracle Corporation)
+Bundle-ManifestVersion: 2
+Import-Package: org.apache.log4j;version="[1.2.15,2.0.0)"
+
+Name: org/eclipse/ocl/xtext/oclstdlib/cs2as/OCLstdlibCSLeft2RightVisit
+ or.class
+SHA1-Digest: VgWjFaXM+N7dHaP/QjDL5YFnQyM=
+
+Name: org/eclipse/ocl/xtext/oclstdlibcs/util/OCLstdlibCSVisitor.class
+SHA1-Digest: LaO9IhBMf85sjgWO8oXCf5kmZKA=
+
+Name: org/eclipse/ocl/xtext/oclstdlibcs/OCLstdlibCSFactory.class
+SHA1-Digest: Wt/EyfmbKYl1oUS+0l2gbdBUbj4=
+
+Name: model/OCLstdlibCS.genmodel
+SHA1-Digest: bAHECRcWiWS1IMzMP7cSgxWA6Cg=
+
+Name: org/eclipse/ocl/xtext/oclstdlibcs/LibCoercionCS.class
+SHA1-Digest: v6Q8bl06ZLJIdXAD4iPNQganFSk=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/parser/antlr/internal/InternalOC
+ LstdlibParser$FollowSets000.class
+SHA1-Digest: V10ro0PtKnFEyF6m2n/Xv10XdMI=
+
+Name: org/eclipse/ocl/xtext/oclstdlibcs/impl/LibRootPackageCSImpl.clas
+ s
+SHA1-Digest: XKB8AZvIBXzSEPndtVmsofeRQWo=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/services/OCLstdlibGrammarAccess$
+ LibClassCSElements.class
+SHA1-Digest: f/gp3g0X2emN05baqtjIQ2gCq4U=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/services/OCLstdlibGrammarAccess$
+ RestrictedKeywordsElements.class
+SHA1-Digest: 3CNHf3MpsMnWjxKqUwCHD6E1hG0=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/parser/antlr/internal/InternalOC
+ LstdlibParser$DFA116.class
+SHA1-Digest: /Pc2i2LBqRFL8n1h+l6OI+se/So=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/cs2as/OCLstdlibCSPreOrderVisitor
+ $CollectionElementTypeContinuation.class
+SHA1-Digest: NKfMsX6YeKZhH07Qi/EHX1WqtUI=
+
+Name: org/eclipse/ocl/xtext/oclstdlibcs/LibPackageCS.class
+SHA1-Digest: ZD8axOREE7M3zd2/SEueJrppZZI=
+
+Name: model/ReadMe.txt
+SHA1-Digest: +jx5+OE8fTBEu+KblL9h4VNXXq4=
+
+Name: org/eclipse/ocl/xtext/oclstdlibcs/util/AbstractOCLstdlibCSContai
+ nmentVisitor.class
+SHA1-Digest: c4tdIxNthlSJFihFSQAcnPUobuw=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/parser/antlr/OCLstdlibParser.cla
+ ss
+SHA1-Digest: eU/l2avXBT2VgVVKMWjJXAJcsH8=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/scoping/JavaClassScope$1.class
+SHA1-Digest: ztWfco+piMHWR9kCyX3e2kKEyjc=
+
+Name: org/eclipse/ocl/xtext/oclstdlibcs/PrecedenceCS.class
+SHA1-Digest: LxgROVIeSvviHGJitUbGqU+HAK8=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/services/OCLstdlibGrammarAccess$
+ DocumentationCSElements.class
+SHA1-Digest: svvcleMVxLqQvuKDGN3s9XMbhuo=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/services/OCLstdlibGrammarAccess$
+ LibPropertyCSElements.class
+SHA1-Digest: 7dcpU0AuXxJbIryxfz22mEMi+NQ=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/utilities/OCLstdlibPlugin$Implem
+ entation.class
+SHA1-Digest: 5FkbBipP9rBF+sGWf56Z3/caXHA=
+
+Name: org/eclipse/ocl/xtext/oclstdlibcs/impl/MetaclassNameCSImpl.class
+SHA1-Digest: ihYVQOqU90BpA8ca/UNC0I3Htk0=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/cs2as/OCLstdlibCSPreOrderVisitor
+ .class
+SHA1-Digest: eoC+Ii6Ws1Df9BVxQFcFwMV3CLc=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/utilities/OCLstdlibASResourceFac
+ tory.class
+SHA1-Digest: 9/zoAY2S247jdlJhq90IY29Nk+w=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/services/OCLstdlibGrammarAccess$
+ AccumulatorCSElements.class
+SHA1-Digest: 6znGs7c653yXbJs/zfD2tPH71eQ=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/parser/antlr/internal/InternalOC
+ Lstdlib.g
+SHA1-Digest: 7PX7UBrN6ZLXOqvs/IqkkSEmZ9k=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/services/OCLstdlibGrammarAccess$
+ DetailCSElements.class
+SHA1-Digest: Dcp+3QSscF4b3rD+XSJekcNwh1M=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/services/OCLstdlibGrammarAccess$
+ LibPathElementCSElements.class
+SHA1-Digest: GZbm++He1yj/YbTnWIJxFd3mSIE=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/serializer/OCLstdlibSemanticSequ
+ encer.class
+SHA1-Digest: NI6j6S48iIM4Q8xxbP6FzA8Y8Vk=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/cs2as/OCLstdlibCSPreOrderVisitor
+ $MapTypeContinuation.class
+SHA1-Digest: ++ec4wn+iszYgxj3zXYHuaXQklI=
+
+Name: org/eclipse/ocl/xtext/oclstdlibcs/impl/LibOperationCSImpl.class
+SHA1-Digest: 5ORIvESPgGm6kFEBy2rZvAWFZw4=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/OCLstdlibGrammarResource$_Essent
+ ialOCL.class
+SHA1-Digest: JUwrnvEUppcV/trDW1UNbMF2ESk=
+
+Name: org/eclipse/ocl/xtext/oclstdlibcs/LibOperationCS.class
+SHA1-Digest: ARwJ/QZP5VUGPHMzEnfz6tqQqRs=
+
+Name: org/eclipse/ocl/xtext/oclstdlibcs/JavaClassCS.class
+SHA1-Digest: XLLi6AYDD1cq8+Hqkmo+R1c2A6k=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/services/OCLstdlibGrammarAccess$
+ NameElements.class
+SHA1-Digest: X7Cw6fm26y7QbxUtHELNKMuc4aI=
+
+Name: org/eclipse/ocl/xtext/oclstdlibcs/util/OCLstdlibCSAdapterFactory
+ .class
+SHA1-Digest: yF6JzSwCgBfkGJ4K/3nM04vNcfA=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/scoping/OCLstdlibScopeProvider.c
+ lass
+SHA1-Digest: N34W0sR9SSAEco6tO+SlydALML8=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/services/OCLstdlibGrammarAccess$
+ PostCSElements.class
+SHA1-Digest: A0TDy9qbMoczLoSb5LHIkxAG74s=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/parser/antlr/internal/InternalOC
+ LstdlibParser.class
+SHA1-Digest: cbQcfF+q8NNTBLNmLlcNBBIHVZM=
+
+Name: org/eclipse/ocl/xtext/oclstdlibcs/util/AbstractOCLstdlibCSPostOr
+ derVisitor.class
+SHA1-Digest: rTl3iOGKK29F+uWrrm6vq+e/W/w=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/services/OCLstdlibValueConverter
+ Service.class
+SHA1-Digest: wlpt8n88thFvoMN1zHWNgsiIOXk=
+
+Name: org/eclipse/ocl/xtext/oclstdlibcs/OCLstdlibCSPackage.class
+SHA1-Digest: fPcOuP41DBeyETYSpKV51eb0MNU=
+
+Name: org/eclipse/ocl/xtext/oclstdlibcs/util/AbstractExtendingOCLstdli
+ bCSVisitor.class
+SHA1-Digest: BlXgNXjwKD3boF7yQ2iMNdpiE0c=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/parser/antlr/internal/InternalOC
+ LstdlibLexer.class
+SHA1-Digest: ETThxD8RnjFz7aD/epCRL0V0eqM=
+
+Name: org/eclipse/ocl/xtext/oclstdlibcs/impl/LibClassCSImpl.class
+SHA1-Digest: e5OPLhMq4cZt3SD/giVLCmY4diE=
+
+Name: org/eclipse/ocl/xtext/oclstdlibcs/util/AbstractOCLstdlibCSVisito
+ r.class
+SHA1-Digest: +8YGiQq7pNm3TYkUzVhmHRX2JaE=
+
+Name: org/eclipse/ocl/xtext/oclstdlibcs/LibClassCS.class
+SHA1-Digest: nh4GUL54F46N8ZWZFWtZIdZQcYI=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/services/OCLstdlibGrammarAccess$
+ PreCSElements.class
+SHA1-Digest: URoH4QGhoR/ytOtt00rr2DnCb9o=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/services/OCLstdlibGrammarAccess$
+ AnyNameElements.class
+SHA1-Digest: FrNZtcr9zszygDMCD8AGDydPbqY=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/services/OCLstdlibGrammarAccess$
+ OperationCSElements.class
+SHA1-Digest: juyqD6XeRtGYjI+kNkKNR168TGo=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/parser/antlr/internal/InternalOC
+ LstdlibParser$DFA113.class
+SHA1-Digest: fTVpdsWexeXx/YSn284eEWDzGT0=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/OCLstdlib.properties
+SHA1-Digest: GhtX55mXrNkrC3soABK6ibMwl1Q=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/validation/OCLstdlibCompositeEVa
+ lidator.class
+SHA1-Digest: t0Uao//+25cptb1zo00XC6tw9Mg=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/OCLstdlibStandaloneSetupGenerate
+ d.class
+SHA1-Digest: dCQVaFhBJrtQSc8lTF0ZGTpmSCk=
+
+Name: org/eclipse/ocl/xtext/oclstdlibcs/impl/PrecedenceCSImpl.class
+SHA1-Digest: VqGROiCFhXemPyDWLQsSYiVO3Bo=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/parser/antlr/internal/InternalOC
+ LstdlibParser$DFA25.class
+SHA1-Digest: 15PRdKyb3ODjyiRxZ61AFvNjY1Q=
+
+Name: org/eclipse/ocl/xtext/oclstdlibcs/OCLstdlibCSPackage$Literals.cl
+ ass
+SHA1-Digest: Eg6CQwMhzyYzqbb8SIvBrIJ+D7Q=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/scoping/JavaClassScope$2.class
+SHA1-Digest: FRyHJMLU49GrAM2LxDJ8CGr8Oe8=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/services/OCLstdlibGrammarAccess$
+ LibPackageCSElements.class
+SHA1-Digest: O6y+IqC3oBDB3sXAlV67V5bDim4=
+
+Name: org/eclipse/ocl/xtext/oclstdlibcs/impl/LibPropertyCSImpl.class
+SHA1-Digest: mFjEPfrjPQiyljVsVHyhT1L+rik=
+
+Name: org/eclipse/ocl/xtext/oclstdlibcs/util/OCLstdlibCSValidator.clas
+ s
+SHA1-Digest: VlTd9LlOMO+MCGiuk4qXFOB0SHs=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/services/OCLstdlibGrammarAccess$
+ PrecedenceCSElements.class
+SHA1-Digest: zDTY2xIEdfQfvs1PLeoB7Cckgxc=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/services/OCLstdlibGrammarAccess$
+ TypedMultiplicityRefCSElements.class
+SHA1-Digest: xUv1Ry0VrFT/pxERa9fecU6UqXQ=
+
+Name: org/eclipse/ocl/xtext/oclstdlibcs/impl/LibCoercionCSImpl.class
+SHA1-Digest: CH00KAmjNacOB0lGsxAu+X3pKo8=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/OCLstdlib.xtext
+SHA1-Digest: HnFLYi9IjL55KaPcfVdC7o4bjmM=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/services/OCLstdlibGrammarAccess$
+ SpecificationCSElements.class
+SHA1-Digest: 05fmKEoErXES/cnD/52GYdzAJsw=
+
+Name: about.html
+SHA1-Digest: 0JTkoQUQP6+DMkOoqOTuamUKhd0=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/services/OCLstdlibGrammarAccess$
+ PackageCSElements.class
+SHA1-Digest: lgW/pvFf9Nd+FjptiihAHESAKck=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/cs2as/OCLstdlibCSPostOrderVisito
+ r.class
+SHA1-Digest: w7OeetZO8d3sCrH6NL5snSiLAgs=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/serializer/AbstractOCLstdlibSema
+ nticSequencer.class
+SHA1-Digest: 2MNkvuAC23O7B5rthIc1D8ACFEk=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/services/OCLstdlibGrammarAccess$
+ LibraryElements.class
+SHA1-Digest: fPVuzQiKzP1FFWWWUGkMDTwqLZM=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/parser/antlr/OCLstdlibAntlrToken
+ FileProvider.class
+SHA1-Digest: jsSgpuYmN+8BOaT6QaIgHrJHXdY=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/services/OCLstdlibGrammarAccess$
+ LibIterationCSElements.class
+SHA1-Digest: pluLcljnT/5z4TOV89N6LK5muvg=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/parser/antlr/internal/InternalOC
+ LstdlibParser$DFA32.class
+SHA1-Digest: D3HpHTEJdX1MkJK2Qpt2VqGrQeM=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/parser/antlr/internal/InternalOC
+ LstdlibParser$DFA99.class
+SHA1-Digest: 4TbtfHSiOIQTBt+/11wasb5rmJA=
+
+Name: org/eclipse/ocl/xtext/oclstdlibcs/LibPropertyCS.class
+SHA1-Digest: 7pUa2WpmuQHiCHnJpJcs061TsM0=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/serializer/AbstractOCLstdlibSynt
+ acticSequencer.class
+SHA1-Digest: z+XD1UR7C+lbvWL4aHw6dCAwCF8=
+
+Name: org/eclipse/ocl/xtext/oclstdlibcs/impl/OCLstdlibCSFactoryImpl.cl
+ ass
+SHA1-Digest: rwFBE7N8uQ9IBe7AAyKUpIVTOZI=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/serializer/OCLstdlibSyntacticSeq
+ uencer.class
+SHA1-Digest: H1yJpwpqGK4QoOHKXVKV/1qhpRY=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/services/OCLstdlibGrammarAccess$
+ ImportCSElements.class
+SHA1-Digest: JHraqs2AVQghArLObKgAR1oH4/s=
+
+Name: org/eclipse/ocl/xtext/oclstdlibcs/LibConstraintCS.class
+SHA1-Digest: pwiougAL8e3QFf3Vg7R0nN2x7kE=
+
+Name: org/eclipse/ocl/xtext/oclstdlibcs/JavaImplementationCS.class
+SHA1-Digest: cu7yLsjNXhhvqdQCKUE+Crymaf8=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/utilities/OCLstdlibPlugin.class
+SHA1-Digest: c/Kseuf8WtViidzDEcqKekgcN30=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/services/OCLstdlibGrammarAccess$
+ IteratorCSElements.class
+SHA1-Digest: Aoobp5dvWXWVrijMUzUA/p8Oa40=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/services/OCLstdlibGrammarAccess$
+ AnnotationCSElements.class
+SHA1-Digest: qo+uKtzvrTCN627SImB8a0Wqqu4=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/validation/OCLstdlibJavaValidato
+ r.class
+SHA1-Digest: Guzk5cXFNjJX7Irvw0KP/+WAFsA=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/services/OCLstdlibGrammarAccess$
+ LambdaContextTypeRefCSElements.class
+SHA1-Digest: KpiMLz2IxZrJbfGd2cXRCyUbqtQ=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/scoping/JavaClassScope.class
+SHA1-Digest: fQSRnx1uRCJv02L2f7Y+7TxwfVI=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/services/OCLstdlibGrammarAccess$
+ ParameterCSElements.class
+SHA1-Digest: HVIm/UmJ2FiJgZ8nC7o5yvsf51U=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/parser/antlr/internal/InternalOC
+ Lstdlib.tokens
+SHA1-Digest: /h9cgLyA47xaDz8gFSIcfqQ/AI8=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/utilities/OCLstdlibCSResource.cl
+ ass
+SHA1-Digest: sIo12Jf2e+s8Jyi8unsLY+fiAFU=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/services/OCLstdlibGrammarAccess$
+ IdentifierElements.class
+SHA1-Digest: EI6Z4CSh5IGv9gKhzzygJDtKJ4U=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/services/OCLstdlibGrammarAccess$
+ InvCSElements.class
+SHA1-Digest: N5wvA/A4vE5yaueBI1qM17wfU1c=
+
+Name: org/eclipse/ocl/xtext/oclstdlibcs/util/AbstractOCLstdlibCSPreOrd
+ erVisitor.class
+SHA1-Digest: QLA1u+Genr7oH8kjV0BVG8exyoU=
+
+Name: model/OCLstdlibCS.ecore
+SHA1-Digest: pMaKfzzULUPuu6oAoyiT9ldL1n0=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/formatting/OCLstdlibFormatter.cl
+ ass
+SHA1-Digest: KjwzHr9ji0v+4uFSoFULvHBa+Kw=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/services/OCLstdlibGrammarAccess$
+ LibPathNameCSElements.class
+SHA1-Digest: SBkDSH11NYOykCuFuE2x4lfXVxA=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/OCLstdlib.xtextbin
+SHA1-Digest: hKJXf1NP1Z4taHsO9AHSxApgFQ8=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/OCLstdlibGrammarResource$Grammar
+ Provider.class
+SHA1-Digest: DmonpR81ZBrEiKCrgF+3i+XOkMg=
+
+Name: META-INF/eclipse.inf
+SHA1-Digest: KyT9FF7C7t86NoBoa2kZT3ZJBfw=
+
+Name: org/eclipse/ocl/xtext/oclstdlibcs/impl/LibConstraintCSImpl.class
+SHA1-Digest: USbZytjEuOOqsbWQCpH+CtUCK5E=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/OCLstdlibRuntimeModule$Retokeniz
+ ingOCLstdlibParser.class
+SHA1-Digest: khOeWcSxwYk4HBpuHx0qYKzmZ5w=
+
+Name: org/eclipse/ocl/xtext/oclstdlibcs/impl/LibIterationCSImpl.class
+SHA1-Digest: EDruY75z03Spv4FhVDWOTEIrZPo=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/services/OCLstdlibGrammarAccess$
+ LibCoercionCSElements.class
+SHA1-Digest: zOtRl85E6zAzhm7R+gkUj0SWlXg=
+
+Name: org/eclipse/ocl/xtext/oclstdlibcs/LibIterationCS.class
+SHA1-Digest: wUkNh5U2vIgd306IIODAM/77KUw=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/parser/antlr/internal/InternalOC
+ LstdlibParser$DFA142.class
+SHA1-Digest: drIi+XthiL3sUJILa+uKDwwLzCY=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/OCLstdlibGrammarResource.class
+SHA1-Digest: 6HffaLKWH9+32tUQwMYRogCloz8=
+
+Name: build.properties
+SHA1-Digest: QBytd0dtCq4XcuHMJEBG576ATR8=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/services/OCLstdlibGrammarAccess$
+ AnnotationElementCSElements.class
+SHA1-Digest: NEq1rkuy75hD/E7BVVeavYvc56Q=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/parser/antlr/internal/InternalOC
+ LstdlibParser$DFA96.class
+SHA1-Digest: f2zXeAYUsJLsMPbjMF2tVQWUUBA=
+
+Name: org/eclipse/ocl/xtext/oclstdlibcs/impl/OCLstdlibCSPackageImpl.cl
+ ass
+SHA1-Digest: Ab5uwb2cIvnGYtFk3dgV347mk9E=
+
+Name: org/eclipse/ocl/xtext/oclstdlibcs/util/AutoOCLstdlibContainmentV
+ isitor.class
+SHA1-Digest: PLMW1b7WqmVkWqEF/fRibev23H4=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/parser/antlr/internal/InternalOC
+ LstdlibLexer$DFA11.class
+SHA1-Digest: UwSbWo+mBy93FLZeSSssTFAKaGE=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/OCLstdlibRuntimeModule.class
+SHA1-Digest: I6WuJxab7HEzicsaHXWLxZHP4WA=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/services/OCLstdlibGrammarAccess$
+ TuplePartCSElements.class
+SHA1-Digest: QsT2A5So4zNWY81kqbyOu2nDWL4=
+
+Name: org/eclipse/ocl/xtext/oclstdlibcs/impl/JavaImplementationCSImpl.
+ class
+SHA1-Digest: Cmak+gF0QfSP+B2sZKakpDH6qi8=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/OCLstdlibGrammarResource$_OCLstd
+ lib.class
+SHA1-Digest: OLNmU7mQmx+5ZDhQ1DRkCPih12g=
+
+Name: org/eclipse/ocl/xtext/oclstdlibcs/util/OCLstdlibCSAdapterFactory
+ $1.class
+SHA1-Digest: uDZe8AzrOv48I4zmgnP6HbSgbdY=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/services/OCLstdlibGrammarAccess$
+ TypedTypeRefCSElements.class
+SHA1-Digest: jtsRM04bE9DczFgfK/3J3qahSVg=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/cs2as/OCLstdlibCSContainmentVisi
+ tor.class
+SHA1-Digest: iVFPezlAkWEX49n301uHo9nG3l4=
+
+Name: plugin.properties
+SHA1-Digest: wM7bq/fufNc2YWU5mhRrhkrQZx4=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/validation/AbstractOCLstdlibJava
+ Validator.class
+SHA1-Digest: uRnpRHzNy4sna8NoKDxDf63B5h8=
+
+Name: org/eclipse/ocl/xtext/oclstdlibcs/impl/LibPackageCSImpl.class
+SHA1-Digest: p5C+gejKek25piick6tyBwyz16U=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/OCLstdlibStandaloneSetup.class
+SHA1-Digest: xvBOyL+JBYUhAb7/Tv2mMHT4wDM=
+
+Name: org/eclipse/ocl/xtext/oclstdlibcs/LibRootPackageCS.class
+SHA1-Digest: 2QPRpSaCzEMBpSQkvpvJK9/RrMU=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/parser/antlr/internal/InternalOC
+ LstdlibParser$DFA119.class
+SHA1-Digest: QBkkYJKyKS1A1WvhXcKMEacfDuY=
+
+Name: org/eclipse/ocl/xtext/oclstdlibcs/impl/JavaClassCSImpl.class
+SHA1-Digest: M0YDzOIKBztHDrCumYWy7dupoTE=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/OCLstdlibGrammarResource$_Base.c
+ lass
+SHA1-Digest: s90L+1lf8edlh4+fl2p20eXfU+g=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/parser/antlr/internal/InternalOC
+ LstdlibParser$DFA48.class
+SHA1-Digest: PwUuzS2+FKpOnb/FihCJOWIWYtU=
+
+Name: plugin.xml
+SHA1-Digest: H3/3IUN4//03U0W0HVf00o2EpiY=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/services/OCLstdlibGrammarAccess$
+ ClassCSElements.class
+SHA1-Digest: Z1PiP+Bkxg9cEFEpQ2mhMn6BDOA=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/services/OCLstdlibGrammarAccess.
+ class
+SHA1-Digest: AlgVXFUftXfWS5k1262gVeRWHlo=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/services/OCLstdlibGrammarAccess$
+ TypedRefCSElements.class
+SHA1-Digest: OPkvh5P2EL0wDQ9t5MVEnslNhTw=
+
+Name: org/eclipse/ocl/xtext/oclstdlibcs/util/AbstractDelegatingOCLstdl
+ ibCSVisitor.class
+SHA1-Digest: qLO90Tr+tNwSbUHkI94QUGykNfQ=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/cs2as/OCLstdlibCS2AS.class
+SHA1-Digest: tAhC7MsYFLJUacYRH+IZIiafLpg=
+
+Name: org/eclipse/ocl/xtext/oclstdlibcs/util/AbstractNullOCLstdlibCSVi
+ sitor.class
+SHA1-Digest: z96enPzqNRscd66dzkoU85o+n4c=
+
+Name: org/eclipse/ocl/xtext/oclstdlibcs/util/AbstractOCLstdlibCSLeft2R
+ ightVisitor.class
+SHA1-Digest: vFRd1TY0fKSRZXm4FRIocZu3YPI=
+
+Name: org/eclipse/ocl/xtext/oclstdlibcs/util/OCLstdlibCSSwitch.class
+SHA1-Digest: VJYHvR60t17mqHtLkUNbcSJEx2E=
+
+Name: org/eclipse/ocl/xtext/oclstdlibcs/util/DecorableOCLstdlibCSVisit
+ or.class
+SHA1-Digest: orBUDZfndUTWdXrtHSydwYVtGvw=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/services/OCLstdlibGrammarAccess$
+ LambdaTypeCSElements.class
+SHA1-Digest: NSihms2Atd7wnQ7LBXT9S/o1C/g=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/services/OCLstdlibGrammarAccess$
+ LibOperationCSElements.class
+SHA1-Digest: pPd0CRvPUI34AFi2Xjh9y3reiX0=
+
+Name: org/eclipse/ocl/xtext/oclstdlibcs/MetaclassNameCS.class
+SHA1-Digest: mc5muGVZZMXUBMvF8axR1g5mE4U=
+
+Name: org/eclipse/ocl/xtext/oclstdlib/AbstractOCLstdlibRuntimeModule.c
+ lass
+SHA1-Digest: v9hpQNQ9mPCKevMAxnXRvQkT0so=
+

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.eclipse.gef.dot/src-gen" editDirectory="//opt/users/genie.gef/workspace/gef-master/gef/org.eclipse.gef.dot.edit/src"
+    editorDirectory="//opt/users/genie.gef/workspace/gef-master/gef/org.eclipse.gef.dot.editor/src"
+    modelPluginID="org.eclipse.gef.dot" forceOverwrite="true" modelName="Dot" updateClasspath="false"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" complianceLevel="5.0"
+    copyrightFields="false" editPluginID="org.eclipse.gef.dot.edit" editorPluginID="org.eclipse.gef.dot.edit"
+    runtimeVersion="2.11" usedGenPackages="../DotTerminals.genmodel#//terminals">
+  <genPackages prefix="Dot" basePackage="org.eclipse.gef.dot.internal.language" disposableProviderFactory="true"
+      ecorePackage="Dot.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Dot.ecore#//EdgeOp">
+      <genEnumLiterals ecoreEnumLiteral="Dot.ecore#//EdgeOp/directed"/>
+      <genEnumLiterals ecoreEnumLiteral="Dot.ecore#//EdgeOp/undirected"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Dot.ecore#//GraphType">
+      <genEnumLiterals ecoreEnumLiteral="Dot.ecore#//GraphType/graph"/>
+      <genEnumLiterals ecoreEnumLiteral="Dot.ecore#//GraphType/digraph"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Dot.ecore#//AttributeType">
+      <genEnumLiterals ecoreEnumLiteral="Dot.ecore#//AttributeType/graph"/>
+      <genEnumLiterals ecoreEnumLiteral="Dot.ecore#//AttributeType/node"/>
+      <genEnumLiterals ecoreEnumLiteral="Dot.ecore#//AttributeType/edge"/>
+    </genEnums>
+    <genClasses ecoreClass="Dot.ecore#//DotAst">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dot.ecore#//DotAst/graphs"/>
+    </genClasses>
+    <genClasses ecoreClass="Dot.ecore#//DotGraph">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dot.ecore#//DotGraph/strict"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dot.ecore#//DotGraph/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dot.ecore#//DotGraph/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dot.ecore#//DotGraph/stmts"/>
+    </genClasses>
+    <genClasses ecoreClass="Dot.ecore#//Stmt"/>
+    <genClasses ecoreClass="Dot.ecore#//EdgeStmtNode">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dot.ecore#//EdgeStmtNode/node"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dot.ecore#//EdgeStmtNode/edgeRHS"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dot.ecore#//EdgeStmtNode/attrLists"/>
+    </genClasses>
+    <genClasses ecoreClass="Dot.ecore#//EdgeStmtSubgraph">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dot.ecore#//EdgeStmtSubgraph/subgraph"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dot.ecore#//EdgeStmtSubgraph/edgeRHS"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dot.ecore#//EdgeStmtSubgraph/attrLists"/>
+    </genClasses>
+    <genClasses ecoreClass="Dot.ecore#//NodeStmt">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dot.ecore#//NodeStmt/node"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dot.ecore#//NodeStmt/attrLists"/>
+    </genClasses>
+    <genClasses ecoreClass="Dot.ecore#//AttrStmt">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dot.ecore#//AttrStmt/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dot.ecore#//AttrStmt/attrLists"/>
+    </genClasses>
+    <genClasses ecoreClass="Dot.ecore#//AttrList">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dot.ecore#//AttrList/attributes"/>
+    </genClasses>
+    <genClasses ecoreClass="Dot.ecore#//Attribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dot.ecore#//Attribute/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dot.ecore#//Attribute/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Dot.ecore#//SubgraphOrEdgeStmtSubgraph"/>
+    <genClasses ecoreClass="Dot.ecore#//Subgraph">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dot.ecore#//Subgraph/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dot.ecore#//Subgraph/stmts"/>
+    </genClasses>
+    <genClasses ecoreClass="Dot.ecore#//Port">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dot.ecore#//Port/compass_pt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dot.ecore#//Port/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Dot.ecore#//EdgeRhs">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dot.ecore#//EdgeRhs/op"/>
+    </genClasses>
+    <genClasses ecoreClass="Dot.ecore#//EdgeRhsNode">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dot.ecore#//EdgeRhsNode/node"/>
+    </genClasses>
+    <genClasses ecoreClass="Dot.ecore#//EdgeRhsSubgraph">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dot.ecore#//EdgeRhsSubgraph/subgraph"/>
+    </genClasses>
+    <genClasses ecoreClass="Dot.ecore#//NodeId">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dot.ecore#//NodeId/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dot.ecore#//NodeId/port"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

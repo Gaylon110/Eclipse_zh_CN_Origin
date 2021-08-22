@@ -1,0 +1,977 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.team.core; singleton:=true
+Archiver-Version: Plexus Archiver
+Built-By: genie.releng
+Require-Bundle: org.eclipse.core.resources;bundle-version="[3.3.0,4.0.
+ 0)",org.eclipse.core.runtime;bundle-version="[3.2.0,4.0.0)",org.eclip
+ se.core.filesystem;bundle-version="[1.1.0,2.0.0)",org.eclipse.compare
+ .core;bundle-version="[3.5.200,4.0.0)"
+Bundle-ManifestVersion: 2
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/platfo
+ rm/eclipse.platform.team.git;path="bundles/org.eclipse.team.core";tag
+ ="I20170516-0800";commitId=84ceecf2ae911df9217a8bdf580476f24d65b94a
+Bundle-Vendor: %providerName
+Export-Package: org.eclipse.team.core,org.eclipse.team.core.diff,org.e
+ clipse.team.core.diff.provider,org.eclipse.team.core.history,org.ecli
+ pse.team.core.history.provider,org.eclipse.team.core.importing.provis
+ ional;x-friends:="org.eclipse.pde.core,org.eclipse.team.cvs.core",org
+ .eclipse.team.core.mapping,org.eclipse.team.core.mapping.provider,org
+ .eclipse.team.core.subscribers,org.eclipse.team.core.synchronize,org.
+ eclipse.team.core.variants,org.eclipse.team.internal.core;x-friends:=
+ "org.eclipse.team.cvs.core,org.eclipse.team.cvs.ssh2,org.eclipse.team
+ .cvs.ui,org.eclipse.team.ui",org.eclipse.team.internal.core.history;x
+ -friends:="org.eclipse.team.cvs.core,org.eclipse.team.cvs.ssh2,org.ec
+ lipse.team.cvs.ui,org.eclipse.team.ui",org.eclipse.team.internal.core
+ .importing;x-internal:=true,org.eclipse.team.internal.core.mapping;x-
+ friends:="org.eclipse.team.cvs.core,org.eclipse.team.cvs.ssh2,org.ecl
+ ipse.team.cvs.ui,org.eclipse.team.ui",org.eclipse.team.internal.core.
+ streams;x-friends:="org.eclipse.team.cvs.core,org.eclipse.team.cvs.ss
+ h2,org.eclipse.team.cvs.ui,org.eclipse.team.ui",org.eclipse.team.inte
+ rnal.core.subscribers;x-friends:="org.eclipse.team.cvs.core,org.eclip
+ se.team.cvs.ssh2,org.eclipse.team.cvs.ui,org.eclipse.team.ui"
+Bundle-Name: %pluginName
+Bundle-Version: 3.8.100.v20170516-0820
+Bundle-Localization: plugin
+Bundle-Activator: org.eclipse.team.internal.core.TeamPlugin
+Created-By: Apache Maven 3.3.3
+Build-Jdk: 1.8.0_121
+
+Name: org/eclipse/team/core/mapping/ISynchronizationScopeChangeListene
+ r.class
+SHA-256-Digest: SneCAU+TRfXiIAsPaD11mpzeY2TDMYzLqDAJpYDSzM4=
+
+Name: plugin.xml
+SHA-256-Digest: 62LGSxKgNI7XY5QQ/0SUmXifN1Sb+Qw7S0BHpRrgT8I=
+
+Name: org/eclipse/team/internal/core/subscribers/ThreeWayBaseTree$Base
+ ResourceVariantByteStore.class
+SHA-256-Digest: 22nVINbnCgXR8cnRJKanNMW9PXgT6lVyTnrPtnBod2Q=
+
+Name: org/eclipse/team/core/mapping/provider/SynchronizationContext.cl
+ ass
+SHA-256-Digest: HoVz9gEsgwNxV96EpSmu//ljjGahbeSFY7FNMIAEZKU=
+
+Name: org/eclipse/team/core/subscribers/Subscriber$2.class
+SHA-256-Digest: +2tzwaNtxb8gyh353yMuXtCl4K4NoSjd5RpRxSUEwso=
+
+Name: org/eclipse/team/core/diff/provider/TwoWayDiff.class
+SHA-256-Digest: 0cVmLNcnXPSaC8mUnG0dx10v1hEOZ6gcj6tNuZcXyqs=
+
+Name: org/eclipse/team/core/mapping/provider/MergeContext.class
+SHA-256-Digest: zbAJHsq4CwJPYCOnoZUhBc+Du/zunrWGcKz6I/qJz6M=
+
+Name: org/eclipse/team/core/synchronize/FastSyncInfoFilter$PseudoConfl
+ ictFilter.class
+SHA-256-Digest: IU+KOMgHpTIsRv6+2Qixf6a32qnOMdh+aFDkGchGsb0=
+
+Name: org/eclipse/team/internal/core/subscribers/ChangeSetManager$4.cl
+ ass
+SHA-256-Digest: +NDec9qOoSRSQU3P8udvU7GwowUiAtya1XOjCzaYDOE=
+
+Name: org/eclipse/team/internal/core/streams/PollingOutputStream.class
+SHA-256-Digest: 9j/RWFlKKDU/f1qZmwkQD+B+RxnYVUdkrW5psq6AAo4=
+
+Name: org/eclipse/team/internal/core/mapping/PathTree.class
+SHA-256-Digest: fJ7cMv9D7DjttRsmK9KlH1ipvo2iq/HtQiOTH4auRsk=
+
+Name: org/eclipse/team/internal/core/subscribers/WorkingSetFilteredSyn
+ cInfoCollector.class
+SHA-256-Digest: r0pJqUYgN9fDi6885skcX1S3ZB7RJy1X3ekptocGPUs=
+
+Name: org/eclipse/team/core/history/IFileRevision.class
+SHA-256-Digest: 0eiNkMRnjfuwzM/+ge2syrOxyQgyin6upD7nH/pAi0I=
+
+Name: org/eclipse/team/internal/core/subscribers/BatchingChangeSetMana
+ ger$CollectorChangeEvent.class
+SHA-256-Digest: 2FcoeTRCt8RWJJbAIb/lQII5dkXb4xc4aYqdeYExof0=
+
+Name: org/eclipse/team/core/diff/FastDiffFilter.class
+SHA-256-Digest: RYv8xqCM9/ADPbaem9YDM0gFvZZ1uEzjEFkQcLcahTA=
+
+Name: org/eclipse/team/core/diff/provider/DiffTree.class
+SHA-256-Digest: PR8p+NCBzwdk47FPdbJJzoGliObIAxIHd8nx1/TnsKY=
+
+Name: org/eclipse/team/core/RepositoryProvider$1.class
+SHA-256-Digest: XXYztKVSeG6c4mGCMiPhF2D8YRbsfK4qB3xW4rhwENU=
+
+Name: org/eclipse/team/core/synchronize/ISyncInfoSetChangeListener.cla
+ ss
+SHA-256-Digest: L0IIq1fOT1xcnd3pMzwSerKwK7mDmm/RcmsTCek6JSo=
+
+Name: org/eclipse/team/core/Team$2.class
+SHA-256-Digest: J6z/A6nTinwGWASBYg6Jl2UkXCOnFg7b5GzYEyF+j2c=
+
+Name: .api_description
+SHA-256-Digest: F05Kse86p78nC33iMFpZrAuZ4w2xjGltARdf4j7so/s=
+
+Name: org/eclipse/team/core/diff/IDiffChangeListener.class
+SHA-256-Digest: XpMyeKjMZiDO2u+/FwOCV3VTDhZQ79C6tZWhSaLQHNU=
+
+Name: org/eclipse/team/internal/core/MoveDeleteManager.class
+SHA-256-Digest: 3aWbfR0BIf/Hn19X4xHA77ESAJyq72Wqj3Bco0rngOo=
+
+Name: org/eclipse/team/internal/core/AdapterFactory.class
+SHA-256-Digest: inXy/hsrvkL0Ig/85vKJuUqWDMtxcHuoaE324XPbd5Q=
+
+Name: org/eclipse/team/internal/core/mapping/ScopeManagerEventHandler$
+ ResourceMappingEvent.class
+SHA-256-Digest: Pg2uYHrbrIYwrS38HW+zT8UHcBiJxmWTV2NZThVZesk=
+
+Name: org/eclipse/team/core/mapping/provider/MergeContext$5.class
+SHA-256-Digest: 9dR9YzIt78JTy2/hyLgWkrhUOFpyeid31C+lqG1VFTc=
+
+Name: org/eclipse/team/core/diff/DiffFilter.class
+SHA-256-Digest: EsylgBcMYA41Qrsu+BlL1U3RQPZSBAGWCNlfA+oGPLY=
+
+Name: org/eclipse/team/internal/core/FileModificationValidatorManager.
+ class
+SHA-256-Digest: YH2d5EDIn+zCuayDkp/e8gJ8gdyL34jVeJinGR5f9jw=
+
+Name: org/eclipse/team/internal/core/subscribers/BatchingChangeSetMana
+ ger$1.class
+SHA-256-Digest: X7Ps0Ce+VgHZbeUeRshII0fRBfsbTaC05bRGGqTyTy0=
+
+Name: org/eclipse/team/internal/core/mapping/ResourceMappingInputScope
+ .class
+SHA-256-Digest: 1WnKdjSaEaGaJxmluLRlVxfaZIZFUI7CQDm1AcThBxs=
+
+Name: org/eclipse/team/internal/core/subscribers/BatchingLock.class
+SHA-256-Digest: BrwHZUjy9yFKAt8Ol6tQlX0zwXv7Lwx1Q+K03HjhVZ0=
+
+Name: org/eclipse/team/internal/core/StorageMergerRegistry.class
+SHA-256-Digest: UiHdb94yAMBpYys8EoDouPQfyjrRLGdsu0Xh8mUStkg=
+
+Name: org/eclipse/team/core/synchronize/FastSyncInfoFilter$CompoundSyn
+ cInfoFilter.class
+SHA-256-Digest: Qwy98QBxIypxXBfbpTP/C8QKozRNTiTl/Y0V7qP3p34=
+
+Name: org/eclipse/team/internal/core/BackgroundEventHandler$RunnableEv
+ ent.class
+SHA-256-Digest: dblu5QRpkoVGu1DC/iFR4oo2+2KPskGG7chj9Nuoie8=
+
+Name: org/eclipse/team/internal/core/mapping/ScopeChangeEvent.class
+SHA-256-Digest: WthYPbMnnjODK05RTeEqg1QDqRakv+EWDxhXhjkAlxs=
+
+Name: org/eclipse/team/core/mapping/ISynchronizationScopeParticipantFa
+ ctory.class
+SHA-256-Digest: fN6SeVtxcboGzmP38qP+lH6oBP6UhezgO509W3OnXf0=
+
+Name: org/eclipse/team/core/variants/ResourceVariantTreeSubscriber.cla
+ ss
+SHA-256-Digest: IZF35hISOAS1gzkN/iVpxvu8tgxsjgBMpuOQ/3yEBTw=
+
+Name: org/eclipse/team/internal/core/subscribers/ChangeSetManager.clas
+ s
+SHA-256-Digest: nxJXla2pWJKO0Ag7c7PSUesY8wbKirI+T5zm38HxU4Y=
+
+Name: org/eclipse/team/internal/core/mapping/PathTree$Node.class
+SHA-256-Digest: Nf8QWAbd9B0HgNQ0Sd+t1rTdZnroA/NDZ3vmmCeq0/M=
+
+Name: org/eclipse/team/internal/core/streams/SizeConstrainedInputStrea
+ m.class
+SHA-256-Digest: zP8C0n6hQ1kl9fS0tNtd+6xuvFgT+tOxkqA4cplDbRs=
+
+Name: org/eclipse/team/internal/core/mapping/ResourceMappingScope.clas
+ s
+SHA-256-Digest: Utb+G8nCnITVuVEPmTYY9QUejXkJgYmUoUt549n91gs=
+
+Name: org/eclipse/team/internal/core/subscribers/BatchingLock$IFlushOp
+ eration.class
+SHA-256-Digest: SXAS2KMRWgMn9jwXjkj+MhLrm4MRzCLSyPRex1IV9tM=
+
+Name: org/eclipse/team/internal/core/subscribers/SubscriberDiffTreeEve
+ ntHandler.class
+SHA-256-Digest: XN/JXtQO0X9AWddBvCKFkb3cwLYNRLqTrEKkE32rRVc=
+
+Name: org/eclipse/team/core/synchronize/FastSyncInfoFilter$AndSyncInfo
+ Filter.class
+SHA-256-Digest: 2+FLmHLxxOU3qeLimUBHA8yTovZGZZpLuBAmr9IGLp4=
+
+Name: org/eclipse/team/core/history/provider/FileRevision.class
+SHA-256-Digest: Pqb5YJMMO+1UapjEOz5oBCzHI87tK0vmXoEt3dyaCVY=
+
+Name: org/eclipse/team/internal/core/subscribers/SubscriberSyncInfoCol
+ lector$1.class
+SHA-256-Digest: CFQmwn341c1+K0rztL1DZzcli9ejPPyamfP9s7yu1+4=
+
+Name: org/eclipse/team/core/history/IFileHistory.class
+SHA-256-Digest: QCVy1+rZC8r4OEIgB3wPq1X4HaWpjheBjI1/djCwCVE=
+
+Name: org/eclipse/team/core/variants/IResourceVariantComparator.class
+SHA-256-Digest: LHbmdY3fhl2oHpXIyAdaC25h3nYh+kXZTOEBU75qoiA=
+
+Name: org/eclipse/team/core/diff/provider/ThreeWayDiff.class
+SHA-256-Digest: lLF5wroIZjqMCvFAQcUwkRetmH9z9jtxA5aly8QdtxI=
+
+Name: org/eclipse/team/core/mapping/ChangeTracker$1.class
+SHA-256-Digest: HqavRXjZSE6LoyN6NpDqp9t8eWCmjjzGKiRYYfG1UgA=
+
+Name: org/eclipse/team/core/importing/provisional/IBundleImporter.clas
+ s
+SHA-256-Digest: kZgoQfJBlhO+7Wi1cQMje3vlkfnvAsePpy7ddOHGMg8=
+
+Name: org/eclipse/team/internal/core/DefaultMoveDeleteHook.class
+SHA-256-Digest: /z9n00vLIloftMaMcSPZnKu7ZuHqoF6EmRGJQIR3pjU=
+
+Name: org/eclipse/team/core/mapping/ISynchronizationContext.class
+SHA-256-Digest: /aqEh+fhItIGKSEHQ/D6q+K97DPEt6WBJ0izxXTMrqA=
+
+Name: org/eclipse/team/internal/core/importing/BundleImporterExtension
+ .class
+SHA-256-Digest: UXz6RN0ItIxVDUYyBL/8CSVJzVmf/dFJsJspKQWa+60=
+
+Name: org/eclipse/team/core/variants/ResourceVariantTree.class
+SHA-256-Digest: lzV1pqxKvIxg+XTISPh3yjr6vqGN9olOGpgJHQKoBZg=
+
+Name: org/eclipse/team/core/ScmUrlImportDescription.class
+SHA-256-Digest: vAFNQxa2Hk9LmnqQ0w0v8X6ZeGLI3dAml6npDeHDb4Y=
+
+Name: org/eclipse/team/internal/core/streams/ProgressMonitorInputStrea
+ m.class
+SHA-256-Digest: EGjJhPuUOWE4MobxZ25Av0DGRKRHTRR20vVHll9DHiQ=
+
+Name: org/eclipse/team/core/variants/IResourceVariant.class
+SHA-256-Digest: uuO91mXLMSFortQ9/AhfXWuUgq8aNW4swmZa3M894UQ=
+
+Name: org/eclipse/team/internal/core/importing/BundleImporterExtension
+ $1.class
+SHA-256-Digest: O2nayzReqTfj+eWaBAQzgZ2j5LSJ9+dMt2ew1P+xeNk=
+
+Name: org/eclipse/team/core/variants/ResourceVariantTreeSubscriber$1.c
+ lass
+SHA-256-Digest: wiEE1/fdGpoBevECUkRGI/3DwGhd908zBmxqc+o4YH8=
+
+Name: org/eclipse/team/internal/core/subscribers/AbstractSynchronizati
+ onScope.class
+SHA-256-Digest: fAbe3FQbDUZ0zqeTC6kQIQdMqrcXtpdslSFoQcydz1g=
+
+Name: org/eclipse/team/core/variants/ResourceVariantTree$1.class
+SHA-256-Digest: SAwLUOIVBh/GKapvqJjoPc5PRZszVol9qS0KMCU4bsY=
+
+Name: org/eclipse/team/core/mapping/IChangeGroupingRequestor.class
+SHA-256-Digest: yh4iMhd5tIIed6dtxpFlDy5vDuJ4/9WLXoCuDrnT8F4=
+
+Name: org/eclipse/team/core/mapping/IResourceDiff.class
+SHA-256-Digest: 2yIAumepfWRUR/3Cfx3kpRKpPt4nT/IpCoYjN0hWCRo=
+
+Name: org/eclipse/team/core/mapping/ISynchronizationScopeManager.class
+SHA-256-Digest: Vff6e0cJe86ndSGdyjlRFB+9nkq+aQtJNrRvayru/RU=
+
+Name: org/eclipse/team/core/variants/ThreeWaySynchronizer.class
+SHA-256-Digest: x3joOhtJoA+yAHBOh6brVJIdQdVv/n+0Sxq+ppNinuk=
+
+Name: org/eclipse/team/internal/core/subscribers/SubscriberSyncInfoEve
+ ntHandler$3.class
+SHA-256-Digest: 8b5MXLIhsMqwAQMn1bNDyqtkRiK14Zf91fa4IV1mwB4=
+
+Name: org/eclipse/team/core/IIgnoreInfo.class
+SHA-256-Digest: udVIa3qdw7ZQAHNIiFc9Ndvkv+tV1uMKoVoxHxE9SR4=
+
+Name: org/eclipse/team/internal/core/FileContentManager$UserExtensionM
+ appings.class
+SHA-256-Digest: 9bmzmq4uspKNkWkK8Zu7lqDZcvdfel6gYwWvIVPXKEA=
+
+Name: org/eclipse/team/internal/core/subscribers/SubscriberDiffTreeEve
+ ntHandler$SubscriberDiffChangedEvent.class
+SHA-256-Digest: PrxjBW/PHEN50XpDJPiKTAjV+fQW/WY7BCM2UbBZc2g=
+
+Name: org/eclipse/team/internal/core/subscribers/SyncInfoTreeChangeEve
+ nt.class
+SHA-256-Digest: EWwyAPz1Y/YjrBlQDyWUMNRuX/aI13NDJGmUnSfhSDI=
+
+Name: org/eclipse/team/internal/core/subscribers/SyncSetInputFromSubsc
+ riber.class
+SHA-256-Digest: TJA9rqlnIeWFMlNWFBE2EOJO4jjoNgiTuoR5RndORhs=
+
+Name: org/eclipse/team/internal/core/subscribers/SubscriberSyncInfoEve
+ ntHandler$SubscriberSyncInfoEvent.class
+SHA-256-Digest: sg1RCFEsxmrQ838tEEa7p89ezOClwycbm8SgXBokAmA=
+
+Name: org/eclipse/team/core/variants/IResourceVariantTree.class
+SHA-256-Digest: ir37MvMBlbBQWnP2fxBtLEjyLLqb3OlJziw4kJYWKaI=
+
+Name: org/eclipse/team/core/synchronize/FastSyncInfoFilter$Automergabl
+ eFilter.class
+SHA-256-Digest: +RurM1TpBAHwqm1ErHrti/zDCqKnSKpWtOvaPyqGp0k=
+
+Name: org/eclipse/team/core/subscribers/SubscriberScopeManager$1.class
+SHA-256-Digest: 3GQBrH4rxeJbuL/sCgIjXXRaltEn3bG+iQahuwJKD2k=
+
+Name: org/eclipse/team/internal/core/StorageMergerDescriptor.class
+SHA-256-Digest: qb3fWTw7f4kmizRmj3ivvzSzpqa6ouuxUF00BjUZaYs=
+
+Name: org/eclipse/team/internal/core/subscribers/ThreeWayBaseTree.clas
+ s
+SHA-256-Digest: Wx+9Vdi43bq9EW13riWfIIIoGa97UJmLomXZZb0/2jM=
+
+Name: org/eclipse/team/core/RepositoryProviderType.class
+SHA-256-Digest: fwVp3NYnh2QmTO5snC91ul1xVBCvkMX9xMAR13wPcR4=
+
+Name: org/eclipse/team/core/mapping/IMergeContext.class
+SHA-256-Digest: CJbUvHjHpuRf5s/cYHC3UrKMUUm06arOEFadk87Ulec=
+
+Name: org/eclipse/team/internal/core/subscribers/ChangeSetManager$5.cl
+ ass
+SHA-256-Digest: TlylhQsfftrICrW8Y1UVbEM940hZcOi4L/GR4z66Lu4=
+
+Name: org/eclipse/team/internal/core/BackgroundEventHandler.class
+SHA-256-Digest: l+h/iTjYHwjXFUCixazQMA1Oi1JZFua9En+3D6of+IE=
+
+Name: org/eclipse/team/internal/core/ResourceVariantCache.class
+SHA-256-Digest: SJr7ekmcFtjmXWRtGsxAbj3/ZTHPS2oWkB7JxZN2uPk=
+
+Name: org/eclipse/team/internal/core/Cache$1.class
+SHA-256-Digest: YYaAJdqdSF4niKBrd6N28U1fWK8uIqLsHB4tHLK2wGI=
+
+Name: org/eclipse/team/core/subscribers/Subscriber$1.class
+SHA-256-Digest: S5pLQ5kMZVdwNQwdeMdNQwbPE7iS5Yj1x+ZxWaeF4QE=
+
+Name: org/eclipse/team/core/mapping/provider/ResourceDiffTree.class
+SHA-256-Digest: zAGYYqMQNsG5b6B+enGVvNl/fUVs+2ybSaS3zUwkfKE=
+
+Name: org/eclipse/team/internal/core/BackgroundEventHandler$2.class
+SHA-256-Digest: 5y4T5jfVVYGe1WysRBhakBk4RQA3eevEwt9ullouziA=
+
+Name: org/eclipse/team/core/mapping/provider/SynchronizationScopeManag
+ er$2.class
+SHA-256-Digest: lthXe6Q6t7d5lnXFRJCKJDltKvuMoGq9jaFdBrbHqp0=
+
+Name: org/eclipse/team/internal/core/streams/TimeoutOutputStream$1.cla
+ ss
+SHA-256-Digest: CDeDLLZg/d6NCpdeNGDUN4zM/dWt5xc6136X2UVnXrY=
+
+Name: org/eclipse/team/internal/core/DefaultProjectSetCapability.class
+SHA-256-Digest: zEPV4LK7tc76tRahjwCFriPGtvDGxBd6Q+S5gKfqW6k=
+
+Name: org/eclipse/team/core/mapping/ChangeTracker.class
+SHA-256-Digest: 5KJFE7664jvCvaPUOyIH4ov7nrXfflGQXZqwhbR2pbI=
+
+Name: org/eclipse/team/core/variants/ThreeWayRemoteTree$RemoteResource
+ VariantByteStore.class
+SHA-256-Digest: ZfJtoD72hPyEAzeBNYCcRlmiN8ikt9DiWPa1mtw4Z8E=
+
+Name: org/eclipse/team/core/history/IFileHistoryProvider.class
+SHA-256-Digest: JLvSKLl8TB4Z8Ka9EwcT33115bRCXrhiAlEs+Uy89FQ=
+
+Name: org/eclipse/team/core/mapping/provider/ResourceDiffTree$1.class
+SHA-256-Digest: 8oz19TZ9lq0y0gN99W7YH9PuOOFaUbmdIB5aefXETno=
+
+Name: org/eclipse/team/internal/core/PluginStringMappings.class
+SHA-256-Digest: PS60NobkQWaWO309QL1bCJuSvh6VX5JHS/BAOQDvQg8=
+
+Name: org/eclipse/team/core/variants/ThreeWaySubscriber.class
+SHA-256-Digest: Vnza1Wlk4CVGr08aoqfjUsaovdkrX4JasM7xXYXZ1X0=
+
+Name: org/eclipse/team/core/subscribers/ISubscriberChangeListener.clas
+ s
+SHA-256-Digest: HDGgJTanhnG21yr237iAqJi76b6uO+Jn0bHzIiFHfL0=
+
+Name: org/eclipse/team/internal/core/streams/TimeoutOutputStream.class
+SHA-256-Digest: EVyXw9wNJpFdnIReVAoYaw2LyrsGQrmpPPOuNlxCZbY=
+
+Name: org/eclipse/team/internal/core/subscribers/SyncByteConverter.cla
+ ss
+SHA-256-Digest: mfQkaysD1oMalKxP/nWpuK/lZDjSYjoOq4YZeeRgp+0=
+
+Name: org/eclipse/team/internal/core/mapping/LocalResourceVariant.clas
+ s
+SHA-256-Digest: efLdjlnZ+k/vThu5ilS2JN8reDCdMIRb0+QhGLry87M=
+
+Name: org/eclipse/team/internal/core/mapping/LineComparator.class
+SHA-256-Digest: g3quMaRWOxc8CeVRxtMHp/imY5plvtwiYxjrZ/Avk7c=
+
+Name: org/eclipse/team/internal/core/streams/CRLFtoLFInputStream.class
+SHA-256-Digest: jyh0oSpuIXeJdlt/wRpSQswM9SyK0aHEvhTI9sPXpzE=
+
+Name: org/eclipse/team/core/Team$StringMappingWrapper.class
+SHA-256-Digest: 79cnWv4DBhZ16lZzm6Nv+vao6p+6ahbmri5lhAyqsf0=
+
+Name: org/eclipse/team/internal/core/subscribers/DiffChangeSet.class
+SHA-256-Digest: rpGjoceUJnegiIgKqJU2EtpC/XrStlfD3MEDKcYOBJo=
+
+Name: org/eclipse/team/internal/core/mapping/TextStorageMerger.class
+SHA-256-Digest: 0f3JfUgEC4OQ9mLIIYYmn2Igi0ZUc7IX+5dhA8B6kbA=
+
+Name: org/eclipse/team/internal/core/NullSubProgressMonitor.class
+SHA-256-Digest: z/EmfuhuR03ijYCt/pyNQWTfSCbVSfweKPpx9GgxoZk=
+
+Name: org/eclipse/team/core/mapping/IStorageMerger.class
+SHA-256-Digest: SqxzMCldDmTgpg4F7hh/gZGvDcCp9MldbUldFh8n6Os=
+
+Name: org/eclipse/team/internal/core/mapping/SyncInfoToDiffConverter.c
+ lass
+SHA-256-Digest: rooJI22TzkV3QI/1MvUAE9GpnegENkhy90x9lEX8mpY=
+
+Name: org/eclipse/team/internal/core/history/LocalFileHistory.class
+SHA-256-Digest: JOUPhcXVt/3GtFtdgj8biwNhhjADD/c3bNRDTcRkh+o=
+
+Name: org/eclipse/team/internal/core/subscribers/BatchingLock$1.class
+SHA-256-Digest: PjZ4PFpA4aiAEE2a16nWAcdbkKSoqNlDb86pFbuQb6A=
+
+Name: org/eclipse/team/core/ProjectSetSerializationContext.class
+SHA-256-Digest: i72jwEYQcK2o4W+xrHOEgHlGGBPadZK9xROCTwOTwHg=
+
+Name: org/eclipse/team/internal/core/IRepositoryProviderListener.class
+SHA-256-Digest: 982fmUsiT0De2w1DiqEHETPL87cTGqiYCqVQ+bzMRSU=
+
+Name: org/eclipse/team/internal/core/subscribers/ChangeSetManager$2.cl
+ ass
+SHA-256-Digest: 1w9gZx1EYz1Epzc0h27YoI5ihP0B9uvjNF2VwTBBTf4=
+
+Name: org/eclipse/team/core/variants/AbstractResourceVariantTree.class
+SHA-256-Digest: QOOFLHd4Q/ny/Rl2CpJo34NAv6BnRLRX3BmVNx+CY7w=
+
+Name: org/eclipse/team/internal/core/streams/LFtoCRLFInputStream.class
+SHA-256-Digest: hToEfxb0NgGX/io/mbmCEbhjf0BSD1Mj+GlAlPNlcRE=
+
+Name: org/eclipse/team/core/mapping/provider/MergeContext$4.class
+SHA-256-Digest: hSt1lMcgvqsGOQYS6U074ObFUCvHo2TVQD9PZYv7rlE=
+
+Name: org/eclipse/team/core/diff/IDiff.class
+SHA-256-Digest: b7T75eqFHWrPzZ3HaKVv3O93h9vWRu0B8qYqpZXam/Y=
+
+Name: org/eclipse/team/core/subscribers/SubscriberScopeManager$2.class
+SHA-256-Digest: 3aam+wARdHyx2zaMcxGJ7pLew2uDBNu/1rIP+cSVmAo=
+
+Name: org/eclipse/team/internal/core/FileContentManager.class
+SHA-256-Digest: ddR/RVlMKeZ79uXyQSHwgVIZXnbjXjgpokjuJkJ9FME=
+
+Name: org/eclipse/team/internal/core/subscribers/SubscriberChangeSetMa
+ nager$EventHandler.class
+SHA-256-Digest: /PPDQKIMGECeOgd/PgKWNMvM9YmrbpAw162fXdMXXVs=
+
+Name: org/eclipse/team/core/mapping/provider/ResourceDiff.class
+SHA-256-Digest: ET5vQonQm5RxJQI2Q7rzHI002ANUhcYIXKIXJnfjv2U=
+
+Name: org/eclipse/team/internal/core/TeamHookDispatcher$1.class
+SHA-256-Digest: qHpE8WVS7SkuBwDM84wUKAaAeKjmyaxieDjWfe7U7BU=
+
+Name: org/eclipse/team/internal/core/subscribers/BatchingLock$ThreadIn
+ fo.class
+SHA-256-Digest: BMCg7fvtEPPYGzxpD1arySo9bXnNVwJir1jHmaATPuA=
+
+Name: org/eclipse/team/core/mapping/DelegatingStorageMerger.class
+SHA-256-Digest: 4Zalrbeef1+lnsK1AO1lmGZF8WV6Bwl46AnhzHmhcwk=
+
+Name: org/eclipse/team/internal/core/subscribers/DiffTreeStatistics.cl
+ ass
+SHA-256-Digest: Yo/NIk3diXLLVXXBTdf41YUocYtJT2HcKLe8a4sepw8=
+
+Name: org/eclipse/team/internal/core/subscribers/ChangeSetManager$3.cl
+ ass
+SHA-256-Digest: aWDri+UAJPMc0VtHdLkZxS9BrTkRIGExL4nTjqaSbMo=
+
+Name: org/eclipse/team/internal/core/subscribers/SubscriberResourceCol
+ lector.class
+SHA-256-Digest: p/Tp+4DKmM4HQqeSDwG3o5ee6eQa0b8IcsJocAwS/Gk=
+
+Name: org/eclipse/team/core/synchronize/ISyncInfoSetChangeEvent.class
+SHA-256-Digest: J1G2/9gwBs3xvgFedukUF4nGtJ7fFSdluowSBNyK18U=
+
+Name: org/eclipse/team/core/synchronize/SyncInfoFilter.class
+SHA-256-Digest: Gi5eZmeaHBzIxCFfCVJph899YeOP8Retixf/h+8J0fE=
+
+Name: org/eclipse/team/core/IProjectSetSerializer.class
+SHA-256-Digest: o9Pxw/diR1/jNsl48vD/cXO9u8fAyVi8z2In9jEtl0s=
+
+Name: org/eclipse/team/core/importing/provisional/IBundleImporterDeleg
+ ate.class
+SHA-256-Digest: mmWIOF6XOk7lT48ngtSabUJkJvYsTbWw5yygxAUAPWo=
+
+Name: org/eclipse/team/internal/core/subscribers/AbstractContentCompar
+ ator.class
+SHA-256-Digest: 1tphXuo6kBugLx4pvz/8t5mwrwOmOLK/YOgFDW1eubg=
+
+Name: org/eclipse/team/internal/core/mapping/CompoundResourceTraversal
+ .class
+SHA-256-Digest: gAz9nIxDelPbSKo+hhsBSBnhsuYZzDXL1kzxd7uV8nk=
+
+Name: org/eclipse/team/internal/core/StringMatcher.class
+SHA-256-Digest: 3v9Nvt/4iq3WoqmFYEa2BXIb9d5AsUo8VGpkzSLn20w=
+
+Name: org/eclipse/team/core/diff/FastDiffFilter$1.class
+SHA-256-Digest: Tbuo7otm1+5yh9sCb+0MD6avgio8/6HJexyilT2JcVE=
+
+Name: org/eclipse/team/core/subscribers/SubscriberScopeManager$3.class
+SHA-256-Digest: Bu4C1z1W5+BRQ8A6IAcIJhiUuGzRWVPoWmiGI/zE21k=
+
+Name: org/eclipse/team/internal/core/subscribers/SubscriberDiffTreeEve
+ ntHandler$SubscriberDiffCollector.class
+SHA-256-Digest: 1RJzmUg1OPccTVwQzgazsbtLPWZXpb7utRnOLkTokTE=
+
+Name: org/eclipse/team/core/variants/CachedResourceVariant$ResourceVar
+ iantStorage.class
+SHA-256-Digest: 4t1Uci27yPR05+Puro9msgewWPbsn1SaaP4NYv9wtyY=
+
+Name: org/eclipse/team/internal/core/Cache.class
+SHA-256-Digest: QAcWCF2/vRtYg13awtnmk9lI4C4NNlUfKzRU9pnoQ3Q=
+
+Name: org/eclipse/team/core/mapping/provider/MergeContext$3.class
+SHA-256-Digest: dtXkXZGIxb0c9At9Ug8DbwW1i6zM6d+3++YWz+jRYd0=
+
+Name: org/eclipse/team/core/mapping/provider/SynchronizationScopeManag
+ er$1.class
+SHA-256-Digest: V2nivxM5xsFQgsRTlP338dyP4GhXGeyJpPw83+3SCME=
+
+Name: org/eclipse/team/core/history/provider/FileHistory.class
+SHA-256-Digest: t7zDIqaQLEO/lOmx6tNjg1oHl6I9zht8P0h/ZDeq3vg=
+
+Name: org/eclipse/team/core/synchronize/FastSyncInfoFilter$SyncInfoDir
+ ectionFilter.class
+SHA-256-Digest: fGQ4OqIuO9rwTbbeJysO+IDKDpajD3BLN97wMiuofC0=
+
+Name: org/eclipse/team/internal/core/subscribers/ChangeSet.class
+SHA-256-Digest: B2t2wAanar7z1IDG7/VlDvN5cY/6ZkO6CIns4riYgyE=
+
+Name: org/eclipse/team/core/synchronize/FastSyncInfoFilter.class
+SHA-256-Digest: CoObSPv3uimBrTeBuTdPgGg1tOboYuYxOVyEuRE/kJw=
+
+Name: org/eclipse/team/internal/core/subscribers/SubscriberSyncInfoEve
+ ntHandler.class
+SHA-256-Digest: Q05k2FQzODe1y5cB+LG0Nu8q784FBLc64oOY/Jnm5Vw=
+
+Name: org/eclipse/team/internal/core/TeamResourceChangeListener$1.clas
+ s
+SHA-256-Digest: B+apL4uBrm0twEulRlLo0svUQTo6QRuVs219pnq44m4=
+
+Name: org/eclipse/team/core/mapping/IResourceDiffTree.class
+SHA-256-Digest: rXK86Mvp6QMfBGuuE6Ck+g5UyzArOtmZgs0Ns8dwqP8=
+
+Name: org/eclipse/team/internal/core/subscribers/SubscriberEventHandle
+ r.class
+SHA-256-Digest: 3/FzcvnRc1v/txzzNYyTNXVUZ1gvxqcg6DWaci4R+fY=
+
+Name: org/eclipse/team/internal/core/subscribers/DescendantResourceVar
+ iantByteStore.class
+SHA-256-Digest: 3lgyR7KU6R9Einy6Vc5eqJyKQ/ECL2DUOKW9sXCU4Vc=
+
+Name: org/eclipse/team/internal/core/PessimisticResourceRuleFactory.cl
+ ass
+SHA-256-Digest: B3rw1e4CdkbwDy+I/62ADo4FvpHkFI+xppddti/692c=
+
+Name: org/eclipse/team/internal/core/BackgroundEventHandler$Event.clas
+ s
+SHA-256-Digest: 2VfCPj7BXUlWeyLYF+zQK5PzQK88sj96cwHAFkM5J3E=
+
+Name: org/eclipse/team/core/mapping/provider/MergeContext$2.class
+SHA-256-Digest: UPFo3pge49rMxzY9kmhIbcbeFW2EsUf7IvmYzh8jgww=
+
+Name: org/eclipse/team/core/subscribers/Subscriber.class
+SHA-256-Digest: qCKfZ/YQgduDyWetaMPWxAAGZ2kMp0oeaplV1xP9thc=
+
+Name: org/eclipse/team/internal/core/StringMatcher$Position.class
+SHA-256-Digest: nD36geX86aYkiiAj7D66kaE2Ad1qMNXT9CDQWsLpaGM=
+
+Name: org/eclipse/team/internal/core/subscribers/RootResourceSynchroni
+ zationScope.class
+SHA-256-Digest: VW0wWxvFQQA+dFBmqKUwfrejcz8Ko4Ipk1KVCzowfmI=
+
+Name: org/eclipse/team/core/synchronize/SyncInfo.class
+SHA-256-Digest: jP0GoguqiYMrdevV7tTKA1iAkxcDmmE+gHNmxRvuKWE=
+
+Name: org/eclipse/team/core/diff/provider/Diff.class
+SHA-256-Digest: EBwPkQfav4JlwYi5xWn60/QGWMOnVZNSuB7cVOlJFO4=
+
+Name: org/eclipse/team/core/mapping/IMergeStatus.class
+SHA-256-Digest: 0gFH0ceq+0OWFyXeskTUCins8qlabYPwx/pGy0//f6Y=
+
+Name: org/eclipse/team/core/variants/ResourceVariantByteStore.class
+SHA-256-Digest: nJbWmL3JMJaArznFXc1Zwrr5W4XFGx+oIEgSBMsr2h4=
+
+Name: org/eclipse/team/internal/core/subscribers/SubscriberEventHandle
+ r$SubscriberEvent.class
+SHA-256-Digest: JfQkrJqbwEtn6eMY6EXFQyv5H8mssUWXecEerq1TIyM=
+
+Name: org/eclipse/team/internal/core/mapping/LineComparator$TrailingLi
+ neFeedDetector.class
+SHA-256-Digest: 0HbhVeexsCKZ/vHJisrATgH1e7Yvs0yOdGAOVUVbMZU=
+
+Name: org/eclipse/team/internal/core/subscribers/AbstractSynchronizati
+ onScope$1.class
+SHA-256-Digest: lgpKMFX7b1/SndzU6ZwKWKpJM+HSuhzEEodx6Jk29WM=
+
+Name: org/eclipse/team/internal/core/RepositoryProviderManager.class
+SHA-256-Digest: YT/FQmSusuP0RRNfmJ0APehR392w2hlBC0lXkogBxdg=
+
+Name: org/eclipse/team/internal/core/subscribers/CheckedInChangeSet.cl
+ ass
+SHA-256-Digest: AbbavN2E++/PM1Mo37kKa+D6JJIX2Kya/DgmgWd7/Ac=
+
+Name: org/eclipse/team/internal/core/subscribers/SubscriberSyncInfoEve
+ ntHandler$2.class
+SHA-256-Digest: 4T0+jef68F8euki3mnBH+sHApIcWhLyJXeeCtJrsN2I=
+
+Name: org/eclipse/team/internal/core/subscribers/ChangeSetManager$1.cl
+ ass
+SHA-256-Digest: nn+4sxDOT9Dg5HdqeHHk1K/q5TCG5bmZCmPfY1eJHBI=
+
+Name: org/eclipse/team/core/diff/ITwoWayDiff.class
+SHA-256-Digest: UbBmOpGiBrQz8XFLnPcia5uM4t4y+Xu4wiofKOciywk=
+
+Name: org/eclipse/team/core/ProjectSetCapability.class
+SHA-256-Digest: 6z+KC6z3TgfLW50u0DTlXvZ05J8DdPUMdiOdUKhcOl4=
+
+Name: org/eclipse/team/core/ICacheListener.class
+SHA-256-Digest: My7OFo7J/iOKos3szlygaynNog/CGPd3Q4+NdOhQGB0=
+
+Name: org/eclipse/team/core/TeamStatus.class
+SHA-256-Digest: 0XmK08KpaevrLyfpiXn3RcDaaqJf0cI43gP/ZNrbsPY=
+
+Name: org/eclipse/team/core/subscribers/SubscriberResourceMappingConte
+ xt.class
+SHA-256-Digest: yswwmxw5auaPYzZSWBnA3zlY2yR/2PTDc7nUsvrHaDw=
+
+Name: org/eclipse/team/internal/core/BackgroundEventHandler$1.class
+SHA-256-Digest: SV7ZreCfPlCzpyh3ZjpmARzhbXMz2eGeKyHEBqt/tis=
+
+Name: .options
+SHA-256-Digest: pNkvkg2mMUhh+yT91e42vLM7mgYtJXqPfWYxwtXinKw=
+
+Name: org/eclipse/team/internal/core/FileContentManager$StringMapping.
+ class
+SHA-256-Digest: owFSCMbrUa/JP7+Cd7UxSdh+uMdXXGt98MssM7INw/U=
+
+Name: org/eclipse/team/core/mapping/provider/MergeContext$1.class
+SHA-256-Digest: mgMOhMp+Y2bKuwFi9mH/N8oIzRQT8xLfmG1nWegnyhI=
+
+Name: org/eclipse/team/internal/core/mapping/DiffChangeEvent.class
+SHA-256-Digest: PeRkv05woH9rN2HpOi43LaU73eHMNVm7BrbyCbEGHHI=
+
+Name: org/eclipse/team/internal/core/messages.properties
+SHA-256-Digest: cfy0/Y8EW0OINyTLDKxUmBieuAkuH40lz6/d5GYWFAo=
+
+Name: org/eclipse/team/core/DefaultRepositoryProviderType.class
+SHA-256-Digest: iSluxwykTATlRy/ftpN7iwMGTd3zQEzMIhmKs1YyFx0=
+
+Name: org/eclipse/team/core/TeamException.class
+SHA-256-Digest: xPizBiYqOsIwgmu6U5pq1SzJiUzlsfb2TTM5vKA13rI=
+
+Name: org/eclipse/team/core/Team.class
+SHA-256-Digest: GU9ccD5+t18Num2W5BiZgiL7ParTA24Z0YvQDr6z394=
+
+Name: org/eclipse/team/internal/core/TeamPlugin.class
+SHA-256-Digest: l7lV6N4uDd4uke487K+vp+KOPG0WYUYSqcO5kysnoJM=
+
+Name: org/eclipse/team/core/mapping/provider/ResourceDiffTree$2.class
+SHA-256-Digest: N8gcWiJ6COV0KSr5gEy567iPZdJJk2YVsj7UsnTrCL4=
+
+Name: org/eclipse/team/internal/core/subscribers/SubscriberSyncInfoEve
+ ntHandler$1.class
+SHA-256-Digest: CNElJOBiTWrOiObGovYQuvAFtumcwJdX0OHcklcVM+w=
+
+Name: org/eclipse/team/internal/core/subscribers/SubscriberEventHandle
+ r$1.class
+SHA-256-Digest: 3qv7MxfseCVZV8aU6ibmS81WK1MA1GeH8/2epqBRUkI=
+
+Name: org/eclipse/team/core/mapping/ResourceMappingMerger.class
+SHA-256-Digest: kRKhZ7c2PSzzesVBZlplIL1dXPJk8GUMDhVpIj2pFjo=
+
+Name: org/eclipse/team/internal/core/mapping/AbstractResourceMappingSc
+ ope.class
+SHA-256-Digest: WOe0PKkunVlPaI081VtKGBkt+pgNv8lm/ZPJld9/gAo=
+
+Name: org/eclipse/team/internal/core/mapping/SyncInfoToDiffConverter$P
+ recalculatedSyncInfo.class
+SHA-256-Digest: k2QMAL6s8H1aQ6BmY+4HQS2wSgswcYvaqHc7wwJBdwY=
+
+Name: org/eclipse/team/core/subscribers/ISubscriberChangeEvent.class
+SHA-256-Digest: jJPf69gMYVWGypoG2rHUNOwRXJwUIjT23DA6/wNqS/g=
+
+Name: org/eclipse/team/core/mapping/ChangeTracker$ChangeListener.class
+SHA-256-Digest: xykCrZE69m7K/oaS07a4yycszR8BVH35Ha07tp58X5A=
+
+Name: org/eclipse/team/core/variants/ThreeWayRemoteTree.class
+SHA-256-Digest: EX2tcJf3SJvAScsGGYRwRGXABQILD7UozoRTCcNwOMQ=
+
+Name: org/eclipse/team/core/ICache.class
+SHA-256-Digest: 1ZFBPuc1OCVu3qhQepmyyny+458L3UGFGGgVwysvBGc=
+
+Name: org/eclipse/team/core/subscribers/SubscriberChangeEvent.class
+SHA-256-Digest: IXvDZcH4O2f53Ao34/xR2YBTuRvNcrbMxrmd+ZeGJxs=
+
+Name: org/eclipse/team/internal/core/history/LocalFileRevision.class
+SHA-256-Digest: CJUyxpT6k1x3dOY/6/CspGYqHRDm0Uk0xIDijq4yQoQ=
+
+Name: org/eclipse/team/internal/core/Messages.class
+SHA-256-Digest: ziddc0LyzSWTR0YEpwuKEYiCiozVkWpBvI2S37O6uiE=
+
+Name: org/eclipse/team/core/synchronize/SyncInfoFilter$ContentComparis
+ onSyncInfoFilter.class
+SHA-256-Digest: Ylf07JZ72ShfpzTTeOqZgby/len5br2+n0OjfhuSWSY=
+
+Name: org/eclipse/team/core/diff/provider/DiffTree$1.class
+SHA-256-Digest: XG11A7B70riEgCfYRKi6VLn9q9xoxJVavwObhu2D7yg=
+
+Name: org/eclipse/team/core/diff/IDiffVisitor.class
+SHA-256-Digest: ECx2GbibVUp7o4RvWOIgOVvMAYWvQ4WDSUSx5friJ0c=
+
+Name: org/eclipse/team/internal/core/mapping/ScopeManagerEventHandler.
+ class
+SHA-256-Digest: hkwswzxzVeKrugLzxlTN5tSN3/87J44hIz2o0UYZFLM=
+
+Name: org/eclipse/team/internal/core/subscribers/IChangeSetChangeListe
+ ner.class
+SHA-256-Digest: HmYAoGSWv1B12kOQihS3tyqRg4ru38dEfHgI6SwTN40=
+
+Name: org/eclipse/team/core/synchronize/SyncInfoTree.class
+SHA-256-Digest: cPSCq1T+DeJSTGuLx17yZ5LaPoIANlfSgRk8LGCWGGw=
+
+Name: org/eclipse/team/internal/core/streams/PollingInputStream.class
+SHA-256-Digest: 3kuvLbTeZmquTr0G3y344hhThGxLLpL2Y9ORD/MZvqE=
+
+Name: org/eclipse/team/internal/core/subscribers/WorkingSetSyncSetInpu
+ t.class
+SHA-256-Digest: BSehaFiTF20Ez53HYfJD/4faZWpgKf5I57rS5rWjplg=
+
+Name: org/eclipse/team/core/history/provider/FileRevision$LocalFileRev
+ ision.class
+SHA-256-Digest: mN8f7ZwON4yb3nLfSDwuLJ52amy3TFS+C1COW/HbAFs=
+
+Name: org/eclipse/team/internal/core/InfiniteSubProgressMonitor.class
+SHA-256-Digest: fjYaMuLFxygoUg1WaVtesBIQg7jz8bOZqaMOh635aPM=
+
+Name: org/eclipse/team/internal/core/subscribers/SyncSetInput.class
+SHA-256-Digest: arlYZAnN5xd2PQ7c39wpn1U1Dwrd598ZQ0yJh07KDRY=
+
+Name: org/eclipse/team/internal/core/TeamResourceChangeListener.class
+SHA-256-Digest: viO1OuT/o1TQw9gLPCRaEdNhWLlfn8wXM8ZtQJkydTQ=
+
+Name: org/eclipse/team/core/RepositoryProvider$2.class
+SHA-256-Digest: sjaO44XPoVI4RaV2qQkq+IxgEa3AcwNSayv186kmtdI=
+
+Name: org/eclipse/team/internal/core/subscribers/SyncSetInputFromSyncS
+ et.class
+SHA-256-Digest: Yba3+z1QfvHNoXHkp6/krt9REodU9/YFJEEcP6v0Ltk=
+
+Name: org/eclipse/team/internal/core/subscribers/SubscriberChangeSetMa
+ nager.class
+SHA-256-Digest: cxDJDRrl9M/moG5GtaVNohXdCBZGPH/S7E+5B1WT4PM=
+
+Name: org/eclipse/team/core/variants/ThreeWaySynchronizer$2.class
+SHA-256-Digest: UytjfVlkSKVu0TZeWwhMXuQHkPk2/obRdjiQc8tha34=
+
+Name: org/eclipse/team/core/variants/ThreeWayResourceComparator.class
+SHA-256-Digest: 2avz4Nd4/Hy4NIyknNkKvbtq7aebDrImycIUO9FC9J4=
+
+Name: org/eclipse/team/internal/core/subscribers/SyncInfoStatistics.cl
+ ass
+SHA-256-Digest: 1eRDRuzhYiLkRjfpJ6dkhfpGCpW3J2KZo6C8Ls2TAS4=
+
+Name: org/eclipse/team/core/variants/ISynchronizerChangeListener.class
+SHA-256-Digest: jX3l2jNa3Ta6RVOe3qkdCaNEGfO4ffznT7jHzN4S9M8=
+
+Name: org/eclipse/team/internal/core/mapping/ResourceVariantFileRevisi
+ on.class
+SHA-256-Digest: LVkLJjDIkv+cTp9dBj5SSOk6jZ24Bh8Gm2IlutscfcA=
+
+Name: plugin.properties
+SHA-256-Digest: yCZAfvXk417sIBCmVykV2UniQJ5iazSMkCGArZ0tRzA=
+
+Name: org/eclipse/team/internal/core/subscribers/SubscriberSyncInfoSet
+ .class
+SHA-256-Digest: s9COMLHNalYNIFFAG2bNXf0tfKSHwUfT7IMxgAa7HP8=
+
+Name: org/eclipse/team/core/synchronize/SyncInfoSet$2.class
+SHA-256-Digest: 20UNEkvWgX57BaCFmSc1EHHnn4qdQMgSjnCu6/ooLx8=
+
+Name: org/eclipse/team/internal/core/TeamHookDispatcher.class
+SHA-256-Digest: HDLSX9oYA1gWzT7Gm21vZkJVMHpxKdzDBWrxEDHtEz4=
+
+Name: org/eclipse/team/core/IFileTypeInfo.class
+SHA-256-Digest: fkNZdE9pXt61VBkJyUl8/VjMUaCUUb0EtJG4mZL1fzY=
+
+Name: org/eclipse/team/internal/core/subscribers/SubscriberDiffTreeEve
+ ntHandler$1.class
+SHA-256-Digest: qYJ/ae/uoMSwWvJ91xOe5AbpTxNFDSgfzxyFjRBqlwQ=
+
+Name: org/eclipse/team/core/variants/PersistantResourceVariantByteStor
+ e.class
+SHA-256-Digest: ZpArYB+Jo71wDQ3Mg56NTv3KWE5xTDiLCmdzs5l6bd0=
+
+Name: org/eclipse/team/core/diff/provider/DiffTree$2.class
+SHA-256-Digest: DiZdN0BQlCm1HA1TcFvQ9Fq5bhytVbAJsoO4wbhme94=
+
+Name: org/eclipse/team/core/variants/ThreeWayRemoteTree$1.class
+SHA-256-Digest: skzBC9beClOmno/yShSBRLfh7silr51R3/CENws9D9c=
+
+Name: org/eclipse/team/internal/core/subscribers/BatchingChangeSetMana
+ ger$IChangeSetCollectorChangeListener.class
+SHA-256-Digest: +bSd7sp7J197ldFoHJapIZXMA6fBiYYF4oPEReleQqY=
+
+Name: org/eclipse/team/internal/core/streams/TimeoutInputStream.class
+SHA-256-Digest: pFx+m+pH+yN6b4+ZQnoOp+IA8yOqxlnq2fb9A3GqKJA=
+
+Name: org/eclipse/team/internal/core/subscribers/ActiveChangeSetManage
+ r.class
+SHA-256-Digest: wKtIQ8whMpxAR1Oc4GNJMLy01asFpGueUDDFFwC5JOs=
+
+Name: org/eclipse/team/core/synchronize/ISyncInfoTreeChangeEvent.class
+SHA-256-Digest: IHKFXN0YiOsi320zS24pUUYUq/vN+Z0vWD0CvWOi3sw=
+
+Name: org/eclipse/team/core/mapping/ISynchronizationScopeParticipant.c
+ lass
+SHA-256-Digest: 8wjOUyiWRO2MyupjaktRk2n/IoxXUHlX5vrF+xYhRPA=
+
+Name: org/eclipse/team/core/RepositoryProvider.class
+SHA-256-Digest: AyhtvqjB7Ocp/ZZQctdXId9GCL4/bXCRMausZCoIKIs=
+
+Name: org/eclipse/team/core/synchronize/SyncInfoSetChangeEvent.class
+SHA-256-Digest: PnOk9+USjSSOs6VD7MHrUIrOfXdMudGhL6RvKevCAuU=
+
+Name: org/eclipse/team/core/history/ITag.class
+SHA-256-Digest: Ucw4oK8+aRWyF5lj6G169RtYKwnzBxgYzhepfXbEniQ=
+
+Name: org/eclipse/team/core/mapping/provider/MergeStatus.class
+SHA-256-Digest: QH4WDf6KXeq2cJd+gjTIui6Yc0B5W3BQWyJcHeUv1gA=
+
+Name: org/eclipse/team/internal/core/mapping/IStreamMergerDelegate.cla
+ ss
+SHA-256-Digest: Zf0NGHUpZgP/WFidkIbrpsPduf8qGGWmTvV+EIwiF90=
+
+Name: org/eclipse/team/core/history/provider/FileHistoryProvider.class
+SHA-256-Digest: ndSYXgC2SOMikpLvt838XeIkEIvOnhqw6aesg8wCX4E=
+
+Name: org/eclipse/team/core/mapping/ISynchronizationScope.class
+SHA-256-Digest: wGGmvtUKSJ75aqpSLIYMD63fU/OoH3QvuyCchkhGgHg=
+
+Name: org/eclipse/team/core/mapping/provider/SynchronizationScopeManag
+ er.class
+SHA-256-Digest: p2ZbFl0kWprdRMj7ohL/RjqPGsh+GHGw75A9HkjQLnM=
+
+Name: org/eclipse/team/internal/core/subscribers/SubscriberDiffTreeEve
+ ntHandler$2.class
+SHA-256-Digest: 7HLcMFqlKmwwxq0I1E3WU/t8+ADP3s50MlGD7mzDslg=
+
+Name: org/eclipse/team/internal/core/streams/TimeoutInputStream$1.clas
+ s
+SHA-256-Digest: 1VFTUcUwekEfrJEBUXKmrZuXoydpt9j2RR+hgkMiTAs=
+
+Name: org/eclipse/team/core/synchronize/FastSyncInfoFilter$OrSyncInfoF
+ ilter.class
+SHA-256-Digest: qy0mQqImFlx0LTeGP1vt46EXVCXIlLX1K2XKr1QFffI=
+
+Name: org/eclipse/team/internal/core/subscribers/SubscriberChangeSetMa
+ nager$ResourceCollector.class
+SHA-256-Digest: 0EVuEgKR6Oo3xDxV59Exbf0D7ZQPlR6SrbiGQt76WTg=
+
+Name: org/eclipse/team/internal/core/mapping/GroupProgressMonitor.clas
+ s
+SHA-256-Digest: RzBCam0jsBj7PAOlYKfxaxntBdkIq543WLGtXRCOp7s=
+
+Name: org/eclipse/team/core/diff/IDiffTree.class
+SHA-256-Digest: HOI1E6o1GXUeRvrZMf/GI76Wumshz8w0k59jS1H+NDI=
+
+Name: org/eclipse/team/core/ITeamStatus.class
+SHA-256-Digest: JIX1FmD1WbV9qO5htknxA3Iig6jj2OARqdXu/VZrNSI=
+
+Name: org/eclipse/team/core/subscribers/SubscriberMergeContext.class
+SHA-256-Digest: 3qNPenpUfPJJpPARYxv346ZaT3xkTHdella6dzYhJfU=
+
+Name: org/eclipse/team/internal/core/Policy.class
+SHA-256-Digest: 4Y42D7bvKHiL5u4T9mc8QCRg/jTYDCxkXoEHvjbJ5p4=
+
+Name: org/eclipse/team/core/variants/SessionResourceVariantByteStore.c
+ lass
+SHA-256-Digest: uaZ2JD91HmdDAQi+dL/dEp/NCj4OuboKJfEYXzsRheE=
+
+Name: org/eclipse/team/internal/core/subscribers/ContentComparator.cla
+ ss
+SHA-256-Digest: POPfLZX9IHw1cCkvG87XsB21OZy/hBxASlwXg6MytZM=
+
+Name: org/eclipse/team/core/importing/provisional/BundleImporterDelega
+ te.class
+SHA-256-Digest: 8hpP2RJvaYLelJoTmrfvv4wcUHvglDeT0zhCMw+DapM=
+
+Name: org/eclipse/team/internal/core/subscribers/SyncInfoWorkingSetFil
+ ter.class
+SHA-256-Digest: aJXkMmwYLkRXTSL8tUVf1Yv/0x2IrL0Xe6Ge0EL8lhU=
+
+Name: org/eclipse/team/internal/core/ExceptionCollector.class
+SHA-256-Digest: 91NGYoeiXPXol56m+D4mbB7DpMmQd/iBXOCCgPrMBps=
+
+Name: org/eclipse/team/core/diff/IThreeWayDiff.class
+SHA-256-Digest: alF6tZP7K8PHxnMzqkGvoxqb+RFTz1nixkCqaEZOc+4=
+
+Name: org/eclipse/team/core/diff/IDiffChangeEvent.class
+SHA-256-Digest: Xgsf+4c4FwcIqI5SeTSWhwN+ODv6FWR4G4LmM+Gwrs4=
+
+Name: org/eclipse/team/internal/core/subscribers/WorkingSetFilteredSyn
+ cInfoCollector$1.class
+SHA-256-Digest: BR3622shBxyQGXlE/QOiZpxyCHJshPNgZNko0nb/TIg=
+
+Name: org/eclipse/team/internal/core/subscribers/SubscriberSyncInfoCol
+ lector.class
+SHA-256-Digest: YsLhYHB0khWDFQrfa6Oo6PH6CrizmN9FhCD7OqLW0kw=
+
+Name: org/eclipse/team/core/subscribers/SubscriberScopeManager.class
+SHA-256-Digest: xj8ESTQdn0+R04ya3W+9+gh0wG0Ea0sD57PGiaoF53U=
+
+Name: about.html
+SHA-256-Digest: 0RM1x9lTJa7T8YkysaegPuBIeaEvSZypRDfXoMpsJAU=
+
+Name: org/eclipse/team/internal/core/subscribers/SubscriberSyncInfoSet
+ $1.class
+SHA-256-Digest: 7Hx1SfEpYKaMSFykUhY5PA4ggitquG7IDTAOE+tSel4=
+
+Name: org/eclipse/team/internal/core/mapping/ModelProviderResourceMapp
+ ing.class
+SHA-256-Digest: U5jcxDUjm8LuERwmbTNKPPT5wgSfNRWpoUWpTCQdcNA=
+
+Name: org/eclipse/team/core/IFileContentManager.class
+SHA-256-Digest: VuxPefOGizUPNN9jtVaFAgrZvs3ZBjvLi8PsLjnnB6s=
+
+Name: org/eclipse/team/internal/core/Policy$1.class
+SHA-256-Digest: rTCPU3rfTV0zeu8bYTiXGFQcYy9AcXspkpT514OtkXA=
+
+Name: org/eclipse/team/internal/core/subscribers/ActiveChangeSet.class
+SHA-256-Digest: CHCJ89o5UPebnog6ImnCTFXvoedWxG6k9z3bhrp1EZ4=
+
+Name: org/eclipse/team/core/variants/CachedResourceVariant.class
+SHA-256-Digest: VEHb0nkygsbHNss2cP7PWQmSiwzIcnVDmdxwjOX/c50=
+
+Name: org/eclipse/team/internal/core/ResourceVariantCacheEntry.class
+SHA-256-Digest: oki/1AKxT3lE+R0GiZfvGB9XA43hzVUzDfVuxfI65ds=
+
+Name: org/eclipse/team/internal/core/BackgroundEventHandler$ResourceEv
+ ent.class
+SHA-256-Digest: f/UjPy9+EfVCKsyHg3ASFHMSygp6ZD/eFH0chiMrrm8=
+
+Name: org/eclipse/team/core/variants/ThreeWaySynchronizer$1.class
+SHA-256-Digest: 7AialIoeZD48ERoVYhDSK4gC8VW5A69Vn9pMSL/2zlI=
+
+Name: org/eclipse/team/core/IStringMapping.class
+SHA-256-Digest: qUADd0MOme/lvJOzp6SMMAgijxVFIKinEAx2WXxIKPI=
+
+Name: org/eclipse/team/internal/core/subscribers/ContentComparisonDiff
+ Filter.class
+SHA-256-Digest: LLQXvOEMalMqjnWhVpvc9r6dBL6l0sEp7oWlXPDMWE8=
+
+Name: org/eclipse/team/core/synchronize/SyncInfoSet$1.class
+SHA-256-Digest: EoHU8TfGE8UfcZb5S2CYUUxaFqxvl1dj4yEIT9p0urA=
+
+Name: org/eclipse/team/internal/core/DefaultFileModificationValidator.
+ class
+SHA-256-Digest: Asyj4XBCqWuAQsyQ0kPJABacydLOch8T/Yx6OivoooE=
+
+Name: org/eclipse/team/core/synchronize/SyncInfoSet.class
+SHA-256-Digest: iGDK8/xFnY7bG7qJ9jgxCmcFaWQ8yuKE1ckXGpvzFGI=
+
+Name: org/eclipse/team/internal/core/subscribers/BatchingChangeSetMana
+ ger.class
+SHA-256-Digest: IKKRxuNBpQa1kyWhgI1PET/PBnTUrxIG7DF+IDk0Y8c=
+
+Name: org/eclipse/team/core/mapping/IResourceMappingMerger.class
+SHA-256-Digest: rH4A8I8bN1RMSdPD16i7cUxGHHoo0Wm9oNQ8/doG/rU=
+
+Name: org/eclipse/team/core/Team$1.class
+SHA-256-Digest: wxo2aJy3CoyV/KKNMxmX8rkgFuDURxBT3EnbfqYvc1I=
+
+Name: org/eclipse/team/internal/core/UserStringMappings.class
+SHA-256-Digest: wxvByO68dpAZaXzs/wGKrwWHmv6d67fZm5kSBqRyt44=
+
+Name: org/eclipse/team/core/synchronize/FastSyncInfoFilter$SyncInfoCha
+ ngeTypeFilter.class
+SHA-256-Digest: exMKlXLqhmotGALBrB4icXdcUNln+heDgnG+826zKX8=
+

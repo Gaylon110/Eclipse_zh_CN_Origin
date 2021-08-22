@@ -1,0 +1,285 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.equinox.preferences; singleton:=true
+Archiver-Version: Plexus Archiver
+Built-By: genie.releng
+Require-Bundle: org.eclipse.equinox.common;bundle-version="[3.2.0,4.0.
+ 0)",org.eclipse.equinox.registry;bundle-version="[3.2.0,4.0.0)";resol
+ ution:=optional
+Bundle-ManifestVersion: 2
+Bundle-ActivationPolicy: lazy; exclude:="org.eclipse.core.internal.pre
+ ferences.exchange"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/equino
+ x/rt.equinox.bundles.git;path="bundles/org.eclipse.equinox.preference
+ s";tag="I20170127-2000";commitId=23f9b744c1083eb4fcba8e45da70fa10d267
+ 0dd3
+Bundle-Vendor: %providerName
+Import-Package: org.eclipse.osgi.framework.log,org.eclipse.osgi.servic
+ e.datalocation,org.eclipse.osgi.service.debug,org.eclipse.osgi.servic
+ e.environment,org.eclipse.osgi.util,org.osgi.framework,org.osgi.servi
+ ce.packageadmin,org.osgi.util.tracker,org.osgi.service.prefs;version=
+ "[1.1.1,1.2)"
+Eclipse-LazyStart: true; exceptions="org.eclipse.core.internal.prefere
+ nces.exchange"
+Export-Package: org.eclipse.core.internal.preferences;x-friends:="org.
+ eclipse.core.resources,org.eclipse.core.runtime,org.eclipse.equinox.p
+ 2.engine",org.eclipse.core.internal.preferences.exchange;x-friends:="
+ org.eclipse.core.runtime",org.eclipse.core.runtime.preferences;versio
+ n="3.3.0",org.osgi.service.prefs;version="1.1.1"
+Bundle-Name: %pluginName
+Bundle-Version: 3.7.0.v20170126-2132
+Comment-Header: Both Eclipse-LazyStart and Bundle-ActivationPolicy are
+  specified for compatibility with 3.2
+Bundle-Localization: plugin
+Bundle-Activator: org.eclipse.core.internal.preferences.Activator
+Created-By: Apache Maven 3.3.3
+Build-Jdk: 1.8.0_102
+
+Name: plugin.xml
+SHA-256-Digest: 5kdx1CY+5iPFayoLSyxYrmBk5mP5v640hhCZhQTCiFg=
+
+Name: org/eclipse/core/internal/preferences/IPreferencesConstants.clas
+ s
+SHA-256-Digest: neoFkTrmUbyfODWkmS0kcEMgC6lWYIYyn2pT5RkHi0Q=
+
+Name: org/eclipse/core/internal/preferences/EclipsePreferences$1.class
+SHA-256-Digest: QRC+ld3idJ8acGceSnGfKV1hgID9C3LcighiUjlusLQ=
+
+Name: org/eclipse/core/internal/preferences/SafeFileInputStream.class
+SHA-256-Digest: VWmoraEX1aiwBwn4Yrp5wSDDHIBq2Le0dgTCeivGtus=
+
+Name: org/eclipse/core/runtime/preferences/IEclipsePreferences$NodeCha
+ ngeEvent.class
+SHA-256-Digest: trWnUN8Ia6HskHHGzSvwkHNPN/AvxslW3P1AKrM9Ewc=
+
+Name: org/eclipse/core/internal/preferences/ScopeDescriptor$3.class
+SHA-256-Digest: 4t1hvLx24UyX+iBXvW4CppudQmSxfPDOJToGUOd1mag=
+
+Name: org/eclipse/core/internal/preferences/PreferencesService$7.class
+SHA-256-Digest: xjwPbyCwYJ2yKRZj93HGK3zvB6Evw9iUsiOIs1Kx98Y=
+
+Name: org/eclipse/core/internal/preferences/exchange/ILegacyPreference
+ s.class
+SHA-256-Digest: ALJMCYlZTXhaVWcbNWSHCCXxCMxqxe9jiG/LIZ2b7Cc=
+
+Name: org/eclipse/core/runtime/preferences/AbstractPreferenceInitializ
+ er.class
+SHA-256-Digest: 4ZZzE2S+XwJp3lNO67HHa0j4isGW7Llz6eF+t17PMBo=
+
+Name: org/eclipse/core/internal/preferences/PreferencesOSGiUtils.class
+SHA-256-Digest: tZH+UvduZA/uSES+9UFdyGDGweci5xFrSRFKDHr/0I4=
+
+Name: plugin.properties
+SHA-256-Digest: /Ooljxk1VOzo3vNdoyCS1nv4QXh7QSYN2ZAffREUJQY=
+
+Name: org/eclipse/core/internal/preferences/PreferencesService$4.class
+SHA-256-Digest: PXgXXeWQLkGvbv+VoTkpAwyvcoHQ04kakOefHheOxhc=
+
+Name: org/eclipse/core/internal/preferences/PreferencesService.class
+SHA-256-Digest: NudytHzG3ZpL22Xayq6nTU6/8cWRvDqK7Ml3Bhv4ltg=
+
+Name: org/osgi/service/prefs/Preferences.class
+SHA-256-Digest: 99OB2AX+SsR53gqf/HgywpwBcP2lRFIUVaHMVPET3sM=
+
+Name: org/eclipse/core/internal/preferences/ImmutableMap$EmptyMap.clas
+ s
+SHA-256-Digest: 8W7XyJ6gjkGf6kVHeTi2qEWGFfmtPu9c4QM4FxClprE=
+
+Name: org/eclipse/core/internal/preferences/EclipsePreferences$2.class
+SHA-256-Digest: BFHCH29ReBDJs9DRm56HWB8RehCryqao+j5+gSzNdqc=
+
+Name: org/eclipse/core/internal/preferences/PreferencesService$1.class
+SHA-256-Digest: NvYOqPzCWxDY5aXUziTNy8CfGCuvOenWPR9ng5448sE=
+
+Name: org/eclipse/core/internal/preferences/PreferenceServiceRegistryH
+ elper.class
+SHA-256-Digest: SWGgqsqWAhO1PiMullOg1iGuzbMKyqxpSLh67oiYOIQ=
+
+Name: .api_description
+SHA-256-Digest: dZaqyKRei1dHQrAlXwQkUpfmATMiDS3+hESkbN4Rszg=
+
+Name: org/eclipse/core/runtime/preferences/ConfigurationScope.class
+SHA-256-Digest: 6C8NqB8Pyd4GROxO/0NjGQO+Yqq8V5rmbNXPW2djSQc=
+
+Name: org/eclipse/core/runtime/preferences/PreferenceFilterEntry.class
+SHA-256-Digest: bsPk4xvlUmxZCcjJ0UsjKQhOlhwMjQ3QG0dVnB+Oieg=
+
+Name: org/eclipse/core/internal/preferences/OSGiPreferencesServiceMana
+ ger.class
+SHA-256-Digest: 6PT9APYOXiCkVnEpuA9FhbLUfbTyY1PgGP27JptcH/w=
+
+Name: org/eclipse/core/internal/preferences/Activator.class
+SHA-256-Digest: XMaOf+fwFrVFb6T338dNo5UdJXj3qkNEyi/fjOWBEK8=
+
+Name: org/eclipse/core/runtime/preferences/PreferenceModifyListener.cl
+ ass
+SHA-256-Digest: XLQtp2A/mEj9Gr/yKAEqC4rz3vt7Iq8IYiq3e2zjnsw=
+
+Name: org/eclipse/core/internal/preferences/DefaultPreferences.class
+SHA-256-Digest: H4g3QZiVohnE2GprnSAfTZcGURHwRs3AvJZ37PS12Wc=
+
+Name: org/eclipse/core/internal/preferences/AbstractScope.class
+SHA-256-Digest: SLI19y1Erx3HxJGPw17zps6gfzmFzkkmDQXrsSN7hiQ=
+
+Name: org/eclipse/core/internal/preferences/ImmutableMap$ArrayMap.clas
+ s
+SHA-256-Digest: w5BZ85/l76GFsjQG3cW6Fb0Q6rk/jFV79FmCsmIuAK0=
+
+Name: org/eclipse/core/internal/preferences/ScopeDescriptor.class
+SHA-256-Digest: NmFt2/2lj7gXXyoPt4HSQXc+BIv2VRV8ZVGDorGNswk=
+
+Name: org/eclipse/core/internal/preferences/PreferencesService$8.class
+SHA-256-Digest: rIPnnOZruHPcJaubXS5Ca9sk8gUxqXopOcMFVCHM7/w=
+
+Name: org/eclipse/core/internal/preferences/Base64.class
+SHA-256-Digest: 5wVzaihhp3EhMFT1WkiIo/ECmtlvD2wG9Op9n+BhJOg=
+
+Name: org/eclipse/core/internal/preferences/ScopeDescriptor$2.class
+SHA-256-Digest: Ba5NDn4iAVopI70HP8+nyOc+8yLCDDmNkkEAYzaWbGU=
+
+Name: org/eclipse/core/internal/preferences/StringPool.class
+SHA-256-Digest: xgWeg1QJ3TFSDw5ubX3liaa1RI+7QkcfzD05HKkNAQQ=
+
+Name: org/eclipse/core/internal/preferences/ScopeDescriptor$1.class
+SHA-256-Digest: PbHA/gsr8FIwenEGYqc7jMp8Yrq750QRId9fmv1n80Y=
+
+Name: org/eclipse/core/internal/preferences/PreferenceServiceRegistryH
+ elper$1.class
+SHA-256-Digest: kAllcZgVumjJ65nAs2v71LyJDI3jJhPod9jPeozUnUs=
+
+Name: org/eclipse/core/internal/preferences/PreferencesService$5.class
+SHA-256-Digest: E/9Y6AKNqoezQSpWuLNalvgRkzkm3wa2TDvFf9qCDV0=
+
+Name: org/eclipse/core/internal/preferences/PrefsMessages.class
+SHA-256-Digest: yjNyn4Vkt9f4jKiDuIN8Ywp00yR8FkkWbVVr+e1eRNg=
+
+Name: org/eclipse/core/runtime/preferences/IEclipsePreferences$Prefere
+ nceChangeEvent.class
+SHA-256-Digest: y1ZQJDi+RbiQj3Y/R60opP3r9k8d4Km2gGt1A1KZ8js=
+
+Name: about_files/LICENSE-2.0.txt
+SHA-256-Digest: z8d0m5b2O9McPEK1xHG/dWgUBT6EfBDz6wA0F7xSPTA=
+
+Name: org/eclipse/core/runtime/preferences/IScope.class
+SHA-256-Digest: HtIQTWtEhhHYDy8li4rGPW0s/D7/tRmt47EFqeOuiQo=
+
+Name: org/eclipse/core/runtime/preferences/IPreferenceNodeVisitor.clas
+ s
+SHA-256-Digest: 6+3ky5vh5dhyG8j9nvT6C3ff7hwqR8WP+GdqcMfoju4=
+
+Name: org/eclipse/core/internal/preferences/EclipsePreferences$3.class
+SHA-256-Digest: pc4HAXeEqwlT7Mrfpykr4G9N+K5Y/+jLZYYsHKZJf1E=
+
+Name: org/eclipse/core/internal/preferences/exchange/IProductPreferenc
+ esService.class
+SHA-256-Digest: JNLnfzD98b7E4943C7zorwK+naePCNCNm3eiJ9Ii/uk=
+
+Name: org/osgi/service/prefs/BackingStoreException.class
+SHA-256-Digest: rjzzDDacvPM8xYrL4GU7Ze6Bj6J6SqX/FGxzGlcst3U=
+
+Name: org/eclipse/core/runtime/preferences/IEclipsePreferences.class
+SHA-256-Digest: gLJEEQTtF7rtdXFA9ZsIyg9c5iuM5NufySoh5IgxR7I=
+
+Name: org/eclipse/core/internal/preferences/SortedProperties.class
+SHA-256-Digest: 7jiwgMRnI0KuM6lEBIHKQkP0b5aNI9UF+/Qigp+bGoc=
+
+Name: org/eclipse/core/internal/preferences/PreferencesService$2.class
+SHA-256-Digest: irNLr5fUqv+y/YOfFppBGIrYWFYhTnurqQd/vQak0I8=
+
+Name: .options
+SHA-256-Digest: nMY1U3ObCaEV0FQ8YhSxEVPEWkbk8ySRbjWGtckiL1o=
+
+Name: org/eclipse/core/internal/preferences/OSGiPreferencesServiceImpl
+ $OSGiLocalRootPreferences.class
+SHA-256-Digest: qpL/ZK3HBrZOEoBIH+9tvWemjrbZpHZwdbiaNZNTPoo=
+
+Name: org/eclipse/core/runtime/preferences/BundleDefaultsScope.class
+SHA-256-Digest: 054k+byWSzHQiG5uoZqW3BRCu8R+f49yHov37Et23hs=
+
+Name: org/eclipse/core/runtime/preferences/IPreferencesService.class
+SHA-256-Digest: 8lthzakJRO08vyEYr4Qp8ojaxVhhMHQl8zMDmtSLU3w=
+
+Name: org/eclipse/core/internal/preferences/ScopeDescriptor$4.class
+SHA-256-Digest: ArTFeC1JIA9KJQdaAZqvmBQvyIOqWpDQ+7UqnfNndYo=
+
+Name: org/osgi/service/prefs/PreferencesService.class
+SHA-256-Digest: HLepSyuTWm4lINtcWbtbaJwAd4mtkhrD6gt7QkkpPOw=
+
+Name: org/eclipse/core/internal/preferences/SortedProperties$1.class
+SHA-256-Digest: 1CFPz6BODh5aWKbW3I4eEyTEAdvadRGOaVi6g4TdxYo=
+
+Name: org/eclipse/core/internal/preferences/messages.properties
+SHA-256-Digest: T9qE5Kz0UiPd6BMUskqq0vAGbfdEUXZtbyrzff5HDxY=
+
+Name: org/eclipse/core/internal/preferences/ConfigurationPreferences.c
+ lass
+SHA-256-Digest: Jc9uoHFw4YVFcCSUx4v2RftVEb/9xOUI38AMRkcXmlw=
+
+Name: org/eclipse/core/runtime/preferences/DefaultScope.class
+SHA-256-Digest: oBSjdmX6QEZCi4fCt3tQo6H4KFoZOPg+yLDfrarWHeM=
+
+Name: org/eclipse/core/internal/preferences/InstancePreferences.class
+SHA-256-Digest: JhuHPmWkuhJ0nDMQGI2xbAma+OYClxWccJOzuKT+gt0=
+
+Name: org/eclipse/core/runtime/preferences/IExportedPreferences.class
+SHA-256-Digest: /155KKyurST03ncUyIzRjuAH5OC3ZI0gkn1vgulvizk=
+
+Name: about.html
+SHA-256-Digest: lMSD1ztLnwx9BHQR/c/xqWRVW19KlCOG3VGLb5Z0kkc=
+
+Name: org/eclipse/core/internal/preferences/OSGiPreferencesServiceImpl
+ .class
+SHA-256-Digest: K8x/KeLbsh8CwYbxZ//jbiiE9eLRsdB6llQhC9M21r4=
+
+Name: org/eclipse/core/internal/preferences/PreferencesService$6.class
+SHA-256-Digest: bvmYbrsZKacJjHh6tLEy0YYiBPxAvLsFeQRAPnariL0=
+
+Name: org/eclipse/core/runtime/preferences/IScopeContext.class
+SHA-256-Digest: Q9M6f3s1m2B0X7IrVdJjZ27qeWt5By84R7NM/amSLLY=
+
+Name: org/eclipse/core/internal/preferences/TestHelper.class
+SHA-256-Digest: Cys0l2djzD3WqwYC6ifNNro1GZXQttkj79ikg3Tvxb4=
+
+Name: org/eclipse/core/internal/preferences/SafeFileOutputStream.class
+SHA-256-Digest: ekt6psYKq6xjfhobJL5vjgydQ3yK8m/dH2HrvRJjT8A=
+
+Name: org/eclipse/core/internal/preferences/LookupOrder.class
+SHA-256-Digest: Gw3cNdMtY48RmQiKMlH054nT2wJhylHo6HwIam3DY4M=
+
+Name: org/eclipse/core/runtime/preferences/IEclipsePreferences$IPrefer
+ enceChangeListener.class
+SHA-256-Digest: RF+UcYtXGdEaw/ht1N17KgaLQfcSj7PZr5bujAcS0O4=
+
+Name: org/eclipse/core/internal/preferences/PreferencesService$3.class
+SHA-256-Digest: ly87a0p0Z42nWquN3Al8hCwPlWd/l9Ev7/eQ8R7+raI=
+
+Name: org/eclipse/core/internal/preferences/ExportedPreferences.class
+SHA-256-Digest: FU6053+iAS3a4l31g4qa5yYJCkTAsqKrxymmD9S0h2Q=
+
+Name: org/eclipse/core/runtime/preferences/InstanceScope.class
+SHA-256-Digest: A3ccrX/clZVkXqd82ev90eJv0VOXUS+FLMrJ6lpzMSM=
+
+Name: org/eclipse/core/runtime/preferences/IPreferenceFilter.class
+SHA-256-Digest: jXUsfc+uvsJvSAxZbIgyICCNSrYR5+JqfLsywc8Ces8=
+
+Name: org/eclipse/core/internal/preferences/RootPreferences.class
+SHA-256-Digest: r0Z53y7J9OjgDBapH/+ap2OO66vCSIHHxU6Kdo5woyc=
+
+Name: org/eclipse/core/internal/preferences/ImmutableMap.class
+SHA-256-Digest: K8XdbMM2MgtWVzA6ccQWzUCUn6MQgaaiJCvihuivs1w=
+
+Name: org/eclipse/core/runtime/preferences/IEclipsePreferences$INodeCh
+ angeListener.class
+SHA-256-Digest: KP4y9+mGf9fa7mhjt2pYpxfR9+nMu+g86f69hSqmtb0=
+
+Name: org/eclipse/core/runtime/preferences/AbstractPreferenceStorage.c
+ lass
+SHA-256-Digest: R4g/pOTsXQKV+jILeEbD8xqJOgqqxxAmvHCDLpZyg4k=
+
+Name: org/eclipse/core/internal/preferences/BundleDefaultPreferences.c
+ lass
+SHA-256-Digest: iaV1JAL8ZIE/xw9M9RKRRmginjMwDYteqqwf8DcPW9M=
+
+Name: org/eclipse/core/internal/preferences/EclipsePreferences.class
+SHA-256-Digest: n9M8sQrcvn778xLMVpVtDP+52VTep0XC7ZBrS/xzJAU=
+

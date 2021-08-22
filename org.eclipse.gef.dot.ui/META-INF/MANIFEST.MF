@@ -1,0 +1,1015 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.gef.dot.ui;singleton:=true
+Archiver-Version: Plexus Archiver
+Built-By: genie.gef
+Require-Bundle: org.antlr.runtime;bundle-version="[3.2.0,4.0.0)",org.e
+ clipse.core.runtime;bundle-version="[3.9.0,4.0.0)",org.eclipse.core.f
+ ilesystem;bundle-version="[1.4.0,2.0.0)",org.eclipse.ui;bundle-versio
+ n="[3.105.0,4.0.0)",org.eclipse.ui.ide;bundle-version="[3.9.0,4.0.0)"
+ ,org.eclipse.ui.editors;bundle-version="[3.8.0,4.0.0)",org.eclipse.xt
+ ext.ui;bundle-version="[2.7.3,3.0.0)",org.eclipse.xtext.ui.shared;bun
+ dle-version="[2.7.3,3.0.0)",org.eclipse.xtext.builder;bundle-version=
+ "[2.7.3,3.0.0)",org.eclipse.gef.common;bundle-version="[5.0.0,6.0.0)"
+ ,org.eclipse.gef.geometry;bundle-version="[5.0.0,6.0.0)",org.eclipse.
+ gef.fx;bundle-version="[5.0.0,6.0.0)",org.eclipse.gef.geometry.conver
+ t.fx;bundle-version="[5.0.0,6.0.0)",org.eclipse.gef.graph;bundle-vers
+ ion="[5.0.0,6.0.0)",org.eclipse.gef.layout;bundle-version="[5.0.0,6.0
+ .0)",org.eclipse.gef.mvc.fx;bundle-version="[5.0.0,6.0.0)",org.eclips
+ e.gef.mvc.fx.ui;bundle-version="[5.0.0,6.0.0)",org.eclipse.gef.zest.f
+ x;bundle-version="[5.0.0,6.0.0)",org.eclipse.gef.zest.fx.ui;bundle-ve
+ rsion="[5.0.0,6.0.0)",org.eclipse.gef.dot;bundle-version="[5.0.0,6.0.
+ 0)"
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Eclipse-SourceReferences: scm:git:https://github.com/eclipse/gef.git;p
+ ath="org.eclipse.gef.dot.ui";commitId=ee072ca1e8ecb7cb0923ab2396494a7
+ b365bccba
+Bundle-Vendor: Eclipse GEF
+Import-Package: org.apache.log4j;version="[1.2.15,2.0.0)"
+Export-Package: org.eclipse.gef.dot.internal.ui;x-friends:="org.eclips
+ e.gef.dot.tests",org.eclipse.gef.dot.internal.ui.handlers;x-friends:=
+ "org.eclipse.gef.dot.tests",org.eclipse.gef.dot.internal.ui.language;
+ x-friends:="org.eclipse.gef.dot.tests",org.eclipse.gef.dot.internal.u
+ i.language.contentassist;x-friends:="org.eclipse.gef.dot.tests",org.e
+ clipse.gef.dot.internal.ui.language.highlighting;x-friends:="org.ecli
+ pse.gef.dot.tests",org.eclipse.gef.dot.internal.ui.language.internal;
+ x-friends:="org.eclipse.gef.dot.tests",org.eclipse.gef.dot.internal.u
+ i.language.labeling;x-friends:="org.eclipse.gef.dot.tests",org.eclips
+ e.gef.dot.internal.ui.language.outline;x-friends:="org.eclipse.gef.do
+ t.tests",org.eclipse.gef.dot.internal.ui.language.quickfix;x-friends:
+ ="org.eclipse.gef.dot.tests"
+Bundle-Name: GEF DOT.UI
+Bundle-Version: 5.0.0.201706131249
+Bundle-Activator: org.eclipse.gef.dot.internal.ui.language.internal.Do
+ tActivator
+Created-By: Apache Maven 3.1.1
+Build-Jdk: 1.8.0_121
+
+Name: plugin.xml
+SHA-256-Digest: VvCJjKHwdO6Wi92Urd4EvE3ihotKzGN7qXPWpbEdj28=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/lex
+ er/CustomContentAssistInternalDotLexer.g
+SHA-256-Digest: 6wgvVL06LMV09rB+g4Mq+8pCGz5cAtwz2n3On5IssZ8=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/lex
+ er/InternalDotArrowTypeLexer.class
+SHA-256-Digest: Dx685Yn9WwSTU5iurcXbj3jiYIfagcL74ODZekxzBJs=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/AbstractD
+ otEscStringProposalProvider.class
+SHA-256-Digest: mVGeFlQjhRYV79Znobz2Kulw6rAkHtQTNJkTB4CrsFg=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/int
+ ernal/InternalDotPointParser.class
+SHA-256-Digest: EFQHfXoVT0KQlBr9B9ZIkwLStF53/Fvm1Ih3Z1ThTL0=
+
+Name: about.ini
+SHA-256-Digest: dJnpCx3Bbij7WuygdxEHHHdTDeteCiPLA3svbr565Tw=
+
+Name: org/eclipse/gef/dot/internal/ui/DotExportRadioGroupFieldEditor$2
+ .class
+SHA-256-Digest: fztG8xWtcwZJMtUDGw3YumzijnmfNHGMJ/HlKw9/O5M=
+
+Name: org/eclipse/gef/dot/internal/ui/DotArrowShapeDecorations$Diamond
+ .class
+SHA-256-Digest: 8Em3v+95HKzJDATi325o3a8YSb4s4Hrgk1jddOLaK7Q=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/int
+ ernal/InternalDotHtmlLabelParser.class
+SHA-256-Digest: JINpEVAG8tdqEF6BFOQlsbtFYSb0IIkyzuYt6140i3M=
+
+Name: org/eclipse/gef/dot/internal/ui/language/AbstractDotShapeUiModul
+ e.class
+SHA-256-Digest: 4rdHEOF1707+3Nq9juI8udi0zIqTPoFUwlAtR4tTgZ8=
+
+Name: org/eclipse/gef/dot/internal/ui/language/highlighting/antlr/lexe
+ r/CustomHighlightingInternalDotColorLexer.class
+SHA-256-Digest: NUF/nHTw06f1A2wWWX71Vt8fnt6TmkNmexq8q0mg0DI=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/AbstractD
+ otRectProposalProvider.class
+SHA-256-Digest: E+AEwoLgOcfoX9TKCcy2xuHqCwZNcupQXUsHHfzYCEA=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/int
+ ernal/InternalDotStyleParser.tokens
+SHA-256-Digest: Zfpa9wMg9tkgZWuYPkwuPZIa0b4tpVwMfCmzBu0hf5w=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/int
+ ernal/InternalDotParser$DFA2.class
+SHA-256-Digest: zJIjSIpHOUiWd7d2+Es1Gjg5t4cKQw8lgdozNjrKr0I=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/AbstractD
+ otShapeProposalProvider.class
+SHA-256-Digest: fvMZwKaZQ/p3cbWvUA2UGvqejm71JFEOEr5TWab0r64=
+
+Name: org/eclipse/gef/dot/internal/ui/DotArrowShapeDecorations$Box.cla
+ ss
+SHA-256-Digest: tJe3tUiGnBjp6QE3Vo7VEPjTF0K2JXVRNSFCAjXD+IQ=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/lex
+ er/InternalDotColorLexer$DFA7.class
+SHA-256-Digest: ZR3yOsojPdzD4GC9Nf1KawUTdISZ0k7SfUtKgXyXQE8=
+
+Name: icons/graph_outline.png
+SHA-256-Digest: t4L3dU7/3i+1vTxQRRNjXHw2tF1WhUt1yWVnDGCq6Xg=
+
+Name: icons/subgraph.png
+SHA-256-Digest: flO7lFmx5W/haPyLRSnAMPXjU1HA4QTDViJDzqG1uwk=
+
+Name: org/eclipse/gef/dot/internal/ui/language/DotPointUiModule.class
+SHA-256-Digest: PfsGYUEbPmc0AqLhARoeSribhIfyrKRCvwq29Wcdc3c=
+
+Name: org/eclipse/gef/dot/internal/ui/DotGraphViewModule$1.class
+SHA-256-Digest: LV+remDDo2EhcugHdon5Y5E1HtV5JrmNl8S5q+OpmmQ=
+
+Name: org/eclipse/gef/dot/internal/ui/language/highlighting/antlr/lexe
+ r/CustomHighlightingInternalDotLexer.class
+SHA-256-Digest: 58xr+df8T7RvN6XxNBqK+9l1dfrniI/JtcGo783uaVo=
+
+Name: org/eclipse/gef/dot/internal/ui/DotArrowShapeDecorations$Vee.cla
+ ss
+SHA-256-Digest: TmkqYbGSRBZjOeAopsVoyb5OmSJDbddDANwAYI9GH24=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/lex
+ er/CustomContentAssistInternalDotColorLexer.class
+SHA-256-Digest: xlrsbsw31st4+C84cbklIQgWBZMT8796kRW2Wrd71BI=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/lex
+ er/InternalDotStyleLexer.g
+SHA-256-Digest: C0OGCkG+pVlURY363s8491mFhpNLQBnvJPSwWNgz79A=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/Dot
+ ArrowTypeParser.class
+SHA-256-Digest: 5IG83pPDV/5GhLXolRDfOkajvjGn4Cky8zC/9PRrayE=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/Dot
+ ShapeParser$1.class
+SHA-256-Digest: 9VeMnyIjkh68kNGmvgGIuo7FZ9IrlErakfOye7XRxxI=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/Dot
+ HtmlLabelParser.class
+SHA-256-Digest: uhKLaV6fFIrFyMpLFf01ef3EPSO1T/JQ8gINm1UQM4Y=
+
+Name: org/eclipse/gef/dot/internal/ui/DotGraphView$LoadFile$1.class
+SHA-256-Digest: mSoNGdrmnSWDgBVQ7aXwJmJHDVyga7H8Rc+3d6AEzKc=
+
+Name: org/eclipse/gef/dot/internal/ui/DotExportRadioGroupFieldEditor$3
+ .class
+SHA-256-Digest: EmAi7GwZPkX717W8ir42Tu5pzaBeeUQmxFyi4YRQkAw=
+
+Name: about.mappings
+SHA-256-Digest: T1xhZ98MBhkKZF+4yYnirM6aotYSFC5d8AmI1+NXQu8=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/int
+ ernal/InternalDotEscStringParser.class
+SHA-256-Digest: x+ilBaAOhGhIKZQU9lu9k2dZToIVJiq1UINxtDeGK58=
+
+Name: org/eclipse/gef/dot/internal/ui/DotGraphView$LoadFile.class
+SHA-256-Digest: UHokRnUTAKuilggwcADtRUM7VhiBDmcWhvoAmjCW8Xo=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/lex
+ er/InternalDotLexer.tokens
+SHA-256-Digest: /hzZU32jiqjG4aya8i0Pa15TJyuilQXgSxcU5CuK10M=
+
+Name: org/eclipse/gef/dot/internal/ui/language/highlighting/antlr/lexe
+ r/CustomHighlightingInternalDotLexer$DFA18.class
+SHA-256-Digest: UrqLkCoSjgnXPlrbdfPQo1RZ9uawsa6zne5EyyTxXR4=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/lex
+ er/InternalDotRectLexer.class
+SHA-256-Digest: T56smYPDcXvBaz3XVFTU9i4DeHhjBGsBsd3xkS6l5ww=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/lex
+ er/InternalDotPointLexer.g
+SHA-256-Digest: WzpQXzri6+cv00rlo4mQG/4d5kgxrmYvYc6JXeLNW7k=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/int
+ ernal/InternalDotStyleParser.g
+SHA-256-Digest: s2nArxnkFANxdFU3Yp/DeKwrEwW4sjUWWkoJthlI1DA=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/lex
+ er/InternalDotArrowTypeLexer$DFA1.class
+SHA-256-Digest: JBIxxR1pq29sWr/21j9mcVkZTSz9n0DN21e3Ht+POmM=
+
+Name: icons/rhs.png
+SHA-256-Digest: B505uDRgWe6+X+R2KF4Ajf2jL8j4FHagL/czuZYY7Iw=
+
+Name: icons/edge.png
+SHA-256-Digest: Q+ZKyY/xilTXJkyultQOOrDlG+u1gxnHcF9GjIEz1S0=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/lex
+ er/InternalDotLexer$DFA7.class
+SHA-256-Digest: CrjRp6qCM+gYgYXRNBBubfHu7sUMF3zNMUoZYpCH/do=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/AbstractD
+ otArrowTypeProposalProvider.class
+SHA-256-Digest: nBM9ee/EjDDkn4roLnOsZ2k0nuEFBVuih1impdB4aS8=
+
+Name: org/eclipse/gef/dot/internal/ui/handlers/SyncGraphvizExportHandl
+ er$5.class
+SHA-256-Digest: ibsCFLNRedoTwfwayz0Rpaf37OLIdGKQGEP52K3SmJw=
+
+Name: org/eclipse/gef/dot/internal/ui/language/AbstractDotEscStringUiM
+ odule.class
+SHA-256-Digest: a4O5MrLO7S3uzWnDfMJ9gEopcCFBCw0MYFivM9alL40=
+
+Name: org/eclipse/gef/dot/internal/ui/language/DotEscStringUiModule.cl
+ ass
+SHA-256-Digest: +3t5vu4my9SDkvmLaMiFJi8byN5L5rJDD/xCMJwXNes=
+
+Name: org/eclipse/gef/dot/internal/ui/DotGraphView$UpdateToggle$4.clas
+ s
+SHA-256-Digest: osjbaevDRAnNSmQDmSg/f3kgU/48+Ccv8ZZvRdCutmY=
+
+Name: org/eclipse/gef/dot/internal/ui/language/highlighting/antlr/lexe
+ r/CustomHighlightingInternalDotHtmlLabelLexer.class
+SHA-256-Digest: UDqOaklKdRDukcKejOQXNN4an178m+QCy1wYHDj+dTs=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/Dot
+ Parser.class
+SHA-256-Digest: Nx9Wxbxtj4UBmVZJUhpcb+V7l2Epb0X3eJhIpszojFU=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/AbstractD
+ otColorProposalProvider.class
+SHA-256-Digest: 0nZ1S0bNLdTHJ2HQ1n51UIK5haF8wIY9SVwY5tWhnSM=
+
+Name: org/eclipse/gef/dot/internal/ui/GraphvizPreferencePage$GraphvizC
+ onfigurationDialog.class
+SHA-256-Digest: SGK05qPgXAq1OP7K99ATlf4wEXOZaWcYlOm0BwES7t4=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/lex
+ er/InternalDotColorLexer.g
+SHA-256-Digest: RHcn3OBIV84osUvETfe12mUm5ac8grUopvQ3T2OmVeM=
+
+Name: org/eclipse/gef/dot/internal/ui/language/quickfix/DotQuickfixPro
+ vider$1.class
+SHA-256-Digest: dTHLDd8WsZFim0Gq4ZRLDQzLg7a1fALLJA3oQWDkOvU=
+
+Name: org/eclipse/gef/dot/internal/ui/DotGraphView$4.class
+SHA-256-Digest: PGq6MNmolaOSAyAuSBIL+8J5KOjAuem4S8+5kQYgnNA=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/lex
+ er/InternalDotStyleLexer.class
+SHA-256-Digest: eM3P/mCWE4RcsrvNWi8RhzTV7Ncjgu6UrP8OQT3Szug=
+
+Name: org/eclipse/gef/dot/internal/ui/language/highlighting/antlr/lexe
+ r/CustomHighlightingInternalDotColorLexer$DFA7.class
+SHA-256-Digest: OPb4ANeHyYFm6voUIEyDSfwmqC7ROD5aiitxTMrVaZw=
+
+Name: org/eclipse/gef/dot/internal/ui/language/labeling/DotLabelProvid
+ er.class
+SHA-256-Digest: guZ5KXju7/aebraqV1BHF4FiSR5xDb6mjDOyZctohbg=
+
+Name: org/eclipse/gef/dot/internal/ui/language/AbstractDotUiModule.cla
+ ss
+SHA-256-Digest: MJd/z63tIhsLKAl3OZHOZAvbzCpzUhlBLaZPsJ4UE+g=
+
+Name: org/eclipse/gef/dot/internal/ui/DotExportRadioGroupFieldEditor$3
+ $1.class
+SHA-256-Digest: Mjf5cveHiOP3SkJitOsTtF/vJBrVch/T1XI6upgeM1k=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/DynamicTe
+ mplateProposalProvider.class
+SHA-256-Digest: jF7UUcelj0WwDrqIFYyOK96Guli7UEdyQ3+PMkRFOCM=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/int
+ ernal/InternalDotColorParser.class
+SHA-256-Digest: KgmY0g2ZjVSm26HdqxhbJn7voT/wR6FHziXeEtExS8A=
+
+Name: org/eclipse/gef/dot/internal/ui/language/DotRectExecutableExtens
+ ionFactory.class
+SHA-256-Digest: wi0QaBcW4tqzIfmH0aUnSUPaJnN2gwqLKwiYW8apm4w=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/int
+ ernal/InternalDotArrowTypeParser.class
+SHA-256-Digest: g7lQPcUATEcevpgfIOXeXb66N12N9R0Jls4nAY5IjcQ=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/int
+ ernal/InternalDotRectParser.g
+SHA-256-Digest: fPLS7KZO0Or6qnQwoSuDpyH1Eifo6WasJeWLCwcCL/Y=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/int
+ ernal/InternalDotStyleParser.class
+SHA-256-Digest: O+/uf4gpMJ3bRW9lbRuzmzvm/1qG1YArcWz36nk5hK0=
+
+Name: org/eclipse/gef/dot/internal/ui/DotGraphView$1.class
+SHA-256-Digest: Ycxur0uqXzELIVW71qVV84q30GiabdtpRm2bMlui9SA=
+
+Name: icons/file.png
+SHA-256-Digest: iC7OpO+RG97KXPMRPkkeQ1XE8AWaOhvZoK842dCUv8Q=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/lex
+ er/InternalDotEscStringLexer.class
+SHA-256-Digest: yvTvQkwDxab87RWQJkUiKKpXrl9UmLeSTS3urC7Z9bE=
+
+Name: org/eclipse/gef/dot/internal/ui/DotArrowShapeDecorations$ICurve.
+ class
+SHA-256-Digest: toC3kyEVCqNWG35F8oFhvnmJlprGGBsyUKSTU2PuKck=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/DotPropos
+ alProviderDelegator.class
+SHA-256-Digest: kvkLK40l3JhQI6twwolbICVmpitsnEAuftLitSug3dk=
+
+Name: org/eclipse/gef/dot/internal/ui/language/highlighting/antlr/lexe
+ r/CustomHighlightingInternalDotColorLexer.tokens
+SHA-256-Digest: Gy0R/hUkDe5PMTM1XwseQtlPbBraa8bagoLy4pMTGA0=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/DotStyleP
+ roposalProvider.class
+SHA-256-Digest: 96hPc2DzNGn5yBKFoWGcyVU1t5Bp34DGVN+mZrmt738=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/lex
+ er/InternalDotLexer$DFA18.class
+SHA-256-Digest: 0WovqW7fpcA2s3AG9R1XORgmvJjXXB0tbKvkkOFRsUg=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/lex
+ er/InternalDotEscStringLexer.g
+SHA-256-Digest: KpHsbzzfwkxkhLvF6tXWg4FHjoEMQhaBrd8p+vUVxhY=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/lex
+ er/InternalDotColorLexer.class
+SHA-256-Digest: 7y2T7U0tOxA0qNMZrssfcCz5DqUb/HSM4BPom0JwN0E=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/AbstractD
+ otPointProposalProvider.class
+SHA-256-Digest: AzU9BmnpHc71mVDDbllrlTjs9mnf5jHqQPdrfd5rwNo=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/lex
+ er/InternalDotStyleLexer$DFA2.class
+SHA-256-Digest: 5aDDp+WNJa0l3jN84D8tIF6sGbAllgBSBiu3C3fBn6A=
+
+Name: org/eclipse/gef/dot/internal/ui/language/highlighting/DotSubgram
+ marHighlighter.class
+SHA-256-Digest: 7UmXMcsrSnqmxEykPj5XNJnN/E3fiimjzO2BkUDhTvE=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/Dot
+ SplineTypeParser.class
+SHA-256-Digest: yVrlPMQKGuWjHqIzlXrSCB75nxLJH7SKtXsmd+huw20=
+
+Name: org/eclipse/gef/dot/internal/ui/language/DotSplineTypeExecutable
+ ExtensionFactory.class
+SHA-256-Digest: Qzj6cjkFWmDDoPcZFwv0LBm14s+fcZAsZYXZ7REyzmM=
+
+Name: org/eclipse/gef/dot/internal/ui/language/DotExecutableExtensionF
+ actory.class
+SHA-256-Digest: Eaarkd57+XSCANx0MZ7bWMepD+BjpcrxHZNtj55ZnFU=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/Dot
+ HtmlLabelParser$1.class
+SHA-256-Digest: tmHt0IKmihJkltrbYfsrSbji5oqGYsi0l6cjU9aUdEM=
+
+Name: org/eclipse/gef/dot/internal/ui/handlers/SyncGraphvizExportHandl
+ er$1.class
+SHA-256-Digest: lkQDXPdfF6UIcwcyflouo0eye+xjoT693l64J96plIs=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/Dot
+ ArrowTypeParser$1.class
+SHA-256-Digest: NsYLpHZbFfHK8iR2N00m5rijmVXkT0wEKX9mSbY0gKU=
+
+Name: org/eclipse/gef/dot/internal/ui/DotBSplineInterpolator.class
+SHA-256-Digest: 0jbS6M4HAGQMswiFzhT7MarmsJlFV7PlR+3/EOLV6Ss=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/lex
+ er/InternalDotHtmlLabelLexer$DFA6.class
+SHA-256-Digest: PzBKk6xKkMOvsIV9cEVOtrtcG4tdZdX3vz9M7GbJqYA=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/Dot
+ PointParser$1.class
+SHA-256-Digest: XUks80IQTqUgnXA8G2gNc45oEdu9mWTDhAKrrJw6ZqU=
+
+Name: org/eclipse/gef/dot/internal/ui/handlers/SyncGraphvizExportHandl
+ er$4.class
+SHA-256-Digest: DCqWHKVGIUmJzQeWaAUO1fXZEXtz0WdiqYgjHKONwpk=
+
+Name: org/eclipse/gef/dot/internal/ui/language/highlighting/antlr/lexe
+ r/CustomHighlightingInternalDotHtmlLabelLexer.g
+SHA-256-Digest: lv/LoMpZpxB7tlTn3p9eYAyY9Bue+cPpqWtHJn/A9mQ=
+
+Name: icons/attributes.png
+SHA-256-Digest: 5uSxyy9IYfs2cFP8xpzkUHQDjrB7xTdUTGzP7kMgbqA=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/int
+ ernal/InternalDotParser.tokens
+SHA-256-Digest: /hzZU32jiqjG4aya8i0Pa15TJyuilQXgSxcU5CuK10M=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/lex
+ er/InternalDotStyleLexer.tokens
+SHA-256-Digest: Zfpa9wMg9tkgZWuYPkwuPZIa0b4tpVwMfCmzBu0hf5w=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/lex
+ er/CustomContentAssistInternalDotLexer$DFA7.class
+SHA-256-Digest: +wZbGAzlBwJuJb/2Ej/Iqr7eh8K2jmNBFudqBuuz2yw=
+
+Name: org/eclipse/gef/dot/internal/ui/DotArrowShapeDecorations$Dot.cla
+ ss
+SHA-256-Digest: JnJzFLM/0lgD0t2CQpful8OfaKtKE16CBxv6fj+Ir9M=
+
+Name: org/eclipse/gef/dot/internal/ui/handlers/SyncGraphvizExportHandl
+ er$2.class
+SHA-256-Digest: Jnp3CQGtLhnZ8GVJ2xBmzrBvf5OslOKHddt8xE1NWeY=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/int
+ ernal/InternalDotSplineTypeParser.class
+SHA-256-Digest: dLzfR7Z8V+zHwqeRwMFndDKrOWWVlYXvaCw46iJj5X4=
+
+Name: org/eclipse/gef/dot/internal/ui/DotGraphView$2.class
+SHA-256-Digest: GiKJcJB0N1VYabjXGniZcmnQx0+s849AmVtQflvF6pI=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/int
+ ernal/InternalDotArrowTypeParser.tokens
+SHA-256-Digest: ugZsq/iTayIjrEGrV40TaKBopMmm8PFoT88u0Cl2OEM=
+
+Name: org/eclipse/gef/dot/internal/ui/language/highlighting/antlr/lexe
+ r/CustomHighlightingInternalDotHtmlLabelLexer.tokens
+SHA-256-Digest: D+nlyc/MWVtiDkmyJAr0BKqqDfEIw5v0tXFY8gPzIRg=
+
+Name: icons/node.png
+SHA-256-Digest: kLBX/bnuLpZzj+mhmyHdkdnqs/AYHB0wu7J0Uo05pps=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/lex
+ er/InternalDotRectLexer.g
+SHA-256-Digest: v/2p+xCzMIDhuYxqug+OsRoGreMV8INEQrH5LOVvQpI=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/int
+ ernal/InternalDotShapeParser.class
+SHA-256-Digest: Ky0wPKLYdfWmwzda51DEX7fMIkD+f2Djm70DsmZpq6s=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/lex
+ er/InternalDotShapeLexer.g
+SHA-256-Digest: 1WXcJXfNCf/OkdvsTrpnZjLhUu9djPL2wNTDd/t/vNU=
+
+Name: org/eclipse/gef/dot/internal/ui/language/highlighting/antlr/lexe
+ r/CustomHighlightingInternalDotHtmlLabelLexer$DFA6.class
+SHA-256-Digest: LWdv1SUsCv4nd5RJyfvuvA+w2EPAaWUFfym0v5cM4tk=
+
+Name: org/eclipse/gef/dot/internal/ui/language/quickfix/DotQuickfixPro
+ vider.class
+SHA-256-Digest: URmU4G/D99s+kaaSOeNN3+sA1q5N/9OFPP+iaNyjxcQ=
+
+Name: org/eclipse/gef/dot/internal/ui/DotArrowShapeDecorations$Normal.
+ class
+SHA-256-Digest: uoW+BXtxSSofuuAyEi60duHhMajfMybLzTh6ljnSicc=
+
+Name: org/eclipse/gef/dot/internal/ui/language/highlighting/DotSubgram
+ marHighlighter$1.class
+SHA-256-Digest: xzFxzjkZUk7itVnSUZW2gDnWRdew4GtIYlToiPgzLp4=
+
+Name: templates/templates.xml
+SHA-256-Digest: ShZ8I09APD5fgFBKcN5uv9jAmKWvQ9f4zK2RjdjFROE=
+
+Name: org/eclipse/gef/dot/internal/ui/DotGraphViewModule$2.class
+SHA-256-Digest: cxE/9wGFYYoRU9L2Ca7dAFU/3hfa5XZtnDmeRk3iH7o=
+
+Name: org/eclipse/gef/dot/internal/ui/language/AbstractDotArrowTypeUiM
+ odule.class
+SHA-256-Digest: pcCJeGXboA1M+vGWuikX1+/kaRTlqfogEmTB9IYA9Eg=
+
+Name: org/eclipse/gef/dot/internal/ui/Dot2ZestGraphCopier.class
+SHA-256-Digest: A0W0IwleObrsYxFiwXy+uDeFLn9BbVWG81AYR8NKKCg=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/AbstractD
+ otSplineTypeProposalProvider.class
+SHA-256-Digest: aC6HRt7/El4nXjLrbiYx9uy016VKwJcDv3twu1UP5fw=
+
+Name: org/eclipse/gef/dot/internal/ui/DotArrowShapeDecorations$Inv.cla
+ ss
+SHA-256-Digest: V8F3c4DzBvn8zsTzngOxYUyOOAx/UyPeBq7BSJIv3DY=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/lex
+ er/InternalDotColorLexer.tokens
+SHA-256-Digest: Gy0R/hUkDe5PMTM1XwseQtlPbBraa8bagoLy4pMTGA0=
+
+Name: org/eclipse/gef/dot/internal/ui/language/DotArrowTypeUiModule.cl
+ ass
+SHA-256-Digest: O7qkQjIt9rj0zck4W6B8vxkt6UmZmUiIAIHY3rjNOXU=
+
+Name: org/eclipse/gef/dot/internal/ui/handlers/SyncGraphvizExportHandl
+ er$3.class
+SHA-256-Digest: x1Rt3cZXhsLu7Q2SYW1NUlcTHvvucchJTcJNCI0cWFk=
+
+Name: org/eclipse/gef/dot/internal/ui/DotGraphView$3.class
+SHA-256-Digest: v9jj+xQ5BbrglWmhQ83ESRDjxfKNFsEtc3bx6rUd+gk=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/Dot
+ StyleParser$1.class
+SHA-256-Digest: G/eOGiWKsLJFRLEkDrf8S37xyuOrHJUl9DtSf7dUjQY=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/AbstractD
+ otProposalProvider.class
+SHA-256-Digest: 8LyYA6WqIzv7YEpgVTJGRbr07nkF8v/wv+yfSRZ6KxU=
+
+Name: org/eclipse/gef/dot/internal/ui/DotUiMessages.class
+SHA-256-Digest: REGVR6CNOs7HASnVE1JfecCm2DTNWCrqyO4Szvzk2UY=
+
+Name: org/eclipse/gef/dot/internal/ui/DotGraphViewModule$3.class
+SHA-256-Digest: TIGXA7Bei1CYlQp/MkZFjgUQFSEo+3AitaYSHtPoNMA=
+
+Name: org/eclipse/gef/dot/internal/ui/language/DotEscStringExecutableE
+ xtensionFactory.class
+SHA-256-Digest: 1UQkk7XYjryMeN+vwndKa9tUXxNAhzuZ5d4N0mFFg5c=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/int
+ ernal/InternalDotShapeParser.tokens
+SHA-256-Digest: Iyf3wNQsE3ixYzqkbxlOxtK9yUDnIWj4Y+UfTtu6lxc=
+
+Name: org/eclipse/gef/dot/internal/ui/language/internal/DotActivator.c
+ lass
+SHA-256-Digest: tElorFD+KmWnbT9T1snhgOBbhXrjj2G9sAfkQrAl3gA=
+
+Name: org/eclipse/gef/dot/internal/ui/language/DotColorExecutableExten
+ sionFactory.class
+SHA-256-Digest: ston4WTrhqq7egrCXWW6PgeYy7/bXx+ozwxq8EDTWf8=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/lex
+ er/InternalDotLexer.class
+SHA-256-Digest: rLSktNVtLLKWrMsPKhx8h8uaNXnh0u9hw7nRZUuqzmE=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/Dot
+ RectParser$1.class
+SHA-256-Digest: LPRJbvUG+nIZegOib+vpWK5sK0XYD0Svg1K3H2OEGDI=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/lex
+ er/InternalDotSplineTypeLexer.g
+SHA-256-Digest: XXqw6wd2Ud41oq93boTOf8hxmofCk96VRiEIpPVl2yc=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/int
+ ernal/InternalDotArrowTypeParser.g
+SHA-256-Digest: VrftiF2tSWvxviAIb2CDp4ujBcrsMoHQI3rRXl0IpcA=
+
+Name: org/eclipse/gef/dot/internal/ui/DotNodeLayoutBehavior.class
+SHA-256-Digest: sgFm8iErEC5uVwEdFzKFaRBjM1Rq7xfAQWAlJyoeqww=
+
+Name: org/eclipse/gef/dot/internal/ui/GraphvizPreferencePage$1.class
+SHA-256-Digest: xuCdpp3B6Sa+CaJj8dDMMZXL4c53zbbbrU3rlfrcu5M=
+
+Name: org/eclipse/gef/dot/internal/ui/DotArrowShapeDecorations$Crow.cl
+ ass
+SHA-256-Digest: F4umkW1YC/ZvqAXkcwI43S3e1y5QjuyTTLdBDne1v0Y=
+
+Name: org/eclipse/gef/dot/internal/ui/language/DotStyleExecutableExten
+ sionFactory.class
+SHA-256-Digest: XQr38IKUFMTt7X1fmX3CpFqVxCfW6hmXFwnhrBMnqdU=
+
+Name: org/eclipse/gef/dot/internal/ui/language/DotArrowTypeExecutableE
+ xtensionFactory.class
+SHA-256-Digest: fasNKPTSLqqRkFb81OHwwjA7bifVgWeaRNRUUnKLYMw=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/DotArrowT
+ ypeProposalProvider.class
+SHA-256-Digest: bpzOnDmbgDxTKSUOZ863wAl2GWXMW3a4olwZtZLsiJA=
+
+Name: org/eclipse/gef/dot/internal/ui/DotGraphView$UpdateToggle$2.clas
+ s
+SHA-256-Digest: NqFfOluMk8ew7J+AbshugKwBCMKr8rGjnqBVJn8NybM=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/int
+ ernal/InternalDotRectParser.tokens
+SHA-256-Digest: eERhqylrlEYX1rg4SWp0Ic8FzbBKeBNx+k5rtqsftBM=
+
+Name: org/eclipse/gef/dot/internal/ui/styles.css
+SHA-256-Digest: Bi9RtVsxqyZxwOdl+RUDVfo6A70U/PrzT2881qAEEkY=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/DotColorP
+ roposalProvider.class
+SHA-256-Digest: DM2D7geM9XrYGb1bM+LuivKZ9sGnL77W4td59zWFFpo=
+
+Name: org/eclipse/gef/dot/internal/ui/language/DotStyleUiModule.class
+SHA-256-Digest: CAFlLpprLzbykidOcWQYNIVVXRd74+P/J6aFUJVCPRE=
+
+Name: org/eclipse/gef/dot/internal/ui/language/AbstractDotRectUiModule
+ .class
+SHA-256-Digest: ntQLFb8WPlDyhCFGnSc4GC/g36zNwpnKuBuX0TkDqvM=
+
+Name: org/eclipse/gef/dot/internal/ui/Dot2ZestAttributesConverter.clas
+ s
+SHA-256-Digest: 82tkZbaaY8OSw9EToHqn33y2AmgdaWY9q0Z6CKh78f0=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/int
+ ernal/InternalDotPointParser.tokens
+SHA-256-Digest: vs7TMfhXtftJjuTsOCD61VoJChyRCSo+7mGggzLvsJI=
+
+Name: org/eclipse/gef/dot/internal/ui/DotGraphViewModule.class
+SHA-256-Digest: AHxU1R1wnyGpeAZGW2Qnlu73wOqAO8RRqvLNkPSiD5k=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/lex
+ er/InternalDotEscStringLexer.tokens
+SHA-256-Digest: QrnmaWi/hxyjtBKqz7DheVend5EOpOIhVl9V0sSSrwg=
+
+Name: org/eclipse/gef/dot/internal/ui/DotArrowShapeDecorations$IPrimit
+ iveShape.class
+SHA-256-Digest: SuOfihOgWDZI4smJUpfh1E7DEw5AwllbtwE8iNfU2BU=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/lex
+ er/InternalDotShapeLexer.tokens
+SHA-256-Digest: Iyf3wNQsE3ixYzqkbxlOxtK9yUDnIWj4Y+UfTtu6lxc=
+
+Name: org/eclipse/gef/dot/internal/ui/language/outline/DotOutlineTreeP
+ rovider.class
+SHA-256-Digest: IwU4uJBYZJcwo1hCdsTwdfaEUHTvP1tclqyxHWm7+YA=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/lex
+ er/CustomContentAssistInternalDotColorLexer.g
+SHA-256-Digest: xuT9q9MVncXjkNfuzkph0J6UhFB7AAQ5acS8Ac1ANh8=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/lex
+ er/InternalDotHtmlLabelLexer.tokens
+SHA-256-Digest: D+nlyc/MWVtiDkmyJAr0BKqqDfEIw5v0tXFY8gPzIRg=
+
+Name: org/eclipse/gef/dot/internal/ui/language/highlighting/antlr/lexe
+ r/CustomHighlightingInternalDotLexer.tokens
+SHA-256-Digest: mToutZYTplNCRM8OoLCtI6iQm8lqxcN3ZIKvnjkxlhE=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/Dot
+ PointParser.class
+SHA-256-Digest: /xB0YYaajC5Zr5X8qXGCqBheg1OBJ/8/D5j0x1naun8=
+
+Name: org/eclipse/gef/dot/internal/ui/GraphvizPreferencePage.class
+SHA-256-Digest: EytyO5C0i+XZbIVZXaaD9dUz7AXyD8jp91gpa7l1BaI=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/int
+ ernal/InternalDotSplineTypeParser.g
+SHA-256-Digest: lFVTTuvJl/NEODKhpeujizED7d/5ugMfiYMfhZACum8=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/lex
+ er/InternalDotShapeLexer$DFA12.class
+SHA-256-Digest: ps05XGpe6ARYZlF69yDPMWHPt/0CkOlEIKlPxfoPyis=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/lex
+ er/InternalDotHtmlLabelLexer.g
+SHA-256-Digest: ydb+veevMuREBW7nH6zOb1fZQqaG7Yit5C2El/1501Q=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/DotEscStr
+ ingProposalProvider.class
+SHA-256-Digest: hjITzZCXBBbpE80RMGqlQJ+O6Z+nBy9hs1tyJdaWetg=
+
+Name: org/eclipse/gef/dot/internal/ui/handlers/SyncGraphvizExportHandl
+ er.class
+SHA-256-Digest: QnVYB9hQQcaOtMgKDtAXqdsYG2hHoSc94fv0ZkEuvCc=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/int
+ ernal/InternalDotHtmlLabelParser.g
+SHA-256-Digest: AY9ax2ONPy3eHKIVUJiOXw1Jt0b+UDgNJOSXgYCxDio=
+
+Name: org/eclipse/gef/dot/internal/ui/language/labeling/DotDescription
+ LabelProvider.class
+SHA-256-Digest: Vje6+BjeTvA6OkFCPIljT/X1froqGFkVSmvuZJOREkA=
+
+Name: org/eclipse/gef/dot/internal/ui/DotGraphView$5.class
+SHA-256-Digest: Cc+T0IzL5IN8qatoyKUbRU+BosSIKVRhqt74Y0U0jLg=
+
+Name: org/eclipse/gef/dot/internal/ui/language/AbstractDotColorUiModul
+ e.class
+SHA-256-Digest: hPX+jYcBqYzHVDlrOKq0vPlFdx265+k1q1D2n/1WUpE=
+
+Name: org/eclipse/gef/dot/internal/ui/DotArrowShapeDecorations$Tee.cla
+ ss
+SHA-256-Digest: nCOoL2TQTaGJEq6NSi4VGlqpYTOrP3bPpMYFqHXa4Cc=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/Dot
+ Parser$1.class
+SHA-256-Digest: yw3+tG3hzvh/nOhrqgKjnR31XnUP4lX4pi1L79GvB3o=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/lex
+ er/InternalDotRectLexer.tokens
+SHA-256-Digest: eERhqylrlEYX1rg4SWp0Ic8FzbBKeBNx+k5rtqsftBM=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/int
+ ernal/InternalDotColorParser.tokens
+SHA-256-Digest: Gy0R/hUkDe5PMTM1XwseQtlPbBraa8bagoLy4pMTGA0=
+
+Name: org/eclipse/gef/dot/internal/ui/language/highlighting/DotSemanti
+ cHighlightingCalculator.class
+SHA-256-Digest: Tif3qKS+U2mON/IjLrOGd1xDat0t7rCpDIKonZNRySw=
+
+Name: org/eclipse/gef/dot/internal/ui/language/DotPointExecutableExten
+ sionFactory.class
+SHA-256-Digest: dXTSqxCXzwiUaKqPNVom1m7tPUIeykiQzCkaLRpAZ5M=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/int
+ ernal/InternalDotParser.class
+SHA-256-Digest: oMxWDtXcPF8RUE7bc4mODkVridEtdcSHL0/RChRAmBo=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/Dot
+ StyleParser.class
+SHA-256-Digest: YH/Vupmubpdf+ME+fsW+3pyKLHPHg8aTEQn0W1YaNiw=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/Dot
+ RectParser.class
+SHA-256-Digest: WJaIVxF4HhO7An4ga8FRJpKozHz3VO4lomsy+HVEGSc=
+
+Name: org/eclipse/gef/dot/internal/ui/Dot2ZestAttributesConverter$Opti
+ ons.class
+SHA-256-Digest: /ldITmlmyX7iK2wUG+MT9Nfb6VjNoJv0W25XxaEsijw=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/lex
+ er/InternalDotHtmlLabelLexer.class
+SHA-256-Digest: VfHA+19B8ZAfAkpp/YQUzucI/c+RdlgJnVV6Gzgqzj4=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/lex
+ er/CustomContentAssistInternalDotLexer.tokens
+SHA-256-Digest: mToutZYTplNCRM8OoLCtI6iQm8lqxcN3ZIKvnjkxlhE=
+
+Name: gef_eclipse_logo_32.png
+SHA-256-Digest: 3gjt8pGYyF7O9G8DmyVCJGnZ0uzj6jfJwG5MgJjWJoQ=
+
+Name: org/eclipse/gef/dot/internal/ui/Zest2DotAttributesConverter.clas
+ s
+SHA-256-Digest: 7oE2blmDDHyPzHt6Buq9cXj63gZhk0HYTxptxSDifJI=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/DotSpline
+ TypeProposalProvider.class
+SHA-256-Digest: HfMnEl2OEBinpXuFtb0U1v9Dzh9yuYGrlWaQGbZcNTQ=
+
+Name: org/eclipse/gef/dot/internal/ui/DotExportRadioGroupFieldEditor$4
+ .class
+SHA-256-Digest: zM0ROZEp2gDtrAyOgJZpUicf5tnY1+lal5Buh5FOwNU=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/lex
+ er/CustomContentAssistInternalDotColorLexer.tokens
+SHA-256-Digest: Gy0R/hUkDe5PMTM1XwseQtlPbBraa8bagoLy4pMTGA0=
+
+Name: org/eclipse/gef/dot/internal/ui/language/DotHtmlLabelUiModule.cl
+ ass
+SHA-256-Digest: FYmQmObAHEWNRRJ3uXnXTMHfWY+Vcs6PDrYhqJCQBWA=
+
+Name: org/eclipse/gef/dot/internal/ui/language/DotShapeUiModule.class
+SHA-256-Digest: lBHpUQzdWluK3T2P4DcaohMtM726o3khCBy+V/LkMWg=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/Dot
+ ShapeParser.class
+SHA-256-Digest: Svcov5F007wd9SpLH8dix7qaxbJOPtxwEaT1hHsGNUw=
+
+Name: org/eclipse/gef/dot/internal/ui/language/AbstractDotHtmlLabelUiM
+ odule.class
+SHA-256-Digest: lhDOUD5wzXi01RG7NQkD0o6SeKKFAlBjGsx/oslRA1I=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/lex
+ er/InternalDotArrowTypeLexer.g
+SHA-256-Digest: oxFRQ77aEa4eBwL5iFtCCPvHlXhf/Q9jF8DKrdDx0JU=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/lex
+ er/CustomContentAssistInternalDotHtmlLabelLexer.tokens
+SHA-256-Digest: D+nlyc/MWVtiDkmyJAr0BKqqDfEIw5v0tXFY8gPzIRg=
+
+Name: icons/graph_view.png
+SHA-256-Digest: iCKzoVnrYMVfNBKV5HYgctwVNLZ/ZvXuHgUoOCuOwaE=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/AbstractD
+ otStyleProposalProvider.class
+SHA-256-Digest: bkiOEQC85q2u57pB/ThJML5vXo5IuQdYvFfRcm/LRWs=
+
+Name: org/eclipse/gef/dot/internal/ui/language/highlighting/antlr/lexe
+ r/CustomHighlightingInternalDotColorLexer.g
+SHA-256-Digest: XiUa2EVafD+kZuk/PCfFkM+6UYcDNWruKGrLTlT17AE=
+
+Name: org/eclipse/gef/dot/internal/ui/language/highlighting/DotHtmlLab
+ elSemanticHighlightingCalculator.class
+SHA-256-Digest: NIS0uvU9Sjd/iroXbfTrx+YoTj8aJ5jVuQcS6hxxbOk=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/int
+ ernal/InternalDotParser.g
+SHA-256-Digest: DrQ6L/JEbxF74ZV1+tBukbKQslVsMb+bXrcv+QrTnEY=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/lex
+ er/CustomContentAssistInternalDotHtmlLabelLexer.g
+SHA-256-Digest: 9+kEtxAUoCGCfzNobi1LtKromsK+TkJCsczrdEH18UM=
+
+Name: about.properties
+SHA-256-Digest: cPw4R38iBYF8j4anYNjEJe50Pw1LdoFGDdcacPf0e8c=
+
+Name: org/eclipse/gef/dot/internal/ui/DotArrowShapeDecorations$Curve.c
+ lass
+SHA-256-Digest: IsWfErCrSLy+h1vthAY2Oq5veTas3CqNhwQo9A3fU8Q=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/int
+ ernal/InternalDotColorParser.g
+SHA-256-Digest: dVEqLXDe+laGTWghh2JVKdEdAZPATqKxGtnvS3r8cTg=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/int
+ ernal/InternalDotEscStringParser.tokens
+SHA-256-Digest: QrnmaWi/hxyjtBKqz7DheVend5EOpOIhVl9V0sSSrwg=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/int
+ ernal/InternalDotPointParser.g
+SHA-256-Digest: VbEFJ6e4swBupVtUWZpqys1BObqB7DbGqKebz1QmU7g=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/DotHtmlLa
+ belProposalProvider.class
+SHA-256-Digest: V0ArjjVh5HIZrcUG+w3x1v3CH22MtQMM3o+1P/OffwY=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/DotRectPr
+ oposalProvider.class
+SHA-256-Digest: lprm9Pf8t/0aDTskDFSeeWiS7ipgv4VpLokdq9r1oWo=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/Dot
+ EscStringParser.class
+SHA-256-Digest: 1iZhHpgSv6SWRm8ceMBc0GIHcfp7c+nbeYj6PNYthoI=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/lex
+ er/CustomContentAssistInternalDotLexer$DFA18.class
+SHA-256-Digest: 2jkj5gVmE99aRLOAQdvHpUhW/zrhR4qpiPQ4YSSE29o=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/int
+ ernal/InternalDotShapeParser.g
+SHA-256-Digest: BuflQonug92Qc1RvxblrhtWuIE3XttC/GzhyFUK8Lxc=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/lex
+ er/CustomContentAssistInternalDotLexer.class
+SHA-256-Digest: +C+fNB4McCSSwkgXFCxey1pHl8vL0wANsxAG5NkUGJo=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/lex
+ er/InternalDotLexer.g
+SHA-256-Digest: Xjk7imhNJU2OIAMi5j93nOvH1Lfp9yQ6ha1U3J5vM3o=
+
+Name: org/eclipse/gef/dot/internal/ui/DotExportRadioGroupFieldEditor.c
+ lass
+SHA-256-Digest: 8rk77sdYS8fbf0QlK931bDFQHUPhsCPxOW/nOwvAXRo=
+
+Name: org/eclipse/gef/dot/internal/ui/language/DotHtmlLabelExecutableE
+ xtensionFactory.class
+SHA-256-Digest: zfHi0pyYPll7pRGnioyYnVGClH6d3WyXHNmFG5FfZMo=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/AbstractD
+ otHtmlLabelProposalProvider.class
+SHA-256-Digest: Cuf5iTmrCcI2T4ZsnB5wTjwNjIBwX3cVIjKJhPDLuq0=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/int
+ ernal/InternalDotHtmlLabelParser.tokens
+SHA-256-Digest: D+nlyc/MWVtiDkmyJAr0BKqqDfEIw5v0tXFY8gPzIRg=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/DotPropos
+ alProvider.class
+SHA-256-Digest: RBiLK4s3C/PRwPro+i2WBTLoswxbzI0Qt9yUb+MsKW4=
+
+Name: org/eclipse/gef/dot/internal/ui/language/DotSplineTypeUiModule.c
+ lass
+SHA-256-Digest: t4n16bmNg3vKUHKg6jl3VgATVOpEawm/rWvt3mC/Nyw=
+
+Name: icons/graphviz_dot.png
+SHA-256-Digest: 8n/JIyiRHLGQb93h8zE0gT/H9+ffVQ5tTGp4n99iNkA=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/int
+ ernal/InternalDotRectParser.class
+SHA-256-Digest: /f8/cLsDPDtBucuduYbE6OLZ0jsmrtamgn0/75koAqs=
+
+Name: org/eclipse/gef/dot/internal/ui/DotGraphView$UpdateToggle.class
+SHA-256-Digest: EDVXlVJKIvqAVBCSnCc6z1n/duTDwPhjdsiyJNNKUL0=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/DotPointP
+ roposalProvider.class
+SHA-256-Digest: Kiq5wVhPzB6ni9It14UH/TQKXMz8Ixfyk6fJzY5+EWM=
+
+Name: org/eclipse/gef/dot/internal/ui/GraphvizPreferencePage$2.class
+SHA-256-Digest: A4L9+rL830KX4Wj9Eeh3kABsccE87k7N1jIB09/vt0U=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/lex
+ er/InternalDotPointLexer.class
+SHA-256-Digest: 3405RF1cMBD4l0cST4rjIbztwnUz8vO5PECxJa1Zl1M=
+
+Name: org/eclipse/gef/dot/internal/ui/handlers/SyncGraphvizExportHandl
+ er$DotExportRunnable.class
+SHA-256-Digest: +XttRXfSzzgtTvxPoBP6BdK06rgIJPotMMJ3IP3ZfdQ=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/Dot
+ EscStringParser$1.class
+SHA-256-Digest: yujtVu3ppXyRkyIj1WZCPQ8z2NbjWm96ITm2zEhxutA=
+
+Name: org/eclipse/gef/dot/internal/ui/language/highlighting/antlr/lexe
+ r/CustomHighlightingInternalDotLexer$DFA7.class
+SHA-256-Digest: M8AFWG7rGE4UDIHCSBj52lK55/Ei4Mw3gF7kmlhcrrs=
+
+Name: org/eclipse/gef/dot/internal/ui/messages.properties
+SHA-256-Digest: VnOn0E//5mDhwAMcK3ZCt6Euzu56nhrJZ//p055docg=
+
+Name: org/eclipse/gef/dot/internal/ui/DotGraphView$UpdateToggle$3.clas
+ s
+SHA-256-Digest: Cv70u979OEG2ho7urdW4DHtICJSyBoU/2gotTyUJ9Rg=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/Dot
+ SplineTypeParser$1.class
+SHA-256-Digest: zcD+rUQ+miSDt/HXipujTzmxFUAhvIss/OrRuB6/JL4=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/lex
+ er/InternalDotPointLexer.tokens
+SHA-256-Digest: vs7TMfhXtftJjuTsOCD61VoJChyRCSo+7mGggzLvsJI=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/lex
+ er/InternalDotSplineTypeLexer.class
+SHA-256-Digest: rSQ+2Wwc+q6Xh+3OGglEU+iiaG+j+FgpzUcjcs6sXpE=
+
+Name: org/eclipse/gef/dot/internal/ui/language/highlighting/DotHighlig
+ htingConfiguration.class
+SHA-256-Digest: XZgNQ+71pj0mreBZZHz57Fmgx9pw7fPffFk92vQ7obA=
+
+Name: org/eclipse/gef/dot/internal/ui/language/DotShapeExecutableExten
+ sionFactory.class
+SHA-256-Digest: xB8s7E2s/pa0PySdQkIw6eq0LADRq94h1rkWUhemHBI=
+
+Name: org/eclipse/gef/dot/internal/ui/language/highlighting/DotAntlrTo
+ kenToAttributeIdMapper.class
+SHA-256-Digest: VNnGI2xn9YhcGL5C0wwB9ng7kl5T0OFVyONj7QobbDo=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/int
+ ernal/InternalDotEscStringParser.g
+SHA-256-Digest: yR6wfOW271lypgseYthF5PpXVhllDKLGHbbQiHBdqbg=
+
+Name: org/eclipse/gef/dot/internal/ui/language/AbstractDotStyleUiModul
+ e.class
+SHA-256-Digest: pIKQB5ksVtzUqChbarSbrr9HoomW5dvwP5VMYruWHcE=
+
+Name: icons/id.png
+SHA-256-Digest: kLBX/bnuLpZzj+mhmyHdkdnqs/AYHB0wu7J0Uo05pps=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/lex
+ er/CustomContentAssistInternalDotHtmlLabelLexer$DFA6.class
+SHA-256-Digest: MRjZMe74R/P42tzbbysnKvIzn9So4HrloC+ybJeGh54=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/lex
+ er/InternalDotSplineTypeLexer.tokens
+SHA-256-Digest: jy0DKHQaIVVFxsSvkA/9tLZ5h8ANZibOYzIVVzfbSZY=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/int
+ ernal/InternalDotSplineTypeParser.tokens
+SHA-256-Digest: jy0DKHQaIVVFxsSvkA/9tLZ5h8ANZibOYzIVVzfbSZY=
+
+Name: icons/attribute.png
+SHA-256-Digest: IBWpz3Mx+BFZ9D53b0dQzYDmpAy/IeebQ6Wlo2wmzp0=
+
+Name: org/eclipse/gef/dot/internal/ui/DotArrowShapeDecorations.class
+SHA-256-Digest: uaGF34tu6191/m+gN1aulZmoW3hcWDroA68nYW/iYv0=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/DotShapeP
+ roposalProvider.class
+SHA-256-Digest: KenW5a9dG3kDJlTcp9QaSQdHpOGT++9IlL8/Kh/Hqtg=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/lex
+ er/InternalDotArrowTypeLexer.tokens
+SHA-256-Digest: ugZsq/iTayIjrEGrV40TaKBopMmm8PFoT88u0Cl2OEM=
+
+Name: org/eclipse/gef/dot/internal/ui/language/DotColorUiModule.class
+SHA-256-Digest: JIUmHPzLmLkgFGOKDqW6ae0tVXn8bUBCxYw4tpWvbCg=
+
+Name: about.html
+SHA-256-Digest: 31Y4uaBtOphfTgcHob0hh1CKroOIWaMaM86u24L7ZN8=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/Dot
+ ColorParser.class
+SHA-256-Digest: lxpBUKlczio/OSKaRYHxMsFYo0K+bUl/cTfa9nfW12M=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/lex
+ er/InternalDotShapeLexer.class
+SHA-256-Digest: yXNfxRlC+k6P9YsBm7b0kuyipul3NS5JGyIvS9hjeIc=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/lex
+ er/CustomContentAssistInternalDotColorLexer$DFA7.class
+SHA-256-Digest: Wvs2RyANTD+S1gTcMyBCWVjtA7nIvyfaeoqFgrEWagI=
+
+Name: org/eclipse/gef/dot/internal/ui/DotEdgeLayoutBehavior.class
+SHA-256-Digest: z5p8pmt5j6GtxjUzZSdSdEmYb3HGKVu4A/eiTYRtOC4=
+
+Name: org/eclipse/gef/dot/internal/ui/DotGraphView.class
+SHA-256-Digest: GsFZlA2YQrU04BnyRhJ7c3C5hTS41BSGCk5NsxmKQME=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/lex
+ er/CustomContentAssistInternalDotHtmlLabelLexer.class
+SHA-256-Digest: sq7d6BcmE8s+UDKEbu+kxH5Tm6SXtDN595w5h07tKfw=
+
+Name: org/eclipse/gef/dot/internal/ui/language/highlighting/antlr/lexe
+ r/CustomHighlightingInternalDotLexer.g
+SHA-256-Digest: 6+ZH4eowsksgbdrLi31QdwR6NeZwG3JAVq8ElcD+1KI=
+
+Name: org/eclipse/gef/dot/internal/ui/DotGraphView$UpdateToggle$1.clas
+ s
+SHA-256-Digest: Lx8qDQ367KpHUqoUvfx9M8MtiKnJIvotHlVAGEf170g=
+
+Name: org/eclipse/gef/dot/internal/ui/language/AbstractDotPointUiModul
+ e.class
+SHA-256-Digest: qG+tlB1E8GDhpim9t9dvZ4+yKCTnUGuU8iKPGXVJ/EU=
+
+Name: org/eclipse/gef/dot/internal/ui/language/DotRectUiModule.class
+SHA-256-Digest: fR2PwiJYZ8WfHG3yuUPL0Rv8ztpMjcogV0ledVLNXrg=
+
+Name: org/eclipse/gef/dot/internal/ui/language/DotUiModule.class
+SHA-256-Digest: TKX4TtjDZ9FH3fFkJCecFdc8BGlt4/hjxRZaGxukqik=
+
+Name: org/eclipse/gef/dot/internal/ui/language/contentassist/antlr/Dot
+ ColorParser$1.class
+SHA-256-Digest: IfoMqOaEqMBCWtfhp4ls0293neh4sMhL4h1Lrq6Pnz4=
+
+Name: org/eclipse/gef/dot/internal/ui/language/AbstractDotSplineTypeUi
+ Module.class
+SHA-256-Digest: cWYuW2USDtDsNGXE39eHz/g0Iy+//9wdA/bSmWZjsGQ=
+
+Name: org/eclipse/gef/dot/internal/ui/DotAnchorProvider.class
+SHA-256-Digest: nutwCCTNCraH714ZuJrs1m7NMmCH+tYWEubLydJUSd0=
+
+Name: org/eclipse/gef/dot/internal/ui/GraphvizPreferencePage$GraphvizC
+ onfigurationDialog$1.class
+SHA-256-Digest: v9z6/I/BNm5tHB5ZACsaLfqXPHXA41s++DkOWoEWeSg=
+
+Name: org/eclipse/gef/dot/internal/ui/DotExportRadioGroupFieldEditor$1
+ .class
+SHA-256-Digest: 7zZTY4g+4GgUJOgsynTg3VoyzzPuR0HM64L+9CSIov8=
+

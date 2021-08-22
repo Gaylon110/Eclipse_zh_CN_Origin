@@ -1,0 +1,191 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html lang="en">
+<head>
+<meta name="copyright" content="Copyright (c) IBM Corporation and others 2011, 2015. This page is made available under license. For full details see the LEGAL in the documentation book that contains this page." >
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="STYLESHEET" href="../book.css" charset="ISO-8859-1" type="text/css">
+<title>Deprecated API removals</title>
+</head>
+<body>
+<h1>Deprecated API removals</h1>
+
+<p>
+  Often there is no sufficiently compelling reason to ever remove deprecated API, so the 
+  API may remain in place indefinitely after the release in which it was deprecated. 
+  However, there are situations where continuing to maintain the deprecated API 
+  creates too high a burden for both API developers and clients: the code bloat of 
+  keeping old implementations, the added complexity of multiple redundant APIs, etc.
+  For this reason the Eclipse project has a 
+  <a href="http://wiki.eclipse.org/Eclipse/API_Central/Deprecation_Policy">policy</a> 
+  to occasionally delete deprecated API after providing two years advance notice to clients. 
+  This section describes API removals that occurred in this release, and upcoming 
+  removals in future releases.
+</p>
+<p>
+  <b>Note that the policy for removing API types is broken, so some of these plans are not implementable, see
+  <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=482382" target="_blank">bug 482382</a></b>.
+</p>
+
+<p>
+Removed APIs in the Neon (4.6) release:
+</p>
+<ol>
+ <li><a href="#runtime">Eclipse 2.0 runtime model and boot API</a></li>
+</ol>
+<p>
+Planned API removals after June 2016:
+</p>
+<ol>
+ <li><a href="#listenerlist">org.eclipse.jface.util.ListenerList</a></li>
+ <li><a href="#tabletreeviewer">TableTree and TableTreeViewer</a></li>
+ <li><a href="#tasklist">org.eclipse.ui.views.tasklist.TaskList</a></li>
+ <li><a href="#auth">Platform authorization API</a></li>
+</ol>
+
+<p>
+Planned API removals after June 2017:
+</p>
+<ol>
+ <li><a href="#icontextcomputer">IContextComputer</a></li>
+ <li><a href="#iplatformrunnable">org.eclipse.core.runtime.IPlatformRunnable</a></li>
+</ol>
+
+<p>
+Planned API removals after June 2018:
+</p>
+<ol>
+ <li><a href="#imageandmessagearea">ImageAndMessageArea from JFace</a></li>
+ <li><a href="#fullscreen">org.eclipse.ui.cocoa.fullscreenWindow</a></li>
+</ol>
+<hr>
+
+
+
+
+<!-- ############################################## -->
+
+<h2>API removals in this release</h2>
+
+<h3>1. <a name="runtime">Eclipse 2.0 runtime model and boot API</a></h3>
+<p>
+When the Eclipse runtime transitioned to use OSGi as its implementation, some existing
+APIs for interacting with the old runtime were deprecated and moved to a compatibility fragment
+(<tt>org.eclipse.core.runtime.compatibility</tt>). All API that was still valid was moved
+elsewhere. These APIs have been non-functional since Eclipse 3.0 and will therefore
+be removed in the future. The following packages will be removed:
+</p>
+<ul>
+ <li><tt>org.eclipse.core.boot</tt></li>
+ <li><tt>org.eclipse.core.runtime.model</tt></li>
+ </ul>
+ The compatibility fragment, <tt>org.eclipse.core.runtime.compatibility</tt> will
+ also be removed. As a consequence <code>org.eclipse.ui.startup</code> extensions will no longer work if they do not specify a class that implements <code> org.eclipse.ui.IStartup</code>. 
+<p>
+For further details or to provide feedback on this change, see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=370248" target="_blank">bug 370248</a>.
+</p>
+
+
+<!-- ############################################## -->
+
+<h2>API removals after June 2016</h2>
+
+<h3>1. <a name="listenerlist">org.eclipse.jface.util.ListenerList</a></h3>
+<p>
+The <code>org.eclipse.jface.util.ListenerList</code> class is deprecated since 2005 and has been replaced by <code>org.eclipse.core.runtime.ListenerList with org.eclipse.core.runtime.ListenerList.IDENTITY</code> as argument.
+The <code>org.eclipse.jface.util.ListenerList</code> class is planned to get deleted.
+</p>
+<p>
+For further details or to provide feedback on this change, see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=436448" target="_blank">bug 436448</a>.
+</p>
+
+<h3>2. <a name="tabletreeviewer">TableTreeViewer</a></h3>
+<p>
+The <code>org.eclipse.jface.viewers.TableTreeViewer</code> class is deprecated since Eclipse 3.1 and has been replaced by <code>TreeViewer</code>.
+The <code>org.eclipse.jface.viewers.TableTreeViewer</code>, <code>org.eclipse.swt.custom.TableTree</code> and <code>org.eclipse.swt.custome.TableTreeItem</code> classes are planned to get deleted as well as methods using these types.
+</p>
+<p>
+For further details or to provide feedback on this change, see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=436505" target="_blank">bug 436505</a>.
+</p>
+
+<h3>3. <a name="tasklist">org.eclipse.ui.views.tasklist.TaskList</a></h3>
+<p>
+The <code>org.eclipse.ui.views.tasklist.TaskList</code> class is deprecated since Eclipse 3.4 and has been replaced by <code>MarkerSupportView</code>.
+The <code>org.eclipse.ui.views.tasklist.TaskList</code> class and related classes only used by this class are planned to get deleted.
+</p>
+<p>
+For further details or to provide feedback on this change, see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=436506" target="_blank">bug 436506</a>.
+</p>
+
+<h3>4. <a name="auth">Platform authorization API</a></h3>
+<p>
+Since Eclipse 1.0, the Eclipse Platform class provided API for storing and retrieving
+passwords in a keyring file. This API used an inherently insecure method for encrypting 
+credentials, and used a custom encryption algorithm that made it difficult for some 
+consumers to distribute and export Eclipse-based products. For these and other reasons,
+this API was deprecated and replaced in Eclipse 3.4 with a new Equinox secure storage API.
+In Eclipse 4.2 the implementation of the old authorization methods was removed, but the API left in place. 
+This old API will be removed completely in a future release. The following API methods will
+be removed from <tt>org.eclipse.core.runtime.Platform</tt>:
+</p>
+<ul>
+ <li><tt>addAuthorizationInfo(URL serverUrl, String realm, String authScheme, Map info)</tt></li>
+ <li><tt>getAuthorizationInfo(URL serverUrl, String realm, String authScheme)</tt></li>
+ <li><tt>flushAuthorizationInfo(URL serverUrl, String realm, String authScheme)</tt></li>
+ <li><tt>addProtectionSpace(URL resourceUrl, String realm)</tt></li>
+ <li><tt>getProtectionSpace(URL resourceUrl)</tt></li>
+ </ul>
+<p>
+For further details or to provide feedback on this change, see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=476404" target="_blank">bug 476404</a>.
+</p>
+
+
+<!-- ############################################## -->
+
+<h2>API removals after June 2017</h2>
+<h3>1. <a name="icontextcomputer">IContextComputer and related classes</a></h3>
+<p>
+The <code>org.eclipse.ui.help.IContextComputer</code> class and dependent classes, i.e., org.eclipse.ui.help.WorkbenchHelp, DialogPageContextComputer and ViewContextComputer are deprecated since 2002. These classes are planned to get deleted.
+</p>
+<p>
+For further details or to provide feedback on this change, see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=442961" target="_blank">bug 442961</a>.
+</p>
+
+<h3>2. <a name="iplatformrunnable">org.eclipse.core.runtime.IPlatformRunnable</a></h3>
+<p>
+The <code>org.eclipse.core.runtime.IPlatformRunnable</code> interface is planned to be removed.
+</p>
+<p>
+For further details or to provide feedback on this change, see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=370248" target="_blank">bug 370248</a>.
+</p>
+
+<!-- ############################################## -->
+<h2>API removals after June 2018</h2>
+<h3>1. <a name="imageandmessagearea">ImageAndMessageArea from JFace</a></h3>
+<p>
+The <code>org.eclipse.jface.dialogs.ImageAndMessageArea</code> class is planned to be removed.
+</p>
+<p>
+For further details or to provide feedback on this change, see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=475863" target="_blank">bug 475863</a>.
+</p>
+
+<h3>2. <a name="fullscreen">org.eclipse.ui.cocoa.fullscreenWindow</a></h3>
+<p>
+Eclipse Platform 4.2 introduced a OS&nbsp;X-specific command to toggle full-screen
+called <code>org.eclipse.ui.cocoa.fullscreenWindow</code> (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=376394" target="_blank">bug 376394</a>),
+bound to Command-Ctrl-F.  In 4.6 we introduced a cross-platform command
+to toggle full-screen called <code>org.eclipse.ui.window.fullscreenmode</code>
+(<a href="https://bugs.eclipse.org/489087" target="_blank">bug 489087</a> and
+<a href="https://bugs.eclipse.org/491572" target="_blank">bug 491572</a>).  As a result,
+we have two "Toggle Full Screen" commands on OS&nbsp;X, and both
+appear in the <em>Quick Access</em>.  We will consolidate our code to
+use <code>org.eclipse.ui.window.fullscreenmode</code>, and plan to
+remove <code>org.eclipse.ui.cocoa.fullscreenWindow</code>.
+</p>
+<p>
+For further details or to provide feedback on this change, see
+<a href="https://bugs.eclipse.org/493932" target="_blank">bug 493932</a>.
+</p>
+
+</body>
+</html>

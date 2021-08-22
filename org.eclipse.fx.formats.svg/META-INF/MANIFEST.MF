@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.eclipse.fx.formats.svg;singleton:=true
+Bundle-Version: 3.0.0.201705220600
+Bundle-ClassPath: org.eclipse.fx.formats.svg_3.0.0.201705220600.jar
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Export-Package: org.eclipse.fx.formats.svg.converter,
+  org.eclipse.fx.formats.svg.handler,
+  org.eclipse.fx.formats.svg.svg,
+  org.eclipse.fx.formats.svg.svg.impl,
+  org.eclipse.fx.formats.svg.svg.util
+Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
+  org.eclipse.xtext.xbase.lib,
+  org.eclipse.jdt.annotation;bundle-version="[2.0.0,3.0.0)";resolution:=optional
+Build-Jdk: 1.8.0_121
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/efxclipse/org.eclipse.efxclipse.git;path="bundles/runtime/org.eclipse.fx.formats.svg";commitId=9f907bf6aa95c0f74b9f414d775514428655b9be
+Created-By: Apache Maven 3.0.5
+Built-By: genie.efxclipse
+Archiver-Version: Plexus Archiver

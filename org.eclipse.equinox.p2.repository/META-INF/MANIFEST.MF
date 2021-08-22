@@ -1,0 +1,356 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.equinox.p2.repository;singleton:=true
+Archiver-Version: Plexus Archiver
+Built-By: genie.releng
+Require-Bundle: org.eclipse.equinox.common,org.eclipse.equinox.registr
+ y;bundle-version="3.3.0"
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/equino
+ x/rt.equinox.p2.git;path="bundles/org.eclipse.equinox.p2.repository";
+ tag="M20170906-1700";commitId=f94c9ac9bd27522cf55784111380d5f4aebc4ba
+ b
+Bundle-Vendor: %providerName
+Import-Package: javax.crypto,javax.xml.parsers,org.eclipse.core.runtim
+ e.jobs,org.eclipse.core.runtime.preferences;version="3.2.0",org.eclip
+ se.equinox.internal.p2.core,org.eclipse.equinox.internal.p2.core.help
+ ers,org.eclipse.equinox.internal.p2.metadata,org.eclipse.equinox.inte
+ rnal.p2.repository.helpers,org.eclipse.equinox.internal.provisional.p
+ 2.core.eventbus,org.eclipse.equinox.p2.core;version="[2.0.0,3.0.0)",o
+ rg.eclipse.equinox.p2.core.spi;version="[2.0.0,3.0.0)",org.eclipse.eq
+ uinox.p2.metadata;version="[2.0.0,3.0.0)",org.eclipse.equinox.p2.meta
+ data.expression;version="[2.0.0,3.0.0)",org.eclipse.equinox.p2.query;
+ version="[2.0.0,3.0.0)",org.eclipse.equinox.security.storage,org.ecli
+ pse.osgi.service.debug,org.eclipse.osgi.util;version="1.1.0",org.osgi
+ .framework;version="1.6.0",org.osgi.service.packageadmin;version="1.2
+ .0",org.osgi.service.prefs;version="1.0.0",org.osgi.util.tracker;vers
+ ion="1.4.0",org.xml.sax,org.xml.sax.helpers
+Service-Component: OSGI-INF/cacheManager.xml
+Export-Package: org.eclipse.equinox.internal.p2.persistence; x-friends
+ :="org.eclipse.equinox.p2.artifact.repository,  org.eclipse.equinox.p
+ 2.engine,  org.eclipse.equinox.p2.metadata.repository,  org.eclipse.e
+ quinox.p2.ui.importexport,  org.eclipse.equinox.p2.repository.tools",
+ org.eclipse.equinox.internal.p2.repository; x-friends:="org.eclipse.e
+ quinox.p2.artifact.repository,  org.eclipse.equinox.p2.metadata.repos
+ itory,  org.eclipse.equinox.p2.updatesite,  org.eclipse.equinox.p2.re
+ pository.tools,  org.eclipse.equinox.p2.transport.ecf,  org.eclipse.e
+ quinox.p2.engine,  org.eclipse.equinox.p2.discovery.compatibility,  o
+ rg.eclipse.equinox.p2.publisher",org.eclipse.equinox.internal.p2.repo
+ sitory.helpers; x-friends:="org.eclipse.equinox.p2.artifact.repositor
+ y,  org.eclipse.equinox.p2.exemplarysetup,  org.eclipse.equinox.p2.me
+ tadata.repository,  org.eclipse.equinox.p2.operations,  org.eclipse.e
+ quinox.p2.publisher,  org.eclipse.equinox.p2.repository.tools,  org.e
+ clipse.equinox.p2.ui,  org.eclipse.equinox.p2.updatesite",org.eclipse
+ .equinox.internal.provisional.p2.repository,org.eclipse.equinox.p2.re
+ pository;version="2.0.0",org.eclipse.equinox.p2.repository.artifact;v
+ ersion="2.3.0",org.eclipse.equinox.p2.repository.artifact.spi;version
+ ="2.0.0",org.eclipse.equinox.p2.repository.metadata;version="2.0.0",o
+ rg.eclipse.equinox.p2.repository.metadata.spi;version="2.0.0",org.ecl
+ ipse.equinox.p2.repository.spi;version="2.0.0"
+Bundle-Name: %pluginName
+Bundle-Version: 2.3.301.v20170906-1259
+Bundle-Localization: plugin
+Bundle-Activator: org.eclipse.equinox.internal.p2.repository.Activator
+Created-By: Apache Maven 3.3.3
+Build-Jdk: 1.8.0_131
+
+Name: org/eclipse/equinox/p2/repository/IRunnableWithProgress.class
+SHA-256-Digest: qQOsimcV99oSHEsRSVP+IbPBY6RP3NAhhH+7S7yPzn8=
+
+Name: org/eclipse/equinox/p2/repository/metadata/IMetadataRepositoryMa
+ nager.class
+SHA-256-Digest: EmKvzy3YMQJBKBV5X/p+YyD7s6Y1YerrXCPU8TOt000=
+
+Name: org/eclipse/equinox/internal/p2/repository/messages.properties
+SHA-256-Digest: 3nzKtfDIA/mMZRVz3efi64f+d3sh913tjhCvr/afb68=
+
+Name: org/eclipse/equinox/internal/p2/persistence/XMLWriter$AttributeA
+ fterNestedContentError.class
+SHA-256-Digest: 3OM/VMBloRz8Tv9zVCOnI5oKSiGL+YEBM1ZUxfxMsc4=
+
+Name: org/eclipse/equinox/p2/repository/metadata/spi/AbstractMetadataR
+ epository.class
+SHA-256-Digest: ALub5xjGCiDDQy0A/4OlpHTv821NcmAnLwL0N8fnOa0=
+
+Name: org/eclipse/equinox/internal/provisional/p2/repository/IStateful
+ .class
+SHA-256-Digest: Db4fe+LWFFsx9sAcl5gxNO4xeWPp0NhUmHYAW97wvG8=
+
+Name: org/eclipse/equinox/internal/p2/repository/DownloadStatus.class
+SHA-256-Digest: eu6pPO9I/jzxRnDvI8yP2ChSX3Et/C5k6GUuA5bKzDA=
+
+Name: org/eclipse/equinox/internal/p2/persistence/XMLParser$DocHandler
+ .class
+SHA-256-Digest: MfoE+I79ChIcihFued2tXNOTFcbzA52rQwy0DdkRl84=
+
+Name: org/eclipse/equinox/internal/p2/repository/helpers/AbstractRepos
+ itoryManager.class
+SHA-256-Digest: eMaFyEoERkxJVE+fZ1o8yp0Y1UqzKPXr8xdktnSkPIc=
+
+Name: org/eclipse/equinox/internal/p2/persistence/CompositeParser.clas
+ s
+SHA-256-Digest: Ny46FGtmcGkpNiV7mnyqUZTuWwH/91bT2gRd8KNvG/8=
+
+Name: org/eclipse/equinox/p2/repository/spi/AbstractRepository.class
+SHA-256-Digest: hDt42ueRI0tyYkXPjMKeygP8mN7R19sMJtt1YnoLmSo=
+
+Name: org/eclipse/equinox/p2/repository/metadata/IMetadataRepository.c
+ lass
+SHA-256-Digest: r/u3JEZL/ja67dD7fl3eRYA9JYURBBnY996MsWKLTrI=
+
+Name: org/eclipse/equinox/internal/p2/persistence/CompositeParser$Chil
+ dHandler.class
+SHA-256-Digest: R0lfxyyIUO3lb/FN3JN6Ch2MLVL19b/cxhXruQSFLSw=
+
+Name: org/eclipse/equinox/internal/p2/repository/helpers/Messages.clas
+ s
+SHA-256-Digest: EwlFS/eikzbpeF6dNKu/g1WcR/Ci+6X6Z+tng5v+H1k=
+
+Name: OSGI-INF/cacheManager.xml
+SHA-256-Digest: 3i6Ao5xj1DBfJ6uju5MmYv+oN1lerSmVp49XMeYPHnY=
+
+Name: org/eclipse/equinox/internal/p2/persistence/XMLWriter.class
+SHA-256-Digest: z4rCxiVbc2RN9aWyzhJrp18RuZkwMA3143cIk1p34QM=
+
+Name: org/eclipse/equinox/internal/p2/repository/ProgressStatistics.cl
+ ass
+SHA-256-Digest: Fzo/4xR0+ygc4LeLUuFucJ7UQ4wlgcK/G1d6WpRH5hI=
+
+Name: org/eclipse/equinox/internal/p2/repository/Credentials$LoginCanc
+ eledException.class
+SHA-256-Digest: HkTA0xjo4MjX7MBqJ1OdtmIDPi4b6wZ6hx8dDZOOtg0=
+
+Name: org/eclipse/equinox/internal/p2/persistence/CompositeRepositoryI
+ O.class
+SHA-256-Digest: OADy52p14ztclpCslM9ZU7jmD6xsdfq2hmkVLfkuAMA=
+
+Name: org/eclipse/equinox/p2/repository/artifact/IArtifactRepositoryMa
+ nager.class
+SHA-256-Digest: +CwSLI3GTAhZNQCayEQ/WEpSCCOL0PpetiTtzcyq+I8=
+
+Name: org/eclipse/equinox/internal/p2/persistence/XMLParser.class
+SHA-256-Digest: eN9UH8Rk9TtSiWnBZBWTOZncygBQpq2S+BnrDeZ5l4Y=
+
+Name: org/eclipse/equinox/internal/p2/persistence/messages.properties
+SHA-256-Digest: km0ngjVEmhp4W9Nt5rK46rL3t4W493ez8AUQsrGdfZ4=
+
+Name: org/eclipse/equinox/p2/repository/metadata/spi/MetadataRepositor
+ yFactory.class
+SHA-256-Digest: pnoTIGj+k1of1ynhJXZqKOepchWDUFQOhDdW4KH5wv4=
+
+Name: org/eclipse/equinox/internal/p2/repository/helpers/messages.prop
+ erties
+SHA-256-Digest: U0LSoFDtFSeBJN48s39qURcCBZiUN0wO+BOYu3Gv87g=
+
+Name: plugin.properties
+SHA-256-Digest: R71OUohnsTTRhcVpbKXupovSarnAk1Qi9ENBW3nUUFw=
+
+Name: org/eclipse/equinox/p2/repository/artifact/ArtifactKeyQuery.clas
+ s
+SHA-256-Digest: RHnaPOWXBb0s+SFNFkfKsWuGhLnPKHas1+83USoNQMo=
+
+Name: org/eclipse/equinox/p2/repository/artifact/IProcessingStepDescri
+ ptor.class
+SHA-256-Digest: ST1SPkyB8DfrI8rsh5LrkGpmlQK5mTYzk4yU2VHl1Ec=
+
+Name: org/eclipse/equinox/internal/p2/persistence/XMLConstants.class
+SHA-256-Digest: okB3iMScWqurPpWRfg281exT0wJ5ArVL7ScVq/rRamk=
+
+Name: org/eclipse/equinox/p2/repository/artifact/spi/ProcessingStepDes
+ criptor.class
+SHA-256-Digest: DuNAJIqbNLjHWtVH2ptYlw+QGl39tUAYVJW8LZQW+Zk=
+
+Name: org/eclipse/equinox/internal/p2/persistence/XMLParser$TextHandle
+ r.class
+SHA-256-Digest: v3M9pzOa0u/JTjP04Jc1cJ/0b/LsZwk+5f1k4u8Dj3A=
+
+Name: org/eclipse/equinox/internal/p2/repository/DownloadPauseResumeEv
+ ent.class
+SHA-256-Digest: wSVdGDkO482uQFD15uiEDGVzEKdxQROM1KvY42v38PA=
+
+Name: org/eclipse/equinox/internal/p2/persistence/CompositeWriter.clas
+ s
+SHA-256-Digest: mE9MeSsqAQem86OwuXNb4WsCX/QWVTVYRhXEQ78xWME=
+
+Name: org/eclipse/equinox/internal/p2/persistence/XMLParser$RootHandle
+ r.class
+SHA-256-Digest: EaqMeOnLH1BXo+UsUt9/o3VeBIkuX9uSWoDdeNxK57M=
+
+Name: org/eclipse/equinox/p2/repository/IRepository.class
+SHA-256-Digest: LcAyYRtR04O0fhXnQ/FxKBVG2rM5sWlq2nDLYxpTmyw=
+
+Name: org/eclipse/equinox/internal/p2/repository/helpers/AbstractRepos
+ itoryManager$RepositoryInfo.class
+SHA-256-Digest: do86c0Tu/5bxo4Ct9wE7M8HN+IO03WqXpGY09zeXIao=
+
+Name: .api_description
+SHA-256-Digest: dRXC/d3dWeEnxRiX7saHvMKI5YfxUSyDmdiGV1l2xwk=
+
+Name: org/eclipse/equinox/internal/p2/persistence/XMLParser$Properties
+ Handler.class
+SHA-256-Digest: qaiRraUKvoz1mNX315haLJI5XUTMDO8wtCiHqRS7CAo=
+
+Name: org/eclipse/equinox/internal/p2/persistence/XMLParser$IgnoringHa
+ ndler.class
+SHA-256-Digest: AH0HcpHTO5dFOTA9z0NPyW/N4dr6onLinwceBWPc5rI=
+
+Name: org/eclipse/equinox/internal/p2/repository/helpers/RepositoryHel
+ per.class
+SHA-256-Digest: gLHVGHdcIMYs/395Ccme4jOOpXf3G4rhiuxzh7gp4aE=
+
+Name: org/eclipse/equinox/internal/p2/repository/CacheManager.class
+SHA-256-Digest: H2/P0GZAQCDk4OOyi0Fv5UGn10OtwwqiOa52eBhr0AM=
+
+Name: org/eclipse/equinox/internal/p2/repository/Activator.class
+SHA-256-Digest: TE1w4XapbU9zHnrbbqHS0L3QSWy6cUC97CFBG+gQrtc=
+
+Name: org/eclipse/equinox/internal/p2/persistence/XMLWriter$Processing
+ Instruction.class
+SHA-256-Digest: GXCXUYTnJnO53vAF2e4j3iCqigl+Xjo0ntGb32HoQVc=
+
+Name: org/eclipse/equinox/internal/p2/persistence/XMLParser$PropertyHa
+ ndler.class
+SHA-256-Digest: NDkncLNH43LzS4SenP3s1piMWTZ5RgMjAhjyFLqe86w=
+
+Name: org/eclipse/equinox/p2/repository/artifact/IArtifactRepository.c
+ lass
+SHA-256-Digest: nCOAWUZjkIZ5cVIg5Am0Ozhz/EBDe13I/BGujTBfbFA=
+
+Name: org/eclipse/equinox/p2/repository/spi/RepositoryReference.class
+SHA-256-Digest: p9Bxql87Yi4ANNWUNYsfeWUMaNyPNgyu5Kce0mlHcV0=
+
+Name: org/eclipse/equinox/internal/p2/persistence/CompositeParser$Chil
+ drenHandler.class
+SHA-256-Digest: qaFmGQ2J4JXdP//4RtdNT3VCsC8IDriyQOVqKAsjn8I=
+
+Name: org/eclipse/equinox/p2/repository/artifact/spi/ArtifactDescripto
+ r.class
+SHA-256-Digest: +ZoZwB6VoeK5SgSJ8H3cnGNYfvGcrirT7Xn4iIqTgwU=
+
+Name: org/eclipse/equinox/internal/p2/persistence/CompositeParser$Repo
+ sitoryHandler.class
+SHA-256-Digest: x8aVipMlav1sXFYY1Z0625NA+07BBWEdW53vHVxN5Fo=
+
+Name: org/eclipse/equinox/internal/p2/persistence/CompositeRepositoryS
+ tate.class
+SHA-256-Digest: 5P/Oe9cuy5GX3V1iAeWjJA3rbf9i+qPzDd337LVWY2U=
+
+Name: org/eclipse/equinox/internal/p2/persistence/XMLWriter$EndWithout
+ StartError.class
+SHA-256-Digest: oHgtkPJlG3nR1JOCLtmdmIyXoJfa5cJorJYAWR68Ygk=
+
+Name: org/eclipse/equinox/p2/repository/artifact/IArtifactDescriptor.c
+ lass
+SHA-256-Digest: LCX4AbT+a/G00lljVUMxS2VI3mkfODmHbmNFp34iDok=
+
+Name: org/eclipse/equinox/internal/p2/repository/RepositoryTracing.cla
+ ss
+SHA-256-Digest: fvXLJANyf4ba6kujgY13Ivqc5Y2qf79lYYWGcUerbKU=
+
+Name: org/eclipse/equinox/internal/p2/repository/DownloadProgressEvent
+ .class
+SHA-256-Digest: V3WBA44eMUN6SCLCxFwqzjzyW9aaTmbsYj0VAH2gpyE=
+
+Name: org/eclipse/equinox/internal/p2/repository/CacheManager$1.class
+SHA-256-Digest: LLpLbz5JW4u2123UAzErlCppI5C9zGbK+1enNALPtcM=
+
+Name: org/eclipse/equinox/internal/p2/persistence/CompositeParser$Repo
+ sitoryDocHandler.class
+SHA-256-Digest: 29NGGyZbF0JO6kAav6hfuJXDrFp+xIRNt73whyJ+FeE=
+
+Name: org/eclipse/equinox/internal/p2/repository/CacheManagerComponent
+ .class
+SHA-256-Digest: rsddcpKkmNL9uS2QDtnntWzsB+ZZSYEg8OkVnhgqxkI=
+
+Name: org/eclipse/equinox/p2/repository/metadata/spi/AbstractMetadataR
+ epository$RepositoryState.class
+SHA-256-Digest: VVPx9Ps5q74SsNPOTh+Cn7HrMecNa/j11sQwOAQZrvE=
+
+Name: org/eclipse/equinox/internal/p2/repository/CacheManager$Stateful
+ Stream.class
+SHA-256-Digest: tI4bYo/CmNY1SQaiMpV6/bUgHu4c4gsxv7b5X6/BhK4=
+
+Name: org/eclipse/equinox/p2/repository/artifact/spi/ArtifactRepositor
+ yFactory.class
+SHA-256-Digest: 4LEDqntHvqxmxxIktX2VJK5OzzCb1hUOuraUIqOPao8=
+
+Name: org/eclipse/equinox/p2/repository/artifact/IArtifactRequest.clas
+ s
+SHA-256-Digest: VBa+jWoRmdLCEEoxmnfeeYFPy9NGiuDm0ndecyh92nU=
+
+Name: org/eclipse/equinox/internal/p2/repository/Credentials$HostEntry
+ .class
+SHA-256-Digest: mGyrB0qytMSEFDy6m22KvuPsatT45lSzYrn/w62+P5k=
+
+Name: org/eclipse/equinox/internal/p2/persistence/Messages.class
+SHA-256-Digest: Zbn43Gas5LE9tP8a8ZyGPDR1quNhvU4q4NgNzAgnJAw=
+
+Name: org/eclipse/equinox/internal/p2/repository/AuthenticationFailedE
+ xception.class
+SHA-256-Digest: zWK5pd7dW6cNnRxxZHRJhJ8i7S+/nrms6FqR/hvYqxQ=
+
+Name: org/eclipse/equinox/p2/repository/IRepositoryReference.class
+SHA-256-Digest: p95SkkYDR5IOnW8ENoymkqLIA4xsSdB5Op68lGwAxZ0=
+
+Name: org/eclipse/equinox/internal/p2/repository/Messages.class
+SHA-256-Digest: tRodaz0zMlaSKLnHOJPMKkvFGMvTE9yV/JrUbe77H+Q=
+
+Name: org/eclipse/equinox/internal/p2/persistence/XMLParser$AbstractHa
+ ndler.class
+SHA-256-Digest: 8gUNprELQfPG5k0hyfDJbRUCoiXLo1Wj9ULcZE2GvWk=
+
+Name: about.html
+SHA-256-Digest: 0RM1x9lTJa7T8YkysaegPuBIeaEvSZypRDfXoMpsJAU=
+
+Name: org/eclipse/equinox/internal/p2/repository/helpers/LocationPrope
+ rties.class
+SHA-256-Digest: ekCbqDw31WLLN8H3qfJORvGD0bVXcSEaJWbsn3cqugI=
+
+Name: org/eclipse/equinox/internal/p2/repository/JREHttpClientRequired
+ Exception.class
+SHA-256-Digest: 57SJRa/Qh+6frZYLluvrdiEZJ6VKpFSxE183gsyvAtA=
+
+Name: org/eclipse/equinox/p2/repository/ICompositeRepository.class
+SHA-256-Digest: rvK7eZI6AkFRCGrrxQOViGybK3BJriWhwNHeCla+Hug=
+
+Name: org/eclipse/equinox/internal/p2/repository/Credentials.class
+SHA-256-Digest: H/6aXbWXR5efYwNuNIsPVGpf1vzVMzqT0dxscJef+Tk=
+
+Name: org/eclipse/equinox/internal/provisional/p2/repository/Repositor
+ yEvent.class
+SHA-256-Digest: gPqk5k/SQmdosv2LXEO4f4NQqsBlqeESjYH7hOqYbGA=
+
+Name: org/eclipse/equinox/p2/repository/IRepositoryManager.class
+SHA-256-Digest: xUIq/yqJe4CQVLWKfmSD+iC9g4LCegSzv5X91sTONOA=
+
+Name: org/eclipse/equinox/internal/p2/repository/helpers/DebugHelper.c
+ lass
+SHA-256-Digest: 8oX4C/xQ3ymDFSNJ1+MutjOjq3iE4ikAuD0gwa2ZJ1I=
+
+Name: org/eclipse/equinox/p2/repository/artifact/spi/AbstractArtifactR
+ epository.class
+SHA-256-Digest: XeZJ5LtwxpyYkCracXqlHtBCJwhgRh16S1QgHRq42JE=
+
+Name: org/eclipse/equinox/internal/p2/repository/Transport.class
+SHA-256-Digest: mw9IQWQ5GvuXaf9i+Bl4QRiRxCALxMyd1RB2mekIKe8=
+
+Name: org/eclipse/equinox/p2/repository/artifact/ArtifactDescriptorQue
+ ry.class
+SHA-256-Digest: wRVx9P64062lxTr3EVTnQa7nH6ZoSVgm4PHwRRMGm7Q=
+
+Name: org/eclipse/equinox/internal/p2/repository/RepositoryPreferences
+ .class
+SHA-256-Digest: q56jQ6pEoM856eQl4qG16pZcDSGCg/g0bSGpyojtw6w=
+
+Name: org/eclipse/equinox/internal/p2/repository/FileInfo.class
+SHA-256-Digest: 1A30kHlgwWrPQu6LWh6PFL1XiWEzBARl0amEUkXC5i8=
+
+Name: org/eclipse/equinox/internal/p2/repository/helpers/ChecksumProdu
+ cer.class
+SHA-256-Digest: terHfwUvd4EBJB13jyGwMtEMvo9i+cY3n0WzNZMar1U=
+
+Name: org/eclipse/equinox/p2/repository/artifact/IFileArtifactReposito
+ ry.class
+SHA-256-Digest: i885CD7OPlCaqS/8jOTPoiebNVYpuqVeK8AHWPcFztI=
+

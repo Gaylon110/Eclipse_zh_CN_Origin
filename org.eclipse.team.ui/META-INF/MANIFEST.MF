@@ -1,0 +1,3761 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.team.ui; singleton:=true
+Archiver-Version: Plexus Archiver
+Built-By: genie.releng
+Require-Bundle: org.eclipse.ui.ide;bundle-version="[3.3.0,4.0.0)";reso
+ lution:=optional,org.eclipse.core.resources;bundle-version="[3.3.0,4.
+ 0.0)",org.eclipse.core.runtime;bundle-version="[3.2.0,4.0.0)",org.ecl
+ ipse.team.core;bundle-version="[3.6.0,4.0.0)",org.eclipse.ui;bundle-v
+ ersion="[3.5.0,4.0.0)",org.eclipse.compare;bundle-version="[3.3.0,4.0
+ .0)",org.eclipse.ui.forms;bundle-version="[3.3.0,4.0.0)",org.eclipse.
+ ui.navigator;bundle-version="[3.3.0,4.0.0)",org.eclipse.jface.text;bu
+ ndle-version="[3.3.0,4.0.0)",org.eclipse.ui.editors;bundle-version="[
+ 3.3.0,4.0.0)"
+Bundle-ManifestVersion: 2
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/platfo
+ rm/eclipse.platform.team.git;path="bundles/org.eclipse.team.ui";tag="
+ I20170515-0910";commitId=1a3f28dbf5df7c64d31b8e3f2bfeaa70cf06aeda
+Bundle-Vendor: %providerName
+Import-Package: com.ibm.icu.text,com.ibm.icu.util
+Export-Package: org.eclipse.team.internal.ui;x-friends:="org.eclipse.t
+ eam.cvs.ssh2,org.eclipse.team.cvs.ui",org.eclipse.team.internal.ui.ac
+ tions;x-friends:="org.eclipse.team.cvs.ssh2,org.eclipse.team.cvs.ui",
+ org.eclipse.team.internal.ui.dialogs;x-friends:="org.eclipse.team.cvs
+ .ssh2,org.eclipse.team.cvs.ui",org.eclipse.team.internal.ui.history;x
+ -friends:="org.eclipse.team.cvs.ssh2,org.eclipse.team.cvs.ui",org.ecl
+ ipse.team.internal.ui.mapping;x-friends:="org.eclipse.team.cvs.ssh2,o
+ rg.eclipse.team.cvs.ui",org.eclipse.team.internal.ui.preferences;x-fr
+ iends:="org.eclipse.team.cvs.ssh2,org.eclipse.team.cvs.ui",org.eclips
+ e.team.internal.ui.registry;x-friends:="org.eclipse.team.cvs.ssh2,org
+ .eclipse.team.cvs.ui",org.eclipse.team.internal.ui.synchronize;x-frie
+ nds:="org.eclipse.team.cvs.ssh2,org.eclipse.team.cvs.ui",org.eclipse.
+ team.internal.ui.synchronize.actions;x-friends:="org.eclipse.team.cvs
+ .ssh2,org.eclipse.team.cvs.ui",org.eclipse.team.internal.ui.synchroni
+ ze.patch;x-friends:="org.eclipse.jdt.ui",org.eclipse.team.internal.ui
+ .wizards;x-friends:="org.eclipse.team.cvs.ssh2,org.eclipse.team.cvs.u
+ i",org.eclipse.team.ui,org.eclipse.team.ui.history,org.eclipse.team.u
+ i.mapping,org.eclipse.team.ui.synchronize
+Bundle-Name: %pluginName
+Bundle-Version: 3.8.1.v20170515-1133
+Bundle-Localization: plugin
+Bundle-Activator: org.eclipse.team.internal.ui.TeamUIPlugin
+Created-By: Apache Maven 3.3.3
+Build-Jdk: 1.8.0_121
+
+Name: org/eclipse/team/internal/ui/synchronize/patch/PatchCompareAdapt
+ er.class
+SHA-256-Digest: 3i1qKzd3mXn1grG+WDxJHNAI4jdqJXKc2YNomFa7OPI=
+
+Name: org/eclipse/team/ui/mapping/SynchronizationContentProvider.class
+SHA-256-Digest: NxuiomBB3Zb2PSvU6RC5YJczZ7s5nCX1E6NEzfX6oyA=
+
+Name: org/eclipse/team/ui/synchronize/ModelSynchronizeParticipant$1.cl
+ ass
+SHA-256-Digest: OH8ShDQroi9/CS0qFR1zhxoOmBSRlrcF5XJNVt8ZR3U=
+
+Name: org/eclipse/team/internal/ui/mapping/ResourceMergeHandler$1.clas
+ s
+SHA-256-Digest: 4Od860DxOA7nj5mkpJHGc/fPrBI+purn9VH6R3AZHag=
+
+Name: org/eclipse/team/internal/ui/mapping/ResourceCompareInputChangeN
+ otifier$CompareInputLabelProvider.class
+SHA-256-Digest: uq/KvnzZuWJ67+kMloO4ArJbkihVTmaTY5m5kSZLZAU=
+
+Name: icons/full/dlcl16/filter_change.png
+SHA-256-Digest: Tl2ndtNAaBJRkKENTaPm/BIrhnhCEZUoxXutBXxpe1Q=
+
+Name: org/eclipse/team/internal/ui/mapping/ReversePatchAction.class
+SHA-256-Digest: 5Y1kqk2aeXDmRwu7Gh2c6DEFuTJutTZbDfBpFdrLeNI=
+
+Name: org/eclipse/team/ui/synchronize/ISynchronizeParticipantReference
+ .class
+SHA-256-Digest: 079hcjt7yyb0BkQZ0uU8YOXuqw7dkstO6NOAR0jWYYY=
+
+Name: org/eclipse/team/internal/ui/synchronize/GlobalRefreshElementSel
+ ectionPage$5.class
+SHA-256-Digest: xJh9oEhwo8MBLgE/Kgqc6qLbtkRK/nri5BjTBd+n9o4=
+
+Name: org/eclipse/team/internal/ui/dialogs/PreferencePageContainerDial
+ og.class
+SHA-256-Digest: vAtwPiYpL5pB+QKo50wSPLctC3wIaxlBRktIdzc+SHU=
+
+Name: org/eclipse/team/internal/ui/synchronize/ChangesSection.class
+SHA-256-Digest: Hgs2iiWVWTeEJMQc12SkqoHwrDsUPaUaUHXwyWLOQvE=
+
+Name: org/eclipse/team/internal/ui/mapping/ModelEnablementPreferencePa
+ ge$3.class
+SHA-256-Digest: 3f89gGhlEfFbLqQRLobqo7jA+kxXqk0pddFbGJTAStk=
+
+Name: icons/full/dlcl16/refresh_remote.png
+SHA-256-Digest: 5X5RIQOprFeypd5iwd0DWPnHQBXkONYBrUyREt5jSVA=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/GlobalRefreshAc
+ tion$2.class
+SHA-256-Digest: RHT68rWJic5sYC0HSki08YJKB+CZwdD0yHNkNxuKVCA=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/PasteAction$2.c
+ lass
+SHA-256-Digest: v7eZGcdtIhYgH/loAbtT8YOYzEgeWEdtfMFE1qYSTcg=
+
+Name: org/eclipse/team/internal/ui/actions/ImportProjectSetAction$1.cl
+ ass
+SHA-256-Digest: unSKLSiCwIW48wz6olLzoYJ1sbZ5sxBiI79r0uGygY0=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/StatusLineContr
+ ibutionGroup.class
+SHA-256-Digest: JbGRLTEwi5lCGcZyjK7oxjM+EhPUcAnbjld06maWTZk=
+
+Name: org/eclipse/team/ui/synchronize/SyncInfoCompareInput.class
+SHA-256-Digest: Rv1iTCXFIs+azj2YylEcNW6HiNAZrli9lznOpbwHHs0=
+
+Name: icons/full/eview16/compare_view.gif
+SHA-256-Digest: mF6EjcF8uvgRLNxH+EhHxMVpdtkwtWVLDPAixG+lFT8=
+
+Name: org/eclipse/team/internal/ui/actions/ConfigureProjectAction.clas
+ s
+SHA-256-Digest: MHPB9BUy5nftyyBhrbDERPmo7o7n/fFNGKgzO85NBCk=
+
+Name: org/eclipse/team/internal/ui/mapping/IgnoreLeadingPathSegmentsAc
+ tion$1.class
+SHA-256-Digest: hhM/fTUrPtu2wKfUkyC5p7obHh/9DTtvX9k58SXYJks=
+
+Name: org/eclipse/team/internal/ui/dialogs/ResourceMappingResourceDisp
+ layArea$2$1.class
+SHA-256-Digest: xxNS3pZkdG+kWFANX1whCixXJn19+M+xIsnZu3ahbiU=
+
+Name: org/eclipse/team/internal/ui/synchronize/SynchronizePageConfigur
+ ation.class
+SHA-256-Digest: YUQm7oeWudvHlXVJqOhOKh7gxGviMu19nmh3KnUYXZ0=
+
+Name: icons/full/elcl16/prev_nav.png
+SHA-256-Digest: yxgjX0Rh5hyyjVTLI2Ao+fwtFXyqQIP2r2cKYoRNyoI=
+
+Name: org/eclipse/team/internal/ui/synchronize/EditableSharedDocumentA
+ dapter.class
+SHA-256-Digest: jcLpuP2h4tWW+80a7hUDOvSbsSLHu/HI6m2Asd98lVI=
+
+Name: org/eclipse/team/internal/ui/mapping/StorageStreamMerger.class
+SHA-256-Digest: VpzWVnzbOTafVKbCTY3rBXBWDkL5M7DdvqcMz2tkON0=
+
+Name: org/eclipse/team/internal/ui/preferences/FileTypeTable$FileTypeC
+ omparator.class
+SHA-256-Digest: aC4nsc2ArFJjKQan93tEu4TwjaUgicqC3r9dDbTx8qw=
+
+Name: org/eclipse/team/internal/ui/history/CompareLocalHistory.class
+SHA-256-Digest: JvxETwP+bsyL40vTUvmSp35azWoOCZQ2NDT7iqCE7pE=
+
+Name: org/eclipse/team/internal/ui/synchronize/RefreshModelParticipant
+ Job$ChangeDescription.class
+SHA-256-Digest: lB8XNNPgiZJ9JBTA3hzqDTG5n9LFmNRIKLyB+WwiEl8=
+
+Name: org/eclipse/team/internal/ui/actions/OpenWithMenu$3.class
+SHA-256-Digest: O0+Ps3ZfipM6pEMhh3nqD5QwKkyeJTzAmO28BNDGgik=
+
+Name: org/eclipse/team/internal/ui/synchronize/ActionDelegateWrapper$1
+ .class
+SHA-256-Digest: LOY8qFPXJQm68w6a6Aku4BtOHdYshugD3tl1MIupfHM=
+
+Name: org/eclipse/team/internal/ui/synchronize/FlatModelProvider$FlatS
+ orter.class
+SHA-256-Digest: uIfoROI7CGWmNw4TpKVIRCCaVQ7z/VouPoddqRlpArg=
+
+Name: org/eclipse/team/ui/history/HistoryPage.class
+SHA-256-Digest: POyqX7hE7L5bxvlJ3D70nFogFqFv9py9UbF9BX59U/Y=
+
+Name: org/eclipse/team/internal/ui/preferences/FileTypeTable$Item.clas
+ s
+SHA-256-Digest: KgdemdnMzj+FzaSvEFLhZPc7U+CrzqslVOeOK4od65k=
+
+Name: org/eclipse/team/ui/synchronize/ISynchronizePageConfiguration.cl
+ ass
+SHA-256-Digest: IM3JyvUsivwOL1BzW7wwRCMQHzjV7OKSjPKqUWvtxpQ=
+
+Name: org/eclipse/team/internal/ui/dialogs/ResourceMappingResourceDisp
+ layArea.class
+SHA-256-Digest: fToacdoVGmLkA0Ck8m6fQuxhRUNSaLxquYDjobPgfEY=
+
+Name: org/eclipse/team/internal/ui/dialogs/AdditionalMappingsDialog$1.
+ class
+SHA-256-Digest: DY/7/oSD3SL1MoNb0/ramlXBAxU+IpLIvkg+tzoEEPY=
+
+Name: org/eclipse/team/internal/ui/history/GenericHistoryTableProvider
+ $HistoryLabelProvider.class
+SHA-256-Digest: AT/kAPMk6b5os8q2MJucrooD/EGxxsaUxbSqV+xQM0Q=
+
+Name: icons/full/ovr/warning_co@2x.png
+SHA-256-Digest: xDHJT8UOmdfxLM8YC4jXgHNW4yoKXijle0imV79qZzQ=
+
+Name: icons/full/dlcl16/synced.png
+SHA-256-Digest: tGrCXmgzMtoaXbTPue88I+pYBym+GJF7Jq0bRGIwe60=
+
+Name: org/eclipse/team/internal/ui/synchronize/ForwardingChangesSectio
+ n$2.class
+SHA-256-Digest: EQ94CiH7LUC1V2mpynuQ+QkmpvvT7lDEBAgspTg9Xfg=
+
+Name: org/eclipse/team/internal/ui/synchronize/SynchronizeModelUpdateH
+ andler$5.class
+SHA-256-Digest: ziff0Bl3BNjD4hJ9MEZZINqFyyWNgHFUGQqOqvoMMaY=
+
+Name: org/eclipse/team/internal/ui/mapping/WorkspaceTeamStateProvider.
+ class
+SHA-256-Digest: 0rurgkkdFfWXzVT1OtKbwq4AhAnVKQZYGcQGX79iHUg=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/RefactorActionG
+ roup.class
+SHA-256-Digest: IDBwj1p0Yl7xeY9zKJvxTiH2r/L8nw1s+B//WZ/Z8AU=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/PasteAction.cla
+ ss
+SHA-256-Digest: wTKRGrNor7dgtSN2nDK0+f1HUg05pMAPGleZNRHLFh0=
+
+Name: org/eclipse/team/ui/synchronize/AbstractSynchronizeScope.class
+SHA-256-Digest: /FFNQm/JYp8SqGAEJ74YFcQF/hICxgKJh783PGZZTeM=
+
+Name: org/eclipse/team/internal/ui/synchronize/TreeViewerAdvisor$Navig
+ ableTreeViewer.class
+SHA-256-Digest: T6ViS8G/vR29ZzGDJDmTgpMRW2y37bE/G7HZv7dcMLo=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/RefreshActionCo
+ ntribution.class
+SHA-256-Digest: hvE+kBCIFx6JHQVTGCcq35NeHhK+VFP+y7rk8+iM0fM=
+
+Name: org/eclipse/team/internal/ui/wizards/ProjectSelectionPage$1.clas
+ s
+SHA-256-Digest: /ZA8U3t14lf9Et7yvdoyuY2tNDNCWW7jVm+3u1456NA=
+
+Name: org/eclipse/team/internal/ui/preferences/TextPreferencePage$3.cl
+ ass
+SHA-256-Digest: j2ZkNXFufgoTIcM6rVRRc+kTUrTwnXGuCwmcKYezE+c=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/OpenInCompareAc
+ tion$1.class
+SHA-256-Digest: Bnokw6D/YZRufxL8LtwPi8xN3DmbxBcL1N8z5ZZIvU8=
+
+Name: org/eclipse/team/internal/ui/mapping/FuzzFactorDialog$3.class
+SHA-256-Digest: yg9hLc+0GQxVjTJgZV2WpG85vKYLNsIS3Kpn234O2CU=
+
+Name: org/eclipse/team/internal/ui/synchronize/ChangeSetModelProvider.
+ class
+SHA-256-Digest: 2NOmV7ckaAoNxKN9AcvRBISKCGdzn+np0Zg0y//iwIM=
+
+Name: icons/full/elcl16/participant_rem.png
+SHA-256-Digest: 4vo7y/hW/hK5RfH6DP+kYiozZPRCY+Ygw3vjgH/I1SQ=
+
+Name: org/eclipse/team/internal/ui/synchronize/SyncInfoSetChangeSetCol
+ lector$1.class
+SHA-256-Digest: JyMFLqduEObpo7K2T71izY66BMlvYDhWbPJ1iG82COw=
+
+Name: org/eclipse/team/internal/ui/mapping/CompareInputChangeNotifier$
+ InputChangeEvent.class
+SHA-256-Digest: wJvMRLZv2um4FGYuuBKTum1BkoQ02XalA+c8pClfyx8=
+
+Name: org/eclipse/team/internal/ui/synchronize/MultiLabelDecorator.cla
+ ss
+SHA-256-Digest: 7Rq59c+QRSFleeCXUI0BgKN8cj5LiLOslhMj4+boiEE=
+
+Name: icons/full/elcl16/ignorefiles.png
+SHA-256-Digest: kCODg2Cjs9bD38O38yheXKnRfY91xOqCFy1FSu8S2hE=
+
+Name: org/eclipse/team/internal/ui/mapping/CommonViewerAdvisor$1.class
+SHA-256-Digest: i+HXRUjC/VRxg4HshYiUeEooS+4YZSZocBJ5ShxqIw0=
+
+Name: org/eclipse/team/internal/ui/mapping/ModelElementSelectionPage$2
+ .class
+SHA-256-Digest: 8Cfq0v3qVzT/wvlCpW9o4fgNu+Ito+Dl+1wSxYSfi64=
+
+Name: org/eclipse/team/internal/ui/synchronize/LocalResourceSaveableCo
+ mparison$1.class
+SHA-256-Digest: s0+P03o13oWl9fxg+pra2TJgHmfzZkH2Idtnnh6PBLo=
+
+Name: org/eclipse/team/internal/ui/dialogs/PreferencePageContainerDial
+ og$4.class
+SHA-256-Digest: 8WSHh6U3dE+xWr2y88Z9LsHIf2Db84rx2ry0Ed7uCJ4=
+
+Name: org/eclipse/team/internal/ui/Utils$2.class
+SHA-256-Digest: bfGZa+eP8dQXriUUf84M9k4HP0CxEXhx1ryDS8WnyJw=
+
+Name: icons/full/elcl16/pin.png
+SHA-256-Digest: kTMUo8KALCXguirxqo5NI0RhIQIw8/gFYqRUg5d8nyk=
+
+Name: org/eclipse/team/internal/ui/synchronize/patch/ApplyPatchModelCo
+ mpareEditorInput$3.class
+SHA-256-Digest: AS8Ouatzz+zadgTJMdnwGbQ5LcojMKT0PBpVTieDDo4=
+
+Name: org/eclipse/team/ui/history/RevisionAnnotationController$2.class
+SHA-256-Digest: enU+RVjhCRxZhFMA9mzL3itzsWX4Cm5yI4HGIpfuaMs=
+
+Name: icons/full/wizban/export_projectset_wizban.png
+SHA-256-Digest: gYA4aiMF4FKztjWDGmXsYE5SNHDdeJaOi85IvU6HDRs=
+
+Name: org/eclipse/team/internal/ui/mapping/GererateRejFileAction.class
+SHA-256-Digest: 4U7jON2B6aqxp/uOf6Amy1KX/NbBddDVcl8p6WKl2Hw=
+
+Name: org/eclipse/team/internal/ui/mapping/RestoreRemovedItemsAction.c
+ lass
+SHA-256-Digest: YrrVV8EOVYVBS/XLuEo7HqT1rHPF018Y1fEDCXQzBW0=
+
+Name: icons/full/obj/resource_model@2x.png
+SHA-256-Digest: B/ChDIM04PxSN+DpZeioh/XMT4OjEEe7y9EcPXV3Urg=
+
+Name: icons/full/wizban/import_projectset_wizban.png
+SHA-256-Digest: syunnWYxvog3SvrgoNAeKRGYfWc+0PwCzqZOulvEz9U=
+
+Name: icons/full/obj/hunk_obj@2x.png
+SHA-256-Digest: Ok0XkoH/8FMBeC3o9yJ2heHO8x3nuOmZKZ7McAadeY8=
+
+Name: org/eclipse/team/internal/ui/mapping/DiffTreeChangesSection$7.cl
+ ass
+SHA-256-Digest: J9grwvzNYFsJ4jJgFG7nsYJMyOIAmjU9V7b8C7Ql9o4=
+
+Name: org/eclipse/team/ui/mapping/SynchronizationStateTester.class
+SHA-256-Digest: Zo8G4ZXYuhMvZi3Hn/K6g2Zaiy90q9iKKK8yONxkWX4=
+
+Name: org/eclipse/team/internal/ui/wizards/ImportProjectSetMainPage$2.
+ class
+SHA-256-Digest: vzgDq4u4KLuELQGkf0vh7hs4gus/hYdakghZ94uG6YE=
+
+Name: org/eclipse/team/internal/ui/mapping/ResourceCompareInputChangeN
+ otifier$2.class
+SHA-256-Digest: TPApYx1rP7zEZRvUnw/lkADbMRwfb3sE04KhEgAbsbM=
+
+Name: org/eclipse/team/internal/ui/synchronize/ChangeSetModelManager$C
+ ommitSetActionContribution.class
+SHA-256-Digest: N0doxN1c1ZdHU6/LfdNZoNmW1wCylDtJJGjOh38QgeA=
+
+Name: org/eclipse/team/internal/ui/history/ShowLocalHistory.class
+SHA-256-Digest: ovKMhwHYFpOJiFMcYfozql9K1yYopuDdbIVBGxO3IWw=
+
+Name: org/eclipse/team/ui/synchronize/ISynchronizeModelElement.class
+SHA-256-Digest: WOuhD6qzP7SpcLcfDH355NYgJKMy+8syCakU6jLNbzM=
+
+Name: icons/full/dlcl16/filter_change@2x.png
+SHA-256-Digest: I38pJWjVQ+FDlhzAszl0frypRwhnAdtkw1zikaxYCT8=
+
+Name: icons/full/obj/import_projectset@2x.png
+SHA-256-Digest: E3CAJWxACPpHee2eDtZXVXSHpIp4yxRVM2lKTsb1cOw=
+
+Name: org/eclipse/team/internal/ui/wizards/ExportProjectSetLocationPag
+ e$LocationPageContentProvider.class
+SHA-256-Digest: AnA1628TU2uhsHJ6ASAVSkDa+TJZDILgPBQYjMM6zb8=
+
+Name: org/eclipse/team/internal/ui/synchronize/TreeViewerAdvisor$Navig
+ ableCheckboxTreeViewer.class
+SHA-256-Digest: m3ukr+8G4rgIjf4CncYT0CGNQ1oQzCBCpEqjni+62m8=
+
+Name: org/eclipse/team/internal/ui/wizards/ExportProjectSetLocationPag
+ e$4.class
+SHA-256-Digest: h79RXtkIHjxUgEjhEGVt/LJqu10Rx12FcfI2MNA6sPc=
+
+Name: org/eclipse/team/internal/ui/synchronize/ActiveChangeSetCollecto
+ r$1.class
+SHA-256-Digest: D4GqkWqKXnvneChvd7Nbi+gZk5f81X+OLswwQiZZeVE=
+
+Name: org/eclipse/team/internal/ui/synchronize/SaveablesCompareEditorI
+ nput$3.class
+SHA-256-Digest: ZSPfJwbLUHnhCAxEVkU09cXHNU3pTzUscuAr7LedSrM=
+
+Name: org/eclipse/team/internal/ui/synchronize/patch/ApplyPatchModelSy
+ nchronizeParticipant$ApplyPatchModelSynchronizeParticipantActionGroup
+ .class
+SHA-256-Digest: 1qBmw1+m6Bz+UvWakpT/P0TmE7nQIdgmjEs/1JA3rag=
+
+Name: org/eclipse/team/ui/synchronize/ModelParticipantAction$2.class
+SHA-256-Digest: ra32X/2kOtftLIkFsKy0T/PqzXnHctCtu8y5AtEgZSg=
+
+Name: org/eclipse/team/internal/ui/wizards/WorkingSetsDialog$1.class
+SHA-256-Digest: ooow/9Eve+g6RcPvVBZ53g81leF3pfvng1EIWEPGvIE=
+
+Name: org/eclipse/team/internal/ui/mapping/ResourceDiffCompareInput.cl
+ ass
+SHA-256-Digest: 4IlQS5ku4Nc92Cdb5pRPJ856IvzYx0qS7k7SGrKVVcA=
+
+Name: org/eclipse/team/ui/history/HistoryPageCompareEditorInput$1.clas
+ s
+SHA-256-Digest: DdoXAjIrYZ9ypYC2tDC+KvtC5fzSFyFSzztwHOfpscs=
+
+Name: icons/full/elcl16/pin@2x.png
+SHA-256-Digest: 695wkCeKphgL+vonxIMslypY+iL8PQUcWn2gnLph+u0=
+
+Name: org/eclipse/team/ui/synchronize/ModelParticipantMergeOperation.c
+ lass
+SHA-256-Digest: WIVhYQS0qmM0mlRDQ5HI3SfABwYQMk5tOZzN4sU+Bko=
+
+Name: org/eclipse/team/internal/ui/mapping/CommonViewerAdvisor$MyDecor
+ atingStyledCellLabelProvider.class
+SHA-256-Digest: +22fB9eWtSR0ki0h6zUXwolZvSTMRIN/rURPwTwk7Ks=
+
+Name: org/eclipse/team/ui/synchronize/SaveableCompareEditorInput$2.cla
+ ss
+SHA-256-Digest: TwdivKSr/zdUg55OZ/MINF8B+WXHyvkzXSvmLLFD9JE=
+
+Name: org/eclipse/team/internal/ui/wizards/ProjectSetExportWizard.clas
+ s
+SHA-256-Digest: rRniCgaGVuZWySu2Z8Pzr0EalOonhQuLU1nDG84MxjQ=
+
+Name: org/eclipse/team/internal/ui/dialogs/DetailsDialog.class
+SHA-256-Digest: wSW3m+lfFFwmikEu5H0PanUirHa6lf1oXtPptBSS2L4=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/RemoveSynchroni
+ zeParticipantAction$4.class
+SHA-256-Digest: RhkNiFFDllIuOrWHz33YOb4uRKELkh0BElhMNA3FYEI=
+
+Name: org/eclipse/team/internal/ui/mapping/MergeAllOperation.class
+SHA-256-Digest: bGYv4LinNEfSU8wB6aKzgIteBXbVCPv6xYpmUOfotGk=
+
+Name: org/eclipse/team/internal/ui/mapping/MergeAllOperation$1.class
+SHA-256-Digest: 4O73Ho40eDMKcF/Th179PQ6V28pAuZk+b4ylNzEkTiA=
+
+Name: icons/full/dlcl16/release_rls@2x.png
+SHA-256-Digest: CayR4NUVbGBli1V2uUxMDuknVRxw0H3ie57Ik2RxDdM=
+
+Name: org/eclipse/team/ui/synchronize/ISynchronizeManager.class
+SHA-256-Digest: 9pzC4Kt+yP3ZcEYmOdkLOXVMQKCCdBCUBF20dOw91Tk=
+
+Name: org/eclipse/team/internal/ui/wizards/GlobalRefreshWizardSelectio
+ nPage.class
+SHA-256-Digest: kKGI587OaysxQCl7fXX90e+cpW6X2fuQxipKFR2fTiw=
+
+Name: org/eclipse/team/internal/ui/synchronize/SynchronizePageConfigur
+ ation$2.class
+SHA-256-Digest: Bm+3736fxWTb53mw6QCj6pD6+DV3h/8kPGuCt05LyH8=
+
+Name: org/eclipse/team/internal/ui/history/AbstractHistoryCategory.cla
+ ss
+SHA-256-Digest: 4N9rYvxbd03FydTo6S2t/o9ywfW0mZMFfylt2lIjvvs=
+
+Name: org/eclipse/team/internal/ui/mapping/ModelCompareEditorInput$3.c
+ lass
+SHA-256-Digest: 4USdVDGzbapEcMhzt/Xh3ZcEwsHcYyKoaXNcFn/YNS4=
+
+Name: org/eclipse/team/internal/ui/mapping/CommonViewerAdvisor$Navigab
+ leCommonViewer.class
+SHA-256-Digest: Mck5UrsefVuvKyDIWvRnqTEFnq7A3nJEe92Fb92P6cs=
+
+Name: org/eclipse/team/internal/ui/ProjectSetImporter.class
+SHA-256-Digest: eWaNjW0yJGLYfHErk5FPG0MJG2A6y7u1ff0yqgr3I6g=
+
+Name: icons/full/dlcl16/release_rls.png
+SHA-256-Digest: yGkxbicmY+KHSn+nfb/KfREQiY4OP+Tl5zIPQMXQzDA=
+
+Name: org/eclipse/team/internal/ui/synchronize/CompressedFoldersModelP
+ rovider$1.class
+SHA-256-Digest: HWcPYIJehlKERm8hwXsikvJQyUtAcRdwm8+OdLoeZRM=
+
+Name: org/eclipse/team/internal/ui/Policy$1.class
+SHA-256-Digest: 02sF7jZieScRCFKUWYg2VQQsO8On9E5SgXi1mR2n0Wo=
+
+Name: org/eclipse/team/internal/ui/wizards/ExportProjectSetMainPage$1.
+ class
+SHA-256-Digest: MY9JdB01IS8YoVouHiO36bQkePFqtMX63nIlYBxDsTA=
+
+Name: org/eclipse/team/internal/ui/ProjectSetImporter$AdviceDialog$1.c
+ lass
+SHA-256-Digest: Yl9rr0g5ELFeG4A7U1loLmlIf4Pe5aRr9SmzKpTc57k=
+
+Name: org/eclipse/team/internal/ui/synchronize/patch/ApplyPatchOperati
+ on$1.class
+SHA-256-Digest: Dsum787bRgFEayRr9SMWsUBAf8+ihobVK5eFD+Mbkp8=
+
+Name: org/eclipse/team/internal/ui/synchronize/SynchronizeModelUpdateH
+ andler$MarkerChangeEvent.class
+SHA-256-Digest: bQjh070tFbw7GuQMkMswTyZzkn4SE0WOwAHjdUUymOU=
+
+Name: org/eclipse/team/internal/ui/history/LocalHistoryPage$HistoryRes
+ ourceListener.class
+SHA-256-Digest: 5lOjMfoPG/oggzJS2/mxEZ87/E+pyXLHnx3EBC21QxU=
+
+Name: org/eclipse/team/internal/ui/history/LocalHistoryPageSource.clas
+ s
+SHA-256-Digest: 9kQQ84yEJ2yRcRAw7v6Uwf/A1peouvzWWj4UHJQT2yg=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/ToggleLinkingAc
+ tion.class
+SHA-256-Digest: csOGSLDiEKl2NSC+s5w6HSOV62+tG9kNEe0XuHfuLT0=
+
+Name: org/eclipse/team/internal/ui/synchronize/patch/ApplyPatchSubscri
+ ber.class
+SHA-256-Digest: gLtJrxyONOgaP260RMzT0TOMEKYaCG+2pEq7RCV7+wk=
+
+Name: org/eclipse/team/internal/ui/synchronize/patch/FilePatchResource
+ Mapping.class
+SHA-256-Digest: ixrUBjlkrc6lvlNhiVx0hwC0CMxN7uifYIQJffpHJrw=
+
+Name: icons/full/elcl16/syncpane_co.png
+SHA-256-Digest: aKHssySlpYRI20HpQpV99nKEnEgjfIPrg22OtacMqzE=
+
+Name: org/eclipse/team/internal/ui/synchronize/SynchronizeView$1.class
+SHA-256-Digest: AC9YEsnLgu0/tgdGekQOHAWxSF0psRQleqS4rS/C5oU=
+
+Name: org/eclipse/team/internal/ui/synchronize/SynchronizePageConfigur
+ ation$3.class
+SHA-256-Digest: pHrXRsSNQPQbYrRQZ2egE+HsiNeIF/7WWc1WZrTTGxU=
+
+Name: org/eclipse/team/internal/ui/synchronize/AbstractTreeViewerAdvis
+ or$TreeCompareNavigator.class
+SHA-256-Digest: pDSYy60+q5kqejVPxUH9Qrw7t0+9e41ge7UYVSd9wao=
+
+Name: icons/full/dlcl16/incom_synch.png
+SHA-256-Digest: g4ku4B96794q5oaJnvrA0V6UAOeBw4y7qEqQQeWz5E8=
+
+Name: org/eclipse/team/internal/ui/history/GenericHistoryView$2.class
+SHA-256-Digest: 80EY+1Df4ZdTTLAkVTPrVms5GwQFDGl/Bs0boi1QXt0=
+
+Name: org/eclipse/team/ui/synchronize/ModelParticipantAction$3.class
+SHA-256-Digest: ANw/56uTFHvIw+jhxmVRRPPybE/P1TsXpZbfT/ja314=
+
+Name: org/eclipse/team/internal/ui/wizards/ConfigureProjectWizardMainP
+ age$1.class
+SHA-256-Digest: 2QZpzUcUjhd9vjoQteD8tSccVIcln5VTZQ8qntzcnhs=
+
+Name: org/eclipse/team/internal/ui/registry/TeamContentProviderDescrip
+ tor.class
+SHA-256-Digest: TGCKgR9XET1kXMr1fVCt+s+hJ/h/VSiKsHJhwLaS7Io=
+
+Name: icons/full/dlcl16/synch_participants.png
+SHA-256-Digest: SxOOntJEZ7GOQ+NWLUJkf81MvIHAOk2MVCytU+eNJH8=
+
+Name: org/eclipse/team/internal/ui/synchronize/ActiveChangeSetCollecto
+ r$2.class
+SHA-256-Digest: XDTsMvvGgvW5ZoWYN32XjYdQTxbI9PWmLgVxPDJg8YQ=
+
+Name: org/eclipse/team/ui/synchronize/SynchronizeModelAction$1.class
+SHA-256-Digest: DdPEILNHCok1/V9+dGrD0Pu15kcJya2dESqm0Hc4QBM=
+
+Name: org/eclipse/team/internal/ui/mapping/ResourceModelContentProvide
+ r$3.class
+SHA-256-Digest: 2/jaL/kjhrzn9RuPLQIbVMN0PlkdwREP55+0uKct3rw=
+
+Name: org/eclipse/team/internal/ui/wizards/ImportProjectSetMainPage$6.
+ class
+SHA-256-Digest: xitu4Wwdgn+uHY9JZj+87TMLuF5fAz9zXmIrbmuLSoA=
+
+Name: org/eclipse/team/ui/synchronize/SaveableCompareEditorInput$1.cla
+ ss
+SHA-256-Digest: B6iNpEyHWVDPn59yIXwaQpPSXhdNjpv2WftpmsaoU+0=
+
+Name: org/eclipse/team/internal/ui/DefaultUIFileModificationValidator$
+ 1.class
+SHA-256-Digest: RHdhYa42XWUkoWIZi/GF04zIe0mnxErjgHFBPAfc56A=
+
+Name: org/eclipse/team/internal/ui/mapping/FuzzFactorAction.class
+SHA-256-Digest: nc0p0DjFlwQyHhgHyFkmpKhsrHt76Q8ddwxPuRUmwGc=
+
+Name: org/eclipse/team/internal/ui/wizards/ExportProjectSetLocationPag
+ e$WorkspaceDialog$3.class
+SHA-256-Digest: ffCCpBJ2Aw4yXEDV1EMz2uh6Ukf4Pb0lKYrvWMYapho=
+
+Name: icons/full/elcl16/refresh_remote.png
+SHA-256-Digest: D8Ijl35lJH/yiH1mKA4dzwuQdiU4EAf4AwZ3dzA9HjQ=
+
+Name: org/eclipse/team/internal/ui/actions/TeamAction$3.class
+SHA-256-Digest: SMjp56gTBgu8r2roBi9X4KI1iOmSgvMaGYvNrbxeX+g=
+
+Name: org/eclipse/team/ui/history/ElementLocalHistoryPageSource.class
+SHA-256-Digest: 8KvRs0LIjZRmyVjrWj4b9SGKWfaGd0KotXsS/c186R4=
+
+Name: org/eclipse/team/internal/ui/actions/CompareAction$SelectAncesto
+ rDialog.class
+SHA-256-Digest: 1iCku2D3FkmukWQvoO9wGjcJb9sxbwWjmdwLuLhHyxw=
+
+Name: org/eclipse/team/ui/synchronize/WorkingSetScope.class
+SHA-256-Digest: V6/saXoxBWRht8ccuGi70QCFRr29BTFqhMpXP5AYXEI=
+
+Name: org/eclipse/team/internal/ui/synchronize/SynchronizeView$6.class
+SHA-256-Digest: +O3pa5Ww8qgrgBLzPRZGZFfN6lMe0napHFonVRu6xbg=
+
+Name: org/eclipse/team/internal/ui/synchronize/patch/ApplyPatchOperati
+ on.class
+SHA-256-Digest: R4lWhGl9EA+tex6zUYgEuc7jNZ2mOyRLmG4IK1hL/zI=
+
+Name: org/eclipse/team/internal/ui/actions/ImportProjectSetAction.clas
+ s
+SHA-256-Digest: fDIxBN0qlWkTtxfxIbfy6fcv7ZxJQMkmlbDY0lg7JGQ=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/ChangeSetAction
+ Group$CreateChangeSetAction.class
+SHA-256-Digest: Pyz/R2rdnJfKCtAO7+HdvtIst9sOjQHESOb4ouJ51eQ=
+
+Name: org/eclipse/team/internal/ui/synchronize/SynchronizePageConfigur
+ ation$8.class
+SHA-256-Digest: eb4iJ67VYcGvrnOd7Gx/5JDibkFYyhsysXhAHcVknSg=
+
+Name: org/eclipse/team/internal/ui/mapping/ModelSelectionDropDownActio
+ n$1.class
+SHA-256-Digest: od1WFiL+SS1qjlPZGG7Wjj/uSU/WkkzuTsTNEevBlvc=
+
+Name: org/eclipse/team/internal/ui/synchronize/SaveablesCompareEditorI
+ nput$7.class
+SHA-256-Digest: ErGnTahxATkHofMZA60Spi/r0nQhtcFH3l++0qaWVO8=
+
+Name: icons/full/elcl16/refresh@2x.png
+SHA-256-Digest: jcP/cHGlwO9bc8+0thQRNYYhFYZ8tnj3TWgAF+H56Tk=
+
+Name: org/eclipse/team/internal/ui/history/ReplaceLocalHistory$1.class
+SHA-256-Digest: SYLjkEKPIUND7TBSLAJrjYxGgxDnpTYC26uPl/AOm1U=
+
+Name: org/eclipse/team/internal/ui/UIProjectSetSerializationContext$1.
+ class
+SHA-256-Digest: 9B4JCWT6I8ZGhyiDvq1/Mf6nNxu2gf4Mjvh84aXZtII=
+
+Name: org/eclipse/team/internal/ui/wizards/ImportProjectSetOperation.c
+ lass
+SHA-256-Digest: wN9hYy4KBj6rQwh6eQ0M6dDvsZ5QKBDd/N/0aItXGr0=
+
+Name: org/eclipse/team/internal/ui/synchronize/HierarchicalModelProvid
+ er.class
+SHA-256-Digest: TPYX7TyiVM883x/IhYAkCDdggmUNrFykUavj99uoPyI=
+
+Name: org/eclipse/team/internal/ui/synchronize/SynchronizeManager$Part
+ icipantInstance.class
+SHA-256-Digest: s5yOV8dR1rLzj4i9CLJy/Ms4HAcn1iLkqRUpxaX1rzM=
+
+Name: org/eclipse/team/internal/ui/wizards/WorkingSetsDialog$2.class
+SHA-256-Digest: oc/IvjyfILvEyYiUPdBbvUTrBM7E9+n2sbaoqsQ9zD4=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/SynchronizePage
+ DropDownAction$2.class
+SHA-256-Digest: vH1yLEqPnStO/JBpPuGOkcx2YXjekMVOrDeNv/GsEl4=
+
+Name: org/eclipse/team/internal/ui/actions/ApplyPatchAction.class
+SHA-256-Digest: HT4RT88YhL1yGXVrVBjZIH4a+gjkRtmglV6rdIzerkI=
+
+Name: org/eclipse/team/ui/history/HistoryPageCompareEditorInput$2.clas
+ s
+SHA-256-Digest: AtdiDrRNcZDdXY2hbM8OUBZC+gjcCX9ptwd7voCX/yY=
+
+Name: .options
+SHA-256-Digest: FiWvsP8mJwmFz0T8o/sB/spGG91LAgtZGRZEK0YpgVI=
+
+Name: org/eclipse/team/internal/ui/mapping/ResourceModelContentProvide
+ r$2.class
+SHA-256-Digest: 7dUj0xP+32LSyNpxn4UiZy3OtjjhJmRPj7ViLzP9850=
+
+Name: org/eclipse/team/internal/ui/synchronize/SynchronizeModelUpdateH
+ andler$6$1.class
+SHA-256-Digest: j+3hTERljh7LkjYZrtBt9ZhrUe8SBcENyEZhpD9fhCo=
+
+Name: org/eclipse/team/internal/ui/actions/actions.properties
+SHA-256-Digest: CfcUrnd0Yvj1HfSMFTGnXNbnkawpJALXevAt97+PjaU=
+
+Name: icons/full/obj/dates@2x.png
+SHA-256-Digest: ZfqghG6ZvDC3wbyTBafJrgMv4QS2Ns8NKjSLSX4WnWI=
+
+Name: org/eclipse/team/internal/ui/actions/ConfigureProjectAction$1.cl
+ ass
+SHA-256-Digest: HINhT/t1MGV0sl0kN6sxasAAB6O6r2LeF/R5ufE0uQM=
+
+Name: org/eclipse/team/ui/synchronize/ParticipantSynchronizeWizard.cla
+ ss
+SHA-256-Digest: xxfeNGF94VylmGMBr2NkY7d9l7/PLccxeMpqVPR0lUI=
+
+Name: org/eclipse/team/ui/history/RevisionAnnotationController$3.class
+SHA-256-Digest: ScEWOUasvNx23p3NNVUqax5lh9eBr9Utt02fYuEdxac=
+
+Name: org/eclipse/team/internal/ui/history/LocalHistoryPage$10$1.class
+SHA-256-Digest: XlC/XNKgk4DsrPhV/u39yCSQFLCBo8T3UkeAr8DYIw0=
+
+Name: org/eclipse/team/internal/ui/mapping/ModelSelectionDropDownActio
+ n$MenuCreator.class
+SHA-256-Digest: c3xifsqBCgR8/h55/BSDWpitCbHCrEXaxFmVnJTlBOM=
+
+Name: icons/full/dlcl16/next_nav@2x.png
+SHA-256-Digest: P0alHYKFBPjhhRfwI1Cz20vXHIR1DdsFYW6HfAjPcwg=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/SynchronizePage
+ DropDownAction$3.class
+SHA-256-Digest: v50P7iQuEVHZ3xEP/D0BdsaPZsp28/hJIfY0tKwIlE0=
+
+Name: icons/full/dlcl16/checkin_action.png
+SHA-256-Digest: /dZDGZcrTl4aYD/jrn220Y0cZmm8JQO+iY+lHVxmjsc=
+
+Name: org/eclipse/team/ui/mapping/ITeamStateDescription.class
+SHA-256-Digest: OAY7T3OXckSNQf7oYlfl19LK6KAoaNTqBCUjIz6f3V8=
+
+Name: org/eclipse/team/internal/ui/synchronize/patch/DiffProjectResour
+ ceMapping.class
+SHA-256-Digest: wlL8dJYi8f3zFMaZJSALWn+hcvcXK+VJnB/kjLSbz7s=
+
+Name: org/eclipse/team/internal/ui/synchronize/IPageValidator.class
+SHA-256-Digest: KUHufMRoHTMFXwAhgg4uHwjLR0cN1pboFl61TC0rs1Q=
+
+Name: org/eclipse/team/internal/ui/mapping/ModelSelectionDropDownActio
+ n$2.class
+SHA-256-Digest: kCOMdHFdEn9AglAPNgoO8oj9R+jlit9NwyHktzqMN48=
+
+Name: org/eclipse/team/internal/ui/synchronize/SynchronizeModelUpdateH
+ andler$4.class
+SHA-256-Digest: FNIurulCH2wJFl3RZcsJbXx4gUuC/3kXhtx+JDnqV+w=
+
+Name: icons/full/elcl16/rem_co.png
+SHA-256-Digest: /OWESIkCXklU7gm6VLkHNgIw3i0n4s5LC2bUUO0paMA=
+
+Name: org/eclipse/team/ui/synchronize/TeamStateProvider$1.class
+SHA-256-Digest: VEVHjZ8M69OBPdd5RQKP9JKNd/SQcWQw8kcBx8n0HSE=
+
+Name: icons/full/obj/local_entry_tbl.png
+SHA-256-Digest: 3I1V+jcZGS2iljg11uCcyif3OydOh4LY3+MtSNcQJVk=
+
+Name: icons/full/eview16/history_view@2x.png
+SHA-256-Digest: OHigziWuQD5PE9Qny1z09uGt16j5XXON33z3nE1lFFY=
+
+Name: org/eclipse/team/internal/ui/synchronize/NavigationActionGroup.c
+ lass
+SHA-256-Digest: m8v4qbgRA6wOr1mHivXLBcCnWRnVSwJ/1e2IdEqBNO8=
+
+Name: org/eclipse/team/internal/ui/synchronize/ChangeSetCapability.cla
+ ss
+SHA-256-Digest: 4ffYq9NnFmhPPjyo8JmxM1Qwn4PYwA6TGj9ARkNIO6Q=
+
+Name: org/eclipse/team/internal/ui/synchronize/patch/ApplyPatchSynchro
+ nizationActionProvider.class
+SHA-256-Digest: ZoZoqH/AGUW89B/0KjcPX0UIHYsXjfIOHuMGw/+M8vY=
+
+Name: org/eclipse/team/internal/ui/synchronize/AbstractTreeViewerAdvis
+ or.class
+SHA-256-Digest: XZg4V0qYCJW5luct7VT2gbpb4ThLwvD3YXI8TO33c8U=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/DirectionFilter
+ ActionGroup$DirectionFilterAction.class
+SHA-256-Digest: MeWKhWQHA6PiNHfgISznpqWsamFD2pRXVC8xQ8BhFcQ=
+
+Name: org/eclipse/team/internal/ui/actions/TeamAction$2.class
+SHA-256-Digest: tuXd50Z1b19I7qkqLNWO+5pq0nUmZysGUlpqV+mDPfc=
+
+Name: org/eclipse/team/internal/ui/dialogs/MultipleYesNoPrompter$1.cla
+ ss
+SHA-256-Digest: 2w00WJJ0HrpiEXooLqyaql0jQDi/bAJJVMrneLqOTzc=
+
+Name: org/eclipse/team/internal/ui/synchronize/ImageManager$1.class
+SHA-256-Digest: kemch5kVXYndBnAgqBpg/B+e3o9/UJ/5WSHGXC8X+Bk=
+
+Name: org/eclipse/team/ui/synchronize/ModelMergeOperation$4.class
+SHA-256-Digest: ZIATssQIQyWghw3dQBcRpoLEo/2AAONv0u2IvhT0BhA=
+
+Name: org/eclipse/team/ui/ISharedImages.class
+SHA-256-Digest: NLFfj7Cdi6geqhWr7H0eCGXKOuYoVs1duXWWVW01DbM=
+
+Name: icons/full/elcl16/participant_rem@2x.png
+SHA-256-Digest: HgNE2kvS0lZlzdmKJw1R2Yu4O6E7sg7POm4RvN4oEeE=
+
+Name: org/eclipse/team/internal/ui/synchronize/GlobalRefreshElementSel
+ ectionPage$1.class
+SHA-256-Digest: RDUZTsCw9lk+7Wja8ZySlHniqLPJFvMi7Ync1MH+lYE=
+
+Name: icons/full/obj/dates.png
+SHA-256-Digest: shpmOlCaHWYnTJXUoRZJ6Y/goMgvb6AP3pi0UFsTpKw=
+
+Name: org/eclipse/team/internal/ui/dialogs/ResourceMappingResourceDisp
+ layArea$ResourceMappingElement.class
+SHA-256-Digest: c9jcQuM08xk+KiEPdJLf6JHmBj2hu/qzSieRYg74U2g=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/GlobalRefreshAc
+ tion.class
+SHA-256-Digest: BeZCmX7ph3PrS+oj9uNNLyElUcRa6bNJ4GzMZuDuNX4=
+
+Name: org/eclipse/team/ui/history/HistoryPageSource.class
+SHA-256-Digest: 6fwZB68BFZ/NjCirnAMHVVxXKZFVirAdh/EogptsOyU=
+
+Name: org/eclipse/team/internal/ui/actions/OpenWithMenu$2.class
+SHA-256-Digest: bP1GjADoJyhik03kIIbUtJT14wsQ5UvkAqQez3wOW5E=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/ChangeSetAction
+ Group.class
+SHA-256-Digest: XXPHpmVSRj4RkeSouFdb7Buk8eCAXFsDG+QT3k3WkJA=
+
+Name: org/eclipse/team/internal/ui/dialogs/ResourceMappingResourceDisp
+ layArea$2.class
+SHA-256-Digest: 2giTYieLKVLC+bOwoTiAc7VuNZuhjz+iK/aCLnAjoxA=
+
+Name: org/eclipse/team/internal/ui/mapping/CommonViewerAdvisor$CommonS
+ ubActionBars.class
+SHA-256-Digest: NNQMjfIgCSc540EBxUFXfdV9Wgaw5ZFxAf68uEZou7M=
+
+Name: org/eclipse/team/internal/ui/wizards/ExportProjectSetLocationPag
+ e$WorkspaceDialog.class
+SHA-256-Digest: 8BEU84V35jEw6NpJ1QLn+Pm/oL7tDYWbWXkEyu9022c=
+
+Name: org/eclipse/team/internal/ui/synchronize/SaveablesCompareEditorI
+ nput$MyDiffNode.class
+SHA-256-Digest: lvMz0Y3d4YMnNTLbIqDugajKr51gNc5HfJjptHjdwmM=
+
+Name: org/eclipse/team/internal/ui/synchronize/SynchronizePageConfigur
+ ation$7.class
+SHA-256-Digest: 64Gq50iyC2cylccZisebA8w2zI70pH7c6TAb3DsEWbA=
+
+Name: org/eclipse/team/internal/ui/synchronize/SynchronizeView$5.class
+SHA-256-Digest: u3mSbQZ/N+c0o+71f8zbmxEsEQ1YQmy7D09nx+n1pwE=
+
+Name: org/eclipse/team/internal/ui/synchronize/RegexDiffComparator.cla
+ ss
+SHA-256-Digest: QA1i8YLRVHakFnb3raabLh/td2WRdZKl10dd59/ahs0=
+
+Name: org/eclipse/team/internal/ui/synchronize/RefreshUserNotification
+ Policy.class
+SHA-256-Digest: 1ZKaJ8xC8O6yjm+Ig0lK1Hjf1Gpz9SvcmA2F8NtFKI0=
+
+Name: org/eclipse/team/internal/ui/preferences/SyncViewerPreferencePag
+ e$PerspectiveDescriptorComparator.class
+SHA-256-Digest: ZnsAjY0EeOHqrwhBMGhrLyxVyLCa05JoYbe+vKHgX30=
+
+Name: org/eclipse/team/internal/ui/dialogs/PromptingDialog$1.class
+SHA-256-Digest: ImG412+7p8PGW+gBz2b2KqbInao5uwB/Tzz5lGeQnbs=
+
+Name: org/eclipse/team/ui/history/HistoryPageSaveablePart.class
+SHA-256-Digest: tAGFgbOupTCf+CwKK6ZWIsEvz9MaooG3qJTtxcT+zN8=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/ShowSynchronize
+ ParticipantAction$ParticipantOverlay.class
+SHA-256-Digest: X9YXakdYHtC3PTn6SxCz90Q9Wp8PMogkt0Q9VOe0EkU=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/ShowSynchronize
+ ParticipantAction.class
+SHA-256-Digest: up9CQ84GdpaPm8RfsiTkMzT1uHNL1QKLfYtHi+nWzxU=
+
+Name: org/eclipse/team/internal/ui/mapping/ResourceMergeHandler$2.clas
+ s
+SHA-256-Digest: diYhMwpjXwZq2+CwFAPRFkRWLCxuTANPU/eDiXRY/og=
+
+Name: org/eclipse/team/ui/synchronize/ModelMergeOperation$1$1.class
+SHA-256-Digest: om8bVASAV4Dp622j5GLrDTgH+mLWEiOR9iOPHhmdpVc=
+
+Name: org/eclipse/team/internal/ui/wizards/ProjectSetExportWizard$1$1.
+ class
+SHA-256-Digest: XGuAdfOHPSK4NYELPukUT+zBjaYANQJJkMgchki8C2Q=
+
+Name: org/eclipse/team/internal/ui/preferences/TextPreferencePage.clas
+ s
+SHA-256-Digest: z1SpcTn5t57ORlq/PFga0wrE+aUad6C2HW4J5Q0QBi0=
+
+Name: org/eclipse/team/internal/ui/synchronize/SynchronizeModelUpdateH
+ andler$SyncInfoSetChangeEvent.class
+SHA-256-Digest: c1uGJwYUK6wmWfh2/DD74VBKi1+nyQnwAW9D9a/iW9c=
+
+Name: org/eclipse/team/internal/ui/synchronize/GlobalRefreshElementSel
+ ectionPage$4.class
+SHA-256-Digest: /2rFgfqTwW2o7+hC6rVvvqLgfUfGONDvDyvp0P2MMOU=
+
+Name: org/eclipse/team/internal/ui/preferences/FileTypeTable.class
+SHA-256-Digest: LNQXS0vzE81k4RdZHIa6hBJLClmRV2hzrzTRHuSMcGw=
+
+Name: icons/full/dlcl16/prev_nav@2x.png
+SHA-256-Digest: nsMtgaxW7TPoZ4KmIVh2U6DBHgxXlNkFfe61BEz41jk=
+
+Name: org/eclipse/team/internal/ui/synchronize/TreeViewerAdvisor$3.cla
+ ss
+SHA-256-Digest: 3BJzaxKzFT3QsG7PcOc4/l77Bc1rRxyu5Bxv4Czy3PM=
+
+Name: org/eclipse/team/internal/ui/synchronize/GlobalRefreshResourceSe
+ lectionPage$MyContentProvider.class
+SHA-256-Digest: 4Y5yvR+1qlWYy9Bm1oHfch5+xEYrHdMXTQ2/dl/TLLI=
+
+Name: org/eclipse/team/internal/ui/mapping/CommonMenuManager.class
+SHA-256-Digest: KdwUKH5ktxXE8KxFxJrs540g0WJMfAKZ/3i2MHbdbEg=
+
+Name: icons/full/elcl16/catchuprelease_rls@2x.png
+SHA-256-Digest: t2wJYF1ORufuMFRvW5mDmtZWPUBf4oyECegIGaGxXo4=
+
+Name: org/eclipse/team/internal/ui/registry/RegistryReader.class
+SHA-256-Digest: FuqwHPnKj7H2LhoTiIED0ie5miX/YbfE67ZytRZ7NbA=
+
+Name: org/eclipse/team/internal/ui/synchronize/SaveablesCompareEditorI
+ nput$8.class
+SHA-256-Digest: pkY6lH6NcSlPQuC/PIHx/BjlMZkIb9P/y2NNWiUNgao=
+
+Name: org/eclipse/team/ui/synchronize/SaveableCompareEditorInput$6.cla
+ ss
+SHA-256-Digest: GWcks3Pu6kRie+MlLHD0Z9NhU/9s4vHMVQsZXUaSJV8=
+
+Name: org/eclipse/team/internal/ui/synchronize/SyncInfoSetChangesSecti
+ on$5.class
+SHA-256-Digest: Ijfe/1CNsUZJMcVDSHDJhF0Zhb3Gims85M/B8fTBqYU=
+
+Name: org/eclipse/team/internal/ui/mapping/ResourceModelTraversalCalcu
+ lator.class
+SHA-256-Digest: Au1K6oq0TF4+dZqj6pFgVFKP3d0xArSR5NgBz3+F/YE=
+
+Name: org/eclipse/team/internal/ui/synchronize/patch/PatchSyncContentP
+ rovider.class
+SHA-256-Digest: 3+WOd9ynxnEzKp9ZS/glVKwSzy6hdMXkyci5/WugSKY=
+
+Name: org/eclipse/team/internal/ui/mapping/ResourceModelScopeParticipa
+ nt.class
+SHA-256-Digest: M5r/U/yMEV/uhfkgRCh0RokgM2VioJSVgDRvMqReLkY=
+
+Name: org/eclipse/team/internal/ui/wizards/ExportProjectSetMainPage$Wo
+ rkingSetPage.class
+SHA-256-Digest: cVVmVWRZDyZwgxCfg4HEfKYMjNxdI4NbJU+DAB/8D5o=
+
+Name: org/eclipse/team/internal/ui/DefaultUIFileModificationValidator$
+ FileListDialog.class
+SHA-256-Digest: JuIJ84qbETLzG7tNq0D14T0PjA8CLpvGhr8dhY+04hA=
+
+Name: org/eclipse/team/ui/synchronize/ModelMergeOperation$2.class
+SHA-256-Digest: Ss+kSPVqAVqcgn+7Hl3FaJ1ouvGVN4K6C9SWhAu0T8g=
+
+Name: org/eclipse/team/ui/synchronize/ModelParticipantMergeOperation$1
+ .class
+SHA-256-Digest: FMZVWt2HM25rQ6vPqsC05qsWx9F921x8GU1fwG9cRBY=
+
+Name: icons/full/dlcl16/checkout_action@2x.png
+SHA-256-Digest: TfNj7RDdO44PY9njDHwPUEGHgKPffkoC7j1ZN5Gplmc=
+
+Name: icons/full/dlcl16/outgo_synch.png
+SHA-256-Digest: 6s5AiXAWeQxwDXckIuEiqLxXgTdNXNqggd36QSqalhw=
+
+Name: org/eclipse/team/internal/ui/synchronize/SynchronizeModelUpdateH
+ andler$1.class
+SHA-256-Digest: zqT973HiK6yn58nvlcF0WFocITgbU9VXFL6qp9V5+jY=
+
+Name: org/eclipse/team/internal/ui/mapping/MergeAction.class
+SHA-256-Digest: wtEMOfWuDLP4gcnW6ZnqF0zBOuOwx78AwzebwANpttY=
+
+Name: org/eclipse/team/internal/ui/synchronize/GlobalRefreshResourceSe
+ lectionPage$MyLabelProvider.class
+SHA-256-Digest: InavHo49a6T7VFjdPvmIv4CJeZb043YOL3EK4vkFx+4=
+
+Name: org/eclipse/team/internal/ui/synchronize/ImageManager$2.class
+SHA-256-Digest: IgVH6EjNW6Ke8eFxnR03iKGCTyIxEQ2IaCyicEYI1DI=
+
+Name: org/eclipse/team/ui/synchronize/ModelMergeOperation$3.class
+SHA-256-Digest: 8KKNpgUb8pvtJxPGklpe6qOkq4qCtgwhgfBiL/u4rYg=
+
+Name: org/eclipse/team/internal/ui/history/GenericHistoryView$1.class
+SHA-256-Digest: puJjNkE2iIX/Hibla0KJNEpjc0IN8wF6wwJaPx1pnbw=
+
+Name: org/eclipse/team/internal/ui/synchronize/TreeViewerAdvisor$4.cla
+ ss
+SHA-256-Digest: 8BGOItRX2QPNbTqjG1AQLMsQfZh0FsDAUNr4uPSJjuM=
+
+Name: org/eclipse/team/internal/ui/mapping/ResourceModelProviderOperat
+ ion.class
+SHA-256-Digest: Gy6wbHOg4zUaG4j00fUMq2mX3qezcyPFgDjDzZZGU5s=
+
+Name: org/eclipse/team/ui/synchronize/ModelParticipantMergeOperation$2
+ .class
+SHA-256-Digest: mTxNKz/DcW5E24HC++MhTtJGbcIx7+YHGp/lYpfWQAQ=
+
+Name: org/eclipse/team/internal/ui/dialogs/ResourceMappingResourceDisp
+ layArea$3.class
+SHA-256-Digest: c+L9k26XVUhGqjT8C+9Rras+sddZJDh7XXD5LaE4VsM=
+
+Name: org/eclipse/team/internal/ui/actions/OpenRevisionAction.class
+SHA-256-Digest: +jROJVe+mMza1djQr3u9//RkfsuuaXHiPyN2gE3G5Qo=
+
+Name: org/eclipse/team/internal/ui/history/GenericHistoryViewDefaultPa
+ ge.class
+SHA-256-Digest: 3yIk5drHIweILEKBPOzW1vXHbto/OVzZ8nY7fYiuxHQ=
+
+Name: icons/full/dlcl16/pin.png
+SHA-256-Digest: p1+jWpmY8VAiuuzpSgG2raDlcf8EKdnqd9jT2MgnglM=
+
+Name: org/eclipse/team/internal/ui/actions/ProgressDialogRunnableConte
+ xt.class
+SHA-256-Digest: nrdmW0OsbAWRwjJbI79z5pLstanp5Yug5tj+L16bhI0=
+
+Name: icons/full/elcl16/release_rls@2x.png
+SHA-256-Digest: VtgJRrYF5gH9BDj1J2KuCsd2OQF3tYCrBH5elstdnXg=
+
+Name: org/eclipse/team/internal/ui/synchronize/SyncInfoSetChangesSecti
+ on$4.class
+SHA-256-Digest: IgIoMVc/ljqhp5yhFKKyJs1lMxJj/uqGt/FKHG1gT44=
+
+Name: icons/full/dlcl16/flatLayout.png
+SHA-256-Digest: OBiuT2viCsvdXvAK7EOZI8ajXo1bM9z4DVuSdztKKJ4=
+
+Name: icons/full/dlcl16/clear_co.png
+SHA-256-Digest: SwZ469wXzaVA6LaB/d6hQqQMOyPlKoJhyMdOFTu7tXE=
+
+Name: org/eclipse/team/internal/ui/synchronize/CompressedFoldersModelP
+ rovider$CompressedFolderModelProviderDescriptor.class
+SHA-256-Digest: mNYf/FzR0JdxefZEpqBWgvhzyLgV10s3vxsrYvgA6LM=
+
+Name: org/eclipse/team/ui/history/RevisionAnnotationController$1.class
+SHA-256-Digest: Kx2v6AjTteUz7g7jHUE1Vo+SpanWm+11JTclgSGIMw4=
+
+Name: org/eclipse/team/internal/ui/synchronize/SynchronizeViewWorkbenc
+ hPart.class
+SHA-256-Digest: 7jkfbwKKPcOQvEFAgVXcBpSczD2BhZNoA/yA8P7kvB8=
+
+Name: org/eclipse/team/internal/ui/ProjectSetImporter$AdviceDialog.cla
+ ss
+SHA-256-Digest: YGt+4nm0X9rWxEUMF+5mVzwOgPOyFVZTddQN5Hv6D3w=
+
+Name: org/eclipse/team/internal/ui/history/CompareFileRevisionEditorIn
+ put$MyDiffNode.class
+SHA-256-Digest: i9U4p8Bgb9ZneG2e1m81uRUeA8f276rSIHcYWM1ndLk=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/RefactorActionG
+ roup$1.class
+SHA-256-Digest: 9YXVZUE5V5RYlEEAgET/IYGLT5ykoJACQMQLct0jPWw=
+
+Name: org/eclipse/team/ui/synchronize/TeamStateDescription.class
+SHA-256-Digest: P3w83yZ1ETGcsvwxoj6JDqQ/caYnvsyGw1wiImD3DJw=
+
+Name: icons/full/dlcl16/outgo_synch@2x.png
+SHA-256-Digest: vRsZWDxr2K1sjMjUx5/BC6YXhew3F9lRSnpPkUCuc2o=
+
+Name: org/eclipse/team/internal/ui/synchronize/ChangeSetModelProvider$
+ ChangeSetModelProviderDescriptor.class
+SHA-256-Digest: EN/uPYQ7tMUtj/HEyLJJgLj8pawWgjrJRDjnw9MoQRc=
+
+Name: org/eclipse/team/ui/history/IHistoryCompareAdapter.class
+SHA-256-Digest: zMHtPwOIBpPlqxEZAA6zwrK+cCeJ2d8antIMrsx61CA=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/DirectionFilter
+ ActionGroup.class
+SHA-256-Digest: teo7hxdC04Na97UX+aF98pRo1x4rV4Qj5NvqSH6EL38=
+
+Name: org/eclipse/team/internal/ui/mapping/ResourceDragAdapterAssistan
+ t.class
+SHA-256-Digest: 34LdqbUIrJLYFy8EBh/WYuz4KDWkrKqOBeV0ERodxNU=
+
+Name: org/eclipse/team/internal/ui/synchronize/SynchronizeModelUpdateH
+ andler$6.class
+SHA-256-Digest: 9iuoDiYR+oGJc6dzcre4PzZDyzNl7W31REUGniyPRKU=
+
+Name: org/eclipse/team/internal/ui/history/LocalHistoryTableProvider.c
+ lass
+SHA-256-Digest: SejnvlTWyXy719Rgk8k5nGlrotc8ZYJ8XA8yB0BgPWA=
+
+Name: org/eclipse/team/internal/ui/synchronize/RefreshParticipantJob$G
+ otoActionWrapper.class
+SHA-256-Digest: 5Ktb87g6FYhWHO6jTS5D/J9Rgc+l9fzW11vPw7C7Ymw=
+
+Name: icons/full/ovr/version_controlled.png
+SHA-256-Digest: YCrki+kEi1UrG6jqZLI90uhBtMfcOTpXz4GmsqzI5iY=
+
+Name: org/eclipse/team/internal/ui/synchronize/SynchronizeModelUpdateH
+ andler$BusyStateChangeEvent.class
+SHA-256-Digest: w9/rTg78DjuKINgp+EJyW6uyB2bGWPFrwCPdi2cnH5M=
+
+Name: org/eclipse/team/internal/ui/dialogs/ResourceMappingResourceDisp
+ layArea$1.class
+SHA-256-Digest: K8zLF38WOhvP/63SG76rSLyH956NzGYcpu0Cm4HPqgc=
+
+Name: org/eclipse/team/internal/ui/history/GenericHistoryView$5.class
+SHA-256-Digest: yZ1sz21y8nw6jovBYpUZxuuNByLhZ7yQh/nblw7WkWA=
+
+Name: org/eclipse/team/internal/ui/mapping/CommonViewerAdvisor$2.class
+SHA-256-Digest: 6SdGWcZeBZ7LtB35aJylgO6XXiT4bNcD6Y/25xVTr3Y=
+
+Name: org/eclipse/team/internal/ui/wizards/ConfigureProjectWizardMainP
+ age$4.class
+SHA-256-Digest: D3fC5Pe/NdHBOsvBmJ+Rg6lSZWVhoM4whNEbx/xcOxU=
+
+Name: org/eclipse/team/internal/ui/synchronize/AbstractSynchronizeMode
+ lProvider$1.class
+SHA-256-Digest: SKB6bSQqEIX1nLYtz/ymngGDzBJHGA3eMv0fo/zU/CM=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/ChangeSetAction
+ Group$MakeDefaultChangeSetAction.class
+SHA-256-Digest: fSSowFmSxojUBdQaGVtVgQJt+Msq+8r/rrLj4ACBfR8=
+
+Name: icons/full/dlcl16/clear_co@2x.png
+SHA-256-Digest: vaT8e/FsPe+PZTSFV39vuKQ3idC0FKZkZY6K+/m9Mxs=
+
+Name: org/eclipse/team/internal/ui/mapping/ResourceModelLabelProvider$
+ 1.class
+SHA-256-Digest: 77c7OA+WQOEOLo+I0zEYC/tsHJ9NIPRNUKD02Nr5RbU=
+
+Name: icons/full/dlcl16/catchup_rls@2x.png
+SHA-256-Digest: VN3JKOTKR6C8Z1y3EeeNFOcYSbW43FUtmYvEZTUtHAA=
+
+Name: org/eclipse/team/internal/ui/registry/SynchronizeWizardRegistry.
+ class
+SHA-256-Digest: pf/aYeImqGVxpX0K6CB1dXdHW7USjwmtO2ztG7NrdRs=
+
+Name: org/eclipse/team/internal/ui/mapping/ModelElementSelectionPage$1
+ .class
+SHA-256-Digest: neL00ynEsES6bBrpPd8lZcnGLLFl5l2r5UaFAXejZ3s=
+
+Name: org/eclipse/team/internal/ui/mapping/ResourceMergeActionHandler.
+ class
+SHA-256-Digest: NKZ0KMfq7jYATwXerTdNoj8DaHv2WYclnDR8W1+BGuQ=
+
+Name: org/eclipse/team/internal/ui/synchronize/SaveablesCompareEditorI
+ nput$4.class
+SHA-256-Digest: EcfEfIXYgEvcg855Dv186bI44Gk+m44SvgVKbDX+ClI=
+
+Name: org/eclipse/team/ui/mapping/SynchronizationLabelProvider.class
+SHA-256-Digest: 09YvgFguqGDrg+azLQ527S/J+r6U+VtOrdTtRhIFBSw=
+
+Name: org/eclipse/team/ui/history/IHistoryPage.class
+SHA-256-Digest: 51NH2Cwio8YiSmlft1TYSs6T+V5Jw0zTE/kgKMtvOLc=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/PinParticipantA
+ ction$1.class
+SHA-256-Digest: AarCtdbwtZKNeM02AQFdWM9Qu9VaK9dr3mPHJ6UELOI=
+
+Name: org/eclipse/team/internal/ui/synchronize/GlobalRefreshElementSel
+ ectionPage$6.class
+SHA-256-Digest: k9RTGLRo4UpNggq3eXEpGVDZH5J7dW3DfJG8ez5tNSk=
+
+Name: icons/full/obj/ignoreprefs.png
+SHA-256-Digest: 8NhU3RV56mk6vQlV1WAarTtnrQOSrk1IMv6LjKOcjlM=
+
+Name: org/eclipse/team/internal/ui/Utils$3.class
+SHA-256-Digest: 6t2y1tRfSRN1ZX45W/vvy87uAdh4Jda111qJYRSiheg=
+
+Name: icons/full/dlcl16/history_nav.png
+SHA-256-Digest: Z8RqAmHqLvY4ugFom/EwE+WWReHiS03USs6Yg8NDNVM=
+
+Name: org/eclipse/team/internal/ui/history/GenericHistoryTableProvider
+ $2.class
+SHA-256-Digest: 9K++kMFaOfyR43GQUyC6rge/bnt/T3hNIwakBYVPLhY=
+
+Name: org/eclipse/team/internal/ui/mapping/ResourceCompareInputChangeN
+ otifier$1.class
+SHA-256-Digest: byfNi8XFBBztEF0zjspu0S1CII6dR167a9jqBhb+fAE=
+
+Name: org/eclipse/team/internal/ui/dialogs/IResourceMappingResourceFil
+ ter.class
+SHA-256-Digest: bkOHVgngKxOrkINHYkE0SMyIjBtJUbc8/YXoMf7D6Uo=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/RefreshActionCo
+ ntribution$2.class
+SHA-256-Digest: PF0cJVwKc33mRUh4odehQZ/ipLz5idzkcZ3aCmsENLQ=
+
+Name: org/eclipse/team/internal/ui/mapping/DiffTreeChangesSection.clas
+ s
+SHA-256-Digest: YcsZAmcWNkV0s8SFi1vG29JJz7S5Fn76CpghfBsVZa0=
+
+Name: org/eclipse/team/internal/ui/wizards/ExportProjectSetMainPage$Wo
+ rkingSetPage$2.class
+SHA-256-Digest: lFAMAa7tl0SMws4csHcsdJhdZj1s/Ja5VVRHAPz84FQ=
+
+Name: org/eclipse/team/internal/ui/actions/OpenWithMenu$4.class
+SHA-256-Digest: pY0qutrDbJhCaVcXBLINvJRxMyyFK34MAJi1UFQIfXg=
+
+Name: org/eclipse/team/ui/synchronize/SaveableCompareEditorInput$3.cla
+ ss
+SHA-256-Digest: ZenNIk0wAcQFSNaQsx4mnOrKZ1VbY0eVfnvO4T2+GX8=
+
+Name: org/eclipse/team/ui/synchronize/SynchronizePageActionGroup$Visib
+ leRootsSelectionProvider.class
+SHA-256-Digest: pwOMrlNwHA4P0dP9Ulv2ObPYOAvac+sUa2kGfecU0lo=
+
+Name: icons/full/elcl16/participant_remall@2x.png
+SHA-256-Digest: /ur1TfWfrHvLnwUKalRON0jfdl75v3D1NY6LgnWwba0=
+
+Name: icons/full/obj/workspace_obj@2x.png
+SHA-256-Digest: nS13IQ3EF4VpWvG2ZI/AR2Uv4cE5f2HGOt9BWVKIkGU=
+
+Name: org/eclipse/team/internal/ui/dialogs/PromptingDialog.class
+SHA-256-Digest: 7F+jCWeTPPoG4j1W7x2Afokx+M/P2+S0POzOH370heM=
+
+Name: org/eclipse/team/internal/ui/dialogs/NoChangesDialog$1.class
+SHA-256-Digest: ylke807GkV4e2f5snAMWWU51Nql7zfNDMUv3avFddlQ=
+
+Name: org/eclipse/team/ui/synchronize/ISynchronizeView.class
+SHA-256-Digest: kaCQLBO6CtIw7Bt5AOmBZVVz13o++ccN6ElU4ChilyQ=
+
+Name: org/eclipse/team/ui/mapping/SaveableComparison.class
+SHA-256-Digest: Gg1k4F/gwp1GajgiroH4iTz835x3ltHOJXQvA3m5a5k=
+
+Name: org/eclipse/team/internal/ui/mapping/CompareInputChangeNotifier$
+ InputChangeEventHandler.class
+SHA-256-Digest: BbJkLgvDklamfbYF21YxbSBzHAMPy7xJdHD/j16E7gg=
+
+Name: org/eclipse/team/internal/ui/mapping/MergeAllOperation$1$1.class
+SHA-256-Digest: PLblljdSgBl1vpXldnKDmkn6SOHENnnipz63iO6QZ94=
+
+Name: org/eclipse/team/internal/ui/synchronize/IRefreshEvent.class
+SHA-256-Digest: EeyPYNSFWEEjpE8cZtPUnq08/SDsPgbMkzGC71ELdxA=
+
+Name: org/eclipse/team/internal/ui/SWTUtils.class
+SHA-256-Digest: EgAhunvkX8fcSCOo54HnNf+mmHl9xDVaIzVDpl3iYwM=
+
+Name: org/eclipse/team/internal/ui/ProjectSetContentHandler.class
+SHA-256-Digest: ZRQUVhT5+5sRYhpqM395TN1gdXYAv6CawG0AZb36aPQ=
+
+Name: org/eclipse/team/internal/ui/mapping/ModelEnablementPreferencePa
+ ge$2.class
+SHA-256-Digest: 7Tu3JGA8iVFhNI3Bs1HR9+OhaRxfQV4Adq4C6As7+H4=
+
+Name: org/eclipse/team/internal/ui/synchronize/AbstractSynchronizeMode
+ lProvider$6.class
+SHA-256-Digest: oDygSXpydSBHfaYxFQJKfsuKTD/2rBML7Wdp3qnUdz8=
+
+Name: org/eclipse/team/internal/ui/dialogs/ResourceMappingHierarchyAre
+ a.class
+SHA-256-Digest: zTVx9yBUIEdl2YmlywA9pJsXVHHvo3dyDvjFEWDHCEI=
+
+Name: org/eclipse/team/internal/ui/synchronize/SynchronizeManager$Sync
+ hronizeViewPageNotifier.class
+SHA-256-Digest: 4pwrMqHSYQcR6o1lrtIm/THP2nSbqzu92DpfU5aqtUw=
+
+Name: org/eclipse/team/internal/ui/history/GenericHistoryView.class
+SHA-256-Digest: 2WPV/s2ThS8aig2JvONcQ6JzFCtD5ZvGOtOudKDkEBQ=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/PasteAction$1.c
+ lass
+SHA-256-Digest: 44woM/n/nIiZ8f+CECltyRyb3bM8+fpVYLdGz38/MHE=
+
+Name: icons/full/elcl16/history_nav.png
+SHA-256-Digest: E83hGBEYxYQvB23PYylFTqYLAaqgBY7WoyMzEVJ8n1Y=
+
+Name: org/eclipse/team/internal/ui/Utils$1.class
+SHA-256-Digest: jtP6ZHpY7ew0HB/rBvTiPDEWS5BsjqmOxLb9PUpH5tU=
+
+Name: org/eclipse/team/internal/ui/synchronize/StructuredViewerAdvisor
+ .class
+SHA-256-Digest: GPb7xoH7ARrBVdhrGw99JdWkNfN7Gkn6YmH2QkBPPR4=
+
+Name: org/eclipse/team/internal/ui/mapping/AbstractCompareInput.class
+SHA-256-Digest: 5PnAOW0aYiylaYdeCYxMl+KXDCwlbPS4mPQbNWAWiO4=
+
+Name: org/eclipse/team/internal/ui/synchronize/patch/PatchedFileVarian
+ tComparator.class
+SHA-256-Digest: x/P1qdZPd1ieYyPf045HcR9wXcUM0wZgPRkLtqEJJ/o=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/RemoveFromViewA
+ ction$1$1.class
+SHA-256-Digest: 415qyOuESnEZZbEE17vuaPBPNpCObdGNJ1EW1WO0uWQ=
+
+Name: icons/full/ovr/confchg_ov.png
+SHA-256-Digest: 2bs/kymWZmvCKqWRmUUpq2L3zboB3gALSREcJN3NSww=
+
+Name: org/eclipse/team/internal/ui/synchronize/SyncInfoSetChangesSecti
+ on.class
+SHA-256-Digest: 78tVRA2hEGlAK6I8dI3cOYp03JNA5RF/ePG9MDpS8JY=
+
+Name: org/eclipse/team/ui/mapping/ITeamContentProviderDescriptor.class
+SHA-256-Digest: UddQ7rgBVYY6+MPAz77ET1UqJvLJYwxH9aBmoOefwCE=
+
+Name: org/eclipse/team/internal/ui/mapping/SynchronizationResourceMapp
+ ingContext.class
+SHA-256-Digest: IOf9bzUs82VDkHf53TAwCwuDoD6wBbtjCdp+5wD63h0=
+
+Name: icons/full/elcl16/checkout_action.png
+SHA-256-Digest: lsLmZ9vfgLrfC6+mzVTZUTvhCaXT6c9PENkN9DprFgs=
+
+Name: icons/full/dlcl16/ignorefiles@2x.png
+SHA-256-Digest: xeMOP0HakP40TK/7EBjPPY2DVv1VYv0HrVVy1mOT1iw=
+
+Name: icons/full/elcl16/history_nav@2x.png
+SHA-256-Digest: /cKa5VGeEHs1t1JzFWlZtsbMizNUyJoRgjESXdk6ojo=
+
+Name: org/eclipse/team/internal/ui/synchronize/FlatModelProvider.class
+SHA-256-Digest: b+KD2CLMfTy20xfeJP1m/UOykRY91uvwpvROrjjofN4=
+
+Name: org/eclipse/team/ui/PageSaveablePart.class
+SHA-256-Digest: IRDMkxYBxvoEMkD+uLLl3GoozPvA/EW0mgvk2AjaTmw=
+
+Name: org/eclipse/team/internal/ui/synchronize/TreeViewerAdvisor$3$1.c
+ lass
+SHA-256-Digest: VdA/on7v1MEzx0d6r7TUsbVx7hxV7luwpJkO1LZQJhU=
+
+Name: icons/full/ovr/error_co.png
+SHA-256-Digest: sTLH/hzMpz3CvpHcmeHfv6IEpyGvT14Vsn/dM+NoznU=
+
+Name: org/eclipse/team/internal/ui/synchronize/SubscriberRefreshSchedu
+ le$1.class
+SHA-256-Digest: nFp3YW9cOT7j8j/TChETB4bt+KftFxW3maG58zm4GqE=
+
+Name: org/eclipse/team/internal/ui/mapping/ModelElementSelectionPage$3
+ .class
+SHA-256-Digest: Gnh1LNa3Jv8ziERem3sA/ihMFqmOQtRoINyrbOVyhks=
+
+Name: icons/full/elcl16/next_nav@2x.png
+SHA-256-Digest: XO7Clj4sCa8Hpf8eZnpjCGjTMLXOIsbvVHKKZXt2m64=
+
+Name: org/eclipse/team/ui/synchronize/ModelSynchronizeParticipant$2.cl
+ ass
+SHA-256-Digest: qO8c5i162k1t2+FwKL8jlpAOdlZau1qapbNLnWxBRr0=
+
+Name: org/eclipse/team/internal/ui/synchronize/EditableSharedDocumentA
+ dapter$ISharedDocumentAdapterListener.class
+SHA-256-Digest: oQRWxsrtannxDZDAB45qKLs8BD8+wNxfTpbrELdxXmQ=
+
+Name: icons/full/elcl16/hierarchicalLayout.png
+SHA-256-Digest: Gxbd5h8UBU+DUswzl4KvCpTI2fz4V68JqK38Qq2EUrE=
+
+Name: org/eclipse/team/internal/ui/dialogs/IPromptCondition.class
+SHA-256-Digest: E7DzXsOp8G2ttLUVWlCbpWQZBYzOsQ4myIBdzSPKawg=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/DefaultSynchron
+ izePageActions$1.class
+SHA-256-Digest: +jcukpAGtODAJdYLLer5aG2ny8EvaLch5ULADVHO6eQ=
+
+Name: org/eclipse/team/internal/ui/actions/JobRunnableContext.class
+SHA-256-Digest: kYeCM+7pyiWx8cPoO+WNEd+3cMwBhInq6sRbGofKuGw=
+
+Name: org/eclipse/team/internal/ui/synchronize/SaveablesCompareEditorI
+ nput$1.class
+SHA-256-Digest: eUgktDUXZY+DyKVP2+8MD80TzQpmUwSPm5cjIIGYVPQ=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/PasteAction$3.c
+ lass
+SHA-256-Digest: AROxlvUG2PhwhUtuwmHN7wrFgndQerYFqC7Um64JAws=
+
+Name: icons/full/elcl16/next_nav.png
+SHA-256-Digest: a5y2UyvDePdxRV9SpSDpqwLAUcz7TSvbHXAygJPXQzo=
+
+Name: icons/full/dlcl16/refresh.png
+SHA-256-Digest: tid3af5LPc1tTTuE943hWTulQbswGGAJ70XbyMPsPuk=
+
+Name: icons/full/elcl16/synced@2x.png
+SHA-256-Digest: Zat0PePTdJu1OE0Keu1HE6MeKOvTdUa+Kk762tA9QAM=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/ChangeSetAction
+ Group$RemoveChangeSetAction.class
+SHA-256-Digest: Uo8xh4nBl+C1Z7WyRWfFKJ5RQOC+RvU7ugH2PKuATCI=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/SynchronizePage
+ DropDownAction.class
+SHA-256-Digest: AWuXCn+inA/CsVnlzIVedzjcMzFABOql6rRi3Ipp1iI=
+
+Name: org/eclipse/team/internal/ui/synchronize/SynchronizeModelUpdateH
+ andler.class
+SHA-256-Digest: pmXD69faKShmF9AVuvzYYtIjzlrWiQAL3e9lg4MSPko=
+
+Name: icons/full/wizban/share_wizban@2x.png
+SHA-256-Digest: iBW1/JVkqgz9tU/GLuJbhL2xDtNzF4gnNV+P9ARUg2Y=
+
+Name: org/eclipse/team/internal/ui/mapping/DiffTreeStatusLineContribut
+ ionGroup.class
+SHA-256-Digest: PLe5NEKwPqjPqkv3kUPVXLQdEM/joKruwJd8l5mN8Mk=
+
+Name: org/eclipse/team/internal/ui/mapping/ResourceModelScopeParticipa
+ ntFactory.class
+SHA-256-Digest: 3mDZqsd8uCtAQmJdU8BiFPoVmQMWSApfjC+DoqS8q10=
+
+Name: org/eclipse/team/internal/ui/mapping/ModelElementSelectionPage.c
+ lass
+SHA-256-Digest: fIgoX9qPZ/Z+3gmkGqlJV/LKBRl14SiaKmJGZKUbsjM=
+
+Name: org/eclipse/team/ui/synchronize/SubscriberParticipantWizard.clas
+ s
+SHA-256-Digest: tJXlSRAD+dyAyv/CFZDKiMcSNH4XTnlx6l/zCoqWdKQ=
+
+Name: org/eclipse/team/ui/synchronize/ModelParticipantAction.class
+SHA-256-Digest: PfSrB/icHymSH7+c2IWyCPBoaiPTWNVmOMlyHyOVazM=
+
+Name: org/eclipse/team/internal/ui/wizards/ExportProjectSetMainPage$Wo
+ rkingSetPage$4.class
+SHA-256-Digest: oeIeSKptxWcaSxSOMu6gjZMlNWVX3nuc4qmAZzTICWA=
+
+Name: org/eclipse/team/internal/ui/mapping/RemoveFromViewAction$1.clas
+ s
+SHA-256-Digest: qXrT790rLPG1iLbu7FvsKpji27xuALelX2IpwKxlAeg=
+
+Name: org/eclipse/team/internal/ui/mapping/MergeAllOperation$1$1$1.cla
+ ss
+SHA-256-Digest: G01H6RXjMv3GsCTUPqm1MMelHxHUWsMIYZw52gQ8o8M=
+
+Name: org/eclipse/team/internal/ui/synchronize/ScopableSubscriberParti
+ cipant.class
+SHA-256-Digest: eKxJrwvVYj/WURdlP7vf+ACd0xibo8XRtqB6YS+Z8dg=
+
+Name: org/eclipse/team/internal/ui/synchronize/SaveablesCompareEditorI
+ nput$2.class
+SHA-256-Digest: WpdZplRQhOiGx2UV/UmgKTp4LhrF+rTy80z1eFmW3FI=
+
+Name: org/eclipse/team/internal/ui/history/LocalHistoryTableProvider$L
+ ocalHistoryLabelProvider.class
+SHA-256-Digest: ZrYVtx0nnaSK0RzfEQNGWlEqmIlLWs8P3jhidiycMBg=
+
+Name: org/eclipse/team/internal/ui/wizards/ExportProjectSetMainPage$Pr
+ ojectPage$1.class
+SHA-256-Digest: IOt8nlX2Y5t6YMAsd5HKD0PTcf+sCN84a/GmL5+OyOE=
+
+Name: org/eclipse/team/internal/ui/mapping/CommonViewerAdvisor$4.class
+SHA-256-Digest: ceTRBYddztg0WRFGqObrlVHdEHO8HQNXRDbHA7lf6x0=
+
+Name: icons/full/elcl16/flatLayout@2x.png
+SHA-256-Digest: WhcYrBEUksWF9Kt/LP3GUzbx/tH7GBXyGJFLgRIBVr8=
+
+Name: icons/full/eview16/compare_view.png
+SHA-256-Digest: s0d5bt0JqKgbIygTCmGurP6ecdeKVjBwFY3LuNHI7Z8=
+
+Name: icons/full/ovr/waiting_ovr@2x.png
+SHA-256-Digest: Sgg3rshQNLJcA5o6jCmiN0oi3lCSv6CdyS5EXNbrx3s=
+
+Name: icons/full/elcl16/filter_change@2x.png
+SHA-256-Digest: NsonmwD3VFpRsWwWN7RHFCoqmN2ijxoPLJz+nMcBbO0=
+
+Name: org/eclipse/team/internal/ui/mapping/ResourceModelParticipantAct
+ ion.class
+SHA-256-Digest: ZEIjUFS9/chiZ7NDjLDJnn6jGXwG7C3x+f2S735lkZg=
+
+Name: org/eclipse/team/internal/ui/history/EditionHistoryPage$1.class
+SHA-256-Digest: Ll81VOwk0qXahTf6SjBdXPfbARarzivM2GIiqGnNPho=
+
+Name: org/eclipse/team/ui/PageSaveablePart$2.class
+SHA-256-Digest: SBzQzm7P05ICJvrW4W6lakmNlMmnGcGSz5qR8ydkoeY=
+
+Name: org/eclipse/team/internal/ui/wizards/PsfFilenameStore.class
+SHA-256-Digest: gVNJoT4qdXh6sxTnJVBezokMyB83dyB4Tnhu5pk7uP8=
+
+Name: org/eclipse/team/ui/mapping/SynchronizationOperation.class
+SHA-256-Digest: b0nGlifHpTKAe6ub7w9I32JRTT/sTgek3MeUq8Dy8pA=
+
+Name: org/eclipse/team/internal/ui/synchronize/ChangeSetModelManager$1
+ .class
+SHA-256-Digest: O9zFYAtF4B2TkMUjn/924T0geyn2pEUC/cq4PzW9pi4=
+
+Name: org/eclipse/team/internal/ui/wizards/ExportProjectSetMainPage$Pr
+ ojectPage$3.class
+SHA-256-Digest: oGl2hPnxoEwzQhfRQNL4nYt5uh1LbC9CaAmkSO7veOQ=
+
+Name: org/eclipse/team/internal/ui/synchronize/SynchronizeView.class
+SHA-256-Digest: IDcXKYrBuLPzEhVG0x45AYW7DMq9GfjEINpiZ0ovCiQ=
+
+Name: org/eclipse/team/internal/ui/Utils$5.class
+SHA-256-Digest: DHzkjbIWvB8ha6/jVDU+oOcJ3z/EIPeDlYcl/OhKUCs=
+
+Name: org/eclipse/team/internal/ui/synchronize/SaveablesCompareEditorI
+ nput$12.class
+SHA-256-Digest: 5jQPyudkqloVdQhwFPg4H8zmbaZLbZxrcOJUFw0f8yY=
+
+Name: org/eclipse/team/internal/ui/mapping/DiffTreeChangesSection$10.c
+ lass
+SHA-256-Digest: jD5KQeRN4OXpVpcEEVKBpvzthTShei+7vC2MSHTfzcs=
+
+Name: org/eclipse/team/internal/ui/synchronize/AbstractSynchronizeMode
+ lProvider$4.class
+SHA-256-Digest: zYV6g0X8sIMmE6pqXXsEFs/izxjzw639gL3dbyrVHh8=
+
+Name: icons/full/ovr/dirty_ov.png
+SHA-256-Digest: Q9zcVx8ORAxknS5UBdMwRTRd+cK4kZVpkjMZZ1RYICg=
+
+Name: icons/full/elcl16/outgo_synch.png
+SHA-256-Digest: mMB+YpXDeZL+owTU85GD8WHsWiFi80XF8I6N2GRHTKg=
+
+Name: org/eclipse/team/internal/ui/dialogs/MultipleYesNoPrompter.class
+SHA-256-Digest: WsW0k3zls1gI4yFx4XPdlZ9qPW4w1clbpjeBv16z7Tg=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/OpenFileInSyste
+ mEditorAction.class
+SHA-256-Digest: /uJdyMvlVRFkwzyYMlZnTNvYCi0heKmMROO1JvagD/g=
+
+Name: org/eclipse/team/internal/ui/mapping/AbstractCompareInput$1.clas
+ s
+SHA-256-Digest: Hf6fXUnjN41/YyP/uAsqEVuyHTCvoixGyyxWMaEeUp8=
+
+Name: icons/full/dlcl16/ignorews_edit.png
+SHA-256-Digest: 3azAAIqFvzR70isRRxNIs5g6SZspSrNlmtOUgnX1B0Y=
+
+Name: org/eclipse/team/ui/history/IHistoryPageSite.class
+SHA-256-Digest: WxmYE+I3biOumy9+ZvP8Ytx50EY5xFELvf4ljY9DFu4=
+
+Name: icons/full/elcl16/filter_change.png
+SHA-256-Digest: wT1XxS0TitOrNoKzojc+fBypMqrsx0/XNsVWJu1PkoM=
+
+Name: icons/full/ovr/dirty_ov@2x.png
+SHA-256-Digest: GXjeM2b3NhyFZ/2eW9HECH5jLNlHBEngxpNn3nlpUV4=
+
+Name: org/eclipse/team/internal/ui/synchronize/RefreshUserNotification
+ Policy$3.class
+SHA-256-Digest: T5qTCj6Lt8i4uwHMXC6st85a3o7mcg3D30Id8rEjIjk=
+
+Name: org/eclipse/team/internal/ui/synchronize/patch/PatchWorkbenchAda
+ pter.class
+SHA-256-Digest: Tw0XQ7pmPAMISqNLXH6sIkbXsNmdBNRyMS+ozm0XxCM=
+
+Name: org/eclipse/team/ui/synchronize/ParticipantPagePane.class
+SHA-256-Digest: DXvQUM/jmm3Hn/RmIqr7TiBwVTZK4qisZdBiYaB4s6A=
+
+Name: org/eclipse/team/internal/ui/synchronize/RefreshParticipantJob$1
+ .class
+SHA-256-Digest: DmkZTrWL6KqHeRgrw/fn6As/e9QeoLz7ab3mL6xocfs=
+
+Name: org/eclipse/team/internal/ui/synchronize/ChangeSetModelProvider$
+ 2.class
+SHA-256-Digest: YlcAVR/rOYWzYBzeA8tZkmgSV6GJBoAb7qeD+9h1eXQ=
+
+Name: org/eclipse/team/ui/synchronize/ModelOperation$1.class
+SHA-256-Digest: wxC0WHlZ7X+b7z9FskbSuLAvetWUeIie0Avv+iIP9g4=
+
+Name: org/eclipse/team/internal/ui/synchronize/ConfigureSynchronizeSch
+ eduleComposite$1.class
+SHA-256-Digest: LXzhBRy6gxp/TxdI+P+o4OcEAFpqHLYFbFM72p8jryU=
+
+Name: icons/full/elcl16/catchup_rls.png
+SHA-256-Digest: CPlc/dAZU/5gOz9KV02bSToVQBH6RXFYzlXxLP+V0Uw=
+
+Name: icons/full/dlcl16/rem_co@2x.png
+SHA-256-Digest: 9OnF8ZnhU6E8voDryWYX6q97OOA2hDGRD3jPR11n9+I=
+
+Name: org/eclipse/team/internal/ui/synchronize/SynchronizeModelElement
+ LabelProvider.class
+SHA-256-Digest: Ltx3RoCbQDRmi703yS/0tQZdJPWcBZo0pQo/6Vxvok0=
+
+Name: org/eclipse/team/internal/ui/synchronize/RefreshParticipantJob$I
+ ChangeDescription.class
+SHA-256-Digest: PNzKax3bQEeju8DlaXCFPAiW6niAOS34WLMiuS5PHAQ=
+
+Name: org/eclipse/team/internal/ui/mapping/ModelSelectionDropDownActio
+ n.class
+SHA-256-Digest: mIXiJW7Zl/mYJLgEdw5UdL62U1ggdRPRIff6//zdcbU=
+
+Name: org/eclipse/team/internal/ui/synchronize/AbstractSynchronizePage
+ $1.class
+SHA-256-Digest: o/HL6YS2e7ALudj7pCEBi+BdLTb+7YsM235tjTb+d1o=
+
+Name: org/eclipse/team/internal/ui/synchronize/patch/AdapterFactory.cl
+ ass
+SHA-256-Digest: RlDU7fRaq+tpbsuUeQhnvgrMKcSiLqyGTrXrzQYNw3o=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/SyncViewerShowP
+ referencesAction.class
+SHA-256-Digest: YjSn6fKMHPb1TOc0YEyw3PouHjUYy1hGHjUIdwSfZQ0=
+
+Name: icons/full/elcl16/outgo_synch@2x.png
+SHA-256-Digest: 2CV8K8rHwdmLRZqiP764JR346FBqUVLhV9l/eoEY9hs=
+
+Name: org/eclipse/team/internal/ui/dialogs/ResourceMappingResourceDisp
+ layArea$ResourceTraversalElement.class
+SHA-256-Digest: z+huez/ZjAk6xDqvDuys8f3g0Wdgtvq1+wGt7UD9C2c=
+
+Name: org/eclipse/team/internal/ui/mapping/ShowModelProviderAction.cla
+ ss
+SHA-256-Digest: HrStimU3eCcgXtFO76DsE/EBheg3VwvWyNiAV9pJr8Q=
+
+Name: org/eclipse/team/internal/ui/mapping/CompareInputChangeNotifier$
+ 1.class
+SHA-256-Digest: wME9RpNJ9B7SKIHUH3EtDQhUGqT3WJtVdNsdnhpSEk4=
+
+Name: org/eclipse/team/ui/mapping/ITeamStateChangeListener.class
+SHA-256-Digest: 0f8P1+95+uCnT0fQNjC+LEPjzd9PW3te6RvSQ4v7G+A=
+
+Name: org/eclipse/team/internal/ui/history/GenericHistoryView$MenuCrea
+ tor.class
+SHA-256-Digest: xAeKcoI8TH10isZw6E3bjZ4bkj0VcLcEA42O9XwwyeQ=
+
+Name: org/eclipse/team/internal/ui/synchronize/FlatModelProvider$FullP
+ athSyncInfoElement.class
+SHA-256-Digest: pnMdm8krZmDwIwISzNcxx6XJFqxJTZ5yU3AZYw6XGdk=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/RemoveFromViewA
+ ction.class
+SHA-256-Digest: SHmljZpuv8Ds8F7Idhh3n9I/RUj0f0Io4kNFk6GBOFw=
+
+Name: org/eclipse/team/internal/ui/dialogs/DialogArea.class
+SHA-256-Digest: y0a9YHeXODp9GQ6ouhs/4NVHNtUt+c4CTmupERzIqZ8=
+
+Name: org/eclipse/team/internal/ui/synchronize/patch/ApplyPatchSynchro
+ nizationWizard.class
+SHA-256-Digest: r2U0DXQas4FgGZhI0G8WQEgdTy6gNnxnjddLI27sV6k=
+
+Name: icons/full/dlcl16/catchup_rls.png
+SHA-256-Digest: 4O4Ac/CLTyTKxEtJcIOrWRbRtnXpi1Bq5F9YNoaCsxQ=
+
+Name: org/eclipse/team/internal/ui/wizards/ExportProjectSetMainPage$Wo
+ rkingSetPage$1.class
+SHA-256-Digest: XaUrDqTQT/leWbu4xydeSIaBDAIPTPq95OZc/D7UAjA=
+
+Name: org/eclipse/team/ui/PageSaveablePart$1.class
+SHA-256-Digest: Z9G5JcNctRMv/wM8p1YeLiuzHIkMZobs8pFpwyML8us=
+
+Name: org/eclipse/team/internal/ui/history/MessageHistoryCategory.clas
+ s
+SHA-256-Digest: EtNtZ3pGYhV6qKyuWkGCKIAmKjQNHquGdL2b7I3t4NE=
+
+Name: org/eclipse/team/internal/ui/synchronize/ChangesSection$1.class
+SHA-256-Digest: uUiE9r074DryQMvV4+ZS769/7dCQW+ZiU0CVNjYJET4=
+
+Name: org/eclipse/team/ui/mapping/ISynchronizationCompareInput.class
+SHA-256-Digest: yz5heO/mfh+WmM7bKhFyU8pCS4jmgXwGTJrWYgTzo6M=
+
+Name: org/eclipse/team/internal/ui/history/GenericHistoryView$Navigati
+ onHistoryEntry.class
+SHA-256-Digest: PS7NY0mNrg1RS+B0wtnweYZS8bBcY9hI56jpGUtXPsc=
+
+Name: org/eclipse/team/ui/synchronize/TeamStateChangeEvent.class
+SHA-256-Digest: nWeDu8brOCUlV+zXInt/iU0eeNLtDqeTNZ+brEQsBcI=
+
+Name: icons/full/elcl16/catchup_rls@2x.png
+SHA-256-Digest: b+zEKaL3MXSLTS0UZajzHoXgHP3UqsispCALImrIIUI=
+
+Name: org/eclipse/team/internal/ui/preferences/IgnorePreferencePage.cl
+ ass
+SHA-256-Digest: qfu2/6ZBgDxEODY5Gq9jJN/ii4tEBm05pQA+WHXTNkY=
+
+Name: icons/full/obj/workspace_obj.png
+SHA-256-Digest: 4DGveyPZyqLXWkJrCKaLr5EHlsXehIc7yob6An2+Qas=
+
+Name: org/eclipse/team/internal/ui/synchronize/CompressedFoldersModelP
+ rovider.class
+SHA-256-Digest: KW70Q2nWRgb0qKVhbmffHOpNNJgaRf93y4uGrWDcAHU=
+
+Name: org/eclipse/team/internal/ui/synchronize/SaveablesCompareEditorI
+ nput$11.class
+SHA-256-Digest: EygXvXjr/ZtZGJ+BxnDl/xktcge3tAcTZt7qvx6DRmo=
+
+Name: icons/full/dlcl16/site_element.png
+SHA-256-Digest: ofi+JGkj1hzE+BYDQWte+NlhytWcGt4AhtQz8FvucnA=
+
+Name: org/eclipse/team/internal/ui/mapping/ResourceModelContentProvide
+ r.class
+SHA-256-Digest: Q/YAUSh2ndUhEyutrcm2exhtHoj0jKgIzGo75/v0sFQ=
+
+Name: org/eclipse/team/internal/ui/StorageTypedElement.class
+SHA-256-Digest: dmCj5C5TndlT6wtY0U2XbjnaA2obDZjvUQFMV9jE73U=
+
+Name: org/eclipse/team/ui/synchronize/SubscriberTeamStateProvider.clas
+ s
+SHA-256-Digest: MV7Ewq/CpOZ4TwL51RnbyK3aL72vWb9evIC5KpgKb0Q=
+
+Name: icons/full/ovr/pinned_ovr.png
+SHA-256-Digest: j+eN3typDye9M6XPrgxUQzcpdSG9lkEW+gv+PEKunr0=
+
+Name: org/eclipse/team/internal/ui/synchronize/RefreshUserNotification
+ Policy$2.class
+SHA-256-Digest: pN1D7jvx+mz955Ww7Zeg5JWLCQYCh5MPdUZyl3OYjLI=
+
+Name: org/eclipse/team/internal/ui/wizards/PatchInaccessibleProjectsPa
+ ge$4.class
+SHA-256-Digest: W7duNlZAKVkjplyR5bC7M6M3AqP9Na8v/ZQ02/xiKJs=
+
+Name: org/eclipse/team/internal/ui/synchronize/ConfigureSynchronizeSch
+ eduleComposite$2.class
+SHA-256-Digest: 9zcoRNnsldvcJrngnuBR5Qswxwd+8Ov4ooAnSjSG3K0=
+
+Name: org/eclipse/team/internal/ui/history/LocalHistoryPage$LocalHisto
+ ryContentProvider.class
+SHA-256-Digest: QBzb2+kGWT3tP61o8+gjgmAVQ7p2dhER59Mzw7Vlua0=
+
+Name: org/eclipse/team/internal/ui/TeamCapabilityHelper.class
+SHA-256-Digest: 9lSKoZm28vMbwlFGZx61A8ikaNU3k20jD9IfjGUMY0c=
+
+Name: org/eclipse/team/internal/ui/mapping/DiffTreeChangesSection$11.c
+ lass
+SHA-256-Digest: 493UPsg5Y6VCyi85/eIdGBYYkggASQoXnDlXo+Bc1Mk=
+
+Name: org/eclipse/team/internal/ui/registry/TeamContentProviderManager
+ $1.class
+SHA-256-Digest: ZYEbD38h2FtwfHSWKvTeRJjRSX0wetGiqdCCVgBsIzY=
+
+Name: org/eclipse/team/internal/ui/synchronize/LocalResourceTypedEleme
+ nt.class
+SHA-256-Digest: Gm8xYw93jeuxTHvJjmmyrk8h2F7Cmv3vTV+Nh5juC3o=
+
+Name: org/eclipse/team/internal/ui/history/IFileHistoryConstants.class
+SHA-256-Digest: i/Vu7LMb+XwNKyDXvUAcHTv2dXdUappA6txto8RSyRw=
+
+Name: icons/full/elcl16/site_element@2x.png
+SHA-256-Digest: Joh/hHJwNqsjv+mXtyOwZmP7hbVKICDicMCAKVCWsmg=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/SubscriberActio
+ nContribution.class
+SHA-256-Digest: fP0n+xEy2CAm85YU+iJbXKIfC9iRRRTr6tpPg8mOLfQ=
+
+Name: org/eclipse/team/internal/ui/synchronize/RefreshParticipantJob$2
+ .class
+SHA-256-Digest: /vqnYyEZitQ+biTVhx9OGU379bU+kANWdp72gF26bmE=
+
+Name: org/eclipse/team/internal/ui/wizards/ConfigureProjectWizardMainP
+ age.class
+SHA-256-Digest: ielhaDTZw6ovt7G18JuML0bsQfGfZ1yihsPiCj6jcwA=
+
+Name: org/eclipse/team/ui/synchronize/AbstractSynchronizeParticipant.c
+ lass
+SHA-256-Digest: BOLNgjy5hKXbSU2Y2X2yNMfgf9EQ9Ogk46zrnFyBvUU=
+
+Name: org/eclipse/team/internal/ui/synchronize/AbstractSynchronizeMode
+ lProvider$5.class
+SHA-256-Digest: uYDT9hhxFR4KFLT6KYygyL8VtYLHPMiepYax8/FiQks=
+
+Name: icons/full/dlcl16/syncpane_co.png
+SHA-256-Digest: mQKFl/Idg26ybpo4eHe6L7v/tZmH/7XhF7OfoCK349w=
+
+Name: icons/full/elcl16/ignorews_edit@2x.png
+SHA-256-Digest: yFM7BMchIB78zD/6NIHgAH4xHKIMLeRsASU9Ox7+tCA=
+
+Name: org/eclipse/team/internal/ui/synchronize/AbstractSynchronizePage
+ $2.class
+SHA-256-Digest: +KoUKc1IuBVX0Xu4YeTE6FXF52oz09cxrmVb9PI+8t8=
+
+Name: icons/full/elcl16/filter_history@2x.png
+SHA-256-Digest: NsonmwD3VFpRsWwWN7RHFCoqmN2ijxoPLJz+nMcBbO0=
+
+Name: org/eclipse/team/ui/synchronize/SubscriberParticipant.class
+SHA-256-Digest: f87JZPG41gUJYKzXQbxp1g2+MmdtY/NKmSfMyNNvusQ=
+
+Name: org/eclipse/team/internal/ui/mapping/DiffTreeChangesSection$ITra
+ versalFactory.class
+SHA-256-Digest: eVFRn3AtkT/RPR0bvcfyuT9btCNFu8pCNOHpBrmRNU4=
+
+Name: org/eclipse/team/internal/ui/synchronize/TreeViewerAdvisor.class
+SHA-256-Digest: jAzbt5HS/190si6X0GUL0rf3zaA3TcG+Xl/2iw4H4Do=
+
+Name: org/eclipse/team/internal/ui/synchronize/GlobalRefreshElementSel
+ ectionPage.class
+SHA-256-Digest: OTjEKo653oZZNZXyb0TD1wSgc+AgTYpBn7hQRPy1Wnc=
+
+Name: org/eclipse/team/internal/ui/Utils$7.class
+SHA-256-Digest: q5SlGk3AwTsAkk3A/MUCU7f5yELKdvrM7PkzDIhziNI=
+
+Name: org/eclipse/team/internal/ui/synchronize/ISynchronizeModelProvid
+ er.class
+SHA-256-Digest: XSBe1aqBfiAFyHI+qaJ+hi5tc96vwok3szAk0GkM34s=
+
+Name: org/eclipse/team/internal/ui/history/CompareFileRevisionEditorIn
+ put.class
+SHA-256-Digest: gl5rNBCXlVqLTNgFICdWOYC1J4XEU+a03LlmVmhQXOs=
+
+Name: org/eclipse/team/ui/PageSaveablePart$6.class
+SHA-256-Digest: 5OPm4zhF+K8CCMpjum1h3kAcbGTKmthkho/Svj3dhE0=
+
+Name: icons/full/ovr/checkedout_ov.png
+SHA-256-Digest: AHh8QAuyyLfxHKhu8m8TaBCF/6H8qd3RwkOAh7cY3/U=
+
+Name: org/eclipse/team/internal/ui/wizards/ProjectSelectionPage$2.clas
+ s
+SHA-256-Digest: gEWwYHxY413dQfNb+bu+SRGsK3/XU6DUGHLxNvkeobw=
+
+Name: org/eclipse/team/internal/ui/synchronize/FlatModelProvider$FlatA
+ ctionGroup.class
+SHA-256-Digest: eAIiYyy4lXn7AXQ60QmnLcQ/vNPhJDqKRZhaMu/NeuU=
+
+Name: org/eclipse/team/ui/PageCompareEditorInput$1.class
+SHA-256-Digest: zSKTqdrUP1FBy46mfDGJhzyJOWPxLZOsQeCcez1W1lc=
+
+Name: icons/full/elcl16/checkin_action.png
+SHA-256-Digest: 6o6XEQEuQ5zz6JPm3rzboL4S5cteAFJKqE/vyWMeSpY=
+
+Name: org/eclipse/team/internal/ui/wizards/PatchInaccessibleProjectsPa
+ ge$1.class
+SHA-256-Digest: E6kD64uzTBjcc5wzqhgsLNHqu2oQune7mcyNwvYMj0M=
+
+Name: org/eclipse/team/internal/ui/actions/ProgressDialogRunnableConte
+ xt$2$1.class
+SHA-256-Digest: +JW0V9L47QKKO0owJTsG0KgW7cQYtWQTIT+txmE8sw8=
+
+Name: org/eclipse/team/internal/ui/Utils$4.class
+SHA-256-Digest: QvwEctVE1zIoo8CAAHgSTVKxGYNdLhmXv1q5dPyy8do=
+
+Name: org/eclipse/team/internal/ui/history/DateHistoryCategory.class
+SHA-256-Digest: JO9wOA0dmeg8XP+nR5hkP0EJbK78ng3POI3SGbtbmoY=
+
+Name: org/eclipse/team/ui/PageSaveablePart$3.class
+SHA-256-Digest: 0pm/u17qWod1f/tsMv8x+M1bln1xDNQ7Z8FrwJ3FR3E=
+
+Name: org/eclipse/team/internal/ui/Utils$6.class
+SHA-256-Digest: Fln8uMiD9esMMvQ27A0xfJP9SlWaHrwCiC1t3+Ltxng=
+
+Name: org/eclipse/team/internal/ui/synchronize/ChangeSetModelManager$T
+ oggleCommitSetAction.class
+SHA-256-Digest: RZ7RSeMA97wZ3auRIfVET7actm35n2qQzrnwYf7uqhM=
+
+Name: icons/full/elcl16/flatLayout.png
+SHA-256-Digest: dM2d0M0y3foXR0JY/PyEVdIaE6q4vV1uE+Dr28e3EZQ=
+
+Name: org/eclipse/team/internal/ui/synchronize/AbstractSynchronizeMode
+ lProvider$3.class
+SHA-256-Digest: rDHhdPDPsEaP7UtKieRhMslvgZTRkHPpyS+Cwk3k+XY=
+
+Name: org/eclipse/team/internal/ui/mapping/ModelSynchronizePage.class
+SHA-256-Digest: jlqlwUoVC30Bjv7VTljYsrc8BdWuVy7E7w3Ck7RQ4XU=
+
+Name: org/eclipse/team/internal/ui/synchronize/ConfigureSynchronizeSch
+ eduleComposite$4.class
+SHA-256-Digest: LFM8S+CZsD4znC0lDSpza9VJVbYNz91taLHSvtOeyd4=
+
+Name: org/eclipse/team/ui/PageCompareEditorInput$2.class
+SHA-256-Digest: hUr5zkQU2l3jd4VwTnYNh+DWyUtK0pRvJW/0GHsEi8I=
+
+Name: org/eclipse/team/internal/ui/synchronize/ChangeSetModelProvider$
+ 1.class
+SHA-256-Digest: DMq81Jnp0CFa7CXAiizEMyUq7ShiEK6v6kNxSTiQsMc=
+
+Name: org/eclipse/team/internal/ui/synchronize/patch/PatchSyncLabelPro
+ vider.class
+SHA-256-Digest: cmYcU8ddQ5X+msBWPdx9XfEck4zdeXf37fFq7yGdL74=
+
+Name: org/eclipse/team/internal/ui/mapping/ResourceModelActionProvider
+ .class
+SHA-256-Digest: HC014gnf8YD72Reh11ljYFG1FTX1VKWByauK1CCjulE=
+
+Name: icons/full/dlcl16/history_nav@2x.png
+SHA-256-Digest: 3Mu4fMsps4e1pTWd4YyVHBfdiyFkrf7kLeHAzxgSMKg=
+
+Name: org/eclipse/team/ui/PageSaveablePart$4.class
+SHA-256-Digest: HjWPf22svqNA1ghr5lG68trL2gk6/ouhmPMW/YCnWoA=
+
+Name: icons/full/elcl16/filter_history.png
+SHA-256-Digest: wT1XxS0TitOrNoKzojc+fBypMqrsx0/XNsVWJu1PkoM=
+
+Name: icons/full/dlcl16/rem_co.png
+SHA-256-Digest: zPkpa/A+UvBznDWv2lpNCpKAuvbo5yvURREeoWZhpBU=
+
+Name: org/eclipse/team/internal/ui/wizards/PatchInaccessibleProjectsPa
+ ge$2.class
+SHA-256-Digest: wb9m1KdnM9e52DFgd4gU0DdI9uvaeyeVy8hQtIcohtk=
+
+Name: icons/full/elcl16/clear_co@2x.png
+SHA-256-Digest: DlOSZnm5QlUGZ3SAzYZTOvkXPTsyhdyGXgriCwgBZG0=
+
+Name: org/eclipse/team/internal/ui/mapping/ResourceModelLabelProvider.
+ class
+SHA-256-Digest: kJVG+k/wnfYUSsJRZoYxblHueIYkAy9M5jVjmwnCXAo=
+
+Name: org/eclipse/team/internal/ui/preferences/ResourceModelPreference
+ Page.class
+SHA-256-Digest: dANubRPS8LsZchkTr8ndiMJfqvGGgSwml16rPXegTqU=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/ChangeSetAction
+ Group$AddToChangeSetAction.class
+SHA-256-Digest: OGXt3v87GF8P0huH5Q5HnZKpUDwNXcTkebm1Rb2qz7g=
+
+Name: org/eclipse/team/internal/ui/mapping/IgnoreLeadingPathSegmentsAc
+ tion.class
+SHA-256-Digest: aH6KyqJY3rGffMH5ryTDHRvoIIVGKe0PCeZ1la8L68A=
+
+Name: org/eclipse/team/internal/ui/synchronize/ConfigureSynchronizeSch
+ eduleComposite$3.class
+SHA-256-Digest: SO2ZKZYB7KJ4Pr8PL1BAYtwcL3hL2c0Q7oWyFsZuF04=
+
+Name: org/eclipse/team/internal/ui/synchronize/WorkbenchAction.class
+SHA-256-Digest: G407TEbqRQs6LbFdcBxLMD8oRhKiFyn9KQvDBvqiq8k=
+
+Name: org/eclipse/team/internal/ui/synchronize/AbstractSynchronizeMode
+ lProvider$2.class
+SHA-256-Digest: bMZeu1bJiGkgSm1ruT4R9ntEKFCCGhd7PXZB/Rcaz1Y=
+
+Name: org/eclipse/team/internal/ui/preferences/SyncViewerPreferencePag
+ e.class
+SHA-256-Digest: vEuDqdU01GzzavzoQhhWePcfhFd8vRoiS/HaGlI8nAQ=
+
+Name: org/eclipse/team/ui/PageSaveablePart$5.class
+SHA-256-Digest: 7539fNjo9hXLcBI30C1LSJE5hVoWjFsQB3WksrcyT4k=
+
+Name: icons/full/dlcl16/newstream_wiz.png
+SHA-256-Digest: nKbFKeRsBaAG1fblbTWjzzofK0vWUveil/eY0kyo7CE=
+
+Name: org/eclipse/team/internal/ui/synchronize/ChangeSetLabelDecorator
+ .class
+SHA-256-Digest: mivISIYCdjAWm4cJMnD24KFWHx9dF8YfakKhxLaS174=
+
+Name: org/eclipse/team/internal/ui/wizards/WorkingSetsDialog.class
+SHA-256-Digest: SfxCY0KCjxYCLIOZYlXw/fO2BuZ+MKG3V1SzaNGl+F8=
+
+Name: org/eclipse/team/ui/synchronize/SynchronizePageActionGroup.class
+SHA-256-Digest: MzhYYryRT7zUmsXVdooRJQC+aRJ09lnvBuEovSv4Y7I=
+
+Name: icons/full/obj/compressed_folder_obj@2x.png
+SHA-256-Digest: b655etRHA/6uH7skWk3gvR8IcigfG/RzzQ5rswcGBWY=
+
+Name: icons/full/dlcl16/filter_history@2x.png
+SHA-256-Digest: I38pJWjVQ+FDlhzAszl0frypRwhnAdtkw1zikaxYCT8=
+
+Name: org/eclipse/team/internal/ui/actions/CompareAction$SelectAncesto
+ rDialog$1.class
+SHA-256-Digest: f54Ywtd31oPlux0TdbjM4m082nS2BowKePtnMgKsLMs=
+
+Name: org/eclipse/team/internal/ui/wizards/PatchInaccessibleProjectsPa
+ ge$3.class
+SHA-256-Digest: BkbRPIqmZQOPhpdS5huHctqtFGH4ICZ/yQjAnnRR6SY=
+
+Name: org/eclipse/team/internal/ui/synchronize/RefreshParticipantJob$3
+ .class
+SHA-256-Digest: PdrsuA65q5D87mQF8XyWwDwCh55tmjgBWhT3A+byceI=
+
+Name: org/eclipse/team/internal/ui/synchronize/RefreshUserNotification
+ Policy$1.class
+SHA-256-Digest: uD9wQy9mCvs/SYa5X17ljY7WWqBA79B5Irw4a0ub0SQ=
+
+Name: org/eclipse/team/internal/ui/synchronize/StartupPreferencePage.c
+ lass
+SHA-256-Digest: Bl74EkaoFTqDYITjY+kJtPLKn5dxJLN2+SxXmUkplHc=
+
+Name: org/eclipse/team/internal/ui/history/HistoryPageSourceWorkbenchP
+ art.class
+SHA-256-Digest: w+Xk8hkuZW+PTGeFhLLjOSpV6nYQ9DsE+qxw9vcqmR4=
+
+Name: org/eclipse/team/internal/ui/preferences/IgnorePreferencePage$4.
+ class
+SHA-256-Digest: Gryvht8sv+lLnFpDfkwpEbkCr8FVDNKPtlxXP3j+fbg=
+
+Name: icons/full/dlcl16/filter_history.png
+SHA-256-Digest: Tl2ndtNAaBJRkKENTaPm/BIrhnhCEZUoxXutBXxpe1Q=
+
+Name: org/eclipse/team/ui/TeamOperation$1.class
+SHA-256-Digest: 2XWtDRJ60b2i8+UYxPR0pH/P/Jn/xtSYV+bYKdJR1ZY=
+
+Name: org/eclipse/team/internal/ui/history/ShowLocalHistory$1$1.class
+SHA-256-Digest: Dfb14RpdDF9CzLMYwRysUQ0uQuaKuKgJImd/RfeOsKc=
+
+Name: org/eclipse/team/ui/synchronize/SaveableCompareEditorInput$4.cla
+ ss
+SHA-256-Digest: 0ltmI/wxgqDXR6H17glTHTFYLt6cFb/xVpYl0j12IF4=
+
+Name: org/eclipse/team/internal/ui/synchronize/RegexDiffFilter.class
+SHA-256-Digest: 3yXgJVPncbsBMJEK2MqgNYQqVNbN2+KzaR1l+lMESC4=
+
+Name: org/eclipse/team/internal/ui/actions/OpenWithMenu.class
+SHA-256-Digest: 1s+TOkwAitkzAeXaJTage0y6xBVHqmjiGtzH/gEOg5g=
+
+Name: org/eclipse/team/internal/ui/history/EditionHistoryPage.class
+SHA-256-Digest: TDr8QZKfS0Lca632F9RafYt4Z/5CbUdRTUo79XddUgQ=
+
+Name: org/eclipse/team/internal/ui/wizards/ImportProjectSetMainPage.cl
+ ass
+SHA-256-Digest: il8HkBN3dZRGsY18ybOzK7tskgIxBE0Eyq/mf1atEk4=
+
+Name: icons/full/eview16/history_view.png
+SHA-256-Digest: 3QMQRA6gLZ+jgSpq2+qe4mHGnf/NBEOys7n2mS1Wmj4=
+
+Name: org/eclipse/team/internal/ui/mapping/DefaultResourceMappingMerge
+ r.class
+SHA-256-Digest: KeYeVo9ZZI83iIJypYmFXTNqzqA30ocx2suilLnBi+Q=
+
+Name: icons/full/elcl16/incom_synch.png
+SHA-256-Digest: xZ64w2ltV8vsb+s2pJA6A0NkO8iV9ar5ftA2lr0/tag=
+
+Name: org/eclipse/team/internal/ui/wizards/ExportProjectSetMainPage$Pr
+ ojectContentProvider.class
+SHA-256-Digest: lG7wY3k57w2HTSpTphJKX3z+iaRZjWnkGJlKxuVOaBg=
+
+Name: org/eclipse/team/internal/ui/mapping/ModelCompareEditorInput$5.c
+ lass
+SHA-256-Digest: Jmo7qFvE6E+K1lWZKxi6d+ZWQDJQybncYi/ie/jt2i8=
+
+Name: icons/full/dlcl16/synced@2x.png
+SHA-256-Digest: Fqu8edXutrVrkT/moVdiPd5MD0LMXgjsnp+ngP6dqO4=
+
+Name: icons/full/dlcl16/checkin_action@2x.png
+SHA-256-Digest: 4P4sqsmq0b+gXXroxLcnmubMOXUaV2fa7o88uUh1XkM=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/RestoreRemovedI
+ temsAction.class
+SHA-256-Digest: /Q6lSiYyx1diAhIaF6kd96WHogdGLYAQ1gC2Nv6dPls=
+
+Name: org/eclipse/team/internal/ui/synchronize/AbstractViewerAdvisor.c
+ lass
+SHA-256-Digest: hDDTA9aCkD7x2rByoH3f27evxG9vtrCkvyyiBzBKY0g=
+
+Name: org/eclipse/team/internal/ui/synchronize/SynchronizeModelProvide
+ r.class
+SHA-256-Digest: 89Mxl5poIctUut5VselDAKUi7QyaK0Y+d3VdPfMoMCg=
+
+Name: org/eclipse/team/internal/ui/synchronize/LocalResourceSaveableCo
+ mparison.class
+SHA-256-Digest: in8oIcRuxznUDf1k+EVtT3Fw7HPh+GY+sJRIoak/NoY=
+
+Name: org/eclipse/team/ui/ISaveableWorkbenchPart.class
+SHA-256-Digest: fgnGso8HG2mCnKmijf/TKlzWuegx8FxS44YNxZfdCCU=
+
+Name: org/eclipse/team/internal/ui/synchronize/SynchronizePageConfigur
+ ation$5.class
+SHA-256-Digest: VMXyR9yd5mqGeZXTyo3e/g6mvMAY/Uj9cUJs/AXgMu4=
+
+Name: org/eclipse/team/internal/ui/history/LocalHistoryPage$6.class
+SHA-256-Digest: BScbnajAh6sY8Z+5Ws2uS5mqwnbt5GMacXAITN1qL9o=
+
+Name: icons/full/elcl16/refresh_remote@2x.png
+SHA-256-Digest: OnUfZbf4hsYPTxkd6XwsboOJI0ko+I+RCsU1Zw4Q9cg=
+
+Name: org/eclipse/team/internal/ui/Policy.class
+SHA-256-Digest: GYHbSN3QMxQnywbjDFmrkAHnprR8nn03r9ib9ZVxRYg=
+
+Name: org/eclipse/team/internal/ui/wizards/ExportProjectSetMainPage$Wo
+ rkingSetPage$3.class
+SHA-256-Digest: 3VObA7UtdzIOYlFowUoi9resHVsWUPeB13y5eQqsVSU=
+
+Name: icons/full/dlcl16/prev_nav.png
+SHA-256-Digest: tubMZJbDNF3KvDYQz7BV0c0pKsSZ8Z1wNDKM5cLXcAQ=
+
+Name: org/eclipse/team/internal/ui/dialogs/NoChangesDialog.class
+SHA-256-Digest: +fMaMHpvQXcUPwDl9H/zwac3ORiBRphL09vfGfx3Jbg=
+
+Name: org/eclipse/team/internal/ui/mapping/ModelSelectionDropDownActio
+ n$4.class
+SHA-256-Digest: jaeLHLeR4u4Xc6PEbye9ZaboA3umbOOGXf0JlTKb2gg=
+
+Name: org/eclipse/team/ui/TeamOperation$TeamOperationJobContext.class
+SHA-256-Digest: 566x6VICFSvCxWtEq4ZwqR3GNPSyiJ1mWKOwYRjS/kA=
+
+Name: org/eclipse/team/internal/ui/actions/CompareAction.class
+SHA-256-Digest: jXGMa2M3pDjiggkBuW/l9rRtGEn81w2e/RnFmAQf5JE=
+
+Name: org/eclipse/team/internal/ui/synchronize/SynchronizeView$3.class
+SHA-256-Digest: RB3PseM7c+ca8JLPUjwuascwwI5nkfFQAExGMmAdNeY=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/RefactorActionG
+ roup$2.class
+SHA-256-Digest: ZWNqXuTkPhRUYefpUB/5BPVBX9oPPtXv6f8q7tkCMlg=
+
+Name: org/eclipse/team/internal/ui/mapping/DiffTreeChangesSection$5.cl
+ ass
+SHA-256-Digest: foBAEk5fG2193J7ykOx3z559TNRrJzTfTBGIP3zjGeQ=
+
+Name: org/eclipse/team/internal/ui/wizards/ProjectSetImportWizard.clas
+ s
+SHA-256-Digest: sOi+ocO19oodRqfzFaD2pyF5zx/WCsfOZPcTgN6mQKc=
+
+Name: org/eclipse/team/internal/ui/synchronize/SaveablesCompareEditorI
+ nput$10.class
+SHA-256-Digest: kPb8q5Zv5ekYD514TjAIqef7kBUMgJGiJqY6YuPOjHU=
+
+Name: org/eclipse/team/internal/ui/wizards/ConfigureProjectWizardMainP
+ age$3.class
+SHA-256-Digest: U76ZuMD+ob+vDCchnbGbchYwmbxheHIWYqKLFvuwJeU=
+
+Name: org/eclipse/team/ui/mapping/MergeActionHandler$1.class
+SHA-256-Digest: SbFWXbYAg+3V/sT5dzGWRiiCGpqbgxQrdZih/i5/pxw=
+
+Name: org/eclipse/team/internal/ui/ProjectSetImporter$1.class
+SHA-256-Digest: p+nJLlfBQ7f7q/J8U8q5Tbg1rEVDEpCloZAF1I4Onqc=
+
+Name: org/eclipse/team/internal/ui/synchronize/ActiveChangeSetCollecto
+ r$1$5.class
+SHA-256-Digest: ta7fUerCQBXHJL4mqD1CS7ta+eKxql+1SGjdTmWUbMw=
+
+Name: org/eclipse/team/ui/synchronize/ModelSynchronizeParticipant.clas
+ s
+SHA-256-Digest: YXzHGYNM+N5HWrBmrrlnrBE0d9MmPXeJ8Bx7aVV5DpU=
+
+Name: org/eclipse/team/ui/history/IHistoryPageSource.class
+SHA-256-Digest: MSUpjqFzw2uWC4tZfj3Rr0hG808W5FeOm5jVzvoaqAU=
+
+Name: org/eclipse/team/internal/ui/registry/RegistryReader$1.class
+SHA-256-Digest: tgAcRJNtv8IN2iz+5lBPD2DTuZj+xl1aZdQTYuJfvP8=
+
+Name: org/eclipse/team/internal/ui/history/LocalHistoryPage$1.class
+SHA-256-Digest: U0m/n6gYeOylGyi1G28pFxLxpk4C++nMCxJ9yaLNXkc=
+
+Name: org/eclipse/team/internal/ui/dialogs/ResourceMappingSelectionAre
+ a$1.class
+SHA-256-Digest: HKLr2IjxeAt0C6fTcitaxahLnTaRWhCPMyujoYNbmxg=
+
+Name: org/eclipse/team/internal/ui/synchronize/SaveablesCompareEditorI
+ nput$5.class
+SHA-256-Digest: 2Lh3bgdASeqjyEfK4ofbjJQoTAmEbqfiZwAzOtTZc5k=
+
+Name: org/eclipse/team/internal/ui/dialogs/DetailsDialogWithProjects.c
+ lass
+SHA-256-Digest: 3KQGUcqh6RD8JtFFWJUWpMR7Cqmh2YLzpXHcI2thaM4=
+
+Name: org/eclipse/team/internal/ui/PropertyChangeHandler$PropertyNotif
+ ier.class
+SHA-256-Digest: Uwi4jDA8Z0C/ggbuD126rmAA9PSdx+xi2g0E4EAthds=
+
+Name: org/eclipse/team/internal/ui/synchronize/StructuredViewerAdvisor
+ $2.class
+SHA-256-Digest: zD6voRIdaRN7jwBT7lVvsKIg1zejTvcKLtFkGhEJ2/M=
+
+Name: org/eclipse/team/internal/ui/history/GenericHistoryView$4.class
+SHA-256-Digest: CplXPwSuE6uSV1hHUe/9L/DYYUOGTyBZ7WUhEM/1AUY=
+
+Name: org/eclipse/team/internal/ui/synchronize/CompressedFoldersModelP
+ rovider$UnchangedCompressedDiffNode.class
+SHA-256-Digest: kmk7BUVxbg7zQrwm94pr1hUxAiAKzMv0Drrqjc6W0aA=
+
+Name: org/eclipse/team/internal/ui/synchronize/FlatModelProvider$FlatM
+ odelProviderDescriptor.class
+SHA-256-Digest: KFsJKB638uyB3OQ4V6AB1rvbN5xH+WnuuPThKxRIYh4=
+
+Name: org/eclipse/team/internal/ui/actions/ProgressDialogRunnableConte
+ xt$2.class
+SHA-256-Digest: 1JEN3Y9qr4Yt3qyjvbEE+USPyhtMX00aCG2tNOsIifk=
+
+Name: org/eclipse/team/internal/ui/actions/ITeamRunnableContext.class
+SHA-256-Digest: Hnp39ybQf6eUpGh6yp+FeYAXLsG42xG4/SPngPYe3WQ=
+
+Name: org/eclipse/team/internal/ui/synchronize/patch/ApplyPatchModelCo
+ mpareEditorInput$1.class
+SHA-256-Digest: y0mfKtdhGPXFce2PpMbfiOB0LgGqhtWpH7bfjWEvPww=
+
+Name: icons/full/dlcl16/ignorefiles.png
+SHA-256-Digest: K/3wUuLZFl/6WftMa+X7WRVF2vCSgzpNMwAiO2f/WME=
+
+Name: org/eclipse/team/ui/synchronize/ISynchronizePageSite.class
+SHA-256-Digest: +XkVDP1GytjI6l16s4liKFf11sCpzRRWqO76ioHPVPo=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/RemoveSynchroni
+ zeParticipantAction$2.class
+SHA-256-Digest: VzmFK9pPzv+e5BlGwhO3EYvp7SBPpwUw4QIO288Rbwo=
+
+Name: org/eclipse/team/ui/SaveablePartDialog$1.class
+SHA-256-Digest: TEwAEAHgTANtsXeDLieRl0iYebKyBdt07t8j+xKOdsg=
+
+Name: org/eclipse/team/internal/ui/wizards/PatchInaccessibleProjectsPa
+ ge.class
+SHA-256-Digest: 0Wb5yZcGDDLDZ833JhUnBTcvIlw4tjHg6SmL/qSEOCo=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/SynchronizeAndR
+ efreshAction.class
+SHA-256-Digest: gpXsNokxtQA/4taMDfFwDm9fqByZ4A6ETCbvxaes8RE=
+
+Name: icons/full/elcl16/syncpane_co@2x.png
+SHA-256-Digest: t5kJoOiFRpvi+dNnD92dsIEwQNhxzp1/9p00NQDB0HA=
+
+Name: org/eclipse/team/internal/ui/IPreferenceIds.class
+SHA-256-Digest: Ql1KRVuD15MzHuMMAMbTMTMvClO/IWa5hupdrL45ARg=
+
+Name: icons/full/elcl16/hierarchicalLayout@2x.png
+SHA-256-Digest: c8gHCwTAUaAIzigf4XUfDHJTy8/YTop+FGe7WwFl+Es=
+
+Name: icons/full/eview16/synch_synch.png
+SHA-256-Digest: 9E5o/lASMmO+J81/TLcEfqZXiKnvshhQzCpA/xA3Hno=
+
+Name: org/eclipse/team/ui/synchronize/ParticipantPageCompareEditorInpu
+ t.class
+SHA-256-Digest: ks8C7GDTrP5yf+pH6IfYGck7iDZY83q5QfGufoQ8QPk=
+
+Name: org/eclipse/team/ui/mapping/SynchronizationActionProvider.class
+SHA-256-Digest: yOojD7/HBP4SsyGzYuO7nkUh7Jzz6nkxdJ+KFnxYsv0=
+
+Name: org/eclipse/team/internal/ui/synchronize/patch/ApplyPatchSubscri
+ berMergeContext.class
+SHA-256-Digest: 8D6QKi0lVDdM090QTnd8hLtQgOQBrqZ2UJGC4rxM4qA=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/OpenWithActionG
+ roup.class
+SHA-256-Digest: KYw2jMe4lwrS0WxgmsKhHKu7dbWRE35t89hX9lZlhCI=
+
+Name: org/eclipse/team/ui/synchronize/ISynchronizeModelChangeListener.
+ class
+SHA-256-Digest: s2xpPWHO2LREA9UZS8AHm4WekMJI35+90W842MAybsY=
+
+Name: org/eclipse/team/internal/ui/synchronize/SynchronizeModelManager
+ $ToggleModelProviderAction.class
+SHA-256-Digest: u7F0L8iX2vz6g7Uc7vRaQkjPvAOkEYCGB4fN+Ulg3io=
+
+Name: org/eclipse/team/internal/ui/mapping/TeamViewerSorter.class
+SHA-256-Digest: enliD/AfDKt2xurrHfUzRa9RLbbdKbj9d68GdY1iiL4=
+
+Name: org/eclipse/team/ui/synchronize/SyncInfoCompareInput$2.class
+SHA-256-Digest: nIXOmh1euG3blQp6wONauqAYVB1ZB63RL7c8P3NhwYE=
+
+Name: icons/full/obj/compressed_folder_obj.png
+SHA-256-Digest: flf+yq+SZt65sMGR39m85t8/71YSdlZjFMup8oCoAw8=
+
+Name: org/eclipse/team/internal/ui/PixelConverter.class
+SHA-256-Digest: BfbVr9F1C+2jt1a3iarKDRtYrdf51DVblDmE4JhtxRU=
+
+Name: org/eclipse/team/internal/ui/mapping/CommonViewerAdvisor$1$1.cla
+ ss
+SHA-256-Digest: VZYs24dOqmMmVihmwSEw7vPOrMqab7P3XL+lazqWkXc=
+
+Name: org/eclipse/team/ui/history/HistoryPageCompareEditorInput.class
+SHA-256-Digest: 0og4XH1ZiTvk+Jx880QI2nWJVXanCzNOKzc4RGjygS0=
+
+Name: org/eclipse/team/internal/ui/wizards/ExportProjectSetLocationPag
+ e$WorkspaceDialog$1.class
+SHA-256-Digest: d42sfiRakp3EJd45Eckm2XdRgcG5qglb3loVZvB9ixY=
+
+Name: org/eclipse/team/ui/synchronize/SynchronizeModelOperation.class
+SHA-256-Digest: BhflMR4AMGu729oZt2Mel6kLXmiPh3pFBpVuopikAjg=
+
+Name: org/eclipse/team/internal/ui/synchronize/RefreshUserNotification
+ PolicyInModalDialog$2.class
+SHA-256-Digest: go4G5w6ImIdQFFra28h4gw2gui91FImJvmNHTjKTZLo=
+
+Name: org/eclipse/team/internal/ui/mapping/StreamMergerDelegate.class
+SHA-256-Digest: egRjqvGzcNct2CVTQ4JDFZ3fCbFxHuReqSjnMpOEUPQ=
+
+Name: icons/full/dlcl16/synch_participants@2x.png
+SHA-256-Digest: K8weioDriHILmLjNkUNtuyRNRpWhlmnO3tl02ih7w7Q=
+
+Name: org/eclipse/team/internal/ui/mapping/MergeIncomingChangesAction$
+ 1.class
+SHA-256-Digest: JHEwnPOqZ3LGa0OBsStAotBINhAwZzLpJHw7SNXRFFA=
+
+Name: org/eclipse/team/internal/ui/synchronize/patch/ApplyPatchSynchro
+ nizationWizard$2.class
+SHA-256-Digest: kYpUgeUydc5mLDmu3vaJl7pvv6Vgl4AAVLGclIxeoSc=
+
+Name: org/eclipse/team/ui/TeamImages.class
+SHA-256-Digest: 9QzWdfRvWJJDmOxjNVewOzDzMf8Pdm9dUFxDvD7qKDA=
+
+Name: org/eclipse/team/ui/synchronize/ParticipantPageSaveablePart$2.cl
+ ass
+SHA-256-Digest: HREJkFgLbTIoPoVDmC6k+6eDZ99BmQXlyuEzRLdUqx8=
+
+Name: org/eclipse/team/internal/ui/synchronize/LocalResourceTypedEleme
+ nt$1.class
+SHA-256-Digest: iDbjv/FgKGdqCGY/5rRQcGqXhD/JI5lOWfcnjUlUGcg=
+
+Name: org/eclipse/team/ui/synchronize/ModelMergeOperation.class
+SHA-256-Digest: ZIMQKbYxc6E12s0N9j5sD4Lvu8RrZtpTQJh537xKDI0=
+
+Name: org/eclipse/team/internal/ui/wizards/ExportProjectSetMainPage$Pr
+ ojectPage$2.class
+SHA-256-Digest: 6ihWS5+gjbA+nBVKOn7AYGyn09PquHFXWNQXEDGy1z8=
+
+Name: org/eclipse/team/ui/mapping/ITeamStateChangeEvent.class
+SHA-256-Digest: Sg5ClucfG4qQ4SfNYXzc9d17HnZoYKvQur9rAsrxibg=
+
+Name: icons/full/elcl16/synch_participants@2x.png
+SHA-256-Digest: gI7ixm2N/oxgnmBY//0bAEQ+F8pGVhYRzgoRajsruxY=
+
+Name: org/eclipse/team/ui/synchronize/ISynchronizeScope.class
+SHA-256-Digest: jw1Q++Lhpbq1XOxiak28hMHpdlUNgARvz1vzG/Li64E=
+
+Name: org/eclipse/team/internal/ui/history/GenericHistoryTableProvider
+ $HistoryComparator.class
+SHA-256-Digest: 1gH+ldVGOJ0W5K3ZjpA2Lttar/sbbAdJ4aTB3xx/oPg=
+
+Name: org/eclipse/team/ui/synchronize/ModelSynchronizeParticipantActio
+ nGroup$1.class
+SHA-256-Digest: OCOM2hTq2rR7JBGvRlwYvHh4k1pXtPJ37K0Z+cF4Tr8=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/RestoreRemovedI
+ temsAction$1.class
+SHA-256-Digest: 3m1wRr6w0m3uHsk3ON+2kV4FMd+Cy2q98c5WjvGym0s=
+
+Name: icons/full/obj/share_project.png
+SHA-256-Digest: OHhfN30JPjS1BJQFtJfG0TCS6Ed0buKSG94oJcwoxHE=
+
+Name: org/eclipse/team/internal/ui/actions/JobRunnableContext$IContext
+ Job.class
+SHA-256-Digest: jufPW3yrPnf7ItneoTjy/u/LPiGXFYuuX1sNCFwvB3k=
+
+Name: org/eclipse/team/internal/ui/wizards/ExportProjectSetLocationPag
+ e$2.class
+SHA-256-Digest: NpfDZXhyVI38qFiQS3MnwiLngstMFAOlX3oTntUnU0g=
+
+Name: icons/full/ovr/confchg_ov@2x.png
+SHA-256-Digest: 8CQCBrRiMHRwKm+kZtWkuTTuUi9e/XnHmjwPGQiddIE=
+
+Name: org/eclipse/team/ui/synchronize/ModelSynchronizeParticipant$3.cl
+ ass
+SHA-256-Digest: +4tMIZ8mutVHbS7KJueeVTpQslriJllltjpexYc05+8=
+
+Name: org/eclipse/team/internal/ui/wizards/ExportProjectSetLocationPag
+ e.class
+SHA-256-Digest: 08VN8HaDjVXLeGRy3kqRWepW4fM15Zay7ruV0OCEr64=
+
+Name: org/eclipse/team/internal/ui/mapping/CommonViewerAdvisor$3.class
+SHA-256-Digest: IloNCS44htHpWy13ws6UEyH5RBU7QWZoS8HKkSpgEIU=
+
+Name: org/eclipse/team/internal/ui/messages.properties
+SHA-256-Digest: SiQTamr3yB1c1abtcAAdZG8Z9KdK09g9ptT4iGX5jqM=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/SyncInfoSetStat
+ usLineContributionGroup.class
+SHA-256-Digest: nGeF4pvdIx5iU4xqsOfytkwQ00oCekvuwkyLaCBFE5A=
+
+Name: icons/full/elcl16/prev_nav@2x.png
+SHA-256-Digest: yFHNtMNOlvZRiJcPMhqlJcMaIZC1VWD2f+hz+NKqLew=
+
+Name: org/eclipse/team/internal/ui/mapping/ResourceCompareInputChangeN
+ otifier.class
+SHA-256-Digest: LJEdq3xcdQyCu33TFhu9cbYoJPolgqQTgzOr+OyBOjU=
+
+Name: icons/full/dlcl16/hierarchicalLayout@2x.png
+SHA-256-Digest: +DSbWMH/wPl39oXUGwmx8edurRzWsLrOGqkiO3CVrEA=
+
+Name: org/eclipse/team/internal/ui/PropertyChangeHandler.class
+SHA-256-Digest: Uq8iX7bqULZLU3/7Dc9Wj2kEgwzEVjBs83zhJfiCWlc=
+
+Name: org/eclipse/team/internal/ui/mapping/ResourceMergeHandler.class
+SHA-256-Digest: XdcQ0DVZvc417W3UiPXgkjfVO0Iw3ZSgAJljuPSVQpA=
+
+Name: org/eclipse/team/internal/ui/ITeamUIImages.class
+SHA-256-Digest: d1zaavOwhQhYuxoeLk6db4Zqkg5tRweOspJhOfAuH0g=
+
+Name: org/eclipse/team/ui/PageCompareEditorInput.class
+SHA-256-Digest: YOnewpuPDTUrARerQDNMK2fsHGXcDJKsZD1mR6CTgPo=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/RemoveFromViewA
+ ction$1.class
+SHA-256-Digest: wb6ug/JKupWpN5UnFRMqpUEo00Agz2oPO/fKbQzFWBI=
+
+Name: org/eclipse/team/internal/ui/synchronize/SynchronizeModelUpdateH
+ andler$5$1.class
+SHA-256-Digest: YztYjHBQYf9LLYaKvF64piGWArWCJgJ0NMw4ALK+RtM=
+
+Name: org/eclipse/team/internal/ui/wizards/ImportProjectSetMainPage$4.
+ class
+SHA-256-Digest: ZUKnCMfQYLC6Q7yOCu7M7+TVX/IWnQKNpjknY49F2+Q=
+
+Name: org/eclipse/team/internal/ui/synchronize/ImageManager.class
+SHA-256-Digest: Ls9zbL5HSyV3iC18Ao2Kql1waZ7sQmU/dFLN6kuX5VU=
+
+Name: org/eclipse/team/ui/synchronize/AbstractSynchronizeLabelProvider
+ .class
+SHA-256-Digest: oVeKs2JuJt+sEtzXfzdX4TLMaVjCD3YSbB516455hK0=
+
+Name: org/eclipse/team/internal/ui/mapping/FuzzFactorDialog.class
+SHA-256-Digest: O/yLQ0iqtaos4vx7UC2Xeim+RPFDZ1rzVCx1s5qpN6U=
+
+Name: org/eclipse/team/ui/synchronize/ModelParticipantWizard.class
+SHA-256-Digest: 4pCaxLOhHz0DpwLitazM1dt55QjgYn747r+h4ZINrNc=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/ChangeSetAction
+ Group$AddToChangeSetAction$1.class
+SHA-256-Digest: /Lh+pHyf7uzQ4u+qhIG3ji9FJOZR/nZmg84ZGs/YZoU=
+
+Name: org/eclipse/team/ui/synchronize/ResourceScope.class
+SHA-256-Digest: eU1+AWCIqLKUGVi6ka4TbBvIQRboT8wIxztREtu6Nss=
+
+Name: org/eclipse/team/internal/ui/synchronize/RefreshEvent.class
+SHA-256-Digest: 660gKD1xymXSp/T5fwQUUjjb11V5X9KG75NqAWleGjs=
+
+Name: org/eclipse/team/ui/history/IHistoryView.class
+SHA-256-Digest: VEQhYsyXwuXxO1SwMabXk6nhoXu1ZHpObcjAW5VLyLU=
+
+Name: org/eclipse/team/internal/ui/synchronize/SyncInfoSetChangesSecti
+ on$6.class
+SHA-256-Digest: foao7pd5HCiKqUoW5UW8bN7igQJSXvYKyD1Weepi3iA=
+
+Name: org/eclipse/team/ui/synchronize/SynchronizePageActionGroup$Visib
+ leRootsSelectionProvider$1.class
+SHA-256-Digest: Eiyx85D711VPFuzYhDDCbmUIPFzSfDiTW7lc9NzCiDg=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/GlobalRefreshAc
+ tion$5.class
+SHA-256-Digest: iBNS4ZQvBH2L7xaRMqnyHMxgbDQw9HvKiMo+QFwjz6E=
+
+Name: org/eclipse/team/internal/ui/synchronize/SynchronizeModelUpdateH
+ andler$3.class
+SHA-256-Digest: KCQhXv6/nUuXM7jVkLueirGDwuI2oJ47HBzLnGFz5ik=
+
+Name: org/eclipse/team/internal/ui/wizards/ConfigureProjectWizard.clas
+ s
+SHA-256-Digest: CHOThOPOg6IXwYNeiqYdfLxTikjrJjtLZQHvQOpOso4=
+
+Name: org/eclipse/team/internal/ui/synchronize/TreeViewerAdvisor$2.cla
+ ss
+SHA-256-Digest: ykKWPsBWfrD8MLO8tEFLXyvUqrlcGO6Zw/A01POjwxc=
+
+Name: org/eclipse/team/ui/synchronize/ModelMergeOperation$5.class
+SHA-256-Digest: 89YitN4lzrvB763MP9aV/aDoUr0hfmiVu6H7rsBEOBk=
+
+Name: org/eclipse/team/internal/ui/StorageTypedElement$1.class
+SHA-256-Digest: W46RCFXYpZlai1DIhFXTE89VLuxB43y4ym8s/DufiQE=
+
+Name: org/eclipse/team/internal/ui/synchronize/ChangeSetModelManager.c
+ lass
+SHA-256-Digest: BOH8yIoDaBon+OdChPFSDBzeoLWkeGhfV1/4p2Ex/qM=
+
+Name: org/eclipse/team/internal/ui/mapping/RemoveFromViewAction.class
+SHA-256-Digest: G+ZlfKjcO5f7wk7oQ837RjIEx0R83xxOpT7szwDdcCA=
+
+Name: org/eclipse/team/internal/ui/actions/TeamAction.class
+SHA-256-Digest: j+2nETnpiwFOkBbPsVnriKH+2wbBaO4lc8IAnVltQPI=
+
+Name: org/eclipse/team/internal/ui/registry/TeamDecoratorDescription.c
+ lass
+SHA-256-Digest: UFzy+EI5YA0R+Nba4apv3UPw4zuRT4SgW8B8UbjTIec=
+
+Name: org/eclipse/team/internal/ui/mapping/MergeIncomingChangesAction.
+ class
+SHA-256-Digest: mFwjJ9NV0WmRopxBG1Xl+iFq/DnoOvETRbONwC0uYKs=
+
+Name: org/eclipse/team/internal/ui/synchronize/patch/PatchWorkspace$1.
+ class
+SHA-256-Digest: 2g9fq8fck3KdwBFJOpJkMhbdoAkH8jm417g4in5YfHI=
+
+Name: org/eclipse/team/ui/IScmUrlImportWizardPage.class
+SHA-256-Digest: H3mQrG20+/p6v2JPcA4C4ULCz7UyyO72VMSNLtlbVTk=
+
+Name: org/eclipse/team/internal/ui/synchronize/NavigationActionGroup$1
+ .class
+SHA-256-Digest: VtjYHPaYZDH+4ccdV1NmmQ+GVt/jsWySJXfA8V2iFmw=
+
+Name: icons/full/elcl16/catchuprelease_rls.png
+SHA-256-Digest: sYxzMvZgas4h1WdQcdONKgyfzPbEuPjGNCohdXM7Xnk=
+
+Name: org/eclipse/team/internal/ui/synchronize/patch/ApplyPatchSubscri
+ ber$ApplyPatchSyncInfo.class
+SHA-256-Digest: ObN5AGU66VajwX9YTaGCV2KOe8VmIwBTFWkYX4x3F6w=
+
+Name: org/eclipse/team/internal/ui/registry/SynchronizeWizardDescripti
+ on.class
+SHA-256-Digest: MQ6HETZYdsIszvTTqf1HrNC+1e6EA1IqEciXCgxJ+ok=
+
+Name: org/eclipse/team/internal/ui/wizards/ExportProjectSetMainPage.cl
+ ass
+SHA-256-Digest: E9OVilw3YVTd4eHiCB5hKBwYYpJ14dDwMA6o+beIKZk=
+
+Name: org/eclipse/team/internal/ui/mapping/ModelEnablementPreferencePa
+ ge$1.class
+SHA-256-Digest: FvjrwyC/qf83zLmQHYrvSTVnQrZSxe7NMvwM80GybX4=
+
+Name: org/eclipse/team/internal/ui/synchronize/SyncInfoSetChangesSecti
+ on$1.class
+SHA-256-Digest: 4qi3/1p4JqFP/3X/7gUaHPA2BJJ1GjCRZTEtRPVgEzM=
+
+Name: org/eclipse/team/ui/mapping/SynchronizationCompareAdapter.class
+SHA-256-Digest: 7JN8UkUi6UcfYzFdhnfswZapEIm7yJa0wHh35qx7b1U=
+
+Name: org/eclipse/team/internal/ui/history/GenericHistoryDropAdapter.c
+ lass
+SHA-256-Digest: Uq+4AeBCFLZrUDUoIxFBi0nvWDyxdOYa/fdR0EO2cnk=
+
+Name: icons/full/dlcl16/participant_remall@2x.png
+SHA-256-Digest: OWvCgDgE4l0lolBy1ATjA03jX67PcYcucCqfI6a0yPY=
+
+Name: org/eclipse/team/internal/ui/history/ShowLocalHistory$1.class
+SHA-256-Digest: lxq2pU0XKFUHyL6lvUC4skh2ObfsLy5tE/oH06rrQTY=
+
+Name: icons/full/ovr/version_controlled@2x.png
+SHA-256-Digest: 25hH51c1T7zzfYNNFTUUDgm16/UgPbrGM0Y5uthkn+k=
+
+Name: org/eclipse/team/internal/ui/synchronize/SaveablesCompareEditorI
+ nput.class
+SHA-256-Digest: gI1ULUdtIobOa+JY8VN9hmbnSF6oMJkXyEhWNyvuulw=
+
+Name: icons/full/obj/ignoreprefs@2x.png
+SHA-256-Digest: 1mgaZFubpgePVj8OcS5nu0fc3LW2uONtpxQX7QD3h4g=
+
+Name: org/eclipse/team/internal/ui/history/GenericHistoryView$3.class
+SHA-256-Digest: +BbetMSOWZMDmCv8rVifSPF0ciuU28wZUNluE3y1ivM=
+
+Name: org/eclipse/team/internal/ui/mapping/ResourceMarkAsMergedHandler
+ $1$2.class
+SHA-256-Digest: lh4HdxsY7lG85XqaeaRPJxPmiNDXAVfD9X3KSomXU5g=
+
+Name: org/eclipse/team/internal/ui/synchronize/AbstractSynchronizePage
+ .class
+SHA-256-Digest: q/oGrs8d1PCvtuC1Qp136UZ3z+nKKBNcXLyDEBo1gec=
+
+Name: org/eclipse/team/ui/history/HistoryPageCompareEditorInput$3.clas
+ s
+SHA-256-Digest: hYu4seXgRAN14jmbPm5Toe0NaiFqpg3PGtFxjazm6J8=
+
+Name: icons/full/obj/share_project@2x.png
+SHA-256-Digest: kFmtOCdbSAHmxh72TaNGY6I9o/dUvLJXaUAsh6ksEl8=
+
+Name: org/eclipse/team/internal/ui/synchronize/SynchronizeModelUpdateH
+ andler$6$2.class
+SHA-256-Digest: 6De4EGw1S4Oo4sOC1CUQgQT9Z/PoJhQwG8PH3HRLqOU=
+
+Name: icons/full/dlcl16/next_nav.png
+SHA-256-Digest: EnZHS/xtHWJLnv4LrwfOB/z77jlFQhpwWJgHLNiY9Eg=
+
+Name: org/eclipse/team/internal/ui/synchronize/RefreshParticipantJob$2
+ $1.class
+SHA-256-Digest: VM5raIbnrBWreIzRp8ALR3TQ28mMLSjAln8oiNz2Q34=
+
+Name: icons/full/elcl16/clear_co.png
+SHA-256-Digest: oj5zOLUH+cKJbeKgegVL0vx6MtB2d2CyXWFfyWn5/DU=
+
+Name: org/eclipse/team/ui/synchronize/SyncInfoCompareInput$1.class
+SHA-256-Digest: ozzM5kgJfzrkr13JcjNvjDJPtaq57hyb8FpVnes8DZc=
+
+Name: org/eclipse/team/internal/ui/synchronize/FlatModelProvider$Toggl
+ eSortOrderAction.class
+SHA-256-Digest: euOAwZRVnJG0ChzfBbzduhdAjFq22MLjCRFgQGFR7qw=
+
+Name: org/eclipse/team/internal/ui/history/LocalHistoryPage$RefreshFil
+ eHistory.class
+SHA-256-Digest: LAuZQGXNJG36GbcSt/d+TphDokCDq3YDE0ew2p/IElM=
+
+Name: org/eclipse/team/internal/ui/synchronize/SynchronizeModelManager
+ .class
+SHA-256-Digest: cwZtZblgowr54ig9+uaEoX42uCrJeA3mPZe65xz+F4c=
+
+Name: org/eclipse/team/internal/ui/synchronize/TreeViewerAdvisor$1.cla
+ ss
+SHA-256-Digest: f95G/TUh2auSEr0Nl0/H9JisALWCXpu1x1RWE/Pgx5E=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/DefaultSynchron
+ izePageActions.class
+SHA-256-Digest: 1zARRurGGc0K3imO5cUJXXT45LK7vYcux4RSnpKwb80=
+
+Name: org/eclipse/team/internal/ui/wizards/ConfigureProjectWizardMainP
+ age$2.class
+SHA-256-Digest: HydxUGKXzCDahydn6A11k68QYDnceIAFU4MX3XJg+r0=
+
+Name: org/eclipse/team/internal/ui/history/FileRevisionEditorInput.cla
+ ss
+SHA-256-Digest: T7aUSrWm6Q1IpOCenKJ/EXPblkUyqvDOEzo4i4OPHqI=
+
+Name: org/eclipse/team/internal/ui/mapping/MergeIncomingChangesAction$
+ 2.class
+SHA-256-Digest: a0T8rhhNVyAvTRsj4NOqq6MB9ZL1jvvOpOa7F2HHbHs=
+
+Name: icons/full/elcl16/conflict_synch@2x.png
+SHA-256-Digest: 4H6Vgf8mdF2yxeZCnaEPADUpH0+1KW0qwZ6nwBqfD80=
+
+Name: org/eclipse/team/internal/ui/registry/TeamContentProviderManager
+ .class
+SHA-256-Digest: P0uKz0ivLc0CI8USSZUuSlBirhurUB4eTSLo1y5OjcA=
+
+Name: org/eclipse/team/internal/ui/synchronize/SaveablesCompareEditorI
+ nput$6.class
+SHA-256-Digest: c+SEhJ2lJUt68EVZTopbVsGjoipiTH32RVqKxryelSQ=
+
+Name: org/eclipse/team/internal/ui/synchronize/SyncInfoSetChangeSetCol
+ lector.class
+SHA-256-Digest: aUtBiUcXxOTc/IjmDmcM63wL+PzV5OVAqpv50qH/4rI=
+
+Name: org/eclipse/team/internal/ui/history/GenericHistoryTableProvider
+ $1.class
+SHA-256-Digest: JOU/FFTUPKAmA/ZXv1JZKaKpZlWRxXweofYhlZPE6ds=
+
+Name: icons/full/elcl16/collapseall@2x.png
+SHA-256-Digest: Vx5h16r56NBbPUAxTAiWdEBzUXnT8ZUWpHg4f2a4vow=
+
+Name: icons/full/elcl16/checkin_action@2x.png
+SHA-256-Digest: Zg7M2wP99N1Mez3ZDaiJ2SDeC7qVR3Prv/3Vt9uHv60=
+
+Name: icons/full/elcl16/ignorefiles@2x.png
+SHA-256-Digest: tFpxtjngdc5ZFI4ldlPAQwZqIQCrDx5H56pjlcmLAzI=
+
+Name: org/eclipse/team/internal/ui/synchronize/IChangeSetProvider.clas
+ s
+SHA-256-Digest: /+2wKPusg7hIGU6ayNGZhjdHou5cpDJWntm3MCH9MGE=
+
+Name: org/eclipse/team/internal/ui/synchronize/ConfigureRefreshSchedul
+ eDialog.class
+SHA-256-Digest: BuD57GtNwlTSJa3S13Dvoj54+aajaIKuTPR+81qTWv8=
+
+Name: org/eclipse/team/internal/ui/mapping/ResourceModelLabelProvider$
+ 2.class
+SHA-256-Digest: Xucdz/hM3CJwJqYcNGslH5Zlzg2x0yyuqEE/+wq2k/w=
+
+Name: org/eclipse/team/ui/synchronize/SaveableCompareEditorInput.class
+SHA-256-Digest: mILDiouXHq1SAZl57IdyCR0ubEvBawje1F/eXO4SdEU=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/SynchronizePage
+ DropDownAction$1.class
+SHA-256-Digest: QYW9bKNouXATHT+UACRLvdPzG9xJxar4U9upnXUFxQ4=
+
+Name: org/eclipse/team/internal/ui/wizards/PsfStore.class
+SHA-256-Digest: ksmHpYbAta3uqNR7ELZ3c8Ug17gWNU6rQvhRE60Rwd4=
+
+Name: org/eclipse/team/internal/ui/history/GenericHistoryView$Navigati
+ onHistoryEntryAction.class
+SHA-256-Digest: jJ19yElGmGruyMe8QBHZmxswuHEZsrswnSnOoACEVpk=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/ExpandAllAction
+ .class
+SHA-256-Digest: eji9K1LcHBqa0qqlNtU40k1Uc+l+t32T9h8QbvASTPw=
+
+Name: org/eclipse/team/ui/IConfigurationWizardExtension.class
+SHA-256-Digest: IVqhkBnatisyRtUm3cZM5yYRYmH3DnIok2G7Zuvh9Tw=
+
+Name: org/eclipse/team/internal/ui/synchronize/SyncInfoSetChangesSecti
+ on$2.class
+SHA-256-Digest: WIC8rh66saJHPitkZp5bbwccHOtCfy2+stvFyAar3Yg=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/GlobalRefreshAc
+ tion$4.class
+SHA-256-Digest: bfp1p9j/LLVgOyabrz8m62ZPN5I/pQW1ZMDA7jS2h9A=
+
+Name: org/eclipse/team/ui/synchronize/SaveableCompareEditorInput$5.cla
+ ss
+SHA-256-Digest: jPMn41c5tNJhMpDbiz/cNlzPnTY8eJPdQ1sHdVVfJEo=
+
+Name: org/eclipse/team/internal/ui/synchronize/SynchronizeModelElement
+ .class
+SHA-256-Digest: fa8hw/dyMaurZaroUNHYZ+cjmJSUc4I9Hz+wmJEeDBk=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/RefactorActionG
+ roup$3.class
+SHA-256-Digest: wojDk1AojPfl5EsJa4d19iadKEyiYjXrUK1HUbJMVxw=
+
+Name: org/eclipse/team/ui/synchronize/ModelMergeOperation$1.class
+SHA-256-Digest: XPidYT+6SQMrW37WuH4F2/70FXzNtlmb3srt64CCTvA=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/SubscriberActio
+ nContribution$2.class
+SHA-256-Digest: kkz7F/8ZxN+uK5uZneKu6E9LcqN2rJnqnUiJVzJSzlA=
+
+Name: org/eclipse/team/internal/ui/wizards/GlobalRefreshWizardSelectio
+ nPage$MyLabelProvider.class
+SHA-256-Digest: T67banVttWLKb2dJylT21QFK/ZsPGTj0YhISFNRWITA=
+
+Name: icons/full/elcl16/refresh.png
+SHA-256-Digest: CHDCUFb/1bQNCUrqownmEeBxRk4zuOE5lOPAx8sxHtQ=
+
+Name: org/eclipse/team/ui/SaveablePartDialog.class
+SHA-256-Digest: 6Gz6vMlfeldCZ5J5pVea1T+Vefj86pKlM1qw/LxRFh0=
+
+Name: org/eclipse/team/internal/ui/synchronize/SynchronizeModelElement
+ $1.class
+SHA-256-Digest: JiVhiFuxEbs58kBh0V6gO3YsDzKAjO/ROIWwaWXs5u8=
+
+Name: org/eclipse/team/internal/ui/registry/SynchronizeParticipantDesc
+ riptor.class
+SHA-256-Digest: y7f87u4bVcGntQEwPdyPmWPqqeBV9WQS+K/PcpeNwZU=
+
+Name: org/eclipse/team/internal/ui/synchronize/SynchronizeModelUpdateH
+ andler$2.class
+SHA-256-Digest: IAbHSgIFvVWavdncP0BTESgdbXbcltnWNPYvKzjOecQ=
+
+Name: org/eclipse/team/internal/ui/synchronize/GlobalRefreshElementSel
+ ectionPage$3.class
+SHA-256-Digest: hLegw6JEFdIZAedXlTdjN8sogbY8mAHdqnsTzUqEStI=
+
+Name: org/eclipse/team/internal/ui/dialogs/AdditionalMappingsDialog.cl
+ ass
+SHA-256-Digest: kgCvyubaMXTgHz0GtFFayXIl0xYyteSTk3x8S5z4OFg=
+
+Name: org/eclipse/team/ui/synchronize/ParticipantPageDialog.class
+SHA-256-Digest: btf8Co1InyTHpGY4SSsr7oysxBU/H+G4h/SstfozkFo=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/RefreshActionCo
+ ntribution$1.class
+SHA-256-Digest: 9RE7Mc4jnKSPFJ/lUO2ZIEwahztF0mHvQNcri7KHu2Y=
+
+Name: org/eclipse/team/internal/ui/mapping/ResourceModelPersistenceAda
+ pter.class
+SHA-256-Digest: KNk4XfhxdNSzwNithqd5h9f319O7ogqURZfCAuGuPoE=
+
+Name: org/eclipse/team/internal/ui/mapping/ResourceModelSorter.class
+SHA-256-Digest: +wqiC81jBWJuLMZUV2oK8y+nPRbhaMs9TK92yW+2dmk=
+
+Name: org/eclipse/team/internal/ui/history/GenericHistoryTableProvider
+ .class
+SHA-256-Digest: EYWE/OBx5dZkg6chGqyGaUtSPcfHOaNRv0gUs6pNCfQ=
+
+Name: icons/full/wizban/export_projectset_wizban@2x.png
+SHA-256-Digest: zuZQG6jVjaHJtN8Ww9y5vYmGzdcLT8AebYrjQpRteaw=
+
+Name: org/eclipse/team/internal/ui/synchronize/SynchronizeView$7.class
+SHA-256-Digest: gpWAya5J9HYWK4HCRw4ziZo7rNbN9yow4LA7cf2kH18=
+
+Name: org/eclipse/team/internal/ui/mapping/ResourceMergeHandler$3.clas
+ s
+SHA-256-Digest: h9pZbd6RxZmI/PZ+nZ+0nxg9TimhB6JINk0N+QYTYps=
+
+Name: icons/full/dlcl16/syncpane_co@2x.png
+SHA-256-Digest: pDPoP0ZQEc+IgNalmV1LjiiUZN+41r+y4HjuoluiFQo=
+
+Name: org/eclipse/team/internal/ui/dialogs/ResourceMappingResourceDisp
+ layArea$4.class
+SHA-256-Digest: XHjJvMDnLr41J+cpv1N1008+OrCwawtf9iemxk/T4u4=
+
+Name: org/eclipse/team/internal/ui/wizards/ProjectSetExportWizard$1.cl
+ ass
+SHA-256-Digest: TyBRK12GeGWOaQ8xfCV17cgZdJJOYy9UInB47U21+8s=
+
+Name: org/eclipse/team/internal/ui/dialogs/ResourceMappingSelectionAre
+ a.class
+SHA-256-Digest: gnnITKqKp20dqad30Ia6gsbAnIg/AvQ+zNTu3QnNdcc=
+
+Name: org/eclipse/team/ui/synchronize/ParticipantPageSaveablePart.clas
+ s
+SHA-256-Digest: vrwsl5vQ5e+skL330Ls9Us88S33h2LKPn+wOoy2/oOA=
+
+Name: icons/full/eview16/compare_view@2x.png
+SHA-256-Digest: BSG3s/xs+gqhDQ/HtfzNHtTXJmFeSvUaj1DQA9/KF4k=
+
+Name: org/eclipse/team/internal/ui/wizards/ExportProjectSetMainPage$Ex
+ portProjectSetLabelProvider.class
+SHA-256-Digest: VleRxKWaD5Li87l2Gv2swHOfznQEO85Ce9u0KjqfYYY=
+
+Name: org/eclipse/team/internal/ui/synchronize/GlobalRefreshElementSel
+ ectionPage$2.class
+SHA-256-Digest: wrbTYz6k0V9mUTxhpD0uYn9GthkZ4B3d6Mu3MKsclcs=
+
+Name: org/eclipse/team/ui/synchronize/WorkspaceScope.class
+SHA-256-Digest: h75/L0Cqz5AP0c/wD6uS6il6u5xkP5U/wkO0B69tatY=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/ChangeSetAction
+ Group$CreateChangeSetAction$1$1.class
+SHA-256-Digest: sEMIr3UUy8eP03WrGGmnyF8TUE0j6qTiWFtm3JWtfxs=
+
+Name: org/eclipse/team/internal/ui/actions/OpenWithMenu$1.class
+SHA-256-Digest: RYRCv7K2AOLAwCPJfyCz+XzQfJwG+Ll5g110ilEOYQs=
+
+Name: org/eclipse/team/internal/ui/history/LocalHistoryTableProvider$1
+ .class
+SHA-256-Digest: CR0gR5fBLRJBTWdBap78naWHlwPMnlE21Y5tAJy3pRM=
+
+Name: icons/full/dlcl16/ignorews_edit@2x.png
+SHA-256-Digest: CE1i31YZX/D/De/sE3uK/uGMmrnAvFxPi2P0pHMAlbY=
+
+Name: org/eclipse/team/internal/ui/synchronize/GlobalRefreshResourceSe
+ lectionPage.class
+SHA-256-Digest: QHlVVQfGFSD+1EqtDCcEhOiM/QMmburBS4Ln6AuH7QY=
+
+Name: org/eclipse/team/ui/TeamOperation.class
+SHA-256-Digest: Wu5F8qjsxeGd0LPXtfPWAsUL2UYGtD3MsJqJ4I3HgV4=
+
+Name: org/eclipse/team/internal/ui/synchronize/patch/ApplyPatchSynchro
+ nizationActionProvider$2.class
+SHA-256-Digest: s2Mka1gAyhnKrCvQcEbYUdabYRe03mcIQGesNQVuDgQ=
+
+Name: org/eclipse/team/internal/ui/synchronize/SaveablesCompareEditorI
+ nput$9.class
+SHA-256-Digest: zXS85HEbbYLrmlTFTvc/DRrgYVdo1ouen+W4k1wsZeE=
+
+Name: org/eclipse/team/internal/ui/preferences/TextPreferencePage$File
+ nameValidator.class
+SHA-256-Digest: 0KH8Hh5ForWxrhp6gGNeoQM3FjL6vJwCCjUU8TyTYRM=
+
+Name: icons/full/dlcl16/catchuprelease_rls@2x.png
+SHA-256-Digest: sG3nr7XtqR6cuMS+Dx4ahyoqggX6s9LtXGroYSRRn3w=
+
+Name: org/eclipse/team/internal/ui/synchronize/patch/PatchWorkbenchLab
+ elProvider.class
+SHA-256-Digest: wgXDG0A8xGmg1U3PLKmb1FaB8+xUnrqeicAcYNdZ51E=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/RemoveSynchroni
+ zeParticipantAction.class
+SHA-256-Digest: MmnU3CUhN6gTpf4tdSg9ChhVxPzd427mukqPW54fMXQ=
+
+Name: icons/full/elcl16/release_rls.png
+SHA-256-Digest: 9F9M/aykBwVHAUVgmnXf9d8L5owlXxsLRD28uZlA3ss=
+
+Name: org/eclipse/team/internal/ui/synchronize/SaveablesCompareEditorI
+ nput$InternalResourceSaveableComparison.class
+SHA-256-Digest: w9O4VPEsBARmAVi/m68nZkz4qBK32lnEEn7oEFaxC0s=
+
+Name: icons/full/ovr/pinned_ovr@2x.png
+SHA-256-Digest: LAesliVsQ6SORgzvVtga/686yfq8w9WHTAojAsVTC+U=
+
+Name: org/eclipse/team/internal/ui/mapping/ResourceModelContentProvide
+ r$4.class
+SHA-256-Digest: MJ+aPiowjkveMAtx2yDrVV8NIJ8NMvmvu1n+XAY41DI=
+
+Name: org/eclipse/team/ui/synchronize/ParticipantPageCompareEditorInpu
+ t$1.class
+SHA-256-Digest: s9np0vSEWdREzKyST1sQBhIKkOXVacd8lyJ5gkN+CAU=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/ChangeSetAction
+ Group$EditChangeSetAction.class
+SHA-256-Digest: KmEklbQ2YsRDzvxzIErraqt60PgXD1m4jPd2Hrpzgjs=
+
+Name: plugin.xml
+SHA-256-Digest: VBE7JJmYYHnNU5J3TQwFzFa+NX4IGNsyX45uC6e2qfQ=
+
+Name: org/eclipse/team/internal/ui/synchronize/SyncInfoSetChangesSecti
+ on$3.class
+SHA-256-Digest: lXE8riV+wTzxHn1D17QqJar2IkpolNdZOBal+We39mA=
+
+Name: icons/full/obj/changeset_obj.png
+SHA-256-Digest: XTlXkDVPLhJjouQWlpdGebvL1YE8TxAKAXL4yD4fIeg=
+
+Name: org/eclipse/team/internal/ui/dialogs/ResourceMappingSelectionAre
+ a$2.class
+SHA-256-Digest: BVA6RanYkQdhaB8161wE+3bVTZWIOnYUxwgcGlPTwdw=
+
+Name: org/eclipse/team/internal/ui/synchronize/RefreshModelParticipant
+ Job.class
+SHA-256-Digest: QpOtqxhQp5ZA11GMgQLOMxZhgztJN7X8x0eE+9FJtSA=
+
+Name: org/eclipse/team/ui/TeamUI.class
+SHA-256-Digest: bumVIzA6HVWIM2EdeZ+dhmISXxZKP3+bXNSrPriBWa0=
+
+Name: org/eclipse/team/internal/ui/synchronize/GlobalRefreshResourceSe
+ lectionPage$1.class
+SHA-256-Digest: RmkjJlm9jkBwnfnzRNmd/rCLfKoZvpeeV8umL35H34s=
+
+Name: org/eclipse/team/ui/synchronize/AbstractSynchronizeScope$1.class
+SHA-256-Digest: DNXhySz+juL8vKZhzgtEhnOS3xPyslCcUrlhnW69Z54=
+
+Name: org/eclipse/team/internal/ui/synchronize/RefreshParticipantJob$N
+ onblockingProgressMonitor.class
+SHA-256-Digest: gTlK46q0bYV7HRPh9Y8jG85TvV3CmBrgV3+y+RNY2OY=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/NavigateAction.
+ class
+SHA-256-Digest: iZc7Uiw4bRoeLc8ZKZ8f3K0R2weUxn20EzPQm0BGI3E=
+
+Name: org/eclipse/team/ui/synchronize/ModelOperation.class
+SHA-256-Digest: ycrNEwhvtKvmrpFcrzypHjr9JKmk85xtx1jkMf0WDVo=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/SubscriberActio
+ nContribution$1.class
+SHA-256-Digest: GvrqcMLf9//TQPisfkzel2IuZ0NII8iojEgS6ZuEBV0=
+
+Name: org/eclipse/team/internal/ui/synchronize/SynchronizeManager.clas
+ s
+SHA-256-Digest: vLsULOWcJ74xH/GMihIUPkwEKDDISmY5SV8kl5L7i0k=
+
+Name: org/eclipse/team/internal/ui/mapping/DiffTreeChangesSection$6.cl
+ ass
+SHA-256-Digest: R4zyOGkq2n2eInUjdgytawH3MkZJCrshd2CuegoA+6Q=
+
+Name: org/eclipse/team/internal/ui/wizards/ExportProjectSetLocationPag
+ e$3.class
+SHA-256-Digest: 2CIJk3pW24EELr7P0gnDPZFtqHMVNeKfGtemiZFjQ9w=
+
+Name: org/eclipse/team/internal/ui/synchronize/ForwardingChangesSectio
+ n.class
+SHA-256-Digest: kYNvKHmJljMhP5ihn9x3l6mEpNBcvGay1/bhbw/GdPE=
+
+Name: org/eclipse/team/ui/mapping/SynchronizationContentProvider$1.cla
+ ss
+SHA-256-Digest: PIHU4BIGdNhCOVTxLzgyuuGXPNYqrQN6HD2q1oM47Dg=
+
+Name: icons/full/eview16/synch_synch.gif
+SHA-256-Digest: C09/77cOT3JjHyhAd5fo92uVqZqiu/7f04QbE4cN4w4=
+
+Name: org/eclipse/team/internal/ui/synchronize/patch/ApplyPatchSynchro
+ nizationActionProvider$1.class
+SHA-256-Digest: 9qbvt8+iEmuQqLyM4G0/VxXBeWyn2pjhuM3E9neDBsU=
+
+Name: .api_description
+SHA-256-Digest: OGsWyA3/AOphtQ0FTaE32xfcUdPiqKJQQnyUF5/2QbE=
+
+Name: org/eclipse/team/internal/ui/synchronize/TeamSynchronizingPerspe
+ ctive.class
+SHA-256-Digest: 3k6IQkeez0ki9OMO9TD+3n0Pizy7BLa/yD477kz2Vj4=
+
+Name: org/eclipse/team/internal/ui/synchronize/patch/ApplyPatchModelCo
+ mpareEditorInput$2.class
+SHA-256-Digest: kQIIxMLulVZUso86t7/BM+9NORsHUy1R7HsQQOBvoJI=
+
+Name: org/eclipse/team/internal/ui/synchronize/IRefreshable.class
+SHA-256-Digest: K0NICc9zcgUwyyuviZdOdr3TqXE54RvPnbWF6QLmyFw=
+
+Name: org/eclipse/team/internal/ui/synchronize/ActiveChangeSetCollecto
+ r.class
+SHA-256-Digest: SWmGJYs+FzUmJAqg8tdjUzHPGsyjq0774Y07qGR8PUA=
+
+Name: org/eclipse/team/internal/ui/synchronize/SyncInfoModelElement.cl
+ ass
+SHA-256-Digest: gG3dCZMXBDZvBx50AL+/LHOoEVtAcn/St2U9Xk0uq8I=
+
+Name: icons/full/elcl16/newstream_wiz@2x.png
+SHA-256-Digest: pLaimxYY5h3VwDlsi4d2oNuDoQonG34XySZ7YaHNpIs=
+
+Name: icons/full/dlcl16/incom_synch@2x.png
+SHA-256-Digest: INfoR4a3/PgIFk6flcBsTEJor9y3WPoD1F+YsnwTIgg=
+
+Name: org/eclipse/team/internal/ui/dialogs/PreferencePageContainerDial
+ og$3.class
+SHA-256-Digest: NAtjzkNofbzsa7owvGSUnd++AYLQMgS9LWSu6vq0WBI=
+
+Name: org/eclipse/team/ui/synchronize/SaveableCompareEditorInput$Inter
+ nalResourceSaveableComparison.class
+SHA-256-Digest: /DrFnQJOEQZ1i0IdEF05JouITaYYiRXDBXiQAJgjCUY=
+
+Name: org/eclipse/team/internal/ui/synchronize/AbstractSynchronizePage
+ $ModeFilterActions.class
+SHA-256-Digest: GNwIoiCCKzVM3jVIRRvNwRka8i256dtAoidmwKOSzus=
+
+Name: org/eclipse/team/internal/ui/wizards/ConfigureProjectWizard$Resi
+ zeWizardDialog.class
+SHA-256-Digest: DcK7hvDs3E2WkaL6Ul4mosqARHZcxJLspC9HzgSRMQ8=
+
+Name: org/eclipse/team/internal/ui/synchronize/RefreshSubscriberPartic
+ ipantJob.class
+SHA-256-Digest: CvKdZaU2P3+NwwS/BnEa1HDo8pIvJVq/9HiS5sCWCS8=
+
+Name: org/eclipse/team/internal/ui/SWTUtils$1.class
+SHA-256-Digest: 1nc1LqkkXg4CgAMwJhfKa57K7GrjCdZZcxyfDs/ZfF4=
+
+Name: org/eclipse/team/internal/ui/wizards/PsfUrlStore.class
+SHA-256-Digest: vl1QC6ax6OmEVf6hIT1JdXrjNCbEWPJC+MPreY2La8k=
+
+Name: icons/full/elcl16/collapseall.png
+SHA-256-Digest: PVh4ytv6t/AI8j2Y+4d+gENmGCd4T89fnTB/jp/5Bm0=
+
+Name: org/eclipse/team/ui/mapping/ITeamStateProvider.class
+SHA-256-Digest: bZl5ApHCpRXKAl0+S4PZymzCPI+mt4wyVPFoKEaCz8k=
+
+Name: icons/full/wizban/keylock.png
+SHA-256-Digest: slA8HkufReA36zxGQ4IdkwSgjZ1BcWhTYvjaYrWsbt0=
+
+Name: org/eclipse/team/internal/ui/synchronize/SynchronizePageConfigur
+ ation$6.class
+SHA-256-Digest: r3AK3Rq9+IwRHCjVxFWSAZDjcFe3crMpRWWR6VmmKyk=
+
+Name: org/eclipse/team/internal/ui/mapping/ModelSelectionDropDownActio
+ n$3.class
+SHA-256-Digest: eq3OFQ53l//ZjrYkoPQr3jPIzCXqLZKULNMAbKsgm7k=
+
+Name: org/eclipse/team/internal/ui/history/GenericHistoryView$Navigati
+ onHistory.class
+SHA-256-Digest: d2ou3NH4JxXFvqHgZCkC4BW1QGlB7Xw5NEkqrTYFU+k=
+
+Name: org/eclipse/team/internal/ui/synchronize/patch/PatchWorkspace.cl
+ ass
+SHA-256-Digest: eJl4QjMeLj9V54+AZReB7yMLV7+ldTk7Eyrd1VA4CAo=
+
+Name: org/eclipse/team/internal/ui/mapping/BuildScopeOperation.class
+SHA-256-Digest: J6AZJAF2mxhQUhDJVTHaPUVebPckPatCdc0bN631DhA=
+
+Name: org/eclipse/team/ui/mapping/SaveableComparison$1.class
+SHA-256-Digest: hCNnbYWvIk/5sfIEcvAa0WY//4D1WPLZfhdjTGasw5E=
+
+Name: org/eclipse/team/internal/ui/synchronize/StructuredViewerAdvisor
+ $3.class
+SHA-256-Digest: Q0m9daP8/e5aCpVh8wneJCOHJyIWlG/xQl6O3kyJcZE=
+
+Name: org/eclipse/team/internal/ui/synchronize/DialogSynchronizePageSi
+ te$1.class
+SHA-256-Digest: i0U9xekbClagxDi+afM9Ga3e9/YnrDL+YhjUgThquO8=
+
+Name: org/eclipse/team/internal/ui/actions/TeamAction$1.class
+SHA-256-Digest: Ps0KZe4wzuvHBzwoAAhcjZevKrtTa2EYGbC9SSpKr8c=
+
+Name: org/eclipse/team/ui/mapping/ISynchronizationCompareAdapter.class
+SHA-256-Digest: N9CgNMTCxUZrJQL1SHyu2+WVhWToDM9K0FN8dLL+1XQ=
+
+Name: org/eclipse/team/internal/ui/synchronize/patch/ApplyPatchModelCo
+ mpareEditorInput.class
+SHA-256-Digest: nooLGR1OQJf0J32lGbhFIiHg+1HHa+lFFrrUSh79+uw=
+
+Name: org/eclipse/team/internal/ui/synchronize/ConfigureRefreshSchedul
+ eDialog$1.class
+SHA-256-Digest: SKKylf1jTE+qAcBm3/xMO+pNy9c4IoY/jTEXSyKx3Q4=
+
+Name: org/eclipse/team/ui/synchronize/ISynchronizeParticipant.class
+SHA-256-Digest: 8nBv3N8bdST+Df7766LkuQeNqFfquaM01Bi+CmXBuwk=
+
+Name: org/eclipse/team/ui/synchronize/SyncInfoCompareInput$MyDiffNode.
+ class
+SHA-256-Digest: 7Z3IvgOmMlIH/yp9yMx7poNlW4VMPAqGjb1hxIlWFzQ=
+
+Name: org/eclipse/team/internal/ui/synchronize/UnchangedResourceModelE
+ lement.class
+SHA-256-Digest: IY3UHCcJgLNdCQMt5WLeymURkj0KAIycD1OL312dwsQ=
+
+Name: org/eclipse/team/internal/ui/mapping/ModelCompareEditorInput$6.c
+ lass
+SHA-256-Digest: sccZ0lg8l2KF/2z25SQjLGpV3xtEQZcCoCFRjKdvwjg=
+
+Name: org/eclipse/team/internal/ui/mapping/ResourceMarkAsMergedHandler
+ $1$1.class
+SHA-256-Digest: 2cIKDC0lIsBpBiWV819jTpdNuIMrw8EG+uQKltug4mc=
+
+Name: org/eclipse/team/ui/synchronize/SynchronizeModelAction.class
+SHA-256-Digest: dyWflkdHEYqxuWc4BGDGNB14lgmKGPp+BdeLY+ZHtn4=
+
+Name: org/eclipse/team/internal/ui/synchronize/ForwardingChangesSectio
+ n$3.class
+SHA-256-Digest: QpLR7F9HEiciQLWvqZx+wUVohO5cmL2yRFqO73a16H8=
+
+Name: org/eclipse/team/internal/ui/synchronize/SynchronizeView$4.class
+SHA-256-Digest: pT/fZPj1ntKsiLn1Lc5M+p5pMzNvtb8tMlXnaeytUW8=
+
+Name: org/eclipse/team/internal/ui/mapping/ResourceMarkAsMergedHandler
+ $1.class
+SHA-256-Digest: z5eQpg+zS9yctTuYQlj2guiIUzQoyXiD/RLl4z78Cr8=
+
+Name: org/eclipse/team/ui/synchronize/ISynchronizeParticipantListener.
+ class
+SHA-256-Digest: 3OVStT3X3wArtHnyLr4c9ONGDKJ60BkHhV4/XbbnQsI=
+
+Name: org/eclipse/team/internal/ui/preferences/TextPreferencePage$4.cl
+ ass
+SHA-256-Digest: 2G4yK3niM8+3/eXIqwgxlA+3PgrBFeManA6OjguelSE=
+
+Name: org/eclipse/team/internal/ui/wizards/GlobalRefreshWizardSelectio
+ nPage$MyContentProvider.class
+SHA-256-Digest: 80zS79hniTPGZEbN5E7izBWsP3/bPiT27ICQlnq7iBo=
+
+Name: org/eclipse/team/internal/ui/synchronize/ChangeSetDiffNode.class
+SHA-256-Digest: 396F8npGI9fQKEQXifofR/a6mbT6XSvQmJzeBhhc1lo=
+
+Name: icons/full/ovr/error_co@2x.png
+SHA-256-Digest: 9O9XABGHlvSbnWFv5g6Jk0QXvPEaVMi3hxmIQbJCHlc=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/GlobalRefreshAc
+ tion$3.class
+SHA-256-Digest: lu0nVjQxPTIMQX5GTUgFHMC8cgUoE2Xx08jahMbXDeU=
+
+Name: org/eclipse/team/internal/ui/history/GenericHistoryView$Navigati
+ onHistoryAction.class
+SHA-256-Digest: 1hCbiWCjdUtftcOwRzZq9kJW97gqx6yslKHxKHm9buM=
+
+Name: icons/full/obj/import_projectset.png
+SHA-256-Digest: +CAKGkRXWJMnqefmKJEjqdnzf+B8DRts2YzMOzNgzrs=
+
+Name: org/eclipse/team/ui/synchronize/ParticipantPageSaveablePart$1.cl
+ ass
+SHA-256-Digest: xOEwFomLMxm1owrg9eh/+fn6OMRD0JdWbs+p7ONOdOE=
+
+Name: org/eclipse/team/internal/ui/history/GenericHistoryView$Navigati
+ onHistoryAction$1.class
+SHA-256-Digest: nKs0bqOGZIMksJqsieQGGJLUkqkBw3MfzhMomRnG5zc=
+
+Name: org/eclipse/team/internal/ui/mapping/ResourceMarkAsMergedHandler
+ .class
+SHA-256-Digest: /d2bcO5gDvUDK8/yDmmTKxfq7wPzjLQuWlEfA5aDuvg=
+
+Name: org/eclipse/team/internal/ui/mapping/ResourceModelContentProvide
+ r$1.class
+SHA-256-Digest: 41IO79c6odcAwAO9mpWWp+w06q42F338Kn+dD69rc0s=
+
+Name: org/eclipse/team/ui/history/RevisionAnnotationController.class
+SHA-256-Digest: V8A1JGNXnA4ExvjvAumYFrmirtw4RLzOoICuRvIqydw=
+
+Name: org/eclipse/team/internal/ui/synchronize/CompressedFoldersModelP
+ rovider$CompressedFolderDiffNode.class
+SHA-256-Digest: EqbxCipk6WdUZR8YW2nVGV9rN2pubnrjclEEBxrH3L0=
+
+Name: org/eclipse/team/internal/ui/preferences/TextPreferencePage$Exte
+ nsionValidator.class
+SHA-256-Digest: ipsyNbFNwK722H3OGJLn9fPPwnDjCAiSglma7f7Kla8=
+
+Name: org/eclipse/team/internal/ui/synchronize/RefreshUserNotification
+ PolicyInModalDialog.class
+SHA-256-Digest: 50RVcG3alXceefois3Umd1d/4ICkty52sHOALVDnUjo=
+
+Name: org/eclipse/team/internal/ui/synchronize/CompositeModelProvider.
+ class
+SHA-256-Digest: z/wg1nOg8gf7GwM+gbjhvaYr0oxlNXo/Dcs16YdTjX0=
+
+Name: org/eclipse/team/internal/ui/history/ReplaceLocalHistory$2.class
+SHA-256-Digest: ujXDfuf8Fss1gRVkQgi0uPtLMxJCJcpke7Mnm9i5Y7I=
+
+Name: org/eclipse/team/internal/ui/synchronize/SynchronizePageConfigur
+ ation$1.class
+SHA-256-Digest: dDeIvUuBgDU1Yvkp+KN1SGN2RdQcHjxtzw96ziJtspU=
+
+Name: org/eclipse/team/internal/ui/synchronize/SynchronizePageConfigur
+ ation$4.class
+SHA-256-Digest: 4CCZqosuEjtWADVGtztTMYy8qgLTI8rhXmU7FRzhV/c=
+
+Name: org/eclipse/team/internal/ui/dialogs/PreferencePageContainerDial
+ og$5.class
+SHA-256-Digest: m7ZfYd4O2HYPQWrG42ZSxsO6H44hdk+1oIN/bbMoQvY=
+
+Name: org/eclipse/team/ui/synchronize/ISynchronizePage.class
+SHA-256-Digest: jv1i9UjuYuHF8Oz5QGgB+zqT+mvcr7LGP/8STh9QXNU=
+
+Name: org/eclipse/team/internal/ui/synchronize/RangeDifferenceComparat
+ or.class
+SHA-256-Digest: zvjdP4+n8PbOXkQAFeSQI69of6ATpXusaBu3TwUJtMs=
+
+Name: org/eclipse/team/internal/ui/synchronize/ActionDelegateWrapper.c
+ lass
+SHA-256-Digest: H8Rc6TybT5bai9OTHZHJWySA9sPqF3mXqyv/+JI56eA=
+
+Name: org/eclipse/team/internal/ui/TeamUIMessages.class
+SHA-256-Digest: 7SYpqQzT8Sd8VDxfT58z0AP8tRTI86HQuzWaKZCGKgs=
+
+Name: org/eclipse/team/internal/ui/wizards/ExportProjectSetMainPage$Pr
+ ojectPage.class
+SHA-256-Digest: Jzq90rxLZLPfULck981kt8wi/X/dUnLEr2d+Hx33C+E=
+
+Name: icons/full/elcl16/newstream_wiz.png
+SHA-256-Digest: ++N7cByJcUJjgBelYQodQ7ErXGR0dE+NGuRWrRACfho=
+
+Name: icons/full/elcl16/conflict_synch.png
+SHA-256-Digest: NHsAL4H79BR9dAxAd6jp8jwWPFr3tGhZRCJ/8CJBqNw=
+
+Name: icons/full/dlcl16/hierarchicalLayout.png
+SHA-256-Digest: eW+qCRZe4PBJSfYFLG7B+T4SXwcnNAspoTVUsFgq8iY=
+
+Name: org/eclipse/team/internal/ui/synchronize/SubscriberRefreshSchedu
+ le.class
+SHA-256-Digest: MmSKCVe1/5PQy7F5TqDIOXAnuhEIMuGVxY4Q3lBiRYE=
+
+Name: org/eclipse/team/internal/ui/synchronize/SynchronizeView$2.class
+SHA-256-Digest: 83VYU88LLfLTt3gjR1R98GejTmVsP7vlZH3fqTS+h8w=
+
+Name: org/eclipse/team/internal/ui/history/FileRevisionEditorInput$1.c
+ lass
+SHA-256-Digest: mS1xHVYstknfdeE19jn4mB4rLQuYNc4n0zjNhLCwZB4=
+
+Name: icons/full/ovr/checkedout_ov@2x.png
+SHA-256-Digest: ShQHWpgM4gt3g3ifGGDFBOooy6a+W/VfetwbxxSKBkM=
+
+Name: org/eclipse/team/internal/ui/synchronize/RefreshParticipantJob$G
+ otoActionWrapper$1.class
+SHA-256-Digest: CCDCvfDluRwXsMonYPwB7t9K6hkeehwZBVzTcWsEMhM=
+
+Name: org/eclipse/team/internal/ui/synchronize/patch/PatchWorkspace$2.
+ class
+SHA-256-Digest: KRo0EtpgqDIbdB1NyH3Npq182NT7+b4RMvPlH5IROhM=
+
+Name: org/eclipse/team/internal/ui/synchronize/DecoratingColorLabelPro
+ vider.class
+SHA-256-Digest: adONJVa94m2savJyVIXYf7j2N8qcXd3vaKZrlSA4U4s=
+
+Name: org/eclipse/team/internal/ui/synchronize/StructuredViewerAdvisor
+ $1.class
+SHA-256-Digest: 8FAEXI5eaXZxaoLgt7HCoGozPHlxizTX/5fqUmqCtXU=
+
+Name: icons/full/dlcl16/participant_rem.png
+SHA-256-Digest: 2JqR40s5SFO2cZpkgyj/4BJLac9L3Hc+gvm5fVA1QvI=
+
+Name: org/eclipse/team/internal/ui/actions/ProgressDialogRunnableConte
+ xt$1.class
+SHA-256-Digest: VoeGMQOeSMdDLZxGDC+lzDyf0xZzMzvv28UAm7mXc78=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/CopyToClipboard
+ Action.class
+SHA-256-Digest: Ln/D5LVwOWBwxpLqW+4xavg8M9cNP5Xb4BnO8U4N/0A=
+
+Name: org/eclipse/team/internal/ui/actions/JobRunnableContext$Resource
+ Job.class
+SHA-256-Digest: 6/j99+AjLaJcN3cKsYHdi88S0OtFBhR7iGI87IGVEpM=
+
+Name: org/eclipse/team/internal/ui/preferences/TextPreferencePage$2.cl
+ ass
+SHA-256-Digest: M9/YUlLKgccMRTndZQiz4G6mTOF7R822kCHpwosQcyo=
+
+Name: org/eclipse/team/internal/ui/history/LocalHistoryTableProvider$L
+ ocalHistoryLabelProvider$1.class
+SHA-256-Digest: m1+8qeNf/4FkOSCEtIf72QCsd4UxnaR9g7ExRZU9XGc=
+
+Name: icons/full/dlcl16/participant_remall.png
+SHA-256-Digest: x3GAGbOvvVsqfBUfEwo/nZHbbUdJJbe/RReLnhJnzHE=
+
+Name: org/eclipse/team/internal/ui/wizards/ImportProjectSetMainPage$5.
+ class
+SHA-256-Digest: 8MVj/dJHxfNhkejSPsnbX7mDdoH1HFtqyUn1yCCJaRw=
+
+Name: icons/full/wizban/share_wizban.png
+SHA-256-Digest: LRG0X0uQkzKFnKuiBmzGhdPolUGHsv8uDauK2MWnkQ8=
+
+Name: org/eclipse/team/internal/ui/mapping/ModelEnablementPreferencePa
+ ge.class
+SHA-256-Digest: cKINuayIZySFI7kbviJS2+S4eukpMQlrwH4zW72oi9U=
+
+Name: org/eclipse/team/internal/ui/registry/TeamDecoratorManager.class
+SHA-256-Digest: LIotlxuDa4B6KgH8lVoTZomAJY9XarlFrydiGKMUxl4=
+
+Name: icons/full/eview16/history_view.gif
+SHA-256-Digest: dPuOWawmPlVY5DHMBrIkDPvwUezrP84RJKp4KnfKaa4=
+
+Name: org/eclipse/team/internal/ui/synchronize/patch/PatchModelProvide
+ r.class
+SHA-256-Digest: Owf8CXv/9EQt585nRhzq9N1lL8FNll9PLurv1stAK88=
+
+Name: org/eclipse/team/internal/ui/history/LocalHistoryPage$LocalFileH
+ istoryTableProvider.class
+SHA-256-Digest: x6KtHBBvgkne7aO1Pw1fDAwk28aTeb61gwHjos0qUfw=
+
+Name: org/eclipse/team/internal/ui/DefaultUIFileModificationValidator.
+ class
+SHA-256-Digest: JX3APVr7fl8w1sR58beabJNWDCHi5b2iMi1ZPX7CHo4=
+
+Name: org/eclipse/team/internal/ui/history/CompareFileRevisionEditorIn
+ put$1.class
+SHA-256-Digest: XhZ1yIdbd6gvxUn5sPIMPi8xsBx8aDxjE+yu37VtgaE=
+
+Name: org/eclipse/team/internal/ui/registry/SynchronizeParticipantRegi
+ stry.class
+SHA-256-Digest: k8Jvqej4t8CPAY+9senkHmTp6Dk+VQlAndpT9KJiVQA=
+
+Name: org/eclipse/team/internal/ui/synchronize/ChangeSetModelSorter.cl
+ ass
+SHA-256-Digest: 6Ejqqe8XTUOrTqVxbZr/3rem4FTDKBySBdUDwXP2PfU=
+
+Name: org/eclipse/team/internal/ui/mapping/ModelCompareEditorInput$4.c
+ lass
+SHA-256-Digest: RdPQzdhggeOv9jiGs3Fzf1V6YvdlAMF1UhK2Qbvfo68=
+
+Name: org/eclipse/team/internal/ui/mapping/ModelCompareEditorInput$1.c
+ lass
+SHA-256-Digest: F+cpGPXaiJrtSchs5qFHDafpgC0ZIQwIlEu72BLPq7g=
+
+Name: org/eclipse/team/internal/ui/preferences/FileTypeTable$Name.clas
+ s
+SHA-256-Digest: pbg0eAepx9ejTSThtSYPmiwggHOBPDHS5pXCO1IAGvc=
+
+Name: org/eclipse/team/internal/ui/synchronize/DialogSynchronizePageSi
+ te.class
+SHA-256-Digest: VdtYUpLwPT/YJ+HrB+a8ZmaHqt6OiOUNxQWOp9RqGi8=
+
+Name: icons/full/elcl16/rem_co@2x.png
+SHA-256-Digest: 9HM8FRv6ZUhG6baVu4Qs9G4xmBXenLNTUGKubulwGyo=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/GlobalRefreshAc
+ tion$1.class
+SHA-256-Digest: uo1IoEEPQlWWEmNAefYVpEUv6yYRVx32SHxWW5MfAwA=
+
+Name: org/eclipse/team/internal/ui/wizards/ExportProjectSetLocationPag
+ e$WorkspaceDialog$2.class
+SHA-256-Digest: uo2BaMn0qhdZBkQ/XCGrZVD73V/O4fa2PWNqr9Q794Q=
+
+Name: org/eclipse/team/internal/ui/synchronize/RefreshParticipantJob.c
+ lass
+SHA-256-Digest: w/EDOMsLD7k/tpzvpTiSIVOFFvG1++MHj3dSzIDSEFA=
+
+Name: icons/full/dlcl16/refresh@2x.png
+SHA-256-Digest: PRSYFRyMIJet4gIFDxKZeRkQY1x0kK3VG9e7Z2yfvSs=
+
+Name: org/eclipse/team/internal/ui/wizards/ExportProjectSetMainPage$IE
+ xportProjectSetPage.class
+SHA-256-Digest: xnzBDFyuGjzSraT+9g8xN0O2bfoK3In2Na2w4rTnRAs=
+
+Name: org/eclipse/team/internal/ui/DefaultUIFileModificationValidator$
+ 2.class
+SHA-256-Digest: FA+OSkOJzc+uCXkmQMh79Nhlc93jcTkJIfLU5MYckSU=
+
+Name: org/eclipse/team/internal/ui/mapping/ResourceMappingLabelProvide
+ r.class
+SHA-256-Digest: nJuVKsNLWZykow4+wXRmkM+WRre1pBvO9JOE/hqJ+yI=
+
+Name: org/eclipse/team/internal/ui/mapping/MergeAllActionHandler.class
+SHA-256-Digest: OGN7nhqZ72xpAu9hUPU1R0Km8cDOI6WxG+6HaIFukEU=
+
+Name: org/eclipse/team/internal/ui/synchronize/HierarchicalModelManage
+ r.class
+SHA-256-Digest: N1VqT2kyoiQSzp/UKs53i41jAGppTIYiGwKQ1Pcn4/U=
+
+Name: org/eclipse/team/internal/ui/synchronize/ISynchronizeModelProvid
+ erDescriptor.class
+SHA-256-Digest: 7CuDddx2SOdBs1zgkgdX4gUXShtB3qqXAsoP/TP7xdE=
+
+Name: org/eclipse/team/internal/ui/mapping/DiffTreeChangesSection$9.cl
+ ass
+SHA-256-Digest: NtTtfhY7mao/n2mNTQtfG2Yfc0pVf3t7l4VkUyX6rsw=
+
+Name: org/eclipse/team/internal/ui/history/LocalHistoryPage$HistoryRes
+ ourceListener$1.class
+SHA-256-Digest: bXHQwyVOYu7GL2QhfNV1dki27RGR0TSGChyKb+onnRk=
+
+Name: org/eclipse/team/internal/ui/synchronize/patch/ApplyPatchModelSy
+ nchronizeParticipant.class
+SHA-256-Digest: Paftn3moD2gEfJwTb7xaEpMIv/e9byYzm+uwuofT89k=
+
+Name: icons/full/obj/resource_model.png
+SHA-256-Digest: BPKC3sVaM9U+jUYen6J3wvstWQgEXnVLrEiWQJR6G4Q=
+
+Name: icons/full/elcl16/ignorews_edit.png
+SHA-256-Digest: mwJ6p+YaW2tJgQDHQ911sH99kzKlNgP3a6LFJ6EslRc=
+
+Name: org/eclipse/team/ui/synchronize/ModelParticipantAction$1.class
+SHA-256-Digest: 4gstdV+0tS5iKnDkRTOEqeHkqUtLFVZekKZ+C505Sic=
+
+Name: icons/full/elcl16/participant_remall.png
+SHA-256-Digest: dh1EH1Y/84/Udtb3Mw/+05nkNYWuQhCxwpN3wyjq1vU=
+
+Name: org/eclipse/team/internal/ui/synchronize/SynchronizeModelManager
+ $1.class
+SHA-256-Digest: anCZVPGhNAmf60gqtLjqrqhq4NO3psjaKTKTYn1qq4M=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/ChangeSetAction
+ Group$ChangeSetAction.class
+SHA-256-Digest: X/2jCx+8TAExpgVcRT31Jqv0oxjk5krIbgYBQb86Vrs=
+
+Name: org/eclipse/team/internal/ui/wizards/ImportProjectSetMainPage$3.
+ class
+SHA-256-Digest: co9wNrhT1tgkrqLcca4K+myTV8Tntr9ZlJYC47gZwYI=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/RemoveSynchroni
+ zeParticipantAction$3.class
+SHA-256-Digest: JwY8fS6zgeA+YLfhRuslzQQUWUbJ+ZxGzA11aS5OS2s=
+
+Name: org/eclipse/team/internal/ui/Utils$Sorter.class
+SHA-256-Digest: LlzFQ7IzEnTkQ9C2PeU7UVZ4JNWbb2JzagulCBydpJk=
+
+Name: org/eclipse/team/internal/ui/wizards/ExportProjectSetLocationPag
+ e$1.class
+SHA-256-Digest: 54aVqdFo1ZZHpuAM8Sdp9d33MhWcRNXxnnMY3a2HZV0=
+
+Name: org/eclipse/team/internal/ui/history/WorkbenchHistoryPageSite.cl
+ ass
+SHA-256-Digest: /04R3lj+6Y0/VlhxF/UzKqmaIDQpx//S1ZdDz4lKeUw=
+
+Name: org/eclipse/team/internal/ui/mapping/ModelCompareEditorInput.cla
+ ss
+SHA-256-Digest: Bd9B1mmPFoba6rDKVYLPAFcSZrtjV9hDg06y105JEYc=
+
+Name: icons/full/ovr/warning_co.png
+SHA-256-Digest: z3h4d98yksps+UHWzuiucG6ja93Tgo1jC70H2ULCl4w=
+
+Name: icons/full/obj/changeset_obj@2x.png
+SHA-256-Digest: jqhxwYnb+7jSIjZZmBf36kvArzpuBxTB4Tidvk0BbKk=
+
+Name: org/eclipse/team/internal/ui/history/EditionHistoryPage$CompareE
+ ditionAction.class
+SHA-256-Digest: EMLrTyvg8LU4CYHgb9Vsti6h42UcZh72cvFefocnwFQ=
+
+Name: org/eclipse/team/internal/ui/synchronize/RefreshChangeListener.c
+ lass
+SHA-256-Digest: s/seER5XFfRjZ+siIwwABduhwCWYoU7Knc/T6tzVIKI=
+
+Name: org/eclipse/team/ui/synchronize/TeamStateProvider.class
+SHA-256-Digest: xXokHfFDWW3QR1kHCMraB23RbExmqe5XJD1pWh8VJR8=
+
+Name: org/eclipse/team/ui/mapping/SynchronizationOperation$1.class
+SHA-256-Digest: gFQXJyhzBuRtB+pzX3JV7dO6PSp+/2OqtrBW0IVMQPo=
+
+Name: org/eclipse/team/internal/ui/mapping/DiffTreeChangesSection$8.cl
+ ass
+SHA-256-Digest: FOXokAaVdKnMDQDtQlRsG1yBXVUs0n3v0Fl2AnfJkWM=
+
+Name: org/eclipse/team/internal/ui/synchronize/WorkbenchPartSynchroniz
+ ePageSite.class
+SHA-256-Digest: zqybjwEOg5px3k2JDkMKfT60aM/2FLOJMz3UPlyPy0E=
+
+Name: icons/full/obj/export_projectset@2x.png
+SHA-256-Digest: qYugSOp+Uo4AVvQ3C+ZjhCEBjQBocfaKi+DCg74aA30=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/ChangeSetAction
+ Group$ToggleSortOrderAction.class
+SHA-256-Digest: wfHt84RW705m3ErcsQhx7dj1edLHAzVBF/UxKq8gyFg=
+
+Name: org/eclipse/team/internal/ui/actions/OpenRevisionAction$1.class
+SHA-256-Digest: K4ax9eZh/1Z7cFzklLAJ3dIWgEC6S1cmCRKu1MZIgPk=
+
+Name: org/eclipse/team/internal/ui/history/DialogHistoryPageSite.class
+SHA-256-Digest: RvjvBtxqlFU9YhrnaNTMFv1z20Zcvc+ApIRFLpbIOC0=
+
+Name: org/eclipse/team/internal/ui/mapping/ResourceMergeHandler$1$1.cl
+ ass
+SHA-256-Digest: uMkmV/QseLFOzBnhh72NS9EW3K7W8rpjb4ISLHnP/WA=
+
+Name: org/eclipse/team/internal/ui/synchronize/SynchronizeModelElement
+ Sorter.class
+SHA-256-Digest: Z8kz0cUfS2TXLhp77ND/qPAvjVIoyDpExirG5mpsOyA=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/StatusLineContr
+ ibutionGroup$1.class
+SHA-256-Digest: Qz+NTuJI/7EZhz1Qukj/s3HVMehrS1z3WpiNpzEpC1c=
+
+Name: org/eclipse/team/ui/SaveablePartAdapter.class
+SHA-256-Digest: Juf/h2/LLYx28IQ+2RLm96GpmWJHMwCjiUQArl3/Fxg=
+
+Name: org/eclipse/team/internal/ui/mapping/ModelCompareEditorInput$2.c
+ lass
+SHA-256-Digest: 0eSRpgOdw9ssfZXRGoqWYLOKNpVvcBzKrznbTOj7gnw=
+
+Name: org/eclipse/team/ui/synchronize/ISynchronizeParticipantDescripto
+ r.class
+SHA-256-Digest: sy/Eoy61Su8THoDOi4EeT5zuyrENvrtAh/WObqBel3g=
+
+Name: org/eclipse/team/internal/ui/preferences/TextPreferencePage$1.cl
+ ass
+SHA-256-Digest: 6jrzGa4j9COfcCJbDlEcoQpKZp+soIXSjUGK8OXbabs=
+
+Name: org/eclipse/team/internal/ui/synchronize/ActiveChangeSetCollecto
+ r$1$3.class
+SHA-256-Digest: lEe+H2+U+/qBsSWsQMUnmyCUOw0dxrkYQz6SD8qaU6w=
+
+Name: org/eclipse/team/internal/ui/history/OpenLocalFileAction.class
+SHA-256-Digest: 5AXfXF2sxj1vrVImN4oz8U6n5UG+r/vnhgasNEdVG7Q=
+
+Name: org/eclipse/team/internal/ui/history/LocalHistoryPage$3.class
+SHA-256-Digest: dbmhJr0IA+Z1e4xC4crr5E2d/RmOG8bgMVBQXz9VDws=
+
+Name: org/eclipse/team/internal/ui/mapping/CompareInputChangeNotifier$
+ CompareInputConnecton.class
+SHA-256-Digest: R3OrpzwN7RWx9NKQp4/XqTwOHKVVM1pzkeLCig+YBik=
+
+Name: icons/full/ovr/waiting_ovr.png
+SHA-256-Digest: knesu3j5I9a8N42lREQwpGXhVddv6kxuXhyBdQT9/nU=
+
+Name: org/eclipse/team/internal/ui/UIProjectSetSerializationContext.cl
+ ass
+SHA-256-Digest: pxtC5kajIgDtmSNqsGnq4RiyKGJqOw9Fm76rW2o81NY=
+
+Name: org/eclipse/team/internal/ui/mapping/FuzzFactorDialog$1.class
+SHA-256-Digest: CkL6904ZXYomh5USyGEO6e9j3Lc6jzRdawbE0uyi0yM=
+
+Name: org/eclipse/team/internal/ui/synchronize/AbstractTreeViewerAdvis
+ or$1.class
+SHA-256-Digest: /GQPPjt3dMCEtJgmpttJqTFaJ8iXRH9O1e+sSiqgVPI=
+
+Name: org/eclipse/team/internal/ui/synchronize/patch/PatchParsedPage.c
+ lass
+SHA-256-Digest: +f8fZ5p4R4tHUjmo/aUsv8O9eK1+pNwlW12ZQ5SQI7Q=
+
+Name: org/eclipse/team/internal/ui/history/EditionHistoryPage$CompareE
+ ditionsEditorInput.class
+SHA-256-Digest: 8jYxXETK/IJI2Cx8qrf3ck9PuZYs3KiVgZf2Xjj+Zb0=
+
+Name: org/eclipse/team/internal/ui/TeamUIPlugin.class
+SHA-256-Digest: TqBUADcKB9PbJku3X/ZRLuwKXJLz3AAqaNdzU/Gr0ok=
+
+Name: org/eclipse/team/ui/mapping/ITeamContentProviderManager.class
+SHA-256-Digest: jgNp9NLhYoWK4J2grBqgUiXIuvjtzfAlZaxyq8+FT0Q=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/PinParticipantA
+ ction.class
+SHA-256-Digest: hyMnkFQ3N5qcl3NCVWVmUJ2eKr57xUcPondMQPEqtAs=
+
+Name: org/eclipse/team/internal/ui/mapping/ResourceCompareInputChangeN
+ otifier$CompareInputLabelProvider$1.class
+SHA-256-Digest: Z1FfGZz1h5JaEp0D/CJf9yw6M/6/GVTnHYqC5uDYcRI=
+
+Name: icons/full/elcl16/checkout_action@2x.png
+SHA-256-Digest: vu8cB8F3wzVInGcr+y09RfBcaLyKPBaExH2OiWo5AHo=
+
+Name: org/eclipse/team/internal/ui/synchronize/RefreshParticipantJob$N
+ otification.class
+SHA-256-Digest: SS8TrGJoZ+9t/QV/ws1ktS+M1yMHIZDiXfBfKzT6C2o=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/RemoveSynchroni
+ zeParticipantAction$1.class
+SHA-256-Digest: xtLIQW73m+rYS+U1GfdScO3SLaCBwPnDounYc1sPPYo=
+
+Name: org/eclipse/team/internal/ui/history/FileRevisionEditorInput$2.c
+ lass
+SHA-256-Digest: V7YtshzCw88xrE8N1GPiV+BR6AIqrqm+QYX/OenUe/g=
+
+Name: org/eclipse/team/internal/ui/history/LocalHistoryPage$9.class
+SHA-256-Digest: qf1LL0teXkfdMFv01Z/5x3ZA/HwqZ2+aSbdgw2Yy5LI=
+
+Name: org/eclipse/team/internal/ui/mapping/DiffTreeChangesSection$3.cl
+ ass
+SHA-256-Digest: gu9xJyRP6Qrw57cnSylwCDeoW0TfV9VrlsAtW+ee4iU=
+
+Name: icons/full/elcl16/synced.png
+SHA-256-Digest: uJ1edOe1NOyBPLrxEX5Qfy29v8M7WJQEcHZ+xRrVZqE=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/ChangeSetAction
+ Group$3.class
+SHA-256-Digest: EcTNd2E+b4CX/VZAlclEu4ETBZbP/7NqH2fM/UealWA=
+
+Name: org/eclipse/team/internal/ui/mapping/MergeAllActionHandler$1.cla
+ ss
+SHA-256-Digest: DecLHqgBvfJkODsoc5e7VXtp9ZU4BWuTC3+evMbSiVk=
+
+Name: org/eclipse/team/internal/ui/TeamUIPlugin$1.class
+SHA-256-Digest: Y9c897AHTJbGjUPb99CcRjHbM1daVO/Lr+jnI/d69G0=
+
+Name: org/eclipse/team/internal/ui/history/LocalHistoryPage$10.class
+SHA-256-Digest: NI0fLL/GADx69NwiGQYzu+oQGzPRYu/NudKsC+O0xUQ=
+
+Name: icons/full/dlcl16/refresh_remote@2x.png
+SHA-256-Digest: pn70Wv7IoIaDMLx8OexArAIrkLICJ0JkcI9oSAVcrQk=
+
+Name: org/eclipse/team/internal/ui/TeamCapabilityHelper$1.class
+SHA-256-Digest: DGlsziYiFKEzRi+7Ol5tWCeE+6S5hbF/7kP3S9r/2u0=
+
+Name: org/eclipse/team/internal/ui/preferences/IgnorePreferencePage$2.
+ class
+SHA-256-Digest: JZGQP+XCzRDrxq8hE0ADn47fbyPMiWs19x6auvXwKf8=
+
+Name: org/eclipse/team/internal/ui/mapping/FuzzFactorDialog$2.class
+SHA-256-Digest: vHz7+tcajXFCEy22GG6p3mejINtFw0+uXs+YWpwdg8E=
+
+Name: org/eclipse/team/internal/ui/synchronize/RefreshUserNotification
+ PolicyInModalDialog$1.class
+SHA-256-Digest: x13MmjmEuCRWRadk0ft5O6xAY6/vW43uXQrSEQxMSlE=
+
+Name: org/eclipse/team/internal/ui/history/LocalHistoryPage.class
+SHA-256-Digest: MYUchFFeoI31NpDVYS7F49zkXIOczAenXyamxQhCW54=
+
+Name: icons/full/dlcl16/site_element@2x.png
+SHA-256-Digest: 443mO9urSuGMNfMAAxEBCS7rBgGIaUJ3EflsKU9vUS4=
+
+Name: org/eclipse/team/internal/ui/synchronize/SubscriberParticipantPa
+ ge.class
+SHA-256-Digest: AuTiWMDHEUpLkpqi7+HVon2u/esRMF1Chb47zTWmxAw=
+
+Name: org/eclipse/team/internal/ui/history/LocalHistoryPage$2.class
+SHA-256-Digest: Wix0yr5VXM++gCkbsz59TwqRwx8mNgxR/hg85B4vvMc=
+
+Name: org/eclipse/team/internal/ui/mapping/MergeAction$1.class
+SHA-256-Digest: aT535wUv2/tkAZb0plNSB+dFE4dhWOzQrewkl5Sh8/4=
+
+Name: icons/full/eview16/synch_synch@2x.png
+SHA-256-Digest: gI7ixm2N/oxgnmBY//0bAEQ+F8pGVhYRzgoRajsruxY=
+
+Name: org/eclipse/team/internal/ui/synchronize/AbstractSynchronizeMode
+ lProvider.class
+SHA-256-Digest: xXFW4eyAiOGbL+79ql76RXuYb1c0BYjJ11yCZJX8pkc=
+
+Name: org/eclipse/team/internal/ui/registry/RegistryReader$2.class
+SHA-256-Digest: HYOqiSdlNDKyZIWqjRTgYUlmMMxp9+Jlw3mPpTebwZg=
+
+Name: org/eclipse/team/internal/ui/wizards/ConfigurationWizardElement.
+ class
+SHA-256-Digest: e7TUxYouoTO4RivHvlsc43b+qYXtORcdH1dsWwa/EQA=
+
+Name: org/eclipse/team/internal/ui/wizards/ExportProjectSetLocationPag
+ e$6.class
+SHA-256-Digest: thbed1zL4/4nAbCBs1dLLtDkiixItIUX1b/J1hXjAB4=
+
+Name: org/eclipse/team/internal/ui/mapping/ResourceMergeActionHandler$
+ 1.class
+SHA-256-Digest: KIoHQvxHdGDt9FoBojei/tVkO52UUk/0yLkJe60sRS4=
+
+Name: org/eclipse/team/internal/ui/synchronize/patch/ApplyPatchSynchro
+ nizationWizard$1.class
+SHA-256-Digest: 7yHu4JCpv61qqoCWO/+uux68mUr76VNtnqjsyPWgxXE=
+
+Name: org/eclipse/team/internal/ui/actions/CompareRevisionAction.class
+SHA-256-Digest: nkn8fGpe+egrAvrKKqoG+15OLvR1E6uxZi8OPoZDkBY=
+
+Name: org/eclipse/team/internal/ui/history/ReplaceLocalHistory.class
+SHA-256-Digest: 6iRGppFQqgTK29GUAezVa0cHXQ1Sx7hZi7xvFH7Tezk=
+
+Name: org/eclipse/team/internal/ui/history/LocalHistoryPage$8.class
+SHA-256-Digest: 2PPLmSRJtF7Na2PGYzC+tmbUeFrxEFQ5WCojfiiaXrk=
+
+Name: icons/full/dlcl16/checkout_action.png
+SHA-256-Digest: NXOGgwbNYeDRhpIq4iGit/VTBReAcy1U1ulcWU0py1M=
+
+Name: org/eclipse/team/internal/ui/synchronize/DiffNodeWorkbenchAdapte
+ r.class
+SHA-256-Digest: Dqap0tf/mg+FSQrNY5WEkybzaXiVuhxG93jnAV7j1zk=
+
+Name: org/eclipse/team/internal/ui/synchronize/ActiveChangeSetCollecto
+ r$1$4.class
+SHA-256-Digest: Kv96M/8eGRH11yvXvrRDu7oN+1B4pDOrWYqm7Jkoys8=
+
+Name: org/eclipse/team/internal/ui/wizards/ImportProjectSetMainPage$1.
+ class
+SHA-256-Digest: zz08lckJNUKpvCs2xjnPiXKmTiL2/00c+M4+ZLJrtyo=
+
+Name: org/eclipse/team/ui/PageSaveablePart$4$1.class
+SHA-256-Digest: qQdvDejnT3l3QE/4+pHBhBrMfNTXqfdkAwjhyyX2Z5o=
+
+Name: org/eclipse/team/internal/ui/Utils.class
+SHA-256-Digest: yc26l358puZDWwTjDpJ3bGscc9rKYdgVj3lUOT+d0uw=
+
+Name: org/eclipse/team/internal/ui/synchronize/RemoteResourceTypedElem
+ ent.class
+SHA-256-Digest: sYGpsA9KrgSBTRJdt4RLtS9RQ1+I8I4IVzseI3bVahw=
+
+Name: org/eclipse/team/internal/ui/mapping/CompareInputChangeNotifier.
+ class
+SHA-256-Digest: LFAlOds89fUrsIgYsII047EWwIfULRg7mswFYH1SM6k=
+
+Name: org/eclipse/team/internal/ui/wizards/ExportProjectSetLocationPag
+ e$5.class
+SHA-256-Digest: vccxHF54uTB1hA3zlRR74izwnXruQj0eU9v3NErmnQU=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/StatusLineCLabe
+ lContribution.class
+SHA-256-Digest: Rx3ahgf2+dm/Lix3xYlb5cB7QKt760Ki+PZtXtdlTP4=
+
+Name: icons/full/wizban/keylock@2x.png
+SHA-256-Digest: blueM10Vs/S8AigpEuZG1tpR1pEhU7++/nTkhKYO9jA=
+
+Name: org/eclipse/team/ui/synchronize/ModelSynchronizeParticipantActio
+ nGroup.class
+SHA-256-Digest: 5GaawQQwF3230wD/7Cd5JZfzGPEjBufZPN/KmoFIjJM=
+
+Name: org/eclipse/team/internal/ui/synchronize/patch/PatchedFileVarian
+ t.class
+SHA-256-Digest: SnP+nBToAMNByT7n+xbTf/k/GDMSPSkkpCwwIx5LMTQ=
+
+Name: org/eclipse/team/internal/ui/TeamAdapterFactory.class
+SHA-256-Digest: 6MfGVg6loHHltVwuX/3oOrfqj5qtYJUBSEgMdlYFDXg=
+
+Name: org/eclipse/team/internal/ui/wizards/WorkingSetsDialog$WorkingSe
+ tLabelProvider.class
+SHA-256-Digest: tksAB33uhZjvOaZtj0eSvdd90DAR3MylLFPzTIwOykk=
+
+Name: org/eclipse/team/internal/ui/history/LocalHistoryTableProvider$H
+ istoryComparator.class
+SHA-256-Digest: YP4aehMrt+7jR2+vOh+KAjJgkvZHsfC41D2ude0PiUc=
+
+Name: org/eclipse/team/internal/ui/preferences/IgnorePreferencePage$1.
+ class
+SHA-256-Digest: Ac6LdQlDJ1StrMEQdI0ZNphkP8N6Pfd6Gcg6NM05He4=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/ChangeSetAction
+ Group$CreateChangeSetAction$1.class
+SHA-256-Digest: 6MgUtIA1J15ln78iAuDmxLs/ShocdeWYPkqiKh0gsFo=
+
+Name: icons/full/dlcl16/collapseall@2x.png
+SHA-256-Digest: DBCG6xcuxhYA8155H4NPYkw6IFzg069OB+5RbKtJHVs=
+
+Name: icons/full/wizban/import_projectset_wizban@2x.png
+SHA-256-Digest: j1xz+IjcYSytQm9oZeaIMAveeDba475yfN/JO0VL+/Y=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/OpenInCompareAc
+ tion.class
+SHA-256-Digest: ZZ+cJdySpVM4p2ByTLum/sX3H1pZNC+f4j0Qs9yE6Tk=
+
+Name: org/eclipse/team/internal/ui/history/LocalHistoryPage$7.class
+SHA-256-Digest: mNgNTj0HeTl6fDrZb0QNBf9Srs886usbekkispR6HZ4=
+
+Name: org/eclipse/team/internal/ui/preferences/TextPreferencePage$5.cl
+ ass
+SHA-256-Digest: oqa1v3m/d6gWbVrjUPyKTTsdOBM02s9xWC6+8noXXb8=
+
+Name: org/eclipse/team/internal/ui/mapping/ResourceMergeActionHandler$
+ 2.class
+SHA-256-Digest: pslsBJ088/Lo5rODmiV/mvBpiFE6G4DWSFC4JC4P99c=
+
+Name: icons/full/dlcl16/catchuprelease_rls.png
+SHA-256-Digest: jHguzckK1Kn8a+Cd/hj6tuBy/XN2toy8FVNopsl9az8=
+
+Name: icons/full/obj/export_projectset.png
+SHA-256-Digest: wdf+h2FQ9yAYesX1aNKVp9pabot56x5YQcbCA8MrT8U=
+
+Name: org/eclipse/team/internal/ui/synchronize/StructuredViewerAdvisor
+ $4.class
+SHA-256-Digest: Fa7Ezgr9ra/3ASifEZvoLEzTF5Eg5RFQ23eMnAL1wR0=
+
+Name: org/eclipse/team/internal/ui/mapping/DiffTreeChangesSection$4.cl
+ ass
+SHA-256-Digest: o0HA4YtOHzC69Vc2U7gIHab4AbXuNOK/Q9zvEj980lk=
+
+Name: org/eclipse/team/ui/IConfigurationWizard.class
+SHA-256-Digest: MJ79/vBeoazarwQ9zY1c570+LtqkYbPnVVLpSqdSSbY=
+
+Name: plugin.properties
+SHA-256-Digest: MdzBAas8wCuSEXHneEeSOkt2YK8L941pJjL0OkWNMQ4=
+
+Name: org/eclipse/team/internal/ui/IHelpContextIds.class
+SHA-256-Digest: mgvO2xpgGbcKAiqF61bLC4jhlyjd1Vf9Fc8EITRIfNc=
+
+Name: org/eclipse/team/internal/ui/dialogs/PreferencePageContainerDial
+ og$2.class
+SHA-256-Digest: pAxryrumfrcDXX+VgNjfXQdyAu7JZbpxhQSDgZlGOyI=
+
+Name: org/eclipse/team/internal/ui/dialogs/ResourceMappingSelectionAre
+ a$3.class
+SHA-256-Digest: E1N/ormNyxhtu7vRFMlzaE2jFep+jZY1T3QkBm5Hwn0=
+
+Name: icons/full/dlcl16/newstream_wiz@2x.png
+SHA-256-Digest: dQ6w9LV8Ehl+XeVZiu6fXfnZlpjJXPoKPEcV/lwPNGo=
+
+Name: org/eclipse/team/internal/ui/preferences/IgnorePreferencePage$3.
+ class
+SHA-256-Digest: NDuMSKx3m1HyUeV9QMNVALBs5OwmzYc3A81cXVc0cys=
+
+Name: org/eclipse/team/internal/ui/synchronize/StructuredViewerAdvisor
+ $7.class
+SHA-256-Digest: 0axgwVMwhWaRkcv/xZu2YbSk+Jvhiqwfqp7AZ41QxpY=
+
+Name: org/eclipse/team/internal/ui/synchronize/HierarchicalModelProvid
+ er$HierarchicalModelProviderDescriptor.class
+SHA-256-Digest: /z/9wQoXXgUV5SDQy4v39VNupVqkNbCooMA2YUN/bV0=
+
+Name: org/eclipse/team/internal/ui/synchronize/ConfigureSynchronizeSch
+ eduleComposite.class
+SHA-256-Digest: Uzqx7AdlQ9YhjbLcTGC6nHsLh9S4BfnRVLkgEqySAFc=
+
+Name: org/eclipse/team/internal/ui/preferences/FileTypeTable$Extension
+ .class
+SHA-256-Digest: wLo0fAJzCt5MRqHBkOW9qLx9RkW5oVAJZ0hYtYVpVko=
+
+Name: icons/full/obj/hunk_obj.png
+SHA-256-Digest: iVlNn7s9r0d3tbeFCFJs2uTfJGamibeTh9rM8I0l/eg=
+
+Name: org/eclipse/team/internal/ui/synchronize/ForwardingChangesSectio
+ n$1.class
+SHA-256-Digest: hQZir14Wr3QTaVmt99G3LFL7rQM3IlSUX+otxM2VjUw=
+
+Name: org/eclipse/team/internal/ui/synchronize/SynchronizeModelUpdateH
+ andler$4$1.class
+SHA-256-Digest: XTarfq1XPuqd1PgWw6OON2IW8HgwY5qBlemPVYwKs6U=
+
+Name: org/eclipse/team/internal/ui/synchronize/patch/HunkResourceMappi
+ ng.class
+SHA-256-Digest: neZTe/pz7S8xBQ3Yn5THDZddhfFxBMhnaUmmXljFScE=
+
+Name: org/eclipse/team/internal/ui/synchronize/IRefreshSubscriberListe
+ ner.class
+SHA-256-Digest: qiRPii27JUdNaMnOghOIbqErKjSr1THHl1oLbKkagCI=
+
+Name: org/eclipse/team/internal/ui/wizards/ExportProjectSetMainPage$Wo
+ rkingSetPage$4$1.class
+SHA-256-Digest: p2Vcxp7YhtDHiYXozl5CgYXn47UIed38m3Ua+m6IF0c=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/StatusLineContr
+ ibutionGroup$2.class
+SHA-256-Digest: /ansBbBqKa+hdYbfmtaN47vpCLBzyzyS8Mnl+BxeHHw=
+
+Name: org/eclipse/team/ui/mapping/MergeActionHandler.class
+SHA-256-Digest: dbbOXUmLMXMZULRrK9bVPww3a2ISpxoZo+GVm3UQL10=
+
+Name: org/eclipse/team/internal/ui/synchronize/StructuredViewerAdvisor
+ $6.class
+SHA-256-Digest: md7rW1oqIulDcXRfVS4szyLXDrVPxq8liaU2RZ/47No=
+
+Name: org/eclipse/team/internal/ui/history/LocalHistoryPage$5.class
+SHA-256-Digest: NoQodTFRnGLw7mdLhUIdcP1Ko0Rn3Ehe+YImk23ucwE=
+
+Name: icons/full/dlcl16/flatLayout@2x.png
+SHA-256-Digest: IEq7YSsh5DKnHYpUKmkAP8P2i4qRq1lfjK10rhnAfIw=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/GlobalRefreshAc
+ tion$RefreshParticipantAction.class
+SHA-256-Digest: JQscxCnykTlZQmkjv1oc2Qh7A1OREu0T57BPgMt1CUU=
+
+Name: org/eclipse/team/internal/ui/history/LocalHistoryPage$11.class
+SHA-256-Digest: Tyutvrr9lfmFB7SmvPeKJpkYOXbyEiMr4ak6Fp5Q+Bk=
+
+Name: org/eclipse/team/internal/ui/wizards/ConfigureMultipleProjectsWi
+ zard.class
+SHA-256-Digest: hJnwfYYvPUQt6sjRUJBxlE/Nhz2lupcvIZOoE5LaGO8=
+
+Name: org/eclipse/team/internal/ui/preferences/TextPreferencePage$6.cl
+ ass
+SHA-256-Digest: Lz4txCt3Jz1ZiHZg53zshnZsmNk/TFxxcclo1KUrlR8=
+
+Name: org/eclipse/team/internal/ui/mapping/IEmptyTreeListener.class
+SHA-256-Digest: WHwLw5sfnjdqUN7SoPUPg3mpAP+DqObAg4YYkPY90tk=
+
+Name: org/eclipse/team/internal/ui/synchronize/ActiveChangeSetCollecto
+ r$1$2.class
+SHA-256-Digest: UKAzAFu6lvhJtq4gVRYUpVO0gyOA6rmniVCY9g8V4n8=
+
+Name: org/eclipse/team/internal/ui/mapping/DiffTreeChangesSection$2.cl
+ ass
+SHA-256-Digest: xFj8C/gyfDxZ8fKicz8/YiH3XL9Yhka4BrsLOdiFfc8=
+
+Name: org/eclipse/team/internal/ui/wizards/GlobalSynchronizeWizard.cla
+ ss
+SHA-256-Digest: Qsz/TVObNZre3PjXj4KIAbUQnEDizDhu8wUtzIJOm0c=
+
+Name: icons/full/dlcl16/pin@2x.png
+SHA-256-Digest: nYe5QySKSTHOiJPr4/7SDSZHNrT7J5s2QxNpedEbjhU=
+
+Name: org/eclipse/team/internal/ui/wizards/ProjectSelectionPage.class
+SHA-256-Digest: AbY0ELZCMi+C4H7NgNIzaWkGEdsdt3wNTvidvEnJYRA=
+
+Name: icons/full/dlcl16/collapseall.png
+SHA-256-Digest: YP8zuw/gIxx8gcRnVrHn3jIdElqalALWW/TQ+akbeoo=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/ChangeSetAction
+ Group$2.class
+SHA-256-Digest: N4n3h8oOtDz74cufBI8aC1ALSuXwrBWOXltASnYi60M=
+
+Name: org/eclipse/team/internal/ui/TeamUIPlugin$2.class
+SHA-256-Digest: AlNvVlimOjeUJnMtxuO40MiFxWsME2CgRj0v35F5GNE=
+
+Name: about.html
+SHA-256-Digest: 0RM1x9lTJa7T8YkysaegPuBIeaEvSZypRDfXoMpsJAU=
+
+Name: org/eclipse/team/internal/ui/dialogs/PreferencePageContainerDial
+ og$1.class
+SHA-256-Digest: 4U62NpHIqClAgDzCZS/O+9qqL++KdWAP3zAg3QN3+6Q=
+
+Name: icons/full/elcl16/incom_synch@2x.png
+SHA-256-Digest: vgn+qWkDE/wccBF1NwJmp7+v7CYkuFYuADQI7P31Gt4=
+
+Name: org/eclipse/team/internal/ui/actions/JobRunnableContext$BasicJob
+ .class
+SHA-256-Digest: LM4HSpu0PxOu1NAjYqsW+Vu1uc3xtfL++4DF25pBFm0=
+
+Name: icons/full/elcl16/site_element.png
+SHA-256-Digest: WFvGg20xZcFk0jv8Pc8+SFHVpFr5OO2NfsORN6q6YEE=
+
+Name: org/eclipse/team/internal/ui/synchronize/patch/PatchedFileVarian
+ t$1.class
+SHA-256-Digest: 61G31xNlck8/PhnZ0Kzdf0pp+0Wi8UFuNmC4Jz8G020=
+
+Name: org/eclipse/team/internal/ui/history/LocalHistoryPage$12.class
+SHA-256-Digest: 15GuGtDGSiV+mAg5xc++8d3/2AnIsTnc2Bcp8ZUY9ZU=
+
+Name: org/eclipse/team/ui/synchronize/SubscriberParticipant$1.class
+SHA-256-Digest: +zBUVh27q7T+0Xv8fitlaZu8pOJQIPs8LKhESd+Rk8Q=
+
+Name: org/eclipse/team/internal/ui/wizards/TeamWizardPage.class
+SHA-256-Digest: 7i5Ee+JGA+CEscit+HXpic4I35hdoplp1FOfi9PX2vo=
+
+Name: org/eclipse/team/internal/ui/mapping/DiffTreeChangesSection$1.cl
+ ass
+SHA-256-Digest: A14rLfCgBNHZFWWjjReATAx9zMxOmGAY+Jccy1hC2/k=
+
+Name: org/eclipse/team/internal/ui/mapping/CommonViewerAdvisor.class
+SHA-256-Digest: tXbkPOt8wYMCrZe0pLRehUSzAKCM2JZ19b52b4EcMT0=
+
+Name: org/eclipse/team/internal/ui/synchronize/actions/ChangeSetAction
+ Group$1.class
+SHA-256-Digest: 2ZFF8R/miZGLp17pdzWQJJB598LrqjaclZRwDJd6tsA=
+
+Name: org/eclipse/team/internal/ui/synchronize/AbstractTreeViewerAdvis
+ or$ITreeViewerAccessor.class
+SHA-256-Digest: d5nR/l97znnnUyWpacyqrDWwvdeBWZXcEyOAT4oUZn0=
+
+Name: icons/full/dlcl16/participant_rem@2x.png
+SHA-256-Digest: zjgAjh3H8xMFp961nHT0syPJvcZ1C73flwheWaRxlZM=
+
+Name: org/eclipse/team/internal/ui/synchronize/ActiveChangeSetCollecto
+ r$1$1.class
+SHA-256-Digest: TJVOEDxXbTppjsGQh/UX9Z2mJYdEuC0Z3Xci8QTrgoU=
+
+Name: org/eclipse/team/internal/ui/synchronize/StructuredViewerAdvisor
+ $5.class
+SHA-256-Digest: L/+QYxJ+BuK0FmZ8VJIINPg2zuAURffldQWFqDt8ik0=
+
+Name: org/eclipse/team/internal/ui/dialogs/ResourceMappingSelectionAre
+ a$4.class
+SHA-256-Digest: UGkQJI6Kqx3CR+/E35l4c0Xvm1IwG5O5fFbdlPk1aDw=
+
+Name: icons/full/obj/local_entry_tbl@2x.png
+SHA-256-Digest: 5u4HG2VeRfLvPZxEQkhGqfef2v7GMRSf0u1liEOXLZc=
+
+Name: org/eclipse/team/internal/ui/history/FileRevisionTypedElement.cl
+ ass
+SHA-256-Digest: 6uec+To+2TMky4kz2odgsHu5GUp2qt4BGyyJ6lqlEto=
+
+Name: org/eclipse/team/internal/ui/history/LocalHistoryPage$4.class
+SHA-256-Digest: hIrDkcl/3jr3kDwMWJa53vi34Ro+OfFtEPwKsNzpzyQ=
+
+Name: icons/full/elcl16/synch_participants.png
+SHA-256-Digest: 9E5o/lASMmO+J81/TLcEfqZXiKnvshhQzCpA/xA3Hno=
+

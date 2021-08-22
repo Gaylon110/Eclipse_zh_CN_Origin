@@ -1,0 +1,438 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.emf.ecp.view.core.swt;singleton:=true
+Archiver-Version: Plexus Archiver
+Built-By: genie.ecp
+Require-Bundle: org.eclipse.core.runtime;bundle-version="[3.7.0,4.0.0)
+ ", org.eclipse.emf.ecp.ui.view.swt;bundle-version="[1.16.0,1.17.0)", 
+ org.eclipse.emf.ecp.edit.swt;bundle-version="[1.16.0,1.17.0)", org.ec
+ lipse.emf.ecp.view.template.model;bundle-version="[1.16.0,1.17.0)", o
+ rg.eclipse.emf.ecp.view.model.common;bundle-version="[1.16.0,1.17.0)"
+ , org.eclipse.core.databinding.property;bundle-version="[1.4.200,2.0.
+ 0)", org.eclipse.emf.ecp.view.util.swt;bundle-version="[1.16.0,1.17.0
+ )", org.eclipse.emf.edit;bundle-version="[2.8.0,3.0.0)", org.eclipse.
+ emf.databinding;bundle-version="[1.3.0,2.0.0)", org.eclipse.emfforms.
+ localization;bundle-version="[1.16.0,1.17.0)", org.eclipse.emfforms.c
+ ore.services.editsupport;bundle-version="[1.16.0,1.17.0)", org.eclips
+ e.emfforms.swt.core;bundle-version="[1.16.0,1.17.0)", org.eclipse.emf
+ forms.core.services;bundle-version="[1.16.0,1.17.0)", org.eclipse.emf
+ forms.swt.core.di;bundle-version="[1.16.0,1.17.0)"
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/emfcli
+ ent/org.eclipse.emf.ecp.core.git;path="bundles/org.eclipse.emf.ecp.vi
+ ew.core.swt";commitId=f2dbbd13b720d1f9463c4d5909101632edfd5c17
+Bundle-Vendor: Eclipse Modeling Project
+Import-Package: javax.inject;version="1.0.0", org.eclipse.emfforms.spi
+ .common.locale;version="[1.16.0,1.17.0)", org.eclipse.emfforms.spi.co
+ mmon.report;version="[1.16.0,1.17.0)", org.eclipse.jface.databinding.
+ swt;version="0.0.0", org.eclipse.jface.databinding.viewers;version="0
+ .0.0", org.eclipse.jface.dialogs;version="0.0.0", org.eclipse.jface.l
+ ayout;version="0.0.0", org.eclipse.jface.resource;version="0.0.0", or
+ g.eclipse.jface.viewers;version="0.0.0", org.eclipse.jface.window;ver
+ sion="0.0.0", org.eclipse.swt;version="0.0.0", org.eclipse.swt.custom
+ ;version="0.0.0", org.eclipse.swt.events;version="0.0.0", org.eclipse
+ .swt.graphics;version="0.0.0", org.eclipse.swt.layout;version="0.0.0"
+ , org.eclipse.swt.widgets;version="0.0.0"
+Service-Component: OSGI-INF/booleanControlService.xml,OSGI-INF/dateTim
+ eControlService.xml,OSGI-INF/enumControlService.xml,OSGI-INF/numberCo
+ ntrolService.xml,OSGI-INF/textControlService.xml,OSGI-INF/xmlDateCont
+ rolService.xml,OSGI-INF/viewRendererService.xml,OSGI-INF/linkControlS
+ ervice.xml,OSGI-INF/enumLiteralFilteredControlService.xml
+Export-Package: org.eclipse.emf.ecp.view.internal.core.swt;version="1.
+ 16.0";x-friends:="org.eclipse.emf.ecp.view.table.ui.swt", org.eclipse
+ .emf.ecp.view.internal.core.swt.renderer;version="1.16.0";x-friends:=
+ "org.eclipse.emf.ecp.ui.view.editor.controls,org.eclipse.emf.ecp.view
+ .context.test", org.eclipse.emf.ecp.view.spi.core.swt;version="1.16.0
+ ";  uses:="org.eclipse.emf.ecp.ui.view.swt.internal,   org.eclipse.em
+ f.ecp.view.spi.model,   org.eclipse.swt.widgets,   org.eclipse.emf.ec
+ p.view.spi.context,   org.eclipse.emf.ecp.edit.spi.swt.util", org.ecl
+ ipse.emf.ecp.view.spi.core.swt.renderer;version="1.16.0"
+Bundle-Name: View Core SWT
+Bundle-Version: 1.16.0.20180305-1637
+Bundle-Activator: org.eclipse.emf.ecp.view.internal.core.swt.Activator
+Created-By: Apache Maven 3.5.2
+Build-Jdk: 1.8.0_162
+
+Name: OSGI-INF/linkControlService.xml
+SHA-256-Digest: QACTOXDrn6SWkyX3QOw2GosDpxqpv2wglR1eIM0XYYA=
+
+Name: plugin.xml
+SHA-256-Digest: Rlq1s6JVB+deR8o8pHjWPMKadYQo2nSgIzgFDjw8qqQ=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/renderer/EnumComboVie
+ werSWTRendererService.class
+SHA-256-Digest: PaP1FuyqixbTMMQLKdXq70U1CxSfNUEjHvkzvQ6IQPY=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/renderer/DateTimeCont
+ rolSWTRenderer$SetBtnSelectionAdapterExtension.class
+SHA-256-Digest: Nj9vgYv9PrgSz/TAhnhtyBP6UhSE+Z+VQ70yFlO0avc=
+
+Name: icons/unset_feature.png
+SHA-256-Digest: zgeotQIuWaG96WkLcgpr8Q/Jdn22US0U6/8nguxitb8=
+
+Name: OSGI-INF/numberControlService.xml
+SHA-256-Digest: WfKi81KIpjGv62aQ1uprBSYzp2ltTaoRjFSksAXQX14=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/renderer/DateTimeCont
+ rolSWTRendererService.class
+SHA-256-Digest: qHZrOkB/t6PRJB1AGdO8vw/cgZKu8IFG0+c0iKF2Vg8=
+
+Name: OSGI-INF/enumLiteralFilteredControlService.xml
+SHA-256-Digest: KgVPF1oEjAasUILgz2UPZmgTTIP6bckdQV8jFuAjOpI=
+
+Name: icons/set_feature.png
+SHA-256-Digest: wGpS3zNh3zgKAqRRWaCFjW982MvD9x/3MqZdbCXqavY=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/renderer/EnumComboVie
+ werSWTRenderer$1.class
+SHA-256-Digest: jTIGEQQVE7BEFcFvPnAd/IRyEN0M0g8EJQbpbN67cgU=
+
+Name: icons/set_reference.png
+SHA-256-Digest: n+9Zy/VRyuaP0Enf49rD77+ZfalZ9ist78t0i0otJvQ=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/renderer/NumberContro
+ lSWTRenderer$NumericalTargetToModelUpdateStrategy.class
+SHA-256-Digest: /BrttF3gJ9PvNM0r1hSVP8HV1swPUdUw6mw+VsLxvkY=
+
+Name: org/eclipse/emf/ecp/view/spi/core/swt/renderer/TextControlSWTRen
+ derer$1.class
+SHA-256-Digest: MbouRPmWVhpgfkKXpdnxVh32ENPS8ensC6ezrDCbA4Q=
+
+Name: META-INF/maven/org.eclipse.emf.ecp/org.eclipse.emf.ecp.view.core
+ .swt/pom.xml
+SHA-256-Digest: y4Lpfa76HwD5N3eVfCdsnnptPrrjkEbFlUwvJmAQvE0=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/renderer/EnumLiteralF
+ ilteredComboViewerSWTRenderer$1.class
+SHA-256-Digest: 9aF8PNyPW9kn1wOFiTFR36l1rzghFw54A60Usz6a40o=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/renderer/LinkControlS
+ WTRenderer$4.class
+SHA-256-Digest: GX+HuJ2JPdmEuGiP0HkHKQ7xym3YiphN3L+q2txKCS0=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/renderer/EnumComboVie
+ werSWTRenderer.class
+SHA-256-Digest: h7kdctTIYC7TbiXQ0SsRe+06mCfwlhIH0fG/gDyiThw=
+
+Name: org/eclipse/emf/ecp/view/spi/core/swt/SimpleControlSWTControlSWT
+ Renderer$1.class
+SHA-256-Digest: v78QDcVM38m4xc5gXLNy1UGgZuL3eUe3mw1YF2eF66w=
+
+Name: META-INF/maven/org.eclipse.emf.ecp/org.eclipse.emf.ecp.view.core
+ .swt/pom.properties
+SHA-256-Digest: mnPqf5w9WxsfbbwEFrnIpN+fosNYlt9dxqqO1/t/oH4=
+
+Name: org/eclipse/emf/ecp/view/spi/core/swt/SimpleControlSWTControlSWT
+ Renderer.class
+SHA-256-Digest: NjVtvlxMudqfR+I46EtH2LGskCvnH/jEZr8dK3MY3WU=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/renderer/NumberContro
+ lSWTRendererService.class
+SHA-256-Digest: Py+EuIu1m0iHOpCYhc+481TbM6Ono9JY+8Bo7q9NRwM=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/MatchFreeItemComboVie
+ wer$MatchItemKeyAdapter.class
+SHA-256-Digest: sATnG5YEOBzdgy7DUqWutkc7QfrtLiFGYLyIvV4eQNM=
+
+Name: OSGI-INF/l10n/bundle.properties
+SHA-256-Digest: ZPuxP6fe3Vaz8snbWooLDtClpUeM2lIUNaPqYOC8hlo=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/renderer/LinkControlS
+ WTRenderer$9$1.class
+SHA-256-Digest: Q07MjUSGMI1fxgkRYhBql5zqYwQmBaBwKNgF0yVtmzk=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/renderer/DateTimeCont
+ rolSWTRenderer$SetBtnSelectionAdapterExtension$1.class
+SHA-256-Digest: 2gOkIqBTCtDFNMwVsREpNE4kch/XgiZZu+cDUcyfBXE=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/renderer/LinkControlS
+ WTRenderer$7.class
+SHA-256-Digest: V+f7Y3JEKEkJpG1XkFJHkrNV321BBAKXW7cDD8xpKi8=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/renderer/XMLDateContr
+ olSWTRenderer.class
+SHA-256-Digest: xY8gwz57DcC/XazfHTEBOaO3VF0og4Rbiqu6UTvb6tY=
+
+Name: icons/time.png
+SHA-256-Digest: f2FMwgLpOv/McRBs/65i+5fIUN69Nmw+qF8IRJD2mZc=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/renderer/EnumLiteralF
+ ilteredComboViewerSWTRenderer.class
+SHA-256-Digest: fnegSoOtDW/qaBXSsmiIfaxq160G2PX7+n92BoVM4BA=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/MessageKeys.class
+SHA-256-Digest: rh6ZqrSlgLK0usbun/xuc9QvAJq7mVKv+zpVMjL7n/E=
+
+Name: OSGI-INF/booleanControlService.xml
+SHA-256-Digest: RB/RvimWVy3kcXrL2XrfAyjxOGf9rF5GZt9OSLPttSY=
+
+Name: org/eclipse/emf/ecp/view/spi/core/swt/SimpleControlJFaceViewerSW
+ TRenderer.class
+SHA-256-Digest: C3gHXpgX8m0v8HhHaMrLSFd9/H28X6bwkQ6v5CNlcOs=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/renderer/NumberContro
+ lSWTRenderer$NumericalTargetToModelUpdateStrategy$1.class
+SHA-256-Digest: 7Ja2G2ziajvgwzvEsnrmCLL+VwhaaYeqZhFwn1WzGf8=
+
+Name: org/eclipse/emf/ecp/view/spi/core/swt/AbstractControlSWTRenderer
+ $2.class
+SHA-256-Digest: pljETy6YBeT+EULIV2+qtp0DqkXW3sQZ7tAbMc8w6Js=
+
+Name: icons/link_overlay.png
+SHA-256-Digest: tVPKzBdrkq4UttB7BtUODNTUZk2xl6RDtKuRAR+7ehU=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/renderer/BooleanContr
+ olSWTRenderer.class
+SHA-256-Digest: 6VQ6C4vq8nDwgJzajyh1sfIzCzpB7wkIZS+WBeFsQpo=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/MatchFreeItemComboVie
+ wer.class
+SHA-256-Digest: 5vwy5zaIoj+VriBX1zU2ZrPPx73Hs4G+DmEOicCisSk=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/renderer/EnumLiteralF
+ ilteredComboViewerSWTRendererService.class
+SHA-256-Digest: XYtBXq6rWGzIU4fe58LFmUxBcOWwUEmc0o7KG9YfwkA=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/MatchFreeItemComboVie
+ wer$1.class
+SHA-256-Digest: YktWu+L8ZPJo2RBgDowavVo2b950uUQJ5T3FP58oukI=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/renderer/NumberContro
+ lSWTRenderer.class
+SHA-256-Digest: eaNEyNqUAbdJ0wnIFaE9aan32o9imZMvlVxQ2niAvWc=
+
+Name: org/eclipse/emf/ecp/view/spi/core/swt/SimpleControlSWTRenderer$U
+ nsetModelChangeListener.class
+SHA-256-Digest: 0fO2XahoYu9sa9z962aiDInhO5d4/ZnybaKLT/jLyhs=
+
+Name: OSGI-INF/viewRendererService.xml
+SHA-256-Digest: b9jkrhtRD3PAHapqfMZJkSZoFUS4kx+8JVidRxPFHKg=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/renderer/DateTimeCont
+ rolSWTRenderer.class
+SHA-256-Digest: TCea69G41vOJHTsoTN8RtBzyfRdjM6LszqtQ/l4QqE4=
+
+Name: org/eclipse/emf/ecp/view/spi/core/swt/renderer/TextControlSWTRen
+ derer$ModelToTargetUpdateStrategy.class
+SHA-256-Digest: Bn3KYac2eraJAbqkhC2YCykidr9dGYveBnc+r+rnYYE=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/TimeBoundStringBuffer
+ .class
+SHA-256-Digest: kZXMIpv9197+mArYbqLF/SyEU/zzwnIpK0nGF4ysvJo=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/renderer/ViewSWTRende
+ rer.class
+SHA-256-Digest: H1oCTPIV5IkVEm9k/pBtrZApc9ljuVRDRvlXkG1G62Y=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/renderer/LinkControlS
+ WTRenderer.class
+SHA-256-Digest: M6mxWVug4C60B5DomKY/w3Pv5vWIl/u58op42LQ5RQU=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/MatchItemComboViewer.
+ class
+SHA-256-Digest: YHan5Abp2goKE8OtI7fLCaivgS5yI3rcAZakBCQNA0E=
+
+Name: icons/delete.png
+SHA-256-Digest: zgeotQIuWaG96WkLcgpr8Q/Jdn22US0U6/8nguxitb8=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/renderer/LinkControlS
+ WTRenderer$5.class
+SHA-256-Digest: kVONu1xUa8zaXidICY/6+lRvdQ78rKFs/imfXZivW/U=
+
+Name: icons/add_overlay.png
+SHA-256-Digest: A3tl7q8fQ78FHhZM4Tpu/c7QbqyZ1PihjuJ01O9goYI=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/renderer/DateTimeCont
+ rolSWTRenderer$DateModelToTargetUpdateStrategy.class
+SHA-256-Digest: 0dGN1EBJWpjubopkSzzb9duzTLfbedNTxHJeoXvUYdM=
+
+Name: org/eclipse/emf/ecp/view/spi/core/swt/AbstractControlSWTRenderer
+ $1.class
+SHA-256-Digest: 4h+2s6fP0cJV0gY8s3xROjdOrPQSb0jvWUSf2/UBinM=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/renderer/NumberContro
+ lSWTRenderer$NumericalModelToTargetUpdateStrategy.class
+SHA-256-Digest: NZpdoR1B4vtW3klJM83dHj2QDubgNINXByRv99q9jvs=
+
+Name: org/eclipse/emf/ecp/view/spi/core/swt/SimpleControlJFaceViewerSW
+ TRenderer$1.class
+SHA-256-Digest: /Qm9QQpdAg0HeReshM1/zW9fRBHWjV0NiNkRogC9Ydc=
+
+Name: icons/date.png
+SHA-256-Digest: rg7fDrRJQ3C3w9Nz0yaK3WOoY3VQy3pmSLAzybINR0A=
+
+Name: org/eclipse/emf/ecp/view/spi/core/swt/renderer/TextControlSWTRen
+ derer.class
+SHA-256-Digest: rOG/Qa4bCXI93tQs7c0zfBn1CzT/SGt3ov210uv7mFY=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/renderer/EnumLiteralF
+ ilteredComboViewerSWTRenderer$3.class
+SHA-256-Digest: IRgodesRtuVclLcp6vc9Me1jHScVxDlp3G4fVOZjPFQ=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/renderer/LinkControlS
+ WTRenderer$DeleteSelectionAdapter.class
+SHA-256-Digest: 2vg6KdOPNhRg7clD9EqwuaryuFGCD/FNjAWqnoz49nE=
+
+Name: org/eclipse/emf/ecp/view/spi/core/swt/SimpleControlSWTRenderer.c
+ lass
+SHA-256-Digest: nmFFkMB6MLwzom3E7REb1GL3naEN7frdv6gJqhIjzxA=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/renderer/EnumLiteralF
+ ilteredComboViewerSWTRenderer$2.class
+SHA-256-Digest: oQM1bHRHg5zHTrjCcpvIq+jJKxGiwJ2tOFRATf4AuAw=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/renderer/NumberContro
+ lSWTRenderer$1.class
+SHA-256-Digest: Alsz1SxWMx00LrIPEyAN8AxDEnBddskgn4Kz/Htzeyg=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/ComboUtil.class
+SHA-256-Digest: qPZewleyu1xxb78qW4SkUOju/K/UV9Qcx+gnfonPxFk=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/renderer/DateTimeCont
+ rolSWTRenderer$1.class
+SHA-256-Digest: 9eRVHufSMbqkvR8fLInaKjaFrInYDeZqNPWHn9wRcxk=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/MatchItemComboViewer$
+ 1.class
+SHA-256-Digest: guLm+MZt62ilKXlFTt4fILXf9xtmp95MCXrp5Sd14vY=
+
+Name: org/eclipse/emf/ecp/view/spi/core/swt/renderer/TextControlSWTRen
+ derer$TargetToModelUpdateStrategy.class
+SHA-256-Digest: Al7HQU9l/GP/UvvUKiFN35QUOmZsJGsgTRbPnGsNYDU=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/renderer/ViewSWTRende
+ rerService.class
+SHA-256-Digest: 1H2xNL08Q70EQtHFeuJqLC25j8eL1OBFxIkw1QVM+FM=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/renderer/LinkControlS
+ WTRenderer$6.class
+SHA-256-Digest: ig3mnQMQ7SmByKyx5ouE3CO9XZR6sTN6SyJ48ZFPNKk=
+
+Name: icons/reference.png
+SHA-256-Digest: AqpxByBtBOapOuSKJ0Q53+Z8uDBrOgdVQ089N44XPSg=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/renderer/LinkControlS
+ WTRendererService.class
+SHA-256-Digest: ux/xZOPwHbEesUmZDecjryi8uO5vvw00KcvxCGgTxN8=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/renderer/LinkControlS
+ WTRenderer$3.class
+SHA-256-Digest: DfKW2kTV/1M4FvqPNDbqNOhHjUcYHj3fDH6VnRSVgJM=
+
+Name: OSGI-INF/textControlService.xml
+SHA-256-Digest: tzJ615DCjNo92i9N//yz6CCqU31/lKJk6ZwPDjaX2G4=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/MatchItemComboViewer$
+ MatchItemKeyAdapter.class
+SHA-256-Digest: /n2FNb6LfHQawL3oNvIR2E6zKbHiF7Me3W8+SGmUDGE=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/renderer/XMLDateContr
+ olSWTRenderer$SelectionAdapterExtension$1.class
+SHA-256-Digest: BWK0NQ9KAL9ZU7A/JF2zoJvnzGYA4Jdc9EpipRM4I6E=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/renderer/XMLDateContr
+ olSWTRenderer$1.class
+SHA-256-Digest: 23QpaVwD4/RVGoVUMMMcoGMO6k3VNWAopBrsoHpKCak=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/renderer/XMLDateContr
+ olSWTRenderer$DateTargetToModelUpdateStrategy.class
+SHA-256-Digest: aPIO8GG5Dn3hQXgDDJyK9m8zxe2ezUc4jO4z/GDV+QA=
+
+Name: org/eclipse/emf/ecp/view/spi/core/swt/renderer/TextControlSWTRen
+ derer$EMFUpdateConvertValueStrategy.class
+SHA-256-Digest: vqZ/WxbFHdJPcm7ENN+MJTTfr/7hDFUbF4vMRLTCEGQ=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/renderer/BooleanContr
+ olSWTRendererService.class
+SHA-256-Digest: 7nM3iiMKJGxzKdqJ12b5Q4upre5pyE2gVNYLc4g3feo=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/renderer/TextControlS
+ WTRendererService.class
+SHA-256-Digest: aNmC/+koNMlu9yVaHSzqdnzuvRh9y1lNm08J8EQtj4I=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/renderer/XMLDateContr
+ olSWTRenderer$DateModelToTargetUpdateStrategy.class
+SHA-256-Digest: NNws65OUWNVD9G24cyDDH3VbAHs7QIsvFnDRkUZJqiw=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/Activator.class
+SHA-256-Digest: HGDd6Rqsp5Hq99TpByYBWg9EpALbiMbMur2XX7Eq5y8=
+
+Name: icons/unset_reference.png
+SHA-256-Digest: JfHqrdqqP46jGA2N3cpxwrLE7+Rg3asdweERSqU7mto=
+
+Name: org/eclipse/emf/ecp/view/spi/core/swt/AbstractControlSWTRenderer
+ $1$1.class
+SHA-256-Digest: wee9Qkit5g4ufO412oYXfBV5IL6eGsjdPIPXZQkYfDA=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/renderer/LinkControlS
+ WTRenderer$8.class
+SHA-256-Digest: Nr95xXmysyiuVOnNJOSyzt3/9NWw3lB5QH9tCtfQZlQ=
+
+Name: org/eclipse/emf/ecp/view/spi/core/swt/renderer/TextControlSWTRen
+ derer$2.class
+SHA-256-Digest: 1G037RrolOxSB8/oz+MY8UhjxjdTZRmvKqEWQLwzZow=
+
+Name: org/eclipse/emf/ecp/view/spi/core/swt/SimpleControlSWTRenderer$1
+ .class
+SHA-256-Digest: b6Y+HsuqIOIf2z7yr4PS0jto/XttwbwlDtQIB27UdQY=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/renderer/LinkControlS
+ WTRenderer$1.class
+SHA-256-Digest: nQjM7jKV1EIeSxZTj8n23TYx/6uzNoYvOfAphDvZgEs=
+
+Name: org/eclipse/emf/ecp/view/spi/core/swt/SimpleControlSWTRenderer$U
+ nsetSelectionAdapter.class
+SHA-256-Digest: ChcZyejdQzgUX0ubeOnrYGjJH4bQRR/oxETBxd8QHhA=
+
+Name: OSGI-INF/dateTimeControlService.xml
+SHA-256-Digest: 67fRRw+32UlaOJWJJcQ33zN/6FwH3eSLFcmk4U63tGo=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/renderer/DateTimeCont
+ rolSWTRenderer$UnsetBtnSelectionAdapterExtension.class
+SHA-256-Digest: kvs7/jKWHIAFCD0W091i/dr50HKFZaO/pwyQrCio0x4=
+
+Name: about.html
+SHA-256-Digest: ZYczHLHHJbJ2GSLe/MBOpU/zRznwNG9X6G0P5BecAYs=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/renderer/LinkControlS
+ WTRenderer$2.class
+SHA-256-Digest: w775NsPrxOiEwfJNpa6NHggAmlqBFyStuox0TXSj/YI=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/renderer/XMLDateContr
+ olSWTRenderer$SelectionAdapterExtension.class
+SHA-256-Digest: B3xzYc2yaubCV46beerr/SDWKGiWh80Azl6BRov4hHo=
+
+Name: org/eclipse/emf/ecp/view/spi/core/swt/ContainerSWTRenderer.class
+SHA-256-Digest: r6Ecj7YdDfpTUQns01FYkn3uK2YNkIHiYTXXSbleiqw=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/renderer/ECPLegacyCon
+ trolSWTRenderer.class
+SHA-256-Digest: S4HV8kOef/1jFSdrHhSNAuTZs1lxwipTx6r1ppqbH6g=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/renderer/LinkControlS
+ WTRenderer$9.class
+SHA-256-Digest: 2WC5o/UbaEX542cBhAE4sTCzEf4kA3Z0wKg5FGiIyp4=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/renderer/ECPLegacyCon
+ trolSWTRendererTester.class
+SHA-256-Digest: UO4Xu0KC/AQXVE/s2oAVb/gebZwnQgdhKoF07HIgyes=
+
+Name: OSGI-INF/xmlDateControlService.xml
+SHA-256-Digest: gsEHo/0sZNi03Ar2GvsV+6rfr8Gvw3kcJKV/2BUBgLw=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/renderer/XMLDateContr
+ olSWTRenderer$DateTargetToModelUpdateStrategy$1.class
+SHA-256-Digest: KbFlfjeRXOJw5/lJg7xbyc1gf9Ys98DvJkdNfMU1MyU=
+
+Name: org/eclipse/emf/ecp/view/spi/core/swt/AbstractControlSWTRenderer
+ .class
+SHA-256-Digest: 0kxcSMdsHupb1Jqf5x6jK+NPXVULrn0pRwUBMub+KoY=
+
+Name: org/eclipse/emf/ecp/view/internal/core/swt/renderer/XMLDateContr
+ olSWTRendererService.class
+SHA-256-Digest: 2d3gKEP/vtwE08k+twtydLQcz3IONVf49FNh1l4UzMo=
+
+Name: OSGI-INF/enumControlService.xml
+SHA-256-Digest: mcJZek0qeFB8kTrXNh/svD/Z27baCaGlDcK4fLR7mh0=
+

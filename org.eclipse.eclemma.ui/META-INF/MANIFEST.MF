@@ -1,0 +1,37 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.eclipse.eclemma.ui;singleton:=true
+Bundle-Version: 3.1.0.201804041601
+Bundle-ClassPath: org.eclipse.eclemma.ui_3.1.0.201804041601.jar
+Bundle-Activator: org.eclipse.eclemma.internal.ui.EclEmmaUIPlugin
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Export-Package: org.eclipse.eclemma.internal.ui;x-friends:="org.eclipse.eclemma.ui.test",
+  org.eclipse.eclemma.internal.ui.actions;x-internal:=true,
+  org.eclipse.eclemma.internal.ui.annotation;x-internal:=true,
+  org.eclipse.eclemma.internal.ui.coverageview;x-internal:=true,
+  org.eclipse.eclemma.internal.ui.decorators;x-internal:=true,
+  org.eclipse.eclemma.internal.ui.dialogs;x-internal:=true,
+  org.eclipse.eclemma.internal.ui.launching;x-internal:=true,
+  org.eclipse.eclemma.internal.ui.wizards;x-internal:=true,
+  org.eclipse.eclemma.ui.launching;x-friends:="org.eclipse.eclemma.ui.test"
+Require-Bundle: org.eclipse.eclemma.core,
+  org.jacoco.core;bundle-version="[0.8.1,0.8.2)",
+  org.eclipse.core.expressions,
+  org.eclipse.core.runtime,
+  org.eclipse.debug.ui,
+  org.eclipse.jdt.core,
+  org.eclipse.jdt.ui,
+  org.eclipse.jface.text,
+  org.eclipse.ui,
+  org.eclipse.ui.forms,
+  org.eclipse.ui.ide,
+  org.eclipse.ui.workbench.texteditor
+Built-By: genie.eclemma
+Build-Jdk: 1.7.0_80
+Eclipse-SourceReferences: scm:git:https://github.com/eclipse/eclemma.git;path="org.eclipse.eclemma.ui";commitId=5f0e596c9b4b4ef78850d112eb3a59c698312db0
+Created-By: Apache Maven 3.5.2
+Archiver-Version: Plexus Archiver
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: J2SE-1.5

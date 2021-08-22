@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            name="User Storage Browser"
+            icon="icons/eclipse.png"
+            category="org.eclipse.userstorage.sdk.category"
+            class="org.eclipse.userstorage.sdk.browser.USSBrowsingView"
+            id="org.eclipse.userstorage.browser">
+      </view>
+      <category
+            id="org.eclipse.userstorage.sdk.category"
+            name="User Storage Service SDK">
+      </category>
+   </extension>
+   <extension
+         point="org.eclipse.userstorage.oauth.clients">
+      <client
+            icon="icons/eclipse.png"
+            id="eclipse_uss_sdk"
+            name="USS SDK Examples"
+            authURI="https://accounts.eclipse.org/">
+      </client>
+   </extension>
+
+</plugin>

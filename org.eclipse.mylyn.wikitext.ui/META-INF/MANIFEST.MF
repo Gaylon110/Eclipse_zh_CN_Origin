@@ -1,0 +1,1037 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: org.eclipse.mylyn.wikitext.ui
+Bundle-SymbolicName: org.eclipse.mylyn.wikitext.ui;singleton:=true
+Require-Bundle: org.eclipse.mylyn.wikitext;bundle-version="3.0.39",org
+ .eclipse.mylyn.wikitext.osgi;bundle-version="3.0.39",org.eclipse.core
+ .runtime,org.eclipse.jface.text,org.eclipse.ui;bundle-version="3.6.0"
+ ,org.eclipse.ui.editors,org.eclipse.ui.workbench.texteditor,org.eclip
+ se.ui.views,org.eclipse.ui.ide,org.eclipse.core.expressions,org.eclip
+ se.core.resources,org.eclipse.help
+Bundle-ManifestVersion: 2
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/mylyn/
+ org.eclipse.mylyn.docs.git;path="wikitext/ui/org.eclipse.mylyn.wikite
+ xt.ui";commitId=6bc4b002262973eb4ab7e822f51059da7cdf6f35
+Bundle-Vendor: %Bundle-Vendor.0
+Import-Package: com.google.common.base;version="[15.0.0,22.0.0)",com.g
+ oogle.common.collect;version="[15.0.0,22.0.0)",com.google.common.io;v
+ ersion="[15.0.0,22.0.0)"
+Export-Package: org.eclipse.mylyn.internal.wikitext.ui;x-friends:="org
+ .eclipse.mylyn.wikitext.tasks.ui",org.eclipse.mylyn.internal.wikitext
+ .ui.commands;x-internal:=true,org.eclipse.mylyn.internal.wikitext.ui.
+ editor;x-friends:="org.eclipse.mylyn.wikitext.tasks.ui,org.eclipse.my
+ lyn.wikitext.context.ui",org.eclipse.mylyn.internal.wikitext.ui.edito
+ r.actions;x-friends:="org.eclipse.mylyn.wikitext.tasks.ui,org.eclipse
+ .mylyn.wikitext.context.ui",org.eclipse.mylyn.internal.wikitext.ui.ed
+ itor.assist;x-friends:="org.eclipse.mylyn.wikitext.tasks.ui,org.eclip
+ se.mylyn.wikitext.context.ui",org.eclipse.mylyn.internal.wikitext.ui.
+ editor.commands;x-friends:="org.eclipse.mylyn.wikitext.tasks.ui,org.e
+ clipse.mylyn.wikitext.context.ui",org.eclipse.mylyn.internal.wikitext
+ .ui.editor.dnd;x-internal:=true,org.eclipse.mylyn.internal.wikitext.u
+ i.editor.help;x-friends:="org.eclipse.mylyn.wikitext.tasks.ui,org.ecl
+ ipse.mylyn.wikitext.context.ui",org.eclipse.mylyn.internal.wikitext.u
+ i.editor.operations;x-internal:=true,org.eclipse.mylyn.internal.wikit
+ ext.ui.editor.outline;x-internal:=true,org.eclipse.mylyn.internal.wik
+ itext.ui.editor.preferences;x-friends:="org.eclipse.mylyn.wikitext.ta
+ sks.ui,org.eclipse.mylyn.wikitext.context.ui",org.eclipse.mylyn.inter
+ nal.wikitext.ui.editor.reconciler;x-friends:="org.eclipse.mylyn.wikit
+ ext.tasks.ui,org.eclipse.mylyn.wikitext.context.ui",org.eclipse.mylyn
+ .internal.wikitext.ui.editor.syntax;x-friends:="org.eclipse.mylyn.wik
+ itext.tasks.ui,org.eclipse.mylyn.wikitext.context.ui",org.eclipse.myl
+ yn.internal.wikitext.ui.editor.validation;x-friends:="org.eclipse.myl
+ yn.wikitext.tasks.ui,org.eclipse.mylyn.wikitext.context.ui",org.eclip
+ se.mylyn.internal.wikitext.ui.properties;x-internal:=true,org.eclipse
+ .mylyn.internal.wikitext.ui.registry;x-internal:=true,org.eclipse.myl
+ yn.internal.wikitext.ui.util;x-friends:="org.eclipse.mylyn.wikitext.t
+ asks.ui,org.eclipse.mylyn.wikitext.context.ui",org.eclipse.mylyn.inte
+ rnal.wikitext.ui.util.css.editor;x-friends:="org.eclipse.mylyn.wikite
+ xt.tasks.ui",org.eclipse.mylyn.internal.wikitext.ui.util.resources;x-
+ internal:=true,org.eclipse.mylyn.internal.wikitext.ui.validation;x-in
+ ternal:=true,org.eclipse.mylyn.internal.wikitext.ui.viewer;x-friends:
+ ="org.eclipse.mylyn.wikitext.tasks.ui,org.eclipse.mylyn.wikitext.cont
+ ext.ui",org.eclipse.mylyn.internal.wikitext.ui.viewer.annotation;x-in
+ ternal:=true,org.eclipse.mylyn.wikitext.ui,org.eclipse.mylyn.wikitext
+ .ui.annotation,org.eclipse.mylyn.wikitext.ui.commands,org.eclipse.myl
+ yn.wikitext.ui.editor,org.eclipse.mylyn.wikitext.ui.viewer
+Bundle-Name: %Bundle-Name.0
+Bundle-Version: 3.0.39.202102270010
+Bundle-Localization: plugin
+Bundle-Activator: org.eclipse.mylyn.internal.wikitext.ui.WikiTextUiPlu
+ gin
+Build-Jdk-Spec: 1.8
+Created-By: Maven Archiver 3.5.0
+
+Name: plugin.xml
+SHA-256-Digest: 3sDB8Eq7E+lyR8/KrGowUl5MfS3LfdLeD3FpQaos2GQ=
+
+Name: org/eclipse/mylyn/wikitext/ui/viewer/MarkupViewerConfiguration.c
+ lass
+SHA-256-Digest: qmYPEXOt3wOpQSzRfLRCVTqBm7MUtzBVNR5wkzp7PSo=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/syntax/Block.class
+SHA-256-Digest: Ly3rBjuS8F/So2jfktj5zuIwlt8KJ0Gv8NynD+5TmFI=
+
+Name: org/eclipse/mylyn/wikitext/ui/commands/ConvertMarkupToEclipseHel
+ p.class
+SHA-256-Digest: 4XSrdFpofgaVe34aq+XB4ITIWWkZK0eNN2Lm7tl5KBk=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/WikiTextNature.class
+SHA-256-Digest: E3FSLPbac+rjjPskUnXFlTJ8JWK3thycdTGs+MHfEMI=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/syntax/Messages.cl
+ ass
+SHA-256-Digest: udGjf1aatRqsiJLBfDpyczJ5SOAMHneiMgxJvRCmzqw=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/validation/messages.prope
+ rties
+SHA-256-Digest: r6FXaLGwUuqx+0C3ynsgThetT8GId03yIF7pBbFsIG0=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/outline/Messages.c
+ lass
+SHA-256-Digest: AAaEKY86LZsgBifIfn7kgTqElgWs5/6PDqSacGEXffM=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/FoldingStructure$A
+ nnotationOperation.class
+SHA-256-Digest: BcRAMtbuaJ35IIFrImK5lM4xNUe5jwY2UHz7ZV/I+kY=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/MarkupEditor$2.cla
+ ss
+SHA-256-Digest: h/JW0bW+G6VSmBStbdsgewAbXDAiXVaGZmtldXxn8Ek=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/properties/Messages.class
+SHA-256-Digest: irJ1anX/KwFrKFb8EEVd0vDPUZpu5sby6nVbi0Yq/BY=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/preferences/WikiTe
+ xtTemplatePreferencePage.class
+SHA-256-Digest: Qk2uvUYbuEhHhR5E1Z4xKyj3ZcKFacag8hx7fCBLrcA=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/syntax/MarkupDocum
+ entProvider$1.class
+SHA-256-Digest: y/X+hggkRI0ol8BAgO5zvPwI6kF+Pox42DxP7NlIUIs=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/preferences/CssSty
+ leFieldEditor.class
+SHA-256-Digest: FgQFVB+avK1ga1Jw0E1gwIUOc9h2WWf6HX/LbJc7/D4=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/reconciler/MultiRe
+ concilingStrategy.class
+SHA-256-Digest: 6blgJKxuNUrP82KJYDfBU3Ol2KqxGurJlLxWsOy3YvI=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/util/css/editor/CommentRu
+ le.class
+SHA-256-Digest: l4MtBkmRv+Pg7hctZ5luVaH34qcBRRUWkvFdhYyrvqo=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/commands/WikiMarkupGenera
+ tionContribution.class
+SHA-256-Digest: ZuK/+gh97+pL53iin7ktK9U8gQLZuTQifE8j2/nMWoA=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/operations/MoveSec
+ tionsCommand.class
+SHA-256-Digest: fRScxTnQ60mk4M/qoWwEtK3e5hDTiZ+Olazl6eNkRAM=
+
+Name: css/dark_prefstyle.css
+SHA-256-Digest: PwNO1yy+BEjOiANUna2Gc24lSn5N8LpTDOdbikipWXU=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/dnd/OutlineDropTar
+ getListener$1.class
+SHA-256-Digest: tmAM7LfFeMmMiWh55xEV9dvmQbGuQZOXqmzZytT76sI=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/viewer/CssStyleManager$Ba
+ ckgroundColorRuleHandler.class
+SHA-256-Digest: MwtvPnsk5aDNsz7Brt84ZjRMdbzdQknI7klF2CUVdJI=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/util/InformationPresenter
+ Util$2.class
+SHA-256-Digest: m3anU+twhw96H9V/7fii6/4pZOApqjwJm7T0Yl+h4sY=
+
+Name: org/eclipse/mylyn/wikitext/ui/annotation/TitleAnnotation.class
+SHA-256-Digest: Syf+uPvOhbgYH1rT5WopjoqI0K/DpB9iA8mh6jj3468=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/viewer/annotation/Horizon
+ talRuleAnnotation.class
+SHA-256-Digest: eC+hf2EMxHmQ8aV8EWCbSVt6xbv44WBOwNCAEdLSmWE=
+
+Name: org/eclipse/mylyn/wikitext/ui/commands/messages.properties
+SHA-256-Digest: Gzo0fKpLuTY04FRfvU8ifFQDy0/KXjTKlqhManLZaUM=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/MarkupEditor$11.cl
+ ass
+SHA-256-Digest: QsxwqfZ/8n3kD4gYURO8OZWR6JmbjIBhj1g/hsEnfW4=
+
+Name: org/eclipse/mylyn/wikitext/ui/annotation/AnchorHrefAnnotation.cl
+ ass
+SHA-256-Digest: jzX6WenCqJI1pfXG2vO9Ky5ympThbF6hWKUgKe8lVzc=
+
+Name: org/eclipse/mylyn/wikitext/ui/commands/Messages.class
+SHA-256-Digest: otbe1GhF1jA1F2MVC0iwd9/IRSm3XRRq+YGuGB5BBXY=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/syntax/MarkupDocum
+ entProvider.class
+SHA-256-Digest: k6Z/I6gAYDuM87X6HZtRi2BcrfXpvVyg1cMbaL+lOOs=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/viewer/TextHover$1.class
+SHA-256-Digest: HyBtyiPgOu4H0dg+zete85qZrpzRvckU3Lm3xNje6fI=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/actions/CollapseAl
+ lFoldingRulerAction.class
+SHA-256-Digest: z3Odwt7IBXDe+fkTxmuGcpOWH7ujU4OYKWf6Ctw4iJg=
+
+Name: schema/contentAssist.exsd
+SHA-256-Digest: s0ntXmwls/Uzh09dcXIVB6qpQ86RTxl4C7OUPIcVDm0=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/syntax/FastMarkupP
+ artitioner$MarkupPartition.class
+SHA-256-Digest: JFTHfVv5szEWHLp5Akj4Ako6/9CKE9OSENp7it3dofo=
+
+Name: org/eclipse/mylyn/wikitext/ui/viewer/MarkupViewer.class
+SHA-256-Digest: jGDe4K4tBjlR/+rVbaSxRVXyiMst1uNc5VN4dBfO2bE=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/outline/messages.p
+ roperties
+SHA-256-Digest: yMh91lGLBW3W3uJngLVgnhNZ9W50Lb2SL8WkBvOlPlY=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/MarkupEditorAction
+ BarContributor.class
+SHA-256-Digest: rSqJv+53BkQ3BjQ5hkEoafJfaMaYQcMe6JJ9g4iorpM=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/MarkupEditorOutlin
+ e$1.class
+SHA-256-Digest: zrKBjXC65Higwy6P4fWXerLKrH7/qu3qpztMO8+OTqE=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/syntax/FastMarkupP
+ artitioner.class
+SHA-256-Digest: wLOnHbtiEap+/dQMbsFkZtgMiOqIy8FxONj61ETPrrA=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/viewer/AnnotationHyperlin
+ kDetector$OffsetComparator.class
+SHA-256-Digest: wuWxBgVh/gLnxok/taD3n9s3BYBLS6OjHPHdaz7Uwhg=
+
+Name: org/eclipse/mylyn/wikitext/ui/WikiText.class
+SHA-256-Digest: ejEFvvceeRSGHKPBhwrSPSYEajFL/Z7rr6vgX6OGI1c=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/MarkupEditor$7.cla
+ ss
+SHA-256-Digest: +I39ymAOOLveTKRiTF77AACI35LoV4/fL3ULG5uC054=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/syntax/MarkupToken
+ Scanner.class
+SHA-256-Digest: lMtbpQ2Wh8pGeep0OanWxnfehwW1WKqc4mltSjAcZv8=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/util/resources/missing-im
+ age.png
+SHA-256-Digest: wTI0+TllHYVs8/yClxn/j87Jrs2vaRraKPdzuONX748=
+
+Name: schema/markupLanguage.exsd
+SHA-256-Digest: VaaEOTuWYB1i4Emk3QBXYCoikWF4PAgOjxIuBdKwhvk=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/syntax/MarkupHyper
+ linkDetector$HyperlinkDescriptor.class
+SHA-256-Digest: 8K0e8nI/TLzWz3ogfK83yiH2qk7BVi+T6I10a1hdmc0=
+
+Name: org/eclipse/mylyn/wikitext/ui/editor/WikiTextDocumentProvider.cl
+ ass
+SHA-256-Digest: N+1amkXeKav7GHJsYJTyWsCLbiMGMwtF7iL/Vy29/L4=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/commands/ConvertMarkupToM
+ arkup.class
+SHA-256-Digest: bWDxtGotm1Lok4om5spnrd9ljqQIns8tPuU+GSXJQC0=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/syntax/FastMarkupP
+ artitioner$PartitionBuilder.class
+SHA-256-Digest: p8qaxQhuJ4W4Fj/yKePOs090RPEy01rINnmlVlXTCBI=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/viewer/ImageManager$Image
+ Resolver.class
+SHA-256-Digest: 8tTC5zWvQsWqMsT1XNLF6dEwFZIqbP+FUErNOxu0ZYg=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/util/ImageCache.class
+SHA-256-Digest: kv7vyQEYplrIsDh+7XofLrNpbOp2egNh9XlwOWeqp+0=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/MarkupEditorOutlin
+ e.class
+SHA-256-Digest: nX454esN3QzWBnE3hOZBqG5rKQrLvqOUApqpeoIxJ8I=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/help/messages.prop
+ erties
+SHA-256-Digest: PlUkQXMYZK/XSmH30tIl7G86zyBzNQnnDvHxVPiSgHc=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/operations/message
+ s.properties
+SHA-256-Digest: lV6U1AsEYiqKeYuXfrX3QnlHkDS5R2gile3xflIdYds=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/WikiTextUiPlugin.class
+SHA-256-Digest: ytud4hMF/rrBdnZZTVZiDpDUc5+bKjKTAH0b+WWvw1c=
+
+Name: org/eclipse/mylyn/wikitext/ui/commands/ConvertMarkupToDocbook.cl
+ ass
+SHA-256-Digest: obIx2DtlWK5Dyos3Ip6bb9CPELKtgfFJ9oV1fiuqumg=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/assist/SourceTempl
+ ateContextType.class
+SHA-256-Digest: /uoLfV8NOfxMyC2yFwGaDsuZw9iPxxVpUxQEO34DtO0=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/MarkupEditor$1.cla
+ ss
+SHA-256-Digest: FyXa9hzUcXm2fMbZH9EQmCtpGAedXW3ed9KKUwbaVJk=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/viewer/ImageManager$Hyper
+ linkMouseListener.class
+SHA-256-Digest: VqTms070C9XXnJPYUJ8+Jiq5FscPzmta4TSOaTGp8iw=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/util/css/editor/CssPartit
+ ioner.class
+SHA-256-Digest: qjwACOZW9m9Vfd5Kz4+3uwZv66cHcvK5Tye3HOXvi44=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/MarkupEditor$8.cla
+ ss
+SHA-256-Digest: +UBPYYquwyh6zgs1JyKEw3GseeYBbE2Rfu5Vo4LlliU=
+
+Name: org/eclipse/mylyn/wikitext/ui/viewer/HtmlTextPresenter.class
+SHA-256-Digest: C1dnGJsWZuWcABSSt17+tHLuY4M+uwQTyS1I3a77Znc=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/Messages.class
+SHA-256-Digest: jBpuOJzhJIzpb+0P1tlrMiZNx3lFQgSzUA1xKaPpviA=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/assist/Messages.cl
+ ass
+SHA-256-Digest: wac9GXciC4z8d/Jn7kVCm/CBUSR2l8lDc5NAl+Qk19M=
+
+Name: icons/editor-icon.gif
+SHA-256-Digest: m1Ze47JH2ZvuUho+XGnIzh3WzwJXB9B/agNlgfs1yPs=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/help/HelpContent$1
+ .class
+SHA-256-Digest: yeI9SRjCPIF3qttubU9Q8vLZit8AK1g6WE8ZZ5HlGJM=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/messages.propertie
+ s
+SHA-256-Digest: Gt1rwIk8Hffgij5YcTXvK9aglnfEEYR+tzWStR0+FoE=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/util/IOUtil.class
+SHA-256-Digest: M24J4D/uw/YHGW5tlhanIcbjCRBvFQ9EVFzfI8yOqas=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/operations/MoveSec
+ tionsCommand$OffsetComparator.class
+SHA-256-Digest: 7O2fdoOjAVbnCOoYR3xfMxzSZwtvcwBYBA6i5KfDLAs=
+
+Name: org/eclipse/mylyn/wikitext/ui/viewer/AbstractTextSourceViewerCon
+ figuration.class
+SHA-256-Digest: Z1PQ78aVFkex63X72ko+2GGsbQHG6fWm7nWS+81qHxw=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/registry/WikiTextExtensio
+ nPointReader.class
+SHA-256-Digest: z13XapWTt/xF7Mm7IZRctOLstsBQ8G0KumC9WeUFABs=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/validation/Resourc
+ eMarkerMarkupValidator.class
+SHA-256-Digest: zjUAhn00P3mQg0fAC2jwDiab7ck2OiVQHOMb++JwrfI=
+
+Name: org/eclipse/mylyn/wikitext/ui/editor/WikiTextSourceEditor$4.clas
+ s
+SHA-256-Digest: Nuyl7jQFGgB7TWxOUzcBo77GR6uOj5snhYcfHN0Ml5w=
+
+Name: org/eclipse/mylyn/wikitext/ui/viewer/AbstractTextSourceViewerCon
+ figuration$HyperlinkDetectorDescriptorFilter.class
+SHA-256-Digest: NR5+fi4SHj8hfnxwS5i7JexrqSVqjI4UbqQkBgJwqPM=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/validation/ValidationProj
+ ectBuilder.class
+SHA-256-Digest: NESbxmOxP9A8qc/eGb3OLZRr/lEdlpe+TmSrfMlcAng=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/assist/AnchorCompl
+ etionProcessor$CompletionProposal.class
+SHA-256-Digest: z6cM4X9EcVGba5LSzTmrZRhxtWJXcsWZplAlfWa0g7k=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/viewer/CssStyleManager$Fo
+ ntSizeRuleHandler.class
+SHA-256-Digest: et0l5Yh+pxNFNfXHboGBgqrK9d4HV8ySg2Udl4q+inU=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/actions/Messages.c
+ lass
+SHA-256-Digest: b6gYzcDSEJPGn5n2acB/um3PONcyh38Jdc6jtc8NQms=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/viewer/annotation/ImageAn
+ notation.class
+SHA-256-Digest: EElNUJ8QMTXxxeuXdWXf1QFa6K/hWA9XuV93TZxmC+0=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/MarkupEditor$10.cl
+ ass
+SHA-256-Digest: 7LCo9gX8gvrzoB5L687i5kRniS34ZLKJHNX4bfwbp7A=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/commands/messages.
+ properties
+SHA-256-Digest: GyICpMLTry/BRHn/Iisc5ZVFiTGyL3bYPRkqVPLkc8U=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/commands/ShowCheat
+ SheetCommand.class
+SHA-256-Digest: k17OG4arfXtlhCJNjSbwl4j8ImDD+Jt6aFhtrXj2pwg=
+
+Name: icons/collapseall.gif
+SHA-256-Digest: vrC8rRfWUvpPxc/e6IOk3TnYdzSj1h4PDqS+lxD3kEM=
+
+Name: org/eclipse/mylyn/wikitext/ui/commands/AbstractMarkupResourceHan
+ dler.class
+SHA-256-Digest: gIKG0uQEogHKGp+di7LqcwL+t1TkEljWnCeZySQBTW8=
+
+Name: org/eclipse/mylyn/wikitext/ui/editor/AbstractWikiTextDocumentPro
+ vider.class
+SHA-256-Digest: o/ViOWoVidJbBXpWsW2FQ0IJ6bx/TfoOz6u6ncVfW20=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/assist/AnchorCompl
+ etionProcessor.class
+SHA-256-Digest: 9UKgdbQt4zOWT8QX1AI0wEt15cZKxTAH/wpoNKX48a4=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/MarkupEditor$6.cla
+ ss
+SHA-256-Digest: 5YYSx42wesDLiJ1jkd/p/CHyhjg4uU+Dw7dTOGMKVts=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/viewer/ImageManager.class
+SHA-256-Digest: VCw7EETVvKPfXSP0wxnHyYO0UMVEoqRqIxCcAGeThiY=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/operations/Command
+ Manager.class
+SHA-256-Digest: Sy8oqK/VyuW0/Q5sYbFnm2KUp5yqK8RzQKDJpJ5y6wE=
+
+Name: schema/relativeFilePathHyperlinkDetector.exsd
+SHA-256-Digest: mZ/rMTLZbKd7sKFP3ze/cv2Qsb7SJ6c4id+yxF2UeCg=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/assist/AnchorCompl
+ etionProcessor$CompletionProposalComparator.class
+SHA-256-Digest: EU/kbG3/l+wZjC4W7cgBcKSKuQp4bSGFhy4fQ0hPczw=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/registry/Messages.class
+SHA-256-Digest: buH/FgopcX42jCtFCjaUzdouKUQ6EyQzw+7B7vArVGU=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/assist/Templates.c
+ lass
+SHA-256-Digest: I7ySneBN94WfTSvrCMdpe/X42RM0BYZHERd0t0oAip0=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/viewer/CssStyleManager$Fo
+ ntFamilyRuleHandler.class
+SHA-256-Digest: y+tNq5A0iVftt2vpviO4hCljhFPynpHSowr4R7yJbA4=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/util/WikiTextUiResources.
+ class
+SHA-256-Digest: IX9oSmNc06E63NPNL7FN1qrFQXeRGvlO+lyywEQBn5s=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/syntax/Segment.cla
+ ss
+SHA-256-Digest: DCAyD4yAz4DWP+sZVLLJaAW+2GTD/aSbWY4jB2cVmjY=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/commands/Messages.
+ class
+SHA-256-Digest: nAf1WkhpruRt9a9M7wOHQFQAnuplfxcGXatqxFqlMIY=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/viewer/annotation/Horizon
+ talRuleDrawingStrategy.class
+SHA-256-Digest: v7FSWA9zocmfCk+UCbE1QtqfDf3Z+EJj3buN0JVIFy8=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/MarkupEditor$3.cla
+ ss
+SHA-256-Digest: fiwDdGRjR+SLzuVAdD0Gkt2ajZiB7KzXgSJ0wQCez2Y=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/actions/messages.p
+ roperties
+SHA-256-Digest: KaCcj4M8xisRZZ0gN8v1qdsgQqgyAoDsBoUfLKd+Tvk=
+
+Name: org/eclipse/mylyn/wikitext/ui/editor/WikiTextSourceEditor$7.clas
+ s
+SHA-256-Digest: dfv3FKErNfWshFe1DF6TxX0HTWC8IsntWKKOs2w1Xxk=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/commands/messages.propert
+ ies
+SHA-256-Digest: gKiaa2YyDT3eTunuXNle/lN1db+c1Qj6JrTjUJCz72Q=
+
+Name: org/eclipse/mylyn/wikitext/ui/editor/AbstractWikiTextSourceEdito
+ rOutline.class
+SHA-256-Digest: FrG9XuzfjCoPTY/aoVOC+SbjsB4Vg54/udQZWAmV/6g=
+
+Name: org/eclipse/mylyn/wikitext/ui/viewer/HtmlViewerConfiguration.cla
+ ss
+SHA-256-Digest: gGRScuqpGHNR+g5aoYCbJCWmELlh1qtMzIHR9npNHh8=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/util/InformationPresenter
+ Util$SizeConstraint.class
+SHA-256-Digest: l0xEQcyOOtf2Hbdz5IyXQI8ReDONWRkmQke3CFjmGQo=
+
+Name: org/eclipse/mylyn/wikitext/ui/editor/DefaultWikiTextSourceEditor
+ Outline.class
+SHA-256-Digest: iOvCoO1XbOmWJp3awZc492IOW4/gmWds03FVWHM4t+U=
+
+Name: org/eclipse/mylyn/wikitext/ui/editor/WikiTextSourceEditor$6.clas
+ s
+SHA-256-Digest: TKCK8Q8+R/iK0T6Kv7BkHs9/RM7MZdHC3EBK8Heriqg=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/viewer/CssStyleManager$Ve
+ rticalAlignRuleHandler.class
+SHA-256-Digest: wpysYQh/xbGO+60Q8TDIyC313jKsV9yfziWefAlvcAg=
+
+Name: schema/markupValidationRule.exsd
+SHA-256-Digest: QnHgS2JfCHzlBtSYnonjshotZLtkXkb09g9nspzZV3o=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/util/css/editor/CssConfig
+ uration.class
+SHA-256-Digest: Qtr5LAlkV/IjNCu8t/a1eyrN1FDIrt1cVs3RGD4gXR4=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/syntax/EditFileHyp
+ erlink.class
+SHA-256-Digest: WMpyWlIE4Nr5aLtpx5E69K7slc7Wu/eky5b7pI2hahE=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/MarkupEditorOutlin
+ e$CollapseAllAction.class
+SHA-256-Digest: YNcae9RSw6g/7Gr7SRutGy2PGbDI0F4coyGqpX3d9kg=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/viewer/TextHover.class
+SHA-256-Digest: 7sLPCPFZj3xvsua4uJLR/LUW0FwWg1G7be7SdWmJf58=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/validation/Validat
+ ionProblemAnnotation.class
+SHA-256-Digest: BtC9YtIYVSOYc8qqiJrfMNrBDH5fzhW5TAAMbEnslZI=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/MarkupEditor$4.cla
+ ss
+SHA-256-Digest: nHC6G5I+5I1GH7362o5PEJyb+EmjlQTJNoCK1eteG1U=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/actions/SetMarkupL
+ anguageAction.class
+SHA-256-Digest: 6nS4uEFlIQIYipM7qihZffT9vX5igmEa4yMQrfyHSjM=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/MarkupEditor$12.cl
+ ass
+SHA-256-Digest: 4uG4QpE6TQcS9GhG/2rLtrjMefspnHx63N5iZmvU6O0=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/FoldingStructure$4
+ .class
+SHA-256-Digest: y2or14K2rfaFFZXgE7XVj1YsJ4WAwMw3pTOROt0ofeI=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/viewer/CssStyleManager$Te
+ xtDecorationRuleHandler.class
+SHA-256-Digest: FNkqmy7TAVz4pgA3jYfT0Ke2eu3hXj7cuWOzvyBp5q8=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/dnd/Messages.class
+SHA-256-Digest: jwqu2j7vuM9FsWeX9vRwHrlpkm0aGGl+Hanf8r+/jAo=
+
+Name: org/eclipse/mylyn/wikitext/ui/editor/WikiTextSourceEditor$5.clas
+ s
+SHA-256-Digest: mztN4plBSwWt2cOK+rRZ/2gEYuPtoJ91rqdx/W3wTcc=
+
+Name: org/eclipse/mylyn/wikitext/ui/viewer/HtmlViewerConfiguration$Mar
+ kupViewerDamagerRepairer.class
+SHA-256-Digest: 8F1YrzH1qYnZtW9OQvsDn4aHPDvL0TxzGU3+cQy5MUs=
+
+Name: org/eclipse/mylyn/wikitext/ui/viewer/HtmlViewerConfiguration$1.c
+ lass
+SHA-256-Digest: 3l3LUC/K/JRPueS59HA1235nsx2Ri/55WsGV8D2rS+w=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/viewer/annotation/BulletA
+ nnotation.class
+SHA-256-Digest: SvYDr2Sl/DQGffODwYmXR6ngVyHSfPuiR6jndyqZvSA=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/viewer/CssStyleManager$Ru
+ leHandler.class
+SHA-256-Digest: X6bGl4xMQEyH7VsP3XeP01bhs/1D1w/ZMGYjBgUBTSg=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/util/css/editor/PropertyN
+ ameRule.class
+SHA-256-Digest: UTcZ+O1yw1vAS4GKZbo9EHcA+AJaU3HrO3YBs8MxVSU=
+
+Name: org/eclipse/mylyn/wikitext/ui/annotation/AnchorNameAnnotation.cl
+ ass
+SHA-256-Digest: xTRrmF+VGI0wGpQDhQqlsAOMCnNOswB/68J9ohWEXeQ=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/util/NlsResourceBundle.cl
+ ass
+SHA-256-Digest: wDrjM19wrCHte+kQQChMq/gJrovYrzsWoKg/nwQQWD0=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/registry/EclipseServiceLo
+ cator.class
+SHA-256-Digest: 8RhQtVkuGlXhis+YujbHpCT4F/hnC8DqJwc0fGMrqLY=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/properties/messages.prope
+ rties
+SHA-256-Digest: /Ci5pOW8hWuWoIef42/IzQ9iXw0dpmRoxl5JJG4Spms=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/help/Messages.clas
+ s
+SHA-256-Digest: kU55VeAEWf1Skmqc55kELOMecWC8/J6UeYLVrAUGxns=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/viewer/CssStyleManager$Fo
+ ntStyleRuleHandler.class
+SHA-256-Digest: U5BBxq/XY5vVxWyXgS3S75crsLVmA1LYj+N56T8g/T4=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/viewer/Messages.class
+SHA-256-Digest: Df8+dWNUrioG/OSpCk3hAiag3fk+cl5E+h2xfJ5mvlE=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/MarkupEditor$5.cla
+ ss
+SHA-256-Digest: cUmKJ8Ls8OJ/pEW3biAfAlaucDcuiHJDwXaWQSMKz4I=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/preferences/Prefer
+ enceInitializer.class
+SHA-256-Digest: xa8wE3vaFonWDgaA21TYkzhxkLmQFCeBkF2Kaggt2+8=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/Messages.class
+SHA-256-Digest: p793zyT5jYHbQ0ctzYEOFzzLputkmNka2iLx5iQFL7g=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/viewer/HtmlTextPresentati
+ onParser$ElementState.class
+SHA-256-Digest: hIVJWrhwoRCreOESqoSMZ43JUM0eTqHwuOvr7naxU7I=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/viewer/Util.class
+SHA-256-Digest: fg5A3gtZcczy99G1qZlJPH1qsbE1TEcAZveAP31BNdo=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/properties/ProjectPropert
+ yPage$1.class
+SHA-256-Digest: LjXHtt10Y//iBGxwAKlq2vqlYil/Y+vmqpNWTJekTUI=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/viewer/TextHover$1$1.clas
+ s
+SHA-256-Digest: BXKKzHx8wjJ+NUkzJi/4Iy0BM8nNNDns1DweTU7UkL8=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/viewer/CssStyleManager.cl
+ ass
+SHA-256-Digest: sLcQD3vMSEBxZvYVqekjtbmjRaErCRk+WperWNIuQZc=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/syntax/FastMarkupP
+ artitioner$PartitionTokenScanner.class
+SHA-256-Digest: /XW669deyynjz8u5iLnra6n6PQc0TLIPFFxqQy9elzc=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/util/css/editor/CssScanne
+ r.class
+SHA-256-Digest: wklvJOz6kPBSkS1aa9hi9qjc+ltPPSYsIXrA7WWgTXU=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/util/OutlineItemAdapterFa
+ ctory.class
+SHA-256-Digest: bYPq3QvXDQcx2oGVUxCq5lopEuVvSKIT8xbDs3V6jZo=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/assist/Multiplexin
+ gContentAssistProcessor.class
+SHA-256-Digest: p/UF7oektFCXFkDlVt6pGqolRePsZ+F+wIIXWxuUsxY=
+
+Name: org/eclipse/mylyn/wikitext/ui/editor/WikiTextSourceEditor.class
+SHA-256-Digest: BBNMK4PbGUcn8UqXAUOrR9V5rBZRs5V5UmpzF2xCFqA=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/validation/message
+ s.properties
+SHA-256-Digest: XLBNbgrt/EccCR5csNaFTGogbMj/4hbhr6AWuOP5t5Y=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/FoldingStructure$A
+ bstractItemsAnnotationOperation.class
+SHA-256-Digest: Ga9IMQHvD4+2Lbped9VNBOkQsmF5h0MmEHhE8vcZuD4=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/syntax/MarkupHyper
+ linkDetector$1.class
+SHA-256-Digest: QPk5KdwsdhlTVqr4fKr2VHb2IA4xM0w9A3SBroULdrU=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/preferences/messag
+ es.properties
+SHA-256-Digest: aczSdGqO0ePuEAGKf0foN56BQXtAl5B7fQVQbQqN6TQ=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/reconciler/MarkupM
+ onoReconciler.class
+SHA-256-Digest: 8Ai+4hxxvSgUXDMdmILdpPxMO6wcE9EAtoad4q8A5IA=
+
+Name: org/eclipse/mylyn/wikitext/ui/viewer/messages.properties
+SHA-256-Digest: lrVDUzN/3kLfMgjz8ExxyD0ddUiF8jROadSH8h1bMvk=
+
+Name: org/eclipse/mylyn/wikitext/ui/annotation/ClassAnnotation.class
+SHA-256-Digest: +CuqrUKHeHxN/3FL12l3taqwMfsL2oZ1C3yVgcl/mME=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/syntax/FileRefHype
+ rlinkDetector.class
+SHA-256-Digest: xmqSqs6o2RR69uzZbIiIfuUx01VsmCqpTL/qbKTQlb4=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/viewer/default.css
+SHA-256-Digest: 5K74ZoYlMMT7Fi6ET50s+k+wm0207pgayna1cX+DxuQ=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/syntax/MarkupDamag
+ erRepairer.class
+SHA-256-Digest: Wc5FuES/m5yP7s11tMsvsacCvpnC1ltX0rkeP7noEYk=
+
+Name: org/eclipse/mylyn/wikitext/ui/editor/MarkupSourceViewer.class
+SHA-256-Digest: PvDdYM/EmCWo9FfIWmjM62TSI4B7slxab/8Dh/Jnelg=
+
+Name: org/eclipse/mylyn/wikitext/ui/viewer/DefaultHyperlinkDetectorDes
+ criptorFilter.class
+SHA-256-Digest: ZKDc9J40VXjXidEPzcjWxw/4D85jm4n86SrSUNNk0UY=
+
+Name: org/eclipse/mylyn/wikitext/ui/viewer/HtmlViewer$ParseResult.clas
+ s
+SHA-256-Digest: 9E8YbQ2QfpzHBTA7fQhqQkDIHftfipTsD3WZK/79WEY=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/outline/QuickOutli
+ nePopupDialog$2.class
+SHA-256-Digest: Q/5lrwsOFK9PjeyH7AsrVr1LiXUUezciEBVrgos9Euc=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/actions/ToggleFold
+ ingRulerAction.class
+SHA-256-Digest: XhimXUxwyaOnQfgggLzUONPL46MxAiCcTbZD6bGTrEc=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/util/HyperlinkDetectorDel
+ egate.class
+SHA-256-Digest: mrgc7FKntsFxjX8xMkqcyNVFeeSGdk2dtbpp7pGRXtE=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/FoldingStructure$3
+ .class
+SHA-256-Digest: HRhE2skHrbINFB1Jeew9ksPfVdfXEK0nbh9iztYwc6o=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/FindAndReplaceTarg
+ et.class
+SHA-256-Digest: x+zANT70d+bEw9DW9qb31iz5Wc0kBTj/vymppV6gvS8=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/util/css/editor/package-i
+ nfo.class
+SHA-256-Digest: G5rtHksRNRBGReRPwoIZ92VTmToYUm7Nrz5KInAml+4=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/viewer/CssStyleManager$Fo
+ ntWeightRuleHandler.class
+SHA-256-Digest: X7cYSb4rtWUiAK9o1JWwGhGeVho/XNx+FVnYYhxFhug=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/util/css/editor/Colors.cl
+ ass
+SHA-256-Digest: GPdfhn84QjlpkNMOO3QvCzBFhZtLBFKLMxhRxUR78DY=
+
+Name: org/eclipse/mylyn/wikitext/ui/editor/WikiTextSourceEditor$3.clas
+ s
+SHA-256-Digest: peoqUe8VNyfVeP6po2eowv6mNiqWTEhOQLmVMejKFV0=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/viewer/CssStyleManager$Co
+ lorRuleHandler.class
+SHA-256-Digest: aDxVl1OrUC0ZXoj5yqDGz6qQZ1/KdjZh6TDr0nowgeM=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/viewer/annotation/BulletD
+ rawingStrategy.class
+SHA-256-Digest: mTh2x1pokHKOUvjBvvomov+qD47ssN0PQ4r/4Jx97yo=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/FoldingStructure.c
+ lass
+SHA-256-Digest: WZ0BC9+xyoBr+rdij2ZeZdU0Fhgp1ZC3zJkvFYFRVYo=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/validation/Annotat
+ ionMarkupValidator.class
+SHA-256-Digest: GC7o8PFw3youMn+9duoNgWNWdEgdACO0xlz6+E6iYOg=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/syntax/Segments.cl
+ ass
+SHA-256-Digest: fZGP/BvrKCHDfT9QVk/zQAEVDpg9dpNbpzW1Kv6CAGY=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/HeadingProjectionA
+ nnotation.class
+SHA-256-Digest: NGa4CH15ZTTuysI0AmZjcbvGMeeZjFd7cXLweGic5r8=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/util/OutlineItemWorkbench
+ Adapter.class
+SHA-256-Digest: MCD8+ZCX83VZSqFTRwiGs29FveuUwhS5Ne24cop8olk=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/operations/Abstrac
+ tDocumentCommand.class
+SHA-256-Digest: pjXEFJDITVOKWMclQk8AH6vrlEvEBZ03SOSowDJBL3s=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/util/css/editor/SelectorR
+ ule.class
+SHA-256-Digest: AeYYv5eWtchs+baVmAmiUxHx2I6/drTQ0R8sT0ASSdc=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/outline/QuickOutli
+ nePopupDialog$3.class
+SHA-256-Digest: t7HmvCxWrXPMFeIqWcdcRcoC0+KDUsnlaMpJz3phf78=
+
+Name: org/eclipse/mylyn/wikitext/ui/viewer/MarkupTextPresenter.class
+SHA-256-Digest: qUJN0NdURmP1k8CRxmHteMjOgQzQ2y/Y5l8XQEiD2wk=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/FoldingStructure$2
+ .class
+SHA-256-Digest: 6Pi5NHDKz0CVQS/pnrGqjTK962ZJfAv+4OxEzAHlgVI=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/syntax/Span.class
+SHA-256-Digest: AjoXetowWaa3Sq3r/uMRav/iP3MNuyz39zTVuo9rwEc=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/viewer/HtmlTextPresentati
+ onParser.class
+SHA-256-Digest: GkeXxgefpDigcPNsNELPWREECizryGWK6rokbcI7bEQ=
+
+Name: org/eclipse/mylyn/wikitext/ui/viewer/HtmlViewer.class
+SHA-256-Digest: sy1+qbvBjelbi+dy5d6scZUpOLWj4IVGmDWj5d/Gef8=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/MarkupEditor.class
+SHA-256-Digest: RMIGsa7rnfsv2rICAt/gJsP3r6l9sgiDimE6wI2XKRg=
+
+Name: org/eclipse/mylyn/wikitext/ui/editor/WikiTextSourceEditor$2.clas
+ s
+SHA-256-Digest: 925iHsNAc0YlmP8VxmyuWsA2FA4oXI8pVwxker6QFmA=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/actions/ExpandAllF
+ oldingRulerAction.class
+SHA-256-Digest: uNFARh7cC29VDMN2h9ncCES5CwhHKkJ33irgq8RCNAw=
+
+Name: org/eclipse/mylyn/wikitext/ui/editor/MarkupSourceViewerConfigura
+ tion.class
+SHA-256-Digest: DJJ2bIcamJ8m+D1iyHmmu1kNL+LMNeMPYDRzCwDHBPw=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/preferences/RegExS
+ tringFieldEditor.class
+SHA-256-Digest: VkuGbO4IlNxW9Tc1IXgQ2zIGXAxagbi1y225m9dUOWk=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/dnd/DndConfigurati
+ onStrategy.class
+SHA-256-Digest: 8ztagt/Z6urLFWW+QgEDLeyuu/haGz2P6ObJrN8wdGo=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/preferences/Messag
+ es.class
+SHA-256-Digest: M2rgFCD08RU9dGXJdMZZe6uAJCuKTYxNQAxbcQz7HaQ=
+
+Name: org/eclipse/mylyn/wikitext/ui/editor/WikiTextSourceEditor$1.clas
+ s
+SHA-256-Digest: tscFSvTOPqHnILwBPHufxawv0K29F0Q6wXLmJv0LpAY=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/util/InformationPresenter
+ Util$1.class
+SHA-256-Digest: Wyb9+eoSG+TbidKscinjEbAY4tzkoZFFYZ/V1RH2gpQ=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/operations/MoveSec
+ tionsCommand$Section.class
+SHA-256-Digest: H6JoRhdFXrGF0FT0q8/lgRUTRkzz+KrsSmSkZ9Xk0XA=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/assist/messages.pr
+ operties
+SHA-256-Digest: 4PHOwQHInMDEP2ck/m31gftR1LHfxRmE2q3O4T8CGLQ=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/util/css/editor/CssWhites
+ paceDetector.class
+SHA-256-Digest: dgZj0VRYC1lvHcKt2Io1rZYQ7Aa8w6vVP1K2yYdKmYw=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/viewer/annotation/ImageDr
+ awingStrategy.class
+SHA-256-Digest: KdiZSf89fcHz52dePkcojnr2VRPPeDzH7Y5mk/8+pHg=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/MarkupProjectionVi
+ ewer.class
+SHA-256-Digest: qwdU8s1JOEpZpfmyY23mTx/+tcQ3kbrCv5LfMv2NdNI=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/FoldingStructure$1
+ .class
+SHA-256-Digest: 9zOd94BO2Ct6d3h058jDALpLvmCelVomI6ZNWeIzpJk=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/validation/ValidationProj
+ ectBuilder$ValidationInfo.class
+SHA-256-Digest: E9E5A7db24p861x2tXwR0pNvbtb/joHrc1XgK2uWocs=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/dnd/OutlineDragSou
+ rceListener.class
+SHA-256-Digest: Y4pVxl/6Hl5rokC9hW4Z85dxyhMrQILJduQ8xHbJhk0=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/MarkupEditor$9.cla
+ ss
+SHA-256-Digest: N3R+MU/VcVyJhNwYFNwX+0qmgN0gJAC2701U6VIhbfg=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/viewer/AnnotationHyperlin
+ kDetector.class
+SHA-256-Digest: hVtiQGZM4qduw+YEvY8xcDGuxjvlvZOHDbaWxlKRnGI=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/viewer/messages.propertie
+ s
+SHA-256-Digest: 19s9WKczb6quKqfUxYgFu/bAldgEr/CTW4h/f/qwqaQ=
+
+Name: plugin.properties
+SHA-256-Digest: +js59Czp1XxJxQHpCZmns/pXxs/GOCFbfSGMoBF5SS0=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/operations/Message
+ s.class
+SHA-256-Digest: ZmAqvUBDl0CenLnb0FWlY391VIk2OTeT7mAAxFlnyjs=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/FindAndReplaceTarg
+ et$Result.class
+SHA-256-Digest: O/6mbRE3MmVrlLwSdQsTMCY0oBWrNnucHtEFs25SL/0=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/syntax/MarkupToken
+ Scanner$Token.class
+SHA-256-Digest: APA8kNN1gpSH5FKe9SEdlNokeUjZ6VuWkKrimWC+y8E=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/outline/QuickOutli
+ nePopupDialog$1.class
+SHA-256-Digest: 1C/aWeDMPkKkATNMKrDdrgdk/GNLay52hfpJrnndECI=
+
+Name: org/eclipse/mylyn/wikitext/ui/viewer/Messages.class
+SHA-256-Digest: KJB2MWXFa3MPM06w0Pgs7qMvBJ8gFA5nXTc7wMSfQqA=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/dnd/OutlineDropTar
+ getListener.class
+SHA-256-Digest: u83IK8yH3aLj2IPOR7v8tW/bs8hCiobGgqWYwVyLm+0=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/IFoldingStructure.
+ class
+SHA-256-Digest: SQPACUfiEbZ3VG9HhUepCd5Q7oe/ocZY791+q/BB4Kk=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/dnd/messages.prope
+ rties
+SHA-256-Digest: FGOQrDn9pENZ0YYk9vvhvj9NaVhCluTIczRXCx4VjHE=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/operations/InsertL
+ ocation.class
+SHA-256-Digest: wtqP3oCCvy+AIyAuHzvBHh4A+ErNL0Vqfqo+Gv17NTI=
+
+Name: org/eclipse/mylyn/wikitext/ui/commands/ConvertMarkupToHtml.class
+SHA-256-Digest: nSREgg2tY5Ki9hnX/Bbk91rsGVsyPDzh9mvYr83JsHg=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/commands/ShowQuick
+ OutlineCommand.class
+SHA-256-Digest: cTGiow4YnBzQenC95+yCh+2uhkjVaeyA3jbT/S+KQAo=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/actions/PreviewOut
+ lineItemAction.class
+SHA-256-Digest: t64KOYgc3gNeLt2wqeBjAjRYHzQYRB8HZ2457nARKlE=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/util/css/editor/CssBlockS
+ canner.class
+SHA-256-Digest: q58vpUD64U8A7ImgCOFZDvmHg1auf4am87uERkqLja8=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/validation/Messages.class
+SHA-256-Digest: 8+k3p55Knbea7v2iMnUbIXdtg3Z6G1fzUZBy8C1K5L0=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/viewer/AnnotationHyperlin
+ kDetector$DocumentHyperlink.class
+SHA-256-Digest: UC1/EZWw5e3sAw15UpW+a6oKbOeIFfMaU1RJ6AJiLgw=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/viewer/FontState.class
+SHA-256-Digest: hGHOD5u1vZm3RO8QkeFjD+VfIhBN/acT/Fd1JL6NhVE=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/util/InformationPresenter
+ Util.class
+SHA-256-Digest: r+vLhoExN6TTwvwumY19VCpMwAShllDJdgc0UGNZ9Pk=
+
+Name: icons/help.gif
+SHA-256-Digest: K8TNWtrr8CbiAyz1PLTnN1fVgXWoSCZmXiKFU418/Jg=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/assist/WikiTextTem
+ plateAccess.class
+SHA-256-Digest: GTweRqUl8v4XZIPrx3xeGtlVIN23GvpxgncVtVoUW4I=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/assist/MarkupTempl
+ ateCompletionProcessor$ProposalComparator.class
+SHA-256-Digest: 3CRa7ycQvL6tUWv8pQOzqa8X9/5NBXPOaNruM23sEGg=
+
+Name: schema/cheatSheet.exsd
+SHA-256-Digest: Um1jfYFCGEUCDjgm4W+BINa0+b9P1Uw8OjK9TPMcvpw=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/syntax/MarkupDocum
+ entProvider$MarkupFileDocumentProvider.class
+SHA-256-Digest: uht1J6fnKVeKdQmgj/eBtjpGVTLD/PbotMfAOUa5Zec=
+
+Name: org/eclipse/mylyn/wikitext/ui/editor/MarkupSourceViewerConfigura
+ tion$InformationProvider.class
+SHA-256-Digest: ZeMQgjlzg6iNM5Aj8RavXW547r+8ZATcyvnR7ZTp2YI=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/util/css/editor/PropertyV
+ alueRule.class
+SHA-256-Digest: v8S8YEwrfrQoNHIcQ6jEMBJlHlhZST0kO9D/etQJMno=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/messages.properties
+SHA-256-Digest: Q4KNhdyctU/fgkHGgPBJ8yZx3L6zpAbdINlXsD3SFCA=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/viewer/HtmlTextPresentati
+ onParser$HtmlContentHandler.class
+SHA-256-Digest: Kp5LpRH7eVfyoEPUQq9bfoAVYYFct0I9UqAPHeokiVk=
+
+Name: org/eclipse/mylyn/wikitext/ui/editor/DefaultWikiTextSourceEditor
+ Outline$1.class
+SHA-256-Digest: EraYjT/zgXhZnEv2Fmiy6rkJDRklfcYqRZpMWhgZUT0=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/assist/MarkupTempl
+ ateCompletionProcessor.class
+SHA-256-Digest: TnfIgWh0+w9NH5/EixZnQA+emgXEBdPNTR+7ArzQpgQ=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/util/css/editor/CssPartit
+ ionScanner.class
+SHA-256-Digest: MdRmJrwI4Y4HgRuI1YKgMcKzGRD6BrfEE+bpoRiftrk=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/preferences/Prefer
+ ences.class
+SHA-256-Digest: DcwwCzMP+F9nX2rPInpmGjMquT41YenArArY+5yHbXM=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/preferences/Editor
+ PreferencePage$1.class
+SHA-256-Digest: ybZGsqZKv8q45ANN6bfwEDBXH1E45gF3HdyhJ2vvAhQ=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/properties/ProjectPropert
+ yPage.class
+SHA-256-Digest: m5Q9KKrNt6FAoPl4kJvxBxGn9ekbtta84/WYSq0lekA=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/validation/Documen
+ tRegionValidator.class
+SHA-256-Digest: sVCaG1UaIYLZ7zb9L4bnY/39xjTiLDE1CXozJ5WxlGo=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/util/InformationPresenter
+ Util$InformationProvider.class
+SHA-256-Digest: Z9gUHBni2/p3zT5z8DdHEj1PLe+9Z1gwWLcQquGPdSM=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/registry/messages.propert
+ ies
+SHA-256-Digest: mj0myOeJAxFSP6Y7V3ImfP95u/3ipCsPOB3R2fRVg08=
+
+Name: org/eclipse/mylyn/wikitext/ui/viewer/HtmlViewer$1.class
+SHA-256-Digest: dMDfO2MerTlrLHa5ycwmeoNEHSbtoPNQWm5y0vC8gpw=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/help/HelpContent.c
+ lass
+SHA-256-Digest: PrjoHsfuSXkqxpgztY4VXZriEx1vRU880sg0CoWhZxM=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/reconciler/MarkupV
+ alidationReconcilingStrategy.class
+SHA-256-Digest: Tr9HB4YUw3pvU3Wi2w3qyDUjvzCmtuzKXqN4T+E4zwg=
+
+Name: about.html
+SHA-256-Digest: GWwWKwDoEPbqRj3Nm004u/ySxB5XSz/ODMj6p56lw8o=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/syntax/FastMarkupP
+ artitioner$PartitionTokenScanner$PartitioningResult.class
+SHA-256-Digest: nGg1DfrHFiz4F3JTQ3ziOM8bJiUwm/Td+1PafX74vbg=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/validation/Message
+ s.class
+SHA-256-Digest: woXPDOXI7nAIAzehox2ut4KXThVnj0Hw54HOj5FVhl4=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/util/css/editor/CommentDa
+ magerRepairer.class
+SHA-256-Digest: 27aCnAezcm1cHlJ2efw6fwQHiHmMT/2rd2WFkegeIqw=
+
+Name: org/eclipse/mylyn/wikitext/ui/editor/WikiTextSourcePartitioning.
+ class
+SHA-256-Digest: 3hv34gGoIY9hU7Fcqp+YUdAMQd7wlxIhub6ZyBHnUXQ=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/commands/Messages.class
+SHA-256-Digest: EXNkDEEjnChMgcdGzyqokiJjUYvHXlWX7Vy3OtR+d0Q=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/preferences/Editor
+ PreferencePage.class
+SHA-256-Digest: FHfMBcyaV0th/MX+eqW96itJtuMsCjhrb0Gj4JBCF3I=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/actions/ContextHel
+ pAction.class
+SHA-256-Digest: USB6pnfeFnwlVsO4zo1PuEywrorKa3d2ND2ooWuETJo=
+
+Name: org/eclipse/mylyn/wikitext/ui/annotation/IdAnnotation.class
+SHA-256-Digest: lUavVGVp5DeQig0UaNoOxpeTcGRSJiAKmGlB9dxvXJU=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/util/PreferenceStoreFacad
+ e.class
+SHA-256-Digest: esypeos47GJ2nOVAkYQIHyE6X93xA8NuW9INZ7XO0oQ=
+
+Name: org/eclipse/mylyn/wikitext/ui/editor/ShowInTargetBridge.class
+SHA-256-Digest: 5azekzm80PvxlU3j5EvmMtZvfJOTohoB719aa//OG3Q=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/outline/QuickOutli
+ nePopupDialog.class
+SHA-256-Digest: 3d47FyJ5y/O7/YKcvVdZc3NKQbJDYOhY0UmWBbVva9I=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/help/CheatSheetCon
+ tent.class
+SHA-256-Digest: qgCvqjGd86fvuVLg3DYWEYeuc4POAMjnitm+GPXwbZI=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/syntax/messages.pr
+ operties
+SHA-256-Digest: fl+QhlPN2JeNnh+3HVw1GJXKS37FbDN+2gXRvzI8B0Q=
+
+Name: org/eclipse/mylyn/internal/wikitext/ui/editor/syntax/MarkupHyper
+ linkDetector.class
+SHA-256-Digest: eCKjOUAKpQcew5IJSxY0GlFSy0ggBTr8acsEWyGYFmQ=
+

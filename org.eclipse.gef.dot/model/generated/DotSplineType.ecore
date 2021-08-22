@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="splinetype" nsURI="http://www.eclipse.org/gef/dot/internal/language/DotSplineType"
+    nsPrefix="splinetype">
+  <eClassifiers xsi:type="ecore:EClass" name="SplineType">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="splines" upperBound="-1"
+        eType="#//Spline" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Spline">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="startp" eType="ecore:EClass DotPoint.ecore#//Point"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="endp" eType="ecore:EClass DotPoint.ecore#//Point"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="controlPoints" upperBound="-1"
+        eType="ecore:EClass DotPoint.ecore#//Point" containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<component name="org.eclipse.equinox.supplement_1.7.0.v20170329-1416" version="1.2">
+    <plugin id="org.eclipse.equinox.supplement_1.7.0.v20170329-1416"/>
+    <package name="org.eclipse.osgi.framework.console" visibility="1">
+        <type name="CommandInterpreter" restrictions="1"/>
+        <type name="ConsoleSession" restrictions="0">
+            <method name="close" restrictions="8" signature="()V"/>
+            <method name="doClose" restrictions="8" signature="()V"/>
+            <method name="getInput" restrictions="8" signature="()Ljava/io/InputStream;"/>
+            <method name="getOutput" restrictions="8" signature="()Ljava/io/OutputStream;"/>
+            <method name="getService" restrictions="8" signature="(Lorg/osgi/framework/Bundle;Lorg/osgi/framework/ServiceRegistration;)Ljava/lang/Object;"/>
+            <method name="ungetService" restrictions="8" signature="(Lorg/osgi/framework/Bundle;Lorg/osgi/framework/ServiceRegistration;Ljava/lang/Object;)V"/>
+        </type>
+    </package>
+    <package name="org.eclipse.osgi.framework.eventmgr" visibility="1">
+        <type name="EventListeners" restrictions="2"/>
+        <type name="EventManager" restrictions="2"/>
+    </package>
+    <package name="org.eclipse.osgi.framework.log" visibility="1">
+        <type name="FrameworkLog" restrictions="1"/>
+        <type name="FrameworkLogEntry" restrictions="2"/>
+    </package>
+    <package name="org.eclipse.osgi.service.datalocation" visibility="1">
+        <type name="Location" restrictions="1"/>
+    </package>
+    <package name="org.eclipse.osgi.service.debug" visibility="1">
+        <type name="DebugOptions" restrictions="3"/>
+        <type name="DebugTrace" restrictions="3"/>
+    </package>
+    <package name="org.eclipse.osgi.service.environment" visibility="1">
+        <type name="Constants" restrictions="3"/>
+        <type name="EnvironmentInfo" restrictions="1"/>
+    </package>
+    <package name="org.eclipse.osgi.service.localization" visibility="1">
+        <type name="BundleLocalization" restrictions="1"/>
+    </package>
+    <package name="org.eclipse.osgi.service.runnable" visibility="1">
+        <type name="ApplicationLauncher" restrictions="1"/>
+    </package>
+    <package name="org.eclipse.osgi.util" visibility="1">
+        <type name="ManifestElement" restrictions="2"/>
+    </package>
+</component>

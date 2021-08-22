@@ -1,0 +1,1780 @@
+Manifest-Version: 1.0
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-SymbolicName: org.eclipse.ocl;singleton:=true
+Eclipse-LazyStart: true
+Bundle-Activator: org.eclipse.ocl.internal.OCLPlugin$Implementation
+Require-Bundle: org.eclipse.core.runtime;bundle-version="[3.5.0,4.0.0)
+ ",org.eclipse.emf.ecore;bundle-version="[2.7.0,3.0.0)";visibility:=re
+ export,org.eclipse.emf.ecore.xmi;bundle-version="[2.7.0,3.0.0)";visib
+ ility:=reexport,lpg.runtime.java;bundle-version="[2.0.17,3.0.0)";visi
+ bility:=reexport,org.eclipse.ocl.common;bundle-version="[1.0.0,2.0.0)
+ ";visibility:=reexport
+Bundle-Version: 3.6.200.v20170522-1736
+Export-Package: org.eclipse.ocl,org.eclipse.ocl.cst,org.eclipse.ocl.cs
+ t.impl,org.eclipse.ocl.cst.util,org.eclipse.ocl.expressions,org.eclip
+ se.ocl.expressions.impl,org.eclipse.ocl.expressions.operations,org.ec
+ lipse.ocl.expressions.util,org.eclipse.ocl.helper,org.eclipse.ocl.int
+ ernal.evaluation;x-friends:="org.eclipse.ocl.ecore,org.eclipse.ocl.ex
+ amples.impactanalyzer,org.eclipse.ocl.uml",org.eclipse.ocl.internal.h
+ elper; x-friends:="org.eclipse.ocl.ecore,  org.eclipse.ocl.uml,  org.
+ eclipse.ocl.uml.tests,  org.eclipse.ocl.tests",org.eclipse.ocl.intern
+ al.l10n; x-friends:="org.eclipse.ocl.ecore.tests,  org.eclipse.ocl.um
+ l.tests,  org.eclipse.ocl.tests,  org.eclipse.ocl.ecore",org.eclipse.
+ ocl.lpg,org.eclipse.ocl.options,org.eclipse.ocl.parser,org.eclipse.oc
+ l.parser.backtracking,org.eclipse.ocl.types,org.eclipse.ocl.types.imp
+ l,org.eclipse.ocl.types.operations,org.eclipse.ocl.types.util,org.ecl
+ ipse.ocl.util,org.eclipse.ocl.utilities,org.eclipse.ocl.utilities.imp
+ l,org.eclipse.ocl.utilities.util
+Bundle-ClassPath: .
+Ant-Version: Apache Ant 1.9.4
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: %providerName
+Bundle-Name: %pluginName
+Created-By: 1.8.0_121-b13 (Oracle Corporation)
+Bundle-ManifestVersion: 2
+Import-Package: com.ibm.icu.lang;version="4.0.0";resolution:=optional,
+ com.ibm.icu.text;version="4.0.0";resolution:=optional
+
+Name: org/eclipse/ocl/util/OCLUtil.class
+SHA1-Digest: J13y64+E5J41XqkhvHOBzYQ9Rg4=
+
+Name: org/eclipse/ocl/parser/OCLLexer.class
+SHA1-Digest: a5yObX49C32UFt7aW4sLQrzzn6Q=
+
+Name: org/eclipse/ocl/cst/impl/OCLMessageArgCSImpl.class
+SHA1-Digest: qGPJO77roSDWVYBFbrKkm49xtmI=
+
+Name: org/eclipse/ocl/expressions/operations/CollectionLiteralExpOpera
+ tions.class
+SHA1-Digest: h+h4yIpzPNISETSZ9VBN3IQohNw=
+
+Name: org/eclipse/ocl/expressions/operations/TupleLiteralExpOperations
+ .class
+SHA1-Digest: d51epdSb4B5j7xfEXCj6BVE25DM=
+
+Name: org/eclipse/ocl/cst/impl/NullLiteralExpCSImpl.class
+SHA1-Digest: W+HqR0P5gH+XyvO+UaBXbDspeFY=
+
+Name: org/eclipse/ocl/lpg/btParserTemplateF.gi
+SHA1-Digest: WPwoopWcxAt/dU7HNwYIyhSQMYU=
+
+Name: org/eclipse/ocl/parser/backtracking/OCLBacktrackingParserprs$IsK
+ eyword.class
+SHA1-Digest: RkOquN2FV2oQjBTkoG0NB0ArTfs=
+
+Name: org/eclipse/ocl/types/operations/SetTypeOperations.class
+SHA1-Digest: 31B0Q3vKGWy4APiLbN2ECH2vgMI=
+
+Name: org/eclipse/ocl/parser/backtracking/OCLBacktrackingParserprs$Non
+ terminalIndex.class
+SHA1-Digest: NH0tydAtY+aiwBCvxo5kTJZ8Tmg=
+
+Name: org/eclipse/ocl/AbstractEvaluationVisitor.class
+SHA1-Digest: 2OdcvCpE6n3iyX6ZxKB8ZXakNyw=
+
+Name: org/eclipse/ocl/internal/helper/HelperUtil.class
+SHA1-Digest: ZZ6wWAZrA17yRaSjZNU9DVwgZXU=
+
+Name: org/eclipse/ocl/types/VoidType.class
+SHA1-Digest: HM0EeitFPJ4Kym22oQuTzm0NENE=
+
+Name: org/eclipse/ocl/expressions/IntegerLiteralExp.class
+SHA1-Digest: +NvPZXycQOY2W6R7RP9t7/vqPZY=
+
+Name: org/eclipse/ocl/internal/l10n/IMessages$Default.class
+SHA1-Digest: yxDvlm4NQ3pD7siLQXdfGuy25DI=
+
+Name: org/eclipse/ocl/cst/impl/PropertyContextCSImpl.class
+SHA1-Digest: 88/jAGE1ZnKsxmVYrCtqn0CAGNI=
+
+Name: org/eclipse/ocl/parser/OCLParserprs$TerminalIndex.class
+SHA1-Digest: asHRs27Atyti3ohbgWE/yHsEkIU=
+
+Name: org/eclipse/ocl/options/ClassOption.class
+SHA1-Digest: X5z6RJzITTb/HPuypxgDvYixN5o=
+
+Name: org/eclipse/ocl/cst/LiteralExpCS.class
+SHA1-Digest: qPcxk/rP1VoJjtfsgCp4295WO8o=
+
+Name: org/eclipse/ocl/expressions/MessageExp.class
+SHA1-Digest: Q8cxuaVjA6b+ftRZJyuyL7DTLOo=
+
+Name: org/eclipse/ocl/internal/evaluation/NumberUtil.class
+SHA1-Digest: frHR1CKwlbOzYN2FMVXWht16p58=
+
+Name: org/eclipse/ocl/cst/CSTPackage.class
+SHA1-Digest: 7bHa5nLKylxU8sRZYcM+mXXfjqo=
+
+Name: org/eclipse/ocl/expressions/impl/FeatureCallExpImpl.class
+SHA1-Digest: Z1SpNhCH9nXSc9T2IIsb9gqwsHo=
+
+Name: org/eclipse/ocl/parser/OCLKWLexerprs$ProsthesesIndex.class
+SHA1-Digest: meV+/sXq4MH8CzM2SZgrNRfTgEM=
+
+Name: org/eclipse/ocl/expressions/StringLiteralExp.class
+SHA1-Digest: eGROgxCNHAnYUN45BC+jkaZ84sk=
+
+Name: model/OCLCST.ecore
+SHA1-Digest: D8fc/9iyrTkl56zioYKTFZJBn/w=
+
+Name: org/eclipse/ocl/utilities/Visitor.class
+SHA1-Digest: NBNUywy2g19mr3ksvitBKWK9tts=
+
+Name: org/eclipse/ocl/util/ToStringVisitor.class
+SHA1-Digest: IZpxzOW/sGX75CsC0WU/HgcWNbE=
+
+Name: org/eclipse/ocl/parser/ValidationVisitor$1ResultFinder.class
+SHA1-Digest: ikc+cSuUsxx72whu5RPyrl1sIL4=
+
+Name: org/eclipse/ocl/cst/TypeCS.class
+SHA1-Digest: lGaPGB9dGWE/0hHBW5oIymAU/Mw=
+
+Name: org/eclipse/ocl/types/util/TypesAdapterFactory.class
+SHA1-Digest: fz79NVT03l620Ezew+lYRmD50Qc=
+
+Name: org/eclipse/ocl/parser/backtracking/OCLBacktrackingParserprs$Sco
+ peSuffix.class
+SHA1-Digest: aj8lxiW+nEnxYPkMTwBpR7uPy/s=
+
+Name: org/eclipse/ocl/cst/IsMarkedPreCS.class
+SHA1-Digest: jiUMRkf21Ur3JC7LTcVCh/wTO/4=
+
+Name: org/eclipse/ocl/expressions/AssociationClassCallExp.class
+SHA1-Digest: HC9if9qYZE/4kz6GoW3nuV055h0=
+
+Name: org/eclipse/ocl/cst/IteratorExpCS.class
+SHA1-Digest: DbLL/MXeoBjxxbItfW7SqLLVr3o=
+
+Name: org/eclipse/ocl/expressions/NavigationCallExp.class
+SHA1-Digest: DVUGG8XA9A7zRWE+fhl8feM6SCQ=
+
+Name: org/eclipse/ocl/AbstractEvaluationEnvironment$AbstractTuple.clas
+ s
+SHA1-Digest: H+Q82zlsFvmgu3FkXNG4fpEa/WM=
+
+Name: org/eclipse/ocl/parser/OCLLexerprs$ProsthesesIndex.class
+SHA1-Digest: 7Jk/j8t5LpiznAQZE2Rx8Mu2xm0=
+
+Name: org/eclipse/ocl/types/ElementType.class
+SHA1-Digest: qMNFtjRHJtwH/dAuKuazGDZZQp8=
+
+Name: org/eclipse/ocl/cst/impl/IfExpCSImpl.class
+SHA1-Digest: Ish/LM8VEjO8xlkVOfK46h58UXE=
+
+Name: org/eclipse/ocl/cst/impl/InvalidLiteralExpCSImpl.class
+SHA1-Digest: T2VUIKPhscS0fqxgyo1iI3i+1e8=
+
+Name: org/eclipse/ocl/cst/UnlimitedNaturalLiteralExpCS.class
+SHA1-Digest: LS9LXVcmTtxVcH8Yo3UShcgzqsw=
+
+Name: org/eclipse/ocl/cst/impl/OperationContextDeclCSImpl.class
+SHA1-Digest: 3a0dqSMASW4IBvY26rWyCj42ENU=
+
+Name: org/eclipse/ocl/cst/TupleTypeCS.class
+SHA1-Digest: UuA3uzPOqC80Sf1lUqT4zITd2LQ=
+
+Name: org/eclipse/ocl/Query.class
+SHA1-Digest: iB5/4wm9nE14fcPIHLEmRlFZXYs=
+
+Name: org/eclipse/ocl/cst/impl/MessageExpCSImpl.class
+SHA1-Digest: BR/fRDFE/DGjRcDtOltCyCOT/pM=
+
+Name: org/eclipse/ocl/cst/impl/IntegerLiteralExpCSImpl.class
+SHA1-Digest: pXFnx7fMXyeC50YLKEiLZY8uXqc=
+
+Name: org/eclipse/ocl/lpg/LexerBasicMapF.gi
+SHA1-Digest: XchKUCLG4zeQA4MarTfWvLhhvvk=
+
+Name: org/eclipse/ocl/util/OCLUtil$2.class
+SHA1-Digest: VN3G1eKnzTdv/0Wh6C86PzfClj4=
+
+Name: org/eclipse/ocl/expressions/impl/BooleanLiteralExpImpl.class
+SHA1-Digest: hEFKA8OmsgF+DHCgX2rQasBQudM=
+
+Name: org/eclipse/ocl/cst/impl/IteratorExpCSImpl.class
+SHA1-Digest: XSop5Bjao2PCEbLSEZjVdxuA3FM=
+
+Name: org/eclipse/ocl/cst/DerValueCS.class
+SHA1-Digest: 8+k3j1fIGuT8J21GWc8qsBGMlnA=
+
+Name: org/eclipse/ocl/cst/impl/OCLExpressionCSImpl.class
+SHA1-Digest: J9efuNzcicvIFlD7kAxxtzrwfZo=
+
+Name: org/eclipse/ocl/options/EvaluationOptions.class
+SHA1-Digest: TnYk1BY3GMphzyvjVF3S/fJRwWo=
+
+Name: org/eclipse/ocl/internal/helper/OCLSyntaxHelper.class
+SHA1-Digest: 2+9V4NLhXGZ5uZ7lmbPn0v/1wYo=
+
+Name: org/eclipse/ocl/parser/backtracking/OCLBacktrackingKWLexersym.cl
+ ass
+SHA1-Digest: moL2NUr6n6WHUz8yGMMu9hyUu90=
+
+Name: org/eclipse/ocl/parser/OCLLexerprs$IsKeyword.class
+SHA1-Digest: /s8mW2zneb1F2DPmxOYm0F3HNlY=
+
+Name: org/eclipse/ocl/types/impl/BagTypeImpl.class
+SHA1-Digest: GO6Vomdcy/jWfmfEnA5e8lTMiSo=
+
+Name: org/eclipse/ocl/AmbiguousLookupException.class
+SHA1-Digest: nOQCvdcI7hTPvPucNn+NJtCZp+A=
+
+Name: org/eclipse/ocl/EvaluationVisitorDecorator.class
+SHA1-Digest: chvAGLHj1a+494gGPAqKmTIiGhY=
+
+Name: org/eclipse/ocl/expressions/impl/IterateExpImpl.class
+SHA1-Digest: PPRQoNjZoddcQ3t42Lz34rImHhc=
+
+Name: org/eclipse/ocl/lpg/AbstractLexer.class
+SHA1-Digest: cHgw+kWYlhhVAGHnkIJ3RmBYnlY=
+
+Name: org/eclipse/ocl/parser/backtracking/OCLParserErrors.class
+SHA1-Digest: 2vTzHfLERiTrfuJbhdnOz2ulQUg=
+
+Name: org/eclipse/ocl/cst/IfExpCS.class
+SHA1-Digest: 9rgmHe84uumX+LeqdyO83oz8RrQ=
+
+Name: org/eclipse/ocl/cst/InitValueCS.class
+SHA1-Digest: JiX87ZxyMY2JUnvVS5RV8HJ49so=
+
+Name: org/eclipse/ocl/cst/impl/OperationCSImpl.class
+SHA1-Digest: yesrF1/VTTaFIsgk6rrhwdmHO4o=
+
+Name: org/eclipse/ocl/expressions/impl/EnumLiteralExpImpl.class
+SHA1-Digest: nWtnMTups4pELqixR8vLsQqPfNA=
+
+Name: org/eclipse/ocl/expressions/operations/EnumLiteralExpOperations.
+ class
+SHA1-Digest: uaXUQcjWx1r91w3o+eE/3d7Baps=
+
+Name: org/eclipse/ocl/expressions/util/ExpressionsSwitch.class
+SHA1-Digest: y5Wn1T0z+q12w7R32g8c+eU+qko=
+
+Name: org/eclipse/ocl/types/PrimitiveType.class
+SHA1-Digest: PM5jMT8sU+rGwIPqW77OgnGh0RI=
+
+Name: org/eclipse/ocl/expressions/CallExp.class
+SHA1-Digest: v2aLkjak5jCM6Oqr7/pZXsl3JEs=
+
+Name: org/eclipse/ocl/expressions/operations/CollectionItemOperations.
+ class
+SHA1-Digest: BQNUXfcS0C3FIz91x34elsK3W4o=
+
+Name: org/eclipse/ocl/cst/impl/TypeCSImpl.class
+SHA1-Digest: 4iHwK6t1SaWjsB98NOjFPI3TXf8=
+
+Name: org/eclipse/ocl/cst/impl/InvCSImpl.class
+SHA1-Digest: +aesW1GOPyl1F3zT4Dkzs4wKJ7k=
+
+Name: org/eclipse/ocl/expressions/impl/UnlimitedNaturalLiteralExpImpl.
+ class
+SHA1-Digest: 3imBaYtDUXjYpcSr2rIGVvUVgGs=
+
+Name: org/eclipse/ocl/parser/backtracking/OCLBacktrackingLexerprs$IsKe
+ yword.class
+SHA1-Digest: QxmDvY+QKuZhA9LAKQ17Siu+NNc=
+
+Name: org/eclipse/ocl/util/BagImpl$1MyIterator.class
+SHA1-Digest: pkFsJAASBDgoa5wG+qVetG0WhAw=
+
+Name: org/eclipse/ocl/expressions/LiteralExp.class
+SHA1-Digest: TqDreuC1RJincI+0u8dpMhI1S3k=
+
+Name: model/OCLCST.uml
+SHA1-Digest: 4r0S001rF3eJRdxIfErYLEgb0iA=
+
+Name: org/eclipse/ocl/parser/backtracking/OCLBacktrackingKWLexerprs$Ba
+ seCheck.class
+SHA1-Digest: xUmKT12JL5xc8SNuJVVu37+eSls=
+
+Name: org/eclipse/ocl/options/ObjectOption.class
+SHA1-Digest: cxiSkTSO62hswtrxmOEs8cjd1vM=
+
+Name: org/eclipse/ocl/parser/OCLLexerprs$TermAction.class
+SHA1-Digest: 6neF1fOanvHvXS58g/XUcWtz2fw=
+
+Name: org/eclipse/ocl/lpg/LexerTemplateF.gi
+SHA1-Digest: aGX4nyiJAIk1gpEl6ecGGkQJl5s=
+
+Name: org/eclipse/ocl/parser/backtracking/OCLBacktrackingKWLexerprs$Is
+ Nullable.class
+SHA1-Digest: b8/pvzvIyp7m5sI74031tLpxG+A=
+
+Name: org/eclipse/ocl/cst/impl/VariableExpCSImpl.class
+SHA1-Digest: qWzZPI5U7iCQM+kxNKby+y15uoc=
+
+Name: org/eclipse/ocl/internal/OCLDebugOptions.class
+SHA1-Digest: cPB7OJzVYVviGq901ACnxFTuFo8=
+
+Name: org/eclipse/ocl/expressions/impl/RealLiteralExpImpl.class
+SHA1-Digest: HC/cnPy0JjBcpUFD8cgh9JZSG3o=
+
+Name: org/eclipse/ocl/internal/PreferenceInitializer.class
+SHA1-Digest: uhU7iiCzglcMz8S/oUfRBOjxKTw=
+
+Name: org/eclipse/ocl/internal/helper/OCLSyntaxHelper$ASTVisitor.class
+SHA1-Digest: El0ZCQy7/A7eOEHxRRspEDMSucE=
+
+Name: org/eclipse/ocl/EnvironmentFactory.class
+SHA1-Digest: Fcz/VWIYmcpCSWgFbkj+ZHcQZ+c=
+
+Name: org/eclipse/ocl/cst/impl/SimpleNameCSImpl.class
+SHA1-Digest: rCFG0yN1fRj6UcPTYPAWNG43a6Q=
+
+Name: org/eclipse/ocl/EvaluationVisitor.class
+SHA1-Digest: YJry1X00IC3m5K/kYzdYvafwdOk=
+
+Name: org/eclipse/ocl/internal/evaluation/IterationTemplateSelect.clas
+ s
+SHA1-Digest: NbKbaoCAbcj3Qlm0tCiO+is60Cg=
+
+Name: org/eclipse/ocl/cst/impl/StringLiteralExpCSImpl.class
+SHA1-Digest: Q7uehL8YFIIgDd6q4M0AIeg4lIA=
+
+Name: org/eclipse/ocl/types/impl/SequenceTypeImpl.class
+SHA1-Digest: hWRk4kDW7h/S86UmKotCL1ozjag=
+
+Name: org/eclipse/ocl/expressions/EnumLiteralExp.class
+SHA1-Digest: dlTccTyzpV1PPHNm4HcKBR3OS+o=
+
+Name: org/eclipse/ocl/expressions/impl/VariableImpl.class
+SHA1-Digest: U+Uo83zVXYJukWCj8LV5Oqwycn4=
+
+Name: org/eclipse/ocl/types/operations/AnyTypeOperations.class
+SHA1-Digest: PrH/JEbhRs+BTVoGb+dP+sElONg=
+
+Name: org/eclipse/ocl/expressions/UnlimitedNaturalLiteralExp.class
+SHA1-Digest: lSW/Bs6Rtw7m5nfpNa3Uol45rWE=
+
+Name: org/eclipse/ocl/expressions/impl/InvalidLiteralExpImpl.class
+SHA1-Digest: xzCnuBiWr4c53iVAQFmzrecMZ8Q=
+
+Name: org/eclipse/ocl/types/CollectionType.class
+SHA1-Digest: 8FO3TDb7X5GYWrBZl8rFO3PxDLw=
+
+Name: org/eclipse/ocl/types/impl/VoidTypeImpl.class
+SHA1-Digest: yg1URquTlJTaxO3mxgV5PzCWNEo=
+
+Name: org/eclipse/ocl/EnvironmentFactory$Lookup.class
+SHA1-Digest: mizTiF3U2HbJdGAD2GKKUjt8IE0=
+
+Name: org/eclipse/ocl/cst/impl/OperationCallExpCSImpl.class
+SHA1-Digest: tvLVqPe6cuByqp8//auejY2D84c=
+
+Name: org/eclipse/ocl/SyntaxException.class
+SHA1-Digest: muBOyypLCj7Ky8FuHA01EuAdxKY=
+
+Name: org/eclipse/ocl/types/util/TypesValidator.class
+SHA1-Digest: 9JmfJ27dv1umXDP3jkUPJ1UkD3g=
+
+Name: org/eclipse/ocl/parser/backtracking/EssentialOCLErrors.gi
+SHA1-Digest: N8tSnu7E3RY0Hc4UrJqXGuZeeYU=
+
+Name: org/eclipse/ocl/expressions/operations/IfExpOperations.class
+SHA1-Digest: wodOfXI0RMuvup8WjdGuh0l1Tto=
+
+Name: org/eclipse/ocl/expressions/operations/VariableExpOperations.cla
+ ss
+SHA1-Digest: bwMi9n/enMyOXQvtOubqmjQNKck=
+
+Name: org/eclipse/ocl/expressions/ExpressionsPackage.class
+SHA1-Digest: 2+cdf+SA/mcF20Ho06npYobLa5Y=
+
+Name: org/eclipse/ocl/types/operations/MessageTypeOperations.class
+SHA1-Digest: LtN4JbY7xONJ2CCmQ05f2IEHnWI=
+
+Name: model/OCLCST.genmodel
+SHA1-Digest: iS0X2XMxdzHix+7QpNJeX94v12Y=
+
+Name: org/eclipse/ocl/types/operations/BagTypeOperations.class
+SHA1-Digest: WDEZSKOf2GxZZbST9u8a2wPGn/c=
+
+Name: org/eclipse/ocl/cst/impl/LetExpCSImpl.class
+SHA1-Digest: yuD/T0MRCjGeWz3/2zl5uW4pWlQ=
+
+Name: org/eclipse/ocl/options/EnumeratedOption.class
+SHA1-Digest: Qa4rlr+gX4lA9R3P/BkgIFFqvZU=
+
+Name: org/eclipse/ocl/parser/OCLParser.class
+SHA1-Digest: zJWrQ2FdJFyEIFe4nhUvae/y1Qk=
+
+Name: org/eclipse/ocl/types/operations/TemplateParameterTypeOperations
+ .class
+SHA1-Digest: 5+3zx1mSTuLHyKq7mCnOc6eh5B0=
+
+Name: org/eclipse/ocl/cst/ClassifierContextDeclCS.class
+SHA1-Digest: j5wjId93XBgggEVQks+HmekZlL0=
+
+Name: org/eclipse/ocl/cst/PathNameCS.class
+SHA1-Digest: Y390ZD2BFCB8e7EvoGj3YEjtTnw=
+
+Name: org/eclipse/ocl/parser/backtracking/OCLBacktrackingKWLexerprs.cl
+ ass
+SHA1-Digest: B/Xu4T916V3GI7I7/4HHx69q98M=
+
+Name: org/eclipse/ocl/expressions/impl/CollectionLiteralExpImpl.class
+SHA1-Digest: Zy/3/GEOxXeQl/01sFN3GSNxkuk=
+
+Name: org/eclipse/ocl/lpg/dtParserTemplateF.gi
+SHA1-Digest: mnLrORMzOZsfgEy8FSgVYdSejTE=
+
+Name: org/eclipse/ocl/types/impl/TypesFactoryImpl.class
+SHA1-Digest: IrRilaSDJ1uuYRClOmzpYUXUyvg=
+
+Name: org/eclipse/ocl/cst/impl/UnlimitedNaturalLiteralExpCSImpl.class
+SHA1-Digest: ZowIG6FjS9GwFtV0jlQzDUUvQbQ=
+
+Name: org/eclipse/ocl/expressions/impl/ExpressionsFactoryImpl.class
+SHA1-Digest: /cwasl6zRzAHu1WB2fVgOzcDv8o=
+
+Name: org/eclipse/ocl/internal/l10n/OCLMessages.class
+SHA1-Digest: FH+PKbAfLeMcQCHer3nhXyMVxos=
+
+Name: org/eclipse/ocl/expressions/CollectionRange.class
+SHA1-Digest: hVaHhy+dilEzOyn633ESzc1uYMs=
+
+Name: org/eclipse/ocl/AbstractEnvironmentFactory.class
+SHA1-Digest: mMKBQqKydu/e3kH0X2ygzN1/rz8=
+
+Name: org/eclipse/ocl/utilities/TypedASTNode.class
+SHA1-Digest: x2JJdCZq6Gauu7LH9n2Pv1bq3qM=
+
+Name: org/eclipse/ocl/types/impl/TypesPackageImpl$1.class
+SHA1-Digest: uGa9/T8Qsk+x+shEH6z4qjlfGpc=
+
+Name: org/eclipse/ocl/Environment.class
+SHA1-Digest: UrF//5Bgg3RGDRLN/Z7tr7AxntY=
+
+Name: org/eclipse/ocl/expressions/impl/ExpressionsPackageImpl$1.class
+SHA1-Digest: h7RLgpw1qqB/YKvEG9+tcRRM8Es=
+
+Name: org/eclipse/ocl/cst/impl/TupleLiteralExpCSImpl.class
+SHA1-Digest: 209Plr7Bp14Y8IQ2e8TVb6i0F5Q=
+
+Name: org/eclipse/ocl/cst/PrePostOrBodyDeclCS.class
+SHA1-Digest: TyHor1Ia+d6wacapmM5ekPNNjBo=
+
+Name: org/eclipse/ocl/expressions/impl/CollectionRangeImpl.class
+SHA1-Digest: iVynN9A36ZHu65wzRBqWT7Si9zs=
+
+Name: org/eclipse/ocl/expressions/impl/IfExpImpl.class
+SHA1-Digest: 5SDn3i5Nvn68bRLN3WDxws6oUrI=
+
+Name: org/eclipse/ocl/expressions/impl/LetExpImpl.class
+SHA1-Digest: 7vfaQMIPacNJy1/DX80ZEsYD/S8=
+
+Name: org/eclipse/ocl/cst/util/CSTAdapterFactory$1.class
+SHA1-Digest: anOYZxGNi/Dgv8brIX4fy0FUUTc=
+
+Name: org/eclipse/ocl/cst/impl/RealLiteralExpCSImpl.class
+SHA1-Digest: p1YB7OAfWjW/SDQB2o7Fs4igs2U=
+
+Name: org/eclipse/ocl/lpg/BasicEnvironment2.class
+SHA1-Digest: FlSm5xcn2oE2MiNIn7vGCGw7MUA=
+
+Name: org/eclipse/ocl/internal/evaluation/IterationTemplateOne.class
+SHA1-Digest: c+UpIzlDqBzQamD6oa97/6po02M=
+
+Name: org/eclipse/ocl/parser/OCLLexer$OCLLexerLpgLexStream.class
+SHA1-Digest: k0eSiDMs/IHcX5wh28cxdtWJPtE=
+
+Name: org/eclipse/ocl/lpg/AbstractAnalyzer.class
+SHA1-Digest: q652iq29Je+Kv+sShIVy1ypYPq0=
+
+Name: org/eclipse/ocl/parser/backtracking/OCLBacktrackingParserprs$Ter
+ mCheck.class
+SHA1-Digest: i6uxh9BVgkLjPWF45+cxo/JJEOE=
+
+Name: org/eclipse/ocl/lpg/ProblemHandler.class
+SHA1-Digest: kYw4xmfxBuBO5gTjZyLaEoTN2Sc=
+
+Name: org/eclipse/ocl/internal/OCLPlugin.class
+SHA1-Digest: 1k6DggZPGfSfOKbm1cMJmIDeQJA=
+
+Name: org/eclipse/ocl/ParserException.class
+SHA1-Digest: MYNNiWSyvEcB3xOFCW0ZpftqJ74=
+
+Name: org/eclipse/ocl/parser/OCLParserprs$TermAction.class
+SHA1-Digest: M0z0tAi6SjiP/YA1IMkK+O18QgI=
+
+Name: org/eclipse/ocl/types/impl/CollectionTypeImpl.class
+SHA1-Digest: 2vtoy7EPwyVDqbzInO1QCCdaO8Q=
+
+Name: org/eclipse/ocl/parser/backtracking/OCLBacktrackingParserprs$IsN
+ ullable.class
+SHA1-Digest: 2cnnO+MfJ0CSfeN+bpuP8CrR8nU=
+
+Name: org/eclipse/ocl/EvaluationHaltedException.class
+SHA1-Digest: +5C4f1f9iLLCR1m/nXk5QGauYL4=
+
+Name: org/eclipse/ocl/lpg/DerivedPrsStream.class
+SHA1-Digest: JvCPvgpoH88kW+gxxIqVH55eJCI=
+
+Name: org/eclipse/ocl/internal/evaluation/IterationTemplateReject.clas
+ s
+SHA1-Digest: QWvLlRnNtNgBZcwWKySXC+tnQCE=
+
+Name: org/eclipse/ocl/AbstractTypeResolver.class
+SHA1-Digest: 2Llz7JZeaxcnEH2T4MYEzF7VyEM=
+
+Name: org/eclipse/ocl/parser/OCLParserprs$NonterminalIndex.class
+SHA1-Digest: XJTKRWqut3/skHXVR/Tc7Z950X4=
+
+Name: org/eclipse/ocl/parser/OCLParserprs$ScopeRhs.class
+SHA1-Digest: su2qwfKXM2VaQabz3IM813RtY0M=
+
+Name: org/eclipse/ocl/parser/backtracking/OCLBacktrackingLexer$OCLBack
+ trackingLexerLpgLexStream.class
+SHA1-Digest: T1tYpm5ASqTX5OXuYUTfu6VNjT8=
+
+Name: org/eclipse/ocl/TypeChecker$Cached.class
+SHA1-Digest: eLnqy24CR2hX8hbEf99UbeLUD8s=
+
+Name: org/eclipse/ocl/expressions/Variable.class
+SHA1-Digest: 27NCMBksYUlw+1gPmObJ/BJqUCw=
+
+Name: org/eclipse/ocl/parser/OCLParserprs$IsKeyword.class
+SHA1-Digest: nMkE1jnGK6s7atT6NquzbxOYpkI=
+
+Name: org/eclipse/ocl/types/impl/TypesPackageImpl.class
+SHA1-Digest: /JflO/alJNtUkRCIZ6OaFRo8Hi8=
+
+Name: org/eclipse/ocl/expressions/impl/ExpressionsPackageImpl.class
+SHA1-Digest: MQqEAAe5PejIvZpzL60IkwzPRvE=
+
+Name: org/eclipse/ocl/expressions/operations/LoopExpOperations.class
+SHA1-Digest: fNfMOwv4JxefjCaol5MCVXIMoVI=
+
+Name: org/eclipse/ocl/expressions/IterateExp.class
+SHA1-Digest: MIAMsROdsz2XtYqKyDsZBCfprzU=
+
+Name: org/eclipse/ocl/expressions/IfExp.class
+SHA1-Digest: xslCybkw838ed5qh6CnsvXJbSy0=
+
+Name: org/eclipse/ocl/expressions/VariableExp.class
+SHA1-Digest: czbr+iwDugJErMyb0zE4sr7Jtx8=
+
+Name: org/eclipse/ocl/EvaluationEnvironment$Enumerations.class
+SHA1-Digest: bU7cFtDhXufGdshCg1/wXW4KaXc=
+
+Name: org/eclipse/ocl/parser/OCLKWLexerprs$TermAction.class
+SHA1-Digest: sGqKQ66OBmZNiqGMs5uFs5Gu2yE=
+
+Name: org/eclipse/ocl/util/OCLUtil$1.class
+SHA1-Digest: kmTV3D6hYaC8vXTS4NqT8LF/R88=
+
+Name: model/OCLCST.properties
+SHA1-Digest: MWuPdWa2ImAaOzfaQ1/FdsJyVag=
+
+Name: org/eclipse/ocl/parser/backtracking/OCLBacktrackingParserprs$Sco
+ peRhs.class
+SHA1-Digest: jC+zduglv1QV2z2LcP70aesGZuc=
+
+Name: org/eclipse/ocl/cst/CollectionLiteralExpCS.class
+SHA1-Digest: Hz5ExD3IPebsDidrIw49mC6edQc=
+
+Name: org/eclipse/ocl/expressions/OCLExpression.class
+SHA1-Digest: nlPzBb6WPN+A5868Wez1MGeJiPE=
+
+Name: org/eclipse/ocl/expressions/NullLiteralExp.class
+SHA1-Digest: rEHC634wbbvHMNrGznW0aO96zP4=
+
+Name: org/eclipse/ocl/parser/backtracking/OCLBacktrackingKWLexer.class
+SHA1-Digest: SD+EYS52+UTsXYYaFVwIvZ1Ojc8=
+
+Name: org/eclipse/ocl/cst/InvOrDefCS.class
+SHA1-Digest: kKKgAMVTwpZ3Y2iiKbfXNv1HZDI=
+
+Name: org/eclipse/ocl/parser/EssentialOCLKWLexer.gi
+SHA1-Digest: NxM+HHc21I847FI6ARWPsjXopsU=
+
+Name: org/eclipse/ocl/internal/l10n/OCLMessages.properties
+SHA1-Digest: MSlYVm478fVQZDWCAF0hozrHAa8=
+
+Name: org/eclipse/ocl/Environment$Registry.class
+SHA1-Digest: GNJL2rTgSlTYwy/isXyVwzCO/fM=
+
+Name: org/eclipse/ocl/cst/DefExpressionCS.class
+SHA1-Digest: 12C3caEDwCmZU1arHBY1+9h4xFc=
+
+Name: org/eclipse/ocl/expressions/impl/PropertyCallExpImpl.class
+SHA1-Digest: //jloD7L6ulo5pafgnXjEnD5odk=
+
+Name: org/eclipse/ocl/cst/CollectionRangeCS.class
+SHA1-Digest: vBeUAM8zauCVUwa6eu5ckRXSw3E=
+
+Name: org/eclipse/ocl/parser/OCLParser.g
+SHA1-Digest: 6t/UrstUJSxeGtYwDVIB8bKb970=
+
+Name: org/eclipse/ocl/types/operations/CollectionTypeOperations.class
+SHA1-Digest: /sTfS9QrchgS0JALJ04CI9xkrRs=
+
+Name: org/eclipse/ocl/expressions/operations/UnlimitedNaturalLiteralEx
+ pOperations.class
+SHA1-Digest: a4IphElIpnhM9zQF9GK9Ka9kQB4=
+
+Name: org/eclipse/ocl/parser/backtracking/OCLBacktrackingParserprs$Sco
+ peStateSet.class
+SHA1-Digest: iDi4svFooXYPQkVRXAsbYBj43bg=
+
+Name: org/eclipse/ocl/lpg/FormattingHelper.class
+SHA1-Digest: GyE/D53c7YJFDk8Ccua8jXnMiY8=
+
+Name: org/eclipse/ocl/types/operations/TupleTypeOperations.class
+SHA1-Digest: uGv0vAMJ2G1YSMfgILRlMgVowTM=
+
+Name: org/eclipse/ocl/parser/backtracking/OCLBacktrackingKWLexerprs$Ba
+ seAction.class
+SHA1-Digest: IyUx0qHBQ9mndPL8r5ZMZYiAl0E=
+
+Name: org/eclipse/ocl/parser/OCLLexerprs$TermCheck.class
+SHA1-Digest: OesGB8BblBu0n6+QUNlGey8uG3k=
+
+Name: org/eclipse/ocl/types/TypesFactory.class
+SHA1-Digest: H2Dyw7RtlgzH/GuXOjWBDkmsu44=
+
+Name: org/eclipse/ocl/cst/impl/FeatureCallExpCSImpl.class
+SHA1-Digest: mExrEjxqWxXkk+BzBLIM0svjLEs=
+
+Name: org/eclipse/ocl/internal/OCLPlugin$Implementation.class
+SHA1-Digest: /80XrMB5P2cIQY3mqq2x+4/nQQE=
+
+Name: org/eclipse/ocl/types/util/TypesAdapterFactory$1.class
+SHA1-Digest: DU+pf9DuM5cytjtU4JOV7m1+E2I=
+
+Name: org/eclipse/ocl/expressions/PrimitiveLiteralExp.class
+SHA1-Digest: iQreDg7zryGwGtJAe6/ZYasaUQ8=
+
+Name: org/eclipse/ocl/lpg/DerivedPrsStream$1.class
+SHA1-Digest: F/a/C2Vo9oxYBxbh5ZVeAlr0f3A=
+
+Name: org/eclipse/ocl/lpg/BasicEnvironment.class
+SHA1-Digest: +9cz+ra9Q21kflKa5RqPUfThR7Q=
+
+Name: org/eclipse/ocl/parser/OCLProblemHandler.class
+SHA1-Digest: yHrgJPjvn2+BtuMjD/MVsuCKd3I=
+
+Name: org/eclipse/ocl/parser/OCLKWLexerprs$IsKeyword.class
+SHA1-Digest: iAnbE9MDd4McQVZCYuIZrlMzsSk=
+
+Name: org/eclipse/ocl/cst/impl/IsMarkedPreCSImpl.class
+SHA1-Digest: j+GEoq2cLk0s3Cgzvsp/VTMNUKc=
+
+Name: org/eclipse/ocl/expressions/FeatureCallExp.class
+SHA1-Digest: v1PkgCPpfLI6u6Kwv/LDk2AXcmg=
+
+Name: org/eclipse/ocl/parser/backtracking/OCLBacktrackingLexerprs$Term
+ Check.class
+SHA1-Digest: wXxME/6RhE+g96jVvHEpUgefQ/Q=
+
+Name: org/eclipse/ocl/lpg/KeywordTemplateF.gi
+SHA1-Digest: 12xctEg9xxUtvEQOTST6dZV85Ts=
+
+Name: org/eclipse/ocl/internal/l10n/IMessages.class
+SHA1-Digest: IaY1XEJOnQIsfKrQ2B3skBjkPdc=
+
+Name: org/eclipse/ocl/helper/OCLSyntaxHelper.class
+SHA1-Digest: Hl6hZlshZUSK2E0gz4a8Bd8IeOU=
+
+Name: org/eclipse/ocl/helper/Choice.class
+SHA1-Digest: xrSNUoYQBe4o1I8rl7dGwmAo5LQ=
+
+Name: org/eclipse/ocl/parser/backtracking/OCLBacktrackingParserprs$Bas
+ eCheck.class
+SHA1-Digest: V/MzYeRSrCe/6I0RqFOV4vZA3AI=
+
+Name: org/eclipse/ocl/cst/PrimitiveTypeCS.class
+SHA1-Digest: kbjmthxPKYRSxRakAYavQIEd8y4=
+
+Name: org/eclipse/ocl/cst/VariableExpCS.class
+SHA1-Digest: vL+Jlm+NePRj2sdc3U+dzdjNJXw=
+
+Name: org/eclipse/ocl/expressions/ExpressionsPackage$Literals.class
+SHA1-Digest: BiGDhyV5qkdxemWNV96zuFBY/sQ=
+
+Name: about.html
+SHA1-Digest: m+wzKd57dPxuWpaqs1MsBq0oaiw=
+
+Name: org/eclipse/ocl/parser/OCLParserprs$ScopePrefix.class
+SHA1-Digest: y+YFaf4QdH/NaQ3kjqr1JII0Ly4=
+
+Name: org/eclipse/ocl/parser/OCLParserprs$Nasb.class
+SHA1-Digest: pMLHqny17gcH7drk5Z3KiOae+Jo=
+
+Name: org/eclipse/ocl/AbstractTypeResolver$ResolveSwitch.class
+SHA1-Digest: QNwBkwt9Z+vaWLDmLvc8f8VBKoI=
+
+Name: org/eclipse/ocl/internal/evaluation/IterationTemplate.class
+SHA1-Digest: xVyhuQ+Ka2xj3A7z8MprKjvDyHM=
+
+Name: org/eclipse/ocl/EvaluationEnvironment.class
+SHA1-Digest: kxS8JpuNZEoCSPU9B1VfFOkdAlY=
+
+Name: org/eclipse/ocl/expressions/impl/CallExpImpl.class
+SHA1-Digest: 7+pJLOfPOvyoo3Eb10nuIwxaQ5E=
+
+Name: org/eclipse/ocl/cst/impl/ContextDeclCSImpl.class
+SHA1-Digest: UQbn3LaP4xDLbOO0LuJvQiI/tY8=
+
+Name: org/eclipse/ocl/types/InvalidType.class
+SHA1-Digest: 4e07nTKPHyXAx57sxTxG3+PREDo=
+
+Name: org/eclipse/ocl/expressions/operations/IteratorExpOperations.cla
+ ss
+SHA1-Digest: VNm6X1+iqvwU3PpQ9M+HELBJPY4=
+
+Name: org/eclipse/ocl/parser/AbstractOCLAnalyzer.class
+SHA1-Digest: qWirkM3soXHgH91ELRfHzq1xdPQ=
+
+Name: org/eclipse/ocl/parser/OCLParserprs$Nasr.class
+SHA1-Digest: UIMUagtNaMza5Zq+CCrxhgTcWhU=
+
+Name: org/eclipse/ocl/internal/evaluation/BasicTypeChecker.class
+SHA1-Digest: 0Z6TOb6Ikwbpc4L5Fs7pr6h5V+U=
+
+Name: org/eclipse/ocl/util/Adaptable.class
+SHA1-Digest: SRFf5aV98XhTd9kcql1sfxlU3dQ=
+
+Name: org/eclipse/ocl/options/ProblemOption.class
+SHA1-Digest: AY6H0suFj/PuA4O4AH5tCykoj+E=
+
+Name: org/eclipse/ocl/cst/util/CSTSwitch.class
+SHA1-Digest: Xr42OovKWc4pP9rKuvkpoGk39FY=
+
+Name: org/eclipse/ocl/parser/OCLParserprs$ScopeState.class
+SHA1-Digest: +KeKKO2UBheuPKrigZIkkmJpj6Q=
+
+Name: org/eclipse/ocl/cst/OperationCS.class
+SHA1-Digest: G2GubQayyHsR4+8zbfcumvCjnhA=
+
+Name: org/eclipse/ocl/cst/SimpleNameCS.class
+SHA1-Digest: PswvpNLpLe4i/IL6VN9hTko/TFY=
+
+Name: org/eclipse/ocl/options/BooleanOption.class
+SHA1-Digest: LwV12p71qjjSeaLQmC8+CpKCXxw=
+
+Name: org/eclipse/ocl/utilities/util/UtilitiesAdapterFactory.class
+SHA1-Digest: Cx7gZPMhyMfVQx8YFqKZndi3CB0=
+
+Name: org/eclipse/ocl/parser/backtracking/OCLBacktrackingLexerprs$Pros
+ thesesIndex.class
+SHA1-Digest: klbNWt8SG/fH2ijN0XnF1aNeWXQ=
+
+Name: org/eclipse/ocl/expressions/impl/OperationCallExpImpl.class
+SHA1-Digest: oQ9N5kB4w51CuDGzJfS8YnfuBdA=
+
+Name: org/eclipse/ocl/lpg/ProblemHandler$Severity$1.class
+SHA1-Digest: 2jfjp9ocCjKVNGPpbdRtLxvW2FE=
+
+Name: org/eclipse/ocl/types/impl/MessageTypeImpl.class
+SHA1-Digest: vkGLF0NvH9+270kJYHT58287tIU=
+
+Name: org/eclipse/ocl/lpg/KWLexerMapF.gi
+SHA1-Digest: WarK44DvirriBIDw6bLXK0CFQQo=
+
+Name: org/eclipse/ocl/cst/CollectionTypeIdentifierEnum.class
+SHA1-Digest: CSZy/o9J0QbYBOD4Ftd18AhIyjo=
+
+Name: org/eclipse/ocl/cst/impl/TupleTypeCSImpl.class
+SHA1-Digest: mkcZPvxY45jks716TEbSjECEy8c=
+
+Name: org/eclipse/ocl/EvaluationVisitorImpl$IntegerRangeList.class
+SHA1-Digest: FClgHgA2cBR7ttpWz0906DF6yhU=
+
+Name: org/eclipse/ocl/expressions/operations/BooleanLiteralExpOperatio
+ ns.class
+SHA1-Digest: F4WXq+RlpV4iE/2dp/EtcfZ6C4c=
+
+Name: model/OCL.ecore
+SHA1-Digest: EtCMNGIeX8x0R+R6qpgyRISTIJQ=
+
+Name: org/eclipse/ocl/parser/backtracking/OCLBacktrackingLexerprs$IsNu
+ llable.class
+SHA1-Digest: qG7XID54sZZF2h8e84O9XEdeVGY=
+
+Name: org/eclipse/ocl/cst/impl/CSTFactoryImpl.class
+SHA1-Digest: BAKd2IUbqFtmXt5XcnK43Gj5b9w=
+
+Name: org/eclipse/ocl/parser/OCLParserprs$ScopeStateSet.class
+SHA1-Digest: 8z0njVejKR6o6yKtvkAfFUFQmek=
+
+Name: org/eclipse/ocl/parser/backtracking/OCLBacktrackingParserprs$Bas
+ eAction.class
+SHA1-Digest: FJRaeewDN/0NUFCpECMvBE11m3s=
+
+Name: org/eclipse/ocl/cst/LetExpCS.class
+SHA1-Digest: XuPgJa8A32Bv5pfjES2FF+3o9k0=
+
+Name: org/eclipse/ocl/expressions/CollectionLiteralExp.class
+SHA1-Digest: bfokTRfJb//4wejZjI7U6IhgcFc=
+
+Name: org/eclipse/ocl/parser/OCLLexerprs$BaseCheck.class
+SHA1-Digest: +RIq19s7qYGkWuB34yMXywtrx3g=
+
+Name: org/eclipse/ocl/cst/impl/PrimitiveLiteralExpCSImpl.class
+SHA1-Digest: NbkDYPDMliMqT9EXGGokohgy2vo=
+
+Name: org/eclipse/ocl/cst/CSTPackage$Literals.class
+SHA1-Digest: Ar54oy92G9bYYHbDOQ+tvz+b1EA=
+
+Name: org/eclipse/ocl/cst/TupleLiteralExpCS.class
+SHA1-Digest: Bwxc3VxaoNkIvAa1NHC0TmyiiP8=
+
+Name: org/eclipse/ocl/EvaluationVisitorImpl$IntegerRangeList$1IntegerR
+ angeIterator.class
+SHA1-Digest: ro/TScVy5++tGYHndKGQuWWY8JM=
+
+Name: org/eclipse/ocl/LazyExtentMap.class
+SHA1-Digest: //r9Go3e7SEOPlaIOLBkJTOAtTs=
+
+Name: org/eclipse/ocl/cst/LoopExpCS.class
+SHA1-Digest: uJZHBhBC6ZIw7WL8klC4wZvRRE4=
+
+Name: org/eclipse/ocl/cst/impl/PrimitiveTypeCSImpl.class
+SHA1-Digest: qS2jCFEjJBPwzHV4edIGcb0mzIQ=
+
+Name: org/eclipse/ocl/cst/InitOrDerValueCS.class
+SHA1-Digest: TyqYLoO5paEYZvAFkdUxO2wjJwM=
+
+Name: schema/environments.exsd
+SHA1-Digest: yuhfaQnn78LdzL4LninRz/XDasA=
+
+Name: org/eclipse/ocl/cst/CallExpCS.class
+SHA1-Digest: fIf0t8EsUusLZLbFk2rxOJpmQeI=
+
+Name: org/eclipse/ocl/cst/MessageExpCS.class
+SHA1-Digest: XMIyG2vT2az1zNTX9i2GqAnW+f0=
+
+Name: org/eclipse/ocl/types/operations/OrderedSetTypeOperations.class
+SHA1-Digest: oJspVVMz9NcUAXQ/ZrGzuV4Z6JQ=
+
+Name: org/eclipse/ocl/parser/backtracking/OCLBacktrackingLexerprs$Base
+ Check.class
+SHA1-Digest: rM9P7z5SJ2nDdJqFURhw65kCoEM=
+
+Name: org/eclipse/ocl/options/BasicOption.class
+SHA1-Digest: vuuXlV1CNud/y+j5jCwHpfVfuw4=
+
+Name: org/eclipse/ocl/types/TemplateParameterType.class
+SHA1-Digest: MS/HymE3GImfdPyjIHUosgNE6Q8=
+
+Name: org/eclipse/ocl/cst/impl/OCLDocumentCSImpl.class
+SHA1-Digest: RRDsLkesz+BZaZajdsXExwjAs5E=
+
+Name: org/eclipse/ocl/expressions/operations/OperationCallExpOperation
+ s.class
+SHA1-Digest: SrujyJ/0W16+DCu0tCrlKJe2ESA=
+
+Name: org/eclipse/ocl/lpg/Ascii.g
+SHA1-Digest: gS/hRoY1z0nJjiduTPujtd9l/6A=
+
+Name: org/eclipse/ocl/utilities/UtilitiesPackage.class
+SHA1-Digest: 4mFowDgd9Gc+o5zc431ebbKB50I=
+
+Name: org/eclipse/ocl/parser/OCLLexer.gi
+SHA1-Digest: pQQ6HfiZLsqOlb71gYWCO/js27o=
+
+Name: org/eclipse/ocl/expressions/operations/VariableOperations.class
+SHA1-Digest: AaG5vFKznrKZdpYCAwMS/hXkLjs=
+
+Name: org/eclipse/ocl/AbstractTypeChecker.class
+SHA1-Digest: sw3m1bg4GjzolgmWrtBfRwH7mME=
+
+Name: org/eclipse/ocl/cst/CSTNode.class
+SHA1-Digest: 4XuwPcIA3ra3p47gCX0R9fNZlBE=
+
+Name: org/eclipse/ocl/expressions/impl/CollectionLiteralPartImpl.class
+SHA1-Digest: ZXdwBOL/hvivBaLOtQNiyHhWSYY=
+
+Name: org/eclipse/ocl/parser/OCLParserprs$TermCheck.class
+SHA1-Digest: uYYRozv3ujn1/W8k35KCfX1vMIc=
+
+Name: org/eclipse/ocl/internal/helper/ChoiceImpl.class
+SHA1-Digest: WOhUXuNPKJEsiQbL8T4wxgD15mM=
+
+Name: org/eclipse/ocl/cst/CSTFactory.class
+SHA1-Digest: x2lEOXlnlxUiKyNdYCQWe4wEoPE=
+
+Name: org/eclipse/ocl/cst/impl/CSTPackageImpl.class
+SHA1-Digest: yh02oZZpcndtfrWtGHKUN5J3pUA=
+
+Name: org/eclipse/ocl/expressions/impl/StateExpImpl.class
+SHA1-Digest: x82J2VAG/VtNp+37Edtu+V5rzvg=
+
+Name: org/eclipse/ocl/expressions/impl/IteratorExpImpl.class
+SHA1-Digest: qsfnC8e6AKlLCx78Wd3UT/GirCs=
+
+Name: org/eclipse/ocl/types/util/TypesSwitch.class
+SHA1-Digest: z4ufNrjcDCyFUSvtRyQM5dX7is0=
+
+Name: org/eclipse/ocl/expressions/impl/CollectionItemImpl.class
+SHA1-Digest: 6I6FmyNlsGtqugAwHUdwM/fDFpI=
+
+Name: org/eclipse/ocl/expressions/impl/NullLiteralExpImpl.class
+SHA1-Digest: h+l26UMjOr8YORREtByaQ5YoH8E=
+
+Name: org/eclipse/ocl/expressions/impl/MessageExpImpl.class
+SHA1-Digest: 0dkHW1eeDB4MxPrnyFAh8hUTCLs=
+
+Name: org/eclipse/ocl/AbstractEvaluationEnvironment.class
+SHA1-Digest: 3FomYvB0d9IpXa7UhIfZuF6+EpM=
+
+Name: org/eclipse/ocl/lpg/AbstractFormattingHelper.class
+SHA1-Digest: OwUUAFhgkF6lFs0oVEibN6V6fEg=
+
+Name: model/OCL.uml
+SHA1-Digest: wUXb50yg9O0e5db+jp999ZxI4UE=
+
+Name: org/eclipse/ocl/types/OrderedSetType.class
+SHA1-Digest: es5/6hDdUi8OC92KL6Qm48y/6mI=
+
+Name: org/eclipse/ocl/parser/OCLParserprs$Name.class
+SHA1-Digest: KrH/sMyWW8XPgVWpngfhVh/1XIE=
+
+Name: org/eclipse/ocl/cst/OperationContextDeclCS.class
+SHA1-Digest: szLKgCq6nZYThqa5k+Ruu0romr0=
+
+Name: org/eclipse/ocl/expressions/impl/ExpressionsPackageImpl$1OCLPack
+ ageImpl.class
+SHA1-Digest: 8rNU12Dqoch0F1/2m2XVNERbMiI=
+
+Name: about.ini
+SHA1-Digest: So6w3BOLjDxdL3xtKUBiKuOB/Gc=
+
+Name: org/eclipse/ocl/types/SequenceType.class
+SHA1-Digest: 1tz3HmRzlTK/xHokiUDFNuCaMag=
+
+Name: org/eclipse/ocl/lpg/AbstractBasicEnvironment.class
+SHA1-Digest: NVJv0qNsicRLUoQo4a3IPg7jmSQ=
+
+Name: org/eclipse/ocl/cst/impl/PackageDeclarationCSImpl.class
+SHA1-Digest: 61WXzbYQ+iB1QNxZYVjyeFd4Iro=
+
+Name: org/eclipse/ocl/parser/backtracking/OCLBacktrackingParserprs$Nas
+ b.class
+SHA1-Digest: PX0lk1kJg3RA1+YYcDlXoJuyYRk=
+
+Name: org/eclipse/ocl/types/TupleType.class
+SHA1-Digest: +ReAybaE36CRALucspSIL+BUZDw=
+
+Name: org/eclipse/ocl/types/operations/TypeTypeOperations.class
+SHA1-Digest: CwNA50B6miCwePUwKEMQOWayoqM=
+
+Name: org/eclipse/ocl/parser/OCLParserprs$ScopeLa.class
+SHA1-Digest: tKXZyGT0vtfZs8YFJGH/8ZQKd9E=
+
+Name: org/eclipse/ocl/expressions/CollectionLiteralPart.class
+SHA1-Digest: o/fckdgt71sU2QeN5uf3GNU4IXc=
+
+Name: org/eclipse/ocl/internal/EnvironmentRegistryImpl$EnvironmentDesc
+ riptor.class
+SHA1-Digest: qSH4XBRnUOLmvM7eUGdoU4JRJpE=
+
+Name: org/eclipse/ocl/internal/EnvironmentRegistryImpl$RegistryReader$
+ 1.class
+SHA1-Digest: 1DPIOZfhNZsUIvMEQYoSgn4yDuU=
+
+Name: org/eclipse/ocl/helper/ChoiceKind.class
+SHA1-Digest: IIcx5rSvKPPC95of7E+1TDX30us=
+
+Name: org/eclipse/ocl/OCL.class
+SHA1-Digest: eiKqRAdWhRP46CmTmpl/qzCM9E0=
+
+Name: org/eclipse/ocl/internal/evaluation/CachedTypeChecker.class
+SHA1-Digest: Yufu/zG+i3pbXnOCryH+Ru0WWdo=
+
+Name: org/eclipse/ocl/parser/backtracking/OCLBacktrackingParserprs$Nas
+ r.class
+SHA1-Digest: mohxd7VSnLdnTIWun42jyTAeQYQ=
+
+Name: org/eclipse/ocl/expressions/impl/TypeExpImpl.class
+SHA1-Digest: 6X76XSSupsKwQ1t2NhrrmksA7dc=
+
+Name: org/eclipse/ocl/lpg/StringProblemHandler.class
+SHA1-Digest: oQWK9mWDIiFrhVGxqHhxTAR1BrQ=
+
+Name: org/eclipse/ocl/EvaluationVisitorImpl$3.class
+SHA1-Digest: Q2Bk3exlkIPHJ3mmjBnpkpW2e/A=
+
+Name: org/eclipse/ocl/parser/OCLParserprs$ProsthesesIndex.class
+SHA1-Digest: fxTeK8DfKxB3tuGdQpI6BDTzs0c=
+
+Name: org/eclipse/ocl/parser/OCLKWLexerprs$TermCheck.class
+SHA1-Digest: Ks1rHDqsk988fk+TzspPeAz68a0=
+
+Name: org/eclipse/ocl/types/SetType.class
+SHA1-Digest: 5uQO+yXIzM3rDsfotThk5tuculY=
+
+Name: org/eclipse/ocl/utilities/AbstractVisitor.class
+SHA1-Digest: 7mkSd4rdFeE2R6AgS+Osszvv2f0=
+
+Name: org/eclipse/ocl/utilities/TypedElement.class
+SHA1-Digest: HSBfC4OjDLUGbU3/eHvodtRBHjM=
+
+Name: org/eclipse/ocl/lpg/AbstractProblemHandler.class
+SHA1-Digest: WWtFv9+dC2v1+Uef8hZ6fzb+01o=
+
+Name: org/eclipse/ocl/types/OCLStandardLibrary.class
+SHA1-Digest: +NpVBfsVj4HGRIydyYFoxYyrvZE=
+
+Name: org/eclipse/ocl/expressions/util/ExpressionsValidator.class
+SHA1-Digest: UmM6X5r6wgabGTl4kHeu442oLAQ=
+
+Name: about.properties
+SHA1-Digest: gSK5CoSMZN+QMo6tT89aRtyWf50=
+
+Name: org/eclipse/ocl/LookupException.class
+SHA1-Digest: mlBNPML8JIsRr80vVHSHf1jmI8s=
+
+Name: org/eclipse/ocl/parser/AbstractOCLParser.class
+SHA1-Digest: xUKoAjFwXjCUGYtD99HB89q+JOM=
+
+Name: org/eclipse/ocl/expressions/operations/StringLiteralExpOperation
+ s.class
+SHA1-Digest: iuwrH+Z0WByeq3pV82PW2AVg+Yk=
+
+Name: org/eclipse/ocl/types/impl/PrimitiveTypeImpl.class
+SHA1-Digest: wr9Pp2LbkKYATn9+jSUjz2xkQ0o=
+
+Name: org/eclipse/ocl/types/TypeType.class
+SHA1-Digest: pu/WeuRXU2wLe3gMa5ff1Twke9w=
+
+Name: org/eclipse/ocl/cst/impl/InitValueCSImpl.class
+SHA1-Digest: i1Anu0UdEQTIgrHDtYsOQ/LSWf0=
+
+Name: org/eclipse/ocl/cst/impl/CollectionLiteralPartCSImpl.class
+SHA1-Digest: /YPeC6/CJ7+wCqIE2zQm7uZeXqE=
+
+Name: org/eclipse/ocl/internal/EnvironmentRegistryImpl$RegistryReader.
+ class
+SHA1-Digest: EQ6PZIxXdRcsKcm+eQ4bdcZHRYc=
+
+Name: org/eclipse/ocl/parser/backtracking/OCLBacktrackingParserprs$InS
+ ymb.class
+SHA1-Digest: Nb/lmwjdZzUvX2mrnFWUWavT/A0=
+
+Name: org/eclipse/ocl/internal/evaluation/QueryImpl.class
+SHA1-Digest: 8Rxk+oI6wRBWvsv8hUaSacmPPaA=
+
+Name: org/eclipse/ocl/expressions/impl/LiteralExpImpl.class
+SHA1-Digest: 8kq7b0fUWfeH6Vqujg9TeWNDgRA=
+
+Name: org/eclipse/ocl/types/BagType.class
+SHA1-Digest: EDSaaEUJJ2hta7+tR9z8QuzUgro=
+
+Name: org/eclipse/ocl/cst/StringLiteralExpCS.class
+SHA1-Digest: wz9D4oN7WGTbB6ZiQ2v+sjajIZ4=
+
+Name: org/eclipse/ocl/types/operations/PrimitiveTypeOperations.class
+SHA1-Digest: fqp815pm+E6zpuMjiH3yWDKsho8=
+
+Name: org/eclipse/ocl/parser/backtracking/OCLBacktrackingParser.class
+SHA1-Digest: Z9eSYgq2dr0+gVkFUX2aL9OH7Uk=
+
+Name: org/eclipse/ocl/parser/backtracking/OCLBacktrackingKWLexerprs$Te
+ rmAction.class
+SHA1-Digest: MIa5meJzcdNhrLtOd+zvxf5BxYA=
+
+Name: org/eclipse/ocl/expressions/StateExp.class
+SHA1-Digest: fyovo8e6lPwkeFzf8Jb/OJkcLGI=
+
+Name: org/eclipse/ocl/util/OCLStandardLibraryUtil.class
+SHA1-Digest: GkdrkwICXy/2GNINvc2EIFVgUxc=
+
+Name: org/eclipse/ocl/cst/InvCS.class
+SHA1-Digest: asfe2Hc9Da2bc2SzhenjbmVNfEA=
+
+Name: org/eclipse/ocl/parser/OCLParserprs$Asb.class
+SHA1-Digest: 0conoOq/sZXDQoY50DI3ws87VIE=
+
+Name: org/eclipse/ocl/cst/impl/LoopExpCSImpl.class
+SHA1-Digest: 04ZFNsQzNhHmUhq+mTf4Qr/XCBw=
+
+Name: org/eclipse/ocl/utilities/UMLReflection.class
+SHA1-Digest: iT9AldPadTd8o4ZxvSXcn4YHqkk=
+
+Name: org/eclipse/ocl/expressions/impl/UnspecifiedValueExpImpl.class
+SHA1-Digest: 1/EGNnz/9JlmO/WewEtiTQLIVb0=
+
+Name: org/eclipse/ocl/parser/OCLParserprs$BaseCheck.class
+SHA1-Digest: jWFWNOfo6qHWoCCZ8gdDM/9a6jU=
+
+Name: org/eclipse/ocl/cst/ContextDeclCS.class
+SHA1-Digest: sqAXb8T2ShRikc+U6gNPbSqNCkM=
+
+Name: org/eclipse/ocl/cst/impl/CollectionLiteralExpCSImpl.class
+SHA1-Digest: AqoBlN10sRKeXRMYcii8S2PQQ+E=
+
+Name: org/eclipse/ocl/util/BagImpl$MutableInteger.class
+SHA1-Digest: x7TzVEnToinzoquo6JTYq/dWzl8=
+
+Name: org/eclipse/ocl/expressions/TupleLiteralPart.class
+SHA1-Digest: doOnbBne0RtUkcfNy60lBI2Wam0=
+
+Name: org/eclipse/ocl/parser/backtracking/OCLBacktrackingLexerprs$Base
+ Action.class
+SHA1-Digest: TxHR0xWViOnfnlivHVwVsIz0n3U=
+
+Name: org/eclipse/ocl/expressions/impl/IntegerLiteralExpImpl.class
+SHA1-Digest: Rn3/c6kYuHtSVJRqQsRDIvq6PB4=
+
+Name: org/eclipse/ocl/parser/OCLParserprs$Asr.class
+SHA1-Digest: UsBrNVa73Jj0EZEcCkHCWMn5ggw=
+
+Name: org/eclipse/ocl/cst/CollectionLiteralPartCS.class
+SHA1-Digest: jViX/Ue/7OdvEMTJ3T95bGZqu6I=
+
+Name: org/eclipse/ocl/utilities/impl/UtilitiesFactoryImpl.class
+SHA1-Digest: 37QXzsJYosqTWPf3aWVvoZSNgUs=
+
+Name: org/eclipse/ocl/cst/DefCS.class
+SHA1-Digest: RTzUe5nJHi0nebXY90S69unc3dA=
+
+Name: org/eclipse/ocl/internal/OCLStatusCodes.class
+SHA1-Digest: xu+COa1m4EG/eRFidNa5yGyoRCE=
+
+Name: org/eclipse/ocl/expressions/operations/CollectionRangeOperations
+ .class
+SHA1-Digest: vZvVNyRrNXoxZfQezf58BtZ2efA=
+
+Name: org/eclipse/ocl/internal/EnvironmentRegistryImpl.class
+SHA1-Digest: nx57ws6+NBhJJbNoiooVKiwjaX8=
+
+Name: org/eclipse/ocl/expressions/ExpressionsFactory.class
+SHA1-Digest: b3b09hn2IG4+hx+JEvZkPvN/A/k=
+
+Name: org/eclipse/ocl/expressions/operations/PropertyCallExpOperations
+ .class
+SHA1-Digest: 8T/vmv8ElsCR3NAn0ZcrHaWb7SY=
+
+Name: org/eclipse/ocl/cst/impl/DefCSImpl.class
+SHA1-Digest: JgMFIMSp3n6GQZjGRlsUe2ZPxic=
+
+Name: org/eclipse/ocl/utilities/UtilitiesPackage$Literals.class
+SHA1-Digest: aiIaHHqooxqIvPh3FEaffRhZpU0=
+
+Name: org/eclipse/ocl/internal/evaluation/IterationTemplateSortedBy.cl
+ ass
+SHA1-Digest: 8JKPyfPOY34ugJzQdmqmhiFqOIo=
+
+Name: org/eclipse/ocl/util/BagImpl.class
+SHA1-Digest: m9pJQFbWsl/XWc8vW5gcfK7W8rs=
+
+Name: org/eclipse/ocl/parser/backtracking/OCLBacktrackingParserprs$Nam
+ e.class
+SHA1-Digest: 8HFl+dCEpoWkg+gRPHjSK0j6/xQ=
+
+Name: org/eclipse/ocl/expressions/PropertyCallExp.class
+SHA1-Digest: 9iK+uYKf0s7aG0ZKiajjLCQmHvk=
+
+Name: org/eclipse/ocl/cst/impl/ClassifierContextDeclCSImpl.class
+SHA1-Digest: djHiN+i3OpjFWgXFlhGQRapqO7I=
+
+Name: org/eclipse/ocl/parser/backtracking/OCLParserErrors.gi
+SHA1-Digest: EW58onpXEhVD8uCNIYvs7E+ztnQ=
+
+Name: org/eclipse/ocl/parser/ValidationVisitor.class
+SHA1-Digest: 5gKCpEi23l7dLoXpZZSzmO1al34=
+
+Name: org/eclipse/ocl/helper/OCLHelper.class
+SHA1-Digest: 1Py52+AkMUsrLGgbMUEtjV6jLUE=
+
+Name: org/eclipse/ocl/expressions/impl/VariableExpImpl.class
+SHA1-Digest: YtzyLWu9jeO4/UFAn3PgLjILFy0=
+
+Name: org/eclipse/ocl/parser/backtracking/OCLBacktrackingKWLexer.gi
+SHA1-Digest: 1CiYqcADt1j59LxnXuxDohSqJCA=
+
+Name: org/eclipse/ocl/util/UnicodeSupport$Default.class
+SHA1-Digest: dN/5I+faG8zxZ/g6eNmiTrqSC94=
+
+Name: org/eclipse/ocl/parser/backtracking/OCLBacktrackingParserprs$Asb
+ .class
+SHA1-Digest: wgkgQvKyfaAodzhkIZrALKamsqY=
+
+Name: org/eclipse/ocl/expressions/operations/LetExpOperations.class
+SHA1-Digest: XEpOILJAJBxOh/kkPZVA9DzL4TU=
+
+Name: org/eclipse/ocl/utilities/util/UtilitiesAdapterFactory$1.class
+SHA1-Digest: NDg23ENXLoGMW3keVCzamwR9EF0=
+
+Name: org/eclipse/ocl/parser/OCLKWLexerprs$BaseCheck.class
+SHA1-Digest: 2K11KV4kUDf30xOvignti4gxUHA=
+
+Name: org/eclipse/ocl/options/Customizable.class
+SHA1-Digest: xMnFD2Oh3P+1rfhHEnj09xGmc00=
+
+Name: org/eclipse/ocl/cst/impl/LiteralExpCSImpl.class
+SHA1-Digest: 5ATRmnO0VWWNN5K0jG7hFtEuzo0=
+
+Name: org/eclipse/ocl/lpg/ProblemHandler$Phase.class
+SHA1-Digest: sfiWa8GCO8XX2SY38dduHb+ZwfU=
+
+Name: org/eclipse/ocl/parser/OCLLexerprs$IsNullable.class
+SHA1-Digest: n8+0807OgXmtwsh9VQmq39klOBs=
+
+Name: org/eclipse/ocl/AbstractEnvironment$VariableEntry.class
+SHA1-Digest: 1nVjvMf71kcooOjpnisno9r9roY=
+
+Name: META-INF/eclipse.inf
+SHA1-Digest: zGrdOy/KGcwA6PTl3WmKmRzSpc0=
+
+Name: org/eclipse/ocl/types/operations/InvalidTypeOperations.class
+SHA1-Digest: VmEqM8qLLqaDjeH3HIEkuxI7tYc=
+
+Name: org/eclipse/ocl/types/impl/TemplateParameterTypeImpl.class
+SHA1-Digest: zFItGZRLqNhVHmaJA83U9u+WqqI=
+
+Name: org/eclipse/ocl/utilities/impl/UtilitiesPackageImpl.class
+SHA1-Digest: b9+0H7ruJtCXGOBLAhfVBcm0DlQ=
+
+Name: org/eclipse/ocl/internal/evaluation/IterationTemplateCollect.cla
+ ss
+SHA1-Digest: 8AoGkP+oSC8ZjDqkIaoghn9GNR0=
+
+Name: org/eclipse/ocl/cst/impl/CollectionTypeCSImpl.class
+SHA1-Digest: EH7sl1E5hPCmOAKbD/ejGGkvi1w=
+
+Name: org/eclipse/ocl/cst/OCLMessageArgCS.class
+SHA1-Digest: v1qbjNMesSpV1P6BAPenaCrSmUs=
+
+Name: org/eclipse/ocl/parser/backtracking/OCLBacktrackingParserprs$Asr
+ .class
+SHA1-Digest: 1mPVQ1W/v1aL798oY81RMPv9Zls=
+
+Name: org/eclipse/ocl/internal/evaluation/IterationTemplateForAll.clas
+ s
+SHA1-Digest: VtIcQlKzqX00RuGA6YVAZ3wEVOU=
+
+Name: .options
+SHA1-Digest: QXbfhlvOchDIOacAhui/7NQeAb8=
+
+Name: org/eclipse/ocl/parser/backtracking/OCLBacktrackingLexersym.clas
+ s
+SHA1-Digest: /P8v0vpB0+O8h0GSUXrrovitfRw=
+
+Name: org/eclipse/ocl/expressions/operations/MessageExpOperations.clas
+ s
+SHA1-Digest: N1s419x0I6nbS/RrhM1IPBoWr7g=
+
+Name: org/eclipse/ocl/expressions/util/ExpressionsAdapterFactory.class
+SHA1-Digest: ad2CQYMJmSiqq7lkgIceSyUrcIs=
+
+Name: org/eclipse/ocl/parser/backtracking/OCLBacktrackingParserprs$Sco
+ pePrefix.class
+SHA1-Digest: Vxd3MsZDKK8lA05nOtpcVt9JbLI=
+
+Name: org/eclipse/ocl/expressions/impl/NumericLiteralExpImpl.class
+SHA1-Digest: H6pHBxaeE0XkCIeRfiGxKykaeO4=
+
+Name: org/eclipse/ocl/expressions/operations/CollectionLiteralPartOper
+ ations.class
+SHA1-Digest: B+JOH5apIxBRjUM7yjyTI+kTiOA=
+
+Name: org/eclipse/ocl/expressions/operations/TupleLiteralPartOperation
+ s.class
+SHA1-Digest: 2S7eeCauIE6lc0CFpcAnVK0mdo8=
+
+Name: org/eclipse/ocl/cst/impl/CSTNodeImpl.class
+SHA1-Digest: mA7cFkxq22vIv2AP490ia0f1L+I=
+
+Name: org/eclipse/ocl/cst/FeatureCallExpCS.class
+SHA1-Digest: RxbxAqgAiK4IxNiu4ADYvaxvLK4=
+
+Name: org/eclipse/ocl/cst/PrePostOrBodyEnum.class
+SHA1-Digest: gzv7E5GQTXuHAEWb1OmhRw2wfhI=
+
+Name: org/eclipse/ocl/util/ProblemHandlerWrapper$Tee.class
+SHA1-Digest: 23rY1HcRoB5iBJ9A/LoBVtkXqA8=
+
+Name: org/eclipse/ocl/expressions/impl/AssociationClassCallExpImpl.cla
+ ss
+SHA1-Digest: qFPBOILsAflfWeOweXzgAFA8f/0=
+
+Name: org/eclipse/ocl/parser/OCLKWLexer.gi
+SHA1-Digest: TTn4lLKtRLy/Uh+UhTJtyhBx21M=
+
+Name: org/eclipse/ocl/expressions/operations/RealLiteralExpOperations.
+ class
+SHA1-Digest: 3oT3Xtf3BeLt+PFxu5AT9zp6Fq8=
+
+Name: org/eclipse/ocl/types/impl/OrderedSetTypeImpl.class
+SHA1-Digest: 8HhiHTNXeMQtc12KkA/ZFHwlTKQ=
+
+Name: org/eclipse/ocl/util/TypeUtil.class
+SHA1-Digest: PhjpSBfXxT4b+qNPh833NvrLyCk=
+
+Name: org/eclipse/ocl/parser/backtracking/OCLBacktrackingParserprs$Ter
+ mAction.class
+SHA1-Digest: sE/S7wmaw/jiJXEJvMHMsrCTknw=
+
+Name: org/eclipse/ocl/lpg/ProblemHandler$Severity.class
+SHA1-Digest: 46g+I5C0XiuihdqBwY5Cr3hvXTU=
+
+Name: plugin.properties
+SHA1-Digest: dkY1JQvEMV803EohQQEqNr/PNtI=
+
+Name: org/eclipse/ocl/util/Bag.class
+SHA1-Digest: FxvnwKbGRm8gigaZM0xQCI73nVA=
+
+Name: org/eclipse/ocl/expressions/UnspecifiedValueExp.class
+SHA1-Digest: FEPbsKL+KwetAsCIxHUfIRSMH7U=
+
+Name: org/eclipse/ocl/expressions/InvalidLiteralExp.class
+SHA1-Digest: jhPRpOXzB1Lazd604f2suSXDkJ0=
+
+Name: org/eclipse/ocl/AbstractEnvironment.class
+SHA1-Digest: 4jo44b7zbBUCj5J5X98rTqYv1ZI=
+
+Name: org/eclipse/ocl/EvaluationVisitorImpl.class
+SHA1-Digest: fS1U/B3uskM8z8LFTYqLQ46LIA4=
+
+Name: org/eclipse/ocl/parser/backtracking/OCLBacktrackingParserprs$Sco
+ peLa.class
+SHA1-Digest: QlHyQ9IsCVnuVVuZZJ4ultUtjlA=
+
+Name: org/eclipse/ocl/expressions/CollectionKind.class
+SHA1-Digest: G9bgj1V2FUgGb291WWrUjEGUcZ0=
+
+Name: plugin.xml
+SHA1-Digest: MqncP49CQZWGv7PzwFRDMj/kH5Q=
+
+Name: org/eclipse/ocl/utilities/ASTNode.class
+SHA1-Digest: tJApOWiaWi6N/1rL92CMmkf9V9g=
+
+Name: org/eclipse/ocl/EvaluationVisitorImpl$2.class
+SHA1-Digest: hGbPQ8Bukg/XhBfhAhJhKvKvmDY=
+
+Name: org/eclipse/ocl/expressions/LoopExp.class
+SHA1-Digest: go5MFQfTwarAxakR0l/vvyqzVK0=
+
+Name: org/eclipse/ocl/OCLInput.class
+SHA1-Digest: vjkVL4ocftjC4CTR0oZBL4Y1tvI=
+
+Name: org/eclipse/ocl/cst/OperationCallExpCS.class
+SHA1-Digest: g3zse4fh7MWIb/uMoS5JfrNN6+Q=
+
+Name: org/eclipse/ocl/SemanticException.class
+SHA1-Digest: mxBLEV82/dZZB9uumGM2Ug4PFFE=
+
+Name: org/eclipse/ocl/cst/VariableCS.class
+SHA1-Digest: bY9XM+ZlI1kkRQWtZ83pU2jizIg=
+
+Name: org/eclipse/ocl/parser/OCLParserprs$ScopeSuffix.class
+SHA1-Digest: OyeFIxHuqgcK2iV1c1IWpklv7AE=
+
+Name: org/eclipse/ocl/cst/SimpleTypeEnum.class
+SHA1-Digest: OQ4/krizeOuMBFtPQyZWwS8pMg4=
+
+Name: org/eclipse/ocl/util/CollectionUtil.class
+SHA1-Digest: K6llZPATdjnmpbSBWmSasHv9Wl0=
+
+Name: org/eclipse/ocl/cst/IntegerLiteralExpCS.class
+SHA1-Digest: 6ex92Mu1aAL/wrRoUAE9F4hsfoo=
+
+Name: org/eclipse/ocl/internal/evaluation/IterationTemplateIsUnique.cl
+ ass
+SHA1-Digest: KaEsdxSM5igFoZDzoJs0bpoHTQY=
+
+Name: org/eclipse/ocl/parser/OCLParserprs$ScopeLhs.class
+SHA1-Digest: sP2khHV2+44UtOivJn92jJz+23I=
+
+Name: org/eclipse/ocl/expressions/impl/LoopExpImpl.class
+SHA1-Digest: p+ODWKetS8WsUEwLib7P3uRk+Pw=
+
+Name: org/eclipse/ocl/utilities/ExpressionInOCL.class
+SHA1-Digest: TsJLHbRuOqxn5U/uBoPQQKPQFDs=
+
+Name: org/eclipse/ocl/utilities/CallingASTNode.class
+SHA1-Digest: 8JTFtpBGHdB4vjVX5YHYSLqDf00=
+
+Name: org/eclipse/ocl/internal/evaluation/IterationTemplateClosure.cla
+ ss
+SHA1-Digest: ZCHDVhTknvtGGGdzowv2A8otLpU=
+
+Name: org/eclipse/ocl/cst/PropertyContextCS.class
+SHA1-Digest: gYGEI3VvOaySkGET0ycIebf02MA=
+
+Name: org/eclipse/ocl/expressions/OperationCallExp.class
+SHA1-Digest: VDCuob01SWpXzXcq1iXub8gyqQc=
+
+Name: org/eclipse/ocl/parser/EssentialOCL.gi
+SHA1-Digest: tx26d+VbxRJNlTUNKzdp100Z94w=
+
+Name: org/eclipse/ocl/expressions/BooleanLiteralExp.class
+SHA1-Digest: B7RJyKmRF7msEh4Mjd+92Ijimz0=
+
+Name: org/eclipse/ocl/expressions/impl/NavigationCallExpImpl.class
+SHA1-Digest: pwLGkMZ+N6BydIjk23OCbKgCltU=
+
+Name: org/eclipse/ocl/parser/backtracking/OCLBacktrackingParsersym.cla
+ ss
+SHA1-Digest: YnojeBdl/2lAcxEILAKXHZCkbdw=
+
+Name: org/eclipse/ocl/parser/backtracking/OCLBacktrackingParserprs$Sco
+ peLhs.class
+SHA1-Digest: wOgQKwbFU1GgbWbM8yOEV5V5VCI=
+
+Name: org/eclipse/ocl/expressions/TypeExp.class
+SHA1-Digest: r4MZr8zXMluzpg6uR8vIHT7I11k=
+
+Name: org/eclipse/ocl/cst/impl/DerValueCSImpl.class
+SHA1-Digest: K1VFnd/TvWh8+cbxtP/o2rhL8jU=
+
+Name: org/eclipse/ocl/utilities/PredefinedType.class
+SHA1-Digest: mmrnkiUfw8WzhFT2IDYdy1VL46M=
+
+Name: org/eclipse/ocl/expressions/CollectionItem.class
+SHA1-Digest: rdp0lqV7IdfKaQhyjuJcU/YELJg=
+
+Name: org/eclipse/ocl/parser/OCLParserprs$IsNullable.class
+SHA1-Digest: n3fo7a0r5nsqui5EPWiHBaOs51Y=
+
+Name: org/eclipse/ocl/parser/backtracking/OCLBacktrackingLexerprs.clas
+ s
+SHA1-Digest: 96xlas4JWHuslbsfOz4yMiWmHgY=
+
+Name: org/eclipse/ocl/parser/backtracking/OCLBacktrackingKWLexerprs$Is
+ Keyword.class
+SHA1-Digest: 5J8XvaRuqFd2QnxX98rfng6Ua14=
+
+Name: org/eclipse/ocl/expressions/TupleLiteralExp.class
+SHA1-Digest: ePPuTQvGSb+P+4ERhlw56GqyWzM=
+
+Name: org/eclipse/ocl/types/TypesPackage$Literals.class
+SHA1-Digest: D5Xwdko0y+92xUMRzI110QxVu4g=
+
+Name: org/eclipse/ocl/internal/evaluation/TracingEvaluationVisitor.cla
+ ss
+SHA1-Digest: 12jYWgswjevG7i3+dOzE9jnWXug=
+
+Name: org/eclipse/ocl/options/ParsingOptions$PACKAGE_LOOKUP_STRATEGIES
+ .class
+SHA1-Digest: zb8/tYHGkPyxNASRBQJu1QCubho=
+
+Name: org/eclipse/ocl/types/AnyType.class
+SHA1-Digest: sIZ7snRR3D1M7CdQCTMuviKm9R0=
+
+Name: org/eclipse/ocl/cst/impl/PrePostOrBodyDeclCSImpl.class
+SHA1-Digest: bxWThaMbLw2mUq7O+k0lDT1+DoA=
+
+Name: org/eclipse/ocl/expressions/RealLiteralExp.class
+SHA1-Digest: Qn8mle6p3qPmODfsXeIsCKmViRI=
+
+Name: org/eclipse/ocl/TypeResolver.class
+SHA1-Digest: iaMPuCt8SplQgAPM7XPrJCZmidw=
+
+Name: model/OCL.genmodel
+SHA1-Digest: F1sLYbnj97PlhsC13k98YsR4xDg=
+
+Name: org/eclipse/ocl/parser/OCLKWLexerprs$IsNullable.class
+SHA1-Digest: +tH98pg6iRHaTc21V1JQE61zieM=
+
+Name: org/eclipse/ocl/types/impl/SetTypeImpl.class
+SHA1-Digest: OP4ImS+b63sfei3q9ElIXaXqZRM=
+
+Name: org/eclipse/ocl/expressions/impl/StringLiteralExpImpl.class
+SHA1-Digest: WU5i7iin9w00S7qVwnHDXy/cVyg=
+
+Name: org/eclipse/ocl/expressions/operations/IntegerLiteralExpOperatio
+ ns.class
+SHA1-Digest: fHfBJRqiZQkf5boh96ugqvoIJiw=
+
+Name: org/eclipse/ocl/parser/backtracking/OCLBacktrackingKWLexerprs$Pr
+ osthesesIndex.class
+SHA1-Digest: OWhCKaWnDmNIQaPKeva1O9LHC80=
+
+Name: org/eclipse/ocl/parser/OCLParsersym.class
+SHA1-Digest: E4TP53A2csI1i/xG7V+d8B7v5oo=
+
+Name: org/eclipse/ocl/types/impl/AnyTypeImpl.class
+SHA1-Digest: VH3Z9OVYTi9S+esMMWRtsSOiabg=
+
+Name: org/eclipse/ocl/parser/backtracking/OCLBacktrackingParser.g
+SHA1-Digest: ZvuKegjEA045T/VGGN7NJq9yiWs=
+
+Name: org/eclipse/ocl/parser/OCLKWLexersym.class
+SHA1-Digest: Og65mujc6rUqllN8LmWOVVAR9ZI=
+
+Name: org/eclipse/ocl/cst/impl/InitOrDerValueCSImpl.class
+SHA1-Digest: jKTQ21C4YhSlUOp9WXt+uCD7mWw=
+
+Name: org/eclipse/ocl/cst/MessageExpKind.class
+SHA1-Digest: PZIm8RxWTKxtpxO2vc8LdWUBb8E=
+
+Name: org/eclipse/ocl/utilities/util/UtilitiesSwitch.class
+SHA1-Digest: 2UQlyuW07oAokEGL+TjoWzX+vuc=
+
+Name: org/eclipse/ocl/parser/backtracking/OCLBacktrackingLexer.class
+SHA1-Digest: Qv48ltN/IG+porEJ9kOSyR6vR/w=
+
+Name: org/eclipse/ocl/util/Tuple.class
+SHA1-Digest: GDL1zB9icbNEcBTEhmuU2xSUlUQ=
+
+Name: org/eclipse/ocl/parser/OCLLexersym.class
+SHA1-Digest: vgPCgtGFcmuLhU7RNgkoTj7F7gs=
+
+Name: org/eclipse/ocl/expressions/IteratorExp.class
+SHA1-Digest: mCq11Fw4Gonmbbl/LXCqOqk+kB8=
+
+Name: org/eclipse/ocl/cst/BooleanLiteralExpCS.class
+SHA1-Digest: YIpEwJFV4+KY6rjVf//+IdgKHQk=
+
+Name: org/eclipse/ocl/expressions/operations/IterateExpOperations.clas
+ s
+SHA1-Digest: /Nxf1njaXFUdcege2EmZ7ktXhBM=
+
+Name: org/eclipse/ocl/parser/OCLLexerprs$BaseAction.class
+SHA1-Digest: Mi0Pj1XEPg/n1en2I3fHCQ8Sgh0=
+
+Name: org/eclipse/ocl/cst/impl/CallExpCSImpl.class
+SHA1-Digest: edz6zmfDQMJ3Rhxg4KhOkKaq/rY=
+
+Name: org/eclipse/ocl/Environment$Lookup.class
+SHA1-Digest: vuNZNZGPmYSPTudVA+JORrTT9c8=
+
+Name: org/eclipse/ocl/utilities/Visitable.class
+SHA1-Digest: DjBkoAi/D4safS9+FUWQhuX3uLg=
+
+Name: org/eclipse/ocl/parser/OCLFactoryWithHistory.class
+SHA1-Digest: ReDUl7yjaacR98w7NUKl9VRvfEg=
+
+Name: org/eclipse/ocl/lpg/DerivedLexStream.class
+SHA1-Digest: Pr8VxTGu7Ed4Oo41dKFbXd5+NEg=
+
+Name: org/eclipse/ocl/parser/backtracking/OCLBacktrackingParserprs$Sco
+ peState.class
+SHA1-Digest: Gq43F9rmB9m/vJ3VYG3eCwNRiPc=
+
+Name: org/eclipse/ocl/cst/impl/InvOrDefCSImpl.class
+SHA1-Digest: 8OlUHB9kqFNg29yxyAW2w3Qmm44=
+
+Name: org/eclipse/ocl/types/operations/VoidTypeOperations.class
+SHA1-Digest: lOBMoiI2UtI+GFrMylPgpJNnbHc=
+
+Name: org/eclipse/ocl/cst/InvalidLiteralExpCS.class
+SHA1-Digest: InMB5nef+gUcjDGn1evFjTdtAzY=
+
+Name: org/eclipse/ocl/parser/backtracking/OCLBacktrackingParserprs.cla
+ ss
+SHA1-Digest: k8YH0FcwUpFzSWOrUTnx7LAjPrs=
+
+Name: org/eclipse/ocl/cst/IterateExpCS.class
+SHA1-Digest: 7l8n61vR1bDU+Y9GSU+iiLV965w=
+
+Name: modeling32.png
+SHA1-Digest: ADlLWFV0eQ74YnLvHnPFkYLeLrs=
+
+Name: org/eclipse/ocl/options/ParsingOptions.class
+SHA1-Digest: XOas8aDzRmeW1frfBAYKVeVbjNs=
+
+Name: org/eclipse/ocl/cst/OCLExpressionCS.class
+SHA1-Digest: KGsxJnnmSgWZpXnDxg5WtVfgZ8o=
+
+Name: org/eclipse/ocl/types/TypesPackage.class
+SHA1-Digest: 8GmV35K84BP3/lCJWCvQvgjNTYA=
+
+Name: org/eclipse/ocl/cst/impl/IterateExpCSImpl.class
+SHA1-Digest: gTltL2qaSrHIUeA1AP+sOodPyX0=
+
+Name: org/eclipse/ocl/internal/helper/PluginFinder.class
+SHA1-Digest: 8igZoIF0LDWSkkD7/Eb4ZOzcmC8=
+
+Name: org/eclipse/ocl/cst/impl/DefExpressionCSImpl.class
+SHA1-Digest: RtQjB8rNKpB1Vil/57z5mkhx/mQ=
+
+Name: org/eclipse/ocl/parser/backtracking/OCLBacktrackingLexerprs$Term
+ Action.class
+SHA1-Digest: 3MtfyxzvC0RX0L3KO3kCx3qtkyo=
+
+Name: org/eclipse/ocl/parser/OCLAnalyzer.class
+SHA1-Digest: JDyQXG8KTFL19hSm7nEsIslc4OY=
+
+Name: org/eclipse/ocl/cst/PackageDeclarationCS.class
+SHA1-Digest: aruCGv7yqn4/ftzrn00t1KD8fcw=
+
+Name: org/eclipse/ocl/cst/impl/PathNameCSImpl.class
+SHA1-Digest: co/64eQof4vzzxW1Yunget659Lo=
+
+Name: org/eclipse/ocl/cst/NullLiteralExpCS.class
+SHA1-Digest: rwk5yjrXwzV+fxLAEMcSzWJez38=
+
+Name: org/eclipse/ocl/expressions/LetExp.class
+SHA1-Digest: qL0QsADf9FjVCyJD32X1KXFRPec=
+
+Name: org/eclipse/ocl/utilities/OCLFactory.class
+SHA1-Digest: 4YmpeTCTDL0SJ1phicnJdRLxO5E=
+
+Name: org/eclipse/ocl/types/MessageType.class
+SHA1-Digest: 3glAYTEKKF8PHd2w91gP3fb07FQ=
+
+Name: org/eclipse/ocl/types/impl/InvalidTypeImpl.class
+SHA1-Digest: 1kcFlRMpNgsMezQF1rqYpcO67M4=
+
+Name: model/OCL.properties
+SHA1-Digest: UQ0u/cY5WGkYQfn9s5WGzVr3MG0=
+
+Name: org/eclipse/ocl/util/OCLUtil$3.class
+SHA1-Digest: 6CVUpdlIldkWxz4XCf5r/1l0v4Q=
+
+Name: org/eclipse/ocl/types/operations/SequenceTypeOperations.class
+SHA1-Digest: 1a+yEjnMgMtRsd1eaVND2lxfw9g=
+
+Name: org/eclipse/ocl/parser/OCLKWLexer.class
+SHA1-Digest: u9fwcbTsTNG00cnahS6V+9wwV3M=
+
+Name: org/eclipse/ocl/utilities/UtilitiesFactory.class
+SHA1-Digest: ZO9nqt1dQ55YzeDCd8L+Nqap+bM=
+
+Name: org/eclipse/ocl/cst/PrimitiveLiteralExpCS.class
+SHA1-Digest: PO5Qubxj5BXEB+fKYlLqw38P/Ro=
+
+Name: org/eclipse/ocl/EvaluationVisitorImpl$1.class
+SHA1-Digest: L7I4wnKxwGbEuGtLqTrXVUE36ks=
+
+Name: org/eclipse/ocl/lpg/AbstractParser.class
+SHA1-Digest: GJMRHM1wG0jbtWtdcaG1uBk1YYE=
+
+Name: org/eclipse/ocl/Environment$Internal.class
+SHA1-Digest: TiqPPacnTGQHHBb1Mwy7u4/4zGs=
+
+Name: org/eclipse/ocl/parser/backtracking/OCLBacktrackingParserprs$Ter
+ minalIndex.class
+SHA1-Digest: 02VxcCmVqguO6TgnQT+UCWg9vRo=
+
+Name: org/eclipse/ocl/cst/CollectionTypeCS.class
+SHA1-Digest: 5PKp/+FD+y3o+1Oh5xyQvLkHGI0=
+
+Name: org/eclipse/ocl/parser/OCLParserprs.class
+SHA1-Digest: 33KnAWzZ543+BOq/Td/S84nrJTA=
+
+Name: org/eclipse/ocl/util/ProblemAware.class
+SHA1-Digest: Ykl8GOfO2aviv6VT2A8LGDYxgiY=
+
+Name: org/eclipse/ocl/parser/OCLKWLexerprs.class
+SHA1-Digest: qJYCdenIw/5kgfQz9Wi9TP9pYRw=
+
+Name: org/eclipse/ocl/expressions/impl/TupleLiteralExpImpl.class
+SHA1-Digest: kqm1c6i/Y2eLwz/yuPuhZoQXCs0=
+
+Name: org/eclipse/ocl/cst/impl/VariableCSImpl.class
+SHA1-Digest: ayzsRh9bAzRDzugxAAHvwC5eKm4=
+
+Name: org/eclipse/ocl/parser/EssentialOCLLexer.gi
+SHA1-Digest: P+nWb9+xzpJGAVTooMHa3ycuoHs=
+
+Name: org/eclipse/ocl/cst/impl/BooleanLiteralExpCSImpl.class
+SHA1-Digest: /8+P6mCxC+zPn6vVwMc7jifrlE0=
+
+Name: org/eclipse/ocl/cst/OCLDocumentCS.class
+SHA1-Digest: CE8Aok7BL0z9zdGavjgYexx9qqo=
+
+Name: org/eclipse/ocl/expressions/util/ExpressionsAdapterFactory$1.cla
+ ss
+SHA1-Digest: wZvnsnbxS9Kjtwg9X86LUOKM4ZM=
+
+Name: org/eclipse/ocl/cst/impl/CollectionRangeCSImpl.class
+SHA1-Digest: Zz6uuJlNhO2iP+SKethiUXV0rdE=
+
+Name: org/eclipse/ocl/expressions/operations/OCLExpressionOperations.c
+ lass
+SHA1-Digest: ZVY0Lx4dv7WgDtyrBJO0o6q48Hs=
+
+Name: org/eclipse/ocl/parser/OCLLexerprs.class
+SHA1-Digest: kVk9HC6fS+tlD7zkCjnACciw+Qs=
+
+Name: org/eclipse/ocl/internal/l10n/IMessages$NLS.class
+SHA1-Digest: Anwk75ymo2/cPgPMauomd/bm33w=
+
+Name: org/eclipse/ocl/types/impl/TypeTypeImpl.class
+SHA1-Digest: zJERT4D1xxKMsuta28Kh1A6TMkY=
+
+Name: org/eclipse/ocl/util/ObjectUtil.class
+SHA1-Digest: YpCf/+vGhGNu6qOIiYG7JgqCJCE=
+
+Name: org/eclipse/ocl/expressions/impl/PrimitiveLiteralExpImpl.class
+SHA1-Digest: B33Q4h7yQakAM9FneqHjy+3h8sU=
+
+Name: org/eclipse/ocl/util/OCLTypeChecker.class
+SHA1-Digest: EErTfEX8Bz7nB62F4ONYppbru78=
+
+Name: org/eclipse/ocl/types/impl/ElementTypeImpl.class
+SHA1-Digest: ew62RF4hmOg0itPu8D3ElS3HQ8k=
+
+Name: org/eclipse/ocl/cst/util/CSTAdapterFactory.class
+SHA1-Digest: jfMoiI3mZNHZOH4Qd7skYp0b1T8=
+
+Name: org/eclipse/ocl/InvalidLookupException.class
+SHA1-Digest: tEBwj1GBFLYlmTIDHW6P+7t4MXk=
+
+Name: org/eclipse/ocl/helper/ConstraintKind.class
+SHA1-Digest: HFwVwfVMhD+Cfvj0uptavARjpzw=
+
+Name: org/eclipse/ocl/parser/OCLParserprs$BaseAction.class
+SHA1-Digest: ELrBYgCSSv2YrmY2dUvPBReYo6k=
+
+Name: org/eclipse/ocl/internal/helper/OCLHelperImpl.class
+SHA1-Digest: jReVGgdd00oMUwnpvlh/13CEXJk=
+
+Name: org/eclipse/ocl/options/Option.class
+SHA1-Digest: o3Hn1E1gXYhgWDn0LXMEjXamz+k=
+
+Name: org/eclipse/ocl/TypeChecker.class
+SHA1-Digest: nl1IE/XxflHhzuGP2LnuBfhkEyc=
+
+Name: org/eclipse/ocl/cst/RealLiteralExpCS.class
+SHA1-Digest: guWIWE7euVSxI8fXMiM00atqEVM=
+
+Name: org/eclipse/ocl/types/impl/TupleTypeImpl.class
+SHA1-Digest: j6W58Vx41pEDcRZ2cfruwQu/KbA=
+
+Name: org/eclipse/ocl/util/UnicodeSupport.class
+SHA1-Digest: Fb/mAXsHTw/nBr+WHikj5TY9G0o=
+
+Name: org/eclipse/ocl/expressions/NumericLiteralExp.class
+SHA1-Digest: K+eqH92qdaqqADONHPfNvpxyvrs=
+
+Name: org/eclipse/ocl/parser/backtracking/OCLBacktrackingParserprs$Pro
+ sthesesIndex.class
+SHA1-Digest: tyerCAi+MOLUUrlX6E9PZ9Tn6XM=
+
+Name: org/eclipse/ocl/expressions/impl/OCLExpressionImpl.class
+SHA1-Digest: 7NczPieR9iu37L3FCi/7VOk/9HU=
+
+Name: org/eclipse/ocl/internal/evaluation/IterationTemplateAny.class
+SHA1-Digest: TxRI54nTIGQLSU4GnX8wbz/kSpU=
+
+Name: org/eclipse/ocl/parser/OCLParserprs$InSymb.class
+SHA1-Digest: iHCRCMi2GH7qmSNTslgg//9UjYw=
+
+Name: org/eclipse/ocl/util/ProblemHandlerWrapper.class
+SHA1-Digest: 08MII7dXKZ9YeRz+cZgfdyyCY0o=
+
+Name: org/eclipse/ocl/parser/backtracking/OCLBacktrackingLexer.gi
+SHA1-Digest: fgH04To5xT3QbG2vlEoHT4c8bJ0=
+
+Name: org/eclipse/ocl/internal/evaluation/IterationTemplateExists.clas
+ s
+SHA1-Digest: Cj+C2UwOidd1NieX4O5+gmSWv/8=
+
+Name: org/eclipse/ocl/parser/OCLKWLexerprs$BaseAction.class
+SHA1-Digest: HkSI6CGoqT4myE7rGbuZVgBOQ/o=
+
+Name: org/eclipse/ocl/expressions/impl/TupleLiteralPartImpl.class
+SHA1-Digest: RBN+dBmcqij2x8bAANMR2PdKH/o=
+
+Name: org/eclipse/ocl/util/UnicodeSupport$ICU.class
+SHA1-Digest: ICeVcWRja84tbC8GAsszHUm2Xm4=
+
+Name: org/eclipse/ocl/cst/DotOrArrowEnum.class
+SHA1-Digest: ZzROQ4Rl+mQ/ThbTY6FJxqNLus0=
+
+Name: org/eclipse/ocl/parser/backtracking/OCLBacktrackingKWLexerprs$Te
+ rmCheck.class
+SHA1-Digest: HKL6oyHxN0DEavFyCjKY5IyJc64=
+
+Name: org/eclipse/ocl/internal/evaluation/IterationTemplateCollectNest
+ ed.class
+SHA1-Digest: U8Vamd7P1W6qCnZgHHkvPF9+/ZU=
+

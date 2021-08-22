@@ -1,0 +1,29 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.eclipse.eclemma.core;singleton:=true
+Bundle-Version: 3.1.0.201804041601
+Bundle-ClassPath: org.eclipse.eclemma.core_3.1.0.201804041601.jar
+Bundle-Activator: org.eclipse.eclemma.internal.core.EclEmmaCorePlugin
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Export-Package: org.eclipse.eclemma.core;x-friends:="org.eclipse.eclemma.ui,org.eclipse.eclemma.ui.test",
+  org.eclipse.eclemma.core.analysis;x-friends:="org.eclipse.eclemma.ui",
+  org.eclipse.eclemma.core.launching;x-friends:="org.eclipse.eclemma.ui",
+  org.eclipse.eclemma.internal.core;x-internal:=true,
+  org.eclipse.eclemma.internal.core.analysis;x-internal:=true,
+  org.eclipse.eclemma.internal.core.launching;x-internal:=true
+Require-Bundle: org.eclipse.core.runtime,
+  org.eclipse.debug.core,
+  org.eclipse.jdt.core,
+  org.eclipse.jdt.launching,
+  org.jacoco.core;bundle-version="[0.8.1,0.8.2)",
+  org.jacoco.agent;bundle-version="[0.8.1,0.8.2)",
+  org.jacoco.report;bundle-version="[0.8.1,0.8.2)"
+Built-By: genie.eclemma
+Build-Jdk: 1.7.0_80
+Eclipse-SourceReferences: scm:git:https://github.com/eclipse/eclemma.git;path="org.eclipse.eclemma.core";commitId=5f0e596c9b4b4ef78850d112eb3a59c698312db0
+Created-By: Apache Maven 3.5.2
+Archiver-Version: Plexus Archiver
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: J2SE-1.5

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ASCII"?>
+<efacet:FacetSet xmi:version="2.0"
+	xmlns:xmi="http://www.omg.org/XMI"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+	xmlns:efacet="http://www.eclipse.org/emf/facet/efacet/0.2.incubation/efacet"
+	xmlns:javaQuery="http://www.eclipse.org/emf/facet/query/java/0.2.incubation/javaquery"
+	name="org.eclipse.emf.facet.widgets.table.examples.library.core.instantiation"
+	nsURI="http://www.eclispe.org/emf/facet/widgets/table/examples/library/core/instanciation"
+	nsPrefix="instantiation">
+  <eClassifiers xsi:type="efacet:Facet" name="org.eclipse.emf.facet.widgets.table.examples.library.core.instantiation">
+    <extendedMetaclass href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+    <facetOperations name="createWriter" ordered="false" unique="false" lowerBound="1">
+      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/facet/examples/library/0.2.incubation/library#//Writer"/>
+      <eParameters name="tableParameter" ordered="false" unique="false" lowerBound="0">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+      </eParameters>
+      <eParameters name="editingDomain" ordered="false" unique="false" lowerBound="0">
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+      </eParameters>
+      <query xsi:type="javaQuery:JavaQuery" implementationClassName="org.eclipse.emf.facet.widgets.table.examples.library.core.internal.query.eobject.CreateWriter"/>
+    </facetOperations>
+  </eClassifiers>
+</efacet:FacetSet>

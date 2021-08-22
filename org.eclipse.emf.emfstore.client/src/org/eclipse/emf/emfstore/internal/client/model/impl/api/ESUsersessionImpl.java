@@ -1,0 +1,238 @@
+/*******************************************************************************
+ * Copyright (c) 2012-2013 EclipseSource Muenchen GmbH and others.
+ *
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ * Edgar Mueller - initial API and implementation
+ ******************************************************************************/
+package org.eclipse.emf.emfstore.internal.client.model.impl.api;
+
+import java.util.concurrent.Callable;
+
+import org.eclipse.emf.emfstore.client.ESServer;
+import org.eclipse.emf.emfstore.client.ESUsersession;
+import org.eclipse.emf.emfstore.client.ESWorkspace;
+import org.eclipse.emf.emfstore.client.ESWorkspaceProvider;
+import org.eclipse.emf.emfstore.client.util.ESVoidCallableWithException;
+import org.eclipse.emf.emfstore.client.util.RunESCommand;
+import org.eclipse.emf.emfstore.internal.client.model.Usersession;
+import org.eclipse.emf.emfstore.internal.client.model.util.EMFStoreCommand;
+import org.eclipse.emf.emfstore.internal.common.api.AbstractAPIImpl;
+import org.eclipse.emf.emfstore.internal.server.model.impl.api.ESSessionIdImpl;
+import org.eclipse.emf.emfstore.server.exceptions.ESException;
+import org.eclipse.emf.emfstore.server.model.ESSessionId;
+
+/**
+ * Mapping between {@link ESUsersession} and {@link Usersession}.
+ *
+ * @author emueller
+ *
+ */
+public class ESUsersessionImpl extends AbstractAPIImpl<ESUsersessionImpl, Usersession> implements ESUsersession {
+
+	/**
+	 * Constructor.
+	 *
+	 * @param usersession
+	 *            the delegate
+	 */
+	public ESUsersessionImpl(Usersession usersession) {
+		super(usersession);
+	}
+
+	/**
+	 *
+	 * {@inheritDoc}
+	 *
+	 * @see org.eclipse.emf.emfstore.client.ESUsersession#getServer()
+	 */
+	public ESServer getServer() {
+		return RunESCommand.runWithResult(new Callable<ESServer>() {
+			public ESServer call() throws Exception {
+				if (toInternalAPI().getServerInfo() == null) {
+					return null;
+				}
+
+				return toInternalAPI().getServerInfo().toAPI();
+			}
+		});
+	}
+
+	/**
+	 *
+	 * {@inheritDoc}
+	 *
+	 * @see org.eclipse.emf.emfstore.client.ESUsersession#getUsername()
+	 */
+	public String getUsername() {
+		return RunESCommand.runWithResult(new Callable<String>() {
+			public String call() throws Exception {
+				return toInternalAPI().getUsername();
+			}
+		});
+	}
+
+	/**
+	 *
+	 * {@inheritDoc}
+	 *
+	 * @see org.eclipse.emf.emfstore.client.ESUsersession#getPassword()
+	 */
+	public String getPassword() {
+		return RunESCommand.runWithResult(new Callable<String>() {
+			public String call() throws Exception {
+				return toInternalAPI().getPassword();
+			}
+		});
+	}
+
+	/**
+	 *
+	 * {@inheritDoc}
+	 *
+	 * @see org.eclipse.emf.emfstore.client.ESUsersession#isLoggedIn()
+	 */
+	public boolean isLoggedIn() {
+		return toInternalAPI().isLoggedIn();
+	}
+
+	/**
+	 *
+	 * {@inheritDoc}
+	 *
+	 * @see org.eclipse.emf.emfstore.client.ESUsersession#refresh()
+	 */
+	public void refresh() throws ESException {
+		RunESCommand.WithException.run(ESException.class, new Callable<Void>() {
+			public Void call() throws Exception {
+				toInternalAPI().logIn();
+				return null;
+			}
+		});
+	}
+
+	/**
+	 *
+	 * {@inheritDoc}
+	 *
+	 * @see org.eclipse.emf.emfstore.client.ESUsersession#logout()
+	 */
+	public void logout() throws ESException {
+		RunESCommand.WithException.run(ESException.class, new Callable<Void>() {
+			public Void call() throws Exception {
+				toInternalAPI().logout();
+				return null;
+			}
+		});
+	}
+
+	/**
+	 * Returns the session ID.
+	 *
+	 * @return the session ID
+	 */
+	public ESSessionId getESSessionId() {
+		return new ESSessionIdImpl(toInternalAPI().getSessionId());
+	}
+
+	/**
+	 * Sets the user's name to be used by this session when logging in.
+	 *
+	 * @param name
+	 *            the name of the user
+	 */
+	public void setUsername(final String name) {
+		new EMFStoreCommand() {
+			@Override
+			protected void doRun() {
+				toInternalAPI().setUsername(name);
+			}
+		}.run(false);
+	}
+
+	/**
+	 * Sets the password to be used by this session when logging in.
+	 *
+	 * @param password
+	 *            the new password
+	 */
+	public void setPassword(final String password) {
+		RunESCommand.run(new Callable<Void>() {
+			public Void call() throws Exception {
+				toInternalAPI().setPassword(password);
+				return null;
+			}
+		});
+	}
+
+	/**
+	 * Sets the server.
+	 *
+	 * @param server
+	 *            the server
+	 */
+	public void setServer(final ESServerImpl server) {
+		new EMFStoreCommand() {
+			@Override
+			protected void doRun() {
+				if (server == null) {
+					toInternalAPI().setServerInfo(null);
+				} else {
+					toInternalAPI().setServerInfo(server.toInternalAPI());
+				}
+			}
+		}.run(false);
+	}
+
+	/**
+	 *
+	 * {@inheritDoc}
+	 *
+	 * @see org.eclipse.emf.emfstore.client.ESUsersession#getSessionId()
+	 */
+	public ESSessionId getSessionId() {
+		return RunESCommand.runWithResult(new Callable<ESSessionId>() {
+			public ESSessionId call() throws Exception {
+				return toInternalAPI().getSessionId().toAPI();
+			}
+		});
+	}
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * @see org.eclipse.emf.emfstore.client.ESUsersession#setSavePassword(boolean)
+	 */
+	public void setSavePassword(boolean shouldSavePassword) {
+		toInternalAPI().setSavePassword(shouldSavePassword);
+	}
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * @see org.eclipse.emf.emfstore.client.ESUsersession#isSavePassword()
+	 */
+	public boolean isSavePassword() {
+		return toInternalAPI().isSavePassword();
+	}
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * @see org.eclipse.emf.emfstore.client.ESUsersession#delete()
+	 */
+	public void delete() throws ESException {
+		final ESWorkspace workspace = ESWorkspaceProvider.INSTANCE.getWorkspace();
+		final ESWorkspaceImpl workspaceImpl = ESWorkspaceImpl.class.cast(workspace);
+		RunESCommand.WithException.run(ESException.class, new ESVoidCallableWithException<ESException>() {
+			@Override
+			public void run() throws ESException {
+				workspaceImpl.toInternalAPI().removeUsersession(toInternalAPI());
+			}
+		});
+	}
+}

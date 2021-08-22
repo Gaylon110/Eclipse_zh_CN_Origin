@@ -1,0 +1,278 @@
+Manifest-Version: 1.0
+Bundle-Description: Mylyn WikiText provides an extensible framework an
+ d tools for parsing, editing and presenting lightweight markup. WikiT
+ ext has parsers for AsciiDoc, CommonMark, Markdown, MediaWiki, Textil
+ e, Confluence, Creole, HTML, TracWiki and TWiki markup, and        ca
+ n be extended to support other languages. WikiText provides Ant tasks
+  for converting lightweight markup to HTML, Eclipse Help, DocBook, DI
+ TA and XSL-FO. WikiText also provides an editor for editing such mark
+ up within Eclipse, and integrates with        the Mylyn task editor c
+ ausing it to be markup-aware. WikiText provides API for integrating w
+ iki markup capabilities into Eclipse, RCP, stand-alone and server-sid
+ e applications.
+Bundle-License: https://www.eclipse.org/legal/epl-2.0/
+Bundle-SymbolicName: org.eclipse.mylyn.wikitext.mediawiki
+Built-By: jenkins
+Bnd-LastModified: 1614384522538
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-DocURL: http://eclipse.org/mylyn
+Bundle-Vendor: Eclipse Mylyn
+Import-Package: com.google.common.collect;version="[21.0,22.0)",com.go
+ ogle.common.io;version="[21.0,22.0)",org.eclipse.mylyn.wikitext.media
+ wiki,org.eclipse.mylyn.wikitext.mediawiki.internal,org.eclipse.mylyn.
+ wikitext.mediawiki.internal.block,org.eclipse.mylyn.wikitext.mediawik
+ i.internal.phrase,org.eclipse.mylyn.wikitext.mediawiki.internal.token
+ ,org.eclipse.mylyn.wikitext.parser;version="[3.0,4)",org.eclipse.myly
+ n.wikitext.parser.markup;version="[3.0,4)",org.eclipse.mylyn.wikitext
+ .parser.markup.block;version="[3.0,4)",org.eclipse.mylyn.wikitext.par
+ ser.markup.phrase;version="[3.0,4)",org.eclipse.mylyn.wikitext.parser
+ .markup.token;version="[3.0,4)",org.eclipse.mylyn.wikitext.parser.out
+ line;version="[3.0,4)",org.eclipse.mylyn.wikitext.validation;version=
+ "[3.0,4)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-3.2.0.201605172007
+Export-Package: org.eclipse.mylyn.wikitext.mediawiki.internal;x-intern
+ al:=true;uses:="org.eclipse.mylyn.wikitext.mediawiki,org.eclipse.myly
+ n.wikitext.parser,org.eclipse.mylyn.wikitext.parser.markup";version="
+ 3.0.39",org.eclipse.mylyn.wikitext.mediawiki.internal.block;x-interna
+ l:=true;uses:="org.eclipse.mylyn.wikitext.parser.markup,org.eclipse.m
+ ylyn.wikitext.parser.markup.block,org.eclipse.mylyn.wikitext.parser.o
+ utline";version="3.0.39",org.eclipse.mylyn.wikitext.mediawiki.interna
+ l.phrase;x-internal:=true;uses:="org.eclipse.mylyn.wikitext.parser,or
+ g.eclipse.mylyn.wikitext.parser.markup";version="3.0.39",org.eclipse.
+ mylyn.wikitext.mediawiki.internal.token;x-internal:=true;uses:="org.e
+ clipse.mylyn.wikitext.parser.markup";version="3.0.39",org.eclipse.myl
+ yn.wikitext.mediawiki.internal.validation;x-internal:=true;uses:="org
+ .eclipse.mylyn.wikitext.parser.markup,org.eclipse.mylyn.wikitext.vali
+ dation";version="3.0.39",org.eclipse.mylyn.wikitext.mediawiki;uses:="
+ org.eclipse.mylyn.wikitext.mediawiki.internal,org.eclipse.mylyn.wikit
+ ext.parser.markup";version="3.0.39"
+Bundle-Name: Mylyn WikiText MediaWiki
+Bundle-Version: 3.0.39.20210227000941
+Build-Jdk: 1.8.0_202
+Created-By: Apache Maven Bundle Plugin
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/TemplateResolver.class
+SHA-256-Digest: S4+lk+HfzN1NisItnpN0RYJYVnAGAkDYXOJzO4A+Fs4=
+
+Name: META-INF/maven/org.eclipse.mylyn.docs/org.eclipse.mylyn.wikitext
+ .mediawiki/pom.properties
+SHA-256-Digest: qPS1bl8NqMHdCCMiLv44n/URxEjwVPSb3EtC1wMspTg=
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/internal/block/ListBlock.cl
+ ass
+SHA-256-Digest: v0kYn6W6okUFQ4FYKtvww+7kZtKtLxSW3dCWq3VESFw=
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/internal/AbstractMediaWikiL
+ anguage.class
+SHA-256-Digest: vNHE1DyWseXtQZpUjStGiuD80xGtDBJS9Kbhjtu/v18=
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/internal/block/CommentBlock
+ .class
+SHA-256-Digest: duLkfyI+5NutfP7CINw2MO9Yd7g2uxUGr0HpaUSnDLY=
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/internal/block/BehaviorSwit
+ chBlock.class
+SHA-256-Digest: ztChq7v7BMtgLa/3OS8W8kBhX3UE5I7r1+drx08duzI=
+
+Name: plugin.properties
+SHA-256-Digest: mbMP62c+gNbQQ4hcFgD7GqEfJRbjqseZXNJ5buTCw2Q=
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/internal/token/EntityRefere
+ nceReplacementToken$1.class
+SHA-256-Digest: o3tGwc/qXY/L+hj91dRmbYhIMjJnTwLDwZbS8r74vCE=
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/internal/MediaWikiIdGenerat
+ ionStrategy.class
+SHA-256-Digest: IZOEncPwqC8djxd2VqoKZy80e2km8Q7xBxKsShoaLFM=
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/internal/DateTimeTemplate.c
+ lass
+SHA-256-Digest: f5sTnIt6TCuW4N3StDC8hc1B3SV2NfWnaaQitSuZWDk=
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/internal/messages.propertie
+ s
+SHA-256-Digest: NmZWb9DQLR0lsqYmoZcroOh72cdnUjUpP19JpqZqbgY=
+
+Name: META-INF/maven/org.eclipse.mylyn.docs/org.eclipse.mylyn.wikitext
+ .mediawiki/pom.xml
+SHA-256-Digest: 8etibZIx5DcPWzOHQaSw2TGZ+hwWN8wN2iS+eqkPe+o=
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/internal/block/ParagraphBlo
+ ck.class
+SHA-256-Digest: 3LhKZODoAFDKRCqPuEn/ECvST7QXAK2jPrtJNOzQUaw=
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/internal/token/ImageReplace
+ mentToken$1.class
+SHA-256-Digest: Rne15gKCH/XHh3yVWNR/uemudkiDneGGmKc6x5ipIcI=
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/internal/token/HyperlinkRep
+ lacementToken$1.class
+SHA-256-Digest: FJ7PD8hD49GKjZh9s6lPlHpd8bPvxqz9ebPiXKUtriM=
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/internal/phrase/EscapePhras
+ eModifier.class
+SHA-256-Digest: dIoPOSJAAHdu/7rLvIaB5ldWsilUMyJaJdJ7Od7GjGI=
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/internal/block/HeadingBlock
+ .class
+SHA-256-Digest: ILh+ie+o98pknlidTSTDqtlEhCRxC7kV0scWwWrmcTI=
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/internal/token/HyperlinkExt
+ ernalReplacementToken.class
+SHA-256-Digest: M1KZPonpwnMCdM+1P9THgOcPz7E1mRLKyJoH6HCjE6c=
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/internal/token/HyperlinkInt
+ ernalReplacementToken.class
+SHA-256-Digest: kKPZ6zJBgqj45nmwJz/GWDUymhfzlAPmhEUo6FR3zgE=
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/internal/token/EntityRefere
+ nceReplacementToken$EntityReferenceProcessor.class
+SHA-256-Digest: UfZVB2vtz33UMsoxvC95qEB8mTiTSzshPVlW3LsUGEA=
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/internal/token/HyperlinkRep
+ lacementToken.class
+SHA-256-Digest: Qgw/WMMmq+qkOkho1GIpZoAXwOI53pQIA3jyH550jRI=
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/internal/BuiltInTemplateRes
+ olver.class
+SHA-256-Digest: 5scAA5OcKswf4H19Bo0+jRJvWIXOPAWs74Cn+1mzGZk=
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/internal/token/LineBreakTok
+ en$LineBreakProcessor.class
+SHA-256-Digest: BqQL13/jjCj0vRtTDm9u1g+Cce9EVVm1adrrkdCCRuI=
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/Template.class
+SHA-256-Digest: O05WuhwDLyqJw2JM/4wt+PBN/6+VR0NLBRKJ3o3zMQg=
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/internal/validation/message
+ s.properties
+SHA-256-Digest: seyGwwGDRF5kwdOq9gH5gdxmuQlOHIlVvKhYz4hve8k=
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/internal/block/Preformatted
+ Block.class
+SHA-256-Digest: aCmuc+uiA/efGLjRTgOJ3WDE/cprnheshhRlEx0cp7o=
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/internal/TemplateProcessor.
+ class
+SHA-256-Digest: vQneULsBiK/O08vANT3WWHZqF45S181yDllebry9wbw=
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/internal/validation/MediaWi
+ kiReferenceValidationRule.class
+SHA-256-Digest: 0NOT6OKRkQ2za2bA5AkaZqmBUZlGiFVtMrJr+v8/VIA=
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/WikiTemplateResolver.class
+SHA-256-Digest: ndQ57laByb46ulSlGlpX6RZ/RI8QI+eI6ivNVOu5yjk=
+
+Name: services/org.eclipse.mylyn.wikitext.parser.markup.MarkupLanguage
+SHA-256-Digest: 4fkH4/VXTPINdqTnbPj2rVlIT1rvzTSMzsXtXaYP7Rg=
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/internal/block/AbstractTabl
+ eOfContentsBlock.class
+SHA-256-Digest: mRxOF1gzY87XlwQWFfMGWBHuoHVz8rxVlZEjn23xB3I=
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/internal/TemplateProcessor$
+ Parameter.class
+SHA-256-Digest: SUiPOLZciirOxpQfnOFEn0pC9Xlt2yEczDB/wSNzESg=
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/internal/phrase/SimplePhras
+ eModifier.class
+SHA-256-Digest: X+KIfdeFI5BlPmboDUyApBaT1P4dUEDDo5DbCMkhAOU=
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/internal/token/EntityRefere
+ nceReplacementToken.class
+SHA-256-Digest: n3Xkb4wW1H0lQVr1S6tgDn4sjwFjwVdJPfrVFHXYab0=
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/internal/token/LineBreakTok
+ en.class
+SHA-256-Digest: fjdvjqZSkSsxduReQI6DycBlBP6haUAvQu9YCE9Ua7o=
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/internal/block/EscapeBlock.
+ class
+SHA-256-Digest: Fi1YK3Sb9a6reKnGGY7KUsGNkUia/WW/rDcrVmVWpuU=
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/internal/validation/Message
+ s.class
+SHA-256-Digest: QqFdPM2behhI2ZC6PhlO4AVFMTBbGMSx+SxlumvVjEk=
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/internal/token/HyperlinkInt
+ ernalReplacementToken$HyperlinkReplacementTokenProcessor.class
+SHA-256-Digest: hafHct5LtrNNwahG1eBjR3rsNcldJ34GKwzSeTQ6yl4=
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/internal/token/HyperlinkExt
+ ernalReplacementToken$HyperlinkReplacementTokenProcessor.class
+SHA-256-Digest: Vpp8SvWixITcohPuq5nhNFs5hOCuMl2ehW52i9yYRSQ=
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/internal/block/TableBlock.c
+ lass
+SHA-256-Digest: xuEJ99UrIC0Mk86riQjhbRgSCRDL9nGo9tpmpbAIl4g=
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/internal/block/ListBlock$1.
+ class
+SHA-256-Digest: eZg0WQfAu/TMX25AKibarOaY1Qks6vGYpMY6PXpmGew=
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/internal/block/ListBlock$Li
+ stState.class
+SHA-256-Digest: rzDgWtVnAeUT0OBUpib5CUBfK1G3e+P5TYuBMK8BcdY=
+
+Name: about.html
+SHA-256-Digest: GWwWKwDoEPbqRj3Nm004u/ySxB5XSz/ODMj6p56lw8o=
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/PageMapping.class
+SHA-256-Digest: 5MAlHWHK4kgvAn7U/b1d0QWoj944j8zT1kRh9xGToVk=
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/internal/block/SourceBlock.
+ class
+SHA-256-Digest: VhQbseGv0cBp0jKSTBIo6tJRSN5GcT6C/Al8LJ3/9jo=
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/internal/TemplateProcessor$
+ 1.class
+SHA-256-Digest: fpxtRrhL4KVyQMqeSuVz9wLYpW2UB+Ly/FaZhJDO3zk=
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/internal/token/HyperlinkInt
+ ernalReplacementToken$1.class
+SHA-256-Digest: U8l8jks15Q75jDdKWg2PDArveuBTqpi8DU0C24PGrXk=
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/MediaWikiLanguage.class
+SHA-256-Digest: v1AtP7Pt4VWvSyNJ7eRApqj1Q/xvnflsih4LCmw07Bg=
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/internal/Messages.class
+SHA-256-Digest: rzkimIIiSN5mXVrNVM4zcTH2VmSy6J7mHynHVy11bJw=
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/internal/token/ImageReplace
+ mentToken.class
+SHA-256-Digest: nz8UJTRk6DpwahdB3DxJL0DxUvApENBKkWs6SR4O44M=
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/internal/validation/Comment
+ ValidationRule.class
+SHA-256-Digest: UpikVl09/jGka0lf/JqZdesY5uP01BpRuvhc4e+S48I=
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/internal/token/HyperlinkExt
+ ernalReplacementToken$1.class
+SHA-256-Digest: XTvZYSectmH9amfWO72PoK6cpQMbijEPi4lY5AbNWiI=
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/internal/block/TableOfConte
+ ntsBlock.class
+SHA-256-Digest: YgJRXR2JVQLjFDvCkg2WOg2XY3TVwCl5EQsB2ahPHdA=
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/internal/token/ImageReplace
+ mentToken$ImageReplacementTokenProcessor.class
+SHA-256-Digest: 0YTH9mIvFmhVcJGqeuoSHQueZ4RDULglQR66p7+YTk8=
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/internal/phrase/SimpleWrapp
+ edPhraseModifier.class
+SHA-256-Digest: Q8jRGSQ8cQLwdrXftGJd1UKSkgBr6FFdwvOZqkHh2fM=
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/internal/phrase/SimpleWrapp
+ edPhraseModifier$SimplePhraseModifierProcessor.class
+SHA-256-Digest: p6MFZ/oLRUxn5A3OjQ3Rbq+d+/+oxFU0SUheNVfIrQw=
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/internal/token/HyperlinkRep
+ lacementToken$HyperlinkReplacementTokenProcessor.class
+SHA-256-Digest: A5d1LLv5Gy+8p+hnllviFrNLEpTX3F581bkjqFTdpg0=
+
+Name: org/eclipse/mylyn/wikitext/mediawiki/internal/token/LineBreakTok
+ en$1.class
+SHA-256-Digest: Rl1APRf8D7yFAU6saY59EccRuqEW4cO5CwpCx7gPFkI=
+

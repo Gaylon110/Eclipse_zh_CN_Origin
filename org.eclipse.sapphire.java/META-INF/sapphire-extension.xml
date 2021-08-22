@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+ ******************************************************************************
+ * Copyright (c) 2016 Oracle
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *    Konstantin Komissarchik - initial implementation and ongoing maintenance
+ ******************************************************************************
+-->
+
+<extension xmlns="http://www.eclipse.org/sapphire/xmlns/extension" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <service>
+        <description>Resolves Java types visible to the class loader that contains a given model element type interface.</description>
+        <context>Sapphire.Property.Instance</context>
+        <id>Sapphire.Java.TypeReferenceService</id>
+        <implementation>org.eclipse.sapphire.java.internal.StandardJavaTypeReferenceService</implementation>
+        <condition>org.eclipse.sapphire.java.internal.StandardJavaTypeReferenceService$Condition</condition>
+    </service>
+    <service>
+        <context>Sapphire.Property.Instance</context>
+        <id>Sapphire.Java.TypeValidationService</id>
+        <implementation>org.eclipse.sapphire.java.internal.JavaTypeValidationService</implementation>
+        <condition>org.eclipse.sapphire.java.internal.JavaTypeValidationService$Condition</condition>
+    </service>
+    <service>
+        <id>Sapphire.Java.TypeConstraintService</id>
+        <context>Sapphire.Property.Instance</context>
+        <implementation>org.eclipse.sapphire.java.internal.StandardJavaTypeConstraintService</implementation>
+        <condition>org.eclipse.sapphire.java.internal.StandardJavaTypeConstraintService$Condition</condition>
+    </service>
+    <service>
+        <description>Creates fact statements about Java type property's constraints by using semantical information specified by @JavaTypeConstraints annotation.</description>
+        <context>Sapphire.Property.Instance</context>
+        <id>Sapphire.FactsService.JavaTypeConstraint</id>
+        <implementation>org.eclipse.sapphire.java.internal.JavaTypeConstraintFactsService</implementation>
+        <condition>org.eclipse.sapphire.java.internal.JavaTypeConstraintFactsService$Condition</condition>
+    </service>
+    <service>
+        <id>Sapphire.ConversionService.StringToJavaTypeName</id>
+        <context>Sapphire</context>
+        <implementation>org.eclipse.sapphire.java.internal.StringToJavaTypeNameConversionService</implementation>
+        <description>ConversionService implementation for String to JavaTypeName conversions.</description>
+    </service>
+    <service>
+        <id>Sapphire.ConversionService.StringToJavaPackageName</id>
+        <context>Sapphire</context>
+        <implementation>org.eclipse.sapphire.java.internal.StringToJavaPackageNameConversionService</implementation>
+        <description>ConversionService implementation for String to JavaPackageName conversions.</description>
+    </service>
+    <service>
+        <id>Sapphire.ConversionService.StringToJavaIdentifier</id>
+        <implementation>org.eclipse.sapphire.java.internal.StringToJavaIdentifierConversionService</implementation>
+        <description>ConversionService implementation for String to JavaIdentifier conversions.</description>
+        <context>Sapphire</context>
+    </service>
+</extension>

@@ -1,0 +1,443 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.emf.edapt.history;singleton:=true
+Archiver-Version: Plexus Archiver
+Built-By: genie.edapt
+Require-Bundle: org.eclipse.core.runtime;bundle-version="[3.7.0,4.0.0)
+ ",org.eclipse.emf.ecore;bundle-version="[2.7.0,3.0.0)";visibility:=re
+ export,org.eclipse.emf.edapt.common;bundle-version="[1.3.0,2.0.0)";vi
+ sibility:=reexport,org.eclipse.emf.ecore.xmi;bundle-version="[2.7.0,3
+ .0.0)";visibility:=reexport,org.eclipse.emf.edapt.declaration;bundle-
+ version="[1.3.0,2.0.0)";visibility:=reexport,org.eclipse.emf.edapt.mi
+ gration;bundle-version="[1.3.0,2.0.0)";visibility:=reexport
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: %providerName
+Export-Package: org.eclipse.emf.edapt.history.reconstruction;version="
+ 1.3.0";x-friends:="org.eclipse.emf.edapt.history.cdo,org.eclipse.emf.
+ edapt.history.edit,org.eclipse.emf.edapt.history.editor",org.eclipse.
+ emf.edapt.history.recorder;version="1.3.0";x-friends:="org.eclipse.em
+ f.edapt.history.edit",org.eclipse.emf.edapt.history.util;version="1.3
+ .0";x-friends:="org.eclipse.emf.edapt.history.cdo,  org.eclipse.emf.e
+ dapt.history.edit,  org.eclipse.emf.edapt.history.editor,  org.eclips
+ e.emf.edapt.migration.test,  org.eclipse.emf.edapt.migration.ui",org.
+ eclipse.emf.edapt.internal.migration.execution;version="1.3.0",org.ec
+ lipse.emf.edapt.internal.migration.execution.internal;version="1.3.0"
+ ;x-friends:="org.eclipse.emf.edapt.history.cdo,  org.eclipse.emf.edap
+ t.history.edit,  org.eclipse.emf.edapt.history.editor,  org.eclipse.e
+ mf.edapt.migration.ui",org.eclipse.emf.edapt.migration.execution;vers
+ ion="1.3.0",org.eclipse.emf.edapt.spi.history;version="1.3.0",org.ecl
+ ipse.emf.edapt.spi.history.impl;version="1.3.0",org.eclipse.emf.edapt
+ .spi.history.util;version="1.3.0"
+Bundle-Name: %pluginName
+Bundle-Version: 1.3.0.201801260923
+Bundle-ClassPath: .
+Bundle-Localization: plugin
+Bundle-Activator: org.eclipse.emf.edapt.spi.history.HistoryPlugin$Impl
+ ementation
+Created-By: Apache Maven 3.5.2
+Build-Jdk: 1.8.0_162
+
+Name: plugin.xml
+SHA-256-Digest: jVjXnvCkaZIHGWW+13yB3EmDfgLDu75z+HJxThQDBz8=
+
+Name: org/eclipse/emf/edapt/spi/history/impl/SetImpl.class
+SHA-256-Digest: bBdmPMYrj6zxVMbc6qnFZoXoTAwb8uAe9uJWbKxjrnE=
+
+Name: org/eclipse/emf/edapt/spi/history/impl/OperationInstanceImpl.cla
+ ss
+SHA-256-Digest: GjmEzapMjM5Rd0KAMwb292uQ3l75nTx8/HQWfCjQdBY=
+
+Name: org/eclipse/emf/edapt/spi/history/impl/OperationChangeImpl.class
+SHA-256-Digest: +r0FxgDvLKBLIxwTOxNXlL6rfVZ+L9n1Q0yNm/AoEew=
+
+Name: model/history.ecorediag
+SHA-256-Digest: NS3TKpkhbVITk+ChYz0u7k0MlkMy8PU3p7sRFNN4e5Y=
+
+Name: org/eclipse/emf/edapt/spi/history/impl/HistoryPackageImpl.class
+SHA-256-Digest: R2rgFdABvxEdMKuhV8mU5TYZzTMMLdXNlvostaXqJKw=
+
+Name: org/eclipse/emf/edapt/spi/history/impl/HistoryImpl.class
+SHA-256-Digest: 3B+6/yA6FsRBlDTAIhYAavLwkFF17SzIztrhSf5g7rE=
+
+Name: org/eclipse/emf/edapt/history/reconstruction/MappingBase$1.class
+SHA-256-Digest: snzLdOje7McAZK/guaQKQPskDMjmPBQL7zWZP0ESpG0=
+
+Name: org/eclipse/emf/edapt/spi/history/HistoryFactory.class
+SHA-256-Digest: C2h95aPmwBo3ex6B/aruinOt894QpueCJg8HFcznVTw=
+
+Name: org/eclipse/emf/edapt/spi/history/HistoryPlugin$Implementation.c
+ lass
+SHA-256-Digest: gwPSAuu6EcU/w3THB62YIQeDxNqJdwI+uBSVx0lepZU=
+
+Name: org/eclipse/emf/edapt/spi/history/impl/InitializerChangeImpl.cla
+ ss
+SHA-256-Digest: uurRY3e8H7xgZQAWEed1EqOMN9PBWwvUn+Zjtj6FdVs=
+
+Name: org/eclipse/emf/edapt/history/reconstruction/HistoryReconstructo
+ r.class
+SHA-256-Digest: JhhCxrTYpY35CabEGveCeWJAe0yHPTvZg2kS9BrcGEw=
+
+Name: org/eclipse/emf/edapt/history/reconstruction/FinishedException.c
+ lass
+SHA-256-Digest: zDtBThfhte6F0ucbxSugT6mcZ1Hfl72phCQUkg+6oy8=
+
+Name: org/eclipse/emf/edapt/spi/history/impl/HistoryFactoryImpl.class
+SHA-256-Digest: jliLgruXpHAcOj5llvxabWNabKj7X+NIHWrVCjipyWo=
+
+Name: org/eclipse/emf/edapt/spi/history/Release.class
+SHA-256-Digest: 7uku0YxSjUwmMNosm6plf5hXiranskGSVfWA2cUFXMU=
+
+Name: org/eclipse/emf/edapt/spi/history/impl/ValueChangeImpl.class
+SHA-256-Digest: GuTPAN8qYrgzs9P1+T8swQ6DBDwtI28s+FTHcmZF7Xw=
+
+Name: org/eclipse/emf/edapt/history/reconstruction/EcoreForwardReconst
+ ructor.class
+SHA-256-Digest: cVP43a5KQYM0OFh9njL+/ouxK0Rv6kY2UmnEFgMuh0Y=
+
+Name: org/eclipse/emf/edapt/spi/history/HistoryPackage.class
+SHA-256-Digest: WIBDjjxO2pMtDtLn5mZHxHq3ChrBOdmGk7VLPP0Czoo=
+
+Name: org/eclipse/emf/edapt/history/reconstruction/HistoryValidator$Va
+ lidatorSwitch.class
+SHA-256-Digest: mXI2bOhNCs4nbvhMEGuY5h8qF5S5LSS7ICrq3UGB2kc=
+
+Name: org/eclipse/emf/edapt/internal/migration/execution/internal/Migr
+ atorCommandLine.class
+SHA-256-Digest: 7S/YIPjs8GYDhEInaYoonAaQ3AHdPE1YI4lJFJ27jxY=
+
+Name: org/eclipse/emf/edapt/history/util/HistoryUtils.class
+SHA-256-Digest: Ku+A8Y7wjzLn1wF28Vwtd5WYRZdvR1lnVLpZ+fp4f+k=
+
+Name: org/eclipse/emf/edapt/history/recorder/HistoryGenerator.class
+SHA-256-Digest: DmSMdS0wqnbsLfdeAjixqqtaPt5frau18h8+QmUu1/c=
+
+Name: org/eclipse/emf/edapt/spi/history/util/HistorySwitch.class
+SHA-256-Digest: TIiB6uLuPxShalcGvyXTLVT64uHS7l1fKhReYY531m0=
+
+Name: org/eclipse/emf/edapt/history/reconstruction/HistoryValidator$Va
+ lidatorSwitch$1.class
+SHA-256-Digest: o98OD7O2qaxYxh8jiHXGiZedQJhcSQqaimwAq9xPtgw=
+
+Name: org/eclipse/emf/edapt/internal/migration/execution/internal/Migr
+ atorCommandLineOption.class
+SHA-256-Digest: 3uVXcg3eQf9Xco9a8FdOvb0msJumkwz4GHlevx2Cmrs=
+
+Name: org/eclipse/emf/edapt/spi/history/ParameterInstance.class
+SHA-256-Digest: QHWdgUlIVGsMY4lGnm+qaBcSp0cXsNnmloAhtUJiaSo=
+
+Name: org/eclipse/emf/edapt/history/reconstruction/MigrationChangeReco
+ nstructor.class
+SHA-256-Digest: yv74xqglc54w6myGXKMeaxLxD36MNwdjxqN3gEJ5dcA=
+
+Name: org/eclipse/emf/edapt/internal/migration/execution/internal/Migr
+ ationReconstructor$MigrationReconstructorSwitch$1.class
+SHA-256-Digest: WgsZ8jjuQFbxHze1pTsFn4NPDwhwWNBRPzlsuQJ0kZ0=
+
+Name: org/eclipse/emf/edapt/internal/migration/execution/IClassLoader.
+ class
+SHA-256-Digest: OvzPADPT3HDJNNvvkg8W1pSyxrJDVnRnW4pNCkaaHrc=
+
+Name: org/eclipse/emf/edapt/history/recorder/ChangeRecorder.class
+SHA-256-Digest: KPHNzz9OfbbsaTdydIY2INkaiZ7xoLMH366dxOVcapA=
+
+Name: org/eclipse/emf/edapt/spi/history/Move.class
+SHA-256-Digest: 0wTndE3U1R12gWSICNgmFNEyehBR7nJIA4YaKG1AnDQ=
+
+Name: org/eclipse/emf/edapt/spi/history/OperationInstance.class
+SHA-256-Digest: OG996thntH8NvkJ5n1xMzbPJrjI/i7f52SuFk2M9zwA=
+
+Name: org/eclipse/emf/edapt/history/recorder/DirectedGraph.class
+SHA-256-Digest: 9x1WArFoFumFI2w8/PSODH8Y31HGo0dceLh8V/uDUUw=
+
+Name: org/eclipse/emf/edapt/spi/history/NamedElement.class
+SHA-256-Digest: zxGsxpGzTBvUInKbp5tkiSf9zEPCMKraGyybC0wz+AA=
+
+Name: org/eclipse/emf/edapt/spi/history/Remove.class
+SHA-256-Digest: d1DZwcZ+a+h2e1rLxeyWZYqvIFYh/AysnHzbaV+FpO4=
+
+Name: org/eclipse/emf/edapt/history/reconstruction/EcoreForwardReconst
+ ructor$EcoreReconstructorSwitch.class
+SHA-256-Digest: OOeLwbb5Qz7yLN1DKVQMQyUZrS9Cl8vIAZk4t9XcMAQ=
+
+Name: org/eclipse/emf/edapt/spi/history/ContentChange.class
+SHA-256-Digest: Mvw6vlN2E0NjONxxwHdJ+ybe1z7Jj7o0zHSsFP6wOho=
+
+Name: org/eclipse/emf/edapt/migration/execution/Migrator.class
+SHA-256-Digest: 047KZ0m1QhnuNF2ARCGNMFJxmZwWQ5a9eGucQNG2C3o=
+
+Name: org/eclipse/emf/edapt/history/reconstruction/Mapping.class
+SHA-256-Digest: quWnNTZ/2xU/jq5jMyfVmEHMYEcB0ibAAbry9Vlczyk=
+
+Name: org/eclipse/emf/edapt/history/reconstruction/MappingBase$2.class
+SHA-256-Digest: K2vfay8metxxDUBwasm1uxoqvoGBljOALkz6afr1uPI=
+
+Name: org/eclipse/emf/edapt/spi/history/impl/NoChangeImpl.class
+SHA-256-Digest: tqI7Srp8UmqmqgPvFygSOpVjLcB/fnk1h48UknIX+h8=
+
+Name: org/eclipse/emf/edapt/spi/history/MigrationChange.class
+SHA-256-Digest: 19aHtrJ3/25Brf1rglSE9rM6BWabTw/Ah/PcxFIwAgM=
+
+Name: org/eclipse/emf/edapt/spi/history/ModelReference.class
+SHA-256-Digest: 0k1RuqKBXbaPeNovhWk0RvSFRCx90NZQGjj3kdHFxk4=
+
+Name: org/eclipse/emf/edapt/spi/history/impl/ChangeImpl.class
+SHA-256-Digest: 7bHZrQ3KnYhLFqldfRCIGXI/V4REQMuBn68u4FnVz1c=
+
+Name: org/eclipse/emf/edapt/internal/migration/execution/internal/Bund
+ leClassLoader.class
+SHA-256-Digest: ukZiAloFKMOATJtIlxVXauMsYpH6XcU4PdV0oseBeHo=
+
+Name: org/eclipse/emf/edapt/spi/history/impl/ReleaseImpl.class
+SHA-256-Digest: Pk3F6MgLWh2o1E/u/Pb8hPCaypqgC5oOjhhSZSASpOw=
+
+Name: model/history.ecore
+SHA-256-Digest: wDelrboFsK4IIBU1ZYxuQRjJfEUkvzU9zCblPUjncic=
+
+Name: org/eclipse/emf/edapt/history/reconstruction/ReconstructorBase.c
+ lass
+SHA-256-Digest: 6PSNMIXaLoDOU13kJWtFSy8xu9vLE+ko76aOF98BQjs=
+
+Name: org/eclipse/emf/edapt/spi/history/NonDelete.class
+SHA-256-Digest: wIi0nwAq1lRWBEI63XKgRz1077Yp+zCOr0KINU4bVSs=
+
+Name: org/eclipse/emf/edapt/history/reconstruction/EcoreBackwardRecons
+ tructor.class
+SHA-256-Digest: ToDrqzLGdPXaoXBmgfzkgq5EFWeu9H/OoEcSjBFXT18=
+
+Name: org/eclipse/emf/edapt/spi/history/impl/DeleteImpl.class
+SHA-256-Digest: ObZ4wev3sZsWAQJEmmV7FizYxZPqXLrWmI1T4HPnXXM=
+
+Name: schema/org.eclipse.emf.edapt.migrators.exsd
+SHA-256-Digest: ul7na10cHQhfoObKabaGn33i/dlo+aqWOR0ijwKkKpw=
+
+Name: org/eclipse/emf/edapt/spi/history/impl/RemoveImpl.class
+SHA-256-Digest: 2/LKi4V0G4HlCZR33KFqHrg6cQupTbkX0XpavFGgJVg=
+
+Name: model/history.history
+SHA-256-Digest: OybN++LUQP6cFEEIIwVp38XdtN92R2wxsR8A+GBfqKA=
+
+Name: org/eclipse/emf/edapt/spi/history/util/HistoryResourceFactoryImp
+ l.class
+SHA-256-Digest: AB0bpkWCXkhqFJ/TiRy5OimwcMhFrZ+9aNJeIPGt5zM=
+
+Name: org/eclipse/emf/edapt/spi/history/Add.class
+SHA-256-Digest: RkS+oCnlVdP94eP6heKeHoOik+DZF0o16rHZzzgKgS0=
+
+Name: org/eclipse/emf/edapt/history/recorder/HistoryChangeRecorder.cla
+ ss
+SHA-256-Digest: JrRIkKDnf8HaAeEdR/xP+c9noG/bVJrVEi9ylLOjH3c=
+
+Name: org/eclipse/emf/edapt/history/reconstruction/HistoryValidator.cl
+ ass
+SHA-256-Digest: Uezr4qpGEEtrNLS9r/m/asGFbLOk2mQeOH7TDAyLuH8=
+
+Name: org/eclipse/emf/edapt/spi/history/impl/HistoryPackageImpl$1.clas
+ s
+SHA-256-Digest: mtMuBXjo21TOiO25415vHgS3KjayvIoGwzVKLJK5eEs=
+
+Name: org/eclipse/emf/edapt/history/recorder/HistoryChangeRecorder$Lin
+ k.class
+SHA-256-Digest: gjP91Mfw5cZb122nbTgKF0XpkYLAZgyi0/fH09YVUws=
+
+Name: model/history.png
+SHA-256-Digest: iy5y2BuanF5M0+J1A54hQgz+SNBXGdlYujpH11VIIBE=
+
+Name: org/eclipse/emf/edapt/spi/history/HistoryPlugin.class
+SHA-256-Digest: KyQ7Hv/1iUK4RjRXtpyJ+RLN4sK8KPD6qDL0c5qK3G8=
+
+Name: org/eclipse/emf/edapt/history/reconstruction/MappingBase.class
+SHA-256-Digest: Z0SsejyfnUpb+Tz1qgg4rwTY1X22ZzTOVowLWAOQB/M=
+
+Name: org/eclipse/emf/edapt/spi/history/Set.class
+SHA-256-Digest: c3qgXMjoxLab+hWDHBylplMWQo2YLcuJ5EOOc1t+0hU=
+
+Name: org/eclipse/emf/edapt/spi/history/ValueChange.class
+SHA-256-Digest: 99bZZqJWKvJjifpzhWfsHCwb34Cxt3zaF4a7BaHIU1E=
+
+Name: org/eclipse/emf/edapt/spi/history/impl/MigrateableChangeImpl.cla
+ ss
+SHA-256-Digest: 3bn/hoPKOmbFLnhS9pALAqxpCkVTppmS6KY/DQgbG6s=
+
+Name: org/eclipse/emf/edapt/spi/history/MigrateableChange.class
+SHA-256-Digest: hX4v4bR3LgfHIVl4D88gdCPd/1Qi7slsETITRh0/Nyo=
+
+Name: org/eclipse/emf/edapt/history/reconstruction/EcoreReconstructorS
+ witchBase.class
+SHA-256-Digest: P4s1KActY0tR/tQFzwjbXhk2a7P5p5T/EZ2HuLTkAp0=
+
+Name: org/eclipse/emf/edapt/internal/migration/execution/internal/Migr
+ ationReconstructor.class
+SHA-256-Digest: nChAoM95/Lt21wByiwno02TUTMfFWggURpP1eFfj8mY=
+
+Name: org/eclipse/emf/edapt/internal/migration/execution/internal/Migr
+ ationReconstructor$MigrationReconstructorSwitch.class
+SHA-256-Digest: uddbsCjvgLn53dCoJJT+RdjWz3Z++rFQPJg9kiTj9kM=
+
+Name: META-INF/maven/edapt/org.eclipse.emf.edapt.history/pom.propertie
+ s
+SHA-256-Digest: dd1KldG81954jGqpIjbOd9n+uwSmm7utk7kGFwGypW4=
+
+Name: org/eclipse/emf/edapt/spi/history/impl/MigrationChangeImpl.class
+SHA-256-Digest: v8M+aeeD8uBKnS01m/IBLHFlRQaaAW6zIlEEs194nHU=
+
+Name: plugin.properties
+SHA-256-Digest: iDi3zg28E5KegtqK/b4lldjpZ/ude2TI27xqRphX7jk=
+
+Name: org/eclipse/emf/edapt/spi/history/impl/NonDeleteImpl.class
+SHA-256-Digest: 96KiuF3BqfORYWcetd5B3htZx9peWExMAf8PbbQwqaE=
+
+Name: org/eclipse/emf/edapt/spi/history/impl/MoveImpl.class
+SHA-256-Digest: uAHbQT1mBbgxm/x8NxBnb4OmqegZs7Wzpa/azchii7c=
+
+Name: org/eclipse/emf/edapt/spi/history/impl/NamedElementImpl.class
+SHA-256-Digest: KJcW3xE4ahes8dIR6etxHYXsHlKOJWHeXRQmxtJL1GM=
+
+Name: org/eclipse/emf/edapt/spi/history/impl/ParameterInstanceImpl.cla
+ ss
+SHA-256-Digest: OuYPrkfjPcAAvX/0cUZfpJG+bAB/2rkrCEAV4Sd2H94=
+
+Name: org/eclipse/emf/edapt/history/util/MoveChecker.class
+SHA-256-Digest: DxiYVik4EhKNKb2xQphXjEQmEjsYo+vOh7GegkdmfXI=
+
+Name: org/eclipse/emf/edapt/history/util/DependencyChecker.class
+SHA-256-Digest: u9vqGdExHgay8qb74ApcO0MFraUqy9axw4Pu6YZ56PU=
+
+Name: org/eclipse/emf/edapt/spi/history/Create.class
+SHA-256-Digest: 0B+IyMbGiYTHzSV86Y2cNoQPQVP1QZHiUd81SxMsvyM=
+
+Name: org/eclipse/emf/edapt/history/reconstruction/IReconstructor.clas
+ s
+SHA-256-Digest: xCba1zn5efdpx1g7D1o9AcdP2dkcJX637+WJS+5UiMo=
+
+Name: org/eclipse/emf/edapt/history/reconstruction/EcoreBackwardRecons
+ tructor$EcoreReconstructorSwitch.class
+SHA-256-Digest: 7cudnkN7KAvH8a+gjeIBsLR5exb1xK5LxtNmXrzKf4A=
+
+Name: org/eclipse/emf/edapt/internal/migration/execution/internal/Oper
+ ationInstanceConverter.class
+SHA-256-Digest: dPO1TuJaqDPVDig1+a98hv8/Ei1xnuUnQQG4Si7jVsk=
+
+Name: org/eclipse/emf/edapt/history/reconstruction/ResolverBase.class
+SHA-256-Digest: FErPxq8qBN9s1Bd9fZUBYNUS/AUKaGFy6Ep2HwOYjw0=
+
+Name: org/eclipse/emf/edapt/spi/history/util/HistoryAdapterFactory.cla
+ ss
+SHA-256-Digest: 9ZiLMkF+tBzVvhIbb0+ogKZ2XcDlVLhJ4OI5SVq8VlY=
+
+Name: org/eclipse/emf/edapt/spi/history/History.class
+SHA-256-Digest: pMb55ogP+FlToUj+ZuuLX2LnmHO5xWCPUw1Wccxeu6w=
+
+Name: org/eclipse/emf/edapt/history/recorder/IChangeProvider.class
+SHA-256-Digest: 5+ULIDeiqfZ77usByqjBPDAdDgnIc97pE9/8tNf9CJo=
+
+Name: org/eclipse/emf/edapt/history/util/ExtendedHistoryValidator.clas
+ s
+SHA-256-Digest: quHlMVkffg3DPHQMQBtaoF81Mn9rQB3breS9pHpcdLw=
+
+Name: org/eclipse/emf/edapt/spi/history/util/HistoryResourceImpl.class
+SHA-256-Digest: FcB4qjE88Vo6lWOkUv9ZFLC0pj5maD8RIcZtvBFHPTk=
+
+Name: org/eclipse/emf/edapt/history/reconstruction/ForwardReconstructo
+ rBase.class
+SHA-256-Digest: e5+wy3Dg9f3hP6pICZ1ttGAOEhyE7PIxh5UOcrKjLgU=
+
+Name: org/eclipse/emf/edapt/spi/history/HistoryPackage$Literals.class
+SHA-256-Digest: VL/yDy5oLjt9MC1WEPX6sRf8DwN9mpY9VvND2MUfCio=
+
+Name: org/eclipse/emf/edapt/internal/migration/execution/internal/Wrap
+ pedMigrationException.class
+SHA-256-Digest: p+cq5bsrnejuBd1lqaEar5DiSSFYHE270lEer7iQ7oc=
+
+Name: org/eclipse/emf/edapt/spi/history/impl/CompositeChangeImpl.class
+SHA-256-Digest: XzQTth3BXArg0R4HPXSd0OmXb5jMe91vBTzUTJw+PkI=
+
+Name: org/eclipse/emf/edapt/spi/history/util/HistoryValidator.class
+SHA-256-Digest: b2tsaECFgtMkgo8lXj6TR06Ms21NyEpm4s5Gmz88SL0=
+
+Name: org/eclipse/emf/edapt/spi/history/NoChange.class
+SHA-256-Digest: wpvnT1KAb9zZdKKnnY39aY4Llm9OwFASMmkSQHr2pyo=
+
+Name: org/eclipse/emf/edapt/history/recorder/GeneratorBase.class
+SHA-256-Digest: zrmzOQ2EbUkpwYLy21pFq1s9JgOzrJxA8BJEAgqZ+YI=
+
+Name: org/eclipse/emf/edapt/spi/history/impl/AddImpl.class
+SHA-256-Digest: 3tyBsxrkMsK8KlNEvTnzqsnPRbCa49WiN1vHdPtd7cI=
+
+Name: org/eclipse/emf/edapt/spi/history/impl/ModelReferenceImpl.class
+SHA-256-Digest: bM0MEazFZKNjicINnX2soekuwRfAC7kWygHis8IKhzs=
+
+Name: org/eclipse/emf/edapt/history/reconstruction/CompositeMapping.cl
+ ass
+SHA-256-Digest: Cc9DbGruM1j/JNbRh9g3sUnVHkBcsk3e7kET1YrP04o=
+
+Name: org/eclipse/emf/edapt/spi/history/impl/CreateImpl.class
+SHA-256-Digest: 6bTrEEC8qZ5BUFErymu+e3z6w8Gwx53KGVONw+CdAeg=
+
+Name: org/eclipse/emf/edapt/spi/history/InitializerChange.class
+SHA-256-Digest: yCAtsezBwkE+sSBozamMc3tnLLGPdUgd8WpfFauXwQY=
+
+Name: org/eclipse/emf/edapt/migration/execution/MigratorRegistry.class
+SHA-256-Digest: bumH17cbSwr3ycp9xt2cryx97c9R2t+f5aiNikGeW7g=
+
+Name: org/eclipse/emf/edapt/spi/history/impl/PrimitiveChangeImpl.class
+SHA-256-Digest: wrKr9NN6nbDnhW1X3KxcqeQv2GWEKFbFB9HGFgrkbkw=
+
+Name: org/eclipse/emf/edapt/spi/history/impl/ContentChangeImpl.class
+SHA-256-Digest: c1RLtmaYDzeo1qXoUe27L/sduCdzTlrDHerZuuCpdkY=
+
+Name: org/eclipse/emf/edapt/spi/history/Delete.class
+SHA-256-Digest: lF95MD1Y/SCWXerptJDKkkN//A9OoEi/uMf+tQWrnHE=
+
+Name: about.html
+SHA-256-Digest: ZYczHLHHJbJ2GSLe/MBOpU/zRznwNG9X6G0P5BecAYs=
+
+Name: org/eclipse/emf/edapt/spi/history/util/HistoryAdapterFactory$1.c
+ lass
+SHA-256-Digest: 1lupVp+FIr+EiloN+57qSqDKiIJaH8wAmRqwuyb8gPU=
+
+Name: org/eclipse/emf/edapt/history/recorder/HistoryChangeRecorder$1.c
+ lass
+SHA-256-Digest: AyCSppHDxZVW/ggdohbRwR2+Y3qrH5bpfZMNA2YOy1U=
+
+Name: org/eclipse/emf/edapt/spi/history/Change.class
+SHA-256-Digest: yjtFktxjvbhN41raWyZ179THpR77jMUwO+zMiyGGxzI=
+
+Name: org/eclipse/emf/edapt/history/util/BidirectionalChangesCustomMig
+ ration.class
+SHA-256-Digest: hi0oF5N3oG+KAmYta5W/UFpXMzNKXhIA5HcT7Ih+DcQ=
+
+Name: org/eclipse/emf/edapt/spi/history/OperationChange.class
+SHA-256-Digest: /pwSmCovazvCr9WtlBxWc5zxgHWvEIR+z0SUnT3aJ24=
+
+Name: org/eclipse/emf/edapt/history/reconstruction/CompositeReconstruc
+ torBase.class
+SHA-256-Digest: CWKDPb/JFmXOALHklTTQ1Sw6HKDYtnqry/CfPIvGMAE=
+
+Name: org/eclipse/emf/edapt/internal/migration/execution/ValidationLev
+ el.class
+SHA-256-Digest: PxdXeSvIKG6Og8roWoOKY+HDObCMplhaFTA73UoV/BA=
+
+Name: org/eclipse/emf/edapt/history/reconstruction/BackwardReconstruct
+ orBase.class
+SHA-256-Digest: PlRGSTtRDat7m+Bz341kBrGPG5bD39fB560Fm7AYGV4=
+
+Name: META-INF/maven/edapt/org.eclipse.emf.edapt.history/pom.xml
+SHA-256-Digest: OHXsvxbVr6Tchw2KaUluLvbzItL4P3Kr2YHyVgFJhgw=
+
+Name: org/eclipse/emf/edapt/spi/history/CompositeChange.class
+SHA-256-Digest: 7EvcWHPYkFoj4RziA+HkZ6admprPN+GMAP9+Ik4+28o=
+
+Name: org/eclipse/emf/edapt/internal/migration/execution/internal/Clas
+ sLoaderFacade.class
+SHA-256-Digest: xdk+7AOeNEcb6ns39S6O5eXO7aLmEGYf0oBGk7yRkAQ=
+
+Name: org/eclipse/emf/edapt/history/recorder/ChangeRecorder$1.class
+SHA-256-Digest: b1hnQkGZIcXav4Htmb2jZd1OWYE3H0uacdO98qiWiGc=
+
+Name: model/history.genmodel
+SHA-256-Digest: 1TAjk50fnugPUWxBlsd49fRzU6g2SiIeR3IB9niCf6o=
+
+Name: org/eclipse/emf/edapt/spi/history/PrimitiveChange.class
+SHA-256-Digest: zIwL02YZBjhpjFqOyv4YJ0flVhTXjAL2y3/X+bMIgVA=
+

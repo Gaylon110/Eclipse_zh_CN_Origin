@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.eclipse.gmf.validate;singleton:=true
+Bundle-Version: 1.2.0.201409171321
+Bundle-ClassPath: org.eclipse.gmf.validate_1.2.0.201409171321.jar
+Bundle-Activator: org.eclipse.gmf.internal.validate.GMFValidationPlugin
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Export-Package: org.eclipse.gmf.internal.validate;x-friends:="org.eclipse.gmf.tests",
+  org.eclipse.gmf.internal.validate.expressions;x-friends:="org.eclipse.gmf.tests",
+  org.eclipse.gmf.validate
+Require-Bundle: org.eclipse.emf.validation;bundle-version="[1.1.0,2.0.0)",
+  org.eclipse.emf.ecore.edit;bundle-version="[2.3.0,3.0.0)",
+  org.eclipse.emf.codegen.ecore;bundle-version="[2.3.0,3.0.0)",
+  org.eclipse.core.runtime;bundle-version="[3.3.0,4.0.0)",
+  org.eclipse.ocl.ecore;bundle-version="[3.0.0,4.0.0)"
+Build-Jdk: 1.7.0_51
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Created-By: Apache Maven
+Built-By: genie.modeling.gmp.gmf-tooling
+Archiver-Version: Plexus Archiver

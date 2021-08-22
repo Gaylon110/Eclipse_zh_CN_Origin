@@ -1,0 +1,482 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.ui.console; singleton:=true
+Archiver-Version: Plexus Archiver
+Built-By: genie.releng
+Require-Bundle: org.eclipse.ui;bundle-version="[3.5.0,4.0.0)",org.ecli
+ pse.jface.text;bundle-version="[3.5.0,4.0.0)",org.eclipse.ui.workbenc
+ h.texteditor;bundle-version="[3.5.0,4.0.0)",org.eclipse.core.runtime;
+ bundle-version="[3.11.0,4.0.0)",org.eclipse.core.expressions;bundle-v
+ ersion="[3.4.0,4.0.0)",org.eclipse.core.variables;bundle-version="[3.
+ 2.800,4.0.0)"
+Bundle-ManifestVersion: 2
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/platfo
+ rm/eclipse.platform.debug.git;path="org.eclipse.ui.console";tag="M201
+ 70802-0400";commitId=e0cb6ed5cb2286131c714249681d342b1e4e571c
+Bundle-Vendor: %providerName
+Import-Package: com.ibm.icu.text
+Export-Package: org.eclipse.ui.console,org.eclipse.ui.console.actions,
+ org.eclipse.ui.internal.console;x-internal:=true
+Bundle-Name: %pluginName
+Bundle-Version: 3.7.1.v20170728-0806
+Bundle-Localization: plugin
+Bundle-Activator: org.eclipse.ui.console.ConsolePlugin
+Created-By: Apache Maven 3.3.3
+Build-Jdk: 1.8.0_131
+
+Name: icons/full/dlcl16/wordwrap@2x.png
+SHA-256-Digest: z2FX8YhP2ANxglM7xoORYEINciBZnpVnvxx9Pp6y3VE=
+
+Name: plugin.xml
+SHA-256-Digest: 2Go4luH3qaOJJIcsVP+9K+SOHyhOJrXA2QhyhIOIXME=
+
+Name: org/eclipse/ui/console/IConsoleConstants.class
+SHA-256-Digest: ILfbbnKyRLz5lBbGNGzJUwdzoDDYF9dRXQjXdXYwMbY=
+
+Name: org/eclipse/ui/internal/console/ConsoleView$7.class
+SHA-256-Digest: HhAhve0bR2MnPfq4ti0/Iw3AUHZULuupfQS4WfXa5Xk=
+
+Name: org/eclipse/ui/console/TextConsole.class
+SHA-256-Digest: uxBtSzIyh5dCKobe1hSzIZdaDzB7g61fJpyyQ5Ma0a0=
+
+Name: org/eclipse/ui/internal/console/ConsoleTypePropertyTester.class
+SHA-256-Digest: OtY2gjuGTpvFqElGHRYw3QA5xucu3emMeoIMm9nI5f4=
+
+Name: org/eclipse/ui/console/ConsolePlugin.class
+SHA-256-Digest: iN8OjxnjI4jOHCxskHV+Mlv/jt9tSz7dU235enw4OpI=
+
+Name: org/eclipse/ui/console/IConsoleView.class
+SHA-256-Digest: qzN6hALmxmHiiBZGo8RVuZZW++0PtE0xyJ5R7oCC83Q=
+
+Name: org/eclipse/ui/internal/console/PatternMatchListenerExtension.cl
+ ass
+SHA-256-Digest: A7ixwbi/Mh1dbpQzb1AUXVXsE97q5TRv/ccL4MkioSM=
+
+Name: org/eclipse/ui/console/AbstractConsole$PropertyNotifier.class
+SHA-256-Digest: LFtRGugRdB0yL5Co4wHG+TYKEsA5BqBC4gY2DLzq9DE=
+
+Name: org/eclipse/ui/internal/console/OpenConsoleAction.class
+SHA-256-Digest: PfUmQ1YTPGZ0Ku8iEwz3GduUyYUmhvdrhV+H1+QNcPM=
+
+Name: org/eclipse/ui/internal/console/IOConsoleViewer$2.class
+SHA-256-Digest: QC66NFJ9Ez/70AQydsLmmpOcXUs5akh7NvoiOWSJ+gA=
+
+Name: icons/full/dlcl16/wordwrap.png
+SHA-256-Digest: jeMV6jtn1uwgO2SGLX6qKgbiRFFYZMgW1C+hKS+sx04=
+
+Name: icons/full/clcl16/pin@2x.png
+SHA-256-Digest: 5M7GtE8tsweSQq2XtkF5Sn+6O01R0KhZAYfWf0q4vlo=
+
+Name: icons/full/eview16/console_view.gif
+SHA-256-Digest: vab/CmPsuCDGNcCKrmRYnlQVSyk/XICxc/OoqHjDr8Y=
+
+Name: org/eclipse/ui/internal/console/ConsoleResourceBundleMessages.pr
+ operties
+SHA-256-Digest: ZM/F0H6QX+bDtvurf05gYOdI2nrDhSq4q6urBy2INU8=
+
+Name: org/eclipse/ui/internal/console/ConsoleManager$ConsoleNotifier.c
+ lass
+SHA-256-Digest: wpZM4KQPOmPJ7DsoW7j2kouaT6vOJ/ZatPu/12kmN3s=
+
+Name: org/eclipse/ui/internal/console/PatternMatchListener.class
+SHA-256-Digest: B+ujRfPbby7X1UoDy0mdHPdyWJO1xm8nG+0Ww+mch40=
+
+Name: org/eclipse/ui/internal/console/WordWrapAction.class
+SHA-256-Digest: EwsC3BHGnqg5x8qwygnd+S4Opwm0hbnKKIAuGgdIZ6Q=
+
+Name: icons/full/elcl16/wordwrap@2x.png
+SHA-256-Digest: kXcXsKwibQSBs9mkT7OWQkWSK+kJMDyCOZDGTKuXUN8=
+
+Name: org/eclipse/ui/internal/console/ConsoleDropDownAction.class
+SHA-256-Digest: u4GOPTM5ytIiQ0iXcqZVTPOQUetmQRfJwWczNPN0nwo=
+
+Name: org/eclipse/ui/internal/console/ConsolePatternMatcher.class
+SHA-256-Digest: jNM0hgUnn93SSYYoCnZMjh8E0KZRGSRlUNgPPQzDi84=
+
+Name: org/eclipse/ui/console/IConsole.class
+SHA-256-Digest: WDHT5zU9xjtCyhePnM2viUdC2sZdBe4ghKMIvenqN0c=
+
+Name: org/eclipse/ui/console/TextConsoleViewer$3.class
+SHA-256-Digest: s9TX/rrYKtbS2kuJctemVxqY2/9n/qAuytYjxQ+XEBU=
+
+Name: org/eclipse/ui/internal/console/ConsolePageParticipantExtension.
+ class
+SHA-256-Digest: i4YZPJ6CYeO56dagZkphqGpUAqwomK9CHHIK0u63FAk=
+
+Name: icons/full/elcl16/wordwrap.png
+SHA-256-Digest: s7mYcewNilNxt8fgEBhZ6vkJMKCQ5dOzr8Q3s/k6e4c=
+
+Name: .api_description
+SHA-256-Digest: 5GZPWccEnXLrk9MpVAfe8cWcOjCp7XPZzgN4NauDRwo=
+
+Name: org/eclipse/ui/internal/console/IOConsolePartitioner.class
+SHA-256-Digest: mJG0vGZUP3ijEZS5UW4sIpKm2gMbKlFspXvatFYUK1M=
+
+Name: org/eclipse/ui/console/actions/TextViewerGotoLineAction$NumberVa
+ lidator.class
+SHA-256-Digest: kRt2u1d7VapJLXCrV7elje40y60pSJm6BmqxubP+iDA=
+
+Name: org/eclipse/ui/internal/console/ConsolePatternMatcher$CompiledPa
+ tternMatchListener.class
+SHA-256-Digest: qnsdiiY8StrTEmfiAbYWrkHHWv9nk1rWMV4TDUYOhwI=
+
+Name: org/eclipse/ui/console/MessageConsole.class
+SHA-256-Digest: oc7moO6uRCkEZCrHNaxf22D2qfojkmc/9/+vHW3UkrU=
+
+Name: org/eclipse/ui/internal/console/ShowConsoleAction.class
+SHA-256-Digest: /NjQW8tiUYTjUsZYYic1xZqlSk06SnWsMED3KB3TjnE=
+
+Name: org/eclipse/ui/internal/console/OpenConsoleAction$ConsoleFactory
+ Action.class
+SHA-256-Digest: jJ4uN+/5O8EhbYzXFhsD+XEI0k8KI9j3KzLygOm3MA4=
+
+Name: org/eclipse/ui/console/TextConsolePage.class
+SHA-256-Digest: kn8qJmNgiyK1vlvrGAvK83xCDPR/MdUvfZCsHqLPVUQ=
+
+Name: org/eclipse/ui/console/AbstractConsole.class
+SHA-256-Digest: GtTTgL6ZWpS1YDjuaveeVNA3I3gakOuCuy8JMIIdPco=
+
+Name: org/eclipse/ui/console/IConsoleDocumentPartitioner.class
+SHA-256-Digest: /qAbUlLXDRggj1izMRpoCEBi2gTuJPYgrkWaxYhJyoc=
+
+Name: org/eclipse/ui/console/IHyperlink.class
+SHA-256-Digest: 0/C8xv2CYWrIRCZOjjBigdwdHgo54hlANFKCdW2nGSA=
+
+Name: icons/full/dlcl16/clear_co@2x.png
+SHA-256-Digest: vaT8e/FsPe+PZTSFV39vuKQ3idC0FKZkZY6K+/m9Mxs=
+
+Name: org/eclipse/ui/console/TextConsoleViewer$HyperlinkColorChangeLis
+ tener.class
+SHA-256-Digest: OTGfjzP2GZQNdJtA0iHWuHKAzfNL7CWKQ6WcJEC/7Zg=
+
+Name: org/eclipse/ui/console/TextConsolePage$1.class
+SHA-256-Digest: 7pVyHwwe0lAhhn/yXHWqnmf0D46ihbt1r1VTEWyFgpw=
+
+Name: org/eclipse/ui/console/TextConsoleViewer$6.class
+SHA-256-Digest: n4xrmoR/Ul4wU3OoAErwZRBcVSg6fDeabBLSpTBfJXQ=
+
+Name: org/eclipse/ui/internal/console/ConsolePluginImages.class
+SHA-256-Digest: jQH187RJvUlNE0TlARhfRDw+WuG9R6Q4/OyNCThlpjY=
+
+Name: icons/full/elcl16/new_con.png
+SHA-256-Digest: Yf3nmjq9Q66h0tKWrat8xM2xtfp/kQ4l+MqbyTbvRG8=
+
+Name: icons/full/dlcl16/rem_co@2x.png
+SHA-256-Digest: 6e2RkUXZMSy70yOERBq/oLMeeQu4aZoAsSe0gvsGMCo=
+
+Name: org/eclipse/ui/console/TextConsoleViewer$9.class
+SHA-256-Digest: YSb9gkYjisIN875tYxCi5SM9X11W/ZHftx+j7/mXEPY=
+
+Name: org/eclipse/ui/internal/console/IOConsolePartitioner$QueueProces
+ singJob.class
+SHA-256-Digest: BUpxXrQWX69YQSux19TgdASbz5J9U+g9bUPZl1/P2cE=
+
+Name: org/eclipse/ui/console/IConsolePageParticipant.class
+SHA-256-Digest: twdTvsDmPYDTq6OqaN57c3m09hJSXF4Ra74HGYdEL4Q=
+
+Name: org/eclipse/ui/console/IScrollLockStateProvider.class
+SHA-256-Digest: Jcn0KAItNjZTBA6ncsL3daxFrKLvlCgNKyPF22l5P7k=
+
+Name: org/eclipse/ui/console/AbstractConsole$Lifecycle.class
+SHA-256-Digest: c+iS3obbp+fyIhnQagt+PD6y59m4d/sPQisQUsknIsA=
+
+Name: org/eclipse/ui/console/IHyperlink2.class
+SHA-256-Digest: +93PKy/b6nDjhEPInSgsWV7+C9PfPQgAKZjyEEk1BH8=
+
+Name: icons/full/cview16/console_view.gif
+SHA-256-Digest: vab/CmPsuCDGNcCKrmRYnlQVSyk/XICxc/OoqHjDr8Y=
+
+Name: icons/full/cview16/console_view@2x.png
+SHA-256-Digest: 3OtO9/18dfo3REXdeVaHHY7v/EPQdbE65vaxHjSU+0U=
+
+Name: org/eclipse/ui/internal/console/ConsoleDropDownAction$1.class
+SHA-256-Digest: +7CK51FSu9DP2KSlnd4DNImtdjZbVSGf2FDjVFZ4VB8=
+
+Name: org/eclipse/ui/internal/console/ConsoleManager$ShowConsoleViewJo
+ b.class
+SHA-256-Digest: eemP25eIjkYyf2OEMHvRGrRY6dReFuELCJIAw3WGw+k=
+
+Name: icons/full/dlcl16/new_con@2x.png
+SHA-256-Digest: 1i8hC1eSfUFzs8oHyd4IGW5T2fCjzJ9kruswn2j9HpE=
+
+Name: org/eclipse/ui/console/TextConsoleViewer$2.class
+SHA-256-Digest: kQNQLxrUOu69mCu+gebquGNZUoRh1ZCbPNViwsEhmPk=
+
+Name: icons/full/elcl16/lock_co.png
+SHA-256-Digest: /vd8wsDqUAIEgtsP/wD/LvB71YVjrNkPwYR6rIIGUiM=
+
+Name: org/eclipse/ui/console/IPatternMatchListener.class
+SHA-256-Digest: OWe87eyqbOn6R1tSprzqBv8hDT2/vuLCEjmdClIaynk=
+
+Name: org/eclipse/ui/internal/console/ConsoleView$5.class
+SHA-256-Digest: EXAeffO1zCLLEUNUOY0GyoKwYvNh6T0u2ltsipBO1Oo=
+
+Name: org/eclipse/ui/console/MessageConsoleStream.class
+SHA-256-Digest: X7l4v3lmAKCq5YNQJU0kYKBzZjbGm2FkY1Iqay7OD6M=
+
+Name: org/eclipse/ui/internal/console/IOConsolePartitioner$PendingPart
+ ition.class
+SHA-256-Digest: LBkJjum1z9uCstmBfomHnC3lIZtrntd0YKPpxSZOI1A=
+
+Name: org/eclipse/ui/internal/console/ConsoleDocumentAdapter.class
+SHA-256-Digest: J+NxQBAExiQNL12xsMGmiw/xnaZh58He9lpX5kRjuGI=
+
+Name: org/eclipse/ui/console/TextConsoleViewer$8.class
+SHA-256-Digest: /m2n1em8gkVpC6BXkhChRGeaISAIrW0FUPXP43AqxVk=
+
+Name: icons/full/clcl16/clear_co@2x.png
+SHA-256-Digest: DlOSZnm5QlUGZ3SAzYZTOvkXPTsyhdyGXgriCwgBZG0=
+
+Name: icons/full/elcl16/clear_co.png
+SHA-256-Digest: r+BAeayhyd7hjqtj2u3pbPVMUv9tFimD4IEM3AIxLo4=
+
+Name: icons/full/elcl16/pin.png
+SHA-256-Digest: LonzCxfhqJG8jOlZqZot9qH2viZKikg4wo35oTvJTok=
+
+Name: icons/full/eview16/console_view.png
+SHA-256-Digest: uEx/IYBrRkMN025ry4ivzr6b1eGk2qJSbJrt3I29v84=
+
+Name: icons/full/dlcl16/new_con.png
+SHA-256-Digest: DLgD1X2MvV0nr2ZWC0WqKHClhdLzmY3nnB3UU8Aqasw=
+
+Name: icons/full/dview16/console_view@2x.png
+SHA-256-Digest: 6iCYQjkVWupQTT69aZ9LBvDJq5DEXNt6cDTjquF2pZE=
+
+Name: icons/full/elcl16/rem_co.png
+SHA-256-Digest: 3KQ0fWgLmy2/c00pwXnH3uiE/7nBZ999SRKQ2Wyp+qM=
+
+Name: icons/full/eview16/console_view@2x.png
+SHA-256-Digest: 3OtO9/18dfo3REXdeVaHHY7v/EPQdbE65vaxHjSU+0U=
+
+Name: org/eclipse/ui/internal/console/ConsoleDropDownAction$2.class
+SHA-256-Digest: dw4TNZHs9D0eYtHyxoLpYMZJd+bwIdqt8QsVDCOrx84=
+
+Name: org/eclipse/ui/internal/console/IConsoleHelpContextIds.class
+SHA-256-Digest: Dcjitfnm2iIQAMkjRcCbgTNMz/80BQ1EqD3eGaa8qK8=
+
+Name: org/eclipse/ui/internal/console/ConsoleResourceBundleMessages.cl
+ ass
+SHA-256-Digest: ck72AnObEK0TM8VwirCHoYWhlK92j/ZUUnQTgPsjuJs=
+
+Name: org/eclipse/ui/internal/console/ConsoleView$4.class
+SHA-256-Digest: JifN8wBKNNml9mdhmaJFYW16JhSoMiTxS93mod1SaW4=
+
+Name: icons/full/clcl16/pin.png
+SHA-256-Digest: LonzCxfhqJG8jOlZqZot9qH2viZKikg4wo35oTvJTok=
+
+Name: org/eclipse/ui/internal/console/ConsoleViewConsoleFactory.class
+SHA-256-Digest: aek5dwsqWRL3Bt4B9GfsFq0FlpUcm18yiTSp3gqgiYo=
+
+Name: org/eclipse/ui/console/IConsoleListener.class
+SHA-256-Digest: f4XcZzaVbiewewouto5EUew4ahpnuBpTy2kInhhw7K8=
+
+Name: org/eclipse/ui/internal/console/IOConsoleViewer.class
+SHA-256-Digest: P/PZ/qm3ftGspudn8P3DLh8zh6FFUlL2Xvcg8folZfY=
+
+Name: icons/full/clcl16/wordwrap.png
+SHA-256-Digest: gr3q/eKroSF5VZIkR0nn57GUqVb1Wpra8TFqLIbDKUw=
+
+Name: org/eclipse/ui/console/TextConsoleViewer$1.class
+SHA-256-Digest: FlmK3xLuRO3MYxA/CrwIbVgwnFmgIJahsBDr290heW8=
+
+Name: org/eclipse/ui/console/actions/TextViewerAction.class
+SHA-256-Digest: CeExuKcJjcQLT5kdfU9WYWVO69eKOkqiskMNlX4nTP8=
+
+Name: org/eclipse/ui/console/TextConsole$MatcherSchedulingRule.class
+SHA-256-Digest: 3c8gK9iJotW34iU5hiMfx/6QSdIo3m/LMb4vkuUVamY=
+
+Name: org/eclipse/ui/console/TextConsolePage$2.class
+SHA-256-Digest: HjGqtI6O5FY2VYeVFtyyGl7wPgvIHSHNLBtQIOw4jnA=
+
+Name: icons/full/clcl16/clear_co.png
+SHA-256-Digest: r+BAeayhyd7hjqtj2u3pbPVMUv9tFimD4IEM3AIxLo4=
+
+Name: org/eclipse/ui/console/TextConsoleViewer$4.class
+SHA-256-Digest: uuP/yUfZfDo4KphPjynQJjXPsM7jQE2t/fsGEM8oOFw=
+
+Name: org/eclipse/ui/internal/console/IOConsolePartition.class
+SHA-256-Digest: 37BB/2ZA7zH5kfnt0raxyou2KJJlqhIcOgVzR6mQfX4=
+
+Name: icons/full/dview16/console_view.png
+SHA-256-Digest: JvQx45c25xPo3mndHoe8UJtM0U24xcjjjElR8GirQBs=
+
+Name: org/eclipse/ui/console/TextConsoleViewer$7.class
+SHA-256-Digest: X3PQhZIu9WvCXanA+tQ53n4jBMDgbTd0gwpEK7mPjA4=
+
+Name: plugin.properties
+SHA-256-Digest: 8aNcfnLMAOOitAV2jQ4wJMcLn4+3BPutj29SoRIqZ/s=
+
+Name: org/eclipse/ui/internal/console/StreamDecoder.class
+SHA-256-Digest: 2/+mIQXG4oY2grPAiAZDpC4jGXw8NqHqFKSkMfF1ptU=
+
+Name: org/eclipse/ui/internal/console/ConsoleManager$1.class
+SHA-256-Digest: Wgrx9hAn4/gHyfSLiRQWQbKCfkjkqF/rH4TMqmMoHzY=
+
+Name: icons/full/elcl16/new_con@2x.png
+SHA-256-Digest: nZWtnU0LxsK0iike6OVF6ZsdQb3ZqnDZKmOCqtNAQiw=
+
+Name: org/eclipse/ui/internal/console/PinConsoleAction.class
+SHA-256-Digest: gpns5pj6QzeLN632pBpAEVuEcBmIff26XEfpzNZDEc4=
+
+Name: org/eclipse/ui/console/PatternMatchEvent.class
+SHA-256-Digest: os+lh6DZMCdD58cl2rCZUFOqA81MaWuvHKwjasdi9+k=
+
+Name: org/eclipse/ui/internal/console/ConsoleManager.class
+SHA-256-Digest: EPIELJtQmwVZFUJZmKjiXR7njw0D0sgxXb2O0OyG95A=
+
+Name: org/eclipse/ui/internal/console/ConsoleView$6.class
+SHA-256-Digest: l1fudXPFCd0A9afozx96U/z5JqbG6KI/69NIpr9peEc=
+
+Name: org/eclipse/ui/console/IOConsoleOutputStream.class
+SHA-256-Digest: 9TlvXXfH3bSt+Lr2Np5LFdgurZnO4Sbc78vCYKY/Hxk=
+
+Name: org/eclipse/ui/console/IConsoleManager.class
+SHA-256-Digest: GFaeD1muMeLTB/4v5XOh6HqW1mY9QOVmWeY0tw4cFPw=
+
+Name: org/eclipse/ui/console/IConsoleFactory.class
+SHA-256-Digest: zi+FkcPnjrjgdm1bp1wRw8Z4LY7bbjCTr+3cXBt3gp4=
+
+Name: org/eclipse/ui/internal/console/ConsoleView$3.class
+SHA-256-Digest: AgyeBKvIfc24j6NZNZuZRsFp/UV2zVsk7sFpCdab+eE=
+
+Name: org/eclipse/ui/internal/console/ConsoleMessages.class
+SHA-256-Digest: K78/e/J/bqFUuHZf51+LzKAUHqI8PGamGAWmVCVh7sM=
+
+Name: icons/full/cview16/console_view.png
+SHA-256-Digest: uEx/IYBrRkMN025ry4ivzr6b1eGk2qJSbJrt3I29v84=
+
+Name: icons/full/elcl16/pin@2x.png
+SHA-256-Digest: 5M7GtE8tsweSQq2XtkF5Sn+6O01R0KhZAYfWf0q4vlo=
+
+Name: org/eclipse/ui/console/actions/ClearOutputAction$1.class
+SHA-256-Digest: /iTQtsEpXTPw+cmN5unfMemaiHeKwjcOZo9xj9PPXKQ=
+
+Name: org/eclipse/ui/internal/console/ConsoleView.class
+SHA-256-Digest: fP9Q65TofRexK1sw27RDYrZ4ouOD29OvQkzluPW2aLw=
+
+Name: org/eclipse/ui/internal/console/IInternalConsoleConstants.class
+SHA-256-Digest: HY6Sgst4KkE3XKYXCb2APjhd3vJRAiZpMLAr1OLk+QY=
+
+Name: org/eclipse/ui/internal/console/IOConsoleViewer$1.class
+SHA-256-Digest: ZS4bbdDVdZzEBNtxOq5ADwSCarBxMdxQfncOOT/oCbM=
+
+Name: org/eclipse/ui/internal/console/ConsoleMessages.properties
+SHA-256-Digest: g1TPArE/9z7WA1be4eieWyHf1yigy2F3AWqvsKZolA8=
+
+Name: org/eclipse/ui/internal/console/FollowHyperlinkAction.class
+SHA-256-Digest: PsldedE+1Wy0L6jStnCP/02Kto7VTE5q031zxErbCvk=
+
+Name: icons/full/clcl16/lock_co.png
+SHA-256-Digest: /vd8wsDqUAIEgtsP/wD/LvB71YVjrNkPwYR6rIIGUiM=
+
+Name: org/eclipse/ui/internal/console/ConsolePatternMatcher$MatchJob.c
+ lass
+SHA-256-Digest: yU69mvPgHNuebBRZO2JjDEHbSlkCJZ9520QpBAFbkbI=
+
+Name: icons/full/elcl16/lock_co@2x.png
+SHA-256-Digest: q+lKdrafK08K8P+EusQ2mBJZ0kGOSfrWqTh8HPuUSQ0=
+
+Name: icons/full/elcl16/rem_co@2x.png
+SHA-256-Digest: HgNE2kvS0lZlzdmKJw1R2Yu4O6E7sg7POm4RvN4oEeE=
+
+Name: org/eclipse/ui/console/actions/ClearOutputAction.class
+SHA-256-Digest: 7wkPkmdZaJJeBub5j2SLLQHzJiiF2UBl55pVJ8TGaSU=
+
+Name: org/eclipse/ui/internal/console/ConsoleDocument.class
+SHA-256-Digest: Nf+JKy7oMjh+Jb1b2YyVcCO1ATjbNXIQYJ4XVA2AfwY=
+
+Name: org/eclipse/ui/internal/console/ConsoleView$2.class
+SHA-256-Digest: lu+ePPw5BCsngv/irOlctFAEPbjuCVIZd0nUvbM1VoI=
+
+Name: org/eclipse/ui/console/TextConsole$1.class
+SHA-256-Digest: DgNGUqhdFkdnoyM6nLVMrUyzh4GnX4us/bM0J/7AY5g=
+
+Name: org/eclipse/ui/internal/console/ConsoleHyperlinkPosition.class
+SHA-256-Digest: hh09f53xO3R1EFJiVz9MMMe9N4TmT4WSDOx9Xp9SJ+4=
+
+Name: org/eclipse/ui/internal/console/IOConsolePage$1.class
+SHA-256-Digest: tmL6cpeuH27u0n3ej6GjT6vFycqSrBdmTkP4iyImVJg=
+
+Name: org/eclipse/ui/console/actions/TextViewerGotoLineAction.class
+SHA-256-Digest: XuJ0P7F1L/xd5sjcZ7dajDVDbSn8XaxV122Ng4CcSik=
+
+Name: org/eclipse/ui/internal/console/HyperlinkUpdater.class
+SHA-256-Digest: XJ6Gjo9cvQT7OuOHmUdTaWyhSsrHvPWbbPmcPKFOmUY=
+
+Name: org/eclipse/ui/console/TextConsoleViewer$5.class
+SHA-256-Digest: t/maOyR2JwUDB6oLD9cocKJtFSihbPX+lbesYGEqFnU=
+
+Name: org/eclipse/ui/internal/console/ConsoleFactoryExtension.class
+SHA-256-Digest: FycxXB8s6QXOXVCsXzhDgUFABkNlbSOnXcobkZf3ZhI=
+
+Name: org/eclipse/ui/internal/console/IOConsolePartitioner$TrimJob.cla
+ ss
+SHA-256-Digest: EwZFLR4h8H/hzCkU5QjRulmD8DHBTMMbBLPGq1BW5sw=
+
+Name: icons/full/dlcl16/rem_co.png
+SHA-256-Digest: pBU8C2GJvIWM3znE1vmgUXtmgyEoRpghzrw96QaHzjI=
+
+Name: icons/full/dlcl16/lock_co@2x.png
+SHA-256-Digest: mPPlR50JLMbV4SaJDRBKD5NoZfVN4LNFoaHeBWIh8zE=
+
+Name: org/eclipse/ui/console/IOConsoleInputStream.class
+SHA-256-Digest: Cok4EySaENC1aOtmJ8N8xgkju2CTZxVwJZbj24aSXgo=
+
+Name: org/eclipse/ui/internal/console/ConsoleWorkbenchPart.class
+SHA-256-Digest: se6CXs5/zNzwhb7l9wYi/UkGzvEsXIBrEY/wqNTjq9Q=
+
+Name: icons/full/dlcl16/pin@2x.png
+SHA-256-Digest: 2mHBPP4gWKVZeOsjlpfOBYMAIMKHh4ElPNY7Twcyhv4=
+
+Name: org/eclipse/ui/console/TextConsoleViewer.class
+SHA-256-Digest: xQEXdbXrdmb77ywwaoJFvSvkm0BHSfUFwRZ5j5KvVGw=
+
+Name: icons/full/elcl16/clear_co@2x.png
+SHA-256-Digest: DlOSZnm5QlUGZ3SAzYZTOvkXPTsyhdyGXgriCwgBZG0=
+
+Name: org/eclipse/ui/internal/console/ConsoleManager$RepaintJob.class
+SHA-256-Digest: bb4uj93y7Paef+gJ+MqSTnOv9QX+fp3MoXsDGL058+o=
+
+Name: org/eclipse/ui/internal/console/ConsoleView$1.class
+SHA-256-Digest: KesC5cFpFFfTsFhSHDZ0NTMC8Kg1hlV2bkhZyIlNsT0=
+
+Name: about.html
+SHA-256-Digest: 0RM1x9lTJa7T8YkysaegPuBIeaEvSZypRDfXoMpsJAU=
+
+Name: org/eclipse/ui/internal/console/ConsoleView$8.class
+SHA-256-Digest: Bib8kPek9sqpILxtJsIQ9xLX0fNif9a/3VUUS7+XcNk=
+
+Name: org/eclipse/ui/internal/console/IOConsolePartitioner$1.class
+SHA-256-Digest: lk0rJfgJXIEdA7nb/ruZIlw3q6G6Ys3OdqHaHt3CKa8=
+
+Name: org/eclipse/ui/console/IOConsole.class
+SHA-256-Digest: 5B5p0yuNSjnY+tnmxe/D6N8rGjfIWIJjth9Qmu8Fyt4=
+
+Name: icons/full/dlcl16/lock_co.png
+SHA-256-Digest: kCiWtgE+waQYgwL2t0rg3MQWyKAspPbtgNiu594JsLU=
+
+Name: org/eclipse/ui/console/TextConsolePage$3.class
+SHA-256-Digest: qOCOmhFuG/VmMiXpkSmXAU/mw3X+CTTOKKZzid0PpjI=
+
+Name: org/eclipse/ui/internal/console/ScrollLockAction.class
+SHA-256-Digest: jKtQpQdk7UgNLzAvi24Cz3/ngZw88beDwbd8PPJTlCM=
+
+Name: icons/full/clcl16/lock_co@2x.png
+SHA-256-Digest: q+lKdrafK08K8P+EusQ2mBJZ0kGOSfrWqTh8HPuUSQ0=
+
+Name: icons/full/dlcl16/pin.png
+SHA-256-Digest: X9tCtEF0QJBlZIj3QfMJRqnwQlJ0uqiALGv1tTabPm8=
+
+Name: org/eclipse/ui/console/actions/CloseConsoleAction.class
+SHA-256-Digest: bRnqQloi9BRfxuuNu/DCXumg9Hv0TrDIw6rdMOaCCqA=
+
+Name: org/eclipse/ui/console/IPatternMatchListenerDelegate.class
+SHA-256-Digest: z/Gn6Yn8+DlY/3wmCe3FHN7gfkrmucgpniGOY+RGiWM=
+
+Name: org/eclipse/ui/internal/console/IOConsolePage.class
+SHA-256-Digest: N6mlZCqcDabAAQoc6n1cHpNz8pnnAhceKMe4skxOk/I=
+
+Name: icons/full/dlcl16/clear_co.png
+SHA-256-Digest: ctrV9gptx8PI0o/i0//S9jg0qhJmfKVoTxKxuV6jOXM=
+

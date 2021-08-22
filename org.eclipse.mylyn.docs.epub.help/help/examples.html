@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>examples</title><link type="text/css" rel="stylesheet" href="../book.css"/><style type="text/css">/*******************************************************************************
+ * Copyright (c) 2011, 2012 Torkild U. Resheim.
+ * 
+ * All rights reserved. This program and the accompanying materials are made
+ * available under the terms of the Eclipse Public License v2.0 which
+ * accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
+ * 
+ * Contributors: 
+ *     Torkild U. Resheim - initial API and implementation
+ *******************************************************************************/
+
+table, td, th {
+  border-color: gray; 
+  border-style: solid;
+}
+
+table {
+  width: 90%;
+  border-width: 0 0 1px 1px; 
+  border-spacing: 0; 
+  border-collapse: collapse;
+  padding: 1em;
+  }
+
+td, th {
+  margin: 0px; 
+  padding: 4px; 
+  border-width: 1px 1px 0 0; 
+  font-size: 0.9em;
+}
+
+pre {
+  margin: 0px;
+}
+
+th {
+  background-color: #c0c0c0;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+td {
+  background-color: #f0f0f0;
+}
+</style></head><body><h1 id="Practicalexamples">Practical examples</h1><h2 id="Addingacover">Adding a cover</h2><p>Correctly adding a cover to a publication can be a bit awkward as different reading systems expect different input. So there is a shortcut:</p><pre><code>&lt;cover image="cover.jpg" title="My Title"/&gt; 
+
+</code></pre><p>Simply point to the file in question and this EPUB tooling will take care of the rest. There is of course another, more laborious way allowing more control. The procedure is as follows: </p><ol><li>Add a cover image to the publication</li><li>Add a HTML file using the image</li><li>Reference the HTML file</li><li>Add a meta element pointing to the image</li></ol><p>Assuming the cover image is at hand we will add it using the <b>item</b> element as this:</p><pre><code>&lt;item file="images/cover.jpg" id="cover-image"
+  type="image/jpg" spine="false" /&gt;
+
+</code></pre><p>Next we add a XHTML file (named <i>cover.html</i>) to the publication. This will be used by some reading systems.</p><pre><code>&lt;?xml version="1.0" encoding="utf-8" standalone="no"?&gt;
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" 
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+  &lt;head&gt;
+    &lt;title&gt;Cover Page&lt;/title&gt;
+    &lt;style type="text/css"&gt;
+      img { max-width: 100%; }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id="cover-image"&gt;
+      &lt;img src="cover.jpg" alt="Building EPUBs"/&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+
+</code></pre><p>Then some more Ant code:</p><pre><code>&lt;item file="cover.xhtml"/&gt;
+&lt;reference href="cover.xhtml" 
+  type="cover" title="Cover Page" /&gt;
+&lt;meta name="cover" content="cover-image"/&gt;
+
+</code></pre><p>Both methods will produce a cover page that will work with all the tested reading systems; including Syny Reader PRS-T1, Calibre, iBooks, Nook for Mac, Adobe Digital Editions for Mac and Kindle (after converting to MOBI using Calibre).</p><p><img alt="The cover of this book as it is rendered on Nook for Mac." title="The cover of this book as it is rendered on Nook for Mac." border="0" src="nook-cover.png"/></p><p>The end result can be something like the illustration above &#8211; showing the cover of the example book as it is rendered on Nook for Mac.</p></body></html>

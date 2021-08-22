@@ -1,0 +1,55 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Mylyn Gerrit Connector
+Bundle-SymbolicName: org.eclipse.mylyn.gerrit.core;singleton:=true
+Bundle-Version: 2.14.0.v20170411-2108
+Bundle-ClassPath: org.eclipse.mylyn.gerrit.core_2.14.0.v20170411-2108.jar
+Bundle-Activator: org.eclipse.mylyn.internal.gerrit.core.GerritCorePlugin
+Bundle-Vendor: Eclipse Mylyn
+Export-Package: org.eclipse.mylyn.internal.gerrit.core;x-friends:="org.eclipse.mylyn.gerrit.ui,org.eclipse.mylyn.gerrit.dashboard.ui",
+  org.eclipse.mylyn.internal.gerrit.core.client;x-friends:="org.eclipse.mylyn.gerrit.ui",
+  org.eclipse.mylyn.internal.gerrit.core.client.compat;x-friends:="org.eclipse.mylyn.gerrit.ui",
+  org.eclipse.mylyn.internal.gerrit.core.client.data;x-friends:="org.eclipse.mylyn.gerrit.ui",
+  org.eclipse.mylyn.internal.gerrit.core.client.rest;x-internal:=true,
+  org.eclipse.mylyn.internal.gerrit.core.egit;x-friends:="org.eclipse.mylyn.gerrit.ui",
+  org.eclipse.mylyn.internal.gerrit.core.operations;x-friends:="org.eclipse.mylyn.gerrit.ui",
+  org.eclipse.mylyn.internal.gerrit.core.remote;x-friends:="org.eclipse.mylyn.gerrit.ui"
+Require-Bundle: org.eclipse.core.runtime,
+  org.eclipse.emf.common;bundle-version="2.5.0",
+  org.eclipse.emf.ecore;bundle-version="2.5.0",
+  org.eclipse.emf.ecore.xmi;bundle-version="2.5.0",
+  org.eclipse.emf.edit;bundle-version="2.5.0",
+  org.eclipse.mylyn.commons.core,
+  org.eclipse.mylyn.commons.net,
+  org.eclipse.mylyn.reviews.core,
+  org.eclipse.mylyn.tasks.core,
+  org.eclipse.jgit,
+  org.eclipse.egit.core,
+  org.eclipse.mylyn.reviews.edit;bundle-version="1.1.0",
+  com.google.guava;bundle-version="[21.0.0,22.0.0)",
+  javax.servlet;bundle-version="[3.0.0,3.1.0)"
+Built-By: genie.mylyn
+Build-Jdk: 1.8.0_121
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/mylyn/org.eclipse.mylyn.reviews.git;path="org.eclipse.mylyn.gerrit.core";commitId=50d8a6196eecb7f98cfabd13582899ef16f3bf66
+Created-By: Apache Maven 3.0.5
+Archiver-Version: Plexus Archiver
+Import-Package: com.google.common.base;version="15.0.0",
+  com.google.common.collect;version="15.0.0",
+  com.google.gerrit.common.auth;version="2.1.5",
+  com.google.gerrit.common.auth.openid;version="2.1.5",
+  com.google.gerrit.common.auth.userpass;version="2.1.5",
+  com.google.gerrit.common.data;version="2.1.5",
+  com.google.gerrit.prettify.common;version="2.1.5",
+  com.google.gerrit.reviewdb;version="2.1.5",
+  com.google.gson;version="[2.7.0,2.8.0)",
+  com.google.gson.annotations;version="[2.7.0,2.8.0)",
+  com.google.gson.reflect;version="[2.7.0,2.8.0)",
+  com.google.gwt.user.client.rpc;version="2.0.4",
+  com.google.gwtjsonrpc.client;version="1.2.4",
+  com.google.gwtjsonrpc.client.impl.ser;version="1.2.4",
+  com.google.gwtjsonrpc.server;version="1.2.4",
+  com.google.gwtorm.client;version="1.1.4",
+  com.google.gwtorm.server;version="1.1.4",
+  org.apache.commons.io;version="1.4.0"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="arrowtype" nsURI="http://www.eclipse.org/gef/dot/internal/language/DotArrowType"
+    nsPrefix="arrowtype">
+  <eClassifiers xsi:type="ecore:EClass" name="ArrowType">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="arrowShapes" upperBound="-1"
+        eType="#//AbstractArrowShape" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractArrowShape"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ArrowShape" eSuperTypes="#//AbstractArrowShape">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="open" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="side" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="shape" eType="#//PrimitiveShape"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DeprecatedArrowShape" eSuperTypes="#//AbstractArrowShape">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="shape" eType="#//DeprecatedShape"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="DeprecatedShape">
+    <eLiterals name="ediamond" literal="ediamond"/>
+    <eLiterals name="open" value="1" literal="open"/>
+    <eLiterals name="halfopen" value="2" literal="halfopen"/>
+    <eLiterals name="empty" value="3" literal="empty"/>
+    <eLiterals name="invempty" value="4" literal="invempty"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="PrimitiveShape">
+    <eLiterals name="box" literal="box"/>
+    <eLiterals name="crow" value="1" literal="crow"/>
+    <eLiterals name="curve" value="2" literal="curve"/>
+    <eLiterals name="icurve" value="3" literal="icurve"/>
+    <eLiterals name="diamond" value="4" literal="diamond"/>
+    <eLiterals name="dot" value="5" literal="dot"/>
+    <eLiterals name="inv" value="6" literal="inv"/>
+    <eLiterals name="none" value="7" literal="none"/>
+    <eLiterals name="normal" value="8" literal="normal"/>
+    <eLiterals name="tee" value="9" literal="tee"/>
+    <eLiterals name="vee" value="10" literal="vee"/>
+  </eClassifiers>
+</ecore:EPackage>

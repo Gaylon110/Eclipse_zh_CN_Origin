@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension-point id="servers" name="Error Reporting Server" schema="schema/servers.exsd"/>
+   <extension-point id="processors" name="Provider for additional information" schema="schema/processors.exsd"/>
+   <extension
+         point="org.eclipse.ui.startup">
+      <startup
+            class="org.eclipse.epp.internal.logging.aeri.ide.IDEStartup">
+      </startup>
+   </extension>
+    <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            id="org.eclipse.epp.logging.aeri.ide.preferencePages.root"
+            category="org.eclipse.ui.preferencePages.Workbench"
+            class="org.eclipse.epp.internal.logging.aeri.ide.dialogs.PreferencePage"
+            name="Error Reporting">
+      </page>
+   </extension>
+   <!-- notifications: category -->
+   <!-- notifications: sink -->
+   <extension
+         point="org.eclipse.mylyn.commons.notifications.ui.notifications">
+      <category
+            id="org.eclipse.epp.logging.aeri.notifications.category"
+            label="Error Reporting">
+      </category>
+      <sink
+            id="org.eclipse.epp.logging.aeri.notifications.sink.popup"
+            class="org.eclipse.epp.internal.logging.aeri.ide.notifications.PopupNotificationSink"
+            label="Desktop Popup (Errors)">
+      </sink>
+      <event
+            categoryId="org.eclipse.epp.logging.aeri.notifications.category"
+            id="org.eclipse.epp.logging.aeri.notifications.event.setup"
+            label="Setup">
+         <defaultHandler
+               sinkId="org.eclipse.epp.logging.aeri.notifications.sink.popup">
+         </defaultHandler>
+         <description>
+            This event is triggered when error reporting is set up initially. Note that this event will only work properly with the ‘Desktop Popup (Errors)’ notifier.
+         </description>
+      </event>
+      <event
+            categoryId="org.eclipse.epp.logging.aeri.notifications.category"
+            id="org.eclipse.epp.logging.aeri.notifications.event.responses"
+            label="Project Responses">
+         <defaultHandler
+               sinkId="org.eclipse.epp.logging.aeri.notifications.sink.popup">
+         </defaultHandler>
+         <description>
+            This event is triggered when a response for a sent error report is received. Note that this event will only work properly with the ‘Desktop Popup (Errors)’ notifier.
+         </description>
+      </event>
+      <event
+            categoryId="org.eclipse.epp.logging.aeri.notifications.category"
+            id="org.eclipse.epp.logging.aeri.notifications.event.newProblem"
+            label="New Problem">
+         <defaultHandler
+               sinkId="org.eclipse.epp.logging.aeri.notifications.sink.popup">
+         </defaultHandler>
+         <description>
+            This event is triggered when a new problem occurs. Note that this event will only work properly with the ‘Desktop Popup (Errors)’ notifier.
+         </description>
+      </event>
+   </extension>
+   <extension
+         point="org.eclipse.epp.logging.aeri.ide.servers">
+      <server
+            id="org.eclipse.epp.logging.aeri.ide.server"
+            class="org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection"
+            description="%servers.ide.description"
+            icon16="icons/obj16/eclipse.png"
+            icon32="icons/obj32/eclipse.png"
+            name="%servers.ide.name">
+         <link
+               href="http://eclipse.org"
+               rel="provider"
+               title="Eclipse Foundation">
+         </link>
+         <link
+               href="https://dev.eclipse.org/recommenders/community/confess/v2/discovery"
+               rel="discovery"
+               title="Discovery URL">
+         </link>
+         <link
+               title="Privacy Policy" 
+               href="https://www.eclipse.org/legal/services/aeri-privacy.php"
+               rel="privacy-policy">
+         </link>
+         <link
+               title="Terms of Use" 
+               href="http://www.eclipse.org/legal/services/aeri-termsofuse.php"
+               rel="terms-of-use">
+         </link>
+         <link
+               href="https://wiki.eclipse.org/EPP/Logging"
+               rel="help"
+               title="Help">
+         </link>
+      </server>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="org.eclipse.epp.internal.logging.aeri.ide.PreferenceInitializer">
+      </initializer>
+   </extension>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated aeri.ide -->
+      <package
+            uri="https://www.eclipse.org/epp/logging/aeri/ide/2.0"
+            class="org.eclipse.epp.internal.logging.aeri.ide.IIdePackage"/>
+   </extension>
+
+       <extension
+             point="org.eclipse.emf.ecore.factory_override">
+          <factory
+                class="org.eclipse.epp.internal.logging.aeri.ide.custom.CustomModelFactory"
+                uri="https://www.eclipse.org/epp/logging/aeri/ide/2.0">
+          </factory>
+       </extension>
+       <extension
+             point="org.eclipse.epp.logging.aeri.ide.processors">
+          <processor
+                class="org.eclipse.epp.internal.logging.aeri.ide.processors.SystemPropertiesProcessor"
+                description="Adds all system properties to this report."
+                directive="system-properties"
+                icon16="icons/elcl16/system_properties.png"
+                isAutomatic="false"
+                name="System Properties">
+          </processor>
+          <processor
+                class="org.eclipse.epp.internal.logging.aeri.ide.processors.UserPreferencesProcessor"
+                description="Adds all Eclipse user preferences to this report."
+                directive="user-preferences"
+                icon16="icons/elcl16/user_preferences.png"
+                isAutomatic="false"
+                name="User Preferences">
+          </processor>
+          <processor
+                class="org.eclipse.epp.internal.logging.aeri.ide.processors.PluginRegistryProcessor"
+                description="Adds all installed bundles with their name, version and resolution status to this report."
+                directive="installed-bundles"
+                icon16="icons/elcl16/installed_bundles.png"
+                isAutomatic="false"
+                name="Installed Bundles">
+          </processor>
+          <processor
+                class="org.eclipse.epp.internal.logging.aeri.ide.processors.InstalledFeaturesProcessor"
+                description="Adds all installed features with their name and version to this report."
+                directive="installed-features"
+                icon16="icons/elcl16/installed_features.png"
+                isAutomatic="false"
+                name="Installed Features">
+          </processor>
+          <processor
+                class="org.eclipse.epp.internal.logging.aeri.ide.processors.AnonymizeMessagesProcessor"
+                description="Anonymize all messages within this report."
+                directive="anonymize-messages"
+                icon16="icons/elcl16/anonymize_messages.png"
+                isAutomatic="false"
+                name="Anonymize Messages">
+          </processor>
+          <processor
+                class="org.eclipse.epp.internal.logging.aeri.ide.processors.AnonymizeStackTracesProcessor"
+                description="Anonymize all 3rd party stack trace elements within this report."
+                directive="anonymize-stack-trace"
+                icon16="icons/elcl16/anonymize_stacktrace.png"
+                isAutomatic="false"
+                name="Anonymize Stack Trace">
+          </processor>
+          <processor
+                class="org.eclipse.epp.internal.logging.aeri.ide.processors.WiringErrorAnalyzerProcessor"
+                description="Adds information about possible originating bundles for NoClassDefFoundError, LinkageError and ClassNotFoundException to the report. "
+                directive="analyze-wiring"
+                icon16="icons/elcl16/analyze_wiring.png"
+                isAutomatic="true"
+                name="Extended Classpath Analysis">
+          </processor>
+          <processor
+                class="org.eclipse.epp.internal.logging.aeri.ide.processors.StepsToReproduceProcessor"
+                description="Please provide detailed steps to reproduce this error."
+                directive="steps-to-reproduce"
+                icon16="icons/elcl16/steps_to_reproduce.png"
+                isAutomatic="false"
+                name="Steps to Reproduce">
+          </processor>
+       </extension>
+</plugin>

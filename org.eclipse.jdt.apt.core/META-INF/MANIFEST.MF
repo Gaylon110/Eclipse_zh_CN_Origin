@@ -1,0 +1,810 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: org.eclipse.jdt.apt.core
+Bundle-SymbolicName: org.eclipse.jdt.apt.core; singleton:=true
+Built-By: genie.releng
+Require-Bundle: org.eclipse.jdt.core;bundle-version="[3.6.0,4.0.0)",or
+ g.eclipse.core.runtime;bundle-version="[3.5.100,4.0.0)",org.eclipse.c
+ ore.resources;bundle-version="[3.6.0,4.0.0)",org.apache.ant;bundle-ve
+ rsion="1.6.5"
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/jdt/ec
+ lipse.jdt.core.git;path="org.eclipse.jdt.apt.core";tag="M20180322-093
+ 5";commitId=101576b4749a3dd59609609710f6e8e21366a1c2
+Bundle-Vendor: %providerName
+Import-Package: com.sun.mirror.type
+Export-Package: com.sun.mirror.apt,com.sun.mirror.declaration,com.sun.
+ mirror.type,com.sun.mirror.util,org.eclipse.jdt.apt.core.build,org.ec
+ lipse.jdt.apt.core.env,org.eclipse.jdt.apt.core.internal;x-friends:="
+ org.eclipse.jdt.apt.pluggable.core,org.eclipse.jdt.apt.tests,org.ecli
+ pse.jdt.apt.ui,org.eclipse.jdt.apt.pluggable.tests",org.eclipse.jdt.a
+ pt.core.internal.build;x-friends:="org.eclipse.jdt.apt.pluggable.core
+ ,org.eclipse.jdt.apt.tests,org.eclipse.jdt.apt.ui,org.eclipse.jdt.apt
+ .pluggable.tests",org.eclipse.jdt.apt.core.internal.declaration;x-fri
+ ends:="org.eclipse.jdt.apt.pluggable.core,org.eclipse.jdt.apt.tests,o
+ rg.eclipse.jdt.apt.ui,org.eclipse.jdt.apt.pluggable.tests",org.eclips
+ e.jdt.apt.core.internal.env;x-friends:="org.eclipse.jdt.apt.pluggable
+ .core,org.eclipse.jdt.apt.tests,org.eclipse.jdt.apt.ui,org.eclipse.jd
+ t.apt.pluggable.tests",org.eclipse.jdt.apt.core.internal.generatedfil
+ e;x-friends:="org.eclipse.jdt.apt.pluggable.core,org.eclipse.jdt.apt.
+ tests,org.eclipse.jdt.apt.ui,org.eclipse.jdt.apt.pluggable.tests",org
+ .eclipse.jdt.apt.core.internal.type;x-friends:="org.eclipse.jdt.apt.p
+ luggable.core,org.eclipse.jdt.apt.tests,org.eclipse.jdt.apt.ui,org.ec
+ lipse.jdt.apt.pluggable.tests",org.eclipse.jdt.apt.core.internal.util
+ ;x-friends:="org.eclipse.jdt.apt.pluggable.core,org.eclipse.jdt.apt.t
+ ests,org.eclipse.jdt.apt.ui,org.eclipse.jdt.apt.pluggable.tests",org.
+ eclipse.jdt.apt.core.util
+Bundle-Name: %pluginName
+Bundle-Version: 3.5.100.v20180322-1206
+Bundle-Localization: plugin
+Bundle-Activator: org.eclipse.jdt.apt.core.internal.AptPlugin
+Created-By: Apache Maven 3.3.3
+Build-Jdk: 1.8.0_162
+
+Name: org/eclipse/jdt/apt/core/internal/declaration/DeclarationImpl.cl
+ ass
+SHA-256-Digest: Y5sS2oXxagM+9aZXtmnJY0xgILlcRfkLygyfVP2YKB4=
+
+Name: plugin.xml
+SHA-256-Digest: zOHb0kWJ6t0KAu+zQicuaYi1pXbhlxYZ0WAd5ztSO8s=
+
+Name: com/sun/mirror/type/TypeVariable.class
+SHA-256-Digest: 4uo6hoXptjYHv8SJdsdYVIMGylqu4M4ByMpXol/7+Po=
+
+Name: com/sun/mirror/declaration/EnumConstantDeclaration.class
+SHA-256-Digest: UA/996Nm7GX0NDf9yetZb0g08Q0VD4WeKWNjETBvgBI=
+
+Name: org/eclipse/jdt/apt/core/internal/generatedfile/GeneratedFileMap
+ .class
+SHA-256-Digest: 8wsOiUG0SpsZRQoqopL5QRJjyhy0khXrv/1I63QpzQw=
+
+Name: org/eclipse/jdt/apt/core/internal/APTDispatchRunnable$1.class
+SHA-256-Digest: 9oQRMsqPaE1KBpsOVZvH+EhNJRogmMxEwBD52xB+Uxw=
+
+Name: org/eclipse/jdt/apt/core/internal/util/CharArrayAnnotationScanne
+ r.class
+SHA-256-Digest: lyAUtGB7U5FWmD2cKbCSFNerCRQQ9l7tQdt/LrJbng8=
+
+Name: mirror-api-license.txt
+SHA-256-Digest: 91e2E238TXDCyj2s5uqF0s/kaERp5TZnyu4lQzOJgjo=
+
+Name: com/sun/mirror/util/DeclarationScanner.class
+SHA-256-Digest: CAtzIzePY3Cmanu0db62Gha+S+h4cxSNH4evVkdK7qI=
+
+Name: org/eclipse/jdt/apt/core/internal/env/ReconcileEnv$CallbackReque
+ stor.class
+SHA-256-Digest: qhE70ZfOtuI1Wzd7d28VLEKPLV/U1NzWvFJYBbVxYtY=
+
+Name: org/eclipse/jdt/apt/core/internal/env/AnnotationInvocationHandle
+ r.class
+SHA-256-Digest: DFRIb3aQa6odgPCFgiQJwnNixImyR+txWeYNRImRh+U=
+
+Name: com/sun/mirror/declaration/ParameterDeclaration.class
+SHA-256-Digest: +QV7zXaDWXjhXWuQEc9456SKnpvb7zK0dDReWOC6R3I=
+
+Name: org/eclipse/jdt/apt/core/util/EclipseMessager.class
+SHA-256-Digest: J79U1b3HUd/yCwVwP9B/pWCGp85zFECeuvlWdUVKS9o=
+
+Name: org/eclipse/jdt/apt/core/internal/env/BaseProcessorEnv.class
+SHA-256-Digest: 3nJKB5TQeYjEgaBbyJwdAYyX8ClXnuvJ/nSBflUuW7A=
+
+Name: org/eclipse/jdt/apt/core/internal/generatedfile/GeneratedFileMan
+ ager$GeneratedPackageFragmentRoot.class
+SHA-256-Digest: DescmMlsNpAD4tg49hZEtPFJpPvK3Y7Iepdiuo8zHgI=
+
+Name: com/sun/mirror/util/SimpleTypeVisitor.class
+SHA-256-Digest: IGaN/qUX1ehRDanpDbk5p3S683HB9B5gYy9KB+E7ifg=
+
+Name: org/eclipse/jdt/apt/core/env/EnvironmentFactory.class
+SHA-256-Digest: 3mkLRaguwOVhhBqn56FjL3U3ujc9Jg8NtBBB7vlooQ4=
+
+Name: org/eclipse/jdt/apt/core/internal/util/FactoryPath$Attributes.cl
+ ass
+SHA-256-Digest: HYIQlLRt+a1CdhMOIhfUdc6GlcgwSYqx7I6u1IaalXM=
+
+Name: org/eclipse/jdt/apt/core/internal/env/EncodedFileOutputStream.cl
+ ass
+SHA-256-Digest: DRWtl4k04us43QvfBf1i+xpt22se/FOCbLuymTzFyW0=
+
+Name: org/eclipse/jdt/apt/core/internal/env/EnvUtil$EndingOffsetFinder
+ .class
+SHA-256-Digest: wYLF75HtboKt3+NtWrSvUxjQmDmS8KHiG8bbV2Nqnc8=
+
+Name: .api_description
+SHA-256-Digest: 9MWnqmnuLa0UgacEXzCjJ3hv/MyK95ATrFP4HMiqnYw=
+
+Name: org/eclipse/jdt/apt/core/util/AptConfig.class
+SHA-256-Digest: EWA/ik/ulws+5HB9rf9GyhSDuZZSV4ux3U4F0mI6jEs=
+
+Name: org/eclipse/jdt/apt/core/internal/env/BuildEnv$CallbackRequestor
+ .class
+SHA-256-Digest: F3kKvCMPc+WD/ZrWibzn2idaI69Ao4PxyFDIwH8zGgg=
+
+Name: org/eclipse/jdt/apt/core/internal/declaration/TypeParameterDecla
+ rationImpl.class
+SHA-256-Digest: 48gzm/omgYJ6HeByMguhd0zSqgVKz9HaQkB97BNGVww=
+
+Name: com/sun/mirror/type/VoidType.class
+SHA-256-Digest: /RLMQdpkQW3JdUs/d34gkw+UD553Eo9bbb7nNUOMnio=
+
+Name: org/eclipse/jdt/apt/core/internal/env/APTProblem.class
+SHA-256-Digest: yQRUcViY4JoS+k/oasD3er7pM2vVE7apcV3BVdW1zM4=
+
+Name: org/eclipse/jdt/apt/core/internal/generatedfile/GeneratedSourceF
+ olderManager.class
+SHA-256-Digest: tt4ac5j/UHoWdeAF6HAOEDHW2SP9WI9FFFyaP5dJVow=
+
+Name: org/eclipse/jdt/apt/core/internal/declaration/SourceParameterDec
+ larationImpl.class
+SHA-256-Digest: 5dRAnnBO8Lu75Z4LCgZUU4TnL5PdDZz+/uJPHnkCl7k=
+
+Name: org/eclipse/jdt/apt/core/internal/env/NoOpPrintWriter.class
+SHA-256-Digest: rHHmwwPVjBf8l7rsZ2gMPL/NMYe5HjD7SSmUZb4uGuI=
+
+Name: org/eclipse/jdt/apt/core/internal/declaration/ASTBasedDeclaratio
+ nImpl.class
+SHA-256-Digest: lT6MkWdavGWt9kuUwhBgxOq5LiTBSL0a5Ceu7WYDFF0=
+
+Name: org/eclipse/jdt/apt/core/internal/AptCompilationParticipant.clas
+ s
+SHA-256-Digest: 3j1Oot/ET+jzQHC9xasifjJorX6kMrj/x7bhJ2M9ZH4=
+
+Name: com/sun/mirror/apt/AnnotationProcessor.class
+SHA-256-Digest: J9mPanegO9wSGH4SnEFzEFLZ272nmM7v5cDotOaYUtk=
+
+Name: com/sun/mirror/declaration/TypeDeclaration.class
+SHA-256-Digest: DlGcQa/4NxbtbfjzyxcTnBtI+kakTpJoTjZvjwoeerk=
+
+Name: org/eclipse/jdt/apt/core/internal/env/FilerImpl.class
+SHA-256-Digest: vhUV/YRxPZR/4N44k0SoHtQJ2rTZmKt4ZqRDUpSY4wU=
+
+Name: org/eclipse/jdt/apt/core/internal/declaration/AnnotationMirrorIm
+ pl.class
+SHA-256-Digest: PZbdZsi1N+P0rUG/ygV6kEFse6vlQwYXZcyZP+HsR+Y=
+
+Name: com/sun/mirror/type/InterfaceType.class
+SHA-256-Digest: 4c5QoL4L+DfsDYlYKjl1iWVHeSO02AWRQ9ejy5yfZD0=
+
+Name: org/eclipse/jdt/apt/core/internal/env/BuildFilerImpl.class
+SHA-256-Digest: woWv8ILfbJKIhxwdzOdK8/w6KsuX2LVqdLtfUGVbkl4=
+
+Name: org/eclipse/jdt/apt/core/internal/env/MessagerImpl.class
+SHA-256-Digest: AnypI3mClsDj4gqfJrIuAfC9cNapJs6eJ/OpReht10Y=
+
+Name: org/eclipse/jdt/apt/core/internal/declaration/EclipseMirrorObjec
+ t.class
+SHA-256-Digest: BXAEjPfGhHt4b8p1cgCCZEc8yf08Gy/H+41ocpqKaK8=
+
+Name: com/sun/mirror/apt/RoundState.class
+SHA-256-Digest: 0DrqUwiSngk+xFyE+lo24p4mTOAjoDXadtv0DSuQCas=
+
+Name: org/eclipse/jdt/apt/core/internal/env/BaseProcessorEnv$BaseReque
+ stor.class
+SHA-256-Digest: xlKdSJumROhYUygZU75pBxL9c394ad+/K//RBwRYDC8=
+
+Name: com/sun/mirror/util/Types.class
+SHA-256-Digest: 9QHlWd9v+BUM8QfX3B2Z/7Eb2rH0NvFBGs40em8ha/8=
+
+Name: org/eclipse/jdt/apt/core/internal/type/ErrorType.class
+SHA-256-Digest: qRgHoseE/J/RXJj4Wz0Ga4oYNXaVdXZlgN6WhRw17QQ=
+
+Name: org/eclipse/jdt/apt/core/internal/build/Messages.class
+SHA-256-Digest: MXr1WQf0kGtDHjrW/1XoI+nNRERGsdvL8AT+KlA8tPs=
+
+Name: com/sun/mirror/type/AnnotationType.class
+SHA-256-Digest: NBa+gkEzXkMBFqbRAxsLY/9lqDgMZP98aJelk1N8AKU=
+
+Name: com/sun/mirror/util/DeclarationVisitor.class
+SHA-256-Digest: GnvoFIOCNmTSvCQQ1v12BHzebWW/oT+n5n+J5vesA/k=
+
+Name: org/eclipse/jdt/apt/core/internal/env/EclipseRoundCompleteEvent$
+ State.class
+SHA-256-Digest: XZJbJJgEGEMQL3/YZaN9g7GHgLSPhNDZmWomUzn7SVY=
+
+Name: org/eclipse/jdt/apt/core/internal/Messages.class
+SHA-256-Digest: COz3I4y99RbVJT/Q45FJIK3VuU4nz9zNGLL5yESUYGk=
+
+Name: org/eclipse/jdt/apt/core/internal/declaration/EclipseMirrorObjec
+ t$MirrorKind.class
+SHA-256-Digest: 5hA7/EC8W8xYGbjvM9g5MVjwqtVGCEalx+CeX9xbSrs=
+
+Name: com/sun/mirror/apt/AnnotationProcessors$NoOpAP.class
+SHA-256-Digest: 7S+bdmHoHbLfJEynVIHiYw8/73I8/vPktlP4uQAcVnU=
+
+Name: org/eclipse/jdt/apt/core/internal/generatedfile/GeneratedResourc
+ eChangeListener.class
+SHA-256-Digest: 4avoIn4yzxUw54c/K6AqHohUXk26PfdFhX+gQMbUYEU=
+
+Name: org/eclipse/jdt/apt/core/internal/generatedfile/ClasspathUtil.cl
+ ass
+SHA-256-Digest: TSsCkrTsoZq773roqA09T93I9ilrk7J0DDvY8b1OIMM=
+
+Name: com/sun/mirror/type/ReferenceType.class
+SHA-256-Digest: iJawWvY70n5avdY/5PnA9c9/d0VibM6nSbNFYEipYnk=
+
+Name: org/eclipse/jdt/apt/core/internal/declaration/ASTBasedFieldDecla
+ rationImpl.class
+SHA-256-Digest: epyPYcNvHqfCKho763CLx6A6Gsvj/03Jai/p6rwvqtk=
+
+Name: com/sun/mirror/apt/AnnotationProcessors.class
+SHA-256-Digest: XQAgtTBLGdxiKKGv/UlYZZmS60dfZwPB+B/XVGlPk80=
+
+Name: org/eclipse/jdt/apt/core/internal/util/SourcePositionImpl.class
+SHA-256-Digest: 5XExVykP+ONCB1A2HQXPlIQNIHVJlbvh2o4CLUPeI5U=
+
+Name: org/eclipse/jdt/apt/core/internal/declaration/ClassDeclarationIm
+ pl.class
+SHA-256-Digest: Sp4ACgtLyLQKNmvyy00EvXYFuBA4MXaOk88VyDagbpI=
+
+Name: com/sun/mirror/util/SourceOrderDeclScanner$SourceOrderComparator
+ $DeclPartialOrder.class
+SHA-256-Digest: 1K7C6xTYYSL9TP4fuBrDfl4ATHhNO+hVleMvnvAYGK4=
+
+Name: com/sun/mirror/util/SourceOrderDeclScanner.class
+SHA-256-Digest: kwRV8V8Rc+lI6FJcZIM1IxZmQ35fSO83rO3uENnUhVA=
+
+Name: com/sun/mirror/util/TypeVisitor.class
+SHA-256-Digest: 5kfCQaopjmt2aPrDQErMbf98mxKoOV0Lp2sFe54SY7A=
+
+Name: com/sun/mirror/util/SourcePosition.class
+SHA-256-Digest: 5wuN+hiFEn7dB5OB/rj3AFTypERQsrEGSQzeFaF42rk=
+
+Name: org/eclipse/jdt/apt/core/internal/WkspJarFactoryContainer.class
+SHA-256-Digest: g+SrOdKvhF+MP/FxA3THdfsNpomtOrqIMloMZjmts0M=
+
+Name: org/eclipse/jdt/apt/core/build/JdtApt.class
+SHA-256-Digest: E71sho8x7NhSd/6atE4NstUjczeIxwC0WsUdKDRCY2c=
+
+Name: org/eclipse/jdt/apt/core/internal/generatedfile/WorkingCopyClean
+ upListener.class
+SHA-256-Digest: SzFYYf7qyp++KgiTm04UlE2ON3cHwvtEKh9NMxopRVE=
+
+Name: com/sun/mirror/apt/AnnotationProcessorEnvironment.class
+SHA-256-Digest: P07HHVPPjGVbePZbMvcLhXEXDlN9IUyHJCZCMJ43E2M=
+
+Name: org/eclipse/jdt/apt/core/internal/env/EclipseRoundCompleteEvent.
+ class
+SHA-256-Digest: d4OpQ1UbYuK1YUfBj2x2EFq6lG3fib0sIQIERyFyhkc=
+
+Name: org/eclipse/jdt/apt/core/internal/declaration/EclipseDeclaration
+ Impl.class
+SHA-256-Digest: WQ3XeDKvA6orJBkpnOrNdn5hkXqQTTM4SK7bQFao/A0=
+
+Name: org/eclipse/jdt/apt/core/internal/declaration/ExecutableUtil.cla
+ ss
+SHA-256-Digest: q6BQM9f/Ny+LlVuCiVNkcLTOCdt76S3Um5DPkaxXxVU=
+
+Name: com/sun/mirror/apt/RoundCompleteListener.class
+SHA-256-Digest: 8gXlH3EFqYw43jWnRIGHokMnIp7nZKJA5V6ObrNSj1g=
+
+Name: org/eclipse/jdt/apt/core/internal/env/NoOpOutputStream.class
+SHA-256-Digest: ZkTnuBPyd/Z+Gm00agzHhPluJVA1ZcoeS9c5cpNlDZI=
+
+Name: com/sun/mirror/type/MirroredTypeException.class
+SHA-256-Digest: ML87KVH8NbQVtFqg6C87gtx/8h8GuyKIFgJjwp4ADTQ=
+
+Name: com/sun/mirror/declaration/AnnotationTypeDeclaration.class
+SHA-256-Digest: eW2+JMoopv6YyHP5TdAgkEJat+DVyxqN7LBvv3aIQVk=
+
+Name: com/sun/mirror/util/SourceOrderDeclScanner$SourceOrderComparator
+ .class
+SHA-256-Digest: 8q5f97J6ySW1AN5XhTdM4c+hSxiyqYdeTnkZ77ClLwk=
+
+Name: org/eclipse/jdt/apt/core/internal/AnnotationProcessorFactoryLoad
+ er$1.class
+SHA-256-Digest: 49ahlBjRFLJhXV32K3ayRAx5AxXkdrXeWjD/Ny+XsnU=
+
+Name: com/sun/mirror/declaration/ExecutableDeclaration.class
+SHA-256-Digest: YPBMBXeE23jW8x2+zgLcxZTuCFhOh42KMl4D6xbm0cU=
+
+Name: org/eclipse/jdt/apt/core/internal/AnnotationProcessorFactoryLoad
+ er$ResourceListener.class
+SHA-256-Digest: 4te9eAW+WJcMUm7AmyUunDls4UNdIhOdC90JXpJUZv0=
+
+Name: com/sun/mirror/type/PrimitiveType$Kind.class
+SHA-256-Digest: g97zr1Uf7Cc0G+qcphrEw5pkyV/dHg8urpJmZrmmYD0=
+
+Name: org/eclipse/jdt/apt/core/internal/declaration/AnnotationDeclarat
+ ionImpl.class
+SHA-256-Digest: hrXpio4XStSR3aGXvgZ6SBrEl5ukihQrGBaXKr8eIBM=
+
+Name: com/sun/mirror/apt/AnnotationProcessorFactory.class
+SHA-256-Digest: vcR5AfVVXp1WUShNIgt42+JtGOObooyLlpF0s9+rc30=
+
+Name: org/eclipse/jdt/apt/core/internal/LoadFailureHandler.class
+SHA-256-Digest: HqBpoktRib2PSIsBnAmAPp7ptkOW1LxpSF0TrHH19Js=
+
+Name: org/eclipse/jdt/apt/core/internal/generatedfile/GeneratedFileMan
+ ager$GeneratedPackageFragmentRoot$NameAndRoot.class
+SHA-256-Digest: RbyCON61UhU2WAbUd/tLkscZgXpm/hZ2u7fVXWWuMyM=
+
+Name: org/eclipse/jdt/apt/core/internal/VarJarFactoryContainer.class
+SHA-256-Digest: cwIFBmcDxxL/+OG2Sk1w4e6RN+0ks8MbTjnQgWQLk6Y=
+
+Name: com/sun/mirror/declaration/AnnotationValue.class
+SHA-256-Digest: 4dSR8eB1gIZ2eH+sZL4oh9lgVthP9m7dx1R80bOdEbg=
+
+Name: com/sun/mirror/declaration/PackageDeclaration.class
+SHA-256-Digest: 2cC6SA8QaMv+9gP9bWPXd8+kY1OT3qboQ7gWYsONJ1A=
+
+Name: org/eclipse/jdt/apt/core/internal/type/ArrayTypeImpl.class
+SHA-256-Digest: Uq3E4qU1/QTV1A6hfimIg/fUgnLA6uXt+NXfgFkjJ2w=
+
+Name: org/eclipse/jdt/apt/core/internal/env/MessagerImpl$Severity.clas
+ s
+SHA-256-Digest: FcasAovEIpPbJ+oJyNETG+PoG7U1hGSLAGZGn4xYoAE=
+
+Name: org/eclipse/jdt/apt/core/internal/AnnotationProcessorFactoryLoad
+ er$FactoryPathDeltaVisitor.class
+SHA-256-Digest: hn/F5J9WljNFyL0lC9S/3Yw/HVABl2qJAChKGzq4R64=
+
+Name: org/eclipse/jdt/apt/core/internal/util/FactoryPathUtil.class
+SHA-256-Digest: Taca9vnSDnNqWCXSaq12ebND/JdcB1NDhmxJ+ODmtEo=
+
+Name: org/eclipse/jdt/apt/core/env/EclipseAnnotationProcessorFactory.c
+ lass
+SHA-256-Digest: /+YKnI+H4Dz2lfBFYsncpNm6is5shWozqmJN77Lo8/0=
+
+Name: org/eclipse/jdt/apt/core/internal/JarClassLoader$JarCLInputStrea
+ m.class
+SHA-256-Digest: ul1O+F7tvMFEzB9rmLHUZNBbPTs+3o2C+auzzau18B8=
+
+Name: org/eclipse/jdt/apt/core/internal/declaration/ASTBasedConstructo
+ rDeclarationImpl.class
+SHA-256-Digest: jaM+T+Zeu0FGV6S+Xq6SUuIvsQ9FP7NpjyFaqdz8LvI=
+
+Name: org/eclipse/jdt/apt/core/env/Phase.class
+SHA-256-Digest: 8pncuRFxLJdjJ6MQUzjxw7j6VKVSH8JucAOHalBKH4g=
+
+Name: org/eclipse/jdt/apt/core/internal/generatedfile/CompilationUnitH
+ elper.class
+SHA-256-Digest: het8p1noMctZDjrUuPEfOBEFeBujbO9sJgAViJVNMZE=
+
+Name: org/eclipse/jdt/apt/core/internal/APTDispatchRunnable$ReconcileE
+ nvCallback.class
+SHA-256-Digest: Y0Q4Z7p0TGw5qz5w3Q19gd2+nvjxpABXqabhZMYxl84=
+
+Name: org/eclipse/jdt/apt/core/internal/env/BuildEnv$1.class
+SHA-256-Digest: AbeJtd5TtvVkBmgSIooMTx2F4/mkhI353P4gqBD9Pds=
+
+Name: org/eclipse/jdt/apt/core/internal/env/MarkerInfo.class
+SHA-256-Digest: XNEEqa87oNChfTq0c1F9+GzqQPwlchF0Tx1Wmf0Ku8k=
+
+Name: org/eclipse/jdt/apt/core/internal/FactoryPluginManager.class
+SHA-256-Digest: uYD1bkJ0N9oq39fVNDCENhM1P3O3zMEpZ0xvhUqdcrI=
+
+Name: org/eclipse/jdt/apt/core/internal/util/messages.properties
+SHA-256-Digest: CZbFxPRzfU5d7P7FGxbMBiY+8g4ziCDgtaOwFivJjtA=
+
+Name: org/eclipse/jdt/apt/core/internal/util/ManyToMany.class
+SHA-256-Digest: 7FzEu7jmZ3Z7457ycCqA130/itPBFAkMCKT8pMDauDU=
+
+Name: com/sun/mirror/type/TypeMirror.class
+SHA-256-Digest: 7J4xy650wBQJx99yN6kCJrJALz/k5vEAJS1FmdMH26c=
+
+Name: com/sun/mirror/util/Declarations.class
+SHA-256-Digest: rme292ULrB2oJpoNQbwjupdIzyPTUtlIec6Ge+YwjaE=
+
+Name: com/sun/mirror/type/ClassType.class
+SHA-256-Digest: k/2IOBXY7SNooI8cdJK+po3Mc244k/xaC8+DPssOGLI=
+
+Name: org/eclipse/jdt/apt/core/internal/generatedfile/GeneratedFileMap
+ $Flags.class
+SHA-256-Digest: J7i2tOd89kFrJKK5Wu2Ep8s4zXrb1prLIsZ6HffdGPk=
+
+Name: org/eclipse/jdt/apt/core/internal/util/DeclarationsUtil.class
+SHA-256-Digest: Ko+s8cZSHAvv6kBl5BRAe/Rg6jzhVcU/VnOLH0YQPXI=
+
+Name: org/eclipse/jdt/apt/core/internal/type/WildcardTypeImpl.class
+SHA-256-Digest: 8GEhBzQqvrRdS7D/MvXupRzdj8VKNRNL+osaCVRYH6g=
+
+Name: org/eclipse/jdt/apt/core/internal/util/Factory.class
+SHA-256-Digest: pU1dGmgZIo4QIKFAxB9tgQeD/xQsgmvGNydS1kHWBvo=
+
+Name: org/eclipse/jdt/apt/core/util/AptPreferenceConstants.class
+SHA-256-Digest: LEOaYbC1NSo4Iwq+QY/Nj5wprlLZUi2tG+TaYukRBAc=
+
+Name: org/eclipse/jdt/apt/core/internal/env/EnvUtil.class
+SHA-256-Digest: iOY9AlcXTD/idOgNKASEgJeHpxQ0DL0wca9wFtvE0sE=
+
+Name: com/sun/mirror/apt/Messager.class
+SHA-256-Digest: vJ0L+9s+65F6MGun4mC0IUW/J6ttpzjTQYy6GP1NRtk=
+
+Name: org/eclipse/jdt/apt/core/internal/util/ReaderAnnotationScanner.c
+ lass
+SHA-256-Digest: ikIH+0OZbGliryFDDa6wphKDwdok8OqeX7bIfUq62do=
+
+Name: org/eclipse/jdt/apt/core/internal/declaration/ASTBasedExecutable
+ DeclarationImpl.class
+SHA-256-Digest: oBszNuC5h7k/d7cWMgzGpK0+IVrYeVgbKAXB0lAMEDc=
+
+Name: org/eclipse/jdt/apt/core/internal/util/PackageUtil.class
+SHA-256-Digest: VWdH49Xb5aAuth4gQrOrBIekiwFEbYq1iqalnQXUlQw=
+
+Name: com/sun/mirror/declaration/ClassDeclaration.class
+SHA-256-Digest: LUfQyyhjPk4QUKuSkS/wuqbX6Hybf2jsm0PL8uowViQ=
+
+Name: org/eclipse/jdt/apt/core/internal/AnnotationProcessorFactoryLoad
+ er.class
+SHA-256-Digest: 9eOjYsFEcjPtOjpB36SxBb2ztpqLPOlD4oeLOJjVWcM=
+
+Name: org/eclipse/jdt/apt/core/internal/generatedfile/GeneratedResourc
+ eChangeListener$PostChangeVisitor.class
+SHA-256-Digest: 1wMtoqh8yAsQpIs6QyMv8127xogkddJrGQffQTpU/JE=
+
+Name: org/eclipse/jdt/apt/core/util/AptUtil.class
+SHA-256-Digest: 4kOihuiz7C6rgCPvJDjynGR378kRG3VBoSjvb4XLSt8=
+
+Name: org/eclipse/jdt/apt/core/internal/generatedfile/GeneratedFileMan
+ ager.class
+SHA-256-Digest: zSaVqCuCHTcrwifWmoMuwpSc7fZ/JXPTN2V0/p9fpCI=
+
+Name: org/eclipse/jdt/apt/core/internal/ClassServiceFactory.class
+SHA-256-Digest: QbE3/NmKCq3NEahiOvz1hdzaBXtf5e4jaJnnrxKg3eA=
+
+Name: org/eclipse/jdt/apt/core/internal/type/VoidTypeImpl.class
+SHA-256-Digest: U0f95L+oyz0XxKj5s00AfCQjXikDuJ2whmVfWbgB0lw=
+
+Name: org/eclipse/jdt/apt/core/internal/env/JavaSourceFilePrintWriter.
+ class
+SHA-256-Digest: N80IXdHVsibTHneUPTHj070tKdeSVPZnHl2+EzZR7eY=
+
+Name: org/eclipse/jdt/apt/core/internal/generatedfile/GeneratedSourceF
+ olderManager$1.class
+SHA-256-Digest: 0G1mkJDXnuPaKDKIwtHZ19Zbruv1MfNjkBPOoNrGRcE=
+
+Name: org/eclipse/jdt/apt/core/internal/declaration/EnumDeclarationImp
+ l.class
+SHA-256-Digest: 7mtg9jadumhc/rBIVOiFu2MHVwduYt8ai+ctjr+LiBs=
+
+Name: org/eclipse/jdt/apt/core/internal/env/ReconcileEnv.class
+SHA-256-Digest: YryJbp2Cwt76I0T6uHN4To7Xn3tfaWuLRvIDygKKkKo=
+
+Name: org/eclipse/jdt/apt/core/internal/NonEclipseImplementationExcept
+ ion.class
+SHA-256-Digest: zzeHOeKenh5LQVOR5mQfNtqamg1sSjDZoPhutmbMVuc=
+
+Name: org/eclipse/jdt/apt/core/internal/util/ScannerUtil.class
+SHA-256-Digest: qlFaWTAS0AKAMZN1SY52nYuhq9tuRkDSkXxdgxUNFAI=
+
+Name: org/eclipse/jdt/apt/core/internal/declaration/BinaryParameterDec
+ larationImpl.class
+SHA-256-Digest: uLgSmeEI5ctuALWvaFJUQepCSXvScMvZDiT+8oz49Og=
+
+Name: org/eclipse/jdt/apt/core/internal/env/AbstractCompilationEnv$Env
+ Callback.class
+SHA-256-Digest: saCbYcQoHHlO5hkeqUJEzTnvR1I4JBbP+iqB9XaDRmI=
+
+Name: org/eclipse/jdt/apt/core/internal/declaration/PackageDeclaration
+ ImplNoBinding.class
+SHA-256-Digest: q98U5PBBmFf993/NuLLoZFJq1V3qF5sos8PVuMtwjfY=
+
+Name: org/eclipse/jdt/apt/core/internal/declaration/ConstructorDeclara
+ tionImpl.class
+SHA-256-Digest: kl9nMmO9j+1eEGCMEdv7yrrJ0MIC9nnHzsR4/Ti4KJc=
+
+Name: org/eclipse/jdt/apt/core/build/AptBuilder.class
+SHA-256-Digest: ke14ezvZuA1cliri859KEtT/XMMGiQRJD8gKUK1MW+s=
+
+Name: com/sun/mirror/type/WildcardType.class
+SHA-256-Digest: CeOZd58/U6Zy/DzXolFQelz9fJAUCz7mrRjCDsdg0mQ=
+
+Name: com/sun/mirror/declaration/MethodDeclaration.class
+SHA-256-Digest: 2qZAMM2aF3J9sOMjleGfyuEfUpraWuLGs4Q7/heZOEI=
+
+Name: org/eclipse/jdt/apt/core/internal/env/ITypeConstants.class
+SHA-256-Digest: j/ggFnmiTjvFQ+x98v06PvWpX95O/Buq4Zp2dw/8MgE=
+
+Name: org/eclipse/jdt/apt/core/internal/AptPlugin.class
+SHA-256-Digest: QH+LbWVb9B5MIVtvyjZygnrEE6aIHP9e5+T32NwsXwQ=
+
+Name: org/eclipse/jdt/apt/core/internal/type/PrimitiveTypeImpl.class
+SHA-256-Digest: wL3o/4DKw6A9x3chdczBf6ImMiuiOhX/yoMkIgvtZTc=
+
+Name: org/eclipse/jdt/apt/core/util/AptConfig$ProcessorOptionsParser.c
+ lass
+SHA-256-Digest: QCyv6GsbeHZJj85oE1doYzqMUgVDXxHOt02qNAGOwp8=
+
+Name: com/sun/mirror/util/DeclarationFilter$2.class
+SHA-256-Digest: NU/isviE5DvPsj49SLyJ8o9Ud2xJHV74IKaVq0LPUJ4=
+
+Name: .options
+SHA-256-Digest: TlCIFq8RcBG8UnG3ipxSPoCRQn02IMV5m9tVE92P7k4=
+
+Name: org/eclipse/jdt/apt/core/internal/declaration/ASTBasedAnnotation
+ ElementDeclarationImpl.class
+SHA-256-Digest: v5X6YE1cLd6sWMYvx13isbDAbyqFUfi70EtYjv0KwQA=
+
+Name: org/eclipse/jdt/apt/core/internal/declaration/MethodDeclarationI
+ mpl.class
+SHA-256-Digest: ob/cu0SSgACCufI1IRoNkvEoO5RcgO2jUTMI+95iHBU=
+
+Name: org/eclipse/jdt/apt/core/internal/env/AbstractCompilationEnv.cla
+ ss
+SHA-256-Digest: uXXB0cNTeZrQDN1dLLFrpDNMk3RG4s/OGGFo70x9iHQ=
+
+Name: com/sun/mirror/apt/Filer.class
+SHA-256-Digest: yZx9A9/TtP719fATQWa3M9rJxFfSgLH4/fBGOAiNYvk=
+
+Name: org/eclipse/jdt/apt/core/internal/env/ReconcileFilerImpl.class
+SHA-256-Digest: VKCZJixaUyCwg7IsTzUgXAPoZORNJgMgEkP7r7RJJ8w=
+
+Name: com/sun/mirror/util/DeclarationVisitors.class
+SHA-256-Digest: yIUOsoJkYSprL088pBlXLA4daxigkQSTWzdQ7sJNJi8=
+
+Name: org/eclipse/jdt/apt/core/internal/PluginFactoryContainer.class
+SHA-256-Digest: trcrXYciBuGy/6wsd/kKNDR16fb8PfHim2e7de5mXJ0=
+
+Name: org/eclipse/jdt/apt/core/internal/ExtJarFactoryContainer.class
+SHA-256-Digest: Crg2HwqbNLEu9dAXnOf6Qv+z7fbYj9MlkZ5grVJLTEM=
+
+Name: org/eclipse/jdt/apt/core/internal/declaration/MemberDeclarationI
+ mpl.class
+SHA-256-Digest: becRp/8TdAWW7M/4FnyGE25eeBFv6s86FIARXjKqf1c=
+
+Name: org/eclipse/jdt/apt/core/internal/declaration/ExecutableDeclarat
+ ionImpl.class
+SHA-256-Digest: a2cBsbj6v0BpwiWkHGKfvdEtI0lagpyZdvhRQokf/Jg=
+
+Name: org/eclipse/jdt/apt/core/internal/messages.properties
+SHA-256-Digest: afaFFCZIK6lHy6ZDgi0WmhbiEVo9utvLz+0CUQtl5yU=
+
+Name: org/eclipse/jdt/apt/core/internal/env/BinaryFileOutputStream.cla
+ ss
+SHA-256-Digest: kQVw9sHOgX8ClOYZIGhRPFL9Tk3RVQ1rVkbA6r6HbAI=
+
+Name: org/eclipse/jdt/apt/core/internal/IServiceFactory.class
+SHA-256-Digest: /ayP8hrrMPLCdQhnGoauIdxQUJldwSTz/zfhfFXYm9c=
+
+Name: org/eclipse/jdt/apt/core/internal/util/Visitors$AnnotatedNodeVis
+ itor.class
+SHA-256-Digest: bN9NQhh6hrKamUT1qYRzbpxGF/p1cOF2yHCjVL7eOvE=
+
+Name: com/sun/mirror/declaration/EnumDeclaration.class
+SHA-256-Digest: NgMs9rnjiLxn3LPJkHJQEgtPTq3SgMgzowBerGZ40YQ=
+
+Name: com/sun/mirror/util/DeclarationFilter$1.class
+SHA-256-Digest: jwnVhr50AMFCkkUkBiB5mXokrlk49pyfHL/XddPqCiw=
+
+Name: org/eclipse/jdt/apt/core/internal/util/FileSystemUtil.class
+SHA-256-Digest: TRV7PU1sxexAVtbYl04Z76YFNesJWPE6kt8gAFP63ic=
+
+Name: com/sun/mirror/declaration/Modifier.class
+SHA-256-Digest: X5buOBDzo06UyCZUbtzGV6kW53BSut+WG/CGQD5d1Gw=
+
+Name: com/sun/mirror/type/EnumType.class
+SHA-256-Digest: 0LUjwIPpLfRwGb0vglpPcz/jfWM73kG6tW80H9Erit4=
+
+Name: com/sun/mirror/apt/RoundCompleteEvent.class
+SHA-256-Digest: Mb322KZjNSXnXinaHBioU2ABSNq/gCdM3/T7fTai6ek=
+
+Name: com/sun/mirror/declaration/ConstructorDeclaration.class
+SHA-256-Digest: Z9vdm1bD7f91XEjj0YwHR8aMcL0BMRI//Tkrup8DiIg=
+
+Name: org/eclipse/jdt/apt/core/internal/type/ErrorType$ErrorInterface.
+ class
+SHA-256-Digest: mhLelVHSlnsJLzE6lbJBwWUapOQz80c/eDdGeSVRbqU=
+
+Name: com/sun/mirror/apt/Filer$Location.class
+SHA-256-Digest: 4f0yGJkw6MFpa6hmzn0Izv8KZEkB9vfFIddAXBIhncM=
+
+Name: org/eclipse/jdt/apt/core/internal/util/Visitors$EndingOffsetFind
+ er.class
+SHA-256-Digest: Q6zmyp6LuIBD3dwO4k3DFGLSxzHBXgEDZHssOn4aD3s=
+
+Name: org/eclipse/jdt/apt/core/internal/generatedfile/GeneratedResourc
+ eChangeListener$PreBuildVisitor.class
+SHA-256-Digest: A1DQjSgGbhD/REWXgZ8f+XQ3pPJTgVPq7NzVxeYUKkI=
+
+Name: org/eclipse/jdt/apt/core/internal/JarClassLoader.class
+SHA-256-Digest: xb+K00Z9Px7uCovDyk1GqIDpNOaE+EDSyy22KIf+cok=
+
+Name: com/sun/mirror/declaration/AnnotationMirror.class
+SHA-256-Digest: 5RpteedfnIeeLq4ZII5BLVruXjtxr2GUHzShcDDVjBQ=
+
+Name: com/sun/mirror/type/PrimitiveType.class
+SHA-256-Digest: CdKSQ5Sv7U36QKaTXoEGzHTI2RmsVyob+iSSDlSkqGk=
+
+Name: com/sun/mirror/util/DeclarationFilter.class
+SHA-256-Digest: +FMBxxQz1Dvh8xT9+gf87PHg8+32+ddkftwiXzM4hR4=
+
+Name: org/eclipse/jdt/apt/core/internal/util/FactoryContainer.class
+SHA-256-Digest: X2bdMn4A2d0Rv6GgGx+DQyzTp3ALKqi0G30Q7OLUOpc=
+
+Name: org/eclipse/jdt/apt/core/internal/util/Visitors.class
+SHA-256-Digest: xqyhCFQysPgDIg/Lf488VsWOq07j4f4VHPpJgX5k7lo=
+
+Name: org/eclipse/jdt/apt/core/env/EclipseAnnotationProcessorEnvironme
+ nt.class
+SHA-256-Digest: m2SCWLdgbp4TccMcMeQbFgbvZQaeS5H91n9yWE6YK+0=
+
+Name: org/eclipse/jdt/apt/core/internal/util/FactoryContainer$FactoryT
+ ype.class
+SHA-256-Digest: 3rPrxC3GLmiGPE0pb7CmQcDCM/4xHzbS4mIhW8VZtzg=
+
+Name: org/eclipse/jdt/apt/core/internal/declaration/AnnotationElementD
+ eclarationImpl.class
+SHA-256-Digest: d+uqOjfO1JBhs4OWXxpWxkxXevwrZ1NHsgMD8L5Wofc=
+
+Name: org/eclipse/jdt/apt/core/internal/util/Visitors$AnnotationVisito
+ r.class
+SHA-256-Digest: 7jkt9WWViLkU0M0nOsnFLf9sGd3eRkgQkVsyHhh6Xzo=
+
+Name: org/eclipse/jdt/apt/core/internal/env/ReconcileFilerImpl$NoOpWri
+ ter.class
+SHA-256-Digest: esB1CTmmrOlYWdaGyJX9iGmQvXd/uEKLa07TS0hMUSM=
+
+Name: org/eclipse/jdt/apt/core/internal/type/ErrorType$ErrorClass.clas
+ s
+SHA-256-Digest: OSsRgcW6jCmsCW+ROeT4E8PN4RVhD5JgkCrUfKrJcec=
+
+Name: org/eclipse/jdt/apt/core/internal/util/AnnotationScanner.class
+SHA-256-Digest: dPnnI7MfH5V8Dz4++nf2ZgzPp9R/D8XLe7mBq8hVK70=
+
+Name: org/eclipse/jdt/apt/core/internal/util/Visitors$DeclarationFinde
+ r.class
+SHA-256-Digest: 7wjb49LY5+AXv58PIhGUo0u7OneNIYvCVFGMOEUoXhM=
+
+Name: com/sun/mirror/apt/AnnotationProcessors$CompositeAnnotationProce
+ ssor.class
+SHA-256-Digest: AU3qm1VZGT2iXeB1XaAfXc5GSQY3qazrRrjiUdxg1X4=
+
+Name: com/sun/mirror/declaration/FieldDeclaration.class
+SHA-256-Digest: 2orzs5qRciXgoNtpy/z3a6PYVV+nniIhIIxM/9NF+S0=
+
+Name: org/eclipse/jdt/apt/core/internal/util/AnnotationScanner$State.c
+ lass
+SHA-256-Digest: 9f4aoGjC3Z/GBhaaNaf0uRviAOBC8tt4y2rSTzQrd+c=
+
+Name: plugin.properties
+SHA-256-Digest: 0uX/ldyFVuVLbhxwIz/bYQX0q4ePpzTL42VvpKZ1cV0=
+
+Name: org/eclipse/jdt/apt/core/internal/AptCompilationParticipantExten
+ sionFactory.class
+SHA-256-Digest: 6QJ5WcpGRhyaKnT3GLKPdMHJIIVcKbU6YLYAIkPJ1Nc=
+
+Name: org/eclipse/jdt/apt/core/internal/generatedfile/FileGenerationRe
+ sult.class
+SHA-256-Digest: j+BrqvUuhB2ZI9FKS75VUHw1edpiWw6ETEw4Wf0P/QU=
+
+Name: com/sun/mirror/util/DeclarationFilter$3.class
+SHA-256-Digest: zHp9rlSU4n5w/Ohx7E6KLsu05vVcA7NxtZPOzAiLYtw=
+
+Name: com/sun/mirror/type/ArrayType.class
+SHA-256-Digest: 2BQB/8gys2/QCjQfevReIFGqxbumxYsyr0BMwIQ3CFQ=
+
+Name: org/eclipse/jdt/apt/core/internal/util/AptCorePreferenceInitiali
+ zer.class
+SHA-256-Digest: rnSZSpKqLmre65Ei+oABZFGWTy3dPPNm3F2AFOFckys=
+
+Name: org/eclipse/jdt/apt/core/internal/env/BuildEnv.class
+SHA-256-Digest: tpFqBaf8/ip2a9L++7NPEVNQsLH/Vcflb8HvbzbbJUs=
+
+Name: com/sun/mirror/apt/AnnotationProcessorListener.class
+SHA-256-Digest: LDlEgo4WhQkOyXIqBzPQzBfX7P53GPePa19DWGRoUGU=
+
+Name: org/eclipse/jdt/apt/core/util/IFactoryPath.class
+SHA-256-Digest: Ai7plI/ZR90L6bat657RAEdegmd+P5+6AOF3EQ2fTp0=
+
+Name: com/sun/mirror/declaration/Declaration.class
+SHA-256-Digest: SBnHPjlCIUK2L6p45UO6YBqMX+jEkY4xxvJNkZ/I/Aw=
+
+Name: com/sun/mirror/type/DeclaredType.class
+SHA-256-Digest: NRC2vQsC5p9YSOaRnsAo8n6dGaCEllBf+YwYNGUKmA0=
+
+Name: com/sun/mirror/util/SimpleDeclarationVisitor.class
+SHA-256-Digest: fwnlmtQSxtEXiUEITazqXf2PMoEyp7DhKpt0cf0cal8=
+
+Name: org/eclipse/jdt/apt/core/internal/type/ErrorType$ErrorArrayType.
+ class
+SHA-256-Digest: Bq8XnRokuJBIGIuTvyJ2ZsPkn6rRWmrsM4rMWgTeKLU=
+
+Name: org/eclipse/jdt/apt/core/internal/APTDispatchRunnable.class
+SHA-256-Digest: YJ2rAzxXSLbHiWpzV5ue63USVDR1ApjzTHiMgFyYvXo=
+
+Name: org/eclipse/jdt/apt/core/internal/env/ReconcileFilerImpl$1.class
+SHA-256-Digest: naVWdOjWR7bKHog3xd3KxEBzDZZRzK+MB/QmiRtGy1w=
+
+Name: org/eclipse/jdt/apt/core/internal/util/FactoryPath.class
+SHA-256-Digest: Bx6rcZWyc0sSDfGcky+ShQck8d8S4lxuIhpyczXcIZo=
+
+Name: org/eclipse/jdt/apt/core/internal/type/ErrorType$ErrorAnnotation
+ .class
+SHA-256-Digest: blrJ3l0Cpdf09Q8PNHr6x/7irDsMmOye+6x9G6uwFQI=
+
+Name: org/eclipse/jdt/apt/core/internal/env/BaseProcessorEnv$1Compilat
+ ionUnitRequestor.class
+SHA-256-Digest: boRbo0X8+tBWJsqyaEv4bACCCLd0JmOMsc6wa/fTo3U=
+
+Name: org/eclipse/jdt/apt/core/internal/declaration/ASTBasedMethodDecl
+ arationImpl.class
+SHA-256-Digest: /fXgaT4JkT92hjPClU3n4++mdTdUv+nJ1Nbte8iMpXY=
+
+Name: org/eclipse/jdt/apt/core/internal/JarFactoryContainer.class
+SHA-256-Digest: uQ36V3jAGPN94pL7tgmi42RVc9vRqJKNfNt2910ZVIY=
+
+Name: org/eclipse/jdt/apt/core/internal/util/InputStreamAnnotationScan
+ ner.class
+SHA-256-Digest: TDFb3Rdd8p2CIo/zA7+Geih3xxEfYceCotBRhxTPCfw=
+
+Name: org/eclipse/jdt/apt/core/internal/declaration/ASTBasedMemberDecl
+ arationImpl.class
+SHA-256-Digest: w1ci6BBtUiDa32xRZ2HxD2taJabi9pYCr+Kgl+Jpk5U=
+
+Name: org/eclipse/jdt/apt/core/internal/build/messages.properties
+SHA-256-Digest: 14E4bw9XlhyxMFwnMMXLhsvbn4u4Mtb/cMRVLSi5ZJM=
+
+Name: com/sun/mirror/declaration/AnnotationTypeElementDeclaration.clas
+ s
+SHA-256-Digest: MJzVfeTfIyYa+x5qEwaIt50jfZp9XydZMdpyO4hcN+w=
+
+Name: com/sun/mirror/type/MirroredTypesException.class
+SHA-256-Digest: vcf07+ZC1nqcYE+1ZuFk1LMHOuBztkb5MsiS+0W1wqY=
+
+Name: org/eclipse/jdt/apt/core/internal/declaration/EnumConstantDeclar
+ ationImpl.class
+SHA-256-Digest: FsPrrLeyiUx6s3+skyak2Zfc7iZHTpnxP/MP67FUNm8=
+
+Name: org/eclipse/jdt/apt/core/internal/declaration/AnnotationValueImp
+ l.class
+SHA-256-Digest: yHcmIFBJWdC/VkpmkSGGYuv9kHOMFYNugk95gwUaPC4=
+
+Name: org/eclipse/jdt/apt/core/internal/AptProject.class
+SHA-256-Digest: uM0CcYFz8ZgeLSLd8ncYFRZo/lSA2b0M4pQ4bwJN31k=
+
+Name: com/sun/mirror/util/DeclarationFilter$5.class
+SHA-256-Digest: bU5Bt+7S/faVwcp/2o8F7oavC7wexeFE1uAWdwQYXps=
+
+Name: org/eclipse/jdt/apt/core/internal/util/Messages.class
+SHA-256-Digest: ljoW5KxWgJYaNLWt+QBzO5rsYq+Aua/wWTV5+UgnHKQ=
+
+Name: org/eclipse/jdt/apt/core/internal/declaration/PackageDeclaration
+ Impl.class
+SHA-256-Digest: YqMD+2BK8MkBqnZ6jpt/n8g2Zh3iVSYKdBjlOEAQQlc=
+
+Name: about.html
+SHA-256-Digest: KKOc74O3NUEtOTxJ3ZseeQbpHDqNedLNw3bXwggtD2g=
+
+Name: org/eclipse/jdt/apt/core/build/AptBuilder$SystemOutProgressMonit
+ or.class
+SHA-256-Digest: wnVxRAzcfLWHhuXqtbppnxTf0z547qNEnhl+gJrbSJE=
+
+Name: org/eclipse/jdt/apt/core/internal/declaration/FieldDeclarationIm
+ pl.class
+SHA-256-Digest: D+pP+52v9eviP16IIDhTiFXh+yYS5dekIEJobJkm7EY=
+
+Name: org/eclipse/jdt/apt/core/internal/declaration/InterfaceDeclarati
+ onImpl.class
+SHA-256-Digest: ZIx+QeZKyqeipDLCibGKgyGIOZTidGcdgt8q3y6Gnl0=
+
+Name: org/eclipse/jdt/apt/core/internal/util/TypesUtil.class
+SHA-256-Digest: kJEbj5v/MB3irQxMjxemSzOnjRa3wyDwmEYc3rjdStU=
+
+Name: com/sun/mirror/declaration/TypeParameterDeclaration.class
+SHA-256-Digest: f1tiDXOAydXem6i8AlXOU1LtVJ7TbwaqWHU7J2MAp0c=
+
+Name: org/eclipse/jdt/apt/core/internal/env/BaseProcessorEnv$1BindingR
+ equestor.class
+SHA-256-Digest: PpTlKrmVyCJLnCsuzSXuhJT2qf6UDBXUcszom2V3t6I=
+
+Name: org/eclipse/jdt/apt/core/internal/declaration/EclipseMirrorType.
+ class
+SHA-256-Digest: BPunpXvzCXiinyrL5/4jEtwLKeHJgms+cPdGKxHducI=
+
+Name: org/eclipse/jdt/apt/core/internal/declaration/TypeDeclarationImp
+ l.class
+SHA-256-Digest: WI3Xkj02yfLTDqgjcCF2RG0VVGCTaeVxT4jSZsyhHvo=
+
+Name: com/sun/mirror/util/DeclarationFilter$AccessFilter.class
+SHA-256-Digest: wYTS29duW5KHtjFx3rMxnyUGKj0QIQgRUPhMu2d1SPk=
+
+Name: com/sun/mirror/declaration/InterfaceDeclaration.class
+SHA-256-Digest: 4LksbAv6O9LqKzmTqufaULj9YCfDIwiE8AAdBUYEX5g=
+
+Name: com/sun/mirror/util/DeclarationFilter$4.class
+SHA-256-Digest: bFI0j6fRdA/i3OogyfPSWORZ8+5y3TrJ966mFG0yigg=
+
+Name: com/sun/mirror/declaration/MemberDeclaration.class
+SHA-256-Digest: fzmL++aDu+MrENtOY9BvpLgLD9I+Drij216cmdqyYnM=
+

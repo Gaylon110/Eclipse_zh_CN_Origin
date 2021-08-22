@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<!--
+	Copyright (c) 2012 Eike Stepper (Berlin, Germany) and others.
+	All rights reserved. This program and the accompanying materials
+	are made available under the terms of the Eclipse Public License v1.0
+	which accompanies this distribution, and is available at
+	http://www.eclipse.org/legal/epl-v10.html
+
+	Contributors:
+	  Eike Stepper - initial API and implementation
+-->
+
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="org.eclipse.emf.cdo.examples.client.offline.Application">
+         </run>
+      </application>
+   </extension>
+
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="Client"
+            class="org.eclipse.emf.cdo.examples.client.offline.ClientPerspective"
+            id="org.eclipse.emf.cdo.examples.client.offline.ClientPerspective"/>
+      <perspective
+            name="Normal Repository"
+            class="org.eclipse.emf.cdo.examples.client.offline.NormalRepositoryPerspective"
+            id="org.eclipse.emf.cdo.examples.client.offline.NormalRepositoryPerspective"/>
+      <perspective
+            name="Failover Repository"
+            class="org.eclipse.emf.cdo.examples.client.offline.FailoverRepositoryPerspective"
+            id="org.eclipse.emf.cdo.examples.client.offline.FailoverRepositoryPerspective"/>
+      <perspective
+            name="Failover Monitor"
+            class="org.eclipse.emf.cdo.examples.client.offline.FailoverMonitorPerspective"
+            id="org.eclipse.emf.cdo.examples.client.offline.FailoverMonitorPerspective"/>
+   </extension>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            class="org.eclipse.emf.cdo.examples.client.offline.ClientView"
+            icon="icons/Client.gif"
+            id="org.eclipse.emf.cdo.examples.client.offline.ClientView"
+            name="Client"/>
+      <view
+            class="org.eclipse.emf.cdo.examples.client.offline.CloneRepositoryView"
+            icon="icons/CloneRepository.gif"
+            id="org.eclipse.emf.cdo.examples.client.offline.CloneRepositoryView"
+            name="Clone Repository"/>
+      <view
+            class="org.eclipse.emf.cdo.examples.client.offline.NormalRepositoryView"
+            icon="icons/NormalRepository.gif"
+            id="org.eclipse.emf.cdo.examples.client.offline.NormalRepositoryView"
+            name="Normal Repository"/>
+      <view
+            class="org.eclipse.emf.cdo.examples.client.offline.FailoverRepositoryView"
+            icon="icons/FailoverRepository.gif"
+            id="org.eclipse.emf.cdo.examples.client.offline.FailoverRepositoryView"
+            name="Failover Repository"/>
+      <view
+            class="org.eclipse.emf.cdo.examples.client.offline.FailoverMonitorView"
+            icon="icons/FailoverMonitor.gif"
+            id="org.eclipse.emf.cdo.examples.client.offline.FailoverMonitorView"
+            name="Failover Monitor"/>
+   </extension>
+
+</plugin>

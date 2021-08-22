@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+
+-->
+
+<plugin>
+  <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+    <factory
+          class="org.eclipse.emf.emfstore.internal.server.model.provider.ModelItemProviderAdapterFactory"
+          supportedTypes=
+          	"org.eclipse.emf.edit.provider.IEditingDomainItemProvider  
+          	 org.eclipse.emf.edit.provider.IStructuredItemContentProvider  
+          	 org.eclipse.emf.edit.provider.ITreeItemContentProvider  
+          	 org.eclipse.emf.edit.provider.IItemLabelProvider 
+          	 org.eclipse.emf.edit.provider.IItemPropertySource"
+          uri="http://eclipse.org/emf/emfstore/server/model"/>
+  </extension>
+    
+  <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+    <factory 
+       uri = "http://eclipse.org/emf/emfstore/server/model/accesscontrol" 
+       class = "org.eclipse.emf.emfstore.internal.server.model.accesscontrol.provider.AccesscontrolItemProviderAdapterFactory" 
+       supportedTypes = 
+         "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+          org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+          org.eclipse.emf.edit.provider.ITreeItemContentProvider
+          org.eclipse.emf.edit.provider.IItemLabelProvider
+          org.eclipse.emf.edit.provider.IItemPropertySource" />
+  </extension>
+  <extension  point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+     <factory
+           uri = "http://eclipse.org/emf/emfstore/server/model/accesscontrol/roles"
+           class = "org.eclipse.emf.emfstore.internal.server.model.accesscontrol.roles.provider.RolesItemProviderAdapterFactory"
+           supportedTypes = 
+	         "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+	          org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+	          org.eclipse.emf.edit.provider.ITreeItemContentProvider
+	          org.eclipse.emf.edit.provider.IItemLabelProvider
+	          org.eclipse.emf.edit.provider.IItemPropertySource" />
+  </extension>
+
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <!-- @generated server -->
+      <factory
+            uri="http://eclipse.org/emf/emfstore/server/model/url"
+            class="org.eclipse.emf.emfstore.internal.server.model.url.provider.UrlItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+  <extension  point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+     <factory
+           class="org.eclipse.emf.emfstore.internal.server.model.versioning.provider.VersioningItemProviderAdapterFactory"
+           supportedTypes=
+           	"org.eclipse.emf.edit.provider.IEditingDomainItemProvider  
+           	 org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+           	 org.eclipse.emf.edit.provider.ITreeItemContentProvider
+           	 org.eclipse.emf.edit.provider.IItemLabelProvider
+           	 org.eclipse.emf.edit.provider.IItemPropertySource"
+           uri="http://eclipse.org/emf/emfstore/server/model/versioning">
+     </factory>
+  </extension>
+  <extension  point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+     <factory
+           class="org.eclipse.emf.emfstore.internal.server.model.versioning.operations.provider.OperationsItemProviderAdapterFactory"
+           supportedTypes=
+           	"org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+           	org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+           	org.eclipse.emf.edit.provider.ITreeItemContentProvider
+           	org.eclipse.emf.edit.provider.IItemLabelProvider
+           	org.eclipse.emf.edit.provider.IItemPropertySource"
+           uri="http://eclipse.org/emf/emfstore/server/model/versioning/operations">
+     </factory>
+  </extension>
+
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <!-- @generated server -->
+      <factory
+            uri="http://eclipse.org/emf/emfstore/server/model/versioning/operations/semantic"
+            class="org.eclipse.emf.emfstore.internal.server.model.versioning.operations.semantic.provider.SemanticItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <!-- @generated server -->
+      <factory
+            uri="http://eclipse.org/emf/emfstore/server/model/versioning/events"
+            class="org.eclipse.emf.emfstore.internal.server.model.versioning.events.provider.EventsItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <!-- @generated server -->
+      <factory
+            uri="http://eclipse.org/emf/emfstore/server/model/versioning/events/server/"
+            class="org.eclipse.emf.emfstore.internal.server.model.versioning.events.server.provider.ServerItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+
+</plugin>

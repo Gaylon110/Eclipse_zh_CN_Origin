@@ -1,0 +1,512 @@
+Manifest-Version: 1.0
+Bundle-Description: %osgiServicesDes
+Bundle-SymbolicName: org.eclipse.osgi.services
+Archiver-Version: Plexus Archiver
+Built-By: genie.releng
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/equino
+ x/rt.equinox.framework.git;path="bundles/org.eclipse.osgi.services";t
+ ag="I20170228-2000";commitId=6e3d3967c4052a93abc26281fe7809f4abbc5e69
+Bundle-Vendor: %eclipse.org
+Bundle-DocUrl: http://www.eclipse.org
+Import-Package: javax.servlet;resolution:=optional,javax.servlet.http;
+ resolution:=optional,org.osgi.dto;version="1.0",org.osgi.framework;ve
+ rsion="1.6",org.osgi.framework.dto;version="1.8.0",org.osgi.service.c
+ m;version="[1.5,1.6)",org.osgi.service.component;version="[1.3,1.4)",
+ org.osgi.service.component.annotations;version="[1.3,1.4)",org.osgi.s
+ ervice.component.runtime; version="[1.3,1.4)",org.osgi.service.compon
+ ent.runtime.dto; version="[1.3,1.4)",org.osgi.service.device;version=
+ "[1.1,1.2)",org.osgi.service.event;version="[1.3,1.4)",org.osgi.servi
+ ce.http;version="[1.2,1.3)",org.osgi.service.log;version="[1.3,1.4)",
+ org.osgi.service.metatype;version="[1.3,1.4)",org.osgi.service.provis
+ ioning;version="[1.2,1.3)",org.osgi.service.upnp;version="[1.2,1.3)",
+ org.osgi.service.useradmin;version="[1.1,1.2)",org.osgi.service.wirea
+ dmin;version="[1.0,1.1)",org.osgi.util.function;version="[1.0,2.0)",o
+ rg.osgi.util.promise;version="[1.0,2.0)"
+Bundle-ContactAddress: www.eclipse.org
+DynamicImport-Package: javax.servlet,javax.servlet.http
+Export-Package: org.osgi.service.cm;version="1.5";uses:="org.osgi.fram
+ ework",org.osgi.service.component;version="1.3";uses:="org.osgi.frame
+ work",org.osgi.service.component.annotations;version="1.3",org.osgi.s
+ ervice.component.runtime;version="1.3";uses:="org.osgi.framework,org.
+ osgi.util.promise,org.osgi.service.component.runtime.dto",org.osgi.se
+ rvice.component.runtime.dto;version="1.3";uses:="org.osgi.dto,org.osg
+ i.framework.dto",org.osgi.service.device;version="1.1";uses:="org.osg
+ i.framework",org.osgi.service.event;version="1.3.1";uses:="org.osgi.f
+ ramework",org.osgi.service.http;version="1.2.1";uses:="javax.servlet,
+ javax.servlet.http",org.osgi.service.http.context;version="1.0";uses:
+ ="org.osgi.framework,javax.servlet.http",org.osgi.service.http.runtim
+ e;version="1.0";uses:="org.osgi.service.http.runtime.dto",org.osgi.se
+ rvice.http.runtime.dto;version="1.0";uses:="org.osgi.dto,org.osgi.fra
+ mework.dto",org.osgi.service.http.whiteboard;version="1.0",org.osgi.s
+ ervice.log;version="1.3";uses:="org.osgi.framework",org.osgi.service.
+ metatype;version="1.3";uses:="org.osgi.framework",org.osgi.service.pr
+ ovisioning;version="1.2",org.osgi.service.upnp;version="1.2",org.osgi
+ .service.useradmin;version="1.1";uses:="org.osgi.framework",org.osgi.
+ service.wireadmin;version="1.0.1";uses:="org.osgi.framework"
+Bundle-Name: %osgiServices
+Bundle-Version: 3.6.0.v20170228-1906
+Bundle-Localization: plugin
+Created-By: Apache Maven 3.3.3
+Build-Jdk: 1.8.0_121
+
+Name: org/osgi/service/component/runtime/package-info.class
+SHA-256-Digest: iUbTi+Is88WVOfLRNMT5QWP663+QHudz5YcRUzw/dLc=
+
+Name: org/osgi/service/wireadmin/packageinfo
+SHA-256-Digest: jqcfd8/nSPFeBoByagfZ+Qu/r5DCiBz8p6LQDmzxyug=
+
+Name: org/osgi/service/useradmin/UserAdminPermission.class
+SHA-256-Digest: wvJRTW6rqE8NRkQa2mCtkctHt0pJImwMMeo4IuFQdOU=
+
+Name: org/osgi/service/component/annotations/ReferencePolicyOption.cla
+ ss
+SHA-256-Digest: iguo0esL7D4rAksVxV/WO1e3+ATSD5AO94mEYmWZWTk=
+
+Name: org/osgi/service/http/runtime/dto/ListenerDTO.class
+SHA-256-Digest: YdKI8gIiCPHztGUSI9+Xa6bO8+vM1TIv5UXs33oSMpI=
+
+Name: org/osgi/service/cm/ManagedServiceFactory.class
+SHA-256-Digest: pJ+8QbNRBpVy0ZxSMw4ywJLYbTQJB1euJk0zSdiQQvs=
+
+Name: org/osgi/service/component/runtime/dto/package-info.class
+SHA-256-Digest: jPUHBuLy0TFM1MkuAsy8LvgtXZB1UCbchGc+sfRGaT4=
+
+Name: org/osgi/service/component/ComponentConstants.class
+SHA-256-Digest: 6JhsCGrbvJXDJwUi8WUNLUcme0fRMqpxiBWGwOk2JLE=
+
+Name: org/osgi/service/component/runtime/dto/packageinfo
+SHA-256-Digest: pFqkA0Evp1rF0zJ+NSsuant87bRmtwmoj6bJ9dRjIiE=
+
+Name: org/osgi/service/cm/ConfigurationEvent.class
+SHA-256-Digest: lMCuaUa6mHSSAW7anCO3e0yfXKKPp5ioSqKdmHSJ5Kc=
+
+Name: org/osgi/service/device/Match.class
+SHA-256-Digest: V0oyjnRnu75LOcBGCkZPukTB8/XufZLReT42T7sw/Mw=
+
+Name: org/osgi/service/event/packageinfo
+SHA-256-Digest: jekN0YjZjW5Sa/FcadeLsVRjXwXae/W7WEYN7uSrfso=
+
+Name: org/osgi/service/event/EventConstants.class
+SHA-256-Digest: hCFKPnEuJXMl+JWCg/oTTZfgVrJyC9rKQ3bhswAgKNM=
+
+Name: org/osgi/service/http/runtime/dto/FailedResourceDTO.class
+SHA-256-Digest: jYYQnFxNTc/5Rd1JS17VyHEJnwUh4YxQbNPi5mRlJR0=
+
+Name: org/osgi/service/http/runtime/dto/FailedErrorPageDTO.class
+SHA-256-Digest: lTU18nTFgwGEJzn0b3Ukb3jXXKqhlwwVFqtNRamKUmw=
+
+Name: org/osgi/service/event/TopicPermission.class
+SHA-256-Digest: vsjjeqHRS7zjrbbc9lPk3Uni9eaDeE8+NjbRDASKhT8=
+
+Name: org/osgi/service/upnp/UPnPDevice.class
+SHA-256-Digest: n0BJCQfPBbvS2clfPZl6uWFF3A14wljBhCD+m4Bq7gQ=
+
+Name: org/osgi/service/component/ComponentServiceObjects.class
+SHA-256-Digest: c+cNjCBmuUI2HloxzgUqQVRJL6TPae3n/qdqZdFepCM=
+
+Name: org/osgi/service/useradmin/User.class
+SHA-256-Digest: Yq7ldapMg8nPspG7dE0QwjUsUm2FV1BHj1f9fBD7yig=
+
+Name: org/osgi/service/component/ComponentException.class
+SHA-256-Digest: R9m9lCx8dYuRdZJ+G6L7Hv9C8+6oG1DHXNHTGVqNAvs=
+
+Name: org/osgi/service/metatype/packageinfo
+SHA-256-Digest: pFqkA0Evp1rF0zJ+NSsuant87bRmtwmoj6bJ9dRjIiE=
+
+Name: META-INF/p2.inf
+SHA-256-Digest: lZdaO2CE+pWSfK9zY0W9oGXsZf5gZSBFqN4t0+VCD4o=
+
+Name: org/osgi/service/wireadmin/WireAdminEvent.class
+SHA-256-Digest: K8lYxji0nzfw3SWJp+8sPS4zTF3LUKTRbdFtT7kFwfQ=
+
+Name: org/osgi/service/upnp/packageinfo
+SHA-256-Digest: 3m7O8JBgvZ7Ib1N/3pkr7xUt0SrMqw5hFyCil/VULhg=
+
+Name: org/osgi/service/wireadmin/Envelope.class
+SHA-256-Digest: Ie5RvSOXO5V8+0e5cga31j1pHy5pkgvGEiHFTMCmseg=
+
+Name: .api_description
+SHA-256-Digest: V6hGpg6p1ZRNbBi/QaUidX4CS59jmU0WYKJ8SOP8ZwU=
+
+Name: org/osgi/service/component/annotations/Reference.class
+SHA-256-Digest: 2lr/hpLQzizsRB3eAftNAd6wactXNNy9U805DDad8j8=
+
+Name: org/osgi/service/event/EventHandler.class
+SHA-256-Digest: 7gZ16IFaA1qNuuolEfmlc+ij9rKQvsHsSZxwvF3MALQ=
+
+Name: org/osgi/service/component/annotations/Activate.class
+SHA-256-Digest: d+a7zmCFZyNLs6vvRJnNJNVZoo2L7kLIBNwHUNiy/J0=
+
+Name: org/osgi/service/useradmin/package-info.class
+SHA-256-Digest: bdPpS8ErA9BIEo0UObAj4FmS5W4YahdNxtepspNy+yg=
+
+Name: org/osgi/service/upnp/UPnPService.class
+SHA-256-Digest: KnVPWdnYnSnir1szg+SkSRteNKKnqPy1XSkIlbCcyac=
+
+Name: org/osgi/service/http/runtime/HttpServiceRuntime.class
+SHA-256-Digest: /SOUM4y+Vn+PrYB1KZzUSjsy/Pp52Ftsqw7mrvN/AfE=
+
+Name: org/osgi/service/http/runtime/dto/packageinfo
+SHA-256-Digest: U8BJUQRCOi5wEJQN/Lkox+gkPvtlWqFIeC8lH0Fr0bY=
+
+Name: org/osgi/service/wireadmin/Producer.class
+SHA-256-Digest: ie8zQ43fGy1BSsNADOhk2u8crttRl7GMC0Y5UKgIF9w=
+
+Name: org/osgi/service/http/runtime/dto/FailedServletContextDTO.class
+SHA-256-Digest: KEUqAXrZoW8P/skBkpzPklO7rOjiAj/ynW6r4/YcUUI=
+
+Name: org/osgi/service/metatype/MetaTypeProvider.class
+SHA-256-Digest: 8TVs8XBfM7YbbuQNF6Usnl4Jm0ia7mgPABI0z6m2pXE=
+
+Name: org/osgi/service/http/HttpService.class
+SHA-256-Digest: QyciBcA6ru/HEReJsa0swoUOnjwYXnrT5uUWELot4DE=
+
+Name: org/osgi/service/cm/packageinfo
+SHA-256-Digest: j/peGxXlpmvwVtl0Y3bC9MNEX2MlgMyG4VWJjdULNvU=
+
+Name: org/osgi/service/event/Event$FilterProperties.class
+SHA-256-Digest: Qg6pZBOW+dwzMA1lN0Auqtjlkk3bniKGegE1s++UEio=
+
+Name: org/osgi/service/wireadmin/BasicEnvelope.class
+SHA-256-Digest: zVAFSkA8jMJDtRS3M75+gYmXalmOQKZl0Q3xmoBFG+Q=
+
+Name: org/osgi/service/device/Device.class
+SHA-256-Digest: C4UVA/l7gpBhXLpFj5lfWJH+InbLiNPLytsLPnOAguk=
+
+Name: org/osgi/service/log/packageinfo
+SHA-256-Digest: pFqkA0Evp1rF0zJ+NSsuant87bRmtwmoj6bJ9dRjIiE=
+
+Name: org/osgi/service/useradmin/UserAdminPermissionCollection.class
+SHA-256-Digest: 8i8eKU7qf3mc1hbT0Mi8ZeqNv6wY1U+efyRo9cpOCOI=
+
+Name: org/osgi/service/http/HttpContext.class
+SHA-256-Digest: HuI+dWItvPffXR6oeJpoI9cNaKYZLJhC9+86VVR6+v4=
+
+Name: org/osgi/service/http/runtime/dto/FailedServletDTO.class
+SHA-256-Digest: b1S+ALPXgsIKuZ9aLaGxW5W7KLfubODbr5tRvgqaKbI=
+
+Name: org/osgi/service/useradmin/Role.class
+SHA-256-Digest: k1e14tV0lAVEXxpcTR84Oy9dWVwz7LVJhq4rdYx0TuU=
+
+Name: org/osgi/service/wireadmin/Consumer.class
+SHA-256-Digest: oO2iqrdk2zsSMxg44OPpFoY4Ibl2PWNCpLJ36Z3LZ+g=
+
+Name: org/osgi/service/component/runtime/ServiceComponentRuntime.class
+SHA-256-Digest: PalvYZMNL54hQy/MSKqQyZf70ymMm85iKvtMPKWD95U=
+
+Name: about_files/LICENSE-2.0.txt
+SHA-256-Digest: z8d0m5b2O9McPEK1xHG/dWgUBT6EfBDz6wA0F7xSPTA=
+
+Name: org/osgi/service/component/annotations/package-info.class
+SHA-256-Digest: 0pMscylzebp5ZgLwsXkfRCbHY8J423oJl11IKlE5Re0=
+
+Name: org/osgi/service/upnp/UPnPLocalStateVariable.class
+SHA-256-Digest: WAi474PZTnxZyLLXTD8N05SIlHydHPyQ2lic59o6TMY=
+
+Name: org/osgi/service/upnp/UPnPIcon.class
+SHA-256-Digest: vbfHahgQoye80T4cnLWLZWNpAtBZkBvxh4GMIMXPG+M=
+
+Name: org/osgi/service/wireadmin/Wire.class
+SHA-256-Digest: KPK6AICDleMxPSgT3VnqzOJXLqR4OrA2wgFHHVlTvSo=
+
+Name: org/osgi/service/upnp/package-info.class
+SHA-256-Digest: K1MaZm5DcI527WnrevW8mSaLZRRj952Vc5SSjPNDnLQ=
+
+Name: org/osgi/service/component/ComponentContext.class
+SHA-256-Digest: JgzPITleuMsvw25WzhSfNnce3W2aug6c+izeCaDZ3Wc=
+
+Name: org/osgi/service/wireadmin/WirePermissionCollection.class
+SHA-256-Digest: VoTRSFzUvob/YMzMgktm25YakJqpp5903AH0CW31mH4=
+
+Name: org/osgi/service/metatype/MetaTypeService.class
+SHA-256-Digest: IcCR0eonHmSb9KkztKrq+kU2mlAzuNTpynvmxxf7KjM=
+
+Name: org/osgi/service/metatype/package-info.class
+SHA-256-Digest: XZk+xTXs+E6qk6eXKmLYUHjtEwMrsDww81oXGRvGTtw=
+
+Name: org/osgi/service/component/runtime/dto/SatisfiedReferenceDTO.cla
+ ss
+SHA-256-Digest: unzZIGXglw8ce9BxKUnt0vY//cgoxIfe3J9UjwneqCg=
+
+Name: org/osgi/service/component/runtime/dto/ComponentDescriptionDTO.c
+ lass
+SHA-256-Digest: +lNqF0X++MSBRfIo1vwjhNiEHZmB3lcZorl3Btmysbg=
+
+Name: org/osgi/service/component/annotations/ReferencePolicy.class
+SHA-256-Digest: GF3lUXjbxLCvXO15AooFTjElSqAldIf5mb4PGzAWKaU=
+
+Name: org/osgi/service/provisioning/packageinfo
+SHA-256-Digest: 3m7O8JBgvZ7Ib1N/3pkr7xUt0SrMqw5hFyCil/VULhg=
+
+Name: org/osgi/service/component/runtime/packageinfo
+SHA-256-Digest: pFqkA0Evp1rF0zJ+NSsuant87bRmtwmoj6bJ9dRjIiE=
+
+Name: org/osgi/service/http/runtime/dto/package-info.class
+SHA-256-Digest: XFgkrNKJYKBwE5clf1XriikN0f+cyG85d4TyJXN54yg=
+
+Name: org/osgi/service/upnp/UPnPStateVariable.class
+SHA-256-Digest: xysQxlPsnnUjg46BGrYf7fE+xTxsgDEeGCyZdQ3EK80=
+
+Name: org/osgi/service/event/package-info.class
+SHA-256-Digest: fChiN88RpOj4N+8JqMuWe9IRUB7nHVB4oykEkd4n18c=
+
+Name: org/osgi/service/component/annotations/ReferenceCardinality.clas
+ s
+SHA-256-Digest: vR3Qvdjz45uZM5gDkw9u/bkz16dyKVVh9y/v1I4juIA=
+
+Name: org/osgi/service/http/runtime/dto/FailedFilterDTO.class
+SHA-256-Digest: sr+qwAwa0B5UnDajPH0taeIZH3FfeWdlvl5Ua94qRaQ=
+
+Name: org/osgi/service/http/packageinfo
+SHA-256-Digest: UfrP60xwkmA/79e7gv5fLuwZuOEf31EUCxGmEft9qQo=
+
+Name: org/osgi/service/http/context/packageinfo
+SHA-256-Digest: U8BJUQRCOi5wEJQN/Lkox+gkPvtlWqFIeC8lH0Fr0bY=
+
+Name: org/osgi/service/useradmin/UserAdmin.class
+SHA-256-Digest: +kO30z2kx2Sdk4v4ufqCVRBkJyKo/K1rqzeFjmlnQEc=
+
+Name: org/osgi/service/cm/ConfigurationException.class
+SHA-256-Digest: GgHJCHAxMIpapZ3n6MlIMgiYKZGVEyMvYmoChxclRWo=
+
+Name: org/osgi/service/http/runtime/dto/RequestInfoDTO.class
+SHA-256-Digest: Oz8Oc908xF0yqYy8z2mCiKEEGQD0JsMWi4sedJsCRL0=
+
+Name: org/osgi/service/component/annotations/FieldOption.class
+SHA-256-Digest: 7UZJSbWATjoCo3zFMI+ojdVByLUm32xqWYWJYuNpVtc=
+
+Name: org/osgi/service/log/LogListener.class
+SHA-256-Digest: Cs2VUx04hLxVoabspyw31AOyu3h5woG30cDOdFYKrs0=
+
+Name: org/osgi/service/wireadmin/package-info.class
+SHA-256-Digest: h3JyiZGP6e0zue4ZPkHBrbz7Kr8E6Of/Fl0GNSbtHSs=
+
+Name: org/osgi/service/provisioning/package-info.class
+SHA-256-Digest: WgBCAGOr+Kth4RC9ZJZmhIQaaaiO2ciqGv5E8RBBEH4=
+
+Name: org/osgi/service/http/runtime/package-info.class
+SHA-256-Digest: YCDsBA7O9uiFqNxO48rkO4YyqSpvmLgZxq+k6qCivIE=
+
+Name: org/osgi/service/http/whiteboard/HttpWhiteboardConstants.class
+SHA-256-Digest: X0TGiOEsKlk/hKIhpC+7akN1k+z5H2f2J4edsxkxBvA=
+
+Name: org/osgi/service/wireadmin/WireAdminListener.class
+SHA-256-Digest: up69h3+yIe36qVJGET+Ms+CxTKJWS+R/iAxlWWOnZO0=
+
+Name: org/osgi/service/component/package-info.class
+SHA-256-Digest: MdD4zGvLD5wCY8a7blGcXieaX4DOzfRphyPdW5NCS7g=
+
+Name: org/osgi/service/log/package-info.class
+SHA-256-Digest: L9QhyKCxoVoPgKe9ef5ypW3QVnbXuLLgUzb37uGTS7Y=
+
+Name: org/osgi/service/useradmin/UserAdminListener.class
+SHA-256-Digest: FeRN61SBB0SVnABjwnlYopvYSccuLA/urJ+6e5+trTI=
+
+Name: org/osgi/service/cm/ManagedService.class
+SHA-256-Digest: dFmW7+9jV3jEUgklS8jYPOurUVXjtc3Hd0PQNQMrJ1I=
+
+Name: org/osgi/service/useradmin/packageinfo
+SHA-256-Digest: 9g7LIa1DyPfj5ZENbSc351rpJmWHXYTpwRppJkKf+4I=
+
+Name: org/osgi/service/log/LogEntry.class
+SHA-256-Digest: IhxUYolFiI/Oc3To7S1Gcr0KcmBO7/Kpp+ZH+Y2+42s=
+
+Name: org/osgi/service/cm/ConfigurationPermission.class
+SHA-256-Digest: 3ZUdKJpk2ORc10hpDjpUG7JcP3OxZPGRIlKz3kFdeqs=
+
+Name: org/osgi/service/component/ComponentFactory.class
+SHA-256-Digest: AxcREUXYi1/giMfNN4rNpr1uvwPp8nviiETBs+FLKec=
+
+Name: org/osgi/service/event/Event.class
+SHA-256-Digest: Z433nX812nSdxwhAn28jsMg1mHkEYwAqMJe/GkWLGhg=
+
+Name: plugin.properties
+SHA-256-Digest: I99xFBmJxa8pnYK2U0yTdrBhlvnZnKA5ailA0FKkUdo=
+
+Name: org/osgi/service/device/DriverSelector.class
+SHA-256-Digest: Azr35JWPyb/ED9LHYq6homekMt1/+EgtJXCA8OEfPwY=
+
+Name: org/osgi/service/http/runtime/dto/ServletContextDTO.class
+SHA-256-Digest: vuGKjoz5v0zMXuttdfMwwxwsqOOqTSYMNPMFONvqC2Y=
+
+Name: org/osgi/service/upnp/UPnPEventListener.class
+SHA-256-Digest: /qrtyiA60R6yGwRx9S9PiOzbyXlM2E05gzAl5cbiRGw=
+
+Name: org/osgi/service/cm/ConfigurationPlugin.class
+SHA-256-Digest: LLshQPw5aT2FxVC/smzgtWqIeDNu62VJPR5lv5hcbfs=
+
+Name: org/osgi/service/event/TopicPermissionCollection.class
+SHA-256-Digest: HLa4a9tDNV31Oerw/ZW/Nr+KAKqeFhi2nTiK//rZAzE=
+
+Name: org/osgi/service/device/package-info.class
+SHA-256-Digest: 7jbVKJG14FpgxrUD26n8yPXVbH7FWBIzymD9R7UQDZo=
+
+Name: org/osgi/service/provisioning/ProvisioningService.class
+SHA-256-Digest: VKjKnogJXgBH1K5UJGFQVLudySwOTZ8berem2wqf7CI=
+
+Name: org/osgi/service/component/ComponentInstance.class
+SHA-256-Digest: L7n/uTMkWigTxr4KCXI4aeLjoolkPPek67jA2RdtraA=
+
+Name: org/osgi/service/cm/package-info.class
+SHA-256-Digest: +9KFZ+V5Omsq7upBcDJipzLEWv5OxXW0K03D1M253Oo=
+
+Name: org/osgi/service/log/LogReaderService.class
+SHA-256-Digest: 04qTZBy0GpomnOiwfI9YsvR1icd/O/UiEy050u5M13Y=
+
+Name: org/osgi/service/component/runtime/dto/UnsatisfiedReferenceDTO.c
+ lass
+SHA-256-Digest: aMMAzkj7gkNTBO9VIWK/wb7vJZgaQq4Lh/vRh7U8j98=
+
+Name: org/osgi/service/metatype/ObjectClassDefinition.class
+SHA-256-Digest: t5guIcwUkVTVwTAwU/G1WL9am29P0yozY89Jkaq9geU=
+
+Name: org/osgi/service/cm/ConfigurationPermissionCollection.class
+SHA-256-Digest: tm9JVRGC1oOG/nNapf67R7haIb6+qw75AkZJJlwiP94=
+
+Name: org/osgi/service/http/whiteboard/package-info.class
+SHA-256-Digest: hbIXvExVtYSlFBnI+hwmgxh7gnCI53/AmeDrl0oC6+Y=
+
+Name: org/osgi/service/useradmin/UserAdminEvent.class
+SHA-256-Digest: hLHqZ7R4UtdaZgT/NN0pQiLHB35XAHyMcQ2MZojq7G4=
+
+Name: org/osgi/service/upnp/UPnPAction.class
+SHA-256-Digest: mAdTJfXDvzBSRNYCSYv/eNm0JnT+9ilxnZuAOnv5ITc=
+
+Name: org/osgi/service/upnp/UPnPException.class
+SHA-256-Digest: WFM6ZMJUu3dopp8Uf+Vf/wp1I6VRx53/7J+e+gbVSvQ=
+
+Name: org/osgi/service/cm/ConfigurationAdmin.class
+SHA-256-Digest: EKWg9Ws7SInivE2UGN043e2l1MnOqFabHlL6gJtW/gk=
+
+Name: org/osgi/service/wireadmin/WireAdmin.class
+SHA-256-Digest: 59eYRW8pgMjKdcihk/7kFHsaeC4YLO/XyoOHvs5R2XA=
+
+Name: org/osgi/service/component/annotations/Deactivate.class
+SHA-256-Digest: 5MbAPcf1Haw0OGa1mUpWt9alWGaIn+bP8g/+JKAjx+c=
+
+Name: org/osgi/service/http/runtime/HttpServiceRuntimeConstants.class
+SHA-256-Digest: 5N9HG58TVDX0h9JnefpsXa34E3loxJMIy/i0bVEZxp8=
+
+Name: org/osgi/service/http/context/ServletContextHelper.class
+SHA-256-Digest: dscf8hqTMqcx8nAFDqVLRikcp9x6MaFh4jY1wctP5pg=
+
+Name: org/osgi/service/http/runtime/dto/FilterDTO.class
+SHA-256-Digest: CTZ16bqce3tg4pG2kEK5E97bX+JrnpVWzVDjBy5Qvr4=
+
+Name: org/osgi/service/http/whiteboard/packageinfo
+SHA-256-Digest: U8BJUQRCOi5wEJQN/Lkox+gkPvtlWqFIeC8lH0Fr0bY=
+
+Name: org/osgi/service/http/runtime/packageinfo
+SHA-256-Digest: U8BJUQRCOi5wEJQN/Lkox+gkPvtlWqFIeC8lH0Fr0bY=
+
+Name: org/osgi/service/event/EventAdmin.class
+SHA-256-Digest: z1NTvtkiJSfJxqNs3RW3dJo+iNtjYWabsbil08Tw1C4=
+
+Name: org/osgi/service/event/EventProperties.class
+SHA-256-Digest: ADFdbdeW0lzUe+hAEFZqMcjNnF2GxR0/UZyaUxzMtsQ=
+
+Name: org/osgi/service/http/runtime/dto/ErrorPageDTO.class
+SHA-256-Digest: 9knFp89LZ56M6v36Vx90jK8mQAXTHz2TKCC7W/TKMAw=
+
+Name: org/osgi/service/metatype/MetaTypeInformation.class
+SHA-256-Digest: 9OcvV4YFXD3XJ/7nAVRtX5RE8PpGb1I8xIYsVi2uO+U=
+
+Name: org/osgi/service/component/annotations/packageinfo
+SHA-256-Digest: pFqkA0Evp1rF0zJ+NSsuant87bRmtwmoj6bJ9dRjIiE=
+
+Name: org/osgi/service/http/runtime/dto/ServletDTO.class
+SHA-256-Digest: vzynomOTGaVhayC3I1VB3MtyYkaPRBXWaNCv5CCleLY=
+
+Name: org/osgi/service/metatype/AttributeDefinition.class
+SHA-256-Digest: 7sJyHt16epFQ2hU0DiVhrv4THDVfjMLW52pj9HcjkNE=
+
+Name: org/osgi/service/component/annotations/ReferenceScope.class
+SHA-256-Digest: JQahRILF5deYybwt5icGykj+J+uhLFQXtErMpCoTPAE=
+
+Name: org/osgi/service/cm/SynchronousConfigurationListener.class
+SHA-256-Digest: tce52pZeXmiaadUN7T3wQ8euQeDDjYdPXq6iXB66l/8=
+
+Name: org/osgi/service/http/context/package-info.class
+SHA-256-Digest: pirChJvEmi364JZNNRSxBt/XXVZLXL4r+fl9ALzCkqQ=
+
+Name: org/osgi/service/wireadmin/WirePermission.class
+SHA-256-Digest: 9jTPxL1Jr5tbDRAP8qwyZkmmhc7vamE+fvhkjvga9Qk=
+
+Name: org/osgi/service/component/packageinfo
+SHA-256-Digest: pFqkA0Evp1rF0zJ+NSsuant87bRmtwmoj6bJ9dRjIiE=
+
+Name: org/osgi/service/component/annotations/ServiceScope.class
+SHA-256-Digest: X1X1XC6z6a0cnrqnWb2n5yA0qUtRBDQJoJ+zCe1RRNs=
+
+Name: org/osgi/service/device/Driver.class
+SHA-256-Digest: wAqqvkw4L2mUNwV/QvV1HxmBgt9D6P7OePFQ0txVROE=
+
+Name: org/osgi/service/http/runtime/dto/RuntimeDTO.class
+SHA-256-Digest: 4FqQziZ3wCfrOQhxCg/OZHH7ljjyQDhERJPwMMDZABA=
+
+Name: org/osgi/service/component/annotations/ConfigurationPolicy.class
+SHA-256-Digest: NN9/KE1z3V+MdhVI/h50Mlp8unJ4dviXlGzTPtoHycY=
+
+Name: about.html
+SHA-256-Digest: 2WY/nu+tKk/nYLkpwWl/9VDHT5BK0MDnOgmnfCDvSzs=
+
+Name: org/osgi/service/http/runtime/dto/FailedListenerDTO.class
+SHA-256-Digest: c43qDBs5keEm9pR+pxBf6ZvrJWYW1j6gMfz9r1c7UOw=
+
+Name: org/osgi/service/device/packageinfo
+SHA-256-Digest: 9g7LIa1DyPfj5ZENbSc351rpJmWHXYTpwRppJkKf+4I=
+
+Name: org/osgi/service/cm/ConfigurationListener.class
+SHA-256-Digest: PMQnVDk3BL4/vQesPIRO3VdrdxS9EM2MfFs0m2ReZJY=
+
+Name: org/osgi/service/useradmin/Group.class
+SHA-256-Digest: 9x+9otWVi5HuFKZbkv1nzV3IaEFf6c64pP8NA+NerDY=
+
+Name: org/osgi/service/http/runtime/dto/BaseServletDTO.class
+SHA-256-Digest: v0D+k0BnDw+wnfb9ux1CcjOODHXaz/5hpRcP08owB7A=
+
+Name: org/osgi/service/http/runtime/dto/ResourceDTO.class
+SHA-256-Digest: duJjkpe16G0RURGUVQLuIS+8Muh+K+KayLJEa0WwcPc=
+
+Name: org/osgi/service/component/annotations/Component.class
+SHA-256-Digest: wAR0ju09QRPzGB+roEnIGoTGQsGMQsxrBXlZVRuRstQ=
+
+Name: org/osgi/service/component/annotations/Modified.class
+SHA-256-Digest: f4VQLR1oEhm/tvu3TzBuzWUrhwvq1stlNvZfooHEEE8=
+
+Name: org/osgi/service/http/runtime/dto/DTOConstants.class
+SHA-256-Digest: LGXnoFvXTJhewq+PLhYq2Cy0tMOl+bytUIFSq2pqXT0=
+
+Name: org/osgi/service/device/DriverLocator.class
+SHA-256-Digest: 6zv/lVguz2rnkm6o6zkfusmUDTWOIuhktZJX9AHl5Fk=
+
+Name: org/osgi/service/device/Constants.class
+SHA-256-Digest: xhu+rGeM4JLz5ut/lMzAsa187prEmWwd1KK7eedOVmI=
+
+Name: org/osgi/service/useradmin/Authorization.class
+SHA-256-Digest: QaNnUUgjJPLSUp/JsALKqOKd/kR49gkzY18rk127nBE=
+
+Name: org/osgi/service/component/runtime/dto/ReferenceDTO.class
+SHA-256-Digest: zeLF6VRMmgg9ehVjdBrM0A9BvefW0oS3s7XcfJ96/is=
+
+Name: org/osgi/service/component/runtime/dto/ComponentConfigurationDTO
+ .class
+SHA-256-Digest: nB8kgKfs495XyDcBF9VqqXr4RNx7uoJ+SQZjLE5u5wo=
+
+Name: org/osgi/service/wireadmin/WireConstants.class
+SHA-256-Digest: um5SR803aTBCxxDJtiWphCsx3+hbaMyV9y/Zo94ibsE=
+
+Name: org/osgi/service/http/package-info.class
+SHA-256-Digest: +9QGI9ptwnGKQfSEuJ8nwPAGbJhBvNF566bd2nAbstQ=
+
+Name: org/osgi/service/http/NamespaceException.class
+SHA-256-Digest: jJsyWNzNJLn0gySlzlwgd339f1Nz2gcCe6PBDphimX0=
+
+Name: org/osgi/service/cm/Configuration.class
+SHA-256-Digest: x9dpJnGfS19JzOhgSAVJKCRw4BevATQ6quNIzNBAzpo=
+
+Name: org/osgi/service/log/LogService.class
+SHA-256-Digest: 2inhL7MVv3xe3LEEeQN61erdNx+iskBb6fnsA4grGbM=
+

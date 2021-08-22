@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.eclipse.cdt.core.native;singleton:=true
+Bundle-Version: 5.10.0.201802261533
+Bundle-ClassPath: org.eclipse.cdt.core.native_5.10.0.201802261533.jar
+Bundle-Activator: org.eclipse.cdt.internal.core.natives.CNativePlugin
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Export-Package: org.eclipse.cdt.core;native=split;mandatory:=native,
+  org.eclipse.cdt.utils;native=split;mandatory:=native,
+  org.eclipse.cdt.utils.pty;version="5.7",
+  org.eclipse.cdt.utils.spawner;version="5.7"
+Require-Bundle: org.eclipse.core.runtime;bundle-version="[3.1.0,4.0.0)"
+Built-By: genie.cdt
+Build-Jdk: 1.8.0_162
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/cdt/org.eclipse.cdt.git;path="core/org.eclipse.cdt.core.native";commitId=0051cf041c7a22db297c09819a35a57710e020a8
+Created-By: Apache Maven 3.5.2
+Archiver-Version: Plexus Archiver
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8

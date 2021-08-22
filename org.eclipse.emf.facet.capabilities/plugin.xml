@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?><!--
+    Copyright (c) 2011 Mia-Software.
+    All rights reserved. This program and the accompanying materials
+    are made available under the terms of the Eclipse Public License v1.0
+    which accompanies this distribution, and is available at
+    http://www.eclipse.org/legal/epl-v10.html
+   
+    Contributors:
+       Nicolas Bros (Mia-Software) - Bug 343399 - EMF Facet capability
+       Gregoire Dupe (Mia-Software) - Bug 377802 - Deprecated menus must be hidden using a capability
+       GrÃ©goire DupÃ© (Mia-Software) - Bug 388422 - [Table] Queries for InstanciationMethod needs to have 2 parameters
+ -->
+
+<plugin>
+   <extension point="org.eclipse.ui.activities">
+	  <category
+            description="%category.description"
+            id="org.eclipse.emf.facet.capabilities.category"
+            name="%category.name">
+      </category>
+   <defaultEnablement
+         id="org.eclipse.emf.facet.widgets.table.activity">
+   </defaultEnablement>
+  </extension>
+  <extension point="org.eclipse.ui.activities">
+      <activity
+            description="%activity.description.table.0.2"
+            id="org.eclipse.emf.facet.widgets.table.activity"
+            name="%activity.name.table.0.2">
+      </activity>
+      <categoryActivityBinding
+            activityId="org.eclipse.emf.facet.widgets.table.activity"
+            categoryId="org.eclipse.emf.facet.capabilities.category">
+      </categoryActivityBinding>
+      <activityPatternBinding
+            activityId="org.eclipse.emf.facet.widgets.table.activity"
+            isEqualityPattern="false"
+            pattern="org\.eclipse\.emf\.facet\.widgets\.table\..*/.*">
+      </activityPatternBinding>
+   </extension>
+   <extension point="org.eclipse.ui.activities">
+      <activity
+            description="%activity.description.table.0.1"
+            id="org.eclipse.emf.facet.widgets.nattable.activity"
+            name="%activity.name.table.0.1">
+      </activity>
+      <categoryActivityBinding
+            activityId="org.eclipse.emf.facet.widgets.nattable.activity"
+            categoryId="org.eclipse.emf.facet.capabilities.category">
+      </categoryActivityBinding>
+      <activityPatternBinding
+            activityId="org.eclipse.emf.facet.widgets.nattable.activity"
+            isEqualityPattern="false"
+            pattern="org\.eclipse\.emf\.facet\.widgets\.nattable.*">
+      </activityPatternBinding>
+   </extension>
+   <extension
+          point="org.eclipse.ui.activities">
+       <activity
+             description="%activity.description.infra"
+             id="org.eclipse.emf.facet.infra.activity"
+             name="%activity.name.infra">
+       </activity>
+       <categoryActivityBinding
+             activityId="org.eclipse.emf.facet.infra.activity"
+             categoryId="org.eclipse.emf.facet.capabilities.category">
+       </categoryActivityBinding>
+       <activityPatternBinding
+             activityId="org.eclipse.emf.facet.infra.activity"
+             isEqualityPattern="false"
+             pattern="org\.eclipse\.emf\.facet\.infra\..*/.*">
+       </activityPatternBinding>
+    </extension>
+   <extension
+         point="org.eclipse.ui.activities">
+      <activity
+            id="org.eclipse.emf.facet.examples.activity"
+            name="%emf.facet.examples">
+      </activity>
+      <categoryActivityBinding
+      	 activityId="org.eclipse.emf.facet.examples.activity"
+		 categoryId="org.eclipse.emf.facet.capabilities.category">
+	  </categoryActivityBinding>
+      <activityPatternBinding
+         activityId="org.eclipse.emf.facet.examples.activity"
+         isEqualityPattern="false"
+         pattern="org\.eclipse\.emf\.facet\..*examples.*">
+      </activityPatternBinding>
+   </extension>
+</plugin>

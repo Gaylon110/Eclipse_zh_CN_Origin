@@ -1,0 +1,6 @@
+<%if (UML2GenModelUtil.getRedefinitionTypeGenClassifier(genFeature) != genFeature.getTypeGenClassifier()) {%>
+		if (new<%=genFeature.getCapName()%> != null && !(new<%=genFeature.getCapName()%> instanceof <%=UML2GenModelUtil.getRedefinitionTypeGenClassifier(genFeature).getRawImportedInstanceClassName()%>))
+		{
+			throw new IllegalArgumentException("new<%=genFeature.getCapName()%> must be an instance of <%=UML2GenModelUtil.getRedefinitionTypeGenClassifier(genFeature).getRawImportedInstanceClassName()%>");<%=genModel.getNonNLS()%>
+		}
+<%}%>

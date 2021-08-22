@@ -1,0 +1,316 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1" />
+<title>Tutorial: Creating Connections</title>
+</head>
+<body>
+<p><img src="../../logo.gif" /></p>
+
+<h1>Tutorial: Creating Connections</h1>
+
+<table border="0">
+<tr>
+<td>
+<p>Version: 0.1</p>
+</td>
+<td>
+<p>Date: August 11, 2005</p>
+</td>
+</tr>
+</table>
+
+<h2>Contents</h2>
+
+<p>-  <a href="#_Overview">Overview</a></p>
+
+<p>-  <a href="#_References">References</a></p>
+
+<p>-  <a href="#_Introduction">Introduction</a></p>
+
+<p>-  <a href="#newConnection">Create a new connection
+type</a></p>
+
+<p>-  <a href="#betweenShapes">Drawing connections between
+shapes</a></p>
+
+<p>-  <a href="#fixedAnchors">Connecting wires at fixed
+anchors</a></p>
+
+<p>-  <a href="#summary">Summary</a></p>
+
+<h2><a id="_Overview" name="_Overview"></a>Overview</h2>
+
+<p>[<a href="#top">back to top</a>]</p>
+
+<p>This tutorial provides the reader with the steps to create a new
+connection within a diagram client.</p>
+
+<h2><a id="_References" name="_References"></a>References</h2>
+
+<p>[<a href="#top">back to top</a>]</p>
+
+This tutorial references the following tutoral:<br />
+<br />
+ <a href="createShape.html">Create a shape</a>
+<h2><a id="_Introduction"
+name="_Introduction"></a>Introduction</h2>
+
+<p>[<a href="#top">back to top</a>]</p>
+
+<p>In this tutorial, we will use the Logic Diagram Example to
+illustrate how to add a connection edge to a diagram. We will use
+the wire connection as the example. To gain familiarity with the
+Logic Diagram Example, refer to the <a
+href="../../examples-guide/diagram/logicExample.html">Logic Example
+Guide</a>.</p>
+
+<h2><a id="_Step1" name="_Step1"></a></h2>
+
+<h2><a id="newConnection" name="newConnection">Create a new
+connection type</a><br />
+ [<a href="#top">back to top</a>]<br />
+</h2>
+
+<p>Most diagrams have a need to display semantic relationships that
+exist between elements.&nbsp; In the Logic example, this is also
+the case.&nbsp; There is an element called ?Wire? which allows
+logic elements to be connected to each other.&nbsp; It is literally
+the wire that carries electricity between terminals on circuits and
+LED elements in the circuit board.&nbsp; The mechanism for adding a
+connection shape on a diagram is very similar to how a shape is
+added except for some subtle difference in API.&nbsp; This is
+summarized below.</p>
+
+<h3><a id="_Toc104273250" name="_Toc104273250">Example: LED
+connected by wires</a><br />
+ <img width="104" height="218" src="connectedLED.gif" /></h3>
+
+<h3><a id="_Toc104273251" name="_Toc104273251">Adding a Wire
+palette entry to the contribution for the palette provider</a></h3>
+
+<p>See section <a href="createShape.html#palette">#Add entries to
+the contribution for the palette provider.</a></p>
+
+<h3><a id="_Toc104273252" name="_Toc104273252">Adding a new Wire
+creation tool instrumented from a palette factory class</a></h3>
+
+<p>A new condition needs to be added in the LogicPaletteFactory
+class in the createTool method.&nbsp; For a connection a
+ConnectionCreationTool instance is created passing in an
+IElementType hint (wire) that will be sent in a request to return a
+command for creating the connection.</p>
+
+<h3><a id="_Toc104273253" name="_Toc104273253">Add new View
+provider entry</a></h3>
+
+<p>In order to respond to the tool request we need to create a
+provider for creating the notation (View) for the new shape.&nbsp;
+First it is necessary to add plug-in.xml extension for the
+org.eclipse.gmf.runtime.diagram.core.viewProviders extension
+point.&nbsp; We indicate the viewClass context
+(org.eclipse.gmf.runtime.notation.Edge) and provide a hint for our
+provider to be invoked upon (wire).&nbsp; Similar to <a
+href="createShape.html#notation">#Add new Vie</a><a
+href="createShape.html#notation"></a><a
+href="createShape.html#notation">w provider entry</a> a mapping of
+the hint to the view class that will construct the connection
+notation is necessary in the getConnectionViewClass method.&nbsp;
+The WireView.java class will serve this purpose.&nbsp; The WireView
+class subclasses from AbstractConnectionView.&nbsp; Please refer to
+the WireView class for details of what initialization is
+needed.</p>
+
+<h3><a id="_Toc104273254" name="_Toc104273254">Add new Editpart
+provider entry</a></h3>
+
+<p>Refer to <a href="createShape.html#editpart">#Add new Editpart
+provider entry</a> on how to add a plugin.xml entry for a
+org.eclipse.gmf.runtime.diagram.ui.editpartProviders extension. In
+the LogicEditPartProvider class there is simply a mapping from the
+View class to the EditPart class that needs to be created in the
+getConnectionEditPartClass method.&nbsp; The WireEditPart class
+contains code for managing creating the IFigure
+(PolylineConnectionEx ) class and responding to property change
+events.</p>
+
+<h2><a id="betweenShapes" name="betweenShapes">Drawing connections
+between shapes</a></h2>
+
+[<a href="#top">back to top</a>]
+
+<p>The notation meta-model stores all layout constraint units
+(positions, bendpoints and anchors) in HiMetric units (0.1
+millimeter).&nbsp; This allows for a high level of precision when
+dealing with zoomed in diagrams.&nbsp; This adds some complexity to
+the figure display since GEF assumes pixel units when drawing
+figures onto the canvas.&nbsp;</p>
+
+<p>In the case where we wish to connect 2 LED shapes via a wire
+connection, we'll need to do some conversion of the pixel values to
+HiMetric before the connection can accurately connect to the
+LEDFigure.&nbsp; The function MapMode.DPtoLP(int deviceUnit) is
+used to convert a Device Unit (pixels) into a Logical Unit.&nbsp;
+This method needs to be instrumented in the LEDFigure when drawing
+the connection nubs around the shape.&nbsp; Additionally by
+abstracting the pixels through this MapMode, it will allow the
+platform to support a different coordinate systems in the future
+without affecting clients.&nbsp;</p>
+
+<p>A somewhat unique aspect of the Logic example is that the wires
+don't connect directly to the top level shapes.&nbsp; They always
+connect via terminal elements that exist on the borders of the
+shapes.&nbsp; If we consider the LED shape, it has 8 terminals
+surrounding it where 4 are incoming terminals and 4 are outgoing
+terminals.&nbsp; To accomplish this, it is necessary to have a
+separate view represent the terminal on the border of the LED
+view.&nbsp; The terminal views on the LED are essential to the
+functionality of the LED so they need to be represented all the
+time.&nbsp; This is referred to as a canonical
+representation.&nbsp; The means that the children of a particular
+view are always fully synchronized with the corresponding semantic
+element children.&nbsp;</p>
+
+<p>There is a facility in the diagram layer that can manage this
+synchronization called the CanonicalEditPolicy.&nbsp; This
+EditPolicy is installed on an EditPart and is responsible for
+managing the creation of child views that need to be created if a
+semantic child exists.&nbsp; The LEDEditPart has a subclass of this
+EditPolicy called LogicCanonicalEditPolicy that discovers the
+terminal children of the LED semantic element and creates
+corresponding terminal views for each terminal element.</p>
+
+<h2><a id="fixedAnchors" name="fixedAnchors">Connecting the wires
+at fixed anchors</a></h2>
+
+[<a href="#top">back to top</a>]
+
+<p>The default behavior when connecting to a shape allows the end
+of the connection to be anywhere around the source or target
+shape.&nbsp; In the case of the wire connection, we want it to
+connect at a very specific location on the terminal and don't need
+to have the flexibility of moving it around the shape.&nbsp; The
+anchoring behavior is handled in the IFigure hierarchy through the
+ConnectionAnchor interface.</p>
+
+<p>To change the default behavior, we need to override some methods
+in the IFigure implementation to return a different anchor.&nbsp;
+In the LEDFigure class the getSourceConnectionAnchorAt and
+getTargetConnectionAnchorAt functions need to be overridden in
+LEDFigure and return a anchor that will return a fixed point with
+the figure bounds.</p>
+
+<p>In LEDFigure:</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /*</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;* @see
+org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure#getSourceConnectionAnchorAt(org.eclipse.draw2d.geometry.Point)</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;*/</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; public ConnectionAnchor
+getSourceConnectionAnchorAt(Point p) {</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (p == null) {</p>
+
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return getConnectionAnchor(szAnchor);</p>
+
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+}</p>
+
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return fixedAnchor;</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p>
+
+<p>public Vector getSourceConnectionAnchors() {</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return
+outputConnectionAnchors;</p>
+
+<p>}</p>
+
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+
+<h3>Support for reconnection between two shapes at fixed
+anchors</h3>
+
+<p>When creating or reconnecting a wire between terminals on the
+logical example, this is not only</p>
+
+<p>changing the notation by moving the end points, it is also
+changing the underlying semantic model that the diagram is
+representing.&nbsp; This behavior is centralized with-in the
+EditHelper for wire metaModelType.&nbsp; The WireEditHelper
+overrides the AbstractEditHelper#getReorientRelationshipCommand to
+return the command that handles reorient of the logic wire
+element.&nbsp; For instance, when a palette tool is invoked, it is
+sending a request that is handled by the SemanticEditPolicy which
+in terms handles the creation.&nbsp; Similarly when the user
+reorients the end of a wire in the logic example, a request is sent
+automatically by the infrastructure to the SemanticEditPolicy which
+determines if there is a metaModelType registered that can handle
+the request.&nbsp; In this case the wire metaModelType would be
+found and would return the WireEditHelper which can provide a
+command for this request that subsequently gets executed making the
+changes against the logic semantic model.</p>
+
+<p>In WireEditHelper.java:</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /**</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;* Gets a command to
+change the source or target of a wire.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;*/</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; protected
+IEditElementCommand getReorientRelationshipCommand(</p>
+
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ReorientRelationshipRequest req) {</p>
+
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return new ReorientWireCommand(req);</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p>
+
+<h2><a id="summary" name="summary">Summary</a></h2>
+
+<p>[<a href="#top">back to top</a>]</p>
+
+<p>In this tutorial, we did the following:</p>
+
+<ol>
+<li>Created a new connection wire for display on the diagram
+editor..</li>
+
+<li>Learned how to connect 2 shapes using the new connection
+type..</li>
+
+<li>Created fixed anchors for the connection to attach it's ends
+to.</li>
+</ol>
+
+<br />
+<br />
+<p><a href="http://www.eclipse.org/legal/epl-v10.html">Copyright
+(c) 2000,2005 IBM Corporation and others. All Rights
+Reserved.</a></p>
+
+<br />
+ <br />
+</body>
+</html>
+

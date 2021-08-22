@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.eclipse.net4j.db.h2;singleton:=true
+Bundle-Version: 4.3.0.v20161018-1530
+Bundle-ClassPath: org.eclipse.net4j.db.h2_4.3.0.v20161018-1530.jar
+Bundle-Activator: org.eclipse.net4j.db.internal.h2.bundle.OM$Activator
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Export-Package: org.eclipse.net4j.db.h2;version="4.3.0",
+  org.eclipse.net4j.db.internal.h2.bundle;version="4.3.0";x-internal:=true
+Require-Bundle: org.eclipse.core.runtime;bundle-version="[3.5.0,4.0.0)",
+  org.eclipse.net4j.db;bundle-version="[4.0.0,5.0.0)";visibility:=reexport
+Bundle-ActivationPolicy: lazy
+Import-Package: org.h2;version="[1.0.0,2.0.0)";resolution:=optional;x-installation:=greedy,
+  org.h2.command;version="[1.0.0,2.0.0)";resolution:=optional;x-installation:=greedy,
+  org.h2.expression;version="[1.0.0,2.0.0)";resolution:=optional;x-installation:=greedy,
+  org.h2.jdbc;version="[1.0.0,2.0.0)";resolution:=optional;x-installation:=greedy,
+  org.h2.jdbcx;version="[1.0.0,2.0.0)";resolution:=optional;x-installation:=greedy,
+  org.h2.util;version="[1.0.0,2.0.0)";resolution:=optional;x-installation:=greedy,
+  org.h2.value;version="[1.0.0,2.0.0)";resolution:=optional;x-installation:=greedy
+Ant-Version: Apache Ant 1.9.6
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Created-By: 1.8.0_121-b13 (Oracle Corporation)
+Eclipse-RegisterBuddy: org.eclipse.net4j.db

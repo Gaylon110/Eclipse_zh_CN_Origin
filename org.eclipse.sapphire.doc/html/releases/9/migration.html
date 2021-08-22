@@ -1,0 +1,192 @@
+<!-- 
+ ******************************************************************************
+ * Copyright (c) 2016 Oracle
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *    Konstantin Komissarchik - initial implementation and ongoing maintenance
+ ******************************************************************************
+-->
+
+<html>
+
+<head>
+  <title>Migration Guide for Sapphire 9</title>
+  <link rel="StyleSheet" href="../../style.css" TYPE="text/css"/>
+  <style type="text/css">
+    pre.source-code 
+    {
+      font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; 
+      color: #000000;
+      background-color: #ffffff;
+      font-size: 12px;
+      border: 0px;
+      line-height: 14px;
+      padding: 5px;
+      margin-left: 0px;
+      margin-right: 0px;
+      overflow: auto
+    }
+    .unaffected
+    {
+      color: #888888
+    }
+    .comment
+    {
+      color: #006600;
+      font-style: italic
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>Migration Guide for Sapphire 9</h1>
+
+<p>This documents covers changes that need to be made by Sapphire adopters as part of migrating 
+to Sapphire 9 from a prior release. Only changes from the previous major release are covered.</p>
+
+<p>Table of Contents</p>
+
+<ol>
+  <li><a href="#CountConstraint">CountConstraint</a></li>
+  <li><a href="#PossibleTypesService">PossibleTypesService</a></li>
+  <li><a href="#PossibleTypesServiceData">PossibleTypesServiceData</a></li>
+  <li><a href="#StringUtil">StringUtil</a></li>
+  <li><a href="#Type">Type</a></li>
+</ol>
+
+
+<h2><a name="CountConstraint">CountConstraint</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.</span>modeling.annotations.CountConstraint</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.</span>Length</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">@</span>CountConstraint<span class="unaffected">( ... )</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">@</span>Length<span class="unaffected">( ... )</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="PossibleTypesService">PossibleTypesService</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.</span>services.<span class="unaffected">PossibleTypesService</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.PossibleTypesService</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExamplePossibleTypesService extends PossibleTypesService
+{
+    @Override
+    protected</span> PossibleTypesServiceData <span class="unaffected">compute()
+    {
+        return</span> new PossibleTypesServiceData( <span class="unaffected">...</span> )<span class="unaffected">;
+    }
+}</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExamplePossibleTypesService extends PossibleTypesService
+{
+    @Override
+    protected</span> void <span class="unaffected">compute(</span> Set&lt;ElementType> types <span class="unaffected">)
+    {
+        ...
+    }
+}</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>SortedSet<span class="unaffected">&lt;ElementType> types = possibleTypesService.types();</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>Set<span class="unaffected">&lt;ElementType> types = possibleTypesService.types();</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>SortedSet<span class="unaffected">&lt;ElementType> types = possibleTypesService.data();</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>Set<span class="unaffected">&lt;ElementType> types = possibleTypesService.data();</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="PossibleTypesServiceData">PossibleTypesServiceData</a></h2>
+
+<p>This class has been removed. See <a href="#PossibleTypesService">PossibleTypesService</a> migration.
+
+
+<h2><a name="StringUtil">StringUtil</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>org.eclipse.sapphire.util.StringUtil.UTF8</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>java.nio.charset.StandardCharsets.UTF_8</code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="Type">Type</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.</span>modeling.annotations.<span class="unaffected">Type</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.Type</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<div class="copyright">Copyright (c) 2016 Oracle<br/>
+Content made available under the terms of <a href="http://www.eclipse.org/legal/epl-v10.html">Eclipse Public License</a>.</div>
+
+
+</body>
+
+</html>

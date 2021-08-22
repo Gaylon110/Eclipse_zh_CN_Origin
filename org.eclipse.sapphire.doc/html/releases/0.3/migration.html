@@ -1,0 +1,1379 @@
+<!-- 
+ ******************************************************************************
+ * Copyright (c) 2016 Oracle
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *    Konstantin Komissarchik - initial implementation and ongoing maintenance
+ ******************************************************************************
+-->
+
+<html>
+
+<head>
+  <title>Migration Guide for Sapphire 0.3</title>
+  <link rel="StyleSheet" href="../../style.css" TYPE="text/css"/>
+  <style type="text/css">
+    pre.source-code 
+    {
+      font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; 
+      color: #000000;
+      background-color: #ffffff;
+      font-size: 12px;
+      border: 0px;
+      line-height: 14px;
+      padding: 5px;
+      margin-left: 0px;
+      margin-right: 0px;
+      overflow: auto
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>Migration Guide for Sapphire 0.3</h1>
+
+<p>This documents covers changes that need to be made by Sapphire adopters as part of migrating 
+to Sapphire 0.3 from a prior release. Only changes from the previous major release are covered.</p>
+
+<p>Table of Contents</p>
+
+<ol>
+  <li><a href="#modularity">Modularity Changes</a></li>
+  <li><a href="#ref">ReferenceValue Changes</a></li>
+  <li><a href="#services">Services</a></li>
+  <li><a href="#validation">Validation</a></li>
+  <li><a href="#enablement">Enablement</a></li>
+  <li><a href="#whitespace">Whitespace Handling</a></li>
+  <li><a href="#java">Java Support</a></li>
+  <li><a href="#html">HTML Content Presentation</a></li>
+  <li><a href="#related-content">Related Content</a></li>
+  <li><a href="#composite-ref">Composite Reference</a></li>
+  <li><a href="#section-description">Section Description</a></li>
+  <li><a href="#function">Function Name Method</a></li>
+  <li><a href="#with">With Directive</a></li>
+  <li><a href="#element-image">Model Element Image</a></li>
+  <li><a href="#required-annotation">Required Annotation</a></li>
+  <li><a href="#master-details-content-node-factory">Master Details Content Node Factory</a></li>
+  <li><a href="#jump-action-handle">Jump Action Handler</a></li>
+  <li><a href="#show-in-source">Show In Source Action</a></li>
+</ol>
+
+<h2><a name="modularity">Modularity Changes</a></h2>
+
+<p>The contents of some bundles have changes and several new bundles have been created. These changes
+may require adopters to modify Requite-Bundle declarations and import statements.</p>
+
+<table>
+  <tr>
+    <th>Old Bundle</th>
+    <th>Old Classes</th>
+    <th>New Bundle</th>
+    <th>New Classes</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>org.eclipse.sapphire.modeling</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>org.eclipse.sapphire.modeling.xml.*<br/>org.eclipse.sapphire.modeling.xml.annotations.*<br/>org.eclipse.sapphire.modeling.xml.schema.*</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>org.eclipse.sapphire.modeling.xml</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>unchanged</code></pre>
+    </td>
+  </tr>
+    <td>
+<pre class="source-code"><code>org.eclipse.sapphire.modeling</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>org.eclipse.sapphire.modeling.java.*</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>org.eclipse.sapphire.java</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>org.eclipse.sapphire.java.*</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>org.eclipse.sapphire.modeling</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>org.eclipse.sapphire.modeling.WorkspaceFileResourceStore</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>org.eclipse.sapphire.workspace</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>org.eclipse.sapphire.workspace.WorkspaceFileResourceStore</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>org.eclipse.sapphire.modeling</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>org.eclipse.sapphire.modeling.annotations.EclipseWorkspacePath</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>org.eclipse.sapphire.workspace</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>org.eclipse.sapphire.workspace.WorkspaceRelativePath</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>org.eclipse.sapphire.ui</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>org.eclipse.sapphire.ui.xml.*</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>org.eclipse.sapphire.ui.swt.xml.editor</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>org.eclipse.sapphire.ui.swt.xml.editor.*</code></pre>
+    </td>
+  </tr>
+</table>
+
+<p>The core dependency on IStatus, IPath and IProgressMonitor types from org.eclipse.core.runtime bundle
+has been eliminated. These classes have been replaced with Status, Path and ProgressMonitor classes in
+org.eclipse.sapphire.modeling bundle. StatusBridge, PathBridge and ProgressMonitorBridge classes are available
+in org.eclipse.sapphire.platform bundle when back-n-forth conversion is necessary.</p>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class CustomValidationService extends ModelPropertyValidationService&lt;Value&lt;String>> 
+{
+    public</font> IStatus <font color="#888888">validate() 
+    {
+        if( ... )
+        {
+            return</font> createErrorStatus( Resources.errorMessage );
+        <font color="#888888">}
+
+        return</font> Status.OK_STATUS;
+    <font color="#888888">}
+}</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class CustomValidationService extends ModelPropertyValidationService&lt;Value&lt;String>> 
+{
+    public</font> Status <font color="#888888">validate() 
+    {
+        if( ... )
+        {
+            return</font> Status.createErrorStatus( Resources.errorMessage );
+        <font color="#888888">}
+
+        return</font> Status.createOkStatus();
+    <font color="#888888">}
+}</font></code></pre>
+
+<p>When necessary, use StatusBridge class from org.eclipse.sapphire.platform bundle to convert back-n-forth between Sapphire's Status object and
+Eclipse's IStatus object.</p> 
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><font color="#888888">@PossibleValues( service = CustomPossibleValuesService.class, invalidValueSeverity = </font>IStatus.OK <font color="#888888">)</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><font color="#888888">@PossibleValues( service = CustomPossibleValuesService.class, invalidValueSeverity = </font>Status.Severity.OK <font color="#888888">)</font></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class CustomPossibleValuesService extends PossibleValuesService
+{
+    ...
+
+    public</font> int <font color="#888888">getInvalidValueSeverity( String value ) 
+    {
+        if( ... )
+        {
+            return</font> IStatus.ERROR<font color="#888888">;
+        }
+        else if( ... )
+        {
+            return</font> IStatus.WARNING<font color="#888888">;
+        }
+
+        return</font> IStatus.OK<font color="#888888">;
+    }
+}</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class CustomPossibleValuesService extends PossibleValuesService
+{
+    ...
+
+    public</font> Status.Severity <font color="#888888">getInvalidValueSeverity( String value ) 
+    {
+        if( ... )
+        {
+            return</font> Status.Severity.ERROR<font color="#888888">;
+        }
+        else if( ... )
+        {
+            return</font> Status.Severity.WARNING<font color="#888888">;
+        }
+
+        return</font> Status.Severity.OK<font color="#888888">;
+    }
+}</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><font color="#888888">@Type( base =</font> IPath<font color="#888888">.class )
+@Required
+@MustExist
+@WorkspaceRelativePath
+@ValidFileSystemResourceType( FileSystemResourceType.FILE )
+@ValidFileExtensions( "xml" )
+
+ValueProperty PROP_LOCATION = new ValueProperty( TYPE, "Location" );
+
+Value&lt;</font>IPath<font color="#888888">&gt; getLocation();
+void setLocation( String location );
+void setLocation( </font>IPath<font color="#888888"> location );</font></code></pre>
+
+<p>These migration sites will not be obvious via problems at compile times. Search for "Value&lt;IPath&gt;".</p>
+    </td>
+    <td>
+<pre class="source-code"><font color="#888888">@Type( base =</font> Path<font color="#888888">.class )
+@Required
+@MustExist
+@WorkspaceRelativePath
+@ValidFileSystemResourceType( FileSystemResourceType.FILE )
+@ValidFileExtensions( "xml" )
+
+ValueProperty PROP_LOCATION = new ValueProperty( TYPE, "Location" );
+
+Value&lt;</font>Path<font color="#888888">&gt; getLocation();
+void setLocation( String location );
+void setLocation( </font>Path<font color="#888888"> location );</font></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><font color="#888888">public class CustomBasePathsProvider extends BasePathsProviderImpl
+{
+    public List&lt;</font>IPath<font color="#888888">&gt; getBasePaths( IModelElement element )
+    {
+        ...
+    }
+}</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><font color="#888888">public class CustomRelativePathService extends RelativePathService
+{
+    public List&lt;</font>Path<font color="#888888">&gt; roots()
+    {
+        ...
+    }
+}</font></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><font color="#888888">public class ProjectRootsBasePathsProvider extends BasePathsProviderImpl
+{
+    public List&lt;</font>IPath<font color="#888888">&gt; getBasePaths( IModelElement element )
+    {
+        final List&lt;</font>IPath<font color="#888888">&gt; paths = new ArrayList&lt;</font>IPath<font color="#888888">&gt;();
+
+        for( IProject project : ResourcesPlugin.getWorkspace().getRoot().getProjects() )
+        {
+            paths.add(</font> project.getLocation() <font color="#888888">);
+        }
+
+        return paths;
+    }
+}</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><font color="#888888">public class ProjectRootsRelativePathService extends RelativePathService
+{
+    public List&lt;</font>Path<font color="#888888">&gt; roots()
+    {
+        final List&lt;</font>Path<font color="#888888">&gt; paths = new ArrayList&lt;</font>Path<font color="#888888">&gt;();
+
+        for( IProject project : ResourcesPlugin.getWorkspace().getRoot().getProjects() )
+        {
+            paths.add(</font> PathBridge.create( project.getLocation() ) <font color="#888888">);
+        }
+
+        return paths;
+    }
+}</font></code></pre>
+
+<p>When necessary, use PathBridge class from org.eclipse.sapphire.platform bundle to convert back-n-forth between Sapphire's Path object and
+Eclipse's IPath object.</p> 
+    </td>
+  </tr>
+</table>
+
+<p>Sapphire extension system no longer requires a flag from Eclipse extension system in order to discover extensions.</p>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">&lt;plugin>
+
+    ...</font>
+
+    &lt;extension point="org.eclipse.sapphire.modeling.extension"/>
+
+<font color="#888888">&lt;/plugin></font></code></pre>
+    </td>
+    <td>
+      <i>remove</i>
+    </td>
+  </tr>
+</table>
+
+<p>Sapphire now loads all resources (such as images and sdef files) from the class loader. To access resources from another
+bundle use standard OSGi facilities to require another bundle or to import packages. To make re-use from other bundles
+easier, place images and sdef files into exported packages along with Java source code.</p>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">&lt;definition></font>
+
+    &lt;import>
+      &lt;bundle>org.sample.foo&lt;/bundle>
+      &lt;package>org.sample.foo&lt;/package>
+      &lt;package>org.sample.foo.xyz&lt;/package>
+      &lt;definition>sdef/Foo.sdef&lt;/definition>
+    &lt;/import>
+
+    &lt;import>
+      &lt;bundle>org.sample.bar&lt;/bundle>
+      &lt;package>org.sample.bar&lt;/package>
+    &lt;/import>
+
+    <font color="#888888">...
+
+&lt;/definition></font>
+</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">&lt;definition></font>
+
+    &lt;import>
+      &lt;package>org.sample.foo&lt;/package>
+      &lt;package>org.sample.foo.xyz&lt;/package>
+      &lt;definition>org/sample/foo/Foo.sdef&lt;/definition>
+      &lt;package>org.sample.bar&lt;/package>
+    &lt;/import>
+
+    <font color="#888888">...
+
+&lt;/definition></font></code></pre>
+
+      <p>Note that multiple import elements are no longer supported.</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">@Image( path = "</font>org.sample.foo/images/something.png<font color="#888888">" )</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">@Image( path = "</font>images/something.png<font color="#888888">" )</font></code></pre>
+
+      <p>The above migration is sufficient if the annotated type is located in the same plugin as the image. If the image is located
+      in a different plugin, then you need to arrange to place the image in an exported package and adjust the path in the annotation
+      accordingly.</p>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="ref">ReferenceValue Changes</a></h2>
+
+<p>The ReferenceValue class now takes two type parameters instead of one. The first is the 
+type of the reference. This used to be assumed to always be a string. The second is the type 
+of what the reference resolves to.</p>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>ReferenceValue&lt;ImageDescriptor> getImage();</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>ReferenceValue&lt;String,ImageDescriptor> getImage();</code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="services">Services</a></h2>
+
+<p>A few changes have been made to the services API.</p>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>public class MyService extends ModelElementService
+{
+    public void init( final IModelElement element )
+    {
+        super.init( element );
+
+        ...
+    }
+}</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>public class MyService extends ModelElementService
+{
+    public void init( final IModelElement element,
+                      final String[] params )
+    {
+        super.init( element, params );
+
+        ...
+    }
+}</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>@Reference( target = IComponent.class, service = ComponentReferenceService.class )</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>@Reference( target = IComponent.class )
+@Service( impl = ComponentReferenceService.class )</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>@PossibleValues( service = CustomPossibleValuesService.class )</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>@Service( impl = CustomPossibleValuesService.class )</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>@DefaultValue( service = CustomDefaultValueService.class )</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>@Service( impl = CustomDefaultValueService.class )</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>@BasePathsProvider( CustomBasePathsProvider.class )</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>@Service( impl = CustomRelativePathService.class )</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>public class CustomBasePathsProvider extends BasePathsProviderImpl
+{
+    public List&lt;Path> getBasePaths( IModelElement element )
+    {
+        ...
+    }
+}</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>public class CustomRelativePathService extends RelativePathService
+{
+    public List&lt;Path> roots()
+    {
+        ...
+    }
+}</code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="validation">Validation</a></h2>
+
+<p>Validators are now model element services. They can be registered globaly via the extension
+system or at the level of an individual property using the @Service annotation.</p>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>@Validator( service = MyValidator.class )</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>@Service( impl = MyValidationService.class )</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>@Validators
+(
+    @Validator( impl = MyValidator1.class ),
+    @Validator( impl = MyValidator2.class )
+)</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>@Services
+(
+    @Service( impl = MyValidationService1.class ),
+    @Service( impl = MyValidationService2.class )
+)</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>public class CustomValidator extends ModelPropertyValidator&lt;Value&lt;?>>
+{
+    @Override
+    public void init( String[] params )
+    {
+        ...
+    }
+
+    public IStatus validate( Value&lt;?> value )
+    {
+        ...
+    }
+}</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>public class CustomValidationService extends ModelPropertyValidationService&lt;Value&lt;?>>
+{
+    @Override
+    public void init( IModelElement element,
+                      ModelProperty property,
+                      String[] params )
+    {
+        ...
+    }
+
+    public Status validate()
+    {
+        final Value&lt;?> value = target();
+
+        ...
+    }
+}</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>@Validator( impl = UniqueValueValidator.class )</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>@NoDuplicates</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>public class CustomValidator extends UniqueValueValidator
+{
+    ...
+}</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>public class CustomValidationService extends UniqueValueValidationService
+{
+    ...
+}</code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="enablement">Enablement</a></h2>
+
+<p>Enablement is now handled by true model element services. They can be registered globaly via the extension
+system or at the level of an individual property using the @Service annotation.</p>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>@Enablement( service = CustomEnablementService.class )</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>@Service( impl = CustomEnablementService.class )</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>public class CustomEnablementService extends EnablementService
+{
+    @Override
+    public void init( IModelElement element,
+                      ModelProperty property,
+                      String[] params )
+    {
+        super.init( element, property, params );
+
+        ...
+    }
+
+    @Override
+    public boolean isEnabled() 
+    {
+        ...
+    }
+}</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>public class CustomEnablementService extends EnablementService
+{
+    @Override
+    protected void initEnablementService( IModelElement element,
+                                          ModelProperty property,
+                                          String[] params )
+    {
+        super.initEnablementService( element, property, params );
+
+        ...
+    }
+
+    @Override
+    public boolean state()
+    {
+        refresh();
+        return super.state();
+    }
+
+    @Override
+    protected boolean compute() 
+    {
+        ...
+    }
+}
+</code></pre>
+
+<p>The above represents the quickest way to migrate an existing enablement service, but is far from
+ideal. A better solution would be to not override the state() method with a refresh on every invocation.
+To do that, the service would need to listen on changes to data used in the compute() method and call
+refresh() method when that data changes.</p>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="whitespace">Whitespace Handling</a></h2>
+
+<p>Whitespace handling has been made more flexible via the new @Whitespace annotation and the 
+ValueNormalizationService API. The collapseWhitespace attribute on @XmlValueBinding annotation
+is no longer supported.</p>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>@XmlValueBinding( <font color="#888888">path = "description",</font> collapseWhitespace = true )</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>@XmlValueBinding( <font color="#888888">path = "description"</font> )
+@Whitespace( collapse = true )</code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="java">Java Support</a></h2>
+
+<p>Support for writing models that reference Java types has been improved. All properties that that hold
+Java type names should now be modeled as a reference from JavaTypeName to JavaType in order to receive validation
+and content assist support.</p>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">@Type( base = JavaTypeName.class )</font>
+@JavaTypeConstraint<u>s</u>( ... )
+<font color="#888888">@MustExist
+
+ValueProperty PROP_IMPL_CLASS = new ValueProperty( TYPE, "ImplClass" );</font>
+
+Value&lt;JavaTypeName> <font color="#888888">getImplClass();
+void setImplClass( String value );
+void setImplClass( JavaTypeName value );</font>
+</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">@Type( base = JavaTypeName.class )</font>
+@Reference( target = JavaType.class )
+@JavaTypeConstraint( ... )
+<font color="#888888">@MustExist
+
+ValueProperty PROP_IMPL_CLASS = new ValueProperty( TYPE, "ImplClass" );</font>
+
+ReferenceValue&lt;JavaTypeName,JavaType> <font color="#888888">getImplClass();
+void setImplClass( String value );
+void setImplClass( JavaTypeName value );</font>
+</code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="html">HTML Content Presentation</a></h2>
+
+<p>Support for presenting HTML content in Sapphire UI was introduced in the 0.2 release in
+the form of @HtmlContent annotation and a read-only property editor. This approach proved
+to be too inflexible and has been replaced with a dedicated HTML UI part that can display
+HTML content that's statically specified, drawn from the model or even fetched remotely.</p>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>@HtmlContent</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><i>remove</i></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>&lt;property-editor>
+  &lt;property>MessageBody&lt;/property>
+  &lt;hint>
+    &lt;name>show.label&lt;/name>
+    &lt;value>false&lt;/value>
+  &lt;/hint>
+&lt;/property-editor></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>&lt;html>
+  &lt;content>${ MessageBody }&lt;/content>
+  &lt;show-border/>
+&lt;/html></code></pre>
+    </td>
+  </tr>
+</table>
+
+<p><a href="enhancements.html#html">See New Feature Documentation</a></p>
+
+<h2><a name="related-content">Related Content</a></h2>
+
+<p>The ability to augment a property editor with an auxiliary property editor has been generalized
+into a more powerful related content feature.</p>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">&lt;property-editor>
+  &lt;property>MainProperty&lt;/property></font>
+  &lt;aux-property-editor>RelatedProperty&lt;/aux-property-editor>
+<font color="#888888">&lt;/property-editor></font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">&lt;property-editor>
+  &lt;property>MainProperty&lt;/property></font>
+  &lt;related-content>
+    &lt;property-editor>RelatedProperty&lt;/property-editor>
+  &lt;/related-content>
+<font color="#888888">&lt;/property-editor></font></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">&lt;property-editor>
+  &lt;property>MainProperty&lt;/property></font>
+  &lt;aux-property-editor>RelatedProperty1&lt;/aux-property-editor>
+  &lt;aux-property-editor>RelatedProperty2&lt;/aux-property-editor>
+<font color="#888888">&lt;/property-editor></font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">&lt;property-editor>
+  &lt;property>MainProperty&lt;/property></font>
+  &lt;related-content>
+    &lt;property-editor>
+      &lt;property>RelatedProperty1&lt;/property>
+      &lt;related-content>
+        &lt;property>RelatedProperty2&lt;/property>
+      &lt;/related-content>
+    &lt;/property-editor>
+  &lt;/related-content>
+<font color="#888888">&lt;/property-editor></font></code></pre>
+    </td>
+  </tr>
+</table>
+
+<p><a href="enhancements.html#related-content">See New Feature Documentation</a></p>
+
+<h2><a name="composite-ref">Composite Reference</a></h2>
+
+<p>The composite-ref construct has been replaced with a more flexible include construct which allows
+any form part to be included.</p>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>&lt;composite-ref>
+  &lt;id>bug.report&lt;/id>
+&lt;/composite-ref></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>&lt;include>bug.report&lt;/include></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>&lt;composite-ref>
+  &lt;id>bug.report&lt;/id>
+  &lt;param>
+    &lt;name>SomeParam&lt;/name>
+    &lt;value>SomeValue&lt;/value>
+  &lt;/param>
+&lt;/composite-ref></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>&lt;include>
+  &lt;part>bug.report&lt;/part>
+  &lt;param>
+    &lt;name>SomeParam&lt;/name>
+    &lt;value>SomeValue&lt;/value>
+  &lt;/param>
+&lt;/include></code></pre>
+    </td>
+  </tr>
+</table>
+
+<p>The following Eclipse search/replace regular expression can be used to perform this
+migration (only works when there are no params):</p>
+
+<p style="margin-left: 20px;"><code>Scope: &nbsp;&nbsp;&nbsp;*.sdef<br/>
+<nobr>Search: &nbsp;&nbsp;(?s)&lt;composite-ref>.*?&lt;id>(.*?)&lt;/id>.*?&lt;/composite-ref></nobr><br/>
+<nobr>Replace: &nbsp;&lt;include>\1&lt;/include></nobr></p>
+
+<h2><a name="section-description">Section Description</a></h2>
+
+<p>The description construct under section has been removed. Use label and spacer to achieve the same result.</p>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>&lt;section>
+  &lt;description>description&lt;/description></id>
+&lt;/section></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>&lt;section>
+  &lt;content>
+    &lt;label>description&lt;/label>
+    &lt;spacer/>
+  &lt;/content>
+&lt;/section></code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="function">Function Name Method</a></h2>
+
+<p>Implementations of custom expression language functions (classes that extend Function) need to be updated
+to implement the required new name method. The returned name should be consistent with the name used when
+registering the function in sapphire-extension.xml file. The new method is used during toString() execution
+on a parsed expression.</p>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>public class CustomFunction extends Function
+{
+    @Override
+    public FunctionResult evaluate( FunctionContext context )
+    {
+        ...
+    }
+}</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>public class CustomFunction extends Function
+{
+    @Override
+    public String name()
+    {
+        return "Custom";
+    }
+
+    @Override
+    public FunctionResult evaluate( FunctionContext context )
+    {
+        ...
+    }
+}</code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="with">With Directive</a></h2>
+
+<p>The with directive capabilities have been expanded to allow ancestor element access via a path. To
+accommodate this feature, the "property" XML element in the sdef syntax has been renamed to "path".</p>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">&lt;with></font>
+    &lt;property><font color="#888888">SomeProperty</font>&lt;/property>
+    <font color="#888888">&lt;default-panel>
+        &lt;content>
+            ...
+        &lt;/content>
+    &lt;/default-panel>
+&lt;/with></font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">&lt;with></font>
+    &lt;path><font color="#888888">SomeProperty</font>&lt;/path>
+    <font color="#888888">&lt;default-panel>
+        &lt;content>
+            ...
+        &lt;/content>
+    &lt;/default-panel>
+&lt;/with></font></code></pre>
+    </td>
+  </tr>
+</table>
+
+<p>The following Eclipse search/replace regular expression can be used to perform this
+migration:</p>
+
+<p style="margin-left: 20px;"><code>Scope: &nbsp;&nbsp;&nbsp;*.sdef<br/>
+<nobr>Search: &nbsp;&nbsp;(?s)&lt;with>(.*?)&lt;property>(.*?)&lt;/property>(.*?)&lt;/with></nobr><br/>
+<nobr>Replace: &nbsp;&lt;with>\1&lt;path>\2&lt;/path>\3&lt;/with></nobr></p>
+
+<h2><a name="element-image">Model Element Image</a></h2>
+
+<p>The API for model element image provider has been changed to unify it with the model element services
+API and to support notification of image changes.</p>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">@Image( </font>small<font color="#888888"> = "..." )</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">@Image( </font>path<font color="#888888"> = "..." )</font></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>@Image( provider = AttendeeImageProvider.class )
+
+public interface IAttendee extends IModelElement
+{
+    ...
+}
+
+...
+
+public class AttendeeImageProvider extends ImageProvider
+{
+    private static final String IMG_PERSON 
+        = SapphireSamplesPlugin.PLUGIN_ID + "/org/eclipse/sapphire/samples/contacts/Contact.png";
+
+    private static final String IMG_PERSON_FADED 
+        = SapphireSamplesPlugin.PLUGIN_ID + "/org/eclipse/sapphire/samples/contacts/ContactFaded.png";
+
+    @Override
+    public String getSmallImagePath( IModelElement element )
+    {
+        if( ( (IAttendee) element ).isInContactsDatabase().getContent() )
+        {
+            return IMG_PERSON;
+        }
+        else
+        {
+            return IMG_PERSON_FADED;
+        }
+    }
+
+    @Override
+    public String getSmallImagePath( ModelElementType type )
+    {
+        return IMG_PERSON;
+    }
+}</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>@Image( path = "Contact.png" )
+@Service( impl = AttendeeImageService.class )
+
+public interface IAttendee extends IModelElement
+{
+    ...
+}
+
+...
+
+public class AttendeeImageService extends ImageService
+{
+    private static final ImageData IMG_PERSON 
+        = ImageData.readFromClassLoader( IContact.class, "Contact.png" );
+
+    private static final ImageData IMG_PERSON_FADED 
+        = ImageData.readFromClassLoader( IContact.class, "ContactFaded.png" );
+
+    private ModelPropertyListener listener;
+
+    @Override
+    public void init( IModelElement element, String[] params )
+    {
+        super.init( element, params );
+
+        this.listener = new ModelPropertyListener()
+        {
+            @Override
+            public void handlePropertyChangedEvent( final ModelPropertyChangeEvent event )
+            {
+                notifyListeners( new ImageChangedEvent( AttendeeImageProviderService.this ) );
+            }
+        };
+
+        element.addListener( this.listener, IAttendee.PROP_IN_CONTACTS_DATABASE.getName() );
+    }
+
+    @Override
+    public ImageData provide()
+    {
+        if( ( (IAttendee) element() ).isInContactsDatabase().getContent() )
+        {
+            return IMG_PERSON;
+        }
+        else
+        {
+            return IMG_PERSON_FADED;
+        }
+    }
+
+    @Override
+    public void dispose()
+    {
+        super.dispose();
+        element().removeListener( this.listener, IAttendee.PROP_IN_CONTACTS_DATABASE.getName() );
+    }
+}</code></pre>
+    </td>
+  </tr>
+</table>
+
+<p>The following Eclipse search/replace regular expression can be used to perform some of this
+migration:</p>
+
+<p style="margin-left: 20px;"><code>Scope: &nbsp;&nbsp;&nbsp;*.java<br/>
+<nobr>Search: &nbsp;&nbsp;(?s)@Image\((.*?)small(.*?)=(.*?)"(.*?)"(.*?)\)</nobr><br/>
+<nobr>Replace: &nbsp;@Image\(\1path\2=\3"\4"\5\)</nobr></p>
+
+<h2><a name="required-annotation">Required Annotation</a></h2>
+
+<p>The NonNullValue annotation has been renamed to Required to better reflect its broader usage
+with both value and element properties.</p>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>@NonNullValue
+
+<font color="#888888">ValueProperty PROP_NAME = new ValueProperty( TYPE, "Name" );
+
+Value<String> getName();
+void setName( String name );</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>@Required
+
+<font color="#888888">ValueProperty PROP_NAME = new ValueProperty( TYPE, "Name" );
+
+Value<String> getName();
+void setName( String name );</font></code></pre>
+    </td>
+  </tr>
+</table>
+
+<p>The following Eclipse search/replace regular expressions can be used to perform this
+migration:</p>
+
+<p style="margin-left: 20px;"><code>Scope: &nbsp;&nbsp;&nbsp;*.java<br/>
+<nobr>Search: &nbsp;&nbsp;(?s)@NonNullValue</nobr><br/>
+<nobr>Replace: &nbsp;@Required</nobr></p>
+
+<p style="margin-left: 20px;"><code>Scope: &nbsp;&nbsp;&nbsp;*.java<br/>
+<nobr>Search: &nbsp;&nbsp;(?s)import org\.eclipse\.sapphire\.modeling\.annotations\.NonNullValue;</nobr><br/>
+<nobr>Replace: &nbsp;import org\.eclipse\.sapphire\.modeling\.annotations\.Required;</nobr></p>
+
+<h2><a name="master-details-content-node-factory">Master Details Content Node Factory</a></h2>
+
+<p>The syntax of master details content node factory has been modified to better reflect its
+broader usage with both list and element properties.</p>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>&lt;node-list>
+    <font color="#888888">&lt;property>HeterogeneousList&lt;/property></font>
+    &lt;node-template>
+        <font color="#888888">&lt;model-element-type>IChildElementWithInteger&lt;/model-element-type>
+        &lt;label>${ StringValue == null ? "&amp;lt;child-with-integer&amp;gt;" : StringValue }&lt;/label>
+        &lt;section>
+            &lt;label>child element with integer&lt;/label>
+            &lt;content>
+                &lt;property-editor>StringValue&lt;/property-editor>
+                &lt;property-editor>IntegerValue&lt;/property-editor>
+            &lt;/content>
+        &lt;/section></font>
+    &lt;/node-template>
+    &lt;node-template>
+        <font color="#888888">&lt;model-element-type>IChildElementWithEnum&lt;/model-element-type>
+        &lt;label>${ StringValue == null ? "&amp;lt;child-with-enum&amp;gt;" : StringValue }&lt;/label>
+        &lt;section>
+            &lt;label>child element with enum&lt;/label>
+            &lt;content>
+                &lt;property-editor>StringValue&lt;/property-editor>
+                &lt;property-editor>EnumValue&lt;/property-editor>
+            &lt;/content>
+        &lt;/section></font>
+    &lt;/node-template>
+    &lt;node-template>
+        <font color="#888888">&lt;model-element-type>IChildElement&lt;/model-element-type>
+        &lt;label>${ StringValue == null ? "&amp;lt;child&amp;gt;" : StringValue }&lt;/label>
+        &lt;section>
+            &lt;label>child element&lt;/label>
+            &lt;content>
+                &lt;property-editor>StringValue&lt;/property-editor>
+            &lt;/content>
+        &lt;/section></font>
+    &lt;/node-template>
+&lt;/node-list></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>&lt;node-factory>
+    <font color="#888888">&lt;property>HeterogeneousList&lt;/property></font>
+    &lt;case>
+        <font color="#888888">&lt;model-element-type>IChildElementWithInteger&lt;/model-element-type>
+        &lt;label>${ StringValue == null ? "&amp;lt;child-with-integer&amp;gt;" : StringValue }&lt;/label>
+        &lt;section>
+            &lt;label>child element with integer&lt;/label>
+            &lt;content>
+                &lt;property-editor>StringValue&lt;/property-editor>
+                &lt;property-editor>IntegerValue&lt;/property-editor>
+            &lt;/content>
+        &lt;/section></font>
+    &lt;/case>
+    &lt;case>
+        <font color="#888888">&lt;model-element-type>IChildElementWithEnum&lt;/model-element-type>
+        &lt;label>${ StringValue == null ? "&amp;lt;child-with-enum&amp;gt;" : StringValue }&lt;/label>
+        &lt;section>
+            &lt;label>child element with enum&lt;/label>
+            &lt;content>
+                &lt;property-editor>StringValue&lt;/property-editor>
+                &lt;property-editor>EnumValue&lt;/property-editor>
+            &lt;/content>
+        &lt;/section></font>
+    &lt;/case>
+    &lt;case>
+        <font color="#888888">&lt;model-element-type>IChildElement&lt;/model-element-type>
+        &lt;label>${ StringValue == null ? "&amp;lt;child&amp;gt;" : StringValue }&lt;/label>
+        &lt;section>
+            &lt;label>child element&lt;/label>
+            &lt;content>
+                &lt;property-editor>StringValue&lt;/property-editor>
+            &lt;/content>
+        &lt;/section></font>
+    &lt;/case>
+&lt;/node-factory></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>&lt;node-ref><font color="#888888">CommonNode</font>&lt;/node-ref></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>&lt;node-include><font color="#888888">CommonNode</font>&lt;/node-include></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>&lt;node-list-ref><font color="#888888">CommonNodeFactory</font>&lt;/node-list-ref></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>&lt;node-include><font color="#888888">CommonNodeFactory</font>&lt;/node-include></code></pre>
+    </td>
+  </tr>
+</table>
+
+<p>The following Eclipse search/replace regular expressions can be used to perform this
+migration:</p>
+
+<p style="margin-left: 20px;"><code>Scope: &nbsp;&nbsp;&nbsp;*.sdef<br/>
+<nobr>Search: &nbsp;&nbsp;(?s)&lt;node-list></nobr><br/>
+<nobr>Replace: &nbsp;&lt;node-factory></nobr></p>
+
+<p style="margin-left: 20px;"><code>Scope: &nbsp;&nbsp;&nbsp;*.sdef<br/>
+<nobr>Search: &nbsp;&nbsp;(?s)&lt;/node-list></nobr><br/>
+<nobr>Replace: &nbsp;&lt;/node-factory></nobr></p>
+
+<p style="margin-left: 20px;"><code>Scope: &nbsp;&nbsp;&nbsp;*.sdef<br/>
+<nobr>Search: &nbsp;&nbsp;(?s)&lt;node-template></nobr><br/>
+<nobr>Replace: &nbsp;&lt;case></nobr></p>
+
+<p style="margin-left: 20px;"><code>Scope: &nbsp;&nbsp;&nbsp;*.sdef<br/>
+<nobr>Search: &nbsp;&nbsp;(?s)&lt;/node-template></nobr><br/>
+<nobr>Replace: &nbsp;&lt;/case></nobr></p>
+
+<p style="margin-left: 20px;"><code>Scope: &nbsp;&nbsp;&nbsp;*.sdef<br/>
+<nobr>Search: &nbsp;&nbsp;(?s)&lt;node-ref></nobr><br/>
+<nobr>Replace: &nbsp;&lt;node-include></nobr></p>
+
+<p style="margin-left: 20px;"><code>Scope: &nbsp;&nbsp;&nbsp;*.sdef<br/>
+<nobr>Search: &nbsp;&nbsp;(?s)&lt;/node-ref></nobr><br/>
+<nobr>Replace: &nbsp;&lt;/node-include></nobr></p>
+
+<p style="margin-left: 20px;"><code>Scope: &nbsp;&nbsp;&nbsp;*.sdef<br/>
+<nobr>Search: &nbsp;&nbsp;(?s)&lt;node-list-ref></nobr><br/>
+<nobr>Replace: &nbsp;&lt;node-include></nobr></p>
+
+<p style="margin-left: 20px;"><code>Scope: &nbsp;&nbsp;&nbsp;*.sdef<br/>
+<nobr>Search: &nbsp;&nbsp;(?s)&lt;/node-list-ref></nobr><br/>
+<nobr>Replace: &nbsp;&lt;/node-include></nobr></p>
+
+<h2><a name="jump-action-handle">Jump Action Handler</a></h2>
+
+<p>Jump action handler API has been improved slightly to make it less likely that a subclass will override
+enablement logic from the parent class rather than augmenting it.</p>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>public class CustomJumpActionHandler extends SapphireJumpActionHandler
+{
+    @Override
+    public void refreshEnablementState()
+    {
+        setEnabled( ... );
+    }
+}</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>public class CustomJumpActionHandler extends SapphireJumpActionHandler
+{
+    @Override
+    protected boolean computeEnablementState()
+    {
+        if( super.computeEnablementState() == true )
+        {
+            return ...
+        }
+
+        return false;
+    }
+}</code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="show-in-source">Show In Source Action</a></h2>
+
+<p>The "show in source" action has been generalized to apply to other contexts besides the content outline. 
+This necessitated change of the id.</p>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>Sapphire.Outline.ShowInSource</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>Sapphire.ShowInSource</code></pre>
+    </td>
+  </tr>
+</table>
+
+<div class="copyright">Copyright (c) 2016 Oracle<br/>
+Content made available under the terms of <a href="http://www.eclipse.org/legal/epl-v10.html">Eclipse Public License</a>.</div>
+
+</body>
+
+</html>

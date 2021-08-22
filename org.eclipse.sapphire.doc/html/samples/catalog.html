@@ -1,0 +1,110 @@
+<!-- 
+ ******************************************************************************
+ * Copyright (c) 2016 Oracle
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *    Konstantin Komissarchik - initial implementation and ongoing maintenance
+ ******************************************************************************
+-->
+
+<html>
+
+<head>
+  <title>Catalog Editor Sample</title>
+  <link rel="StyleSheet" href="../style.css" TYPE="text/css"/>
+</head>
+
+<body>
+
+<h1>Catalog Editor Sample</h1>
+
+<p>Catalog editor is a two page editor that primarily demonstrates grouping of flat data.</p> 
+
+<ol>
+  <li>Key Concepts</li>
+  <ol type="A">
+    <li>Using a custom list binding to group items based on an item property value</li>
+    <li>Simultaneous presentation of the same items grouped in different ways.</li>
+  </ol>
+  <li>Model</li>
+  <ol type="A">
+    <li>Value property</li>
+    <li>Derived value property using EL</li>
+    <li>List property (homogeneous and heterogeneous)</li>
+    <li>@ReadOnly list property</li>
+    <li>@Required</li>
+    <li>@LongString</li>
+    <li>@PossibleValues using values from model</li>
+  </ol>
+  <li>XML</li>
+  <ol type="A">
+    <li>Basic root binding using @XmlBinding</li>
+    <li>Basic value property binding using @XmlBinding</li>
+    <li>Basic list property binding using @XmlListBinding</li>
+    <li>Custom list property binding using @CustomXmlListBinding</li>
+    <li>Two page editor with an XML source editor page</li>
+  </ol>
+  <li>Forms</li>
+  <ol type="A">
+    <li>Master-details editor page</li>
+    <ol type="a">
+      <li>Extending persistent state</li>
+      <ol type="i">
+        <li>Custom persistent state element type for the "Show Manufacturer" and "Show Price" features</li>
+        <li>Generic persistent attributes used for the "Color Code Manufacturers" feature</li>
+      </ol>
+      <li>Custom page-level toggle action</li>
+    </ol>
+    <li>Content node</li>
+    <li>Content node factory</li>
+    <ol type="a">
+      <li>EL used for node label to base label of item nodes on item name and manufacturer</li>
+      <li>EL used for node image to implement the "Color Code Manufacturers" feature</li>
+    </ol>
+    <li>Content node include</li>
+    <ol type="a">
+      <li>Reuse the same node factory definition in several places</li>
+    </ol>
+    <li>Section</li>
+    <ol type="a">
+      <li>EL used for section description to customize description to context</li>
+    </ol>
+    <li>Section Reference</li>
+    <ol type="a">
+      <li>Reuse the same section definition in several places</li>
+    </ol>
+    <li>Property editor</li>
+    <ol type="a">
+      <li>Text field</li>
+      <li>Table</li>
+    </ol>
+    <li>Page book</li>
+    <ol type="a">
+      <li>Using list selection for master-details effect</li>
+    </ol>
+    <li>Label</li>
+    <li>Actuator</li>
+    <li>Line separator with label</li>
+  </ol>
+  <li>Expression Language</li>
+  <ol type="A">
+    <li>Ternary operator (conditional expression)</li>
+    <li>Concat() function</li>
+    <li>Min() function</li>
+    <li>Max() function</li>
+    <li>Scale() function</li>
+    <li>State() function</li>
+    <li>Custom function (CatalogItemImage)</li>
+  </ol>
+</ol>
+
+<div class="copyright">Copyright (c) 2016 Oracle<br/>
+Content made available under the terms of <a href="http://www.eclipse.org/legal/epl-v10.html">Eclipse Public License</a>.</div>
+
+</body>
+
+</html>

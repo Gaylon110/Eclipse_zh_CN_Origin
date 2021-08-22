@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+ ******************************************************************************
+ * Copyright (c) 2016 Oracle
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *    Shenxue Zhou - initial implementation and ongoing maintenance
+ ******************************************************************************
+-->
+
+<extension xmlns="http://www.eclipse.org/sapphire/xmlns/extension" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <service>
+        <id>DiagramLayoutPersistenceService.Project</id>
+        <context>Sapphire.Part</context>
+        <implementation>org.eclipse.sapphire.workspace.ui.internal.ProjectDiagramLayoutPersistenceService</implementation>
+        <condition>org.eclipse.sapphire.workspace.ui.internal.ProjectDiagramLayoutPersistenceService$Condition</condition>
+    </service>
+    <service>
+        <id>DiagramLayoutPersistenceService.SideBySide</id>
+        <context>Sapphire.Part</context>
+        <implementation>org.eclipse.sapphire.workspace.ui.internal.SideBySideDiagramLayoutPersistenceService</implementation>
+        <condition>org.eclipse.sapphire.workspace.ui.internal.SideBySideDiagramLayoutPersistenceService$Condition</condition>
+    </service>
+    <service>
+        <id>DiagramLayoutPersistenceService.Workspace</id>
+        <context>Sapphire.Part</context>
+        <implementation>org.eclipse.sapphire.workspace.ui.internal.WorkspaceDiagramLayoutPersistenceService</implementation>
+        <condition>org.eclipse.sapphire.workspace.ui.internal.WorkspaceDiagramLayoutPersistenceService$Condition</condition>
+    </service>
+    <service>
+        <id>Sapphire.ConversionService.ResourceStoreToFile</id>
+        <implementation>org.eclipse.sapphire.workspace.ui.internal.ResourceStoreToFileConversionService</implementation>
+        <description>ConversionService implementation for ResourceStore to File conversions via FileStoreEditorInput. Used in the case where an editor is open to a file outside of the workspace.</description>
+        <context>Sapphire</context>
+    </service>
+    <service>
+        <id>Sapphire.ConversionService.ResourceStoreToIFile</id>
+        <implementation>org.eclipse.sapphire.workspace.ui.internal.ResourceStoreToIFileConversionService</implementation>
+        <description>ConversionService implementation for ResourceStore to IFile conversions via FileEditorInput.</description>
+        <context>Sapphire</context>
+    </service>
+</extension>

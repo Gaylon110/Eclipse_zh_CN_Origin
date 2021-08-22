@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %Bundle-Name
+Bundle-SymbolicName: org.eclipse.mylyn.builds.core;singleton:=true
+Bundle-Version: 1.15.0.v20170411-2141
+Bundle-ClassPath: org.eclipse.mylyn.builds.core_1.15.0.v20170411-2141.jar
+Bundle-Vendor: %Bundle-Vendor
+Bundle-Localization: plugin
+Export-Package: org.eclipse.mylyn.builds.core;x-friends:="org.eclipse.mylyn.builds.ui",
+  org.eclipse.mylyn.builds.core.spi;x-friends:="org.eclipse.mylyn.builds.ui",
+  org.eclipse.mylyn.builds.internal.core;x-friends:="org.eclipse.mylyn.builds.ui",
+  org.eclipse.mylyn.builds.internal.core.operations;x-friends:="org.eclipse.mylyn.builds.ui",
+  org.eclipse.mylyn.builds.internal.core.util;x-friends:="org.eclipse.mylyn.builds.ui"
+Require-Bundle: org.eclipse.core.runtime,
+  org.eclipse.core.databinding.observable,
+  org.eclipse.emf.ecore,
+  org.eclipse.emf.ecore.xmi,
+  org.eclipse.mylyn.commons.core;bundle-version="3.8.0",
+  org.eclipse.mylyn.commons.repositories.core;bundle-version="1.0.0"
+Build-Jdk: 1.8.0_121
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/mylyn/org.eclipse.mylyn.builds.git;path="org.eclipse.mylyn.builds.core";commitId=daa05efa45def78c85ce4a982cb36557b479cd0f
+Created-By: Apache Maven 3.0.5
+Built-By: genie.mylyn
+Archiver-Version: Plexus Archiver

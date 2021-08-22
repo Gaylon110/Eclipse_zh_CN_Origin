@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.emf.compare.rcp.ui.accessorFactory">
+      <factory
+            class="org.eclipse.emf.compare.uml2.rcp.ui.internal.accessor.factory.UMLStereotypeApplicationChangeFeatureAccessorFactory"
+            ranking="25">
+      </factory>
+      <factory
+            class="org.eclipse.emf.compare.uml2.rcp.ui.internal.accessor.factory.UMLStereotypeStringAttributeChangeAccessorFactory"
+            ranking="25">
+      </factory>
+      <factory
+            class="org.eclipse.emf.compare.uml2.rcp.ui.internal.accessor.factory.UMLStereotypeSingleAttributeChangeAccessorFactory"
+            ranking="25">
+      </factory>
+      <factory
+            class="org.eclipse.emf.compare.uml2.rcp.ui.internal.accessor.factory.UMLStereotypeManyAttributeChangeAccessorFactory"
+            ranking="25">
+      </factory>
+      <factory
+            class="org.eclipse.emf.compare.uml2.rcp.ui.internal.accessor.factory.UMLStereotypeSingleReferenceChangeAccessorFactory"
+            ranking="25">
+      </factory>
+      <factory
+            class="org.eclipse.emf.compare.uml2.rcp.ui.internal.accessor.factory.UMLStereotypeManyReferenceChangeAccessorFactory"
+            ranking="25">
+      </factory>
+      <factory
+            class="org.eclipse.emf.compare.uml2.rcp.ui.internal.accessor.factory.OpaqueElementBodyChangeAccessorFactory"
+            ranking="25">
+      </factory>
+      <factory
+            class="org.eclipse.emf.compare.uml2.rcp.ui.internal.accessor.factory.UMLDanglingStereotypeApplicationAccessorFactory"
+            ranking="25">
+      </factory>
+      <factory
+            class="org.eclipse.emf.compare.uml2.rcp.ui.internal.accessor.factory.MultiplicityElementAttributeChangeAccessorFactory"
+            ranking="25">
+      </factory>
+   </extension>
+   <extension
+         point="org.eclipse.emf.compare.rcp.ui.filters">
+      <filter
+            activeByDefault="true"
+            class="org.eclipse.emf.compare.uml2.rcp.ui.internal.structuremergeviewer.filters.UMLRefinedElementsFilter"
+            description="This filter is responsible for filtering out refined UML differences."
+            label="UML refined elements">
+      </filter>
+   </extension>
+   <extension
+         point="org.eclipse.emf.compare.rcp.ui.contentMergeViewerCustomization">
+      <treeContentCustomization
+            contentProvider="org.eclipse.emf.compare.uml2.rcp.ui.internal.mergeviewer.item.impl.DanglingStereotypeApplicationMergeViewerItemProvider"
+            ranking="101">
+      </treeContentCustomization>
+   </extension>
+</plugin>

@@ -1,0 +1,192 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.emf.ecp.view.custom.model;singleton:=
+ true
+Archiver-Version: Plexus Archiver
+Built-By: genie.ecp
+Require-Bundle: org.eclipse.core.runtime;bundle-version="[3.7.0,4.0.0)
+ ", org.eclipse.emf.ecore;bundle-version="[2.7.0,3.0.0)";visibility:=r
+ eexport, org.eclipse.emf.ecp.view.model;bundle-version="[1.16.0,1.17.
+ 0)";visibility:=reexport, org.eclipse.emf.ecp.edit;bundle-version="[1
+ .16.0,1.17.0)", org.eclipse.emfforms.localization;bundle-version="[1.
+ 16.0,1.17.0)"
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/emfcli
+ ent/org.eclipse.emf.ecp.core.git;path="bundles/org.eclipse.emf.ecp.vi
+ ew.custom.model";commitId=f2dbbd13b720d1f9463c4d5909101632edfd5c17
+Bundle-Vendor: %providerName
+Import-Package: org.eclipse.core.databinding.property.list;version="0.
+ 0.0", org.eclipse.core.databinding.property.value;version="0.0.0", or
+ g.eclipse.emf.databinding;version="0.0.0", org.eclipse.emf.ecp.common
+ .spi;version="[1.16.0,1.17.0)", org.eclipse.emf.ecp.common.spi.assert
+ s;version="[1.16.0,1.17.0)", org.eclipse.emfforms.spi.common.report;v
+ ersion="[1.16.0,1.17.0)", org.eclipse.emfforms.spi.core.services.data
+ binding;version="[1.16.0,1.17.0)", org.eclipse.emfforms.spi.core.serv
+ ices.databinding.emf;version="[1.16.0,1.17.0)", org.eclipse.emfforms.
+ spi.core.services.domainexpander;version="[1.16.0,1.17.0)", org.eclip
+ se.emfforms.spi.core.services.mappingprovider;version="[1.16.0,1.17.0
+ )", org.eclipse.emfforms.spi.core.services.structuralchange;version="
+ [1.16.0,1.17.0)", org.osgi.service.component.annotations;version="[1.
+ 2.0,2.0.0)";resolution:=optional
+Service-Component: OSGI-INF/EMFFormsCustomDMRExpander.xml,OSGI-INF/org
+ .eclipse.emf.ecp.view.spi.custom.model.impl.CustomDMRConverter.xml,OS
+ GI-INF/org.eclipse.emf.ecp.view.spi.custom.model.impl.CustomDMRMappin
+ gProvider.xml,OSGI-INF/org.eclipse.emf.ecp.view.spi.custom.model.impl
+ .StructuralChangeCustomDMRTester.xml
+Export-Package: org.eclipse.emf.ecp.view.spi.custom.model;version="1.1
+ 6.0", org.eclipse.emf.ecp.view.spi.custom.model.impl;version="1.16.0"
+ , org.eclipse.emf.ecp.view.spi.custom.model.util;version="1.16.0"
+Bundle-Name: %pluginName
+Bundle-Version: 1.16.0.20180305-1637
+Bundle-ClassPath: .
+Bundle-Localization: plugin
+Bundle-Activator: org.eclipse.emf.ecp.view.spi.custom.model.impl.Activ
+ ator
+Created-By: Apache Maven 3.5.2
+Build-Jdk: 1.8.0_162
+
+Name: OSGI-INF/EMFFormsCustomDMRExpander.xml
+SHA-256-Digest: TMxAGCn6/Vi5VdTBLzhBryHSgzkOdmdS/xO6Yz6fdW8=
+
+Name: about.properties
+SHA-256-Digest: KfRk+3x68LWKzAVcbatbmdUcd5gpGtQFpXRsUSZ8NtM=
+
+Name: plugin.xml
+SHA-256-Digest: aqmcJjxodUeB9YnGFx20T5wEdCPmyW0DA7P7on/aUP0=
+
+Name: OSGI-INF/org.eclipse.emf.ecp.view.spi.custom.model.impl.CustomDM
+ RMappingProvider.xml
+SHA-256-Digest: WFX4OAhNnslHvuAuzZqsTuufsLJi0zGVrqmm2OnyilQ=
+
+Name: org/eclipse/emf/ecp/view/spi/custom/model/VCustomPackage$Literal
+ s.class
+SHA-256-Digest: 6JWOLoj8j2Q4poLF8hEEffH8VA8WvqwHVcHoHLjxajU=
+
+Name: org/eclipse/emf/ecp/view/spi/custom/model/impl/VCustomControlImp
+ l.class
+SHA-256-Digest: JfmkFu9BuKwTn0ANk/5hK27H4M0O2nxlo1gROW7pDxY=
+
+Name: org/eclipse/emf/ecp/view/spi/custom/model/impl/VCustomPackageImp
+ l.class
+SHA-256-Digest: RrgXXeKofbnNltQ1xjXI0WT4CybE66cEtqzbJX8Nz5w=
+
+Name: org/eclipse/emf/ecp/view/spi/custom/model/impl/EMFFormsCustomDMR
+ Expander.class
+SHA-256-Digest: +mJZnLW/MwrWMAcYBxuEWEIqfrTbdvcPOlvCUcEh0r4=
+
+Name: org/eclipse/emf/ecp/view/spi/custom/model/VCustomPackage.class
+SHA-256-Digest: Jpw7OEueQ3ETMqRi78UhOSPHby6vdzJ+ewZrUa/i0iE=
+
+Name: org/eclipse/emf/ecp/view/spi/custom/model/ECPHardcodedReferences
+ .class
+SHA-256-Digest: 6abwNdg6l2FlWx1qxkBdRg3fVWWbBuf1vFrige5K5xc=
+
+Name: about.mappings
+SHA-256-Digest: ZucZG+EtVdFUqxmGDhoy0Go3l4mbfg9sdoccSBUojW0=
+
+Name: org/eclipse/emf/ecp/view/spi/custom/model/impl/CustomDMRConverte
+ r.class
+SHA-256-Digest: yQZkxdLgV9inzgBrsmZLZUFVih1LRFjLtNS1IAqgsI8=
+
+Name: org/eclipse/emf/ecp/view/spi/custom/model/impl/Activator.class
+SHA-256-Digest: 9YqG6Lp8tjfQhWFo5j3clRXdTWkpEeLmYgGK8viufbA=
+
+Name: about.ini
+SHA-256-Digest: AFJCrWPhOVpZRuNPuUA1PEi+yu43YdTHNbGzaQyYcV8=
+
+Name: plugin.properties
+SHA-256-Digest: xcejJWJIL96eUI3sctfn3AN/muS2NMgyp10qpQewlNI=
+
+Name: org/eclipse/emf/ecp/view/spi/custom/model/impl/VCustomFactoryImp
+ l.class
+SHA-256-Digest: wXcCTunCJTMXc/KY4FDfRcZWWzFwHQum4A/4Nf06mOc=
+
+Name: org/eclipse/emf/ecp/view/spi/custom/model/impl/StructuralChangeC
+ ustomDMRTester.class
+SHA-256-Digest: 4zkptebpEmPy49ha4hbHKU/WcWhcSUkT1cjPf9uFs6I=
+
+Name: org/eclipse/emf/ecp/view/spi/custom/model/impl/VCustomDomainMode
+ lReferenceImpl$2.class
+SHA-256-Digest: 4iDJ32/wlS+hpNgcYqG/jr61/k6qSu7qtAStYqYd1Ng=
+
+Name: OSGI-INF/org.eclipse.emf.ecp.view.spi.custom.model.impl.Structur
+ alChangeCustomDMRTester.xml
+SHA-256-Digest: E28vSzUsZTt9hc7xJXi1MJAezMHn8gkzS4RTJNcrRzI=
+
+Name: OSGI-INF/org.eclipse.emf.ecp.view.spi.custom.model.impl.CustomDM
+ RConverter.xml
+SHA-256-Digest: YL6pYMUdkMZX4jV8AQgWCFOA17x91OYNoY/5Rtid11I=
+
+Name: model/custom.history
+SHA-256-Digest: RTHqg1/1MVVneH2TaLFUEiNStI5FL0bdYbvpOR/DKis=
+
+Name: modeling32.png
+SHA-256-Digest: saSrfvJ79Uzl2BFpCbuVBho1UTuf14LrjD+wGJG44Ok=
+
+Name: org/eclipse/emf/ecp/view/spi/custom/model/impl/VCustomDomainMode
+ lReferenceImpl$1.class
+SHA-256-Digest: IPYNwTwRKFyebEaEGH7P/rqOofflNNKFmzfrx7goBD4=
+
+Name: about.html
+SHA-256-Digest: ZYczHLHHJbJ2GSLe/MBOpU/zRznwNG9X6G0P5BecAYs=
+
+Name: org/eclipse/emf/ecp/view/spi/custom/model/VCustomFactory.class
+SHA-256-Digest: wqVwBA12U26/yBONj3oSnZutuMU37Jpl2b2pOKR+GGw=
+
+Name: model/custom.ecore
+SHA-256-Digest: XNJ4kRv5xhKGPGhFjphUep7HPsTe25MqjOH/IaFgu8E=
+
+Name: org/eclipse/emf/ecp/view/spi/custom/model/impl/VCustomDomainMode
+ lReferenceImpl$ExistingIteratorIterator.class
+SHA-256-Digest: /0rX60v4WAPLzM0xJjMRZ41f+/mQ82usKINx2mpQWQo=
+
+Name: org/eclipse/emf/ecp/view/spi/custom/model/util/CustomAdapterFact
+ ory$1.class
+SHA-256-Digest: aglQbX5E1py1GNPna/DrlRg99Ipd7R0bYCxkolmjQ2A=
+
+Name: org/eclipse/emf/ecp/view/spi/custom/model/util/CustomSwitch.clas
+ s
+SHA-256-Digest: bKJtk/CRrWu6W38EwyvzD+fBT4GKoFa6FHnVfM5ULP8=
+
+Name: org/eclipse/emf/ecp/view/spi/custom/model/impl/CustomDMRMappingP
+ rovider.class
+SHA-256-Digest: ufJgpirmsqlUbMRpkWpBaVzOjMJ8GjqB4rQD75KmLdA=
+
+Name: org/eclipse/emf/ecp/view/spi/custom/model/ECPCustomControlChange
+ Listener.class
+SHA-256-Digest: rqe1a2lR0XNW+Fh3u4CGEx7gYKR8VlphM3KfAPGjmoQ=
+
+Name: model/custom.genmodel
+SHA-256-Digest: F/+hmCGAKQz7ZFKHaEuw7yeOP+2sdV3MP3Sys4iqaeE=
+
+Name: org/eclipse/emf/ecp/view/spi/custom/model/VCustomDomainModelRefe
+ rence.class
+SHA-256-Digest: 4Q8VWogDh4j5cdYOFn8pIykOiAWqDOQ48BbVc93tPc0=
+
+Name: META-INF/maven/org.eclipse.emf.ecp/org.eclipse.emf.ecp.view.cust
+ om.model/pom.xml
+SHA-256-Digest: xz5nL0t3anWWcIYYr66vPjr+yWFhXGg5SSfnAAraYf4=
+
+Name: org/eclipse/emf/ecp/view/spi/custom/model/util/CustomAdapterFact
+ ory.class
+SHA-256-Digest: f6EMAYUxkpQMg8nXRxTl3xyFcf0AG6qzWgonN9FT+z8=
+
+Name: org/eclipse/emf/ecp/view/spi/custom/model/impl/VCustomDomainMode
+ lReferenceImpl$3.class
+SHA-256-Digest: gXe2k3Y7TzAVCn3FU3o5cXPHSmjX5LiqWZTEzBi8bJs=
+
+Name: org/eclipse/emf/ecp/view/spi/custom/model/impl/VCustomDomainMode
+ lReferenceImpl.class
+SHA-256-Digest: fR/MaWqzp2Kai2AxDBufnBSbbUSL4ryakmeLEpkvUAY=
+
+Name: org/eclipse/emf/ecp/view/spi/custom/model/VCustomControl.class
+SHA-256-Digest: c1ajDWXOOXmu106Oh7KiPJrgJRvTLd0bHqjczE2YIes=
+
+Name: OSGI-INF/l10n/bundle.properties
+SHA-256-Digest: ppSiEbrujfR0BvqlDGsaB8YCMaO0r6xSAD08MyAwGZs=
+
+Name: META-INF/maven/org.eclipse.emf.ecp/org.eclipse.emf.ecp.view.cust
+ om.model/pom.properties
+SHA-256-Digest: 64QhfZD+rdPrOj2u7bXKSykxsowuEsWJkrm9WvXNgrY=
+

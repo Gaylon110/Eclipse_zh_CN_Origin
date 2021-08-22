@@ -1,0 +1,216 @@
+<!-- 
+ ******************************************************************************
+ * Copyright (c) 2016 Oracle
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *    Konstantin Komissarchik - initial implementation and ongoing maintenance
+ ******************************************************************************
+-->
+
+<html>
+
+<head>
+  <title>Enhancements in Sapphire 0.7.1</title>
+  <link rel="StyleSheet" href="../../style.css" TYPE="text/css"/>
+  <style type="text/css">
+    pre.source-code-compare 
+    {
+      font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; 
+      color: #000000;
+      background-color: #ffffff;
+      font-size: 12px;
+      border: 0px;
+      line-height: 14px;
+      padding: 5px;
+      margin-left: 0px;
+      margin-right: 0px;
+      overflow: auto
+    }
+    .unaffected
+    {
+      color: #888888
+    }
+    .comment
+    {
+      color: #006600;
+      font-style: italic
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>Enhancements in Sapphire 0.7.1</h1>
+
+<ol>
+  <li><a href="#Core">Core</a></li>
+  <ol type="A">
+    <li><a href="#Core-CustomCollation">Custom Collation</a></li>
+    <li><a href="#Core-ElementEnhancements">Element Enhancements</a></li>
+    <li><a href="#Core-ObservableCollections">Observable Collections</a></li>
+  </ol>
+  <li><a href="#ExpressionLanguage">Expression Language</a></li>
+  <ol type="A">
+    <li><a href="#ExpressionLanguage-ReplaceFunction">Replace Function</a></li>
+    <li><a href="#ExpressionLanguage-EncodeToXmlFunction">EncodeToXml Function</a></li>
+    <li><a href="#ExpressionLanguage-GlobalFunction">Global Function</a></li>
+  </ol>
+  <li><a href="#Forms">Forms</a></li>
+  <ol type="A">
+    <li><a href="#Forms-SapphireWizardEnhancements">SapphireWizard Enhancements</a></li>
+  </ol>
+  <li><a href="#SDK">SDK</a></li>
+  <ol type="A">
+    <li><a href="#SDK-LogicalStructureInDebugger">Logical Structure in the Debugger</a></li>
+  </ol>
+</ol>
+
+
+<h2><a name="Core"><a name="Core-CustomCollation">Custom Collation</a></a></h2>
+
+<p>The developer can now specify a custom collation for a list index, such a collation that ignores letter case differences.</p>
+
+<pre class="source-code"><code><font color="#888888">ElementList
+{
+    Index&lt;T> index( ValueProperty property )</font>
+    Index&lt;T> index( ValueProperty property, Comparator&lt;String> comparator )
+    <font color="#888888">Index&lt;T> index( String property )</font>
+    Index&lt;T> index( String property, Comparator&lt;String> comparator )
+<font color="#888888">}</font></code></pre>
+
+<p>The new @Collation annotation can be used to specify collation for a property. The specified collation is leveraged by various
+parts of the framework, such as the NoDuplicates annotation. The @Collation annotation supports <a href="../../el/index.html">Sapphire EL</a>.</p>
+
+<pre class="source-code"><font color="#888888">@NoDuplicates</font>
+@Collation( ignoreCaseDifferences = "true" )
+
+<font color="#888888">ValueProperty PROP_NAME = new ValueProperty( TYPE, "Name" );
+
+Value&lt;String> getName();
+void setName( String value );</font></code></pre>
+
+<p>When more control is necessary, a custom implementation of CollationService can be provided.</p>
+
+<pre class="source-code"><font color="#888888">@NoDuplicates</font>
+@Service( impl = ExampleCollationService.class )
+
+<font color="#888888">ValueProperty PROP_NAME = new ValueProperty( TYPE, "Name" );
+
+Value&lt;String> getName();
+void setName( String value );</font></code></pre>
+
+<pre class="source-code"><code>public class ExampleCollationService extends CollationService
+{
+    @Override
+    protected Comparator&lt;String> compute()
+    {
+        return new Comparator<String>()
+        {
+            public int compare( final String a, final String b )
+            {
+                ...
+            }
+        };
+    }
+}</code></pre>
+
+
+<h2><a name="Core-ElementEnhancements">Element Enhancements</a></h2>
+
+<p>Determine if an element is empty using the new method. An element is empty when all of its properties are empty.</p>
+
+<pre class="source-code"><code><font color="#888888">Element
+{</font>
+    public boolean empty()
+<font color="#888888">}</font></code></pre>
+
+<p>Find all non-empty properties in an element using the new method.</p>
+
+<pre class="source-code"><code><font color="#888888">Element
+{</font>
+    public SortedSet&lt;Property> content()
+<font color="#888888">}</font></code></pre>
+
+
+<h2><a name="Core-ObservableCollections">Observable Collections</a></h2>
+
+<p>Create collections that can be monitored for changes. An Observable wrapper is provided for List, Set and Map.</p>
+
+<pre class="source-code"><code>ObservableMap&lt;String,String> map = new ObservableMap&lt;String,String>();
+
+Listener listener = new Listener()
+{
+    public void handle( final Event event )
+    {
+        ...
+    }
+};
+    
+map.attach( listener );
+
+...
+
+map.detach( listener );</code></pre>
+ 
+
+<h2><a name="ExpressionLanguage"><a name="ExpressionLanguage-ReplaceFunction">Replace Function</a></a></h2>
+
+<p>Replaces all occurrences of a regular expression pattern with the provided replacement text. The full semantics
+are specified by Java's <nobr>String.replaceAll( String, String )</nobr> function.</p>
+
+<pre class="source-code"><code>${ Message.Replace( "\n", "&lt;br/>" ) }</code></pre>
+
+<pre class="source-code"><code>${ Message.Replace( "[0-9]", "x" ) }</code></pre>
+
+
+<h2><a name="ExpressionLanguage-EncodeToXmlFunction">EncodeToXml Function</a></h2>
+
+<p>Encodes a string for use as XML element content or an attribute value.</p>
+
+<pre class="source-code"><code>${ Message.EncodeToXml }</code></pre>
+
+
+<h2><a name="ExpressionLanguage-GlobalFunction">Global Function</a></h2>
+
+<p>Returns a map of global objects maintained through Sapphire.global() API.</p>
+
+<pre class="source-code"><code>Sapphire.global().put( "User", "John" );</code></pre>
+
+<pre class="source-code"><code>${ Global.User }</code></pre>
+
+
+<h2><a name="Forms"><a name="Forms-SapphireWizardEnhancements">SapphireWizard Enhancements</a></a></h2>
+
+<p>When the finish operation of a SapphireWizard fails with an error status, a dialog is opened showing the
+failure message. In some cases, customization of the failure handling behavior is desired.</p>
+
+<pre class="source-code"><code><font color="#888888">SapphireWizard
+{</font>
+    protected boolean handleFinishFailure( Status status )
+<font color="#888888">}</font></code></pre>
+
+<p>Certain use cases require access to the corresponding part from a SapphireWizard instance.</p>
+
+<pre class="source-code"><code><font color="#888888">SapphireWizard
+{</font>
+    public WizardPart part()
+<font color="#888888">}</font></code></pre>
+
+
+<h2><a name="SDK"><a name="SDK-LogicalStructureInDebugger">Logical Structure in the Debugger</a></a></h2>
+
+<p>Examining a model in a debug session is difficult as the logical structure is hidden among complex
+implementation details. A debugger extension is now provided to show the logical structure of elements
+and properties.</p>
+
+
+<div class="copyright">Copyright (c) 2016 Oracle<br/>
+Content made available under the terms of <a href="http://www.eclipse.org/legal/epl-v10.html">Eclipse Public License</a>.</div>
+
+</body>
+
+</html>

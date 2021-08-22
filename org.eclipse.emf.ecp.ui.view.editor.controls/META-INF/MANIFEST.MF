@@ -1,0 +1,578 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.emf.ecp.ui.view.editor.controls;singl
+ eton:=true
+Archiver-Version: Plexus Archiver
+Built-By: genie.ecp
+Require-Bundle: org.eclipse.core.runtime;bundle-version="3.7.0", org.e
+ clipse.emf.ecp.edit.swt;bundle-version="[1.16.0,1.17.0)", org.eclipse
+ .emf.edit.ui;bundle-version="2.8.0", org.eclipse.emf.ecp.ui;bundle-ve
+ rsion="[1.16.0,1.17.0)", org.eclipse.emf.ecp.view.rule.model;bundle-v
+ ersion="[1.16.0,1.17.0)", org.eclipse.emf.ecp.workspace.core;bundle-v
+ ersion="[1.16.0,1.17.0)", org.eclipse.emf.ecp.view.model.provider.xmi
+ ;bundle-version="[1.16.0,1.17.0)", org.eclipse.emf.ecp.view.table.mod
+ el;bundle-version="[1.16.0,1.17.0)", org.eclipse.emf.ecp.ide.view.ser
+ vice;bundle-version="[1.16.0,1.17.0)", org.eclipse.emf.ecore.xmi;bund
+ le-version="[2.7.0,3.0.0)", org.eclipse.emf.ecp.view.treemasterdetail
+ .ui.swt;bundle-version="[1.16.0,1.17.0)", org.eclipse.emf.ecp.view.co
+ re.swt;bundle-version="[1.16.0,1.17.0)", org.eclipse.emf.ecp.ui.view.
+ swt;bundle-version="[1.16.0,1.17.0)", org.eclipse.emf.ecp.view.templa
+ te.model;bundle-version="[1.16.0,1.17.0)", org.eclipse.emf.ecp.view.s
+ tack.model;bundle-version="[1.16.0,1.17.0)", org.eclipse.emf.ecore.ed
+ it;bundle-version="[2.7.0,3.0.0)", org.eclipse.emf.ecp.view.label.mod
+ el;bundle-version="[1.16.0,1.17.0)", org.eclipse.emf.ecp.common.ui;bu
+ ndle-version="[1.16.0,1.17.0)", org.eclipse.emf.ecp.view.custom.model
+ ;bundle-version="[1.16.0,1.17.0)", org.eclipse.emf.databinding.edit;b
+ undle-version="[1.3.0,2.0.0)", org.eclipse.core.databinding.property;
+ bundle-version="[1.4.0,2.0.0)", org.eclipse.emfforms.localization;bun
+ dle-version="[1.16.0,1.17.0)", org.eclipse.emfforms.core.services;bun
+ dle-version="[1.16.0,1.17.0)", org.eclipse.emfforms.core.services.edi
+ tsupport;bundle-version="[1.16.0,1.17.0)", org.eclipse.emfforms.swt.c
+ ore.di;bundle-version="[1.16.0,1.17.0)", org.eclipse.emf.ecp.view.uti
+ l.swt;bundle-version="[1.16.0,1.17.0)"
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/emfcli
+ ent/org.eclipse.emf.ecp.core.git;path="bundles/org.eclipse.emf.ecp.ui
+ .view.editor.controls";commitId=f2dbbd13b720d1f9463c4d5909101632edfd5
+ c17
+Bundle-Vendor: Eclipse Modeling Project
+Import-Package: org.eclipse.emfforms.spi.common.report;version="[1.16.
+ 0,1.17.0)", org.eclipse.emfforms.spi.core.services.databinding.emf;ve
+ rsion="[1.16.0,1.17.0)", org.eclipse.jface.databinding.swt;version="0
+ .0.0", org.eclipse.jface.databinding.viewers;version="0.0.0", org.ecl
+ ipse.jface.resource;version="0.0.0", org.eclipse.swt;version="0.0.0",
+  org.eclipse.swt.graphics;version="0.0.0", org.eclipse.swt.layout;ver
+ sion="0.0.0", org.eclipse.swt.widgets;version="0.0.0", org.osgi.servi
+ ce.component.annotations;version="[1.2.0,2.0.0)";resolution:=optional
+Service-Component: OSGI-INF/ControlRootEClassControl2SWTRendererServic
+ e.xml,OSGI-INF/ControlRootEClassControlChangeableSWTRendererService.x
+ ml,OSGI-INF/DomainModelReferenceControlSWTRendererService.xml,OSGI-IN
+ F/LeafConditionControlRendererService.xml,OSGI-INF/LinkFeatureControl
+ RendererService.xml,OSGI-INF/StackItemControlRendererService.xml,OSGI
+ -INF/TableColumnsDMRTableControlService.xml,OSGI-INF/TableDetailViewC
+ ontrolSWTRendererService.xml,OSGI-INF/TableWidthConfigurationDMRRende
+ rerService.xml,OSGI-INF/ColumnEnablementConfigurationDMRRendererServi
+ ce.xml
+Export-Package: org.eclipse.emf.ecp.view.internal.editor.controls;vers
+ ion="1.16.0";x-internal:=true, org.eclipse.emf.ecp.view.internal.edit
+ or.handler;version="1.16.0";x-friends:="org.eclipse.emf.ecp.view.mode
+ l.project.installer,org.eclipse.emf.ecp.view.model.editor,org.eclipse
+ .emf.ecp.view.treemasterdetail.ui.swt", org.eclipse.emf.ecp.view.spi.
+ editor.controls;version="1.16.0"
+Bundle-Name: Controls
+Bundle-Version: 1.16.0.20180305-1637
+Bundle-Activator: org.eclipse.emf.ecp.view.internal.editor.controls.Ac
+ tivator
+Created-By: Apache Maven 3.5.2
+Build-Jdk: 1.8.0_162
+
+Name: plugin.xml
+SHA-256-Digest: 50cYTUaBLnk1KDQIzmJzaaMwFcxzZd8VKgqDniWsOOg=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/EditableERefer
+ enceLabelControlSWTRenderer.class
+SHA-256-Digest: GUsGUUlxd27BUmw8HZ/qQec9N/p+4CCsr1Z4s0RlamI=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/ControlRootECl
+ assControl2SWTRenderer$5.class
+SHA-256-Digest: xeQCApm4zP4MDD2FpgDhbpw9qHcVuQr7utmJWcU9ygw=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/ControlRootECl
+ assControlChangeableSWTRenderer$2.class
+SHA-256-Digest: 6x/AgRZ708zT9HF5xtZKNJ8TblDkuQGhO03y0acEmek=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/EReferenceLabe
+ lControlSWTRenderer$7$1.class
+SHA-256-Digest: 9hvlO8dAzvMaObKPrBx6m2BA3yljoEssTa0mq79hLNM=
+
+Name: org/eclipse/emf/ecp/view/spi/editor/controls/Helper.class
+SHA-256-Digest: 2pVZoBHygFMr9gbg36RdMG089Kdwsowl/zGQkYgml+Y=
+
+Name: OSGI-INF/StackItemControlRendererService.xml
+SHA-256-Digest: /QcwkM+MenUHSf9ZQ/DQK08s44cVVHmTI1Zk1KPMn+Q=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/ECPSelectionSt
+ atusValidator.class
+SHA-256-Digest: m/61Fesl3oZVQOtZtXfIBp2RolIxY5lI9u6em8OqW6Y=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/TableDetailVie
+ wControlSWTRenderer$CreateNewElementHandler.class
+SHA-256-Digest: b2/Cst19aVugTqhQ34LXoccZWxbgkLTvWxwo2GptdOE=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/ControlRootECl
+ assControl2SWTRenderer$2.class
+SHA-256-Digest: /XHq8+9t3wEedDsZFTuVWZh5N9UWlxWq3q+/VwYaNrQ=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/DomainModelRef
+ erenceControlSWTRenderer$3.class
+SHA-256-Digest: dQ6RPOmXUPZis2vYY/ktTaNAqBRiv89VC21m07MfWPI=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/DomainModelRef
+ erenceControlSWTRendererService.class
+SHA-256-Digest: bGPz7c1Zz8BIsZNr697S9+tg8wiy0+G/o8Wvb1klRrk=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/EReferenceLabe
+ lControlSWTRenderer$2.class
+SHA-256-Digest: LtHz+IRUVFjDfLXvWg8PC7wWt0YZEL7184jErkhDqg0=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/handler/ControlGenerato
+ r.class
+SHA-256-Digest: QoS4OI45f+4b2REI53BePMVcG5W80mtHm0n7jdClzQU=
+
+Name: about.ini
+SHA-256-Digest: AFJCrWPhOVpZRuNPuUA1PEi+yu43YdTHNbGzaQyYcV8=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/TableDetailVie
+ wControlSWTRendererService.class
+SHA-256-Digest: 1kCVtUtYYOV2/ZhpVHnT9YElNP0MRUhSKabNrcc6JSE=
+
+Name: icons/generate.png
+SHA-256-Digest: /OpwVh8T1/Htw3pU1tb2UwaD7DFSExcVIUyh9KHxPpA=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/EditableERefer
+ enceLabelControlSWTRenderer$3.class
+SHA-256-Digest: T2Ym7Se/xPfv+qN5UduBm9OeBIyyGjrWJub8aXe77qk=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/EReferenceLabe
+ lControlSWTRenderer$5.class
+SHA-256-Digest: rb/RiOfUgrXaYKzZPu8YCyyxTMvIwZ8co0yOMPQDwCk=
+
+Name: icons/generateColumns.png
+SHA-256-Digest: BaHDPmJP83eBtR31CWh8ftNZ3P1bUe/3Bj66iadICdg=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/handler/SelectAttribute
+ sWizardPage$7.class
+SHA-256-Digest: UWIX5m+Pw4FESi5AZ3zz7CIE6eBOHTZL17wop2JZpjs=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/EReferenceLabe
+ lControlSWTRenderer$7.class
+SHA-256-Digest: 3Livq4+io597i0cYtOBTV2A7XlTgkRCk324dGZiUXNE=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/LinkFeatureCon
+ trolRendererService.class
+SHA-256-Digest: Bx64IB9/t9Xbb7kA7nFaEOI72fMjIuHNO6R0leGjJ4Q=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/handler/GenerateControl
+ sHandler$CallbackFeatureSupplier.class
+SHA-256-Digest: zhYkDX8TDNSnFXLPs6voYAVTd2770oC3dXEOGA1bQg8=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/TableColumnsDM
+ RTableControl$AddSelectionAdapter.class
+SHA-256-Digest: TjbfHdSKZgx7txpeNF1iGH4yRhkq57MJ2/fwy2geuFs=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/TableColumnsDM
+ RTableControl$TableControlAdapter.class
+SHA-256-Digest: a33ddieQ/Tz+uvWjQNs3AKKyiBuKuzBqPoCmSNjhOxk=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/handler/CreateDomainMod
+ elReferenceWizard$CustomizeDomainModelReferencePage.class
+SHA-256-Digest: GBm5eMKoaTtNeNhn113jxOTcA1bDx16J3Gbwtc9CZtQ=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/TableDetailVie
+ wControlSWTRenderer$6.class
+SHA-256-Digest: E2i5TzKntVmTkmZdBUXRtYEv3Z83/rpbb8KYKmA4mAg=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/TableColumnsDM
+ RTableControl.class
+SHA-256-Digest: Yc90Wz5Xo2xEBjk2cXuCEagVuy200iKVBnIvX2+GU8s=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/LinkFeatureCon
+ trolRenderer$FilteredReferenceCommand.class
+SHA-256-Digest: xQQTbkcEi0PujEp+w64VPWcngQszAzddVj6yUR4gG+8=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/handler/SelectAttribute
+ sWizardPage$4.class
+SHA-256-Digest: n3l49UHu9A/1bePjhVRdtHkBjTNbjvGBiSgm6a180Uc=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/handler/GenerateControl
+ sHandler.class
+SHA-256-Digest: BkBS2VFX/3pFkOfR9BDxCuvzNnHKqnu1kKs/fAqd2bI=
+
+Name: OSGI-INF/l10n/bundle.properties
+SHA-256-Digest: GutEkISZsfrtnBavI4UJb0HhzpPWozWE44Vm+D3ObH8=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/TableDetailVie
+ wControlSWTRenderer$3.class
+SHA-256-Digest: 5CuCptrJAi/YJ9ETzvXJ+04o17dusLk2ARLwDN4z61Y=
+
+Name: OSGI-INF/TableColumnsDMRTableControlService.xml
+SHA-256-Digest: JElcGPU1A3Pn4kHrMmAg4dYVc942h6/1XLd6GtoGMeU=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/TableDetailVie
+ wControlSWTRenderer$4.class
+SHA-256-Digest: 4UUvt8uFnZ/i8JwVVGP7z/jRO+m2Ts5mJQh39JeGD5I=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/ColumnConfigur
+ ationDMRRendererReferenceService.class
+SHA-256-Digest: T5G/YbLOh+9JtXYEEwR40Wz5CbimP03VcL7xqUaoY+k=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/ControlRootECl
+ assControl2SWTRenderer$7.class
+SHA-256-Digest: h8Ghptgv1JzpzOGYaxip6kj/XobpJ/5eOdukAVJRUD4=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/DomainModelRef
+ erenceControlSWTRenderer$SelectionAdapterExtension.class
+SHA-256-Digest: 218pkvYzOfkp2i+j6XiFOUxD1rxAWb9VAplYbsxvixc=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/LinkFeatureCon
+ trolRenderer.class
+SHA-256-Digest: irutC5kQpkCX95Zzk04FIJI4jWx1DL6pcq61e5F7tNY=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/ExpectedValueC
+ ontrolRenderer.class
+SHA-256-Digest: av5RrtmZKcz/CBbboe1x/5xB1UfI5FM6Ceru9YgxqSo=
+
+Name: about.mappings
+SHA-256-Digest: sGvVCnvZ5sBZD1m3gPjT2Pcvj+rfJ/upke1VEq9ZzT4=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/ExpectedValueC
+ ontrolRenderer$ModelToTargetUpdateStrategy.class
+SHA-256-Digest: mRGodprI0vPhTYlPMqg1f5YPMqWLQsM3+h8LedX8Bn8=
+
+Name: OSGI-INF/TableWidthConfigurationDMRRendererService.xml
+SHA-256-Digest: NYZuCYjOxdTrS+qEZnwBr1Oxc0dNV4zeBCXWM9eYWqU=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/ControlRootECl
+ assControlChangeableSWTRenderer$EClassContentProvider.class
+SHA-256-Digest: jbh0v6XKxMtHlVfMFiLLOozUlGkNWMQ49o9j2PV6JMw=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/handler/SelectAttribute
+ sWizardPage.class
+SHA-256-Digest: +P3IsdnU81tzrXCqFe0IQKkv/y5o8nnXL0rQx22JAKA=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/ControlRootECl
+ assControl2SWTRendererService.class
+SHA-256-Digest: oOg2TL6AEBHfD61IQrpaKPDsdOZViI4dmMLyoP67RVc=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/ExpectedValueC
+ ontrolRenderer$TargetToModelUpdateStrategy.class
+SHA-256-Digest: lzNWQV0I90uAepUBN/hcjs6Vz3Ygp0xwhIK0Bw26rx8=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/DomainModelRef
+ erenceControlSWTRenderer$5$1.class
+SHA-256-Digest: tuda+PrrogZkMDaFpbF9s7yXNGBP6XFCSM0QHL6FrZA=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/DomainModelRef
+ erenceControlSWTRenderer$5.class
+SHA-256-Digest: XmynUVBXbB81UUY0bgVt9Hx7EzvBpWDIPd5elaaqwkE=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/LeafConditionC
+ ontrolRendererService.class
+SHA-256-Digest: APUImZZOrSfuJGN1DJVmBS5AG5neAvIUCn7sclikVBk=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/EditableERefer
+ enceLabelControlSWTRenderer$5.class
+SHA-256-Digest: eU0fm2CAmfo2aV+hg/db7TUhatBdGFeQPE1F1aAWh2k=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/ColumnEnableme
+ ntConfigurationDMRRenderer.class
+SHA-256-Digest: Cuta4A4bAJa7y+snmcirBLnUMD1dMdCI2p+eiAO/fkc=
+
+Name: org/eclipse/emf/ecp/view/spi/editor/controls/AbstractFilteredRef
+ erenceCommand$1.class
+SHA-256-Digest: Ib0Uhrgj8eEGP68OzVaQwcUaqAVaudY0Qb8cK4Iwd1Y=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/ECPViewEditorT
+ reeSelectionDialog.class
+SHA-256-Digest: UKpWDldMVLIHTFvZ4tJo3FhBwkUNhVq8WFmN2845Ixk=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/handler/SelectAttribute
+ sDialog.class
+SHA-256-Digest: F3X9elaAg9f4RxZAPzM04nfajSfdYP70wX0bKgu7pso=
+
+Name: modeling32.png
+SHA-256-Digest: saSrfvJ79Uzl2BFpCbuVBho1UTuf14LrjD+wGJG44Ok=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/ControlRootECl
+ assControl2SWTRenderer$6.class
+SHA-256-Digest: ciAagxS5w4bJZkCuZP96aYC482JlhcgiWlOKasYucNY=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/StackItemContr
+ olRenderer.class
+SHA-256-Digest: FOA9uMG0y8UvFkluTCQWrzyyFrnYxoUAIzWcdFvvCEY=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/handler/CreateDomainMod
+ elReferenceWizard.class
+SHA-256-Digest: Tm72T08k9SYIqYGHP5P0bG57zg35H2PEo88eAgwni0Y=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/handler/GenerateTableCo
+ lumnsForSubclassesHandler.class
+SHA-256-Digest: NvZkEXajvyhue53p2CRAho8xb3LnkZeugrE4P49TjpA=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/handler/SelectAttribute
+ sWizardPage$5.class
+SHA-256-Digest: UHzlX7IMU4LWuL8ekmMs/GoW0zlciyWsIgf8gVA8O5c=
+
+Name: OSGI-INF/TableDetailViewControlSWTRendererService.xml
+SHA-256-Digest: UsjNysoWttSYcNbBtjTccpo+JHnoouJpt+czJlDym3s=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/DomainModelRef
+ erenceControlSWTRenderer$6.class
+SHA-256-Digest: lpXhi1sAMhhXITxjw0QRcWl28TTaMcwufb2WkJZMe8k=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/TableColumnsDM
+ RTableControl$SortSelectionAdapter$1.class
+SHA-256-Digest: Rn33K/zS5aOCypbCOoMUR0Rn2UW7mBQ5Kq0nDTBK/I4=
+
+Name: OSGI-INF/ColumnEnablementConfigurationDMRRendererService.xml
+SHA-256-Digest: 3vlPecDhETu4mkQv6sMU3BU2+cYCrf93kTW5vUd0QWs=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/TableDetailVie
+ wControlSWTRenderer$5.class
+SHA-256-Digest: nHVuEU3JMpDyQuL675PKiL2FFhmKrK4ZfrZqeYVDNZM=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/StackItemContr
+ olRendererService.class
+SHA-256-Digest: YYaXBKuJu9bui3IJzaV/YOc3t1pH018UuCgef0V/+e4=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/ControlRootECl
+ assControl2SWTRenderer$7$1.class
+SHA-256-Digest: bGirnJPJQMb/ky2IdglVqINNsB4ylp7FU2/Za6+9czM=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/EditableERefer
+ enceLabelControlSWTRenderer$4.class
+SHA-256-Digest: gErx0cM6c5QBn5TEqp/y8PAGiM1qDu2JvzYn0L0M/SU=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/Activator.clas
+ s
+SHA-256-Digest: Ez2Ay9RXT3popDtP+zA7fgnXhZFhp5C8JCAVcNNZXSk=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/DomainModelRef
+ erenceControlSWTRenderer.class
+SHA-256-Digest: 5Kq6sXO3gIOTb54mmMpBvUdKtMYGmIFZWhFBm+OGioM=
+
+Name: about.properties
+SHA-256-Digest: JPlRhPXQ0GuM7evMZLv588YDSyah3OFZPAik+LmQVnc=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/TableColumnsDM
+ RTableControl$TableColumnsLabelProvider.class
+SHA-256-Digest: N6La+nzoMeadAnH8Wy56+x/33MTb55D/krBKnN8dBFk=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/ControlRootECl
+ assControlChangeableSWTRenderer.class
+SHA-256-Digest: sqqsyqbjSXe5SrPy6DxPTYVByFW2T5l9a/E6WhQgTnc=
+
+Name: META-INF/maven/org.eclipse.emf.ecp/org.eclipse.emf.ecp.ui.view.e
+ ditor.controls/pom.properties
+SHA-256-Digest: j+Si52hsgIFjFyNwtr8OHOCxxghRucpO84YUqdeAwgk=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/EReferenceLabe
+ lControlSWTRenderer$6.class
+SHA-256-Digest: f6AhGywSFcoovLpDr7le54on3R7jqIrdG+TKWBJA1yw=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/handler/GenerateTableCo
+ lumnsHandler.class
+SHA-256-Digest: 2iKHt9lc0sG0PLaTw7JhSe2hEBKBe1xIBQSBLImAiNQ=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/handler/SelectDataSegme
+ ntWizardPage.class
+SHA-256-Digest: i0MeLCmk4I7PcBjOK28F2tjmHw+h+LxrMrNwzafQ3fs=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/handler/SelectAttribute
+ sWizardPage$6.class
+SHA-256-Digest: ZnncG3ypHMaAWfbEgXihfuW5seI2C8Z9gYRLVbQfNVM=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/handler/SelectAttribute
+ sWizardPage$3.class
+SHA-256-Digest: OcLyWXMFZIz4VaCyfWw9FTIXiSAXFT1PmbS4Iw1xAYA=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/ExpectedValueC
+ ontrolRenderer$1.class
+SHA-256-Digest: jyN7tZkL3K7weiMNe4YYuKAoUwQNfI/xfFDHOZQDM3c=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/TableDetailVie
+ wControlSWTRenderer.class
+SHA-256-Digest: 6eGn95Zf6giUA4b0CX6BahS1coxnVXYAp6wCR8Z/U2w=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/TableDetailVie
+ wControlSWTRenderer$2.class
+SHA-256-Digest: duw023lCV1yiW3eandthqDWjazRfD4Mj0F31K8nFEpA=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/Activator$1.cl
+ ass
+SHA-256-Digest: F2eFwjPRd7U23X0M+gdWx1O8AD22JfdUCZL2LyGeDmQ=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/TableColumnsDM
+ RTableControlService.class
+SHA-256-Digest: asRzRDgfMjwcCA+xG6kn06VVMGu+TD1p4sTDHDxsmE0=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/ColumnEnableme
+ ntConfigurationDMRRendererService.class
+SHA-256-Digest: 88wriIEPf621SkZMi9Gt0H5Cn9544hpkdzPDEHbd/cQ=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/WidthConfigura
+ tionDMRRenderer.class
+SHA-256-Digest: IgKWt/P69VFDKcVjcHY7vfcfcpizEq2z8V6umE6LpCg=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/ControlRootECl
+ assControl2SWTRenderer.class
+SHA-256-Digest: 8zKSdi33bgfapHFeR2yCPj1+naQNag3aiSdqnKf/hyI=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/DomainModelRef
+ erenceControlSWTRenderer$1.class
+SHA-256-Digest: zmKFeCHHppptHC+CU2hZSCSM5eExPf1wWql2wl9xoV8=
+
+Name: OSGI-INF/LeafConditionControlRendererService.xml
+SHA-256-Digest: rfyo10ppzQ4O2/VPjJN3V0lbThE9LI64oNctyRojs4c=
+
+Name: OSGI-INF/DomainModelReferenceControlSWTRendererService.xml
+SHA-256-Digest: EJ8mM1k68Fw1pTHBdanoS4HDwYe3SniQ01dDKyfxiNs=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/ControlRootECl
+ assControl2SWTRenderer$1.class
+SHA-256-Digest: a2DpsoW2E8S+7BctUqGnPKlt+C7ohfDhhS4NKFnNOtc=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/handler/SelectDataSegme
+ ntWizardPage$1.class
+SHA-256-Digest: 0e541z2nUeWVvwg2oX8n0r1CFadRhuomOH7TtHKKyE4=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/DomainModelRef
+ erenceControlSWTRenderer$4.class
+SHA-256-Digest: VlJXCBojhQt59Xqu+12e+SW83L/MqMcA3YiuLrdQ8Uk=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/LeafConditionC
+ ontrolRenderer.class
+SHA-256-Digest: 54YuJrS6rY6z2cmeOui/4XT0lNgZh+H8WB4qNfT/Ciw=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/ControlRootECl
+ assControlChangeableSWTRenderer$1.class
+SHA-256-Digest: y+T23cuSXVZexQFatQlNsF0Vol6Eei//140h0N5zIFw=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/EReferenceLabe
+ lControlSWTRenderer.class
+SHA-256-Digest: m/h2vvxvB9c/AY9SwfsRzINqVKZmV6vaZffW1aCIHDU=
+
+Name: OSGI-INF/LinkFeatureControlRendererService.xml
+SHA-256-Digest: YCTZN6/7e/wWTcZgQCeyPQcyJRun/dP396wcHJ4YV9E=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/LinkFeatureCon
+ trolRenderer$FilteredReferenceCommand$1.class
+SHA-256-Digest: bQc4ueWJOawYjSOEZBr53+uQGTOS2Mh//fnpN+oyorg=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/EReferenceLabe
+ lControlSWTRenderer$1.class
+SHA-256-Digest: jpYqbSG9QI2LQxnLdzCST33WXdtkM74CxVBt0itGpK8=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/handler/ViewEditorDropA
+ dapter.class
+SHA-256-Digest: q1PGhDwIRH7whuKuEj/jq5B+I1LrT5DtmPiXvNBDPSQ=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/handler/SelectAttribute
+ sWizardPage$1.class
+SHA-256-Digest: gDN8lc6sMxU5AvOhum4NIGoVllnIcD5ccrbqNNNiVB8=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/EReferenceLabe
+ lControlSWTRenderer$4.class
+SHA-256-Digest: GuvmZ72m4PuwJbrg9MSbaXwEhOwKD1yWtDSkyMAFnh8=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/EditableERefer
+ enceLabelControlSWTRenderer$2.class
+SHA-256-Digest: Dnqag3yVuuUo3UQglrW6SNmS2nOmbysQpSOlfV7bngI=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/Activator$2.cl
+ ass
+SHA-256-Digest: c4zmNHhANcouGAkf44xAqJroiwR7tyEsfCCrbAvuUXM=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/handler/MigrateHandler.
+ class
+SHA-256-Digest: PUjAf2xmR81TgBYiwy/cDEY0ZEbyDRknPez9i9g60nU=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/TableColumnsDM
+ RTableControl$SortSelectionAdapter.class
+SHA-256-Digest: IPvHMgJlf/8Z1rAjyefZMdHHf0IM2ga3uLOWbU4UZRU=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/DomainModelRef
+ erenceControlSWTRenderer$2.class
+SHA-256-Digest: 3fa65Ywt9bf4+jPRF1bLxQ1T6CJLaX5bgTqGDmODBjs=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/handler/GenerateControl
+ sHandler$1.class
+SHA-256-Digest: U7e6JIxCQSfSGQrgP/jF0j0rkGtcleF5E63ddxGQEac=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/TableDetailVie
+ wControlSWTRenderer$7.class
+SHA-256-Digest: O9m3rKXjEGs4rIop7wbgxh7crf7j2uvzFgFtiNR2atc=
+
+Name: org/eclipse/emf/ecp/view/spi/editor/controls/AbstractFilteredRef
+ erenceCommand.class
+SHA-256-Digest: DyRGGPKuuhQL1hIx/ei6irfi+wWuENaQSMMq8Gms5Bs=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/TableColumnsDM
+ RTableControl$RemoveSelectionAdapter.class
+SHA-256-Digest: oOknCjQpF1eAzjE1h3QhTOXagAmef75VawrtpguwtHE=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/ControlRootECl
+ assControl2SWTRenderer$4.class
+SHA-256-Digest: LlFfLEgLjE8O+DEz4oZEUnWJZmRhU+Hsr5woJRcnRnU=
+
+Name: OSGI-INF/ControlRootEClassControl2SWTRendererService.xml
+SHA-256-Digest: E8E5huxny8gaHD0YX6hOmcxNBN4xGU1reGiAMWZQGxA=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/handler/SelectAttribute
+ sWizard.class
+SHA-256-Digest: Mm/fYjq/6Wceo0l09qFxjse/vJukzHz+eqyR/EsjIDk=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/handler/SelectAttribute
+ sWizardPage$8.class
+SHA-256-Digest: jzJHDw7Wo/gPv9yTbp6EYnH8q2Qp6HaCsbCBvPynyPs=
+
+Name: about.html
+SHA-256-Digest: ZYczHLHHJbJ2GSLe/MBOpU/zRznwNG9X6G0P5BecAYs=
+
+Name: org/eclipse/emf/ecp/view/spi/editor/controls/AbstractFilteredRef
+ erenceAction.class
+SHA-256-Digest: dLdganpcqtAdxFTo+0s3QrrOqAhPO4ZFg8fn5gFLbb4=
+
+Name: META-INF/maven/org.eclipse.emf.ecp/org.eclipse.emf.ecp.ui.view.e
+ ditor.controls/pom.xml
+SHA-256-Digest: 1aQ9g3kYv7K7BJs6vqnlItujSiEEokESef1H/M0L3l4=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/TableWidthConf
+ igurationDMRRendererService.class
+SHA-256-Digest: 8CXKm7vB4D4B9TPYen4vuV0AbFeWQ8/A/08tCh/3leA=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/EReferenceLabe
+ lControlSWTRenderer$3.class
+SHA-256-Digest: 1dQ9w1ZVMP3F60JFUVSVCdR9aJAPWlIq0xlGMYsE7AA=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/handler/CreateDomainMod
+ elReferenceWizard$CustomizeDomainModelReferencePage$1.class
+SHA-256-Digest: hH99KDZrSdqG8VaKjnPFEM3V1iAvPZHWrbnTY37WTts=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/handler/UnsetRootEClass
+ .class
+SHA-256-Digest: rp21RashiQ0t6B8ZYUru4zpw6wbO6sXWB/8MAWK8ghA=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/TableDetailVie
+ wControlSWTRenderer$1.class
+SHA-256-Digest: LQoSOApsCF19snAGCwappOEFHm4Qjc0yjtv+nwB54T4=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/ControlRootECl
+ assControl2SWTRenderer$3.class
+SHA-256-Digest: 56QfDgm7gglI0FT/dlO0SwVo0blMUFdLC2CjXvKB3q4=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/handler/SelectAttribute
+ sWizardPage$2.class
+SHA-256-Digest: GMgzk/1B/1hnwTwLseMF9wE5wPIuWyBnzwTndpAZKXc=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/handler/GenerateControl
+ sHandler$2.class
+SHA-256-Digest: fugayc97TjCqUjmcHXFWj6lTUtepMCPRQI9ipCy1rhA=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/EditableERefer
+ enceLabelControlSWTRenderer$1.class
+SHA-256-Digest: iuuoCrIlahEa6VrKxdtpHLvpOz4h8vCtLxlpAgPiSNE=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/handler/SelectDataSegme
+ ntWizardPage$DataSegmentTreeContentProvider.class
+SHA-256-Digest: 1ex2arkRiBtSpx3xnVUO5otyEtEpDDiC13l295/TzRU=
+
+Name: org/eclipse/emf/ecp/view/internal/editor/controls/ControlRootECl
+ assControlChangeableSWTRendererService.class
+SHA-256-Digest: A4wRgjsL2854CNJEttFvlC3AO1HbWmm0jUqv7geHRMo=
+
+Name: OSGI-INF/ControlRootEClassControlChangeableSWTRendererService.xm
+ l
+SHA-256-Digest: v+TCS6HhO0//FIg6yslIZ0+sYkvwtA2bjWMO20TBzvg=
+

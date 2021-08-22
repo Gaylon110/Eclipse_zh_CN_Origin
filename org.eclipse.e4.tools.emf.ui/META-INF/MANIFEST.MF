@@ -1,0 +1,3868 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.e4.tools.emf.ui;singleton:=true
+Archiver-Version: Plexus Archiver
+Built-By: genie.releng
+Require-Bundle: org.eclipse.core.runtime;bundle-version="3.9.0",org.ec
+ lipse.core.databinding;bundle-version="1.3.0",org.eclipse.core.databi
+ nding.property;bundle-version="1.2.100",org.eclipse.e4.ui.model.workb
+ ench;bundle-version="0.9.1",org.eclipse.emf.databinding;bundle-versio
+ n="1.2.0",org.eclipse.jface.databinding;bundle-version="1.4.0",org.ec
+ lipse.jface;bundle-version="3.6.0",org.eclipse.emf.edit;bundle-versio
+ n="2.6.0",org.eclipse.equinox.common;bundle-version="3.6.0",org.eclip
+ se.emf.databinding.edit;bundle-version="1.2.0",org.eclipse.core.resou
+ rces;bundle-version="3.6.0",org.eclipse.e4.core.services;bundle-versi
+ on="0.9.1",org.eclipse.osgi;bundle-version="3.6.0",org.eclipse.e4.ui.
+ css.swt.theme;bundle-version="0.9.0",org.eclipse.e4.core.di;bundle-ve
+ rsion="0.9.0",org.eclipse.e4.ui.workbench;bundle-version="0.9.1",org.
+ eclipse.e4.ui.services;bundle-version="0.9.1",org.eclipse.equinox.reg
+ istry;bundle-version="3.5.0",org.eclipse.e4.core.contexts;bundle-vers
+ ion="0.9.0",org.eclipse.e4.ui.di;bundle-version="0.9.0",org.eclipse.e
+ 4.tools.services;bundle-version="0.11.0",org.eclipse.e4.core.di.exten
+ sions;bundle-version="0.9.0",org.eclipse.jface.text;bundle-version="3
+ .7.0",org.eclipse.e4.ui.widgets;bundle-version="0.11.0",org.eclipse.e
+ quinox.preferences;bundle-version="3.4.0",org.eclipse.emf.ecore.xmi;b
+ undle-version="2.9.0",org.eclipse.jdt.core;resolution:=optional,org.e
+ clipse.pde.core;resolution:=optional,org.eclipse.e4.core.commands;bun
+ dle-version="0.10.0",org.eclipse.e4.ui.dialogs;bundle-version="1.0.0"
+ ,org.eclipse.e4.emf.xpath
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ActivationPolicy: lazy
+Eclipse-SourceReferences: scm:git:http://git.eclipse.org/gitroot/e4/or
+ g.eclipse.e4.tools;path="bundles/org.eclipse.e4.tools.emf.ui";tag="I2
+ 0170515-2000";commitId=2feffb5b87204240961455104cf1eb93033ca6d0
+Bundle-Vendor: %providerName
+Import-Package: javax.annotation,javax.inject;version="1.0.0",org.osgi
+ .framework;version="1.5.0",org.osgi.service.event;version="1.3.1"
+Service-Component: OSGI-INF/contributioncollector.xml, OSGI-INF/resour
+ ceprovider.xml
+Export-Package: org.eclipse.e4.tools.emf.ui.common;version="0.12.0.qua
+ lifier";x-friends:="org.eclipse.e4.tools.emf.editor3x,org.eclipse.e4.
+ tools.model.spy",org.eclipse.e4.tools.emf.ui.common.component;version
+ ="0.12.0.qualifier";x-internal:=true,org.eclipse.e4.tools.emf.ui.inte
+ rnal;version="0.12.0.qualifier";x-internal:=true,org.eclipse.e4.tools
+ .emf.ui.internal.common;version="0.12.0.qualifier";x-internal:=true,o
+ rg.eclipse.e4.tools.emf.ui.internal.common.component;version="0.12.0.
+ qualifier";x-internal:=true,org.eclipse.e4.tools.emf.ui.internal.comm
+ on.component.dialogs;version="0.12.0.qualifier";x-internal:=true,org.
+ eclipse.e4.tools.emf.ui.internal.common.component.tabs;version="0.12.
+ 0.qualifier";x-internal:=true,org.eclipse.e4.tools.emf.ui.internal.co
+ mmon.component.tabs.empty;version="0.12.0.qualifier";x-internal:=true
+ ,org.eclipse.e4.tools.emf.ui.internal.common.component.virtual;versio
+ n="0.12.0.qualifier";x-internal:=true,org.eclipse.e4.tools.emf.ui.int
+ ernal.common.objectdata;version="0.12.0.qualifier";x-internal:=true,o
+ rg.eclipse.e4.tools.emf.ui.internal.common.properties;version="0.12.0
+ .qualifier";x-internal:=true,org.eclipse.e4.tools.emf.ui.internal.com
+ mon.resourcelocator;version="0.12.0.qualifier";x-internal:=true,org.e
+ clipse.e4.tools.emf.ui.internal.common.resourcelocator.dialogs;versio
+ n="0.12.0.qualifier";x-internal:=true,org.eclipse.e4.tools.emf.ui.int
+ ernal.common.uistructure;version="0.12.0.qualifier";x-internal:=true,
+ org.eclipse.e4.tools.emf.ui.internal.common.xml;version="0.12.0.quali
+ fier";x-internal:=true,org.eclipse.e4.tools.emf.ui.internal.handlers;
+ version="0.12.0.qualifier";x-internal:=true,org.eclipse.e4.tools.emf.
+ ui.internal.imp;version="0.12.0.qualifier";x-internal:=true,org.eclip
+ se.e4.tools.emf.ui.internal.wbm;version="0.12.0.qualifier";x-friends:
+ ="org.eclipse.e4.tools.emf.editor,org.eclipse.e4.tools.model.spy"
+Bundle-Name: %pluginName
+Bundle-Version: 4.5.200.v20170515-1617
+Bundle-ClassPath: .
+Bundle-Localization: plugin
+Created-By: Apache Maven 3.3.3
+Build-Jdk: 1.8.0_121
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/PartSashCo
+ ntainerEditor$2.class
+SHA-256-Digest: 06/SBYaMXMXVYr81JiPS56rshBfRRtvoPKlJEPAOKXY=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/E4StringPickList.cla
+ ss
+SHA-256-Digest: TS9oxxkr2xG3GrvlE6smvwb++Mi+4CxYWg1SHhnenaA=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VM
+ enuContributionsEditor.class
+SHA-256-Digest: 4UQlL3lYqaGCzP7oOnsPzm2oLNWjzJ7s7teTGL2d8GY=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/ListT
+ ab$1.class
+SHA-256-Digest: bQWCLokNgAa06PFFFLVnPvlHFugKnoUi22ZZKwf4k3g=
+
+Name: icons/full/modelelements/Placeholder.gif
+SHA-256-Digest: TX/r913acXQ7n8LVYVYhj+pJvTckQeL/Z/PYueS0KZU=
+
+Name: org/eclipse/e4/tools/emf/ui/common/Util$2.class
+SHA-256-Digest: 2eCBD/IX9XyKLkSkwlJD6EeLj7ME5JoNS5tYWAWUG0A=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/XmiTa
+ b.class
+SHA-256-Digest: QU+fJRatxE6IoU0rSf2h7xC3xatKNcANj074yppl+20=
+
+Name: css/default.css
+SHA-256-Digest: SZPvmunMnjOF1YjMv7SZ4XeQVZCSt/qHcTTfz4YCZ94=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/IconDialog$4$1.class
+SHA-256-Digest: KOdTFotgGCpTIy8QOUnnw8p3PqMDZM5n6YrCNHiXuzA=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/PartEditor
+ $7.class
+SHA-256-Digest: cP6wSdmqUvI5frYg/EXcAl6izMCW6edpR76CsNKI+Fg=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VW
+ indowWindowsEditor.class
+SHA-256-Digest: 6DPSYCoe5MUO6ltCnyhLxnFUPOzotna3d7mDW1VB5/4=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/NonReferencedResourceDialog$2$1.class
+SHA-256-Digest: vpCRg259dqbaG9uPoeS2PdoitlOIzzL0ZnzP0ObWnuk=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/NonReferencedAction.class
+SHA-256-Digest: qWiOAdPZjMaqjYz/+apXAcZ/8wPlyyufNq5lQPkzLco=
+
+Name: icons/full/modelelements/CommandParameter.png
+SHA-256-Digest: nvb28oKQDZePv79xpCNsod405Z7ov3Sx2OUD4E9oV1I=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/Perspectiv
+ eEditor$1.class
+SHA-256-Digest: wwLqyqNCP2xlNwDXzrRts4lPN7h1qzjRAfMvnrg4GfY=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/properties/ExportIds
+ Handler$ExportIdDialog.class
+SHA-256-Digest: Vz0tj/dYOFM3wR2THX/O7io4xencLheZ6TQRXqUyXQM=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/ProjectFolderPickerDialog$2.class
+SHA-256-Digest: BzoUlE+V182v4scloUHJclSQIUtpVwBSBiBjpgamh5I=
+
+Name: icons/full/obj16/field_protected_obj.gif
+SHA-256-Digest: YbpIoQjrQf19YBJz67JtfoTS25C5QXBkwNQU3R834Lo=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/ModelEditor$4.class
+SHA-256-Digest: JncDlGnmqkAA4uO6nUZpmXFtKHEeQcCgX2Rzhik1uEI=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/StringMode
+ lFragment$2.class
+SHA-256-Digest: 7Y3sVlEArk3/4nLbyWdY/3bJDmE9ARZx2CBBStuXWDA=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/ClassContributionCol
+ lector.class
+SHA-256-Digest: STWU3n+k6KV2OPPiiRV39Ep5DdkZf+xDl4LjzVDoriU=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/AddonsEdit
+ or.class
+SHA-256-Digest: dhQi19Macl3Qf8hrgWd1kG2YVVzxurszZ6iwJWXc9jY=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/ControlHighlighter.c
+ lass
+SHA-256-Digest: LLbCTrtt82RYDbmxhembUokvq1rcmgxcGUdmbAhjgcY=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/uistructure/UIViewer
+ $1.class
+SHA-256-Digest: KJ2KGYD9rjMtWayL0w7pPRnx707P4gTAlretTWIxRM0=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/BindingTab
+ leEditor$2.class
+SHA-256-Digest: aEci+/St103AwlwkfKulqoHjBHHT7ZHKOo+PdH5RSeo=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VH
+ andlerEditor$2.class
+SHA-256-Digest: p9XwR7ynS3Dy4PTIAItNGG58IltBfD2H1scBAk1zgSA=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/WindowEdit
+ or$2.class
+SHA-256-Digest: GLY/F0DF8NGM2trOwVteTJl8iCuGk4L775NDEFhDTU8=
+
+Name: org/eclipse/e4/tools/emf/ui/common/AbstractElementEditorContribu
+ tion.class
+SHA-256-Digest: zTLIlTEqpe/T0mfQOpNNroLjO7zXUj0Z6BIttc9oME8=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/E4Too
+ lItemMenu$1.class
+SHA-256-Digest: p4Vm/tugsAGw56D+IkiIqAF2MxlDuQe+N474zc7WA6M=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Mo
+ delResultHandlerImpl.class
+SHA-256-Digest: gistauZ77TQBLmCIS5nVAGS5UmycWE7CtQFc18OuAX0=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fi
+ lteredContributionDialog$13.class
+SHA-256-Digest: sPeps5moIxeqBzCsePgimyxuywWe1W57C2mRr9oGhxk=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/E4StringPickList$1.c
+ lass
+SHA-256-Digest: hfjN1WnOOw365GX3ndeV3VFyJsLiaOSSRnZsKDHzFCI=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/MenuItemEd
+ itor$3.class
+SHA-256-Digest: Gb3uqI6YCpqiKDYS63MztC5kbH+i9SessBX/FoTrzSM=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VP
+ artDescriptorMenuEditor.class
+SHA-256-Digest: y+4FMkaLh+1qAq/4v3dWdZGxPIw/YZlwDp0IyMaINxE=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ControlFac
+ tory$3.class
+SHA-256-Digest: J48GyCX+I2339UNrY24hlNuRyfHJZLfrk9bVJs9af8A=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/Unsettable
+ UpdateValueStrategy.class
+SHA-256-Digest: pY7O54mO0LUks9Db/NZDqTJU5wDuVBTTkvJlqBMJ7vE=
+
+Name: org/eclipse/e4/tools/emf/ui/common/IModelElementProvider$ModelRe
+ sultHandler.class
+SHA-256-Digest: MrUudUoTqbTQ9U5l/2dqmc7h9vmgeLgiCBnJaw92KWQ=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/Applicatio
+ nEditor$10.class
+SHA-256-Digest: n7a6hLic/d/2E/RWEltobfiT+jjwnYd+TOTH9S/kSEk=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/empty
+ /TitleAreaFilterDialog.class
+SHA-256-Digest: 27iLE8m2oFaUd2K7MmLoHfBRrNY94VAdTiOMMimnKms=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/handlers/RepairDuplicateIte
+ msHandler.class
+SHA-256-Digest: GGflsYpCk6+nFKn8zHeNhyBv+D06X3DPIMl2/u+CZ0w=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VP
+ artDescriptor$4.class
+SHA-256-Digest: Z9rTIowM6a2xEuFi9GHwVJBhbE/MW7to0keioxgfuew=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VW
+ indowControlEditor$3.class
+SHA-256-Digest: /VO9ZGirP1ac/LwXmQiDhWG3lz7/O/Fy+0WK9iTQdmA=
+
+Name: org/eclipse/e4/tools/emf/ui/common/XMIModelResource$1.class
+SHA-256-Digest: ix56wEEirxoY1q0XAMoJ15CTtlVqMiHguhU2m6WY6/I=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/FindContributionDialog$4$1.class
+SHA-256-Digest: afBCz7YcXN62L8kCe8tgBlwUM1BJlY76ANxas4aJ+NE=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/Applicatio
+ nEditor$7.class
+SHA-256-Digest: xoBPv9g64jSN8bKtUhffC6oD620RbHtu1vJ/6b3upOU=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/DocUt
+ il.class
+SHA-256-Digest: fYeitcrXBmFcVSd60QaCm943m2kidFgogAaofumCrp4=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VR
+ ootBindingContexts.class
+SHA-256-Digest: 0JM5iUNUhNN+0xHwA7UM6rDGxO9b6pNDQiLX65iEOc4=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/IGoto
+ Object.class
+SHA-256-Digest: hg9sM28r9RpgbSyz71ipZTckFX4cuJ0ScvP+aR+DPgI=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/Perspectiv
+ eEditor.class
+SHA-256-Digest: NIgUJz9zoEaV6id9/AdVfV27r5XDvKBL99Q0oZaou60=
+
+Name: icons/full/obj16/cross.png
+SHA-256-Digest: 0E7PyT/4bET2/DnjWUXj2Kdki6j82XomNZIN8uiIk7M=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Co
+ mmandCategorySelectionDialog.class
+SHA-256-Digest: mvIKuTfzoikx72yCAMJwKW6VR1/kR9mRYevZJB8txF8=
+
+Name: icons/full/modelelements/MenuContribution.gif
+SHA-256-Digest: vBGz4DordqGs36So5wpFg0WbUGl6t/QU7OT0LJo/yQ8=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/xml/EMFDocumentResou
+ rceMediator.class
+SHA-256-Digest: sqFDMYCd2TnAL1AXojQyPFiSwtPMG6ax61JWDbg3qNU=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/HandledToo
+ lItemEditor$1.class
+SHA-256-Digest: z6KegxL8LzucNdvyGIWhryG7o5B66rReFNnsBj2fAOM=
+
+Name: icons/full/obj16/command.gif
+SHA-256-Digest: ho1FtJosz/FKGA8rLVqdmlemOUZ5eHsyiHLvcpPYdH0=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ToolBarEdi
+ tor$1.class
+SHA-256-Digest: IU1rFK51hCM5mbT8nS3L8phutFhhKVTTlb0Tl3ROuc8=
+
+Name: icons/full/widgets/table_obj.gif
+SHA-256-Digest: 1Nw1KAY0oBpm7A+Q1xAEbo1F5ygB6z2cCsvOxzVMCrE=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Ab
+ stractIconDialogWithScopeAndFilter$SearchThread$1.class
+SHA-256-Digest: kJ47pelyuKluQ5txSS+bJG+kZiOOZNgbhjr3VpAyBpM=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/PickProjectFolderPage$1.class
+SHA-256-Digest: zjaFAwAIrP5K9W0kUOwPHuTrwsqTqUkh5OGl5sRTMhI=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/MenuContri
+ butionEditor$6.class
+SHA-256-Digest: A10qvAFmkCsKx2g36TeSurm1G8/duOg//um7QhPUPp8=
+
+Name: icons/full/modelelements/ToolBar.gif
+SHA-256-Digest: We11rYMmT88T5xIBksE3v+7ZhFZAmpeMKXFfyz7XWx4=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/empty
+ /TitleAreaFilterDialog$2.class
+SHA-256-Digest: C3IfAFSQqcPGR/ypxvN64THpA5c10/k1BdOH1sQIXE4=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/Targ
+ etPlatformContributionCollector$1.class
+SHA-256-Digest: Afxcje3BK1uTu3NEBL4vxZAhskvr6Kx272SJsENncpM=
+
+Name: icons/full/obj16/field_public_obj.gif
+SHA-256-Digest: dqslOLpSw4UfsJOpd/4/2YNIng3rO/t6rsgWbgJfpuY=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fi
+ ndImportElementDialog$1.class
+SHA-256-Digest: EZX/7ATbNgjuJonmE91Enfs7wN6T4Pospxi5caCP7Fk=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VW
+ indowTrimEditor.class
+SHA-256-Digest: bvgrb4KTmoWwz6W6XukIyvLQUWraIisbiI/K7aW5A4I=
+
+Name: org/eclipse/e4/tools/emf/ui/common/IEditorDescriptor.class
+SHA-256-Digest: LtmYEa/N+kCZOx2P0L3BbprktUtSd3k6efAzhEYGo+Q=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/StringMode
+ lFragment$7.class
+SHA-256-Digest: /JrnolK0gB/WVPQU7qyIgti6Bm7LOZC4RV9xLq2fORw=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ToolItemEd
+ itor$3.class
+SHA-256-Digest: XO3rab6lx9r61ooThD4WrbipptUv2/tlIYCGosFlgdw=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/CompositeP
+ artEditor$7.class
+SHA-256-Digest: ZJEsvOvYeuEbl/QB+fTUUW0FY3OaLEJ9ocANoqfVqRc=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Ab
+ stractIdDialog.class
+SHA-256-Digest: rIwph0OIVHU6TCsmO7gopDJupCQVWX5EGc7ADkhaVOg=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/xml/XMLPartitionScan
+ ner.class
+SHA-256-Digest: WUrgzJtL5n5hBrirCDBRHDwq42aBfIrKAxBCPLuNsYU=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fi
+ lteredContributionDialog$18.class
+SHA-256-Digest: G7F4+HWIfjOWTEVAmyAAjTE7IcTSrCHa8PdPdL+IV5Q=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/IconDialog.class
+SHA-256-Digest: mPkxxhJ6iBtv7sJPvTspytUFmC7LLsSe5hz4ijXSG/s=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/Placeholde
+ rEditor$3.class
+SHA-256-Digest: eRZm3N5Y0CrLVFnol+uAPsuKIr7N4M2QfB7Ob6TrypM=
+
+Name: icons/full/widgets/progressbar_obj.gif
+SHA-256-Digest: WYdsQNKcdmp9/9NLtKSTOLv9tBcCx9/03aWdPTPxWlg=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Pa
+ rameterIdSelectionDialog.class
+SHA-256-Digest: lYogeIm/emA8AV5IZSMvwJLP3AE5fmE5Ul1kkxrsGYU=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ControlFac
+ tory$8.class
+SHA-256-Digest: c1WUA8Y+tE6haPhtaoUZHFIgORPI1eASY/O04rtZtEI=
+
+Name: icons/full/obj16/package_obj.gif
+SHA-256-Digest: gld7a0Frv2XMmbwcJJ5kYq5Kxwhof+LhQothDASTAMI=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/FindContributionDialog$1.class
+SHA-256-Digest: VBOaf8isfbkjSdGKQI9DWLRlGUuVhT0b00t8QAs2kUw=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Bi
+ ndingContextSelectionDialog$1.class
+SHA-256-Digest: wGRgMh1Ol//a37NJtOs0JRt2Ph/O45hEIifLwCI/xrA=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VW
+ indowSharedElementsEditor$5.class
+SHA-256-Digest: Sd/MFypmN8mzp2x/AA6MVER6Rj8LhIsMJ0NkTWQZ28g=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VB
+ indingTableEditor$2.class
+SHA-256-Digest: q3tooBMw5tApU6e/5KCP+KgKuPbVrYa45IKclc5RT8U=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/MenuEditor
+ $9.class
+SHA-256-Digest: xUdVdAeWsKI+mmIZp/xxzNJwuAd7M4XQZh1drm1Oyi8=
+
+Name: icons/full/wizban/newclass_wiz.png
+SHA-256-Digest: FvNrhzL/wLP5DuwDJMjcWS2EL9fZF7paWm67EdgYCDg=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Sh
+ aredElementsDialog.class
+SHA-256-Digest: 3nsdn7pgkuhSfW7g/kNr0QkfSPYwYpQ4qt+KnjB2hoY=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fi
+ lteredContributionDialog$6$1$2.class
+SHA-256-Digest: eLFssAon8bZIg3tOpqOAD5354rIk9zLbU+UvJSEQD90=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/Table
+ ViewerUtil$AbstractInvertableTableSorter.class
+SHA-256-Digest: QtrliZ64QMP90NYAzce5ONnkEkw2NrEHDU4RNS0q3ew=
+
+Name: icons/full/widgets/button_obj.gif
+SHA-256-Digest: oK+5vTqti3loR/WNRcWwdquyDFD24POn/a460tp1vVw=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Co
+ mmandCategorySelectionDialog$1.class
+SHA-256-Digest: K/AvDVuFCqBZ5JmQ1BXuHN+UciVOnJfSmbw2psKVWEA=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/Autocomplete$3.class
+SHA-256-Digest: xxfKIQjdtB0NNi0MGW14qXfZVmB5JSPaCCyM9pxIILQ=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/KeyBinding
+ Editor.class
+SHA-256-Digest: gmIBH8HisfNaYGcQcovKTIaDyPKM2LGFVnDnJFugkkU=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/CompositeP
+ artEditor$2.class
+SHA-256-Digest: a+XEprsAJrP5KpqLd9vemnHpB2co4rgSqUehhKC4Ceg=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/DynamicMen
+ uContributionEditor$3.class
+SHA-256-Digest: 4N64C88Cb7mnsK1LC+RyKNObkq2ME2NAAHmkpVMs0Eg=
+
+Name: icons/full/obj16/bullet_go.png
+SHA-256-Digest: X1C3D6tiq+S5fGMb+FBvQq5aUQiCDzru+5HLfCgYJGE=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/NonReferencedActionPage$4.class
+SHA-256-Digest: FrrWm6Ji+jJqtL/W7Oa5OxshFL5wICiCNukHPCQrLVA=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fi
+ ndParentReferenceElementDialog$7.class
+SHA-256-Digest: 9C0wYNrRFOwZn3Fc+489Wo80NPkiPAohA4rddIJfwzQ=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/AreaEditor
+ $2.class
+SHA-256-Digest: H+l4C1u2W40kictqrgREooafCY8pkpcOs10DGlC46yw=
+
+Name: org/eclipse/e4/tools/emf/ui/common/ImageTooltip.class
+SHA-256-Digest: mVZgvNbOkKIhh5IzUQTzkKOqdJHMoRvEarHJBiD4Cao=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/Mess
+ ages.class
+SHA-256-Digest: FUEvsAjqRS5Y3LiVxb639ZtQnwLA1CFNiSrMFT8nfcs=
+
+Name: icons/full/modelelements/KeyBinding.png
+SHA-256-Digest: AqpxByBtBOapOuSKJ0Q53+Z8uDBrOgdVQ089N44XPSg=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/NonReferencedResourceDialog$5$1.class
+SHA-256-Digest: wm+1h17NBwuQ2q5XPHlNqv6cawXMAhtRJ8R103PFKBk=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/ListT
+ ab$6.class
+SHA-256-Digest: X7LavTTOmIbqTBcq7RjEWOeWZGZrxTdMmEMIxSrP/ME=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/ModelEditor$8$5.clas
+ s
+SHA-256-Digest: JcCCwmAlM0J+3/GbTTJV/qcI+C+EQ6OyqQ5i+VjrFHg=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/UriDialogType.class
+SHA-256-Digest: jBPxAKdqcyP04c0bOy3jdN5RNmK8IPS3vK1QOMd6o/4=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/PartEditor
+ $2.class
+SHA-256-Digest: 3sx3PXTtBUzxHSVUGKR5Y5BY6BlORxwuVdOVmlEb1gA=
+
+Name: icons/full/obj16/add_column.gif
+SHA-256-Digest: HyuQkms+2P7xzG6pmN8IIFYdODCqnGktMiP4Y7S8kTA=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fi
+ lteredContributionDialog$4.class
+SHA-256-Digest: 995BERn/F3c6yOQLBhPd2kghNhahHR48lFnQP08nhko=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/TrimBarEdi
+ tor$2.class
+SHA-256-Digest: vspUK5mlQCVQRt+PDmVGVqJmxtuw+nq4zIk/AaSKZ40=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/NonReferencedResourceDialog$2.class
+SHA-256-Digest: awdBZPKg4f7LNnOLNIPxULnjHZMYcavCLlRtV/J3zAA=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/HandledMen
+ uItemEditor$1.class
+SHA-256-Digest: e+wNu6QJWjq05sQkN1yIiK4NXkrRBI4fXMEjItVFZ3s=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/ModelEditor$9.class
+SHA-256-Digest: 5Q3xalKYMM8gCMN2fvPPFivPZEI6HmrQ6jmH1VRAlzo=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ParameterE
+ ditor$ChooseParameterButtonSelectionListener.class
+SHA-256-Digest: YpE1rTxARIlFnjAkQN7aljOKBI/pZPULIOzQIdwE0RI=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/CoreExpres
+ sionEditor.class
+SHA-256-Digest: XgtTjGs7ywYTD+0Ncv2nhduNYU9OTRYo+CpEeoW8obk=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ToolBarCon
+ tributionEditor$1.class
+SHA-256-Digest: prV9/Q2DOw20taoGvlrWRoRPHAM42SGS1pS+7XkaGSk=
+
+Name: org/eclipse/e4/tools/emf/ui/common/ComboViewerAutoComplete$3$1$1
+ .class
+SHA-256-Digest: Z5qjneOtvY7DW3+YZgc6qCFXzmZGvjVkKslwHEFFTyU=
+
+Name: icons/full/modelelements/Menu.gif
+SHA-256-Digest: We11rYMmT88T5xIBksE3v+7ZhFZAmpeMKXFfyz7XWx4=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VM
+ enuContributionsEditor$2.class
+SHA-256-Digest: wm4aBGl+/qBRbVbtJInEJpRI57MGqnFE/WIBdlP5ybQ=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/NonReferencedResourceDialog$3.class
+SHA-256-Digest: WjvQGMc30a9JgZfqaMuQXtz0+dyFqxCGkSrvZ2nKyxU=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fi
+ ndParentReferenceElementDialog$8.class
+SHA-256-Digest: FaMFRyN2d9Wwf58imzvSVHJrfltkww6jCa2M2u8EoCw=
+
+Name: org/eclipse/e4/tools/emf/ui/common/component/IdGenerator$3.class
+SHA-256-Digest: gQRnyBHzNbjV99J7rzbL2dCFRwOQiF6vwY1hXs+rOwo=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/PartDescri
+ ptorEditor$4.class
+SHA-256-Digest: 7LLkI41hZb+TuyeZ9s67zcZ/q1JwFf1G4RygEjD7bkM=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VM
+ enuEditor.class
+SHA-256-Digest: oqQY+ZqqGN5dv3JL5qnrh9NWNqoTmb44+rqMY8+qHGM=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/handlers/MarkDuplicateEleme
+ ntIdsHandler.class
+SHA-256-Digest: 2Ipa14TaRA1b55yBdCWt6JqFC8MRQqDqVOv+kBBGKeM=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/ListT
+ ab$16.class
+SHA-256-Digest: BnLYgBEFUwh53cu5GPGEf24pA/kZVCqZk2D2iiOaYSw=
+
+Name: org/eclipse/e4/tools/emf/ui/common/IClassContributionProvider$Fi
+ lter.class
+SHA-256-Digest: ljwaMUNeq+eb5rbl531WtwnoAocDfV90mL5hMMxhPLQ=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/StringMode
+ lFragment$10.class
+SHA-256-Digest: YsZXADyv5Mu7OSLh5mrxt+Fh2DcVbNwGuqOxeu4wHRM=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VA
+ pplicationWindowEditor.class
+SHA-256-Digest: aLUu5Z/gxcco5m1FEG6/TC5S3QDfXaQ7YQvFUhsBhZY=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fi
+ ndParentReferenceElementDialog$2.class
+SHA-256-Digest: L1/XOfH49/0wuQR/CEQ3YpxxcBRF8JEDd1O4aaC5ShY=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/NonReferencedActionPage$6$1.class
+SHA-256-Digest: P3AxZWrzsjXNcj97snQe3/hseazGT4oceBFGfDpIoTY=
+
+Name: icons/full/widgets/label_obj.gif
+SHA-256-Digest: 6nrZJIvuXkmqWqPTLSzuHqNajgedz/XSVMd6yip5tSI=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ToolBarCon
+ tributionEditor$5.class
+SHA-256-Digest: 3JPKmDc1TnlvAhkd96gBtogLC70oRkg8j31s4n4FjgY=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/CompositeP
+ artEditor$14.class
+SHA-256-Digest: z9vPZHrtNfwTs7dvQ4cogV0KjlAdmgXnCUMsY960pP4=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VW
+ indowEditor$2.class
+SHA-256-Digest: RNLFHanACOdcN1FjZnAWR2rcP+Zz99lJCE0DJuGjuPA=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ToolBarCon
+ tributionEditor.class
+SHA-256-Digest: iJidGihix2pv4WO88xjD6Zp4E3mo9hS7qvCWOZj3uYo=
+
+Name: icons/full/modelelements/Parameter.png
+SHA-256-Digest: nvb28oKQDZePv79xpCNsod405Z7ov3Sx2OUD4E9oV1I=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fi
+ lteredContributionDialog$9.class
+SHA-256-Digest: dcYBVZK+dpOoIBt5iUKjuFTF7JLDuvm0pIfgYtZEnCw=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/ListT
+ ab$10.class
+SHA-256-Digest: wT/RV+M/4Rju1CPG1biLS4EoezZvwVnLdHhDu+5PaDc=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/NonReferencedResourceDialog$8.class
+SHA-256-Digest: CuN28edYYxmCDhUVppwG6WfFx0JIHztk3QHTUuVz5Lw=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fi
+ lteredContributionDialog.class
+SHA-256-Digest: 5oQXhEWL21+Upk4EnRixnIhMd8naA0yaApTZtEUT0Ec=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ControlFac
+ tory$13.class
+SHA-256-Digest: 2sUtQ+OaFSxU8ZR4TP6fcuAAwkBtDeCNTfi6azl7/XU=
+
+Name: icons/full/wizban/plugin_wiz.gif
+SHA-256-Digest: JrMrjDYtZfeZmmeTReKdfeyY/msQohcwZt5nr37uX9Q=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/TrimBarEdi
+ tor$1.class
+SHA-256-Digest: CQXS8SDZjJYTscGCU8A6I/6eajzJ4MYsHYqGgfVWwT4=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/imp/ModelImportPage1$2.clas
+ s
+SHA-256-Digest: Me/NziNO/NSEKWdASWRKuMU7JqXZn6u9SjmtVfYJ7Pc=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/PartStackE
+ ditor$2.class
+SHA-256-Digest: doRLStcvPhjLgiZjUWoc8RcvJteeYbvhY7SInItbjek=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Ab
+ stractIconDialogWithScopeAndFilter$IconMatchCallback.class
+SHA-256-Digest: tYqnjpneJNBkkSj61c/B2l/iLPQ+Rl3X+8Qc4jcNkd4=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fi
+ lteredContributionDialog$ContributionResultHandlerImpl$1.class
+SHA-256-Digest: prddGjPnM4n594cqZrHSe+nkvCEvAxt7oSFNwPJvAyY=
+
+Name: icons/full/widgets/toolitemdrop_obj.gif
+SHA-256-Digest: PM27uVKvy0ZiJhpr5JWILprUnABldAwz4a6Kwxm3+9A=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/BundleClassDialog$4.class
+SHA-256-Digest: vCz1X9oxo8qk8uv2qYF2tXToDC+ZYWWcrga/hGLLRGg=
+
+Name: icons/full/widgets/toolitemseparator_obj.gif
+SHA-256-Digest: q+9n7BpsvcQsgXg8OTvwTXzd8qnCNVpr2O/X07/ro/A=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fi
+ lteredContributionDialog$8.class
+SHA-256-Digest: CTWXt9sWrIP/v0BJg4CW3WjWvj0NRRcXLzdLuHSL2+E=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Ab
+ stractIconDialogWithHardcodedScope$5.class
+SHA-256-Digest: caXn12MmWYFQWloswXJCaxjTci+Q9WwUsvBeU+TnpBY=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/PartStackE
+ ditor$3.class
+SHA-256-Digest: vFIdH33Y4mTfEN53Enh34/qa5kywkrkCNhPiLuPE4jM=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/IconDialog$6.class
+SHA-256-Digest: MeD2IlyQnE+w72ZfXkmFVuSu1ACdg6LE9RLNw7GNrXk=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/ModelEditor$8$9.clas
+ s
+SHA-256-Digest: 6b/poYNtW1ruTD53ayTLLMD5yAn+RvT/auhwfMdNGqU=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/MenuEditor
+ $4.class
+SHA-256-Digest: HxZ4wIZEmoVeccAx8JHjd3XUV0Xfs/btw2XyQu5r3tk=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/properties/Externali
+ zeStringHandler$ExtractionDialog$3.class
+SHA-256-Digest: GNJey2PSVgH9wv3x4Qo+jpAmP47yFoNcVoNx3QUpJsM=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/Autocomplete$2.class
+SHA-256-Digest: SyWT+AWYLaYEesRfvGq/sS7ku1IESukpxfW5vGrbLC4=
+
+Name: org/eclipse/e4/tools/emf/ui/common/Util$InternalFeature.class
+SHA-256-Digest: 2e4DpYFgFq15oVJyxQEh0rYEb3Gca5QkdQ5dY/q/4fQ=
+
+Name: org/eclipse/e4/tools/emf/ui/common/IModelElementProvider.class
+SHA-256-Digest: Jzim39RyxgNnkOMNksng/mI5HnalFInNDDhbshDAVnM=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/objectdata/ObjectVie
+ wer$TooltipSupportImpl.class
+SHA-256-Digest: w4h4YLxid8Q8yb0EKBdgSflijgLXzj1QsqtHGPtvhTk=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/NonReferencedActionPage$3.class
+SHA-256-Digest: QeYv4AOqSwMkrQ8ObVoyfBhlhDoj5xb3ZPh1up/2pMI=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/handlers/ResetToDefaultHand
+ ler.class
+SHA-256-Digest: NGdMjXv1dutTkKoyITE6TBqn9HrqSNq79+gJ1ygmWjM=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fi
+ lteredContributionDialog$12.class
+SHA-256-Digest: hoWbxk689YhRf+fee7nST3ziMcOIyndBKtSyqYJNChI=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/Table
+ ViewerUtil$TableSortSelectionListener.class
+SHA-256-Digest: xvB30CGyDChc4U12j9dpfF1pg87mnazRWkUhgMHYsqc=
+
+Name: schema/org.eclipse.e4.tools.emf.ui.scripting.exsd
+SHA-256-Digest: WBFQX/1UHYWYX05xseWAPWSb1G0MrDVtt4wDZrJtWTg=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ControlFac
+ tory$18.class
+SHA-256-Digest: gA37X+kfGN1p7YgyWeBiofgZMbjpGjMVMt0WmPjSias=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/DirectMenu
+ ItemEditor.class
+SHA-256-Digest: 6tv7sbduWcgMXayBIJP2nWxVqum7PbHBV+pxxxOE3cE=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/BundleClassDialog$5.class
+SHA-256-Digest: ie2WMtDWhYDMh9kK9VljEJam+ZBC9emUV1TBkpsA0CE=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VP
+ artDescriptor$5.class
+SHA-256-Digest: NUcdH1IZioY+nT0oyu1+2Ax30DaDvkiXWMJBfkgZPN8=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/Table
+ ViewerUtil$1.class
+SHA-256-Digest: nLI6XmWv1lJ0lnmZNiCgFi6EfRx4cnT+i1lYEhyUrsI=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/properties/ExportIds
+ Handler$JavaClass.class
+SHA-256-Digest: 0BEihqBIYow0TB2EJldActMggOj49i3Iq+f1SBMahl0=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fi
+ lteredContributionDialog$ContributionResultHandlerImpl$2.class
+SHA-256-Digest: VNGM67eP3BqNVX+T1LfelUZ9Zet14zGj3fsm5u3Rwvs=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VM
+ odelFragmentsEditor$1.class
+SHA-256-Digest: QraZNQoPhA9VW/W6kv6ePyrQ5VuWRU3SBbaTqgJp8Pg=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/xml/XMLScanner.class
+SHA-256-Digest: fwffgNsheOrBXa2axC54/Fnc/rnE7CeoTRBtpmXrvKg=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/Applicatio
+ nEditor$ToolbarWizardPage.class
+SHA-256-Digest: mzoGP6LZm5Wuj3j1oNQM+zHDO0AWa2NW3Eyg/yI0hEM=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/ListT
+ ab$11.class
+SHA-256-Digest: JHrcSNxWC2uGChxezkszPu71RJh7NyZT3kVHIIw6XiQ=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/MenuEditor
+ $5.class
+SHA-256-Digest: I31sT50rxAUpHe3+0NTi6awpAdMRCR5QhBns32IDEQY=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/MenuEditor
+ .class
+SHA-256-Digest: MbYdccYuaZXPk4d6TLB1Ue9fkFkGPVcwm3dt+SXcyio=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/AbstractPickList$4.c
+ lass
+SHA-256-Digest: WgWWp06nbLEAcrKSILWeslUrSk7VQF8h920MpwBBRA0=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/Table
+ ViewerUtil$InvertableSorter.class
+SHA-256-Digest: MY6o40SNZcslQaCrekgO3rE7YRDlnTlHZxTFL0Dkwxc=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/NonReferencedResourceDialog$7.class
+SHA-256-Digest: VwaVIW0Ko7LAdJ73dQ4l5RDv2usy0qB3BIiTN70Q0U8=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/properties/Externali
+ zeStringHandler$ExtractionDialog$2.class
+SHA-256-Digest: x7nZJXo3CjaiqeNtRQjIeszA7GcrCbgdr8UANGHHYac=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/WizardDial
+ ogEditor.class
+SHA-256-Digest: CC33+hX2mOUg+RS6tMh2a+QUsvUb2gSMsk2g2Z9Ncw8=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VW
+ indowControlEditor$8.class
+SHA-256-Digest: P2GqUZ1oGZDzKwgfNmpXGu4dhW3np6hg2h3p/gjA1sw=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/WindowEdit
+ or$6.class
+SHA-256-Digest: TWL5eA8J4cx+ThcQDSsP3jj9gZC/QdU6SUKTN5uz4aA=
+
+Name: org/eclipse/e4/tools/emf/ui/common/Util$InternalClass.class
+SHA-256-Digest: WdQkv+id+F3y/OA83dhoDdv7YY/yRjHUztyB8et1OfU=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/AbstractPickList$3.c
+ lass
+SHA-256-Digest: dQnsgTMwU2VSWmB8uSEQnThym6R82ouBIpIBOAaef0E=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/Perspectiv
+ eEditor$5.class
+SHA-256-Digest: zXaQ775R54LxghuPu/D8yDI+r0M8ezHd6x8tQvEVvJo=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/NonReferencedResourceWizard.class
+SHA-256-Digest: qSaKr2gBqCembyAusdVLsV5lSuWZfH12KK0cDHDp78M=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/IView
+ EObjects.class
+SHA-256-Digest: LUOfkzIuyvzf1ilfyd6L1nx2MMThhcf0+h8y55sXI3A=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/PartSashCo
+ ntainerEditor$6.class
+SHA-256-Digest: Ppw0+XnlTIawZUg8VEGBVq+wkwrgBz7bxr0yWlCbgi8=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/HandlerEdi
+ tor$1.class
+SHA-256-Digest: hHvPamADymflREfUtwO1KCqneYZUj9PuH2r12v+jwVM=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VH
+ andlerEditor$3.class
+SHA-256-Digest: gEvA5hhRlDcTxcvMm+ChEXwljTUuO5fi+RSCx6QWmwc=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/imp/ModelImportPage1.class
+SHA-256-Digest: hXybc2emSmnp2bakTIppFUwgxP/9FUONSQOM7GYDGLo=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/PartEditor
+ $6.class
+SHA-256-Digest: F4emVHWeBRm56SdDVWnxXvjLIvLB72WIHCa3n/xu0lE=
+
+Name: icons/full/widgets/radiobutton_obj.gif
+SHA-256-Digest: EO8WiPRXzQ0Aec/K9iYvMIEf5k294Z1XUUSOdd+foTE=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Ab
+ stractIconDialogWithHardcodedScope$4.class
+SHA-256-Digest: mHGA10qY/pqFxHDiTGuqieg/dNon4kMGZSVkj1O/Df4=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/Messages.properties
+SHA-256-Digest: KnxzOFYp95PFBcLEDUbAk+MUKfxghRwJasK+iama68U=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/NonReferencedActionPage$1$1.class
+SHA-256-Digest: 4wJeSpzhJqYhTKey+O56jE+ZkYivcG55MuCVVH2jlMI=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/Applicatio
+ nEditor.class
+SHA-256-Digest: meAJYBXufA/0hk78Rq8/I3i85q5ttoVAnHyliyGcN9o=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VM
+ enuEditor$5.class
+SHA-256-Digest: 9ZieZ7YrPbHbL5sQbJWpZ+zQfyc7d/TeoBBsRQmMVaA=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Ha
+ ndledToolItemCommandSelectionDialog.class
+SHA-256-Digest: m3piVUn6QF6HMCbnWEga1Aq7Q/lCFOAFW+NzP7cXJG0=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fi
+ ndParentReferenceElementDialog$3.class
+SHA-256-Digest: gvcHq0ldSMFtC9LQuTB2z6qoBeiECNmho919W8Xo4bE=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/Targ
+ etPlatformIconContributionCollector.class
+SHA-256-Digest: R1inTTbroI9lIzTDEi8FuyXTgmMgAA1y841Zzz4C1Es=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ToolBarCon
+ tributionEditor$6.class
+SHA-256-Digest: yCQoBu27g1/m0+4FDZe4/7y0lZ67pMSqTdB9+wOzaFo=
+
+Name: org/eclipse/e4/tools/emf/ui/common/IClassContributionProvider$Co
+ ntributionResultHandler.class
+SHA-256-Digest: TnNPNmkAb/cpxNnhQeEbfLQljNKMSJbKargQG8HlBNw=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VW
+ indowEditor$1.class
+SHA-256-Digest: pFfVt4G57zQPTX4XxcjxQWmWDCcaXbqgEg2lm/qx0V4=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VW
+ indowControlEditor.class
+SHA-256-Digest: TWYp5mchCiGmupnYGE1ybeyYqrFc88PKW09cG+vxT30=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/Contr
+ ibutionUriCellEditor.class
+SHA-256-Digest: hJa/WuzHFXUFzboVjCjKfvrf82CPFWPOMDzB5kUkQMo=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VA
+ pplicationAddons$1.class
+SHA-256-Digest: RbxZtIzXPm3H7RhSKaRC9NyeqyIVvDVsIMSO9KkgNZY=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/Perspectiv
+ eEditor$7.class
+SHA-256-Digest: VmPxVnJjqxTu0kQaqNrpEosP+2Jd5byTRe0tCBlDR9g=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fi
+ ndParentReferenceElementDialog.class
+SHA-256-Digest: RR0X9hPzMh301s+s7QdOs7HpUd8EVYlOoI3xzSMQTlo=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/ModelEditor$3.class
+SHA-256-Digest: HjTWJk+anEk8qNlAhH1aDMgEjL7IR3u1b+1BKNr3r34=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/imp/messages.properties
+SHA-256-Digest: ZQ/gY9zin2mtHbqUM5amX57lqzZ5gsZviATeYN9tp1o=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VM
+ odelImportsEditor$1.class
+SHA-256-Digest: IWlwCghrRzHhNKvsx1jpvCwp2Wb6F3iCa0twSy5ZTSM=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/PartSashCo
+ ntainerEditor$7.class
+SHA-256-Digest: Wd3alHzCynaZr9IIQr1S4Wc859xjHSPBwMS+5cmOFcA=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VW
+ indowControlEditor$7.class
+SHA-256-Digest: u0t3VdJ+HIgspEzLqdz1D54q7S0AiFeewwY/zFXWIGI=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ControlFac
+ tory$14.class
+SHA-256-Digest: fLjaGA8gQXxNTDoUHLmqzdEGfRM4nHmBRJ4I1K3ll44=
+
+Name: org/eclipse/e4/tools/emf/ui/common/Util.class
+SHA-256-Digest: UwCnc/WT0l8p/bTr48P8h16Ca5WCHg0prEgxvsdq7J8=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/imp/ModelImportWizard.class
+SHA-256-Digest: wYWSYI+2Nwbjfr3v4y1w8oHsC3Wn7yfsAo00KPg7F80=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VP
+ erspectiveControlEditor$4.class
+SHA-256-Digest: K4LaxM6+xRPPhdhGAJ6vlCsnm9D429u5UkQUTLPfKLs=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/Targ
+ etPlatformContributionCollector.class
+SHA-256-Digest: KTGFxgti8UaT9GcFlQ1Y/tLDzozWLrRpqNcQsXqeQBY=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VS
+ nippetsEditor.class
+SHA-256-Digest: wq1+mBy0vsQb2y1G0cL0cn3bEyN6xoPayUQAWxX6emE=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VM
+ enuEditor$4.class
+SHA-256-Digest: Ph/mGNww+G/Jj5BZXVSFVD+O3dp6k2HDkhh0tXRD3co=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VM
+ odelImportsEditor$2.class
+SHA-256-Digest: Cb102CBqSR3RmhHJD0PQyJc1dZbYh1YLJxTXIR8QNeA=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/ListT
+ ab$15.class
+SHA-256-Digest: DipsVTq6Xb6IBHd1Dm+liuPCIgVVCQ6CYdw0OhUdlWU=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/PartStackE
+ ditor.class
+SHA-256-Digest: kSwsva5dpGZebCbtCAfhyLcLBsmT0IP4lpCDbqWxjnw=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VM
+ odelFragmentsEditor.class
+SHA-256-Digest: Dol6JXkyuJ2sn7CcFVU2YPsJu5X7WDj94DeuJXVJ0Bk=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/ListT
+ ab$ColumnLabelProvider_Markable.class
+SHA-256-Digest: dunD7RSln/PL4cE43jX5k+GN09qXFXW8THAGv9JkrOQ=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/CompositeP
+ artEditor$10.class
+SHA-256-Digest: riJyng8861ycPSMH4cblUtP1Pux1UI+5S8cijUPgh48=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/Perspectiv
+ eEditor$6.class
+SHA-256-Digest: ayppOyUmsSg/ECtF0Y2Ro0KeUEOdZHiGhYP6DV+l968=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VP
+ erspectiveControlEditor$5.class
+SHA-256-Digest: zX896jOSlXe9dRRXUQj+LwDe/txpR/A901Fs5w7lfSI=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/PartStackE
+ ditor$7.class
+SHA-256-Digest: BqKes+IpmHpgzSx6Ro8p04Y0a+T2nDGjGPc9lNnk3GE=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/Autocomplete.class
+SHA-256-Digest: /eXI0kXUfGjtCciolyEnE1gi3BXhBBzS5NPTI35ZHEg=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/WindowEdit
+ or$7.class
+SHA-256-Digest: I6B3ndI2hR03MX2OAvYW39OPJQB0wvJLU5wQMMa9WCo=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/handlers/MarkDuplicateAttri
+ butesHandler.class
+SHA-256-Digest: QLnFxonfbR/6nlKCcde+FDk6QcNnyGVs6maNzSiE9V8=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/PartEditor
+ $8.class
+SHA-256-Digest: e+HCKvBpvZJQjRdRw6+wQUlFQQyRxoedKSwTb0fd+NY=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/CategoryEd
+ itor.class
+SHA-256-Digest: SfwPrdc4Y6JB41219CK5UyOlgFzulrX7HTciyfr03oc=
+
+Name: icons/full/widgets/ccombo_obj.gif
+SHA-256-Digest: nKASlDv0Z6UZ/ShEBLMGRP5I5N6IMYV/KTCli6JjVIA=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/BindingCon
+ textEditor$2.class
+SHA-256-Digest: 9B1dWV7XepWCuuG7BCgoTj+Db4cXQQyc2YIlCrblntE=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/uistructure/WidgetCo
+ ntentProvider.class
+SHA-256-Digest: hM0bBT7xM25sNBimoXM/mKUV01pI20CmPU4Pt5x9BZI=
+
+Name: icons/full/widgets/group_obj.gif
+SHA-256-Digest: dho9bXkDt3cXmS158UGY61lO/95oW7cFHutnDVqMec4=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ToolBarEdi
+ tor$2.class
+SHA-256-Digest: xuZUbURUOnbBQadMXja1XIxH+cpbHT73O5zMiob2BJQ=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VM
+ enuContributionsEditor$1.class
+SHA-256-Digest: L8KmAUtgZbNgFUa/iJs2+dg0T9CvRwJpuhlQo4rB+d0=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/Perspectiv
+ eStackEditor.class
+SHA-256-Digest: ggwQEGsWzgGwbo4A2BW5HovTdGxYX8+BCn/E2VNFzDU=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/ComponentLabelProvid
+ er$3.class
+SHA-256-Digest: K7u36REvwe0zCCue1SBMZkd8SBE7m50yiM39HpovLVc=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/imp/ModelImportPage1$ComboC
+ ontentProvider.class
+SHA-256-Digest: HjbLfwxyHoJGje5WrAGst6PUeL4cWwt9Chm3vDlZIrw=
+
+Name: icons/full/modelelements/Perspective.gif
+SHA-256-Digest: QKIEHM53apzOlUrW5I78Z1/xuBUqbZnP7zm2GovIH+w=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/empty
+ /TitleAreaFilterDialogWithEmptyOptions$3.class
+SHA-256-Digest: oxrIpOAFVknUqD5x6l3lcZl4h+Mn3Oi079EakwANAUI=
+
+Name: icons/full/widgets/toolitempush_obj.gif
+SHA-256-Digest: a0H6/PCSoHRd8etJ2QtmlQsBOldQx/DIGVo/ErFJOPw=
+
+Name: org/eclipse/e4/tools/emf/ui/common/ResourceSearchScope.class
+SHA-256-Digest: PeEbh+7c7ZdfqhFlTUNLiSMRc2hKnoMC8gxykawYcTI=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fe
+ atureSelectionDialog$5.class
+SHA-256-Digest: odXA3yL2d4d4p2e4iTmgolowIolBP4izGjB30TBEsQs=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/EAttr
+ ibuteTableViewerColumn$1.class
+SHA-256-Digest: bXMWHQ6bV79pnSjOFXspJQzpDAZjmK+7QS+dkHAr7O0=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/KeyBinding
+ Editor$1.class
+SHA-256-Digest: RR47m9NCjojDDTcBknaGahkP8Z1OvZekvgN0gmsBtkQ=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ControlFac
+ tory$9.class
+SHA-256-Digest: P29C0MHMc26ra5ImEkc7uVf9YkNtIyWmcB8CJee0R3A=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/ModelEditor.class
+SHA-256-Digest: WBr2vmPc3K1Z5jmnacSWQUQZunOvuoq3h7dnLulLQ7U=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VP
+ artDescriptor$3.class
+SHA-256-Digest: WW9KpGUcTJavqVB1g06vllSw+a4lwsxYT8uIj1wzQ0A=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VW
+ indowControlEditor$4.class
+SHA-256-Digest: xY12NzVHaEGn3+EWoszza0aEdotqE7BSZouQra14jT8=
+
+Name: icons/full/obj16/copy_to_project.png
+SHA-256-Digest: SwbwDIEEKzMyADRlKa+g5In0MzwxfODDWMBZ38VsFUQ=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/E4Too
+ lItemMenu.class
+SHA-256-Digest: qC/89mc7x7rAkyXEft7q4Z5SB8CoXDXqUlqfj/ABmo4=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Ha
+ ndledMenuItemCommandSelectionDialog.class
+SHA-256-Digest: 6552wYjYOTbs7DqtSbS7diA41UoyMks3FDhIWUq47yI=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/properties/Externali
+ zeStringHandler$ExtractionDialog$1.class
+SHA-256-Digest: c8exRIct7iXr6u16q+NxrfJZPOqFFBGPhZQw+80MlZ4=
+
+Name: icons/full/modelelements/PartSashContainer_vertical.gif
+SHA-256-Digest: KinvaauCvo98fXwr29jyfoIZlW0uBwJfzyngE0tMK70=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/DynamicWizard.class
+SHA-256-Digest: OPKGq5I6DXxz4R49kD/omULz9OQqYpJigqmn049iIiU=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VM
+ enuEditor$Types.class
+SHA-256-Digest: 33Q/39U1baI8C5Bwx0+QHJWplG182wPgULiFw07Xuuw=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/CompositeP
+ artEditor$11.class
+SHA-256-Digest: oTuXcdnkWQmlNqr12PucMXwYWuwK/BdqUg5rDEZbPUY=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/imp/RegistryStruct.class
+SHA-256-Digest: PK1n7ytExklzUkjTqnHPnLAbvy1YGN6iJrKI6O4SRQs=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/ListT
+ ab$7.class
+SHA-256-Digest: 64QCDUaigVvquPdiEZ9GIvT4r+BXTf69FwCp+z0q9po=
+
+Name: icons/full/wizban/attribute_wiz.gif
+SHA-256-Digest: Kv8a9NZrcmJqVUckdN+nB6Fzxruei5+Y3PnCK51oDco=
+
+Name: icons/full/obj16/remove_filter.png
+SHA-256-Digest: wZg2+fquIvzb0pG+HpQz20cjxu1aRQdZQbKy0ggNTr0=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/E4PickList.class
+SHA-256-Digest: jW40PTPpq9VFeBcFSqb7p3W3aVtsHXzr9CYG61Gg1ds=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/MenuEditor
+ $10.class
+SHA-256-Digest: dTfzN5me6Dt+ocA65TaelKJTIv6mj67UdJVPhNb9QwY=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/properties/ExportIds
+ Handler$ExportIdDialog$2.class
+SHA-256-Digest: qynyHduS+DscnhXzZKcCi3Sxc9+kbjicFFVt6IITk9w=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/properties/ProjectOS
+ GiTranslationProvider$1$1.class
+SHA-256-Digest: NRAzDZrGgevCove4BqlHLsBCVMzDE5zsLrA1VL5Hsi0=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Ab
+ stractIdDialog$1.class
+SHA-256-Digest: QGITvcPkKybxq7r0SsMu0O7YpbLj19Bc/Yh2oUiCmz0=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/empty
+ /EmptyFilterOption.class
+SHA-256-Digest: 1uYF0vNT7ejE9caUc19vBDZE16FIKxi/XFSQnhhOqp0=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fi
+ lteredContributionDialog$6$1$3.class
+SHA-256-Digest: fRhO1sqPUHJ11Dycg5DS+sXxm2+ublloNb/21xk4t9k=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Pe
+ rspectiveIconDialogEditor.class
+SHA-256-Digest: Vadh6Mlf2GQrzlDFuB1FXPAaAycfJmDnlrU3jnlc8tw=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/Targ
+ etPlatformContributionCollector$4$1$1.class
+SHA-256-Digest: yUBU/fn3hARrfaQWSXQJJaGDSjcHQka1CMGlKdeegFA=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Co
+ mmandCategorySelectionDialog$2.class
+SHA-256-Digest: Z4nHD1N9Yp1SfAZggauxECM7ZU5VGA7CoRHBkJzO5eY=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/MenuContri
+ butionEditor.class
+SHA-256-Digest: sy/TMCuWckeLpfddpWMe2o9YwdRvIrabq6GqpFoB3Bk=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/objectdata/ObjectVie
+ wer$1.class
+SHA-256-Digest: JdN3s1PR+0NGJbTQmNqR2LpLhTZKYKaUxtCrEOs67EY=
+
+Name: org/eclipse/e4/tools/emf/ui/common/IContributionClassCreator.cla
+ ss
+SHA-256-Digest: Ko8iRmU8AYqIsCLKtYgXqn5CXUNbYqW5SszjeIHdsy0=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VS
+ nippetsEditor$14.class
+SHA-256-Digest: NISTgkqExjsYDO7yQ8l92BrsAFIyY7OqKMvqvWFlN88=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ControlFac
+ tory$2$1.class
+SHA-256-Digest: AQYBZqLB5KIxRb17sheV7l6bhJkOJm2LayR1o7bCiNE=
+
+Name: org/eclipse/e4/tools/emf/ui/common/IExtensionLookup.class
+SHA-256-Digest: h6AaYxT9QpjyjmMd2Pahq4XVprGtRjk19wSWQmJje2Q=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/PartDescri
+ ptorEditor.class
+SHA-256-Digest: ImN39yllvE835SQeCs5QAcOLbQRM89Mb9of2Fb7A5ls=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/StringMode
+ lFragment$8.class
+SHA-256-Digest: eKZiaCtnhElTfmrxnDSG2d6kwjP0eOaSE6978pAsZEs=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Ha
+ ndlerCommandSelectionDialog.class
+SHA-256-Digest: sfU5ZTXDEVhBfy0V4mjmIGZAkxcPZI5rRMUyiVFwmMI=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ControlFac
+ tory$10.class
+SHA-256-Digest: aJr+RoHuAsX2NMRMbSujmWFlYHNwiHjWF1NlsORolac=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/imp/ModelImportPage1$TableL
+ abelProvider.class
+SHA-256-Digest: tK4IGamZTblWlJO/DbRND65Tv/sHjlh+CZdFZxDHYeU=
+
+Name: icons/full/obj16/mark_occurrences.png
+SHA-256-Digest: sSKb69ssLrNXAPTu6QSFJmnbqxD/eDufEE/vv5S2Jlw=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/ListT
+ ab$2.class
+SHA-256-Digest: bC49PBl89S0qn9yC64+TdX9PQquhyi+9FyEwEOONELE=
+
+Name: icons/full/modelelements/PartSashContainer.gif
+SHA-256-Digest: TDTzK6TDPq4UgkZI3xp0DXHm0vls385KiBUkhEdRcMM=
+
+Name: icons/full/obj16/error_obj.gif
+SHA-256-Digest: iiyTDHy3r4F6/pRQ4NF8TlV4o7C1RGg/nKSpfDc7vKw=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/EmfUt
+ il.class
+SHA-256-Digest: r24V5EwC9KJMKBKnNl+uVrdFYl6lm6ir/4f3Lp3kpfM=
+
+Name: icons/full/modelelements/CoreExpression.png
+SHA-256-Digest: d6KxQRRSjrbjr3Zjf1LGQMg82Ao/XHLedqO7xdecFic=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/BindingTab
+ leEditor$1.class
+SHA-256-Digest: EiJwlxhVqhWmAOTf2vH1llVBY6d8h0hMebl6CsUd35U=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/WindowEdit
+ or$3.class
+SHA-256-Digest: 24avTdS/1yIMRHPnhuKnQTDrJlduujwfkxDAVTI+1ak=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fi
+ lteredContributionDialog$7.class
+SHA-256-Digest: ybTm7EKnlN/3jmCCGkktXWtnGa0wl9FlaL/D/jvF4xU=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VP
+ erspectiveControlEditor$1.class
+SHA-256-Digest: 2iRnGjenUomJLMfr+wPlaPWR7xDoZH+MLP+BWv2dhtw=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/FindContributionDialog.class
+SHA-256-Digest: thcF9ViUy/IkH6Quy0NRCNTlNx1PAxj25Q7hreJYibw=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ControlFac
+ tory$4.class
+SHA-256-Digest: 65SWb1ETt5I55SqDpffkF+S3Vfc7dRTvHxFewdj5myA=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/BindingCon
+ textEditor.class
+SHA-256-Digest: XuNih+CP2wN3WVfyj5GL96qkwzqoFTaTNQUzd2jTas0=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/PartSashCo
+ ntainerEditor$3.class
+SHA-256-Digest: 3szlkErTZ/5F1WineFV6bYl18Hun2oXuA2X0tf7DCB4=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/StringMode
+ lFragment$1.class
+SHA-256-Digest: SVNiWi/pwmtExjKpc6nnphKDqKt6wXxY1/5GRd/4OX8=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/objectdata/ObjectVie
+ wer$LabelProviderImpl.class
+SHA-256-Digest: ZGKh9D8mTnyzR8TTJaIuJN5dyb7JUlPtlYY/GntoRcs=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/AddonsEdit
+ or$1.class
+SHA-256-Digest: iw1Y2oHniYfKdZmSs8SJF6vCBP/2XqV3O6czQAK1n+4=
+
+Name: org/eclipse/e4/tools/emf/ui/common/ComboViewerAutoComplete$3.cla
+ ss
+SHA-256-Digest: WNSMF5WVgGhnKDKce2ly95QDNVUtIhQtlpieaGguP5U=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/ModelEditor$5.class
+SHA-256-Digest: DPBdmO2YNh4oxbcobBi46DFGYUZXaT+BHl9Ad9bE++g=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fe
+ atureSelectionDialog.class
+SHA-256-Digest: NxQpCp+aV0YGEp9dPyBix6mWvwc/TaJ++LjI33PlD0w=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/objectdata/JavaAttri
+ bute.class
+SHA-256-Digest: U6++HxauecHv27x4987hj+x3ZFoj9d5jCld4Oj6bNT8=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VS
+ nippetsEditor$4.class
+SHA-256-Digest: ZPbYuPD+r+cik2aL2PUz8OJkaxpPa0iTIEtUKjoJSMs=
+
+Name: org/eclipse/e4/tools/emf/ui/common/IClassContributionProvider.cl
+ ass
+SHA-256-Digest: R5BjSVk4EQ6NX374kMZLwSehHeqC4JY5qIUV+5UvSHU=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/Messages.class
+SHA-256-Digest: WZDhZAI3Lv1HTTd20YLWnvEXCzF3IlcGndNNRqhq8pU=
+
+Name: org/eclipse/e4/tools/emf/ui/common/IModelResource.class
+SHA-256-Digest: RFyZIv7kMbcJw+Cvq1r9VIriiQf8lTvdkuWjBeEILA0=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/CommandEdi
+ tor$1.class
+SHA-256-Digest: BYWyQmhdwWBcVSfRGDj547lyKAY0CrmkL/cPRJWAXGk=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/EAttr
+ ibuteTableViewerColumn.class
+SHA-256-Digest: iwQ61gB1RUO4LHmORyB+yf7B/pEWArOhApp38cxFK1E=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/ModelEditor$8.class
+SHA-256-Digest: Rq70M9h/UPtjrtc6W7BUGFVKUSBjP09W/MVIXn+8Oig=
+
+Name: icons/full/widgets/tree_obj.gif
+SHA-256-Digest: 8hKs5Ki4pXex7J6oUQ8ymHzyQrl6EYPtPehoQHCN4BU=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Ab
+ stractIconDialogWithScopeAndFilter$IconMatchCallback$1.class
+SHA-256-Digest: gNd8wwMsWVrJDn521eyQhVkHPiktft4sVGDl8A8Hu/M=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/properties/ExportIds
+ Handler$ExportIdDialog$4.class
+SHA-256-Digest: J9aoDQSbq+7d9oUVmBqUi64NUzi/7eUVE0ZxjYP31zA=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VP
+ artDescriptor.class
+SHA-256-Digest: YutCz2LY4i9Ox1HbDLu6QYV/VqluswXBA7bQtnidgzs=
+
+Name: icons/full/obj16/arrow_up.png
+SHA-256-Digest: fRC65kyAZzW01DzIK20IeNgO4a0RV9SD4hZniJuxEMI=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VW
+ indowControlEditor$2.class
+SHA-256-Digest: vzQrf4UifDM9H/yMkJvgp33LUBPqjfT978zZ8WZhlp8=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/uistructure/UIViewer
+ .class
+SHA-256-Digest: kFcsUlYoCIkFtanHdAMXxPSnget2aNcekOqt0TX7obQ=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/ListT
+ ab$5.class
+SHA-256-Digest: gg84+3l3Rp6Yb3dI7mYw7x7RN+v9LNNbQG2HpC2aPbg=
+
+Name: icons/full/modelelements/ModelFragments.png
+SHA-256-Digest: olP82vbfrFdoJSvhh32GMHHTwYHbAGVuPQfXmsaksWM=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/BindingTab
+ leEditor$3.class
+SHA-256-Digest: iqwSFFIxLm0U0dU3sN40ynrM96M0T0i2CM3Eqd2qTSM=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Ke
+ yBindingCommandSelectionDialog.class
+SHA-256-Digest: X2xEnxLUza9gcFehm1eVju5EIJSZcnZN3FyOibPOBNI=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/StringMode
+ lFragment$3.class
+SHA-256-Digest: K9c3mTpvd2Y1dw4qoZ+a+72H3mTasBkououEWnc39Bw=
+
+Name: icons/full/modelelements/DynamicMenuContribution.gif
+SHA-256-Digest: 8PIjRGR83t9qkyTGzlM8FqgOVazXZDjfsbNJFECps8w=
+
+Name: org/eclipse/e4/tools/emf/ui/common/component/IdGenerator$4.class
+SHA-256-Digest: D+E5Inbf8uoKvYlcoAmZASNT1+82HrfnavyZ4EIm3gA=
+
+Name: org/eclipse/e4/tools/emf/ui/common/ComboViewerAutoComplete$1.cla
+ ss
+SHA-256-Digest: Hh/UEgCx//b7juJjYaysjdF3c/TLOSeJHlnYOvzfBOw=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/DefaultEdi
+ tor.class
+SHA-256-Digest: Yu/WMlfkRUHDL8LirF3798Jvs86BfFTwQGbIxD9Alco=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/FindContributionDialog$4$2.class
+SHA-256-Digest: 0PwKgQJ8ugtcKLeK48M5szm0sktUpdxZ+JeTJ6yAdCY=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/ModelEditor$8$4.clas
+ s
+SHA-256-Digest: BPoILFj2fa7USlbJeZkjInlOWoyFUakKUwH0JOIEHwU=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/ResourceProvider.class
+SHA-256-Digest: zXLYlKAHrMxMQiaE2wR7xS2Ra8joaXFjxnHNayyhw40=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/StringMode
+ lFragment$6.class
+SHA-256-Digest: IYYnavfGl4iBmwMOZIzI6fYYza8wUeyDwiQXXicUUB0=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/Targ
+ etPlatformContributionCollector$2.class
+SHA-256-Digest: +7OctLePyDCQCTW9yc9bCqdU61y2/DYHv5VubBscMEY=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fi
+ lteredContributionDialog$2.class
+SHA-256-Digest: bMHQrDJOg19qxlbnpLXwI2yXWQJcJ2GXWFT7FD9n+NM=
+
+Name: icons/full/widgets/toolitemradio_obj.gif
+SHA-256-Digest: YyJfbmT6qu1gsIMkLRC8fLxFcBIslmY+vvoY+hzuNCA=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fi
+ lteredContributionDialog$5.class
+SHA-256-Digest: OfPDDuNpey4QcuIuGMynlxdbe0vDd2AeJRUz3jlRdqU=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/handlers/MarkDuplicateLabel
+ sHandler.class
+SHA-256-Digest: BQ+ZaEJtJUsrjZpD1Wei+AFl0MIl9+pDpqg3SnhouKM=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/Applicatio
+ nEditor$ToolbarWizardPage$1.class
+SHA-256-Digest: +j4CvzjWrX66/dE7JVy+EBelnAfeNLHLwHpdIex3/KE=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/xml/IXMLColorConstan
+ ts.class
+SHA-256-Digest: RGHLfe/5RwmzwXG4O7bTYDKa0fEP8Psi8d2wg6Ci21U=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/BundleClassDialog$3.class
+SHA-256-Digest: R58aXzwwTuOZcFLwGytLjd0HAITVG06JR1sOBzN5kUA=
+
+Name: org/eclipse/e4/tools/emf/ui/common/IEditorFeature.class
+SHA-256-Digest: QwTXJctE5FxKf6nql8xWJsetbqV9zWjPOCLI5od9vQ8=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/FindIconDialog.class
+SHA-256-Digest: V/YTgJhO9xUW2HzA6yUGQA52VDF076M7mzzcyxf/LSg=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/ModelEditor$DragList
+ ener.class
+SHA-256-Digest: 0wBAhnrdky1cq5wAN+5nTWrltg/HR84FL6/eS+l3adw=
+
+Name: org/eclipse/e4/tools/emf/ui/common/IProviderStatusCallback.class
+SHA-256-Digest: tC5JDbqR6r7IbO8rHOL1IZWUUBe3+6t9urVOzgSCBAg=
+
+Name: OSGI-INF/resources.properties
+SHA-256-Digest: LDkBlzQ2QA/NcODSoas2uH5WcKqwBQCvNTAPThkOKis=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Ab
+ stractIconDialogWithScopeAndFilter$Entry.class
+SHA-256-Digest: FUOGdmi0JNjSpXvL64CSaIbUtY2ekguGFQIsJ39nf3g=
+
+Name: icons/full/modelelements/PerspectiveStack.gif
+SHA-256-Digest: E6a1YcJn7RlKea3H+4S4a5UJdFj16shfO3cQwnpOAVU=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/CommandEdi
+ tor.class
+SHA-256-Digest: eob9/vZY+MmphLoHyUM3CKWHbrVtf65txo9+2vWKTGI=
+
+Name: icons/full/modelelements/DirectToolItem.gif
+SHA-256-Digest: StX8/0rTOG0cNRB+PMyiLQrUMo4eGJcJzqI3yU2CpLc=
+
+Name: icons/full/obj16/class_obj.gif
+SHA-256-Digest: aQnK1jKBLo5bBX8onk0DnL20EP1C5KetaTKk7U7pdZU=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/BundleClassDialog$1.class
+SHA-256-Digest: v1Usv8ydi9bx862NH2qCIt1v1rCU7kuCxrchBsdF9yI=
+
+Name: icons/full/obj16/find.png
+SHA-256-Digest: 8K2433BN/03sbwAanw/Ej3TCg3F5lK2sOH84JsnJGHk=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/ComponentLabelProvid
+ er$1.class
+SHA-256-Digest: SAhC4EAtTHVfWhudWfE5gUjE4xAzDRhFnZGZOOYqKDo=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/DynamicMen
+ uContributionEditor$2.class
+SHA-256-Digest: CggujnjxvZdj0Hz5FjWDytBwJ3qMQYU/uJMSlh5rK1M=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/properties/Externali
+ zeStringHandler$ExtractionDialog.class
+SHA-256-Digest: wPng4GJecAg7wATzwV/XZQmwWOYb4HXIsLRZG4t3Ubw=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/CommandEdi
+ tor$3.class
+SHA-256-Digest: dIOacd/2ZZD+ZKDqY8DNfi4fjlHs7gLOg9F1KJGATms=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VB
+ indingTableEditor.class
+SHA-256-Digest: 04nYm4PNa2Y1RLa1M27+AbN8z4/fu1l5JtK5bcGuVew=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/PartSashCo
+ ntainerEditor$1.class
+SHA-256-Digest: f6QDqwxpi66NOoFgluffhHvsVKPcuLjS7iNUoDe0YZQ=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/WindowEdit
+ or$1.class
+SHA-256-Digest: fK7xH9OCC5/KkXkHVd99FvDQJacPLA8DYoJHbowZ3TI=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fi
+ lteredContributionDialog$6$1.class
+SHA-256-Digest: y8BHoDTV22T66w+MeTXCAzSF3T/wWNEFHGs3xeLlKR4=
+
+Name: org/eclipse/e4/tools/emf/ui/common/component/IdGenerator$2.class
+SHA-256-Digest: Lz3YLZdPfBchaq9De+a0S7lMTTMKHW3OLatc+upBqGo=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ControlFac
+ tory$6.class
+SHA-256-Digest: K5olheob0QVnefyDdImxX+CQ2cezXeFRpwrIFFNKdxc=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/wbm/ApplicationModelEditor.
+ class
+SHA-256-Digest: CN2+3/Y9zsmq9sZYTuIX6maCet24ircjWEj5DBJtF/o=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/ModelEditor$8$6.clas
+ s
+SHA-256-Digest: A79WlxafL75FkJm/0Gq4xcd9X8Vv1oqExeXx54h2OWE=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ControlFac
+ tory$7.class
+SHA-256-Digest: IekJhpnsPt8bNrH84CGaAjVTgVrjPzDA10+gVcuHb2E=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/DynamicMen
+ uContributionEditor$1.class
+SHA-256-Digest: gj4lCz5t6gvL5OMmWkPWPGMvH3W1mzpMiMCh2N+LeQc=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fi
+ lteredContributionDialog$20.class
+SHA-256-Digest: mUvVDfLvX6qbJq4gAkUuvmpFCoVyEzOR1ZowmAjo04U=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Sa
+ veDialogBoundsSettingsDialog.class
+SHA-256-Digest: kF54ph6DFGXKcljgefL+Aw2HbOxzPTvueLGVVyOsX3E=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/ProjectFolderPickerDialog$1.class
+SHA-256-Digest: lzzJaKKd3sgWhYSwT8Hd40Ph4y8mo9Un88llBqreAqA=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VS
+ nippetsEditor$1.class
+SHA-256-Digest: cxx7fmySwJwYKqn2aq16mTW+K34sfvhHz9r6HEFmXzg=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/empty
+ /TitleAreaFilterDialogWithEmptyOptions.class
+SHA-256-Digest: 40AeJ68zPnywdXq5rMWEcMkQFmi4VV2sLtqPptaGikc=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/TreeViewerEx$1.class
+SHA-256-Digest: jWZQ9jqtZXfs9ZdsblJax2QHozHIzCm7Qm4ptECOIrU=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ToolBarEdi
+ tor$4.class
+SHA-256-Digest: 5z2YBRTGm3Yazz/OiHFspifxQuzmLaEf1LA/taTSv5U=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/handlers/AbstractHandler.cl
+ ass
+SHA-256-Digest: u9oeLwzXU0V7M1U34pbiKFosLSib7sgAQcGjOuBuYtU=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fi
+ lteredContributionDialog$3.class
+SHA-256-Digest: UCOGmy+mhJZR/JIl87KLIs76e9to2TT9gmCyDkKOnEA=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/HandledMen
+ uItemEditor$2.class
+SHA-256-Digest: HJafhxv3QaJpfEZfy/awqtj0F+ZCgPSJINOEhpEEDs4=
+
+Name: icons/full/widgets/checkbox_obj.gif
+SHA-256-Digest: JQOuyIYp1UAXEvj42gjO4KcM7T9tNOuhqRSOhH0QxXw=
+
+Name: icons/full/modelelements/Window.gif
+SHA-256-Digest: xCjtsgfc7gV1KgVXQQXjYu5WTwO8Kyag6XlineN/QUs=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/Applicatio
+ nEditor$HiearchyLabelProvider.class
+SHA-256-Digest: hlVjYEIBmpQHL/BCMme0CE1L6HTiWtQ/Adg5a8Cvg2E=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VS
+ nippetsEditor$8.class
+SHA-256-Digest: 5sGAgiyPqslHtHUYjyMb4PSGNgPfCFm6aTyoB90W/7w=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ToolBarEdi
+ tor$5.class
+SHA-256-Digest: iWJL9DYWoe+3eAruPVoww8QAejcR8iK9j67qTQn8NtM=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fi
+ lteredContributionDialog$6$1$1.class
+SHA-256-Digest: 9Ek/rjEWjlYe30lZfeQxN7jwLuglWiJLnnpxzdGRuL8=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ControlFac
+ tory$1.class
+SHA-256-Digest: AjPWRpwa+cz22oOKUu01OHAsKGt3XewvVYxDiVV8G5I=
+
+Name: icons/full/wizban/package_wiz.png
+SHA-256-Digest: JBu/hT6jfsdJub9sKIHmSP8LPJU2Q263GggmQHQ945A=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/Placeholde
+ rEditor$2.class
+SHA-256-Digest: AqcyYA6QUbIdbVSaYPQbnR7WntmcX7ljXe5yHQ0DlLA=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/Unsettable
+ UpdateValueStrategy$2.class
+SHA-256-Digest: irSEA6pkf9K3xMAnBW9b8MNsamHh758QxQTKlz1nu6A=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/EClassLabelProvider.
+ class
+SHA-256-Digest: zdiMWZneAbf1SlQLkWYsbIZrFKUUa01EIkV3Ewbc8xI=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/HandledToo
+ lItemEditor$3.class
+SHA-256-Digest: LvQodoT2tOdR1DwyLs2bJ2egbpYncZw40b5IiHgEKII=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VS
+ nippetsEditor$2.class
+SHA-256-Digest: 3TbgChFTM9wf6XIwAoUwiBovNr0HbDtDXGJTfAiyPBY=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/PickProjectPage$2.class
+SHA-256-Digest: yL6/6JWtUUW5WHe5syX8YIVminO5WffUXA8reYE5Q8c=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/DialogEdit
+ or.class
+SHA-256-Digest: NwroNrhq1oWNrD80eekCPvtEfHo0sfnLQsc4kzyvlr0=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/VirtualEntry.class
+SHA-256-Digest: N1+JMFNBnK9edoYfNn2nG3WsAhXmAhaFEueHcvT3IHk=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/Applicatio
+ nEditor$KeybindingPage.class
+SHA-256-Digest: S0AYTV/1vZN6SBCi8a6drY0vkUQg03EXXa3qNQoQ5EQ=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/ControlHighlighter$1
+ .class
+SHA-256-Digest: 5HRN9siQBKnCnN4nfVZ8p6APGUqUoQaFM8m+5m1Ykrk=
+
+Name: org/eclipse/e4/tools/emf/ui/common/ComboViewerAutoComplete.class
+SHA-256-Digest: Khuwb4sYRyVnCOFLtWEhrK3QleQoGDaFwrZuaZbmym0=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/Applicatio
+ nEditor$MenuWizardPage.class
+SHA-256-Digest: ujxAv2kIsFbQ+ZHq31/C/wG4nrFdmwxbcmLCTSnRy8Q=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/NonReferencedActionPage$3$1.class
+SHA-256-Digest: A8OgJaVN7gObgo34XOomRPofnUfXctyMQKjhGreL3gE=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VS
+ nippetsEditor$12.class
+SHA-256-Digest: 6CzAi5Omf7NC58T5d6hyBmPa8xqFWg3deIKMZeMwm2E=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/xml/NonRuleBasedDama
+ gerRepairer.class
+SHA-256-Digest: URvz9AB/gse819B80W88cwMT9TMZC3RFWIbJvtLx5z0=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/imp/RegistryUtil.class
+SHA-256-Digest: Ti6KxKvbW0M9Cy2XvAWOG38fjDvCMzBv5P+H/5/Z/CA=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/CommandPar
+ ameterEditor.class
+SHA-256-Digest: DQXacLSYHgix1unHRzpLLu1gKwK0mLrzZP0dToqA3fE=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/Unsettable
+ UpdateValueStrategy$1.class
+SHA-256-Digest: rju8zOTrsr5gh2YBxFVUewQ7v4aEYpVQ/lRp5AB+wLI=
+
+Name: org/eclipse/e4/tools/emf/ui/common/Plugin.class
+SHA-256-Digest: VskkCumEdHrQWD4fYu4lhssxI8mMP1IjSjdgPh63soY=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/PartSashCo
+ ntainerEditor$10.class
+SHA-256-Digest: Yb/JZHTLBrOeEMvpTxaz7dQoVV0MepdNpgIM/XEUghQ=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/properties/Externali
+ zeStringHandler.class
+SHA-256-Digest: rSTBgl5cF0W2UVn/rB1s17NKAgW/CK4KuAR+x7yK9eQ=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/PickProjectPage$1.class
+SHA-256-Digest: a0rMPflD4R48qxl4cqBzMfMVJ5QakUlChfl7aKiSw4I=
+
+Name: icons/full/modelelements/MenuItem.gif
+SHA-256-Digest: /uCdYXwTyOMA22IbPWMQLT60EuzX78Sv0Eq1alcaTAQ=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/CompositeP
+ artEditor.class
+SHA-256-Digest: 3BgjrHafle7CeEHJrIjC9/+yBCXlkyQZjK6pV1flmtI=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ToolContro
+ lEditor$2.class
+SHA-256-Digest: rOC2iZmwWn00J4rNTciy/CxGRYY4vVreujQRuHwbGZQ=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/ModelEditor$8$2.clas
+ s
+SHA-256-Digest: g4O3cczcBrjBWYKY0NgAMgppRx7toZ/mwVNS/9C6yHY=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/objectdata/JavaObjec
+ t.class
+SHA-256-Digest: NqhaSsygGT+9jCYnSNFRQUpQZEVhc10Rhs017t5+cF4=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VS
+ nippetsEditor$3.class
+SHA-256-Digest: 73+k52Ta0JSqFsYmM1CylnkTFeeU94a06LR2497WDJE=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VR
+ ootBindingContexts$1.class
+SHA-256-Digest: XUDX5XiOx97VGzeOUnuVfdxfzSMpg3dF2l2VlYB5D08=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/HandledMen
+ uItemEditor$3.class
+SHA-256-Digest: 4qijbYnTLhEnNq/ly4JuESOCeZpkDXmzYj24E8HIFi8=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/properties/ExportIds
+ Handler$Entry.class
+SHA-256-Digest: FHUdZ/qUzde5FRHm8fJK/qxIdGWM0/9netnvLxXc2D0=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/ListT
+ ab$9.class
+SHA-256-Digest: 5t5JyN0PKJ2hndGWhp2DmxzsHeqiQIyXoibaGJIEd8w=
+
+Name: icons/full/modelelements/Part.gif
+SHA-256-Digest: fZ9GtLASIfB/XaX1eWDQ5JVvMsFc4xeTjfkl8aAWP0c=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/ModelEditor$8$3.clas
+ s
+SHA-256-Digest: PpCRtBywididWhmkR0aKwtcgbzQXb7C1J+8AKmIkDBE=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/Placeholde
+ rEditor$1.class
+SHA-256-Digest: QflH8B+l1vS5ssBali7aTZaaqNuv3fU45uIXpoMDNh4=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/HandledToo
+ lItemEditor$2.class
+SHA-256-Digest: IVEfJ1pEDkNLO3nS3/knxu0dfEuzGhRpUE4/83FZR9E=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Ab
+ stractIconDialogWithHardcodedScope.class
+SHA-256-Digest: kPKNrYBa3WefHEYZPeWNkCzFP3WbxjxAC7wyI9rhmew=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VR
+ ootBindingContexts$2.class
+SHA-256-Digest: wutso2XsRZOLeMmwzV973Z+Lp147Eft/oPuhQ85gXt4=
+
+Name: icons/full/obj16/bundle.png
+SHA-256-Digest: jbFpXeN6nqtGMLIUNPCTk++UNr8CjvjsaUsA/1k1ok4=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fe
+ atureSelectionDialog$LabelProviderImpl.class
+SHA-256-Digest: /EzcYrWBjK+1E+RRamldUuYyz/e7MDVX2QfACHW/5sE=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Ex
+ pressionIdDialog$2.class
+SHA-256-Digest: vBeDqXy5ZENKs/efcqnEvZbLOfpbkTGDgmyeGy4x8RI=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/E4Too
+ lItemMenu$2.class
+SHA-256-Digest: oiSpRVprqiuN3v0hYXomPGZ+3JBmf9UoUE616/E+L0I=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/E4PickList$Struct.cl
+ ass
+SHA-256-Digest: qXd/55DlMaADaDRg+oE7kCtQ1iUvAx1lNbUAeSFeImQ=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fe
+ atureSelectionDialog$ContentProviderImpl.class
+SHA-256-Digest: Vsb8AGwj6qPR1oHMT+J7oJewYXoP2VRWdgQPunIQ8wU=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/properties/ExportIds
+ Handler$ExportIdDialog$1.class
+SHA-256-Digest: pJway0vC4GNLT7l9PJYdlbM0M5AUqnfhzclWEGFr4V0=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/NonReferencedResourceWizard$1.class
+SHA-256-Digest: Rg114thJypmJEDdU3hrOJ+M4LrXCH1JufmlVgMgbAks=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/PickProjectPage$3.class
+SHA-256-Digest: lY3SyBz77QJheOEbJZf2agsK9b3pYHmQnYuUEk17LLw=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ModelFragm
+ entsEditor$5.class
+SHA-256-Digest: r5Z1QRV9lB1VFTnwWcovW8UQYbyFKRaUM9fOV7QxLuk=
+
+Name: OSGI-INF/resourceprovider.xml
+SHA-256-Digest: i0D9dF6Cgg5xSSGPnev6CwShPlHwIirtUEiN6GPjuyk=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/NonReferencedResourceDialog$4$1.class
+SHA-256-Digest: KUEQsI/03dWN9a1tmT2HczESr8DB+I6EFA2n85nBGeE=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/properties/ProjectOS
+ GiTranslationProvider$1.class
+SHA-256-Digest: tq9exy8Tva6Vil175Ed0HOOvfE8ndiVkzgfc3b6F6vQ=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VP
+ erspectiveControlEditor.class
+SHA-256-Digest: FSIufYj2dc9ExjDdAVl9T7ce4Uu/0pWuo5r6oZtj89M=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/ComponentLabelProvid
+ er.class
+SHA-256-Digest: 0hJK5PhHim0LTVsQMmoLM70jes8TfCBcxQi6OTW3Cug=
+
+Name: icons/full/obj16/missing_image_placeholder.png
+SHA-256-Digest: WWZBNcp49RlDH4R2ZXwQWFbEN7mk5rz0BD9+QjbNwH4=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VS
+ nippetsEditor$13.class
+SHA-256-Digest: IyBU43Qn8k65utDQNB7P1CSvtIDp7kCDbIeXYKLqWN8=
+
+Name: icons/full/obj16/table_add.png
+SHA-256-Digest: tq2nKSLI/kkEMenyu8/XMg1jrVECLpdasBaKd7D0oN8=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/ObservableColumnLabelProvid
+ er$1.class
+SHA-256-Digest: SpqIdsmrsKAcAkBtDAKBO1GWwuZZvAo0KfiOY+9KbMQ=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/uistructure/UIViewer
+ $2.class
+SHA-256-Digest: VnUHfShJw/FCHuhYhhfdewUAPOMy7cZeQirFSn4x8jE=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ModelFragm
+ entsEditor$2.class
+SHA-256-Digest: Fcfe90KZI0kzIsI2sQxm8+Y/190siHHeYZgdpKsN/f8=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/MenuItemEd
+ itor$EClass2EObject.class
+SHA-256-Digest: OD5Wy4Ufu6IzKm6RWpCTc0xflR2GK1n99qD8doS3mv4=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ControlFac
+ tory$2.class
+SHA-256-Digest: 2u34UFGCF4THA47F04tdd5pWdHxi3NTlOeZKxwWQUS8=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/ModelEditor$8$1.clas
+ s
+SHA-256-Digest: sQpxjb1JlwR46mJCVP7dXaSHLFNibmT8/OBhyzgTjEI=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/StringMode
+ lFragment$9.class
+SHA-256-Digest: IdRGCfJTsh7znndkIyFx1cXLYa71+n9aovKgTZN7NO8=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fe
+ atureSelectionDialog$1.class
+SHA-256-Digest: TgJ6EYlv6BTTXyd0RUY4DzKzGsU+OLnayyLoCafI21M=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ToolContro
+ lEditor$1.class
+SHA-256-Digest: ROkRzzWlzMK0OD3p7suRkVkvbszhQTXBZfFIkpzhzv0=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fe
+ atureSelectionDialog$4.class
+SHA-256-Digest: q68qS0M+o9rP4M8D4me3vqOJor7nLqZrCRySsDtBGgY=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VS
+ nippetsEditor$9.class
+SHA-256-Digest: oxaM+5m1YOj3YPCrXN4rpAn2gWUj9jvcG8D/YzxEJC0=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fe
+ atureSelectionDialog$3.class
+SHA-256-Digest: XHjbjpN1fDINEYCGFMRoBAhirZYi16gPKhuowlFTao0=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/xml/XMLWhitespaceDet
+ ector.class
+SHA-256-Digest: fSLp6K23lpsA9pTOnBL9R+8xzR2tb+x8O6qRpiCHZG4=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/Applicatio
+ nEditor$HandlerCommandPage.class
+SHA-256-Digest: P0umf56OPhR/P3HR5sxOUejqZnLS5FRM8fIj409fNPc=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/Targ
+ etPlatformContributionCollector$4$1.class
+SHA-256-Digest: 91vdWDaXYm+q/Ic8LyXVNb/rS8PGwAG7pssi3XOPqwg=
+
+Name: org/eclipse/e4/tools/emf/ui/common/ComboViewerAutoComplete$3$1.c
+ lass
+SHA-256-Digest: SZvBBXDzK9/FkR1/v8GhZswh7p4MxmiMsprZG3y4yKM=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VS
+ nippetsEditor$6.class
+SHA-256-Digest: eNVZXKtYM1BxV4wGE2+wqb2N9ictj9RyZnVnluTX7T4=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Ab
+ stractIconDialogWithScopeAndFilter$SearchThread.class
+SHA-256-Digest: qFCtCI5p5o3a5uEpqULzghcvVdCzhlBcOKwWhfIF8Tg=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/xml/TagRule.class
+SHA-256-Digest: t29iXrcvQNW+BeGys98188mrB8+Lyd2lepaAKPrtCqQ=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ModelFragm
+ entsEditor$4.class
+SHA-256-Digest: rI31zilcbZlto/p4s7lNsh0NwmJOg8bf7CEC8YIQXnk=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Co
+ ntributionClassDialog.class
+SHA-256-Digest: VzF/BWIFzqtn+oo4NKo23jY3zDQZvfoPJzc6Jy8jFzw=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/ModelEditor$10$2.cla
+ ss
+SHA-256-Digest: lbf60eV56hucNhCRAj5ACCMCK/CW9seYp3BzzotiQ94=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/ModelEditor$10$1.cla
+ ss
+SHA-256-Digest: 7r7Mk4tVp2SHLr5wI+J246FDn/EiW8rW/zQMh1oAABc=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VS
+ nippetsEditor$11.class
+SHA-256-Digest: BMxu9dLJHYjIxfausHo72zIv9Hkb8uJVZuhgWjhg+WA=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/TrimBarEdi
+ tor.class
+SHA-256-Digest: c/1Z+D/I1o/FrrhL58E+BRWIcsUEK//yay1V+7vxnkE=
+
+Name: icons/full/widgets/comboviewer_obj.gif
+SHA-256-Digest: xLy3ozhzC+mnPhpW+m1Pjbf+uqe0idN2Fsi3llyjlhA=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Ex
+ pressionIdDialog$1.class
+SHA-256-Digest: zn0sRqaheYn9GHuqCXPw0+dNMkrgWgBD6vZ3qMA6C6U=
+
+Name: icons/full/modelelements/ToolBarSeparator.gif
+SHA-256-Digest: q+9n7BpsvcQsgXg8OTvwTXzd8qnCNVpr2O/X07/ro/A=
+
+Name: icons/full/wizban/newefix_wizban.png
+SHA-256-Digest: DiFsL4IUHveGsKhtnM8KecXSoOwrZxfIKr97Zfqsakw=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/objectdata/ObjectVie
+ wer$ContentProviderImpl.class
+SHA-256-Digest: kbYTFPfqQJKRnGavDvAmXkrvPhs00bNSMKXKMb9lu5w=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/ListT
+ ab.class
+SHA-256-Digest: zauufG2UMkFhfFCijCKqYYBx+8uMiEC+ZDEsFh8tYJ4=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fe
+ atureSelectionDialog$2.class
+SHA-256-Digest: eR5gZEgNSrwUo6WTTLSOgXBkWggGX+D/ilGIs6eL17k=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/Targ
+ etPlatformContributionCollector$4$2.class
+SHA-256-Digest: /nbw9eRB3vhzJJnfDAZBHoB8CPzFglA3733LEnmAZE4=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Ab
+ stractCommandSelectionDialog$LabelProviderImpl.class
+SHA-256-Digest: zQpeZIZewfF7/QVs1XjbYL9Zad4x97ieSESq+M8JSHE=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/To
+ olBarIdDialog.class
+SHA-256-Digest: IDbyvJd2sFJnSQ38rcalT3IG8QvnNdOZsQXWu+Mvuzg=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VS
+ nippetsEditor$10.class
+SHA-256-Digest: Wh0Wf2cK7AwKC9ocVmpeyBL33sL6NWu2S2IKnk84h+Q=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VS
+ nippetsEditor$7.class
+SHA-256-Digest: c+QdCt4SK8t0sv52FcTKD5kAK/huK1tTId2K9myV5pE=
+
+Name: icons/full/modelelements/BindingContext.gif
+SHA-256-Digest: RziElyKjWUolj9FdgYBdWzTQL9090oUXCAtJlP8zLhg=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ModelFragm
+ entsEditor$3.class
+SHA-256-Digest: ayJ445/xb4zRoXZT8YdGxAXqVitb/GRYnf1YTKEYe9E=
+
+Name: icons/full/wizban/newexp_wiz.png
+SHA-256-Digest: 5tEqwfCbcye31ZeDJSl8eu5QBaol1k2Y/6oIF1Rgy7Y=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Co
+ ntributionDataFile.class
+SHA-256-Digest: UcouemLCd/4tb7WHhuX1JglpVjlMdpkfg2PCT/wCeeM=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/ModelEditor$Observab
+ leFactoryImpl.class
+SHA-256-Digest: RAK1S0DBKs/SqfBVMFgLgFDzAqCNYgvYD6RZYkPoP5o=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VP
+ erspectiveWindowsEditor.class
+SHA-256-Digest: 750KpIBHgpBhAN00NvIt1zrLnfucc+YGlJbnCqZyvVs=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/PartStackE
+ ditor$5.class
+SHA-256-Digest: AVVlK5tgoNvIsYuTkcWY9mU2BCa+E5LhD2QOX9jJ0OU=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Co
+ mmandCategorySelectionDialog$3.class
+SHA-256-Digest: y1GeCZJ4coUZjNBJmeDcZhVLzvs+MVRV86Y5mi6xhkc=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fi
+ lteredContributionDialog$6.class
+SHA-256-Digest: v8ZC2i+q0DmBNBQwkLyv/qdLYT47BdMOh3BoTP8K9uY=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/AbstractPickList$Pic
+ kListFeatures.class
+SHA-256-Digest: rTzDxDXaZUHSfJAZlF+P9gI7vvv6UzZ4bmrBGR44Fcs=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/BundleClassDialog$2.class
+SHA-256-Digest: n3Fad4HV9YlGk3qEirS60dA2Y09wSS0Apu1zqSPbJrs=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/ProjectFolderPickerDialog$ProjectLabelProvider.class
+SHA-256-Digest: RD9F5RwPj4D89doX4sVYAjDu+kPYiJ/H0ph6eaGWjQw=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/Applicatio
+ nEditor$MenuWizardPage$1.class
+SHA-256-Digest: catJVplzuWwHzunW6DpgDhI71AeQP9I/lXvRleRqbJM=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/PopupMenuE
+ ditor.class
+SHA-256-Digest: h2arfFw6lABlqqSc16cEVqCAdfJawyzB61mFt/MIRqw=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/NonReferencedResourceDialog.class
+SHA-256-Digest: i9Hll+fkI3Jz+7pT83exubagqFqgDof4aNElo0kVJHU=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Ab
+ stractCommandSelectionDialog.class
+SHA-256-Digest: OYA2m/f+Ut78eQhEB8AiWWDuwxbemUV14CFb7vrbeyQ=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VS
+ nippetsEditor$5.class
+SHA-256-Digest: k7eheh/WCgen3jexjFZrLB4XKJWrRmPQoDqluSN858Y=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/MenuEditor
+ $7.class
+SHA-256-Digest: tw6SnBRbts2kTvVLwysHMDPWiW2IpuP9HaCTVi3LoyE=
+
+Name: icons/full/widgets/separator_obj.gif
+SHA-256-Digest: MPsA0om6fl1TanCHRYhY6lp62GELVt4/XD8yXQFJ6IE=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ModelFragm
+ entsEditor$1.class
+SHA-256-Digest: 7Eg2bL5/RXJNVj8RoOhzamZo0Kgd594X+4JB6bKhj0U=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/CommandEdi
+ tor$2.class
+SHA-256-Digest: 3El4bd16z9+g3xlus0Y+f69UFIQ+s+kzCV2lBQBqQdY=
+
+Name: icons/full/wizban/typerefact_wiz.png
+SHA-256-Digest: WDBAo9MSVP2RJ3o6xtmtFHYJvXYCQL8akyUa5L142m8=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/Messa
+ ges.class
+SHA-256-Digest: +7QQXlh1wtiRPfFRAFd7jo7ehehzsGfUlN3i0xNNKLg=
+
+Name: icons/full/widgets/shell_obj.gif
+SHA-256-Digest: xCjtsgfc7gV1KgVXQQXjYu5WTwO8Kyag6XlineN/QUs=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/ObservableColumnLabelProvid
+ er.class
+SHA-256-Digest: 3gNSJJzouYpFdYsAROWVT/wM1SSXQnttPGFLNv99osk=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/ListT
+ ab$13.class
+SHA-256-Digest: TpGRuRLYmb49KMfwpBn0o/1WAklvkpkZo5CUhxWgLG4=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/AbstractPickList.cla
+ ss
+SHA-256-Digest: Ufl25EG0Nh+Ky6dfdbg+Dh/nwxOYcIF9aFMdp2oI01U=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/TrimmedWin
+ dowEditor$1.class
+SHA-256-Digest: 5Op+ToyxLaknz4u3pssR9wBjdyKQbtcwQ3J36Rno77s=
+
+Name: icons/full/modelelements/WindowTrim.gif
+SHA-256-Digest: xCjtsgfc7gV1KgVXQQXjYu5WTwO8Kyag6XlineN/QUs=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/Model
+ ResourceContentProvider.class
+SHA-256-Digest: HmoJVKDWEmMAxGwyrghRbAAHaOZOtJm2ulJtJnbaBig=
+
+Name: schema/org.eclipse.e4.tools.emf.ui.editors.exsd
+SHA-256-Digest: bZ0hzBI63M93z4J4SdJ5QvlmgUxEpEwElQ21hobAAiQ=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ControlFac
+ tory$16.class
+SHA-256-Digest: R3CBEegfWqd7GF4oaxyGM7EYM0EhDjb48XLxRHwgkR8=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VM
+ odelImportsEditor.class
+SHA-256-Digest: HfPY1cuWYPo5XGhyfJG+Hp9rB3cVn7fqlfAAPGY9maw=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/Imperative
+ ExpressionEditor.class
+SHA-256-Digest: XOAy/5XqyF/vOZVyhLgkzcbU99u3dUALMdcCuH9qsOU=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/handlers/AutosizeColumnsHan
+ dler.class
+SHA-256-Digest: 9s/MYv6HFe0O+200Vp0KDcI/QZXzYP2ZRAUc+ecBxqw=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fi
+ lteredContributionDialog$1.class
+SHA-256-Digest: ceWMtVnNpLlUTlRbkXvV3qVXq87EIlh+siOkSgD846I=
+
+Name: icons/full/modelelements/HandledMenuItem.gif
+SHA-256-Digest: YNiXNL1677WebYpuRsEnG+gTP7NFKFcfPOV+nbqAaMY=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VW
+ indowEditor$4.class
+SHA-256-Digest: x8E8cCYmU7eKSr/fj5Oyc52zteii4C5mgEKfmLwPXF4=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/NonReferencedActionPage$5$1.class
+SHA-256-Digest: Z7jTWnKwd+3HtwYNkPu2ly7Hlf2zg0YE1AdPKaET+7k=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/ListT
+ ab$18.class
+SHA-256-Digest: NvKmKhpaL/jF6IPJWUZFJ+TKQNulAi70EJUwSssgtM0=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/objectdata/ObjectVie
+ wer$ViewerComparatorImpl.class
+SHA-256-Digest: DAeBaBUj28wtF9bj0SF84ImW0xnYW4JCUuNu/WrIvuU=
+
+Name: org/eclipse/e4/tools/emf/ui/common/ComboViewerAutoComplete$2.cla
+ ss
+SHA-256-Digest: kmoVr4sRnKq16HkK01Kbu1rpfPaWp5ctzumoGZRCFis=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/PickProjectPage.class
+SHA-256-Digest: ZwZIyR/V7nfWG5dZ+hXMmqvq7sabB92D3BkzmrdhuVM=
+
+Name: icons/full/modelelements/PartDescriptor.gif
+SHA-256-Digest: 4Dq35n653KeumzEDhtvxFCcI3tsr73tNRrLuD/+He4E=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/NonReferencedResourceDialog$5.class
+SHA-256-Digest: 3W6hKsoO6KszwLZVE11J19fWj7kwKtShCu5XC2vxzMs=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VW
+ indowSharedElementsEditor$7.class
+SHA-256-Digest: dV4BnxkdgyZnMpl6Moq0n805RH1H7+K7mdGri30nwhU=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/properties/ExportIds
+ Handler$ExportIdDialog$3.class
+SHA-256-Digest: bkmVL1lAegyesNmy3A8qF6aYnQTeNQKvr531AJ1EEng=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/CompositeP
+ artEditor$12.class
+SHA-256-Digest: y9sKx8K56oMehNjou9SEbvBLoiGW0Ey6E/8I0Ii3GAQ=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/objectdata/JavaMetho
+ d.class
+SHA-256-Digest: b2jewXWAOsx5GJSwdJPy5C75CszEBwEIITTEVfcDqD0=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/handlers/UnmarkItemsHandler
+ .class
+SHA-256-Digest: wlxQdEJ+zxbZ/kA6UBczdhQfkn4KReqVHBW60W7LwF8=
+
+Name: icons/full/wizban/location_wiz.png
+SHA-256-Digest: k26+hhJ2V1z8FckLblwy5u+VFc5fSilHOSro8R6x7sY=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/TrimContri
+ butionEditor$5.class
+SHA-256-Digest: y9tXONp0NIxPbecTp4iLvJZtfil3Qk9JZ91du1zAdEo=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Ab
+ stractCommandSelectionDialog$1.class
+SHA-256-Digest: A2qkSrvf+DsXERzl9hZsiakwm8ZCIfImtc7mHow/vQ0=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/HandlerEdi
+ tor$3.class
+SHA-256-Digest: K5hyjU87PhA57ki8C3QLeSgW2m/BnQRkLldJYNF7ZZw=
+
+Name: icons/full/widgets/sashform_obj.gif
+SHA-256-Digest: TDTzK6TDPq4UgkZI3xp0DXHm0vls385KiBUkhEdRcMM=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Ab
+ stractIconDialogWithScopeAndFilter$3.class
+SHA-256-Digest: xF3+zz+a9FwzCPlJwsjdN3NoxrBrH78BFyTxIa3bgFM=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ControlFac
+ tory$11.class
+SHA-256-Digest: 2bi0XHxO8rP5gQU+Vy76ur/wwS2zsAOEf5KcOpnrKgw=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ControlFac
+ tory$TextPasteHandler.class
+SHA-256-Digest: 2VmUXYRaDKDRMCnMiZT8TLkA0ioy2q+RGzwJiDxHra4=
+
+Name: org/eclipse/e4/tools/emf/ui/common/IModelExtractor.class
+SHA-256-Digest: L4UZcKlXjl8Y0ycBuYB1zP1jT4tI5/DrFRWTw9jEu3o=
+
+Name: org/eclipse/e4/tools/emf/ui/common/component/IdGenerator.class
+SHA-256-Digest: bT5DmbZzWvpMW0ThLf8Y0Xb7JDl50Eh7x8ANOup2tz8=
+
+Name: icons/full/obj16/reset_columns.gif
+SHA-256-Digest: wZg2+fquIvzb0pG+HpQz20cjxu1aRQdZQbKy0ggNTr0=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fi
+ ndParentReferenceElementDialog$5.class
+SHA-256-Digest: SPCiza+7F7RubtpHdbNVRNbgih+lXDdtACzlkRMnbsg=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/NonReferencedActionPage$2$1.class
+SHA-256-Digest: R+b/2Tnch773KzE7FkKEvZuntjdW0+a1za3mKy5GAT0=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/TrimContri
+ butionEditor.class
+SHA-256-Digest: G/n4QHLKjwlZ17valAeBRGXEvMx3KbjEhfNgy9midvc=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/xml/AnnotationAccess
+ .class
+SHA-256-Digest: SxmlwYYNbXQnHvZIJaJUJ/TQmocTDHQE7/sWWfUJuW8=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ModelFragm
+ entsEditor$6.class
+SHA-256-Digest: BpbLbnqfnIJTgbqCIgp5kpmpK1m/UNleGHJl/TRG+7M=
+
+Name: org/eclipse/e4/tools/emf/ui/common/component/AbstractComponentEd
+ itor$1.class
+SHA-256-Digest: 6YsbR9F3NAZkWU3dwDvkWkMCDK68uXs/tPodniME0bc=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/XmiTa
+ b$2.class
+SHA-256-Digest: 9s0XFDKVF96RousrEEI3ATfKJhC6kLvV/Jt5J1Qsq7o=
+
+Name: icons/full/wizban/fieldrefact_wiz.png
+SHA-256-Digest: fhOlbgbkSVxLfEZZ3UIs+qdVddLGAqV8A1DRLUGHDM4=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/Imperative
+ ExpressionEditor$2.class
+SHA-256-Digest: gD/bUtsOUmxiBUa6EeKRGzRxh0hPRMlxZ9UzJJRNeFg=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/CompositeP
+ artEditor$5.class
+SHA-256-Digest: cS0AhGG3MFq2vo5S8oOStDp56WcHdpDOerwGf9kj9T4=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/E4StringPickList$3.c
+ lass
+SHA-256-Digest: w+IvEZ72u0Lb0EllqcEtYuDq3KuJDk7tsnHdKgi5Bd8=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fi
+ lteredContributionDialog$15.class
+SHA-256-Digest: +8qjDke6sl6WGwDtnS3YMk7CAGdFoyC17DIFKawIx28=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/NonReferencedActionPage$6.class
+SHA-256-Digest: 8nwYHDFljkZS5XFAuTvQFIQQlSJ6vrTxtRUiku+sDfA=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Ab
+ stractIconDialog.class
+SHA-256-Digest: KGrHl3JmEH83Qg2PyZotaHVzhSoPbayt/fYT3fPkPHQ=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/properties/Externali
+ zeStringHandler$ExtractionDialog$5.class
+SHA-256-Digest: sJKY+Tjy/XEv5yxEfkCjZmfWF34Yyylu2Y1hSCWPA/c=
+
+Name: icons/full/widgets/ctabfolder_obj.gif
+SHA-256-Digest: rnPTVY5o0swcm0jgMrKSLtRTXtQhzty3zBNDzKnVGJg=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/objectdata/ObjectVie
+ wer$2.class
+SHA-256-Digest: BZoR+rPjjk2gb+W3cxHEC76HkuEOW+BjGvhjmMQql8s=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/ProjectFolderPickerDialog.class
+SHA-256-Digest: iL8c+Wi0/8X/XqpgWlGyueOnPEf8Y0baV/8pUO8/lNs=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VW
+ indowSharedElementsEditor$2.class
+SHA-256-Digest: jC87azcKAQZXcCfov4OinObW4oeL66KDqPekIXE0yfw=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/FindContributionDialog$4.class
+SHA-256-Digest: vB690wagPfRvVt+Bob+sIPideltp7rOeIqkCdXAhuug=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/ListT
+ ab$8.class
+SHA-256-Digest: OYbhK9pVaVqvno28xQTKt6mh+Q3T2xzUBd9rGL016yo=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/ModelEditor$8$7.clas
+ s
+SHA-256-Digest: pjDzlNjyEzS88qqz96LC03ZhDCkByXba88drG+QCwEE=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/PartDescri
+ ptorEditor$6.class
+SHA-256-Digest: h1Pt21Pg4D4qvpPljGMyQPJVTRMQpoyjjVrj+MNtvlo=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/Perspectiv
+ eStackEditor$3.class
+SHA-256-Digest: 2lX3SG/eRkt4Xyx13Hls43uqhyxFYYvnBaFTAaEZro0=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/FindContributionDialog$ContributionResultHandlerImpl.class
+SHA-256-Digest: WunAjmtwlaZDXZm8i3jy3XMcZs8tSXlQdLbDRO35nEs=
+
+Name: fragment.e4xmi
+SHA-256-Digest: YslqJPTR/k42f1ieotHHa2JwAZwlsQ68GUD2cew4WXk=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/AbstractPickList$6.c
+ lass
+SHA-256-Digest: NjIG+CWJj+2YOjTaqJA1Tt7yZbem/EfUm/oiqiFKVNc=
+
+Name: org/eclipse/e4/tools/emf/ui/common/component/IdGenerator$1.class
+SHA-256-Digest: 7JG+dxVE94xBsknwONSRiEeik8MJI17oCB7N5SdpT+k=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/xml/XMLDoubleClickSt
+ rategy.class
+SHA-256-Digest: AMzoiQcUYzIVMuLV7bALC/e3OlGAnfu3WnwIWhBjY6w=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/KeyBinding
+ Editor$2.class
+SHA-256-Digest: GvsDBYl9dqoVZDvyhOzqFRz7I+fUKptWeA9wKQzAVNo=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ControlFac
+ tory$5.class
+SHA-256-Digest: Y0iJYfnx5YXg8+K5oiulpU4PcchdsOMZhVZ+SgavacM=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VW
+ indowEditor.class
+SHA-256-Digest: qqA//zbPnE5inOIALH+SbE7TSoFIE2J5SMP7I3dxTGQ=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Ab
+ stractIconDialogWithHardcodedScope$SearchThread$1.class
+SHA-256-Digest: tAvT02AxzcGXVIVZ6VA+0G2FpQb3XTZEYIE3q6md6tA=
+
+Name: icons/full/obj16/application_form.png
+SHA-256-Digest: WGKGWlaKCLCQRaGOYJPwBKhicsCxaXuPLd5pHAqy/Bw=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/empty
+ /TitleAreaFilterDialogWithEmptyOptions$2.class
+SHA-256-Digest: u4pG/VeHLfw9+jMYGfSQmRu1OY0TJGDsusYR9nxnAZ4=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/Applicatio
+ nEditor$12.class
+SHA-256-Digest: g2W36KW/CEmiQj7b+VZUh9VatzmXTdrjf1iPdQwq1XQ=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ToolBarCon
+ tributionEditor$3.class
+SHA-256-Digest: 4tu9LYi0FYVSA8mYbfRz/RUiLI7adzleCok3Uk8DI9M=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/ModelEditor$10.class
+SHA-256-Digest: R0uItLvIMij17D0G7yk0PAKIdRYWxq5xD4fgNK2/HKU=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/PreferenceInitializer.class
+SHA-256-Digest: UPbkDK3jQTV6gYYiTWfKIKWSCs6+e6KJkJ1+DZo+RmQ=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/StringMode
+ lFragment$5.class
+SHA-256-Digest: Vs5dn6zMGFdeSKnX89wjKo/ektNTvsgXCFh560zr0fk=
+
+Name: icons/full/obj16/arrow_down.png
+SHA-256-Digest: uNnMNx77qLmajcV3YKklU1IgqejPoxM+BQSfMfV+0ls=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/MenuItemEd
+ itor$EObject2EClass.class
+SHA-256-Digest: i5tsTmcu6axu8tWbQHMbT6ic0+bybnQzL6/yhzbdHu0=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fi
+ ndImportElementDialog$3.class
+SHA-256-Digest: Gwxk2I7DjRGxSI51y8GjeTbyLQXW1RVVimc+m6yuNdw=
+
+Name: icons/full/obj16/class_default_obj.gif
+SHA-256-Digest: 0QWC6K9M7VPV/sHnZDSmyImNOPo03N9g6QWnACgLbxs=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ToolItemEd
+ itor$5.class
+SHA-256-Digest: QrOJQE25e48e7psyBBs+oO5dHOqV5TVFi+QdEEKgSPM=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ToolBarEdi
+ tor$3.class
+SHA-256-Digest: TmPixyRYumizJufOeoBrQhlO7P+8d5wsZXNwVZHwYOY=
+
+Name: icons/full/modelelements/DirectMenuItem.gif
+SHA-256-Digest: 9M7LlLVtstEGn/PgVqido1kkuwXf7yZFXgnz6cLd8VQ=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/Targ
+ etPlatformContributionCollector$3.class
+SHA-256-Digest: de2+Cz7bnuynEAHlk7renD7UjM3gHO2xam5tBlJTHwY=
+
+Name: icons/full/widgets/menuitem_obj.gif
+SHA-256-Digest: /uCdYXwTyOMA22IbPWMQLT60EuzX78Sv0Eq1alcaTAQ=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/Targ
+ etPlatformClassContributionCollector.class
+SHA-256-Digest: 2xcO6w45lDv2hJvth849KfYlm6eRcOm4CiTmUIZ37MY=
+
+Name: icons/full/modelelements/MenuSeparator.gif
+SHA-256-Digest: rRg3R4m0YXXQYB+BmtU1taBRLHa+q3LyTgiFRjz4mbc=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VW
+ indowTrimEditor$1.class
+SHA-256-Digest: 1y0ztNYPGPl8+09S6QdT5WyJCzzitKX8/DKt5JTcWx0=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/ComponentLabelProvid
+ er$2.class
+SHA-256-Digest: jjsP0BZqCTRQKDhuRkO6AzJicfZ1KxSXYRsEmcoGVaw=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ToolItemEd
+ itor.class
+SHA-256-Digest: WCVUUWfcw9AJBkIFnlNG4mQTy8S2uP9t9V0Upjca5vE=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/BindingCon
+ textEditor$1.class
+SHA-256-Digest: 5e7mtdh/FkDySZkTSTMrm65O7Rdjl32N7XDJv0rnbXw=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/ModelEditor$7$1.clas
+ s
+SHA-256-Digest: HyrUKo04i+2KSjGvPtgHXrkuxWMu8kudrgR+UC376SM=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/StringMode
+ lFragment$StringModelFragmentProposalProvider.class
+SHA-256-Digest: +t5cE6o5RUJGq6iy9HS/n6j658+2KqqqPvAw+OxQWv0=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/properties/ExportIds
+ Handler.class
+SHA-256-Digest: fpv/+bTnR6hPJ1iBpPDFkWRBaQTdPgIz//MVrwinVEk=
+
+Name: icons/full/obj16/EPackage.gif
+SHA-256-Digest: Al+MwYpLAbEutip2PLYRqBqRBaWIIEQ1VQpd6X+SaHA=
+
+Name: icons/full/obj16/world_edit.png
+SHA-256-Digest: /ycXWfyZ74kJXEwVm/jodj/1sF/j+ZzceFqky4SmeGY=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ToolItemEd
+ itor$6.class
+SHA-256-Digest: PTMtUVdwonNIO6/HGJP052NNkhfsPR4yegTP/COUkfs=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/WindowEdit
+ or.class
+SHA-256-Digest: SHu7aLxPILZJnXcwPWrBe5j4K9qAmS7IZ2wcE5fkezw=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/StringMode
+ lFragment$4.class
+SHA-256-Digest: xa0xmpxRGBykY8fc3Ataxnsf227zYp6W4TNHpqrp6UY=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/IconDialog$4.class
+SHA-256-Digest: yIU1Th6j7a33Xv55CODxCHdKRsCuB1S6FcPM7Gyi150=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Ab
+ stractIconDialogWithScopeAndFilter.class
+SHA-256-Digest: vavcyafgai1w1amM4LLRBY6MYqVPfPraQKbdFmrDpNk=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/Targ
+ etPlatformContributionCollector$4.class
+SHA-256-Digest: cvQoDxFG0P8+w2uBvsEwmLmchJv23RWlTiCccCiPUpQ=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VM
+ odelImportsEditor$3.class
+SHA-256-Digest: rBYTw6uvZPrd1+h5+WYCWdoy8penBWB27Chwf94sY6A=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/AddonsEdit
+ or$3.class
+SHA-256-Digest: 4ivq3N6xmDqzautXOS6zJ3o9g2fP/lJ4oVQlrS2tdvo=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/PartDescri
+ ptorEditor$7.class
+SHA-256-Digest: jKfqGsM39iN5ZSYv9Pa8j48J72ujjx9lTTd71XJynzc=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/NonReferencedResourceDialog$6$1.class
+SHA-256-Digest: nFP/QkM06gE0Y5rABPPDdtMfLBRAe5pW0tDdenRfsTI=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fi
+ lteredContributionDialog$11.class
+SHA-256-Digest: /PWjZ52tRP9uNy/JjSVhb2RYH7HJ0402Ygh5qVxrPVE=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/NonReferencedActionPage$2.class
+SHA-256-Digest: gFZUlpvg9FCg2imzoe6OxIs0bN+XHHCaTzOAmT8/6Po=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/TreeViewerEx.class
+SHA-256-Digest: PvmwI7AKimDVbB5jtwzd4ta4DkfIMzv1ie3x8tLoD5o=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/Perspectiv
+ eStackEditor$2.class
+SHA-256-Digest: ttQZDeX28HMTrpVc3saF6kSBj1x96dBMdYrBg8qTly8=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/ReferencedProjectPickerDialog$2.class
+SHA-256-Digest: d3CI2dbOsSXkTYXRkCw7VPyBCyHfBpHUYGM+prdVHNg=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/EAttr
+ ibuteEditingSupport$ATT_TYPE.class
+SHA-256-Digest: WkTYckBakYGxsmLdN7RX+q+/RjJmUSoudikZKjU0954=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Ab
+ stractIconDialogWithHardcodedScope$IconMatchCallback$1.class
+SHA-256-Digest: 68kIyKOj6kjw1MiiRu6sQpYHPFrViTAQ+gmz1IYKQuI=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Pa
+ rtIconDialogEditor.class
+SHA-256-Digest: G53BrvvFsBEHlMOQaZPKW8VAlxXzWyaN+MdKHsz1CNQ=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/ModelEditor$1.class
+SHA-256-Digest: SZEu5sXqA2NSd1Ni4WWbFpvYP5JNQZ8cLk4j5RX02U4=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/PartEditor
+ $4.class
+SHA-256-Digest: i0D9Tu26FcMGA77VBn1XQ4i7nRY67wq5+PYNIwGfRxg=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Ab
+ stractIconDialogWithHardcodedScope$6.class
+SHA-256-Digest: ZoYAB+r4zLlRcuS8h98Q9vgQgtHjO9PvS+6JzrfUwqg=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/Placeholde
+ rEditor.class
+SHA-256-Digest: 53KoFXFz+Itu2qDQw4hyA/i3ypd2clUIUZyC7qP7ZNU=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VM
+ odelFragmentsEditor$2.class
+SHA-256-Digest: WUedQzfNrWS6XH87WPTE4jEPeRIb9nOan1WMpdOOnbs=
+
+Name: org/eclipse/e4/tools/emf/ui/common/XMIModelResource.class
+SHA-256-Digest: EVF9LmA2Vg9T5w+i7CmOlJdcfMYssHx5SVBpUvmoico=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VP
+ erspectiveControlEditor$3.class
+SHA-256-Digest: scVgQ5dDJOAh+BL44gpiEPvLVe2T52ouH3bgkYdvXe4=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VW
+ indowSharedElementsEditor$3.class
+SHA-256-Digest: qGXQS0AApI5ecrxFZUXgbiu89t7Dlq5uLxCd1eLW1Eg=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Ab
+ stractIdDialog$DefaultStyledLabelProvider.class
+SHA-256-Digest: GAYAqqXQeyNmebDpOA7HZ9fTR4qz2QFFq/5wtPPvOf8=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Pa
+ rtDescriptorIconDialogEditor.class
+SHA-256-Digest: 1wHC++haN06SL7w0w4gEo5BKMduPVeCVmhRbSoNSyH4=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VP
+ artDescriptor$1.class
+SHA-256-Digest: 2JR7A8ZfMbauCvw8SBhraEMND4zyz0E2jXph+Yisbxg=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VA
+ pplicationAddons$2.class
+SHA-256-Digest: hMWXi6yTLomeXbPo66dTneZoekgPjiw/3IjEPCCgl0Q=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/XmiTa
+ b$1.class
+SHA-256-Digest: a5ij0WPRdTZju6j8fO+1PioMMz1kJiOXF6+fgku2PTU=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/properties/ProjectOS
+ GiTranslationProvider$ProjectResourceBundleControl$1.class
+SHA-256-Digest: qVGpaf5YKRHXed6RCD42yEHeLIxQXl86lM/huOa/FBI=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/PartSashCo
+ ntainerEditor.class
+SHA-256-Digest: qQaiSLXjrd6atxE5G0WF7nG7l5/xfYNNYmSPSAIwxuQ=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/ModelEditor$1$1.clas
+ s
+SHA-256-Digest: ukJU08piTEoZ2Np5osTzrEsFy2T1LiI3KwF0utJuvS4=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/PartSashCo
+ ntainerEditor$5.class
+SHA-256-Digest: Eun76R/r7LOx2dwGHRYV6zbvUiWgNL6O5NV7tAb7ul8=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/WindowEdit
+ or$5.class
+SHA-256-Digest: AmGNqtmJ+9XB00BJu8woGi436FoGjlUg+B4L/4pXTMo=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/ModelEditor$7.class
+SHA-256-Digest: eZItTubBxzQF8lbWamk3vkM0rEjxT7NQooXlAF8K6dw=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/ModelEditor$8$8.clas
+ s
+SHA-256-Digest: Mvqo6qXCWHWC3rwEbX6JLn4tECgQxJSYb8E3XK3bpvw=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/properties/Externali
+ zeStringHandler$ExtractionDialog$4.class
+SHA-256-Digest: Rh03Scr30WXr7GU47elAUuj0f2UQBLuutARd/hJq42M=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VW
+ indowControlEditor$1.class
+SHA-256-Digest: 9OtiAi4AuGwYRQNRIfFb92EPb5o1vtGE8HWDBh2Pbc8=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/ListT
+ ab$4.class
+SHA-256-Digest: tXzbOQy+EHEof45UrXDj7akGZbstWCfRD31lFokHHnE=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/DynamicMen
+ uContributionEditor.class
+SHA-256-Digest: Xj2HBnzIRi9ND+T9lKCTWrl+39mFhjIF0brE22Jg0dI=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/Perspectiv
+ eEditor$4.class
+SHA-256-Digest: fRP2T8kC3lx+6dpLent0ihvM+IUH1O8sxDcJYXCfhZ0=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/BundleClassDialog.class
+SHA-256-Digest: BAImKXDYosp7pGGaysvdZ43P3KCZBnSQY2Ou2LU0x1c=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/PartSashCo
+ ntainerEditor$4.class
+SHA-256-Digest: +NhxGcO6yYhC8n8TH3bw+fVGjV3us0zwtcYZ1sCV0FE=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Bi
+ ndingContextSelectionDialog.class
+SHA-256-Digest: +GprxKLZWgdiZ4coXqCvk0suU46xQFqJFxvSb5QR6fE=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/PartEditor
+ $5.class
+SHA-256-Digest: 2QKPffp1MEQdDl4r4qUPOfsEJaj3Oacwou01utdqyXM=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/WindowEdit
+ or$4.class
+SHA-256-Digest: Dap9NMlGbD4BsIZLh0I+W/TxvyoJTbzWYWjhJn8GhRE=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Ex
+ pressionIdDialog$LabelProviderImpl.class
+SHA-256-Digest: 5foOp0zNhvXLsarY1wPhrncUwofhobj+Iws9X3FtJfk=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/ModelEditor$6.class
+SHA-256-Digest: MZWkZ9QJy46qv511ErijnL5bIO1QwcoQ7dKDenfiXNk=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/KeyBinding
+ Editor$3.class
+SHA-256-Digest: f+c3ZIjzHXTcxUTQBLwEjRH4q8f9DRPdT3H8f2YSL5U=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/Perspectiv
+ eEditor$3.class
+SHA-256-Digest: kUcHNj16Ki78yrWjT6jFfdU/tz+vCCQh4j6Eigv2cGE=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/AbstractPickList$5.c
+ lass
+SHA-256-Digest: MVkw/UDe5MC3Oma4NbzfGnyFGYq4c4LPGNQKbwsnUnE=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/AddonsEdit
+ or$2.class
+SHA-256-Digest: Xr9V1PzrbgLe5O859UqF5uGSdYyoicijq0j17a1dVDI=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/properties/ProjectOS
+ GiTranslationProvider$ProjectResourceBundleControl.class
+SHA-256-Digest: vR9p+HercoZAahfutpJ4dLeEGN5Q367TPIse6sSpMAY=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/ListT
+ ab$3.class
+SHA-256-Digest: 9krpb+LW6/bL2JVvi16NLWrcYpCQOAlnOEdZSFRe/cE=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/empty
+ /TitleAreaFilterDialogWithEmptyOptions$1.class
+SHA-256-Digest: /shlGwq5hWJZqkRu3DZH6qWkEdwL2NlnUJIiC0WDnbA=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ToolBarCon
+ tributionEditor$4.class
+SHA-256-Digest: D20c1rfdAwtIwZZszRQVbhVz1vhz2AqENArwdNjUiyU=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/CompositeP
+ artEditor$13.class
+SHA-256-Digest: Xk5OJFO3jFKAAv07W6I6dpV59EL73isPOvkSNXTwAHY=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/ListT
+ ab$17.class
+SHA-256-Digest: 8NQ6fAroFH8t8sPhCz4cBubTbHjOpSYPBU0c3HWcu3M=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/TrimmedWin
+ dowEditor.class
+SHA-256-Digest: YEFb5zF7DSJ3J81XmBYnjrqyHtDScjyxb10UjZSF6Xs=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VW
+ indowEditor$3.class
+SHA-256-Digest: W8RAhWYaG6Xl+BYOZT5DdNtcjFAbN+edeREmEG9GGt0=
+
+Name: icons/full/widgets/menuseparator_obj.gif
+SHA-256-Digest: rRg3R4m0YXXQYB+BmtU1taBRLHa+q3LyTgiFRjz4mbc=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/ReferencedProjectPickerDialog.class
+SHA-256-Digest: CtCbb+C66NGIDBFpDCfaTtgwXjVjiQglvyuNCg/b5AU=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/xml/EMFDocumentResou
+ rceMediator$1.class
+SHA-256-Digest: atiQn3wgY1S8lANHE0LuAjt9WxGIWxWspNSPcW+GSnA=
+
+Name: icons/full/widgets/clabel_obj.gif
+SHA-256-Digest: m4YLmXcc+bGQNlYc2riaSgPQQXNFXgag0T3uEG4hI4w=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/mess
+ ages.properties
+SHA-256-Digest: 4xi57SPeOrcX04b5iD/dLHOCdPcKdeQBbMXUIx49+nY=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Ab
+ stractIdDialog$2.class
+SHA-256-Digest: 2RQ4+MYbG8CKwJl6LKW/2UsH4zynYWt407bD1xJnEJI=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/Autocomplete$1.class
+SHA-256-Digest: 7q8LPwP5AA8eLtM+39wI9Y1306IQ2NZGkZabSiqn73s=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/Perspectiv
+ eEditor$9.class
+SHA-256-Digest: ZkU4TUYcGJib3xouwFRqtIKdeLaI3eqN9hN/pyqf/0I=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VM
+ enuEditor$2.class
+SHA-256-Digest: 6luJWrwqVF8sRjE4rv/SW7UGQMVDaQ8eamwoD8Lqpm4=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VP
+ erspectiveControlEditor$2.class
+SHA-256-Digest: S6ot3yS8wyUgoWzhzI2NuJhfESOHqlOgVIPNXuxQAW0=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/WindowEdit
+ or$9.class
+SHA-256-Digest: k/C82dWVzl0dcaJ5VpTyTdH5vxJFVB7pLSh70znTTSE=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/PartSashCo
+ ntainerEditor$9.class
+SHA-256-Digest: TzD/6nGadhqRi4F/ISF5JY59ivrPhETffUmvfA8ksec=
+
+Name: icons/full/widgets/coolbar_obj.gif
+SHA-256-Digest: cIuNwq2ZfiRkrXzayHs/boJxjUNMiXgj91LJaIg5B10=
+
+Name: icons/full/obj16/projects.png
+SHA-256-Digest: F4kaiFusrQn2UXH/VZ4DEkui5f5u0PbJ+l3T/b9lfqw=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Ar
+ eaIconDialogEditor.class
+SHA-256-Digest: rOdE3/ak4bBROMCGSdKk3eljxWzQi75q5NjVHNB+aC4=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/BundleClassDialog$6.class
+SHA-256-Digest: AnT0yd96X7sxsNMMg6TTJGlm3WWHg1G02Gjrold2+So=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/MenuEditor
+ $3.class
+SHA-256-Digest: yZL/DIIl6SsDCEBtyf+G2GMXWORfsrBGWSJal0x+mOM=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/objectdata/AccessLev
+ el.class
+SHA-256-Digest: rS9fh6gV32a0rs8Xk4pvQif8tyWu7Kc82V8ij0qp6Rc=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/Bund
+ leConverter.class
+SHA-256-Digest: 7tio+nEwxSwX26B86yaEo9XfPHh7vzc7JV2Ay0CDHoo=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/StringMatcher$Position.clas
+ s
+SHA-256-Digest: 2bisq2DXEVSYdeCsUvnQGFOi7DerWnfqeOQctA56JtA=
+
+Name: org/eclipse/e4/tools/emf/ui/common/IModelElementProvider$Filter.
+ class
+SHA-256-Digest: 56KHZApsQSUhMnu8l+yCMLpAYvHHWIUdguQOcemRFZs=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/HandlerEdi
+ tor.class
+SHA-256-Digest: rtmxUT0FiY/nfi4jcXuUyi/VJKjbPd8nurbO2PKgPo4=
+
+Name: icons/full/obj16/chart_organisation.png
+SHA-256-Digest: p8Ut0gQDo81yvQ3HMCcXdzImHJatQ8GJCvfoUFBWJ/U=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Ab
+ stractIconDialogWithHardcodedScope$SearchThread.class
+SHA-256-Digest: LuTwy6cdwGxtfNH1U6ElHDjmiqQ8OcBQi9Qb334bQfc=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ControlFac
+ tory$12.class
+SHA-256-Digest: KD/OScnshsfkrybSV+Xg5mB62nwyEmmPrVBvOZkmNss=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/ListT
+ ab$12.class
+SHA-256-Digest: HInixBJmwNaFsIYAQXyo6BOpdeg0BYoj/j6TJhoLc4c=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/Perspectiv
+ eEditor$8.class
+SHA-256-Digest: NEHfipLGmyEuhHroJW7l7UrT/bpiM1b9t3jt5MWX5Eo=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/empty
+ /E.class
+SHA-256-Digest: LXgvnwNZ42G0tVBjCiW8GqMTEJDfoZmJiivSt0X3NZk=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Me
+ nuItemIconDialogEditor.class
+SHA-256-Digest: 3O6rGE5NQkswwrS+90KBW++qy9JqJs/EbnnzXQxno+k=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VW
+ indowControlEditor$5.class
+SHA-256-Digest: SzJOf6cUtuo/k10M5k7Mp5C2zudu2VLJHKuWZeMFuDg=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/ModelEditor$DropList
+ ener.class
+SHA-256-Digest: YRYIohEDldnPuBKMvOVawSnzo0acvWk0C71XNolsvqg=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fi
+ lteredContributionDialog$10.class
+SHA-256-Digest: 3VqHgUZnwTW1+K9LxvDaohbQMz6syNzkqbrQMcMh+es=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/PartStackE
+ ditor$6.class
+SHA-256-Digest: +x2h2it28oWJ+hl7o6aYXSj6pyQjxUJpo7HNZosj6N0=
+
+Name: icons/full/obj16/field_default_obj.gif
+SHA-256-Digest: pKMP1/nUT5S8o7KP+vcwKNK89nd68B0A+QNuL/ckPoM=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/NonReferencedActionPage$1.class
+SHA-256-Digest: BNsunEQEjCmzmdj5ak3wASHCOtkGxVKWLGhC9uJA7rc=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VI
+ temParametersEditor.class
+SHA-256-Digest: P7xcVFMftO0EVcsmOpk7HLMfAQ+l5M2GrLqU5pfWR/c=
+
+Name: icons/full/modelelements/Dialog.png
+SHA-256-Digest: jAhca9d/7v09q3iJ4w4wambqZC4zc9rCPHpJtCZ1A+U=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/MenuEditor
+ $1.class
+SHA-256-Digest: xYzC4NHRfG2LQ13UGLXHXxKf7w721FBTw11C4xK2Hn4=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/StringMode
+ lFragment$StringModelFragmentProposalProvider$1.class
+SHA-256-Digest: EjYG39I9Ms5TXSpApmMpvNETbxGQvrP+i3aq3kE6MBU=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/AbstractPickList$2.c
+ lass
+SHA-256-Digest: H3zJuRboqGldE56NclL1e3YcWp3Yww0bX3kgWJxVj9I=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VW
+ indowSharedElementsEditor.class
+SHA-256-Digest: 9b/i1fONR3WDzAVpXYoH/Kqi2mO/FHaDY85AafXfPao=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/ListT
+ ab$14.class
+SHA-256-Digest: w2hprcx/sQ8nycSPTENxcBIk35Y+pZUuUz0tJ4NIm+k=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VT
+ rimContributionsEditor.class
+SHA-256-Digest: m+j7JI9edWm0zFFxaGndJwqEVT3mmesaGFrHMJsKhTE=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/BundleClassDialog$7.class
+SHA-256-Digest: x+PUY55cP7hKqwQicJw/IVQxCCLVFP2KIxVdPIooznA=
+
+Name: icons/full/modelelements/Area.gif
+SHA-256-Digest: TDTzK6TDPq4UgkZI3xp0DXHm0vls385KiBUkhEdRcMM=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/xml/XMLTagScanner.cl
+ ass
+SHA-256-Digest: GRdH+CQ5vuaY56gfC7f0L6O/0KIy9Saz6CdV1nx2udY=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/Table
+ ViewerUtil.class
+SHA-256-Digest: ZGV/FPPHstfFB2M/UIeZz1Logv8Jg6BPBU6TSra7Bgk=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/uistructure/WidgetLa
+ belProvider.class
+SHA-256-Digest: LjH0cUlltqn8Hpi8vXA27YpaQSVuNH7LpdItzWPwe1Y=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/NonReferencedResourceDialog$1$1.class
+SHA-256-Digest: 2A9JK0FNUu7KoD/QSPNTHvZ0YAsovAjQ154AOI30ER4=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/objectdata/ObjectVie
+ wer$2$1.class
+SHA-256-Digest: e+vB7E7XvQb606WgYM5CYAAM3SgouPMre9tj547FvBs=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/imp/ModelImportPage1$1.clas
+ s
+SHA-256-Digest: mbKUvL7w9eyoN0c3rVKe+bJpF2nUr7CxI+/uylpbuS8=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Ab
+ stractIconDialogWithHardcodedScope$1.class
+SHA-256-Digest: 449xT/PzINQZPZbHdDQH6ZGZZDsvp4wHRm8j/4jSxcM=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/MenuItemEd
+ itor.class
+SHA-256-Digest: pgw+0PyS2K9p49GeIj6wnpEYBxIUCYh1jDUt/FK91vE=
+
+Name: icons/full/obj16/filter_by_attribute.gif
+SHA-256-Digest: 9G3d2ysUIkdt9qgD/YK4hM5EmIkFt0cVjVzZQAdDuVg=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fi
+ ndParentReferenceElementDialog$1.class
+SHA-256-Digest: Nz5Vajj2JScMRiJVof8uaKyb3XTk0ZsizdF1wbfkJzo=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/ListT
+ ab$20.class
+SHA-256-Digest: VrnHCzKNmQiHReQcNKTxT5SVTDbfrhuUsWElaDw0PLM=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VW
+ indowControlEditor$6.class
+SHA-256-Digest: u82dpgj9eN7blETZvEV/uTMpdKidzodCcj2+EDMUeXw=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/AbstractPickList$1.c
+ lass
+SHA-256-Digest: qSmY4Q94K7ZIVClb3TDx2Ivs/uNKnOT/vOhDg3h7B7g=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ControlFac
+ tory$15.class
+SHA-256-Digest: q8bYg5XKZ3ngCUoDYRJ2Q45Z+N8bgjDl0cZ8WB4EjcI=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/MenuEditor
+ $2.class
+SHA-256-Digest: 5xMPBTyKSwy+VLUkv7VwgeAmMyBVQlCi2s2fV0BkYsk=
+
+Name: icons/full/modelelements/Handler.png
+SHA-256-Digest: dAsV4AFD/EY712kjjBzM9RfT4cgquicboENT+r5Spgg=
+
+Name: icons/full/modelelements/ToolControl.gif
+SHA-256-Digest: sIhiPLE8RscCDhVGnIwqAl3qFaA26KjkvI4cjhTiJkE=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/AreaEditor
+ .class
+SHA-256-Digest: HTe683EqIa+5jC5R6smRjumMCYXQNtPrJzjUqSuM4lk=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/ReferencedProjectPickerDialog$1.class
+SHA-256-Digest: gbFzCmObLwXURr85MlitwjGbtI1nozG2b1u+kr87SKQ=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Ab
+ stractIconDialogWithHardcodedScope$2.class
+SHA-256-Digest: mZiqecAqx/i/z6mb+YjleWot/7Z2mDt7j6N4Ev/E3fU=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VM
+ enuEditor$3.class
+SHA-256-Digest: Gwt0rdWOtWt3o8cqbV61uHMS1Y2tQJoKGljzgdi6j6g=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/BundleClassDialog$8.class
+SHA-256-Digest: s4NkFGsKK7QzIbXL8/spOO/tVzAMnN/BQftJuuqf13k=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/ModelEditor$2.class
+SHA-256-Digest: jWpKB6VCUolqIuYDqL8eW2E7FzWyqXXI8qtsrbX1AvE=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VP
+ artDescriptor$2.class
+SHA-256-Digest: x9nkE9sfoF+pJ0CiSBAfrwsaamjkzY8Z7WK4LF0kN6s=
+
+Name: plugin.xml
+SHA-256-Digest: RVaJdOR/PPOhYYfwCT6E8KEiS8x+ICqOEOHQEn0Ni0A=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/E4PickList$1.class
+SHA-256-Digest: 88EJ8Z2BSa4pvX4T2zqFldxU83ohOI6pQ1dJtRe4kJc=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/ModelEditor$Clipboar
+ dHandler.class
+SHA-256-Digest: W2NCCltqmtcZBvARKCVQBRkWKVfOTlVMPBSAYzO5O1Y=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/ListT
+ ab$AttributeColumnLabelSorter.class
+SHA-256-Digest: gxSZCZrpjFlM8zkv/4Zc2sCi9RwUq3a3N6m/Z6Pdp7o=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Ab
+ stractIconDialogWithHardcodedScope$3.class
+SHA-256-Digest: 1y2pGpicmT4Gka6y25DY7LSxEDe3SCcjKwEIJokE3Wk=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/ModelEditor$7$2.clas
+ s
+SHA-256-Digest: hVjQff4jzWTx+4qXejx3D7S/ENx3jzPrjPRFOjCBwOw=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/properties/Externali
+ zeStringHandler$Entry.class
+SHA-256-Digest: aA+tw4HJSU5rs8lXV9OQOHZBpqsmEweiGjRhCHKWcA8=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fi
+ ndImportElementDialog$2.class
+SHA-256-Digest: TNMhDGYdamgdm141cLhjoPyqcmtqjqTScTXoJn/CgtE=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Me
+ nuIdDialog.class
+SHA-256-Digest: rZSpJzzTHkQtiqR9z4CM6kF3QOvRqB9MIZMFmG1Mgvc=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/CompositeP
+ artEditor$1.class
+SHA-256-Digest: ymhrwupGU15pzeLcV+WIEp304yDLQJm3Khhk98MUi90=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ModelFragm
+ entsEditor.class
+SHA-256-Digest: FLzqy55mprQqHsf+OynxyyXDweZ6PRsWjRJ2CZdJwW8=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/empty
+ /TitleAreaFilterDialog$3.class
+SHA-256-Digest: 9i/VPA/YFjYVjj5qan59KV8HuZMWT/7g6UWDpF9Pry0=
+
+Name: icons/full/widgets/menubar_obj.gif
+SHA-256-Digest: We11rYMmT88T5xIBksE3v+7ZhFZAmpeMKXFfyz7XWx4=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/MenuSepara
+ torEditor.class
+SHA-256-Digest: /XKdBhkgaulzvxGDUXUJpIiv26EijuBXrhjzsPUYrYA=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ToolBarCon
+ tributionEditor$2.class
+SHA-256-Digest: H3InJ5WNAa0S6KAkuY3foyhgcXN3HHHWCvq4InwoRM4=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/Applicatio
+ nEditor$11.class
+SHA-256-Digest: m9I2/jmVUOd7LsSasmRZ7dXSxB4cUVSGvBljxSeLbBk=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/MenuItemEd
+ itor$2.class
+SHA-256-Digest: a5TPeU/ie5j1ldQK/2A0ip75iH7zo5h2HtIWSbjJe7w=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VW
+ indowEditor$5.class
+SHA-256-Digest: 7ZFv/S1BIBSxfXg3LBELycKrAzvydji//Ooba4565o4=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Me
+ nuIconDialogEditor.class
+SHA-256-Digest: FERDCU1dIHa21SgPxh4S6ee0xQt09zXja7bz/8VkffI=
+
+Name: icons/full/widgets/menu_obj.gif
+SHA-256-Digest: b9p0myleWCJfuv50dYK7AWJuoSAsPl+s1RV3fHtzL98=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fi
+ lteredContributionDialog$14.class
+SHA-256-Digest: CSmjK0rt4Ziu5MqoF6Im3tmvvB9rFb9XLOkezf7XbH4=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/handlers/MarkDuplicateAttri
+ butesHandler$2.class
+SHA-256-Digest: vzPC5T9K0cXbw/7BkiHBRn06xfQCit/DE6VdPEHXyGw=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/WindowEdit
+ or$8.class
+SHA-256-Digest: RDvfmBpWNitvqibdgM+gmykMIwSIpY9uu9FJpGjEw3o=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VM
+ enuEditor$1.class
+SHA-256-Digest: JOq9iwsoGXSP5LTv9x/i5lyYppNzErDzF2QCSyKmBxU=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/E4StringPickList$2.c
+ lass
+SHA-256-Digest: 4/9Umw8wS4PwDruOn1qFxtMpIS3EeC3VuivON/gxX6I=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Ab
+ stractIconDialogWithScopeAndFilter$4.class
+SHA-256-Digest: ZgDMV5yhGn9FyTTYaSJQ+7aq5YPyqUZ+fGJ7ygzGq08=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/DirectMenu
+ ItemEditor$4.class
+SHA-256-Digest: +EVlnK6tWzkR2mzCTtffzO4sbq2Fv0rEVFznZ72gUzg=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/PartSashCo
+ ntainerEditor$8.class
+SHA-256-Digest: xzcHQggEGfhzbI/qyxMv/8fxUy/bF524P5PAVNtn4eM=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VP
+ erspectiveControlEditor$6.class
+SHA-256-Digest: Z0C88akPL37aBZqvL3LBxyDprrJy3I5ECBolmSeIJeI=
+
+Name: org/eclipse/e4/tools/emf/ui/common/IModelResource$ModelListener.
+ class
+SHA-256-Digest: CfPm57L146kLeeCKYgdO29ImK7CPem+XCrQ02g28abw=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/ListT
+ ab$19.class
+SHA-256-Digest: aJu6b1U9EA0oKw3a5YvqMNBf+UVC+I1irc5naIcjbf8=
+
+Name: icons/full/wizban/imp3x_wiz.png
+SHA-256-Digest: 1wYA7N/c8Z80cybjye6AtIEMwrgqfNxmKNHAs8XRcpI=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/uistructure/ViewerEl
+ ement.class
+SHA-256-Digest: s6uqNO/ze/rvk1YMRt1t6pVUglMuJmXa3OWdSiGIMgc=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/Applicatio
+ nEditor$6.class
+SHA-256-Digest: GHbM7zlNwK3yHkVvXQAEHpll8//xtHKlhVe7cj7VdI4=
+
+Name: icons/full/widgets/tabfolder_obj.gif
+SHA-256-Digest: 5DnbkY8zVk+bG+Rrngr+6VpEpoXqqm41404+5R3gymE=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VW
+ indowSharedElementsEditor$6.class
+SHA-256-Digest: J/tYzyhyXY/fcuOfANjhXKHZA6P4vdFH0j3tcWUf7Fg=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VI
+ temParametersEditor$1.class
+SHA-256-Digest: 8I0Gu5j9u5ngw//RdwAIqVKAYAoLR8mKPmBU/UkiLiE=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/MenuContri
+ butionEditor$5.class
+SHA-256-Digest: 7tJ9nLyCmFhRfIUvJG7j0JTeiXkV2Jhe70vy2hQ197U=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/HandlerEdi
+ tor$2.class
+SHA-256-Digest: pzhCntMXjAb0ALqAyUGzC79w96OWRIl4yc+WiYOyCdI=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fe
+ atureSelectionDialog$ViewerFilterImpl.class
+SHA-256-Digest: /19xtObk4hir0jJGjsyJLYU0HlbjnrE/tZWFIwRjrFM=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VH
+ andlerEditor$1.class
+SHA-256-Digest: eeBRoG90wNFVq8ummUKS8q5WPmz8eqfTTfKzFTb8EpQ=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/Table
+ ViewerUtil$AbstractInvertableTableSorter$1.class
+SHA-256-Digest: jmfLLXKnoMe3ly3BGvCwEhOEx01F3Txd5WqrLreSLnk=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ToolItemEd
+ itor$4.class
+SHA-256-Digest: ZUED2rlBGFqh/8EdlWdJM37+8GXCD0RgPQBt/htbQsU=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/CompositeP
+ artEditor$6.class
+SHA-256-Digest: 8OAqpKsJ/3tV3O298F/KcuP7FctIdh6i2nFLY3iobmY=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ControlFac
+ tory$17.class
+SHA-256-Digest: 45dtnY8MfSyhKnEwdDl/9oXlf9sUleMW1D6AyEIsfmY=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Tr
+ imIdDialog.class
+SHA-256-Digest: X7/JA4zoIaAoc2PjvQsR/bIzanBzg6RstXUQco9+j4E=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/HandledToo
+ lItemEditor.class
+SHA-256-Digest: vGrn+E6cdZL23VIEotXEQEizU4tvaq8vsFlOfgwv5Ls=
+
+Name: icons/full/wizban/import_wiz.png
+SHA-256-Digest: hHWgNy4qOfKgbffjTLBZQgHjyrszOB6Vn25T7/kZYvI=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VT
+ rimContributionsEditor$2.class
+SHA-256-Digest: x3esWWgYQp//zogEsDDwr/IE+Ie2n0NYvJEG/2XutiI=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fi
+ ndParentReferenceElementDialog$4.class
+SHA-256-Digest: 5FKhiJNA6Fd5CuFwL77tmtvRfvvJGZ6bKKlrU3puU5M=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/DirectTool
+ ItemEditor$4.class
+SHA-256-Digest: TCwRjETFHPxPBbRcL5DT7y1H9JKw0a85ad4RW8NSNug=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/FindContributionDialog$5.class
+SHA-256-Digest: wlcpkNtPEMeEt0LbjVcyeDz1CVi9wN1oqfznDgKEWgk=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fi
+ lteredContributionDialog$ContributionResultHandlerImpl.class
+SHA-256-Digest: jWE1wWCnEZv+mFNdQUCv8F86SIQoKpN4AgpU3/BZJbQ=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/ProjectFolderPickerDialog$ProjectContentProvider.class
+SHA-256-Digest: LqwftWrGGcFuZf57fuaahsYvV1cQiUQdHVhbnRpnA2c=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Bu
+ ndleImageCache.class
+SHA-256-Digest: +XiZfB0pbPR5JP0nDw+LcpJALeUxxHeOD4/bnAiRGUQ=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fi
+ lteredContributionDialog$19.class
+SHA-256-Digest: UI5OGSPJW/R88nkpBpi311jQBEVeAZwJkMEwAZgGKZk=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VB
+ indingTableEditor$1.class
+SHA-256-Digest: Y+sM5CMQ83o731Y2Gcmrtt6WFhXbpdi74fXO1XxUFj0=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/Targ
+ etPlatformContributionCollector$Entry.class
+SHA-256-Digest: matncB7eUDVbwb9GXm1hb2rOWkmKIP7zGfzVlH+mfUc=
+
+Name: org/eclipse/e4/tools/emf/ui/common/IEditorFeature$FeatureClass.c
+ lass
+SHA-256-Digest: teBA8c2nxxsOKeHKYwDYTMGFeOG5GkoNoIkhoiX+bIQ=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/ListT
+ ab$EAttributeTableViewerColumn_Markable.class
+SHA-256-Digest: QU+Qd7vDP3sB2o2uHgMP8dmR0GMEH7saW3KPekkybHY=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/NonReferencedResourceDialog$6.class
+SHA-256-Digest: ZSRYqUrPAQDjE0Sy/ellzRFtKTUvM4JTSM5glwDcuAE=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/DirectTool
+ ItemEditor.class
+SHA-256-Digest: 3h4MzNvKOb4sMYWXbTg1D1l1uATxjNLQsqQAfJI84pY=
+
+Name: icons/full/obj16/field_private_obj.gif
+SHA-256-Digest: MJkMUWlLVOY2o3AoYFLBQuryLohKAx9W9RQjgAWLktQ=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VW
+ indowSharedElementsEditor$1.class
+SHA-256-Digest: QGIOE47KTfzEfP2M2Cwc/HRgjeLVCccml6IyamftKBE=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/PartStackE
+ ditor$4.class
+SHA-256-Digest: 5RgGVQBwpTq0jpeC/wvDAHxMKSJtW+kt/CXtHkJTNf4=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/Imperative
+ ExpressionEditor$1.class
+SHA-256-Digest: djEALqxWkvVp6/jVwMnnvU/kNTfHMxlx5sj74+VuxZQ=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/Applicatio
+ nEditor$1.class
+SHA-256-Digest: pzvwfNlvy/41pY+OMl7wObdagboGNXwbi+/MmAh/pNI=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VT
+ oolBarContributionsEditor.class
+SHA-256-Digest: deMoE8s7rxHR4EeF1e2XFY6jlrKz716cVGJtfDoNZ74=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Ex
+ pressionIdDialog.class
+SHA-256-Digest: 7Ywn0gaslsM19jamkQE8J/vL9kH3/FIwQspmiLK5If4=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/MenuEditor
+ $6.class
+SHA-256-Digest: A+wtNENZFlLwHcKK9ChwTTuuEYGr4JTONb607GvKhRM=
+
+Name: org/eclipse/e4/tools/emf/ui/common/CommandToStringConverter.clas
+ s
+SHA-256-Digest: pSD0VyQTvzgBI6uODwHF5H8G1B9xJx6aTO+3Tx9jG6U=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/HandlerEdi
+ tor$4.class
+SHA-256-Digest: u5PWozh0tJ8kyGbgdDa8LROEz+jErR6MZNXV9jrsjzA=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/Applicatio
+ nEditor$8.class
+SHA-256-Digest: aqSv+oE6SfXeLPBTf4pHk9LygsgxEyMpxUONH5/z+PQ=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/PartStackE
+ ditor$1.class
+SHA-256-Digest: On/ha3mpgncf0qAuQ1Wns1CqNfYaOp8+aTL8CQGZtxw=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/NonReferencedResourceDialog$4.class
+SHA-256-Digest: aNwbWHyFlvAe45fa/gUwrrEOE7QJmFOpA+kgKvoJxT8=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/Perspectiv
+ eEditor$2.class
+SHA-256-Digest: 52BegRLADPYHnxiFQhKW2kg067htq47oUtAqO/zqBtM=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/PartDescri
+ ptorEditor$3.class
+SHA-256-Digest: D+yHsSuwnduteKzQ3qmc9VaBpsdpnunKEX4vA28s2Xo=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fi
+ ndParentReferenceElementDialog$9.class
+SHA-256-Digest: ihgdFt1vGbIp81QcH1unz7FRDOMM0hXLT4AbC5lnWgo=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/MenuContri
+ butionEditor$7.class
+SHA-256-Digest: 2NVIHl7zImuZzdslAlIOOXIsoRkWkhXZvnYEin14d5Q=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/PickProjectFolderPage$2.class
+SHA-256-Digest: l3h9aeIes9SjNcsKZUsYXSjTg0uoqYxa0W6idU0V04o=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Ab
+ stractIconDialogWithScopeAndFilter$2.class
+SHA-256-Digest: NecRDLvkdtIs9Ym0iCnzqjRa4qNrmpPD+zss5ROf4nc=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Bi
+ ndingContextSelectionDialog$LabelProviderImpl.class
+SHA-256-Digest: xWbC5Tna4LYix8jXjyWBEEYCqXCBtrNqCqLdg8dbUAo=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/ProjectFolderPickerDialog$ProjectContentProvider$2.class
+SHA-256-Digest: BN2OkCyZyyWcaFzyltNK3h+0DTq6Y+ffHtJ808YdbVs=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VP
+ artMenuEditor.class
+SHA-256-Digest: qwmfth4lXxTQo8vb7hUyyh6LP2ARb4j0sqayXnDn9o0=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/IconDialog$5.class
+SHA-256-Digest: lnYldJ8B/+C24M8expFU2kTIK7M+vLvIMTC+sqquF6A=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ToolBarEdi
+ tor.class
+SHA-256-Digest: YMAFOpqfnHsL4oXjhacUsDz86f8+lIJ4OG7Bu/BSWE4=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/NonReferencedResourceDialog$1.class
+SHA-256-Digest: SnmTYeqXwX1kpuwkgf/x9KZbkSfxZw0S7GxNdPJz61g=
+
+Name: org/eclipse/e4/tools/emf/ui/common/ModelEditorPreferences.class
+SHA-256-Digest: nG2/c5TLGdrXmOkss7USBy5/VFI3NrHWVYSs2mDIZ4w=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fi
+ ndParentReferenceElementDialog$6.class
+SHA-256-Digest: H8qSFg6DKjwfF8UKZ0pAWTw5OWKr8pM2QoMwTirHg2s=
+
+Name: org/eclipse/e4/tools/emf/ui/common/IClassContributionProvider$Co
+ ntributionData.class
+SHA-256-Digest: a0rOJHudpfwriDKxAPsYTyanKB+9crVBGZTfewvXCEo=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ToolItemEd
+ itor$EObject2EClass.class
+SHA-256-Digest: WfsAUz3C9UkQuz5m95hpsIkkJPfz9+gIH21IfxkXAWQ=
+
+Name: icons/full/modelelements/WizardDialog.png
+SHA-256-Digest: 62RiqXOPsBkKE8ZZXy2iORW7mP8P7Sm8FKvqkxPJNRg=
+
+Name: icons/full/wizban/error_wiz.gif
+SHA-256-Digest: Of3l5SqOy7YbBb0bc5ly2U3NL+Rpwd0CTFR2BbReSes=
+
+Name: icons/full/wizban/add_to_dir_wiz.png
+SHA-256-Digest: zKvsyDi4BUcsn35ZvqxJkVV4QAJ3y+ImHAnHeWuUrB8=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/imp/ModelImportPage1$TableC
+ ontentProvider.class
+SHA-256-Digest: q9WIdDDsnw5RRngy4QbxQvkrCllwoee5N3FSuNSqryg=
+
+Name: icons/full/modelelements/Addons.png
+SHA-256-Digest: HEk/o1D+0V0iD+osQ88DP7oB9aeakPwF0dQm20vPiYU=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/messa
+ ges.properties
+SHA-256-Digest: mmhRzUSwqJn2j3O33PK9HuE+aMUUm7FlICglFzF5a8Y=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/PartEditor
+ $3.class
+SHA-256-Digest: qsCJPz5Sgauorl8wG9tdkd8zcnf6SOwFkIn3EUGnROg=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ParameterE
+ ditor.class
+SHA-256-Digest: +EtOUe0kgeKaaiy6jSr7DjDMJ3K4hxvO5cXfC+oioX4=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Bi
+ ndingContextSelectionDialog$3.class
+SHA-256-Digest: +gXtetJ7n7j3WYi9leErar6z8anxxNa6KIgyEmzbixs=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Ab
+ stractIconDialogWithHardcodedScope$IconMatchCallback.class
+SHA-256-Digest: uauBe6cnRUC7AXEn85HS0EzGd3UXICf8/u2H+NbW7FU=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/CompositeP
+ artEditor$3.class
+SHA-256-Digest: mnbOZPO9tnBrEWpuQ8juxrA6WQJsFb3tBHQWdSmIkes=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VW
+ indowSharedElementsEditor$4.class
+SHA-256-Digest: JXw9gxQF0nGi+WjpXsZsgP7G8TXS5/Ft2vvp4uPtMFo=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VW
+ indowTrimEditor$2.class
+SHA-256-Digest: SfebkobjQleqGCW0Egm2Oc6yCvjzpInPUMC9UdddC3E=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/PartDescri
+ ptorEditor$5.class
+SHA-256-Digest: G/TTe4E+1IU6FrHCGupz6tVbaZsbi41o1VnX3mGsq6M=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/MenuEditor
+ $8.class
+SHA-256-Digest: KYdjnk49LtflJbQZhSI7ZUYFV+OucezYt5rmpb5blAY=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/Applicatio
+ nEditor$CommandWizard.class
+SHA-256-Digest: O50tccGnJUL55+B3uyy+x4ornqxy2nwAocW/X0apL5o=
+
+Name: icons/full/wizban/newfolder_wiz.png
+SHA-256-Digest: 9IGiPnD6lszSQEKbSP25krFuh2dgNTeDYku6RzgawGE=
+
+Name: icons/full/modelelements/TrimContribution.gif
+SHA-256-Digest: 2O2POqwepWWeIgZcyZKKrSejqoqYxWe8wY9ciTtM81w=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/IconDialog$3.class
+SHA-256-Digest: qbR1t2lOcyoyjC7+9im5ThYhmcl4I+iaWir+kWeQXTI=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fi
+ lteredContributionDialog$16.class
+SHA-256-Digest: AATfuibfrgdn6MjHmxfG4jNvnCcee49xQLdJCuFUW9c=
+
+Name: icons/full/obj16/zoom.png
+SHA-256-Digest: O9oBc4POtZHF4FGdv1D8tohhVsEspUhWARm30DtU5Bk=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/CompositeP
+ artEditor$4.class
+SHA-256-Digest: nHg4MXhnyBZrTop1fWrnwZA6j/rmUafKQz9y8Skjbq0=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fi
+ ndImportElementDialog$4.class
+SHA-256-Digest: hQarU9WIJV/YvPbgX7mBouOu1uRgKfarfHpJN4Bmnyw=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/StringMode
+ lFragment.class
+SHA-256-Digest: OyeKFy0juYQzGYy+X/9BpbertvT/QY0lTXqHTMM3n+U=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/PartEditor
+ $1.class
+SHA-256-Digest: zC+kHrGu9GRu9dIbMbs5ZyddWj4DpfSJ5QyJTVaz238=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/AreaEditor
+ $1.class
+SHA-256-Digest: /OmoRHImFi7ifEKRH2nAk9q7NY1MbZl4ATGr1c23zow=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/NonReferencedActionPage$5.class
+SHA-256-Digest: 6s2RBsF5jfiMJ3J4O9hJbhb3/jHq5a2n46IN4FYbqlw=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/Perspectiv
+ eStackEditor$1.class
+SHA-256-Digest: C2AcRd3zNSF022jBqvQrO3S81ZM6zGYtakgq1SSWJmc=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/properties/ProjectOS
+ GiTranslationProvider.class
+SHA-256-Digest: sNfTd7pHyppWKb6gfdUFrucGFj4I6+jl9vbzNJ/+72I=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VA
+ pplicationAddons.class
+SHA-256-Digest: rSTIoBPKVNLp2CEtBCIwGDDemqZI9vHCI8L2VMPdfhE=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/TrimBarEdi
+ tor$3.class
+SHA-256-Digest: eneUmQSQKb3+kQ4gThsmKVEhesuCaYcNnv+d0iZrgpc=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/FindContributionDialog$2.class
+SHA-256-Digest: am3527Eu/dErxHcRgY1HhG6BweAGvIoZiubHIlaqDPM=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Wi
+ ndowIconDialogEditor.class
+SHA-256-Digest: kRLyxzas+8iuxC56hI1InIBzyWkC8DrNvIJA0Wf9vKs=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Bi
+ ndingContextSelectionDialog$2.class
+SHA-256-Digest: Km8TCjkW72zWaSQ4O6VjxXKBRYALMldwdfzi1U9QPo0=
+
+Name: org/eclipse/e4/tools/emf/ui/common/IScriptingSupport.class
+SHA-256-Digest: yhKlkN7KvOPZLHmUzc0Tyt7jwkSf5iHpWKiqUdSxows=
+
+Name: icons/full/modelelements/Area_vertical.gif
+SHA-256-Digest: KinvaauCvo98fXwr29jyfoIZlW0uBwJfzyngE0tMK70=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Sh
+ aredElementsDialog$LabelProviderImpl.class
+SHA-256-Digest: hy+xwrM4ZX2t6B9wNoGb1cMaW26Pity26Li3XCUJ73o=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fi
+ ndImportElementDialog$5.class
+SHA-256-Digest: RxGm0ZiTar7OZDpoy9y8luJprn9f6c1HeJpuRmMkJNs=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VA
+ pplicationCategoriesEditor.class
+SHA-256-Digest: 83W2Bh7HjMIlwMeHWb9JdEP875IaLSSoOQoJYaa3m2o=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/AreaEditor
+ $4.class
+SHA-256-Digest: C3IV7Zw/TTQZc6VFBtfQjcu3cYrTDZzhekVtq8gplDM=
+
+Name: icons/full/obj16/filter_by_item.gif
+SHA-256-Digest: WqJTB187imBN9pRGpPLp97ZOct/y0L3klhRwjdXp8co=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/MenuItemEd
+ itor$5.class
+SHA-256-Digest: zTWxWFECFVAV1mpj5/xBGLYTrzf6fnaIL3UcSOFYjbs=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fi
+ ndImportElementDialog.class
+SHA-256-Digest: RRoaHI99injWlpbmN9t/ggEG0OpyI9q3Ziv88ILWWeA=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/BindingTab
+ leEditor.class
+SHA-256-Digest: 6enCMsPmEgVHmN7EzWR1CdaNfxIrW91alh+lRqMA74w=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/wbm/ApplicationModelEditor$
+ 1$1.class
+SHA-256-Digest: TzW4hLUPZdEMHffavo7l5ycJ1uI8bvSZrRpT6vCB2cY=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/uistructure/UIViewer
+ $2$2.class
+SHA-256-Digest: h+REIO9rKu/wzNEPs9+FhDh4R7R2Lvh9mR9l/Z7nkJg=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Ab
+ stractCommandSelectionDialog$3.class
+SHA-256-Digest: 34gBg9RlTl+1yuxQXRaerqkdHTZRWfEUAqVc9ybNqXU=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/handlers/MarkDuplicateItems
+ Base.class
+SHA-256-Digest: vQsSrHj5sx4hgJZPG6luNiwcq3iI68E4l4PMacseQzc=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/DirectTool
+ ItemEditor$2.class
+SHA-256-Digest: JNy+NTw2WwjTAW8ErVwujCosR4X7r+tNEBCJApDTbdk=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VC
+ ommandEditor.class
+SHA-256-Digest: phgo9FzUoZq2+jYwPDN4ZoKJtVMl8/Hphgk2u3AmRFk=
+
+Name: icons/full/obj16/headermenu.png
+SHA-256-Digest: 4I4PYCkaTr1mXQoac48S1nAWCWGe/DbxXijcxif20lo=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/TrimContri
+ butionEditor$3.class
+SHA-256-Digest: kpL3mGBNmb0ZQqufODpCLdqccJeF77JyKhOReRUV7iE=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/Applicatio
+ nEditor$9.class
+SHA-256-Digest: k60d1sYDX3qXM0MtckMUrOqM+sOG1pd7481yc58q+O8=
+
+Name: org/eclipse/e4/tools/emf/ui/common/Util$InternalPackage.class
+SHA-256-Digest: BpX6c2L7hnzyslRtycegNJGC9oPjG3VG2hfmi8TEMbk=
+
+Name: org/eclipse/e4/tools/emf/ui/common/component/AbstractComponentEd
+ itor.class
+SHA-256-Digest: QzchPK/ID3Q29taj7N3f1a7wdmTLx7+VIMBKsV7z6nQ=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VH
+ andlerEditor.class
+SHA-256-Digest: onF06LWzi529H4ZhMyUTyFJBp6FsaH0gNidBWg91OBw=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VT
+ oolBarContributionsEditor$1.class
+SHA-256-Digest: XRcfSFpJ6SxRUSU2yGJ5d4TpFws3HWc6DRa0QOWEyPw=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/Imperative
+ ExpressionEditor$3.class
+SHA-256-Digest: ilLnY0fQocabuhPdhTcsbRy0Epv7RTYE66aF45MJBpQ=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/CompositeP
+ artEditor$9.class
+SHA-256-Digest: B5JSsXY6S9MEJtpLRjxCQZ46GJGP17QcCV3J6itLamQ=
+
+Name: icons/full/modelelements/HandledToolItem.gif
+SHA-256-Digest: mvpQ/+bOy21K9Esw0Sx87vEua2gQATQt9k12huvKbrM=
+
+Name: OSGI-INF/contributioncollector.xml
+SHA-256-Digest: DUI5vRHCx+j5ejNwn5u2u8Oqx1cMAcZ1CXD8bpkBlTU=
+
+Name: icons/full/obj16/table_delete.png
+SHA-256-Digest: EVCQI6VvIXk/UP3mml2WOQwJtMPBiyhF9dy3wE+XAAE=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/FindContributionDialog$3.class
+SHA-256-Digest: QjUPuM/lCCLnk/+1XZIQ3YGrjmUUSGuY3pWZ2GyFkGc=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/xml/XMLConfiguration
+ .class
+SHA-256-Digest: 5ysdlnHP/TlNpdEO5d/zQ1HqlXjrLC4OHwIANAbJaBY=
+
+Name: icons/full/wizban/extstr_wiz.png
+SHA-256-Digest: KYU09bCJHoOyp252g23Yj3J3TH7zBlGeKCq1iBUchbM=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Ab
+ stractIconDialogWithScopeAndFilter$1.class
+SHA-256-Digest: Z1d8QAZBn6gVnQZlnSkeJYSg88+fkV11tZ/1AZdyaCY=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/wbm/ApplicationModelEditor$
+ 2.class
+SHA-256-Digest: lpXFrBTh/S4018p1wgaDBJt8q/kAPsFzX10RPJEdsYU=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/DirectMenu
+ ItemEditor$1.class
+SHA-256-Digest: C9EXmvg69mFdgmgoLhZe7cmQGRlp7Rhn7mBWEe3Q+N4=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fi
+ lteredContributionDialog$17.class
+SHA-256-Digest: wciMedqhZMK/cWS6B7V+SI7UaBx+FjOK06gZ/NSpFHc=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/HandledMen
+ uItemEditor.class
+SHA-256-Digest: OBRYZLqhcFE6zL+xPXVt9xiF71igN7SbnKgpLZLQZzM=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/TrimContri
+ butionEditor$4.class
+SHA-256-Digest: MMq5n4Pzh9V9rqRDjVw/95Vzi5qGXBImg6CccrrJs/0=
+
+Name: icons/full/widgets/toolbar_obj.gif
+SHA-256-Digest: We11rYMmT88T5xIBksE3v+7ZhFZAmpeMKXFfyz7XWx4=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/ModelEditor$11.class
+SHA-256-Digest: Z8VvtTGY8lqVs1DbUs+4qlRYmggV1a8LDiS2by7v4Vo=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/DirectTool
+ ItemEditor$3.class
+SHA-256-Digest: mY8W8AUtxKcVeIv8idyfAxEYnIqYIYujNNluce7MDig=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/ProjectFolderPickerDialog$ProjectContentProvider$1.class
+SHA-256-Digest: jTo3cdF4LMhuy6yw4zcMXQUUKK3PsW5DbKhekEnDwcY=
+
+Name: org/eclipse/e4/tools/emf/ui/common/MemoryTransfer.class
+SHA-256-Digest: +8DskI63y9cCXRS20j14i3umTn/Kqti/MdbHq9U4HN8=
+
+Name: icons/full/modelelements/Command.png
+SHA-256-Digest: rKb+VNL5fSuwVnw9VVFQQK2V5iKzE+vteguGmPtdqw4=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/NonReferencedResourceDialog$6$1$1.class
+SHA-256-Digest: fF31f6vHtAvnppwoaN+yHBgZSn2tirq2IHga3/tbdeg=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/PartDescri
+ ptorEditor$2.class
+SHA-256-Digest: uaFKqQ0OdEo6RVBAr/U1zha6OlXUz2z5Nbtgl4u/HTg=
+
+Name: org/eclipse/e4/tools/emf/ui/common/ISelectionProviderService.cla
+ ss
+SHA-256-Digest: YeeefXWC6CZcIXa3HLx2Do9pw/hJWYVoyRljCh6DUJ8=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/IconDialog$2.class
+SHA-256-Digest: p7k4ZY7LM9O6KBEPMgt2IdaUk33UWHIa7tKSkLFmhI8=
+
+Name: icons/full/widgets/text_obj.gif
+SHA-256-Digest: tNU5IUKYBM34T5ooLmNXFINxYMSbK+nnrzdonsWt+GM=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/empty
+ /TitleAreaFilterDialog$1.class
+SHA-256-Digest: lFGq2L29E9NSmiQpVHEzXdL1rrvPFEB+9iVrhI6RPmg=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/MenuItemEd
+ itor$4.class
+SHA-256-Digest: IzxXUomd7Yz1LURzkhTCNpr5BTG0TKEh+qXoSZa+0GA=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/KeyBinding
+ Editor$BindingValidator.class
+SHA-256-Digest: Wb2PJEZ9wTsm9q7v9eI2WZ1zmXRkjDEYSTz+Ev1t3Ww=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/AreaEditor
+ $3.class
+SHA-256-Digest: o6w5fACEQY4SkVFQ2vNyifx9g0KvwlT8Aef7JymDX+g=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/ModelEditor$12.class
+SHA-256-Digest: 3XRpJPndd15xXravJ5i/YfvB8GrKB+FXz46d1v7sjXY=
+
+Name: icons/full/wizban/newsearch_wiz.gif
+SHA-256-Digest: Bpm2reNUmmp2iCgQ293GOpF/OolZiCMSW38QCBTjCtY=
+
+Name: icons/full/modelelements/Category.png
+SHA-256-Digest: vf4C3QPKpRb4jwjJxRF0HLQkLflLRdlO5emZ747viHU=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VW
+ indowSharedElementsEditor$8.class
+SHA-256-Digest: aYYtfomtJyRrrT0e25Bco8et7k82jQBik50mMyWAPm8=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Co
+ mmandCategorySelectionDialog$LabelProviderImpl.class
+SHA-256-Digest: akhR355aUZKmvxSktkhbD58bx1zOkKfopkDF1CDvKAI=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/PartDescri
+ ptorEditor$1.class
+SHA-256-Digest: xtf+kz3rL88H3sbo02uhLHdeh1Ikovrk7T131vn3Tgc=
+
+Name: icons/full/widgets/composite_obj.gif
+SHA-256-Digest: sIhiPLE8RscCDhVGnIwqAl3qFaA26KjkvI4cjhTiJkE=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ToolContro
+ lEditor.class
+SHA-256-Digest: wbiK6JlyZnJeo/WQR52W7aEbkBlLEy8nvCYkiGhBFOU=
+
+Name: icons/full/modelelements/BindingTable.png
+SHA-256-Digest: hWMKKLQzu3uEegVmMtHbabxrqZuV9z7TaA+dSwcpU8o=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VT
+ oolBarContributionsEditor$2.class
+SHA-256-Digest: YwwpGInZnMq04RLAq/TRELeL3A8KemkNeHkRW7uhsUM=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/IconDialog$1.class
+SHA-256-Digest: HQ9VjTGKi4u7aaTFQTqIaPtY6q05o+DSpvqfPDQ/IaI=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ControlFac
+ tory.class
+SHA-256-Digest: d8oU0nAnIvO8NMSwuOas7nECYVOpQ+yovJ3yGytl2Y0=
+
+Name: icons/full/modelelements/Application.png
+SHA-256-Digest: YsGS7XMWgqzmMcX1m7jIBTTv+/J1L61ehuN0AR7Jnlo=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VA
+ pplicationCategoriesEditor$1.class
+SHA-256-Digest: fexby9QfcHEIlavw+ae28MZT42kyZ9ftYrjRwwPXNzs=
+
+Name: icons/full/obj16/use_anyway.gif
+SHA-256-Digest: H4Ci9atwQ+zPxcirdPIxwxK8PocfedRggdYSCJnZr6w=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/CompositeP
+ artEditor$8.class
+SHA-256-Digest: 0NXPZY5OdBn6ymKLYMJ2I+81Esq0bE8Gj/bywBpb7xU=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/ModelEditor$13.class
+SHA-256-Digest: fFGtbT5U4BlJ8YdXnnrQQh1rdq9HI8oTl9v9vKUG66Q=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/UriDialog.class
+SHA-256-Digest: YrvqN6X26mtXV5/wcKcdsMsAPW+inF9BmXBJxTiXNx8=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/wbm/ApplicationModelEditor$
+ 1.class
+SHA-256-Digest: rxcy4bu9l/MU82sEIs994x1+CoOwyzYjEhvQ5+QH7lI=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/Applicatio
+ nEditor$2.class
+SHA-256-Digest: OKwQ4mn4iqDRIUr0MWT6qnXZOqYw8RzlpS9xYZckEqI=
+
+Name: icons/full/modelelements/ToolBarContribution.gif
+SHA-256-Digest: 2O2POqwepWWeIgZcyZKKrSejqoqYxWe8wY9ciTtM81w=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/MenuEditor
+ $10$1.class
+SHA-256-Digest: TVmrkS0kCbAFhilYNlTUHFMLWtQOTGMIkoYeF4WrgeQ=
+
+Name: plugin.properties
+SHA-256-Digest: Cnod0pZxktltyifllX6OZH4u6j1TunPWA85hc+dNrnE=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Ab
+ stractIconDialogWithScopeAndFilter$5.class
+SHA-256-Digest: 3eju7XYsxWR331/Jt0TRYgiLUT3R756muMKI6y9VGWk=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VI
+ temParametersEditor$2.class
+SHA-256-Digest: m1wxyJLWnQTFsNdBr4v1gJFMBkuyhHft09lYfXfWn7Y=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/Applicatio
+ nEditor$5.class
+SHA-256-Digest: t8zfrYCvkPvsSf8cTDqjkOzJuLT0a6GldYy+cXOzpiU=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/objectdata/ObjectVie
+ wer.class
+SHA-256-Digest: iq6mMsJsJ7CgvWWbhvegPLwfkt4EnnjPEDL6iLRlv5s=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/MenuContri
+ butionEditor$4.class
+SHA-256-Digest: WpaADxQ34vT5/cxqefzQvWc3mPNpqbMQaX9RRt6cqNM=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ToolItemEd
+ itor$2.class
+SHA-256-Digest: Cpwcw1CJm9CBR3K90dqcT7+5F326ZdyST5LvkNi8Bzc=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/CoreExpres
+ sionEditor$1.class
+SHA-256-Digest: 8h/J14xFl0vNss414r3an/HE+OJJy6DhLxxn0vmNsZk=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Sh
+ aredElementsDialog$1.class
+SHA-256-Digest: c7IdF/bOqQ4xCXUoJmy6ZlToE8ABEHS0Blvu+k6zt7o=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/uistructure/UIViewer
+ $2$1.class
+SHA-256-Digest: 4SJ41DCIepqP+g7mzCGdOICfHcpDqPCAwg12dASFxMM=
+
+Name: org/eclipse/e4/tools/emf/ui/common/Util$1.class
+SHA-256-Digest: aBFUkHQ6SQdngaLyJh21EKk+5TugbXj3Ph9Ke5+zKUA=
+
+Name: icons/full/widgets/toolitemcheck_obj.gif
+SHA-256-Digest: GJPWKPi+uOwHXI5juxZqKIZfe03CpkBXY0RmJPwHmbs=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/AreaEditor
+ $8.class
+SHA-256-Digest: D4FspM2SLQa2ddSXWQJv0m3lIckzKSiAvz83gTDOCwQ=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/MenuContri
+ butionEditor$1.class
+SHA-256-Digest: XO9v1Cy6UHiSM4m0NTqzfvGv9koGut0Nf/qD39FGcU4=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/AreaEditor
+ $5.class
+SHA-256-Digest: WjCve44OgRGGJy/6adrAthuTZMvecSXdtvPuUIX23is=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/PartEditor
+ .class
+SHA-256-Digest: r+EiD64BBWYBoxCeGn/nZrdiP9byplv2z7ujVLq5vs4=
+
+Name: org/eclipse/e4/tools/emf/ui/common/ProviderStatus.class
+SHA-256-Digest: /PRga3vbo4B0wyIPtFjBx7IBot88COZQQDkcoeHIDkk=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/Applicatio
+ nEditor$HandlerCommandPage$1.class
+SHA-256-Digest: NAZ6JCgdR2O6PUdetGfsgEdwkLwrHqGa+L0wtYuXwlk=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VC
+ ommandEditor$3.class
+SHA-256-Digest: e8aRC9q9eOayJRROmoWEbJB6qBVxi0DnxZP4UTNzJOk=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Ab
+ stractCommandSelectionDialog$2.class
+SHA-256-Digest: Rcii790h8sX1YZvMhpiLzopIzT85yRQks+Gn47akzdM=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VT
+ rimContributionsEditor$1.class
+SHA-256-Digest: JFGR61xp5UjcwEzDGHULELExyLv5FwspRjSHPsoigME=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/PickProjectFolderPage.class
+SHA-256-Digest: XT4paYk5Hizpq5Ijkj1ySt2H5PmLbK615/1Eq9cFBUA=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/wbm/ApplicationModelEditor$
+ 3.class
+SHA-256-Digest: I8ip3M18yNNPR9jbrVDGgsMWdLr3Gj6u+nxB3rbLEv0=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/StringMatcher.class
+SHA-256-Digest: WaBGuNSqgzgbxk6O1QFWoNyD6zs0gqJyPNMR3DCzMD0=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ToolItemEd
+ itor$1.class
+SHA-256-Digest: sPb8o9rEDi/FQNQ+aE7+vHC0XA9nPegfutgTNTmjzv8=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ToolItemEd
+ itor$EClass2EObject.class
+SHA-256-Digest: iTAwdq42RHtiPEmwsyf+pSTXj0X17TUYgOoGdNs0sdw=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/To
+ olItemIconDialogEditor.class
+SHA-256-Digest: ah4+BPGxV3GYjM05vPTw/y5Ca+vDmknbcyDLYahXuZ4=
+
+Name: icons/full/modelelements/StringModelFragment.png
+SHA-256-Digest: DnZ9TmiN8VaZ5WYZMNYx02+vNzWYa5rZYXki753MVSA=
+
+Name: org/eclipse/e4/tools/emf/ui/common/ContributionURIValidator.clas
+ s
+SHA-256-Digest: JIL9Lg79vALfn3gLZNGNH0FkRm5tGz6fWiwk11QBnUg=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/Applicatio
+ nEditor$3.class
+SHA-256-Digest: 8PB1ah1IwttWGtM87prdlUQVGyMkW8RkEHhGbCRqFko=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/MenuContri
+ butionEditor$2.class
+SHA-256-Digest: s1tR8lVHRutOyYYMTxs/ijE7vH7jLZvxMk5BH1lok0k=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/VirtualEntry$1.class
+SHA-256-Digest: kljoZSOVO3VEjLX26SzCzc2Hzlg2AzJLTIHMqP9J7A8=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/FeatureClassLabelPro
+ vider.class
+SHA-256-Digest: IYP1e1EIXDjO2Wv8wUsdvAxF003igz4L1jjUtS+AkfU=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VC
+ ommandEditor$2.class
+SHA-256-Digest: Wl9kfchtYI/1mvKk5R9NqX+V1AoltwEsmNgs8EEXweA=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/Table
+ ViewerUtil$ColumnLabelSorter.class
+SHA-256-Digest: GrdWfqhix9W2TX0b7whfCIDBpgxX8klj1xCJWyTX9Ac=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/ModelEditor$14.class
+SHA-256-Digest: kOylc6JsDE+g8AKHK0gGsOIX4au+gl2MYC6szLo9mXc=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/Applicatio
+ nEditor$KeybindingPage$2.class
+SHA-256-Digest: hUGGBkFtXL02klut+DJdA8l8u/8P7FvPUeGmdhY9LNE=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/TrimContri
+ butionEditor$1.class
+SHA-256-Digest: mYJD/W34g5YOxzxaRd3Muwv08VORn0frlmTv1penP9U=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/AreaEditor
+ $6.class
+SHA-256-Digest: uWEJyO+1IPqRdWl+m3cGoPEvoO3vG6VXqSHfHB3V42g=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VA
+ pplicationCategoriesEditor$3.class
+SHA-256-Digest: iTWTRyTalfB/5N7Qb+xFTGSnl8fr1goOQufs2q3HI2Q=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/DirectMenu
+ ItemEditor$2.class
+SHA-256-Digest: vJbhLfHevTb0igZp4zkvhNZRTrO6P6vsRKUTB21le74=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/ToolBarSep
+ aratorEditor.class
+SHA-256-Digest: 5iwzRh80LVWi60N0Su+7kdaCcFiZ2YhuRR330+tFVqg=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Fi
+ lteredContributionDialog$6$1$2$1.class
+SHA-256-Digest: oOwjDgwlelKhmu2szxu9f63K63UeMfRYKMc5En3X9+0=
+
+Name: about.html
+SHA-256-Digest: rIdeh+wVdY1hTkrbtjueBUwvpGFvG9UjXMwUtM1eFpo=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/Applicatio
+ nEditor$4.class
+SHA-256-Digest: 07659i58X1JzrofvUysTECaUB4TPZtPiQYdbON1irU0=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/NonReferencedActionPage.class
+SHA-256-Digest: ZTRLLsWsLJnXb4UlqJJ7UHSM+75XmBfbJlfYkbb8R4w=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/Applicatio
+ nEditor$KeybindingPage$1.class
+SHA-256-Digest: TXtc7u5p/CkNPNgdL0vvWlcWNsTk6hyZmuTH70xpltA=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/DirectTool
+ ItemEditor$1.class
+SHA-256-Digest: 9Dj4dt28odijeKeqBMERWd158l6MwslsxVurvGHjNrg=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/DirectMenu
+ ItemEditor$3.class
+SHA-256-Digest: IfSnVcRHaR23eukq3HDajHpzjo4YpFdI9gnjHVP19YY=
+
+Name: icons/full/modelelements/PartStack.gif
+SHA-256-Digest: 5DnbkY8zVk+bG+Rrngr+6VpEpoXqqm41404+5R3gymE=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/handlers/MarkDuplicateAttri
+ butesHandler$1.class
+SHA-256-Digest: +OeFnKDsmrDj8iMDaX83molIB74HCIm+oEu+YRcPKsk=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/MenuContri
+ butionEditor$3.class
+SHA-256-Digest: wYJMW8gW+guyfe+pKc6cIO9ZxwSpiTmNYlOVY4mKvbM=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/dialogs/Sh
+ aredElementsDialog$2.class
+SHA-256-Digest: 518uDAeKt79G63rYnLO0hsqrmH0lhIDVSI0zRxqnGho=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/MenuItemEd
+ itor$1.class
+SHA-256-Digest: /m4DVoCZhB/Vi+fhYpH6ipNdjgjqO2GhxnssUYQlbcc=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/resourcelocator/dial
+ ogs/NonReferencedActionPage$4$1.class
+SHA-256-Digest: gKiNV48TSob/n1SGaaS6UUD4/AGP7nvW5kmkyY46K2k=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VC
+ ommandEditor$1.class
+SHA-256-Digest: cH+N8B2ncNqK7PfFvicWb2lTRMzo15N00t6QHdomcfI=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/virtual/VA
+ pplicationCategoriesEditor$2.class
+SHA-256-Digest: bxYTbQViwRHaG/lzIOCm1jNiH1/z7+xj+SbM6aXi4CU=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/tabs/EAttr
+ ibuteEditingSupport.class
+SHA-256-Digest: 4wpSCoEr7g4ULilDoS3eP6omrBhRSWJk02rxgaR2AoE=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/imp/Messages.class
+SHA-256-Digest: 8KnWP27znGn4hTK+yykw1WqTTglbsl/lZbkbZmhptfY=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/ModelEditor$15.class
+SHA-256-Digest: hPDrt9Rss/0DACprWFbRPo2GCC0YjnoZzP+XLEc82E8=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/AreaEditor
+ $7.class
+SHA-256-Digest: UUDb+oKK5VXN70JvZr/KyWobIba2z/raI1h2y333/lo=
+
+Name: org/eclipse/e4/tools/emf/ui/internal/common/component/TrimContri
+ butionEditor$2.class
+SHA-256-Digest: qXUk7KEQ4wyqTvcZLtMxXB7DWeNjporqUmLqE0YLtxA=
+

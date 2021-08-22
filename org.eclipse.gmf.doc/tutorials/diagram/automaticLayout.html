@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="generator" content="HTML Tidy, see www.w3.org" />
+<title>Tutorial: Modifying a container to support automatic
+layout</title>
+</head>
+<body>
+<p><img src="../../logo.gif" /></p>
+
+<h1>Tutorial: Modifying a container to support automatic
+layout</h1>
+
+<table border="0">
+<tr>
+<td>
+<p>Version: 0.1</p>
+</td>
+<td>
+<p>Date: August 11, 2005</p>
+</td>
+</tr>
+</table>
+
+<h2>Contents</h2>
+
+<p>&middot; <a href="#_Overview">Overview</a></p>
+
+<p>&middot; <a href="#_References">References</a></p>
+
+<p>&middot; <a href="#_Introduction">Introduction</a><br />
+ &middot; <a href="#automaticLayout">Modifying a container to
+support automatic layout</a></p>
+
+<p>&middot; <a href="#summary">Summary</a></p>
+
+<h2><a id="_Overview" name="_Overview"></a>Overview</h2>
+
+<p>[<a href="#top">back to top</a>]</p>
+
+<p>This tutorial provides the reader with the steps to initializing
+a container that can automatically layout it's children accordingly
+to a specific hseuristic.</p>
+
+<h2><a id="_References" name="_References"></a>References</h2>
+
+<p>[<a href="#top">back to top</a>]</p>
+
+<p>This tutorial references the following tutoral:<br />
+<br />
+ <a href="createShape.html">Create a shape</a></p>
+
+<h2><a id="_Introduction"
+name="_Introduction"></a>Introduction</h2>
+
+<p>[<a href="#top">back to top</a>]</p>
+
+<p>In this tutorial, we will use the Logic Diagram Example to
+illustrate how to initialize the logic flow container to layout
+it's children by utilizing a flow layout. To gain familiarity with
+the Logic Diagram Example, refer to the <a
+href="../../examples-guide/diagram/logicExample.html">Logic Example
+Guide</a>.</p>
+
+<h2><a id="automaticLayout" name="automaticLayout">Modifying a
+container to support automatic layout</a><br />
+ [<a href="#top">back to top</a>]</h2>
+
+<p>Layout is usually managed by the user through explicit movement
+of diagram shapes inside the container.&nbsp; Sometimes, it is more
+convenient to have a managed layout that automatically places
+shapes based on an algorithm.&nbsp; In the Logic example, the Flow
+container shape is an example of this.&nbsp; Logic elements placed
+inside the flow container are automatically positioned relative to
+the other elements.&nbsp; To do this we need to override some
+default behavior that container shapes in exhibit.</p>
+
+<h3><a id="_Toc104273264" name="_Toc104273264">Example: Flow
+Container Shape displaying automatic layout containment</a><br />
+ <img width="236" height="188" src="flowContainer.gif" /><br />
+</h3>
+
+<p>By default the XYLayoutEditPolicy is installed on a shape
+container that allows for specific placement of elements with-in
+the container.&nbsp; If you wish to have a more managed layout that
+automatically positions elements, then a different layout edit
+policy would need to be installed.&nbsp; In this example, we are
+interested in installed a directed flow layout such that the
+elements positions are automatically placed in a flow chart like
+manner.</p>
+
+<h3><a id="_Toc104273265" name="_Toc104273265">Add entries to the
+contribution for the palette provider for the flow container
+shape</a></h3>
+
+<p>See <a href="createShape.html#palette"><a
+href="createShape.html#palette">#Add entries to the contribution
+for the palette provider.</a></a></p>
+
+<h3><a id="_Toc104273267" name="_Toc104273267">Add new View
+provider entry for the flow container shape</a></h3>
+
+<p>This is very similar to the Circuit shape view provider in that
+a sub-container view is created to contain the children.</p>
+
+<p>See <a href="createShape.html#notation">#Add new View provider
+entry for the Circuit shape</a></p>
+
+<h3><a id="_Toc104273268" name="_Toc104273268">Add new EditPart
+provider entry for the flow container shape</a></h3>
+
+<p>A custom EditPart is necessary to handle the unique
+functionality of the Logic Flow container (See <a
+href="createShape.html#editpart">#Add new EditPart provider
+entry</a>). Since the layout of the children is handled uniquely
+(i.e. managed), a new layout EditPolicy needs to be installed on
+the container compartment.&nbsp; This EditPolicy is called the
+?LogicFlowEditPolicy? and it will automatically layout the shapes
+in a grid fashion. LogicFlowEditPolicy? is needed since flow
+container uses ?FlowLayout? to arrange components. Make
+?LogicFlowEditPolicy? inherit from
+?FlowLayoutEditPolicy?.&nbsp;</p>
+
+<p>The ?LogicFlowCompartmentEditPart? inherits from
+?ListCompartmentEditPart? instead of ?ShapeCompartmentEditPart?.
+The reason is that the latter assumes that the layout is going to
+be manipulated by the user (i.e. XYLayoutEditPolicy) instead of
+managed by the container.&nbsp; ?ListCompartmentEditPart? is
+lightweight and doesn?t make any such assumptions. In the
+?LogicFlowCompartmentEditPart, the ?createFigure? method was
+overridden to allow automatic positioning of the children properly
+by setting the layout manager as ?FlowLayout?.&nbsp; It was also
+necessary to overwrite the abstract method
+?hasModelChildrenChanged? from ListCompartmentEditPart in
+?LogicFlowCompartmentEditPart? since there is no canonical
+reflection of the underlying semantic elements inside the
+container.</p>
+
+<p>In LogicFlowCompartmentEditPart:</p>
+
+<p><i></i></p>
+
+<p>/**</p>
+
+<p>&nbsp;* @see
+org.eclipse.gef.editparts.AbstractGraphicalEditPart#createFigure()</p>
+
+<p>&nbsp;*/</p>
+
+<p>public IFigure createFigure() {</p>
+
+<p>ResizableCompartmentFigure rcf = (ResizableCompartmentFigure)
+super.createFigure();</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FlowLayout layout = new
+FlowLayout();</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+layout.setMajorSpacing(MapMode.DPtoLP(5));</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+layout.setMinorSpacing(MapMode.DPtoLP(5));</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+rcf.getContentPane().setLayoutManager(layout);</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return rcf;</p>
+
+<p>}</p>
+
+<h3><a id="_Toc104273269" name="_Toc104273269">Example Logic Flow
+Container structure:</a><br />
+ <img width="623" height="614" src="flowStructure.gif" /></h3>
+
+<h2><a id="summary" name="summary">Summary</a></h2>
+
+<p>[<a href="#top">back to top</a>]</p>
+
+<p>In this tutorial, we did the following:</p>
+
+<ol>
+<li>Initialized the flow container class to support a custom layout
+type that automatically laid-out it's children.</li>
+</ol>
+
+<br />
+<br />
+<p><a href="http://www.eclipse.org/legal/epl-v10.html">Copyright
+(c) 2000,2005 IBM Corporation and others. All Rights
+Reserved.</a></p>
+
+<br />
+ <br />
+</body>
+</html>
+

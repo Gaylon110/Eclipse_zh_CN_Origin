@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>introduction</title><link type="text/css" rel="stylesheet" href="../book.css"/><style type="text/css">/*******************************************************************************
+ * Copyright (c) 2011, 2012 Torkild U. Resheim.
+ * 
+ * All rights reserved. This program and the accompanying materials are made
+ * available under the terms of the Eclipse Public License v2.0 which
+ * accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
+ * 
+ * Contributors: 
+ *     Torkild U. Resheim - initial API and implementation
+ *******************************************************************************/
+
+table, td, th {
+  border-color: gray; 
+  border-style: solid;
+}
+
+table {
+  width: 90%;
+  border-width: 0 0 1px 1px; 
+  border-spacing: 0; 
+  border-collapse: collapse;
+  padding: 1em;
+  }
+
+td, th {
+  margin: 0px; 
+  padding: 4px; 
+  border-width: 1px 1px 0 0; 
+  font-size: 0.9em;
+}
+
+pre {
+  margin: 0px;
+}
+
+th {
+  background-color: #c0c0c0;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+td {
+  background-color: #f0f0f0;
+}
+</style></head><body><h1 id="Introduction">Introduction</h1><p>Electronic books are everywhere these days and new reading devices seem to be announced monthly. With a few exceptions (e.g. Amazon&#8217;s Kindle) - all of these can display books formatted as EPUB. There are also a few decent desktop applications capable of displaying EPUBs. With this abundance of reading systems it could be wise to take advantage of the situation and publish for instance user guides and manuals in this format. This way users can read them at home, at the desktop and everywhere in between. Most reading systems also supports annotating and bookmarking with synchronization between devices.</p><p>There are several ways of assembling EPUBs: You can write a document in Apple&#8217;s <i>Pages</i> and directly export to EPUB. You can for example write it in Microsoft&#8217;s <i>Word</i> and convert it to EPUB using <a href="http://code.google.com/p/epub-tools/">EPUBGen</a>, in DocBook and convert it using <a href="http://code.google.com/p/epub-tools/">docbook2epub</a> or even manually assembling the publication using various command line tools. The popular <a href="http://calibre-ebook.com/">Calibre</a> tool can also be used to create a number of formats. All these methods have their merits but few can be easily used to assemble publications during a <i>continuous build</i> and none can be used without adding a few extra dependencies such as Ruby or Python. </p><p>Hence the primary goal of the EPUB support in Mylyn Docs is to create a mechanism that allows consistent building of EPUB files adhering to all relevant standards, using ANT tasks, while introducing as few dependencies as possible (only Java and parts of Eclipse). The secondary goal is to create an API that can be used for manipulating EPUBs. For instance loading an existing publication and altering it&#8217;s contents or metadata. </p><p>The EPUB support in Eclipse is built around an EMF data model describing the publication along with various mechanisms to manipulate this structure and assemble a EPUB file. The model is expressed in <a href="http://wiki.eclipse.org/Ecore">Ecore</a>, representing the <a href="http://idpf.org/epub/20/spec/OPF_2.0.1_draft.htm">Open Packaging Format (OPF)</a>, a subset of Dublin Core and the Navigation Control File (NCX). All required parts of a properly assembled EPUB file following the 2.0.1 revision of the standard.</p><p>In addition support has been added for forward compatible EPUB 3 files to be read. These are EPUB 3 files that contains all the the artifacts and attributes required for an EPUB 2 reading system. Note that while EPUB 3 files can be read by these tools, corrently only EPUB 2 files can be produced.</p><p>The mechanisms mentioned is an API for handling the EPUB and a Ant task that can be used during building. The following code shows the minimum Ant script required to generate a publication.</p><pre><code>&lt;epub file="My Book.epub"&gt;
+  &lt;title&gt;My Book&lt;/title&gt;
+  &lt;subject&gt;My Book's subject&lt;/subject&gt;
+  &lt;item file="my_chapter.xhtml" /&gt;
+&lt;/epub&gt;
+
+</code></pre><p>Some of the fields required by will be automatically created and added to the publication when not specified in the Ant script. The table of contents will for instance be automatically created, the language set to <i>en</i> for &#8220;English&#8221; and an identifier (based on UUID) will be generated. Details can be found in the chapter describing the <a href="epub-ant-task.html">epub</a> Ant task.</p><h2 id="Features">Features</h2><ul><li>General support for the EPUB 2.0.1 specification.</li><li>Wizard for converting a single markup file to an EPUB.</li><li>Ant task for assembling an EPUB.</li><li>API for creating, reading, writing and manipulating an EPUB.</li><li>Content validation.</li></ul><h3 id="UnsupportedEPUBfeatures">Unsupported EPUB features</h3><ul><li>Digital Rights Management (DRM). Including signing, encryption and font obfuscation.</li><li><b>Tours</b> element in the OPF. Was deprecated in version 2.0.1 and removed in version 3.0 of the EPUB specification.</li><li><b>Out-of-line XML islands</b> in the OPF. Was removed in version 3.0 of the specification.</li></ul><h2 id="Learningmore">Learning more</h2><p>If you would like to learn more about building EPUBs you may want to take a look at following resources:</p><ul><li>Elizabeth Castro: EPUB Straight to the Point &#8211; ISBN: 9780132366984</li><li>International Digital Publishing Forum: <a href="http://idpf.org/epub">EPUB</a></li><li>Liza Daly: <a href="http://www.ibm.com/developerworks/xml/tutorials/x-epubtut/index.html">Build a digital book with EPUB</a></li><li>Harrison Ainsworth: <a href="http://www.hxa.name/articles/content/epub-guide_hxa7241_2007.html">Epub Format Construction Guide</a></li></ul></body></html>

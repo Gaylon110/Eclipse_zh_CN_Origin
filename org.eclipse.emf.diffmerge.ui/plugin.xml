@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<!--
+  Copyright (c) 2010-2018 Thales Global Services S.A.S.
+  This program and the accompanying materials are made
+  available under the terms of the Eclipse Public License 2.0
+  which is available at https://www.eclipse.org/legal/epl-2.0/
+  
+  SPDX-License-Identifier: EPL-2.0
+  
+   Contributors:
+  Thales Global Services S.A.S - initial API and implementation
+-->
+<plugin>
+   <extension-point id="org.eclipse.emf.diffmerge.ui.modelComparisonContext" name="ModelComparisonContext" schema="schema/ModelComparisonContext.exsd"/>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.eclipse.org/emf/diffmerge/ui/diffuidata/1.0.0"
+            class="org.eclipse.emf.diffmerge.ui.diffuidata.DiffuidataPackage"
+            genModel="model/DiffUIData.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated DiffUIData -->
+      <parser
+            type="edm"
+            class="org.eclipse.emf.diffmerge.ui.diffuidata.util.DiffuidataResourceFactoryImpl"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            id="org.eclipse.emf.diffmerge.ui.compareWithEachOther"
+            objectClass="org.eclipse.core.resources.IFile">
+         <action
+               class="org.eclipse.emf.diffmerge.ui.setup.CompareModelsAction"
+               enablesFor="2+"
+               id="org.eclipse.emf.diffmerge.ui.compareFilesAction"
+               label="%action.label"
+               menubarPath="compareWithMenu/compareWithGroup">
+         </action>
+      </objectContribution>
+   </extension>
+   <extension
+         point="org.eclipse.emf.diffmerge.ui.modelComparisonContext">
+      <scopeDefinition
+            factory="org.eclipse.emf.diffmerge.ui.specification.ext.URIScopeDefinitionFactory">
+      </scopeDefinition>
+      <scopeDefinition
+            factory="org.eclipse.emf.diffmerge.ui.specification.ext.ResourceScopeDefinitionFactory">
+      </scopeDefinition>
+      <comparisonMethod
+            factory="org.eclipse.emf.diffmerge.ui.specification.ext.ConfigurableComparisonMethodFactory">
+      </comparisonMethod>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.adapters">
+      <factory
+            adaptableType="org.eclipse.ui.IReusableEditor"
+            class="org.eclipse.emf.diffmerge.ui.setup.CompareEditorAdapterFactory">
+         <adapter
+               type="org.eclipse.ui.views.properties.IPropertySheetPage">
+         </adapter>
+      </factory>
+   </extension>
+</plugin>

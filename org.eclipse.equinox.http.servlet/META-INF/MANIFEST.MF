@@ -1,0 +1,436 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.equinox.http.servlet
+Archiver-Version: Plexus Archiver
+Built-By: genie.releng
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/equino
+ x/rt.equinox.bundles.git;path="bundles/org.eclipse.equinox.http.servl
+ et";tag="I20170524-2000";commitId=0430d1aafb7733c7ffef0a4678bbc5ca88c
+ 2e21d
+Bundle-Vendor: %providerName
+Import-Package: org.apache.commons.fileupload;version="[1.2.2, 2.0.0)"
+ ;resolution:=optional,org.apache.commons.fileupload.disk;version="[1.
+ 2.2, 2.0.0)";resolution:=optional,org.apache.commons.fileupload.servl
+ et;version="[1.2.2, 2.0.0)";resolution:=optional,javax.servlet;versio
+ n="[2.3.0,4.0.0)",javax.servlet.annotation;version="[2.6.0,4.0.0)";re
+ solution:=optional,javax.servlet.descriptor;version="[2.6.0,4.0.0)";r
+ esolution:=optional,javax.servlet.http;version="[2.3.0,4.0.0)",org.os
+ gi.dto;version="[1.0.0,2.0)",org.osgi.framework;version="[1.3.0,2.0)"
+ ,org.osgi.framework.dto; version="[1.8.0,2.0)",org.osgi.framework.wir
+ ing;version="[1.1.0,2.0)",org.osgi.service.http;version="[1.2,1.3)",o
+ rg.osgi.service.http.context;version="[1.0,1.1)",org.osgi.service.htt
+ p.runtime;version="[1.0,1.1)",org.osgi.service.http.runtime.dto;versi
+ on="[1.0,1.1)",org.osgi.service.http.whiteboard;version="[1.0,1.1)",o
+ rg.osgi.util.tracker;version="[1.5,2.0)"
+Eclipse-LazyStart: true
+Provide-Capability: osgi.implementation; osgi.implementation="osgi.htt
+ p"; uses:="javax.servlet, javax.servlet.http, org.osgi.service.http.c
+ ontext, org.osgi.service.http.whiteboard"; version:Version="1.0",osgi
+ .service; objectClass:List<String>="org.osgi.service.http.HttpService
+ "; uses:="org.osgi.service.http",osgi.service; objectClass:List<Strin
+ g>="org.osgi.service.http.runtime.HttpServiceRuntime"; uses:="org.osg
+ i.service.http.runtime"
+Export-Package: org.eclipse.equinox.http.servlet;version="1.2.0",org.e
+ clipse.equinox.http.servlet.context;version="1.0.0";x-internal:=true,
+ org.eclipse.equinox.http.servlet.dto;version="1.0.0";x-internal:=true
+Bundle-Name: %bundleName
+Bundle-Version: 1.4.0.v20170524-1452
+Comment-Header: Both Eclipse-LazyStart and Bundle-ActivationPolicy are
+  specified for compatibility with 3.2
+Bundle-Localization: plugin
+Bundle-Activator: org.eclipse.equinox.http.servlet.internal.Activator
+Created-By: Apache Maven 3.3.3
+Build-Jdk: 1.8.0_121
+
+Name: org/eclipse/equinox/http/servlet/internal/Activator.class
+SHA-256-Digest: iDRZDKyKw1jLrc5YLqcAJcxiFg3Zv9fCR9keGMXjxN4=
+
+Name: org/eclipse/equinox/http/servlet/internal/multipart/MultipartSup
+ port.class
+SHA-256-Digest: NC+UyKfavi6T8yjHJf8vOl1IjHGs9zED3kIztUAxfUo=
+
+Name: org/eclipse/equinox/http/servlet/internal/servlet/ServletContext
+ Adaptor$1.class
+SHA-256-Digest: 4BcV7YUSL72+GtQtWNzo9EgxGK4zeLxJBRtAqqOuGu0=
+
+Name: org/eclipse/equinox/http/servlet/internal/util/EventListeners.cl
+ ass
+SHA-256-Digest: T4e3lHWHYIXiR73StWNuEqDaDWKshUOIkv8t0PA9pS0=
+
+Name: org/eclipse/equinox/http/servlet/dto/ExtendedServletDTO.class
+SHA-256-Digest: 5O6FUoybT4ivhTs9mzvdfbOnFe3DsknwVTZOjTrqkNw=
+
+Name: org/eclipse/equinox/http/servlet/internal/HttpServiceRuntimeImpl
+ $LegacyFilterFactory.class
+SHA-256-Digest: Keda0QZWpa/o6TWjDlLvrhLZ2kTln3BshgeY2ED5NZ0=
+
+Name: org/eclipse/equinox/http/servlet/internal/registration/Matchable
+ Registration.class
+SHA-256-Digest: 6vF3AyJ7FMbbkuBANKWq+3NaHAgPG9UxVDXptWRvsHU=
+
+Name: org/eclipse/equinox/http/servlet/internal/util/UMMapDictionary.c
+ lass
+SHA-256-Digest: B6seGul0MSMiqo7HHBPWj7Qg8T7NPbV7BBRk5XCJuZ8=
+
+Name: org/eclipse/equinox/http/servlet/internal/servlet/ServletContext
+ Adaptor$4.class
+SHA-256-Digest: rS6nMtSj6UVCbnyPpPR+xz/DoXbdMG2HMznMDj9XgC0=
+
+Name: META-INF/p2.inf
+SHA-256-Digest: JInTgU6ES2bSePhoAzBTijVERmhi/MPx+/QLYDYwPeA=
+
+Name: org/eclipse/equinox/http/servlet/dto/ExtendedFailedServletDTO.cl
+ ass
+SHA-256-Digest: zL5De+HZkbU7Bp6A5dU5blt0KEF12b0i087TDR6apD8=
+
+Name: org/eclipse/equinox/http/servlet/internal/servlet/ServletContext
+ Adaptor.class
+SHA-256-Digest: Zb3TlZGbtGtIhBoaf8AMlCgdUtmA2oPwyP4FRJR9IAA=
+
+Name: .api_description
+SHA-256-Digest: +R+N9umqFgvX91dsh4xZKpr6xO7foZ3OLhz12VL1avE=
+
+Name: org/eclipse/equinox/http/servlet/internal/servlet/HttpServletReq
+ uestWrapperImpl.class
+SHA-256-Digest: hDkAs/WHzfEnd289npqq1xg11T9If1eOX3zd1yqm+L0=
+
+Name: org/eclipse/equinox/http/servlet/internal/error/NullServletConte
+ xtHelperException.class
+SHA-256-Digest: 5oJkYWkQlt1D/x3O5O/UdiQdTR+iSyginatAEGtSACo=
+
+Name: org/eclipse/equinox/http/servlet/internal/registration/ServletRe
+ gistration.class
+SHA-256-Digest: KSLhWOo5Gn8xsVqSV4aPWA89OVzBfJ6C3TIPjd7T6nY=
+
+Name: org/eclipse/equinox/http/servlet/internal/servlet/ResponseStateH
+ andler$1.class
+SHA-256-Digest: hpB1eDVrqL0NxXcDUsBMlbqwPap0iujIj78Qln4Gmhk=
+
+Name: org/eclipse/equinox/http/servlet/internal/error/RegisteredFilter
+ Exception.class
+SHA-256-Digest: J937fe3vQ5MxN/jWWtVWl9IHf4rvR+avqcx9Dwsu9fg=
+
+Name: org/eclipse/equinox/http/servlet/internal/servlet/HttpSessionAda
+ ptor$ParentSessionListener.class
+SHA-256-Digest: bz1akJ1piKmka/36hVSPL3PjAtIr5Ynr7cAiNr7CYY4=
+
+Name: org/eclipse/equinox/http/servlet/internal/servlet/ServletContext
+ Adaptor$3.class
+SHA-256-Digest: YbrVKihZtHzODPQgC7tRlST5FfzH+ga8XgUkV/9z0Y0=
+
+Name: org/eclipse/equinox/http/servlet/internal/util/DTOUtil.class
+SHA-256-Digest: U18zGsOG5/nfH5t2aLQI3dQtbZmXPPJ/YI4wFFsgPZs=
+
+Name: org/eclipse/equinox/http/servlet/internal/servlet/ResponseStateH
+ andler.class
+SHA-256-Digest: j+gRauz+ZKVOI6mMdXDWOp2ign8v3TxSgQTfwIGdbYg=
+
+Name: org/eclipse/equinox/http/servlet/internal/servlet/HttpServletRes
+ ponseWrapperImpl$InternalWriter.class
+SHA-256-Digest: uQZ1yZ9it2z7HCEmiQxAM6T7wgbPiLYTt/tOiiNYvic=
+
+Name: org/eclipse/equinox/http/servlet/internal/HttpServiceImpl.class
+SHA-256-Digest: sjAWAtgiW+bXJ5rVvG6sncc+XUeYsfOTkHK7Oum5dD8=
+
+Name: org/eclipse/equinox/http/servlet/internal/servlet/RequestDispatc
+ herAdaptor.class
+SHA-256-Digest: jk3Fc6Ay/HDj3N4FdaiwcZYcOV/amH8s5o/uSkR5x4s=
+
+Name: org/eclipse/equinox/http/servlet/internal/HttpServiceRuntimeImpl
+ $DefaultServletContextHelperFactory.class
+SHA-256-Digest: 2fMIdeb2hV29kA954g0fgL+j8gWH3oAIc1IaSV7Y1X4=
+
+Name: org/eclipse/equinox/http/servlet/internal/servlet/ResourceServle
+ t$1.class
+SHA-256-Digest: apVvYlU6TBrvDJ62Krz+ae6Bw6fKwU0P+6VIoLSEXdE=
+
+Name: org/eclipse/equinox/http/servlet/internal/multipart/MultipartSup
+ portImpl.class
+SHA-256-Digest: 16moXyRegMf34qS1wy9Ub6+9vj7f8Sdtt3dqYjX2CvQ=
+
+Name: org/eclipse/equinox/http/servlet/internal/context/HttpContextHel
+ perFactory$HttpContextHelper.class
+SHA-256-Digest: 1wcXUU8PcIwdPpAtysRInbyDHoRqJZfC+Azr/nfUA3E=
+
+Name: org/eclipse/equinox/http/servlet/internal/util/StringPlus.class
+SHA-256-Digest: i5zSxy8UJV0TIGoQa9am66n/kYCGF+TA+kIwOHJ9RDk=
+
+Name: org/eclipse/equinox/http/servlet/internal/HttpServiceFactory.cla
+ ss
+SHA-256-Digest: 1HNQDR1xqBXG5FA4SiaFvSufHgrXA6xg0ZksrrwYYj4=
+
+Name: org/eclipse/equinox/http/servlet/HttpServiceMultipartServlet.cla
+ ss
+SHA-256-Digest: lxb7Om85eQNIY0su+iOSwPfkkgtC8yTYotCu5XJ3eA4=
+
+Name: org/eclipse/equinox/http/servlet/internal/registration/FilterReg
+ istration.class
+SHA-256-Digest: xEeMEZX8ZEYir1ExLXThSn1DodrDgcUYt3foTkenJ7o=
+
+Name: org/eclipse/equinox/http/servlet/internal/util/ServiceReferenceM
+ ap.class
+SHA-256-Digest: uf8JjWjzg8Kr1Hb2TMsVMbNTnOTrL1Hj/Y5hiKL39Pk=
+
+Name: org/eclipse/equinox/http/servlet/internal/HttpServiceImpl$3.clas
+ s
+SHA-256-Digest: TvM+u7glybz6f5p/FvKVgRPOO5NZg3Cg6QgvxkvPPWc=
+
+Name: org/eclipse/equinox/http/servlet/internal/servlet/FilterChainImp
+ l.class
+SHA-256-Digest: mc1TRcaL3ovaZVLaX7Mxbam9wDVhmytw0tRNRug10T0=
+
+Name: org/eclipse/equinox/http/servlet/internal/servlet/ServletConfigI
+ mpl.class
+SHA-256-Digest: dsGQ+dWucwScko6Lml06Wzf39a7CrpBmr7Ml9ymzuxU=
+
+Name: org/eclipse/equinox/http/servlet/internal/HttpServiceRuntimeImpl
+ $LegacyServlet.class
+SHA-256-Digest: tcqpS0FGwgqRpcoZ3C/TBlJlvmXrxWfR+/Fi7qN4rPg=
+
+Name: org/eclipse/equinox/http/servlet/internal/error/IllegalContextNa
+ meException.class
+SHA-256-Digest: /E6GhBUsn5/60E0ZKLGKufnmyWrUWAUXIf0BEBiFOoc=
+
+Name: org/eclipse/equinox/http/servlet/internal/util/ServiceProperties
+ .class
+SHA-256-Digest: L46FCfJ0LpgO65zx5/JNDnzxjLcn8Ytbbrdw+Fys2+k=
+
+Name: org/eclipse/equinox/http/servlet/HttpServiceServlet.class
+SHA-256-Digest: C049kFOJq65Hk+HIV9h4yLI3qW7f26IzA4FTGHs1oy0=
+
+Name: org/eclipse/equinox/http/servlet/internal/util/HttpTuple.class
+SHA-256-Digest: DC7p3dBb3SnulSqz8Gt5R5q1X9+PPPantYRkRqKZrbw=
+
+Name: org/eclipse/equinox/http/servlet/internal/servlet/ServletContext
+ Adaptor$AdaptorInvocationHandler.class
+SHA-256-Digest: 3LRCOYDAQtQRP29Jslxq62Z53KiaJ8nIaz3xt3TeJ5w=
+
+Name: org/eclipse/equinox/http/servlet/internal/util/BooleanPlus.class
+SHA-256-Digest: 6hh40Bxng42kw4qUF4NxPdgVe8ncIpqXgMkc2MjT02Q=
+
+Name: org/eclipse/equinox/http/servlet/internal/context/ProxyContext.c
+ lass
+SHA-256-Digest: lS53lBF51/+CYpzty72Zqmmi0fD2sJt6S69WHdl12dQ=
+
+Name: org/eclipse/equinox/http/servlet/internal/error/IllegalContextPa
+ thException.class
+SHA-256-Digest: hdRYoIs7GKTUU3hUKpWyAx+Ze/nRXDn1y1J4cI+uRgg=
+
+Name: org/eclipse/equinox/http/servlet/internal/registration/Registrat
+ ion.class
+SHA-256-Digest: S4pmdrmbzeWgo6IQCKci5hSqlV0jIxvga2C/HQLoYFo=
+
+Name: org/eclipse/equinox/http/servlet/internal/HttpServiceImpl$Defaul
+ tHttpContext.class
+SHA-256-Digest: q6SYlvr4Zingo8c7qV2wdGcja1TCCWee+/WxaTU3vY4=
+
+Name: org/eclipse/equinox/http/servlet/internal/HttpServiceRuntimeImpl
+ .class
+SHA-256-Digest: SLcuK1ZplFQ6aNXBzu65L1vYAVOLZqWjkHJ9zJDspjc=
+
+Name: org/eclipse/equinox/http/servlet/internal/context/ContextControl
+ ler.class
+SHA-256-Digest: SqWPjvIPlLWaFeauFSiiVAP2N9eJTmUr5elB4GCorQ0=
+
+Name: org/eclipse/equinox/http/servlet/internal/servlet/ResponseStateH
+ andler$2.class
+SHA-256-Digest: bk+c7ZGMhjyKYtEzl00kwMkRjAk9Ds9O41RcA48KpXo=
+
+Name: org/eclipse/equinox/http/servlet/internal/context/ContextControl
+ ler$ServiceHolder.class
+SHA-256-Digest: 557lgdzJkz6cKpeN/WrVSzIBkAO3kdJMwyizuoURnSQ=
+
+Name: org/eclipse/equinox/http/servlet/internal/error/RegisteredServle
+ tContextHelperException.class
+SHA-256-Digest: fcnS2ax6lWR2uww8HelS28UM1elB/+grS+QkR5FIMrw=
+
+Name: org/eclipse/equinox/http/servlet/internal/servlet/HttpServletRes
+ ponseWrapperImpl$InternalOutputStream.class
+SHA-256-Digest: 5LgYANj+JkMDI7jgD+kUeXywRMn2CNvPVpWltk2IBwY=
+
+Name: org/eclipse/equinox/http/servlet/internal/registration/ListenerR
+ egistration$EventListenerInvocationHandler.class
+SHA-256-Digest: 8/pPX4FYU1WQSBi5fBO2/+WoGaCWk8SlqIkOT+vS2q8=
+
+Name: org/eclipse/equinox/http/servlet/internal/util/Const.class
+SHA-256-Digest: bMLEI5SodS8deNoA7ymgqwvl0VkdCk26gyhtf/FY/Q8=
+
+Name: org/eclipse/equinox/http/servlet/internal/customizer/ContextServ
+ letTrackerCustomizer.class
+SHA-256-Digest: 3U355zEF49US1l9rW13GUqwgb8TpuoHM2q3thQ3AwYs=
+
+Name: plugin.properties
+SHA-256-Digest: MELeUBoNpo+Tw952an7T0lOSb2lIUMPy+ax4aGyt12Y=
+
+Name: org/eclipse/equinox/http/servlet/internal/multipart/MultipartSup
+ portFactoryImpl.class
+SHA-256-Digest: OdfkYnp5u6LFp44B0twda58hLdroDsrDWLPOJHuXCgU=
+
+Name: org/eclipse/equinox/http/servlet/internal/HttpServiceImpl$2.clas
+ s
+SHA-256-Digest: Ukzidw8IW/5gjpLTfrmyH9FnW350T7L46UVyBsF9VEs=
+
+Name: org/eclipse/equinox/http/servlet/internal/error/HttpWhiteboardFa
+ ilureException.class
+SHA-256-Digest: NcXSf33pbJPU//HeIZyEQMUGG5EQfzuu9ra3Wi2nP6I=
+
+Name: org/eclipse/equinox/http/servlet/internal/servlet/HttpSessionAda
+ ptor.class
+SHA-256-Digest: dVsl+vX9Ep0HWsMMgVaExccbY6MzqndhSCNBqCqXAu8=
+
+Name: org/eclipse/equinox/http/servlet/internal/util/EventListeners$Li
+ stenerList.class
+SHA-256-Digest: Dq3Yt4cljSVaViTAkegkPGeg42jvi9y70c0ayBOxm5Q=
+
+Name: org/eclipse/equinox/http/servlet/context/ContextPathCustomizer.c
+ lass
+SHA-256-Digest: dc7tzqa8StL2TSO059dplhz0No7jM4R9josQkkAeifo=
+
+Name: org/eclipse/equinox/http/servlet/internal/servlet/ServletContext
+ Adaptor$2.class
+SHA-256-Digest: XaaCTfOg27OZUZCViQuEXPLtejl0K8IKX2Rcxr0j8aA=
+
+Name: org/eclipse/equinox/http/servlet/internal/util/Params.class
+SHA-256-Digest: TZP+iBrWPsy7r64FtDtniD4dd4PP1a/Yps0UPwsETwM=
+
+Name: org/eclipse/equinox/http/servlet/internal/multipart/MultipartSup
+ portFactory.class
+SHA-256-Digest: YFa78v3Ygl6O/u/+DIKXqOMJZ/GoGym9D0BAcCDg5V8=
+
+Name: org/eclipse/equinox/http/servlet/internal/context/DispatchTarget
+ s.class
+SHA-256-Digest: Mi0BUvm5ikMx5lLfWHmcPoufg1GxWdRL6cTuYhcLKfU=
+
+Name: org/eclipse/equinox/http/servlet/internal/util/Path.class
+SHA-256-Digest: w+FLZcAGPxLBUClLqGkrF1SByrBmZCIOEpUS5WLMWMk=
+
+Name: org/eclipse/equinox/http/servlet/internal/error/PatternInUseExce
+ ption.class
+SHA-256-Digest: +O6HvU8jIuQ/XDAsrzrzrCzbVtnLqz0Mamq78Bxj5sg=
+
+Name: org/eclipse/equinox/http/servlet/internal/HttpServiceRuntimeImpl
+ $LegacyFilterFactory$LegacyFilter.class
+SHA-256-Digest: Cx6QQmvE9D4OTFFiw3UPnHyQ+Eq/vMIdcmzHSW8XzxM=
+
+Name: org/eclipse/equinox/http/servlet/internal/servlet/HttpServletRes
+ ponseWrapperImpl.class
+SHA-256-Digest: 9lBzEFvnD6KWp5RY0eKdNzFxOiee7R8vzlnHV608dZY=
+
+Name: org/eclipse/equinox/http/servlet/internal/HttpServiceRuntimeImpl
+ $ContextPathCustomizerHolder.class
+SHA-256-Digest: nAyGS56Lz/zXwMQzZ0PvKBwgds1RaqBsWgKgsGMZCVY=
+
+Name: org/eclipse/equinox/http/servlet/internal/context/ProxyContext$C
+ ontextAttributes.class
+SHA-256-Digest: OiiggerUsJoALIrSIc6YmtgFm+SIhGDg0v3jzIvI2eA=
+
+Name: org/eclipse/equinox/http/servlet/internal/context/DispatchTarget
+ s$RequestAttributeSetter.class
+SHA-256-Digest: a3VsVx0X2Aqf/63ca6eE5Hdz7OSVy2zbUrPfCeg1Ajs=
+
+Name: org/eclipse/equinox/http/servlet/internal/error/ServletAlreadyRe
+ gisteredException.class
+SHA-256-Digest: Eo/FOs7P+9ol3DyBqxiMz0B5ATqmChi9L8XWMWq74f8=
+
+Name: org/eclipse/equinox/http/servlet/internal/HttpServiceImpl$1.clas
+ s
+SHA-256-Digest: damFF9Yy9NP+yud3xq8xmfZDkNipcx4b1MoRvR9Xe1M=
+
+Name: org/eclipse/equinox/http/servlet/internal/customizer/Registratio
+ nServiceTrackerCustomizer.class
+SHA-256-Digest: Q+arGQZUOTpn5tlL0yf1I9ESwFEHgzuHi0XOE5sZAas=
+
+Name: org/eclipse/equinox/http/servlet/internal/util/Throw.class
+SHA-256-Digest: vxrRAuy72ouL0FSSMuy7fYp04vbsIy8BmplufPjuNlg=
+
+Name: org/eclipse/equinox/http/servlet/internal/util/UMDictionaryMap.c
+ lass
+SHA-256-Digest: Ax+Fb+AjLZmn4rZUEKdOQw2iVfelFcOlhAV8vqQ8yo8=
+
+Name: org/eclipse/equinox/http/servlet/internal/servlet/ResourceServle
+ t.class
+SHA-256-Digest: HL4WLq11fFwTnj9wLJOk8Ocf2ZdeYf9ocYaazrHVQag=
+
+Name: org/eclipse/equinox/http/servlet/internal/servlet/IncludeDispatc
+ hResponseWrapper.class
+SHA-256-Digest: nKunyjWsY3lYfuZaT17QkCVMFNND2LyDx+OymK9nxc4=
+
+Name: org/eclipse/equinox/http/servlet/internal/multipart/MultipartSup
+ portPart.class
+SHA-256-Digest: I/8KN/wXIFD+ZiJWK28JRvm2wXlosKIr6GmoqwEn+Qk=
+
+Name: org/eclipse/equinox/http/servlet/internal/servlet/ProxyServlet.c
+ lass
+SHA-256-Digest: rl3C+2BGsu+Czmo6uN25LFnK7KaYcdOjVkUXLqbRaTM=
+
+Name: META-INF/services/org.eclipse.equinox.http.servlet.internal.mult
+ ipart.MultipartSupportFactory
+SHA-256-Digest: BtOfLeXxPLC24fS48ZGlKvolhy1bxY+Rb4BEF9Miswc=
+
+Name: about.html
+SHA-256-Digest: fSP/INLDuQuq8ANxtsXXFBHbTLwC0Ppkd+1Cbhc8m6w=
+
+Name: org/eclipse/equinox/http/servlet/internal/context/HttpContextHel
+ perFactory.class
+SHA-256-Digest: AA3r7zCJ34e+eBdj78FHNBvmiwZt/yP6JVbj3Gjm+f4=
+
+Name: org/eclipse/equinox/http/servlet/internal/customizer/ContextList
+ enerTrackerCustomizer.class
+SHA-256-Digest: rmfU5Y6x6kCqXhBxuHqcoTjIQ+r0zzLmxGfTERXahE8=
+
+Name: org/eclipse/equinox/http/servlet/internal/servlet/FilterConfigIm
+ pl.class
+SHA-256-Digest: 8iSPOOjwmD7OiQXDYK7NQYIIQlDBKaibuemkHPk8rW8=
+
+Name: org/eclipse/equinox/http/servlet/internal/HttpServiceRuntimeImpl
+ $DefaultServletContextHelper.class
+SHA-256-Digest: i9rgTPUzjgfS2ksYNWPTVT6TUIfWfss05bV1/VhBFDo=
+
+Name: org/eclipse/equinox/http/servlet/ExtendedHttpService.class
+SHA-256-Digest: DHEWcm9aSasawF0cWkk+IieQiex12PYP7dBa4oNURlM=
+
+Name: org/eclipse/equinox/http/servlet/internal/HttpServiceRuntimeImpl
+ $LegacyServiceObject.class
+SHA-256-Digest: E7rOmWNxnKiO/+W8GsOxYKlO0on62iL3u8Zd3xOopCM=
+
+Name: org/eclipse/equinox/http/servlet/internal/HttpServiceObjectRegis
+ tration.class
+SHA-256-Digest: BhHCaAKi0zYbn9vopPvr698H5mMG4oy2f9cgG4AKU7s=
+
+Name: org/eclipse/equinox/http/servlet/internal/registration/ResourceR
+ egistration.class
+SHA-256-Digest: Osndvmmlroqt+jGHCbVgCzbctaiHi3CxfHyPADvSBPc=
+
+Name: org/eclipse/equinox/http/servlet/internal/registration/ListenerR
+ egistration.class
+SHA-256-Digest: qmA5fIoMGGhnr8yvgPHoi46GKG3zSk5iqfOPg0D6Rbg=
+
+Name: org/eclipse/equinox/http/servlet/internal/servlet/HttpSessionAda
+ ptor$HttpSessionAttributeWrapper.class
+SHA-256-Digest: FluIxqcI+1NxisDkGx/g5z6CiDqC/oUI4kOkjKKYlsI=
+
+Name: org/eclipse/equinox/http/servlet/internal/util/ServiceReferenceM
+ ap$ReferenceEntry.class
+SHA-256-Digest: LnqlpQJvFM5YvSOOMckHxr1JUuzHzZxblPfGSD/X438=
+
+Name: org/eclipse/equinox/http/servlet/internal/customizer/ContextFilt
+ erTrackerCustomizer.class
+SHA-256-Digest: gtpERojBRY5k1e2GxR2A+ISJVlLbaRF7SJUKkxgaxm0=
+
+Name: org/eclipse/equinox/http/servlet/internal/customizer/ContextReso
+ urceTrackerCustomizer.class
+SHA-256-Digest: aq9fJKt3vi9g/9t0aDLnoj+/FdHvs0uQZcPUIL+YMHA=
+
+Name: org/eclipse/equinox/http/servlet/internal/servlet/Match.class
+SHA-256-Digest: wpyc1CT5MNfLF3D8YRDnPZfiEqsXnY7YQUDfY0pM2SA=
+
+Name: org/eclipse/equinox/http/servlet/internal/multipart/MultipartSup
+ portPart$IteratorCollection.class
+SHA-256-Digest: alxTSicZoVc1DT53vkz96J+cKTb3hzoKswlzuuzabX4=
+
+Name: org/eclipse/equinox/http/servlet/internal/registration/EndpointR
+ egistration.class
+SHA-256-Digest: mWmAZt6PARcEmcn0Fq2OfDRRA7pBp0pgUgghvrN3AuU=
+

@@ -1,0 +1,679 @@
+<!-- 
+ ******************************************************************************
+ * Copyright (c) 2016 Oracle
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *    Konstantin Komissarchik - initial implementation and ongoing maintenance
+ ******************************************************************************
+-->
+
+<html>
+
+<head>
+  <title>Migration Guide for Sapphire 8</title>
+  <link rel="StyleSheet" href="../../style.css" TYPE="text/css"/>
+  <style type="text/css">
+    pre.source-code 
+    {
+      font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; 
+      color: #000000;
+      background-color: #ffffff;
+      font-size: 12px;
+      border: 0px;
+      line-height: 14px;
+      padding: 5px;
+      margin-left: 0px;
+      margin-right: 0px;
+      overflow: auto
+    }
+    .unaffected
+    {
+      color: #888888
+    }
+    .comment
+    {
+      color: #006600;
+      font-style: italic
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>Migration Guide for Sapphire 8</h1>
+
+<p>This documents covers changes that need to be made by Sapphire adopters as part of migrating 
+to Sapphire 8 from a prior release. Only changes from the previous major release are covered.</p>
+
+<p>Table of Contents</p>
+
+<ol>
+  <li><a href="#DefaultValueService">DefaultValueService</a></li>
+  <li><a href="#DefaultValueServiceData">DefaultValueServiceData</a></li>
+  <li><a href="#DerivedValueService">DerivedValueService</a></li>
+  <li><a href="#DerivedValueServiceData">DerivedValueServiceData</a></li>
+  <li><a href="#EnablementService">EnablementService</a></li>
+  <li><a href="#EnablementServiceData">EnablementServiceData</a></li>
+  <li><a href="#Filter">Filter</a></li>
+  <li><a href="#InitialValueService">InitialValueService</a></li>
+  <li><a href="#InitialValueServiceData">InitialValueServiceData</a></li>
+  <li><a href="#ListenerContext">ListenerContext</a></li>
+  <li><a href="#Localizable">@Localizable</a></li>
+  <li><a href="#NoDuplicates">NoDuplicates</a></li>
+  <li><a href="#PossibleValues">PossibleValues</a></li>
+  <li><a href="#PossibleValuesService">PossibleValuesService</a></li>
+  <li><a href="#ReferenceService">ReferenceService</a></li>
+  <li><a href="#ReferenceValue">ReferenceValue</a></li>
+  <li><a href="#StatusException">StatusException</a></li>
+</ol>
+
+
+<h2><a name="DefaultValueService">DefaultValueService</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.</span>services.<span class="unaffected">DefaultValueService</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.DefaultValueService</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExampleDefaultValueService extends DefaultValueService
+{
+    @Override
+    protected</span> DefaultValueServiceData <span class="unaffected">compute()
+    {
+        return</span> new DefaultValueServiceData( <span class="unaffected">...</span> )<span class="unaffected">;
+    }
+}</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExampleDefaultValueService extends DefaultValueService
+{
+    @Override
+    protected</span> String <span class="unaffected">compute()
+    {
+        return ...;
+    }
+}</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="DefaultValueServiceData">DefaultValueServiceData</a></h2>
+
+<p>This class has been removed. See <a href="#DefaultValueService">DefaultValueService</a> migration.
+
+
+<h2><a name="DerivedValueService">DerivedValueService</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.</span>services.<span class="unaffected">DerivedValueService</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.DerivedValueService</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExampleDerivedValueService extends DerivedValueService
+{
+    @Override
+    protected</span> DerivedValueServiceData <span class="unaffected">compute()
+    {
+        return</span> new DerivedValueServiceData( <span class="unaffected">...</span> )<span class="unaffected">;
+    }
+}</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExampleDerivedValueService extends DerivedValueService
+{
+    @Override
+    protected</span> String <span class="unaffected">compute()
+    {
+        return ...;
+    }
+}</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="DerivedValueServiceData">DerivedValueServiceData</a></h2>
+
+<p>This class has been removed. See <a href="#DerivedValueService">DerivedValueService</a> migration.
+
+
+<h2><a name="EnablementService">EnablementService</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.</span>services.<span class="unaffected">EnablementService</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.EnablementService</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExampleEnablementService extends EnablementService
+{
+    @Override
+    protected</span> EnablementServiceData <span class="unaffected">compute()
+    {
+        return</span> new EnablementServiceData( <span class="unaffected">...</span> )<span class="unaffected">;
+    }
+}</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExampleEnablementService extends EnablementService
+{
+    @Override
+    protected</span> Boolean <span class="unaffected">compute()
+    {
+        return ...;
+    }
+}</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="EnablementServiceData">EnablementServiceData</a></h2>
+
+<p>This class has been removed. See <a href="#EnablementService">EnablementService</a> migration.
+
+
+<h2><a name="InitialValueService">InitialValueService</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.</span>services.<span class="unaffected">InitialValueService</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.InitialValueService</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExampleInitialValueService extends InitialValueService
+{
+    @Override
+    protected</span> InitialValueServiceData <span class="unaffected">compute()
+    {
+        return</span> new InitialValueServiceData( <span class="unaffected">...</span> )<span class="unaffected">;
+    }
+}</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExampleInitialValueService extends InitialValueService
+{
+    @Override
+    protected</span> String <span class="unaffected">compute()
+    {
+        return ...;
+    }
+}</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="Filter">Filter</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.</span>util.<span class="unaffected">Filter</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.Filter</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExampleFilter</span> extends <span class="unaffected">Filter&lt;Object>
+{
+    ...
+}</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExampleFilter</span> implements <span class="unaffected">Filter&lt;Object>
+{
+    ...
+}</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="InitialValueServiceData">InitialValueServiceData</a></h2>
+
+<p>This class has been removed. See <a href="#InitialValueService">InitialValueService</a> migration.
+
+
+<h2><a name="ListenerContext">ListenerContext</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">ListenerContext context = new ListenerContext();</span>
+context.coordinate( another );</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">ListenerContext context = new ListenerContext(</span> another.queue() <span class="unaffected">);</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>context.suspend( ExampleEvent.class );
+
+<span class="unaffected">try
+{
+    ...
+}
+finally
+{</span>
+    context.resume( ExampleEvent.class );
+<span class="unaffected">}</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>final Disposable suspension = context.queue().suspend
+(
+    new Filter&lt;EventDeliveryJob>()
+    {
+        @Override
+        public boolean allows( final EventDeliveryJob job )
+        {
+            return ! ( job.event() instanceof ExampleEvent );
+        }
+    }
+);
+
+<span class="unaffected">try
+{
+    ...
+}
+finally
+{</span>
+    suspension.dispose();
+    context.queue().process();
+<span class="unaffected">}</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="Localizable">@Localizable</a></h2>
+
+<p>This annotation is not longer available and no analog has been provided.</p>
+
+
+<h2><a name="NoDuplicates">NoDuplicates</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.</span>modeling.annotations.NoDuplicates</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.</span>Unique</code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="PossibleValues">PossibleValues</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.</span>modeling.annotations.<span class="unaffected">PossibleValues</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.PossibleValues</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">@PossibleValues
+(
+    invalidValueMessage = "\"</span>{0}<span class="unaffected">\" is not a known entity"
+)</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">@PossibleValues
+(
+    invalidValueMessage = "\"</span>${Entity}<span class="unaffected">\" is not a known entity"
+)</span></code></pre>
+
+<p>The invalid value message must now be in Sapphire EL syntax, rather than in MessageFormat syntax.</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">@PossibleValues(</span> caseSensitive = false <span class="unaffected">)</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">@PossibleValues( ... )</span>
+@Collation( ignoreCaseDifferences = "true" )</code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="PossibleValuesService">PossibleValuesService</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.</span>services.<span class="unaffected">PossibleValuesService</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.PossibleValuesService</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExamplePossibleValuesService extends PossibleValuesService
+{
+    @Override
+    protected void</span> init<span class="unaffected">()
+    {</span>
+        super.init();
+        
+        <span class="unaffected">...
+        
+        <i>inside a listener</i>
+        {</span>
+            broadcast<span class="unaffected">();
+        }
+    }
+}</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExamplePossibleValuesService extends PossibleValuesService
+{
+    @Override
+    protected void</span> initPossibleValuesService<span class="unaffected">()
+    {
+        ...
+        
+        <i>inside a listener</i>
+        {</span>
+            refresh<span class="unaffected">();
+        }
+    }
+}</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExamplePossibleValuesService extends PossibleValuesService
+{
+    @Override
+    protected void</span> fillPossibleValues<span class="unaffected">( Set&lt;String> values )
+    {
+        ...
+    }
+}</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExamplePossibleValuesService extends PossibleValuesService
+{
+    @Override
+    protected void</span> compute<span class="unaffected">( Set&lt;String> values )
+    {
+        ...
+    }
+}</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExamplePossibleValuesService extends PossibleValuesService
+{</span>
+    @Override
+    public String getInvalidValueMessage( String value)
+    {
+        ...
+    }
+    
+    @Override
+    public Status.Severity getInvalidValueSeverity( String value )
+    {
+        ...
+    }
+<span class="unaffected">}</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExamplePossibleValuesService extends PossibleValuesService
+{</span>
+    @Override
+    public Status problem( Value&lt;?> value )
+    {
+        ...
+    }
+<span class="unaffected">}</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExamplePossibleValuesService extends PossibleValuesService
+{</span>
+    @Override
+    public String getInvalidValueMessage( String value)
+    {
+        return MessageFormat.format( <span class="unaffected">"\"</span>{0}<span class="unaffected">\" is not a known entity"</span>, value );
+    }
+    
+    @Override
+    public Status.Severity getInvalidValueSeverity( String value )
+    {
+        return <span class="unaffected">Status.Severity.WARNING</span>;
+    }
+<span class="unaffected">}</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExamplePossibleValuesService extends PossibleValuesService
+{</span>
+    @Override
+    protected void initPossibleValuesService()
+    {
+        this.invalidValueMessage = <span class="unaffected">"\"</span>${Entity}<span class="unaffected">\" is not a known entity"</span>;
+        this.invalidValueSeverity = <span class="unaffected">Status.Severity.WARNING</span>;
+    }
+<span class="unaffected">}</span></code></pre>
+
+<p>This simpler migration can be used in many cases where complex heuristics are not required. Note that the invalid value
+message must be in Sapphire EL syntax, rather than in MessageFormat syntax.</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExamplePossibleValuesService extends PossibleValuesService
+{</span>
+    public ExamplePossibleValuesService()
+    {
+        super
+        (
+            <span class="unaffected">"\"</span>{0}<span class="unaffected">\" is not a known entity"</span>,
+            <span class="unaffected">Status.Severity.WARNING</span>,
+            false /* caseSensitive */,
+            <span class="unaffected">true</span> /* ordered */,
+        );
+    }
+<span class="unaffected">}</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExamplePossibleValuesService extends PossibleValuesService
+{</span>
+    @Override
+    protected void initPossibleValuesService()
+    {
+        this.invalidValueMessage = <span class="unaffected">"\"</span>${Entity}<span class="unaffected">\" is not a known entity"</span>;
+        this.invalidValueSeverity = <span class="unaffected">Status.Severity.WARNING</span>;
+        this.ordered = <span class="unaffected">true</span>;
+    }
+<span class="unaffected">}</span>
+
+@Collation( ignoreCaseDifferences = "true" )
+</code></pre>
+
+<p>The invalid value message must now be in Sapphire EL syntax, rather than in MessageFormat syntax. Each of these properties
+has a default value, so typically only a subset needs to be set explicitly. Collation is now specified separately from the possible
+values, either through @Collation annotation or through CollationService.</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExamplePossibleValuesService extends PossibleValuesService
+{</span>
+    @Override
+    public boolean isCaseSensitive()
+    {
+        return false;
+    }
+<span class="unaffected">}</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExamplePossibleValuesService extends PossibleValuesService
+{
+    ...
+}</span>
+
+@Collation( ignoreCaseDifferences = "true" )
+</code></pre>
+
+<p>Collation is now specified separately from the possible values, either through @Collation annotation or through CollationService.</p>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="ReferenceService">ReferenceService</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExampleReferenceService extends ReferenceService 
+{
+    @Override
+    protected void</span> init<span class="unaffected">()
+    {</span>
+        super.init();
+
+        <span class="unaffected">...
+    }
+
+    @Override</span>
+    public Object resolve( final String reference ) 
+    <span class="unaffected">{
+        ...
+    }
+}</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExampleReferenceService extends ReferenceService</span>&lt;ExampleEntity>
+<span class="unaffected">{
+    @Override
+    protected void</span> initReferenceService<span class="unaffected">()
+    {
+        ...
+    }
+
+    @Override</span>
+    protected ExampleEntity compute() 
+    <span class="unaffected">{</span>
+        final String reference = context( Value.class ).text();
+
+        <span class="unaffected">...
+    }
+}</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="ReferenceValue">ReferenceValue</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">reference.</span>resolve() </code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">reference.</span>target() </code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="StatusException">StatusException</a></h2>
+
+<p>This class is not longer available and no analog has been provided.</p>
+
+
+<div class="copyright">Copyright (c) 2016 Oracle<br/>
+Content made available under the terms of <a href="http://www.eclipse.org/legal/epl-v10.html">Eclipse Public License</a>.</div>
+
+
+</body>
+
+</html>

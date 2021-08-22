@@ -1,0 +1,596 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.emf.parsley.common;singleton:=true
+Archiver-Version: Plexus Archiver
+Built-By: genie.emf-parsley
+Require-Bundle: org.eclipse.emf.databinding.edit;bundle-version="1.2.0
+ ";visibility:=reexport,org.eclipse.core.databinding.property;bundle-v
+ ersion="1.4.0",org.eclipse.emf.ecore.edit;bundle-version="2.7.0";visi
+ bility:=reexport,org.eclipse.core.runtime;bundle-version="3.5.0";visi
+ bility:=reexport,org.eclipse.core.commands;bundle-version="3.5.0";vis
+ ibility:=reexport,org.eclipse.emf.parsley.runtime.common;visibility:=
+ reexport
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/emf-pa
+ rsley/org.eclipse.emf-parsley.git;path="plugins/org.eclipse.emf.parsl
+ ey.common";commitId=80eb92b359f23dd2650d011284b634e51add3543
+Bundle-Vendor: Eclipse Modeling Project
+Import-Package: org.apache.log4j;version="1.2.13",org.eclipse.emf.comm
+ on.ui,org.eclipse.emf.common.ui.action,org.eclipse.emf.common.ui.cell
+ editor,org.eclipse.emf.common.ui.dialogs,org.eclipse.emf.common.ui.ed
+ itor,org.eclipse.emf.common.ui.viewer,org.eclipse.emf.edit.ui,org.ecl
+ ipse.emf.edit.ui.action,org.eclipse.emf.edit.ui.celleditor,org.eclips
+ e.emf.edit.ui.dnd,org.eclipse.emf.edit.ui.provider,org.eclipse.emf.ed
+ it.ui.util,org.eclipse.emf.edit.ui.view,org.eclipse.jface.action,org.
+ eclipse.jface.bindings,org.eclipse.jface.bindings.keys,org.eclipse.jf
+ ace.databinding.fieldassist,org.eclipse.jface.databinding.swt,org.ecl
+ ipse.jface.databinding.viewers,org.eclipse.jface.dialogs,org.eclipse.
+ jface.fieldassist,org.eclipse.jface.layout,org.eclipse.jface.operatio
+ n,org.eclipse.jface.resource,org.eclipse.jface.viewers,org.eclipse.jf
+ ace.window,org.eclipse.jface.wizard,org.eclipse.swt,org.eclipse.swt.c
+ ustom,org.eclipse.swt.dnd,org.eclipse.swt.events,org.eclipse.swt.grap
+ hics,org.eclipse.swt.layout,org.eclipse.swt.widgets,org.eclipse.ui;ui
+ .workbench=split,org.eclipse.ui.actions;ui.workbench=split,org.eclips
+ e.ui.application,org.eclipse.ui.forms,org.eclipse.ui.forms.widgets,or
+ g.eclipse.ui.internal;ui.workbench=split,org.eclipse.ui.part;ui.workb
+ ench=split,org.eclipse.ui.plugin,org.eclipse.ui.views,org.eclipse.ui.
+ views.contentoutline,org.eclipse.ui.views.properties;ui.views=split
+Export-Package: org.eclipse.emf.parsley,org.eclipse.emf.parsley.compos
+ ite,org.eclipse.emf.parsley.config,org.eclipse.emf.parsley.dialogs,or
+ g.eclipse.emf.parsley.ecore,org.eclipse.emf.parsley.edit,org.eclipse.
+ emf.parsley.edit.action,org.eclipse.emf.parsley.edit.actionbar,org.ec
+ lipse.emf.parsley.edit.domain,org.eclipse.emf.parsley.edit.provider,o
+ rg.eclipse.emf.parsley.edit.ui.dnd,org.eclipse.emf.parsley.edit.ui.pr
+ ovider,org.eclipse.emf.parsley.handlers,org.eclipse.emf.parsley.inter
+ nal.databinding;x-internal:=true,org.eclipse.emf.parsley.internal.edi
+ t.ui.dnd,org.eclipse.emf.parsley.internal.viewers;x-internal:=true,or
+ g.eclipse.emf.parsley.listeners,org.eclipse.emf.parsley.menus,org.ecl
+ ipse.emf.parsley.resource,org.eclipse.emf.parsley.ui,org.eclipse.emf.
+ parsley.ui.provider,org.eclipse.emf.parsley.util,org.eclipse.emf.pars
+ ley.validation,org.eclipse.emf.parsley.viewers,org.eclipse.emf.parsle
+ y.widgets
+Bundle-Name: EMF Parsley Common
+Bundle-Version: 1.2.3.v20180220-1246
+Bundle-Activator: org.eclipse.emf.parsley.EmfParsleyActivator
+Created-By: Apache Maven 3.5.2
+Build-Jdk: 1.8.0_162
+
+Name: org/eclipse/emf/parsley/edit/ui/provider/ViewerContentProvider.c
+ lass
+SHA-256-Digest: dEYCy6WU9Jbsf8rxApbCT6zPvwK95mrYB9Hk0dQxViE=
+
+Name: org/eclipse/emf/parsley/ui/provider/FeaturesProvider$1.class
+SHA-256-Digest: +CDjKkVWOjbX5hdAe+8jodE9f3f2OKcB4AtQg8wf2XA=
+
+Name: org/eclipse/emf/parsley/resource/LoadResourceResponse.class
+SHA-256-Digest: VW2TLxOXuVkb0PkfyIsnyYynXYQLsmbYvr1EitS5zz0=
+
+Name: org/eclipse/emf/parsley/edit/action/EditingActionManager.class
+SHA-256-Digest: oFpr3Vbn2J5mPa/zFSmuUC8IGZoEgFTFrBzXbtS8nJc=
+
+Name: org/eclipse/emf/parsley/edit/domain/SingletonAdapterFactoryEditi
+ ngDomainProvider.class
+SHA-256-Digest: 1F+64c4OgS3UjJpKbzQAo3CZ18qM/YHqqAonElNX/XM=
+
+Name: org/eclipse/emf/parsley/menus/ViewerContextMenuHelper$1.class
+SHA-256-Digest: kEsVl2+KNchj2Wo/zKy49jxEMeyRCsossFYq0icAlls=
+
+Name: org/eclipse/emf/parsley/composite/MultipleFeatureControlObservab
+ le$1.class
+SHA-256-Digest: U8bv9UQJ2CgrBB82KOoZZ5Rgp19ABfZRcSxAmgus6SI=
+
+Name: org/eclipse/emf/parsley/dialogs/DetailDialog.class
+SHA-256-Digest: N8v4cdzoXdOXCPl2ocPINwuRXZU/oD0Is63WoDIzghM=
+
+Name: org/eclipse/emf/parsley/composite/TreeFormComposite.class
+SHA-256-Digest: HitF5WFw18r6ftt08KUb5hk5RlEyQrF4bJ5Fo4z17B4=
+
+Name: org/eclipse/emf/parsley/listeners/OpenDialogMouseAdapter.class
+SHA-256-Digest: qQWBkx6NvxvY7M3PMBGjanOaJ5QRDjWVnHE28X9mms0=
+
+Name: org/eclipse/emf/parsley/util/EmfCommandsUtil$1.class
+SHA-256-Digest: AtvJhRJULrrgsTmCiAbnGvjaqYzm/y0mBdzskf3Ax1s=
+
+Name: about.ini
+SHA-256-Digest: eZ1Qm8MlEZYo+VP2sXd38fLiGIekDR4tv8PWnnfAw3A=
+
+Name: org/eclipse/emf/parsley/EmfParsleyGuiceModule.class
+SHA-256-Digest: jLeSwPG2pRwdueSenKsVTEJgSstR+QgHop57ndJWgB8=
+
+Name: org/eclipse/emf/parsley/util/EmfSelectionHelper.class
+SHA-256-Digest: Nkbb2UAnpphIv2bh8R7VejjV7dv8n6AIeHU4x5xci6k=
+
+Name: META-INF/maven/org.eclipse.emf.parsley/org.eclipse.emf.parsley.c
+ ommon/pom.properties
+SHA-256-Digest: iRGi1PXqGP0gf3uC621V/M9U7wNr4v6XTiBVm66+exU=
+
+Name: org/eclipse/emf/parsley/validation/DiagnosticUtil$1.class
+SHA-256-Digest: VcjDNP6MHJNxKLOphinqlaWOrlK4A4J2bATSVCwRhpI=
+
+Name: org/eclipse/emf/parsley/validation/ValidationRunner.class
+SHA-256-Digest: xha8LZ53BXGrDWJXkmstTJoQl3QHRdlhq3NgprgX6Pg=
+
+Name: org/eclipse/emf/parsley/edit/EditCommand.class
+SHA-256-Digest: vYMLIslz/TvJQmEESgCdEkMz759TLrsDUIDozGUQeWM=
+
+Name: org/eclipse/emf/parsley/composite/FormDetailComposite$FormTitleA
+ dapter.class
+SHA-256-Digest: oFPolbnqVSU7wqmB1uCM9koLuhWE9J1mCM0pGJuxHy8=
+
+Name: org/eclipse/emf/parsley/EmfParsleyActivator.class
+SHA-256-Digest: PnX4DdWE2e/fQnqUiPeES878JTR68U8JqXoEFM6PnKI=
+
+Name: org/eclipse/emf/parsley/edit/action/EditingDomainValidateAction.
+ class
+SHA-256-Digest: kuvt3/NZyiDRH1ZX8HKFXJOJWRWfUCFU08dli71GOlM=
+
+Name: org/eclipse/emf/parsley/EmfParsleyExtensionFactory.class
+SHA-256-Digest: ln2u0aemAISJ9qHCOW/B1FDRFEYO/i9VqSHBy94mIvM=
+
+Name: org/eclipse/emf/parsley/ui/provider/DelegatingColumnLabelProvide
+ r.class
+SHA-256-Digest: xoZeHS/+/6c6FVKCAjjyThPm/b/AcbTnjs2VNZtQLCU=
+
+Name: org/eclipse/emf/parsley/viewers/TableViewerEditableColumnBuilder
+ .class
+SHA-256-Digest: jEGozuG88sTx9f/p5bchFTterE7CcQ4tdmDsfkEerfk=
+
+Name: org/eclipse/emf/parsley/composite/AbstractMasterDetailComposite.
+ class
+SHA-256-Digest: q/u5ReBQY27GhSfg6zW1hnN3X3923tgY4DE3ZF4lAZY=
+
+Name: org/eclipse/emf/parsley/ui/provider/FormFeatureCaptionProvider.c
+ lass
+SHA-256-Digest: omylyq2NE/VjLPgUCV1CEFcmpC8vprOGsaEOmjCFXy0=
+
+Name: org/eclipse/emf/parsley/resource/ValidateBeforeSaveStrategy.clas
+ s
+SHA-256-Digest: /+W+Zz2WHM4phcdxBbQViOy6YjGIzh7vzqnmXiYQUXQ=
+
+Name: org/eclipse/emf/parsley/edit/action/IMenuContributionSpecificati
+ on.class
+SHA-256-Digest: 7YpTKbQv2F+X57iPUQ/2tsQneflduoIDtz2QZivBsEU=
+
+Name: org/eclipse/emf/parsley/ui/provider/EClassToEStructuralFeatureAs
+ StringsMap.class
+SHA-256-Digest: +BbL9s062HzAokxQhrNE+Q9O7TPntrEFDAzHcDMM6L0=
+
+Name: org/eclipse/emf/parsley/resource/ResourceLoader.class
+SHA-256-Digest: qKATfgwvfZK5zdJOEQqqhe8V4d4Bez1IFWbVGWImC7Y=
+
+Name: org/eclipse/emf/parsley/edit/actionbar/WorkbenchActionBarContrib
+ utor.class
+SHA-256-Digest: +got0MxpEW6Qqv8OutZtF91ZP0PxVydGebDUoKPweNA=
+
+Name: org/eclipse/emf/parsley/widgets/DialogWidgetFactory.class
+SHA-256-Digest: zREXf607aUX4QF6Gu/9lt4WV7b77pZEs34doow8VFtg=
+
+Name: org/eclipse/emf/parsley/util/DatabindingUtil.class
+SHA-256-Digest: Kq7VRLvLfEXjxQJDFSPjg3gsEVhXBNDu/U6PQ+Uci6g=
+
+Name: org/eclipse/emf/parsley/edit/ui/provider/TableViewerContentProvi
+ derFactory.class
+SHA-256-Digest: RlKUGpee6DMxeqSCQVHqdUpHVcBAxy6RTBiZCzYtsRU=
+
+Name: org/eclipse/emf/parsley/ui/provider/ComboViewerLabelProvider.cla
+ ss
+SHA-256-Digest: T/NRkZn/R4s69voUsgBPDnhXiWr5YaM6dPdToUv44+g=
+
+Name: org/eclipse/emf/parsley/widgets/FormWidgetFactory.class
+SHA-256-Digest: 1VHfPO1OczvvalSiG1ztxryygZCh81fyMLE7tTqGkG8=
+
+Name: org/eclipse/emf/parsley/viewers/TableViewerEditingSupportFactory
+ .class
+SHA-256-Digest: NVxv1j7s9osQyloJrikWvjOh9SdlmH2icEuBmUJhGZ4=
+
+Name: about.mappings
+SHA-256-Digest: jBC4F/7CQ79NHSHamfepwUidYf5mU4Ft6JCJMPK/UO0=
+
+Name: org/eclipse/emf/parsley/viewers/TableViewerColumnBuilder$1.class
+SHA-256-Digest: E9qdElrKjKpbAl4MgwG3hFH4eWdtGN7nIGBbbpbOwec=
+
+Name: org/eclipse/emf/parsley/widgets/AbstractWidgetFactory.class
+SHA-256-Digest: IOad4EsPQydlcMIxJaNnWLE1xDyCDVmDGMmTfx5Vt2M=
+
+Name: org/eclipse/emf/parsley/util/EmfEventHelper.class
+SHA-256-Digest: 1oTiRSnlZs/s6de3+PnQawrYGUPTQfxLGgyoP1rkMlk=
+
+Name: org/eclipse/emf/parsley/listeners/OpenFormBasedDialogMouseAdapte
+ r.class
+SHA-256-Digest: uTBLp3Xhaa1QjyMTMht4G0FCyGJTZJdTQeDPT4OWHNU=
+
+Name: org/eclipse/emf/parsley/listeners/AsyncCommandStackListener.clas
+ s
+SHA-256-Digest: LNlwhMUOhweJFUq2oF8k2sZE4dmlW9y3tzZVEpdAS0o=
+
+Name: org/eclipse/emf/parsley/validation/LogIssueReporter.class
+SHA-256-Digest: vvGspV1ptbWHjuQXXKfGH7JU0Ps0Ui4xKMIyG9225hA=
+
+Name: org/eclipse/emf/parsley/edit/TextUndoRedo$TextInfo.class
+SHA-256-Digest: 9H1YERKUrFUEoXhEQebrKvxCfvoHamDeEvvxnsE5pkE=
+
+Name: org/eclipse/emf/parsley/composite/FormDetailComposite.class
+SHA-256-Digest: a1e/ypTCrFJuHrm2/v0WwgLrbLatv8d1QttWqZaaOYY=
+
+Name: org/eclipse/emf/parsley/ecore/FeatureNamePath.class
+SHA-256-Digest: VV/dcJ1+RiIHOaic8AFW+KPmHyJg+2AbckI9V4c1NbI=
+
+Name: org/eclipse/emf/parsley/composite/MultipleFeatureControl$1.class
+SHA-256-Digest: poQ0voDtqayhiR9JKQIvl0XGRmPWTeri1MEepSxz+pI=
+
+Name: org/eclipse/emf/parsley/internal/databinding/DatabindingSubstitu
+ tionLabelProvider.class
+SHA-256-Digest: lYtuRI6OUreluk1uYF8/6paIkR9cNkRDWp9zdEIKGw0=
+
+Name: org/eclipse/emf/parsley/internal/databinding/DatabindingValidati
+ onUtil$1.class
+SHA-256-Digest: 3DW9LqwD94rqB9ht8Zc1FhgqLtwCJl9obnIFsOION4A=
+
+Name: org/eclipse/emf/parsley/listeners/AsyncCommandStackListener$1.cl
+ ass
+SHA-256-Digest: lIv+Sh7pTPWi9Nw2M3K9SQfoUVAxVYM8tVsKYM9klx0=
+
+Name: org/eclipse/emf/parsley/edit/action/MenuSubmenuSpecification.cla
+ ss
+SHA-256-Digest: 9Ofpwcvgjlt+M2fPQiOeNqE2DQ7MXKp0eHXuUn82RIY=
+
+Name: org/eclipse/emf/parsley/edit/OnTheFlyEditingStrategy.class
+SHA-256-Digest: u6n5sZtHGV+zrjAUIhIdTwSj2XhfOWLQnoUl4Fn7Skg=
+
+Name: org/eclipse/emf/parsley/config/Configurator.class
+SHA-256-Digest: rB+Xk+QxadP2h0BRBzxbU9QqbODsgF3zALjytvvC0jQ=
+
+Name: org/eclipse/emf/parsley/composite/ProposalCreator.class
+SHA-256-Digest: eOKPj9tB7FO+CFreT/r8XBiiXSesk3ZV+Glk5VqVnzA=
+
+Name: org/eclipse/emf/parsley/internal/databinding/DatabindingValidati
+ onUtil.class
+SHA-256-Digest: ZvOEaLplwOEBuI8HtQ0hN+NTVsrEkfzrw/y5L4NPg4U=
+
+Name: org/eclipse/emf/parsley/edit/ui/provider/ViewerContentProvider$V
+ iewerContentProviderViewerRefresh.class
+SHA-256-Digest: zXc2qBU57kel3BGwlv+mVVVxxLnuwO7/X+3wj8VRGVY=
+
+Name: org/eclipse/emf/parsley/composite/EObjectTextObservable.class
+SHA-256-Digest: 94EQHZvTFFvQhaUkBg+NntnZPXOO44nMDPQiIEPKQeQ=
+
+Name: org/eclipse/emf/parsley/edit/provider/InjectableAdapterFactory.c
+ lass
+SHA-256-Digest: wVnhuYTYBBp4nFb+obLIF50QR9RyrnSLIr0HqRKGX/I=
+
+Name: org/eclipse/emf/parsley/composite/FormControlFactory.class
+SHA-256-Digest: 5+ZxxI77KwPUPEMtkXBuAHzwxY1W72/zuNS4kcM/u5w=
+
+Name: org/eclipse/emf/parsley/internal/viewers/GenericFeatureViewerCom
+ parator.class
+SHA-256-Digest: ZIy+ve5PojfTN1o2UInBVz9I00WsSDfM8vgewYAaVcA=
+
+Name: org/eclipse/emf/parsley/composite/ControlObservablePair.class
+SHA-256-Digest: umKMuDDKKkM5CHolQr5sGY5i7aG2u1crZHsUMKF8hFU=
+
+Name: org/eclipse/emf/parsley/composite/TableFormComposite.class
+SHA-256-Digest: neKAY5CHFkRUk/YW6Heum2f5fL6bf4vc48e159/WPso=
+
+Name: org/eclipse/emf/parsley/listeners/OpenPropertyViewMouseAdapter.c
+ lass
+SHA-256-Digest: 4Kef4mGlFnmiPxWxs2kuiFuS/An7AOdXt5GdmWXbUv0=
+
+Name: org/eclipse/emf/parsley/menus/ViewerContextMenuHelper.class
+SHA-256-Digest: 3G7WPvm6+uS58/TFWu2GpvxrnoUth9y+N6HYOmK0Z0g=
+
+Name: org/eclipse/emf/parsley/edit/IEditingStrategy.class
+SHA-256-Digest: 4RWc0liakg9M9v4elR4vsXPaVIah1NXfJwjqWuZr+1I=
+
+Name: org/eclipse/emf/parsley/ui/provider/TableColumnLabelProvider.cla
+ ss
+SHA-256-Digest: 2YJ9ju+8ohaVcwjFylncQ3s6C5psVnWLTHmVvIN5hKU=
+
+Name: org/eclipse/emf/parsley/validation/IssueReporter.class
+SHA-256-Digest: 1gsXw0RQj7K09jkw34NoahzeTHwjikvLBWSAxRXiFgk=
+
+Name: org/eclipse/emf/parsley/util/EObjectState.class
+SHA-256-Digest: ls7TDjNbpjPagDxBH7nzwBP4tJ4rQksbvEkcMRHoa6M=
+
+Name: about.properties
+SHA-256-Digest: oYtptddT4Y5TtxTFAFllMHkD57V7eYZOIEaltvqrFEc=
+
+Name: org/eclipse/emf/parsley/viewers/ViewerSelectionProvider$1.class
+SHA-256-Digest: ErmI4bgAQlWktLjkTyBmDaq2CyfOZtLOY0gV6NMpJrw=
+
+Name: org/eclipse/emf/parsley/edit/action/EditingMenuBuilder.class
+SHA-256-Digest: IrRuHeqVcTdc+K6hY/qp3H4T1JAirvDtK9qo81TnNfE=
+
+Name: org/eclipse/emf/parsley/composite/TableFormFactory.class
+SHA-256-Digest: XxQ0IavWz34yUypFpPFHDgxmYDfwNnYsR23e+BpX5Gs=
+
+Name: org/eclipse/emf/parsley/viewers/LayoutHelper.class
+SHA-256-Digest: apl+jwgrdZqFIpPDTe6bWz/+RbFBUgx07bS1WLsQWQg=
+
+Name: org/eclipse/emf/parsley/edit/action/EditingActionManager$1.class
+SHA-256-Digest: MzoNMGgdIe1h/Z2OFhqjBCzWp+sHsMvMdTTs0eeWGlk=
+
+Name: org/eclipse/emf/parsley/edit/action/MenuCommandActionHandlerCont
+ ributionSpecification.class
+SHA-256-Digest: ld7HXE6GDTfCMTAi7/mPF4U84Ei5Dj589pf3qPhaDJY=
+
+Name: org/eclipse/emf/parsley/ui/EmfParsleyAbstractActivator.class
+SHA-256-Digest: XPp05wdhtUEsaZtPJodPcC62bcxw77WLVsoO61qo3OQ=
+
+Name: org/eclipse/emf/parsley/edit/NotificationBuffer.class
+SHA-256-Digest: 3BiKDlqArDWLEcOeEHbYGHdKXwAqYzWr1nC/8wvVK8A=
+
+Name: org/eclipse/emf/parsley/viewers/IViewerMouseListener.class
+SHA-256-Digest: 4iSdGakaY2MLL+n/h9MV5otS6EsC9SG1LB0EmrNGWhU=
+
+Name: org/eclipse/emf/parsley/edit/TextUndoRedo$UndoRedoStack.class
+SHA-256-Digest: P8UMOQ4SLJLz8wUndL0F7WoKbMDAbMecbCya1zO0AgA=
+
+Name: org/eclipse/emf/parsley/edit/ui/dnd/ViewerDragAndDropHelper.clas
+ s
+SHA-256-Digest: VpSPImn1EMf9NsCjPqcdL00h8BCTUNXXSy4noXiYL1s=
+
+Name: org/eclipse/emf/parsley/edit/ui/provider/TableViewerContentProvi
+ der.class
+SHA-256-Digest: 5m4qG6a47r6pe9sH7/aoc7NIVVHizEafoA3M709nZoU=
+
+Name: org/eclipse/emf/parsley/edit/actionbar/WorkbenchActionBarContrib
+ utor$1.class
+SHA-256-Digest: L7dsxGZRvtVhI8gmDBRvIqS+7Y5SHUErF2YxIoXewic=
+
+Name: org/eclipse/emf/parsley/composite/DialogDetailComposite.class
+SHA-256-Digest: Qpg1hMsxmpTg1qkArI/E1hcIhfvAZ4Gwj+LdeP4humw=
+
+Name: org/eclipse/emf/parsley/composite/AbstractControlFactory$1.class
+SHA-256-Digest: +58jMgK+d8D3wRklDfLSlCOmvhWDBXWbYeE0xTjsYJk=
+
+Name: META-INF/maven/org.eclipse.emf.parsley/org.eclipse.emf.parsley.c
+ ommon/pom.xml
+SHA-256-Digest: BxT/NCtYDLezPp0lUj8NXPfoNTsQ+DodaHHPAIPUzUY=
+
+Name: org/eclipse/emf/parsley/edit/TextUndoRedo.class
+SHA-256-Digest: rl5z5+ShwoVMe9iRLT4FZWirf/pMnPfI5Pb+qR8wRcQ=
+
+Name: org/eclipse/emf/parsley/dialogs/DetailFormBasedDialog.class
+SHA-256-Digest: DXIeLYq7rHLtswcCVr0kXx4BP40sO4MO9EFZmxByadA=
+
+Name: org/eclipse/emf/parsley/viewers/TableViewerCellEditorFactory$1.c
+ lass
+SHA-256-Digest: /fmGOKUpYqO0FHvbktmQnJZengPBSTc2TFBYvDFrFd4=
+
+Name: org/eclipse/emf/parsley/edit/domain/DefaultAdapterFactoryEditing
+ DomainProvider.class
+SHA-256-Digest: VOJPfjyhWoJSXCelJvjWOIal/VEbY/SBgApgw08YAMI=
+
+Name: org/eclipse/emf/parsley/ui/provider/FeatureLabelCaptionProvider.
+ class
+SHA-256-Digest: x3rHbuIywaP8ydWjdaUqlw5ZXDrGoDCPQIo4vSYMuNY=
+
+Name: org/eclipse/emf/parsley/ui/provider/FeaturesProvider$EClassToESt
+ ructuralFeatureMap.class
+SHA-256-Digest: jtw10U3jh0l5Gubz4bEgU9pZJdUabXvkpD7WzFpQ188=
+
+Name: parsley-32.png
+SHA-256-Digest: F5mxxSLxixsGNA4lSMGzeLcNE/sccxAEIKLP5AvtsXE=
+
+Name: org/eclipse/emf/parsley/listeners/IEditorMouseListener.class
+SHA-256-Digest: DtKVvE/610+J8kLORsjkhW+G1ydW2FQ3PzExcywV554=
+
+Name: org/eclipse/emf/parsley/edit/domain/GlobalAdapterFactoryEditingD
+ omainProvider.class
+SHA-256-Digest: mgayv3aJz+1h01m/9Kigy6aNWfFZM18Bhj6Hb0aBUUc=
+
+Name: org/eclipse/emf/parsley/internal/databinding/DataBindingHelper.c
+ lass
+SHA-256-Digest: 2dFEPZRwWr8HA1B7QoNVDgHm6wy0QvUkxwMT7S10uto=
+
+Name: org/eclipse/emf/parsley/composite/DialogControlFactory.class
+SHA-256-Digest: w3KPHl3N5nqLuhQBOtT0zJrmPcFMIGRDMZFKgVFAXxA=
+
+Name: org/eclipse/emf/parsley/util/EcoreUtil2.class
+SHA-256-Digest: VQOAa3ZF5iJzxwlQ2BeqbWgR6rhY2aONLiyL+m0p3Hg=
+
+Name: org/eclipse/emf/parsley/viewers/TableViewerEditingSupport.class
+SHA-256-Digest: I3i/dVUd9QJCSLocCdlTe5UALvUupTPLZMTsVneuHGs=
+
+Name: org/eclipse/emf/parsley/EmfParsleyJavaGuiceModule.class
+SHA-256-Digest: ASCqWJD7gmvZy7PeRtxM9k+vrR/gkYnHdESmj+TElyM=
+
+Name: org/eclipse/emf/parsley/ui/provider/TableFeaturesProvider.class
+SHA-256-Digest: ULQytILq0fEdwFAmXnSQycel/f+ysTro8GwQoumMiUo=
+
+Name: org/eclipse/emf/parsley/composite/FormDetailReadOnlyComposite.cl
+ ass
+SHA-256-Digest: 9UQTOURxTlYhKxL99wfv5/krTB0VEJmuEiBCTBM4JSY=
+
+Name: org/eclipse/emf/parsley/composite/CachedLabelProvider.class
+SHA-256-Digest: 0uMS5zZe+GYgdNHNvIn90KdLLZ8bTH4Zol37b+J5Cfw=
+
+Name: org/eclipse/emf/parsley/composite/MultipleFeatureControl$2.class
+SHA-256-Digest: Bnmy8tptx+UBHsB/OrYlSIke/pHdWLSBQh/59wtKSWM=
+
+Name: org/eclipse/emf/parsley/validation/DiagnosticUtil.class
+SHA-256-Digest: ffag2z/6O4/fvSYEzNdbZSibmz2+0xs1nhnWBwJaAKc=
+
+Name: org/eclipse/emf/parsley/listeners/AsyncCommandStackListenerHelpe
+ r.class
+SHA-256-Digest: IJLSpcP/F5p9jT53GvMgzTbLBO9cGCCzaxBMexeXYyk=
+
+Name: org/eclipse/emf/parsley/listeners/AsyncCommandStackListenerClien
+ t.class
+SHA-256-Digest: V/edeo2PnjXGAlI4GjZImgNdsre6jI+IecMPrQAEDvI=
+
+Name: org/eclipse/emf/parsley/edit/action/EmfCommandAction.class
+SHA-256-Digest: YHma3jRt+8fumv5k9PILcLnqW1EpwdXoalM5Q+wFjZI=
+
+Name: org/eclipse/emf/parsley/ui/provider/ViewerLabelProvider.class
+SHA-256-Digest: XkS7QuwjtiiXRP/tCNdOz3i1csd1LH7huxCK9dC3kGw=
+
+Name: org/eclipse/emf/parsley/viewers/TreeViewerColumnBuilder.class
+SHA-256-Digest: HzXD+EU1t3FDaub5QY+1s1t9u5kSnZ/kEYEJCBTMYeI=
+
+Name: org/eclipse/emf/parsley/viewers/IStructuredViewerProvider.class
+SHA-256-Digest: 5ST8I4FM5z+FDBr4f+0zv47YOIvtA6v/FPlZvm4mPgo=
+
+Name: org/eclipse/emf/parsley/edit/action/MenuSeparatorContributionSpe
+ cification.class
+SHA-256-Digest: y7rlBsXvP8l2FE62nhuMwhNNkfaiDZbzJ8qwtdSGxTc=
+
+Name: org/eclipse/emf/parsley/util/FeatureHelper.class
+SHA-256-Digest: HDd6WLAKR1QSbWP2qPDoMBTSuMlOwDIejTO7LhRrGj8=
+
+Name: org/eclipse/emf/parsley/edit/UndoableEditingStrategy.class
+SHA-256-Digest: o1xeGwVjpvOkP1w6UyeUNOfftLTrPNU0oW6CU8FVYms=
+
+Name: org/eclipse/emf/parsley/composite/TreeFormFactory.class
+SHA-256-Digest: rzOOM7dW66W9TXjVUETAlH1pUCPX6Xee6fe2vouay6M=
+
+Name: org/eclipse/emf/parsley/composite/FormFactory.class
+SHA-256-Digest: ENCkWDoDvoLpHT9DlnvQgj9stYIr/M8KNJchx/B5FDA=
+
+Name: org/eclipse/emf/parsley/viewers/ViewerSelectionProvider.class
+SHA-256-Digest: Vaml9zYn6Q9e+s7c1C8BR6XGD9efxXqQEk3uIWuoCbk=
+
+Name: org/eclipse/emf/parsley/edit/domain/InjectableAdapterFactoryEdit
+ ingDomain.class
+SHA-256-Digest: 4A3eJ/DkhRB5H7s+9MsrH1xaO1ppqxPiqnoVycCAtO8=
+
+Name: org/eclipse/emf/parsley/edit/provider/AdapterFactoryHelper.class
+SHA-256-Digest: IXAKrsiaT+aa4X8B1QVwdXtr4tFv6xlO0+KEZoJDGVI=
+
+Name: org/eclipse/emf/parsley/ui/provider/FeaturesProvider.class
+SHA-256-Digest: IA7tsywFbklKpli6TmvlKSuGJx/DJ10KPs0naR0bQIU=
+
+Name: org/eclipse/emf/parsley/edit/action/EditingMenuBuilder$CustomCha
+ ngeCommand.class
+SHA-256-Digest: GJNQtyWCghu8QW6CA18GIUAN3kKO4xyA1gH4ZzFiN84=
+
+Name: org/eclipse/emf/parsley/internal/databinding/EmfValidationTarget
+ ToModelUpdateValueStrategy.class
+SHA-256-Digest: SSAsIWhBHTSpClW+lamuqGuXUtRGrSqtwjFLaVmr6nw=
+
+Name: org/eclipse/emf/parsley/resource/ResourceSaveStrategy.class
+SHA-256-Digest: tSGdSfbIZN5XZVe86deLpBUdXmF9K3TGxOLjUtmAlP8=
+
+Name: org/eclipse/emf/parsley/util/EmfCommandsUtil.class
+SHA-256-Digest: oz4EoXeIh5gBYP/c+8K0VedtNG6vd0oP1bBuE5moDA8=
+
+Name: org/eclipse/emf/parsley/composite/MultipleFeatureControlObservab
+ le.class
+SHA-256-Digest: p5881588Q/5MePxZ4jCA8MnF5eN7k9jmyWPrXB6+h+c=
+
+Name: org/eclipse/emf/parsley/edit/domain/EditingDomainFinderStrategy.
+ class
+SHA-256-Digest: UgJlYChUTnG8+8qZGC5Jz+/SqAso+hWvu+aVk/XS7A8=
+
+Name: org/eclipse/emf/parsley/widgets/IWidgetFactory.class
+SHA-256-Digest: meFeBOsKEp1/HO3xytagAA4T93B3iMJA3ACdiWcocFU=
+
+Name: org/eclipse/emf/parsley/composite/AbstractMasterDetailComposite$
+ SelectionChangedListener.class
+SHA-256-Digest: oTTnT7qUMVgnGknvPduzakK0k9ycjBAxiYPSz38nhiE=
+
+Name: org/eclipse/emf/parsley/composite/MultipleFeatureControl.class
+SHA-256-Digest: OdcaRLxqTdPqsSPCp/uI/6ya9+NqSxqlwN7R8ep2EvM=
+
+Name: org/eclipse/emf/parsley/edit/action/EditingMenuBuilder$CustomAdd
+ Command.class
+SHA-256-Digest: RIkp8D7J938LeoTEYPJ5Dn0EFUTKoxbnL92PZoX8h24=
+
+Name: org/eclipse/emf/parsley/composite/AbstractControlFactory.class
+SHA-256-Digest: 4vB2qXxjUQiHM8eCOPRdCXB25RcT/mYw2whShO8WSGI=
+
+Name: org/eclipse/emf/parsley/viewers/TableViewerCellEditorFactory.cla
+ ss
+SHA-256-Digest: /B+sCAPOEI9JttojVSUIzJDgeMQLFOgAmXJlHaVodFA=
+
+Name: org/eclipse/emf/parsley/internal/edit/ui/dnd/DynamicEditingDomai
+ nViewerDropAdapter.class
+SHA-256-Digest: xSqZMi9ADdWcCQKYKjD8T1u6R7LSk0qavdxBoEEp4JU=
+
+Name: org/eclipse/emf/parsley/util/EmfParsleyUtil.class
+SHA-256-Digest: I3Hx0MrKnZP2l1uL6oJL3Ay9savdIVkH0DbAKxP+vhU=
+
+Name: org/eclipse/emf/parsley/viewers/ColumnLabelProviderFactory.class
+SHA-256-Digest: 2994bCctima3BeUmLssaKyFy40mggsNSa5tkx/r26SI=
+
+Name: org/eclipse/emf/parsley/viewers/TableViewerColumnBuilder.class
+SHA-256-Digest: 8m/pRWrFS1dN1emOYRCAOncSZsb1l6mVTOhfrOLm+Ss=
+
+Name: org/eclipse/emf/parsley/util/EmfParsleyUiUtil.class
+SHA-256-Digest: r5WpLhZhqr5Bct5EXG/eyD/pcoCTJGXc+FHtISWlwdo=
+
+Name: org/eclipse/emf/parsley/handlers/OutlineSelectionHandler.class
+SHA-256-Digest: cB5kag1JxD9kQHY0zwnrUVpr5Lj9oeonn1RxAy8XZUc=
+
+Name: org/eclipse/emf/parsley/ecore/FeatureResolver.class
+SHA-256-Digest: 4wWUwLmL6W7cC9T3UJCpcOJdQ0ODLdvHkEpxF0Nygi0=
+
+Name: org/eclipse/emf/parsley/validation/DiagnosticUtil$2.class
+SHA-256-Digest: KenC2eDhVvBJlQNZnr1H/J227i+UfMbnEGU52GJ7JHU=
+
+Name: about.html
+SHA-256-Digest: 1fuYr0bu6NsJZCAmSom5QtnvnV0Cg8DwLn77Dd1Ql24=
+
+Name: org/eclipse/emf/parsley/resource/ResourceManager.class
+SHA-256-Digest: XvvmfOkzh03/8/9wj6PMrdZSqS7ZVuv8gQmIyvMz910=
+
+Name: org/eclipse/emf/parsley/ui/provider/DialogFeatureCaptionProvider
+ .class
+SHA-256-Digest: 20nsJkTY4U6CUpAmG9H2AH4bizSCQuZd4KdPsQovaZs=
+
+Name: org/eclipse/emf/parsley/edit/domain/DefaultEditingDomainProvider
+ .class
+SHA-256-Digest: FFN+EGjytJ5Oge0QAivQyz3b4FgudTWDWnTZoNpmGWY=
+
+Name: org/eclipse/emf/parsley/dialogs/AbstractDetailDialog.class
+SHA-256-Digest: kDCO69BxBWyi1Ny4K4DpJxzKn5k/+hL9gMGTz8uAzGQ=
+
+Name: org/eclipse/emf/parsley/dialogs/DialogFactory.class
+SHA-256-Digest: aaDPJxZMxUomSGFL0AxPDSVJF6PHcMTStJI2WOtiVUU=
+
+Name: org/eclipse/emf/parsley/edit/action/MenuActionContributionSpecif
+ ication.class
+SHA-256-Digest: VPZSvDacHDIxC6zft126Dromm5MXn/lG/YQyq3DCcLQ=
+
+Name: org/eclipse/emf/parsley/edit/ui/provider/InjectableAdapterFactor
+ yLabelProvider.class
+SHA-256-Digest: uRGloxfDZitPP/08e0AlH/hg5cR2kBbQ7Hil6qqHkJE=
+
+Name: org/eclipse/emf/parsley/edit/domain/EditingDomainPresetStrategy.
+ class
+SHA-256-Digest: CYOXLuhgihI+wD8F39m/gnzl8B/pKoKRGvkyEM8c2Oc=
+
+Name: org/eclipse/emf/parsley/composite/MultipleFeatureControl$Interna
+ lSelectionProvider.class
+SHA-256-Digest: H2n/FuxWsyzZUdyTq1FyBlRvek2tZnJ+z0dvWMuxFTY=
+
+Name: org/eclipse/emf/parsley/edit/EditingDomainFinder.class
+SHA-256-Digest: 5cEt5xcE44C5jx3CHo50DramrVhrJWgLRzLLOnhIcQ8=
+
+Name: org/eclipse/emf/parsley/validation/DialogErrorReporter.class
+SHA-256-Digest: t2krKJAQkS0s/tXNmtlyWi/ulZeOs/5Pu/bMCRuxPpQ=
+
+Name: org/eclipse/emf/parsley/ui/provider/FeatureCaptionProvider.class
+SHA-256-Digest: v3d3b+bYp90+l2uVDh4lFN6fOCzSvTjfSE1i5fxQIO8=
+
+Name: org/eclipse/emf/parsley/util/ActionBarsUtils.class
+SHA-256-Digest: gUADG0JZ8+QK57hVmEz+cYZ3M3kzHPimOnm75JLtCpY=
+
+Name: org/eclipse/emf/parsley/viewers/ViewerFactory.class
+SHA-256-Digest: IKB3Tz2MMk8h6a9b55O1ZbqupLzhD2jOIA3Xda4AmaE=
+
+Name: org/eclipse/emf/parsley/composite/FormDetailComposite$FormTitleA
+ dapter$1.class
+SHA-256-Digest: djn3H3EZnz6MxuQY1fk0CZx+NOmVBCJD/S+RVjwPR0c=
+
+Name: org/eclipse/emf/parsley/composite/AbstractDetailComposite.class
+SHA-256-Digest: SOKVj/oJfvzokyHI/EpqFPX7AreMXq2jWEE8JUY/Zjk=
+
+Name: org/eclipse/emf/parsley/EmfParsleyConstants.class
+SHA-256-Digest: aNw+ulHz9p8ohgfXsgVQ4Yy7QLD35BX4F3hkvdjmEwE=
+
+Name: org/eclipse/emf/parsley/edit/actionbar/LightweightActionBarContr
+ ibutor.class
+SHA-256-Digest: /KNEbcxflDoG7VlMWyt4eVpy1seW8OmS8gSjJo8fm0w=
+

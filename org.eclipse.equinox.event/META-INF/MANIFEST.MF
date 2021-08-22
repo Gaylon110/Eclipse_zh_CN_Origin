@@ -1,0 +1,100 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.equinox.event
+Archiver-Version: Plexus Archiver
+Built-By: genie.releng
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/equino
+ x/rt.equinox.bundles.git;path="bundles/org.eclipse.equinox.event";tag
+ ="I20170105-2000";commitId=fc458dd083d984d1d217142b76234e7029ccf02f
+Bundle-Vendor: %bundleVendor
+Import-Package: org.eclipse.osgi.framework.eventmgr;version="1.1.0",or
+ g.eclipse.osgi.util;version="1.1.0",org.osgi.framework;version="1.6.0
+ ",org.osgi.service.event;version="[1.3,1.4)",org.osgi.service.log;ver
+ sion="1.3.0",org.osgi.util.tracker;version="1.5.0"
+Service-Component: OSGI-INF/component.xml
+Provide-Capability: osgi.service; objectClass:List<String>="org.osgi.s
+ ervice.event.EventAdmin"; uses:="org.osgi.service.event"
+Export-Package: org.eclipse.equinox.internal.event;x-internal:=true,or
+ g.eclipse.equinox.internal.event.mapper;x-internal:=true
+Bundle-Name: %bundleName
+Bundle-Version: 1.4.0.v20170105-1446
+Bundle-Localization: plugin
+Bundle-Activator: org.eclipse.equinox.internal.event.Activator
+Created-By: Apache Maven 3.3.3
+Build-Jdk: 1.8.0_102
+
+Name: org/eclipse/equinox/internal/event/EventComponent.class
+SHA-256-Digest: E+UdNHi5oCNoFjvNXBCuCzWNSk7Snkvsn2b6TGk9xuQ=
+
+Name: META-INF/p2.inf
+SHA-256-Digest: dYBWBajbs/Pq1mOrD+1Goubq86uSZRl/7lcxVQBdPgE=
+
+Name: about.html
+SHA-256-Digest: 9T2Pe49u5SQVkZRUN2AUcizwTjgMeh52dI1gzZWRvGo=
+
+Name: org/eclipse/equinox/internal/event/EventHandlerWrapper.class
+SHA-256-Digest: ccBUW1ONRE7K8BOSG7C9DdJz98RIh3fAzbhw6fFiAHg=
+
+Name: org/eclipse/equinox/internal/event/LogTrackerMsg.class
+SHA-256-Digest: n6SEgBPgBTVBuXWjY4VTdG1j8/6qXDHONitwXff9FPg=
+
+Name: org/eclipse/equinox/internal/event/mapper/BundleEventAdapter.cla
+ ss
+SHA-256-Digest: H5YH4JMTeSL+aA0zC0AJyW9nhqXumRncfpMMYnVqySw=
+
+Name: OSGI-INF/component.xml
+SHA-256-Digest: Tl6uLuDBWQynxjs5wCgEFkdnuABfVbi5iz6JlAspapk=
+
+Name: org/eclipse/equinox/internal/event/LogTracker.class
+SHA-256-Digest: WI7wgueUyIDlC+WFV+jAQ8IEWC7e9a3H8bZmMVo3kXg=
+
+Name: .api_description
+SHA-256-Digest: G1Gj5x9o+EZvc929bFYjV57K/hGWaKQF6A54dGtxKWU=
+
+Name: org/eclipse/equinox/internal/event/mapper/ServiceEventAdapter.cl
+ ass
+SHA-256-Digest: xeFKIrVcU0A2I4SCf9DIxrBD5KWlROnoRsoKgYiju7M=
+
+Name: org/eclipse/equinox/internal/event/mapper/EventAdapter.class
+SHA-256-Digest: CzOmQm/i/oFw2u9LTRebg7Jg0qhcbx0WkHu5DoSgApQ=
+
+Name: org/eclipse/equinox/internal/event/EventHandlerTracker.class
+SHA-256-Digest: Q1v6Xjd2DX2xVCNib2MnavNTQS+8/g6LCfkJSi8Dxz0=
+
+Name: org/eclipse/equinox/internal/event/EventHandlerWrapper$1.class
+SHA-256-Digest: dpMLx38fq7omLhgQObPnyWkCQqpMYM5FNUHzSkqh6Ro=
+
+Name: org/eclipse/equinox/internal/event/ExternalMessages.properties
+SHA-256-Digest: AdGo4PzmblEq1qK6kwZc7FSx7GPyC7eM7QvMHx5Ec0k=
+
+Name: org/eclipse/equinox/internal/event/LogMessages.properties
+SHA-256-Digest: IezCnZD6ZI73XlcMCocsX8WM2jqwCGt6NTtOdSnVUSE=
+
+Name: org/eclipse/equinox/internal/event/mapper/Constants.class
+SHA-256-Digest: XJmLVf9vRmqPpPZabJxpjuCxS5NMdE4qwsza4qgRM7s=
+
+Name: plugin.properties
+SHA-256-Digest: n3wDFwVwa4o+e02M5a39Y9MD5Kc70mcipZRReTutLtI=
+
+Name: org/eclipse/equinox/internal/event/mapper/EventRedeliverer.class
+SHA-256-Digest: M/8rE8ex6jKnF8Zaf23fZrdk+dApT8qeaA9icdnJhyc=
+
+Name: org/eclipse/equinox/internal/event/EventAdminMsg.class
+SHA-256-Digest: aI0JXr78e4xkY3K7srEZnILAJquKcjnSxpJKFbmLk7I=
+
+Name: org/eclipse/equinox/internal/event/EventAdminImpl.class
+SHA-256-Digest: 3wkKwlnpBhne9SKJTnD75aBsNFrHMK+Ta0ndGqNO0KY=
+
+Name: org/eclipse/equinox/internal/event/mapper/FrameworkEventAdapter.
+ class
+SHA-256-Digest: Xm8q5lTPoGwIZI6GvZG9nWIK1iBUXizVlh6PoXDah+4=
+
+Name: org/eclipse/equinox/internal/event/Activator.class
+SHA-256-Digest: gGCYm3Cxp3EQyKs45MK49sd0ubWeocU7mBC3p/TGwvY=
+
+Name: org/eclipse/equinox/internal/event/EventHandlerWrapper$LogTopicE
+ xception.class
+SHA-256-Digest: 75kxqmwoHiXEq0GcG7nSU38U8ynDyRwtpUmYsM7AbfY=
+

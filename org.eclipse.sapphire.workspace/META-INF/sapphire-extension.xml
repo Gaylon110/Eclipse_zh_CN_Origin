@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+ ******************************************************************************
+ * Copyright (c) 2016 Oracle
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *    Konstantin Komissarchik - initial implementation and ongoing maintenance
+ ******************************************************************************
+-->
+
+<extension xmlns="http://www.eclipse.org/sapphire/xmlns/extension" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <service>
+        <context>Sapphire.Property.Instance</context>
+        <id>Sapphire.RelativePathService.Project</id>
+        <implementation>org.eclipse.sapphire.workspace.internal.ProjectRelativePathService</implementation>
+        <condition>org.eclipse.sapphire.workspace.internal.ProjectRelativePathService$Condition</condition>
+    </service>
+    <service>
+        <context>Sapphire.Property.Instance</context>
+        <id>Sapphire.RelativePathService.Workspace</id>
+        <implementation>org.eclipse.sapphire.workspace.internal.WorkspaceRelativePathService</implementation>
+        <condition>org.eclipse.sapphire.workspace.internal.WorkspaceRelativePathService$Condition</condition>
+    </service>
+    <service>
+        <context>Sapphire.Property.Instance</context>
+        <id>Sapphire.ValidationService.ProjectRelativePath</id>
+        <implementation>org.eclipse.sapphire.workspace.internal.ProjectRelativePathValidationService</implementation>
+        <condition>org.eclipse.sapphire.workspace.internal.ProjectRelativePathValidationService$Condition</condition>
+    </service>
+    <service>
+        <description>Creates fact statements about property's relative to the project path requirement by using semantical information specified by @ProjectRelativePath annotation.</description>
+        <context>Sapphire.Property.Instance</context>
+        <id>Sapphire.FactsService.ProjectRelativePath</id>
+        <implementation>org.eclipse.sapphire.workspace.internal.ProjectRelativePathFactsService</implementation>
+        <condition>org.eclipse.sapphire.workspace.internal.ProjectRelativePathFactsService$Condition</condition>
+    </service>
+    <service>
+        <description>Creates fact statements about property's relative to the workspace path requirement by using semantical information specified by @WorkspaceRelativePath annotation.</description>
+        <context>Sapphire.Property.Instance</context>
+        <id>Sapphire.FactsService.WorkspaceRelativePath</id>
+        <implementation>org.eclipse.sapphire.workspace.internal.WorkspaceRelativePathFactsService</implementation>
+        <condition>org.eclipse.sapphire.workspace.internal.WorkspaceRelativePathFactsService$Condition</condition>
+    </service>
+    <service>
+        <id>Sapphire.ConversionService.IFileToWorkspaceFileResourceStore</id>
+        <description>ConversionService implementation for IFile to WorkspaceFileResourceStore conversions.</description>
+        <context>Sapphire</context>
+        <implementation>org.eclipse.sapphire.workspace.internal.IFileToWorkspaceFileResourceStoreConversionService</implementation>
+    </service>
+    <service>
+        <context>Sapphire</context>
+        <description>ConversionService implementation for WorkspaceFileResourceStore to IFile conversions.</description>
+        <id>Sapphire.ConversionService.WorkspaceFileResourceStoreToIFile</id>
+        <implementation>org.eclipse.sapphire.workspace.internal.WorkspaceFileResourceStoreToIFileConversionService</implementation>
+    </service>
+    <service>
+        <context>Sapphire</context>
+        <description>ConversionService implementation for WorkspaceFileResourceStore to File conversions via IFile.</description>
+        <id>Sapphire.ConversionService.ResourceStoreToFile</id>
+        <implementation>org.eclipse.sapphire.workspace.internal.ResourceStoreToFileConversionService</implementation>
+    </service>
+    <service>
+        <context>Sapphire</context>
+        <description>ConversionService implementation for ResourceStore to IContainer conversions via IFile.</description>
+        <id>Sapphire.ConversionService.ResourceStoreToIContainer</id>
+        <implementation>org.eclipse.sapphire.workspace.internal.ResourceStoreToIContainerConversionService</implementation>
+    </service>
+    <service>
+        <context>Sapphire</context>
+        <description>ConversionService implementation for ResourceStore to IProject conversions via IFile.</description>
+        <id>Sapphire.ConversionService.ResourceStoreToIProject</id>
+        <implementation>org.eclipse.sapphire.workspace.internal.ResourceStoreToIProjectConversionService</implementation>
+    </service>
+</extension>

@@ -1,0 +1,31 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.eclipse.wst.common.frameworks;singleton:=true
+Bundle-Version: 1.2.201.v201707201954
+Bundle-ClassPath: org.eclipse.wst.common.frameworks_1.2.201.v201707201954.jar
+Bundle-Activator: org.eclipse.wst.common.frameworks.internal.plugin.WTPCommonPlugin
+Bundle-Vendor: %provider
+Bundle-Localization: plugin
+Export-Package: org.eclipse.wst.common.frameworks.datamodel,
+  org.eclipse.wst.common.frameworks.datamodel.properties,
+  org.eclipse.wst.common.frameworks.internal;x-internal:=true,
+  org.eclipse.wst.common.frameworks.internal.activities;x-internal:=true,
+  org.eclipse.wst.common.frameworks.internal.datamodel;x-internal:=true,
+  org.eclipse.wst.common.frameworks.internal.enablement;x-internal:=true,
+  org.eclipse.wst.common.frameworks.internal.enablement.nonui;x-internal:=true,
+  org.eclipse.wst.common.frameworks.internal.operations;x-internal:=true,
+  org.eclipse.wst.common.frameworks.internal.plugin;x-internal:=true
+Require-Bundle: org.eclipse.core.resources;bundle-version="[3.4.0,4.0.0)",
+  org.eclipse.core.runtime;bundle-version="[3.4.0,4.0.0)",
+  org.eclipse.core.commands;bundle-version="[3.4.0,4.0.0)",
+  org.eclipse.wst.common.environment;bundle-version="[1.0.200,2.0.0)";visibility:=reexport,
+  org.eclipse.emf.ecore;bundle-version="[2.4.0,3.0.0)",
+  org.eclipse.wst.common.core;bundle-version="[1.2.0,2.0.0)"
+Built-By: genie.webtools
+Build-Jdk: 1.8.0_162
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/webtools-common/webtools.common.git;path="plugins/org.eclipse.wst.common.frameworks";commitId=1f176ef592ae02ffd512547df6a64166a07eae0b
+Created-By: Apache Maven 3.5.2
+Archiver-Version: Plexus Archiver
+Eclipse-LazyStart: true
+Bundle-RequiredExecutionEnvironment: J2SE-1.5

@@ -1,0 +1,193 @@
+Manifest-Version: 1.0
+Bundle-Description: Mylyn WikiText provides an extensible framework an
+ d tools for parsing, editing and presenting lightweight markup. WikiT
+ ext has parsers for AsciiDoc, CommonMark, Markdown, MediaWiki, Textil
+ e, Confluence, Creole, HTML, TracWiki and TWiki markup, and        ca
+ n be extended to support other languages. WikiText provides Ant tasks
+  for converting lightweight markup to HTML, Eclipse Help, DocBook, DI
+ TA and XSL-FO. WikiText also provides an editor for editing such mark
+ up within Eclipse, and integrates with        the Mylyn task editor c
+ ausing it to be markup-aware. WikiText provides API for integrating w
+ iki markup capabilities into Eclipse, RCP, stand-alone and server-sid
+ e applications.
+Bundle-License: https://www.eclipse.org/legal/epl-2.0/
+Bundle-SymbolicName: org.eclipse.mylyn.wikitext.twiki
+Built-By: jenkins
+Bnd-LastModified: 1614384553578
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-DocURL: http://eclipse.org/mylyn
+Bundle-Vendor: Eclipse Mylyn
+Import-Package: org.eclipse.mylyn.wikitext.parser;version="[3.0,4)",or
+ g.eclipse.mylyn.wikitext.parser.markup;version="[3.0,4)",org.eclipse.
+ mylyn.wikitext.parser.markup.phrase;version="[3.0,4)",org.eclipse.myl
+ yn.wikitext.parser.markup.token;version="[3.0,4)",org.eclipse.mylyn.w
+ ikitext.parser.outline;version="[3.0,4)",org.eclipse.mylyn.wikitext.t
+ wiki,org.eclipse.mylyn.wikitext.twiki.internal.block,org.eclipse.myly
+ n.wikitext.twiki.internal.phrase,org.eclipse.mylyn.wikitext.twiki.int
+ ernal.token,org.eclipse.mylyn.wikitext.validation;version="[3.0,4)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-3.2.0.201605172007
+Export-Package: org.eclipse.mylyn.wikitext.twiki.internal.block;x-inte
+ rnal:=true;uses:="org.eclipse.mylyn.wikitext.parser.markup";version="
+ 3.0.39",org.eclipse.mylyn.wikitext.twiki.internal.phrase;x-internal:=
+ true;uses:="org.eclipse.mylyn.wikitext.parser,org.eclipse.mylyn.wikit
+ ext.parser.markup";version="3.0.39",org.eclipse.mylyn.wikitext.twiki.
+ internal.token;x-internal:=true;uses:="org.eclipse.mylyn.wikitext.par
+ ser.markup";version="3.0.39",org.eclipse.mylyn.wikitext.twiki.interna
+ l.validation;x-internal:=true;uses:="org.eclipse.mylyn.wikitext.parse
+ r.markup,org.eclipse.mylyn.wikitext.validation";version="3.0.39",org.
+ eclipse.mylyn.wikitext.twiki;uses:="org.eclipse.mylyn.wikitext.parser
+ .markup";version="3.0.39"
+Bundle-Name: Mylyn WikiText Twiki
+Bundle-Version: 3.0.39.20210227000941
+Build-Jdk: 1.8.0_202
+Created-By: Apache Maven Bundle Plugin
+
+Name: services/org.eclipse.mylyn.wikitext.parser.markup.MarkupLanguage
+SHA-256-Digest: H441wPFTIBgpOJd2YTtb55VhH5USB5bsQ/RD4oP6SSI=
+
+Name: org/eclipse/mylyn/wikitext/twiki/internal/block/LiteralBlock.cla
+ ss
+SHA-256-Digest: 1qYr9q6AVhZGW5AqvWzP+G3Jz5CADcZhI1h017MaaY4=
+
+Name: org/eclipse/mylyn/wikitext/twiki/internal/block/ListBlock.class
+SHA-256-Digest: rVExkTA2HXIppIz04uk8vG088ofoqci1KJrZDJhJh7w=
+
+Name: org/eclipse/mylyn/wikitext/twiki/internal/phrase/SimpleWrappedPh
+ raseModifier.class
+SHA-256-Digest: MdnGCmiUgSCtrrej/ELMJxe9FMomBaeF4slBy9w7ubE=
+
+Name: org/eclipse/mylyn/wikitext/twiki/internal/token/ImpliedEmailLink
+ ReplacementToken$EmailLinkProcessor.class
+SHA-256-Digest: yPBYdHywd1eUIFkNn+QLY/GfurYsWnHEzW3B/m9YZMs=
+
+Name: META-INF/maven/org.eclipse.mylyn.docs/org.eclipse.mylyn.wikitext
+ .twiki/pom.xml
+SHA-256-Digest: EXo7Z03KKEcUwprgJ7D7aJlOgvLcfNuWpQg4bijOA3k=
+
+Name: org/eclipse/mylyn/wikitext/twiki/internal/block/DefinitionListBl
+ ock.class
+SHA-256-Digest: UbPURRpO8hJCfmwt2GBjosb5tQmBcfE8x4c4ivlLns0=
+
+Name: org/eclipse/mylyn/wikitext/twiki/internal/block/TableOfContentsB
+ lock.class
+SHA-256-Digest: YSncccqWaoHBdvSw6HOhQejzmsVXC5crL7PTCmsM2xw=
+
+Name: org/eclipse/mylyn/wikitext/twiki/internal/block/VerbatimBlock.cl
+ ass
+SHA-256-Digest: s7WY/8e4y63G4npbqf8mwG4TjdyqsXwb0PGTrD2tjnU=
+
+Name: META-INF/maven/org.eclipse.mylyn.docs/org.eclipse.mylyn.wikitext
+ .twiki/pom.properties
+SHA-256-Digest: iQHDCZe8I95V0sNOkRFpcpiEzf29iQKG5k43LaQGa08=
+
+Name: org/eclipse/mylyn/wikitext/twiki/internal/block/ListBlock$ListSt
+ ate.class
+SHA-256-Digest: IcwbCIfjKUo45lDjNer4vSSSVmhud1NOp3TH3TiCFnA=
+
+Name: org/eclipse/mylyn/wikitext/twiki/internal/token/IconReplacementT
+ oken.class
+SHA-256-Digest: S9mO57Mqz76FbVZqdNpe1IOqKmBqRwwOlp93OQ/LaDY=
+
+Name: org/eclipse/mylyn/wikitext/twiki/internal/phrase/AutoLinkSwitchP
+ hraseModifier.class
+SHA-256-Digest: l+OKyv7a9Gky5owvxHg3y6KECtcH5Fa1E+FJkVWlZkY=
+
+Name: org/eclipse/mylyn/wikitext/twiki/internal/block/ParagraphBlock.c
+ lass
+SHA-256-Digest: /rPv5u1Y7lfa1S7VmeESnoD9A24kSGlfMn+BWc3jzAY=
+
+Name: org/eclipse/mylyn/wikitext/twiki/internal/block/HeadingBlock.cla
+ ss
+SHA-256-Digest: zAyVpvk0aMgOqfPDkP7Fry4WTmdSsIKuD/7hEkAf14E=
+
+Name: plugin.properties
+SHA-256-Digest: Qmwgra4+AYX+xbpgCLJ+Uu6UKHVYEjjd9rAAykflEi8=
+
+Name: org/eclipse/mylyn/wikitext/twiki/internal/phrase/SimplePhraseMod
+ ifier.class
+SHA-256-Digest: u3/I0SNuNLo69tfoWkY1JA91AbFPWP2WpFMpSjzMJpE=
+
+Name: org/eclipse/mylyn/wikitext/twiki/TWikiLanguage.class
+SHA-256-Digest: 2QgC99Am1vYpJ/AFYysn6+HwdVyIySdRXcRNiN+RIFk=
+
+Name: org/eclipse/mylyn/wikitext/twiki/internal/phrase/AutoLinkSwitchP
+ hraseModifier$SwitchProcessor.class
+SHA-256-Digest: I1QbWah+rcCbkf/5PZXZzHI6zDd4kO6L3EoRww2QFgs=
+
+Name: about.html
+SHA-256-Digest: GWwWKwDoEPbqRj3Nm004u/ySxB5XSz/ODMj6p56lw8o=
+
+Name: org/eclipse/mylyn/wikitext/twiki/internal/block/HorizontalRuleBl
+ ock.class
+SHA-256-Digest: zLKs0VvcC3pHnV+PEm4e+B3iweBRdf3Dz/SDvCSPetI=
+
+Name: org/eclipse/mylyn/wikitext/twiki/internal/token/ImpliedEmailLink
+ ReplacementToken.class
+SHA-256-Digest: P7Bs+VpxM0OD5jmXOGrEs0nrNj9HJT0y4n0/zR+HEYQ=
+
+Name: org/eclipse/mylyn/wikitext/twiki/internal/token/ImpliedEmailLink
+ ReplacementToken$1.class
+SHA-256-Digest: hQJuPfMIwmeizdLRNy+RKRXizuB0Gsl1VCwCPezzoUw=
+
+Name: org/eclipse/mylyn/wikitext/twiki/internal/token/LinkReplacementT
+ oken.class
+SHA-256-Digest: MONcaWRiYV6Fp+v8MNs9GyUHtZs4m690ucY1/5EEeXo=
+
+Name: org/eclipse/mylyn/wikitext/twiki/internal/validation/messages.pr
+ operties
+SHA-256-Digest: r9li+F0MSwfjKKnAYZBthpFznq6G8ygRe4HHfR0HnNU=
+
+Name: org/eclipse/mylyn/wikitext/twiki/internal/block/ListBlock$1.clas
+ s
+SHA-256-Digest: XuuZTr4DHB+Ud3KX/2oujAM6e3jF14TUr/QGvOjXRCk=
+
+Name: org/eclipse/mylyn/wikitext/twiki/internal/token/WikiWordReplacem
+ entToken.class
+SHA-256-Digest: HXKA1vX0QRL/5+jIvLQhakkGGAh0KgPIkdv78KPcWGI=
+
+Name: org/eclipse/mylyn/wikitext/twiki/internal/token/WikiWordReplacem
+ entToken$WikiWordProcessor.class
+SHA-256-Digest: DDvc5CwX0Ysq2qfzX81a96jYFO/aMiQfLEiMDLQMNRc=
+
+Name: org/eclipse/mylyn/wikitext/twiki/internal/validation/TWikiRefere
+ nceValidationRule.class
+SHA-256-Digest: nopsMX4gs7nQQIfchtlO7u553dAbjVRntVa9BZK5mzg=
+
+Name: org/eclipse/mylyn/wikitext/twiki/internal/phrase/AutoLinkSwitchP
+ hraseModifier$1.class
+SHA-256-Digest: nfw6OKSklmJfmn3JZzV74co1HL42erOwHLFam5H7RbU=
+
+Name: org/eclipse/mylyn/wikitext/twiki/internal/token/LinkReplacementT
+ oken$1.class
+SHA-256-Digest: StVTY5j+ODKGS0ROMiZuzw3zp+453aXfR0nKZc7i3XA=
+
+Name: org/eclipse/mylyn/wikitext/twiki/internal/validation/Messages.cl
+ ass
+SHA-256-Digest: xAxH+Y7IqsuM5HprzXfAEwlnje8iHB4WdD2l0VTL9d8=
+
+Name: org/eclipse/mylyn/wikitext/twiki/internal/token/IconReplacementT
+ oken$1.class
+SHA-256-Digest: 556Y2X0lvHsagA4IBJUu9+KX1nbeQuu42btQz2D44Es=
+
+Name: org/eclipse/mylyn/wikitext/twiki/internal/token/WikiWordReplacem
+ entToken$1.class
+SHA-256-Digest: P8I0JJeyUapvQWiBC2cgaVjefnBQyHLXDVYPPnNaFOM=
+
+Name: org/eclipse/mylyn/wikitext/twiki/internal/phrase/SimpleWrappedPh
+ raseModifier$SimplePhraseModifierProcessor.class
+SHA-256-Digest: gO+7Q72MDsZnuKUC5JEvft3e2cvnkuGeAWXBWZiD1Os=
+
+Name: org/eclipse/mylyn/wikitext/twiki/internal/token/IconReplacementT
+ oken$IconProcessor.class
+SHA-256-Digest: 9/42G+lGiJDvPnB4NaruYNS9/IlcOYFArTm0cSDr0YQ=
+
+Name: org/eclipse/mylyn/wikitext/twiki/internal/token/LinkReplacementT
+ oken$LinkProcessor.class
+SHA-256-Digest: ike0dTXccsenmv/yPlwIbpcG2N7f7GepUdi1DHjv5oY=
+
+Name: org/eclipse/mylyn/wikitext/twiki/internal/validation/ListWhitesp
+ aceValidationRule.class
+SHA-256-Digest: iaREOWjAoPsDsKGSLwPiob2tp7erEJd9bovIJomdHBM=
+

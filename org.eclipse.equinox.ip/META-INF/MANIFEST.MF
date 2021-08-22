@@ -1,0 +1,102 @@
+Manifest-Version: 1.0
+Bundle-Description: Provides implementation of the Intial Provisioning
+  servicedefined by OSGi specification release 4.
+Bundle-SymbolicName: org.eclipse.equinox.ip
+Archiver-Version: Plexus Archiver
+Built-By: genie.releng
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: CDC-1.0/Foundation-1.0,J2SE-1.3
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/equino
+ x/rt.equinox.bundles.git;path="bundles/org.eclipse.equinox.ip";tag="I
+ 20161011-0800";commitId=be955ed849a2b51f10f4b534ee2ee9418cc578f0
+Bundle-Vendor: %bundleVendor
+Import-Package: javax.servlet;version="2.1",javax.servlet.http;version
+ ="2.1",org.eclipse.equinox.internal.util.ref;version="1.0",org.eclips
+ e.equinox.internal.util.timer;version="1.0",org.osgi.framework;versio
+ n="1.0",org.osgi.service.cm;version="1.2.0",org.osgi.service.http;ver
+ sion="1.0",org.osgi.service.log;version="1.3.0",org.osgi.service.prov
+ isioning;version="[1.2,1.3)",org.osgi.service.useradmin;version="1.0"
+ ,org.osgi.util.tracker;version="1.3.2"
+Content-Id: equinox.provisioning_agent
+DynamicImport-Package: org.osgi.service.permissionadmin; version="1.0"
+Prv-Storage: org.eclipse.equinox.internal.ip.storage.file.FileStorage
+Export-Package: org.eclipse.equinox.internal.ip;x-internal:=true,org.e
+ clipse.equinox.internal.ip.dscagent;x-internal:=true,org.eclipse.equi
+ nox.internal.ip.impl;x-internal:=true,org.eclipse.equinox.internal.ip
+ .provider;x-internal:=true,org.eclipse.equinox.internal.ip.provider.e
+ nv;x-internal:=true,org.eclipse.equinox.internal.ip.provider.file;x-i
+ nternal:=true,org.eclipse.equinox.internal.ip.provider.http;x-interna
+ l:=true,org.eclipse.equinox.internal.ip.storage.cm;x-internal:=true,o
+ rg.eclipse.equinox.internal.ip.storage.file;x-internal:=true
+PrvInfo-Providers: org.eclipse.equinox.internal.ip.provider.env.Enviro
+ nmentInfoProvider;300,org.eclipse.equinox.internal.ip.provider.http.H
+ ttpProvider;200,org.eclipse.equinox.internal.ip.provider.file.FilePro
+ vider;100
+Bundle-Name: %bundleName
+Bundle-Version: 1.1.400.v20161007-1324
+Bundle-Localization: plugin
+Bundle-Activator: org.eclipse.equinox.internal.ip.impl.ProvisioningAge
+ nt
+Created-By: Apache Maven 3.3.3
+Build-Jdk: 1.8.0_102
+
+Name: org/eclipse/equinox/internal/ip/ProvisioningStorage.class
+SHA-256-Digest: kGkqNv7ep8/29SD+SWQ3KXt2IuZspEKKCX693FHA1js=
+
+Name: about.html
+SHA-256-Digest: cegQFxyxXc4Vkf231R9LiURRNobJqiDYHt2JSOgqWLE=
+
+Name: org/eclipse/equinox/internal/ip/provider/env/EnvironmentInfoProv
+ ider.class
+SHA-256-Digest: OXzKRzQxH9U4f+AcojwNXFQSM56+fNiiu2TZ0C8XDMA=
+
+Name: org/eclipse/equinox/internal/ip/impl/ProvisioningAgent.class
+SHA-256-Digest: flDrW4H5Qo6Y3Xjwc14FMa9IzXPYlko3zvXcbrmvBbA=
+
+Name: org/eclipse/equinox/internal/ip/impl/ProvisioningData.class
+SHA-256-Digest: QWe+uVpcDm1MuWIRCPY3nzzS0N8yZsikPvrEXSjRl5s=
+
+Name: .api_description
+SHA-256-Digest: 4zoFRLqhzEjzsCqQyCH5vcnDd2MeojVUx1ToXPeZZ6E=
+
+Name: org/eclipse/equinox/internal/ip/provider/http/HttpProvider.class
+SHA-256-Digest: tctnmnoEGZecPuIlmgEHjEi1hxXLql1kH8YIn+TX73M=
+
+Name: org/eclipse/equinox/internal/ip/impl/ProvisioningAgent$ISWrapper
+ .class
+SHA-256-Digest: 2CUpB1QPH9K6ON8jt3mRVIIhtgmYR3hJRKBuaKvAHxQ=
+
+Name: org/eclipse/equinox/internal/ip/storage/cm/CMStorage.class
+SHA-256-Digest: I3Kc8sysUPBA3NXj/L4U75bF/SIBl2cCy1xrVE16nlw=
+
+Name: org/eclipse/equinox/internal/ip/provider/http/Context.class
+SHA-256-Digest: TV8FT7FRucb7+81JmlnwdNralIxMo2OPoNtZXtTR2ew=
+
+Name: org/eclipse/equinox/internal/ip/provider/BaseProvider.class
+SHA-256-Digest: 6WJlKk8hh+uwaIT90fvEZ62BiYxFf+UrWUGzhIcquhE=
+
+Name: org/eclipse/equinox/internal/ip/impl/Log.class
+SHA-256-Digest: DZ+ds8l3denznuujDP+H+nEjFh12ExrnWsjloUlXBcU=
+
+Name: org/eclipse/equinox/internal/ip/provider/file/FileProvider.class
+SHA-256-Digest: Koy1vuxBtdvGdb+xkZGpqBJ/+qEjQ8v2TKU67bwUNx4=
+
+Name: org/eclipse/equinox/internal/ip/impl/ProvisioningAgent$1.class
+SHA-256-Digest: gV08+kRcobfbbIbcgGAaazhGMkjE0+WeEcTg7rV2yVQ=
+
+Name: plugin.properties
+SHA-256-Digest: Yq5szR6i97tJnAJK5sZQlSBVYXl1/pn4gKC0e4aOTiY=
+
+Name: org/eclipse/equinox/internal/ip/provider/http/HttpProvider$HttpS
+ ervletImpl.class
+SHA-256-Digest: fumUz0NA8zLsqlZUma2wrn0PoI8SD6iPFi2HymYZA1Y=
+
+Name: org/eclipse/equinox/internal/ip/ProvisioningInfoProvider.class
+SHA-256-Digest: 8QbeIr6vCttUHYChmAOV0AakJzjQ3msQxeNnlpTahvE=
+
+Name: org/eclipse/equinox/internal/ip/storage/file/FileStorage.class
+SHA-256-Digest: 5ZvWEYZqNeEsJtT+WuGBW3u3v+VHmQXm/ZQuhRObC1U=
+
+Name: org/eclipse/equinox/internal/ip/dscagent/DiscoveryAgent.class
+SHA-256-Digest: 6/bpR159qqTa0Kakt8GBCAd6J7CUcwrPvN88cz8DVtA=
+

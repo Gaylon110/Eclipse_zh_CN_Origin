@@ -1,0 +1,5060 @@
+Manifest-Version: 1.0
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-SymbolicName: org.eclipse.ocl.pivot;singleton:=true
+Bundle-Activator: org.eclipse.ocl.pivot.util.PivotPlugin$Implementatio
+ n
+Require-Bundle: org.eclipse.core.resources;bundle-version="[3.5.0,4.0.
+ 0)",org.eclipse.core.runtime;bundle-version="[3.5.0,4.0.0)",org.eclip
+ se.jdt.annotation;bundle-version="[2.0.0,3.0.0)";resolution:=optional
+ ;visibility:=reexport,org.eclipse.emf.codegen.ecore;bundle-version="[
+ 2.7.0,3.0.0)",org.eclipse.emf.ecore.xmi;bundle-version="[2.7.0,3.0.0)
+ ";visibility:=reexport,org.eclipse.emf.edit;bundle-version="[2.7.0,3.
+ 0.0)";visibility:=reexport,org.eclipse.ocl.common;bundle-version="[1.
+ 4.0,2.0.0)";visibility:=reexport
+Bundle-Version: 1.3.0.v20170522-1753
+Export-Package: org.eclipse.ocl.pivot,org.eclipse.ocl.pivot.evaluation
+ ,org.eclipse.ocl.pivot.ids,org.eclipse.ocl.pivot.internal,org.eclipse
+ .ocl.pivot.internal.attributes,org.eclipse.ocl.pivot.internal.compati
+ bility,org.eclipse.ocl.pivot.internal.complete,org.eclipse.ocl.pivot.
+ internal.context,org.eclipse.ocl.pivot.internal.delegate,org.eclipse.
+ ocl.pivot.internal.ecore,org.eclipse.ocl.pivot.internal.ecore.as2es,o
+ rg.eclipse.ocl.pivot.internal.ecore.es2as,org.eclipse.ocl.pivot.inter
+ nal.elements,org.eclipse.ocl.pivot.internal.evaluation,org.eclipse.oc
+ l.pivot.internal.executor,org.eclipse.ocl.pivot.internal.helper,org.e
+ clipse.ocl.pivot.internal.ids,org.eclipse.ocl.pivot.internal.labels,o
+ rg.eclipse.ocl.pivot.internal.library,org.eclipse.ocl.pivot.internal.
+ library.ecore,org.eclipse.ocl.pivot.internal.library.executor,org.ecl
+ ipse.ocl.pivot.internal.lookup,org.eclipse.ocl.pivot.internal.lookup.
+ impl,org.eclipse.ocl.pivot.internal.lookup.util,org.eclipse.ocl.pivot
+ .internal.manager,org.eclipse.ocl.pivot.internal.messages,org.eclipse
+ .ocl.pivot.internal.plugin,org.eclipse.ocl.pivot.internal.prettyprint
+ ,org.eclipse.ocl.pivot.internal.registry,org.eclipse.ocl.pivot.intern
+ al.resource,org.eclipse.ocl.pivot.internal.scoping,org.eclipse.ocl.pi
+ vot.internal.utilities,org.eclipse.ocl.pivot.internal.validation,org.
+ eclipse.ocl.pivot.internal.values,org.eclipse.ocl.pivot.labels,org.ec
+ lipse.ocl.pivot.library,org.eclipse.ocl.pivot.library.classifier,org.
+ eclipse.ocl.pivot.library.collection,org.eclipse.ocl.pivot.library.en
+ umeration,org.eclipse.ocl.pivot.library.iterator,org.eclipse.ocl.pivo
+ t.library.logical,org.eclipse.ocl.pivot.library.map,org.eclipse.ocl.p
+ ivot.library.numeric,org.eclipse.ocl.pivot.library.oclany,org.eclipse
+ .ocl.pivot.library.oclinvalid,org.eclipse.ocl.pivot.library.oclvoid,o
+ rg.eclipse.ocl.pivot.library.string,org.eclipse.ocl.pivot.messages,or
+ g.eclipse.ocl.pivot.model,org.eclipse.ocl.pivot.oclstdlib,org.eclipse
+ .ocl.pivot.oclstdlib.util,org.eclipse.ocl.pivot.options,org.eclipse.o
+ cl.pivot.resource,org.eclipse.ocl.pivot.types,org.eclipse.ocl.pivot.u
+ til,org.eclipse.ocl.pivot.utilities,org.eclipse.ocl.pivot.validation,
+ org.eclipse.ocl.pivot.values,org.eclipse.ocl.pivot.values.util
+Bundle-ClassPath: .
+Ant-Version: Apache Ant 1.9.4
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: %providerName
+Bundle-Name: %pluginName
+Created-By: 1.8.0_121-b13 (Oracle Corporation)
+Bundle-ManifestVersion: 2
+Import-Package: com.google.common.base,com.google.common.collect,com.g
+ oogle.inject,org.apache.log4j;version="[1.2.15,2.0.0)"
+
+Name: org/eclipse/ocl/pivot/library/oclany/OclAnyUnsupportedOperation.
+ class
+SHA1-Digest: HvOYZy4fgPlnFpx/Lbt1v8MdCMQ=
+
+Name: org/eclipse/ocl/pivot/internal/FinalStateImpl.class
+SHA1-Digest: foUangUyNp6w6FaKd0TwVNyhRXI=
+
+Name: org/eclipse/ocl/pivot/AssociativityKind.class
+SHA1-Digest: dkul+EnPQJXHiDIkKom9pfu0+bA=
+
+Name: org/eclipse/ocl/pivot/internal/registry/CompleteOCLRegistry$Regi
+ stration.class
+SHA1-Digest: iqnFvzCjxnBA0Vb70Tvm7Ml5ne0=
+
+Name: org/eclipse/ocl/pivot/oclstdlib/OCLstdlibTables$Parameters.class
+SHA1-Digest: LoXDptg6+u0/pil2wCS4mW5Hm8s=
+
+Name: org/eclipse/ocl/pivot/utilities/OCL.class
+SHA1-Digest: DYwh3u+Xs+ZX8BqyShUNPmmWaoo=
+
+Name: org/eclipse/ocl/pivot/internal/library/executor/ExecutorStandard
+ Library.class
+SHA1-Digest: 6CfQni9CXzEa6W6E9LJK/cFYrN8=
+
+Name: org/eclipse/ocl/pivot/internal/helper/OCLHelperImpl.class
+SHA1-Digest: sfvMSoFj6uMGfmPkjCWQhmu8Lkg=
+
+Name: org/eclipse/ocl/pivot/internal/manager/Orphanage$OrphanResource.
+ class
+SHA1-Digest: vb7Ld9iwluipOKthfqVD8Hh6yCY=
+
+Name: org/eclipse/ocl/pivot/internal/ids/AbstractTemplateableIdImpl.cl
+ ass
+SHA1-Digest: MEsnwuzqc2lV/dMENZl9y416mhk=
+
+Name: org/eclipse/ocl/pivot/internal/elements/AbstractExecutorFeature.
+ class
+SHA1-Digest: /kIXBBKrBHiIkwbuWpOtG3GTsZw=
+
+Name: org/eclipse/ocl/pivot/library/oclany/OclComparableCompareToOpera
+ tion.class
+SHA1-Digest: zTRQCHVffN5NvRrODTZHTL3GV1E=
+
+Name: org/eclipse/ocl/pivot/internal/library/ecore/EcoreExecutorPackag
+ e.class
+SHA1-Digest: 7sovYjTyDky8+CEpp8/8BsT5uJY=
+
+Name: org/eclipse/ocl/pivot/library/map/MapExcludesValueOperation.clas
+ s
+SHA1-Digest: uZYAQ44eSLNuhxP3TtzqQVTlrcQ=
+
+Name: org/eclipse/ocl/pivot/OrphanCompletePackage.class
+SHA1-Digest: oLLuVi1p4zUDTrD+21cs2lEg4hY=
+
+Name: org/eclipse/ocl/pivot/internal/TransitionImpl.class
+SHA1-Digest: b+kD9nE43soUd8qfrqBmtWcRiZg=
+
+Name: org/eclipse/ocl/pivot/internal/ids/AbstractSpecializedIdImpl.cla
+ ss
+SHA1-Digest: o+19+qBVA9Jd8/vEsP2PZn6dHsg=
+
+Name: org/eclipse/ocl/pivot/internal/prettyprint/PrettyPrinter.class
+SHA1-Digest: ylcd+cPnfYvFW3hEiNKeWQpfGd8=
+
+Name: org/eclipse/ocl/pivot/library/oclany/OclAnyEqualOperation.class
+SHA1-Digest: BnjUouEIFfIYqe+S9hkbWUhXve0=
+
+Name: org/eclipse/ocl/pivot/oclstdlib/OCLstdlibTables$TypeFragments.cl
+ ass
+SHA1-Digest: eqbAqBEHj6h/NqI146lyOf37n/o=
+
+Name: org/eclipse/ocl/pivot/ElementExtension.class
+SHA1-Digest: 9XHIrtI3ZYgeXjmugAIXGSEV1VA=
+
+Name: org/eclipse/ocl/pivot/internal/ids/GeneralizedTypeIdImpl.class
+SHA1-Digest: IoP8cgSCIv72SG+uQnOLWwgahAo=
+
+Name: org/eclipse/ocl/pivot/ids/TemplateParameterId.class
+SHA1-Digest: QQLvvt8o2y/gp0prJynU43FIMcQ=
+
+Name: org/eclipse/ocl/pivot/ids/NestedPackageId.class
+SHA1-Digest: 9C4h5gEFVw2JUWXAA7cPHCrlcks=
+
+Name: org/eclipse/ocl/pivot/internal/resource/OCLAdapter.class
+SHA1-Digest: 2moyIReTjm6EaCdxT5nRjcDWJAk=
+
+Name: org/eclipse/ocl/pivot/library/EvaluatorSingleIterationManager$Ne
+ sted.class
+SHA1-Digest: k3kcRKthYGbGJsXr6DVDvvIVxFA=
+
+Name: org/eclipse/ocl/pivot/Trigger.class
+SHA1-Digest: W2wIZefiGsNptdAoJDbCQp5Kj/M=
+
+Name: org/eclipse/ocl/pivot/messages/PivotMessages.class
+SHA1-Digest: 9uwKV8uMkeBtWpZWAGWLegFqJ+E=
+
+Name: org/eclipse/ocl/pivot/internal/ecore/as2es/AS2EcoreDeclarationVi
+ sitor$NonDuplicateOperationsFilter.class
+SHA1-Digest: hby5lmee0vv0dQzV4NcVt071R6g=
+
+Name: org/eclipse/ocl/pivot/library/string/StringTokenizeOperation.cla
+ ss
+SHA1-Digest: reSq2CMgz3UaBkgHMT6+GYsuLps=
+
+Name: org/eclipse/ocl/pivot/library/string/StringLessThanOperation.cla
+ ss
+SHA1-Digest: qxsqJG74LCZvZ6MrRY1klfJOpgw=
+
+Name: org/eclipse/ocl/pivot/internal/evaluation/ShadowCache.class
+SHA1-Digest: OzHOMqM4gLhfd9GWjJFfJG9QMlU=
+
+Name: org/eclipse/ocl/pivot/library/oclany/OclAnyOclAsSetOperation.cla
+ ss
+SHA1-Digest: 7lqgzUHLPc5xOp5W9LruhcTwi8k=
+
+Name: org/eclipse/ocl/pivot/values/MapEntry.class
+SHA1-Digest: TFODlSJdqx4wln773INAEkURWvQ=
+
+Name: org/eclipse/ocl/pivot/library/map/MapExcludingOperation.class
+SHA1-Digest: saLMsDEniAxnuIIMH+lRM7c0kBU=
+
+Name: org/eclipse/ocl/pivot/library/collection/OrderedCollectionPrepen
+ dAllOperation.class
+SHA1-Digest: /6w0ddiFXkV4tdWVjZEI5wmpYYU=
+
+Name: org/eclipse/ocl/pivot/library/map/MapExcludesOperation.class
+SHA1-Digest: aDaDUTJ1GGGPxH/QOb5PWuhXFI8=
+
+Name: org/eclipse/ocl/pivot/library/classifier/OclTypeConformsToOperat
+ ion.class
+SHA1-Digest: fxRBsw6tfS34OXqddIsKcpi1v0k=
+
+Name: org/eclipse/ocl/pivot/internal/delegate/InvocationBehavior.class
+SHA1-Digest: /t83aVzXKZLsXPOJ89WWonhyLLE=
+
+Name: org/eclipse/ocl/pivot/internal/context/EInvocationContext.class
+SHA1-Digest: 7ZJdB8n8hpn6+dKb7pjSobaTQ9I=
+
+Name: org/eclipse/ocl/pivot/library/collection/OrderedCollectionInsert
+ AtOperation.class
+SHA1-Digest: nLW6si5Oe4M8IgYvYylRo9nDVVI=
+
+Name: org/eclipse/ocl/pivot/library/collection/CollectionIncludesOpera
+ tion.class
+SHA1-Digest: HKVHcJPM23uo+CMQkTqDv2IpF4U=
+
+Name: model/Complete.odg
+SHA1-Digest: mIlQyGeMh8/rFbYwOBeQtYUgPWY=
+
+Name: org/eclipse/ocl/pivot/internal/ids/TemplateBindingImpl.class
+SHA1-Digest: t6XhJlRSiIaxHx5ealwhhElhBxA=
+
+Name: org/eclipse/ocl/pivot/library/collection/CollectionCountOperatio
+ n.class
+SHA1-Digest: m90gj1VN1OmgzmedgrZ06yDGSNA=
+
+Name: org/eclipse/ocl/pivot/internal/scoping/EnvironmentView$Disambigu
+ ator.class
+SHA1-Digest: gYnwfEREfb379hkql6tW+mvmXTs=
+
+Name: org/eclipse/ocl/pivot/internal/utilities/PivotObjectImpl.class
+SHA1-Digest: JaCktmBQTwAEdn3r2GawrL+lJtM=
+
+Name: org/eclipse/ocl/pivot/util/PivotValidator.class
+SHA1-Digest: n3kvRpW/wtzXxWPpWNV1tTUhJWk=
+
+Name: org/eclipse/ocl/pivot/library/collection/CollectionMaxOperation.
+ class
+SHA1-Digest: yQNgk52zuz91RRSfjcwn5HweXsw=
+
+Name: org/eclipse/ocl/pivot/messages/StatusCodes.class
+SHA1-Digest: 4Q0cgdWjrH/muRf0lPWZ73sB044=
+
+Name: org/eclipse/ocl/pivot/ids/ElementId.class
+SHA1-Digest: vm2ccZGmiUJR+3zqxeMmnb1lP6I=
+
+Name: org/eclipse/ocl/pivot/utilities/SemanticException.class
+SHA1-Digest: mLdItKzB8zQzmWVfeJeWNH47CnM=
+
+Name: org/eclipse/ocl/pivot/internal/resource/StandaloneProjectMap$Sin
+ glePackageResourceLoadStatus.class
+SHA1-Digest: yrBgvrg7JaLmnE0cZsvesYBGowc=
+
+Name: org/eclipse/ocl/pivot/library/map/MapKeyTypeProperty.class
+SHA1-Digest: nvyBDkYdjvrDoGeidKwHo9Ew3Qg=
+
+Name: org/eclipse/ocl/pivot/types/TemplateParametersImpl.class
+SHA1-Digest: p3Ne7K+gzfTdpsgljA7yrPgReWE=
+
+Name: org/eclipse/ocl/pivot/internal/resource/ASResourceFactoryContrib
+ ution.class
+SHA1-Digest: En+XUTTajwukXpjd6S3cmZfq1ew=
+
+Name: org/eclipse/ocl/pivot/internal/lookup/LookupFactory.class
+SHA1-Digest: 79IlhbLYZYRtkGL4xVmMIuOE6M4=
+
+Name: org/eclipse/ocl/pivot/values/ValuesPackage$Literals.class
+SHA1-Digest: u7/dC0hn9O2NKvESpVDS6EpPxoI=
+
+Name: org/eclipse/ocl/pivot/library/AbstractIterationManager.class
+SHA1-Digest: 3kk4l9jx5gaylhD5dsaiyjIeDa8=
+
+Name: org/eclipse/ocl/pivot/internal/utilities/CompleteElementIterable
+ $Iterator.class
+SHA1-Digest: ozz8Fi6vBIJjQLe366MZGEyv7go=
+
+Name: org/eclipse/ocl/pivot/internal/LibraryImpl.class
+SHA1-Digest: rt+vFKh5p+I0ew1u4bE9stTROf4=
+
+Name: org/eclipse/ocl/pivot/LetVariable.class
+SHA1-Digest: QxhCIBA5CC7IQM1kauKtiSh6/e4=
+
+Name: org/eclipse/ocl/pivot/internal/helper/QueryImpl.class
+SHA1-Digest: mA3I+/ybnziHow3MkWGcFPLl70c=
+
+Name: org/eclipse/ocl/pivot/internal/labels/ResourceLabelGenerator.cla
+ ss
+SHA1-Digest: yZPI/Unq5qvhonyTFJUTboiaqxk=
+
+Name: org/eclipse/ocl/pivot/internal/values/RangeSequenceValueImpl.cla
+ ss
+SHA1-Digest: kpe7/Iyz4qdc0CNzUL8is5Pk+lQ=
+
+Name: org/eclipse/ocl/pivot/library/map/MapIncludingPairOperation.clas
+ s
+SHA1-Digest: 7fVLrYguFBCJzfmEftn/mw4DYIE=
+
+Name: org/eclipse/ocl/pivot/internal/CollectionLiteralExpImpl.class
+SHA1-Digest: DjqYgWViOLKlxwymyebc/og0M1I=
+
+Name: org/eclipse/ocl/pivot/internal/utilities/PivotConstantsInternal.
+ class
+SHA1-Digest: rkOR1EgVJP0h+WUaGNpCum/9B7Q=
+
+Name: org/eclipse/ocl/pivot/internal/ecore/as2es/AS2EcoreDeclarationVi
+ sitor$1.class
+SHA1-Digest: y18oeTl0ZdmCXg6IAo3uMMC20ck=
+
+Name: org/eclipse/ocl/pivot/evaluation/ModelManager$1.class
+SHA1-Digest: AyjUgn1McgBftH4vOIwPrBmGkRY=
+
+Name: org/eclipse/ocl/pivot/library/numeric/NumericDivideOperation.cla
+ ss
+SHA1-Digest: lWFQJwHktGZi+zh0RGpcsyH/FRI=
+
+Name: org/eclipse/ocl/pivot/library/logical/BooleanXorOperation2.class
+SHA1-Digest: fCkNWjPsg/KkHAL8Epqr6aAgH6s=
+
+Name: org/eclipse/ocl/pivot/CollectionType.class
+SHA1-Digest: 4MwuilMlWnVWkz6SW8eL6ORXbGc=
+
+Name: org/eclipse/ocl/pivot/internal/CompleteClassImpl$1.class
+SHA1-Digest: khgLNdxUXUCkFw0wg1qHu2GcgoM=
+
+Name: org/eclipse/ocl/pivot/internal/labels/BooleanLabelGenerator.clas
+ s
+SHA1-Digest: MjgqxXZKoX8WtAsktV6Urnuo7Nc=
+
+Name: org/eclipse/ocl/pivot/internal/CollectionTypeImpl.class
+SHA1-Digest: cafWEfVqzaRJTSS3qJAgCwSHYHc=
+
+Name: org/eclipse/ocl/pivot/utilities/ParserContext.class
+SHA1-Digest: lPvY+BLnoLHYW6xOPMLmsXWOMwA=
+
+Name: org/eclipse/ocl/pivot/internal/resource/StandaloneProjectMap$Loa
+ dingBothLoadedDynamicResourceStrategy.class
+SHA1-Digest: 3ETM6qtriGPBwmwhJW0tItgRDSs=
+
+Name: org/eclipse/ocl/pivot/internal/manager/FinalAnalysis.class
+SHA1-Digest: WiJaTkqmfE9qdzQwjcoJ8702DcM=
+
+Name: org/eclipse/ocl/pivot/NamedElement.class
+SHA1-Digest: UsLmwXkVou4K8lBCtLoiXtTck1U=
+
+Name: org/eclipse/ocl/pivot/internal/library/executor/ExecutorType.cla
+ ss
+SHA1-Digest: H3kZMD7dbHG/kidZZprg90C+Mms=
+
+Name: org/eclipse/ocl/pivot/library/numeric/NumericFloorOperation.clas
+ s
+SHA1-Digest: +mZPVs9QyWLpMEeEzeTl9riAuHk=
+
+Name: org/eclipse/ocl/pivot/internal/utilities/EnvironmentFactoryInter
+ nal$EnvironmentFactoryInternalExtension.class
+SHA1-Digest: 4+kVgwk7dkb75pMQHrDlMcfVM7U=
+
+Name: org/eclipse/ocl/pivot/library/string/StringToBooleanOperation.cl
+ ass
+SHA1-Digest: VI9L4Bz3omQzrRa1u+Ost84n4VY=
+
+Name: org/eclipse/ocl/pivot/internal/IterateExpImpl.class
+SHA1-Digest: XQzPq5iaqfFhGzqbO6Eop0EDEnw=
+
+Name: org/eclipse/ocl/pivot/resource/ProjectManager$IResourceDescripto
+ r.class
+SHA1-Digest: BsW/3Sx0l1x/BjGodXo2pE/oJBA=
+
+Name: org/eclipse/ocl/pivot/oclstdlib/OCLstdlibTables$Properties.class
+SHA1-Digest: pjRZ8hKpjg1yaCH7+xgwjOjRbYo=
+
+Name: org/eclipse/ocl/pivot/ids/UnspecifiedId.class
+SHA1-Digest: rHZzak+UzBYCCo6oBQuJLkAKA68=
+
+Name: org/eclipse/ocl/pivot/internal/elements/AbstractExecutorClass.cl
+ ass
+SHA1-Digest: TSrJZWYDpT4gQZ16eM5UtCtMjw0=
+
+Name: org/eclipse/ocl/pivot/internal/ids/OclInvalidTypeIdImpl.class
+SHA1-Digest: RfQYIsZkIji9SUiphSHymJfd9xI=
+
+Name: org/eclipse/ocl/pivot/util/PivotAdapterFactory.class
+SHA1-Digest: kfiPrTHZevPbEcUPitAmZZwm5aA=
+
+Name: org/eclipse/ocl/pivot/values/IntegerValue$Accumulator.class
+SHA1-Digest: g3NI8vphfCfcpfvAUlFT66VLKz4=
+
+Name: org/eclipse/ocl/pivot/library/logical/BooleanOrOperation.class
+SHA1-Digest: xK5uBnjrSGlH1CHyhIFrDmg/pyQ=
+
+Name: org/eclipse/ocl/pivot/internal/manager/TemplateParameterSubstitu
+ tionHelper$CollectionFlattenHelper.class
+SHA1-Digest: fBeX8+xP3b5mjMy4DaWRFXeRw/Q=
+
+Name: org/eclipse/ocl/pivot/internal/ParameterImpl.class
+SHA1-Digest: 1IgqlLQ6yBdKNjbuuEeCtRns+qY=
+
+Name: org/eclipse/ocl/pivot/util/Visitable.class
+SHA1-Digest: tuQlEvzU2w/uDMdrVLGdw/TlDeM=
+
+Name: org/eclipse/ocl/pivot/internal/lookup/LookupTables$TypeParameter
+ s.class
+SHA1-Digest: Jzkz8dILSvPlVCETX6Wy1PWvnvs=
+
+Name: org/eclipse/ocl/pivot/internal/UnlimitedNaturalLiteralExpImpl.cl
+ ass
+SHA1-Digest: 13hkh2BfTUhdlFfCeR8Vqu2b0vo=
+
+Name: org/eclipse/ocl/pivot/library/oclany/OclElementOclContainerPrope
+ rty.class
+SHA1-Digest: Ibg0gvHJaSZWNNrGblf4S7uri/c=
+
+Name: org/eclipse/ocl/pivot/internal/values/ValuesFactoryImpl.class
+SHA1-Digest: 3JBg5AzC2FDQG6UWTa9nBqXR/7s=
+
+Name: org/eclipse/ocl/pivot/internal/delegate/OCLDelegateDomainFactory
+ .class
+SHA1-Digest: L1+Ile+JtGgHDSHo8S/Mw3d8AkE=
+
+Name: org/eclipse/ocl/pivot/internal/ids/AbstractPackageIdImpl$1.class
+SHA1-Digest: 8FVn6ZctdNSeR24Rin5o2fm9VDM=
+
+Name: org/eclipse/ocl/pivot/internal/MapTypeImpl.class
+SHA1-Digest: t3bxMHOxiHsFZ4v7/wVxSEzhlTo=
+
+Name: org/eclipse/ocl/pivot/internal/labels/EcoreURILabelGenerator.cla
+ ss
+SHA1-Digest: AeCkEoq1cT34nR+mjJLE6pGN5dw=
+
+Name: org/eclipse/ocl/pivot/options/EnumeratedOption.class
+SHA1-Digest: vuuh//3Lz4skOn361WUXD86ZaO4=
+
+Name: org/eclipse/ocl/pivot/validation/ComposedEValidator.class
+SHA1-Digest: on+aqZCYAGdc8nukOWXEjz5AwHQ=
+
+Name: org/eclipse/ocl/pivot/internal/scoping/NullAttribution.class
+SHA1-Digest: 87/SWyDp7G0pFpJ5olvyckyrLlo=
+
+Name: org/eclipse/ocl/pivot/internal/lookup/LookupEnvironment.class
+SHA1-Digest: M07umv0+3+o9Y+2kt7rSaBqMAWo=
+
+Name: org/eclipse/ocl/pivot/internal/ExpressionInOCLImpl.class
+SHA1-Digest: IwXyJSOQZvCyf5c/hu3h4E2otsY=
+
+Name: org/eclipse/ocl/pivot/internal/context/ModelContext.class
+SHA1-Digest: AdRrBbHPLPlAgs5pIk15LLGDw0k=
+
+Name: org/eclipse/ocl/pivot/internal/manager/PivotIdResolver.class
+SHA1-Digest: 5lhAFfAeM0hZp/sxrPof80iiPII=
+
+Name: org/eclipse/ocl/pivot/Stereotype.class
+SHA1-Digest: Ag8noS17v9zrlnDb9aOPZ2RW3zI=
+
+Name: org/eclipse/ocl/pivot/types/AbstractInheritance$FragmentIterable
+ .class
+SHA1-Digest: UyyTxYBdwdP63UTf1E3zU8G82pM=
+
+Name: org/eclipse/ocl/pivot/internal/context/AbstractBase2ASConversion
+ .class
+SHA1-Digest: KOA5iTzNk04syTfL+ttWQ2ciFus=
+
+Name: org/eclipse/ocl/pivot/internal/complete/PartialModels.class
+SHA1-Digest: 4TXYBtyS/wJV3Z5vbCuQErpuXN0=
+
+Name: org/eclipse/ocl/pivot/library/oclany/OclElementOclContentsProper
+ ty.class
+SHA1-Digest: 9dMuHJwN60TRbkZpgI2szjFDj9w=
+
+Name: org/eclipse/ocl/pivot/util/AbstractDelegatingVisitor.class
+SHA1-Digest: avt/328O/B0H/S/TBM+hSiebAfo=
+
+Name: org/eclipse/ocl/pivot/internal/TemplateParameterImpl.class
+SHA1-Digest: DL4YdpZU/dF5X0pR2zmH62/Fp0M=
+
+Name: org/eclipse/ocl/pivot/internal/delegate/DelegateInstaller.class
+SHA1-Digest: XibEKs4GBOnSb8wnokAyzSODdCs=
+
+Name: org/eclipse/ocl/pivot/utilities/ASSaverLocateVisitor.class
+SHA1-Digest: NJONsktbtcgbzSVoNw0DL8Kwje8=
+
+Name: org/eclipse/ocl/pivot/util/PivotExportedLookupVisitor.class
+SHA1-Digest: Hi36pWx9VkR4dZ9mh4Qe1pAb8qI=
+
+Name: org/eclipse/ocl/pivot/utilities/ValueUtil.class
+SHA1-Digest: c0n3BkEWccIGu7csTsceaUDzDJI=
+
+Name: org/eclipse/ocl/pivot/library/string/StringMatchesOperation.clas
+ s
+SHA1-Digest: eyIUkQr7ZO5sSyvv6SAUE3WFUsY=
+
+Name: org/eclipse/ocl/pivot/library/oclany/OclAnyOclIsTypeOfOperation.
+ class
+SHA1-Digest: 1zkhXnq331dgiCXHkuaA+DPhAKs=
+
+Name: org/eclipse/ocl/pivot/internal/library/executor/ExecutorManager$
+ 1.class
+SHA1-Digest: EXZPUJHeq5+wP0HKZiMY3+pZDOI=
+
+Name: org/eclipse/ocl/pivot/PivotTables$Parameters.class
+SHA1-Digest: HlXOVcS5bB2za3iICUwnyl3jzMc=
+
+Name: org/eclipse/ocl/pivot/internal/resource/ASResourceFactoryRegistr
+ y.class
+SHA1-Digest: jDPWJ+vFjYrx6zuXKZtiGBqRjUo=
+
+Name: org/eclipse/ocl/pivot/internal/ShadowExpImpl.class
+SHA1-Digest: 6melkD3u6XO+dCABXk2saEyj1Lw=
+
+Name: org/eclipse/ocl/pivot/internal/delegate/OCLValidationDelegateFac
+ tory.class
+SHA1-Digest: zUiMqJzXEwGOnEhgpWT6YT85EQ8=
+
+Name: org/eclipse/ocl/pivot/internal/manager/MetamodelManagerInternal.
+ class
+SHA1-Digest: 9weHxjPdn/wzArnvGB01CJkDmYY=
+
+Name: org/eclipse/ocl/pivot/internal/values/IntegerValueImpl.class
+SHA1-Digest: 1TohAPfnr0c0QIphYzZBViqk3k8=
+
+Name: org/eclipse/ocl/pivot/internal/TupleTypeImpl.class
+SHA1-Digest: Kq30RotpmRc0S2uW/MPKQ9Tf7Oo=
+
+Name: org/eclipse/ocl/pivot/internal/ecore/as2es/AS2EcoreDeclarationVi
+ sitor$DuplicateConstraintsFilter.class
+SHA1-Digest: bZQ7Wa9H+My7gamwu18DBA36hBc=
+
+Name: org/eclipse/ocl/pivot/options/PivotValidationOptions.class
+SHA1-Digest: MaDP3aUL1gq5K4fjQ/RRJdtxynY=
+
+Name: schema/label_generator.exsd
+SHA1-Digest: E4vhJT6tTUGCgvjRRO+CPsSJ//8=
+
+Name: org/eclipse/ocl/pivot/internal/values/ValuesPackageImpl.class
+SHA1-Digest: e7MRV7O7/02MEx8Dx6ywm1HXIGY=
+
+Name: org/eclipse/ocl/pivot/internal/plugin/LabelGeneratorRegistryRead
+ er$LabelGeneratorDescriptor.class
+SHA1-Digest: Jej59fRL4e+Wg+93WUyYtH1uAQM=
+
+Name: org/eclipse/ocl/pivot/oclstdlib/OCLstdlibTables.class
+SHA1-Digest: PwB3VNy3e5PvxnJwkr6mbl1KVHI=
+
+Name: org/eclipse/ocl/pivot/library/oclany/OclElementOclAsModelTypeOpe
+ ration.class
+SHA1-Digest: LMqQXdNp3BDj6EDZi1iCaX4uQ7A=
+
+Name: org/eclipse/ocl/pivot/library/classifier/ClassifierOclContainerO
+ peration.class
+SHA1-Digest: BnLdEyDP3KhkQLTTIBDqnifd5Co=
+
+Name: org/eclipse/ocl/pivot/internal/FeatureImpl.class
+SHA1-Digest: yNypg8uMlcBzwJ4BY505AAf0Jok=
+
+Name: org/eclipse/ocl/pivot/internal/BooleanLiteralExpImpl.class
+SHA1-Digest: N0BlChFOaqOdKKU0w4unsqfLhYM=
+
+Name: org/eclipse/ocl/pivot/internal/library/ConstrainedProperty.class
+SHA1-Digest: TadSnTyt9OK6E3bgl2A2Dy0X4l8=
+
+Name: org/eclipse/ocl/pivot/utilities/PivotASSaverLocateVisitor.class
+SHA1-Digest: xdKCgfCCKE/N8Ee6RgoLeisnTTo=
+
+Name: model/OCL-2.5.oclstdlib
+SHA1-Digest: J64DF86hnYRxQlK+H8phOkFHaTM=
+
+Name: org/eclipse/ocl/pivot/internal/resource/ICSI2ASMapping.class
+SHA1-Digest: KJKsD7aKZogzakaMTY/FoCoDusI=
+
+Name: org/eclipse/ocl/pivot/internal/SelfTypeImpl.class
+SHA1-Digest: 6xOAl++QPaLT/wWWIOIxKBf1MCY=
+
+Name: org/eclipse/ocl/pivot/internal/values/SetValueImpl$Accumulator.c
+ lass
+SHA1-Digest: GAuWi5QZH/N3kF51v9DQvMUTvxU=
+
+Name: org/eclipse/ocl/pivot/Library.class
+SHA1-Digest: Fy5m1OOckDOfOoZZDOcTmxNMgMU=
+
+Name: org/eclipse/ocl/pivot/internal/library/executor/DomainProperties
+ .class
+SHA1-Digest: aCaiR5TeeTu96eg17kII9WMKdlw=
+
+Name: org/eclipse/ocl/pivot/internal/library/executor/LazyModelManager
+ .class
+SHA1-Digest: XRCYsOQS3dfzdRFpBk7WtnMH+bI=
+
+Name: org/eclipse/ocl/pivot/library/iterator/SelectIteration.class
+SHA1-Digest: VvDFIyla2aJqnKMOAi4QYfxmJSc=
+
+Name: org/eclipse/ocl/pivot/internal/ClassImpl$2.class
+SHA1-Digest: u/PXIQwh3K3n+LfUSCWIdSnEwKo=
+
+Name: org/eclipse/ocl/pivot/internal/resource/StandaloneProjectMap$Plu
+ ginReader.class
+SHA1-Digest: ZvibaWjGZPWrvl0MTWg2kZBm+rk=
+
+Name: org/eclipse/ocl/pivot/Enumeration.class
+SHA1-Digest: 2m5K81U0Z4M1CDjx+TQScDQsA4U=
+
+Name: org/eclipse/ocl/pivot/internal/resource/StandaloneProjectMap$Gen
+ ModelReader.class
+SHA1-Digest: KnLDro/FfwajISut4W/mS9u7qc4=
+
+Name: org/eclipse/ocl/pivot/internal/CompletePackageImpl.class
+SHA1-Digest: CCV/4KHEETgMxkxwsAvD3FEU+vk=
+
+Name: annotations/java/util/Vector.eea
+SHA1-Digest: HhVLHPBbWt0s5CXkoqdxJSDOVdw=
+
+Name: org/eclipse/ocl/pivot/internal/values/CollectionValueImpl$NullIt
+ erator.class
+SHA1-Digest: 3EFlxuaJcrUp/JNjhB+/iknZeSo=
+
+Name: org/eclipse/ocl/pivot/InvalidType.class
+SHA1-Digest: whhrx0IRkMd7vd1L7IocsU0W3WQ=
+
+Name: org/eclipse/ocl/pivot/internal/complete/PartialClasses$1$1.class
+SHA1-Digest: NVQq0Ly78CwiJObHGPNYiV5sSgo=
+
+Name: org/eclipse/ocl/pivot/values/SequenceValue$Accumulator.class
+SHA1-Digest: S8C6aBfP8Y5p2mI2V07rR0ag7YI=
+
+Name: org/eclipse/ocl/pivot/library/collection/CollectionAsOrderedSetO
+ peration.class
+SHA1-Digest: pYDaZjwPcYp1F3JIuRYBm4LBfjI=
+
+Name: org/eclipse/ocl/pivot/utilities/FeatureFilter$2.class
+SHA1-Digest: IJIHRQ5PCqj3XAV599X/PAq7ya8=
+
+Name: org/eclipse/ocl/pivot/internal/plugin/LabelGeneratorRegistryRead
+ er.class
+SHA1-Digest: MPoml/dbm4vLiEB2kgHedbnFduA=
+
+Name: org/eclipse/ocl/pivot/internal/complete/PartialOperations$5.clas
+ s
+SHA1-Digest: zpF+aQM6p0mIOpnNyOHpUP51goM=
+
+Name: org/eclipse/ocl/pivot/internal/resource/StandaloneProjectMap$Pac
+ kageLoadStatus.class
+SHA1-Digest: ryhxLBb7HHkA95RuOkzlO0gxZjM=
+
+Name: org/eclipse/ocl/pivot/internal/OppositePropertyCallExpImpl.class
+SHA1-Digest: Wsry9lEwV158SMZ2OuTkGKG4oxc=
+
+Name: org/eclipse/ocl/pivot/internal/CollectionItemImpl.class
+SHA1-Digest: CuW7s/2r/moNzvgoC4FETe6ADNE=
+
+Name: org/eclipse/ocl/pivot/internal/executor/ExecutorCollectionType.c
+ lass
+SHA1-Digest: gl42VV8ktKBfbXCXZG+10GzIKmQ=
+
+Name: org/eclipse/ocl/pivot/internal/library/ecore/EcoreReflectiveType
+ $1.class
+SHA1-Digest: vUiFOPkxoWgjNnsv2IIoj2ana4c=
+
+Name: org/eclipse/ocl/pivot/internal/ids/AbstractPackageIdImpl.class
+SHA1-Digest: ncX48mMeb/bO9WHARLkcFTz5MtQ=
+
+Name: org/eclipse/ocl/pivot/internal/delegate/ValidationDelegate$Facto
+ ry$Registry.class
+SHA1-Digest: B9g6G7qeDLVnwrZ7ymTryG/9eNU=
+
+Name: org/eclipse/ocl/pivot/internal/NullLiteralExpImpl.class
+SHA1-Digest: gUanmKEUZGL+y7XIXXOBdr8KiPA=
+
+Name: annotations/java/util/AbstractCollection.eea
+SHA1-Digest: YcwmoR/s/D3Nh135C8dB3+vgSyw=
+
+Name: org/eclipse/ocl/pivot/ids/SpecializedId.class
+SHA1-Digest: Bqspa8sakFMZBq7Nj3opPx9PG9M=
+
+Name: org/eclipse/ocl/pivot/internal/evaluation/AbstractCustomizable.c
+ lass
+SHA1-Digest: u4+CqsoIcHjFjxCTeADnXMAFXiM=
+
+Name: org/eclipse/ocl/pivot/internal/ids/WeakHashMapOfWeakReference.cl
+ ass
+SHA1-Digest: s4jPk62uPS0WctginHdSfXabZAQ=
+
+Name: org/eclipse/ocl/pivot/oclstdlib/OCLstdlibFactory.class
+SHA1-Digest: aBup1W8D82DfvkDM/QBnzOcX0e0=
+
+Name: org/eclipse/ocl/pivot/internal/library/executor/DomainReflective
+ Fragment.class
+SHA1-Digest: CZIMhxbczN+ND/PztzZ4MulezH0=
+
+Name: org/eclipse/ocl/pivot/internal/TriggerImpl.class
+SHA1-Digest: n0RaCK91IW2ihspSCoIf5uYvLSE=
+
+Name: org/eclipse/ocl/pivot/internal/library/RegisteredContribution$Re
+ gistry.class
+SHA1-Digest: NeqBPwpC5GotjMwfhWO5i2LzOA0=
+
+Name: org/eclipse/ocl/pivot/options/PivotConsoleOptions.class
+SHA1-Digest: p5mQtzqyyjJh+ofmZto/xVIArfA=
+
+Name: org/eclipse/ocl/pivot/internal/ProfileApplicationImpl.class
+SHA1-Digest: a/KyLQmV/94HkM/7rIIAecBl3yQ=
+
+Name: org/eclipse/ocl/pivot/library/EvaluatorMultipleIterationManager.
+ class
+SHA1-Digest: kB39vKz2yIXxsoiyojQZtgnt3OQ=
+
+Name: org/eclipse/ocl/pivot/library/oclvoid/OclVoidOrOperation.class
+SHA1-Digest: cAEzpfcBK9arcmowUvzfgPpfUdw=
+
+Name: org/eclipse/ocl/pivot/library/collection/CollectionIncludingOper
+ ation.class
+SHA1-Digest: SW9Nqj1GNzmjGtsj/+mWhjUzzuc=
+
+Name: org/eclipse/ocl/pivot/library/LibraryUntypedUnaryOperation$Libra
+ ryUntypedUnaryOperationExtension.class
+SHA1-Digest: mMuhhoeT//Nm/ivhSVSmCYeq18Q=
+
+Name: org/eclipse/ocl/pivot/internal/PrimitiveTypeImpl.class
+SHA1-Digest: 4Ef/AhSuLCe2cD3MAFb7c7FFB2w=
+
+Name: org/eclipse/ocl/pivot/internal/ids/WeakHashMapOfListOfWeakRefere
+ nce3$MatchableId.class
+SHA1-Digest: bj1+pYX18HgCHoM85TNInBIGrEo=
+
+Name: org/eclipse/ocl/pivot/internal/plugin/PivotPreferenceInitializer
+ .class
+SHA1-Digest: bmItFX/WXLcmbK+1KuETh1Zx64U=
+
+Name: org/eclipse/ocl/pivot/internal/InvalidLiteralExpImpl.class
+SHA1-Digest: xZOCrFpHhBjnoGo8k98KFfF5kY4=
+
+Name: org/eclipse/ocl/pivot/VariableExp.class
+SHA1-Digest: 77Ioav27CP4e1vE0u8Fd6v6aCc8=
+
+Name: org/eclipse/ocl/pivot/library/logical/BooleanNotOperation.class
+SHA1-Digest: cmzLAP+wMgYoFX9YQq8+9dxOFl8=
+
+Name: org/eclipse/ocl/pivot/internal/AnyTypeImpl.class
+SHA1-Digest: mRTFauKsoQb8goP31PL7KCLMxfE=
+
+Name: org/eclipse/ocl/pivot/ParentCompletePackage.class
+SHA1-Digest: 6OjMWAljRXhFGN6qB/ViGHp0n1A=
+
+Name: org/eclipse/ocl/pivot/internal/ecore/EcoreASResourceFactory.clas
+ s
+SHA1-Digest: 19EsvLu05uXfG43XI3Cw/rfp3oU=
+
+Name: org/eclipse/ocl/pivot/library/numeric/NumericPlusOperation.class
+SHA1-Digest: MEj/F1PVQGaSeEAgXxc5jsJRBkg=
+
+Name: org/eclipse/ocl/pivot/internal/library/executor/ExecutorManager.
+ class
+SHA1-Digest: xwtx8ZuWpURfDa7IWisgLEUiRhY=
+
+Name: org/eclipse/ocl/pivot/options/ProblemHandler$Severity.class
+SHA1-Digest: /Aayf3jZd7MAmt+F4b8gvuI6txM=
+
+Name: org/eclipse/ocl/pivot/ids/IdManager$3.class
+SHA1-Digest: CNrRLHfyBhhmqNqmbkt+QQstWYc=
+
+Name: org/eclipse/ocl/pivot/internal/evaluation/OCLExecutor.class
+SHA1-Digest: Gdc6if+yPGPz7Xyj91gBcKQ57AA=
+
+Name: org/eclipse/ocl/pivot/internal/messages/PivotMessagesInternal.pr
+ operties
+SHA1-Digest: KihUZ7FT/vU2TmoBQ9kKuc/uYZg=
+
+Name: org/eclipse/ocl/pivot/model/OCLmetamodel$Contents.class
+SHA1-Digest: ZvDHPwDDtNuUkUBfELmTskyRLbY=
+
+Name: org/eclipse/ocl/pivot/internal/validation/PivotEObjectValidator.
+ class
+SHA1-Digest: rivp5y3li/44WKeThRRTiSeyzu0=
+
+Name: org/eclipse/ocl/pivot/internal/attributes/OperationAttribution.c
+ lass
+SHA1-Digest: dHUB9Ls5oQ7dmr7iRbnjYvuQJj4=
+
+Name: org/eclipse/ocl/pivot/internal/prettyprint/PrettyPrinter$Mode.cl
+ ass
+SHA1-Digest: zPYwqy66uTwoG6AxR8OdxGxIAFQ=
+
+Name: org/eclipse/ocl/pivot/evaluation/EvaluationVisitor.class
+SHA1-Digest: OQa8kcRCd+r2IimV6nZs/wx8QnU=
+
+Name: org/eclipse/ocl/pivot/internal/library/executor/ExecutorSingleIt
+ erationManager.class
+SHA1-Digest: ox+kw5HUpkPyZGoP6MK18dkhU10=
+
+Name: org/eclipse/ocl/pivot/util/AbstractWrappingVisitor.class
+SHA1-Digest: w6kcUEu71Wg7w7yCFcZ18DhKs44=
+
+Name: org/eclipse/ocl/pivot/utilities/XMIUtil$HierachicalENamedElement
+ IdCreator.class
+SHA1-Digest: +x/MUxtdMUvKEFO+RMbW6b2dw80=
+
+Name: org/eclipse/ocl/pivot/internal/labels/ElementIdLabelGenerator.cl
+ ass
+SHA1-Digest: R19bKIHJ7oxq6Ka3jakzN7KJTLg=
+
+Name: org/eclipse/ocl/pivot/internal/lookup/util/PivotLookupFilter.cla
+ ss
+SHA1-Digest: lfwPUZ8QlFOoDPkoE65+efst/Vs=
+
+Name: org/eclipse/ocl/pivot/ShadowExp.class
+SHA1-Digest: fmV3vNz22XrdD1t+eyDM1bl2Fu0=
+
+Name: org/eclipse/ocl/pivot/PivotTables$Properties.class
+SHA1-Digest: gc40mHS5NqQaUHBRIZCKIEgeoNQ=
+
+Name: model/oclstdlib.genmodel
+SHA1-Digest: NuGi2WZPeuU2Vkdx4GSpXDrqojg=
+
+Name: org/eclipse/ocl/pivot/CollectionKind.class
+SHA1-Digest: xMpTJisRmZStdayLwjNircrLEj0=
+
+Name: org/eclipse/ocl/pivot/resource/ASResource.class
+SHA1-Digest: cxsSrZgt9q1P1++L04T1VUOuv5A=
+
+Name: org/eclipse/ocl/pivot/util/PivotUnqualifiedLookupVisitor$2.class
+SHA1-Digest: ZNzwPXUFqn+qVY3yjdCPtpm4+8s=
+
+Name: org/eclipse/ocl/pivot/internal/utilities/PivotDiagnostician.clas
+ s
+SHA1-Digest: 3esh0ljkU1SSZds6ly3iCyK8H3U=
+
+Name: annotations/org/eclipse/core/runtime/CoreException.eea
+SHA1-Digest: jXXQ+DTJS1dOCL7DNNaJeOd7AD4=
+
+Name: org/eclipse/ocl/pivot/internal/scoping/EnvironmentView$MergedPac
+ kageDisambiguator.class
+SHA1-Digest: as5OG+DltUU3Y0zeiwyt1p6BOlM=
+
+Name: org/eclipse/ocl/pivot/internal/labels/FileLabelGenerator.class
+SHA1-Digest: E1vrtOGh4Q0K2lXdezWHg9bd3VQ=
+
+Name: org/eclipse/ocl/pivot/ids/RootPackageId.class
+SHA1-Digest: zi1rZrEOVJWp4PoUApwMSdrFEh8=
+
+Name: org/eclipse/ocl/pivot/utilities/ClassUtil$EmptyIterator.class
+SHA1-Digest: +3mix5aMFZxP+jX8zDuzie6PvUA=
+
+Name: org/eclipse/ocl/pivot/library/string/StringSubstituteFirstOperat
+ ion.class
+SHA1-Digest: 7I8oXA4aMsikB+QXgt1DZoHOh2k=
+
+Name: org/eclipse/ocl/pivot/library/string/StringReplaceAllOperation.c
+ lass
+SHA1-Digest: IK/jpVyZ97MhAjaQpQ8k/qB+S2Y=
+
+Name: org/eclipse/ocl/pivot/internal/prettyprint/PrettyPrintOptions.cl
+ ass
+SHA1-Digest: sXMS8Wf5tEuFt8ke593NU7B8AzU=
+
+Name: org/eclipse/ocl/pivot/resource/ProjectManager.class
+SHA1-Digest: STkn0bC1LQLy5ZKCqrcA4Jnfi1Y=
+
+Name: org/eclipse/ocl/pivot/internal/lookup/util/LookupSwitch.class
+SHA1-Digest: k/gmNoMdhKFMOj4O8h56CDZnGhU=
+
+Name: org/eclipse/ocl/pivot/library/LibraryOperation$LibraryOperationE
+ xtension.class
+SHA1-Digest: Suc8UQ1zQecodtrAoTsoMak7BS8=
+
+Name: org/eclipse/ocl/pivot/internal/lookup/util/PivotLookupResultImpl
+ .class
+SHA1-Digest: v2ByiAc88S2VxB2TFS/2jpkq2mQ=
+
+Name: org/eclipse/ocl/pivot/library/iterator/AnyIteration.class
+SHA1-Digest: 3fU8a+byAZOr3FQ8XwAneNX+mlI=
+
+Name: org/eclipse/ocl/pivot/library/collection/CollectionElementTypePr
+ operty.class
+SHA1-Digest: 3AnIowj9+aVNvFaEQ3ycsrzNTAo=
+
+Name: org/eclipse/ocl/pivot/internal/UnspecifiedValueExpImpl.class
+SHA1-Digest: dXMN8vP6TjyMaxzfJ2Iqc+yUn44=
+
+Name: org/eclipse/ocl/pivot/ids/BuiltInTypeId.class
+SHA1-Digest: WgKAl5HtwKwJ1V8H3CP5a3Soezg=
+
+Name: org/eclipse/ocl/pivot/internal/utilities/AbstractConversion$Pred
+ icate.class
+SHA1-Digest: wNVBux7beHDEwbrFsn1bly/xWsU=
+
+Name: org/eclipse/ocl/pivot/internal/delegate/ValueConverter$1.class
+SHA1-Digest: Ue0forE2liUcZd+RQW1qaMbO0/I=
+
+Name: org/eclipse/ocl/pivot/internal/library/ecore/EcoreIdResolver.cla
+ ss
+SHA1-Digest: 6+/BvUrBy93IewxoQt4QqS++Msg=
+
+Name: org/eclipse/ocl/pivot/resource/CSResource$CSResourceExtension2.c
+ lass
+SHA1-Digest: fwNP4djsP5CaPsc442rCuwHGBQQ=
+
+Name: org/eclipse/ocl/pivot/CollectionLiteralPart.class
+SHA1-Digest: PUbXju4mSOoaavag5xhJv7bBfJ4=
+
+Name: org/eclipse/ocl/pivot/internal/complete/PartialClasses$1.class
+SHA1-Digest: DwbZwHy9qWw8OR/GmlLXkJpRYPA=
+
+Name: org/eclipse/ocl/pivot/internal/WildcardTypeImpl.class
+SHA1-Digest: PdvmWXbfLbFKCgBbyRhtsxoIOdg=
+
+Name: org/eclipse/ocl/pivot/internal/evaluation/OCLEvaluationVisitor.c
+ lass
+SHA1-Digest: O3s1tgqLoiaSkX1f054geuN5Z3A=
+
+Name: org/eclipse/ocl/pivot/library/numeric/NumericMinOperation.class
+SHA1-Digest: JdWqWtPHsvKKnOQ4jAL6WS9XRC0=
+
+Name: org/eclipse/ocl/pivot/internal/complete/CompleteClasses$MapCompl
+ eteClassImpl.class
+SHA1-Digest: YCirS6bdKHoz7H9SQ2PU1rkAOmo=
+
+Name: org/eclipse/ocl/pivot/utilities/NameUtil$NameableComparator.clas
+ s
+SHA1-Digest: IXmFGtMKfMev1jXrjomSzKZ6MTQ=
+
+Name: org/eclipse/ocl/pivot/library/map/MapExcludesPairOperation.class
+SHA1-Digest: L9Zo51WvZDgNpOslFOToxPQKNNk=
+
+Name: org/eclipse/ocl/pivot/evaluation/IterationManager$IterationManag
+ erExtension.class
+SHA1-Digest: Kyi6WPoi/V/dm02QEffXWVVrUSg=
+
+Name: org/eclipse/ocl/pivot/library/numeric/UnlimitedNaturalOclAsTypeO
+ peration.class
+SHA1-Digest: Q4ByLlrxUzT9IKgO4rpgMzspq1Q=
+
+Name: org/eclipse/ocl/pivot/ids/IdManager$8.class
+SHA1-Digest: kiJilHL61v7hyoKcJsMCeI8g0cg=
+
+Name: org/eclipse/ocl/pivot/internal/PackageImpl$2.class
+SHA1-Digest: H5C4doBK6c6/6PiMXwOP0lL1hIE=
+
+Name: org/eclipse/ocl/pivot/library/LibrarySimpleUnaryOperation.class
+SHA1-Digest: kPIjwXMKSq6UCsjaE9EqiJ82nHA=
+
+Name: org/eclipse/ocl/pivot/internal/values/TupleValueImpl.class
+SHA1-Digest: C/LDjiCnscugRAXxEr85QlP7rPk=
+
+Name: org/eclipse/ocl/pivot/library/LibraryTernaryOperation.class
+SHA1-Digest: u0G0Lx+infDbW6Ruyby9BpSR6ko=
+
+Name: org/eclipse/ocl/pivot/internal/values/BagValueImpl$Accumulator.c
+ lass
+SHA1-Digest: lHW6gi9aXIKtZI0Kl3U8OzG504A=
+
+Name: org/eclipse/ocl/pivot/utilities/Pivotable.class
+SHA1-Digest: 4sbodX+KxCqgBtwJl2jFitWo5d8=
+
+Name: org/eclipse/ocl/pivot/library/oclany/OclAnyNotEqualOperation.cla
+ ss
+SHA1-Digest: KtU04jVL9p3cMfYAWEryCzQXW/0=
+
+Name: org/eclipse/ocl/pivot/evaluation/EvaluationLogger$Indentable.cla
+ ss
+SHA1-Digest: SEegk6OiAOadom4ERbp5m3X/1Rk=
+
+Name: org/eclipse/ocl/pivot/internal/CallExpImpl.class
+SHA1-Digest: gCaosYsUipUYkplsOYIr/L/Hbz4=
+
+Name: org/eclipse/ocl/pivot/internal/MessageTypeImpl.class
+SHA1-Digest: zCLhABouOrVQF1AahNgMsjKYMNc=
+
+Name: org/eclipse/ocl/pivot/oclstdlib/OCLstdlibTables$Types.class
+SHA1-Digest: S6f1JMRFrfLSqF3egN6IUJEgXx0=
+
+Name: org/eclipse/ocl/pivot/utilities/ASSaverResolveVisitor.class
+SHA1-Digest: gjgcn6fiITwUiMaX2eZtZOaBlMo=
+
+Name: org/eclipse/ocl/pivot/Behavior.class
+SHA1-Digest: qF50FDB+aFFX+oY/w6exkykoezU=
+
+Name: org/eclipse/ocl/pivot/internal/complete/PartialPackages$Package2
+ PackageOwnedPackages.class
+SHA1-Digest: 2GOs8rM0KoUG4YTwo47jP1bCaSI=
+
+Name: org/eclipse/ocl/pivot/internal/library/executor/JavaType.class
+SHA1-Digest: D48sC+lLfO8JbQxNac+bEVddf9I=
+
+Name: org/eclipse/ocl/pivot/internal/OrphanCompletePackageImpl.class
+SHA1-Digest: bCXFd5EE9PNxdqNLdeKWjfyFSQY=
+
+Name: org/eclipse/ocl/pivot/internal/values/NumberValueImpl$EmptyItera
+ tor.class
+SHA1-Digest: GzsTvLHT7qkPt0bRwwoJ9sCyTew=
+
+Name: org/eclipse/ocl/pivot/utilities/ArrayIterable.class
+SHA1-Digest: +F+brLQh7QKNbTIG/2WhNFnPNQw=
+
+Name: org/eclipse/ocl/pivot/internal/values/IntegerRangeImpl.class
+SHA1-Digest: mC91wSecdigopW4iTH1Vx1g1aXY=
+
+Name: org/eclipse/ocl/pivot/internal/TemplateParameterSubstitutionImpl
+ .class
+SHA1-Digest: lb/4gAIe+Dds71vjYMeGV5jRJ9E=
+
+Name: org/eclipse/ocl/pivot/internal/ids/WeakHashMapOfListOfWeakRefere
+ nce4.class
+SHA1-Digest: iuz3+mV146h+kTJGOqjtgC1/URM=
+
+Name: annotations/java/util/List.eea
+SHA1-Digest: /uZ3CAMOIYzdfhn23UkqtmSfdQE=
+
+Name: org/eclipse/ocl/pivot/internal/InstanceSpecificationImpl.class
+SHA1-Digest: l09Qrx3CBx8c+HXME5zboubm3gg=
+
+Name: org/eclipse/ocl/pivot/util/PivotAdapterFactory$1.class
+SHA1-Digest: 781w2s4t/b/QtO2XvPpCIxEkcB8=
+
+Name: org/eclipse/ocl/pivot/internal/ids/UnscopedId.class
+SHA1-Digest: fTlnmbJzW6zGovR684DIiQkBmdQ=
+
+Name: org/eclipse/ocl/pivot/internal/lookup/LookupPackage$Literals.cla
+ ss
+SHA1-Digest: 7QeYvxB4JmvTJdpNWg4Lrm6SY7Q=
+
+Name: model/Pivot.uml
+SHA1-Digest: P2w/4tEpG8OanBt14eLdbmxzr04=
+
+Name: org/eclipse/ocl/pivot/library/numeric/UnlimitedNaturalMaxOperati
+ on.class
+SHA1-Digest: g1k/JUUJc1PD6NxNkW4k7CvyJwo=
+
+Name: org/eclipse/ocl/pivot/internal/ids/NestedPackageIdImpl.class
+SHA1-Digest: 3u9MLahbl+JdLFZfawYZeXejyJY=
+
+Name: org/eclipse/ocl/pivot/library/iterator/OneIteration$MutableBoole
+ an.class
+SHA1-Digest: LX2wXv3nhQGWx+L7OkLHvol97dg=
+
+Name: org/eclipse/ocl/pivot/internal/lookup/LookupTables$Init.class
+SHA1-Digest: aQgk79tbybJwBTUyOrIK4bS+Znk=
+
+Name: org/eclipse/ocl/pivot/model/OCLstdlib.class
+SHA1-Digest: 7F35nBX0ni4dAFJtU8c41b73QeM=
+
+Name: org/eclipse/ocl/pivot/internal/ElementExtensionImpl.class
+SHA1-Digest: MxcblJN/RO1H4SHNL4hGs8vypCI=
+
+Name: org/eclipse/ocl/pivot/internal/library/executor/AbstractIdResolv
+ er$MyList.class
+SHA1-Digest: 9zpxjc8ndNwxljKf6wpnDRQqJcQ=
+
+Name: org/eclipse/ocl/pivot/PivotFactory.class
+SHA1-Digest: Sw6//TxTI+BOUUUPN/gPKnUf3sQ=
+
+Name: org/eclipse/ocl/pivot/evaluation/ModelManager.class
+SHA1-Digest: G15DgQjudUQYwBsyiRPDkFH3+cg=
+
+Name: org/eclipse/ocl/pivot/internal/context/EClassContext.class
+SHA1-Digest: EGY3HGr6K+mX3Lbk7C9QdAiNeBM=
+
+Name: org/eclipse/ocl/pivot/internal/resource/AbstractASResourceFactor
+ y.class
+SHA1-Digest: aVL76eO3f76mGTL2cRcuVADpOao=
+
+Name: org/eclipse/ocl/pivot/internal/delegate/DelegatedBehavior.class
+SHA1-Digest: HZjzty+gldVF3fmoer/XyHprBEQ=
+
+Name: org/eclipse/ocl/pivot/internal/delegate/OCLSettingDelegate$Chang
+ eable.class
+SHA1-Digest: GdmaDm7ZPPZwmvKKFDAkXHbvZXg=
+
+Name: annotations/org/eclipse/core/runtime/IAdapterFactory.eea
+SHA1-Digest: T/ureXIb1wepQJsUK3ZG212Z1EQ=
+
+Name: org/eclipse/ocl/pivot/library/logical/BooleanAndOperation.class
+SHA1-Digest: 2dmeg5XLu6KPgED8753awiDkABs=
+
+Name: org/eclipse/ocl/pivot/ids/TuplePartId.class
+SHA1-Digest: 6QHwswkUtyUkf8h+9VUb+PKPf3M=
+
+Name: org/eclipse/ocl/pivot/PrimitiveType.class
+SHA1-Digest: E87jdxQvfSa+sAzYnFY5VT0rSxs=
+
+Name: org/eclipse/ocl/pivot/library/iterator/OneIteration.class
+SHA1-Digest: gDNhwaH6drs32oYeDhVLdtLqmnU=
+
+Name: org/eclipse/ocl/pivot/internal/attributes/PropertyAttribution.cl
+ ass
+SHA1-Digest: ASA2XclvtnGDh09/y+Gn5BfFSwc=
+
+Name: org/eclipse/ocl/pivot/library/numeric/NumericGreaterThanEqualOpe
+ ration.class
+SHA1-Digest: ba+iDcgPtKw5EH4EvM+VcWNadZs=
+
+Name: org/eclipse/ocl/pivot/InvalidLiteralExp.class
+SHA1-Digest: gYGnzBPXZ/+cAWsxw2uaErTAu5w=
+
+Name: org/eclipse/ocl/pivot/library/map/MapNotEmptyOperation.class
+SHA1-Digest: GcY+uS21syfQZU67XowydiSlGRA=
+
+Name: org/eclipse/ocl/pivot/values/NumberValue.class
+SHA1-Digest: jmx1hLegHDGyplNHCzZiFMa++7M=
+
+Name: org/eclipse/ocl/pivot/internal/complete/PartialOperations.class
+SHA1-Digest: tkkF3tCo9WsYPuyPD1UBLWEg4yM=
+
+Name: org/eclipse/ocl/pivot/internal/attributes/VoidTypeAttribution.cl
+ ass
+SHA1-Digest: GuOreqpbs1IL4npxoLMTybEqVmw=
+
+Name: org/eclipse/ocl/pivot/values/CollectionTypeParameters.class
+SHA1-Digest: miyJTQ98LNnp0/9c8/H+KwWuXWc=
+
+Name: org/eclipse/ocl/pivot/internal/resource/OCLASResourceFactory.cla
+ ss
+SHA1-Digest: N9gXUF7yb5vX3wcn7Gu96v+TluY=
+
+Name: org/eclipse/ocl/pivot/internal/values/BagValueImpl.class
+SHA1-Digest: LFXqW6XXUXEGDUb5UQtq9SqQ6og=
+
+Name: org/eclipse/ocl/pivot/internal/TupleLiteralExpImpl.class
+SHA1-Digest: dRNsudOOShkjZ+CqL//lPw4tv6w=
+
+Name: org/eclipse/ocl/pivot/internal/ecore/EcoreASResourceImpl.class
+SHA1-Digest: /MSTnLreRaCDO+2wTWX2uNKM/XM=
+
+Name: org/eclipse/ocl/pivot/internal/resource/StandaloneProjectMap$Abs
+ tractResourceLoadStrategy.class
+SHA1-Digest: tB7COmZGGwYH8nYATpsymX60OWk=
+
+Name: org/eclipse/ocl/pivot/internal/manager/FlowAnalysis$AbstractDedu
+ cer.class
+SHA1-Digest: /HbRTgoQa63UPrMDpORR/efrLrU=
+
+Name: org/eclipse/ocl/pivot/internal/values/SparseSequenceValueImpl$Ac
+ cumulator.class
+SHA1-Digest: lQy6//CHQRlSnYXY6jC5HOmW6tU=
+
+Name: model/Pivot.genmodel
+SHA1-Digest: Lx7BrLAWY/X6kaXB+OjVA25c0lg=
+
+Name: org/eclipse/ocl/pivot/internal/values/BigIntegerValueImpl.class
+SHA1-Digest: dNgT1WBRLZLSpkA7C9Oo51gijV8=
+
+Name: org/eclipse/ocl/pivot/internal/VariableDeclarationImpl.class
+SHA1-Digest: QtYyTZ0RDv5f43Ox3CRB32l69lU=
+
+Name: org/eclipse/ocl/pivot/library/string/StringSubstituteAllOperatio
+ n.class
+SHA1-Digest: Xv1XNtjKeLA39ygGRSDi/MlMn3E=
+
+Name: org/eclipse/ocl/pivot/library/map/MapExcludingMapOperation.class
+SHA1-Digest: DfJ7hf62yKmi8XpK3fAljCRL1cE=
+
+Name: org/eclipse/ocl/pivot/utilities/ToStringVisitor.class
+SHA1-Digest: cdhUtSgaKzPggStFVCBhWSBcZwI=
+
+Name: org/eclipse/ocl/pivot/labels/ILabelGenerator$Builder.class
+SHA1-Digest: xedES0XvdjgFlaK9vqaBqGmmm8A=
+
+Name: org/eclipse/ocl/pivot/OrderedSetType.class
+SHA1-Digest: LiKA4FDHN7pg36qQD+vemcZ7S1k=
+
+Name: org/eclipse/ocl/pivot/ParameterTypes.class
+SHA1-Digest: uijSatdcT0Cek9tzaa7e1bSMUgQ=
+
+Name: org/eclipse/ocl/pivot/model/OCLmetamodel.class
+SHA1-Digest: GUXxaP3HepNsELCEZ0qjJPc6GmA=
+
+Name: org/eclipse/ocl/pivot/values/MapTypeParameters.class
+SHA1-Digest: 2KNJvyeo5hNfG10x2ubIo8KowGI=
+
+Name: org/eclipse/ocl/pivot/internal/ids/GeneralizedClassIdImpl.class
+SHA1-Digest: Vc0WKoUl3FQiQi/JbN9GcIdCPY0=
+
+Name: org/eclipse/ocl/pivot/library/LibrarySimpleTernaryOperation.clas
+ s
+SHA1-Digest: y9FqDr66l1KFE2Yftiy8cd1L6ns=
+
+Name: org/eclipse/ocl/pivot/ids/EnumerationLiteralId.class
+SHA1-Digest: m63k1WXfspOsFIeNVU/W4aRsN1w=
+
+Name: model-gen/OCL-2.5.oclas
+SHA1-Digest: Od9CRdebn46UrfxyZPuiqWgff7o=
+
+Name: org/eclipse/ocl/pivot/internal/library/executor/DomainReflective
+ Type$1.class
+SHA1-Digest: iP3U6ksPXzgqiivUgnKDJ5CAvQI=
+
+Name: org/eclipse/ocl/pivot/LambdaType.class
+SHA1-Digest: XIuZHrOyu+m5si2OnVg+PKd0YGs=
+
+Name: org/eclipse/ocl/pivot/internal/lookup/impl/LookupFactoryImpl.cla
+ ss
+SHA1-Digest: LG8BrFVjb3Fa/flDgOGn5LJ8qOk=
+
+Name: model/Pivot.ocl
+SHA1-Digest: 4DW6T5Z3BSv75upNH6H/gDhUzig=
+
+Name: org/eclipse/ocl/pivot/internal/delegate/DelegateDomain$Factory.c
+ lass
+SHA1-Digest: xPNEv3T73Io+829apXPh0oZaWd8=
+
+Name: org/eclipse/ocl/pivot/types/AbstractFragment.class
+SHA1-Digest: jhNBbmqE++u/asXkv0IvQLgwDVk=
+
+Name: org/eclipse/ocl/pivot/BooleanLiteralExp.class
+SHA1-Digest: SQIRoWoOUKdvqMoaFSyU77P3+5I=
+
+Name: org/eclipse/ocl/pivot/internal/context/PropertyContext.class
+SHA1-Digest: YxVOokXTBmapj9jxzIok8DjDlgQ=
+
+Name: org/eclipse/ocl/pivot/labels/ILabelGenerator$Descriptor.class
+SHA1-Digest: YIvru0+hCB36uYZ0fxsx15JfEVI=
+
+Name: org/eclipse/ocl/pivot/resource/CSResource$CSResourceExtension.cl
+ ass
+SHA1-Digest: OStVzv5wJTmQouQEOeEpEqXddJY=
+
+Name: org/eclipse/ocl/pivot/library/collection/OrderedCollectionAppend
+ AllOperation.class
+SHA1-Digest: 6SCLJkv7eT9a6nncf4gApnkQEAc=
+
+Name: org/eclipse/ocl/pivot/ShadowPart.class
+SHA1-Digest: Tn1BPmgy6amJ7HjWEVXATx8UVSQ=
+
+Name: org/eclipse/ocl/pivot/library/logical/BooleanAndOperation2.class
+SHA1-Digest: u8IVreK9BSvff+qHqhSgwmJOCjs=
+
+Name: org/eclipse/ocl/pivot/oclstdlib/OCLstdlibTables$FragmentOperatio
+ ns.class
+SHA1-Digest: o6o5WiBuyo2QDkubqXrnK+A08Ww=
+
+Name: org/eclipse/ocl/pivot/library/oclany/OclAnyOclIsInvalidOperation
+ .class
+SHA1-Digest: ACl7qMuWf5pCSyykX39T6Q3X7GU=
+
+Name: org/eclipse/ocl/pivot/PseudostateKind.class
+SHA1-Digest: rvZFImE/sv+5fkuAilXEVfG1cjo=
+
+Name: org/eclipse/ocl/pivot/internal/ResultVariableImpl.class
+SHA1-Digest: bcExBQhcxkcQTEAlZ2DHAqKTaHs=
+
+Name: org/eclipse/ocl/pivot/internal/StateImpl.class
+SHA1-Digest: aYROh1QILEuzE07bObWgMi/GPGg=
+
+Name: org/eclipse/ocl/pivot/internal/library/executor/ReflectiveFragme
+ nt.class
+SHA1-Digest: GxyO+L/9WDJUqUs82HomKRkJXpk=
+
+Name: org/eclipse/ocl/pivot/internal/library/EInvokeOperation.class
+SHA1-Digest: 7a/FWD7WHYcZzlc6bOhsVPYFd44=
+
+Name: org/eclipse/ocl/pivot/internal/LetExpImpl.class
+SHA1-Digest: CVgl5ruZMPdYZyTcC6pv7KohwS4=
+
+Name: org/eclipse/ocl/pivot/library/numeric/NumericTimesOperation.clas
+ s
+SHA1-Digest: lzqUQj8UbT/Ocomv4eLyU00GTxQ=
+
+Name: org/eclipse/ocl/pivot/ids/MapTypeId.class
+SHA1-Digest: ApRfaB+kc550DE2rojRJ9UYSNAw=
+
+Name: org/eclipse/ocl/pivot/internal/compatibility/EMF_2_9$EcorePlugin
+ .class
+SHA1-Digest: 34Ze6MW3TKbIDOZ034/MloWOFII=
+
+Name: org/eclipse/ocl/pivot/internal/resource/StandaloneProjectMap$Sin
+ glePackageResourceDescriptor.class
+SHA1-Digest: F2r5Nby/uARlFzRUFjxo6BR2EkQ=
+
+Name: org/eclipse/ocl/pivot/internal/library/ecore/EcoreLibraryPropert
+ y.class
+SHA1-Digest: FwFZk+b+fvWzxBVf0j6wam5Jl6Y=
+
+Name: org/eclipse/ocl/pivot/internal/manager/PrecedenceManager.class
+SHA1-Digest: gd9ZzdV7FMf3K3q2ph2kARgT5Es=
+
+Name: org/eclipse/ocl/pivot/utilities/LabelUtil$2.class
+SHA1-Digest: Q6sipMaVJ0ZijaFIjTQzJ/1jTwM=
+
+Name: org/eclipse/ocl/pivot/library/map/MapSizeOperation.class
+SHA1-Digest: vYKzjHjWzTxDJax0M2Yh7pbffM4=
+
+Name: org/eclipse/ocl/pivot/ids/LambdaTypeId.class
+SHA1-Digest: el9seBBDV3ZPTTFSriXaAtkzwgA=
+
+Name: org/eclipse/ocl/pivot/library/LibraryOperation$LibraryOperationE
+ xtension2.class
+SHA1-Digest: /jv72gNy5kNVF84Rl16UYr/YxNw=
+
+Name: org/eclipse/ocl/pivot/ConnectionPointReference.class
+SHA1-Digest: ewVfPyQgPmx84nhdjAVse0JlZeg=
+
+Name: org/eclipse/ocl/pivot/internal/ids/AbstractTemplateableIdImpl$1.
+ class
+SHA1-Digest: YkElUL2IYXrwSM67mjiO4IaBZkE=
+
+Name: org/eclipse/ocl/pivot/internal/library/RegisteredContribution$De
+ scriptor.class
+SHA1-Digest: CDXuwGVJWwIDmSEcD+WsOTKnS/k=
+
+Name: org/eclipse/ocl/pivot/library/logical/BooleanAllInstancesOperati
+ on.class
+SHA1-Digest: CQnndTsvu1xmGkKPHZS8c27XHdM=
+
+Name: org/eclipse/ocl/pivot/evaluation/Evaluator.class
+SHA1-Digest: 9H5DycPVMjv/wHkk56EX7zzLI5Q=
+
+Name: org/eclipse/ocl/pivot/internal/ids/SpecializedLambdaTypeIdImpl.c
+ lass
+SHA1-Digest: tt9SMuHJzhdBCUPEZYqtqBsje5g=
+
+Name: org/eclipse/ocl/pivot/internal/complete/PackageListeners.class
+SHA1-Digest: tlwVp8XsMNo1HBgpal4w66VOsn0=
+
+Name: org/eclipse/ocl/pivot/internal/lookup/impl/LookupPackageImpl.cla
+ ss
+SHA1-Digest: zunwbN5OifyqhIEjhWNSiE+T6nc=
+
+Name: org/eclipse/ocl/pivot/library/iterator/IterateIteration.class
+SHA1-Digest: vl+D3QRYb3liMSobPou3CfSUOTE=
+
+Name: org/eclipse/ocl/pivot/util/AbstractExtendingPivotVisitor.class
+SHA1-Digest: HUZXyFx27rDEKiW56nwXhKSCfJ8=
+
+Name: org/eclipse/ocl/pivot/internal/ClassImpl.class
+SHA1-Digest: 5hDQEVCmbbnsIemI6ZUhkX4XDFg=
+
+Name: org/eclipse/ocl/pivot/internal/delegate/ValueConverter.class
+SHA1-Digest: fQR9hxI0sCzJChuyXK8tY64JNAc=
+
+Name: org/eclipse/ocl/pivot/internal/delegate/AbstractDelegatedBehavio
+ r.class
+SHA1-Digest: fcTYJHyh5D98Swxpjyc7TTLGc7g=
+
+Name: org/eclipse/ocl/pivot/internal/values/SetValueImpl.class
+SHA1-Digest: tVPa+y8mtYjNz2jQ8EIJ50oZ5kY=
+
+Name: org/eclipse/ocl/pivot/Class.class
+SHA1-Digest: 4AzP/zhz8hpdzM4SLSRZLZQqYCw=
+
+Name: org/eclipse/ocl/pivot/library/string/StringSizeOperation.class
+SHA1-Digest: PHo4rLyhgqGbrzS886CNsfKwP1Y=
+
+Name: org/eclipse/ocl/pivot/internal/resource/ASResourceFactory.class
+SHA1-Digest: FWZjJXJhBlaS33Q/F8rkZk20u+o=
+
+Name: org/eclipse/ocl/pivot/internal/TypeExpImpl.class
+SHA1-Digest: /smKuSlhgAHb4aEUJdZCBsmIZWQ=
+
+Name: org/eclipse/ocl/pivot/CompleteClass.class
+SHA1-Digest: Fn/YIlJ+S4nLze8NlU9j4mnAHzc=
+
+Name: org/eclipse/ocl/pivot/internal/scoping/EmptyAttribution.class
+SHA1-Digest: j3cr2huQGjgDgFmLRDrNrfQhrfY=
+
+Name: org/eclipse/ocl/pivot/library/collection/OrderedCollectionAtOper
+ ation.class
+SHA1-Digest: JKKz/rnTECpN0mVx9lEt/VN0rjo=
+
+Name: org/eclipse/ocl/pivot/internal/library/ecore/EcoreExecutorManage
+ r.class
+SHA1-Digest: +1kNt/HO7J0SysuodrKW40F3I4g=
+
+Name: org/eclipse/ocl/pivot/oclstdlib/OCLstdlibTables$Fragments.class
+SHA1-Digest: R6krys7xmCT61LcI+64nCoWn0z0=
+
+Name: org/eclipse/ocl/pivot/Variable.class
+SHA1-Digest: g/+/AenDob81/w6JQ1rIsWoXWh4=
+
+Name: org/eclipse/ocl/pivot/library/collection/CollectionExcludingOper
+ ation.class
+SHA1-Digest: Nu2jAh8XiW6Mj+i+oYPV4DDLlPY=
+
+Name: org/eclipse/ocl/pivot/library/LibraryBinaryOperation.class
+SHA1-Digest: 6S7iyQzPRGY16fiT8DuEMBKucfQ=
+
+Name: org/eclipse/ocl/pivot/internal/complete/CompleteInheritanceImpl.
+ class
+SHA1-Digest: B7ctItkqdVZy7dLM2nnqPRTiZY0=
+
+Name: annotations/java/lang/ref/Reference.eea
+SHA1-Digest: 3nSLgHcVZuOmz/JtwV1S4/UoFug=
+
+Name: org/eclipse/ocl/pivot/internal/ids/GeneralizedOperationIdImpl.cl
+ ass
+SHA1-Digest: fAeXb35v7rVXQMSczFsesM4n1E0=
+
+Name: org/eclipse/ocl/pivot/values/CollectionValue.class
+SHA1-Digest: XomxvXXorHEgrwfA4lje3R93h6k=
+
+Name: org/eclipse/ocl/pivot/library/AbstractIteration$1.class
+SHA1-Digest: kpwOhagnb0x87tgWEJ96d5rioF4=
+
+Name: org/eclipse/ocl/pivot/internal/ids/AbstractGeneralizedIdImpl.cla
+ ss
+SHA1-Digest: r8vMQvCrLQOMAav8KDAjFdtOAdU=
+
+Name: org/eclipse/ocl/pivot/internal/TuplePartImpl.class
+SHA1-Digest: 79mvq91CRielUoyGhhFdP6tCiA0=
+
+Name: org/eclipse/ocl/pivot/internal/library/ConstrainedOperation.clas
+ s
+SHA1-Digest: 22G1Qtspk0vMpPC/eVo2nJukrgQ=
+
+Name: org/eclipse/ocl/pivot/internal/prettyprint/PrettyPrintOptions$Lo
+ cal.class
+SHA1-Digest: ZF7ne0DbdxwtS6LEZ7XuOWzYtTo=
+
+Name: org/eclipse/ocl/pivot/internal/values/UnlimitedValueImpl.class
+SHA1-Digest: +8NA54VAe32teDYCZJzc7PI2XTM=
+
+Name: org/eclipse/ocl/pivot/utilities/PivotObject.class
+SHA1-Digest: xPQhChWExMEbmMJfXTZLY5FAWL8=
+
+Name: org/eclipse/ocl/pivot/utilities/XMIUtil$StructuralENamedElementI
+ dCreator$StructuralENamedElementIdSwitch.class
+SHA1-Digest: Knh9fyoO+8lSpcv/vl1hsvtVKmA=
+
+Name: org/eclipse/ocl/pivot/internal/BagTypeImpl.class
+SHA1-Digest: iFtK93soCZwByYSbuqc05ktnILs=
+
+Name: org/eclipse/ocl/pivot/internal/elements/AbstractExecutorProperty
+ .class
+SHA1-Digest: xlGwBMW7Wrf05mXVurvKXM6WOa8=
+
+Name: org/eclipse/ocl/pivot/utilities/PivotUtil.class
+SHA1-Digest: 7P2SqTzr0nCW0rUpGCFPFs6DLCo=
+
+Name: org/eclipse/ocl/pivot/internal/evaluation/ExecutorInternal.class
+SHA1-Digest: 0CccAZAWPzaepBAecMPqsAa42E8=
+
+Name: org/eclipse/ocl/pivot/internal/ecore/as2es/AS2EcoreDeclarationVi
+ sitor$DuplicateOperationsFilter.class
+SHA1-Digest: ZpPrhE5W6k3eFEPAx/h2fsnrVOY=
+
+Name: annotations/java/io/File.eea
+SHA1-Digest: LMYHKhZJk3LFMvgFDVFZq4lfi4I=
+
+Name: org/eclipse/ocl/pivot/library/numeric/NumericLessThanEqualOperat
+ ion.class
+SHA1-Digest: a7qdwG/DFmCnEd5bAZoo2OwKwKA=
+
+Name: org/eclipse/ocl/pivot/library/oclvoid/OclVoidImpliesOperation.cl
+ ass
+SHA1-Digest: XVJj4+P1YzcX56r0T6Y3Q3/nKhA=
+
+Name: org/eclipse/ocl/pivot/internal/manager/Orphanage$WeakEList$1.cla
+ ss
+SHA1-Digest: 5JgEjNa/C5sqOM4hjmgotQdbozU=
+
+Name: org/eclipse/ocl/pivot/internal/utilities/PivotDiagnostician$Weak
+ OCLReference$1.class
+SHA1-Digest: jRAasLnY9r4TOCoUwSySiUmLAb0=
+
+Name: org/eclipse/ocl/pivot/internal/ShadowExpImpl$2.class
+SHA1-Digest: mcKniMId0gi9ltvk3hb23ielMfM=
+
+Name: org/eclipse/ocl/pivot/Operation.class
+SHA1-Digest: Q9qmzaCT6ZT7xEtHY60MOT1uzzc=
+
+Name: org/eclipse/ocl/pivot/labels/ILabelGenerator$Builder$2.class
+SHA1-Digest: tdbXTgtW1KxM1el0slVXwBCnwa8=
+
+Name: org/eclipse/ocl/pivot/internal/resource/StandaloneProjectMap$Loa
+ dedAsGeneratedPackageStrategy.class
+SHA1-Digest: umuakqllk02nDId7LuA7IxfFYfs=
+
+Name: org/eclipse/ocl/pivot/library/LibraryUntypedUnaryOperation.class
+SHA1-Digest: y9N5pRrgOX5jPmnISQzd3AwdcEs=
+
+Name: org/eclipse/ocl/pivot/internal/lookup/LookupTables.class
+SHA1-Digest: nx9f4pqB2todOqHwPV6UKpwlJQI=
+
+Name: org/eclipse/ocl/pivot/oclstdlib/OCLstdlibTables$EnumerationLiter
+ als.class
+SHA1-Digest: RX/P6d/rKwj51ephEmqThtMfkaE=
+
+Name: org/eclipse/ocl/pivot/DynamicBehavior.class
+SHA1-Digest: GxaGTLvpH/06rOzRjviMsOad178=
+
+Name: org/eclipse/ocl/pivot/resource/ProjectManager$IPackageLoadStatus
+ .class
+SHA1-Digest: alA/ug7uDZqBpRSHPZyjttGjJuc=
+
+Name: org/eclipse/ocl/pivot/Import.class
+SHA1-Digest: OZ8YKj+9XqL1TSdPlFA3kv8QRsY=
+
+Name: org/eclipse/ocl/pivot/internal/ids/AbstractPackageIdImpl$4.class
+SHA1-Digest: Ej62UP1zL/6tBu2TPfwhjl1w7es=
+
+Name: org/eclipse/ocl/pivot/library/LibraryConstants.class
+SHA1-Digest: t/PdNQtRX81W/6JM9WeB2l8ZKkg=
+
+Name: org/eclipse/ocl/pivot/library/map/MapValueTypeProperty.class
+SHA1-Digest: /DPBXF1Se+qI7DEDEHDUhTsAByQ=
+
+Name: org/eclipse/ocl/pivot/internal/IfExpImpl.class
+SHA1-Digest: 7i3PW1vgG8BrWbty7IHvgw4v4Sc=
+
+Name: org/eclipse/ocl/pivot/internal/complete/PartialOperations$Overlo
+ adsList.class
+SHA1-Digest: SPHLWud4cjCheOdUItJNdj+oxwE=
+
+Name: org/eclipse/ocl/pivot/internal/executor/PivotExecutorStandardLib
+ rary.class
+SHA1-Digest: SXU93llLBy6ChKUo0rbKBibGQHw=
+
+Name: org/eclipse/ocl/pivot/PivotPackage$Literals.class
+SHA1-Digest: ofb6gXyyC2psY/44V7G2Lo/W5dY=
+
+Name: org/eclipse/ocl/pivot/internal/resource/StandaloneProjectMap.cla
+ ss
+SHA1-Digest: ElbUzgrQFnEV2V0NIEys07TvAUY=
+
+Name: org/eclipse/ocl/pivot/ResultVariable.class
+SHA1-Digest: Vz5hMj/v2J8vzDjiYUVbXHCeM+0=
+
+Name: org/eclipse/ocl/pivot/ids/OclVoidTypeId.class
+SHA1-Digest: TWK3PEUJ0+zAnTJ13DfEfa1c+ro=
+
+Name: org/eclipse/ocl/pivot/library/map/MapExcludingPairOperation.clas
+ s
+SHA1-Digest: 1KYYYCO1AVw0Jfwh1elg5CFb9+Q=
+
+Name: org/eclipse/ocl/pivot/internal/utilities/CompleteElementIterable
+ .class
+SHA1-Digest: vkEn0YxbBV94hQUR0c4SDD3RBNs=
+
+Name: org/eclipse/ocl/pivot/utilities/XMIUtil$ExcludedEClassIdFilter.c
+ lass
+SHA1-Digest: UJGbzUWNkVHjT7Tr8MXZWcGYov0=
+
+Name: org/eclipse/ocl/pivot/utilities/TracingOption.class
+SHA1-Digest: WlWnE1LXxMuKSTxU+OstKB0CumY=
+
+Name: org/eclipse/ocl/pivot/internal/utilities/AS2Moniker.class
+SHA1-Digest: 9DDXIsxMPoPY+PcyhodO2edg90g=
+
+Name: org/eclipse/ocl/pivot/library/collection/CollectionUnionOperatio
+ n.class
+SHA1-Digest: z8VXm9UCyELC6Jq04l5/6IxOs+c=
+
+Name: org/eclipse/ocl/pivot/util/PivotUnqualifiedLookupVisitor.class
+SHA1-Digest: zNwBToweQKVVs/tBr68lInGo+Hw=
+
+Name: org/eclipse/ocl/pivot/values/TupleValue.class
+SHA1-Digest: bK2N1AAtr/Fj89zEJ2BJv1J753c=
+
+Name: org/eclipse/ocl/pivot/internal/utilities/AliasAdapter.class
+SHA1-Digest: iNqSHUWIUgm2T80WESYS4i1IWU8=
+
+Name: org/eclipse/ocl/pivot/internal/validation/EcoreOCLEValidator$Wea
+ kOCLReference$1.class
+SHA1-Digest: F9j2rVF2ZQtTQLwXNf8N/RyDd8A=
+
+Name: org/eclipse/ocl/pivot/values/ComparableValue.class
+SHA1-Digest: S3noEOBQF04idW0BPljqhVKoI/Q=
+
+Name: org/eclipse/ocl/pivot/internal/complete/PartialOperations$3.clas
+ s
+SHA1-Digest: 0lI7aKI5g86LQmyXpyH1VbRyZqc=
+
+Name: org/eclipse/ocl/pivot/library/map/MapExcludesMapOperation.class
+SHA1-Digest: 2+ox+r0KKyYJr553va4+Bw4Cn54=
+
+Name: org/eclipse/ocl/pivot/internal/messages/PivotMessagesInternal.cl
+ ass
+SHA1-Digest: 1las7IyxpRZ9o+hQRFTi0YTbuHo=
+
+Name: org/eclipse/ocl/pivot/values/TemplateParameterSubstitutions$Empt
+ y.class
+SHA1-Digest: tfloy3I9qmcdPhiU0P+lz1AMqvQ=
+
+Name: org/eclipse/ocl/pivot/evaluation/IndentingLogger.class
+SHA1-Digest: fIQtIWXsX4lmhtWBN0vouWddN8k=
+
+Name: org/eclipse/ocl/pivot/internal/ModelImpl.class
+SHA1-Digest: 4/Dp3jz+37fCJQo6rvmKvbbJo+o=
+
+Name: org/eclipse/ocl/pivot/internal/MapLiteralExpImpl.class
+SHA1-Digest: zAbRpfRU30z/sHHp6SaZodpD/QM=
+
+Name: org/eclipse/ocl/pivot/internal/labels/ENamedElementLabelGenerato
+ r.class
+SHA1-Digest: TeFeYrvvdVGAX0HjA7AEwTsrR7A=
+
+Name: model/Types.ocl
+SHA1-Digest: L/L0MdWydjRpqy0vUdJRjjCJo9A=
+
+Name: org/eclipse/ocl/pivot/labels/LabelGeneratorRegistry.class
+SHA1-Digest: R57WdPQP6UVOF3I+ZmcZf4mQj/k=
+
+Name: org/eclipse/ocl/pivot/internal/complete/CompleteInheritanceImpl$
+ BestOperation.class
+SHA1-Digest: OrZzFCgBu02fZgUzAg6Hqj7cZL8=
+
+Name: org/eclipse/ocl/pivot/options/ParsingOptions.class
+SHA1-Digest: Vj3g6/TGFs7WQR7MWqRLYG9EnJY=
+
+Name: org/eclipse/ocl/pivot/library/enumeration/EnumerationAllInstance
+ sOperation.class
+SHA1-Digest: /kIOdPQke7EI18bzJvx+7eXoRlg=
+
+Name: org/eclipse/ocl/pivot/internal/DynamicValueSpecificationImpl.cla
+ ss
+SHA1-Digest: WAcC537i5XPKSqAF6DJt9Gq0NYs=
+
+Name: org/eclipse/ocl/pivot/internal/complete/NestedCompletePackages.c
+ lass
+SHA1-Digest: GUAEzDSj9dmhp6DtnkdRRpNn1zg=
+
+Name: org/eclipse/ocl/pivot/util/AbstractExtendingVisitor.class
+SHA1-Digest: JjB24sLSK31rkWACMFZAjvdo294=
+
+Name: org/eclipse/ocl/pivot/ProfileApplication.class
+SHA1-Digest: eWDgBQe/fvoMJU75xeOTCqXDoOs=
+
+Name: org/eclipse/ocl/pivot/internal/delegate/OCLInvocationDelegate.cl
+ ass
+SHA1-Digest: H1GucdSenC7mo30WhlSJ/rzpPe8=
+
+Name: org/eclipse/ocl/pivot/internal/values/UndefinedValueImpl$Iterato
+ r.class
+SHA1-Digest: 7ZfWqXlMvYad9bk3g4KpsZ1EZIA=
+
+Name: org/eclipse/ocl/pivot/internal/utilities/ProblemAware.class
+SHA1-Digest: iTQ5bPDL4iMO0j7IBwqJAzjGuIg=
+
+Name: org/eclipse/ocl/pivot/internal/complete/PartialClasses.class
+SHA1-Digest: 1qnYEAsKYcJdloOBSGvsb2rxiXk=
+
+Name: org/eclipse/ocl/pivot/library/logical/BooleanXorOperation.class
+SHA1-Digest: NYh5vpnRW05UOQmAwF8OZfel7DU=
+
+Name: org/eclipse/ocl/pivot/internal/prettyprint/PrettyPrinter$Fragmen
+ t.class
+SHA1-Digest: wriuXaXYAgZV8bKFuKQvrxkSEQE=
+
+Name: org/eclipse/ocl/pivot/internal/PivotFactoryImpl.class
+SHA1-Digest: fz8DvzOCXqvjitN0O6+PO2kQk20=
+
+Name: org/eclipse/ocl/pivot/internal/CompleteClassImpl.class
+SHA1-Digest: WoFUeylz8cxDdmZgyW5QHk1Wn90=
+
+Name: annotations/org/eclipse/core/runtime/IAdaptable.eea
+SHA1-Digest: 9Sm0cnE4AlkquP59uJmBmo8vmpk=
+
+Name: org/eclipse/ocl/pivot/library/string/StringEndsWithOperation.cla
+ ss
+SHA1-Digest: g4NufeTHbfB607W4falA4NGbpjQ=
+
+Name: org/eclipse/ocl/pivot/library/LibraryUntypedBinaryOperation.clas
+ s
+SHA1-Digest: KEtd+4UHhIW/A+uujwIBVsw0bBo=
+
+Name: org/eclipse/ocl/pivot/internal/lookup/util/LookupAdapterFactory.
+ class
+SHA1-Digest: 4GyBEWXzJO5YZBdkM9FoIQ5R7h0=
+
+Name: org/eclipse/ocl/pivot/values/Unlimited.class
+SHA1-Digest: v5n8RnxCkPF5fSSKP03Ef5zSSno=
+
+Name: org/eclipse/ocl/pivot/internal/library/executor/AbstractDispatch
+ Operation$1.class
+SHA1-Digest: ls/3NKNBc5n3SCjs+a+Ccju9m+c=
+
+Name: org/eclipse/ocl/pivot/utilities/Query.class
+SHA1-Digest: 5y1lcgn91Y9yE5WVnpMkqwSP5I8=
+
+Name: org/eclipse/ocl/pivot/internal/validation/EcoreOCLEValidator$Con
+ straintEvaluatorWithoutDiagnostics.class
+SHA1-Digest: EVdNVHgpOE1yXz34VzrOOsB6IXI=
+
+Name: org/eclipse/ocl/pivot/internal/resource/StandaloneProjectMap$Loa
+ dedStrategy.class
+SHA1-Digest: KaaaAj2NEtqRSQaZwB9bhEIpvK4=
+
+Name: org/eclipse/ocl/pivot/internal/lookup/LookupTables$FragmentPrope
+ rties.class
+SHA1-Digest: nkPIdh5oj1w8cUF/mnrHmbRla98=
+
+Name: org/eclipse/ocl/pivot/library/string/StringAtOperation.class
+SHA1-Digest: RzWkynkVBIcl0tclv8lgJvp6THw=
+
+Name: org/eclipse/ocl/pivot/ids/IdManager$1.class
+SHA1-Digest: SncuauI6hAnVzBPrRPnZYBdhmE8=
+
+Name: org/eclipse/ocl/pivot/internal/context/ClassContext.class
+SHA1-Digest: eC2AyBxVQsaU2++MNFKm2USSzjI=
+
+Name: org/eclipse/ocl/pivot/internal/ids/GeneralizedNestedTypeIdImpl.c
+ lass
+SHA1-Digest: rKKK3IqKo+u7MIIhUFQW9HsO4GM=
+
+Name: org/eclipse/ocl/pivot/options/ProblemHandler.class
+SHA1-Digest: UVOgADE32BMxsKfarMIdRiHq36c=
+
+Name: org/eclipse/ocl/pivot/internal/manager/TupleTypeManager$Template
+ ParameterReferencesVisitor.class
+SHA1-Digest: waYACCJEnPRSAfnfoPbWKPJqCK4=
+
+Name: org/eclipse/ocl/pivot/utilities/ToStringVisitor$AS2StringFactory
+ .class
+SHA1-Digest: XWgfvvY3S5wFFRJoLrAW0X/KfOY=
+
+Name: org/eclipse/ocl/pivot/internal/manager/MetamodelManagerInternal$
+ MetamodelManagerInternalExtension.class
+SHA1-Digest: abb9XZ9MjFeE1VOPkbn6hW9FHSw=
+
+Name: org/eclipse/ocl/pivot/library/iterator/OnlyIteration.class
+SHA1-Digest: RAYK1ZdR7osiR0TM85oDuTIsaOM=
+
+Name: org/eclipse/ocl/pivot/library/collection/OrderedCollectionFirstO
+ peration.class
+SHA1-Digest: vEOrJCpwak4AAFHqM5mJPYbaJns=
+
+Name: org/eclipse/ocl/pivot/internal/resource/StandaloneProjectMap$Pac
+ kageDescriptor.class
+SHA1-Digest: +tLqw0LBfLfHxwXIMSbpBcxxbck=
+
+Name: org/eclipse/ocl/pivot/internal/IterationImpl.class
+SHA1-Digest: Bw9GGF7j9tMOp967iJpYpntAQAo=
+
+Name: model/Infrastructure.uml
+SHA1-Digest: XyLv7V8QnPhhQWmH1/SotvXKRvQ=
+
+Name: org/eclipse/ocl/pivot/library/numeric/NumericNegateOperation.cla
+ ss
+SHA1-Digest: GsEQLjgTgMdE1Y7LiTzXS9FPPx8=
+
+Name: org/eclipse/ocl/pivot/library/numeric/NumericModOperation.class
+SHA1-Digest: ysiNofLLwVk18v1VtGX7baXKd4I=
+
+Name: org/eclipse/ocl/pivot/internal/resource/StandaloneProjectMap$Map
+ ToFirstConflictHandler.class
+SHA1-Digest: 7dvTRzoRbkVsPlBSIzW+qPmooOQ=
+
+Name: org/eclipse/ocl/pivot/util/AbstractMergedVisitor.class
+SHA1-Digest: bmxfNELGka8nFgOOxuorOTXH91M=
+
+Name: org/eclipse/ocl/pivot/library/collection/SequenceSubSequenceOper
+ ation.class
+SHA1-Digest: WSqXd53goYzJaUyRsBlrOJxiu7U=
+
+Name: org/eclipse/ocl/pivot/internal/scoping/EnvironmentView$MyList.cl
+ ass
+SHA1-Digest: IU4fkpSdc82PXrjhLxXTViburKs=
+
+Name: org/eclipse/ocl/pivot/internal/utilities/EcoreTechnology.class
+SHA1-Digest: lBLLK00moKMSGSaL7Dtmrizmw4Y=
+
+Name: org/eclipse/ocl/pivot/utilities/XMIUtil$LinearPrefixedIdCreator.
+ class
+SHA1-Digest: BM6yxnLccBoZ2Vu1AOI8RnQKJcc=
+
+Name: org/eclipse/ocl/pivot/internal/resource/EnvironmentFactoryAdapte
+ r.class
+SHA1-Digest: EYl+jUF+O3PPmxysIX0jS/D3MEE=
+
+Name: org/eclipse/ocl/pivot/internal/DynamicBehaviorImpl.class
+SHA1-Digest: OqaYapMuFMPtN22/VkGkuX5uAHY=
+
+Name: org/eclipse/ocl/pivot/library/string/StringSubstringOperation.cl
+ ass
+SHA1-Digest: c4cPwA7ZMJYvWwF5JqY8qlOaubM=
+
+Name: org/eclipse/ocl/pivot/labels/Label.class
+SHA1-Digest: 1kjKsCnzsiBLJlX+QfrI7+p1DUo=
+
+Name: org/eclipse/ocl/pivot/library/oclany/OclComparableComparisonOper
+ ation.class
+SHA1-Digest: BsPcEIwUSrjTzLSzkO+x1giv+TA=
+
+Name: org/eclipse/ocl/pivot/library/collection/CollectionSelectByKindO
+ peration.class
+SHA1-Digest: 5lFzaX+b6FJLcnMI0WsJs1tmESs=
+
+Name: org/eclipse/ocl/pivot/internal/resource/ASSaver.class
+SHA1-Digest: JyXzxrD1uYO+P5wIjoP+YhINH3g=
+
+Name: org/eclipse/ocl/pivot/library/map/MapExcludingAllOperation.class
+SHA1-Digest: ZMLhRJKS8W4phulSSmXKbf2fmQc=
+
+Name: org/eclipse/ocl/pivot/internal/PivotPackageImpl.class
+SHA1-Digest: FBytHIOgh8456LTYdhbWisvCimk=
+
+Name: org/eclipse/ocl/pivot/internal/utilities/IllegalMetamodelExcepti
+ on.class
+SHA1-Digest: GbKAXlny/c7AVUeSgUaqEW6Tm+4=
+
+Name: org/eclipse/ocl/pivot/library/string/StringEqualsIgnoreCaseOpera
+ tion.class
+SHA1-Digest: 7rZcG/TgwkmXKaRkfRM6qQ7UHlw=
+
+Name: org/eclipse/ocl/pivot/PivotTables$Types.class
+SHA1-Digest: EaYX2cVsrJuYxixoOe/x6ues9n0=
+
+Name: org/eclipse/ocl/pivot/internal/scoping/Attribution.class
+SHA1-Digest: 5a8+4/TLtaQP4oLk9kejy0QOQrE=
+
+Name: org/eclipse/ocl/pivot/internal/resource/StandaloneProjectMap$Loa
+ dGeneratedPackageStrategy.class
+SHA1-Digest: 1sH5kCCDvsrU3PuZnUxDjxw/oV0=
+
+Name: org/eclipse/ocl/pivot/library/logical/BooleanNotOperation2.class
+SHA1-Digest: 8BATCacBBRhAWsqkdRuJFdb9CoA=
+
+Name: org/eclipse/ocl/pivot/internal/ids/WeakHashMapOfListOfWeakRefere
+ nce4$MatchableId.class
+SHA1-Digest: zWKz/ehtM9u7vZxrpI4AEwQiyAg=
+
+Name: org/eclipse/ocl/pivot/options/ProblemHandler$Phase.class
+SHA1-Digest: LVZCubszcN/sHtZ5O/Xz4oM2mDc=
+
+Name: org/eclipse/ocl/pivot/internal/TypedElementImpl.class
+SHA1-Digest: MVQJJfuihPUMCsy8ntThKqi7aEw=
+
+Name: org/eclipse/ocl/pivot/internal/ecore/as2es/AS2EcoreDeclarationVi
+ sitor$NonDuplicatePropertiesFilter.class
+SHA1-Digest: ANgWSU0RDmq5HLP/3CBwFPIxAoM=
+
+Name: org/eclipse/ocl/pivot/library/collection/CollectionAsSequenceOpe
+ ration.class
+SHA1-Digest: ovbJLxiu/r+KvYuFB39h9uJBhGk=
+
+Name: org/eclipse/ocl/pivot/library/AbstractIteration$MutableObject.cl
+ ass
+SHA1-Digest: H2wckkaJi3R+EVmavuE/27LO71E=
+
+Name: org/eclipse/ocl/pivot/internal/utilities/OCLInput.class
+SHA1-Digest: 0D+LYDOxjWnOeeD85+Z/mR6yK1g=
+
+Name: org/eclipse/ocl/pivot/library/numeric/IntegerToUnlimitedNaturalO
+ peration.class
+SHA1-Digest: Vk6d+Gb8TKsKrpeAesg7nbIHEjA=
+
+Name: org/eclipse/ocl/pivot/internal/delegate/SettingBehavior.class
+SHA1-Digest: t0om3g/noQ8u7vQdd6aPRI6tcUs=
+
+Name: model/Values.ecore
+SHA1-Digest: tMWZ6xWYDpqb0nGGSEP1rQqVccY=
+
+Name: org/eclipse/ocl/pivot/internal/IteratorExpImpl.class
+SHA1-Digest: ntR4hjJiVh6mB6oZnygGAoU3hJY=
+
+Name: org/eclipse/ocl/pivot/IntegerLiteralExp.class
+SHA1-Digest: 36d+qHyS6EVNZFko5onyUjXYhec=
+
+Name: org/eclipse/ocl/pivot/ids/IdManager$6.class
+SHA1-Digest: nlJRYajkXeZ9BArtYTf4jQS7Z6U=
+
+Name: org/eclipse/ocl/pivot/internal/library/StereotypeProperty.class
+SHA1-Digest: fPidKVKdh8qCqsRVWQcRdGjDPrs=
+
+Name: org/eclipse/ocl/pivot/ids/IdHash.class
+SHA1-Digest: 1kTzQEbV/guFb/7guaK+XbzG6n8=
+
+Name: org/eclipse/ocl/pivot/internal/elements/AbstractExecutorParamete
+ r.class
+SHA1-Digest: MV1yH4UwO6QY3GVVawkA2qyu68Y=
+
+Name: org/eclipse/ocl/pivot/utilities/TypeUtil.class
+SHA1-Digest: zFbNRfqVz0ckpIPF/0zjsiVXMtw=
+
+Name: org/eclipse/ocl/pivot/LetExp.class
+SHA1-Digest: kL/xK//fG3SfqC9TvaWQafcz6z4=
+
+Name: org/eclipse/ocl/pivot/internal/manager/MetamodelManagerInternal$
+ MetamodelManagerInternalExtension2.class
+SHA1-Digest: KFR7iZdmowKsnCcBqZE/CKo5q7Q=
+
+Name: org/eclipse/ocl/pivot/TemplateParameters.class
+SHA1-Digest: 9YqKxoCWdJZi+EQzQHB9Srcta8o=
+
+Name: org/eclipse/ocl/pivot/library/map/MapIncludesOperation.class
+SHA1-Digest: XmJqa/pGGlmunYqITCnLGrTaU1E=
+
+Name: org/eclipse/ocl/pivot/util/PivotPlugin.class
+SHA1-Digest: /YP6GtsTNDchAipDOyVUtu2awQE=
+
+Name: org/eclipse/ocl/pivot/internal/complete/RootCompletePackages.cla
+ ss
+SHA1-Digest: NspSWtRM3q4fRgXaE1XOKSW57fA=
+
+Name: org/eclipse/ocl/pivot/internal/resource/StandaloneProjectMap$Mul
+ tiplePackageResourceLoadStatus.class
+SHA1-Digest: d9JxpalZ4mKEiLsPb5YuAY8AHcs=
+
+Name: org/eclipse/ocl/pivot/EnumLiteralExp.class
+SHA1-Digest: 7vBSnKL36kG8NE4ji+RmAa3G/+I=
+
+Name: org/eclipse/ocl/pivot/internal/executor/ExecutorTuplePart.class
+SHA1-Digest: iV9VWSMIOyCeEAmONA0CFwF79Dw=
+
+Name: annotations/org/eclipse/emf/ecore/EFactory.eea
+SHA1-Digest: 8BFE9dq9HP9m/MNW5bh80Swz5Xs=
+
+Name: org/eclipse/ocl/pivot/values/OrderedSetValue$Accumulator.class
+SHA1-Digest: StTwBNsiqRc7aezTxMdMTh+FD64=
+
+Name: org/eclipse/ocl/pivot/utilities/TracingAdapter.class
+SHA1-Digest: wbjruKaI+Xt9HVMAxexxqWWst9g=
+
+Name: org/eclipse/ocl/pivot/library/collection/OrderedCollectionRevers
+ eOperation.class
+SHA1-Digest: N10N0HCUK5AUo0J7v+/Jy3oZ6Ss=
+
+Name: org/eclipse/ocl/pivot/MessageType.class
+SHA1-Digest: i/AQsMphnZHkresqXUyIivnsZQo=
+
+Name: org/eclipse/ocl/pivot/library/string/StringCompareToOperation.cl
+ ass
+SHA1-Digest: +1QqDX3rjjao+aMzeYLczwXAsPI=
+
+Name: org/eclipse/ocl/pivot/MessageExp.class
+SHA1-Digest: 3YS/xEGBcCvlprwNeKLvDJaSrBk=
+
+Name: org/eclipse/ocl/pivot/internal/ids/WeakHashMapOfListOfWeakRefere
+ nce2.class
+SHA1-Digest: foLpIaiJ8MaJyEi0+0jqf/7n5JQ=
+
+Name: org/eclipse/ocl/pivot/internal/library/executor/ExecutorFragment
+ .class
+SHA1-Digest: LUyKKVJ4oQ36wTIg8r4H1+ZCI08=
+
+Name: org/eclipse/ocl/pivot/Model.class
+SHA1-Digest: 7NVyPxnpzOJjo+mtv/ToVKl3x1Y=
+
+Name: org/eclipse/ocl/pivot/values/UnlimitedNaturalValue.class
+SHA1-Digest: doX+4jLi8aaZJPvCduTEAYe81Uc=
+
+Name: annotations/java/util/WeakHashMap.eea
+SHA1-Digest: xcNN0Vu4wjgailF1hC7UmUj92KA=
+
+Name: org/eclipse/ocl/pivot/NavigationCallExp.class
+SHA1-Digest: XyR0oruvm1IrQsUUBtyqeSnUqUY=
+
+Name: org/eclipse/ocl/pivot/internal/resource/StandaloneProjectMap$Map
+ ToFirstConflictHandlerWithLog.class
+SHA1-Digest: Ogx0TY0nVAt/ZUTsOD5wocaxXk8=
+
+Name: org/eclipse/ocl/pivot/internal/CompleteModelImpl.class
+SHA1-Digest: X/IYrA+Z/huOhtUKg/Pmw1QLEaA=
+
+Name: org/eclipse/ocl/pivot/internal/SequenceTypeImpl.class
+SHA1-Digest: jROyA0ELN3c1fn/ffgzhjxYKme4=
+
+Name: org/eclipse/ocl/pivot/library/collection/CollectionExcludingAllO
+ peration.class
+SHA1-Digest: I66nQyOFna9kVDhRPGzTTGAU66c=
+
+Name: org/eclipse/ocl/pivot/CompleteModel.class
+SHA1-Digest: XqzV0r3kqcYJRfkEwStjpoXFnCE=
+
+Name: org/eclipse/ocl/pivot/internal/labels/DynamicEObjectImplLabelGen
+ erator.class
+SHA1-Digest: +37jmqg7Y42vUA5JzXkeMYlUeLw=
+
+Name: org/eclipse/ocl/pivot/internal/scoping/EnvironmentView$ImplicitD
+ isambiguator.class
+SHA1-Digest: TaHnav2GBCNrFXoCE5rKnmt1Eks=
+
+Name: org/eclipse/ocl/pivot/evaluation/EvaluationEnvironment.class
+SHA1-Digest: ImeHBVCQUjFlx9KlNCpPICFXRxA=
+
+Name: org/eclipse/ocl/pivot/internal/delegate/OCLValidationDelegate$Ch
+ eckingConstraintEvaluator.class
+SHA1-Digest: oRM7FxVokUuTWWCtM1cmB7Oj9is=
+
+Name: org/eclipse/ocl/pivot/PrimitiveCompletePackage.class
+SHA1-Digest: VwVS/yxELsJ/h1NsUP43zziZM7U=
+
+Name: org/eclipse/ocl/pivot/internal/library/executor/ReflectivePackag
+ e.class
+SHA1-Digest: IeYcUhm5Y3VZauNU3EdclKhOb38=
+
+Name: org/eclipse/ocl/pivot/internal/VertexImpl.class
+SHA1-Digest: ejN031hSJQE1mQ8jo0orwrDNQsg=
+
+Name: org/eclipse/ocl/pivot/internal/library/ecore/EcoreReflectiveEnum
+ eration.class
+SHA1-Digest: kX5LlZu54IrRvw3jiPit+RZxo90=
+
+Name: org/eclipse/ocl/pivot/internal/resource/StandaloneProjectMap$Del
+ egatedSinglePackageResource.class
+SHA1-Digest: okSKNA2QeEezGCNc/zE/xKL9gnc=
+
+Name: org/eclipse/ocl/pivot/internal/SignalImpl.class
+SHA1-Digest: d5jRQcA/Y8IODR/gKnMUq+NIcz0=
+
+Name: org/eclipse/ocl/pivot/internal/ids/TuplePartIdImpl.class
+SHA1-Digest: yUr1282STCzHaWR7weHmx2eZz8g=
+
+Name: org/eclipse/ocl/pivot/internal/lookup/impl/LookupEnvironmentImpl
+ .class
+SHA1-Digest: aXi55myAfvRGjQDL49D8tEwmiN0=
+
+Name: org/eclipse/ocl/pivot/internal/manager/TemplateSpecialisation.cl
+ ass
+SHA1-Digest: UifphhDN4RRYc6+hIFZkkqLRNSE=
+
+Name: org/eclipse/ocl/pivot/internal/prettyprint/PrettyPrintVisitor.cl
+ ass
+SHA1-Digest: ToSUa0SfhEmQNDhkksuC1XWo7NU=
+
+Name: org/eclipse/ocl/pivot/internal/resource/ASResourceFactoryRegistr
+ y$ContributionFunction.class
+SHA1-Digest: CuSoQifsnu+sqDZnxVP70OPr0nw=
+
+Name: org/eclipse/ocl/pivot/StateMachine.class
+SHA1-Digest: e18GYQW7CTQWkWTCxRYe9VALOw0=
+
+Name: org/eclipse/ocl/pivot/utilities/XMIUtil$ShortPrefixedIdCreator.c
+ lass
+SHA1-Digest: JU8Ub7qGpH2Xnnk2PmGHZKoWeYo=
+
+Name: org/eclipse/ocl/pivot/internal/PropertyCallExpImpl.class
+SHA1-Digest: 7VP78+Hd5WNTdA+Sr+yCLQVfMsg=
+
+Name: org/eclipse/ocl/pivot/internal/resource/StandaloneProjectMap$Loa
+ dBothStrategy.class
+SHA1-Digest: OgGkPbk1NtKAP4aR+YEmOeS3de0=
+
+Name: org/eclipse/ocl/pivot/internal/complete/PartialClasses$4.class
+SHA1-Digest: JfX3Tb3ceeghiFdxnaQEt5BIb+w=
+
+Name: org/eclipse/ocl/pivot/internal/library/CompositionProperty.class
+SHA1-Digest: CkxrY990warlUwyQ9AOwrDOMm7w=
+
+Name: org/eclipse/ocl/pivot/internal/library/UnboxedOppositeNavigation
+ Property.class
+SHA1-Digest: 8g0XMdQygy7YycQPWEtBG9JVNtk=
+
+Name: org/eclipse/ocl/pivot/oclstdlib/validation/OclAnyValidator.class
+SHA1-Digest: /X5sVFK7+PRK/ThEVqLvWExx/IE=
+
+Name: org/eclipse/ocl/pivot/internal/values/CollectionTypeParametersIm
+ pl.class
+SHA1-Digest: BAOwcmuOnjmAvGqryRxohH7ZYTk=
+
+Name: org/eclipse/ocl/pivot/internal/utilities/EnvironmentFactoryInter
+ nal.class
+SHA1-Digest: DBX2MHsYCMPcvlO+BTzrpAfvO1s=
+
+Name: org/eclipse/ocl/pivot/internal/VariableImpl.class
+SHA1-Digest: as08UWNzgM7ZTPrrBKMm31K3fow=
+
+Name: org/eclipse/ocl/pivot/internal/lookup/LookupTables$Operations.cl
+ ass
+SHA1-Digest: fZ0OcetDCRlXKXjiceWH+4nuemA=
+
+Name: org/eclipse/ocl/pivot/messages/StatusCodes$Severity.class
+SHA1-Digest: 4xacKw8sf21GwIWV/R4p7flkuBY=
+
+Name: org/eclipse/ocl/pivot/internal/manager/FlowAnalysis$DeducerFromT
+ rue.class
+SHA1-Digest: xKS7jORZOJdR0ieLmSX/fPRwW08=
+
+Name: org/eclipse/ocl/pivot/model/OCLmetamodel$LibraryContents.class
+SHA1-Digest: IMqj40DZDzK7DrLo33/3jlAqy8w=
+
+Name: org/eclipse/ocl/pivot/internal/manager/Orphanage.class
+SHA1-Digest: NtHCYecC4NqZyXb8B79jkwtrMdw=
+
+Name: org/eclipse/ocl/pivot/internal/utilities/AbstractContents.class
+SHA1-Digest: tuuYF+Gyk8SmHjZ31n/NxH0tGkM=
+
+Name: org/eclipse/ocl/pivot/internal/CompletePackageImpl$1.class
+SHA1-Digest: osaHN6P8BlBp7SeYIqBdsNhu984=
+
+Name: org/eclipse/ocl/pivot/internal/NumericLiteralExpImpl.class
+SHA1-Digest: j/baz/oLcOZAut0isYfyCFDsqfU=
+
+Name: org/eclipse/ocl/pivot/internal/complete/StandardLibraryInternal.
+ class
+SHA1-Digest: 15ZuBb3R4jtwt6ya3HM1SZRpT4Y=
+
+Name: org/eclipse/ocl/pivot/internal/FeatureCallExpImpl.class
+SHA1-Digest: NDuYooQSDeW6Ev3QupjWKK+iZCM=
+
+Name: org/eclipse/ocl/pivot/Namespace.class
+SHA1-Digest: oZKO1ClVKZQ8wJxGlWWlQvVIxU4=
+
+Name: org/eclipse/ocl/pivot/ids/ClassId.class
+SHA1-Digest: PdzUhducSoLX7YcnwZEK6i28ZQI=
+
+Name: org/eclipse/ocl/pivot/internal/utilities/AS2XMIid$UnstableXMIidD
+ iagnostics.class
+SHA1-Digest: H/rlqNi2OjZx83hXUthXpu/slFQ=
+
+Name: org/eclipse/ocl/pivot/Iteration.class
+SHA1-Digest: UkNYXBIHSybRRYoY6oLHNmoy9OQ=
+
+Name: org/eclipse/ocl/pivot/library/logical/BooleanImpliesOperation.cl
+ ass
+SHA1-Digest: FbAJIypzDQu++2+rUknBGJV5sxM=
+
+Name: org/eclipse/ocl/pivot/values/ValuesPackage.class
+SHA1-Digest: QXr90enSFc94+Q6krNe9txB2aZ4=
+
+Name: org/eclipse/ocl/pivot/internal/PropertyImpl.class
+SHA1-Digest: sGOAggdL8kn++JTy7i6xywMw7M0=
+
+Name: annotations/java/util/Collection.eea
+SHA1-Digest: NaNlLyJp0vma7rYQirJJUC3xdzQ=
+
+Name: org/eclipse/ocl/pivot/Profile.class
+SHA1-Digest: jbzslI+sUQRX1gv86+7NRTgikwM=
+
+Name: org/eclipse/ocl/pivot/internal/complete/CompleteClasses.class
+SHA1-Digest: mYHsEKyRE3ab2WclnQRoIkS2M1A=
+
+Name: org/eclipse/ocl/pivot/internal/library/StandardLibraryContributi
+ on$Descriptor.class
+SHA1-Digest: EIIf//Xe4UOb1EPXcfC5WDWOBNk=
+
+Name: org/eclipse/ocl/pivot/library/numeric/NumericAbsOperation.class
+SHA1-Digest: 2VK9JvD20P10FYLoRiUbawf1uX8=
+
+Name: org/eclipse/ocl/pivot/utilities/Customizable.class
+SHA1-Digest: Qoalh7Y0i5TILkSuKxg60BmXlxw=
+
+Name: annotations/java/lang/String.eea
+SHA1-Digest: J2uBwukDeyfVCx0407yOhQQMmP0=
+
+Name: org/eclipse/ocl/pivot/internal/OrphanCompletePackageImpl$OrphanC
+ ompleteClassImpl.class
+SHA1-Digest: pfW+Xi15c8mk/B9Hb94Gb5GzaW4=
+
+Name: org/eclipse/ocl/pivot/AssociationKind.class
+SHA1-Digest: e5zbZvEvk9H5gHfg0Y/k4OKEgZg=
+
+Name: org/eclipse/ocl/pivot/internal/library/executor/AbstractDispatch
+ Operation.class
+SHA1-Digest: plw8bFXpu/PdQlXWLHfL5ksPFcE=
+
+Name: org/eclipse/ocl/pivot/ids/CollectionTypeId.class
+SHA1-Digest: tdcPlvF2sXB08+Vuu0sLzwwP2+s=
+
+Name: org/eclipse/ocl/pivot/library/oclany/OclAnyOclTypesOperation.cla
+ ss
+SHA1-Digest: GPT/JFMFiXoyl7KuahAz0QPgjPU=
+
+Name: org/eclipse/ocl/pivot/internal/values/CollectionValueImpl$ArrayI
+ terator.class
+SHA1-Digest: w80l8RlLghBiRxtKd/GuvMSVat4=
+
+Name: org/eclipse/ocl/pivot/internal/CallOperationActionImpl.class
+SHA1-Digest: ai4LW/9/b9amFuTE6HHURTCAIKQ=
+
+Name: org/eclipse/ocl/pivot/internal/resource/StandaloneProjectMap$Loa
+ dFirstStrategy.class
+SHA1-Digest: /J904NgByLkicjko/GRZVT9kupc=
+
+Name: org/eclipse/ocl/pivot/internal/library/executor/ExecutorOperatio
+ n.class
+SHA1-Digest: I68Jdp7WgLaee69kSZe/vq1Rll4=
+
+Name: org/eclipse/ocl/pivot/library/iterator/CollectIteration.class
+SHA1-Digest: qvSFz07lvufMIf2rJr25F3o/iIM=
+
+Name: org/eclipse/ocl/pivot/internal/CollectionLiteralPartImpl.class
+SHA1-Digest: ToJIo0tnbtzN3P0+Vdb7ccN5vSk=
+
+Name: org/eclipse/ocl/pivot/internal/attributes/OperationCallExpAttrib
+ ution.class
+SHA1-Digest: hx3drxD/+PCzYP+eXttIisraa0Y=
+
+Name: org/eclipse/ocl/pivot/internal/ids/SpecializedCollectionTypeIdIm
+ pl.class
+SHA1-Digest: kM33r8sLqsjWxogjv4jp5en33+s=
+
+Name: org/eclipse/ocl/pivot/library/oclany/OclComparableLessThanOperat
+ ion.class
+SHA1-Digest: wdTvLx6VRgeejJ9oCXXsK9aC+TE=
+
+Name: org/eclipse/ocl/pivot/internal/ecore/as2es/AS2Ecore.class
+SHA1-Digest: afrP8kP+PNorBxKBEDxpkyCSzpo=
+
+Name: org/eclipse/ocl/pivot/values/UniqueCollectionValue.class
+SHA1-Digest: 7n62JwQsdR+12qGhAZTDhapnDJM=
+
+Name: org/eclipse/ocl/pivot/internal/TemplateableElementImpl.class
+SHA1-Digest: +wPMy61Pe5SVt/F8V6/ImegwK1o=
+
+Name: org/eclipse/ocl/pivot/internal/manager/PivotMetamodelManager.cla
+ ss
+SHA1-Digest: Qn9uMv6sHmvu+fr0xLtGknMJ1fY=
+
+Name: org/eclipse/ocl/pivot/utilities/FeatureFilter.class
+SHA1-Digest: PDr2Bn1xCevpVkPMohpInsNdYow=
+
+Name: org/eclipse/ocl/pivot/labels/LabelGeneratorRegistry$Global.class
+SHA1-Digest: oGHA84oQNQQV32SV5g+KsbOzHFg=
+
+Name: org/eclipse/ocl/pivot/library/enumeration/EnumerationOwnedLitera
+ lProperty.class
+SHA1-Digest: G9I+2al05iRMLLCELQCj9z21w0E=
+
+Name: org/eclipse/ocl/pivot/internal/complete/PartialModels$Model2Root
+ OwnedPackages.class
+SHA1-Digest: Kqr1Ghi9WO8QR9+e+LXaon9mL3Q=
+
+Name: org/eclipse/ocl/pivot/internal/complete/PartialPackages.class
+SHA1-Digest: pynoZGKwCLTCRX41B6Jqrn50YXo=
+
+Name: org/eclipse/ocl/pivot/internal/ids/GeneralizedTupleTypeIdImpl.cl
+ ass
+SHA1-Digest: hpG9pLNys9TCtLeDliZ85sD8H5U=
+
+Name: org/eclipse/ocl/pivot/IteratorExp.class
+SHA1-Digest: yG97G8bsWkvW1ntuneyKI4kMHTM=
+
+Name: annotations/java/lang/Iterable.eea
+SHA1-Digest: xBArQUFXxYWq3cFQc8iXXw2tU9o=
+
+Name: org/eclipse/ocl/pivot/internal/delegate/OCLDelegateDomain$PivotO
+ nlyVirtualDelegateMapping.class
+SHA1-Digest: 6UIFc0tUSTiCoa1fW8AmxiFDlVE=
+
+Name: org/eclipse/ocl/pivot/internal/ids/BindingsIdImpl.class
+SHA1-Digest: qjpJ0awk0MZgR4bXywj/5eYtDnY=
+
+Name: org/eclipse/ocl/pivot/values/TemplateParameterSubstitutions.clas
+ s
+SHA1-Digest: 26dTpN/pgW7LY0gTg/mM2oX3LIc=
+
+Name: org/eclipse/ocl/pivot/utilities/NameUtil$ToStringComparator.clas
+ s
+SHA1-Digest: RmhNgfMP1vvfu3LZSybJipxtju4=
+
+Name: org/eclipse/ocl/pivot/internal/values/JavaObjectValueImpl.class
+SHA1-Digest: mLke150gdFgJi/fO6iM7VN++pa4=
+
+Name: org/eclipse/ocl/pivot/values/InvalidValueException.class
+SHA1-Digest: k2PK9eFEpBBEwVzJpIG/hubYOGE=
+
+Name: org/eclipse/ocl/pivot/internal/library/UnboxedExplicitNavigation
+ Property.class
+SHA1-Digest: i7YdabnnqKu4vTEuhn+uDnkvsm0=
+
+Name: org/eclipse/ocl/pivot/internal/values/ObjectValueImpl.class
+SHA1-Digest: FYl83l1/4sG1CZHIBbvyxQ5nLyg=
+
+Name: org/eclipse/ocl/pivot/StateExp.class
+SHA1-Digest: 0ZJBtewNpmffa/ps8U+nW62imtQ=
+
+Name: org/eclipse/ocl/pivot/internal/utilities/PivotDiagnostician$Diag
+ nostician_2_8.class
+SHA1-Digest: cH20O3o/2heBOsJMJv1Hdjstlyg=
+
+Name: org/eclipse/ocl/pivot/internal/values/SparseOrderedSetValueImpl.
+ class
+SHA1-Digest: +vJUCi8ylJNiSHsIdCpnVHLwTy0=
+
+Name: org/eclipse/ocl/pivot/library/LibraryUntypedBinaryOperation$Libr
+ aryUntypedBinaryOperationExtension.class
+SHA1-Digest: H8GYFSJNZAKVZh1nzHqbuLdTDNM=
+
+Name: org/eclipse/ocl/pivot/library/AbstractPolyOperation.class
+SHA1-Digest: OKe0b60dmDpJZH3HMt97hyZjw1g=
+
+Name: org/eclipse/ocl/pivot/ids/PrimitiveTypeId.class
+SHA1-Digest: kywqGjHTt0dKZ4KEbTM2rle73Bo=
+
+Name: org/eclipse/ocl/pivot/internal/library/executor/AbstractIdResolv
+ er.class
+SHA1-Digest: KpohdaHAQTrOGVRBtaIa6aQh8hg=
+
+Name: org/eclipse/ocl/pivot/internal/complete/ModelListeners.class
+SHA1-Digest: yFR9iYJ3Gk+PYs4u4MV1eEo4QpA=
+
+Name: org/eclipse/ocl/pivot/internal/resource/StandaloneProjectMap$Pro
+ jectDescriptor.class
+SHA1-Digest: kfkNE5ORQiSZX833mZpDmR7BwiI=
+
+Name: org/eclipse/ocl/pivot/SequenceType.class
+SHA1-Digest: YwZhopf6ULomFGbYuHrd6nRr5cU=
+
+Name: org/eclipse/ocl/pivot/internal/scoping/ScopeFilter.class
+SHA1-Digest: dKdBKjQGWdFbxMTInEhjhnScjtg=
+
+Name: org/eclipse/ocl/pivot/ids/PackageId.class
+SHA1-Digest: RVvDzIluKh2ewKhIEA/84h2yZgQ=
+
+Name: annotations/java/util/ArrayList.eea
+SHA1-Digest: kkMMDIXIhNnB64G0zZ9tyTOggI8=
+
+Name: org/eclipse/ocl/pivot/internal/library/BaseProperty.class
+SHA1-Digest: AYMuR57Has58FidSGInpsgKvxAs=
+
+Name: org/eclipse/ocl/pivot/util/PivotPlugin$Implementation.class
+SHA1-Digest: qqAAJoezJ3Coj926yMp9LlWtG4o=
+
+Name: org/eclipse/ocl/pivot/evaluation/EvaluationHaltedException.class
+SHA1-Digest: dT8lBUIs5vM4Zzde2H+4XWoaRtk=
+
+Name: org/eclipse/ocl/pivot/internal/ids/TemplateParameterIdImpl.class
+SHA1-Digest: ZN24vVlxvmZ1E5XPRQtkVxxyWr8=
+
+Name: org/eclipse/ocl/pivot/internal/library/JavaCompareToOperation.cl
+ ass
+SHA1-Digest: OEDap824uKUIrj/awNV0A6KXszI=
+
+Name: org/eclipse/ocl/pivot/library/string/StringCharactersOperation.c
+ lass
+SHA1-Digest: pgRvYFsAzdNGj6fqFzAA5iaND/o=
+
+Name: org/eclipse/ocl/pivot/internal/complete/CompleteEnvironmentInter
+ nal.class
+SHA1-Digest: xaH3wKAUOJxV2jYCOhugOZxkh5c=
+
+Name: org/eclipse/ocl/pivot/library/map/MapExcludesAllOperation.class
+SHA1-Digest: GFtZvZ2jAeCZgGezp2f4Zd5QMz8=
+
+Name: org/eclipse/ocl/pivot/internal/delegate/DelegateEClassifierAdapt
+ er.class
+SHA1-Digest: /YABOK1Dsd3rDKJ4u0e9kWY+B3E=
+
+Name: org/eclipse/ocl/pivot/library/oclany/OclAnyOclIsKindOfOperation.
+ class
+SHA1-Digest: AZCq9Sy78BC1q7KjQlCGTASLRSU=
+
+Name: org/eclipse/ocl/pivot/ids/IdManager$10.class
+SHA1-Digest: ITrrZTWQ2o5HJ/Ms62XSMSmfLoo=
+
+Name: annotations/java/util/Set.eea
+SHA1-Digest: XfVw0uAFtYDn4v8mw8SPE1t5C/Y=
+
+Name: org/eclipse/ocl/pivot/internal/delegate/DelegateDomain$Factory$R
+ egistry$Impl.class
+SHA1-Digest: eG4yQHneXvqcAix/V6al5BvLp2M=
+
+Name: org/eclipse/ocl/pivot/internal/library/executor/ExecutorLambdaTy
+ pe.class
+SHA1-Digest: IK50nMjlBpJyl7Vo195km6fkTXw=
+
+Name: org/eclipse/ocl/pivot/library/LibrarySimpleUnaryOperation$Librar
+ ySimpleUnaryOperationExtension.class
+SHA1-Digest: ZjoVH/ECUY8jp3p1ggc5JS++/KE=
+
+Name: org/eclipse/ocl/pivot/library/LibraryUntypedTernaryOperation$Lib
+ raryUntypedTernaryOperationExtension.class
+SHA1-Digest: TqDdVPWDuNY9HgaZAPef30iuLYM=
+
+Name: org/eclipse/ocl/pivot/internal/RealLiteralExpImpl.class
+SHA1-Digest: kr4JxEFNIn3EhySZAoYTiKlsMDg=
+
+Name: org/eclipse/ocl/pivot/internal/ids/AbstractTypeId.class
+SHA1-Digest: EnCunVRsvrmrfe+rToZOUBwoBjY=
+
+Name: org/eclipse/ocl/pivot/values/OrderedSet.class
+SHA1-Digest: FjjgrcteUQ9zEOeCv+EgNs1kwJk=
+
+Name: org/eclipse/ocl/pivot/library/oclany/OclComparableGreaterThanOpe
+ ration.class
+SHA1-Digest: oEn2X3Cqwr4ARc+ObXuKWp+EKdc=
+
+Name: org/eclipse/ocl/pivot/library/string/StringConcatOperation.class
+SHA1-Digest: SLoEKgkA8D3h3m2a1fDGagkRNWc=
+
+Name: org/eclipse/ocl/pivot/utilities/PivotStandaloneSetup.class
+SHA1-Digest: i7V5sdhOylBiaKHd6hwMLAoQP98=
+
+Name: org/eclipse/ocl/pivot/internal/CompleteClassImpl$2.class
+SHA1-Digest: ryFM/NK4T9PB40d1s2qonV7+/yo=
+
+Name: annotations/org/eclipse/emf/ecore/EObject.eea
+SHA1-Digest: iZnnN9+/2tnLhj74TGKn2ZRytkE=
+
+Name: org/eclipse/ocl/pivot/internal/labels/ModelLabelGenerator.class
+SHA1-Digest: Yg/Ybh5IWCQBiyZOqS9SwZ8Ya5A=
+
+Name: org/eclipse/ocl/pivot/values/util/ValuesAdapterFactory.class
+SHA1-Digest: c0Rl8XwgUAto5dOn2VoZtfceehs=
+
+Name: org/eclipse/ocl/pivot/Slot.class
+SHA1-Digest: 3ha5Yu3i1hITOiIE0xZuxuU/75g=
+
+Name: org/eclipse/ocl/pivot/PivotTables$FragmentProperties.class
+SHA1-Digest: yTTISj+YmY51kJl+pcsVVoj7PS8=
+
+Name: org/eclipse/ocl/pivot/options/OCLinEcorePreferenceInitializer.cl
+ ass
+SHA1-Digest: R+f/TVD7xSY7W5PurekBQpuAclY=
+
+Name: org/eclipse/ocl/pivot/internal/values/NullValueImpl.class
+SHA1-Digest: YLoCYd5VbHJtPQUIOqDCQtNmBcU=
+
+Name: org/eclipse/ocl/pivot/library/classifier/ClassifierOclContentsOp
+ eration.class
+SHA1-Digest: T27nDdRUApSN1VlppLow/405Ge8=
+
+Name: annotations/com/google/common/collect/Iterables.eea
+SHA1-Digest: aJ+PvFiWk6zIP3ehXnvsVIIcQ4k=
+
+Name: org/eclipse/ocl/pivot/ids/PropertyId.class
+SHA1-Digest: 0aoQqoYH3c6ViVtAyqegwU4YOkQ=
+
+Name: org/eclipse/ocl/pivot/internal/delegate/AbstractOCLDelegateFacto
+ ry.class
+SHA1-Digest: CbqkW6SDOwscUeRd9ReTTyv2GIE=
+
+Name: org/eclipse/ocl/pivot/values/BagValue.class
+SHA1-Digest: 3CoT4kiK78JMGcr5iICIxxIuVQA=
+
+Name: org/eclipse/ocl/pivot/TupleLiteralExp.class
+SHA1-Digest: 8npDVgzpuAYUsDjQCVhMS31m0tg=
+
+Name: org/eclipse/ocl/pivot/internal/library/StandardLibraryContributi
+ on.class
+SHA1-Digest: IOAv1g4/RjhiKchRciAV5ayRpJM=
+
+Name: org/eclipse/ocl/pivot/internal/NamespaceImpl.class
+SHA1-Digest: 7QQDKBS6Dsdxj5sEiS7YrAwUzdI=
+
+Name: org/eclipse/ocl/pivot/FeatureCallExp.class
+SHA1-Digest: COdltNq8GppN8RKjubQO1R6kBTc=
+
+Name: org/eclipse/ocl/pivot/library/LibraryProperty.class
+SHA1-Digest: aBOGnsKKN3ecwVvUp4mpuTkM7Qs=
+
+Name: org/eclipse/ocl/pivot/internal/labels/ExpressionInOCLLabelGenera
+ tor.class
+SHA1-Digest: fjiDQHWhzpkCs30/Ec2UctzmoFo=
+
+Name: org/eclipse/ocl/pivot/values/OrderedSetValue.class
+SHA1-Digest: 1MUHi7Mec8OjK4HGwceYPQWoqtQ=
+
+Name: org/eclipse/ocl/pivot/internal/resource/ASResourceImpl.class
+SHA1-Digest: Ic4dPYMkNMC+4UffxUZaQZM4AWs=
+
+Name: org/eclipse/ocl/pivot/library/numeric/NumericCompareToOperation.
+ class
+SHA1-Digest: X1jSGDiATY1VncuN/CTvCN2CgwE=
+
+Name: org/eclipse/ocl/pivot/util/DerivedConstants.class
+SHA1-Digest: mqdR4Ktwd3+rRWAzaq4rKBcAOOU=
+
+Name: org/eclipse/ocl/pivot/resource/ProjectManager$IResourceLoadStrat
+ egy.class
+SHA1-Digest: NswsbfS5SV93nMfXGUuas3573lA=
+
+Name: org/eclipse/ocl/pivot/TupleType.class
+SHA1-Digest: aejQwpqyiN+Uw0uJ4lHoGOm+JmQ=
+
+Name: org/eclipse/ocl/pivot/internal/library/ecore/EcoreLibraryOpposit
+ eProperty.class
+SHA1-Digest: NeK/QvEETdzbwGpDTSlaiN/yCcI=
+
+Name: org/eclipse/ocl/pivot/internal/library/executor/ExecutorProperty
+ WithImplementation.class
+SHA1-Digest: qGyI9uOLaVHNugOHAoc646fMaeA=
+
+Name: org/eclipse/ocl/pivot/internal/ProfileImpl.class
+SHA1-Digest: FeivTbdoaVYvuHOP7ClC3LrgDrY=
+
+Name: org/eclipse/ocl/pivot/options/OCLinEcoreOptions.class
+SHA1-Digest: BvRuxmix8EoGCmOe9dMsV0Jq4Gg=
+
+Name: org/eclipse/ocl/pivot/TemplateBinding.class
+SHA1-Digest: Y+sB6xOB8qVc8RS4xkHm5XvhtCY=
+
+Name: org/eclipse/ocl/pivot/internal/delegate/DelegateDomain$Factory$D
+ escriptor.class
+SHA1-Digest: bmZ5kjuvz7pjxuFcYt2iqZ44WDQ=
+
+Name: org/eclipse/ocl/pivot/internal/ids/EnumerationLiteralIdImpl.clas
+ s
+SHA1-Digest: rAtl68husw12Q0e6/y07SD5vS3o=
+
+Name: org/eclipse/ocl/pivot/model/OCLstdlib$Loader.class
+SHA1-Digest: 3qkbgpkPOhcgY0tp/L+1jjyi9Io=
+
+Name: org/eclipse/ocl/pivot/internal/ids/AbstractPackageIdImpl$2.class
+SHA1-Digest: 1NyVGbw8vCnqW7+IcFxTnNPjV3s=
+
+Name: org/eclipse/ocl/pivot/internal/LetVariableImpl.class
+SHA1-Digest: SeeaZBpXs3Ry+pq3k/eshxPVl9Y=
+
+Name: org/eclipse/ocl/pivot/SendSignalAction.class
+SHA1-Digest: zu5Sz+iARMiQJ1zgA+dRDe1erBY=
+
+Name: annotations/org/eclipse/emf/ecore/resource/Resource.eea
+SHA1-Digest: RZv0Kpd0ygsb2CmXst77vZLP3fs=
+
+Name: org/eclipse/ocl/pivot/utilities/PivotASSaverNormalizeVisitor.cla
+ ss
+SHA1-Digest: OOu/EFbXoL3eXQGL0ICx/vHj9I0=
+
+Name: schema/standard_library.exsd
+SHA1-Digest: er/grahnqQKblNWPeKk3FpAmytQ=
+
+Name: org/eclipse/ocl/pivot/internal/SendSignalActionImpl.class
+SHA1-Digest: gQmSrq/9Nc2QmKecS1K3Jd9LKnE=
+
+Name: org/eclipse/ocl/pivot/internal/library/TuplePartProperty.class
+SHA1-Digest: hsmG8vTRfpBF0hgpkCc9M/YsTw8=
+
+Name: annotations/java/util/Iterator.eea
+SHA1-Digest: W3X62BomUFFhhNpQ8ClUs9TBvZ4=
+
+Name: org/eclipse/ocl/pivot/internal/evaluation/AbstractEvaluationVisi
+ torDecorator.class
+SHA1-Digest: zN3RTioR6kQLCh833FNl/EEcekU=
+
+Name: org/eclipse/ocl/pivot/internal/scoping/AbstractAttribution.class
+SHA1-Digest: bpBhBOJOvPj81FMKxuM1fQrceco=
+
+Name: org/eclipse/ocl/pivot/library/iterator/IsUniqueIteration.class
+SHA1-Digest: 9CleW+hh4O1gm8lMZOEidTiTjpY=
+
+Name: org/eclipse/ocl/pivot/internal/library/ImplementationManager.cla
+ ss
+SHA1-Digest: 5OyuJ5OvPu9GoVcY1eYwtOUto+U=
+
+Name: org/eclipse/ocl/pivot/PivotTables.class
+SHA1-Digest: YUnNWGzE4tws43rm94MsKvtX8ug=
+
+Name: org/eclipse/ocl/pivot/Type.class
+SHA1-Digest: UfK2fM5a9qY7UdVOZ9flZpX7B9Y=
+
+Name: org/eclipse/ocl/pivot/library/collection/CollectionAsBagOperatio
+ n.class
+SHA1-Digest: ovR53B/cj3InvXB66c3CixabNQ0=
+
+Name: org/eclipse/ocl/pivot/IterateExp.class
+SHA1-Digest: eu4bfm4/r331SFYJbPKkhMAZHss=
+
+Name: org/eclipse/ocl/pivot/CompleteInheritance.class
+SHA1-Digest: guUOniCphYBbdMOFuuCDnYx954U=
+
+Name: org/eclipse/ocl/pivot/internal/library/executor/AbstractReflecti
+ veInheritanceType.class
+SHA1-Digest: tuUPtylUH+TPrQrnppPddG/XUHk=
+
+Name: org/eclipse/ocl/pivot/internal/library/executor/ExecutorManager$
+ 2.class
+SHA1-Digest: 0BRo+meh/5fvmR2jg4ui4N2Juhs=
+
+Name: org/eclipse/ocl/pivot/values/ObjectValue.class
+SHA1-Digest: qGvDRaP45wxhs3U97WLzi0pySx4=
+
+Name: org/eclipse/ocl/pivot/internal/resource/StandaloneProjectMap$Abs
+ tractResourceLoadStatus$1DiagnosticWrappedException.class
+SHA1-Digest: 0wY1NHDSaOVmys3UM2R3/u0+njg=
+
+Name: org/eclipse/ocl/pivot/utilities/ClassUtil.class
+SHA1-Digest: k2CI88PfiVDcbaz5Ji5tDy9g9jk=
+
+Name: org/eclipse/ocl/pivot/internal/NamedElementImpl.class
+SHA1-Digest: ohJDYSv2m7BKNQBtizxP2qHG5tQ=
+
+Name: org/eclipse/ocl/pivot/internal/complete/PartialOperations$1.clas
+ s
+SHA1-Digest: no1mkAFrcczHUKWFh/QtfyFoPso=
+
+Name: org/eclipse/ocl/pivot/internal/library/executor/ExecutorDoubleIt
+ erationManager.class
+SHA1-Digest: IXAPNRLNzMx5GJgyRs4qdWvCIiM=
+
+Name: org/eclipse/ocl/pivot/library/map/MapIsEmptyOperation.class
+SHA1-Digest: G7It76e+Qnvn9BFYvtRAF9LSWzM=
+
+Name: org/eclipse/ocl/pivot/internal/utilities/PivotDiagnostician$Weak
+ OCLReference.class
+SHA1-Digest: nTUnhzosA/e5/EyI0uf+szvThlU=
+
+Name: org/eclipse/ocl/pivot/LanguageExpression.class
+SHA1-Digest: pa7yhW5WnHKOlbu8X63+/qzahmw=
+
+Name: org/eclipse/ocl/pivot/TemplateSignature.class
+SHA1-Digest: 0Si1Ik6e7NoJ0P672BYJC56v53o=
+
+Name: org/eclipse/ocl/pivot/CallExp.class
+SHA1-Digest: rCfY1LfGd18UCfkefVxqAm4q+/Q=
+
+Name: org/eclipse/ocl/pivot/internal/ids/PrimitiveTypeIdImpl.class
+SHA1-Digest: m9HZHqbmc6MYkaUJyVtgWQv6NUg=
+
+Name: org/eclipse/ocl/pivot/internal/executor/PivotReflectiveFragment.
+ class
+SHA1-Digest: B3gJ4CbsKYrdnVH//ui0mICbemA=
+
+Name: org/eclipse/ocl/pivot/internal/context/DiagnosticContext.class
+SHA1-Digest: t9PwRbgykLYlLLjwKWV1wzDzE6c=
+
+Name: org/eclipse/ocl/pivot/utilities/StringUtil.class
+SHA1-Digest: RPz6OHQJ2gzumje8iKec2YETPRw=
+
+Name: org/eclipse/ocl/pivot/internal/ids/EnumerationIdImpl.class
+SHA1-Digest: DxZsZDoxw/3mz2WU8FNwX72KTEw=
+
+Name: org/eclipse/ocl/pivot/values/Bag.class
+SHA1-Digest: kBOALBm/vEDFKT6Jg8yaHZ4mMdI=
+
+Name: org/eclipse/ocl/pivot/resource/ProjectManager$IPackageDescriptor
+ .class
+SHA1-Digest: YhVFm7Z3eSkk2Lb/BkDwxil72do=
+
+Name: org/eclipse/ocl/pivot/internal/delegate/OCLDelegateDomain$Factor
+ yFactory.class
+SHA1-Digest: YD6+Q7YLqGZapjTY7qsyDN44sN0=
+
+Name: org/eclipse/ocl/pivot/internal/delegate/ValidationDelegate$Facto
+ ry.class
+SHA1-Digest: SZxlRNs4YWOSjJvnyytTKIAeg20=
+
+Name: org/eclipse/ocl/pivot/library/map/MapAtOperation.class
+SHA1-Digest: 1PdUDHrhcSwQeJC/TVccIouN0TA=
+
+Name: org/eclipse/ocl/pivot/internal/manager/FlowAnalysis$DeducerFromF
+ alse.class
+SHA1-Digest: tRMT2lg61yud8q2O46opFXA7GV4=
+
+Name: org/eclipse/ocl/pivot/internal/elements/AbstractExecutorEnumerat
+ ionLiteral.class
+SHA1-Digest: vPeXLHdOVpYFO/94AvqE9zT8gCs=
+
+Name: org/eclipse/ocl/pivot/internal/library/executor/AbstractEvaluati
+ onOperation.class
+SHA1-Digest: 9qMiU30+59dRMhx0CTP5RNNQ33g=
+
+Name: org/eclipse/ocl/pivot/utilities/XMIUtil$IdFilter.class
+SHA1-Digest: ycHZgdlau2/yoGm92ZIEsSD+DNI=
+
+Name: org/eclipse/ocl/pivot/types/ParameterTypesImpl.class
+SHA1-Digest: vGTy+YALXREON5jJW7Co+mdxZ4U=
+
+Name: org/eclipse/ocl/pivot/library/numeric/NumericMaxOperation.class
+SHA1-Digest: 781pyk3hWieLggIhTGAKtSYBRPM=
+
+Name: org/eclipse/ocl/pivot/library/collection/CollectionExcludesAllOp
+ eration.class
+SHA1-Digest: iUUkmYpojZ2fkCcbiTQqMtA6VGU=
+
+Name: org/eclipse/ocl/pivot/library/LibraryUntypedOperation.class
+SHA1-Digest: O9TaPpOAm0Sl+nDne7RcKqmP5Dc=
+
+Name: org/eclipse/ocl/pivot/StandardLibrary.class
+SHA1-Digest: E1yGOWlyE7Q5dwIjS2804jBD4ck=
+
+Name: org/eclipse/ocl/pivot/internal/library/executor/ExecutableStanda
+ rdLibrary.class
+SHA1-Digest: s9y+T/izbqlf+XKNRtOTc7RshOs=
+
+Name: org/eclipse/ocl/pivot/utilities/PivotTemplateParameterSubstituti
+ onVisitor.class
+SHA1-Digest: QzcKmUk45HdfGphNOiE2Xqr5fHk=
+
+Name: org/eclipse/ocl/pivot/internal/ecore/EObjectOperation.class
+SHA1-Digest: sVq1cSzKLjBnCebvZuQH7+zu8kk=
+
+Name: org/eclipse/ocl/pivot/internal/ClassImpl$3.class
+SHA1-Digest: z0wCjvZrS2dp2XvoAlJtBoeBLik=
+
+Name: org/eclipse/ocl/pivot/library/oclvoid/OclVoidAndOperation.class
+SHA1-Digest: 9k/iPms58i7wv0XugHCW08QavVE=
+
+Name: org/eclipse/ocl/pivot/evaluation/AbstractLogger.class
+SHA1-Digest: UmeTlyC9FungNdgkVOCFFdkUkj4=
+
+Name: org/eclipse/ocl/pivot/internal/context/Base2ASConversion.class
+SHA1-Digest: YDlm7yN4z5zpKNtShKu19ixp2dE=
+
+Name: org/eclipse/ocl/pivot/Package.class
+SHA1-Digest: 09H/H2WHkz9NUkjaWwyBzDqdJWw=
+
+Name: annotations/org/eclipse/swt/widgets/Text.eea
+SHA1-Digest: xy8rnQCuXDF3GTiEKpJm17YnCxQ=
+
+Name: org/eclipse/ocl/pivot/internal/lookup/LookupTables$Fragments.cla
+ ss
+SHA1-Digest: OtcQuetVMgTtr91bOGRR+buV5/Q=
+
+Name: org/eclipse/ocl/pivot/values/Value.class
+SHA1-Digest: yrDYBJ6a75z+haZUT8BGhGKyk74=
+
+Name: org/eclipse/ocl/pivot/utilities/Nameable.class
+SHA1-Digest: nbzejBt5lvLgIMDqGT1ToYsL0vM=
+
+Name: org/eclipse/ocl/pivot/library/collection/CollectionSizeOperation
+ .class
+SHA1-Digest: 0YyPGT5f0kIc8p8esbQcck1n94Q=
+
+Name: org/eclipse/ocl/pivot/internal/ids/PropertyIdImpl.class
+SHA1-Digest: a8qZCNSUtvl6V9qUFMeTKJ8/9bQ=
+
+Name: org/eclipse/ocl/pivot/internal/complete/PartialOperations$6.clas
+ s
+SHA1-Digest: 6fGX/hXj/r8ZNJY4iNbAUEp3Krs=
+
+Name: org/eclipse/ocl/pivot/internal/delegate/OCLDelegateValidator.cla
+ ss
+SHA1-Digest: R/Lpl1Z2TW2GYjkyUq1KvnEEa7E=
+
+Name: org/eclipse/ocl/pivot/utilities/ASSaverNormalizeVisitor.class
+SHA1-Digest: wnoySkU7pGHAjcdoDFIrPD2IGhg=
+
+Name: org/eclipse/ocl/pivot/utilities/OCLHelper.class
+SHA1-Digest: 55wsoS2bT+hklbKEpC8VMnc+2xU=
+
+Name: org/eclipse/ocl/pivot/internal/values/OrderedSetValueImpl.class
+SHA1-Digest: ToSuOJNz3RpEVmjbSX7tY7k2zXk=
+
+Name: org/eclipse/ocl/pivot/library/logical/BooleanImpliesOperation2.c
+ lass
+SHA1-Digest: jEp4G2+m3vxqug0YW0CA5NgdIjQ=
+
+Name: org/eclipse/ocl/pivot/library/LibraryProperty$LibraryPropertyExt
+ ension.class
+SHA1-Digest: EKxmw8cGKpHjUyxSDLO4V3lpvFc=
+
+Name: org/eclipse/ocl/pivot/internal/manager/PivotMetamodelManager$Com
+ pleteElementInvariantsIterable.class
+SHA1-Digest: 3OttyvApQmWuRYjnWqmDHrQaro8=
+
+Name: org/eclipse/ocl/pivot/StringLiteralExp.class
+SHA1-Digest: dQ/nqRoOVXeX11FcW6Pm0NUV1XY=
+
+Name: org/eclipse/ocl/pivot/internal/ids/ParametersIdImpl.class
+SHA1-Digest: zmA1o1fRz8sM+sBr2QHk/d91e6w=
+
+Name: org/eclipse/ocl/pivot/internal/resource/PivotSaveImpl.class
+SHA1-Digest: mNagyh/52ztVxyUY/dlCiAJm5ro=
+
+Name: org/eclipse/ocl/pivot/internal/delegate/ValidationBehavior.class
+SHA1-Digest: OXXi1FaE4eNY3EhYrm8voHG5Zps=
+
+Name: org/eclipse/ocl/pivot/library/collection/CollectionAsSetOperatio
+ n.class
+SHA1-Digest: A9fIJENTkhCu+HtHkHxlNyDSwAQ=
+
+Name: org/eclipse/ocl/pivot/internal/utilities/GlobalEnvironmentFactor
+ y$Listener.class
+SHA1-Digest: Dj4nPXY3jEE68jPqs85FRNqGlWQ=
+
+Name: org/eclipse/ocl/pivot/internal/manager/TupleTypeManager$TuplePar
+ t.class
+SHA1-Digest: jK0+l+doOOlW9ejtPKrkvbSRnG8=
+
+Name: org/eclipse/ocl/pivot/utilities/Adaptable.class
+SHA1-Digest: g/njpu0eYHK+L4tQVquHqxl0uLE=
+
+Name: org/eclipse/ocl/pivot/internal/ecore/es2as/Ecore2ASReferenceSwit
+ ch.class
+SHA1-Digest: r7O2telNnAolkxUEd7BQITKzFHI=
+
+Name: org/eclipse/ocl/pivot/internal/complete/PackageListeners$IPackag
+ eListener.class
+SHA1-Digest: BreuaouAb4iw5yrmhNhUABH4pUs=
+
+Name: org/eclipse/ocl/pivot/internal/EnumerationLiteralImpl.class
+SHA1-Digest: KQVTQryPj6VEm8Gna4kSOvOWNk4=
+
+Name: org/eclipse/ocl/pivot/library/LibrarySimpleOperation.class
+SHA1-Digest: kB0ElzJLbkT2C5QgzNTKRmzFjcA=
+
+Name: org/eclipse/ocl/pivot/library/string/StringReplaceFirstOperation
+ .class
+SHA1-Digest: WjoUdbF1msIzHqCfrB5LAcvQL2s=
+
+Name: org/eclipse/ocl/pivot/internal/EnumerationImpl.class
+SHA1-Digest: Xc9ZWyjiowMXO9udw5/kjBQN+s4=
+
+Name: org/eclipse/ocl/pivot/evaluation/IterationManager.class
+SHA1-Digest: J5fzPBjbt46JLUxoGOhyy0hvB+o=
+
+Name: org/eclipse/ocl/pivot/internal/RegionImpl.class
+SHA1-Digest: GF3CLSgdvUHwyTU57s/YXOfePiA=
+
+Name: org/eclipse/ocl/pivot/TemplateableElement.class
+SHA1-Digest: AWrdbXFeWjzhbiA/DC7ZWAawh+U=
+
+Name: org/eclipse/ocl/pivot/library/iterator/CollectNestedIteration.cl
+ ass
+SHA1-Digest: JvXKqPECtRen9NXiPio7NC4u9hM=
+
+Name: org/eclipse/ocl/pivot/internal/manager/FlowAnalysis$DeducerFromN
+ ull.class
+SHA1-Digest: 9DInteN5DDmk4dziyvgMo+rJXs8=
+
+Name: org/eclipse/ocl/pivot/library/iterator/SortedByIteration.class
+SHA1-Digest: kryTJRdjnO6SQkdeVpjZw+m73gM=
+
+Name: org/eclipse/ocl/pivot/internal/validation/EcoreOCLEValidator$Wea
+ kOCLReference.class
+SHA1-Digest: fHwJgmc9dmCBR3hd/onOFUl2G7Y=
+
+Name: org/eclipse/ocl/pivot/ids/IdManager$4.class
+SHA1-Digest: i6nXtPFMX/PyJsNxkJ4N9sbMz7M=
+
+Name: org/eclipse/ocl/pivot/PivotTables$TypeFragments.class
+SHA1-Digest: 1nNZD4K1c/o5mDGiaKmkjAaSl10=
+
+Name: org/eclipse/ocl/pivot/library/LibraryOperation.class
+SHA1-Digest: xZfkq+fsiwcxm8kxbQxo1D9b9F0=
+
+Name: org/eclipse/ocl/pivot/internal/delegate/OCLDelegateDomain$PivotO
+ nlyRegistry.class
+SHA1-Digest: OKCHlXz+cOT1TXb4zoaks+CeKRg=
+
+Name: org/eclipse/ocl/pivot/internal/evaluation/AbstractExecutor$1.cla
+ ss
+SHA1-Digest: IqIJJCjZXh8OUAkn0laDrxapk9k=
+
+Name: org/eclipse/ocl/pivot/options/ProblemHandler$Severity$1.class
+SHA1-Digest: KtpPGvGpZowFdyArFw3a9SJjPw4=
+
+Name: org/eclipse/ocl/pivot/utilities/PivotUtil$PrecedenceComparator.c
+ lass
+SHA1-Digest: 1Tj4cUc+vUEjTzx3FA2LN0ooKZY=
+
+Name: org/eclipse/ocl/pivot/oclstdlib/OCLstdlibTables$Operations.class
+SHA1-Digest: QN5xnBJqyL6GyV7JTVcW3Z0vFew=
+
+Name: org/eclipse/ocl/pivot/internal/CompleteEnvironmentImpl.class
+SHA1-Digest: vuyx1VPWjnJZLmnVpjaS9ljMDUA=
+
+Name: org/eclipse/ocl/pivot/library/collection/CollectionSumOperation.
+ class
+SHA1-Digest: XEWmGfw8UX9HQnpB8fSIx5oSvq8=
+
+Name: org/eclipse/ocl/pivot/internal/labels/ClassLabelGenerator.class
+SHA1-Digest: NEVRPz7Yir/V0OlOYTkMCVfl/9U=
+
+Name: org/eclipse/ocl/pivot/library/string/CGStringLogDiagnosticOperat
+ ion.class
+SHA1-Digest: jA+Zixcsmi4rTiq9VOpXMeG8Ri8=
+
+Name: org/eclipse/ocl/pivot/library/AbstractUnaryOperation.class
+SHA1-Digest: /cefmHbK7r1MJRQ5jjXv/atM65I=
+
+Name: org/eclipse/ocl/pivot/internal/library/executor/DomainReflective
+ Type.class
+SHA1-Digest: LCCWTC3dbgzeRDLjTVwBqMc4DYo=
+
+Name: org/eclipse/ocl/pivot/internal/StateExpImpl.class
+SHA1-Digest: W7xUZ7CAzdlTl0+/kCohCeb6Yls=
+
+Name: org/eclipse/ocl/pivot/internal/library/ecore/EcoreExecutorVoidTy
+ pe.class
+SHA1-Digest: ImEJJ2m37j9WmJRBBDIBCHhs9w4=
+
+Name: org/eclipse/ocl/pivot/Transition.class
+SHA1-Digest: 3QGtdlrYiEy/FG/EPsE3KxL4jF8=
+
+Name: org/eclipse/ocl/pivot/internal/evaluation/EvaluationCache.class
+SHA1-Digest: yhn5yQP1Gx6fBSoUnBxXn488tzA=
+
+Name: org/eclipse/ocl/pivot/internal/delegate/OCLDelegateDomain.class
+SHA1-Digest: 01hEBaDApSgGMGN+Mnevx+93x8c=
+
+Name: annotations/java/util/LinkedHashMap.eea
+SHA1-Digest: Qv7J9M+eSDbFUsOWAfQdRPHpso0=
+
+Name: org/eclipse/ocl/pivot/internal/context/AbstractParserContext.cla
+ ss
+SHA1-Digest: YBk2HNanmTWpLbaPHAQHoHkP5Dw=
+
+Name: org/eclipse/ocl/pivot/internal/ConnectionPointReferenceImpl.clas
+ s
+SHA1-Digest: JjbPhNanLaJWq79LAfd8CR3EPNk=
+
+Name: org/eclipse/ocl/pivot/values/IntegerRange.class
+SHA1-Digest: nx6vHVQUoYQto41nD8JUFHhOrGk=
+
+Name: org/eclipse/ocl/pivot/internal/TupleLiteralPartImpl.class
+SHA1-Digest: tqVZe9dfoMP5jtIknQ+zz27U1gg=
+
+Name: org/eclipse/ocl/pivot/util/AbstractVisitor.class
+SHA1-Digest: MQq+an5zmZn6pck1vWWnCN8yng4=
+
+Name: org/eclipse/ocl/pivot/internal/values/BagImpl.class
+SHA1-Digest: vwb6ioO3NaGHgWk4QojYxZ4rLQQ=
+
+Name: org/eclipse/ocl/pivot/InstanceSpecification.class
+SHA1-Digest: ys+lXLX50SUh2bW3p1jKJ0eP8+M=
+
+Name: org/eclipse/ocl/pivot/utilities/XMIUtil.class
+SHA1-Digest: Ip70eIyo/cmXbhx3lmXS8IMQPAM=
+
+Name: org/eclipse/ocl/pivot/internal/ids/SpecializedMapTypeIdImpl.clas
+ s
+SHA1-Digest: 3msi+didIhwhkdeq+8rtRXYlO8k=
+
+Name: org/eclipse/ocl/pivot/internal/resource/StandaloneProjectMap$Del
+ egatedMultiplePackageResource.class
+SHA1-Digest: GPISmkCJHB5GRmaddlsu7Od4eAQ=
+
+Name: org/eclipse/ocl/pivot/resource/ProjectManager$IProjectDescriptor
+ $IProjectDescriptorExtension.class
+SHA1-Digest: jTr4zN/6DF79UDHpriWnRGK/jmU=
+
+Name: org/eclipse/ocl/pivot/internal/executor/ExecutorMapType.class
+SHA1-Digest: Ez1SMLo2JlZ/2VFe2nkkYkoWV2I=
+
+Name: org/eclipse/ocl/pivot/internal/library/executor/ReflectiveInheri
+ tance.class
+SHA1-Digest: rIjMZ3S9MKthq+AyVoz9ydGeQA8=
+
+Name: org/eclipse/ocl/pivot/InheritanceFragment.class
+SHA1-Digest: hvU4me5LTL07foLdOSSEV2ALKiw=
+
+Name: org/eclipse/ocl/pivot/internal/values/OrderedSetImpl.class
+SHA1-Digest: Dn6YuMQvO7YDLeyhODOy5feBAKg=
+
+Name: org/eclipse/ocl/pivot/internal/complete/ModelListeners$IModelLis
+ tener.class
+SHA1-Digest: 1nMFaPWJDsfsTWvJb5CPSqRWzAk=
+
+Name: org/eclipse/ocl/pivot/library/string/StringToIntegerOperation.cl
+ ass
+SHA1-Digest: MPxCM1/aZ7I3aSutnmQ9qTw0pOA=
+
+Name: org/eclipse/ocl/pivot/library/LibraryUnaryOperation.class
+SHA1-Digest: uY/siSBZRpgNseI7m4UmmWxRebk=
+
+Name: build.properties
+SHA1-Digest: ODad19DWJpUVM1RJ5IbEphpaYZc=
+
+Name: org/eclipse/ocl/pivot/internal/labels/LabelSubstitutionLabelProv
+ ider.class
+SHA1-Digest: bj/CGEk0VZ044vAsJSUQwKkNkKQ=
+
+Name: org/eclipse/ocl/pivot/library/AbstractSimpleTernaryOperation.cla
+ ss
+SHA1-Digest: pmB6trlLVDArzdeO6ERI/DZFqRw=
+
+Name: org/eclipse/ocl/pivot/utilities/ASSaverNormalizeVisitor$TypeComp
+ arator.class
+SHA1-Digest: Mywba/eysFvNdRlDI8t5k3xp33I=
+
+Name: org/eclipse/ocl/pivot/options/ProblemOption.class
+SHA1-Digest: LOGvdXAHWaeekxWBT6P47+4lh5Q=
+
+Name: org/eclipse/ocl/pivot/internal/delegate/OCLSettingDelegate.class
+SHA1-Digest: cpt/U3Srbqu1fgmzfva+NSSEC50=
+
+Name: org/eclipse/ocl/pivot/internal/delegate/ValueConverter$2.class
+SHA1-Digest: NYn+4sQxorxaJ50Df0GoK2uO3Qg=
+
+Name: org/eclipse/ocl/pivot/internal/complete/PartialClasses$2.class
+SHA1-Digest: 2Qy8wK/kDB6stwhHXpcmQi+pjLc=
+
+Name: org/eclipse/ocl/pivot/values/OCLValue.class
+SHA1-Digest: vx219W5S/XDiEeez5QePMkFmhW0=
+
+Name: org/eclipse/ocl/pivot/internal/scoping/PivotScopeView.class
+SHA1-Digest: T4YdV+5pPEa6Z3Pf/E7LzbGB3Wc=
+
+Name: org/eclipse/ocl/pivot/internal/library/StaticProperty.class
+SHA1-Digest: kYB7muItuOi7z0z6bEbukd88S1g=
+
+Name: org/eclipse/ocl/pivot/oclstdlib/util/OCLstdlibAdapterFactory.cla
+ ss
+SHA1-Digest: XpELta+EzgSJ9/RkJVrIOVwDEQE=
+
+Name: org/eclipse/ocl/pivot/library/string/StringToUpperCaseOperation.
+ class
+SHA1-Digest: 8FX+6cJN57QKOqJMrLBQ5AoAKw4=
+
+Name: org/eclipse/ocl/pivot/internal/helper/HelperUtil.class
+SHA1-Digest: DgTg6x8HBegsarCkQZGtRvGdmwU=
+
+Name: org/eclipse/ocl/pivot/internal/PseudostateImpl.class
+SHA1-Digest: NbMFKd6e8pgsH5cBZ+PebLWWeJ0=
+
+Name: org/eclipse/ocl/pivot/ids/IdManager$9.class
+SHA1-Digest: IhHVTKahRKRzk5nORqlm2ystkNY=
+
+Name: org/eclipse/ocl/pivot/library/collection/CollectionIntersectionO
+ peration.class
+SHA1-Digest: YxLlAzxJpDWH1g+NDTXsM9A4a3E=
+
+Name: org/eclipse/ocl/pivot/internal/ids/ParametersIdImpl$Iterator.cla
+ ss
+SHA1-Digest: Wb8S+y3TL3L9Iqh2wvKyrxjkg/E=
+
+Name: org/eclipse/ocl/pivot/internal/validation/EcoreOCLEValidator.cla
+ ss
+SHA1-Digest: Y6hM725c4oWihk4AX9m6tyz3xlI=
+
+Name: model/Lookup.genmodel
+SHA1-Digest: wHu9UBzgJdQH9qCc5lxxeXo62Ss=
+
+Name: org/eclipse/ocl/pivot/utilities/SingletonIterator.class
+SHA1-Digest: eq8UYteoKOckI4R8Bha5Z+vuIIg=
+
+Name: org/eclipse/ocl/pivot/internal/resource/StandaloneProjectMap$Mul
+ tiplePackageResourceDescriptor.class
+SHA1-Digest: D3x/U4oUM5Uw0sW2tbP8YilOL8Q=
+
+Name: org/eclipse/ocl/pivot/ids/TemplateableId.class
+SHA1-Digest: tqg4ZoqCZ7Jzd93l9Vhxxns4+xk=
+
+Name: org/eclipse/ocl/pivot/internal/library/UnboxedCompositionPropert
+ y.class
+SHA1-Digest: Yj+xmQpliHE7BSZuqkgzYjA1sos=
+
+Name: org/eclipse/ocl/pivot/internal/DataTypeImpl.class
+SHA1-Digest: qauKQQNe0QaTue9HpJW4+LLW6Ek=
+
+Name: org/eclipse/ocl/pivot/internal/ecore/es2as/Ecore2AS.class
+SHA1-Digest: LtBrv8tnyWYLe7RMndi6t1/EFcg=
+
+Name: org/eclipse/ocl/pivot/internal/values/IntegerRangeImpl$IntegerRa
+ ngeIterator.class
+SHA1-Digest: SLVwsgmp1e6aghXLCiRfI+OdJw4=
+
+Name: annotations/java/net/URI.eea
+SHA1-Digest: s/wTbdRRMagthLfr7kwZBrcZh2g=
+
+Name: org/eclipse/ocl/pivot/internal/resource/ASResourceFactoryRegistr
+ y$LoadedResourcePredicate.class
+SHA1-Digest: Ylh5R2ACx816HaKAc/WY1oFKYLk=
+
+Name: org/eclipse/ocl/pivot/library/collection/OrderedCollectionIndexO
+ fOperation.class
+SHA1-Digest: PMjJPeGaFFV0P+x7vwvYHDdxubI=
+
+Name: org/eclipse/ocl/pivot/internal/scoping/EnvironmentView$Operation
+ Disambiguator.class
+SHA1-Digest: GcT+cPxlcJvNveWTV0e0RL3RAeI=
+
+Name: org/eclipse/ocl/pivot/internal/complete/AbstractCompletePackages
+ .class
+SHA1-Digest: cKTgEQY9aGZIfGqWcpEydrKXWQw=
+
+Name: org/eclipse/ocl/pivot/values/UnlimitedValue.class
+SHA1-Digest: 6pepgXWQfCsg/K5NBTBemg3isyI=
+
+Name: org/eclipse/ocl/pivot/oclstdlib/validation/OclInvalidValidator.c
+ lass
+SHA1-Digest: k9cwvsmbefXoNwXPK9d/3Xu1JXk=
+
+Name: org/eclipse/ocl/pivot/internal/plugin/ASResourceFactoryRegistryR
+ eader.class
+SHA1-Digest: rqn77CL8Mquag3bw+HN8889Y9hM=
+
+Name: org/eclipse/ocl/pivot/internal/values/SparseOrderedSetValueImpl$
+ Accumulator.class
+SHA1-Digest: 4oeLFKHo0h1DP3xM27mpm1BB2EA=
+
+Name: org/eclipse/ocl/pivot/internal/OperationImpl.class
+SHA1-Digest: ejKShAk/AXTkOU765i0ZWeg8RkA=
+
+Name: org/eclipse/ocl/pivot/internal/delegate/DelegateResourceAdapter.
+ class
+SHA1-Digest: eyadmVYYU4m4HlyD2GCFbqg/HlE=
+
+Name: org/eclipse/ocl/pivot/utilities/EnvironmentFactory.class
+SHA1-Digest: 0JAqSv4Rm/7r4Wqg057N8HO03kc=
+
+Name: org/eclipse/ocl/pivot/internal/evaluation/BasicOCLExecutor.class
+SHA1-Digest: sfsUI9y12kkYEJjg/leqZEAiwTg=
+
+Name: org/eclipse/ocl/pivot/resource/BasicProjectManager.class
+SHA1-Digest: NvP8g18wxl66LPY1UIRTNFTLXbo=
+
+Name: org/eclipse/ocl/pivot/library/oclany/OclAnyOclIsInStateOperation
+ .class
+SHA1-Digest: HQO4QMILWmmUP0phKnG/zPnZsJw=
+
+Name: org/eclipse/ocl/pivot/internal/library/ecore/EcoreReflectiveType
+ $1$1.class
+SHA1-Digest: D9VbV8oyhtaW8i50UFcouLbIUmc=
+
+Name: org/eclipse/ocl/pivot/internal/ids/AbstractElementId$PropertyIds
+ Map.class
+SHA1-Digest: mJhjr9wmVR5Seijmc9x0NhmscUw=
+
+Name: org/eclipse/ocl/pivot/SelfType.class
+SHA1-Digest: QpCIVSmISgtUJdCGTGXFftfJBrA=
+
+Name: org/eclipse/ocl/pivot/library/collection/OrderedCollectionPrepen
+ dOperation.class
+SHA1-Digest: /ELZlgBUTpXx/uTauw+EAG8YVs0=
+
+Name: org/eclipse/ocl/pivot/StandardLibrary$StandardLibraryExtension.c
+ lass
+SHA1-Digest: ZfndIGX2NfIJfXWtbPUyZbjBHIQ=
+
+Name: org/eclipse/ocl/pivot/internal/executor/AbstractSpecializedType.
+ class
+SHA1-Digest: 6YptuTc05/B1AQ3WVhSOB9EHpPM=
+
+Name: org/eclipse/ocl/pivot/internal/lookup/LookupTables$EnumerationLi
+ terals.class
+SHA1-Digest: WfSQdavaNo+94NID1l0hKq2rKTc=
+
+Name: org/eclipse/ocl/pivot/library/string/StringIndexOfOperation.clas
+ s
+SHA1-Digest: VV0c0GoOszkMDhMvyO64iLiHquY=
+
+Name: org/eclipse/ocl/pivot/internal/library/executor/ExecutorTupleTyp
+ e.class
+SHA1-Digest: P3cTwXauVkn3x8rg7rLZ/EbA76A=
+
+Name: org/eclipse/ocl/pivot/internal/utilities/OCLDebugOptions.class
+SHA1-Digest: dsEx4MWZEQuH8wgW6gfFqsibwL8=
+
+Name: org/eclipse/ocl/pivot/ids/IdManager.class
+SHA1-Digest: UQgD2MtOYxqg7MGcoGgoDmZEC6U=
+
+Name: org/eclipse/ocl/pivot/internal/elements/AbstractExecutorTypedEle
+ ment.class
+SHA1-Digest: l+FpLaRoY7BoHYM20mNEQK6Zdlk=
+
+Name: org/eclipse/ocl/pivot/resource/ProjectManager$IProjectDescriptor
+ .class
+SHA1-Digest: kOT93xJ14nwoQAxAEBczjJQCv3M=
+
+Name: org/eclipse/ocl/pivot/ids/IdVisitor.class
+SHA1-Digest: TEdEGeRUiTHeWsI+nhdF6gG3coU=
+
+Name: org/eclipse/ocl/pivot/internal/ids/GeneralizedDataTypeIdImpl.cla
+ ss
+SHA1-Digest: gI7BSaQ96xIUuPuVGyRsRuKW1lc=
+
+Name: org/eclipse/ocl/pivot/internal/context/EObjectContext.class
+SHA1-Digest: 9av+CD0+Iaf/5j3bU/uFkZ6DU70=
+
+Name: org/eclipse/ocl/pivot/internal/utilities/AliasAdapter$Creator.cl
+ ass
+SHA1-Digest: zqhLegyc+LMtvTmTNUabtjRoOlU=
+
+Name: org/eclipse/ocl/pivot/labels/ILabelGenerator$Option.class
+SHA1-Digest: t/r5HpISrTV73pgmLJuuB+Ys4A8=
+
+Name: org/eclipse/ocl/pivot/internal/elements/AbstractExecutorType.cla
+ ss
+SHA1-Digest: y/MLjJXoHyxD6jUl7YrH6Qo7044=
+
+Name: org/eclipse/ocl/pivot/library/AbstractEvaluatorIterationManager$
+ ValueIterator.class
+SHA1-Digest: AT8O1STghPrSrkE1BNQiTAxKOpg=
+
+Name: org/eclipse/ocl/pivot/ids/DataTypeId.class
+SHA1-Digest: 0z5f4p0hQNt7ziZ2DtyJG3IGJTk=
+
+Name: org/eclipse/ocl/pivot/internal/evaluation/AbstractExecutor.class
+SHA1-Digest: P+0KPllV9x0Fa0JmCfAEaXyTvic=
+
+Name: org/eclipse/ocl/pivot/evaluation/Executor.class
+SHA1-Digest: NX3htAXImPPFY8NTrFXOojoTNJE=
+
+Name: org/eclipse/ocl/pivot/library/map/MapIncludesMapOperation.class
+SHA1-Digest: l6c/2/eqEZmzcbKYKxdRurA9eQk=
+
+Name: org/eclipse/ocl/pivot/PivotTables$EnumerationLiterals.class
+SHA1-Digest: m8k34bzpXYBc2gxhUDzVKD5XeaA=
+
+Name: org/eclipse/ocl/pivot/internal/DynamicElementImpl.class
+SHA1-Digest: BOPzcslSUbWlcOXn8E1XANmjXAw=
+
+Name: org/eclipse/ocl/pivot/utilities/PivotAS2XMIidVisitor.class
+SHA1-Digest: ZHpfrNbYSaZRNW14sSxButrOZsY=
+
+Name: org/eclipse/ocl/pivot/internal/library/ecore/EcoreExecutorManage
+ r$1.class
+SHA1-Digest: 5xrape8hhyw5/o6HiwuLFDCc330=
+
+Name: org/eclipse/ocl/pivot/internal/ids/UnspecifiedIdImpl.class
+SHA1-Digest: +/uJJPKV6F8rUizE8YXW9pWpQ6Q=
+
+Name: org/eclipse/ocl/pivot/ids/OclInvalidTypeId.class
+SHA1-Digest: 2IFGRPkSO35B8WSHh/O4zMhjdFQ=
+
+Name: org/eclipse/ocl/pivot/internal/CommentImpl.class
+SHA1-Digest: 6HUTcmKgdvzUubB1XJ3rPAKAdzU=
+
+Name: org/eclipse/ocl/pivot/resource/CSResource.class
+SHA1-Digest: yMNMbJQ8XwmAXzuE0W+5e7fsa8E=
+
+Name: org/eclipse/ocl/pivot/utilities/NameUtil.class
+SHA1-Digest: yqAFCGpDeN77b4yiDRPCciPgJgg=
+
+Name: org/eclipse/ocl/pivot/internal/delegate/OCLInvocationDelegateFac
+ tory.class
+SHA1-Digest: MQqepNIrhYvlI4DIoRHSfVPzMRU=
+
+Name: org/eclipse/ocl/pivot/internal/prettyprint/PrettyPrintOptions$Gl
+ obal.class
+SHA1-Digest: 1BTMwL1XW92QMLvpgvfQZLgPjgI=
+
+Name: org/eclipse/ocl/pivot/internal/executor/ExecutorTupleType.class
+SHA1-Digest: PuEyx4LQS7rcY3Uk2/Iu/dzRYcE=
+
+Name: org/eclipse/ocl/pivot/PivotTables$Fragments.class
+SHA1-Digest: JU75Xxe12VkaTNMq1D9JiXCIHP8=
+
+Name: org/eclipse/ocl/pivot/internal/ecore/as2es/AS2EcoreDeclarationVi
+ sitor$DuplicatePropertiesFilter.class
+SHA1-Digest: Jf8frqME/39cJ37m7hS/WgMeP1o=
+
+Name: annotations/com/google/common/collect/Lists.eea
+SHA1-Digest: L0uXFBqEUp4gu4cA075+w2y/6EA=
+
+Name: org/eclipse/ocl/pivot/values/ValuesFactory.class
+SHA1-Digest: /T4guTjYnkm5tJhNpiR/E6H88io=
+
+Name: org/eclipse/ocl/pivot/internal/attributes/EnumerationAttribution
+ .class
+SHA1-Digest: Z36yKyYhoDxM6N3BzMvEdSi8GA8=
+
+Name: org/eclipse/ocl/pivot/internal/delegate/ValidationDelegate$Facto
+ ry$Registry$Impl.class
+SHA1-Digest: AhI+CoLUpZnHbh+rR+xm2xEkMV0=
+
+Name: org/eclipse/ocl/pivot/ids/TemplateableTypeId.class
+SHA1-Digest: jOEcvnDyPfLLWw+aEXCjGHbEwKY=
+
+Name: org/eclipse/ocl/pivot/library/string/StringLastIndexOfOperation.
+ class
+SHA1-Digest: fe41DFlFu3zsTHiDBrA5t/5USKM=
+
+Name: org/eclipse/ocl/pivot/DynamicValueSpecification.class
+SHA1-Digest: fe99ruQ6CKOuFz8uvLeBJQ8uo7g=
+
+Name: org/eclipse/ocl/pivot/Vertex.class
+SHA1-Digest: WbHYV4z4A2K4sxzl5yTyg3WWCSI=
+
+Name: org/eclipse/ocl/pivot/internal/delegate/OCLInvocationDelegateFac
+ tory$Global.class
+SHA1-Digest: Ub8SzNcAVP+xiz4DqG3uiuYHJzI=
+
+Name: org/eclipse/ocl/pivot/internal/SetTypeImpl.class
+SHA1-Digest: 5zz9yvyIS+Ox8DDyG5XI0Bk6Jtc=
+
+Name: org/eclipse/ocl/pivot/utilities/IndexableIterable.class
+SHA1-Digest: AhCmw+QG7Wzi7UI39PWGYp79vec=
+
+Name: org/eclipse/ocl/pivot/ExpressionInOCL.class
+SHA1-Digest: aBIPzCagR7HtCFSnpaMRbzCqu0k=
+
+Name: org/eclipse/ocl/pivot/VoidType.class
+SHA1-Digest: k6bHKW6uhvpEeonQ49ezgkJH/K0=
+
+Name: org/eclipse/ocl/pivot/utilities/XMIUtil$UUIDCreator.class
+SHA1-Digest: d2Lx9X7JEqznwy8S6HEf9EREvZQ=
+
+Name: org/eclipse/ocl/pivot/utilities/XMIUtil$IdCreator.class
+SHA1-Digest: 2eBJJQcBWe9XolQH3y4kVew5EaA=
+
+Name: org/eclipse/ocl/pivot/library/AbstractSimpleBinaryOperation.clas
+ s
+SHA1-Digest: 2hfDqtixsWmNyaiDwD2RWDHblTA=
+
+Name: org/eclipse/ocl/pivot/internal/VoidTypeImpl.class
+SHA1-Digest: hC9tDPidzzjYQooVdwTHV92evVc=
+
+Name: org/eclipse/ocl/pivot/internal/manager/TemplateParameterSubstitu
+ tionHelper$CollectionSourceElementHelper.class
+SHA1-Digest: nivtd6wAp6c2PAwzMOLtPDw8Uyk=
+
+Name: org/eclipse/ocl/pivot/internal/scoping/EnvironmentView$PropertyD
+ isambiguator.class
+SHA1-Digest: EmDqc83pt24tYFrupyFVzmKFslY=
+
+Name: org/eclipse/ocl/pivot/internal/StateMachineImpl.class
+SHA1-Digest: 4UcuS8iBhOG5XEgRwFGR9rGTm/Q=
+
+Name: org/eclipse/ocl/pivot/internal/labels/NameableLabelGenerator.cla
+ ss
+SHA1-Digest: kChyF03Nya62cnKWe73wqVJHJ9U=
+
+Name: org/eclipse/ocl/pivot/MapLiteralPart.class
+SHA1-Digest: JlpXBSJIbpQ1LRFcWLiiv4bT8Eo=
+
+Name: org/eclipse/ocl/pivot/internal/attributes/IterateExpAttribution.
+ class
+SHA1-Digest: yeGprsfaLSXLeG2vpQv3AxBe3uw=
+
+Name: org/eclipse/ocl/pivot/PivotTables$Operations.class
+SHA1-Digest: aqbDl8aSW98ox0IDDh5opsenJvY=
+
+Name: annotations/com/google/common/collect/Iterators.eea
+SHA1-Digest: 3L6e1ZBW83ZHgCZWSfUf/Nszwng=
+
+Name: org/eclipse/ocl/pivot/DynamicType.class
+SHA1-Digest: BJriJtCztyBt0tjieiAPsJQ/grQ=
+
+Name: org/eclipse/ocl/pivot/library/map/MapIncludesPairOperation.class
+SHA1-Digest: jL/ia0i+6r8cyQbeTvgzElKigWc=
+
+Name: org/eclipse/ocl/pivot/internal/IteratorVariableImpl.class
+SHA1-Digest: z2ZU5mTmW4HCMtIEPp9ul3ZG9vg=
+
+Name: org/eclipse/ocl/pivot/internal/library/ExtensionProperty.class
+SHA1-Digest: VRGEFeryfjseTfT7fBGUxPWR8lE=
+
+Name: org/eclipse/ocl/pivot/library/LibrarySimpleBinaryOperation$Libra
+ rySimpleBinaryOperationExtension.class
+SHA1-Digest: Q1rd4Q81n7ifNOZm9F9pnr2GDjk=
+
+Name: org/eclipse/ocl/pivot/internal/validation/PivotEObjectValidator$
+ ValidationAdapter.class
+SHA1-Digest: gADAaeOEg5D3km5/q+3AlEVA4jA=
+
+Name: org/eclipse/ocl/pivot/evaluation/EvaluationLogger.class
+SHA1-Digest: cca65BSNPOFUUDlopjVTjIMWY3E=
+
+Name: model/Lookup.ecore
+SHA1-Digest: 6fJHnNd2O5NDn+p1RysFvcadAzg=
+
+Name: org/eclipse/ocl/pivot/internal/delegate/ValidationDelegate.class
+SHA1-Digest: lzLsHQJ14v8TE54zORmOv+pQsJM=
+
+Name: org/eclipse/ocl/pivot/internal/utilities/AS2XMIid.class
+SHA1-Digest: AYQ3FKPgS3rO7lS4bO3oqw8espg=
+
+Name: org/eclipse/ocl/pivot/utilities/Option.class
+SHA1-Digest: +Fx+1Kkm3AMsjwpAQaM2z8DeW+Q=
+
+Name: org/eclipse/ocl/pivot/internal/StereotypeExtenderImpl.class
+SHA1-Digest: offyA1efLNtxIE6qmS6VxcLtZ20=
+
+Name: org/eclipse/ocl/pivot/internal/elements/AbstractExecutorPackage.
+ class
+SHA1-Digest: EwJfEyqZFgTeyEc5bS4JuwI8/P4=
+
+Name: org/eclipse/ocl/pivot/internal/utilities/OCLInternal.class
+SHA1-Digest: apHpaaG6cYDN8M0mkoTZ72aWIBw=
+
+Name: org/eclipse/ocl/pivot/library/numeric/NumericDivOperation.class
+SHA1-Digest: KLSCL9vpoAUa34QMf0FcuSOVvBw=
+
+Name: org/eclipse/ocl/pivot/internal/labels/NumberLabelGenerator.class
+SHA1-Digest: xvj0fSJFppxkjfPsnB05E9VpvFA=
+
+Name: org/eclipse/ocl/pivot/internal/attributes/DataTypeAttribution.cl
+ ass
+SHA1-Digest: aMcZWv6aT5j/Jiq1JI3v00C8P8E=
+
+Name: org/eclipse/ocl/pivot/internal/ecore/as2es/AS2EcoreDeclarationVi
+ sitor.class
+SHA1-Digest: HpOKhQtgV0kBi+kj5aTa/IDUDqA=
+
+Name: org/eclipse/ocl/pivot/internal/values/LongIntegerValueImpl.class
+SHA1-Digest: 5tcH6RfQxupRx0iYol1+MPXeGW0=
+
+Name: org/eclipse/ocl/pivot/internal/attributes/ExpressionInOCLAttribu
+ tion.class
+SHA1-Digest: IkQBireHBYZ3tEipJSiGuic2c8U=
+
+Name: org/eclipse/ocl/pivot/internal/ElementImpl.class
+SHA1-Digest: 9VYEsmSO7fI1QTgeHtRzmUbGNG8=
+
+Name: about.html
+SHA1-Digest: 0vzfRatYPPlKdS0YdNoTlE1GBxU=
+
+Name: org/eclipse/ocl/pivot/library/AbstractProperty.class
+SHA1-Digest: icLKj20K9TaT6NOnjSsIlUdYsqQ=
+
+Name: org/eclipse/ocl/pivot/evaluation/AbstractModelManager.class
+SHA1-Digest: F2ZWc4mTTZRqXD2RRrIkKL5p5zY=
+
+Name: org/eclipse/ocl/pivot/internal/complete/ClassListeners.class
+SHA1-Digest: 29R7KGpE7DEBd3sJRjkCA23trSY=
+
+Name: org/eclipse/ocl/pivot/internal/manager/PivotExecutorManager$1.cl
+ ass
+SHA1-Digest: qliO07mOSGxE1cIJ/ldMmBnfFR8=
+
+Name: org/eclipse/ocl/pivot/CollectionLiteralExp.class
+SHA1-Digest: uBio+d8QuUI5VnJbUTVxRr0mhDg=
+
+Name: org/eclipse/ocl/pivot/internal/registry/CompleteOCLRegistry.clas
+ s
+SHA1-Digest: L8HnpjO6MWQOOUuLkUUSBW6HKeo=
+
+Name: org/eclipse/ocl/pivot/CollectionRange.class
+SHA1-Digest: 0T4M64DLVy9h7iFjWUAuX3jrV2M=
+
+Name: org/eclipse/ocl/pivot/library/string/StringToRealOperation.class
+SHA1-Digest: 7YlebfaCvN5V7hP57Bk0oHWl5tw=
+
+Name: org/eclipse/ocl/pivot/library/collection/CollectionExcludesOpera
+ tion.class
+SHA1-Digest: wi3Ci8ndc256ALa/OpaR43ozjM8=
+
+Name: org/eclipse/ocl/pivot/internal/AnnotationImpl.class
+SHA1-Digest: qQ6vtd9YLLa2P0QQFK/w9il2CLw=
+
+Name: org/eclipse/ocl/pivot/internal/ids/SpecializedTypeIdImpl.class
+SHA1-Digest: yDOFgnnLwL1EuLKAlqDE2F2iwQU=
+
+Name: org/eclipse/ocl/pivot/library/LibraryIteration.class
+SHA1-Digest: P0H7nisMrbP1vDeD6Lwe6r0YTGI=
+
+Name: annotations/java/util/Arrays.eea
+SHA1-Digest: G+0s+yDLvC+dhhyuDwMthdISkXc=
+
+Name: org/eclipse/ocl/pivot/library/AbstractEvaluatorIterationManager.
+ class
+SHA1-Digest: +xd3kdfVDSAFDT8NQqTmaB/EP44=
+
+Name: org/eclipse/ocl/pivot/labels/ILabelGenerator$Registry.class
+SHA1-Digest: tnlzX80YEmHn6qJXYUthDY26nUo=
+
+Name: org/eclipse/ocl/pivot/internal/AssociationClassImpl.class
+SHA1-Digest: YUHcLjhuWxFLLw8o75TZMdUAmCo=
+
+Name: annotations/org/eclipse/emf/common/util/URI.eea
+SHA1-Digest: Znz3mbjv0sK99zVm/HIdrNbtjhs=
+
+Name: org/eclipse/ocl/pivot/internal/manager/TemplateParameterSubstitu
+ tionVisitor.class
+SHA1-Digest: OKejmLAljn5CoSizKKtNvzf1GD8=
+
+Name: org/eclipse/ocl/pivot/values/util/ValuesAdapterFactory$1.class
+SHA1-Digest: OBgiM3gpw28cBQTaor4BlOR0zF4=
+
+Name: org/eclipse/ocl/pivot/values/BagValue$Accumulator.class
+SHA1-Digest: nL8iJAN82ZW1wsWoCMcqIkCZ4nM=
+
+Name: org/eclipse/ocl/pivot/Precedence.class
+SHA1-Digest: /ffli7RK6nFsM1gygvxyZ8U717Q=
+
+Name: org/eclipse/ocl/pivot/library/AbstractUntypedBinaryOperation.cla
+ ss
+SHA1-Digest: WzSgrRSWnH5fbw3CCGEJ7kXwqU0=
+
+Name: org/eclipse/ocl/pivot/internal/ids/GeneralizedLambdaTypeIdImpl.c
+ lass
+SHA1-Digest: 1EBIf7JfoSrAr7Bdzv4xhV3+j9E=
+
+Name: org/eclipse/ocl/pivot/internal/delegate/OCLValidationDelegateFac
+ tory$Global.class
+SHA1-Digest: pDk+7mDiUc0cIshud9UI0awOoo8=
+
+Name: annotations/java/util/Stack.eea
+SHA1-Digest: m70P3b7+daRWMobytyQkHoPGnv0=
+
+Name: org/eclipse/ocl/pivot/internal/resource/StandaloneProjectMap$EPa
+ ckageDescriptor.class
+SHA1-Digest: AgYyQ6WfiSCjyjBqI59jL4irXQs=
+
+Name: org/eclipse/ocl/pivot/library/oclany/OclAnyOclAsTypeOperation.cl
+ ass
+SHA1-Digest: gGlIeA0eI+OL1d694p2RVrfQY5c=
+
+Name: org/eclipse/ocl/pivot/CollectionItem.class
+SHA1-Digest: FhRwsmMLyu6/5U1hvKhx2mBZVsg=
+
+Name: org/eclipse/ocl/pivot/library/AbstractFeature.class
+SHA1-Digest: 9Veh1lzkwWzPMfLAEjzDB8K2xuM=
+
+Name: org/eclipse/ocl/pivot/ValueSpecification.class
+SHA1-Digest: rxnKgt8fd+Ro5VJuZAGt0+3Jwaw=
+
+Name: org/eclipse/ocl/pivot/library/iterator/ExistsIteration.class
+SHA1-Digest: KrE7HHuzGsbTgS/lx4BaWt6n1+I=
+
+Name: org/eclipse/ocl/pivot/internal/DetailImpl.class
+SHA1-Digest: Rs4+cT5ApMg1nuBjfzqFk+imeUs=
+
+Name: org/eclipse/ocl/pivot/OppositePropertyCallExp.class
+SHA1-Digest: xxRLycPjXr+iNMsLoO5ZNUq+WJU=
+
+Name: org/eclipse/ocl/pivot/internal/attributes/IteratorExpAttribution
+ .class
+SHA1-Digest: ddcgq5flSE8E0NcKjDrqcVn2tao=
+
+Name: org/eclipse/ocl/pivot/UnlimitedNaturalLiteralExp.class
+SHA1-Digest: Uz5iGD3LhG2olgwXlYwmPui4qg4=
+
+Name: org/eclipse/ocl/pivot/library/oclany/OclComparableLessThanEqualO
+ peration.class
+SHA1-Digest: v32r/TwrrUI4E8GDAaA6vHJt6NE=
+
+Name: org/eclipse/ocl/pivot/library/collection/SetSymmetricDifferenceO
+ peration.class
+SHA1-Digest: lNfG6S+0kEqj0BzZ0JOdIcH243s=
+
+Name: org/eclipse/ocl/pivot/internal/library/executor/ExecutorTypePara
+ meter.class
+SHA1-Digest: JF2cL1CFBrjYdEkAEcziFxKUWFs=
+
+Name: schema/as_resource_factory.exsd
+SHA1-Digest: P30iVNXE8y3pc0QsDU/+SwVOzx0=
+
+Name: org/eclipse/ocl/pivot/utilities/XMIUtil$StructuralENamedElementI
+ dCreator.class
+SHA1-Digest: 2UbBNspoBOC1nmnCFS/WQJ7V+nc=
+
+Name: org/eclipse/ocl/pivot/utilities/SyntaxException.class
+SHA1-Digest: ueO3xUY6SyyvV5mY42fNUU30r98=
+
+Name: org/eclipse/ocl/pivot/internal/ShadowExpImpl$3.class
+SHA1-Digest: zpJPN3H3Q3C2yL74BfdXkn6TBoc=
+
+Name: org/eclipse/ocl/pivot/library/map/MapIncludingMapOperation.class
+SHA1-Digest: c4keB8HBFo4w6I2infgP3cy66iI=
+
+Name: org/eclipse/ocl/pivot/labels/DefaultLabelGeneratorBuilder.class
+SHA1-Digest: 9jB09KZyCQNzg2dOxDb98KV8n/I=
+
+Name: org/eclipse/ocl/pivot/labels/ILabelGenerator$Builder$3.class
+SHA1-Digest: F/lTVPfVsYltposLd1xuBxeyENk=
+
+Name: org/eclipse/ocl/pivot/library/collection/CollectionMinOperation.
+ class
+SHA1-Digest: pJgMQW1cehdZtuWvQwnoej5B0wE=
+
+Name: org/eclipse/ocl/pivot/internal/lookup/util/PivotLookupSolver.cla
+ ss
+SHA1-Digest: rEN+/sg9zZjCyzzzyvya620bljA=
+
+Name: annotations/java/util/Deque.eea
+SHA1-Digest: jlC1WR43k3B1yqCOr+qOeitbzTM=
+
+Name: org/eclipse/ocl/pivot/library/LibraryTernaryOperation$LibraryTer
+ naryOperationExtension.class
+SHA1-Digest: ZI7b1ejbQuKmF9GNnt11tSEiFDk=
+
+Name: org/eclipse/ocl/pivot/internal/manager/TemplateParameterSubstitu
+ tionHelper$OclAnyOclAsSetHelper.class
+SHA1-Digest: zciFH99F7nW7FNwEbxTctcI6cl4=
+
+Name: org/eclipse/ocl/pivot/internal/complete/AbstractListeners.class
+SHA1-Digest: SsR/Gqx3Wshw8w4p/ix3iVLob3A=
+
+Name: org/eclipse/ocl/pivot/RealLiteralExp.class
+SHA1-Digest: YNrcOg/pbw7qlnn4H1WCK8cLyBc=
+
+Name: org/eclipse/ocl/pivot/internal/context/OperationContext.class
+SHA1-Digest: FvpURKB1H1qDNpX7l8wI+P8YCqI=
+
+Name: org/eclipse/ocl/pivot/internal/library/executor/ExecutorSpeciali
+ zedType.class
+SHA1-Digest: Kx9M5nVy0g5qPg+tyP/Wupn+LaA=
+
+Name: org/eclipse/ocl/pivot/utilities/MetamodelManager.class
+SHA1-Digest: Gpwb2leYPNyYqn0Ziq82rakNp3Q=
+
+Name: org/eclipse/ocl/pivot/library/oclinvalid/OclInvalidAllInstancesO
+ peration.class
+SHA1-Digest: Y8fRL9WPfSnsboEIAV5JqVDF0xg=
+
+Name: org/eclipse/ocl/pivot/library/collection/CollectionFlattenOperat
+ ion.class
+SHA1-Digest: GkXiaHOeqWaJS+C5uQarrqJnkWI=
+
+Name: org/eclipse/ocl/pivot/internal/ClassImpl$1.class
+SHA1-Digest: geaKhfFSnsfoQWKUvrPYp43+4MA=
+
+Name: org/eclipse/ocl/pivot/library/string/StringStartsWithOperation.c
+ lass
+SHA1-Digest: JXFYUs1/uzaGtCCxPC/b5ibbhdE=
+
+Name: org/eclipse/ocl/pivot/internal/library/ExplicitNavigationPropert
+ y.class
+SHA1-Digest: PpJ/QarxbOnxHkIkrs9m+10d018=
+
+Name: org/eclipse/ocl/pivot/values/MapValue$Accumulator.class
+SHA1-Digest: Ta79/lROmwyo62uDVpO97DcsaQs=
+
+Name: org/eclipse/ocl/pivot/internal/StereotypeImpl.class
+SHA1-Digest: BkT/iU6BNxSSH87JevIl9fufcro=
+
+Name: org/eclipse/ocl/pivot/utilities/Labelable.class
+SHA1-Digest: ZQUQXolvhgq6BxAYnr72bZhuwbg=
+
+Name: org/eclipse/ocl/pivot/ids/ElementId$ElementIdComparator.class
+SHA1-Digest: v8B+fJfB5rSXxevlu0dQUndw4MM=
+
+Name: org/eclipse/ocl/pivot/library/collection/CollectionUpperProperty
+ .class
+SHA1-Digest: IrFuMNEeennZkPa1UIY/s3ati2U=
+
+Name: org/eclipse/ocl/pivot/internal/evaluation/ExecutorInternal$Execu
+ torInternalExtension.class
+SHA1-Digest: aRw4+g0fV2DLEjxjNwQnVViVlWo=
+
+Name: org/eclipse/ocl/pivot/internal/utilities/PivotEnvironmentFactory
+ .class
+SHA1-Digest: +FMq9McwmYTa5RTrTi+xlL1gHY0=
+
+Name: org/eclipse/ocl/pivot/internal/SlotImpl.class
+SHA1-Digest: YUJvbjC0NGtR+PZ1tCT9ycGvpoo=
+
+Name: org/eclipse/ocl/pivot/internal/complete/PartialProperties.class
+SHA1-Digest: oeRoCN4ifSCnESgKSFdGdLufa08=
+
+Name: org/eclipse/ocl/pivot/options/BasicOption.class
+SHA1-Digest: cR3KEXe2oJUxo9A9mm+10MIlmPw=
+
+Name: org/eclipse/ocl/pivot/utilities/ObjectUtil.class
+SHA1-Digest: cwPmN17QbsSw93qGDkjxnf2zJvo=
+
+Name: org/eclipse/ocl/pivot/utilities/FeatureFilter$1.class
+SHA1-Digest: YsxzZxFEtvw/uWEQVmoRoA2X2y8=
+
+Name: org/eclipse/ocl/pivot/internal/lookup/util/AbstractPivotLookupFi
+ lter.class
+SHA1-Digest: M42oO6caXZ7ovSQ8bkZczJbDX+c=
+
+Name: org/eclipse/ocl/pivot/internal/complete/PartialOperations$4.clas
+ s
+SHA1-Digest: KPDtymUqpc+QxmYSzHsxyuL8RWc=
+
+Name: model-gen/oclstdlib.ecore
+SHA1-Digest: 1qpSCXm6ZEAZDMuwPjTk7J7yLvk=
+
+Name: org/eclipse/ocl/pivot/internal/library/executor/ExecutorSingleIt
+ erationManager$Nested.class
+SHA1-Digest: RcdNR9yBy48UMHd5BhF1jLsU95g=
+
+Name: org/eclipse/ocl/pivot/internal/resource/PivotSaveImpl$Lookup.cla
+ ss
+SHA1-Digest: fkVmacPQBDe4i9CEIO4k0hIBS5c=
+
+Name: org/eclipse/ocl/pivot/library/LibraryBinaryOperation$LibraryBina
+ ryOperationExtension.class
+SHA1-Digest: 4mIZKwYmqbC5ZGIeiopWqBxanGU=
+
+Name: org/eclipse/ocl/pivot/VariableDeclaration.class
+SHA1-Digest: WnPd+LVlRi0yWquGyl9Z10CENhU=
+
+Name: org/eclipse/ocl/pivot/ids/NsURIPackageId.class
+SHA1-Digest: dKHVHehQFNa127iaqIAZ4KmTJlA=
+
+Name: org/eclipse/ocl/pivot/values/IntegerValue.class
+SHA1-Digest: d1aMKUwludAWmg1lnmFn+1oWV08=
+
+Name: org/eclipse/ocl/pivot/internal/ids/AbstractElementId$OperationId
+ sMap.class
+SHA1-Digest: ipJoLUOdEeRqBvxF+Yv52ko4h+k=
+
+Name: org/eclipse/ocl/pivot/utilities/TreeIterable.class
+SHA1-Digest: ICLbSZr3m/t5EN+cBHzfaosPEns=
+
+Name: org/eclipse/ocl/pivot/internal/manager/LambdaTypeManager.class
+SHA1-Digest: Pmhwp5zatwAe1ewW3PQ5eqwtkck=
+
+Name: org/eclipse/ocl/pivot/AssociationClassCallExp.class
+SHA1-Digest: SS8+MqJHnt5TO3iIkpE+n6SQxIQ=
+
+Name: annotations/java/lang/Boolean.eea
+SHA1-Digest: iDsNQwPIKSASA3K0LJhX6eVKWDA=
+
+Name: org/eclipse/ocl/pivot/library/collection/CollectionLowerProperty
+ .class
+SHA1-Digest: 4KUrbIEBz/K/v5tV5R6iTaE/l/4=
+
+Name: org/eclipse/ocl/pivot/internal/ecore/EObjectProperty.class
+SHA1-Digest: ugJuUpr6SgKyT/QMrtH4VQnkUbs=
+
+Name: org/eclipse/ocl/pivot/utilities/ParserException.class
+SHA1-Digest: YKVCG0I5CK+GnrbNa4wDV+g8rmQ=
+
+Name: org/eclipse/ocl/pivot/internal/ModelImpl$1.class
+SHA1-Digest: XbH3e7W199VYpHzDct9ZEVh2M4k=
+
+Name: org/eclipse/ocl/pivot/internal/attributes/LetExpAttribution.clas
+ s
+SHA1-Digest: /2N/mmBfFZgcrbWeEMgnabUu3Ho=
+
+Name: org/eclipse/ocl/pivot/utilities/PivotUtil$TemplateParameterSubst
+ itutionComparator.class
+SHA1-Digest: KeKF0Njo361pX2/8pUkQVXk0xE0=
+
+Name: org/eclipse/ocl/pivot/internal/values/MapValueImpl.class
+SHA1-Digest: 7Rx3qafNWFGFjfbqZwpHHd0Dps4=
+
+Name: org/eclipse/ocl/pivot/library/string/StringGreaterThanEqualOpera
+ tion.class
+SHA1-Digest: PGfb0KmFxdGd/uSi1rVmkQalrTc=
+
+Name: icons/full/obj16/LambdaType.gif
+SHA1-Digest: B2khicf7eEYucpCA0KcXkiUoFZo=
+
+Name: org/eclipse/ocl/pivot/values/MapValue.class
+SHA1-Digest: pIONUMrkbKiQAHzqcD9RTGJWxwE=
+
+Name: org/eclipse/ocl/pivot/internal/PivotPackageImpl$1.class
+SHA1-Digest: uPLXZ8FcXvzKz7gA165BbOA5YDY=
+
+Name: org/eclipse/ocl/pivot/internal/library/executor/AbstractDispatch
+ Operation$2.class
+SHA1-Digest: iufMejjeprm48jp2B45taDIkpfI=
+
+Name: org/eclipse/ocl/pivot/AssociationClass.class
+SHA1-Digest: UhWCDpkHUb00yYoKu5/OzV7iK0c=
+
+Name: org/eclipse/ocl/pivot/internal/ecore/as2es/AS2EcoreReferenceVisi
+ tor.class
+SHA1-Digest: 5pOdJHzOOF5NH+02m8cqwR6edV8=
+
+Name: org/eclipse/ocl/pivot/ids/TupleTypeId.class
+SHA1-Digest: /Ngn3NiTeEOLfUMhg/2MmlQO3lI=
+
+Name: org/eclipse/ocl/pivot/ids/IdManager$2.class
+SHA1-Digest: z3d1wA1tvMQt/bvvbOQzZsgV9TA=
+
+Name: org/eclipse/ocl/pivot/internal/values/UndefinedValueImpl.class
+SHA1-Digest: /lRgDJtC5DwDds0A+U5lnVieYs0=
+
+Name: org/eclipse/ocl/pivot/oclstdlib/OCLstdlibTables$FragmentProperti
+ es.class
+SHA1-Digest: 6aI8iJYwSGY/tBjo7+GTathG05c=
+
+Name: org/eclipse/ocl/pivot/library/oclany/OclAnyOclIsUndefinedOperati
+ on.class
+SHA1-Digest: +1nAO016WgIQcWFlc8Kq+oOCNiA=
+
+Name: about.ini
+SHA1-Digest: KQMVTFcyVja5dvVmIh2o+qDsslY=
+
+Name: org/eclipse/ocl/pivot/library/AbstractBinaryOperation.class
+SHA1-Digest: H50BpkoCjL2sKf8mguhGuTA5AOQ=
+
+Name: org/eclipse/ocl/pivot/options/EvaluationOptions.class
+SHA1-Digest: 5tn1jkKdIBArbkLN0YMMURqjMN0=
+
+Name: org/eclipse/ocl/pivot/internal/labels/ValueLabelGenerator.class
+SHA1-Digest: Ly89AS3eWbUVP+bNzulkDsZWDqo=
+
+Name: org/eclipse/ocl/pivot/internal/resource/StandaloneProjectMap$Abs
+ tractResourceLoadStatus.class
+SHA1-Digest: f3to885YvhO11N26Ykj6kZaw9ac=
+
+Name: org/eclipse/ocl/pivot/internal/plugin/CompleteOCLRegistryReader.
+ class
+SHA1-Digest: RHFiTrS10x2kNimfaNOPI/ejQ1Q=
+
+Name: org/eclipse/ocl/pivot/library/map/MapIncludesValueOperation.clas
+ s
+SHA1-Digest: +G5j9fxytag+Qhn1riVVEqwe1cI=
+
+Name: org/eclipse/ocl/pivot/internal/library/ecore/EcoreReflectiveType
+ .class
+SHA1-Digest: UYuHIRsqo25fUe7cikpqB/A/oaQ=
+
+Name: org/eclipse/ocl/pivot/internal/ids/AbstractElementId.class
+SHA1-Digest: zZAIJBgVos280Lt3H/vLk0auem0=
+
+Name: org/eclipse/ocl/pivot/validation/ValidationWarning.class
+SHA1-Digest: 00RDxA/9gVJ27nAC/KWpNES/rWE=
+
+Name: org/eclipse/ocl/pivot/internal/delegate/OCLQueryDelegateFactory.
+ class
+SHA1-Digest: oTNCvLYwwGYUXgSsj6rOiBsJSTo=
+
+Name: org/eclipse/ocl/pivot/Detail.class
+SHA1-Digest: BnLKeHIpibRldJNSm49EM1Eswe0=
+
+Name: org/eclipse/ocl/pivot/utilities/PivotConstants.class
+SHA1-Digest: A/Oe6obKAK6zp68sPWkEbSGuUvg=
+
+Name: org/eclipse/ocl/pivot/util/PivotUnqualifiedLookupVisitor$1.class
+SHA1-Digest: Op5qNZDYoav+6K0HxAfp6NX8ET8=
+
+Name: org/eclipse/ocl/pivot/internal/LanguageExpressionImpl.class
+SHA1-Digest: kQJEIi5BA40VhSdIGWHi5p2DV5s=
+
+Name: schema/complete_ocl_registry.exsd
+SHA1-Digest: kn5V0op4SJVTdDwTBa42gBUC44I=
+
+Name: org/eclipse/ocl/pivot/internal/scoping/EnvironmentView$Metamodel
+ MergeDisambiguator.class
+SHA1-Digest: CLMNKOwQgE2hC5lQQ19S5hJLTDY=
+
+Name: model/SubSuperstructure.uml
+SHA1-Digest: xRaWyXuwm5G+rPLecXWAtWerV9Y=
+
+Name: org/eclipse/ocl/pivot/library/map/MapIncludesAllOperation.class
+SHA1-Digest: pfn2QJa2yXmt0V9oPbdrtAuoYII=
+
+Name: org/eclipse/ocl/pivot/internal/MessageExpImpl.class
+SHA1-Digest: ws2yi0GkdtVxRiXKqOfWKkfJZ4E=
+
+Name: model/Values.genmodel
+SHA1-Digest: akQau7LpPtehTBWhIVwNhlV5EdY=
+
+Name: org/eclipse/ocl/pivot/internal/library/ecore/EcoreReflectiveFrag
+ ment.class
+SHA1-Digest: gWdQu9Dyq3uLceIRzC6ebtszSCQ=
+
+Name: org/eclipse/ocl/pivot/evaluation/Executor$ExecutorExtension.clas
+ s
+SHA1-Digest: dpOD0p3+zj6kdlkCzG9MAfR5etI=
+
+Name: org/eclipse/ocl/pivot/internal/ids/BindingsIdImpl$Iterator.class
+SHA1-Digest: uywCF/LXGmkAaIjGDGGIvtZLIdM=
+
+Name: org/eclipse/ocl/pivot/PivotTables$TypeParameters.class
+SHA1-Digest: P6N/mYI/Pw1UMKOt13tNrozsHN4=
+
+Name: org/eclipse/ocl/pivot/internal/delegate/DelegateDomain.class
+SHA1-Digest: v/So+vOmC4dslThTHdnA5+sQLkU=
+
+Name: org/eclipse/ocl/pivot/library/oclany/OclAnyOclTypeOperation.clas
+ s
+SHA1-Digest: wbwqIupPD6dhxAIsSg/W7IxuLg4=
+
+Name: org/eclipse/ocl/pivot/library/AbstractTernaryOperation.class
+SHA1-Digest: lnU3TSdxnnaNLn3a0OD/dkbE5L8=
+
+Name: org/eclipse/ocl/pivot/library/LibraryValidator.class
+SHA1-Digest: rRyoO437hI801DLGhg8G4bo4opQ=
+
+Name: org/eclipse/ocl/pivot/internal/StandardLibraryImpl.class
+SHA1-Digest: bY8O8i4G/n+0AkqRzY0+gL9fAuc=
+
+Name: org/eclipse/ocl/pivot/SetType.class
+SHA1-Digest: eFlfaS784SlPY3vIPzLZeiQ0lbs=
+
+Name: org/eclipse/ocl/pivot/internal/labels/StringLabelGenerator.class
+SHA1-Digest: 0K6pD0n3ng+IrRhfWQsPjoNFDBs=
+
+Name: org/eclipse/ocl/pivot/internal/lookup/util/PivotLookupResult.cla
+ ss
+SHA1-Digest: d1XneP3hLnlq0gSfjmJCu25dtDk=
+
+Name: about.properties
+SHA1-Digest: ZWI+f9VVPTMZKICpM3QSZZKH88I=
+
+Name: org/eclipse/ocl/pivot/internal/ParameterVariableImpl.class
+SHA1-Digest: DDtAJuIYQcG2g+jxrE8ixem3Dbs=
+
+Name: org/eclipse/ocl/pivot/internal/PackageImpl.class
+SHA1-Digest: vLFVl40IXbcdDHhx0fYfNOyi/gE=
+
+Name: org/eclipse/ocl/pivot/internal/evaluation/EvaluationCache$Evalua
+ tionResult.class
+SHA1-Digest: w8I9NN+ufKh3YCQ/aEgRb3p30Oo=
+
+Name: org/eclipse/ocl/pivot/library/string/StringGreaterThanOperation.
+ class
+SHA1-Digest: dqENJC2E5DtHiEVq8T0gTinA4Tc=
+
+Name: org/eclipse/ocl/pivot/internal/delegate/ValidationDelegateExtens
+ ion.class
+SHA1-Digest: rJfs8tAU1REv7jN/dEJWLxMbtmU=
+
+Name: org/eclipse/ocl/pivot/internal/library/ecore/EcoreExecutorProper
+ ty.class
+SHA1-Digest: Cac+7aGuiykR+I7KnH+uioO86CU=
+
+Name: org/eclipse/ocl/pivot/internal/attributes/ModelAttribution.class
+SHA1-Digest: W8TYbABli4xIOas71+m2hXW339o=
+
+Name: org/eclipse/ocl/pivot/internal/OperationCallExpImpl.class
+SHA1-Digest: yEUEzRvA1a5OQ8LJNqSPIYKaEyY=
+
+Name: annotations/java/lang/StringBuilder.eea
+SHA1-Digest: v+KLezyQVz1AYjd/VY8xH4MvYGg=
+
+Name: org/eclipse/ocl/pivot/internal/elements/AbstractExecutorOperatio
+ n.class
+SHA1-Digest: x27yAYANZnr35lqKORSWhjhZ7mg=
+
+Name: org/eclipse/ocl/pivot/internal/values/NumberValueImpl.class
+SHA1-Digest: gfsWUw+egWp6ZyN7MaaU6F9w6GM=
+
+Name: org/eclipse/ocl/pivot/library/oclany/OclAnyOclLogOperation.class
+SHA1-Digest: wuvhdwZRnBTK31jS9kfe6H4uKXo=
+
+Name: org/eclipse/ocl/pivot/ids/IdManager$7.class
+SHA1-Digest: y6R9g72EBO6m1ZWtEYAxNhRCn0c=
+
+Name: org/eclipse/ocl/pivot/library/iterator/ClosureIteration.class
+SHA1-Digest: DCw97fPGM9WoB7aFL9Y/tGey1R8=
+
+Name: org/eclipse/ocl/pivot/internal/PackageImpl$1.class
+SHA1-Digest: h7+wiGbZ5k306pylTyc3uVYPz1I=
+
+Name: org/eclipse/ocl/pivot/TemplateParameter.class
+SHA1-Digest: GmRJCW7rR6XzYPgvSLnM1TjTSnE=
+
+Name: annotations/org/eclipse/swt/widgets/Combo.eea
+SHA1-Digest: 3EyPGSYUtZVGnlQEmJu2SzMwDmw=
+
+Name: org/eclipse/ocl/pivot/labels/AbstractLabelGenerator.class
+SHA1-Digest: 0XEBQXnk3CQ3Wkip5dADaAbOdbM=
+
+Name: annotations/org/eclipse/emf/ecore/util/EcoreUtil.eea
+SHA1-Digest: cbux+b3hGkI4BkKuq1vtiiGQkbY=
+
+Name: org/eclipse/ocl/pivot/library/UnsupportedOperation.class
+SHA1-Digest: PjLz1S6w6CKJ+2RAJX0NF94n5jQ=
+
+Name: org/eclipse/ocl/pivot/library/iterator/SortedByIteration$Sorting
+ Value.class
+SHA1-Digest: 2vRzhOEDvr8VH9hWJg8CK9LmZ2E=
+
+Name: org/eclipse/ocl/pivot/internal/labels/EAnnotationLabelGenerator.
+ class
+SHA1-Digest: R2ckx2HxqUw+LI2ErrCZlzNCFJE=
+
+Name: org/eclipse/ocl/pivot/util/PivotSwitch.class
+SHA1-Digest: wPnHbLN4pGNy67slom2v4r4PTAQ=
+
+Name: org/eclipse/ocl/pivot/internal/MapLiteralPartImpl.class
+SHA1-Digest: rpzLIurba8mh4mNDtTbDNfiX1zw=
+
+Name: org/eclipse/ocl/pivot/internal/library/ecore/EcoreExecutorEnumer
+ ationLiteral.class
+SHA1-Digest: UXksTKkvtNb+37F9KiFrJ05/fZI=
+
+Name: org/eclipse/ocl/pivot/library/map/MapValuesOperation.class
+SHA1-Digest: bwwDSEkmIORWv7hPKpT2fsfzAXc=
+
+Name: org/eclipse/ocl/pivot/internal/manager/PivotMetamodelManager$Com
+ pleteTypeOperationsIterable.class
+SHA1-Digest: xufSdX7K0JfIISR3ubl+0Kl08I0=
+
+Name: org/eclipse/ocl/pivot/internal/OrderedSetTypeImpl.class
+SHA1-Digest: kDNtwKVP+cY/K1PnHxX697EW2DU=
+
+Name: org/eclipse/ocl/pivot/internal/utilities/HTMLBuffer.class
+SHA1-Digest: s7js74iyxYAfXJNPHf2nvRbYKAQ=
+
+Name: org/eclipse/ocl/pivot/BagType.class
+SHA1-Digest: 6joEYAjbeyuaLN/6W3IOAA9YR5E=
+
+Name: org/eclipse/ocl/pivot/internal/attributes/TemplateParameterAttri
+ bution.class
+SHA1-Digest: bOsx21Zp06idNyhopAPe1JHiojo=
+
+Name: org/eclipse/ocl/pivot/internal/values/BagImpl$ElementCounter.cla
+ ss
+SHA1-Digest: s8oRgT0ujZNn8LbFy0kXFspUKgI=
+
+Name: org/eclipse/ocl/pivot/internal/labels/EObjectLabelGenerator.clas
+ s
+SHA1-Digest: biYq/Rdnv0Hb+nE94UUlLfI1k2U=
+
+Name: org/eclipse/ocl/pivot/internal/manager/TemplateParameterSubstitu
+ tionHelper$CollectionSourceHelper.class
+SHA1-Digest: zzp8DOtc5MhwTA6ZGbVo4GPFB04=
+
+Name: org/eclipse/ocl/pivot/util/AbstractNullVisitor.class
+SHA1-Digest: ldTq0HdEXVQM43YYcVmZmfu6pew=
+
+Name: org/eclipse/ocl/pivot/library/iterator/ForAllIteration.class
+SHA1-Digest: oROjYRGiKrtnRZJP5A7cACDQNTE=
+
+Name: org/eclipse/ocl/pivot/internal/ids/WeakHashMapOfListOfWeakRefere
+ nce3.class
+SHA1-Digest: TFurMTQOKgM8y9sVKm5WeoE8lwk=
+
+Name: annotations/java/util/Collections.eea
+SHA1-Digest: dalf3tDCz5RkCK8YXeytyc6BWNc=
+
+Name: org/eclipse/ocl/pivot/internal/validation/PivotEObjectValidator$
+ ValidationAdapter$1.class
+SHA1-Digest: wASGEzlAtOoZsPvbuQrRLg2f4X4=
+
+Name: org/eclipse/ocl/pivot/evaluation/EvaluationException.class
+SHA1-Digest: huSjUE90dN+6pdxau5vZKNkoQDg=
+
+Name: org/eclipse/ocl/pivot/internal/library/ecore/EcoreExecutorType.c
+ lass
+SHA1-Digest: /NuHfAg/VlsDeR/MGO9rOPyB+zM=
+
+Name: org/eclipse/ocl/pivot/evaluation/EvaluationVisitor$EvaluationVis
+ itorExtension.class
+SHA1-Digest: hcaGJtIDkipjRMUSGCSYuSFxkaw=
+
+Name: org/eclipse/ocl/pivot/library/EvaluatorSingleIterationManager.cl
+ ass
+SHA1-Digest: /Uxx18FbUIyD10/OJaY65iFaabk=
+
+Name: org/eclipse/ocl/pivot/internal/library/executor/AbstractIdResolv
+ er$1.class
+SHA1-Digest: WnL9LnkkNbOprI4cgLu3TxSz04U=
+
+Name: org/eclipse/ocl/pivot/PrimitiveLiteralExp.class
+SHA1-Digest: TQxvWhNEuhuuwi+ssfHmWyRiqDo=
+
+Name: org/eclipse/ocl/pivot/EnumerationLiteral.class
+SHA1-Digest: zO5YqsoZEeiAJq5qjEsrNFV3Nag=
+
+Name: org/eclipse/ocl/pivot/util/PivotQualifiedLookupVisitor.class
+SHA1-Digest: NdClDiXf80Br62vJdPxq5PENZMw=
+
+Name: org/eclipse/ocl/pivot/internal/resource/StandaloneProjectMap$Loa
+ dDynamicResourceStrategy.class
+SHA1-Digest: 61SEyu+Fjd47OgZgwi+7PR1zVuc=
+
+Name: org/eclipse/ocl/pivot/PivotTables$Init.class
+SHA1-Digest: 2P7yHYxcj4jmDx5lfDqzhtud5TQ=
+
+Name: org/eclipse/ocl/pivot/Element.class
+SHA1-Digest: gYCnvbETJXrx+Z/84Uh+y877Sno=
+
+Name: org/eclipse/ocl/pivot/internal/LiteralExpImpl.class
+SHA1-Digest: UC66fdW+cSoW0ZjIQP9Ox1mu33o=
+
+Name: org/eclipse/ocl/pivot/IfExp.class
+SHA1-Digest: eStamFSeeTy+oFSrB3GGh+HOF2Y=
+
+Name: org/eclipse/ocl/pivot/Region.class
+SHA1-Digest: /ENNuuKeWbvIxgHFmseESmym7c0=
+
+Name: org/eclipse/ocl/pivot/WildcardType.class
+SHA1-Digest: mB2MERDeB1RGgZIPcXPQDnXRH00=
+
+Name: org/eclipse/ocl/pivot/values/util/ValuesSwitch.class
+SHA1-Digest: CzvxHMeki0Q/uRKxb+PhsGZyBFk=
+
+Name: org/eclipse/ocl/pivot/internal/ShadowPartImpl.class
+SHA1-Digest: 5DuXrVcy4zXHQCFkGMN6KEmdmAY=
+
+Name: org/eclipse/ocl/pivot/values/Bag$Internal.class
+SHA1-Digest: qvHHy48g2FBaTDmLzsQKIbbQpsw=
+
+Name: org/eclipse/ocl/pivot/oclstdlib/validation/OclVoidValidator.clas
+ s
+SHA1-Digest: xU+bTG50pgpgj4GsgUdA9k9Yo0c=
+
+Name: org/eclipse/ocl/pivot/library/collection/SetMinusOperation.class
+SHA1-Digest: eFzOv5VZkj9HLEQDtcvdOQAcZ7Y=
+
+Name: org/eclipse/ocl/pivot/internal/elements/AbstractExecutorNamedEle
+ ment.class
+SHA1-Digest: zI27QM9XRAV1D2HWwuVHZqaMG/g=
+
+Name: org/eclipse/ocl/pivot/library/collection/CollectionSelectByTypeO
+ peration.class
+SHA1-Digest: DGyKaK5wOu14yDo9uFeDbPmfoT8=
+
+Name: org/eclipse/ocl/pivot/CompletePackage.class
+SHA1-Digest: ZhVHiL5lbTSyopNCU/WDOsu1ST0=
+
+Name: org/eclipse/ocl/pivot/internal/utilities/GlobalEnvironmentFactor
+ y$UnloadResourceAdapter.class
+SHA1-Digest: LM8R+g1dSzSuOSiW9Kr0KpDshmA=
+
+Name: org/eclipse/ocl/pivot/utilities/LabelUtil.class
+SHA1-Digest: D8W4Wwt9yL36/mi205dhuf1XvhM=
+
+Name: org/eclipse/ocl/pivot/library/AbstractOperation.class
+SHA1-Digest: cEwaEhGmJymAQEPzY11WefXbNmY=
+
+Name: org/eclipse/ocl/pivot/State.class
+SHA1-Digest: S9B/XvcgHRby1Rjsy0AoYCZKYk4=
+
+Name: org/eclipse/ocl/pivot/values/OrderedCollectionValue.class
+SHA1-Digest: +oKVi5okrsrxAEAbVxDNGanFq/o=
+
+Name: org/eclipse/ocl/pivot/internal/values/SparseSequenceValueImpl.cl
+ ass
+SHA1-Digest: XOs5gRk0GH3TsgqFX1N5m6Eig3o=
+
+Name: org/eclipse/ocl/pivot/internal/values/CollectionTypeParametersIm
+ pl$Iterator.class
+SHA1-Digest: 3bw7YVByGoKYUmMJrnUV9o8RGcE=
+
+Name: org/eclipse/ocl/pivot/internal/delegate/ValidationDelegate$Facto
+ ry$Descriptor.class
+SHA1-Digest: 5PuTRt5SI8haMmJiDzbuxPOetkY=
+
+Name: org/eclipse/ocl/pivot/oclstdlib/util/OCLstdlibAdapterFactory$1.c
+ lass
+SHA1-Digest: HoxJT6hNB3A7KNnftjjjXPuG7Ww=
+
+Name: org/eclipse/ocl/pivot/internal/evaluation/BasicEvaluationEnviron
+ ment.class
+SHA1-Digest: PWLvr9mBybrHZrD5TE879+fEFR4=
+
+Name: org/eclipse/ocl/pivot/LoopExp.class
+SHA1-Digest: zjN/FQKJ8qwSWnywyVibOGZZDbI=
+
+Name: org/eclipse/ocl/pivot/utilities/ArrayIterable$Iterator.class
+SHA1-Digest: fWnQl+FecvIo2UtaxKx2n6AgxLg=
+
+Name: org/eclipse/ocl/pivot/CompleteEnvironment.class
+SHA1-Digest: /Li54WWuGPAvTdaXYlMr/WJUHdE=
+
+Name: annotations/org/eclipse/core/runtime/Status.eea
+SHA1-Digest: mcTDn0PZBc4bzSXrTgALWRgZCtw=
+
+Name: org/eclipse/ocl/pivot/internal/PrecedenceImpl.class
+SHA1-Digest: IaenHKtvF5ey1vbkABpFFIF3JiM=
+
+Name: annotations/java/util/Map$Entry.eea
+SHA1-Digest: ew8hkf/rGQ/37g1fv0yfcrjlXG0=
+
+Name: org/eclipse/ocl/pivot/library/LibraryUnaryOperation$LibraryUnary
+ OperationExtension.class
+SHA1-Digest: 8s10G8ot8Qvt8uIzLSG2Pi4zrmU=
+
+Name: org/eclipse/ocl/pivot/internal/utilities/AS2Moniker$1.class
+SHA1-Digest: n/wa/7agC9XdhWSEni78xm3SMC4=
+
+Name: org/eclipse/ocl/pivot/internal/evaluation/TracingEvaluationVisit
+ or.class
+SHA1-Digest: FleBHhLK+uDwFA+z2tRDj361ghU=
+
+Name: org/eclipse/ocl/pivot/internal/ecore/as2es/AS2EcoreDeclarationVi
+ sitor$NonDuplicateConstraintsFilter.class
+SHA1-Digest: IzHBRPJe37g2X38fr60WoZ80qPA=
+
+Name: org/eclipse/ocl/pivot/internal/scoping/DebugEmptyAttribution.cla
+ ss
+SHA1-Digest: FLLvOGwekfbhiCeB5aKoXk759Q8=
+
+Name: org/eclipse/ocl/pivot/internal/ValueSpecificationImpl.class
+SHA1-Digest: A/he8ymlDLd3tv4CLayOD501mQE=
+
+Name: org/eclipse/ocl/pivot/internal/evaluation/PivotModelManager.clas
+ s
+SHA1-Digest: BPbJMUR/8UOjoPNaTImgKYYLmU4=
+
+Name: org/eclipse/ocl/pivot/internal/lookup/LookupTables$Types.class
+SHA1-Digest: hedNsa54EquIg3U7+AFlTowSBcE=
+
+Name: org/eclipse/ocl/pivot/internal/complete/CompletePackageInternal.
+ class
+SHA1-Digest: 0o8SXGjA1kNegCBU3xQ5DUFoUk8=
+
+Name: org/eclipse/ocl/pivot/TupleLiteralPart.class
+SHA1-Digest: NKE6+ivluYfurBfNmfnFC1CdcVc=
+
+Name: org/eclipse/ocl/pivot/evaluation/EvaluationEnvironment$Evaluatio
+ nEnvironmentExtension.class
+SHA1-Digest: 3OLQSk+myNq7C9WyiiXpFlMYjis=
+
+Name: org/eclipse/ocl/pivot/internal/utilities/LiveInstances.class
+SHA1-Digest: AwAAEneMoVUm56gTvUVkOhODqi8=
+
+Name: org/eclipse/ocl/pivot/internal/lookup/LookupPackage.class
+SHA1-Digest: L+E6CTj/4t8bnzdUrWaRV/wW0Ks=
+
+Name: org/eclipse/ocl/pivot/library/collection/CollectionIncludesAllOp
+ eration.class
+SHA1-Digest: WetELaS5Hg/J88Ds1RLsFtxSpD4=
+
+Name: org/eclipse/ocl/pivot/internal/ConstraintImpl.class
+SHA1-Digest: FGNGWqNjxzmssyqZ84/aAe4FAWk=
+
+Name: org/eclipse/ocl/pivot/internal/utilities/External2AS.class
+SHA1-Digest: 2Nq3Vr5t5KCTDiGafDj/2e9beMg=
+
+Name: org/eclipse/ocl/pivot/internal/DynamicPropertyImpl.class
+SHA1-Digest: j7AJHuz3exTf4wP0y1z9yeE0IHU=
+
+Name: META-INF/eclipse.inf
+SHA1-Digest: KyT9FF7C7t86NoBoa2kZT3ZJBfw=
+
+Name: org/eclipse/ocl/pivot/internal/complete/AbstractListeners$IAbstr
+ actListener.class
+SHA1-Digest: Lwg//nIR4wkfBc/YdXBGvsxKt3M=
+
+Name: annotations/com/google/inject/Injector.eea
+SHA1-Digest: TmCf7mEBqcjYDF49SBnyKuN8n4Q=
+
+Name: org/eclipse/ocl/pivot/utilities/PivotASSaverResolveVisitor.class
+SHA1-Digest: JlAFRKsB/j2i61dGI6e1ri7tixY=
+
+Name: org/eclipse/ocl/pivot/MapType.class
+SHA1-Digest: drVM8PBMXFvEwdcgasJ56s4YkT0=
+
+Name: org/eclipse/ocl/pivot/internal/utilities/PivotUtilInternal.class
+SHA1-Digest: JXe8G1sb7gzsxcDPUSpvraktLuU=
+
+Name: .options
+SHA1-Digest: U3iCpiVvUseybLekUhbXrPSD/Xc=
+
+Name: org/eclipse/ocl/pivot/library/LibraryIteration$LibraryIterationE
+ xtension.class
+SHA1-Digest: yppM07+1UApREKJ6zGit8+gJc40=
+
+Name: org/eclipse/ocl/pivot/internal/ecore/Ecore2Moniker.class
+SHA1-Digest: BzIy9kEvq9rY+rVOQy0G+dyySmk=
+
+Name: org/eclipse/ocl/pivot/internal/lookup/LookupTables$FragmentOpera
+ tions.class
+SHA1-Digest: Ym8qVknIBskqjhq8YfmIUmRRZhM=
+
+Name: org/eclipse/ocl/pivot/ids/IdResolver$IdResolverExtension.class
+SHA1-Digest: kmpip0IHLxFzCMIeLYCvqG5d0AA=
+
+Name: org/eclipse/ocl/pivot/internal/delegate/OCLSettingDelegateFactor
+ y$Global.class
+SHA1-Digest: xEgYsihPmCjXAjtSgsEPLGSD2Sc=
+
+Name: org/eclipse/ocl/pivot/library/collection/OrderedCollectionLastOp
+ eration.class
+SHA1-Digest: 3y0HanC/TSBYfKTtQBTl4VUwHh8=
+
+Name: org/eclipse/ocl/pivot/TypeExp.class
+SHA1-Digest: AQoPOuH2b3kCWmXbi1uPuipDRlY=
+
+Name: org/eclipse/ocl/pivot/ParameterVariable.class
+SHA1-Digest: 76kpSwTeiOb2c3V9XQmwhqcaCLc=
+
+Name: org/eclipse/ocl/pivot/internal/compatibility/EMF_2_9.class
+SHA1-Digest: AyfCK0EC5/3fm9WHLwzptvAYXvM=
+
+Name: org/eclipse/ocl/pivot/internal/library/executor/DomainProperties
+ $1.class
+SHA1-Digest: 1MOyxtT9N2heLpMWLhJYHaJmoCk=
+
+Name: org/eclipse/ocl/pivot/internal/manager/TemplateParameterSubstitu
+ tionHelper$CollectionCollectHelper.class
+SHA1-Digest: ARK/RfkZ8Z953n5eM271ukBhgdI=
+
+Name: org/eclipse/ocl/pivot/internal/lookup/LookupTables$Parameters.cl
+ ass
+SHA1-Digest: 4po8ysM2tdGYMPnZ7gDAuBfmBwA=
+
+Name: annotations/org/eclipse/emf/ecore/InternalEObject.eea
+SHA1-Digest: E2CKdG4fxwT4Q3r1WiD9PojXyLM=
+
+Name: org/eclipse/ocl/pivot/library/numeric/NumericRoundOperation.clas
+ s
+SHA1-Digest: AlzXbkL5W/Ea7DMxZ/WUfmUDwqs=
+
+Name: org/eclipse/ocl/pivot/values/RealValue.class
+SHA1-Digest: 1tErHaBb6+Qk2IeCshSxQjVSuE4=
+
+Name: org/eclipse/ocl/pivot/internal/values/RealValueImpl.class
+SHA1-Digest: IKzAhTW6aiQeO0fYfLzMBnz8dE0=
+
+Name: plugin.properties
+SHA1-Digest: MjwU82zXX1E6d7jctgumG5mX840=
+
+Name: org/eclipse/ocl/pivot/NumericLiteralExp.class
+SHA1-Digest: aRn/vzMzOSdOo0fLL779ZKKgkgg=
+
+Name: org/eclipse/ocl/pivot/internal/utilities/PivotDiagnostician$Diag
+ nostician_2_9.class
+SHA1-Digest: WIYzcNNDNvRG2gA8J8fIS0lo7rM=
+
+Name: org/eclipse/ocl/pivot/internal/complete/ClassListeners$IClassLis
+ tener.class
+SHA1-Digest: tvM63ev6XkFtRgGd7ygSgDLU1O8=
+
+Name: org/eclipse/ocl/pivot/library/classifier/ClassifierAllInstancesO
+ peration.class
+SHA1-Digest: fkGI+hWPj16DVtGjrZdPn+9+Emw=
+
+Name: org/eclipse/ocl/pivot/library/LibraryFeature.class
+SHA1-Digest: XxngKxbEdOayLcp8CJ6wDtggaPA=
+
+Name: org/eclipse/ocl/pivot/utilities/LabelUtil$1.class
+SHA1-Digest: SkZCav7AnDAuCuzKQghRKOvaBTw=
+
+Name: org/eclipse/ocl/pivot/internal/delegate/OCLValidationDelegate.cl
+ ass
+SHA1-Digest: adBoaSqOMLjWorwQuBmKBgkXCmA=
+
+Name: org/eclipse/ocl/pivot/internal/manager/FlowAnalysis.class
+SHA1-Digest: jIRQ0+3W84Flrd99Sw/xpbFHY1s=
+
+Name: model/Pivot.ecore
+SHA1-Digest: qk8eUILVIpxB/QmfTL42j4W1Z7Q=
+
+Name: org/eclipse/ocl/pivot/resource/ProjectManager$IResourceLoadStatu
+ s.class
+SHA1-Digest: hKQdaTPSfvbas26pRTqiD29blZs=
+
+Name: org/eclipse/ocl/pivot/Property.class
+SHA1-Digest: VCc7s2RYbRYwueca1phku6LRms8=
+
+Name: org/eclipse/ocl/pivot/internal/AssociationClassCallExpImpl.class
+SHA1-Digest: VzKSLQvtbL8JbPpx0Lv3jG/9Pco=
+
+Name: plugin.xml
+SHA1-Digest: 0pE/hpwXM0HDKP+8z46tKdO5c5w=
+
+Name: org/eclipse/ocl/pivot/oclstdlib/OCLstdlibTables$TypeParameters.c
+ lass
+SHA1-Digest: askuqU2cz0waaDepl0u2eRH3rZI=
+
+Name: org/eclipse/ocl/pivot/internal/library/executor/ExecutorProperty
+ .class
+SHA1-Digest: 0qgBbTQ3oiULQxkSTrs9camAEEU=
+
+Name: org/eclipse/ocl/pivot/internal/values/ValueImpl$EmptyIterator.cl
+ ass
+SHA1-Digest: xdz/6DkdG7K3+FFH2cv0yf+D0Kg=
+
+Name: org/eclipse/ocl/pivot/evaluation/IndentingLogger$1.class
+SHA1-Digest: 6e/woYBFBeltNTXmVw9fMGkqEWU=
+
+Name: org/eclipse/ocl/pivot/internal/PrimitiveLiteralExpImpl.class
+SHA1-Digest: L9ugqAUVI01FOlYJLJ83u2LmxWY=
+
+Name: org/eclipse/ocl/pivot/internal/validation/EcoreOCLEValidator$Con
+ straintEvaluatorWithDiagnostics.class
+SHA1-Digest: uU7EQmkq1W2E3PoZgeOc3k5Ur5Y=
+
+Name: org/eclipse/ocl/pivot/internal/ids/EnumerationIdImpl$1.class
+SHA1-Digest: 2vw0bjaBK4DNuiuMSzFpfx78Hr8=
+
+Name: org/eclipse/ocl/pivot/util/AbstractPivotCommonLookupVisitor.clas
+ s
+SHA1-Digest: MX7SzTRoznqeNaj/MMnmDw7riMw=
+
+Name: org/eclipse/ocl/pivot/Feature.class
+SHA1-Digest: XY79ADFN/TkW/hoY3cIhB40tdvE=
+
+Name: org/eclipse/ocl/pivot/internal/labels/EGenericTypeLabelGenerator
+ .class
+SHA1-Digest: AIc7zSfzeoL+/gZqy26SEfLqvgQ=
+
+Name: org/eclipse/ocl/pivot/internal/delegate/OCLQueryDelegateFactory$
+ Global.class
+SHA1-Digest: aRPWubPi7zL8Wu0dxEk1v3Os+CA=
+
+Name: org/eclipse/ocl/pivot/internal/library/RegisteredContribution$Ab
+ stractRegistry.class
+SHA1-Digest: 3NC7Qqnvh+ynyjh2Hu1h7P9JMOU=
+
+Name: org/eclipse/ocl/pivot/ReferringElement.class
+SHA1-Digest: zuWvwQeqpV//QeK8FP4g/MR5M0M=
+
+Name: org/eclipse/ocl/pivot/internal/CollectionRangeImpl.class
+SHA1-Digest: lq1aZVR6roIYQo4RpKxTE56yuzs=
+
+Name: org/eclipse/ocl/pivot/internal/delegate/OCLQueryDelegate.class
+SHA1-Digest: 1xN95Ftn3zJAcwAB6qd5ldqvOgA=
+
+Name: annotations/com/google/common/collect/Sets.eea
+SHA1-Digest: Q+Qvo0MStTzFuqo0hBeRONBvrfY=
+
+Name: org/eclipse/ocl/pivot/utilities/TreeIterable$Iterator.class
+SHA1-Digest: HAlINDgifL8Z2EnJohIJBTxbtZg=
+
+Name: org/eclipse/ocl/pivot/Annotation.class
+SHA1-Digest: hQeEGM5wVPKmfYyThB2WJuMClsw=
+
+Name: org/eclipse/ocl/pivot/types/AbstractInheritance$FragmentIterable
+ $Iterator.class
+SHA1-Digest: TYPu9RG568cqK3Ug1pxx5/LGGKc=
+
+Name: org/eclipse/ocl/pivot/library/collection/CollectionIncludingAllO
+ peration.class
+SHA1-Digest: bdA5fR6NNodEImZrhrxuaEFxucU=
+
+Name: org/eclipse/ocl/pivot/library/collection/OrderedCollectionAppend
+ Operation.class
+SHA1-Digest: +ma/k5pIGl8eH4iaZ9a1/j2V8jU=
+
+Name: org/eclipse/ocl/pivot/library/collection/CollectionNotEmptyOpera
+ tion.class
+SHA1-Digest: 8FDXCwslBriGLz5yALw0trXsfEI=
+
+Name: org/eclipse/ocl/pivot/TypedElement.class
+SHA1-Digest: 4Ff54JE0cCRrcOU6zDlvfJZWf5M=
+
+Name: org/eclipse/ocl/pivot/library/numeric/UnlimitedNaturalMinOperati
+ on.class
+SHA1-Digest: OGofYvvtP2zxChUP3HCcH3muhWc=
+
+Name: org/eclipse/ocl/pivot/internal/OrphanCompletePackageImpl$OrphanC
+ ompleteClassImpl$1.class
+SHA1-Digest: 8geRqKxYgiQj1BRY5juH+v80JZw=
+
+Name: org/eclipse/ocl/pivot/internal/utilities/Technology.class
+SHA1-Digest: q7H53QV5N9GBxioE2L5qIrrYs7g=
+
+Name: org/eclipse/ocl/pivot/library/LibraryUntypedTernaryOperation.cla
+ ss
+SHA1-Digest: q7Era/nwyspzxyClup9fk/msFrk=
+
+Name: org/eclipse/ocl/pivot/internal/IntegerLiteralExpImpl.class
+SHA1-Digest: PHwfJ5scdNZRnRKct0pqWm7PojE=
+
+Name: org/eclipse/ocl/pivot/messages/PivotMessages.properties
+SHA1-Digest: /DzRVfC3ZndhdfvINSdzA17V8o4=
+
+Name: org/eclipse/ocl/pivot/internal/utilities/PathElement.class
+SHA1-Digest: Zn/o1h3bBOvb79z0Fb8zYBNwO5E=
+
+Name: org/eclipse/ocl/pivot/evaluation/ModelManager$ModelManagerExtens
+ ion.class
+SHA1-Digest: EBgX7cev1YdBmP1/XGakBnB4Dt8=
+
+Name: org/eclipse/ocl/pivot/internal/evaluation/ShadowCache$ShadowResu
+ lt.class
+SHA1-Digest: 4W1KbSgB9FGBBicBazCnqkZmrRY=
+
+Name: org/eclipse/ocl/pivot/internal/evaluation/AbstractEvaluationVisi
+ tor.class
+SHA1-Digest: +sIT3Xk1RW1d72w5tOLDsK/QFLM=
+
+Name: org/eclipse/ocl/pivot/internal/resource/ASResourceFactoryRegistr
+ y$ExternalResourcePredicate.class
+SHA1-Digest: +m9bJzZv5N0MZ2yVvCqDR6jhSQE=
+
+Name: org/eclipse/ocl/pivot/internal/LoopExpImpl.class
+SHA1-Digest: NEht1qOXDxP84DhRobenFoNpmMc=
+
+Name: org/eclipse/ocl/pivot/values/CollectionValue$Accumulator.class
+SHA1-Digest: D6eD2km8U+x+ggVJlD9J2r3MwZo=
+
+Name: org/eclipse/ocl/pivot/internal/TemplateSignatureImpl.class
+SHA1-Digest: XY6PA8shWoOFMeZqzzEaXy2XCMs=
+
+Name: org/eclipse/ocl/pivot/internal/library/executor/ExecutorPackage.
+ class
+SHA1-Digest: 3eV9Ky3ucSp1UNKSBDbEVh3/QcM=
+
+Name: org/eclipse/ocl/pivot/internal/utilities/IllegalLibraryException
+ .class
+SHA1-Digest: BD65T8pOgOMrPMp9z/vV7tXCA5I=
+
+Name: org/eclipse/ocl/pivot/library/collection/OrderedSetSubOrderedSet
+ Operation.class
+SHA1-Digest: FC+h2aGo/83sMA/b3DFLL8fIPDc=
+
+Name: org/eclipse/ocl/pivot/internal/ShadowExpImpl$1.class
+SHA1-Digest: 7DhmQThOHNJP0IKIJQUlV2KhL9o=
+
+Name: org/eclipse/ocl/pivot/Parameter.class
+SHA1-Digest: dRBaQzmyCgfhh99h5XtAxObTmP4=
+
+Name: org/eclipse/ocl/pivot/labels/ILabelGenerator$Builder$1.class
+SHA1-Digest: H92oDkOYSlx/jM32dzDxhxw4qwM=
+
+Name: org/eclipse/ocl/pivot/Constraint.class
+SHA1-Digest: J9/k4MHhZ5uLpsbWrMDej/pQolM=
+
+Name: org/eclipse/ocl/pivot/utilities/AbstractEnvironmentFactory.class
+SHA1-Digest: CzjZ8WeYVbkXH/yWjk0kMu45C7Q=
+
+Name: org/eclipse/ocl/pivot/utilities/EnvironmentFactory$EnvironmentFa
+ ctoryExtension.class
+SHA1-Digest: Aya/1O+Tdyb20zH3w6bDeyHp+dc=
+
+Name: org/eclipse/ocl/pivot/library/numeric/UnlimitedNaturalToIntegerO
+ peration.class
+SHA1-Digest: JW+3S8xYj3RkYt47KcRqVNWmYNo=
+
+Name: org/eclipse/ocl/pivot/internal/complete/CompleteURIs.class
+SHA1-Digest: pMzgf+puLMIuwV4HCHC7lJUDLAw=
+
+Name: org/eclipse/ocl/pivot/library/string/CGStringGetSeverityOperatio
+ n.class
+SHA1-Digest: 9BfPQw6agsQTG66f3ATRaTr7cps=
+
+Name: org/eclipse/ocl/pivot/internal/ids/AbstractPackageIdImpl$3.class
+SHA1-Digest: 4ZMaMbYZ3PGVLNTYI024FikZyq8=
+
+Name: org/eclipse/ocl/pivot/internal/plugin/StandardLibraryRegistryRea
+ der.class
+SHA1-Digest: FtxJQntcMbD7nOXBSrNdhEDGELo=
+
+Name: org/eclipse/ocl/pivot/internal/lookup/LookupTables$TypeFragments
+ .class
+SHA1-Digest: PyxZZUaziO8n2AJPA4TMsnVV0is=
+
+Name: org/eclipse/ocl/pivot/Signal.class
+SHA1-Digest: HNOPuUqfmhICfZv2JmYxCppAWYI=
+
+Name: org/eclipse/ocl/pivot/library/oclany/OclElementOclIsModelKindOfO
+ peration.class
+SHA1-Digest: gzAAPup9In2dM+A2cYnrbwCgUTo=
+
+Name: org/eclipse/ocl/pivot/internal/PrimitiveCompletePackageImpl.clas
+ s
+SHA1-Digest: kYdC1HyZS/Laiz+oNQEcBrnyuH4=
+
+Name: org/eclipse/ocl/pivot/ids/TypeId.class
+SHA1-Digest: ceXK8kApZT5Jf4QD+wD5RXOBz0U=
+
+Name: org/eclipse/ocl/pivot/values/SetValue.class
+SHA1-Digest: iik+KVz/M/yz+uHSahrgVmZ3kvM=
+
+Name: org/eclipse/ocl/pivot/internal/library/ImplicitNonCompositionPro
+ perty.class
+SHA1-Digest: Cv7wUpVViM5DQWKo+eGF3HInL5w=
+
+Name: org/eclipse/ocl/pivot/internal/library/executor/ExecutorEnumerat
+ ionLiteral.class
+SHA1-Digest: 0nkuLrRBRmKwL+aVBROj0ALPDeM=
+
+Name: org/eclipse/ocl/pivot/library/oclany/OclComparableGreaterThanEqu
+ alOperation.class
+SHA1-Digest: veJb19VoijpkYD2l4ot+3Q6pAhY=
+
+Name: org/eclipse/ocl/pivot/internal/manager/TupleTypeManager$TupleIdR
+ esolver.class
+SHA1-Digest: sfE04Le0jkdEM1i7JXjbLZfDUOQ=
+
+Name: org/eclipse/ocl/pivot/internal/utilities/AbstractTechnology.clas
+ s
+SHA1-Digest: YXtPKCnLjQEQm666jRnhOlzRViQ=
+
+Name: org/eclipse/ocl/pivot/labels/ILabelGenerator.class
+SHA1-Digest: zXJymCsYKErcXhLaY7OdxSgJ5aE=
+
+Name: org/eclipse/ocl/pivot/OperationCallExp.class
+SHA1-Digest: OSJ9gk/fkPdIsRP3HhVDsdPbpVc=
+
+Name: org/eclipse/ocl/pivot/AnyType.class
+SHA1-Digest: Y7MK81hTb7axzPHWGO0FZy3HdZM=
+
+Name: annotations/org/eclipse/emf/common/util/AbstractEList.eea
+SHA1-Digest: vimfmgv3J6VctncqNBIJvtvBcC4=
+
+Name: org/eclipse/ocl/pivot/internal/complete/CompleteModelInternal.cl
+ ass
+SHA1-Digest: bUk/n8lriNeSkR7QhQpr76U7GC0=
+
+Name: org/eclipse/ocl/pivot/PropertyCallExp.class
+SHA1-Digest: rI7AAR+XdzjtlShQej3YscAccE0=
+
+Name: org/eclipse/ocl/pivot/values/NullValue.class
+SHA1-Digest: UTD/Rlq11JAZVes7xBMWALySTEk=
+
+Name: org/eclipse/ocl/pivot/ids/OperationId.class
+SHA1-Digest: LZ/Fcwtq4YvGEwI/nLKTV0MYTPk=
+
+Name: org/eclipse/ocl/pivot/internal/ecore/es2as/AbstractExternal2AS.c
+ lass
+SHA1-Digest: iACwGPFdm0LBfICLp/DRz+hbe2c=
+
+Name: org/eclipse/ocl/pivot/ids/NestedTypeId.class
+SHA1-Digest: 49IT45mNeqTRuTqr3fLQFf6vmX4=
+
+Name: org/eclipse/ocl/pivot/library/LibrarySimpleTernaryOperation$Libr
+ arySimpleTernaryOperationExtension.class
+SHA1-Digest: HA7I0Tmr7aPWtU1HiFoWPzn6ZNU=
+
+Name: org/eclipse/ocl/pivot/Pseudostate.class
+SHA1-Digest: 0FfLJTiSniKNikVFYIPzjkB5dNc=
+
+Name: org/eclipse/ocl/pivot/ids/TemplateBinding.class
+SHA1-Digest: LTOx0vdViR+vt2NAehj+jfGJEpM=
+
+Name: org/eclipse/ocl/pivot/internal/values/SequenceValueImpl.class
+SHA1-Digest: jSCJ7DGreGFUIOQpVLr4iOFelz8=
+
+Name: org/eclipse/ocl/pivot/internal/delegate/OCLSettingDelegateFactor
+ y.class
+SHA1-Digest: masj3SzjjEoZZUoH6Vf++jzdLRo=
+
+Name: org/eclipse/ocl/pivot/internal/lookup/LookupTables$Properties.cl
+ ass
+SHA1-Digest: 3xwLFDtrrsPVzTJR3e84nJ7g+nU=
+
+Name: annotations/org/eclipse/emf/ecore/resource/impl/ResourceImpl.eea
+SHA1-Digest: VGbNOIr5RaFp7QpOddgxfyVIi8Y=
+
+Name: org/eclipse/ocl/pivot/internal/values/ValueImpl.class
+SHA1-Digest: sUajOnN9pSW2KL1xhnBbVeT7jig=
+
+Name: org/eclipse/ocl/pivot/TransitionKind.class
+SHA1-Digest: mO3kEMsbcUIM4kgZKkb1MfWIgWY=
+
+Name: org/eclipse/ocl/pivot/internal/complete/PartialOperations$2.clas
+ s
+SHA1-Digest: WXFZougzHzYiyaMEPWTp4Njw7+g=
+
+Name: org/eclipse/ocl/pivot/internal/values/CollectionValueImpl.class
+SHA1-Digest: i/TZOsNOHW3ciyeN/7XeSA1c4Uk=
+
+Name: org/eclipse/ocl/pivot/IteratorVariable.class
+SHA1-Digest: idKytDEIl3aGBGgqri+BeeCpgI4=
+
+Name: org/eclipse/ocl/pivot/internal/complete/CompleteClassInternal.cl
+ ass
+SHA1-Digest: XIzdc5ZtW7EqdMSlXawzvsOYlrk=
+
+Name: org/eclipse/ocl/pivot/utilities/NameUtil$ENamedElementComparator
+ .class
+SHA1-Digest: 5Wl2WB2QAoMXKdaW630u/jt9TA4=
+
+Name: org/eclipse/ocl/pivot/utilities/ASSaverNormalizeVisitor$Property
+ Comparator.class
+SHA1-Digest: lB/2x6jXloXVtrTdVefEEiSvpXk=
+
+Name: org/eclipse/ocl/pivot/internal/ids/NsURIPackageIdImpl.class
+SHA1-Digest: sPSBZ4JMq9HDjfNJ7oneFA/PnP4=
+
+Name: org/eclipse/ocl/pivot/internal/ids/RootPackageIdImpl.class
+SHA1-Digest: UlPGehKYqApj4SMFE5qKDyNt2sY=
+
+Name: org/eclipse/ocl/pivot/internal/values/MapTypeParametersImpl.clas
+ s
+SHA1-Digest: RIRRzdlPqLQISE3E670AjEaD0vc=
+
+Name: org/eclipse/ocl/pivot/internal/complete/CompleteClasses$Collecti
+ onCompleteClassImpl.class
+SHA1-Digest: RrxKHcdEk6sYakJ+QgTy7JmxKSU=
+
+Name: org/eclipse/ocl/pivot/internal/manager/Orphanage$WeakEList$ListI
+ terator.class
+SHA1-Digest: k31XDRSeNiGjP4/BQThJVvZ5k+A=
+
+Name: org/eclipse/ocl/pivot/internal/values/CollectionValueImpl$Unmodi
+ fiableEcoreObjects.class
+SHA1-Digest: qjVxP2nwsmgfDJRxVo1ZE+XihjI=
+
+Name: org/eclipse/ocl/pivot/internal/TemplateBindingImpl.class
+SHA1-Digest: IXIm49THrL2XGHrBb7GI0CT8cu4=
+
+Name: org/eclipse/ocl/pivot/internal/ecore/as2es/AS2EcoreReferenceVisi
+ tor$OptionalType.class
+SHA1-Digest: cgbD6JD3dsa62X40WOVQj6dRnSQ=
+
+Name: org/eclipse/ocl/pivot/ids/ParametersId.class
+SHA1-Digest: zn0J7odJYiittlwXBV54uLoBGoY=
+
+Name: org/eclipse/ocl/pivot/internal/library/RegisteredContribution$Ab
+ stractDescriptor.class
+SHA1-Digest: 908GIp0CFqAT5OUJ0UNXn3kWNcU=
+
+Name: org/eclipse/ocl/pivot/oclstdlib/OCLstdlibPackage.class
+SHA1-Digest: ub5UWqoo0W8ktrJQqlpNaz59y3U=
+
+Name: org/eclipse/ocl/pivot/internal/resource/StandaloneProjectMap$Loa
+ dedFirstAsDynamicResourceStrategy.class
+SHA1-Digest: id78m4aVWCBUixTslj4S3j+kC0g=
+
+Name: org/eclipse/ocl/pivot/internal/ids/GeneralizedCollectionTypeIdIm
+ pl.class
+SHA1-Digest: 93JrGlUh4W5/sHNV1h7X4dQdM0s=
+
+Name: org/eclipse/ocl/pivot/types/AbstractInheritance.class
+SHA1-Digest: jtQyWHcfAOc07/XBhKwDwob77hw=
+
+Name: org/eclipse/ocl/pivot/library/collection/CollectionProductOperat
+ ion.class
+SHA1-Digest: ZEOI9Yp105vh6y9Uer6piyN2cS0=
+
+Name: org/eclipse/ocl/pivot/internal/LambdaTypeImpl.class
+SHA1-Digest: TZO9niITn/LINY7jsxyOD5+SPQw=
+
+Name: org/eclipse/ocl/pivot/oclstdlib/OCLstdlibTables$Init.class
+SHA1-Digest: E6RSF4CG9fXuDLCQB8u1yY0wn7Y=
+
+Name: org/eclipse/ocl/pivot/internal/library/ecore/EcoreReflectivePack
+ age.class
+SHA1-Digest: No+2vQFsCrKu9gIswQzVyEf8fkI=
+
+Name: annotations/java/lang/Class.eea
+SHA1-Digest: S76PYouIyDEUVTxCiG4qXACDpNE=
+
+Name: org/eclipse/ocl/pivot/utilities/AS2XMIidVisitor.class
+SHA1-Digest: txvfq7IupETHjE39kRvrt5PJ8gs=
+
+Name: org/eclipse/ocl/pivot/internal/manager/TemplateParameterSubstitu
+ tionHelper$CollectionAsCollectionHelper.class
+SHA1-Digest: VLORGjxzl8oilCv6DTHpvRumWy8=
+
+Name: org/eclipse/ocl/pivot/internal/resource/StandaloneProjectMap$Cre
+ ateStrategy.class
+SHA1-Digest: E2U0aONBVITUA0vqSKBFIB8VqjE=
+
+Name: org/eclipse/ocl/pivot/LiteralExp.class
+SHA1-Digest: 5tdxTISGeUsoVmInCMu76nN3Kos=
+
+Name: org/eclipse/ocl/pivot/internal/ids/WeakHashMapOfListOfWeakRefere
+ nce2$MatchableId.class
+SHA1-Digest: ONfaQISGNeqbsYxSd+mGGB7Se14=
+
+Name: org/eclipse/ocl/pivot/internal/scoping/PivotScoping.class
+SHA1-Digest: vKSMKorqqEY3dSD788ixySaBMmQ=
+
+Name: icons/full/obj16/Iteration.gif
+SHA1-Digest: t8OtHOqg9nmUMtbYvXZEN1+sk4E=
+
+Name: org/eclipse/ocl/pivot/utilities/MorePivotable.class
+SHA1-Digest: xdi/MO2Zsxg6ERl7gbk3bqPp1DA=
+
+Name: org/eclipse/ocl/pivot/library/oclvoid/OclVoidAllInstancesOperati
+ on.class
+SHA1-Digest: S/Tlle65XEstGhZhpFKOYIsqRRo=
+
+Name: org/eclipse/ocl/pivot/oclstdlib/util/OCLstdlibSwitch.class
+SHA1-Digest: jO65TBTvjwFdh7hiptaLnCPYGWg=
+
+Name: org/eclipse/ocl/pivot/utilities/NameUtil$EAnnotationComparator.c
+ lass
+SHA1-Digest: Do1ovV6VG8o+UlUG6R4WJ1HrxFc=
+
+Name: org/eclipse/ocl/pivot/ids/IdResolver.class
+SHA1-Digest: /3MkX4hQrvVOdeP79CO7oe0piOE=
+
+Name: org/eclipse/ocl/pivot/internal/ids/OclVoidTypeIdImpl.class
+SHA1-Digest: 3n7FcHNL1h/OM3CqLHb917ty674=
+
+Name: org/eclipse/ocl/pivot/values/InvalidValue.class
+SHA1-Digest: rQZliWFz6psxrr/aQ382NIKVLhI=
+
+Name: org/eclipse/ocl/pivot/library/AbstractIteration.class
+SHA1-Digest: l0mLPUbjHjrtbeQShglfwCzxfGk=
+
+Name: org/eclipse/ocl/pivot/internal/values/IntIntegerValueImpl.class
+SHA1-Digest: yh0KmcD+wiMWhUgto1P0lTDUJvM=
+
+Name: org/eclipse/ocl/pivot/FinalState.class
+SHA1-Digest: 0uNWjUCVe95NYpEQkiAnrSswbV8=
+
+Name: org/eclipse/ocl/pivot/utilities/PivotHelper.class
+SHA1-Digest: wTIKeEssqJv9gnY+/depTfXaLMk=
+
+Name: org/eclipse/ocl/pivot/DynamicElement.class
+SHA1-Digest: Fp4u4TtPMcpe73TKdE0t8K3HTJo=
+
+Name: org/eclipse/ocl/pivot/evaluation/AbstractConstraintEvaluator.cla
+ ss
+SHA1-Digest: /zwojH55VwQjtsY6cFBQWIc2mAc=
+
+Name: org/eclipse/ocl/pivot/internal/OCLExpressionImpl.class
+SHA1-Digest: ifE5VW2ox97ED9OqTZ+TSedqsAQ=
+
+Name: org/eclipse/ocl/pivot/internal/lookup/util/LookupAdapterFactory$
+ 1.class
+SHA1-Digest: oEVA9Kx6kQvpjRlDiEWRgheqqzA=
+
+Name: org/eclipse/ocl/pivot/internal/attributes/PackageAttribution.cla
+ ss
+SHA1-Digest: +UF/Ytu/tb1HPPCn9WUrhin1iPg=
+
+Name: org/eclipse/ocl/pivot/internal/InvalidTypeImpl.class
+SHA1-Digest: PKbDPsDtewZAgft6nnXJ/Poskhg=
+
+Name: org/eclipse/ocl/pivot/ids/BindingsId.class
+SHA1-Digest: pNmEptgQvBT3or9uYZO2E6ryQys=
+
+Name: org/eclipse/ocl/pivot/OCLExpression.class
+SHA1-Digest: TfI/YueB4dhuBVgpXCsz5pIhE28=
+
+Name: org/eclipse/ocl/pivot/internal/library/executor/DomainReflective
+ Package.class
+SHA1-Digest: U4a5eyeZJsW3a79AuZGB5PZNoaY=
+
+Name: org/eclipse/ocl/pivot/internal/scoping/PivotScopeView$1.class
+SHA1-Digest: i32T/IpG9lfNOOndEoCKr9fQwRA=
+
+Name: org/eclipse/ocl/pivot/internal/manager/TemplateParameterSubstitu
+ tionHelper.class
+SHA1-Digest: IzvitzCVsqkJN+ZbWFp2WGHBReY=
+
+Name: org/eclipse/ocl/pivot/internal/scoping/EnvironmentView.class
+SHA1-Digest: fkpEH3edv5nJaN6Gv1+IkBxwSH4=
+
+Name: org/eclipse/ocl/pivot/internal/delegate/OCLDelegateException.cla
+ ss
+SHA1-Digest: RCYV8+/aOlDtyuT9aXYAh4Bay9I=
+
+Name: org/eclipse/ocl/pivot/library/oclany/OclElementOclModelTypeOpera
+ tion.class
+SHA1-Digest: yGY+0hW8punG9cd5nfuFZOAerz0=
+
+Name: org/eclipse/ocl/pivot/library/collection/CollectionIsEmptyOperat
+ ion.class
+SHA1-Digest: yU9I8OMYGLSnkQf5ju0a+Tw0bgA=
+
+Name: org/eclipse/ocl/pivot/Comment.class
+SHA1-Digest: 10D+1eT+wWPTv22KdmseTBL9/ZI=
+
+Name: org/eclipse/ocl/pivot/internal/manager/TupleTypeManager.class
+SHA1-Digest: 1cM0FpqEGTQ4BB5vKy9u+h5sGo4=
+
+Name: org/eclipse/ocl/pivot/internal/resource/ProjectMap.class
+SHA1-Digest: rKBKAswT8UDF21lUTJzhxv7UOQ4=
+
+Name: model/ReadMe
+SHA1-Digest: qUuM/lugEtxadZTJ32RS839L16I=
+
+Name: org/eclipse/ocl/pivot/internal/EnumLiteralExpImpl.class
+SHA1-Digest: FMAKjqoE/iATuOXCwAFHEYxNB+8=
+
+Name: org/eclipse/ocl/pivot/internal/elements/AbstractExecutorElement.
+ class
+SHA1-Digest: lXOJUowxOPpLyLWhxBHd2SN6V9w=
+
+Name: org/eclipse/ocl/pivot/internal/ids/GeneralizedMapTypeIdImpl.clas
+ s
+SHA1-Digest: t73kqE7GtjapmxirqAGZQcEg/v0=
+
+Name: org/eclipse/ocl/pivot/internal/ids/SpecializedOperationIdImpl.cl
+ ass
+SHA1-Digest: aBBrwmFCkQ7Atl3faHnMqyv2OEM=
+
+Name: org/eclipse/ocl/pivot/utilities/ToStringVisitor$Factory.class
+SHA1-Digest: 0EfdvvhqX3jUVrM2yT/g/adsCQ0=
+
+Name: org/eclipse/ocl/pivot/NullLiteralExp.class
+SHA1-Digest: g96yENBez1j7LBdVQe2vHfX17kU=
+
+Name: org/eclipse/ocl/pivot/internal/BehaviorImpl.class
+SHA1-Digest: 7c3veUkgdo6fsY6RvqkoslDe09U=
+
+Name: org/eclipse/ocl/pivot/internal/manager/PivotMetamodelManager$Com
+ pleteClassPropertiesIterable.class
+SHA1-Digest: o8+Q3KLS6VxoyIkfEMaSyy0qItA=
+
+Name: org/eclipse/ocl/pivot/oclstdlib/OCLstdlibPackage$Literals.class
+SHA1-Digest: DFxCcSzAcE9XNGu6N0LM7N9psa4=
+
+Name: org/eclipse/ocl/pivot/internal/NavigationCallExpImpl.class
+SHA1-Digest: u9/B2mnaaYyTRCkfjbaPFYEGdac=
+
+Name: model-gen/Pivot.oclas
+SHA1-Digest: 7koKdPxgQhg4pfBqAr8XBcrNWj0=
+
+Name: org/eclipse/ocl/pivot/library/string/StringLessThanEqualOperatio
+ n.class
+SHA1-Digest: cxeqYRGJhJHrAYKUWoGj6HSbebI=
+
+Name: org/eclipse/ocl/pivot/MapLiteralExp.class
+SHA1-Digest: BAlaJ0UraKyOyUsZhWSMFAq8Qys=
+
+Name: org/eclipse/ocl/pivot/ids/EnumerationId.class
+SHA1-Digest: Wk0jwyp6friaqWFN2UoYNI8jerw=
+
+Name: org/eclipse/ocl/pivot/internal/library/executor/ExecutorPackage$
+ StringNameable.class
+SHA1-Digest: /piQJREt/Jt1SjlXn+URRI9uEps=
+
+Name: org/eclipse/ocl/pivot/TemplateParameterSubstitution.class
+SHA1-Digest: Qjn40FtPlWtu5C/XD5rbODew0B8=
+
+Name: org/eclipse/ocl/pivot/library/numeric/NumericMinusOperation.clas
+ s
+SHA1-Digest: yNdakM6v1xWNtjm+szYlyDj/YNQ=
+
+Name: org/eclipse/ocl/pivot/library/AbstractSimpleUnaryOperation.class
+SHA1-Digest: X74nLFq1KW/4//PFQh27zUHIfBQ=
+
+Name: org/eclipse/ocl/pivot/internal/library/executor/ExecutorTypeArgu
+ ment.class
+SHA1-Digest: FERNwhRzJht0mETXFFqX50lv9Ps=
+
+Name: org/eclipse/ocl/pivot/util/Visitor.class
+SHA1-Digest: 61dhjrBW305e6stbLxotJ7KZKHI=
+
+Name: annotations/java/util/Map.eea
+SHA1-Digest: Wb5fYavegMHfftoBIV+ReWJyogc=
+
+Name: org/eclipse/ocl/pivot/internal/delegate/DelegateEPackageAdapter.
+ class
+SHA1-Digest: E+NAYViYya440FhmXw6K28HGadw=
+
+Name: org/eclipse/ocl/pivot/internal/evaluation/BasicEvaluationVisitor
+ .class
+SHA1-Digest: fPaslhUdFJpfBiaSdbagoAgmpRk=
+
+Name: org/eclipse/ocl/pivot/DynamicProperty.class
+SHA1-Digest: JB1PQY4IKM1xP3VGncw2DBp1G2E=
+
+Name: org/eclipse/ocl/pivot/internal/resource/ASResourceFactoryContrib
+ ution$Descriptor.class
+SHA1-Digest: 62xR9ffuxC9a1sUxvuNtKyKAYqo=
+
+Name: org/eclipse/ocl/pivot/internal/attributes/LibraryAttribution.cla
+ ss
+SHA1-Digest: Sj5Ogp86Ll3n4FA/CeLppUDA0rs=
+
+Name: org/eclipse/ocl/pivot/internal/evaluation/EvaluationVisitorDecor
+ ator.class
+SHA1-Digest: Fw5SWZ0fNftHj4aFQijvlNX/cME=
+
+Name: org/eclipse/ocl/pivot/internal/delegate/DelegateDomain$Factory$R
+ egistry.class
+SHA1-Digest: t7h1r9XQ1fuWzWIL1KiNgf4Iues=
+
+Name: org/eclipse/ocl/pivot/library/LibrarySimpleBinaryOperation.class
+SHA1-Digest: AdTu5WYOAoYjBthsqlDTGrdUnTU=
+
+Name: org/eclipse/ocl/pivot/internal/values/MapTypeParametersImpl$Iter
+ ator.class
+SHA1-Digest: h3Qukb1Pi40qwS+4n5Cw+KcRMTc=
+
+Name: org/eclipse/ocl/pivot/internal/VariableExpImpl.class
+SHA1-Digest: z7k0Ejtx+Onz8vhh5+YCKWWC+b0=
+
+Name: org/eclipse/ocl/pivot/internal/complete/PartialOperations$Overlo
+ ads.class
+SHA1-Digest: H37oDEMPoP2Mn6JHx291Xb12juc=
+
+Name: org/eclipse/ocl/pivot/internal/values/MapEntryImpl.class
+SHA1-Digest: FpaWaFXwa3N8tAk/9WddCKHKPWI=
+
+Name: org/eclipse/ocl/pivot/library/AbstractUntypedTernaryOperation.cl
+ ass
+SHA1-Digest: ieiYONmjkhawaQb50Y4zPrsUcRM=
+
+Name: org/eclipse/ocl/pivot/PivotTables$FragmentOperations.class
+SHA1-Digest: bRROuE4/Idz2S6DvnNmM3jBNz0Y=
+
+Name: org/eclipse/ocl/pivot/internal/values/RangeOrderedSetValueImpl.c
+ lass
+SHA1-Digest: Lj1BbiuDeUN2LuTxMZ3b0ComwIM=
+
+Name: org/eclipse/ocl/pivot/internal/prettyprint/EssentialOCLPrettyPri
+ ntVisitor.class
+SHA1-Digest: XRfLGbZ7VGyJU5cVpEHdMHkDB5M=
+
+Name: org/eclipse/ocl/pivot/library/map/MapKeysOperation.class
+SHA1-Digest: 7rLWd4LLRUgtuFUwCjMXoGZLHM0=
+
+Name: org/eclipse/ocl/pivot/internal/resource/StandaloneProjectMap$Abs
+ tractResourceDescriptor.class
+SHA1-Digest: p7l78VpkqGflpqDYWi9xaW9SXuA=
+
+Name: org/eclipse/ocl/pivot/ids/IdManager$5.class
+SHA1-Digest: ZUy5F62E5wQ+mqTF9lzNe/A7iZQ=
+
+Name: org/eclipse/ocl/pivot/utilities/AS2MonikerVisitor.class
+SHA1-Digest: iJyniZFc0ynHvydry+p3EVG0ik8=
+
+Name: org/eclipse/ocl/pivot/internal/utilities/AbstractConversion.clas
+ s
+SHA1-Digest: HRH0tJJp10synGrJQtXqTbEs1W8=
+
+Name: org/eclipse/ocl/pivot/values/SequenceValue.class
+SHA1-Digest: D43wIGstTFud14eiEJ9CxmSJKbs=
+
+Name: org/eclipse/ocl/pivot/DataType.class
+SHA1-Digest: +KcwvG4JslceJsxWPxAk+I2QAKI=
+
+Name: org/eclipse/ocl/pivot/internal/evaluation/AbstractExecutor$2.cla
+ ss
+SHA1-Digest: TQYabtJJT2tS0JdZzPY/XZEMFwc=
+
+Name: org/eclipse/ocl/pivot/internal/DynamicTypeImpl.class
+SHA1-Digest: sWON07vGpTpFRmB1XERuXtKut0Q=
+
+Name: org/eclipse/ocl/pivot/internal/scoping/ScopeView.class
+SHA1-Digest: x3OSXzCnU3ZHWL7wh2SuufeoXBA=
+
+Name: org/eclipse/ocl/pivot/internal/ecore/as2es/AS2EcoreTypeRefVisito
+ r.class
+SHA1-Digest: WatpqsSrHPrDGgGaEuof0ip8GS0=
+
+Name: org/eclipse/ocl/pivot/internal/manager/FlowAnalysis$CallPath.cla
+ ss
+SHA1-Digest: cwwocVb87TudKsCCP8zs9pX25KM=
+
+Name: org/eclipse/ocl/pivot/labels/ILabelGenerator$Self.class
+SHA1-Digest: 2SfKOLJtxaWmLZ1yBvQ+DTKjKiw=
+
+Name: org/eclipse/ocl/pivot/labels/AbstractLabelGeneratorBuilder.class
+SHA1-Digest: XClrFDlo7WYpgQF5PAA/Zm6doWA=
+
+Name: org/eclipse/ocl/pivot/internal/library/RegisteredContribution.cl
+ ass
+SHA1-Digest: JsgRaWUWTI7wB13TGE48jTBVlF8=
+
+Name: org/eclipse/ocl/pivot/internal/manager/Orphanage$WeakEList.class
+SHA1-Digest: Esrz3cmuAt0KmkExia+bhDC2eCQ=
+
+Name: org/eclipse/ocl/pivot/internal/attributes/ClassAttribution.class
+SHA1-Digest: HPR18LQ+4WZgzZvnYtBCLroTz88=
+
+Name: org/eclipse/ocl/pivot/library/logical/BooleanOrOperation2.class
+SHA1-Digest: d7f7gjdWAV0BeEEr1F87+qDwHWU=
+
+Name: org/eclipse/ocl/pivot/internal/library/ecore/EcoreExecutorEnumer
+ ation.class
+SHA1-Digest: TjGlMvHvI3dpZhUlOTxYbANW9dY=
+
+Name: org/eclipse/ocl/pivot/utilities/PivotAS2MonikerVisitor.class
+SHA1-Digest: xRx+L3D5CJb0yhRUaVqW1c7z670=
+
+Name: org/eclipse/ocl/pivot/internal/values/CollectionValueImpl$ListIt
+ erator.class
+SHA1-Digest: 0wsTjmeFFz5rxrFZARV0XC/zK+g=
+
+Name: org/eclipse/ocl/pivot/internal/ecore/es2as/Ecore2ASDeclarationSw
+ itch.class
+SHA1-Digest: KT8jogVuTj3FfbIbb7p0Y2bAgIg=
+
+Name: org/eclipse/ocl/pivot/StereotypeExtender.class
+SHA1-Digest: lGhru/YIXPmdhgwPcSNAdk+f8O8=
+
+Name: annotations/java/lang/reflect/Constructor.eea
+SHA1-Digest: /nXht/X1/+E1enCgDwSGz5t1LZ8=
+
+Name: org/eclipse/ocl/pivot/library/oclany/OclElementOclModelTypesOper
+ ation.class
+SHA1-Digest: FZMKSiPg/fi7GZjwzllzZPyzqbM=
+
+Name: org/eclipse/ocl/pivot/internal/delegate/OCLValidationDelegate$1.
+ class
+SHA1-Digest: S8ZdyRKX8LvByGvUUQ5hwNwx2kM=
+
+Name: org/eclipse/ocl/pivot/internal/library/ecore/EcoreExecutorInvali
+ dType.class
+SHA1-Digest: V5Gm8NXYwXx7oeoBzV8SkHAQWMc=
+
+Name: org/eclipse/ocl/pivot/resource/ProjectManager$IConflictHandler.c
+ lass
+SHA1-Digest: Gw3p9SlG3uihxFezQSJNe4Rb96Q=
+
+Name: org/eclipse/ocl/pivot/internal/manager/PivotExecutorManager.clas
+ s
+SHA1-Digest: jRo7Crrz03h7O6ACOMBRuKUQqB0=
+
+Name: org/eclipse/ocl/pivot/internal/library/executor/AbstractIdResolv
+ er$Id2InstanceVisitor.class
+SHA1-Digest: CvtlXOztTnRGoYOPU+YPG0dn5NU=
+
+Name: org/eclipse/ocl/pivot/library/oclany/OclAnyToStringOperation.cla
+ ss
+SHA1-Digest: 02QFrIvHDLu1r0o7Scd69wnDnHY=
+
+Name: org/eclipse/ocl/pivot/internal/utilities/GlobalEnvironmentFactor
+ y.class
+SHA1-Digest: 49iPvU/4FhJWV7Z4EGTmrUC4urw=
+
+Name: org/eclipse/ocl/pivot/internal/StringLiteralExpImpl.class
+SHA1-Digest: EqzEsPqMyOg0FL5/nexEQgnWr7g=
+
+Name: org/eclipse/ocl/pivot/PivotPackage.class
+SHA1-Digest: LDJplgiNvuXSyd+ErcdXLR4eMRs=
+
+Name: org/eclipse/ocl/pivot/library/AbstractUntypedUnaryOperation.clas
+ s
+SHA1-Digest: AKiSAFDEAqQ+b0YgsinXJbIqI40=
+
+Name: org/eclipse/ocl/pivot/internal/ImportImpl.class
+SHA1-Digest: bi6IyfmU2f7iz8Gx/kTZhC6RRoQ=
+
+Name: org/eclipse/ocl/pivot/internal/library/executor/DomainReflective
+ Type$1$1.class
+SHA1-Digest: K75wVMEDuHV/t/kuvBNJybWbxHs=
+
+Name: org/eclipse/ocl/pivot/model/OCLstdlib$Contents.class
+SHA1-Digest: ufL4jqoK5cP+ksxt6v8aKBT5eK4=
+
+Name: org/eclipse/ocl/pivot/library/string/StringTrimOperation.class
+SHA1-Digest: PXlHd1djKm9MQ79fm7yZBNBRzco=
+
+Name: org/eclipse/ocl/pivot/internal/lookup/util/PivotSingleResultLook
+ upEnvironment.class
+SHA1-Digest: u1V4LH76wZON7BcJ/GelYd7oR/Y=
+
+Name: org/eclipse/ocl/pivot/internal/attributes/VariableAttribution.cl
+ ass
+SHA1-Digest: tFJAjmR/hEqNnUTkRf3CUT/AVLg=
+
+Name: org/eclipse/ocl/pivot/values/SetValue$Accumulator.class
+SHA1-Digest: UrgQM4g1gDzo5kZQCNWiDYt56hI=
+
+Name: annotations/java/lang/Integer.eea
+SHA1-Digest: dd1j2uTsiEebR5WNe+HxuFmALPU=
+
+Name: org/eclipse/ocl/pivot/library/iterator/RejectIteration.class
+SHA1-Digest: qHf1GXPQbL7JxfI9FBeyvq7wJq0=
+
+Name: org/eclipse/ocl/pivot/internal/values/BagImpl$BagIterator.class
+SHA1-Digest: FF6Rj8nuJsXHnTRl9/RbYmLy2Zo=
+
+Name: org/eclipse/ocl/pivot/CallOperationAction.class
+SHA1-Digest: vKKU3nD1QNucTlkGHLygagitzvc=
+
+Name: org/eclipse/ocl/pivot/library/numeric/NumericGreaterThanOperatio
+ n.class
+SHA1-Digest: 7AWB4CFxIQFZyNeUdBclZ5rwmJo=
+
+Name: org/eclipse/ocl/pivot/UnspecifiedValueExp.class
+SHA1-Digest: Bl3HDn54upSqOEqD6WAygwIEljM=
+
+Name: org/eclipse/ocl/pivot/library/numeric/NumericLessThanOperation.c
+ lass
+SHA1-Digest: B9sYCu/gOIKfxHzwdSrLD9AihBo=
+
+Name: org/eclipse/ocl/pivot/internal/resource/ProjectMap$ProjectDescri
+ ptor.class
+SHA1-Digest: 5UVRsayNA9+Af5DWtt/BnUgr05Y=
+
+Name: org/eclipse/ocl/pivot/internal/ElementImpl$1.class
+SHA1-Digest: T5nJP8Iw1O0OwZI5htCk7r5Ajvc=
+
+Name: org/eclipse/ocl/pivot/internal/complete/PartialClasses$3.class
+SHA1-Digest: +LD7nWVUMd3gG5V9N+jx/xyaqFQ=
+
+Name: org/eclipse/ocl/pivot/library/string/StringToLowerCaseOperation.
+ class
+SHA1-Digest: R+m076+EaJqqkLhSiFBvKhpGLmM=
+
+Name: org/eclipse/ocl/pivot/internal/TypeImpl.class
+SHA1-Digest: UOUsSiPh49lH3IKvIQivfd6tVYA=
+

@@ -1,0 +1,1265 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.search; singleton:=true
+Archiver-Version: Plexus Archiver
+Built-By: genie.releng
+Require-Bundle: org.eclipse.core.runtime;bundle-version="[3.5.0,4.0.0)
+ ",org.eclipse.core.resources;bundle-version="[3.5.0,4.0.0)",org.eclip
+ se.core.filesystem;bundle-version="[1.3.0,2.0.0)",org.eclipse.core.fi
+ lebuffers;bundle-version="[3.5.0,4.0.0)",org.eclipse.ui;bundle-versio
+ n="[3.5.0,4.0.0)",org.eclipse.ui.ide;bundle-version="[3.5.0,4.0.0)",o
+ rg.eclipse.ui.workbench.texteditor;bundle-version="[3.5.0,4.0.0)",org
+ .eclipse.jface.text;bundle-version="[3.5.0,4.0.0)",org.eclipse.ui.for
+ ms;bundle-version="[3.4.0,4.0.0)",org.eclipse.ltk.core.refactoring;bu
+ ndle-version="[3.5.0,4.0.0)",org.eclipse.ltk.ui.refactoring;bundle-ve
+ rsion="[3.5.0,4.0.0)"
+Bundle-ManifestVersion: 2
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/platfo
+ rm/eclipse.platform.text.git;path="org.eclipse.search";tag="I20170515
+ -2000";commitId=b4e4d5e46f0adcedd9ee169c7689d846f43ba900
+Bundle-Vendor: %providerName
+Import-Package: com.ibm.icu.text
+Export-Package: org.eclipse.search.core.text,org.eclipse.search.intern
+ al.core.text;x-internal:=true,org.eclipse.search.internal.ui;x-intern
+ al:=true,org.eclipse.search.internal.ui.text;x-internal:=true,org.ecl
+ ipse.search.internal.ui.util;x-internal:=true,org.eclipse.search.ui,o
+ rg.eclipse.search.ui.actions,org.eclipse.search.ui.text,org.eclipse.s
+ earch2.internal.ui;x-internal:=true,org.eclipse.search2.internal.ui.b
+ asic.views;x-internal:=true,org.eclipse.search2.internal.ui.text;x-in
+ ternal:=true,org.eclipse.search2.internal.ui.text2;x-internal:=true
+Bundle-Name: %pluginName
+Bundle-Version: 3.11.100.v20170515-1603
+Bundle-Localization: plugin
+Bundle-Activator: org.eclipse.search.internal.ui.SearchPlugin
+Created-By: Apache Maven 3.3.3
+Build-Jdk: 1.8.0_121
+
+Name: org/eclipse/search/internal/ui/SearchResultView$2.class
+SHA-256-Digest: t+Un2amlA9ENQNIUlAXBTV69O1BjB3nZYrO5QGcJjYo=
+
+Name: plugin.xml
+SHA-256-Digest: pJQqUA2XzJoT+kXsIEkrJdb4KBEWJYssLHb+LDEGoJw=
+
+Name: icons/full/dtool16/search.png
+SHA-256-Digest: SbzZMBr1BE3A4RcTktX4qtXLCJSBr+smprNKeyjh+iM=
+
+Name: org/eclipse/search/internal/ui/util/FileTypeEditor$1.class
+SHA-256-Digest: rgExG/bvxDin4iUaxg3nA5YDmbEP7SJdsNnsZk1JZYo=
+
+Name: org/eclipse/search2/internal/ui/SearchViewManager$1.class
+SHA-256-Digest: 4SgMU/8mj4wqa08DBKkSO34tDyQWFwEQ/NYbJRLzdHQ=
+
+Name: icons/full/dlcl16/filter_ps@2x.png
+SHA-256-Digest: YRQOJop4O2jM0P9wVQ5WrhNMS8F1TqGCeduoIUQcFbA=
+
+Name: icons/full/etool16/group_by_file.png
+SHA-256-Digest: uKq8hOhX5WOQmiKzeChFtc8t9du8+wCArSOhI0uOWcI=
+
+Name: icons/full/elcl16/verticalOrientation.png
+SHA-256-Digest: IxSEXGp0kTWFT45wyweFlbh0g9Drz1ttK9H1srQJp9Y=
+
+Name: icons/full/elcl16/pin_view@2x.png
+SHA-256-Digest: VGpHjEPyWx48foE4c+KDCmqmNm/x4Vwp+KdJXhWiqQ8=
+
+Name: icons/full/dtool16/group_by_folder.png
+SHA-256-Digest: dhXIHZbuzJ/+k99ccK8G8sEY9cUAxi2Db3f8QMXppBA=
+
+Name: org/eclipse/search/internal/ui/text/TextSearchPage$1.class
+SHA-256-Digest: jSbiGhfG53dOBPDfiuPoBHPOQfLVZe6N+Yfhw04soXQ=
+
+Name: org/eclipse/search/internal/core/text/FileCharSequenceProvider.c
+ lass
+SHA-256-Digest: 0bHWYnJhO/jqtxUgcfHJTIPcVN/OsjHTeHj/iU5mjtg=
+
+Name: org/eclipse/search2/internal/ui/InternalSearchUI$InternalSearchJ
+ ob.class
+SHA-256-Digest: D4lbUNd+NqD/bgDVuNnF2GNSHJVLP85zU4erZ07N9X4=
+
+Name: org/eclipse/search/internal/ui/text/ReplaceConfigurationPage$2.c
+ lass
+SHA-256-Digest: Tr7dEp4jUxusKhzF+/rgqCknEDLnObcvCEdE0NLNQNw=
+
+Name: icons/full/elcl16/search_prev.png
+SHA-256-Digest: yxgjX0Rh5hyyjVTLI2Ao+fwtFXyqQIP2r2cKYoRNyoI=
+
+Name: org/eclipse/search/internal/ui/text/FileSearchPage$1.class
+SHA-256-Digest: 9L0+ftpE4JKXnUynGxt29qstArAseEFo2NU/IsqfivY=
+
+Name: org/eclipse/search2/internal/ui/MatchFilterSelectionDialog.class
+SHA-256-Digest: 54YpzR3SL4ISM007ZHEbFggylMeAg3q++AYjLGcN9zM=
+
+Name: org/eclipse/search/internal/ui/RemoveResultAction$1.class
+SHA-256-Digest: 2CJSyQMYGDhEAg9vsiuGB+Q6IR/wQ23/RCukXMg/0ok=
+
+Name: org/eclipse/search/internal/ui/ShowSearchAction.class
+SHA-256-Digest: 5DOnDN7+6tn+u4unuOOMlI1QfqPMiRGSnagml5nD7fk=
+
+Name: org/eclipse/search/internal/ui/text/FileSearchQuery$TextSearchRe
+ sultCollector.class
+SHA-256-Digest: 6rpJ+BphuU2bYnxnspYju1qn4DPCV1ggNuRQT4os27g=
+
+Name: org/eclipse/search/ui/IContextMenuContributor.class
+SHA-256-Digest: 1E8be0jwvLV6tXSTdDLO15j2N6Nnpk7c82EwtdXE4JQ=
+
+Name: icons/full/dlcl16/filter_ps.png
+SHA-256-Digest: V2S6iRRX6vcc85LyVNjvrEHj/t9MR81DbG2xGiZHmBw=
+
+Name: icons/full/dlcl16/search_remall.png
+SHA-256-Digest: x3GAGbOvvVsqfBUfEwo/nZHbbUdJJbe/RReLnhJnzHE=
+
+Name: icons/full/elcl16/automaticOrientation@2x.png
+SHA-256-Digest: B7IviJbXh0etAlK01/vwhLhYtf6o6PyFvPR0Q3YC7Ow=
+
+Name: .api_description
+SHA-256-Digest: PS5tcsuv0wm8BZgws1ph3fU4seaH965FFGpU8vwiJzY=
+
+Name: org/eclipse/search/internal/ui/text/IFileSearchContentProvider.c
+ lass
+SHA-256-Digest: NidfNNRj07axIXmMPK4bmOtcN2K1yGiCmDXCWUbNddY=
+
+Name: org/eclipse/search/internal/ui/ScopePart$3.class
+SHA-256-Digest: VW7ylIoh9DrnzV+Q9dsqvCGr1mLySfDgQFYcAhrS0BI=
+
+Name: org/eclipse/search2/internal/ui/basic/views/RemoveAllMatchesActi
+ on.class
+SHA-256-Digest: 64/x0RYcXBDFoUk73bE5Zjkwmw4QNVDyAn/DffSuAJM=
+
+Name: org/eclipse/search/internal/ui/SearchDialog$3.class
+SHA-256-Digest: QKhh0HCBROBliVAT6/NBbQpKq271/P5WSXJArJBhag0=
+
+Name: org/eclipse/search2/internal/ui/SearchHistorySelectionDialog$4.c
+ lass
+SHA-256-Digest: JarN2QzyfXEg3EPlyxtDZ2gqWMCtIqzFD5fMIjcrrqg=
+
+Name: org/eclipse/search/internal/ui/text/TextSearchPage$TextSearchPag
+ eInput.class
+SHA-256-Digest: nb0ya/zaB55QKrbLOngPH6dTDMppDu8buZTcC6sMcms=
+
+Name: org/eclipse/search/internal/ui/SearchResultViewer$3.class
+SHA-256-Digest: jkBlRRI6R44J2cUkfh3fOq3/7ssJKcLJGFMTj1YSUho=
+
+Name: org/eclipse/search2/internal/ui/OpenSearchPreferencesAction.clas
+ s
+SHA-256-Digest: 9r05swsvAs+0j9prRDhVYWksPsFCcEdMrtQEXGSASNQ=
+
+Name: org/eclipse/search/internal/ui/text/TextSearchPage$SearchPattern
+ Data.class
+SHA-256-Digest: Vk4mFFILJHvEBeI2EBNiWnwwnPJcBCiQBeLtuosjKf8=
+
+Name: org/eclipse/search/ui/text/AbstractTextSearchViewPage$4.class
+SHA-256-Digest: +lRiOsErzcjCRfyBydcDuZIzOlhzb5vJuety1CjDVrQ=
+
+Name: icons/full/elcl16/search_next.png
+SHA-256-Digest: a5y2UyvDePdxRV9SpSDpqwLAUcz7TSvbHXAygJPXQzo=
+
+Name: icons/full/elcl16/search_history.png
+SHA-256-Digest: WKR5IvmMks5l5JrAxfTsT7FJvLJn/p6wWeJ8ZXhPsVY=
+
+Name: org/eclipse/search2/internal/ui/text2/TextSearchQueryProviderReg
+ istry.class
+SHA-256-Digest: Xv2XBL0zYZte5nnoxrJ//CJoBUY0E156xqEAfRH2nSA=
+
+Name: icons/full/dlcl16/singleOrientation.png
+SHA-256-Digest: zAEGNybAxdVaBIp8/X8PuzVyyQccq0LXALOcSHNQWrk=
+
+Name: org/eclipse/search/ui/ISearchPage.class
+SHA-256-Digest: eZ7POBYZ4UNo5ieJ3uNRu6vSilWZAmlC61lR30zWMBU=
+
+Name: org/eclipse/search/internal/ui/ScopePart$2.class
+SHA-256-Digest: OuE+uhwHHr+xgTXCFGLT04XnLZUNcUvwUGeeB4sS2Z8=
+
+Name: icons/full/dlcl16/pin_view.png
+SHA-256-Digest: Kg/usfZqrfbe5UiplM5Y/HLD+JidOO94KeTxLuyJW7g=
+
+Name: org/eclipse/search2/internal/ui/basic/views/ExpandAllAction.clas
+ s
+SHA-256-Digest: +WdaeE9Dm0mi+57I6J/AtG1CLof3yqWGLZpkkyZNWnU=
+
+Name: icons/full/elcl16/collapseall.png
+SHA-256-Digest: PVh4ytv6t/AI8j2Y+4d+gENmGCd4T89fnTB/jp/5Bm0=
+
+Name: org/eclipse/search2/internal/ui/InternalSearchUI$SearchJobRecord
+ .class
+SHA-256-Digest: u16QQdR+rYYBtZG80CWbnVkT9mTsbgaeFi6oNp4wdAE=
+
+Name: org/eclipse/search/internal/ui/text/FileSearchResult.class
+SHA-256-Digest: 2leAHylGIJML3J+oRR9ZR2i73XLZPyKlzugOHm0+nTs=
+
+Name: org/eclipse/search/internal/core/text/FileNamePatternSearchScope
+ .class
+SHA-256-Digest: qjCFxtTnanR0YbQ/Bp+ggnIGto3pBn2PiEzucnOw5i4=
+
+Name: org/eclipse/search/internal/ui/SearchDialog$2.class
+SHA-256-Digest: draXI7vtGTX1nUAUP3KbgWwdXtIAjFGnE4cpAMOK+UY=
+
+Name: org/eclipse/search/ui/ISearchResultViewEntry.class
+SHA-256-Digest: EBTABxLZGtiYar7bgf4cLpdaA2d79ZseyoKw5MMb9Os=
+
+Name: org/eclipse/search/internal/ui/text/FileTreeContentProvider.clas
+ s
+SHA-256-Digest: Nif4CJqQSc/AX4avC1liPL2m/S80/X+mHFFchXygUZY=
+
+Name: icons/full/dtool16/group_by_file@2x.png
+SHA-256-Digest: hJzCFkO296WduhQImvw5Y6R+OeUEPIBnK5HG6uj7tMs=
+
+Name: org/eclipse/search/ui/IGroupByKeyComputer.class
+SHA-256-Digest: v3KK5DhdNEymK+6vhuUYdT/qp2n6ukEM3USe/waleUI=
+
+Name: org/eclipse/search/internal/ui/ScopePart.class
+SHA-256-Digest: 8eIrSaXhUQ6L5+Gsce7Ilp+eqTTuVphtyXV4DyweQYk=
+
+Name: icons/full/dlcl16/search_next.png
+SHA-256-Digest: EnZHS/xtHWJLnv4LrwfOB/z77jlFQhpwWJgHLNiY9Eg=
+
+Name: org/eclipse/search2/internal/ui/MatchFilterSelectionAction.class
+SHA-256-Digest: 0Q2ue+kMkmuh2MfIlpyds7N96+ddL22bOpQLqE8ULhc=
+
+Name: org/eclipse/search/internal/ui/SearchResultViewer$2.class
+SHA-256-Digest: 7hPg0c+SNktLwhIubZdp9ulWozWV834+I7Wlpx2o7f4=
+
+Name: org/eclipse/search/internal/ui/SearchPageDescriptor.class
+SHA-256-Digest: 5eOOyE/QVuSsN7pVhuB8gZ4ZGnAwqs/oxyRjkqH7mEk=
+
+Name: org/eclipse/search/internal/ui/text/ReplaceAction.class
+SHA-256-Digest: DP+uPx1xDdR0tH92DPBU6LGnM9Y/dp9NDMqJiKowpZY=
+
+Name: org/eclipse/search2/internal/ui/basic/views/TreeViewerNavigator.
+ class
+SHA-256-Digest: 1H/R8ggza5I1Tj48TA0Rvg0QjaWg3EPOzxKWle9TEaQ=
+
+Name: org/eclipse/search2/internal/ui/text2/DefaultTextSearchQueryProv
+ ider.class
+SHA-256-Digest: +3xha7EBpEL+QZzn6cWQjmwIoksmiMzc0jC26ozu3uA=
+
+Name: icons/full/dtool16/group_by_project.png
+SHA-256-Digest: pwJTyvB6TBzJUVEpdD63fNaswtuaqSr8b9tsaZzamTU=
+
+Name: org/eclipse/search/internal/core/text/FileCharSequenceProvider$F
+ ileCharSequenceException.class
+SHA-256-Digest: rM8y1QqoKoiVWG7zdTsTRbp0YxRTECewa+aKA5r+qKY=
+
+Name: org/eclipse/search/internal/ui/SearchDialog$TabFolderLayout.clas
+ s
+SHA-256-Digest: 7s/y4SYquYyLqMmcm5T3oepVcEkqTuRSsgqPMG4hfek=
+
+Name: org/eclipse/search2/internal/ui/basic/views/CollapseAllAction.cl
+ ass
+SHA-256-Digest: MnnVjiRNnfSTOI33RNuS5wH4weT3OOLJIhMxzkF3uKk=
+
+Name: org/eclipse/search/internal/ui/text/FileSearchPage.class
+SHA-256-Digest: h3hSro8hZXgr7ELohz6MDRXVjMkFEJJpp7hAQtN7Ve4=
+
+Name: org/eclipse/search/ui/ISearchResultViewPart.class
+SHA-256-Digest: 0VYgbS+IsIw8YuHG7zQJTtKuxo6Wgy/Dv0doFC+Zj2c=
+
+Name: icons/full/elcl16/search_sortmatch@2x.png
+SHA-256-Digest: BzmuNXZl+fMEZ+wd894Hsz8cqxYZmXpZlgiZkdbE2So=
+
+Name: icons/full/obj16/line_match@2x.png
+SHA-256-Digest: ZSAI4CK0aZXEFag1FovqvK4k3i1IyPU+D8rFZbaD+Dc=
+
+Name: org/eclipse/search2/internal/ui/text/WindowAnnotationManager.cla
+ ss
+SHA-256-Digest: TbvpH0xW2SBy6NqP0/cn89YtvG096BxHlaaGD9+KA1Y=
+
+Name: org/eclipse/search/internal/ui/text/DecoratingFileSearchLabelPro
+ vider$1.class
+SHA-256-Digest: 6LQbQa019lB44QQh/KEoZuyKbdQjBL+7OqdMh+ca6KQ=
+
+Name: org/eclipse/search/ui/text/AbstractTextSearchViewPage$3.class
+SHA-256-Digest: JEd5IZsrArsf9EQWH/yroHm1aQp+xq60acaH0ZLVAig=
+
+Name: org/eclipse/search/internal/ui/SearchMessages.properties
+SHA-256-Digest: AVs+FGtQ4p1cpnJq5w0Cg2cenWXzKjT6KNGX+rjr6oo=
+
+Name: icons/full/dlcl16/horizontalOrientation.png
+SHA-256-Digest: mZasa0z3GA4S7/zZw/h8XGDKZDx2si5fM6d87AaUPKo=
+
+Name: org/eclipse/search/internal/ui/SortDropDownAction.class
+SHA-256-Digest: 1HbUeCtJNfwgmlOl5Me7e0XLqGCCdlNQqzLjxZHYvCw=
+
+Name: org/eclipse/search/ui/ISearchResultListener.class
+SHA-256-Digest: BvnmmESmQ0yY/RbmyPPRdS2pojf263ni3jKk+d6KzHk=
+
+Name: org/eclipse/search/ui/IQueryListener.class
+SHA-256-Digest: 3mHdhGKTwU7P3HRw5i8o0zfdS7wioWgEgfIPG362ttc=
+
+Name: org/eclipse/search/internal/ui/SearchResultViewEntry.class
+SHA-256-Digest: WurbZNjeXhmQvllDuoVr5PowfFbSIOy8qlVjDbRpwCk=
+
+Name: org/eclipse/search2/internal/ui/text/AnnotationManagers$1.class
+SHA-256-Digest: JxZDXLDyNtr1HBJZHlInHo3nXqW0JVfsM1qhR5bTiPo=
+
+Name: org/eclipse/search/internal/ui/SearchDialog$6$1.class
+SHA-256-Digest: scUK1b+VbUG5tsEkfZuu1PlUicNnekrEjIgH96bZLNM=
+
+Name: org/eclipse/search/ui/IReplacePage.class
+SHA-256-Digest: yNLgJcxFciD/jLfIHGgTxKNp2jaLHn4leoQsR3zfD7M=
+
+Name: org/eclipse/search/internal/core/text/PatternConstructor.class
+SHA-256-Digest: pEsSn/Njki5ugHldZmv2YgNjnomYw0S4pWjlI9Mg4Ng=
+
+Name: org/eclipse/search/internal/ui/text/DecoratingFileSearchLabelPro
+ vider.class
+SHA-256-Digest: DZ+BKO4CgD8SfBd8sQjlWN7Y9gDXPb+ph6l7+eXWnkc=
+
+Name: org/eclipse/search/internal/ui/text/LineElement.class
+SHA-256-Digest: JxoHGg3qi5LppScEmbg3clJ+YNxLeOHqVnh1u3/5IrM=
+
+Name: org/eclipse/search/internal/ui/text/ReplaceConfigurationPage.cla
+ ss
+SHA-256-Digest: pLyDr2eoAQ3VM9/qOGe9u2YxccE+R1mj4ZeU7aqVzaE=
+
+Name: icons/full/obj16/tsearch_dpdn_obj@2x.png
+SHA-256-Digest: hqv0QwshxvMPvwXQFvwfDz7xuQtSOJrSTdnNNRK6J5g=
+
+Name: org/eclipse/search/internal/ui/RemoveAllResultsAction.class
+SHA-256-Digest: 3QxY9jcdZ0rNjFSlSu2JtKk6q+eOYkZ9mQOy5ZRSaRg=
+
+Name: icons/full/dlcl16/search_goto@2x.png
+SHA-256-Digest: nWcPlWgE9KG4hEwcdeR+8Lk1y5ablBTLIwISPk4FkdU=
+
+Name: icons/full/dtool16/group_by_folder@2x.png
+SHA-256-Digest: V5uxaEoqiuv4AUxWwrm9G6gc9XvO2yX4Aooc3aHOtl4=
+
+Name: icons/full/obj16/tsearch_dpdn_obj.png
+SHA-256-Digest: HlEHXkGb6GRCy276ZL0zS/uY8SnhlrJqqJnN556Qc9k=
+
+Name: org/eclipse/search/internal/ui/SearchPreferenceInitializer.class
+SHA-256-Digest: KCvhszTVEZ0arjSWRDDmx8KG1ElLGWyWLcfJrykHRVU=
+
+Name: org/eclipse/search/internal/ui/SearchDialog$4.class
+SHA-256-Digest: 1CW6xqctLzOAEVGCqdbYbYmiflw66H/Dpni8iQnfSCg=
+
+Name: icons/full/elcl16/search_prev@2x.png
+SHA-256-Digest: utQPHpGeKPtNR43b3LsrMbRgMAmIcpoiocs0YxF5Uf8=
+
+Name: org/eclipse/search2/internal/ui/PinSearchViewAction.class
+SHA-256-Digest: 0SO8/v+lkiuEijkUt4zjWz38ahNL8FoKxrLyWDe8h4g=
+
+Name: icons/full/elcl16/hierarchicalLayout@2x.png
+SHA-256-Digest: Czozr55HFXJULK/vN9IBmnj9zHckwFY7bZKTMmhBKIg=
+
+Name: org/eclipse/search/internal/ui/SearchDialog$7.class
+SHA-256-Digest: tBrfIGJsZgIvNSIivpLQ23DI+rAJBqSZrOXsWFHF9Ao=
+
+Name: org/eclipse/search2/internal/ui/MatchFilterSelectionDialog$2.cla
+ ss
+SHA-256-Digest: NldHGgIySfQv0CMAqpKqVgu03uPY0yDZO9jAZSLpGec=
+
+Name: icons/full/eview16/searchres.png
+SHA-256-Digest: a5SQ+c1pLOlDGJPWRhyfxbrxIMxE1RDc6W2GALcn+PU=
+
+Name: icons/full/dlcl16/search_remall@2x.png
+SHA-256-Digest: OUSd9YhjLoyOKkEjj5PISmzeH4C2mDXBHlxwCZTb4uI=
+
+Name: icons/full/dlcl16/hierarchicalLayout.png
+SHA-256-Digest: eW+qCRZe4PBJSfYFLG7B+T4SXwcnNAspoTVUsFgq8iY=
+
+Name: org/eclipse/search/internal/core/text/TextSearchEngineRegistry$1
+ .class
+SHA-256-Digest: 56ClF9dsjMnzeBDu5FGDbh53E89eYL8efJXX+bsBheE=
+
+Name: org/eclipse/search/internal/ui/SearchResultLabelProvider.class
+SHA-256-Digest: HPKN6Uyp7KDVSUyuJWFqz2layZQUXM+rGMXv0efslUE=
+
+Name: org/eclipse/search/internal/ui/SearchPreferencePage.class
+SHA-256-Digest: lnVM78qSdrcbeVmZhTymvg+Wn/of9BwPhmM+muXx7EM=
+
+Name: icons/full/dlcl16/expandall.png
+SHA-256-Digest: aO0kgvD62ImxL5LMQ8z+aA5hY3INjSTitw1hywOkinM=
+
+Name: icons/full/etool16/search.png
+SHA-256-Digest: a5SQ+c1pLOlDGJPWRhyfxbrxIMxE1RDc6W2GALcn+PU=
+
+Name: org/eclipse/search/internal/ui/CopyToClipboardAction.class
+SHA-256-Digest: z1x47BGUOFk2/+bOgI0eayK0YzmzIfSgTLskgxJUAUs=
+
+Name: org/eclipse/search/internal/ui/SearchDialog.class
+SHA-256-Digest: 6poOrQU1gB5b38F9SIqOetYh4UZnbj8nsc0ehb0M8lM=
+
+Name: org/eclipse/search/internal/core/text/DocumentCharSequence.class
+SHA-256-Digest: /I1Tmrjsk1HXRV2nLO0EJO87jT9PD8BZgvHR+VPqdTk=
+
+Name: org/eclipse/search/internal/ui/ScopePart$1.class
+SHA-256-Digest: I1zIhzn4W7UqMlGAOOLbtrx6WNpwrn/UywUUwzf5/lM=
+
+Name: org/eclipse/search/internal/ui/text/TextSearchPage$8.class
+SHA-256-Digest: 6GcGLFoUurkGp5pReXD7qp7Qe7jZQmEyvqTmptGsekA=
+
+Name: org/eclipse/search2/internal/ui/basic/views/RemoveSelectedMatche
+ sAction.class
+SHA-256-Digest: 7YuQ5g5+5DoJqd+c6fR7hpte7tUadX8lxJ6+akwBXx4=
+
+Name: org/eclipse/search2/internal/ui/text/MarkerHighlighter.class
+SHA-256-Digest: /m/BQjtMj4gAwVANmpKrjPleATz/ouWKKBlTjZf3BwU=
+
+Name: org/eclipse/search/internal/ui/text/TextSearchPage$5.class
+SHA-256-Digest: VFD4txa+Jj4BDAqQ3hBEZyKpJnSpf1Pt+KwJDo/+V7E=
+
+Name: org/eclipse/search/internal/ui/text/FileSearchPage$2.class
+SHA-256-Digest: 9FwTACe9Qdc2Wo+b8+/yvqfFVHCX3CLbfJMx4scdkAg=
+
+Name: org/eclipse/search/internal/ui/SearchResultView$1.class
+SHA-256-Digest: 3lfaUZk2DbK/F+4LLiwKrsWc9+VUQF0oFwcsEqbM3EY=
+
+Name: org/eclipse/search2/internal/ui/text2/TextSearchQueryProviderReg
+ istry$1.class
+SHA-256-Digest: EiroUaTL6zizsBmucEMWH95fffbf6E01K4j6YTxL3sc=
+
+Name: org/eclipse/search/internal/ui/Messages.class
+SHA-256-Digest: nPElfMqLIQM5IVpLJ3OqOWRrT4Jx3GuF9Pyn02xV48s=
+
+Name: org/eclipse/search2/internal/ui/ShowSearchHistoryDialogAction.cl
+ ass
+SHA-256-Digest: Tv0cNunvHqgBk+uWlPc5ZIUR9gcPDp7t8v1eSec8pbg=
+
+Name: icons/full/elcl16/search_history@2x.png
+SHA-256-Digest: i7JskLkhEpNpq3/cHM/ffDMdiyoLZ0fKHm58ziytfWQ=
+
+Name: icons/full/dlcl16/singleOrientation@2x.png
+SHA-256-Digest: 03bcvMh0fCn5YkKEoI5Rbtpsa7gL+hQOMthIAQECoHA=
+
+Name: icons/full/elcl16/tsearch_obj@2x.png
+SHA-256-Digest: Bfkz3ZBfXJBR2DniGvBAgEV3a6nZphfTwW9y7Flay+M=
+
+Name: icons/full/obj16/searchm_obj@2x.png
+SHA-256-Digest: Mes73YYsIQYl/Mu9iJctacm+w0CHfHSlV/LO349DtGE=
+
+Name: icons/full/dtool16/search@2x.png
+SHA-256-Digest: 9pnPAnub41FEx1B3oHoXep8BIC5ETzPruoRHX0Izq7A=
+
+Name: icons/full/dlcl16/search_again.png
+SHA-256-Digest: H2SXva3cW8yQShPusmdtW0vMiQedq8EFy3/Y9tQUA4g=
+
+Name: org/eclipse/search2/internal/ui/SearchView$DummyPart.class
+SHA-256-Digest: wzF+keI1/UJmMRXLNFegwVTPgRRJ9dqsgQoZPmXOB3s=
+
+Name: org/eclipse/search/ui/text/IEditorMatchAdapter.class
+SHA-256-Digest: 37yJ++A6Ri449dyDTZifJLUYQVoCo6RxxAMl5nXmqi8=
+
+Name: org/eclipse/search2/internal/ui/text2/FindInProjectActionDelegat
+ e.class
+SHA-256-Digest: cvgMaLj7FGvMT+iXX7GFzZxoxznG+WDqcw7vtZwc4ic=
+
+Name: icons/full/elcl16/search_rem@2x.png
+SHA-256-Digest: 4qaFRI8uBftz6c3XfTlDbKtxP/2LPwrboyIcJMv79nY=
+
+Name: org/eclipse/search2/internal/ui/SearchAgainAction.class
+SHA-256-Digest: 6QNEfQ1/LDUik5bw0OErz6+y954epPKNunSewk8nkco=
+
+Name: org/eclipse/search2/internal/ui/QueryManager.class
+SHA-256-Digest: pgIaVglP786MVVgXiqC1hYcV5XpP/JbPhQ8Xwjb78ws=
+
+Name: icons/full/elcl16/hierarchicalLayout.png
+SHA-256-Digest: Gxbd5h8UBU+DUswzl4KvCpTI2fz4V68JqK38Qq2EUrE=
+
+Name: org/eclipse/search2/internal/ui/SearchMessages.class
+SHA-256-Digest: TZUYfHR/07MXMFmBM3728CIor+DbEnqTd+8iX5uFo7k=
+
+Name: icons/full/dlcl16/refresh@2x.png
+SHA-256-Digest: 2HRaVnxRmEuyIuk5SzRPGFO72o2ORPhup6FhFhdrqKw=
+
+Name: icons/full/elcl16/search_rem.png
+SHA-256-Digest: 3PWyGcv/D5gVc0T6YOzZiyHYLu2y/VgxUUT0/RPxD4I=
+
+Name: org/eclipse/search/internal/ui/text/TextSearchPage$6.class
+SHA-256-Digest: z2FG7uGoHaCZNCZ9K/jozfKmUW0EW3KPzZeO8ud/SnM=
+
+Name: org/eclipse/search/internal/ui/text/FileMatch.class
+SHA-256-Digest: bbk2KKe6BlyoRJ1pAX7RObQ0B1utmKeXodzaLbG+1Dk=
+
+Name: org/eclipse/search/internal/ui/RemoveAllSearchesAction.class
+SHA-256-Digest: g1sIk8zn+i5pUQmWveRDp36X6YpUVOI5xlrNpe83qnA=
+
+Name: org/eclipse/search/core/text/TextSearchEngine$1.class
+SHA-256-Digest: RnDbIAWpzjpI4vwitKBNVLgrWQ69ZSzxjWxGYRJpt/4=
+
+Name: icons/full/dlcl16/automaticOrientation.png
+SHA-256-Digest: AKSbqsz6xugCnWst8T+u1VEuhcucze/RQhokNv577ZM=
+
+Name: icons/full/dlcl16/refresh.png
+SHA-256-Digest: Bs1Rk6f6PPnbqMHI5phLNumL1NmU/BbuLeDEoq2sE9k=
+
+Name: icons/full/etool16/search@2x.png
+SHA-256-Digest: h/x+v8CV8SuZTFmf81Z3dd7NdSxp8DZYqqEGCXNnkxg=
+
+Name: org/eclipse/search/internal/core/text/FileCharSequenceProvider$C
+ harSubSequence.class
+SHA-256-Digest: c8kV7baWdOkrf63M1DiWI4xhUAGz+xCUYXXkOqDiWB0=
+
+Name: org/eclipse/search/internal/ui/SearchDialog$6.class
+SHA-256-Digest: /uVDFXksXLNGgHcsWUjHBlUGAgrlUuHzd2LuH7uzYqM=
+
+Name: org/eclipse/search2/internal/ui/basic/views/TableViewerNavigator
+ .class
+SHA-256-Digest: 20BJ9TA/SoDcAd92KUT/SJV0snpBAviVzZoRWl7oOLw=
+
+Name: org/eclipse/search/internal/core/text/TextSearchVisitor$1.class
+SHA-256-Digest: 0KocGcO+1SbcNqktHDJU4w5U2wxJEzUcZGDaYKT9YZI=
+
+Name: org/eclipse/search2/internal/ui/SearchPageRegistry.class
+SHA-256-Digest: 1wG/3D7VBFO9GQ0FSSm/SbsbzvJyBNIeJn7tK5H6xb8=
+
+Name: icons/full/elcl16/expandall.png
+SHA-256-Digest: 0CfZLM/9dYAvm4bwFHRXGiF4kWr56ZRrZ8KemoNbQTw=
+
+Name: org/eclipse/search/internal/ui/text/FileSearchQuery.class
+SHA-256-Digest: 6JTdNjzbYQTxwmYz04VbS7x+F7W3g6jCAd58y6znMgw=
+
+Name: org/eclipse/search/internal/ui/SearchResultView.class
+SHA-256-Digest: ZjtVoIgChpaf5LNWWSwzrskD3wcsYvLBcqRTDtWh25U=
+
+Name: org/eclipse/search/internal/ui/SearchPluginImages.class
+SHA-256-Digest: rbo2s2APIzx9ijhNxOeRz6KXgnwocbHsxkmm20ICJ3U=
+
+Name: org/eclipse/search/ui/ISearchPageScoreComputer.class
+SHA-256-Digest: KGc6IVQlioi8lEoZQ1PzlsyEbhgLy0oVB4UU6GEz6Nc=
+
+Name: icons/full/elcl16/search_goto.png
+SHA-256-Digest: hjmSqHxXzNU5sNoT4IKjiRZ8I4JHIsVW0GIy8oWUjck=
+
+Name: icons/full/eview16/searchres@2x.png
+SHA-256-Digest: h/x+v8CV8SuZTFmf81Z3dd7NdSxp8DZYqqEGCXNnkxg=
+
+Name: org/eclipse/search2/internal/ui/SearchHistorySelectionDialog.cla
+ ss
+SHA-256-Digest: C9B23i2E0RPFR3euxDVDqnMh6aQmZvOdOHoUQOfyZwU=
+
+Name: org/eclipse/search2/internal/ui/text/PositionTracker.class
+SHA-256-Digest: FQ35BLbpPTmIzZ6tt0UThxJoGbG6QVSvVgzlkZt548Q=
+
+Name: icons/full/dlcl16/hierarchicalLayout@2x.png
+SHA-256-Digest: +DSbWMH/wPl39oXUGwmx8edurRzWsLrOGqkiO3CVrEA=
+
+Name: icons/full/eview16/searchres.gif
+SHA-256-Digest: uohENWhwuAy5c6lB2xyv/p43V9a8apyY1NuhX332EBw=
+
+Name: org/eclipse/search2/internal/ui/text/AnnotationManagers.class
+SHA-256-Digest: ezCPub3JNVb0/acRNoEBgbFKreGDkxNwPdUTcUhy7QA=
+
+Name: icons/full/dlcl16/search_next@2x.png
+SHA-256-Digest: P0alHYKFBPjhhRfwI1Cz20vXHIR1DdsFYW6HfAjPcwg=
+
+Name: org/eclipse/search/internal/ui/text/SearchResultUpdater.class
+SHA-256-Digest: SbPBUuPSaVUI9tO10YvsCFN6Z7U0vneq6EK9AliPkdY=
+
+Name: org/eclipse/search/internal/ui/ShowSearchesAction$SearchesLabelP
+ rovider.class
+SHA-256-Digest: Ni2sw7YPpiO2/FCHXCdrBj+Ju3Bq1/r8CNujDUumJLc=
+
+Name: org/eclipse/search2/internal/ui/basic/views/RemoveMatchAction.cl
+ ass
+SHA-256-Digest: 4XUPgHsZH3ZNdVwKoF4ARo27fvRchVUpjQriHKVsPjg=
+
+Name: org/eclipse/search2/internal/ui/SearchHistoryDropDownAction$Show
+ SearchFromHistoryAction.class
+SHA-256-Digest: Uyxfdx85cQ02ntWAQJ3MRKsvp7RS7/clCrZ80OdItN4=
+
+Name: org/eclipse/search/core/text/TextSearchRequestor.class
+SHA-256-Digest: /7NeRZMzim2YD8IVjzxnml7rP9CBSPwCCBD90xyyaNM=
+
+Name: org/eclipse/search/internal/core/text/TextSearchEngineRegistry.c
+ lass
+SHA-256-Digest: YO6EPZ9yR36SbYM8SnkkkOU+uW1KRAI/+XeosBuUhGg=
+
+Name: icons/full/elcl16/horizontalOrientation@2x.png
+SHA-256-Digest: Ur1QbHNZqggAEdkfcSA00+drvpR1yNrq+EiM6fWI3aM=
+
+Name: org/eclipse/search2/internal/ui/SearchView$EmptySearchView.class
+SHA-256-Digest: u/8bzVFB+yPCc/Cf+vt1NYLkT5rX6LFTEVgCeLOy7W0=
+
+Name: org/eclipse/search/internal/ui/text/TextSearchPage$7.class
+SHA-256-Digest: uyfk05FvWr0Nx5NIjUrz+MBhp9pR0cl3Z+M6yNemx4E=
+
+Name: icons/full/elcl16/flatLayout@2x.png
+SHA-256-Digest: iy2VELjkL8NrLVVptlsFXQDXRX7eW/i/RJh1Js+w1t8=
+
+Name: org/eclipse/search/internal/ui/text/SearchResultUpdater$1.class
+SHA-256-Digest: OgYem3xxrjPJKf9uVzrKDXwfY3rYFUac3U6NJKDyf3U=
+
+Name: org/eclipse/search2/internal/ui/MatchFilterSelectionDialog$1.cla
+ ss
+SHA-256-Digest: TKsBgGhZ/U0dSCUBywxUpUL2PFojLVD8dLfTXCUwpgk=
+
+Name: org/eclipse/search/ui/IActionGroupFactory.class
+SHA-256-Digest: dPjcgW0ZffNphSq4k1Ya4/QgS/XRZ6x/f/dc9ybOje0=
+
+Name: org/eclipse/search/internal/ui/SearchDialog$5.class
+SHA-256-Digest: WZ5mnQxUugByKC8Ta10vdMs3xrvNkfVRaI92OizuVnk=
+
+Name: org/eclipse/search/internal/core/text/TextSearchVisitor$2.class
+SHA-256-Digest: kBaOxQx2nzROCYfqPJngjsJ0TlIigi+28tRzuT0+UKQ=
+
+Name: icons/full/dlcl16/search_rem.png
+SHA-256-Digest: zIkVzxIw9jhbtZBHLITMvSQzvdN4eLWgxKRWdf/fjeQ=
+
+Name: icons/full/dlcl16/search_prev.png
+SHA-256-Digest: tubMZJbDNF3KvDYQz7BV0c0pKsSZ8Z1wNDKM5cLXcAQ=
+
+Name: org/eclipse/search2/internal/ui/text/PositionTracker$2.class
+SHA-256-Digest: JARMUMtwhr8OUFiN1cqq3HAuHsHMV6Ep9OJSO1938Lw=
+
+Name: org/eclipse/search/internal/ui/text/TextSearchPage$4.class
+SHA-256-Digest: BIlCdOJbltwWnupGtTxbb9uoyw+d+bibqIySwSKXXxk=
+
+Name: org/eclipse/search2/internal/ui/text/MarkerHighlighter$1.class
+SHA-256-Digest: osP98qwFyyd7xfQfD4whYHb2msWRLodcvWuT7C/gWVk=
+
+Name: org/eclipse/search/internal/core/text/PatternConstructor$Replace
+ StringConstructor.class
+SHA-256-Digest: YprCXgTlYHaSnMD7cGqwSVkVJ4trXL7w1k0aODYqqgc=
+
+Name: icons/full/dlcl16/verticalOrientation.png
+SHA-256-Digest: 8FqkYnolSH54+2/JGpNduTDGWks5R5s/gvBT/eGosO8=
+
+Name: org/eclipse/search/internal/ui/SearchDialog$2$1.class
+SHA-256-Digest: MLRulIl6RJPexeD3NM9w1EdE8NDfxMXIOa2rKr5K5r8=
+
+Name: org/eclipse/search2/internal/ui/MatchFilterSelectionDialog$1List
+ enerAndLabelProvider.class
+SHA-256-Digest: 30eGgru8BftNzZAIfwvWi2RDTj2z8EWRz6EYm2LZkyI=
+
+Name: org/eclipse/search2/internal/ui/basic/views/INavigate.class
+SHA-256-Digest: 5yWXcsEZD5SO5dMFgFcM10cWcQnc9BlBZJYM00yxLs8=
+
+Name: org/eclipse/search/internal/ui/OpenSearchDialogAction.class
+SHA-256-Digest: UQlxrIpeXwTpyNiDipyScqA+6tAsrnY4UtAb9E7nWeE=
+
+Name: org/eclipse/search/internal/ui/SearchManager$1.class
+SHA-256-Digest: +kbFav/RpDdeEZHkj0iThsaSiWbvb7/nl19gEk+4BMU=
+
+Name: org/eclipse/search2/internal/ui/text/Highlighter$1.class
+SHA-256-Digest: sXPMlSsLfxq/8nPbDZcxJzWzJTYchUYPIaHc3rYBvrU=
+
+Name: org/eclipse/search2/internal/ui/CancelSearchAction.class
+SHA-256-Digest: v/Urfi3g9aKiG/sa3XFk3zrflxYNzvL04aA0uhefq1Y=
+
+Name: icons/full/elcl16/search_next@2x.png
+SHA-256-Digest: XO7Clj4sCa8Hpf8eZnpjCGjTMLXOIsbvVHKKZXt2m64=
+
+Name: icons/full/elcl16/verticalOrientation@2x.png
+SHA-256-Digest: PXdUv6qWgtZnl/iRZyNuWwHnJHJEJ8Rv29SRd+vPIMk=
+
+Name: org/eclipse/search2/internal/ui/RemoveAllSearchesAction.class
+SHA-256-Digest: AVpYnHE3izZxw/jHWl2gfGrEc3tq8PB9EnERW6X0UzE=
+
+Name: icons/full/elcl16/filter_ps.png
+SHA-256-Digest: Lqd+fk4m1QGfnYnAUr/BnxuMT1bQtrMvb49ULegMv9c=
+
+Name: org/eclipse/search2/internal/ui/SearchView$1.class
+SHA-256-Digest: LXzk85BbbO6bsDa2xevZ+44SMJ9nc2w8FC++XUiChgY=
+
+Name: org/eclipse/search/internal/ui/util/FileLabelProvider.class
+SHA-256-Digest: AZ9d1Gxi58oz0Pskc191doBAKXyQvwJP4wlA/7Fe7ZI=
+
+Name: org/eclipse/search/ui/text/AbstractTextSearchViewPage$SelectionP
+ roviderAdapter.class
+SHA-256-Digest: XHsK4dE27ARdQS8oYK9vfzHYS2auClE9HRiVilm5OCM=
+
+Name: icons/full/elcl16/search_again@2x.png
+SHA-256-Digest: d8cu+9aClhYraEfrLKV4T4n+DNQbCkvc3/2qv2ZqdxY=
+
+Name: org/eclipse/search/ui/text/TextSearchQueryProvider.class
+SHA-256-Digest: 9NnOpKY0IHHL1NH6xpNieYJzf7Ez+7/5XI9MKB1ek20=
+
+Name: org/eclipse/search/ui/text/AbstractTextSearchViewPage$7.class
+SHA-256-Digest: 8fFJP1vz2F1PT/2uZVWk39+d0KZyR+XagW9N70rbrVQ=
+
+Name: org/eclipse/search/internal/ui/util/ExceptionHandler.class
+SHA-256-Digest: BEfVyjHhhDQwX7QeppN5PAqDFZ2HT5OSZ94trzPkicg=
+
+Name: org/eclipse/search/internal/ui/SearchPlugin$1.class
+SHA-256-Digest: 6RafcOSVwoQ23TzV12h94tgBAOkwMN+Vw0P7GB6iIik=
+
+Name: org/eclipse/search/internal/ui/text/FileTableContentProvider.cla
+ ss
+SHA-256-Digest: LcbEr4b5ZtpT3SUSiXTyCisEbhbQtOqtEAzmQDT7/KA=
+
+Name: org/eclipse/search/ui/text/MatchEvent.class
+SHA-256-Digest: v4UAyLWYvpixSUbsFHpHlGFvi9lBOaFuoXCPQbFcMnc=
+
+Name: org/eclipse/search/internal/ui/RemoveMatchAction.class
+SHA-256-Digest: uKL0YnkiV/TYxyTVj0uhwGnItmi/H8PHoMfYHvqhPq8=
+
+Name: org/eclipse/search/ui/text/AbstractTextSearchViewPage$1.class
+SHA-256-Digest: ebjcrLqATU4Z54pLY7noKyUuOpuAOExpBELtooGxcAE=
+
+Name: org/eclipse/search/ui/text/AbstractTextSearchResult.class
+SHA-256-Digest: 39JeILwrL3BXE6IeTJ2NWETvqvgB2Fi39uC38em/TAg=
+
+Name: org/eclipse/search/internal/ui/SearchPlugin.class
+SHA-256-Digest: eHTogXVTF3i+atcepPx+q3vFIyCZrvLzWVtxxRdBrdc=
+
+Name: org/eclipse/search/internal/ui/text/BasicElementLabels.class
+SHA-256-Digest: OWZ1wlXcx6pTzBj/Xx/iG27uCp85BozKyokra58Jv0Y=
+
+Name: org/eclipse/search2/internal/ui/SearchView$EmptySearchView$1.cla
+ ss
+SHA-256-Digest: 1Nn7oq37k7fC4sCbU3TNuJi0kSWPQ0JDiGo54d6Q2L8=
+
+Name: org/eclipse/search/internal/ui/ShowSearchesAction.class
+SHA-256-Digest: E+8H13dDSBlO4JpzwCkWu/ipIe9FpfUwPIfUJfK4cHs=
+
+Name: org/eclipse/search2/internal/ui/SearchHistorySelectionDialog$1.c
+ lass
+SHA-256-Digest: PBkpzoHQaDdllw7xyRJBrJCBqNejPwPze0OgLewdaqg=
+
+Name: icons/full/elcl16/refresh@2x.png
+SHA-256-Digest: iWimX0TBkPsOsgQai6dvrVcncewK35R1Z2Q9epaIuLA=
+
+Name: icons/full/elcl16/tsearch_obj.png
+SHA-256-Digest: fI/Hy8brw4MDlL0mQp6ePqvQQ8/ylenDx59P3kwu9hs=
+
+Name: org/eclipse/search/internal/ui/SelectAllAction.class
+SHA-256-Digest: /Gn80arvlgPyMGWQv77NsBri/AEoh+BQfRJfPJUMvis=
+
+Name: org/eclipse/search2/internal/ui/text/EditorAnnotationManager.cla
+ ss
+SHA-256-Digest: mrzngy36wORjijTbMprxTU3Nla4WJJVPCemwir/RNXk=
+
+Name: org/eclipse/search/ui/text/Match.class
+SHA-256-Digest: 5CbIMFmJC1XAcxRotqMhSmBI2mLelxLfFOtKKZJQlRo=
+
+Name: org/eclipse/search/ui/text/FilterUpdateEvent.class
+SHA-256-Digest: r6HULihtx9Lkkr8wz9mRLTxmBKud9ZsZ6Vwu+LU9nAQ=
+
+Name: org/eclipse/search2/internal/ui/text/EditorAccessHighlighter.cla
+ ss
+SHA-256-Digest: ckSGmM2TkbNHO/TxGEVrlVkuR+bVuyN9ArRZSq0cVWM=
+
+Name: org/eclipse/search/internal/ui/text/TextSearchPage$9.class
+SHA-256-Digest: oyJuNfvIL3HPzwGbMIwenQjDR1c6wLl5NJEXVgvGEvU=
+
+Name: org/eclipse/search/internal/ui/text/ReplaceRefactoring.class
+SHA-256-Digest: MSrJMD+mMWeMLRP1yiUg7CB13oU6lRYDJbkJRF8VPvM=
+
+Name: org/eclipse/search/ui/text/ISearchEditorAccess.class
+SHA-256-Digest: 7zojjiHNnI9IYmA6A8KUzvVphJB1/H9/7hjlwBq1i7g=
+
+Name: .options
+SHA-256-Digest: KNFS500Lp2ZmEukx0Lyyns8X2mgYPKdAVkWsLUKRi3k=
+
+Name: org/eclipse/search/internal/ui/text/FileSearchPage$3.class
+SHA-256-Digest: 9xgPAN5Q5/ND6jntV2MIyer0owjgiwNC5W+J9O6CFfk=
+
+Name: org/eclipse/search/ui/text/AbstractTextSearchViewPage$2.class
+SHA-256-Digest: YNgaYKKPErKQkwAX755WwYFnn3qLzu2oLwp+AwhKNG0=
+
+Name: org/eclipse/search2/internal/ui/SearchHistorySelectionDialog$His
+ toryConfigurationDialog.class
+SHA-256-Digest: kXzl/LlWVltPqXkzYcBqZVZFWbkyon/BhAS9udM5Owg=
+
+Name: icons/full/dlcl16/search_sortmatch@2x.png
+SHA-256-Digest: WqywYx0xf7NIER9QBZst9p5CpxEXXGOggkQHxexTRQQ=
+
+Name: org/eclipse/search2/internal/ui/text2/FindInRecentScopeActionDel
+ egate.class
+SHA-256-Digest: v/L6gh5hTW7/bpjQSWLO+XP4YP70HY3Traxh/E3NEBU=
+
+Name: icons/full/dtool16/group_by_project@2x.png
+SHA-256-Digest: TUxGjbjGUE9esL9OEanCaRyeemn7SR/i1ouRELJBgJo=
+
+Name: org/eclipse/search/internal/ui/SearchDialog$2$2.class
+SHA-256-Digest: QT9FTZTOKMa0cie4Zncd8lmD+biYB0jySxsd+JLmFgo=
+
+Name: org/eclipse/search/internal/ui/RemoveResultAction.class
+SHA-256-Digest: PEnVVKmfsA88NxIjiXY4gGoJVtw8ync9QRr7+Oqi8hI=
+
+Name: org/eclipse/search/internal/ui/SearchManager$7.class
+SHA-256-Digest: dVJW+Iwv4OTbRrP3Mj+i6SztaZCQnqK12Idj1uHEBkg=
+
+Name: org/eclipse/search/ui/ISearchResult.class
+SHA-256-Digest: P5O9nfvvX6jhuJZviQazgVMq/vP8+AWUZAOX0BLzewE=
+
+Name: org/eclipse/search/ui/SearchResultEvent.class
+SHA-256-Digest: u0SJbCfhyGPUaaKRm78qmoMJH7Nbcakk97Z3b1wGd3E=
+
+Name: org/eclipse/search/internal/ui/text/TextSearchPage$3.class
+SHA-256-Digest: UykGqQtIawq/5jSXgPxA8WaomHdvbBtgUPPN9SoUKJo=
+
+Name: org/eclipse/search/ui/actions/TextSearchGroup.class
+SHA-256-Digest: 6I9NVWeygrP5iyfH6DdIGYLR1NGZPzlMOCXidrzWx0k=
+
+Name: org/eclipse/search/ui/ISearchQuery.class
+SHA-256-Digest: uu0Q/nep2uZEMRTujgdaWli3woqVyh4yRMAtIPx7nkU=
+
+Name: icons/full/elcl16/expandall@2x.png
+SHA-256-Digest: SQucKINpSdhkTQsWBZXL5e3XK0KnSMzWegChkMI7Bjc=
+
+Name: icons/full/elcl16/search_remall.png
+SHA-256-Digest: dh1EH1Y/84/Udtb3Mw/+05nkNYWuQhCxwpN3wyjq1vU=
+
+Name: org/eclipse/search/ui/text/AbstractTextSearchViewPage$3$1.class
+SHA-256-Digest: HAyr/XYgCbQ2uNSiY6hBqUJESbCnJnF9pLYwSwMFcJo=
+
+Name: org/eclipse/search/internal/ui/RemovePotentialMatchesAction.clas
+ s
+SHA-256-Digest: WNL6Bqklkx0OVXmWW1IwAKFlrCvwtJhEB3QYj7N4cxE=
+
+Name: icons/full/elcl16/horizontalOrientation.png
+SHA-256-Digest: O5Qah+5deI8zfZ/vzjYO5ZpXa7AbP39hKgNrRM88gHg=
+
+Name: icons/full/etool16/group_by_file@2x.png
+SHA-256-Digest: A2doxZuSqLrpqcsKTZbb5wJGR6V6UzU/OiM9Msd8KQM=
+
+Name: icons/full/dlcl16/search_history@2x.png
+SHA-256-Digest: z8/2ZNW61v4Amj9O4akEArX7KlHi8wf9MtU8/mN2JfY=
+
+Name: org/eclipse/search2/internal/ui/MatchFilterAction.class
+SHA-256-Digest: Ncrt88yqxlXkrcgC5SEWxDN2j9S/Cgeq3UitEh1geXw=
+
+Name: org/eclipse/search/internal/ui/SearchAgainAction.class
+SHA-256-Digest: 97HqrIu3MEyKOIEJjjSJPNBN/D5cx0rsZjrEHls+cYI=
+
+Name: org/eclipse/search2/internal/ui/InternalSearchUI$1.class
+SHA-256-Digest: O0GSM+PNGxjAMZJN+eCu741ogGsjrcS8lhi6lU63Crg=
+
+Name: icons/full/dlcl16/verticalOrientation@2x.png
+SHA-256-Digest: aL2f0v+7+6NzDs3elk38T7/gbxZj8QU7wO0y6r/V/wo=
+
+Name: org/eclipse/search/internal/ui/SearchMessages.class
+SHA-256-Digest: rA23Sar/8OfhYgO0K0G1yGbyAz50ioslngtFvva0v6k=
+
+Name: org/eclipse/search/ui/text/RemoveAllEvent.class
+SHA-256-Digest: Nhyq89a3U0W6q0a/uDmGis7C6chEFAiSRw1mztarILU=
+
+Name: org/eclipse/search/ui/text/MatchFilter.class
+SHA-256-Digest: sk7C742qgECJGk2AabTbQfhtCPC59VUssDezDreZmx8=
+
+Name: org/eclipse/search2/internal/ui/text/PositionTracker$3.class
+SHA-256-Digest: YTOI16fRxp8HKiEr0ox/x47H3VnBFTFa7qYK3lSog+8=
+
+Name: org/eclipse/search/internal/ui/text/ReplaceAction$ReplaceWizard.
+ class
+SHA-256-Digest: 565sz8v+Mo6xn/fC1ejkYUeTtbOSTc+MZdoRPZUfY9M=
+
+Name: icons/full/dlcl16/tsearch_obj@2x.png
+SHA-256-Digest: fEh1uhuQDtziQw5cvloknzT81jhk8JFxcynZGjSH3zs=
+
+Name: org/eclipse/search/internal/ui/SearchManager$6.class
+SHA-256-Digest: xvmoxG1fa8aaKt/gI+J7ofPVa6VGgCbOLeBTnoQXGdI=
+
+Name: org/eclipse/search/ui/text/IFileMatchAdapter.class
+SHA-256-Digest: h6jIUSVG5NDyAzYguepkHZH8bnBHHEdsDDUYcwyg8bc=
+
+Name: org/eclipse/search/internal/ui/SearchManager.class
+SHA-256-Digest: AnZc+FFpv/K/TdcdrPO0PKVM8BPpT3nHw2DCC/IsINw=
+
+Name: icons/full/elcl16/stop@2x.png
+SHA-256-Digest: AvmsggbXkKAxawB0qXh/8Bmqtz5vfOpkVLvr6b1c/KY=
+
+Name: org/eclipse/search/core/text/TextSearchScope.class
+SHA-256-Digest: pkDMjkdV6ct0JiAzDwcXZ++zCvqgnUJbodyRhqYYZvo=
+
+Name: org/eclipse/search/ui/SearchUI.class
+SHA-256-Digest: WoveiIsIr3F5geE3iue/f2Wi3b0W+fRkPsSHi/0I4Ac=
+
+Name: org/eclipse/search2/internal/ui/text2/FindInWorkingSetActionDele
+ gate.class
+SHA-256-Digest: KH9ybk0qJFxkO4TZgKasarQD2OqJhxRCnLoeVAWy/VY=
+
+Name: org/eclipse/search/internal/ui/ShowPreviousResultAction.class
+SHA-256-Digest: qXBItPwUIFVJYxX3gMj8QE4Wua4OdE7LX7Fy9aFwiCg=
+
+Name: org/eclipse/search/ui/ISearchResultPage.class
+SHA-256-Digest: F7y/Yt+gnZcLT8aznzDDFyJCiiEUA7ykZDyClG616PI=
+
+Name: org/eclipse/search/internal/ui/text/ReplaceRefactoring$SearchRes
+ ultUpdateChange.class
+SHA-256-Digest: 7RDHV+XgORnX4nR1gL1MI016ssPDmTCYKD39Z6Fikys=
+
+Name: icons/full/elcl16/filter_ps@2x.png
+SHA-256-Digest: q8BYE9PSagpn5YuiBPx6IiEmabUg+1j9hqHLjW4uWKs=
+
+Name: org/eclipse/search/internal/core/text/FileCharSequenceProvider$F
+ ileCharSequence.class
+SHA-256-Digest: pVW4LE02htzSHqrY9tXuNIesA9nchdGIGJrXkrbm+hY=
+
+Name: org/eclipse/search/internal/ui/text/FileLabelProvider.class
+SHA-256-Digest: /Xr+JWQACKgZ+ZbmQqbaUS7T2J5TRtQqMCLF3cE0IW8=
+
+Name: icons/full/etool16/group_by_project@2x.png
+SHA-256-Digest: /ZO46VeQ8vu29em7NpooSaI9HgmuWUVyQRztawE5GCQ=
+
+Name: org/eclipse/search/internal/ui/SearchResultViewer$1.class
+SHA-256-Digest: dbDypIpgSXjc+kmh+1LoY6G0sICEX+HLmfKov6UpSk8=
+
+Name: org/eclipse/search2/internal/ui/text2/FindInFileActionDelegate.c
+ lass
+SHA-256-Digest: 8GszrtBs/XFkFSX08EChH1Hc6chkaE+5Vx6sTmXvZTw=
+
+Name: org/eclipse/search/internal/ui/text/NewTextSearchActionGroup.cla
+ ss
+SHA-256-Digest: JTebQ0X9rUlcqJLPpUk+fClvW5aP8zF/KdZ81GnbI1Q=
+
+Name: icons/full/dlcl16/collapseall@2x.png
+SHA-256-Digest: nm2yA/fH4EAgfJkDZZ8go1RAm4sRCmjdif41Z4N9g+4=
+
+Name: org/eclipse/search2/internal/ui/InternalSearchUI.class
+SHA-256-Digest: ur+Y3tf+ak1Tz/CKLI7hh9+sdj9tQRsw8EkExOOuYwg=
+
+Name: org/eclipse/search/internal/core/text/TextSearchVisitor$Reusable
+ MatchAccess.class
+SHA-256-Digest: 073MIZI7u7svtckCnI6PflKxW/+lk4BodY9PGpEtmA4=
+
+Name: org/eclipse/search/ui/text/FileTextSearchScope.class
+SHA-256-Digest: 4xs2pLNO1K9ellwPL9xoKzp3ixifz2h1lNxF3kYTXag=
+
+Name: org/eclipse/search2/internal/ui/SearchHistorySelectionDialog$His
+ toryConfigurationDialog$1.class
+SHA-256-Digest: ygckKe3hW4+I6kQYw6JauJmty90gy3lkvYMxwGNvKnM=
+
+Name: icons/full/elcl16/search_remall@2x.png
+SHA-256-Digest: +73JCzlf8Ki5qFMUCEBAobSrM+IdiqLsn7y7AqeCLbA=
+
+Name: icons/full/etool16/group_by_folder.png
+SHA-256-Digest: xyFAttTZPvBrY3GqzYBDje/2BiMCCqGJ0nuidU1k0C0=
+
+Name: org/eclipse/search/internal/ui/SearchManager$5.class
+SHA-256-Digest: aklBPny+iIiLqT+6qmowKrEB+jv5cvC4w9c5i3uQfdI=
+
+Name: org/eclipse/search2/internal/ui/SearchView$2.class
+SHA-256-Digest: Z6c7p6OPnI7BSswqOQSW+S5WU23RsQkOAIJHLlKquso=
+
+Name: icons/full/dlcl16/search_rem@2x.png
+SHA-256-Digest: 9jzYzqsokKozrQx/QgCdhvfIhb6NKRh8r6DtCeoNtWQ=
+
+Name: icons/full/dlcl16/stop.png
+SHA-256-Digest: Obps1vS4dYKxOB8sI4rLZ3Co6Cyy1wUeRmFahyGbm04=
+
+Name: org/eclipse/search/internal/ui/ShowNextResultAction.class
+SHA-256-Digest: qxuXvCtmyhM+3K6ZBBeEYfikxZTsGfABuvbmjAMGEFw=
+
+Name: org/eclipse/search2/internal/ui/SearchHistorySelectionDialog$3.c
+ lass
+SHA-256-Digest: CNI/JNvXl+YRWEoGdRzmvJDE1V2p7h9puRTgmVdQP4A=
+
+Name: icons/full/dlcl16/search_goto.png
+SHA-256-Digest: puSt2jLJdOJXaCAOHPabuF30UROYxiJv9/PXz3HR+Pw=
+
+Name: org/eclipse/search/internal/ui/util/FileTypeEditor.class
+SHA-256-Digest: ipbeclGWZLqYl1pQeD56Aw4zLJVlZFWUZ97xLzIYeaY=
+
+Name: org/eclipse/search/internal/ui/Search.class
+SHA-256-Digest: KVLD4Y8Inr96lGr9sohVlKOji0Mxsz8yhYeilcdrMv4=
+
+Name: icons/full/elcl16/collapseall@2x.png
+SHA-256-Digest: ZKyO+duMscPQimgPKEC1BfYJnhE2TNlnr7pTRbYvOCg=
+
+Name: org/eclipse/search2/internal/ui/text/WindowAnnotationManager$1.c
+ lass
+SHA-256-Digest: kO2v7YTq0FK7Ug3zgh2VSS5562fT6EnuQqrubtiXWaQ=
+
+Name: org/eclipse/search/internal/ui/SearchManager$2.class
+SHA-256-Digest: pINHdDYBs7qHcYJsQo1UpDhRGMK7Elhfqj9psvQjryU=
+
+Name: icons/full/etool16/group_by_folder@2x.png
+SHA-256-Digest: jEojsHTuSXCllrW8HVDV45v+XwHAbjNoYE0m1PoE6AU=
+
+Name: org/eclipse/search2/internal/ui/text/AnnotationHighlighter.class
+SHA-256-Digest: OvoXDYwsCnN2YOhApS4bzL8n8UZSUamyzLA2MByGqOo=
+
+Name: plugin.properties
+SHA-256-Digest: PqwzqZ3vjMDVTrL2Bq+FGg0tmQRvahCIGAA+I6bijmE=
+
+Name: org/eclipse/search/internal/core/text/FileCharSequenceProvider$B
+ uffer.class
+SHA-256-Digest: A0rMAH76sOIRfXy4iT6P0kO9zx3u0g4MN4Ui4q9HH4I=
+
+Name: org/eclipse/search/internal/core/text/FilesOfScopeCalculator.cla
+ ss
+SHA-256-Digest: DB01sWV6cVZAhgWTsuG6xiyo2/jZ0pZwVqTvmKXBhZs=
+
+Name: org/eclipse/search2/internal/ui/SearchMessages.properties
+SHA-256-Digest: XJqvFZd2/bSz9uHmBj8ZIH6ZwZwlFk+3wX0fS6EV70Q=
+
+Name: icons/full/dlcl16/horizontalOrientation@2x.png
+SHA-256-Digest: 9PS5Kmkq1qs17igtJ1oq6To4vLa2V357WS7kWx7djr8=
+
+Name: org/eclipse/search/internal/ui/SearchDialog$1.class
+SHA-256-Digest: 3iFwxIWCN6YA45Fy7hPAaz0FBTgyL3x6I8DgcMh+iyU=
+
+Name: icons/full/obj16/searchm_obj.png
+SHA-256-Digest: 6Z/d0VSK9/wn121e9URWg9AM/EVmUOKZwFxwV2VOQ6A=
+
+Name: icons/full/dlcl16/search_again@2x.png
+SHA-256-Digest: fspFRhZrfEqtwkGZFied+oR3P0JLhQ0Cn1lSz/C+Yl8=
+
+Name: org/eclipse/search/internal/ui/SearchPreferencePage$PerspectiveD
+ escriptorComparator.class
+SHA-256-Digest: bkshdDkrQM5noBqy9/Ck4I9107N6KxYLBJthQkATlC8=
+
+Name: org/eclipse/search2/internal/ui/text/Highlighter.class
+SHA-256-Digest: 1G3xa8zvdPE/75kdUvH5BSZJAbxkTZM8ZbRSGX4VUKk=
+
+Name: org/eclipse/search2/internal/ui/text/PositionTracker$IFileBuffer
+ MatchOperation.class
+SHA-256-Digest: ckAJfNSyp81GPnBOhS/KXJ7bB75wm2Kz0GWPD3M9Y1I=
+
+Name: org/eclipse/search/internal/ui/SearchResultViewEntryAdapterFacto
+ ry.class
+SHA-256-Digest: /yrqYflcPTAicJWLzw8jNEN2PFcXodbCtKzeln+vpWk=
+
+Name: org/eclipse/search/internal/ui/OpenSearchDialogPageAction.class
+SHA-256-Digest: 7xNYn7q58pTQv2K2p84M+CtkIczOKCVE3FQj1GJVLPo=
+
+Name: org/eclipse/search/ui/ISearchPageContainer.class
+SHA-256-Digest: 7the6DhH02u4clet5MVh7Zm311+lqliOYgV0tqwkZ0U=
+
+Name: org/eclipse/search/ui/ISearchResultView.class
+SHA-256-Digest: qYt/TCVAHQ4A4o3K6E0s8W/0eTbalsnFC6+g7hU6jls=
+
+Name: org/eclipse/search/internal/ui/OpenSearchDialogPageAction$1$1.cl
+ ass
+SHA-256-Digest: RyBflWirUos1giRi950rH04AHg3AyHJh7kack3/aaBw=
+
+Name: org/eclipse/search/internal/ui/SearchPlugin$WindowRef.class
+SHA-256-Digest: UDoerrQKRAFulaW/6BNKBZQhuMUiL29ioqGg+jRCTMk=
+
+Name: org/eclipse/search/internal/ui/SearchDropDownAction.class
+SHA-256-Digest: EPTiOxtnLT0HhfTzTaWsBBHuo7ajyfjdwBNkmTd1mzQ=
+
+Name: org/eclipse/search/internal/ui/GotoMarkerAction.class
+SHA-256-Digest: Xmq9Q+ZWKy73bchVLztPl0oUvUEs9OsEGAxmJ3j4TAQ=
+
+Name: org/eclipse/search/internal/ui/text/FileSearchPage$DecoratorIgno
+ ringViewerSorter.class
+SHA-256-Digest: NSWFDCSfP83BFiEvgwBdiCjalFiPLs6pLLJpmacb8u4=
+
+Name: org/eclipse/search/internal/ui/text/EditorOpener.class
+SHA-256-Digest: fELpMAHtUVjIWgmDBD7nEm2k+2OSnCHTNpm0H012Vk4=
+
+Name: org/eclipse/search/internal/ui/text/TextSearchPage$2.class
+SHA-256-Digest: Y4LE62uFJX3qzBr0lGw68fhiELmn5GNc3Qm1e8sFTLY=
+
+Name: org/eclipse/search/internal/ui/SortDropDownAction$1.class
+SHA-256-Digest: bgeiOXBbttaF0g7Gin7VX8K9aot/AyxL+JAOWMVqFrQ=
+
+Name: org/eclipse/search/internal/core/text/TextSearchVisitor.class
+SHA-256-Digest: 4fTtL5LEJkRXVv04EhXnLFSNeKB3/zzz/RBke3RpUPs=
+
+Name: icons/full/elcl16/search_sortmatch.png
+SHA-256-Digest: L7fzpyG6U9Glb4D/MsCKyXi7jICG6nsao4o0czPYAbI=
+
+Name: org/eclipse/search/internal/ui/SorterDescriptor.class
+SHA-256-Digest: v9ReKImwIUJXpq56xdc5WK+hUrxUaOvBUlGjfLYS3eQ=
+
+Name: org/eclipse/search/internal/ui/OpenFileSearchPageAction.class
+SHA-256-Digest: hcGJRUki4iyVTO8kykdibECt6dZwkJxswi/7iI1epO0=
+
+Name: org/eclipse/search/internal/ui/text/ReplaceConfigurationPage$1.c
+ lass
+SHA-256-Digest: uCFrOtK85MjmE+bdM2wx/tSwN+W/aZexAkvYfxBwTvU=
+
+Name: org/eclipse/search/internal/ui/OpenSearchDialogPageAction$Search
+ PageAction.class
+SHA-256-Digest: JWVwL56kB3lAPn5Pqs/tWUOLNqnmFtJn8cTxhNTiN70=
+
+Name: org/eclipse/search/ui/IContextMenuConstants.class
+SHA-256-Digest: Xkbc/5guakYJHxHNL3v2NqXOVaBtRwrI4S39RXJJRWE=
+
+Name: icons/full/elcl16/refresh.png
+SHA-256-Digest: pmfVG/AQJ2N98gafB/sHc8dgagjwD3xqBjrb3z8htSo=
+
+Name: icons/full/dlcl16/stop@2x.png
+SHA-256-Digest: F22NaU7u0dvHoqEcKoCbkRvBlQTB+Kpo8Aox9PfKAKs=
+
+Name: icons/full/obj16/line_match.png
+SHA-256-Digest: jkgyRBSy0f0RJlOnvFnuCRa/7fQwUvqMuGaomTQpk3Q=
+
+Name: org/eclipse/search/internal/ui/SearchPageDescriptor$ExtensionSco
+ rePair.class
+SHA-256-Digest: m+FuvHaOHMkZwP4ygAtlhBDqX/TpTNXPyPtlHqII7gw=
+
+Name: org/eclipse/search/internal/ui/OpenSearchDialogPageAction$1.clas
+ s
+SHA-256-Digest: /VXJ39jmdxym5i5hejJ1wlNZvxn4xIWiy572WxL9sxw=
+
+Name: org/eclipse/search2/internal/ui/SearchHistoryDropDownAction.clas
+ s
+SHA-256-Digest: a7EkEPh0PsOjv3BTawkPOn0qx0BwKxfAj18ZLG4o7ys=
+
+Name: icons/full/elcl16/flatLayout.png
+SHA-256-Digest: dM2d0M0y3foXR0JY/PyEVdIaE6q4vV1uE+Dr28e3EZQ=
+
+Name: icons/full/dlcl16/flatLayout@2x.png
+SHA-256-Digest: IEq7YSsh5DKnHYpUKmkAP8P2i4qRq1lfjK10rhnAfIw=
+
+Name: org/eclipse/search/internal/ui/WorkingSetComparator.class
+SHA-256-Digest: bY5LY2cz72BEPSKNEOMd+mRbIRq/10QVy+il6hcTuxA=
+
+Name: org/eclipse/search/internal/core/text/TextSearchVisitor$TextSear
+ chJobGroup.class
+SHA-256-Digest: GkqQpFmCiw+CyHteu8UkudQU9Gd8JnfdvUhD7M++VPI=
+
+Name: org/eclipse/search/internal/ui/text/ReplaceRefactoring$MatchGrou
+ p.class
+SHA-256-Digest: do6Exl6arsyM0iC0o20vOHa5OXO0ouvUEcu1M2DF+Ns=
+
+Name: org/eclipse/search/ui/text/AbstractTextSearchViewPage.class
+SHA-256-Digest: cvf9wRPNalpVzugrgeGB6DXyR+g1JN7xvYTsVt7SzhI=
+
+Name: org/eclipse/search2/internal/ui/text2/FindInWorkspaceActionDeleg
+ ate.class
+SHA-256-Digest: VuPGkm7TLhhIAP1iJqRZiyVGo1QqPALkI1PQRf9rAcg=
+
+Name: icons/full/elcl16/singleOrientation.png
+SHA-256-Digest: vbcRXgXzoibBAW/SjBDVb/75WTVISUFqItseqSJtc9Y=
+
+Name: icons/full/etool16/group_by_project.png
+SHA-256-Digest: +vfn3jlyXKzCZ5vE3BydqfMJbZa0+SNaUy3DHH9AxHo=
+
+Name: org/eclipse/search/ui/text/AbstractTextSearchViewPage$6.class
+SHA-256-Digest: TU6IbD+vlGAoEd0DeuuWBobabeeGzt+obzF4AypDxmg=
+
+Name: icons/full/elcl16/search_again.png
+SHA-256-Digest: sUTuWwFpgQ7LgSf28ZTxppylYdpNVeBHWhzOHhIzIcY=
+
+Name: icons/full/dlcl16/search_sortmatch.png
+SHA-256-Digest: XKUw7KrY2qMRrz78LSTsuORmzC+T7HCzNmksFMcAVzA=
+
+Name: org/eclipse/search/ui/text/AbstractTextSearchViewPage$UpdateUIJo
+ b.class
+SHA-256-Digest: sYK0z6yLieLm/jDFIhUtJnNCCVBifAk/2cz2FOr7rSo=
+
+Name: icons/full/dlcl16/search_history.png
+SHA-256-Digest: glgphpAKSy2K7uuw/5p+EGARWu3z07TyX+A5oGmgbo4=
+
+Name: org/eclipse/search/ui/NewSearchUI.class
+SHA-256-Digest: P9sTteCuffO+NBl7xyKiHZgeWxx6fXUnwaIb3MaMg7s=
+
+Name: org/eclipse/search/internal/core/text/TextSearchVisitor$TextSear
+ chJob.class
+SHA-256-Digest: C2QhwUpWz09+mK0PYKZkFFXEo2jms8eBxy5Txo8dJ9k=
+
+Name: org/eclipse/search2/internal/ui/basic/views/ShowPreviousResultAc
+ tion.class
+SHA-256-Digest: v1vI8xs1WJSqb5KAK37HzJquUTI7R871buN0oGjPUL0=
+
+Name: icons/full/elcl16/search_goto@2x.png
+SHA-256-Digest: OJJho8R8D+p7FGiJrRcDo0QUrCt0SLSSdr77h1BsSyQ=
+
+Name: icons/full/elcl16/singleOrientation@2x.png
+SHA-256-Digest: s8UpbeFadXefYhpIvTgK/RSPVpwAmbi1DiAcJZns6rQ=
+
+Name: icons/full/dlcl16/expandall@2x.png
+SHA-256-Digest: n66ZDqxPwZP+G3wkpd2WYgNr4Rm55gE70EA0sjgTPlQ=
+
+Name: icons/full/dtool16/group_by_file.png
+SHA-256-Digest: EwUDm8t/HABChmng4CM21zEXarLJfJYqJ4rohNbY0J8=
+
+Name: icons/full/dlcl16/tsearch_obj.png
+SHA-256-Digest: iRJNdHdHDACfgvXu4XNmPwQyDNGvIFVnxBVlN06CUQ0=
+
+Name: org/eclipse/search/internal/ui/text/ReplaceRefactoring$1.class
+SHA-256-Digest: KClS4D2RCTbImNA40tFXtJhRFfQ+D/NB1hamig5XyRg=
+
+Name: org/eclipse/search2/internal/ui/text/PositionTracker$1.class
+SHA-256-Digest: YaQcp9Sgp2IlFvVQMFvQuXk8p427j/KDlgIi79P06/Y=
+
+Name: icons/full/dlcl16/search_prev@2x.png
+SHA-256-Digest: nsMtgaxW7TPoZ4KmIVh2U6DBHgxXlNkFfe61BEz41jk=
+
+Name: org/eclipse/search/internal/ui/ResourceToItemsMapper.class
+SHA-256-Digest: WzGfHAU5nF5GWSBJHmFFFCftu9PGnK98f5i4ZflRZO8=
+
+Name: icons/full/elcl16/pin_view.png
+SHA-256-Digest: 3+TiYuTNi0bTX+6re4yK5JkwJllcqI7RQSIPJTxu4QU=
+
+Name: icons/full/dlcl16/collapseall.png
+SHA-256-Digest: YP8zuw/gIxx8gcRnVrHn3jIdElqalALWW/TQ+akbeoo=
+
+Name: org/eclipse/search/internal/ui/SearchManager$4.class
+SHA-256-Digest: eGVao0H6t+k8lIRiiP3GnDUGhZmG+jRscdV6qqj10Tc=
+
+Name: org/eclipse/search2/internal/ui/basic/views/ShowNextResultAction
+ .class
+SHA-256-Digest: VV8rQc7Bu/L1RbrJKM59diQ0mT7MlS040+Xj1xIF690=
+
+Name: org/eclipse/search/core/text/TextSearchMatchAccess.class
+SHA-256-Digest: tpeSWp2TRKsQxmREiRKBCJeL8DoUw3ufOq5sWiWiiFw=
+
+Name: org/eclipse/search2/internal/ui/SearchHistorySelectionDialog$2.c
+ lass
+SHA-256-Digest: X6f5QRdvmyuDnGbIQ0n/+wAzh0zncxPFXLj1Ptv8Kgk=
+
+Name: about.html
+SHA-256-Digest: 0RM1x9lTJa7T8YkysaegPuBIeaEvSZypRDfXoMpsJAU=
+
+Name: org/eclipse/search/ui/text/AbstractTextSearchViewPage$5.class
+SHA-256-Digest: OdQuVn5aW0XU7mVUOLWNroxVBF9wXckxsU9ATeD4UkY=
+
+Name: org/eclipse/search/internal/ui/text/SortAction.class
+SHA-256-Digest: YB64dH7KncAwUHDzNCpW5KKzniUiuwPex7XiO+vKNjs=
+
+Name: org/eclipse/search/internal/ui/SearchResultViewer.class
+SHA-256-Digest: YaFRQ5ssRy07VW4+4r8hlE+WwOitSdMu7l/CUYwrEhU=
+
+Name: org/eclipse/search/internal/ui/ISearchHelpContextIds.class
+SHA-256-Digest: gRMr8Zx4DFVjfOevQF/gqLgkga4Lx2vZsoDhB4UztI0=
+
+Name: icons/full/elcl16/automaticOrientation.png
+SHA-256-Digest: vWlWnNj7vSG6ab6VHex1OKg3u5I+6JQxF99LASHjzE8=
+
+Name: icons/full/elcl16/stop.png
+SHA-256-Digest: +ds3sOdlXjhPjWlgdtUVVjBwR5ymUfho3PH7ps2uFZo=
+
+Name: icons/full/dlcl16/automaticOrientation@2x.png
+SHA-256-Digest: dw3NU4cNbaiozqrjiTdjA4RIfF/9MFCtN6A5yDDGCwk=
+
+Name: org/eclipse/search2/internal/ui/SearchViewManager.class
+SHA-256-Digest: WDp9pSg31lFg8JAPJ0IYKm0t4Ock0quezgfUjMprJwY=
+
+Name: org/eclipse/search/internal/ui/text/TextSearchPage.class
+SHA-256-Digest: cwwV2qpn9HTWRJbpzNyOiInJBbVJOuXVeohhwdr6mRE=
+
+Name: org/eclipse/search/internal/ui/SearchResultViewer$4.class
+SHA-256-Digest: dYdqP5Tq9WQA+OgflJdVJH4hEUs/+MxwU3DUmMLWpzo=
+
+Name: icons/full/dlcl16/pin_view@2x.png
+SHA-256-Digest: yerrQpvpAip1prIvy9gN6JA7x5tx1XJtl5ykcsJa+4o=
+
+Name: org/eclipse/search/core/text/TextSearchEngine.class
+SHA-256-Digest: WWZueBcxxLeVk10WMbt3zzpv8zEMTkue0ZkEUPCYWC4=
+
+Name: org/eclipse/search2/internal/ui/SearchHistorySelectionDialog$Sea
+ rchesLabelProvider.class
+SHA-256-Digest: G6MPRD+NVd8y+ClbQLY8Kd6wo7P0UEJ6UwmKppj4p+M=
+
+Name: org/eclipse/search2/internal/ui/text2/RetrieverAction.class
+SHA-256-Digest: KNTh0xzE2lAAQYGNfxHVCPIU9o5A6C4IyTInhqSybBQ=
+
+Name: org/eclipse/search2/internal/ui/SearchView.class
+SHA-256-Digest: UO5s2/McO4Q1RfjW0CLj6Gnb2F6x3skJ/p5rgvy2WcY=
+
+Name: org/eclipse/search2/internal/ui/SearchPageRegistry$1.class
+SHA-256-Digest: Vrsh3MTQ28EQ/WD8Z1gO/+D2bxXTzNF3bfWta201q9k=
+
+Name: org/eclipse/search2/internal/ui/basic/views/SetLayoutAction.clas
+ s
+SHA-256-Digest: RvlYWv5YZ41Rjw7HTH5iyX8od0g6fItiL6lbbGsFDAE=
+
+Name: org/eclipse/search/internal/ui/SearchManager$3.class
+SHA-256-Digest: 9AElzIIvzjI5voLAYJ/lkP5d86dnv8g+OkXHHEHeub0=
+
+Name: org/eclipse/search/internal/ui/text/FileLabelProvider$1.class
+SHA-256-Digest: Dc4eWD8MvL714lB6mGd1JgO6DGCskuJdWE+4Hx3f1Aw=
+
+Name: org/eclipse/search/internal/ui/util/ExtendedDialogWindow.class
+SHA-256-Digest: lro2U5fZdlvz6SmjMRVj2bWHz3C+868GYTMcdBOoMZY=
+
+Name: org/eclipse/search/internal/ui/SortDropDownAction$1$1.class
+SHA-256-Digest: Wc5sK1Ok/ZKweEiiXkJLdIZwj7j3IWVcuFJzwQ/CpTQ=
+
+Name: org/eclipse/search/internal/ui/util/SWTUtil.class
+SHA-256-Digest: xRJ0j5OW60CQayKUHSJR6FCyziiO0FPK5WGvbfVlWIk=
+
+Name: org/eclipse/search/ui/text/TextSearchQueryProvider$TextSearchInp
+ ut.class
+SHA-256-Digest: B3CGo+zdCMc3hU/e3Tg9cYzqvNu/Kd95MPRBVEEGEuQ=
+
+Name: icons/full/dlcl16/flatLayout.png
+SHA-256-Digest: OBiuT2viCsvdXvAK7EOZI8ajXo1bM9z4DVuSdztKKJ4=
+

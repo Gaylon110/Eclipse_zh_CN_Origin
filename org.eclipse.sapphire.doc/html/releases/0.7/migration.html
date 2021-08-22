@@ -1,0 +1,5667 @@
+<!-- 
+ ******************************************************************************
+ * Copyright (c) 2016 Oracle
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *    Konstantin Komissarchik - initial implementation and ongoing maintenance
+ ******************************************************************************
+-->
+
+<html>
+
+<head>
+  <title>Migration Guide for Sapphire 0.7</title>
+  <link rel="StyleSheet" href="../../style.css" TYPE="text/css"/>
+  <style type="text/css">
+    pre.source-code 
+    {
+      font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; 
+      color: #000000;
+      background-color: #ffffff;
+      font-size: 12px;
+      border: 0px;
+      line-height: 14px;
+      padding: 5px;
+      margin-left: 0px;
+      margin-right: 0px;
+      overflow: auto
+    }
+    .unaffected
+    {
+      color: #888888
+    }
+    .comment
+    {
+      color: #006600;
+      font-style: italic
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>Migration Guide for Sapphire 0.7</h1>
+
+<p>This documents covers changes that need to be made by Sapphire adopters as part of migrating 
+to Sapphire 0.7 from a prior release. Only changes from the previous major release are covered.</p>
+
+<p>Table of Contents</p>
+
+<ol>
+  <li><a href="#AbsoluteFilePathBrowseActionHandler">AbsoluteFilePathBrowseActionHandler</a></li>
+  <li><a href="#AbsoluteFolderPathBrowseActionHandler">AbsoluteFolderPathBrowseActionHandler</a></li>
+  <li><a href="#AbstractSlushBucketPropertyEditorRenderer">AbstractSlushBucketPropertyEditorRenderer</a></li>
+  <li><a href="#ActionBridge">ActionBridge</a></li>
+  <li><a href="#ActionHandlerBridge">ActionHandlerBridge</a></li>
+  <li><a href="#ActionSystemPartBridge">ActionSystemPartBridge</a></li>
+  <li><a href="#ActuatorDef">ActuatorDef</a></li>
+  <li><a href="#ActuatorPart">ActuatorPart</a></li>
+  <li><a href="#AdapterService">AdapterService</a></li>
+  <li><a href="#BindingImpl">BindingImpl</a></li>
+  <li><a href="#BooleanPropertyEditorRenderer">BooleanPropertyEditorRenderer</a></li>
+  <li><a href="#BundleImageDataFactory">BundleImageDataFactory</a></li>
+  <li><a href="#CheckBoxListPropertyEditorRenderer">CheckBoxListPropertyEditorRenderer</a></li>
+  <li><a href="#Color">Color</a></li>
+  <li><a href="#ColumnSortComparator">ColumnSortComparator</a></li>
+  <li><a href="#CompactListPropertyEditorRenderer">CompactListPropertyEditorRenderer</a></li>
+  <li><a href="#CompositeDef">CompositeDef</a></li>
+  <li><a href="#CompositePart">CompositePart</a></li>
+  <li><a href="#ConditionalDef">ConditionalDef</a></li>
+  <li><a href="#ConditionalPart">ConditionalPart</a></li>
+  <li><a href="#ContentOutlineNodeState">ContentOutlineNodeState</a></li>
+  <li><a href="#ContentOutlineState">ContentOutlineState</a></li>
+  <li><a href="#Context">Context</a></li>
+  <li><a href="#ConversionService">ConversionService</a></li>
+  <li><a href="#CreateWorkspaceFileOp">CreateWorkspaceFileOp</a></li>
+  <li><a href="#DateSerializationService">DateSerializationService</a></li>
+  <li><a href="#DefaultListPropertyEditorRenderer">DefaultListPropertyEditorRenderer</a></li>
+  <li><a href="#DefaultValuePropertyEditorRenderer">DefaultValuePropertyEditorRenderer</a></li>
+  <li><a href="#DependenciesAggregationService">DependenciesAggregationService</a></li>
+  <li><a href="#DialogDef">DialogDef</a></li>
+  <li><a href="#DtdParser">DtdParser</a></li>
+  <li><a href="#EclipseWorkspacePathPropertyEditorRenderer">EclipseWorkspacePathPropertyEditorRenderer</a></li>
+  <li><a href="#EditorPagePresentation">EditorPagePresentation</a></li>
+  <li><a href="#ElementBindingImpl">ElementBindingImpl</a></li>
+  <li><a href="#ElementProperty">ElementProperty</a></li>
+  <li><a href="#ElementValidationEvent">ElementValidationEvent</a></li>
+  <li><a href="#EnabledFunction">Enabled Function</a></li>
+  <li><a href="#EnumPropertyEditorRenderer">EnumPropertyEditorRenderer</a></li>
+  <li><a href="#Event">Event</a></li>
+  <li><a href="#FormComponentDef">FormComponentDef</a></li>
+  <li><a href="#FormComponentPart">FormComponentPart</a></li>
+  <li><a href="#FormDef">FormDef</a></li>
+  <li><a href="#FormEditorPage">FormEditorPage</a></li>
+  <li><a href="#FormEditorPageDef">FormEditorPageDef</a></li>
+  <li><a href="#FormEditorPagePart">FormEditorPagePart</a></li>
+  <li><a href="#FormPart">FormPart</a></li>
+  <li><a href="#FunctionContext">FunctionContext</a></li>
+  <li><a href="#GenerateImpl">GenerateImpl</a></li>
+  <li><a href="#GridLayoutUtil">GridLayoutUtil</a></li>
+  <li><a href="#HtmlPanelDef">HtmlPanelDef</a></li>
+  <li><a href="#HtmlPanelPart">HtmlPanelPart</a></li>
+  <li><a href="#HyperlinkTable">HyperlinkTable</a></li>
+  <li><a href="#ImageData">ImageData</a></li>
+  <li><a href="#ImageService">ImageService</a></li>
+  <li><a href="#IDiagramEditorPageDef">IDiagramEditorPageDef</a></li>
+  <li><a href="#IExecutableModelElement">IExecutableModelElement</a></li>
+  <li><a href="#IFormPartInclude">IFormPartInclude</a></li>
+  <li><a href="#IModelElement">IModelElement</a></li>
+  <li><a href="#IModelParticle">IModelParticle</a></li>
+  <li><a href="#ImpliedElementProperty">ImpliedElementProperty</a></li>
+  <li><a href="#IPropertiesViewContributionDef">IPropertiesViewContributionDef</a></li>
+  <li><a href="#IPropertiesViewContributionPageDef">IPropertiesViewContributionPageDef</a></li>
+  <li><a href="#IPropertiesViewContributorDef">IPropertiesViewContributorDef</a></li>
+  <li><a href="#IPropertiesViewContributorPart">IPropertiesViewContributorPart</a></li>
+  <li><a href="#ISapphireCustomPartDef">ISapphireCustomPartDef</a></li>
+  <li><a href="#ISapphireGroupDef">ISapphireGroupDef</a></li>
+  <li><a href="#ISapphireLabelDef">ISapphireLabelDef</a></li>
+  <li><a href="#ISapphireStaticTextFieldDef">ISapphireStaticTextFieldDef</a></li>
+  <li><a href="#JavaType">JavaType</a></li>
+  <li><a href="#LabelPart">LabelPart</a></li>
+  <li><a href="#LayeredListBindingImpl">LayeredListBindingImpl</a></li>
+  <li><a href="#LineSeparatorDef">LineSeparatorDef</a></li>
+  <li><a href="#LineSeparatorPart">LineSeparatorPart</a></li>
+  <li><a href="#ListBindingImpl">ListBindingImpl</a></li>
+  <li><a href="#ListProperty">ListProperty</a></li>
+  <li><a href="#ListPropertyEditorRenderer">ListPropertyEditorRenderer</a></li>
+  <li><a href="#LoggingService">LoggingService</a></li>
+  <li><a href="#MasterDetailsContentNode">MasterDetailsContentNode</a></li>
+  <li><a href="#MasterDetailsContentNodeChildDef">MasterDetailsContentNodeChildDef</a></li>
+  <li><a href="#MasterDetailsContentNodeDef">MasterDetailsContentNodeDef</a></li>
+  <li><a href="#MasterDetailsContentNodeFactoryCaseDef">MasterDetailsContentNodeFactoryCaseDef</a></li>
+  <li><a href="#MasterDetailsContentNodeFactoryDef">MasterDetailsContentNodeFactoryDef</a></li>
+  <li><a href="#MasterDetailsContentNodeInclude">MasterDetailsContentNodeInclude</a></li>
+  <li><a href="#MasterDetailsContentNodeList">MasterDetailsContentNodeList</a></li>
+  <li><a href="#MasterDetailsContentOutline">MasterDetailsContentOutline</a></li>
+  <li><a href="#MasterDetailsEditorPage">MasterDetailsEditorPage</a></li>
+  <li><a href="#MasterDetailsEditorPageDef">MasterDetailsEditorPageDef</a></li>
+  <li><a href="#MasterDetailsEditorPagePart">MasterDetailsEditorPagePart</a></li>
+  <li><a href="#MasterDetailsEditorPageState">MasterDetailsEditorPageState</a></li>
+  <li><a href="#ModelElementHandle">ModelElementHandle</a></li>
+  <li><a href="#ModelElementList">ModelElementList</a></li>
+  <li><a href="#ModelElementsTransfer">ModelElementsTransfer</a></li>
+  <li><a href="#ModelElementType">ModelElementType</a></li>
+  <li><a href="#ModelProperty">ModelProperty</a></li>
+  <li><a href="#NamedValuesPropertyEditorRenderer">NamedValuesPropertyEditorRenderer</a></li>
+  <li><a href="#NLS">NLS</a></li>
+  <li><a href="#PageBookDef">PageBookDef</a></li>
+  <li><a href="#PageBookExtDef">PageBookExtDef</a></li>
+  <li><a href="#PageBookKeyMapping">PageBookKeyMapping</a></li>
+  <li><a href="#PageBookPart">PageBookPart</a></li>
+  <li><a href="#PageBookPartControlMethod">PageBookPartControlMethod</a></li>
+  <li><a href="#PossibleValuesService">PossibleValuesService</a></li>
+  <li><a href="#ProblemsTraversalService">ProblemsTraversalService</a></li>
+  <li><a href="#ProblemsTraversalServiceData">ProblemsTraversalServiceData</a></li>
+  <li><a href="#ProgressMonitorBridge">ProgressMonitorBridge</a></li>
+  <li><a href="#PropertiesViewContributionManager">PropertiesViewContributionManager</a></li>
+  <li><a href="#PropertiesViewContributionPagePart">PropertiesViewContributionPagePart</a></li>
+  <li><a href="#PropertiesViewContributionPart">PropertiesViewContributionPart</a></li>
+  <li><a href="#PropertyContentEvent">PropertyContentEvent</a></li>
+  <li><a href="#PropertyEditorDef">PropertyEditorDef</a></li>
+  <li><a href="#PropertyEditorPart">PropertyEditorPart</a></li>
+  <li><a href="#PropertyEditorAssistContext">PropertyEditorAssistContext</a></li>
+  <li><a href="#PropertyEditorAssistContributor">PropertyEditorAssistContributor</a></li>
+  <li><a href="#PropertyEditorRenderer">PropertyEditorRenderer</a></li>
+  <li><a href="#PropertyEditorRendererFactory">PropertyEditorRendererFactory</a></li>
+  <li><a href="#PropertyEnablementEvent">PropertyEnablementEvent</a></li>
+  <li><a href="#PropertyEvent">PropertyEvent</a></li>
+  <li><a href="#PropertyInitializationEvent">PropertyInitializationEvent</a></li>
+  <li><a href="#PropertyValidationEvent">PropertyValidationEvent</a></li>
+  <li><a href="#ReferenceValue">ReferenceValue</a></li>
+  <li><a href="#RelativePathBrowseActionHandler">RelativePathBrowseActionHandler</a></li>
+  <li><a href="#Resource">Resource</a></li>
+  <li><a href="#SapphireActionHandler">SapphireActionHandler</a></li>
+  <li><a href="#SapphireActionPresentation">SapphireActionPresentation</a></li>
+  <li><a href="#SapphireActionPresentationManager">SapphireActionPresentationManager</a></li>
+  <li><a href="#SapphireBrowseActionHandler">SapphireBrowseActionHandler</a></li>
+  <li><a href="#SapphireDiagramEditorPagePart">SapphireDiagramEditorPagePart</a></li>
+  <li><a href="#SapphireDialog">SapphireDialog</a></li>
+  <li><a href="#SapphireDialogPart">SapphireDialogPart</a></li>
+  <li><a href="#SapphireEditor">SapphireEditor</a></li>
+  <li><a href="#SapphireEditorFormPage">SapphireEditorFormPage</a></li>
+  <li><a href="#SapphireEnumControlledPageBook">SapphireEnumControlledPageBook</a></li>
+  <li><a href="#SapphireForm">SapphireForm</a></li>
+  <li><a href="#SapphireGroup">SapphireGroup</a></li>
+  <li><a href="#SapphireHotSpotsActionPresentation">SapphireHotSpotsActionPresentation</a></li>
+  <li><a href="#SapphireJumpActionHandler">SapphireJumpActionHandler</a></li>
+  <li><a href="#SapphireKeyboardActionPresentation">SapphireKeyboardActionPresentation</a></li>
+  <li><a href="#SapphireListControlledPageBook">SapphireListControlledPageBook</a></li>
+  <li><a href="#SapphireMenuActionPresentation">SapphireMenuActionPresentation</a></li>
+  <li><a href="#SapphirePart">SapphirePart</a></li>
+  <li><a href="#SapphirePopup">SapphirePopup</a></li>
+  <li><a href="#SapphirePropertyEditorActionHandler">SapphirePropertyEditorActionHandler</a></li>
+  <li><a href="#SapphirePropertyEditorCondition">SapphirePropertyEditorCondition</a></li>
+  <li><a href="#SapphirePropertyPage">SapphirePropertyPage</a></li>
+  <li><a href="#SapphirePropertySheetPage">SapphirePropertySheetPage</a></li>
+  <li><a href="#SapphireStaticTextField">SapphireStaticTextField</a></li>
+  <li><a href="#SapphireStatusDialog">SapphireStatusDialog</a></li>
+  <li><a href="#SapphireTextCellEditor">SapphireTextCellEditor</a></li>
+  <li><a href="#SapphireTextPopup">SapphireTextPopup</a></li>
+  <li><a href="#SapphireToolBarActionPresentation">SapphireToolBarActionPresentation</a></li>
+  <li><a href="#SapphireToolBarManagerActionPresentation">SapphireToolBarManagerActionPresentation</a></li>
+  <li><a href="#SapphireToolTip">SapphireToolTip</a></li>
+  <li><a href="#SapphireWizard">SapphireWizard</a></li>
+  <li><a href="#SapphireWizardPage">SapphireWizardPage</a></li>
+  <li><a href="#SapphireWizardPagePart">SapphireWizardPagePart</a></li>
+  <li><a href="#SapphireWizardPart">SapphireWizardPart</a></li>
+  <li><a href="#ScalePropertyEditorRenderer">ScalePropertyEditorRenderer</a></li>
+  <li><a href="#SectionDef">SectionDef</a></li>
+  <li><a href="#SectionPart">SectionPart</a></li>
+  <li><a href="#SectionRef">SectionRef</a></li>
+  <li><a href="#SeparatorDef">SeparatorDef</a></li>
+  <li><a href="#SeparatorPart">SeparatorPart</a></li>
+  <li><a href="#ServiceFactory">ServiceFactory</a></li>
+  <li><a href="#SlushBucketPropertyEditor">SlushBucketPropertyEditor</a></li>
+  <li><a href="#SplitFormBlockDef">SplitFormBlockDef</a></li>
+  <li><a href="#SplitFormBlockPart">SplitFormBlockPart</a></li>
+  <li><a href="#SplitFormDef">SplitFormDef</a></li>
+  <li><a href="#SplitFormPart">SplitFormPart</a></li>
+  <li><a href="#StandardXmlListBindingImpl">StandardXmlListBindingImpl</a></li>
+  <li><a href="#SwtRendererUtil">SwtRendererUtil</a></li>
+  <li><a href="#SwtResourceCache">SwtResourceCache</a></li>
+  <li><a href="#SwtUtil">SwtUtil</a></li>
+  <li><a href="#TabGroupDef">TabGroupDef</a></li>
+  <li><a href="#TabGroupPageDef">TabGroupPageDef</a></li>
+  <li><a href="#TabGroupPagePart">TabGroupPagePart</a></li>
+  <li><a href="#TabGroupPart">TabGroupPart</a></li>
+  <li><a href="#Transient">Transient</a></li>
+  <li><a href="#TransientProperty">TransientProperty</a></li>
+  <li><a href="#TypeCast">TypeCast</a></li>
+  <li><a href="#UrlResolver">UrlResolver</a></li>
+  <li><a href="#ValidationAggregationService">ValidationAggregationService</a></li>
+  <li><a href="#ValidationService">ValidationService</a></li>
+  <li><a href="#Value">Value</a></li>
+  <li><a href="#ValueBindingImpl">ValueBindingImpl</a></li>
+  <li><a href="#ValueLabelProvider">ValueLabelProvider</a></li>
+  <li><a href="#ValueProperty">ValueProperty</a></li>
+  <li><a href="#ValuePropertyEditorRenderer">ValuePropertyEditorRenderer</a></li>
+  <li><a href="#ValueSerializationMasterService">ValueSerializationMasterService</a></li>
+  <li><a href="#ValueSerializationService">ValueSerializationService</a></li>
+  <li><a href="#WhitespaceSeparatorDef">WhitespaceSeparatorDef</a></li>
+  <li><a href="#WhitespaceSeparatorPart">WhitespaceSeparatorPart</a></li>
+  <li><a href="#WithDef">WithDef</a></li>
+  <li><a href="#WithPart">WithPart</a></li>
+  <li><a href="#WithPartImplied">WithPartImplied</a></li>
+  <li><a href="#WizardDef">WizardDef</a></li>
+  <li><a href="#WizardPageDef">WizardPageDef</a></li>
+  <li><a href="#XmlDocumentSchemasCache">XmlDocumentSchemasCache</a></li>
+  <li><a href="#XmlResource">XmlResource</a></li>
+  <li><a href="#Service">@Service</a></li>
+  <li><a href="#SDEF">SDEF</a></li>
+</ol>
+
+
+<h2><a name="AbsoluteFilePathBrowseActionHandler">AbsoluteFilePathBrowseActionHandler</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>swt.renderer.actions<span class="unaffected">.AbsoluteFilePathBrowseActionHandler</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.swt<span class="unaffected">.AbsoluteFilePathBrowseActionHandler</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="AbsoluteFolderPathBrowseActionHandler">AbsoluteFolderPathBrowseActionHandler</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>swt.renderer.actions<span class="unaffected">.AbsoluteFolderPathBrowseActionHandler</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.swt<span class="unaffected">.AbsoluteFolderPathBrowseActionHandler</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="AbstractSlushBucketPropertyEditorRenderer">AbstractSlushBucketPropertyEditorRenderer</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>renderers<span class="unaffected">.swt.AbstractSlushBucketPropertyEditor</span>Renderer</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms<span class="unaffected">.swt.AbstractSlushBucketPropertyEditor</span>Presentation</code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="ActionBridge">ActionBridge</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.swt.ActionBridge</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms<span class="unaffected">.swt.ActionBridge</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="ActionHandlerBridge">ActionHandlerBridge</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.swt.ActionHandlerBridge</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms<span class="unaffected">.swt.ActionHandlerBridge</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="ActionSystemPartBridge">ActionSystemPartBridge</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.swt.ActionSystemPartBridge</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms<span class="unaffected">.swt.ActionSystemPartBridge</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="ActuatorDef">ActuatorDef</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>def<span class="unaffected">.ActuatorDef</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms<span class="unaffected">.ActuatorDef</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="ActuatorPart">ActuatorPart</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.ActuatorPart</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.<span class="unaffected">ActuatorPart</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="AdapterService">AdapterService</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class</span> ExampleAdapterService <span class="unaffected">extends</span> AdapterService
+<span class="unaffected">{
+    @Override
+    public &lt;T> T</span> adapt<span class="unaffected">( Class&lt;T> type )
+    {
+        if( type == IProject.class )
+        {</span>
+            INewProjectFileOp op = context( INewProjectFileOp.class );
+            <span class="unaffected">return type.cast( op.getProject().resolve() );
+        }
+
+        return null;
+    }
+}</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class</span> ExampleConversionService <span class="unaffected">extends</span> UniversalConversionService
+<span class="unaffected">{
+    @Override
+    public &lt;T> T</span> convert<span class="unaffected">(</span> Object object, <span class="unaffected">Class&lt;T> type )
+    {
+        if(</span> object instanceof INewProjectFileOp && <span class="unaffected">type == IProject.class )
+        {</span>
+            INewProjectFileOp op = (INewProjectFileOp) object;
+            <span class="unaffected">return type.cast( op.getProject().resolve() );
+        }
+
+        return null;
+    }
+}</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class</span> ExampleAdapterService <span class="unaffected">extends</span> AdapterService
+<span class="unaffected">{
+    @Override
+    public</span> &lt;T> T adapt<span class="unaffected">( Class&lt;T> type )
+    {</span>
+        if( type == IProject.class )
+        {
+            INewProjectFileOp op = context( INewProjectFileOp.class );
+            <span class="unaffected">return</span> type.cast( <span class="unaffected">op.getProject().resolve()</span> )<span class="unaffected">;</span>
+        }
+
+        return null;
+    <span class="unaffected">}
+}</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class</span> ExampleConversionService <span class="unaffected">extends</span> ConversionService&lt;INewProjectFileOp,IProject>
+<span class="unaffected">{</span>
+    public ExampleConversionService()
+    {
+        super( INewProjectFileOp.class, IProject.class );
+    }
+
+    <span class="unaffected">@Override
+    public</span> IProject convert<span class="unaffected">(</span> INewProjectFileOp op <span class="unaffected">)
+    {
+        return op.getProject().resolve();
+    }
+}</span></code></pre>
+
+<p>While extending from UniversalConversionService is a quicker migration, in most cases, better performance can be
+achieved by migrating to the typed ConversionService API. Conversions implemented in this manner are quicker for
+Sapphire to find.</p>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="BindingImpl">BindingImpl</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire</span>.modeling.BindingImpl</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire</span>.PropertyBinding</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">binding</span>.<span class="unaffected">element()</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">binding</span>.property().<span class="unaffected">element()</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">binding.property()</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">binding.property()</span>.definition()</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExampleBinding extends</span> BindingImpl
+<span class="unaffected">{
+    @Override
+    public void init(</span> IModelElement pdef, ModelProperty property, String[] params <span class="unaffected">)
+    {
+        ...
+    }
+}</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExampleBinding extends</span> PropertyBinding
+<span class="unaffected">{
+    @Override
+    public void init(</span> Property property <span class="unaffected">)
+    {</span>
+        Element element = property.element();
+        PropertyDef pdef = property.definition();
+        String[] params = pdef.getAnnotation( CustomXmlValueBinding.class ).params();
+        
+        <span class="unaffected">...
+    }
+}</span>
+
+<span class="comment">Note that resource implementations should no longer call the binding init method. This
+is now handled by Resource base class</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="BooleanPropertyEditorRenderer">BooleanPropertyEditorRenderer</a></h2>
+
+<p>This class is not longer available and no analog has been provided.</p>
+
+
+<h2><a name="BundleImageDataFactory">BundleImageDataFactory</a></h2>
+
+<p>This class is not longer available and no analog has been provided.</p>
+
+
+<h2><a name="CheckBoxListPropertyEditorRenderer">CheckBoxListPropertyEditorRenderer</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>renderers<span class="unaffected">.swt.CheckBoxListPropertyEditor</span>Renderer</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms<span class="unaffected">.swt.CheckBoxListPropertyEditor</span>Presentation</code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="Color">Color</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">import</span> org.eclipse.sapphire.ui<span class="unaffected">.Color</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">import</span> org.eclipse.sapphire<span class="unaffected">.Color</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">color.</span>getRed<span class="unaffected">()</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">color.</span>red<span class="unaffected">()</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">color.</span>getGreen<span class="unaffected">()</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">color.</span>green<span class="unaffected">()</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">color.</span>getBlue<span class="unaffected">()</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">color.</span>blue<span class="unaffected">()</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="ColumnSortComparator">ColumnSortComparator</a></h2>
+
+<p>This class is not longer available and no analog has been provided.</p>
+
+
+<h2><a name="CompactListPropertyEditorRenderer">CompactListPropertyEditorRenderer</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>renderers<span class="unaffected">.swt.CompactListPropertyEditor</span>Renderer</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms<span class="unaffected">.swt.CompactListPropertyEditor</span>Presentation</code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="CompositeDef">CompositeDef</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>def<span class="unaffected">.CompositeDef</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms<span class="unaffected">.CompositeDef</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="CompositePart">CompositePart</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.CompositePart</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.<span class="unaffected">CompositePart</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="ConditionalDef">ConditionalDef</a></h2>
+
+<p>This class is not longer available and no analog has been provided.</p>
+
+
+<h2><a name="ConditionalPart">ConditionalPart</a></h2>
+
+<p>This class is not longer available and no analog has been provided.</p>
+
+
+<h2><a name="ContentOutlineNodeState">ContentOutlineNodeState</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>form.editors.masterdetails.state.ContentOutline<span class="unaffected">NodeState</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.MasterDetails<span class="unaffected">NodeState</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="ContentOutlineState">ContentOutlineState</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>form.editors.masterdetails.state.Content<span class="unaffected">OutlineState</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.MasterDetails<span class="unaffected">OutlineState</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="Context">Context</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>URL url <span class="unaffected">= context.findResource( name );</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>InputStream stream <span class="unaffected">= context.findResource( name );</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>List&lt;URL> urls = context.findResources( name );</code></pre>
+    </td>
+    <td>
+<p>This facility has been removed and no analog has been provided.</p>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="ConversionService">ConversionService</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExampleConversionService extends</span> ConversionService
+<span class="unaffected">{
+    @Override
+    public &lt;T> T convert( Object object, Class&lt;T> type )
+    {
+        if( object instanceof IFile && type == Resource.class )
+        {
+            ...
+        }
+
+        return null;
+    }
+}</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExampleConversionService extends</span> UniversalConversionService
+<span class="unaffected">{
+    @Override
+    public &lt;T> T convert( Object object, Class&lt;T> type )
+    {
+        if( object instanceof IFile && type == Resource.class )
+        {
+            ...
+        }
+
+        return null;
+    }
+}</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExampleConversionService extends ConversionService
+{
+    @Override
+    public</span> &lt;T> T <span class="unaffected">convert(</span> Object object, Class&lt;T> type <span class="unaffected">)
+    {</span>
+        if( object instanceof IFile && type == Resource.class )
+        {
+            <span class="unaffected">...</span>
+        }
+
+        return null;
+    <span class="unaffected">}
+}</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExampleConversionService extends ConversionService</span>&lt;IFile,Resource>
+<span class="unaffected">{</span>
+    public ExampleConversionService()
+    {
+        super( IFile.class, Resource.class );
+    }
+
+    <span class="unaffected">@Override
+    public</span> Resource <span class="unaffected">convert(</span> IFile file <span class="unaffected">)
+    {
+        ...
+    }
+}</span></code></pre>
+
+<p>While extending from UniversalConversionService is a quicker migration, in most cases, better performance can be
+achieved by migrating to the new ConversionService API. Conversions implemented in this manner are quicker for
+Sapphire to find.</p>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="CreateWorkspaceFileOp">CreateWorkspaceFileOp</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">CreateWorkspaceFileOp</span>.PROP_FILE_NAME</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">CreateWorkspaceFileOp</span>.PROP_FILE</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">operation</span>.getFileName<span class="unaffected">()</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">operation</span>.getFile<span class="unaffected">()</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">operation</span>.setFileName<span class="unaffected">( ... )</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">operation</span>.setFile<span class="unaffected">( ... )</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">operation</span>.getFileHandle<span class="unaffected">()</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">operation</span>.getFile().resolve<span class="unaffected">()</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="DateSerializationService">DateSerializationService</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">@Type( base = Date.class )</span>
+
+@Service
+(
+    impl = DateSerializationService.class, 
+    params =
+    { 
+        @Service.Param( name = "format-1", value = "yyyy-MM-dd" ), 
+        @Service.Param( name = "format-2", value = "MM/dd/yyyy" )
+    }
+)
+
+<span class="unaffected">ValueProperty PROP_DATE = new ValueProperty( TYPE, "Date" );
+
+Value&lt;Date> getDate();
+void setDate( String value );
+void setDate( Date value );</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">@Type( base = Date.class )</span>
+@Serialization( primary = "yyyy-MM-dd", alternative = "MM/dd/yyyy" )
+
+<span class="unaffected">ValueProperty PROP_DATE = new ValueProperty( TYPE, "Date" );
+
+Value&lt;Date> getDate();
+void setDate( String value );
+void setDate( Date value );</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>class ExampleDateSerializationService extends DateSerializationService
+{
+    @Override
+    public List&lt;? extends DateFormat> formats()
+    {
+        List &lt;DateFormat> formats = new ArrayList&lt;DateFormat>();
+        
+        formats.add( new SimpleDateFormat( "yyyy-MM-dd" );
+        formats.add( new SimpleDateFormat( "MM/dd/yyyy" );
+        
+        return formats;
+    }
+}
+
+<span class="unaffected">@Type( base = Date.class )</span>
+@Service( impl = ExampleDateSerializationService.class ) 
+
+<span class="unaffected">ValueProperty PROP_DATE = new ValueProperty( TYPE, "Date" );
+
+Value&lt;Date> getDate();
+void setDate( String value );
+void setDate( Date value );</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">@Type( base = Date.class )</span>
+@Serialization( primary = "yyyy-MM-dd", alternative = "MM/dd/yyyy" )
+
+<span class="unaffected">ValueProperty PROP_DATE = new ValueProperty( TYPE, "Date" );
+
+Value&lt;Date> getDate();
+void setDate( String value );
+void setDate( Date value );</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="DefaultListPropertyEditorRenderer">DefaultListPropertyEditorRenderer</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>renderers<span class="unaffected">.swt.</span>DefaultListPropertyEditorRenderer</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms<span class="unaffected">.swt.</span>TablePropertyEditorPresentation</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="DefaultValuePropertyEditorRenderer">DefaultValuePropertyEditorRenderer</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>renderers<span class="unaffected">.swt.</span>DefaultValuePropertyEditorRenderer</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms<span class="unaffected">.swt.</span>TextFieldPropertyEditorPresentation</span></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="DependenciesAggregationService">DependenciesAggregationService</a></h2>
+
+<p>As an optimization, the aggregation intermediary to DependenciesService has been removed.</p>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">Set&lt;ModelPath> dependencies =</span> property.service( DependenciesAggregationService.class ).dependencies();</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">Set&lt;ModelPath> dependencies =</span> new HashSet&lt;ModelPath>();
+
+for( DependenciesService service : property.services( DependenciesService.class ) )
+{
+    dependencies.addAll( service.dependencies() );
+}</code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="DialogDef">DialogDef</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>def<span class="unaffected">.DialogDef</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms<span class="unaffected">.DialogDef</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="DtdParser">DtdParser</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">DtdParser.</span>parseFromString<span class="unaffected">( dtd )</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">DtdParser.</span>parse<span class="unaffected">( dtd )</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">DtdParser.</span>parseFromUrl( referer, location )</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">DtdParser.</span>parse( new URL( location ) )</code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="EclipseWorkspacePathPropertyEditorRenderer">EclipseWorkspacePathPropertyEditorRenderer</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.</span>ui.renderers.swt.EclipseWorkspacePathPropertyEditorRenderer</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.</span>workspace.ui.WorkspaceRelativePathPropertyEditorPresentation</code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="EditorPagePresentation">EditorPagePresentation</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.swt.EditorPagePresentation</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.<span class="unaffected">swt.EditorPagePresentation</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="ElementBindingImpl">ElementBindingImpl</a></h2>
+
+<p>The removable method has been removed from ElementBindingImpl class.</p>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire</span>.modeling.ElementBindingImpl</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire</span>.ElementPropertyBinding</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExampleBinding extends</span> ElementBindingImpl
+<span class="unaffected">{
+    ...</span>
+
+    @Override
+    public boolean removable()
+    {
+        ...
+    }
+<span class="unaffected">}</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExampleBinding extends</span> ElementPropertyBinding
+<span class="unaffected">{
+    ...
+}</span></code></pre>
+    </td>
+</table>
+
+
+<h2><a name="ElementProperty">ElementProperty</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire</span>.modeling.<span class="unaffected">ElementProperty</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire</span>.<span class="unaffected">ElementProperty</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="ElementValidationEvent">ElementValidationEvent</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">element.attach
+(
+    new FilteredListener&lt;</span>ElementValidationEvent<span class="unaffected">>()
+    {
+        @Override
+        protected void handleTypedEvent(</span> ElementValidationEvent <span class="unaffected">event )
+        {
+            ...
+        }
+    }
+)</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">element.attach
+(
+    new FilteredListener&lt;</span>PropertyValidationEvent<span class="unaffected">>()
+    {
+        @Override
+        protected void handleTypedEvent(</span> PropertyValidationEvent <span class="unaffected">event )
+        {
+            ...
+        }
+    }</span>,
+    "*"
+<span class="unaffected">)</span>
+
+<span class="comment">ElementValidationEvent no longer exists. To get a similar effect, one
+needs to listen on all PropertyValidationEvents.</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="EnabledFunction">Enabled Function</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">${</span> Enabled( 'FulfillmentDate' ) <span class="unaffected">}</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">${</span> FulfillmentDate.Enabled <span class="unaffected">}</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">${</span> Enabled( PurchaseOrder, 'FulfillmentDate' ) <span class="unaffected">}</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">${</span> PurchaseOrder.FulfillmentDate.Enabled <span class="unaffected">}</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="EnumPropertyEditorRenderer">EnumPropertyEditorRenderer</a></h2>
+
+<p>This class is not longer available and no analog has been provided.</p>
+
+
+<h2><a name="Event">Event</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>Event.filter<span class="unaffected">( listener, eventTypes )</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>new FilteringListenerWrapper<span class="unaffected">( listener, eventTypes )</span>
+
+<span class="comment">...</span>
+
+public class FilteringListenerWrapper extends Listener
+{
+    private final Listener listener;
+    private final Class&lt;?>[] eventTypes;
+
+    public FilteringListenerWrapper( Listener listener, Class&lt;?>[] eventTypes )
+    {
+        this.listener = listener;
+        this.eventTypes = eventTypes;
+    }
+
+    @Override
+    public void handle( Event event )
+    {
+        boolean ok = false;
+
+        for( Class&lt;?> type : this.eventTypes )
+        {
+            if( type.isInstance( event ) )
+            {
+                ok = true;
+                break;
+            }
+        }
+
+        if( ok )
+        {
+            this.listener.handle( event );
+        }
+    }
+
+    @Override
+    public boolean equals( Object obj )
+    {
+        if( obj instanceof FilteringListenerWrapper )
+        {
+            FilteringListenerWrapper x = (FilteringListenerWrapper) obj;
+            return ( this.listener.equals( x.listener ) && Arrays.equals( this.eventTypes, x.eventTypes ) );
+        }
+
+        return false;
+    }
+        
+    @Override
+    public int hashCode()
+    {
+        int hashcode = this.listener.hashCode();
+
+        for( Class&lt;?> eventType : this.eventTypes )
+        {
+            hashcode = hashcode ^ eventType.hashCode();
+        }
+
+        return hashcode;
+    }
+}</code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="FormComponentDef">FormComponentDef</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>def<span class="unaffected">.FormComponentDef</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>def<span class="unaffected">.FormComponentDef</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="FormComponentPart">FormComponentPart</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.FormComponentPart</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.<span class="unaffected">FormComponentPart</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="FormDef">FormDef</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>def<span class="unaffected">.FormDef</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms<span class="unaffected">.FormDef</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="FormEditorPage">FormEditorPage</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.FormEditorPage</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.swt.<span class="unaffected">FormEditorPage</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="FormEditorPageDef">FormEditorPageDef</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>def<span class="unaffected">.FormEditorPageDef</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms<span class="unaffected">.FormEditorPageDef</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="FormEditorPagePart">FormEditorPagePart</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.FormEditorPagePart</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.<span class="unaffected">FormEditorPagePart</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="FormPart">FormPart</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.FormPart</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.<span class="unaffected">FormPart</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="FunctionContext">FunctionContext</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><span class="unaffected">public ExampleFunctionContext extends FunctionContext
+{</span>
+    @Override
+    public Function function( String name, List&lt;Function> arguments )
+    {
+        ...
+    }
+<span class="unaffected">}</span></code></pre>
+    </td>
+    <td>
+      <span class="comment">Functions should be contributed through Sapphire extension system. Contributing a function
+      in a FunctionContext implementation is no longer supported.</span>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="GenerateImpl">GenerateImpl</a></h2>
+
+<p>With the switch to on-demand element compilation, there is no longer a need to signal to the framework
+which elements should be compiled. Also, the developer no longer has control over the name
+of the generated implementation class. As such, the @GenerateImpl annotation has been removed and no direct 
+equivalent has been provided. For further guidance, post a question 
+on <a href="http://www.eclipse.org/forums/index.php?t=thread&frm_id=192">Sapphire Adopter Forum</a>.</p>
+
+
+<h2><a name="GridLayoutUtil">GridLayoutUtil</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>swt.renderer<span class="unaffected">.GridLayoutUtil</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.swt<span class="unaffected">.GridLayoutUtil</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="HtmlPanelDef">HtmlPanelDef</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>def<span class="unaffected">.HtmlPanelDef</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms<span class="unaffected">.HtmlPanelDef</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="HtmlPanelPart">HtmlPanelPart</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.HtmlPanelPart</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.<span class="unaffected">HtmlPanelPart</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="HyperlinkTable">HyperlinkTable</a></h2>
+
+<p>This class is not longer available and no analog has been provided.</p>
+
+
+<h2><a name="ImageData">ImageData</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>org.eclipse.sapphire.<span class="unaffected">modeling.ImageData</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>org.eclipse.sapphire.<span class="unaffected">ImageData</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">ImageData.readFromStream( stream )</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">ImageData.readFromStream( stream )</span>.optional()</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">ImageData.readFromUrl( url )</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">ImageData.readFromUrl( url )</span>.optional()</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">ImageData.readFromClassLoader( cl, path )</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">ImageData.readFromClassLoader( cl, path )</span>.optional()</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">ImageData.</span>create<span class="unaffected">FromStream( stream )</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">ImageData.</span>read<span class="unaffected">FromStream( stream )</span>.required()</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">ImageData.</span>create<span class="unaffected">FromUrl( url )</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">ImageData.</span>read<span class="unaffected">FromUrl( url )</span>.required()</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">ImageData.</span>create<span class="unaffected">FromClassLoader( cl, path )</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">ImageData.</span>read<span class="unaffected">FromClassLoader( cl, path )</span>.required()</code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="ImageService">ImageService</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire</span>.services<span class="unaffected">.ImageService</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ImageService</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExampleImageService extends ImageService
+{
+    @Override
+    protected</span> ImageServiceData <span class="unaffected">compute()
+    {
+        ImageData image = ...
+        
+        return</span> new ImageServiceData( image )<span class="unaffected">;
+    }
+}</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExampleImageService extends ImageService
+{
+    @Override
+    protected</span> ImageData <span class="unaffected">compute()
+    {
+        ImageData image = ...
+        
+        return</span> image<span class="unaffected">;
+    }
+}</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="IDiagramEditorPageDef">IDiagramEditorPageDef</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.diagram.def.</span>IDiagramEditorPageDef</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.diagram.def.</span>DiagramEditorPageDef</code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="IExecutableModelElement">IExecutableModelElement</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.</span>modeling.IExecutableModelElement</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.</span>ExecutableElement</code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="IFormPartInclude">IFormPartInclude</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>def.IFormPartInclude</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.FormComponentRef</code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="IModelElement">IModelElement</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>org.eclipse.sapphire.<span class="unaffected">modeling.IModelElement</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>org.eclipse.sapphire.<span class="unaffected">Element</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>IModelParticle <span class="unaffected">root = element.root()</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>Element <span class="unaffected">root = element.root()</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>IModelParticle <span class="unaffected">parent = element.parent()</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>Property <span class="unaffected">parent = element.parent()</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">element.</span>getParentProperty()</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">element.</span>parent().definition()</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>List&lt;ModelProperty> <span class="unaffected">properties = element.properties()</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>SortedSet&lt;PropertyDef> <span class="unaffected">properties = element</span>.type()<span class="unaffected">.properties()</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">element.property( "ExampleProperty" )</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">element.property( "ExampleProperty" )</span>.definition()</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">element.</span>read<span class="unaffected">( "ExampleProperty" )</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">element.</span>property<span class="unaffected">( "ExampleProperty" )</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">element.</span>read<span class="unaffected">( ExampleElement.PROP_EXAMPLE )</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">element.</span>property<span class="unaffected">( ExampleElement.PROP_EXAMPLE )</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">SortedSet&lt;String> strings =</span> element.read( path );</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">SortedSet&lt;String> strings =</span> new TreeSet&lt;String>();
+
+element.visit
+(
+    path,
+    new PropertyVisitor()
+    {
+        @Override
+        public boolean visit( Value&lt;?> property )
+        {
+            strings.add( property.text() );
+            return true;
+        }
+    }
+);</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">SortedSet&lt;String> strings = new TreeSet&lt;String>();
+
+element.</span>read( path, strings );</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">SortedSet&lt;String> strings = new TreeSet&lt;String>();
+
+element.</span>visit
+(
+    path,
+    new PropertyVisitor()
+    {
+        @Override
+        public boolean visit( Value&lt;?> property )
+        {
+            strings.add( property.text() );
+            return true;
+        }
+    }
+);</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">element.</span>write( ExampleElement.PROP_VALUE, content )</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">element.</span>property( ExampleElement.PROP_VALUE ).write( content )</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">element.</span>write( ExampleElement.PROP_TRANSIENT, content )</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">element.</span>property( ExampleElement.PROP_TRANSIENT ).write( content )</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">element.</span>write( "ExampleProperty", content )</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>( (Value&lt;?>) <span class="unaffected">element.</span>property( "ExampleProperty" ) ).write( content )
+
+<span class="comment">or</span>
+
+( (Transient&lt;?>) <span class="unaffected">element.</span>property( "ExampleProperty" ) ).write( content )</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">element.refresh</span>( force )
+
+<span class="comment">or</span>
+
+<span class="unaffected">element.refresh</span>( force, deep )</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">element.refresh</span>()
+
+<span class="comment">The concepts of forcing a refresh and deep refresh are no longer supported.</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">element.</span>refresh<span class="unaffected">( "ExampleProperty" )</span>
+
+<span class="comment">or</span>
+
+<span class="unaffected">element.</span>refresh<span class="unaffected">( "ExampleProperty"</span>, force <span class="unaffected">)</span>
+
+<span class="comment">or</span>
+
+<span class="unaffected">element.</span>refresh<span class="unaffected">( "ExampleProperty"</span>, force, deep <span class="unaffected">)</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">element.</span>property<span class="unaffected">( "ExampleProperty" )</span>.refresh()
+
+<span class="comment">The concepts of forcing a refresh and deep refresh are no longer supported.</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">element.</span>refresh( <span class="unaffected">ExampleElement.PROP_EXAMPLE</span> )
+
+<span class="comment">or</span>
+
+<span class="unaffected">element.</span>refresh( <span class="unaffected">ExampleElement.PROP_EXAMPLE</span>, force )
+
+<span class="comment">or</span>
+
+<span class="unaffected">element.</span>refresh( <span class="unaffected">ExampleElement.PROP_EXAMPLE</span>, force, deep )</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">element.</span>property( <span class="unaffected">ExampleElement.PROP_EXAMPLE</span> ).refresh()
+
+<span class="comment">The concepts of forcing a refresh and deep refresh are no longer supported.</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">element.</span>service( <span class="unaffected">"ExampleProperty"</span>, <span class="unaffected">ExampleService.class</span> )</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">element.</span>property( <span class="unaffected">"ExampleProperty"</span> ).service( <span class="unaffected">ExampleService.class</span> )</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">element.</span>service( <span class="unaffected">ExampleElement.PROP_EXAMPLE</span>, <span class="unaffected">ExampleService.class</span> )</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">element.</span>property( <span class="unaffected">ExampleElement.PROP_EXAMPLE</span> ).service( <span class="unaffected">ExampleService.class</span> )</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">element.</span>services( <span class="unaffected">"ExampleProperty"</span>, <span class="unaffected">ExampleService.class</span> )</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">element.</span>property( <span class="unaffected">"ExampleProperty"</span> ).services( <span class="unaffected">ExampleService.class</span> )</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">element.</span>services( <span class="unaffected">ExampleElement.PROP_EXAMPLE</span>, <span class="unaffected">ExampleService.class</span> )</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">element.</span>property( <span class="unaffected">ExampleElement.PROP_EXAMPLE</span> ).services( <span class="unaffected">ExampleService.class</span> )</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">element.</span>enabled( <span class="unaffected">"ExampleProperty"</span> )</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">element.</span>property( <span class="unaffected">"ExampleProperty"</span> ).enabled()</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">element.</span>enabled( <span class="unaffected">ExampleElement.PROP_EXAMPLE</span> )</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">element.</span>property( <span class="unaffected">ExampleElement.PROP_EXAMPLE</span> ).enabled()</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">element.</span>empty( <span class="unaffected">"ExampleProperty"</span> )</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">element.</span>property( <span class="unaffected">"ExampleProperty"</span> ).empty()</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">element.</span>empty( <span class="unaffected">ExampleElement.PROP_EXAMPLE</span> )</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">element.</span>property( <span class="unaffected">ExampleElement.PROP_EXAMPLE</span> ).empty()</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">element.</span>validation( <span class="unaffected">"ExampleProperty"</span> )</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">element.</span>property( <span class="unaffected">"ExampleProperty"</span> ).validation()</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">element.</span>validation( <span class="unaffected">ExampleElement.PROP_EXAMPLE</span> )</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">element.</span>property( <span class="unaffected">ExampleElement.PROP_EXAMPLE</span> ).validation()</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">element.</span>attach( <span class="unaffected">listener</span>, <span class="unaffected">ExampleElement.PROP_EXAMPLE</span> )</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">element.</span>property( <span class="unaffected">ExampleElement.PROP_EXAMPLE</span> ).attach( <span class="unaffected">listener</span> )</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">element.</span>detach( <span class="unaffected">listener</span>, <span class="unaffected">ExampleElement.PROP_EXAMPLE</span> )</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">element.</span>property( <span class="unaffected">ExampleElement.PROP_EXAMPLE</span> ).detach( <span class="unaffected">listener</span> )</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="IModelParticle">IModelParticle</a></h2>
+
+<p>This interface has been removed and no direct analog has been provided. Reference Element and Property classes directly.</p>
+
+
+<h2><a name="ImpliedElementProperty">ImpliedElementProperty</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire</span>.modeling.<span class="unaffected">ImpliedElementProperty</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire</span>.<span class="unaffected">ImpliedElementProperty</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="IPropertiesViewContributionDef">IPropertiesViewContributionDef</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>def.I<span class="unaffected">PropertiesViewContributionDef</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.<span class="unaffected">PropertiesViewContributionDef</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="IPropertiesViewContributionPageDef">IPropertiesViewContributionPageDef</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>def.IPropertiesViewContributionPageDef</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.PropertiesViewPageDef</code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="IPropertiesViewContributorDef">IPropertiesViewContributorDef</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>def.I<span class="unaffected">PropertiesViewContributorDef</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.<span class="unaffected">PropertiesViewContributorDef</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="IPropertiesViewContributorPart">IPropertiesViewContributorPart</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>I<span class="unaffected">PropertiesViewContributorPart</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.<span class="unaffected">PropertiesViewContributorPart</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="ISapphireCustomPartDef">ISapphireCustomPartDef</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>def.ISapphireCustomPartDef</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.CustomFormComponentDef</code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="ISapphireGroupDef">ISapphireGroupDef</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>def.ISapphire<span class="unaffected">GroupDef</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.<span class="unaffected">GroupDef</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="ISapphireLabelDef">ISapphireLabelDef</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>def.ISapphireLabel<span class="unaffected">Def</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.Text<span class="unaffected">Def</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="ISapphireStaticTextFieldDef">ISapphireStaticTextFieldDef</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>def.ISapphire<span class="unaffected">StaticTextFieldDef</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.<span class="unaffected">StaticTextFieldDef</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="JavaType">JavaType</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">Class&lt;?> cl = type.artifact();</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">Class&lt;?> cl =</span> (Class&lt;?>) <span class="unaffected">type.artifact();</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="LabelPart">LabelPart</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>Label<span class="unaffected">Part</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.Text<span class="unaffected">Part</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="LayeredListBindingImpl">LayeredListBindingImpl</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire</span>.modeling.LayeredListBindingImpl</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire</span>.LayeredListPropertyBinding</code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="LineSeparatorDef">LineSeparatorDef</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>def<span class="unaffected">.LineSeparatorDef</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms<span class="unaffected">.LineSeparatorDef</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="LineSeparatorPart">LineSeparatorPart</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.LineSeparatorPart</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.<span class="unaffected">LineSeparatorPart</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="ListBindingImpl">ListBindingImpl</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire</span>.modeling.ListBindingImpl</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire</span>.ListPropertyBinding</code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="ListProperty">ListProperty</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire</span>.modeling.<span class="unaffected">ListProperty</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire</span>.<span class="unaffected">ListProperty</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="ListPropertyEditorRenderer">ListPropertyEditorRenderer</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>renderers<span class="unaffected">.swt.ListPropertyEditor</span>Renderer</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms<span class="unaffected">.swt.ListPropertyEditor</span>Presentation</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>getList<span class="unaffected">()</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>list<span class="unaffected">()</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="LoggingService">LoggingService</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.</span>modeling.<span class="unaffected">LoggingService</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.LoggingService</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">LoggingService.log( ... )</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>Sapphire.service( <span class="unaffected">LoggingService</span>.class )<span class="unaffected">.log( ... )</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="MasterDetailsContentNode">MasterDetailsContentNode</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>form.editors.masterdetails<span class="unaffected">.MasterDetailsContentNode</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms<span class="unaffected">.MasterDetailsContentNode</span>Part</code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="MasterDetailsContentNodeChildDef">MasterDetailsContentNodeChildDef</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>form.editors.masterdetails.def<span class="unaffected">.MasterDetailsContentNodeChildDef</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms<span class="unaffected">.MasterDetailsContentNodeChildDef</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="MasterDetailsContentNodeDef">MasterDetailsContentNodeDef</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>form.editors.masterdetails.def<span class="unaffected">.MasterDetailsContentNodeDef</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms<span class="unaffected">.MasterDetailsContentNodeDef</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="MasterDetailsContentNodeFactoryCaseDef">MasterDetailsContentNodeFactoryCaseDef</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>form.editors.masterdetails.def<span class="unaffected">.MasterDetailsContentNodeFactoryCaseDef</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms<span class="unaffected">.MasterDetailsContentNodeFactoryCaseDef</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected"><i>property</i></span> Type</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected"><i>property</i></span> ElementType</code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="MasterDetailsContentNodeFactoryDef">MasterDetailsContentNodeFactoryDef</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>form.editors.masterdetails.def<span class="unaffected">.MasterDetailsContentNodeFactoryDef</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms<span class="unaffected">.MasterDetailsContentNodeFactoryDef</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="MasterDetailsContentNodeInclude">MasterDetailsContentNodeInclude</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>form.editors.masterdetails.def.MasterDetailsContentNodeInclude</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.MasterDetailsContentNodeRef</code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="MasterDetailsContentNodeList">MasterDetailsContentNodeList</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>form.editors.masterdetails<span class="unaffected">.MasterDetailsContentNodeList</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms<span class="unaffected">.MasterDetailsContentNodeList</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="MasterDetailsContentOutline">MasterDetailsContentOutline</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>form.editors.masterdetails<span class="unaffected">.MasterDetailsContentOutline</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms<span class="unaffected">.MasterDetailsContentOutline</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="MasterDetailsEditorPage">MasterDetailsEditorPage</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>form.editors.masterdetails<span class="unaffected">.MasterDetailsEditorPage</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.swt<span class="unaffected">.MasterDetailsEditorPage</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="MasterDetailsEditorPageDef">MasterDetailsEditorPageDef</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>form.editors.masterdetails.def<span class="unaffected">.MasterDetailsEditorPageDef</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms<span class="unaffected">.MasterDetailsEditorPageDef</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="MasterDetailsEditorPagePart">MasterDetailsEditorPagePart</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>form.editors.masterdetails<span class="unaffected">.MasterDetailsEditorPagePart</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms<span class="unaffected">.MasterDetailsEditorPagePart</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">MasterDetailsEditorPageState state = page.</span>getState<span class="unaffected">();</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">MasterDetailsEditorPageState state = page.</span>state<span class="unaffected">();</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="MasterDetailsEditorPageState">MasterDetailsEditorPageState</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>form.editors.masterdetails.state<span class="unaffected">.MasterDetailsEditorPageState</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms<span class="unaffected">.MasterDetailsEditorPageState</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="ModelElementHandle">ModelElementHandle</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.</span>modeling.ModelElementHandle</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.</span>ElementHandle</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>IModelParticle <span class="unaffected">root = handle.root()</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>Element <span class="unaffected">root = handle.root()</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>IModelParticle <span class="unaffected">parent = handle.</span>parent<span class="unaffected">()</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>Element <span class="unaffected">parent = handle.</span>element<span class="unaffected">()</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">handle.</span>adapt<span class="unaffected">( Example.class )</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">handle.</span>element().adapt<span class="unaffected">( Example.class )</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">handle.</span>getProperty<span class="unaffected">()</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">handle.</span>definition<span class="unaffected">()</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">handle.</span>element<span class="unaffected">()</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">handle.</span>content<span class="unaffected">()</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">handle.</span>element<span class="unaffected">( createIfNecessary )</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">handle.</span>content<span class="unaffected">( createIfNecessary )</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">handle.</span>element<span class="unaffected">( createIfNecessary, type )</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">handle.</span>content<span class="unaffected">( createIfNecessary, type )</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">handle.</span>remove<span class="unaffected">()</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">handle.</span>clear<span class="unaffected">()</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">handle.</span>removable()</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">handle.</span>definition() instanceof ImplementElementProperty</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">Status validation =</span> handle.validation()
+
+<span class="comment">or</span>
+
+<span class="unaffected">Status validation =</span> handle.validation( true )</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="comment">Element property validation no longer includes validation of the child element.</span>
+
+Status.CompositeStatusFactory factory = Status.factoryForComposite();
+
+factory.merge( handle.validation() );
+
+Element child = handle.content();
+
+if( child != null )
+{
+    factory.merge( child.validation() );
+}
+
+<span class="unaffected">Status validation =</span> factory.create();</code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="ModelElementList">ModelElementList</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.</span>modeling.ModelElementList</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.</span>ElementList</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>IModelParticle <span class="unaffected">root = list.root()</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>Element <span class="unaffected">root = list.root()</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>IModelParticle <span class="unaffected">parent = list.</span>parent<span class="unaffected">()</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>Element <span class="unaffected">parent = list.</span>element<span class="unaffected">()</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">list.</span>adapt<span class="unaffected">( Example.class )</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">list.</span>element().adapt<span class="unaffected">( Example.class )</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">list.</span>getParentProperty<span class="unaffected">()</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">list.</span>definition<span class="unaffected">()</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">Status validation =</span> list.validation()</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="comment">List property validation no longer includes validation of the child element.</span>
+
+Status.CompositeStatusFactory factory = Status.factoryForComposite();
+
+factory.merge( list.validation() );
+
+for( Element child : list )
+{
+    factory.merge( child.validation() );
+}
+
+<span class="unaffected">Status validation =</span> factory.create();</code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="ModelElementsTransfer">ModelElementsTransfer</a></h2>
+
+<p>This class is not longer available and no analog has been provided.</p>
+
+
+<h2><a name="ModelElementType">ModelElementType</a></h2>
+
+<p>With the switch to on-demand element compilation, the developer no longer has control over the name
+of the generated implementation class. As such, the following methods have been removed and no direct 
+equivalents have been provided. For further guidance, post a question 
+on <a href="http://www.eclipse.org/forums/index.php?t=thread&frm_id=192">Sapphire Adopter Forum</a>.</p>
+
+<pre class="source-code"><code><span class="unaffected">ModelElementType
+{</span>
+    Class<?> getImplClass()
+    String getImplClassName( Class<?> elementTypeClass )
+    String getImplClassName( String elementTypeClassName, GenerateImpl generateImplAnnotation )
+    String getImplClassName( String elementTypeClassName, String preferredImplPackageName, String preferredImplClassName )
+<span class="unaffected">}</span></code></pre>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.</span>modeling.ModelElementType</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.</span>ElementType</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>List<span class="unaffected">&lt;ModelProperty> properties = type.properties()</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>SortedSet<span class="unaffected">&lt;ModelProperty> properties = type.properties()</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">type.instantiate(</span> element, pdef<span class="unaffected">, resource )</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">type.instantiate(</span> element.property( pdef )<span class="unaffected">, resource )</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="ModelProperty">ModelProperty</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.</span>modeling.ModelProperty</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.</span>PropertyDef</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">property.</span>getName()</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">property.</span>name()</code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="NamedValuesPropertyEditorRenderer">NamedValuesPropertyEditorRenderer</a></h2>
+
+<p>This class is not longer available and no analog has been provided.</p>
+
+
+<h2><a name="NLS">NLS</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public final class Resources</span> extends NLS 
+<span class="unaffected">{
+    public static</span> String <span class="unaffected">title;
+    public static</span> String <span class="unaffected">message;
+
+    static 
+    {</span>
+        initializeMessages<span class="unaffected">(</span> Resources.class.getName(), <span class="unaffected">Resources.class );
+    }
+}</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public final class Resources 
+{
+    public static</span> LocalizableText <span class="unaffected">title;
+    public static</span> LocalizableText <span class="unaffected">message;
+
+    static 
+    {</span>
+        LocalizableText.init<span class="unaffected">( Resources.class );
+    }
+}</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">String text = Resources.title;</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">String text = Resources.title</span>.text()<span class="unaffected">;</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">String text =</span> NLS.bind( <span class="unaffected">Resources.message</span>, <span class="unaffected">x, y</span> )<span class="unaffected">;</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">String text = Resources.message</span>.format( <span class="unaffected">x, y</span> )<span class="unaffected">;</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="PageBookDef">PageBookDef</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>def<span class="unaffected">.PageBookDef</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms<span class="unaffected">.PageBookDef</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected"><i>property</i></span> Pages</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected"><i>property</i></span> Cases</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected"><i>property</i></span> DefaultPage</code></pre>
+    </td>
+    <td>
+<p>This property is not longer available and no analog has been provided.</p>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="PageBookExtDef">PageBookExtDef</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>def<span class="unaffected">.PageBook</span>Ext<span class="unaffected">Def</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms<span class="unaffected">.PageBookDef</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="PageBookKeyMapping">PageBookKeyMapping</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>def<span class="unaffected">.PageBook</span>KeyMapping</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms<span class="unaffected">.PageBook</span>CaseDef</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected"><i>property</i></span> Key</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected"><i>property</i></span> ElementType</code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="PageBookPart">PageBookPart</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.PageBookPart</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.<span class="unaffected">PageBookPart</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="PageBookPartControlMethod">PageBookPartControlMethod</a></h2>
+
+<p>This class is not longer available and no analog has been provided.</p>
+
+
+<h2><a name="PossibleValuesService">PossibleValuesService</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExamplePossibleValuesService extends PossibleValuesService
+{
+    protected void fillPossibleValues(</span> SortedSet<span class="unaffected">&lt;String> values )
+    {
+        ...
+    }
+}</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExamplePossibleValuesService extends PossibleValuesService
+{
+    protected void fillPossibleValues(</span> Set<span class="unaffected">&lt;String> values )
+    {
+        ...
+    }
+}</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>SortedSet<span class="unaffected">&lt;String> values = possibleValuesService.values();</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>Set<span class="unaffected">&lt;String> values = possibleValuesService.values();</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="ProblemsTraversalService">ProblemsTraversalService</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>form.editors.masterdetails<span class="unaffected">.ProblemsTraversalService</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms<span class="unaffected">.ProblemsTraversalService</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="ProblemsTraversalServiceData">ProblemsTraversalServiceData</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>form.editors.masterdetails<span class="unaffected">.ProblemsTraversalServiceData</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms<span class="unaffected">.ProblemsTraversalServiceData</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="ProgressMonitorBridge">ProgressMonitorBridge</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.</span>ui.swt<span class="unaffected">.ProgressMonitorBridge</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire</span>.platform<span class="unaffected">.ProgressMonitorBridge</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="PropertiesViewContributionManager">PropertiesViewContributionManager</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.PropertiesViewContributionManager</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.<span class="unaffected">PropertiesViewContributionManager</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="PropertiesViewContributionPagePart">PropertiesViewContributionPagePart</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>PropertiesViewContributionPagePart</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.PropertiesViewPagePart</code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="PropertiesViewContributionPart">PropertiesViewContributionPart</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.PropertiesViewContributionPart</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.<span class="unaffected">PropertiesViewContributionPart</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="PropertyContentEvent">PropertyContentEvent</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire</span>.modeling.<span class="unaffected">PropertyContentEvent</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire</span>.<span class="unaffected">PropertyContentEvent</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="PropertyEditorDef">PropertyEditorDef</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>def<span class="unaffected">.PropertyEditorDef</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms<span class="unaffected">.PropertyEditorDef</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>HINT_PREFER_COMBO</code></pre>
+    </td>
+    <td>
+This hint has been replaced by <a href="#sdef.prefer.combo">Sapphire.PropertyEditor.PopUpListField</a> style.
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>HINT_PREFER_RADIO_BUTTONS</code></pre>
+    </td>
+    <td>
+This hint has been replaced by <a href="#sdef.prefer.radio.buttons">Sapphire.PropertyEditor.RadioButtonGroup</a> style.
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>HINT_PREFER_VERTICAL_RADIO_BUTTONS</code></pre>
+    </td>
+    <td>
+This hint has been replaced by <a href="#sdef.prefer.vertical.radio.buttons">Sapphire.PropertyEditor.RadioButtonGroup.Vertical</a> style.
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="PropertyEditorPart">PropertyEditorPart</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.PropertyEditorPart</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.<span class="unaffected">PropertyEditorPart</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>getLabel<span class="unaffected">( ... )</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>label<span class="unaffected">( ... )</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>getShowLabel()</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>label() != null</code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="PropertyEditorAssistContributor">PropertyEditorAssistContributor</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExampleContributor extends PropertyEditorAssistContributor
+{
+    @Override
+    public void init(</span> IModelElement element, ModelProperty property <span class="unaffected">)
+    {
+        if(</span> property != null <span class="unaffected">)
+        {
+            ...
+        }
+    }
+}</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExampleContributor extends PropertyEditorAssistContributor
+{
+    @Override
+    public void init(</span> SapphirePart part <span class="unaffected">)
+    {</span>
+        Element element = part.getLocalModelElement();
+        
+        <span class="unaffected">if(</span> part instanceof PropertyEditorPart <span class="unaffected">)
+        {</span>
+            PropertyDef property = ( (PropertyEditorPart) part ).property().definition();
+            
+            <span class="unaffected">...
+        }
+    }
+}</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="PropertyEditorAssistContext">PropertyEditorAssistContext</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">context.</span>getModelElement()</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">context.</span>getPart().getLocalModelElement()</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">context.</span>getProperty()</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>( (PropertyEditorPart) <span class="unaffected">context.</span>getPart() ).property().definition()</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">context.</span>isPropertyEditorReadOnly()</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>( (PropertyEditorPart) <span class="unaffected">context.</span>getPart() ).isReadOnly()</code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="PropertyEditorRenderer">PropertyEditorRenderer</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>renderers<span class="unaffected">.swt.PropertyEditor</span>Renderer</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms<span class="unaffected">.swt.PropertyEditor</span>Presentation</code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="PropertyEditorRendererFactory">PropertyEditorRendererFactory</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>renderers<span class="unaffected">.swt.PropertyEditor</span>Renderer<span class="unaffected">Factory</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms<span class="unaffected">.swt.PropertyEditor</span>Presentation<span class="unaffected">Factory</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExamplePropertyEditor</span>Render<span class="unaffected">Factory extends PropertyEditor</span>Renderer<span class="unaffected">Factory
+{</span>
+    @Override
+    public <span class="unaffected">boolean isApplicableTo( PropertyEditorPart part ) 
+    {
+        ...
+    }
+
+    @Override
+    public PropertyEditor</span>Renderer <span class="unaffected">create(</span> SapphireRenderingContext context,
+                                          <span class="unaffected">PropertyEditorPart part ) 
+    {
+        return new ExamplePropertyEditor</span>Render<span class="unaffected">(</span> context, part <span class="unaffected">);
+    }
+}</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExamplePropertyEditor</span>Presentation<span class="unaffected">Factory extends PropertyEditor</span>Presentation<span class="unaffected">Factory
+{</span>
+    private <span class="unaffected">boolean isApplicableTo( PropertyEditorPart part ) 
+    {
+        ...
+    }
+
+    @Override
+    public PropertyEditor</span>Presentation <span class="unaffected">create( PropertyEditorPart part</span>, 
+                                              SwtPresentation parent,
+                                              Composite composite <span class="unaffected">) 
+    {</span>
+        if( isApplicable( part ) )
+        {
+            <span class="unaffected">return new ExamplePropertyEditor</span>Presentation<span class="unaffected">(</span> part, parent, composite <span class="unaffected">);</span>
+        }
+        
+        return null;
+    <span class="unaffected">}
+}</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="PropertyEnablementEvent">PropertyEnablementEvent</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire</span>.modeling.<span class="unaffected">PropertyEnablementEvent</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire</span>.<span class="unaffected">PropertyEnablementEvent</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="PropertyEvent">PropertyEvent</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire</span>.modeling.<span class="unaffected">PropertyEvent</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire</span>.<span class="unaffected">PropertyEvent</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">event</span>.<span class="unaffected">element()</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">event</span>.property().<span class="unaffected">element()</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="PropertyInitializationEvent">PropertyInitializationEvent</a></h2>
+
+<p>As an optimization, property initialization events are no longer broadcast.</p>
+
+
+<h2><a name="PropertyValidationEvent">PropertyValidationEvent</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire</span>.modeling.<span class="unaffected">PropertyValidationEvent</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire</span>.<span class="unaffected">PropertyValidationEvent</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="ReferenceValue">ReferenceValue</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire</span>.modeling.<span class="unaffected">ReferenceValue</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire</span>.<span class="unaffected">ReferenceValue</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="RelativePathBrowseActionHandler">RelativePathBrowseActionHandler</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>swt.renderer.actions<span class="unaffected">.RelativePathBrowseActionHandler</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.swt<span class="unaffected">.RelativePathBrowseActionHandler</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="Resource">Resource</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire</span>.modeling.<span class="unaffected">Resource</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire</span>.<span class="unaffected">Resource</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExampleResource extends Resource
+{
+    @Override
+    protected</span> BindingImpl <span class="unaffected">createBinding(</span> ModelProperty pdef <span class="unaffected">)
+    {
+        ...
+    }
+}</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExampleResource extends Resource
+{
+    @Override
+    protected</span> PropertyBinding <span class="unaffected">createBinding(</span> Property property <span class="unaffected">)
+    {</span>
+        PropertyDef pdef = property.definition();
+        
+        <span class="unaffected">...
+    }
+}</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="SapphireActionHandler">SapphireActionHandler</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExampleActionHandler extends SapphireActionHandler
+{
+    @Override
+    protected Object run(</span> SapphireRenderingContext <span class="unaffected">context )
+    {
+        Shell shell = context</span>.getShell()<span class="unaffected">;
+        
+        ...
+    }
+}</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExampleActionHandler extends SapphireActionHandler
+{
+    @Override
+    protected Object run(</span> Presentation <span class="unaffected">context )
+    {
+        Shell shell =</span> ( (SwtPresentation) <span class="unaffected">context</span> ).shell()<span class="unaffected">;
+        
+        ...
+    }
+}</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="SapphireActionPresentation">SapphireActionPresentation</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>swt.renderer<span class="unaffected">.SapphireActionPresentation</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.swt<span class="unaffected">.SapphireActionPresentation</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="SapphireActionPresentationManager">SapphireActionPresentationManager</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>swt.renderer<span class="unaffected">.SapphireActionPresentationManager</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.swt<span class="unaffected">.SapphireActionPresentationManager</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="SapphireBrowseActionHandler">SapphireBrowseActionHandler</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>Sapphire<span class="unaffected">BrowseActionHandler</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.<span class="unaffected">BrowseActionHandler</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExampleBrowseActionHandler extends</span> Sapphire<span class="unaffected">BrowseActionHandler
+{
+    @Override
+    protected String browse(</span> SapphireRenderingContext <span class="unaffected">context )
+    {
+        Shell shell = context</span>.getShell()<span class="unaffected">;
+        
+        ...
+    }
+}</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExampleBrowseActionHandler extends BrowseActionHandler
+{
+    @Override
+    protected String browse(</span> Presentation <span class="unaffected">context )
+    {
+        Shell shell =</span> ( (SwtPresentation) <span class="unaffected">context</span> ).shell()<span class="unaffected">;
+        
+        ...
+    }
+}</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="SapphireDiagramEditorPagePart">SapphireDiagramEditorPagePart</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">DiagramEditorPageState state = page.</span>getState<span class="unaffected">();</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">DiagramEditorPageState state = page.</span>state<span class="unaffected">();</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="SapphireDialog">SapphireDialog</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.swt.SapphireDialog</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.<span class="unaffected">swt.SapphireDialog</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class CustomDialog extends SapphireDialog
+{
+    @Override
+    protected</span> void okPressed<span class="unaffected">()
+    {
+        ...</span>
+        
+        if( <span class="unaffected">success</span> )
+        {
+            super.okPressed();
+        }
+    <span class="unaffected">}
+}</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class CustomDialog extends SapphireDialog
+{
+    @Override
+    protected</span> boolean performOkOperation<span class="unaffected">()
+    {
+        ...</span>
+        
+        return <span class="unaffected">success</span>;
+    <span class="unaffected">}
+}</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="SapphireDialogPart">SapphireDialogPart</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.SapphireDialogPart</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.<span class="unaffected">DialogPart</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="SapphireEditor">SapphireEditor</a></h2>
+
+<p>The following method has been removed and no direct equivalent have been provided. For further guidance, post a question 
+on <a href="http://www.eclipse.org/forums/index.php?t=thread&frm_id=192">Sapphire Adopter Forum</a>.</p>
+
+<pre class="source-code"><code><span class="unaffected">SapphireEditor
+{</span>
+    File getDefaultStateStorageFile( SapphireEditorPagePart part )
+<span class="unaffected">}</span></code></pre>
+
+
+<h2><a name="SapphireEditorFormPage">SapphireEditorFormPage</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.SapphireEditorFormPage</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.swt.<span class="unaffected">SapphireEditorFormPage</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="SapphireEnumControlledPageBook">SapphireEnumControlledPageBook</a></h2>
+
+<p>This class is not longer available and no analog has been provided.</p>
+
+
+<h2><a name="SapphireForm">SapphireForm</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.swt.SapphireForm</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.<span class="unaffected">swt.SapphireForm</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="SapphireGroup">SapphireGroup</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>Sapphire<span class="unaffected">Group</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.<span class="unaffected">Group</span>Part</code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="SapphireHotSpotsActionPresentation">SapphireHotSpotsActionPresentation</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>swt.renderer<span class="unaffected">.SapphireHotSpotsActionPresentation</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.swt<span class="unaffected">.SapphireHotSpotsActionPresentation</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="SapphireJumpActionHandler">SapphireJumpActionHandler</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>Sapphire<span class="unaffected">JumpActionHandler</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.<span class="unaffected">JumpActionHandler</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="SapphireKeyboardActionPresentation">SapphireKeyboardActionPresentation</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>swt.renderer<span class="unaffected">.SapphireKeyboardActionPresentation</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.swt<span class="unaffected">.SapphireKeyboardActionPresentation</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="SapphireListControlledPageBook">SapphireListControlledPageBook</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>SapphireListControlledPageBook</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.DetailSectionPart</code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="SapphireMenuActionPresentation">SapphireMenuActionPresentation</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>swt.renderer<span class="unaffected">.SapphireMenuActionPresentation</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.swt<span class="unaffected">.SapphireMenuActionPresentation</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="SapphirePart">SapphirePart</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>getParentPart()</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>parent()</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>getImageCache()</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>getSwtResourceCache()</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExamplePart extends</span> SapphirePart
+<span class="unaffected">{
+    @Override
+    public void render(</span> SapphireRenderingContext context <span class="unaffected">)
+    {
+        ...
+    }
+}</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExamplePart extends</span> FormComponentPart
+<span class="unaffected">{</span>
+    @Override
+    public FormComponentPresentation createPresentation( SwtPresentation parent, Composite composite )
+    {
+        return new FormComponentPresentation( this, parent, composite )
+        {
+            <span class="unaffected">@Override
+            public void render()
+            {
+                ...
+            }</span>
+        };
+    }
+<span class="unaffected">}</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="SapphirePopup">SapphirePopup</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.swt.</span>Sapphire<span class="unaffected">Popup</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms<span class="unaffected">.swt.<span class="unaffected">Popup</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="SapphirePropertyEditorActionHandler">SapphirePropertyEditorActionHandler</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>Sapphire<span class="unaffected">PropertyEditorActionHandler</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.<span class="unaffected">PropertyEditorActionHandler</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">handler.</span>getProperty()</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">handler.</span>property().definition()</code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="SapphirePropertyEditorCondition">SapphirePropertyEditorCondition</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>Sapphire<span class="unaffected">PropertyEditorCondition</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.<span class="unaffected">PropertyEditorCondition</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="SapphirePropertyPage">SapphirePropertyPage</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.swt.SapphirePropertyPage</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.<span class="unaffected">swt.SapphirePropertyPage</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="SapphirePropertySheetPage">SapphirePropertySheetPage</a></h2>
+
+<p>This class is not longer available and no analog has been provided.</p>
+
+
+<h2><a name="SapphireStaticTextField">SapphireStaticTextField</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>Sapphire<span class="unaffected">StaticTextField</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.<span class="unaffected">StaticTextField</span>Part</code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="SapphireStatusDialog">SapphireStatusDialog</a></h2>
+
+<p>This class is not longer available and no analog has been provided.</p>
+
+
+<h2><a name="SapphireTextCellEditor">SapphireTextCellEditor</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>swt.renderer<span class="unaffected">.SapphireTextCellEditor</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.swt<span class="unaffected">.SapphireTextCellEditor</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="SapphireTextPopup">SapphireTextPopup</a></h2>
+
+<p>This class is not longer available and no analog has been provided.</p>
+
+
+<h2><a name="SapphireToolBarActionPresentation">SapphireToolBarActionPresentation</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>swt.renderer<span class="unaffected">.SapphireToolBarActionPresentation</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.swt<span class="unaffected">.SapphireToolBarActionPresentation</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="SapphireToolBarManagerActionPresentation">SapphireToolBarManagerActionPresentation</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>swt.renderer<span class="unaffected">.SapphireToolBarManagerActionPresentation</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.swt<span class="unaffected">.SapphireToolBarManagerActionPresentation</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="SapphireToolTip">SapphireToolTip</a></h2>
+
+<p>This class is not longer available and no analog has been provided.</p>
+
+
+<h2><a name="SapphireWizard">SapphireWizard</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.swt.SapphireWizard</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.<span class="unaffected">swt.SapphireWizard</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>setDefaultPageImageDescriptor( ... )</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">&lt;wizard>
+    &lt;id>ExampleWizard&lt;/id>
+    &lt;label>example wizard&lt;/label></span>
+    &lt;image>...&lt;/image>
+    <span class="unaffected">&lt;page>
+        ...
+    &lt;/page>
+&lt;/wizard></span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">getShell()</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>getContainer().<span class="unaffected">getShell()</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExampleWizard extends SapphireWizard&lt;ExampleOp></span>
+{
+    <span class="unaffected">@Override
+    public</span> void addPages()
+    <span class="unaffected">{</span>
+        super.addPages();
+        
+        addPage( new CustomWizardPage() );
+    <span class="unaffected">}
+}</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExampleWizard extends SapphireWizard&lt;ExampleOp></span>
+{
+    private IWizardPage customWizardPage;
+    
+    <span class="unaffected">@Override
+    public</span> IWizardPage[] getPages()
+    <span class="unaffected">{</span>
+        final IWizardPage[] pages = super.getPages();
+        final IWizardPage[] extended = new IWizardPage[ pages.length + 1 ];
+        
+        System.arraycopy( pages, 0, extended, 0, pages.length );
+        
+        if( this.customWizardPage == null )
+        {
+            this.customWizardPage = new CustomWizardPage();
+            this.customWizardPage.setWizard( this );
+        }
+        
+        extended[ pages.length ] = this.customWizardPage;
+        
+        return extended;
+    <span class="unaffected">}
+}</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="SapphireWizardPage">SapphireWizardPage</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.swt.SapphireWizardPage</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.<span class="unaffected">swt.SapphireWizardPage</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="SapphireWizardPagePart">SapphireWizardPagePart</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>Sapphire<span class="unaffected">WizardPagePart</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.<span class="unaffected">WizardPagePart</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="SapphireWizardPart">SapphireWizardPart</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>Sapphire<span class="unaffected">WizardPart</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.<span class="unaffected">WizardPart</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="ScalePropertyEditorRenderer">ScalePropertyEditorRenderer</a></h2>
+
+<p>This class is not longer available and no analog has been provided.</p>
+
+
+<h2><a name="SectionDef">SectionDef</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>def<span class="unaffected">.SectionDef</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms<span class="unaffected">.SectionDef</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="SectionPart">SectionPart</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.SectionPart</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.<span class="unaffected">SectionPart</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="SectionRef">SectionRef</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>def<span class="unaffected">.SectionRef</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms<span class="unaffected">.SectionRef</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="SeparatorDef">SeparatorDef</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>def<span class="unaffected">.SeparatorDef</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms<span class="unaffected">.SeparatorDef</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="SeparatorPart">SeparatorPart</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.SeparatorPart</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.<span class="unaffected">SeparatorPart</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="ServiceFactory">ServiceFactory</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class CustomValidationService</span>Factory <span class="unaffected">extends Service</span>Factory
+<span class="unaffected">{
+    @Override
+    public boolean applicable( ServiceContext context</span>, Class&lt;? extends Service> service <span class="unaffected">)
+    {
+        ...
+    }</span>
+
+    @Override
+    public Service create( ServiceContext context, Class&lt;? extends Service> service )
+    {
+        return new CustomValidationService();
+    }
+<span class="unaffected">}</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class CustomValidationService</span>Condition <span class="unaffected">extends Service</span>Condition
+<span class="unaffected">{
+    @Override
+    public boolean applicable( ServiceContext context )
+    {
+        ...
+    }
+}</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">&lt;service>
+    &lt;id>CustomValidationService&lt;/id>
+    &lt;context>Sapphire.Property.Instance&lt;/context></span>
+    &lt;type>org.eclipse.sapphire.services.ValidationService&lt;/type>
+    &lt;factory>org.adopter.CustomValidationServiceFactory&lt;/factory>
+<span class="unaffected">&lt;/service></span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">&lt;service>
+    &lt;id>CustomValidationService&lt;/id>
+    &lt;context>Sapphire.Property.Instance&lt;/context></span>
+    &lt;implementation>org.adopter.CustomValidationService&lt;/implementation>
+    &lt;condition>org.adopter.CustomValidationServiceCondition&lt;/condition>
+<span class="unaffected">&lt;/service></span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="SlushBucketPropertyEditor">SlushBucketPropertyEditor</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>renderers<span class="unaffected">.swt.SlushBucketPropertyEditor</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms<span class="unaffected">.swt.SlushBucketPropertyEditor</span>Presentation</code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="SplitFormBlockDef">SplitFormBlockDef</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>def<span class="unaffected">.SplitForm</span>Block<span class="unaffected">Def</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms<span class="unaffected">.SplitForm</span>Section<span class="unaffected">Def</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="SplitFormBlockPart">SplitFormBlockPart</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.SplitForm</span>Block<span class="unaffected">Part</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.<span class="unaffected">SplitForm</span>Section<span class="unaffected">Part</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="SplitFormDef">SplitFormDef</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>def<span class="unaffected">.SplitFormDef</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms<span class="unaffected">.SplitFormDef</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="SplitFormPart">SplitFormPart</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.SplitFormPart</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.<span class="unaffected">SplitFormPart</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="StandardXmlListBindingImpl">StandardXmlListBindingImpl</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>
+<span class="unaffected">public class ExampleBinding extends StandardXmlListBindingImpl
+{
+    @Override
+    protected void initBindingMetadata</span>( IModelElement element, ModelProperty property, String[] params )
+    <span class="unaffected">{
+        ...
+    }
+}</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>
+<span class="unaffected">public class ExampleBinding extends StandardXmlListBindingImpl
+{
+    @Override
+    protected void initBindingMetadata</span>()
+    <span class="unaffected">{</span>
+        Element element = property().element();
+        PropertyDef pdef = property().definition();
+        String[] params = pdef.getAnnotation( CustomXmlListBinding.class ).params();
+        
+        <span class="unaffected">...
+    }
+}</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="SwtRendererUtil">SwtRendererUtil</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>renderers<span class="unaffected">.swt.Swt</span>Renderer<span class="unaffected">Util</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms<span class="unaffected">.swt.SwtUtil</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="SwtResourceCache">SwtResourceCache</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.swt.SwtResourceCache</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms<span class="unaffected">.swt.SwtResourceCache</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="SwtUtil">SwtUtil</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>swt.renderer<span class="unaffected">.SwtUtil</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.swt<span class="unaffected">.SwtUtil</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="TabGroupDef">TabGroupDef</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>def<span class="unaffected">.TabGroupDef</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms<span class="unaffected">.TabGroupDef</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="TabGroupPageDef">TabGroupPageDef</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>def<span class="unaffected">.TabGroupPageDef</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms<span class="unaffected">.TabGroupPageDef</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="TabGroupPagePart">TabGroupPagePart</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.TabGroupPagePart</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.<span class="unaffected">TabGroupPagePart</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="TabGroupPart">TabGroupPart</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.TabGroupPart</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.<span class="unaffected">TabGroupPart</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="Transient">Transient</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire</span>.modeling.<span class="unaffected">Transient</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire</span>.<span class="unaffected">Transient</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>IModelParticle <span class="unaffected">root = transient.root()</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>Element <span class="unaffected">root = transient.root()</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">transient.</span>parent<span class="unaffected">()</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">transient.</span>element<span class="unaffected">()</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">transient.</span>adapt<span class="unaffected">( Example.class )</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">transient.</span>element().adapt<span class="unaffected">( Example.class )</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">transient.</span>property<code><span class="unaffected">()</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">transient.</span>definition<code><span class="unaffected">()</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="TransientProperty">TransientProperty</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire</span>.modeling.<span class="unaffected">TransientProperty</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire</span>.<span class="unaffected">TransientProperty</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="TypeCast">TypeCast</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class</span> StringToVersionTypeCast <span class="unaffected">extends</span> TypeCast
+<span class="unaffected">{</span>
+    @Override
+    public boolean applicable( FunctionContext context,
+                               Function requestor,
+                               Object value,
+                               Class&lt;?> target )
+    {
+        return ( target == Version.class && value instanceof String );
+    }
+
+    <span class="unaffected">@Override
+    public</span> Object evaluate( FunctionContext context,
+                            Function requestor,
+                            Object value,
+                            Class&lt;?> target )
+    <span class="unaffected">{
+        Version result = null;
+        
+        try
+        {
+            result = new Version(</span> (String) value <span class="unaffected">);
+        }
+        catch( IllegalArgumentException e )
+        {
+            // Intentionally ignored.
+        }
+        
+        return null;
+    }
+}</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class</span> StringToVersionConversionService <span class="unaffected">extends</span> ConversionService&lt;String,Version>
+<span class="unaffected">{</span>
+    public StringToVersionConversionService()
+    {
+        super( String.class, Version.class );
+    }
+
+    <span class="unaffected">@Override
+    public</span> Version convert( String string )
+    <span class="unaffected">{
+        Version result = null;
+        
+        try
+        {
+            result = new Version(</span> string <span class="unaffected">);
+        }
+        catch( IllegalArgumentException e )
+        {
+            // Intentionally ignored.
+        }
+        
+        return result;
+    }
+}</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">&lt;extension></span>
+    &lt;type-cast>
+        &lt;source>java.lang.String&lt;/source>
+        &lt;target>org.eclipse.sapphire.Version&lt;/target>
+        &lt;impl>org.eclipse.sapphire.modeling.el.internal.StringToVersionTypeCast&lt;/impl>
+    &lt;/type-cast>
+<span class="unaffected">&lt;/extension></span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">&lt;extension></span>
+    &lt;service>
+        &lt;id>Sapphire.ConversionService.StringToVersion&lt;/id>
+        &lt;implementation>org.eclipse.sapphire.internal.StringToVersionConversionService&lt;/implementation>
+        &lt;context>Sapphire&lt;/context>
+    &lt;/service>
+<span class="unaffected">&lt;/extension></span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="UrlResolver">UrlResolver</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>UrlResolver.resolve( referer, location )</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>URIResolverPlugin.createResolver().resolve( referer, null, location )</code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="ValidationAggregationService">ValidationAggregationService</a></h2>
+
+<p>As an optimization, the aggregation intermediary to ValidationService has been removed. Adopters should not use ValidationService directly. Instead, access
+validation using Property.validation() API. The property manages the interaction with ValidationService implementations.</p>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">Status validation = property</span>.service( ValidationAggregationService.class ).<span class="unaffected">validation();</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">Status validation = property</span>.<span class="unaffected">validation()</code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="ValidationService">ValidationService</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExampleValidationService extends ValidationService
+{
+    @Override
+    protected void</span> init<span class="unaffected">()
+    {</span>
+        super.init();
+
+        <span class="unaffected">...
+
+        <i>inside a listener</i>
+        {</span>
+            broadcast<span class="unaffected">();
+        }
+    }
+    
+    @Override</span>
+    public <span class="unaffected">Status</span> validate<span class="unaffected">()
+    {
+        ...
+    }
+}</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">public class ExampleValidationService extends ValidationService
+{
+    @Override
+    protected void</span> initValidationService<span class="unaffected">()
+    {
+        ...
+
+        <i>inside a listener</i>
+        {</span>
+            refresh<span class="unaffected">();
+        }
+    }
+    
+    @Override</span>
+    protected <span class="unaffected">Status</span> compute<span class="unaffected">()
+    {
+        ...
+    }
+}</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="Value">Value</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire</span>.modeling.<span class="unaffected">Value</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire</span>.<span class="unaffected">Value</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>IModelParticle <span class="unaffected">root = value.root()</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>Element <span class="unaffected">root = value.root()</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>IModelParticle <span class="unaffected">parent = value.</span>parent<span class="unaffected">()</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>Element <span class="unaffected">parent = value.</span>element<span class="unaffected">()</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">value.</span>adapt<span class="unaffected">( Example.class )</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">value.</span>element().adapt<span class="unaffected">( Example.class )</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">value.</span>getProperty<code><span class="unaffected">()</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">value.</span>definition<code><span class="unaffected">()</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">value.</span>getText<code><span class="unaffected">()</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">value.</span>text<code><span class="unaffected">()</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">value.</span>getText<code><span class="unaffected">( useDefaultValue )</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">value.</span>text<code><span class="unaffected">( useDefaultValue )</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">value.</span>getLocalizedText<code><span class="unaffected">()</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">value.</span>localized<code><span class="unaffected">()</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">value.</span>getLocalizedText<code><span class="unaffected">( useDefaultValue )</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">value.</span>localized<code><span class="unaffected">( useDefaultValue )</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">value.</span>getLocalizedText<code><span class="unaffected">( capitalizationType, includeMnemonic )</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">value.</span>localized<code><span class="unaffected">( capitalizationType, includeMnemonic )</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">value.</span>getLocalizedText<code><span class="unaffected">( useDefaultValue, capitalizationType, includeMnemonic )</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">value.</span>localized<code><span class="unaffected">( useDefaultValue, capitalizationType, includeMnemonic )</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">value.</span>getContent<code><span class="unaffected">()</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">value.</span>content<code><span class="unaffected">()</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">value.</span>getContent<code><span class="unaffected">( useDefaultValue )</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">value.</span>content<code><span class="unaffected">( useDefaultValue )</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">value.</span>isDefault<code><span class="unaffected">()</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">value.</span>empty<code><span class="unaffected">()</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">value.</span>isMalformed<code><span class="unaffected">()</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">value.</span>malformed<code><span class="unaffected">()</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="ValueBindingImpl">ValueBindingImpl</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire</span>.modeling.ValueBindingImpl</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire</span>.ValuePropertyBinding</code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="ValueLabelProvider">ValueLabelProvider</a></h2>
+
+<p>This class is not longer available and no analog has been provided.</p>
+
+
+<h2><a name="ValueProperty">ValueProperty</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire</span>.modeling.<span class="unaffected">ValueProperty</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire</span>.<span class="unaffected">ValueProperty</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="ValuePropertyEditorRenderer">ValuePropertyEditorRenderer</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>renderers<span class="unaffected">.swt.ValuePropertyEditor</span>Renderer</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms<span class="unaffected">.swt.ValuePropertyEditor</span>Presentation</code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="ValueSerializationMasterService">ValueSerializationMasterService</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">Integer num = </span>(Integer) <span class="unaffected">element.service( prop,</span> ValueSerializationMasterService<span class="unaffected">.class ).</span>decode<span class="unaffected">( str );</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">Integer num = element.service( prop,</span> MasterConversionService<span class="unaffected">.class ).</span>convert<span class="unaffected">( str</span>, Integer.class <span class="unaffected">);</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">String str = element.service( prop,</span> ValueSerializationMasterService<span class="unaffected">.class ).</span>encode<span class="unaffected">( num );</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">String str = element.service( prop,</span> MasterConversionService<span class="unaffected">.class ).</span>convert<span class="unaffected">( num</span>, String.class <span class="unaffected">);</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="ValueSerializationService">ValueSerializationService</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">Integer num = </span>(Integer) <span class="unaffected">element.service( prop,</span> ValueSerializationService<span class="unaffected">.class ).</span>decode<span class="unaffected">( str );</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">Integer num = element.service( prop,</span> MasterConversionService<span class="unaffected">.class ).</span>convert<span class="unaffected">( str</span>, Integer.class <span class="unaffected">);</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">String str = element.service( prop,</span> ValueSerializationService<span class="unaffected">.class ).</span>encode<span class="unaffected">( num );</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">String str = element.service( prop,</span> MasterConversionService<span class="unaffected">.class ).</span>convert<span class="unaffected">( num</span>, String.class <span class="unaffected">);</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>public class ExampleSerializationService extends ValueSerializationService
+{
+    @Override
+    protected ExampleType decodeFromString( String value )
+    {
+        ...
+    }
+
+    public String encode( Object value )
+    {
+        ...
+    }
+}</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>public class StringToExampleTypeConversionService extends ConversionService&lt;String,ExampleType>
+{
+    public ExampleConversionService()
+    {
+        super( String.class, ExampleType.class );
+    }
+
+    @Override
+    public ExampleType convert( String value )
+    {
+        ...
+    }
+}</code></pre>
+
+<p>If the ValueSerializationService does not override the encode() method, then it is not necessary to supply a conversion to a string.
+Sapphire includes a ConversionService implementation for converting an Object to a String that uses object's toString() method. This
+matches the default implementation of the encode() method.</p>
+
+<pre class="source-code"><code>public class ExampleTypeToStringTypeConversionService extends ConversionService&lt;ExampleType,String>
+{
+    public ExampleConversionService()
+    {
+        super( ExampleType.class, String.class );
+    }
+
+    @Override
+    public String convert( ExampleType value )
+    {
+        ...
+    }
+}</code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="WhitespaceSeparatorDef">WhitespaceSeparatorDef</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>def.WhitespaceSeparatorDef</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.SpacerDef</code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="WhitespaceSeparatorPart">WhitespaceSeparatorPart</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>WhitespaceSeparatorPart</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.SpacerPart</code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="WithDef">WithDef</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>def<span class="unaffected">.WithDef</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms<span class="unaffected">.WithDef</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="WithPart">WithPart</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.WithPart</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.<span class="unaffected">WithPart</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="WithPartImplied">WithPartImplied</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.With</span>PartImplied</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms.<span class="unaffected">With</span>ImpliedPart</code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="WizardDef">WizardDef</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>def<span class="unaffected">.WizardDef</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms<span class="unaffected">.WizardDef</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="WizardPageDef">WizardPageDef</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>def<span class="unaffected">.WizardPageDef</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">org.eclipse.sapphire.ui.</span>forms<span class="unaffected">.WizardPageDef</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="XmlDocumentSchemasCache">XmlDocumentSchemasCache</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">XmlDocumentSchemasCache.getSchema</span>( location, referer )</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">XmlDocumentSchemasCache.getSchema</span>( referer, null, location )</code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="XmlResource">XmlResource</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">XmlResource resource = ...
+XmlResource parent = resource.parent();</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">XmlResource resource = ...
+XmlResource parent =</span> (XmlResource) <span class="unaffected">resource.parent();</span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">XmlResource resource = ...
+RootXmlResource root = resource.root();</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">XmlResource resource = ...
+RootXmlResource root =</span> (RootXmlResource) <span class="unaffected">resource.root();</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="Service">@Service</a></h2>
+
+<p>Services registered with an @Service annotation on an element or a property will now be placed
+in either metamodel or instance context, instead of both. Instance context is default, which is the
+most common intention when using the @Service annotation. Registrations of services intended for the 
+metamodel context will need an adjustment.</p>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">@Service( impl = ExampleService.class )</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">@Service( impl = ExampleService.class</span>, context = Service.Context.METAMODEL <span class="unaffected">)</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="SDEF">SDEF</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>&lt;if>
+    &lt;condition><span class="unaffected">${ ... }</span>&lt;/condition>
+    &lt;then>
+        <span class="unaffected">...</span>
+    &lt;/then>
+    &lt;else>
+        <span class="unaffected">...</span>
+    &lt;/else>
+&lt;/if></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>&lt;form>
+    &lt;visible-when><span class="unaffected">${ ... }</span>&lt;/visible-when>
+    &lt;content>
+        <span class="unaffected">...</span>
+    &lt;/content>
+&lt;/form>
+&lt;form>
+    &lt;visible-when><span class="unaffected">${</span> ! ( <span class="unaffected">...</span> ) <span class="unaffected">}</span>&lt;/visible-when>
+    &lt;content>
+        <span class="unaffected">...</span>
+    &lt;/content>
+&lt;/form></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>&lt;switching-panel>
+    &lt;enum-controller>
+        &lt;property>ExampleEnum&lt;/property>
+    &lt;/enum-controller>
+    &lt;panel>
+        &lt;key>ExampleEnum.ITEM1&lt;/key>
+        <span class="unaffected">&lt;content>
+            ...
+        &lt;/content></span>
+    &lt;/panel>
+    &lt;panel>
+        &lt;key>ExampleEnum.ITEM2&lt;/key>
+        <span class="unaffected">&lt;content>
+            ...
+        &lt;/content></span>
+    &lt;/panel>
+    &lt;default-panel>
+        <span class="unaffected">&lt;content>
+            ...
+        &lt;/content></span>
+    &lt;/default-panel>
+&lt;switching-panel></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>&lt;form>
+    &lt;visible-when>${ ExampleEnum == "ITEM1" }&lt;/visible-when>
+    <span class="unaffected">&lt;content>
+        ...
+    &lt;/content></span>
+&lt;/form>
+&lt;form>
+    &lt;visible-when>${ ExampleEnum == "ITEM2" }&lt;/visible-when>
+    <span class="unaffected">&lt;content>
+        ...
+    &lt;/content></span>
+&lt;/form>
+&lt;form>
+    &lt;visible-when>${ ExampleEnum != "ITEM1" and ExampleEnum != "ITEM2" }&lt;/visible-when>
+    <span class="unaffected">&lt;content>
+        ...
+    &lt;/content></span>
+&lt;/form></code></pre>
+
+<p>When comparing enum values in an expression, make sure to use strings as specified
+by @EnumSerialization annotations (if present) rather than names of enum items in Java.</p>
+
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>&lt;switching-panel>
+    &lt;list-selection-controller>
+        <span class="unaffected">&lt;property>...&lt;/property></span>
+    &lt;/list-selection-controller>
+    &lt;panel>
+        &lt;key><span class="unaffected">...</span>&lt;/key>
+        <span class="unaffected">&lt;content>
+            ...
+        &lt;/content></span>
+    &lt;/panel>
+    &lt;panel>
+        &lt;key><span class="unaffected">...</span>&lt;/key>
+        <span class="unaffected">&lt;content>
+            ...
+        &lt;/content></span>
+    &lt;/panel>
+    &lt;default-panel>
+        &lt;content>
+            ...
+        &lt;/content>
+    &lt;/default-panel>
+&lt;/switching-panel></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>&lt;detail-section>
+    <span class="unaffected">&lt;property>...&lt;/property></span>
+    &lt;case>
+        &lt;element-type><span class="unaffected">...</span>&lt;/element-type>
+        <span class="unaffected">&lt;content>
+            ...
+        &lt;/content></span>
+    &lt;/case>
+    &lt;case>
+        &lt;element-type><span class="unaffected">...</span>&lt;/element-type>
+        <span class="unaffected">&lt;content>
+            ...
+        &lt;/content></span>
+    &lt;/case>
+&lt;/detail-section></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>&lt;with>
+    <span class="unaffected">&lt;path>...&lt;/path></span>
+    &lt;panel>
+        &lt;key><span class="unaffected">...</span>&lt;/key>
+        <span class="unaffected">&lt;content>
+            ...
+        &lt;/content></span>
+    &lt;/panel>
+    &lt;panel>
+        &lt;key><span class="unaffected">...</span>&lt;/key>
+        <span class="unaffected">&lt;content>
+            ...
+        &lt;/content></span>
+    &lt;/panel>
+    &lt;default-panel>
+        &lt;content>
+            ...
+        &lt;/content>
+    &lt;/default-panel>
+&lt;/with></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>&lt;with>
+    <span class="unaffected">&lt;path>...&lt;/path></span>
+    &lt;case>
+        &lt;element-type><span class="unaffected">...</span>&lt;/element-type>
+        <span class="unaffected">&lt;content>
+            ...
+        &lt;/content></span>
+    &lt;/case>
+    &lt;case>
+        &lt;element-type><span class="unaffected">...</span>&lt;/element-type>
+        <span class="unaffected">&lt;content>
+            ...
+        &lt;/content></span>
+    &lt;/case>
+&lt;/with></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>&lt;with>
+    <span class="unaffected">&lt;path>...&lt;/path></span>
+    &lt;default-panel>
+        <span class="unaffected">&lt;content>
+            ...
+        &lt;/content></span>
+    &lt;/default-panel>
+&lt;/with></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>&lt;with>
+    <span class="unaffected">&lt;path>...&lt;/path></span>
+    &lt;case>
+        <span class="unaffected">&lt;content>
+            ...
+        &lt;/content></span>
+    &lt;/case>
+&lt;/with></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">&lt;node-factory>
+    &lt;property>...&lt;/property>
+    &lt;case></span>
+        &lt;model-element-type><span class="unaffected">...</span>&lt;/model-element-type>
+        <span class="unaffected">&lt;label>...&lt;/label>
+        &lt;content>
+            ...
+        &lt;/content>
+    &lt;/case>
+&lt;/node-factory></span></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">&lt;node-factory>
+    &lt;property>...&lt;/property>
+    &lt;case></span>
+        &lt;element-type><span class="unaffected">...</span>&lt;/element-type>
+        <span class="unaffected">&lt;label>...&lt;/label>
+        &lt;content>
+            ...
+        &lt;/content>
+    &lt;/case>
+&lt;/node-factory></span></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>&lt;hint>
+    &lt;name>prefer.form.style&lt;/name>
+    &lt;value>true&lt;/value>
+&lt;/hint></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>&lt;background-color>white&lt;/background-color></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<a name="sdef.prefer.combo"><pre class="source-code"><code>&lt;hint>
+    &lt;name>prefer.combo&lt;/name>
+    &lt;value>true&lt;/value>
+&lt;/hint></code></pre></a>
+    </td>
+    <td>
+<pre class="source-code"><code>&lt;style>Sapphire.PropertyEditor.PopUpListField&lt;/style></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<a name="sdef.prefer.radio.buttons"><pre class="source-code"><code>&lt;hint>
+    &lt;name>prefer.radio.buttons&lt;/name>
+    &lt;value>true&lt;/value>
+&lt;/hint></code></pre></a>
+    </td>
+    <td>
+<pre class="source-code"><code>&lt;style>Sapphire.PropertyEditor.RadioButtonGroup&lt;/style></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<a name="sdef.prefer.vertical.radio.buttons"><pre class="source-code"><code>&lt;hint>
+    &lt;name>prefer.vertical.radio.buttons&lt;/name>
+    &lt;value>true&lt;/value>
+&lt;/hint></code></pre></a>
+    </td>
+    <td>
+<pre class="source-code"><code>&lt;style>Sapphire.PropertyEditor.RadioButtonGroup.Vertical&lt;/style></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">&lt;hint>
+    &lt;name>factory&lt;/name>
+    &lt;value></span>CheckBoxListPropertyEditorRenderer<span class="unaffected">$Factory&lt;/value>
+&lt;/hint></span></code></pre></a>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">&lt;hint>
+    &lt;name>factory&lt;/name>
+    &lt;value></span>CheckBoxListPropertyEditorPresentation<span class="unaffected">$Factory&lt;/value>
+&lt;/hint></span></code></pre></a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><span class="unaffected">&lt;import>
+    &lt;package>org.eclipse.sapphire.ui.</span>renderers<span class="unaffected">.swt&lt;/package>
+&lt;/import></span></code></pre></a>
+    </td>
+    <td>
+<pre class="source-code"><code><span class="unaffected">&lt;import>
+    &lt;package>org.eclipse.sapphire.ui.</span>forms<span class="unaffected">.swt&lt;/package>
+&lt;/import></span></code></pre></a>
+    </td>
+  </tr>
+</table>
+
+
+<div class="copyright">Copyright (c) 2016 Oracle<br/>
+Content made available under the terms of <a href="http://www.eclipse.org/legal/epl-v10.html">Eclipse Public License</a>.</div>
+
+
+</body>
+
+</html>

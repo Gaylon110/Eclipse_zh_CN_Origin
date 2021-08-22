@@ -1,0 +1,299 @@
+Manifest-Version: 1.0
+Bundle-Description: Mylyn WikiText provides an extensible framework an
+ d tools for parsing, editing and presenting lightweight markup. WikiT
+ ext has parsers for AsciiDoc, CommonMark, Markdown, MediaWiki, Textil
+ e, Confluence, Creole, HTML, TracWiki and TWiki markup, and        ca
+ n be extended to support other languages. WikiText provides Ant tasks
+  for converting lightweight markup to HTML, Eclipse Help, DocBook, DI
+ TA and XSL-FO. WikiText also provides an editor for editing such mark
+ up within Eclipse, and integrates with        the Mylyn task editor c
+ ausing it to be markup-aware. WikiText provides API for integrating w
+ iki markup capabilities into Eclipse, RCP, stand-alone and server-sid
+ e applications.
+Bundle-License: https://www.eclipse.org/legal/epl-2.0/
+Bundle-SymbolicName: org.eclipse.mylyn.wikitext.confluence
+Built-By: jenkins
+Bnd-LastModified: 1614384520188
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-DocURL: http://eclipse.org/mylyn
+Bundle-Vendor: Eclipse Mylyn
+Import-Package: com.google.common.base;version="[21.0,22.0)",com.googl
+ e.common.collect;version="[21.0,22.0)",org.eclipse.mylyn.wikitext.con
+ fluence,org.eclipse.mylyn.wikitext.confluence.internal,org.eclipse.my
+ lyn.wikitext.confluence.internal.block,org.eclipse.mylyn.wikitext.con
+ fluence.internal.phrase,org.eclipse.mylyn.wikitext.confluence.interna
+ l.token,org.eclipse.mylyn.wikitext.confluence.internal.util,org.eclip
+ se.mylyn.wikitext.parser;version="[3.0,4)",org.eclipse.mylyn.wikitext
+ .parser.builder;version="[3.0,4)",org.eclipse.mylyn.wikitext.parser.m
+ arkup;version="[3.0,4)",org.eclipse.mylyn.wikitext.parser.markup.toke
+ n;version="[3.0,4)",org.eclipse.mylyn.wikitext.parser.outline;version
+ ="[3.0,4)",org.eclipse.mylyn.wikitext.validation;version="[3.0,4)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-3.2.0.201605172007
+Export-Package: org.eclipse.mylyn.wikitext.confluence.internal;x-inter
+ nal:=true;uses:="org.eclipse.mylyn.wikitext.parser,org.eclipse.mylyn.
+ wikitext.parser.builder,org.eclipse.mylyn.wikitext.parser.markup";ver
+ sion="3.0.39",org.eclipse.mylyn.wikitext.confluence.internal.block;x-
+ internal:=true;uses:="org.eclipse.mylyn.wikitext.parser,org.eclipse.m
+ ylyn.wikitext.parser.markup";version="3.0.39",org.eclipse.mylyn.wikit
+ ext.confluence.internal.phrase;x-internal:=true;uses:="org.eclipse.my
+ lyn.wikitext.parser,org.eclipse.mylyn.wikitext.parser.markup";version
+ ="3.0.39",org.eclipse.mylyn.wikitext.confluence.internal.token;x-inte
+ rnal:=true;uses:="org.eclipse.mylyn.wikitext.parser.markup,org.eclips
+ e.mylyn.wikitext.parser.markup.token";version="3.0.39",org.eclipse.my
+ lyn.wikitext.confluence.internal.util;x-internal:=true;version="3.0.3
+ 9",org.eclipse.mylyn.wikitext.confluence.internal.validation;x-intern
+ al:=true;uses:="org.eclipse.mylyn.wikitext.parser.markup,org.eclipse.
+ mylyn.wikitext.validation";version="3.0.39",org.eclipse.mylyn.wikitex
+ t.confluence;uses:="org.eclipse.mylyn.wikitext.parser,org.eclipse.myl
+ yn.wikitext.parser.markup";version="3.0.39"
+Bundle-Name: Mylyn WikiText Confluence
+Bundle-Version: 3.0.39.20210227000941
+Build-Jdk: 1.8.0_202
+Created-By: Apache Maven Bundle Plugin
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/phrase/EmphasisPh
+ raseModifier$EmphasisProcessor.class
+SHA-256-Digest: qBy7ZC/2oY+wIA21Y4dPwh02di0IAuP3PUprulKfcJQ=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/phrase/EmphasisPh
+ raseModifier.class
+SHA-256-Digest: v98pF3QTdcMV5dF+VfjfMn1EN9tjPuU7il7Maas1nQ4=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/token/AnchorRepla
+ cementToken.class
+SHA-256-Digest: jotmNOlcc7gY9e8Bqg69paLRkeS9u9u48yNXnXo8UcY=
+
+Name: META-INF/maven/org.eclipse.mylyn.docs/org.eclipse.mylyn.wikitext
+ .confluence/pom.xml
+SHA-256-Digest: kAAc1Eq1iRQwHEuETtH6rDnjFwI31WVWJcR2W66xgNU=
+
+Name: META-INF/maven/org.eclipse.mylyn.docs/org.eclipse.mylyn.wikitext
+ .confluence/pom.properties
+SHA-256-Digest: R7PJCA3TqqCRH+arAsAOncJaeGmFXgEHss11+GU52G0=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/block/Parameteriz
+ edBlock$1.class
+SHA-256-Digest: TXS6Y8xgP6x6VXRPW0hBqK1GUKxORSTT3tlyIiq+70g=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/block/ExtendedQuo
+ teBlock.class
+SHA-256-Digest: +uPq8HRkEQ+kn1sUdvHnNj9ziFFR4qJIr4sU09pwXZk=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/ConfluenceDocumen
+ tBuilder$LinkBlock.class
+SHA-256-Digest: G2cMQ+Rj5fU+KfiryQnM5/5lrTBbZIFrtowvIe2iwOA=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/token/EscapedChar
+ acterReplacementToken$EscapedCharacterReplacementTokenProcessor.class
+SHA-256-Digest: IK4fJIJCLKHHFCxWu9nhnLNIGDbcW9fB7dtkbF8hNH8=
+
+Name: plugin.properties
+SHA-256-Digest: 12GcMZjyHGhla0eYgWlcwGWt9RieISOefzYM52DgnMM=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/token/EscapedChar
+ acterReplacementToken$1.class
+SHA-256-Digest: 5cqdNMeesthxUppCi9y4REbK25t7xTQhMFTBCVSg9a0=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/block/TableBlock.
+ class
+SHA-256-Digest: WxlZPQQd+4L37j4VJ6OC2RRTXYyliwieKuLMQFdG29s=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/phrase/HyperlinkP
+ hraseModifier.class
+SHA-256-Digest: l4HTIx2+mi6mXxPxFfLPWp9MVmYnozsg/Q+E5GlcJNg=
+
+Name: org/eclipse/mylyn/wikitext/confluence/ConfluenceLanguage.class
+SHA-256-Digest: rmpSoHatg291eLNsbv5LCh/ccQzVef4f1UVmm0URR0Y=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/phrase/Confluence
+ WrappedPhraseModifier.class
+SHA-256-Digest: 9trcCXIuUHJKAHhxXUCvgwaKl6sq3rPBGeqQWYFhpyk=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/phrase/ColorPhras
+ eModifier.class
+SHA-256-Digest: XTDZQGvI4cFhPkVYmsEx76lWH/Iw+AQSmrq6/Gexcyo=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/phrase/SimpleWrap
+ pedPhraseModifier$SimplePhraseModifierProcessor.class
+SHA-256-Digest: nKhILfTS3J+rJUN6enw6jecJYXo3r7zQeg0TP3fR0cE=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/ConfluenceDocumen
+ tBuilder$ImplicitParagraphBlock.class
+SHA-256-Digest: AuWINx1zEjfLxXbxETQ8lLELA2q2bSmkNRX0vMTtVvc=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/block/TextBoxBloc
+ k.class
+SHA-256-Digest: AVGCFu5hjXDh+lz9K4Lkfvf7Njsw6SpRBOnzyHbCFdo=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/phrase/SimplePhra
+ seModifier.class
+SHA-256-Digest: SpjHNKU5l4u5FG4kk3EK5AUQWjYlIwNMKr+6EmlmgbM=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/token/ImpliedHype
+ rlinkReplacementToken$1.class
+SHA-256-Digest: MXTiLJ+06dCNoEFdyHJakF8jHdouozA27sv2fAgG+7c=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/token/NumericEnti
+ tyReferenceReplacementToken.class
+SHA-256-Digest: URyVA43ABvaYhbLG9MLYGkkElnxo6cQwr362HUTV8h0=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/util/Options.clas
+ s
+SHA-256-Digest: 3vRtRj0A3KBl/2HSNO0by72LbWP+JQqR1BxPJvmMfms=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/validation/Conflu
+ enceReferenceValidationRule.class
+SHA-256-Digest: P5e+ykUUz5oFzgtasZmo92w+p4/YkpR7NriTt3ImxsU=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/token/NumericEnti
+ tyReferenceReplacementToken$1.class
+SHA-256-Digest: k6w7PZBJxHLuw8kacO0Tq7gnfiLQZNt7UK1rlL5SsFo=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/phrase/ImagePhras
+ eModifier$1.class
+SHA-256-Digest: /rGKCkh45iH/bE1KUngiU+AAOmWzTGaUabl9jzTixsQ=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/phrase/ImagePhras
+ eModifier$ImagePhraseModifierProcessor$1.class
+SHA-256-Digest: zJnJDSJpZx7eRMjFV1VHnfvFleDC/bkki5dOJluO4uA=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/block/ListBlock$1
+ .class
+SHA-256-Digest: KqiUDQKvNN5HdvAgIWG4mQJtBHANcgvkjgpUH82ikwU=
+
+Name: services/org.eclipse.mylyn.wikitext.parser.markup.MarkupLanguage
+SHA-256-Digest: yr3bUdTvw3wPQrJVAicgqd5iEZmhBdSzwlMZ3XNkLlo=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/token/NumericEnti
+ tyReferenceReplacementToken$NumericEntityReferenceReplacementTokenPro
+ cessor.class
+SHA-256-Digest: bkhWr1C6cvu8pbfNmYBWvCRPsaWP2aWl88GIoZw/HbM=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/token/AnchorRepla
+ cementToken$1.class
+SHA-256-Digest: XFap75sCzz/S/vTAu8+yNOZJ5ruPCoxOAJ3CflVYkFA=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/ConfluenceDocumen
+ tBuilder$ConfluenceBlock.class
+SHA-256-Digest: jb1qK0IPt7hMjSTSJLcVGKDqZE1EfNVs1mhyIufQKt4=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/block/CodeBlock.c
+ lass
+SHA-256-Digest: x24vGQIwgZCQ9S5j4abVg6Njn7hjEqC8pBL4XfNovx0=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/block/ColorBlock.
+ class
+SHA-256-Digest: i56knzf3cByF9dalQX9OnPx7dfw8HsdqoJmQNHrUbQY=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/block/ParagraphBl
+ ock.class
+SHA-256-Digest: WwUS46OEMs3Dg/hul9TztHGj5i9En/zqgi2skluMEHA=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/token/AnchorRepla
+ cementToken$AnchorReplacementTokenProcessor.class
+SHA-256-Digest: cihQYrTKQtpM9eaWk7F5+cU89AlknKdk7aFAmSnUH0k=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/block/TableOfCont
+ entsBlock.class
+SHA-256-Digest: dsPlVdLrFpR4qghDoykZcCevRhzWMwdR2XX56UYGF00=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/ConfluenceDocumen
+ tBuilder$ContentBlock.class
+SHA-256-Digest: n5ngto+jdKoEOmR+1DcQNZp9sBccfPVRRqbfs2k6L5k=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/block/Parameteriz
+ edBlock.class
+SHA-256-Digest: 9kLZX921cqq7dg5llxaTZSd9ANQFC0WJkhUrxfVesM8=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/phrase/ImagePhras
+ eModifier.class
+SHA-256-Digest: Qq/YtayzEe9r+T2x6RAL3mMZQ9HmaiZ/17daB13WEZw=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/ConfluenceDocumen
+ tBuilder$1.class
+SHA-256-Digest: Nc98SN4uwx3geaJdYrbzwYIBHP3qqMV/O7Jtuzi6ZOU=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/util/Colors.class
+SHA-256-Digest: XUZmrA8O0PleWxaBmt4wGSMG/J2ZdrHoCP5/yAV9iRY=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/phrase/SimpleWrap
+ pedPhraseModifier.class
+SHA-256-Digest: TSM6fHncUIFXJjlvbgqoGZIccxMGJKPTH8Tc0CmEcQE=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/block/ListBlock$L
+ istState.class
+SHA-256-Digest: vC8SkEbS038oofE8tZWnJ9dHojr2C7D+GrdTtt6MGsM=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/token/ImpliedHype
+ rlinkReplacementToken$HyperlinkReplacementTokenProcessor.class
+SHA-256-Digest: LoOgDnQ+aDhzeTHtD0wY3WTV9s0VOxYzp0DQqjPvCT4=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/ConfluenceDocumen
+ tBuilder.class
+SHA-256-Digest: 1elYn5G010xLRtlPzDhmYL2Js3mnKMj7UN+WBWiyH5o=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/block/ListBlock.c
+ lass
+SHA-256-Digest: qwqofvgzg5rbWg1dxA5SvpMiQgyJay7G2SN4QqeZkoo=
+
+Name: about.html
+SHA-256-Digest: GWwWKwDoEPbqRj3Nm004u/ySxB5XSz/ODMj6p56lw8o=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/block/HorizontalR
+ uleBlock.class
+SHA-256-Digest: ErsQO7kF2RaIybEUl1b8RrGRsFy3/Cb3FKFnDD/HyvU=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/phrase/HyperlinkP
+ hraseModifier$HyperlinkPhraseModifierProcessor.class
+SHA-256-Digest: TxpuezkEOiSrbtfGh8UNEZVvigr9sQyLBNgQqK8hLpU=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/phrase/Confluence
+ WrappedPhraseModifier$SimplePhraseModifierProcessor.class
+SHA-256-Digest: MEKogzQKOOTYSa54zOTSgRNvzhwIlsql1jyx/2CxroI=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/block/AbstractCon
+ fluenceDelimitedBlock.class
+SHA-256-Digest: dqv4YejVZyr27++zSxRdPc+dRUdDz21n8CMFW0I5LuU=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/block/HeadingBloc
+ k.class
+SHA-256-Digest: EEe8a6d54Mr2IjkMC97QaAiztBnaJjjL4BYyx1msaBs=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/phrase/ImagePhras
+ eModifier$ImagePhraseModifierProcessor.class
+SHA-256-Digest: zAbHpXZYhOoawWkE70ElxdrnL/iLGPmUBq1zL2I83Hs=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/phrase/ColorPhras
+ eModifier$SimplePhraseModifierProcessor.class
+SHA-256-Digest: DTtaeTWLt2X6pj15Me4DcfryJAyRK7WG2unR9LGavmQ=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/block/ExtendedPre
+ formattedBlock.class
+SHA-256-Digest: p7yFwZ/+Lpi+7j7YyHx/yBeO+9fNQRItLxZlwMNx3Jk=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/token/ImpliedHype
+ rlinkReplacementToken.class
+SHA-256-Digest: xOnlx06pH+neMPE79YeWlZ8P8T5e6U/dfNmfD9Ci5Tk=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/ConfluenceDocumen
+ tBuilder$TableCellBlock.class
+SHA-256-Digest: 66+5tnA+M1PtS2Yu16BH8yUiCFAt3apRIkwhvjsaI/0=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/util/Options$Hand
+ ler.class
+SHA-256-Digest: apukDvL2333cYge2If/VXwzgGe6lcfgrnCkC7grWyh8=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/block/QuoteBlock.
+ class
+SHA-256-Digest: XhxUK+USEcW7nxNkDyDPSX9VZJwv1UvQww20PSBo0jI=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/ConfluenceContent
+ State.class
+SHA-256-Digest: krgx6x4mm6ZgaQUwCc6mOTGEuMnSm9HMnztlK0iBtXg=
+
+Name: org/eclipse/mylyn/wikitext/confluence/internal/token/EscapedChar
+ acterReplacementToken.class
+SHA-256-Digest: A4EXTtSQ68vzuUOy401Al9vN7q/kCIbd+jmOkEVPsec=
+

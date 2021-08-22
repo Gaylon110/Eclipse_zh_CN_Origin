@@ -1,0 +1,911 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: org.eclipse.egit.core
+Bundle-SymbolicName: org.eclipse.egit.core;singleton:=true
+Require-Bundle: org.eclipse.core.runtime;bundle-version="[3.12.0,4.0.0
+ )",org.eclipse.team.core;bundle-version="[3.8.0,4.0.0)",org.eclipse.c
+ ore.resources;bundle-version="[3.11.0,4.0.0)",org.eclipse.core.filesy
+ stem;bundle-version="[1.6.0,2.0.0)",org.eclipse.equinox.security;bund
+ le-version="[1.2.200,2.0.0)",org.eclipse.core.variables;bundle-versio
+ n="[3.3.0,4.0.0)",org.eclipse.core.filebuffers;bundle-version="[3.6.0
+ ,4.0.0)"
+Bundle-ManifestVersion: 2
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Eclipse-SourceReferences: scm:git:https://git.eclipse.org/r/egit/egit.
+ git;path="org.eclipse.egit.core";commitId=da875e67f13ab9ac8ad44215d31
+ 07989f27dab3c
+Bundle-Vendor: %Bundle-Vendor
+Import-Package: com.jcraft.jsch;bundle-version="[0.1.53,0.2.0)",org.ec
+ lipse.core.net.proxy;bundle-version="[1.3.0,2.0.0)",org.eclipse.jgit.
+ annotations;version="[5.10.0,5.11.0)",org.eclipse.jgit.api;version="[
+ 5.10.0,5.11.0)",org.eclipse.jgit.api.errors;version="[5.10.0,5.11.0)"
+ ,org.eclipse.jgit.attributes;version="[5.10.0,5.11.0)",org.eclipse.jg
+ it.diff;version="[5.10.0,5.11.0)",org.eclipse.jgit.dircache;version="
+ [5.10.0,5.11.0)",org.eclipse.jgit.errors;version="[5.10.0,5.11.0)",or
+ g.eclipse.jgit.events;version="[5.10.0,5.11.0)",org.eclipse.jgit.inte
+ rnal.storage.file;version="[5.10.0,5.11.0)",org.eclipse.jgit.internal
+ .transport.jsch;version="[5.10.0,5.11.0)",org.eclipse.jgit.lfs;versio
+ n="[5.10.0,5.11.0)";resolution:=optional,org.eclipse.jgit.lib;version
+ ="[5.10.0,5.11.0)",org.eclipse.jgit.merge;version="[5.10.0,5.11.0)",o
+ rg.eclipse.jgit.revwalk;version="[5.10.0,5.11.0)",org.eclipse.jgit.re
+ vwalk.filter;version="[5.10.0,5.11.0)",org.eclipse.jgit.storage.file;
+ version="[5.10.0,5.11.0)",org.eclipse.jgit.submodule;version="[5.10.0
+ ,5.11.0)",org.eclipse.jgit.transport;version="[5.10.0,5.11.0)",org.ec
+ lipse.jgit.transport.http;version="[5.10.0,5.11.0)",org.eclipse.jgit.
+ transport.http.apache;version="[5.10.0,5.11.0)",org.eclipse.jgit.tran
+ sport.sshd;version="[5.10.0,5.11.0)",org.eclipse.jgit.treewalk;versio
+ n="[5.10.0,5.11.0)",org.eclipse.jgit.treewalk.filter;version="[5.10.0
+ ,5.11.0)",org.eclipse.jgit.util;version="[5.10.0,5.11.0)",org.eclipse
+ .jgit.util.io;version="[5.10.0,5.11.0)",org.eclipse.jsch.core;bundle-
+ version="[1.3.0,2.0.0)"
+Export-Package: org.eclipse.egit.core;version="5.10.0"; x-friends:="or
+ g.eclipse.egit.ui,  org.eclipse.egit.ui.test,  org.eclipse.egit.mylyn
+ .ui,  org.eclipse.egit.gitflow.test,  org.eclipse.egit.gitflow.ui,  o
+ rg.eclipse.mylyn.github.ui,  org.eclipse.mylyn.github.core,  org.ecli
+ pse.egit.core.junit",org.eclipse.egit.core.attributes;version="5.10.0
+ ";uses:="org.eclipse.jgit.lib",org.eclipse.egit.core.internal;version
+ ="5.10.0"; x-friends:="org.eclipse.egit.ui,  org.eclipse.egit.import,
+   org.eclipse.egit.gitflow.ui,  org.eclipse.egit.gitflow,  org.eclips
+ e.egit.mylyn.ui",org.eclipse.egit.core.internal.gerrit;version="5.10.
+ 0";x-friends:="org.eclipse.egit.ui",org.eclipse.egit.core.internal.in
+ dexdiff;version="5.10.0";x-friends:="org.eclipse.egit.ui,org.eclipse.
+ egit.ui.test",org.eclipse.egit.core.internal.job;version="5.10.0";x-f
+ riends:="org.eclipse.egit.ui,org.eclipse.egit.gitflow.ui,org.eclipse.
+ egit.gitflow",org.eclipse.egit.core.internal.rebase;version="5.10.0";
+ x-friends:="org.eclipse.egit.ui",org.eclipse.egit.core.internal.stora
+ ge;version="5.10.0";x-friends:="org.eclipse.egit.ui,org.eclipse.egit.
+ core.test",org.eclipse.egit.core.internal.trace;version="5.10.0";x-in
+ ternal:=true,org.eclipse.egit.core.internal.util;version="5.10.0";x-f
+ riends:="org.eclipse.egit.ui",org.eclipse.egit.core.op;version="5.10.
+ 0"; x-friends:="org.eclipse.egit.ui.test,  org.eclipse.egit.ui,  org.
+ eclipse.egit.gitflow,  org.eclipse.egit.gitflow.test,  org.eclipse.eg
+ it.gitflow.ui,  org.eclipse.egit.github.core,  org.eclipse.mylyn.gith
+ ub.ui,  org.eclipse.egit.core.junit",org.eclipse.egit.core.project;ve
+ rsion="5.10.0";x-friends:="org.eclipse.egit.ui,org.eclipse.egit.ui.te
+ st,org.eclipse.egit.gitflow.ui",org.eclipse.egit.core.securestorage;v
+ ersion="5.10.0";x-friends:="org.eclipse.egit.ui",org.eclipse.egit.cor
+ e.settings;version="5.10.0",org.eclipse.egit.core.storage;version="5.
+ 10.0"; uses:="org.eclipse.core.runtime,  org.eclipse.jgit.dircache,  
+ org.eclipse.jgit.lib,  org.eclipse.core.resources",org.eclipse.egit.c
+ ore.synchronize;version="5.10.0";x-friends:="org.eclipse.egit.ui,org.
+ eclipse.egit.ui.test",org.eclipse.egit.core.synchronize.dto;version="
+ 5.10.0";x-friends:="org.eclipse.egit.ui"
+Bundle-Name: %Bundle-Name
+Bundle-Version: 5.10.0.202012080955-r
+Bundle-Localization: plugin
+Bundle-Activator: org.eclipse.egit.core.Activator
+Build-Jdk-Spec: 1.8
+Created-By: Maven Archiver 3.5.0
+
+Name: plugin.xml
+SHA-256-Digest: PdltOobzkhrRVaP0VDdKGabXYLsQ4Ov7HCXtGFyjNcw=
+
+Name: org/eclipse/egit/core/internal/storage/CommitBlobStorage.class
+SHA-256-Digest: /Ao2nwMBmEt9U9d+nOzjpJlBgyQZzqqLcQj7tg+DJ/U=
+
+Name: org/eclipse/egit/core/internal/indexdiff/IndexDiffCacheEntry$2.c
+ lass
+SHA-256-Digest: qd1xpr8lMDFLr6/7Pa9UVXEIru/rYvc4wrof2JO4+m4=
+
+Name: org/eclipse/egit/core/op/SubmoduleAddOperation.class
+SHA-256-Digest: CkMNvMGrL1crDKa4FoR9cvFtltY8HDc26L6El26FGK0=
+
+Name: org/eclipse/egit/core/Activator$MergeStrategyRegistryListener.cl
+ ass
+SHA-256-Digest: 4s0jmY5/PWugcr0EJIvQtbHwWj+CXrXRL96aqSTQDHU=
+
+Name: org/eclipse/egit/core/synchronize/GitResourceVariantComparator.c
+ lass
+SHA-256-Digest: oC1CyYm6q8vo0lq/KmUPQ6AaumRSs2z00sATZxaNkVk=
+
+Name: org/eclipse/egit/core/op/SubmoduleUpdateOperation.class
+SHA-256-Digest: tjRI6DntfVbRCpIZnixPqez2XvVwD7A7+NfWqODLx7w=
+
+Name: org/eclipse/egit/core/synchronize/ThreeWayDiffEntry$NeedEntry.cl
+ ass
+SHA-256-Digest: +94Q0pai/AmL0qL+tZ1y1j3g2v1UH2sOss2b5mP6AJ8=
+
+Name: org/eclipse/egit/core/synchronize/GitSourceResourceVariantTree.c
+ lass
+SHA-256-Digest: dEbHxRnfNUs4tvKoztbUI+Q062kf1GBFYFYiR+MmRQI=
+
+Name: org/eclipse/egit/core/synchronize/ThreeWayDiffEntry$ChangeType.c
+ lass
+SHA-256-Digest: eNQ+N05go0mn5yBWuEcFC0iiK9nwdcDuMPjIHl+ByaQ=
+
+Name: META-INF/p2.inf
+SHA-256-Digest: jK8lWj5pZ7KZVaCKVc99rGrT0fx+Mn94trVw+bfeE2w=
+
+Name: org/eclipse/egit/core/op/PushOperationSpecification.class
+SHA-256-Digest: EtBKXjWQIZDYsFWD8kh4SWOxyTL0RKGXj06YJsB2z5Y=
+
+Name: org/eclipse/egit/core/op/PullOperation$PullJob.class
+SHA-256-Digest: Qr7uGOfQ9SSP0uhvWK7CIfrsnDCOKhwu7p0Yt2MxKlQ=
+
+Name: org/eclipse/egit/core/op/CreatePatchOperation$DiffHeaderKeyword.
+ class
+SHA-256-Digest: CjLxxFLUz5TDW2CDkDQEUJ0jhmABicA/fxUuUT+oNSA=
+
+Name: org/eclipse/egit/core/internal/gerrit/GerritUtil.class
+SHA-256-Digest: sQKCrVUpk+nkeDm/ZIMGEI5OZbDeNkKfhd7H1Um0Z2I=
+
+Name: org/eclipse/egit/core/RevUtils$ConflictCommits.class
+SHA-256-Digest: fVAm/CfGmsDV/tjp4+XhlXqEsK+WHz+gbHrqa+LFQ7o=
+
+Name: org/eclipse/egit/core/op/PullOperation$PullJobGroup.class
+SHA-256-Digest: Jr19JM3D0tY0tOKs9WZIDxIsV+hQWkOi+XdOsktA4kc=
+
+Name: org/eclipse/egit/core/attributes/Filtering.class
+SHA-256-Digest: fUjOsj9774QOeSPuR0HGEiyNsboxGuX/w3/slAKlPb8=
+
+Name: org/eclipse/egit/core/synchronize/GitRemoteFolder.class
+SHA-256-Digest: wSuTLTmIBkT12cgztBvQufX4COkIn4k6KC1V1og9b3o=
+
+Name: org/eclipse/egit/core/internal/job/RuleUtil.class
+SHA-256-Digest: biiiBx8AM51CLnnaE7Rl8qZYRa2MlZSIFCBwM4Z/G+8=
+
+Name: org/eclipse/egit/core/synchronize/IgnoreInGitSynchronizations.cl
+ ass
+SHA-256-Digest: HHi0xmE+TzqMK9w4wbEb53wyLoQM1OAUqqIfXSiFdRU=
+
+Name: org/eclipse/egit/core/op/IEGitOperation.class
+SHA-256-Digest: 69+V8Nx44ewtPf0j4Xdchk6TjXMWRzvqiLaUGm+w9Rg=
+
+Name: org/eclipse/egit/core/op/SetChangeIdTask.class
+SHA-256-Digest: +uDWdDIQVWoZfDMinQtoIewj5bCWNoJLCDIuFuZvrIA=
+
+Name: org/eclipse/egit/core/internal/storage/KidCommit.class
+SHA-256-Digest: zKIwjQrqJkNgSd/+kIdxkFw+rYXYom1vV1ZAnXDCXqE=
+
+Name: org/eclipse/egit/core/op/DeletePathsOperation.class
+SHA-256-Digest: VYb1q/j4G53s2NoTVNvZgtILLXeHukATu57I/Prtlxc=
+
+Name: org/eclipse/egit/core/synchronize/StagedChangeCache.class
+SHA-256-Digest: Y3ppE1Hw30Fmx64gf6N7GlOP4H5YwY9k+9gwZYdyzFg=
+
+Name: org/eclipse/egit/core/op/CloneOperation$PostCloneTask.class
+SHA-256-Digest: 9KXypzq2lxJWqTA3VPtAOnNVdh5BSOUlZQ0QF2S4V/U=
+
+Name: org/eclipse/egit/core/op/FetchOperationResult.class
+SHA-256-Digest: iuknMRuf0zF3EfPhNrIwn6B9+xP7u+x5wMJie5/58Zo=
+
+Name: org/eclipse/egit/core/CachingRepository$CachedConfig.class
+SHA-256-Digest: cuJpJRfG3s6PLRHng8Tw7v8vW+TR1J3FpLQhDxeTP2Y=
+
+Name: org/eclipse/egit/core/internal/CompareCoreUtils.class
+SHA-256-Digest: 468OTIlT9i0jCqmzGYe/rgojRCL7i97UAhQR7plyNz0=
+
+Name: org/eclipse/egit/core/internal/indexdiff/IndexDiffCacheEntry$3.c
+ lass
+SHA-256-Digest: W9Jb184Vbbww189Fl6IA+bDaF1LTsTiuySGkiZRAn7I=
+
+Name: org/eclipse/egit/core/internal/storage/OpenWorkspaceVersionEnabl
+ ed.class
+SHA-256-Digest: s1V4TqgF+HuI1HtNSCvh1AuoyjWi5vRFUy08OokrrQY=
+
+Name: org/eclipse/egit/core/internal/job/JobUtil$1.class
+SHA-256-Digest: WK7TcKbNEE6lacX7lAaUeMfncdE9kILRFyYPC8Q2bK8=
+
+Name: META-INF/maven/org.eclipse.egit/org.eclipse.egit.core/pom.xml
+SHA-256-Digest: vwBs7GolQFlkSUGsaBd+h81pHfen3yWk131uWnTVHiw=
+
+Name: org/eclipse/egit/core/op/GarbageCollectOperation.class
+SHA-256-Digest: X1N2221D2h+sO42Lf8sUsUeIrejYSCpM/YrpnpE68Es=
+
+Name: org/eclipse/egit/core/internal/rebase/RebaseInteractivePlan.clas
+ s
+SHA-256-Digest: UWdjmnJ6GPUhtWNvf60acbqHVy9T+7vlZHoQX5qUA/k=
+
+Name: org/eclipse/egit/core/op/StashCreateOperation$1.class
+SHA-256-Digest: hok92hWj4cxrhy/zJgYmNaZBiEmu7SC0cl/kJdv9VIA=
+
+Name: org/eclipse/egit/core/op/StashDropOperation.class
+SHA-256-Digest: HeRTQpbIS6/w9nFKbvjl0Im0hNbx39eQ7CuakOPq/Ss=
+
+Name: org/eclipse/egit/core/UnitOfWork$WorkWithResult.class
+SHA-256-Digest: BUDcjROxFMrtxkgV+hAdZF3K9S9Q73jc05DUEoRcTVk=
+
+Name: org/eclipse/egit/core/internal/indexdiff/IndexDiffCacheEntry.cla
+ ss
+SHA-256-Digest: cC//eQ/W0VAssaCDcDkQo6QulaIL5TG0TfNKNbpA1L4=
+
+Name: org/eclipse/egit/core/synchronize/GitCommitsModelCache.class
+SHA-256-Digest: VGxYUeW71fkrTj5RFIKIzzPQ6LJppB+jnWD6JlBGK+4=
+
+Name: org/eclipse/egit/core/Activator$HttpClientType.class
+SHA-256-Digest: eD+Ub/oi9e3cBa2Uh4Wb6r733N0CnAP0anBrFXXRk+o=
+
+Name: org/eclipse/egit/core/internal/ReportingTypedConfigGetter.class
+SHA-256-Digest: X2Dwc4QdbtCiSv2plY9afoZ0BEdgBqEquatDjZEsj/o=
+
+Name: org/eclipse/egit/core/CommitUtil.class
+SHA-256-Digest: tQhmK2VKCZuZinfZBAsE5k5ma4iQKWjTPoQGn4cC6M4=
+
+Name: org/eclipse/egit/core/op/TagOperation.class
+SHA-256-Digest: 4LLpcwbQwvUgjY/x+qMhiBVo2z5XT4tZ1Pb7BemDFU8=
+
+Name: org/eclipse/egit/core/op/DeleteBranchOperation$1.class
+SHA-256-Digest: VXml5KqHnvo5awA5sGLRLbqQeOD/wgOnLCRYsWo05O4=
+
+Name: org/eclipse/egit/core/op/AssumeUnchangedOperation.class
+SHA-256-Digest: bdn/VpW6leTwgQbikU4UYoV6fy+cFlrY+BnX0DfqVQk=
+
+Name: org/eclipse/egit/core/op/ResetOperation.class
+SHA-256-Digest: mGjmVQLRlTXZS/VIog2M6UR/lhrWY/5HLu4LQ6of0cs=
+
+Name: org/eclipse/egit/core/NetUtil.class
+SHA-256-Digest: hgn3lliaS3BFn3HNWRA4HB21kCPVLzAIsFjURLArk0o=
+
+Name: org/eclipse/egit/core/GitCorePreferenceInitializer.class
+SHA-256-Digest: ovzMSJUHOSWdOR4/gQM3OIKhMlWdBCxppIeH++rqJJs=
+
+Name: org/eclipse/egit/core/op/EditCommitOperation.class
+SHA-256-Digest: zl/1UG6Xxs4oAKVlmqKwhhx4jkqUhmq4LgHQgL0wB9U=
+
+Name: org/eclipse/egit/core/op/SubmoduleSyncOperation$1.class
+SHA-256-Digest: fh7/ADSNs61ihLG2y4q9yGQy9EpfMoGReBQZTgxKRSE=
+
+Name: org/eclipse/egit/core/Activator$AutoShareProjects$1.class
+SHA-256-Digest: zsb7BPa7KTbaiC1z2VJLcFcTixQqDYolpUGiOlOK0yw=
+
+Name: org/eclipse/egit/core/project/GitProjectData.class
+SHA-256-Digest: Evm1FboarTnDnXaschDcDkhJQCt/MqqPKmUC51OpIhg=
+
+Name: org/eclipse/egit/core/op/CloneOperation$1.class
+SHA-256-Digest: aXxTlxcAWI1QVaUbK2mSfGPGo4LSW4mdHrzvhfkZz08=
+
+Name: org/eclipse/egit/core/synchronize/GitLocalResourceVariant.class
+SHA-256-Digest: DbOoXDxLDYfb72lnvXumbkxCsfLRnUFzCtd2t+C+b1M=
+
+Name: org/eclipse/egit/core/op/FetchOperation.class
+SHA-256-Digest: HFQcY2XZdepr7Ug4y/k4WPg1gRvQXNHRnwrhajVPr70=
+
+Name: org/eclipse/egit/core/op/BranchOperation$1.class
+SHA-256-Digest: F5kUFBh9OTVTNWuClHynzvUBb8ck7MtrKKNMU3FEvXw=
+
+Name: org/eclipse/egit/core/synchronize/GitRemoteResourceVariantTree.c
+ lass
+SHA-256-Digest: 2QTDRwIXtG1nqQzASxIibD8nACdOHjcN0qLzWZuqeBg=
+
+Name: org/eclipse/egit/core/internal/storage/IndexBlobStorage.class
+SHA-256-Digest: CzyjxjE3guPfv8QKzqSiF36tGCkBLHM1AxemkNywbwM=
+
+Name: org/eclipse/egit/core/internal/indexdiff/IndexDiffCache$External
+ FileBufferListener.class
+SHA-256-Digest: 0LY7pXUvANsDfHhKtzqIZSVXlm1bJPKw+FNz3KUYoeY=
+
+Name: org/eclipse/egit/core/project/GitProjectData$RCL.class
+SHA-256-Digest: UsLnxO/af3geARFX4JVpSR/bC/xrWJZdLWMGopgvXvA=
+
+Name: org/eclipse/egit/core/internal/util/ResourceUtil$MappingJob.clas
+ s
+SHA-256-Digest: ji7Pn+NtAD0XoZ6jl8WXIA28QEHfhVsuMTqXF62dk58=
+
+Name: org/eclipse/egit/core/op/PushOperationResult$Entry.class
+SHA-256-Digest: cQLWQUtK1HJTm+13MbNtcQQO5X9YcGSjqBtpnDNXhqA=
+
+Name: org/eclipse/egit/core/op/CommitOperation$1.class
+SHA-256-Digest: YJst11O1T0PeE5VMCZWDW46iSy1DiceXA4Vp3zYK+zs=
+
+Name: org/eclipse/egit/core/GitProvider.class
+SHA-256-Digest: 6ooA/mrsXub5joJBJtF5YxtcTqq8r6RirLHsvSJSJZQ=
+
+Name: META-INF/maven/org.eclipse.egit/org.eclipse.egit.core/pom.proper
+ ties
+SHA-256-Digest: cwtLEkD4cDydSNyXnKlbcVY/S4BD6eTRyzeGsA1Vpc4=
+
+Name: org/eclipse/egit/core/op/DiscardChangesOperation$1.class
+SHA-256-Digest: mApIu1kGRT8R7i8A0hENsAuy+fs6d0mISwDkU4MSkTs=
+
+Name: org/eclipse/egit/core/internal/storage/GitFileHistoryProvider.cl
+ ass
+SHA-256-Digest: Ndkla6+uNO9xDcTpt8YIYSCrF1ZPhkVbFYiKE9Z4vs0=
+
+Name: org/eclipse/egit/core/op/IEGitOperation$PreExecuteTask.class
+SHA-256-Digest: PpC6a5v1k8uCQy5tRBtmRBMO7XdPZVRW+PIyk3/3Gtw=
+
+Name: org/eclipse/egit/core/internal/storage/WorkingTreeFileRevision.c
+ lass
+SHA-256-Digest: 3P/dSVFjPqyN1Ctgy4gbLAyc0hRgTvyQRg04k6e728c=
+
+Name: org/eclipse/egit/core/GitTag.class
+SHA-256-Digest: fpWRVhsEnxU61cX+HpMNjGxaNw/DJf1S1EEV4OGStf8=
+
+Name: org/eclipse/egit/core/internal/SshPreferencesMirror.class
+SHA-256-Digest: /FWg2pANA7QxPKMmMaDGYKqm3nOUNsZvdCTfC3T8CD8=
+
+Name: org/eclipse/egit/core/RepositoryCache.class
+SHA-256-Digest: h78MmdiMK4vRm52U94/o2c3aTOS3kfxebLyWMpwiI+I=
+
+Name: org/eclipse/egit/core/op/DeleteTagOperation.class
+SHA-256-Digest: UUC77ncIm1HDoJyRXssniVc3R5q0q1HwcchpTJyMAK4=
+
+Name: org/eclipse/egit/core/op/PullOperation.class
+SHA-256-Digest: 4RX1AdC/dt8z+w2xS0AOeOukSIxxjcmWj3gDuLIGinw=
+
+Name: org/eclipse/egit/core/internal/storage/WorkspaceFileRevision.cla
+ ss
+SHA-256-Digest: wAg07SnPQBAKE0w22ZQ8pMfrWXfCyE0ng/tJMxiMMPI=
+
+Name: org/eclipse/egit/core/RepositoryCache$RepositoryReference.class
+SHA-256-Digest: 1JCYZ/YBUSJe2APg+LeYtRDT8580CVT7YKM0gP/BL84=
+
+Name: org/eclipse/egit/core/op/StashApplyOperation$1.class
+SHA-256-Digest: PjdqMaObzEih+VzkHrRCrB3nmxQ6cBhzPODNYgNUkuY=
+
+Name: org/eclipse/egit/core/internal/job/JobUtil.class
+SHA-256-Digest: vhLKIXgJGDUC+0DHjMcbnuEKhzgiRSFHq5x95+JK6ao=
+
+Name: org/eclipse/egit/core/internal/Utils.class
+SHA-256-Digest: /C72XQ+SfZ8zFrK5yJUMW37eURQZLkver3D3L0SV4fs=
+
+Name: org/eclipse/egit/core/op/DiscardChangesOperation.class
+SHA-256-Digest: 0UiNmdbTJ5gf/pbNs8tV5tRDeq+s2j/HzR21+HzDSVk=
+
+Name: org/eclipse/egit/core/op/RewordCommitOperation.class
+SHA-256-Digest: 0jL4CjYwS2S3N4qTwheg2mdsHLdpAMgUpZEZFUthXIw=
+
+Name: org/eclipse/egit/core/internal/storage/GitFileRevision.class
+SHA-256-Digest: ex71cP1bHM8SdUjcIk5NWYgm0Uagx/mCOJreDL1KzHg=
+
+Name: org/eclipse/egit/core/op/ConfigureGerritAfterCloneTask.class
+SHA-256-Digest: Hjx06XXjgrgueuXhTGdW0GI74K0uF6RS4qqskPFBSUg=
+
+Name: org/eclipse/egit/core/internal/FileChecker$CheckResultEntry.clas
+ s
+SHA-256-Digest: 3SxSdEjn+ETxk6eP3dpbWxEg/WyHHq/B+3C/CYQIhm8=
+
+Name: org/eclipse/egit/core/securestorage/EGitSecureStore.class
+SHA-256-Digest: 87E0Bd+09PhcC3ejolwuQeQdd8b375voCaOvJAb3108=
+
+Name: org/eclipse/egit/core/op/SubmoduleUpdateOperation$1$1.class
+SHA-256-Digest: azZGxblKoTfrVWfopKtyWpCOmqZkMwYNkV6qmlE6DK0=
+
+Name: org/eclipse/egit/core/op/StashCreateOperation.class
+SHA-256-Digest: tPSawTd2w74ZdpXARie1npaXb5xZRn7KKiBWoGLHIMs=
+
+Name: org/eclipse/egit/core/op/RevertCommitOperation.class
+SHA-256-Digest: Hfrf+3sIGtsylPYjr300KrUxtFpD3YqMVXMICtncjYg=
+
+Name: org/eclipse/egit/core/op/IEGitOperation$PostExecuteTask.class
+SHA-256-Digest: BvXeWCNqg+G2/AMCV7TG14yB6/E5jiR49uuKEoWh6t4=
+
+Name: org/eclipse/egit/core/op/DiscardChangesOperation$Stage.class
+SHA-256-Digest: 0uR8yh0iXYCGTZaTYIt+ju+LP0jM++FVUcwD5JNnalo=
+
+Name: org/eclipse/egit/core/op/SubmoduleUpdateOperation$1.class
+SHA-256-Digest: BxsuNRZ2BdB9ELksHqRwf2XW0vVV3DJSNORnzQE+kxc=
+
+Name: org/eclipse/egit/core/internal/storage/IndexFileRevision.class
+SHA-256-Digest: Iad/FbxkC+Z2ur5sErjB0qnYo2y4Ub+1+oYijQlHY50=
+
+Name: org/eclipse/egit/core/project/RepositoryFinder.class
+SHA-256-Digest: fIT/DwdxlvLG46q6tA5SUQMfesfFU6PmBvo3ZNCWPzo=
+
+Name: org/eclipse/egit/core/op/CreateLocalBranchOperation.class
+SHA-256-Digest: mwgpu3EPw29mXNDqWKir6nFpj+q9LD+nuCihVtPcB/U=
+
+Name: org/eclipse/egit/core/internal/indexdiff/IndexDiffCache.class
+SHA-256-Digest: qyN7mH82ppdoAPbGAALkJeKOGHLDptzaX8mCd2zuskw=
+
+Name: org/eclipse/egit/core/synchronize/GitLazyResourceVariantTreeSubs
+ criber.class
+SHA-256-Digest: mz/i8b/UVKt8UnQn/4Mzf1sPdwPoL/Tb/eKS6c67PDk=
+
+Name: org/eclipse/egit/core/synchronize/ThreeWayDiffEntry.class
+SHA-256-Digest: A7lEyOkNAFKcrSqVdHpRc1P24sJ4v2pHOiQgkAgdpiI=
+
+Name: org/eclipse/egit/core/op/SquashCommitsOperation$1.class
+SHA-256-Digest: HFD4uyTWbKAQnVEyTMxFgO2uYhi8eWLkfTz0lQBKszQ=
+
+Name: org/eclipse/egit/core/Activator$EclipseSystemReader.class
+SHA-256-Digest: pIL2vyxidGIkMqKOhR/XYeD3VIur4Gg58ee6O0wFQBQ=
+
+Name: org/eclipse/egit/core/synchronize/GitSyncObjectCache.class
+SHA-256-Digest: pRMEh0ACxwPDVU4AY3GhqqyxDf5GELCQuCtdnBURMi4=
+
+Name: org/eclipse/egit/core/op/ListRemoteOperation.class
+SHA-256-Digest: DMMMlwrStlb1M+DUoyyfEMzIZ0s8O4HJTdCubob1ZzQ=
+
+Name: org/eclipse/egit/core/internal/rebase/RebaseInteractivePlan$Move
+ Helper.class
+SHA-256-Digest: bDKIFxUoLaWWYNAZaIp3z0PFCFPriyPu/DXLZHAnTSI=
+
+Name: org/eclipse/egit/core/op/RenameBranchOperation$1.class
+SHA-256-Digest: YSztU2oKaXTww1cR9otlk3fb6P1weUf8P0FLk1OnGK4=
+
+Name: org/eclipse/egit/core/synchronize/GitRemoteResource.class
+SHA-256-Digest: hZQL41Qa0u548122clWK616vJbTplLjCOXx06qciX/w=
+
+Name: org/eclipse/egit/core/internal/indexdiff/IndexDiffCacheEntry$1.c
+ lass
+SHA-256-Digest: zJlxxe+Bgw3EPd5mv984qkj6Ot1EndVk7KZvNzIxIsM=
+
+Name: org/eclipse/egit/core/op/CreatePatchOperation$1.class
+SHA-256-Digest: 0viI5VEKeZMRqJFMnkbxBdYbv3O5rFzD6okMqxHz3To=
+
+Name: org/eclipse/egit/core/GitMoveDeleteHook.class
+SHA-256-Digest: OR8XuWj/Ndr9rQ/WVMwHrXKTcyKC9gMNbN1chLOxsqw=
+
+Name: org/eclipse/egit/core/op/IgnoreOperation.class
+SHA-256-Digest: 4gX1iKV+xgL29vFBmlzOX3tL21ZeV5h2onG5kPgU9Dk=
+
+Name: org/eclipse/egit/core/synchronize/WorkingTreeChangeCache.class
+SHA-256-Digest: khO9Kf4zNeGiZCKRPY6Ov3Cvfjd27h4MEgQ3bd+kJrE=
+
+Name: org/eclipse/egit/core/internal/rebase/RebaseInteractivePlan$Elem
+ entType.class
+SHA-256-Digest: 1JO4X9iub2PBYF3fCCQBCx+FNtzSQ+5TscM63mqVsq8=
+
+Name: org/eclipse/egit/core/Activator$MergeStrategyDescriptor.class
+SHA-256-Digest: 1ih7T2sYDrGcYDjCBhdrFqCfsDN9zEy2flkrl2ZCpT0=
+
+Name: org/eclipse/egit/core/UnitOfWork$Work.class
+SHA-256-Digest: A3xRIPTHec62Po1KA50qDHQac4KapXOWMIBixh+GeR8=
+
+Name: org/eclipse/egit/core/synchronize/dto/GitSynchronizeData$RemoteA
+ ndMerge.class
+SHA-256-Digest: x7qgwVHIFnEGywOLF/U6Lp9QrG2+0GRc+lKYhjJu54o=
+
+Name: org/eclipse/egit/core/op/AddToIndexOperation.class
+SHA-256-Digest: wrFstUaQmMP0da44jDzg2cUE0oMPL0l4r7wm6mEN46Y=
+
+Name: org/eclipse/egit/core/EclipseProxySelector.class
+SHA-256-Digest: q+GmtJv/zwLt3TFSS7gzPyFdVhd+iPzfMHJDi5tJg6g=
+
+Name: org/eclipse/egit/core/RepositoryCache$Closer.class
+SHA-256-Digest: Qsr4sq+TZ8HIcxC8BMDk+iDeQ12811RGzW5CVvXOxVI=
+
+Name: org/eclipse/egit/core/op/StashDropOperation$1.class
+SHA-256-Digest: ZDsynOHrtCRvY4drFhUzoJLafYmSAnsp/TXnwZMiGDE=
+
+Name: org/eclipse/egit/core/internal/indexdiff/IndexDiffData.class
+SHA-256-Digest: 3E0xSYqseKf+RpYvnjlX2Yk/JwcuUd5vxXKqrtGfG4g=
+
+Name: org/eclipse/egit/core/op/CloneOperation.class
+SHA-256-Digest: d06zUrQLM6g6n7GrsnwQ+NGrSQjc3AtLmzH4zGNZ2KU=
+
+Name: org/eclipse/egit/core/CommitUtil$1.class
+SHA-256-Digest: wnkIO7OioRvcuzuXaQR99S+G5wPqut6XgY7+CiNEihQ=
+
+Name: org/eclipse/egit/core/securestorage/UserPasswordCredentials.clas
+ s
+SHA-256-Digest: U64nfS8KlKs4kK2rz+DTNVEeNOm19DBpCXuyz3k0rZU=
+
+Name: org/eclipse/egit/core/synchronize/GitRemoteFile.class
+SHA-256-Digest: wg75pjbhlX5mF4rAcT09W2bVZY94WgUtOUFCMtCRRBM=
+
+Name: org/eclipse/egit/core/Activator$SshClientType.class
+SHA-256-Digest: 8Jt+Dv05eSv/RhcmtP2aTLeym/VmXvMoUCo89eG3xtM=
+
+Name: org/eclipse/egit/core/internal/util/ProjectUtil.class
+SHA-256-Digest: vGirfUQzUifQMKHW78f9UkN6zvOiJFuC6kw98OGYals=
+
+Name: org/eclipse/egit/core/op/EditCommitOperation$1.class
+SHA-256-Digest: Q991kSM1U9Tbw10nEql4ocD2ERM+C0BjPqDu1ZhNH4o=
+
+Name: org/eclipse/egit/core/internal/storage/GitFileHistory.class
+SHA-256-Digest: 0RHvkZTxajVBMjw11dMECGvSL8qeLiWvlEwLV+i9gV0=
+
+Name: org/eclipse/egit/core/op/ConfigureFetchAfterCloneTask.class
+SHA-256-Digest: HHOJ2vt/45fhESQkqadZg9821iCKaVlVJsbxfFor96s=
+
+Name: org/eclipse/egit/core/op/RewordCommitOperation$1$1.class
+SHA-256-Digest: 3C4cFzGn+438pPeEcFDnV9ypF5ta9a0UvJ9RdR+ON4o=
+
+Name: org/eclipse/egit/core/synchronize/GitCommitsModelCache$Commit.cl
+ ass
+SHA-256-Digest: Be1hrIQkq7Q98NUpTDyOjrBpj96Lj7AAxREyU7Z2OvA=
+
+Name: org/eclipse/egit/core/ProjectReference.class
+SHA-256-Digest: MK8dz1JxjFz8qeAT3vVFDNhc9/A+9MeDSrufgSaNsv0=
+
+Name: org/eclipse/egit/core/op/PushOperationResult.class
+SHA-256-Digest: airWlIeNMI67Ug3JRwJ+NwclLukO2Z38sJmnYvd5M3E=
+
+Name: org/eclipse/egit/core/internal/indexdiff/IndexDiffCacheEntry$5.c
+ lass
+SHA-256-Digest: WZuLm/X3b2t+pOOjjCAzmgCZU57k17sjd+qKeO1VfYs=
+
+Name: org/eclipse/egit/core/synchronize/GitSubscriberMergeContext.clas
+ s
+SHA-256-Digest: HGJsyEWlbEOp9iBI4gXNrN/798Tv9M8jrY5vP3WEQaU=
+
+Name: org/eclipse/egit/core/op/ResetOperation$1.class
+SHA-256-Digest: NVcuEFe9eDn9/E7aB21ONr4HUrR+Q/6djhVX2Guqp1U=
+
+Name: org/eclipse/egit/core/op/ConfigurePushAfterCloneTask.class
+SHA-256-Digest: DNXNn3dsqmua8xrs2BGB+9Y2NJE64woOHSSMl9Xd+ZU=
+
+Name: org/eclipse/egit/core/settings/GitSettings.class
+SHA-256-Digest: fMctVjtx0n+xreZAm1GM1Z/TzQ+9sYLbwFabJzrVQ3Q=
+
+Name: org/eclipse/egit/core/internal/CoreText.class
+SHA-256-Digest: eXAPVHlZdbKH8LTO6X3I5dg3Fn3B97BWEA8rP7VQnkk=
+
+Name: org/eclipse/egit/core/internal/util/ProjectUtil$1.class
+SHA-256-Digest: O+nif2xqOaacP9LIF/BevLaRWuRkSGgEC2wj6aM6Va0=
+
+Name: org/eclipse/egit/core/op/SquashCommitsOperation.class
+SHA-256-Digest: cbv8tr0mr8+mganM2VpQ1Dm9noKtxTEaDKzM/6w7t0o=
+
+Name: org/eclipse/egit/core/GitCorePreferences.class
+SHA-256-Digest: Yytg1iSztgZxdS5hO0ZEEu5Kl7WPyB9cvdhHGJD6lGQ=
+
+Name: org/eclipse/egit/core/Activator$IgnoreDerivedResources.class
+SHA-256-Digest: tF0IEi4OYAe+ZyJymL/RXBVBQRLLcqI1jjDhjlrVMt8=
+
+Name: org/eclipse/egit/core/internal/FileChecker$CheckResult.class
+SHA-256-Digest: xlJ/HO4xhArQynPNVKiXrpKwV53Cs5b8UQgGt3TXl1M=
+
+Name: org/eclipse/egit/core/internal/GitRepositoryProviderType.class
+SHA-256-Digest: SQ40nJ/cFroLIeQ+qjlmZfqYBXJwd1EJohLOx8To4ws=
+
+Name: org/eclipse/egit/core/RepositoryCache$1.class
+SHA-256-Digest: OXDdgnC8PgbJ3EBefpYGinbN2VnQqbd2nQS6NigVb94=
+
+Name: org/eclipse/egit/core/internal/storage/WorkingTreeFileRevision$1
+ .class
+SHA-256-Digest: xc8Hfb+lTVKog2NAAxSQL/stJSaPNUfbSQY5NRbV+ls=
+
+Name: org/eclipse/egit/core/Activator$1.class
+SHA-256-Digest: tBsYkhselapkUHXocuMtxOy/Zxrj9d0pqRTRfyyPYv0=
+
+Name: org/eclipse/egit/core/internal/rebase/RebaseInteractivePlan$Join
+ edList$RelativeIndex.class
+SHA-256-Digest: PHjiw0JJ+svKialAGB2H2WdTom4wHIo5kwDCmtGl0m4=
+
+Name: org/eclipse/egit/core/op/EditCommitOperation$1$1.class
+SHA-256-Digest: U8FmSU4cA8hvHXFVoKzqRf8sMWjvRL5d6jsNV7ihBqg=
+
+Name: org/eclipse/egit/core/synchronize/GitResourceVariantTree.class
+SHA-256-Digest: eGH4tskz8OyAyEAVIoqg/XomkzXWoEC754o7UpbZGS4=
+
+Name: org/eclipse/egit/core/project/RepositoryMappingChangeListener.cl
+ ass
+SHA-256-Digest: TATbnrxwO2TO4eFJHvrf26DjFf1VkymnywON9IdQTUo=
+
+Name: org/eclipse/egit/core/op/SquashCommitsOperation$1$1.class
+SHA-256-Digest: b8hLYsDnZSaRvAk3ZU9hant0dZkayAeu899mzVFTgxU=
+
+Name: org/eclipse/egit/core/AdapterUtils.class
+SHA-256-Digest: pMA6jBRj5uFtD/dOVrl004/QQlAb81rzjdbRoQC6NKI=
+
+Name: org/eclipse/egit/core/UnitOfWork.class
+SHA-256-Digest: RUOj8vr8B3pAOIkSr/YlVsPAJp9sTLP0GDpdf8NjW7g=
+
+Name: org/eclipse/egit/core/op/CommitOperation.class
+SHA-256-Digest: DA+AjCueDf/YiZ0aj8n/Ip8wyXWpv0ibPSnllMOI+6w=
+
+Name: org/eclipse/egit/core/synchronize/dto/GitSynchronizeDataSet.clas
+ s
+SHA-256-Digest: 6N3/QokALcjzU7YOow6sqAWXF8zVo8oBhz43KbmyGe0=
+
+Name: org/eclipse/egit/core/op/BranchOperation.class
+SHA-256-Digest: mLxiTDS8v+u0UVGCmUCnmJjMCEEvJkaveQYpO2/sZi0=
+
+Name: org/eclipse/egit/core/op/MergeOperation$1.class
+SHA-256-Digest: uH6yLRgH3dQAojw2I2ak0xT+hYCQbFcLNRsxBqhjQmM=
+
+Name: org/eclipse/egit/core/op/CherryPickOperation$1.class
+SHA-256-Digest: cBo6TvCYfmKAVtIBeOiBaW/BqzsUvU6ib45mJAFDkK0=
+
+Name: org/eclipse/egit/core/internal/rebase/RebaseInteractivePlan$Plan
+ Element.class
+SHA-256-Digest: P5qMLiIbC70hwjYHNasT4JxO0f7sbA4nX+ZPs8ncu0g=
+
+Name: org/eclipse/egit/core/JobFamilies.class
+SHA-256-Digest: s5A7eXpOEP3klGK4GsACjQI7uKbotPHorG40Ib/dfFg=
+
+Name: org/eclipse/egit/core/RevUtils.class
+SHA-256-Digest: ZsyyXsBiDcWvvfVuiS9yqf3k5qvhyzY0/1mkufZHzDg=
+
+Name: org/eclipse/egit/core/op/DisconnectProviderOperation.class
+SHA-256-Digest: 4Q+K4Os9lzMGct/gd9KOMya8pPCnLdYO4O2FWaNhxvM=
+
+Name: org/eclipse/egit/core/GitProjectSetCapability$1.class
+SHA-256-Digest: adMrPp0kVLVkf6ZTn762FKmcDoMXMYNc7Phx9uvL7h8=
+
+Name: .options
+SHA-256-Digest: PqduG/v+eIBz9PJWg7+dQN4pr2yjQSMcdA6E8PuFSwI=
+
+Name: org/eclipse/egit/core/op/DeletePathsOperation$1.class
+SHA-256-Digest: vilwnWo9LtIqNy0qWrs8qLVkju9h0GtFgE3weWs4kw8=
+
+Name: org/eclipse/egit/core/internal/trace/GitTraceLocation.class
+SHA-256-Digest: JB9ODrJju95iuvT5YSIu5KQJZonuZMzo23+zVsIo+fM=
+
+Name: org/eclipse/egit/core/synchronize/GitCommitsModelCache$Change.cl
+ ass
+SHA-256-Digest: qLlXmilk9vVgPwXjGwxU+gBNyWK2PwWIhy29+0U2SWo=
+
+Name: org/eclipse/egit/core/internal/EGitSshdSessionFactory.class
+SHA-256-Digest: atS8kjttiVHGcgJ9P1dnWz4ucva3sY37RoUvOzkjylo=
+
+Name: org/eclipse/egit/core/internal/EGitSshdSessionFactory$EGitProxyD
+ ataFactory.class
+SHA-256-Digest: FO9rSCjZgzptA9cbC17nlf1TqQHCdZi55jbggwam/jg=
+
+Name: org/eclipse/egit/core/internal/indexdiff/IndexDiffChangedListene
+ r.class
+SHA-256-Digest: bBiS0apBf1fym6kyfogtR9vVbj+6vT5h6G4roa1T5G0=
+
+Name: org/eclipse/egit/core/GitMoveDeleteHook$MoveResult.class
+SHA-256-Digest: 250DUsedNnmVm+xedtqE+5ucmIEKmYMQ4vgeQCtukC8=
+
+Name: org/eclipse/egit/core/internal/SafeRunnable.class
+SHA-256-Digest: AcOgQpnCZu5Q+5DKlWRRkP3OA91u64BFn5eQ8sqQASE=
+
+Name: org/eclipse/egit/core/internal/rebase/RebaseInteractivePlan$Elem
+ entAction.class
+SHA-256-Digest: 82c3ZzigkoEOHX/LbhRCmVim/KYKTViEkG/su3HUXLg=
+
+Name: org/eclipse/egit/core/internal/rebase/RebaseInteractivePlan$Join
+ edList.class
+SHA-256-Digest: M0hWzHLC/AVy8iS1JayBF99T7v2Ub8v+rei9tnqngfw=
+
+Name: org/eclipse/egit/core/RepositoryHandle.class
+SHA-256-Digest: +iyXu+PkaELxvljlTTwxZicDJtSxAOeqeZbg3sVG7iA=
+
+Name: org/eclipse/egit/core/IteratorService.class
+SHA-256-Digest: nrGmmMUCituWIWENeeqktn0JamMJ1Nk/rjY86JI6hRA=
+
+Name: org/eclipse/egit/core/internal/indexdiff/IndexDiffCacheEntry$4.c
+ lass
+SHA-256-Digest: GLLtbMykbn4rih+5sVzp6xnhD9/wNq/Svy70Ylkjs7o=
+
+Name: org/eclipse/egit/core/synchronize/ThreeWayDiffEntry$Direction.cl
+ ass
+SHA-256-Digest: EzchZvpMzMla+D4toqPF7gzBtbBl0PbVSVNPaSLGWSY=
+
+Name: org/eclipse/egit/core/internal/AdapterFactory.class
+SHA-256-Digest: aGHaBBoi0W4u0dGiRUXzRWx0AD29RpVwoGBb84avCAg=
+
+Name: org/eclipse/egit/core/NetUtil$1.class
+SHA-256-Digest: yQ7K+tM2U9TWYaWgLl3xFurhgrujZumQmgDAJavX/Ks=
+
+Name: org/eclipse/egit/core/synchronize/dto/GitSynchronizeData.class
+SHA-256-Digest: VWV6VeMwwVhpigOdLjiCfkAy9WAG3/YznpxWdWjOJHo=
+
+Name: org/eclipse/egit/core/internal/ProjectReferenceImporter.class
+SHA-256-Digest: L+KkQDZNahsqnh5eAgWKRkMGGzydEGTTeK0GW5dyPvI=
+
+Name: org/eclipse/egit/core/op/MergeOperation.class
+SHA-256-Digest: BZy6BZEJCwqOx3J9C0VCYlL9n7z8pEY8nF1/JXovke0=
+
+Name: org/eclipse/egit/core/RepositoryUtil.class
+SHA-256-Digest: SmNIix0r0yRCyiIVEfDXgRpzzrkiCrq+poa/9r0Qflc=
+
+Name: org/eclipse/egit/core/op/SubmoduleSyncOperation.class
+SHA-256-Digest: qsCyslu/T2K6OxGnVK2913K7NIuEPO8Emelk49izD2M=
+
+Name: org/eclipse/egit/core/storage/GitBlobStorage.class
+SHA-256-Digest: XYhA75F/M4jPp+Rvdz7aIhU6mSaxPeSLmqf3eUoljQ8=
+
+Name: org/eclipse/egit/core/synchronize/GitResourceVariantTreeSubscrib
+ er.class
+SHA-256-Digest: 35qxJjm9kHuSWoz+edLZY4xCcItoSa6C9UuK/1EGebQ=
+
+Name: org/eclipse/egit/core/synchronize/GitSyncCache.class
+SHA-256-Digest: WzNUMndF7tN+BVxvTyizaxw40t38PPkfGwD451wWSvM=
+
+Name: org/eclipse/egit/core/EclipseSshSessionFactory.class
+SHA-256-Digest: sF+p8POrfI/fxwiSf68ZtgIZKi/C0vCXDwtmKo2sIhw=
+
+Name: org/eclipse/egit/core/internal/storage/KidCommitList.class
+SHA-256-Digest: JzWq2jowkAm93sgIe7wBrLAhP8O8XWy9+hXBuil3AqM=
+
+Name: org/eclipse/egit/core/synchronize/GitBaseResourceVariantTree.cla
+ ss
+SHA-256-Digest: AmuK2ktW/rS6WTE16O1V1oI2s9DTHsJSLkdl1Ni8W1g=
+
+Name: org/eclipse/egit/core/Activator$IgnoreDerivedResources$1.class
+SHA-256-Digest: tbdiywtEqzBquLSMbaos1BOs1d9uH2tI1xc3SWN/ziw=
+
+Name: org/eclipse/egit/core/op/RevertCommitOperation$1.class
+SHA-256-Digest: N7/sqa4uVsZJMnreuYy17CUmHBuIUlWvemp2NvFEMsc=
+
+Name: org/eclipse/egit/core/internal/GitURI.class
+SHA-256-Digest: mXrmH5bWbEISmxr00uY9sdxwH+l1qKwdT8jPrMjdDkU=
+
+Name: org/eclipse/egit/core/Activator$CheckProjectsToShare.class
+SHA-256-Digest: USNCtiBdjUzXKXy8D+52udNc/fAtq2wIiT+ZP5ZWfLM=
+
+Name: org/eclipse/egit/core/internal/util/ResourceUtil.class
+SHA-256-Digest: IbLWaKL/pGlrCFRqrnSOjuhM/+iUe0RrRyrPnR8+P/M=
+
+Name: org/eclipse/egit/core/EclipseGitProgressTransformer.class
+SHA-256-Digest: 4p90JWnfcWX1UUfOlmmlvzqQgfZuhshx3jjsALD8ZV4=
+
+Name: org/eclipse/egit/core/Activator$AutoShareProjects.class
+SHA-256-Digest: OXr4mZSXd1a6SXSwFsQvjlkgePri9z611ypDUgdcxQQ=
+
+Name: org/eclipse/egit/core/project/GitProjectData$UnmapJob.class
+SHA-256-Digest: /DoSCM31vHjcT+0X5qEoPXuKLCBAPvEzNBKD/5lT/Wg=
+
+Name: org/eclipse/egit/core/synchronize/GitSubscriberResourceMappingCo
+ ntext.class
+SHA-256-Digest: v8VXQdY0OVldr04t9ks0YpKI00UVyq1KcpdVCQ0I3dM=
+
+Name: schema/mergeStrategy.exsd
+SHA-256-Digest: yeZe7aGEZ4oAynKmx/QtPl1ITGWBuRzZ1HalYWdJnQA=
+
+Name: plugin.properties
+SHA-256-Digest: 7zbNydIQOV3qlReGhm6aIHiQUbSDLYtZzGWxcy0DpqU=
+
+Name: org/eclipse/egit/core/internal/util/ExceptionCollector.class
+SHA-256-Digest: pR+p1fVHvaAcMop3EljITE+YDoV8szvkgqT+eyEusfo=
+
+Name: org/eclipse/egit/core/RepositoryCache$Builder.class
+SHA-256-Digest: pwZnIJHdVCeT+fUp2B7cDOMNDo5391PBw+tnHiLCi+I=
+
+Name: org/eclipse/egit/core/internal/indexdiff/SkipNotInterestingDelta
+ Visitor.class
+SHA-256-Digest: EIS5e+Aek1Y8ggWSFxynTW27vbh/SqDHdl52ctMxaow=
+
+Name: org/eclipse/egit/core/op/SubmoduleAddOperation$1.class
+SHA-256-Digest: R7Vt7Kwbz95zKKfLBX2QGmCHGRmUxJCdPVY+3tc7BzY=
+
+Name: org/eclipse/egit/core/internal/coretext.properties
+SHA-256-Digest: P6ZqmiZtr3xaTPyIIj9pmNI/XGnXK3SNl2ju6q39IZM=
+
+Name: org/eclipse/egit/core/internal/job/JobUtil$2.class
+SHA-256-Digest: 3v0PO1O4mOAUNjAQ9mBpftY+TJYE8rpNglFA6/y0oLA=
+
+Name: org/eclipse/egit/core/project/GitProjectData$2.class
+SHA-256-Digest: 8shXRUhtu/X/0yZThKgDKp35sUVVxZxGd+Qj/O3FV+I=
+
+Name: org/eclipse/egit/core/internal/SafeRunnable$Runner.class
+SHA-256-Digest: +afxxHyvAVTNfY9epEMzGwRDF2VkPQJ9e2hhICPR8YU=
+
+Name: org/eclipse/egit/core/op/RemoveFromIndexOperation.class
+SHA-256-Digest: uQiOE3TrjSqrBX5lC7b/2bI8uywIoxoYJXFTD1GzbH0=
+
+Name: org/eclipse/egit/core/internal/trace/ITraceLocation.class
+SHA-256-Digest: ewZ0U7FUSNpUBN4Pc3l3fog0wv1gI/e0QiUIj27zumM=
+
+Name: org/eclipse/egit/core/internal/indexdiff/IndexDiffCacheEntry$6.c
+ lass
+SHA-256-Digest: 8ueXcWcLfzLNFuN4yZAWmqAL6vdMgvp+FqYv7GiwaqU=
+
+Name: org/eclipse/egit/core/Activator.class
+SHA-256-Digest: ++XwlgdKHe+ipkmahkamt7pwN1bOU75SjnPPHu90644=
+
+Name: org/eclipse/egit/core/synchronize/GitResourceVariantTreeSubscrib
+ er$GitResourceVariantFileRevision.class
+SHA-256-Digest: 7cOi0rdpKw/OxeIpsAhGtehh5JToH6QKwPEid0thZAg=
+
+Name: org/eclipse/egit/core/internal/IRepositoryObject.class
+SHA-256-Digest: vhdlYk9ibihbOsZwWbF0vyZoiinNxm9zOt/+5m7LMSk=
+
+Name: org/eclipse/egit/core/synchronize/GitResourceVariantTreeSubscrib
+ er$GitSyncInfoToDiffConverter.class
+SHA-256-Digest: 75cUqOeNw8KCozi+aLzRPT22sRWWYE4QcvYuV8gJOI4=
+
+Name: org/eclipse/egit/core/internal/indexdiff/IndexDiffUpdateJob.clas
+ s
+SHA-256-Digest: iWCRVx4bvjlP4sq69URlf+hpOz1QyZI9nyw8C/K2t7k=
+
+Name: org/eclipse/egit/core/op/PushOperation.class
+SHA-256-Digest: 2GXmLDZZmBMFG3B3h6RW8WyVUgQV9wyxN9HRp6YP4GI=
+
+Name: org/eclipse/egit/core/internal/ResourceRefreshHandler.class
+SHA-256-Digest: tz0pJHatZ5bqfe0rNMJxP0Lutnbmj0PrIlvXcxa9uZg=
+
+Name: org/eclipse/egit/core/synchronize/GitSyncInfo.class
+SHA-256-Digest: cGgD3E9k7WBtg/4q33jDbl6fL6Ybni/XjK/9pqHrfE8=
+
+Name: org/eclipse/egit/core/op/CreatePatchOperation.class
+SHA-256-Digest: FKsSnAiKRoK6mjstvnG0PXeCWjKFt3HBLnSRHCAwXyw=
+
+Name: org/eclipse/egit/core/synchronize/GitCommitsModelDirectionExcept
+ ion.class
+SHA-256-Digest: rsoSdxHqhIsxEy0aropuJVMTbgU8Y8HMHLhhOVJwbSU=
+
+Name: org/eclipse/egit/core/op/RebaseOperation$1.class
+SHA-256-Digest: 8Nm+AgmNza+VVqh7ykuXOnoA4LXtGRg1Eg/gfXjhMrI=
+
+Name: org/eclipse/egit/core/internal/indexdiff/GitResourceDeltaVisitor
+ .class
+SHA-256-Digest: 07Bhf3XRYWwJTbqhc/vNrNG1d0RF8SXx8j8KkNzGTKk=
+
+Name: org/eclipse/egit/core/internal/IRepositoryCommit.class
+SHA-256-Digest: DWopvxaXmSd0i7UM+HifSDoUBYjsxuW6Rn+QpGSFld0=
+
+Name: org/eclipse/egit/core/internal/rebase/RebaseInteractivePlan$Reba
+ seInteractivePlanChangeListener.class
+SHA-256-Digest: 3hDntTos6PmD9flZk3zSHU/mAXdRnzA7L6N8haV5c34=
+
+Name: org/eclipse/egit/core/op/RewordCommitOperation$1.class
+SHA-256-Digest: DeIHUSi3N9Bt6dFuRg3px3JUFuj2xt1jJvJr59s/x3Q=
+
+Name: org/eclipse/egit/core/op/ConnectProviderOperation$1.class
+SHA-256-Digest: jT/fXZygRytrSs6BPiPZHClYNTAC9klxHSGHv2cZLqs=
+
+Name: org/eclipse/egit/core/internal/util/RepositoryPathChecker.class
+SHA-256-Digest: gSV2uW7VRfrxd8FONh5BzcinKg0KkerC/BA5++qwICo=
+
+Name: org/eclipse/egit/core/op/CreateLocalBranchOperation$1.class
+SHA-256-Digest: zvcqqiDxviw3IEYGbGFbAq4RmyNXieReT+1kp7WTzT0=
+
+Name: org/eclipse/egit/core/internal/trace/JSchLogger.class
+SHA-256-Digest: d8qngvtZt99JkIjRj7jTwZnDCO9tdxl5wKBRT5B8F14=
+
+Name: org/eclipse/egit/core/op/StashApplyOperation.class
+SHA-256-Digest: q9TBA98IcCq/hjjb7YyXd8pwL3354Ee4FzEHOjh31M4=
+
+Name: org/eclipse/egit/core/GitProvider$GitResourceRuleFactory.class
+SHA-256-Digest: kKhvTl90XwIOuwFS88+cERo4ZK7hKi5P6Jtgm3m8Was=
+
+Name: org/eclipse/egit/core/GitMoveDeleteHook$2.class
+SHA-256-Digest: nBDng3GqMX0sLY3mXxGb0jnOdbNM1/rrp89cSdRoHzQ=
+
+Name: org/eclipse/egit/core/op/UntrackOperation.class
+SHA-256-Digest: HBnTh+oxpFOJjScpOFE3UuRHCBoowDaMHAf+HzsBpwk=
+
+Name: org/eclipse/egit/core/EclipseAuthenticator.class
+SHA-256-Digest: Cf4BXtaLzv89XAwo08/hIVfDYly0LaL3qGh/ZeWx/HQ=
+
+Name: org/eclipse/egit/core/op/DeleteBranchOperation.class
+SHA-256-Digest: SIYE/ap9MmKxJYtnfIEwToWhD7Fwpsn7fTuOtcMsJtc=
+
+Name: org/eclipse/egit/core/op/RenameBranchOperation.class
+SHA-256-Digest: KZwGGPBNGB1l5IXESNIN7AiHcJknOJu8Di6wJP7V9Gc=
+
+Name: org/eclipse/egit/core/op/PullOperation$PullReferenceConfig.class
+SHA-256-Digest: mqYAOLrmhzoCPuiDLGgq6XJa3a5G8rGcBAnpZv1AZoI=
+
+Name: org/eclipse/egit/core/op/SetRepositoryConfigPropertyTask.class
+SHA-256-Digest: Nc98S0bJCnUB0EIJClOvDN7rh7MdeqAYu6NSTVIiML0=
+
+Name: about.html
+SHA-256-Digest: gpBNpALtRPPy5c4NZooNOD8ZmYJZxR8r7bxVwyqAut0=
+
+Name: org/eclipse/egit/core/internal/storage/CommitFileRevision.class
+SHA-256-Digest: Ju6vu3ocC0ZdJv9g2F9pZHVacGNbt5rljvYRzuRm3g0=
+
+Name: org/eclipse/egit/core/op/RebaseOperation.class
+SHA-256-Digest: cLjD1PsRpRDeEMv5vL9U+ycD6HYyf0zLhtpQq+EGykk=
+
+Name: org/eclipse/egit/core/internal/storage/AbstractGitResourceVarian
+ t.class
+SHA-256-Digest: CIC5Q8y0qGPwvmL9UETDOYURbrqXF5L1VwVEwllZGDI=
+
+Name: org/eclipse/egit/core/op/CherryPickOperation.class
+SHA-256-Digest: LHvgMtnu5XE2E+jHHPDqMByjdWiCmcVV5FQvZYL9Ym0=
+
+Name: org/eclipse/egit/core/internal/FileChecker.class
+SHA-256-Digest: /QF7vc03GUZES9VZ2qBNtCQ7fS68wDJmGvn7GEF6IYE=
+
+Name: org/eclipse/egit/core/internal/EGitSshdSessionFactory$EGitFilePa
+ sswordProvider.class
+SHA-256-Digest: 5C+640A6LfUZer/1wHGSFHs0iF1QMNTYNCMRtPGEyXU=
+
+Name: org/eclipse/egit/core/UnitOfWork$ConfigScope.class
+SHA-256-Digest: 090gA3jW0608VvO/zNBxJOxOTyWyQuoE/gh1ZSMZ6to=
+
+Name: org/eclipse/egit/core/op/CreatePatchOperation$DiffHeaderFormat.c
+ lass
+SHA-256-Digest: GaEir4tcc08SlnREo4qmDfBBT/KAnkgmwICMIVRfoeA=
+
+Name: org/eclipse/egit/core/project/RepositoryMapping.class
+SHA-256-Digest: Mly0qBi8YMWOh+AFnOMrdxzEq0DcAvsJaraCiTVFnBk=
+
+Name: org/eclipse/egit/core/GitMoveDeleteHook$1.class
+SHA-256-Digest: 3QaOt12JY+mokQLlaEapcLS5CDLtiqgmUe6Af3ovNxc=
+
+Name: org/eclipse/egit/core/op/ConnectProviderOperation.class
+SHA-256-Digest: 1tf21e157rn6aNAyIcGNI7aAJW/VKV090XLxHBRRP68=
+
+Name: org/eclipse/egit/core/CachingRepository.class
+SHA-256-Digest: kNkkjE/oED+iWxot5Bu/6yBLpDnWr6utsQdqZVn2B9A=
+
+Name: org/eclipse/egit/core/GitProjectSetCapability.class
+SHA-256-Digest: Nq8weBm4TBYqymsLkM+n3pwjlSSDdxpnns/rKEDjjBg=
+
+Name: org/eclipse/egit/core/internal/storage/KidWalk.class
+SHA-256-Digest: Y3+hUz/KYsYfFJzr4heDau1v4RFF9iXRqNuT3OKdn94=
+
+Name: org/eclipse/egit/core/project/GitProjectData$1.class
+SHA-256-Digest: 2I54qPJhOSfUWswduMOfiOsCd8zI8B3zRBXrYD/vaZk=
+

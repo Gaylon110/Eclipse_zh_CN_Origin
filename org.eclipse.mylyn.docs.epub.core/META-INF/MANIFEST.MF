@@ -1,0 +1,676 @@
+Manifest-Version: 1.0
+Bundle-Description: The EPUB framework in Mylyn Docs offers API to cre
+ ate, manipulate, read and write EPUB formatted files. There is also a
+ n Ant task for creating EPUBs.
+Bundle-License: https://www.eclipse.org/legal/epl-2.0/
+Bundle-SymbolicName: org.eclipse.mylyn.docs.epub.core
+Built-By: jenkins
+Bnd-LastModified: 1614384835157
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-DocURL: http://eclipse.org/mylyn
+Bundle-Vendor: Eclipse Mylyn
+Import-Package: org.apache.tika.config;version=0,org.apache.tika.detec
+ t;version=0,org.apache.tika.exception;version=0,org.apache.tika.io;ve
+ rsion=0,org.apache.tika.metadata;version=0,org.apache.tika.mime;versi
+ on=0,org.eclipse.emf.common.notify,org.eclipse.emf.common.notify.impl
+ ,org.eclipse.emf.common.util,org.eclipse.emf.ecore,org.eclipse.emf.ec
+ ore.impl,org.eclipse.emf.ecore.plugin,org.eclipse.emf.ecore.resource,
+ org.eclipse.emf.ecore.resource.impl,org.eclipse.emf.ecore.util,org.ec
+ lipse.emf.ecore.xmi,org.eclipse.emf.ecore.xmi.impl,org.eclipse.emf.ec
+ ore.xmi.util,org.eclipse.emf.ecore.xml.type,org.eclipse.mylyn.wikitex
+ t.parser;version="[3.0,4)",org.eclipse.mylyn.wikitext.parser.builder;
+ version="[3.0,4)",org.eclipse.mylyn.wikitext.parser.markup;version="[
+ 3.0,4)",org.eclipse.mylyn.wikitext.util;version="[3.0,4)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-3.2.0.201605172007
+Export-Package: org.eclipse.mylyn.docs.epub.internal;x-internal:=true;
+ uses:="org.eclipse.emf.ecore.xmi.impl,org.eclipse.mylyn.docs.epub.cor
+ e,org.eclipse.mylyn.docs.epub.ncx,org.eclipse.mylyn.docs.epub.opf";ve
+ rsion="4.0.7",org.eclipse.mylyn.docs.epub.core;uses:="org.eclipse.emf
+ .common.util,org.eclipse.mylyn.docs.epub.dc,org.eclipse.mylyn.docs.ep
+ ub.ocf,org.eclipse.mylyn.docs.epub.opf";version="4.0.7",org.eclipse.m
+ ylyn.docs.epub.core.wikitext;uses:="org.eclipse.mylyn.docs.epub.core,
+ org.eclipse.mylyn.wikitext.parser.markup";version="4.0.7",org.eclipse
+ .mylyn.docs.epub.dc;uses:="org.eclipse.emf.ecore,org.eclipse.emf.ecor
+ e.util,org.eclipse.mylyn.docs.epub.opf";version="4.0.7",org.eclipse.m
+ ylyn.docs.epub.dc.impl;uses:="org.eclipse.emf.common.notify,org.eclip
+ se.emf.ecore,org.eclipse.emf.ecore.impl,org.eclipse.emf.ecore.util,or
+ g.eclipse.mylyn.docs.epub.dc,org.eclipse.mylyn.docs.epub.opf";version
+ ="4.0.7",org.eclipse.mylyn.docs.epub.dc.util;uses:="org.eclipse.emf.c
+ ommon.notify,org.eclipse.emf.common.notify.impl,org.eclipse.emf.commo
+ n.util,org.eclipse.emf.ecore,org.eclipse.emf.ecore.resource,org.eclip
+ se.emf.ecore.resource.impl,org.eclipse.emf.ecore.util,org.eclipse.emf
+ .ecore.xmi.impl,org.eclipse.emf.ecore.xmi.util,org.eclipse.mylyn.docs
+ .epub.dc";version="4.0.7",org.eclipse.mylyn.docs.epub.ncx;uses:="org.
+ eclipse.emf.common.util,org.eclipse.emf.ecore,org.eclipse.emf.ecore.u
+ til";version="4.0.7",org.eclipse.mylyn.docs.epub.ncx.impl;uses:="org.
+ eclipse.emf.common.notify,org.eclipse.emf.common.util,org.eclipse.emf
+ .ecore,org.eclipse.emf.ecore.impl,org.eclipse.emf.ecore.util,org.ecli
+ pse.mylyn.docs.epub.ncx";version="4.0.7",org.eclipse.mylyn.docs.epub.
+ ncx.util;uses:="org.eclipse.emf.common.notify,org.eclipse.emf.common.
+ notify.impl,org.eclipse.emf.common.util,org.eclipse.emf.ecore,org.ecl
+ ipse.emf.ecore.resource,org.eclipse.emf.ecore.resource.impl,org.eclip
+ se.emf.ecore.util,org.eclipse.emf.ecore.xmi.impl,org.eclipse.emf.ecor
+ e.xmi.util,org.eclipse.mylyn.docs.epub.ncx";version="4.0.7",org.eclip
+ se.mylyn.docs.epub.ocf;uses:="org.eclipse.emf.common.util,org.eclipse
+ .emf.ecore";version="4.0.7",org.eclipse.mylyn.docs.epub.ocf.impl;uses
+ :="org.eclipse.emf.common.notify,org.eclipse.emf.common.util,org.ecli
+ pse.emf.ecore,org.eclipse.emf.ecore.impl,org.eclipse.mylyn.docs.epub.
+ ocf";version="4.0.7",org.eclipse.mylyn.docs.epub.ocf.util;uses:="org.
+ eclipse.emf.common.notify,org.eclipse.emf.common.notify.impl,org.ecli
+ pse.emf.common.util,org.eclipse.emf.ecore,org.eclipse.emf.ecore.resou
+ rce,org.eclipse.emf.ecore.resource.impl,org.eclipse.emf.ecore.util,or
+ g.eclipse.emf.ecore.xmi.impl,org.eclipse.emf.ecore.xmi.util,org.eclip
+ se.mylyn.docs.epub.ocf";version="4.0.7",org.eclipse.mylyn.docs.epub.o
+ pf;uses:="org.eclipse.emf.common.util,org.eclipse.emf.ecore,org.eclip
+ se.mylyn.docs.epub.dc";version="4.0.7",org.eclipse.mylyn.docs.epub.op
+ f.impl;uses:="org.eclipse.emf.common.notify,org.eclipse.emf.common.ut
+ il,org.eclipse.emf.ecore,org.eclipse.emf.ecore.impl,org.eclipse.mylyn
+ .docs.epub.dc,org.eclipse.mylyn.docs.epub.opf";version="4.0.7",org.ec
+ lipse.mylyn.docs.epub.opf.util;uses:="org.eclipse.emf.common.notify,o
+ rg.eclipse.emf.common.notify.impl,org.eclipse.emf.common.util,org.ecl
+ ipse.emf.ecore,org.eclipse.emf.ecore.resource,org.eclipse.emf.ecore.r
+ esource.impl,org.eclipse.emf.ecore.util,org.eclipse.emf.ecore.xmi.imp
+ l,org.eclipse.emf.ecore.xmi.util,org.eclipse.mylyn.docs.epub.opf";ver
+ sion="4.0.7"
+Bundle-Name: Eclipse EPUB Tools Core
+Bundle-Version: 4.0.7.20210227001406
+Build-Jdk: 1.8.0_202
+Created-By: Apache Maven Bundle Plugin
+
+Name: org/eclipse/mylyn/docs/epub/ncx/NCXPackage.class
+SHA-256-Digest: j1HPT+rwTqlEJPd6L7Zmdv8X+0GvCjJWJyQRtSVxU98=
+
+Name: org/eclipse/mylyn/docs/epub/opf/util/OPFValidator.class
+SHA-256-Digest: nHfID1DPz+A0f1iquqrH038pwmKo+eyabp7CWIJ7Oy8=
+
+Name: org/eclipse/mylyn/docs/epub/core/OPSPublication$1$1.class
+SHA-256-Digest: Fjzk4jTulfsaLSwAlTsDapCf+hUXVWenq1GkoqW/7rs=
+
+Name: org/eclipse/mylyn/docs/epub/core/PublicationProxy.class
+SHA-256-Digest: kobqAIVRIFd5GWQSZYtGsHG2dBDt0h9rYRPydH8In5c=
+
+Name: org/eclipse/mylyn/docs/epub/ocf/impl/RootFilesImpl.class
+SHA-256-Digest: roc2Epy3l4/1uKGni8SsMNIWhzLcF9ElW+0KXDPNAdk=
+
+Name: org/eclipse/mylyn/docs/epub/dc/util/DCResourceImpl.class
+SHA-256-Digest: spmh05gSCAyAj08H4HSvZumJzJaT6nUEdBEWlqYtITQ=
+
+Name: org/eclipse/mylyn/docs/epub/ncx/NavPoint.class
+SHA-256-Digest: otaiKHxnqQZltZ58K634INkteBHukLJPaNlW2E7Zj/M=
+
+Name: model/relacode.src
+SHA-256-Digest: F6DcPsGHmRK/05JVGSbj/Fz32UluuKzJ1ZOYVz0OwXg=
+
+Name: model/relacode.ant
+SHA-256-Digest: FK7GRwtzpk6r33ze6tAlwIowiLbTXb6VLac6EaO5ngc=
+
+Name: org/eclipse/mylyn/docs/epub/ncx/impl/NavInfoImpl.class
+SHA-256-Digest: XC/vtDiW2OeCe23AGMzOxPCJyX1GJ5YOpmaC0pCa4IU=
+
+Name: model/ocf.genmodel
+SHA-256-Digest: JjyLF4S3n86oe0YqcCUJ5oS5094IjClszb8jOqxB3+8=
+
+Name: org/eclipse/mylyn/docs/epub/dc/util/DCAdapterFactory$1.class
+SHA-256-Digest: J8Mc5k+5lObx+X5+Sb7V3xm4iXpMyYe6OTHFB797P+0=
+
+Name: org/eclipse/mylyn/docs/epub/opf/impl/MetaImpl.class
+SHA-256-Digest: e5KZ328nOuYKHpwGB6X4hJtn9VEMhDj+l/jxmKNSdwk=
+
+Name: org/eclipse/mylyn/docs/epub/internal/OPSValidator$Mode.class
+SHA-256-Digest: 8jUysftstIezMVGkFzGMhyGpUCyiFs1YYjejGGB/GkU=
+
+Name: org/eclipse/mylyn/docs/epub/core/ValidationMessage.class
+SHA-256-Digest: mZvBTCe5bkrLkWbfKY85HKMzcFe1zyrCpf2g3Bg1DCE=
+
+Name: org/eclipse/mylyn/docs/epub/core/EPUB$2.class
+SHA-256-Digest: 23MZCsl2ftmdOKZ4vQZwVhZYEj5FQOGiH563QmWsWco=
+
+Name: org/eclipse/mylyn/docs/epub/opf/Metadata.class
+SHA-256-Digest: 0FdaZDXeNyUqQBednefysLYwOjWqwh/Fg6QvCWf5880=
+
+Name: org/eclipse/mylyn/docs/epub/core/EPUB$VersionDetector.class
+SHA-256-Digest: F+Qx82zd2LpsEngaeAUYlQFlgudRL1RXj6RwOT6PCnY=
+
+Name: org/eclipse/mylyn/docs/epub/ncx/Audio.class
+SHA-256-Digest: xMTxZYIuYwI3RTYPKZzDwRkRjEBZwqUB8TuJiCic8vg=
+
+Name: org/eclipse/mylyn/docs/epub/core/ILogger.class
+SHA-256-Digest: HFGSrztfQHRv+9UOOsdy2YP0eWNtYKOvtkVtTouvRRk=
+
+Name: org/eclipse/mylyn/docs/epub/ncx/util/NCXResourceImpl.class
+SHA-256-Digest: JA3Vc9P1RBCTXmsFp6MozAVXg01cvPQ/Bz0D3x/sqe8=
+
+Name: org/eclipse/mylyn/docs/epub/ncx/BookStruct.class
+SHA-256-Digest: yHO+KVfp80Ek1oUd6dFgpIzAkFjtmk0gwYsrWVMd7F8=
+
+Name: org/eclipse/mylyn/docs/epub/opf/Guide.class
+SHA-256-Digest: LiVz7S7O5oPE9jdjhF1RM2oi01CxmwRzf1ASX2u+D6Y=
+
+Name: org/eclipse/mylyn/docs/epub/dc/DCFactory.class
+SHA-256-Digest: KE8CDEB9OALmB+cGz6mbaZCoL4tRqYbEXYt9FW6PgN8=
+
+Name: org/eclipse/mylyn/docs/epub/ncx/NavLabel.class
+SHA-256-Digest: sJ+x4wG1giwqrZcVOkvhAD9+wQCabN35Gqs7JWDvn1M=
+
+Name: org/eclipse/mylyn/docs/epub/internal/OPSValidator.class
+SHA-256-Digest: uER5DgmA4N5Bj37P3s2KUD5MtZ9stVwqOLWTMkeQs7s=
+
+Name: org/eclipse/mylyn/docs/epub/ncx/Img.class
+SHA-256-Digest: r+RPI8l1NQtPRgzbt7b0rnIVH859QrjEVppSI47aX9o=
+
+Name: org/eclipse/mylyn/docs/epub/ncx/util/NCXAdapterFactory.class
+SHA-256-Digest: n6B6kHcL/iFeSyfotqE3iSTSl/3RyB3JXeJpxjIrp+U=
+
+Name: org/eclipse/mylyn/docs/epub/dc/DCPackage.class
+SHA-256-Digest: aSRsuCyFiKbDSGgq8VRlfYAyp+W8fQ96UK+IF24WrPU=
+
+Name: org/eclipse/mylyn/docs/epub/opf/OPFFactory.class
+SHA-256-Digest: fwRby/J5+yq7hcLWQHRv7qXXwJwhTQNDY6M3ctyxEfk=
+
+Name: org/eclipse/mylyn/docs/epub/dc/util/DCResourceFactoryImpl.class
+SHA-256-Digest: zMzuy7Y1EHrW4UvbLwvGjZWCs9cdPMvl+dWVOix1a8c=
+
+Name: org/eclipse/mylyn/docs/epub/dc/impl/LocalizedDCTypeImpl.class
+SHA-256-Digest: pbuDK/aFRSJ6xYSELsUAnSzxs1JfK2mbLwYong53Jco=
+
+Name: org/eclipse/mylyn/docs/epub/internal/MetadataScanner.class
+SHA-256-Digest: y0hngbRoFimXfA4gqEr+cpzaEN3nxeDgK2xWj8hZlIw=
+
+Name: org/eclipse/mylyn/docs/epub/core/wikitext/MarkupToOPS$1.class
+SHA-256-Digest: tpVAAJSrgQrIHB+ZznPUySvTIbl68A1Nw2LppUc32VM=
+
+Name: org/eclipse/mylyn/docs/epub/ncx/util/NCXXMLProcessor.class
+SHA-256-Digest: L0wMQsMgCrOHvuVbsNnHNSoDT3SvHLiZdlrUK8SYAaQ=
+
+Name: org/eclipse/mylyn/docs/epub/ncx/impl/NCXPackageImpl.class
+SHA-256-Digest: EZJ4Xy7lht5J5fPcejXZ9T0yNM4drpxwq92wAwB0Kag=
+
+Name: org/eclipse/mylyn/docs/epub/ncx/SmilCustomTest.class
+SHA-256-Digest: 9Hq4V+Lbs/FzUS/gME8FigCLLw47Gd3tzt7nI9TN3f4=
+
+Name: org/eclipse/mylyn/docs/epub/opf/impl/OPFPackageImpl.class
+SHA-256-Digest: auKSlBkx+NyBO20TaeAFIXgRI2U0HteKz5KvdrL7BKo=
+
+Name: org/eclipse/mylyn/docs/epub/ocf/impl/ContainerImpl.class
+SHA-256-Digest: m+ijKyp3WBApFu+Qu+OSBO6KVyBeNUlT2Kxei7LV3q4=
+
+Name: org/eclipse/mylyn/docs/epub/core/ILogger$Severity.class
+SHA-256-Digest: gvK9U5bu12cJh4eva/exMQYWDHyJjxQtbf9Qjir456g=
+
+Name: org/eclipse/mylyn/docs/epub/internal/EclipseTocImporter.class
+SHA-256-Digest: GFIvgC0kVdcsEAkIX5NAWK50yrDkESeZ24aQaGLm4yg=
+
+Name: org/eclipse/mylyn/docs/epub/ocf/util/OCFResourceFactoryImpl.clas
+ s
+SHA-256-Digest: hs0oAAlnOI1hn+Xmqm6Dp3gu+PQwDv6q+uC3sUi57zs=
+
+Name: org/eclipse/mylyn/docs/epub/opf/Meta.class
+SHA-256-Digest: 7KFvTCic0syUy9DDq/7RVF2iu1QdRlOLBKv8YWqEDuU=
+
+Name: org/eclipse/mylyn/docs/epub/ncx/NCXFactory.class
+SHA-256-Digest: PzTAmqBXZWTrzAa9eWd3J995VN4HTra4GKaO8iTQSEQ=
+
+Name: model/opf.ecore
+SHA-256-Digest: CgBRnKKjivS0EgkyPx3vY9RBMJ4xmOScKE/a+oCEmTQ=
+
+Name: org/eclipse/mylyn/docs/epub/ocf/RootFiles.class
+SHA-256-Digest: 1N+8dAOTj899aYeqlGfRsjXfLeIcEZxnD2664ZZgWck=
+
+Name: org/eclipse/mylyn/docs/epub/dc/impl/DCFactoryImpl.class
+SHA-256-Digest: jsDDhACYIizRZrwcI+B0Mte1tOYrgj004cUHNPucKtE=
+
+Name: org/eclipse/mylyn/docs/epub/opf/impl/ItemImpl.class
+SHA-256-Digest: o/wK73Wml1NR0oi6sKRjI52xLMPMcwHYdY0HZ+0sQtY=
+
+Name: org/eclipse/mylyn/docs/epub/opf/util/OPFResourceFactoryImpl.clas
+ s
+SHA-256-Digest: exBRiVMwrKlDeN5BsRFzqaGjnkiI/MBH2hY0/kUz0cs=
+
+Name: org/eclipse/mylyn/docs/epub/core/Publication$2.class
+SHA-256-Digest: OPruycdDzIowRHb7ZvisasC1329P8VFvzZVaAApxdjA=
+
+Name: org/eclipse/mylyn/docs/epub/opf/impl/PackageImpl.class
+SHA-256-Digest: JsWaZV6Cr5zmEnW8KME6r3whd0V0RE7uTYBp7gMyBLc=
+
+Name: org/eclipse/mylyn/docs/epub/ocf/impl/OCFPackageImpl.class
+SHA-256-Digest: 9Y/Ji2BYXEGO8Z3hdatoakFHbZ3E12geDNEJwVLABQg=
+
+Name: org/eclipse/mylyn/docs/epub/core/Messages.class
+SHA-256-Digest: UvJZYfrfZFLgKfRMkowSf6DDlbj/mjFxFm0CDy73LpU=
+
+Name: org/eclipse/mylyn/docs/epub/opf/Spine.class
+SHA-256-Digest: jeD2mKIi5W6fbiMm52FDz/LnmVkTGIbs6souOObZTDI=
+
+Name: org/eclipse/mylyn/docs/epub/ocf/impl/RootFileImpl.class
+SHA-256-Digest: JvnhBNUaOJFq7WDnJGMY7fVWAlKDcJy6DMuJG3rYYnk=
+
+Name: org/eclipse/mylyn/docs/epub/core/OPSPublication.class
+SHA-256-Digest: OohAci62iw+QUVEDC+uS2acO02L8b6W0yoqiDnGpsNk=
+
+Name: org/eclipse/mylyn/docs/epub/opf/impl/MetadataImpl.class
+SHA-256-Digest: oKDHJrR6p026sgi50fYEht+7YXha69/KlQ0jETYSSFw=
+
+Name: org/eclipse/mylyn/docs/epub/ncx/NavInfo.class
+SHA-256-Digest: UI+VfYxa54+hyu0Suldy9HFiuD5csBc2F5VLfiDGmls=
+
+Name: org/eclipse/mylyn/docs/epub/ncx/util/NCXSwitch.class
+SHA-256-Digest: 8QWxaKv91U+uexTqN6LWQy/tyz/xwE6UyBGWwqusUBE=
+
+Name: META-INF/maven/org.eclipse.mylyn.docs/org.eclipse.mylyn.docs.epu
+ b.core/pom.xml
+SHA-256-Digest: fg8WNnLp9LbbcpH8AsM4jB40eu1ZsDbYcCQztQRF0xI=
+
+Name: org/eclipse/mylyn/docs/epub/core/EPUB$1.class
+SHA-256-Digest: MyzZN6DElkQ4x6Ehtm6akiZmXth+LkxayYASIJy/S5c=
+
+Name: org/eclipse/mylyn/docs/epub/core/PublicationProxy$ValueComparato
+ r.class
+SHA-256-Digest: 3lIk2pXfhFxbos7kvbzZjVgVIzVVzSreXzHYkEqQEu4=
+
+Name: org/eclipse/mylyn/docs/epub/ncx/impl/ContentImpl.class
+SHA-256-Digest: LeNvRa6cw8qgruNr5FlZsyMQzyXV071UepqylyHCzX8=
+
+Name: org/eclipse/mylyn/docs/epub/internal/EPUBFileUtil.class
+SHA-256-Digest: QMHY6KmGZyS+hBWkTk53bpmXWS1G/Ml+Wb1unY2uGvo=
+
+Name: org/eclipse/mylyn/docs/epub/dc/impl/DescriptionImpl.class
+SHA-256-Digest: wYAXnY+vmxYKRVfB9FY2dvsmIt1g2EUa+7PzJxxJ7Sw=
+
+Name: org/eclipse/mylyn/docs/epub/ncx/impl/NavTargetImpl.class
+SHA-256-Digest: XVt/EvY6av5ZyhGuU64l6cGwCwQ/8A7J28ihCkCDneE=
+
+Name: org/eclipse/mylyn/docs/epub/dc/impl/ContributorImpl.class
+SHA-256-Digest: 5CfPXXSLUtCfNVjjTIlizTEQuTZWn8sVbw2J2OZPY2o=
+
+Name: org/eclipse/mylyn/docs/epub/dc/impl/FormatImpl.class
+SHA-256-Digest: hNInZ3REDOYu3B03xk9v+dppqNxf8+oD3XlhUV/2V+Q=
+
+Name: org/eclipse/mylyn/docs/epub/dc/Date.class
+SHA-256-Digest: kHaJV7rQ8TvwYKi+Y1R/fRF+XpUJhpYhdW6w+iMr9DA=
+
+Name: org/eclipse/mylyn/docs/epub/dc/Coverage.class
+SHA-256-Digest: +27O/1I2A1OEdwtJwd9X2glwLqW34cXNaYyJc9QXegQ=
+
+Name: org/eclipse/mylyn/docs/epub/dc/Creator.class
+SHA-256-Digest: 7ILG9jYxYBFEfzFb+MbuLK2Pp7++WS0Jv7LWngNZ2Uo=
+
+Name: model/ncx.ecore
+SHA-256-Digest: et3zFNGPsl72NNPGyPAAH4KzZMNyPkYtiD8SiO0fkkw=
+
+Name: org/eclipse/mylyn/docs/epub/opf/util/OPFXMLProcessor.class
+SHA-256-Digest: 1XB6in7ljeA+bG6iz8dn7zG90VeKdpbQwzJTpFRn8/Q=
+
+Name: org/eclipse/mylyn/docs/epub/dc/Source.class
+SHA-256-Digest: Ku4WfeJaUonnPZXJjOSJv8MF3XqQ9Y3hXgpJxX0sWQ8=
+
+Name: org/eclipse/mylyn/docs/epub/ocf/util/OCFAdapterFactory$1.class
+SHA-256-Digest: IzCtyIvLw1ZyZm2h39wiIqlEdjeF7/cQPFMOgaO7FVg=
+
+Name: org/eclipse/mylyn/docs/epub/ncx/OverrideType.class
+SHA-256-Digest: v61RL/+XREQQKxtRfPFSCVChdG1hohw0pFT/D0kJGKg=
+
+Name: org/eclipse/mylyn/docs/epub/dc/impl/CoverageImpl.class
+SHA-256-Digest: grVI86pQ9kYez7E3glQip8p+5xO+yk2rnKrpT0Stfnw=
+
+Name: org/eclipse/mylyn/docs/epub/ncx/impl/SmilCustomTestImpl.class
+SHA-256-Digest: H2JcMnzCpeX9a7pwGHQTrtVNkNEhyr44kgD0Z635/+Q=
+
+Name: org/eclipse/mylyn/docs/epub/ocf/Container.class
+SHA-256-Digest: sl0z11RK+0kpHnifNJ29BdU4shFk9zUHJ4i4L6c5x70=
+
+Name: org/eclipse/mylyn/docs/epub/opf/util/OPFSwitch.class
+SHA-256-Digest: xzf9JhzXDN1YXB3087wNICLfth8+dGTPkxr94IOgpqE=
+
+Name: org/eclipse/mylyn/docs/epub/ncx/PageTarget.class
+SHA-256-Digest: ofFHt9huvWA6rIy5B2syX5vmO4bxYXEbq/k2XsO5g2w=
+
+Name: org/eclipse/mylyn/docs/epub/ocf/impl/OCFFactoryImpl.class
+SHA-256-Digest: xT6sutaPlv/0MKT0JK9FhYoD+4tH8YKG61l0l7qLn3g=
+
+Name: org/eclipse/mylyn/docs/epub/ncx/impl/PageListImpl.class
+SHA-256-Digest: TZAGp3H8ICXj3IU+sHgVjCCStDtNZiRt0peCk8j/OS0=
+
+Name: org/eclipse/mylyn/docs/epub/opf/util/OPFResourceImpl.class
+SHA-256-Digest: VYmle4YeSzvwb1Fb1erfcWXSie8u4dwPCEfS6H8b/1g=
+
+Name: org/eclipse/mylyn/docs/epub/internal/AbstractXHTMLScanner.class
+SHA-256-Digest: 32fRhD899AwTaewxJnovIbeH/JhGXbXJ2wlscGMmUCg=
+
+Name: org/eclipse/mylyn/docs/epub/ncx/Head.class
+SHA-256-Digest: LbIx0wDlhlS5wwQPIsjNcMDixvZUkaRdi8A3y9RALY4=
+
+Name: org/eclipse/mylyn/docs/epub/ncx/Type.class
+SHA-256-Digest: 36FbAUZIXTNPCxL7d+/Cf9u1I30mKkriYIYhRuSI74k=
+
+Name: org/eclipse/mylyn/docs/epub/ocf/util/OCFResourceImpl.class
+SHA-256-Digest: kAaVyHyS0axklvCfSxH0rEO9b15ueo3NFEowDMNGJ/M=
+
+Name: org/eclipse/mylyn/docs/epub/opf/impl/SpineImpl.class
+SHA-256-Digest: nyuwU+9w0P5qz6YZ1co5I4Xj2DG72DZE9J2sST+uFAM=
+
+Name: org/eclipse/mylyn/docs/epub/ncx/impl/HeadImpl.class
+SHA-256-Digest: USOGoPhhDEyZrewMknRQb9RAsgP7kT264Or1yOJRNfA=
+
+Name: org/eclipse/mylyn/docs/epub/internal/EPUBXMLHelperImp.class
+SHA-256-Digest: Bxgcl0gTWnpLkfUGm3693EdbV1NCuApvs3HH8dS0S50=
+
+Name: org/eclipse/mylyn/docs/epub/dc/Description.class
+SHA-256-Digest: SSyFPuzVTBsToEa1RqpTsSV/evIxu6UdF0aC2TRHZSo=
+
+Name: org/eclipse/mylyn/docs/epub/ncx/impl/NavListImpl.class
+SHA-256-Digest: 5cIEuiGutTGgqALO6wWCnBS96jakBtsxHtFXMqkRCQA=
+
+Name: org/eclipse/mylyn/docs/epub/opf/Tours.class
+SHA-256-Digest: ekTEkj1Kk04SHJJ10X/iWecacaEpC74kZpDuEsFsFhg=
+
+Name: org/eclipse/mylyn/docs/epub/dc/Publisher.class
+SHA-256-Digest: caPvy+aTkP6uvPFPZQ3qhNAFk6tI1CtVAXJHs92Hojg=
+
+Name: org/eclipse/mylyn/docs/epub/ocf/util/OCFSwitch.class
+SHA-256-Digest: J0V4R38z2/v9PCYsiULKnuxdBuJ0tqYzLTAjXrQkmkc=
+
+Name: org/eclipse/mylyn/docs/epub/dc/Language.class
+SHA-256-Digest: x/zAlU+f6eQewVNksha7IzI8BcwepkmtQvE4IAVlKVQ=
+
+Name: org/eclipse/mylyn/docs/epub/internal/TOCGenerator.class
+SHA-256-Digest: bJvplbbUaifgYNu4GeYAizsGWaCYAG3s3EPYD8eCp5I=
+
+Name: org/eclipse/mylyn/docs/epub/ncx/impl/NCXFactoryImpl.class
+SHA-256-Digest: SbW6o+gzGMJCWC4nZldYhCIMXvqOIPfltfcaICB/xaY=
+
+Name: org/eclipse/mylyn/docs/epub/dc/util/DCSwitch.class
+SHA-256-Digest: VNzVKH1n8wwIcD+9dbYCS309dsxsf5/FTU2io69FQa8=
+
+Name: org/eclipse/mylyn/docs/epub/opf/Manifest.class
+SHA-256-Digest: mDhwpPqcvD7hn20a7uB+YRTRVN3yPyPrhVx60APusBc=
+
+Name: model/ncx.genmodel
+SHA-256-Digest: NyRIOPDwGW3JySRbFGKA7ELW0bn11OzIP7u9zLCvX1k=
+
+Name: org/eclipse/mylyn/docs/epub/ocf/util/OCFXMLProcessor.class
+SHA-256-Digest: fT6RkMU0vZwEG7KDqZbzYaEChWH22vNRDpF9I79or3c=
+
+Name: org/eclipse/mylyn/docs/epub/dc/impl/CreatorImpl.class
+SHA-256-Digest: lgXGkKdeHx9Q3DJp6mVtxYQDukQtf7oAMKIadu4BR8o=
+
+Name: org/eclipse/mylyn/docs/epub/dc/util/DCXMLProcessor.class
+SHA-256-Digest: PCFBiJofDCVurga+kslkA35lzwK8fcAKT3a3jC6x1Kg=
+
+Name: org/eclipse/mylyn/docs/epub/core/OPSPublication$1.class
+SHA-256-Digest: p7jXVz4fAbotk35PVMdL0aZ0mel7OD4lbeS0hTamSXY=
+
+Name: org/eclipse/mylyn/docs/epub/core/ValidationMessage$Severity.clas
+ s
+SHA-256-Digest: 9iXGF86c1BDoekmZhEiKAdg9fQK+25lG524M8vuWEb4=
+
+Name: org/eclipse/mylyn/docs/epub/dc/impl/DCTypeImpl.class
+SHA-256-Digest: DqYU7GLm4D6NywkmC/A2HOVwnTQQHJ1OfjWX9Fkth+0=
+
+Name: org/eclipse/mylyn/docs/epub/ncx/util/NCXResourceFactoryImpl.clas
+ s
+SHA-256-Digest: EVx9hg/L41iRUZxRDwBmI5mHwIXa7PxZ/vge/r377o0=
+
+Name: org/eclipse/mylyn/docs/epub/dc/impl/TitleImpl.class
+SHA-256-Digest: 69UGWLnsraBYPI/zD0Eg1xxfd0DRXRIDvbQBwcUwJSU=
+
+Name: org/eclipse/mylyn/docs/epub/core/Publication.class
+SHA-256-Digest: hQ3bSiN3ccu6EbLsYX6pw0Ujd3byGX/F06TAEsHQ0s4=
+
+Name: org/eclipse/mylyn/docs/epub/core/Publication$1$1.class
+SHA-256-Digest: zgkzHIs1MYK5PCCIiiCfQ5yBdVnkqodcrB6cJvKwWnQ=
+
+Name: org/eclipse/mylyn/docs/epub/opf/impl/GuideImpl.class
+SHA-256-Digest: +LHef4nzlzmjOJAHHwyguEASBh6koKrVOx+mbqUY0kU=
+
+Name: org/eclipse/mylyn/docs/epub/dc/impl/IdentifierImpl.class
+SHA-256-Digest: PhlUnQDAjgP3SEY1bPseIE6S+wQPH5r+PIVbWB0y4Bk=
+
+Name: org/eclipse/mylyn/docs/epub/ncx/NavTarget.class
+SHA-256-Digest: sdPN1pTPKa76VjW0k8eMSFpVCT9l0OgKabaFbjmIbHM=
+
+Name: org/eclipse/mylyn/docs/epub/ncx/NavList.class
+SHA-256-Digest: 5UCNpd3uUO4IMN6f1WGfafteXdwiSdEoxtcUevZ2CVI=
+
+Name: org/eclipse/mylyn/docs/epub/dc/Title.class
+SHA-256-Digest: fE4BuXhXo+TcJsaQUbHA6KPlHGMHm3C0JEmPxFDgSSc=
+
+Name: org/eclipse/mylyn/docs/epub/core/EPUB$PublicationVersion.class
+SHA-256-Digest: V1W+/OZsUokABJu878VMRoYxgEZxxjuCMYWJg5KibsI=
+
+Name: org/eclipse/mylyn/docs/epub/dc/DCPackage$Literals.class
+SHA-256-Digest: Zgk0oH1Q+w0fpJorioe30xkWUyWGhIj6ryBU+9dTZi8=
+
+Name: org/eclipse/mylyn/docs/epub/dc/Format.class
+SHA-256-Digest: EUUaOrYu7dipcoso1OsCAfcnrXZCSs6alLAogSJ3Pps=
+
+Name: org/eclipse/mylyn/docs/epub/dc/Identifier.class
+SHA-256-Digest: WMx1ybiQ67T/Fm74G9WBjJWOoxzLEox2Ha9CLaNxs/Y=
+
+Name: org/eclipse/mylyn/docs/epub/opf/util/OPFAdapterFactory$1.class
+SHA-256-Digest: uTTPbFXppd9pVgO3KFpC4WBNmANsr8eb4ZNq6gHaKt0=
+
+Name: org/eclipse/mylyn/docs/epub/dc/impl/LanguageImpl.class
+SHA-256-Digest: 9HNz+EhU6zOTlYA+V+AFSioZ6omJ07u2MDs0dyEL+o8=
+
+Name: org/eclipse/mylyn/docs/epub/opf/impl/ToursImpl.class
+SHA-256-Digest: NPhdDlqVbJqydPKnG+muoPHO4XCPrKMPJEE/zYDS8/Y=
+
+Name: org/eclipse/mylyn/docs/epub/opf/Reference.class
+SHA-256-Digest: iXKEhZnYyvvSdRd4UJUu/jEA5/BCO2B3ENoTKFd9+wo=
+
+Name: org/eclipse/mylyn/docs/epub/dc/impl/SourceImpl.class
+SHA-256-Digest: X/b5Bx+kP2XWv3Jw8UlzNio3QITBw4rs92Q+zetKOQg=
+
+Name: org/eclipse/mylyn/docs/epub/ncx/DefaultState.class
+SHA-256-Digest: 3++V+YyhjDBp5YfgJgy2dSsED/Ylw8OCKNKL3jYIhsk=
+
+Name: org/eclipse/mylyn/docs/epub/opf/OPFPackage$Literals.class
+SHA-256-Digest: 1c9N6TdjFEPJY2Kq8EaPRaxmYv60F3AmKL8nvKDiNwY=
+
+Name: org/eclipse/mylyn/docs/epub/ncx/DirType.class
+SHA-256-Digest: aDeuTZNQYlit9CYcUndUU6e5D0MO+/u467WATNA3uBc=
+
+Name: org/eclipse/mylyn/docs/epub/ncx/impl/ImgImpl.class
+SHA-256-Digest: OeOACa59iM3WkPpsBwFiwk9fKOEi97nrLpgPqmNwxO0=
+
+Name: org/eclipse/mylyn/docs/epub/opf/impl/ManifestImpl.class
+SHA-256-Digest: 4v98VccrtU29z6OobhSNDVibvzfkhHLjA5CtETTh5Cg=
+
+Name: org/eclipse/mylyn/docs/epub/dc/Subject.class
+SHA-256-Digest: 7qgDchZoWauH0YyjRD+oapZPAsGFraiGyYStkP+wyXM=
+
+Name: org/eclipse/mylyn/docs/epub/ncx/impl/PageTargetImpl.class
+SHA-256-Digest: WE57RKm7pNrwbnFZVk5+/+olKpbnMfjjoFtA40ch5qM=
+
+Name: org/eclipse/mylyn/docs/epub/internal/ReferenceScanner.class
+SHA-256-Digest: ZOG/JvN+7D5/dE2vRWUez5BYeBJaEmSMen3/XAfkhoQ=
+
+Name: org/eclipse/mylyn/docs/epub/ocf/RootFile.class
+SHA-256-Digest: p/qgxw/yrU+Hkdf+QZ8nE/n1r1D8xMYFFKAjVE+W2Ks=
+
+Name: org/eclipse/mylyn/docs/epub/opf/Itemref.class
+SHA-256-Digest: jyAWvpMZav0OhCxwpS51qCJv42nhakkxLlv5V9WNR5c=
+
+Name: org/eclipse/mylyn/docs/epub/ncx/impl/NavMapImpl.class
+SHA-256-Digest: nVef/c10jQFgqszJ05dWFRsRUGi5e4iY0aoE82o0CfM=
+
+Name: org/eclipse/mylyn/docs/epub/ncx/impl/DocTitleImpl.class
+SHA-256-Digest: OKyj9c+6QPO9XP7iMb5CsLs9njzcaTDJGq0hGz2BDWA=
+
+Name: org/eclipse/mylyn/docs/epub/ncx/PageList.class
+SHA-256-Digest: 8a6ro6ds5e3PoU8+/5UsdqbK3L6ilTXgnhLUa+1XYKo=
+
+Name: org/eclipse/mylyn/docs/epub/dc/Type.class
+SHA-256-Digest: spQ1RqjNKE5RK5wZn6JUEpCw4hY/ylnUjG/sxhHijyM=
+
+Name: org/eclipse/mylyn/docs/epub/dc/LocalizedDCType.class
+SHA-256-Digest: tQI7C92K+rySJ5QVn66TuLvkZnLoBj7hU0cl9JnnJmA=
+
+Name: org/eclipse/mylyn/docs/epub/ncx/impl/NavLabelImpl.class
+SHA-256-Digest: reb9PY8fZP+wJLZbtO55ruc4RMhSGclYYHp2tqWXuhU=
+
+Name: org/eclipse/mylyn/docs/epub/ncx/impl/AudioImpl.class
+SHA-256-Digest: SsvW5L9+60HxpSiJ8VDdBcMdlo8IVb2qg0RhTYNz5ew=
+
+Name: org/eclipse/mylyn/docs/epub/opf/Item.class
+SHA-256-Digest: 269YIJ64/Gp5CcvB3LFADdJVYSscFNZrgEK0UlNpZcs=
+
+Name: org/eclipse/mylyn/docs/epub/dc/DCType.class
+SHA-256-Digest: Ym865RKqyBYuxQqsNqocDwHQPn7FxC2IES7/nusNbmg=
+
+Name: org/eclipse/mylyn/docs/epub/dc/impl/RightsImpl.class
+SHA-256-Digest: /RVLy4fyYQr1i8aipKQuFGCO4snD3DHXL3iI9LqBwL4=
+
+Name: org/eclipse/mylyn/docs/epub/dc/Relation.class
+SHA-256-Digest: unwC/VzRzptJpyIj0RMkJxYOApGU4P33dY3JMA/Nnuk=
+
+Name: org/eclipse/mylyn/docs/epub/dc/Rights.class
+SHA-256-Digest: MPy9Vc+54gvTWhazYlQLitVrn2yuj7L/dzV5euGSKlw=
+
+Name: org/eclipse/mylyn/docs/epub/ocf/OCFPackage.class
+SHA-256-Digest: oG79eNSLQnsQSx/86BdMgdy87yVCc+chiZ607i1OA9g=
+
+Name: org/eclipse/mylyn/docs/epub/dc/Contributor.class
+SHA-256-Digest: UQ8ioqKwQMXL8nO4ZKe4145P24Wy+i13+gv7EKXceQ4=
+
+Name: org/eclipse/mylyn/docs/epub/opf/Package.class
+SHA-256-Digest: agmn0irF0mkIlhfMElMPStg7anz3IgQtFwgdqyzQpaU=
+
+Name: org/eclipse/mylyn/docs/epub/dc/impl/DateImpl.class
+SHA-256-Digest: Eg/mFZgypF9YSojd/wgBGYZYrMek1kCF15JEUfKjIqA=
+
+Name: org/eclipse/mylyn/docs/epub/ncx/impl/NcxImpl.class
+SHA-256-Digest: /t6uyPiY25fAfkBlY8vEH/eFN5oS9MQDBFRzvShK/9w=
+
+Name: org/eclipse/mylyn/docs/epub/ocf/util/OCFAdapterFactory.class
+SHA-256-Digest: kOeENlD/m7mXu03V78zUArKZoNH3HNy6yKEQqOm482k=
+
+Name: org/eclipse/mylyn/docs/epub/core/Publication$1.class
+SHA-256-Digest: h2M4lq6Aj0ti6nFcPJ3aAxiqk+1zhHwnOsT93ZhCNxQ=
+
+Name: org/eclipse/mylyn/docs/epub/ncx/impl/DocAuthorImpl.class
+SHA-256-Digest: W0bwrBxUKQ2pSJNSeWuDI6U41U/nBJ0L2Ho6O1xfdQc=
+
+Name: org/eclipse/mylyn/docs/epub/core/EPUB.class
+SHA-256-Digest: hrD3OiYQZ5Po58nkr1iD9u1nOu8PmJhs07ifzZokcf8=
+
+Name: org/eclipse/mylyn/docs/epub/internal/EPUBFileUtil$1.class
+SHA-256-Digest: hXpkns9pQUb0NIopOYxf1xi4ddmgi5w0e14W1cJgGUg=
+
+Name: org/eclipse/mylyn/docs/epub/core/EPUBPublication.class
+SHA-256-Digest: x9uk6Ayr6wPBPgKu2IEnxvYkqnump/6u6ajlh/bwqVk=
+
+Name: org/eclipse/mylyn/docs/epub/dc/impl/PublisherImpl.class
+SHA-256-Digest: a0YEeQiBOAZ+Q0CeWJE4hNqRioNqxKfNYJLz34tWQEU=
+
+Name: org/eclipse/mylyn/docs/epub/opf/Role.class
+SHA-256-Digest: QedNa78r1TS+g3NWI7d3YrBTXyxQJhwOd/TnfTq0O4U=
+
+Name: org/eclipse/mylyn/docs/epub/opf/Type.class
+SHA-256-Digest: kGf52MlZ+5kiUD9xRhQFOyGEn65DLWw9CPkKwr7tRfM=
+
+Name: org/eclipse/mylyn/docs/epub/ncx/DocAuthor.class
+SHA-256-Digest: jYpwAM6uwW/i3PAkk/g6UpHW3a607LnA976U2XVQSkw=
+
+Name: org/eclipse/mylyn/docs/epub/ncx/impl/NavPointImpl.class
+SHA-256-Digest: qxVoWwk9iTJyhRB+oG0Jb/tZgMPLGCjKWsActb24GQc=
+
+Name: org/eclipse/mylyn/docs/epub/ocf/OCFFactory.class
+SHA-256-Digest: ig7NENT6U3HeKZ+Dw7EsdtyGRX3EMt+8xUXofkZimFw=
+
+Name: org/eclipse/mylyn/docs/epub/ncx/Text.class
+SHA-256-Digest: g74JK6bK978tLuuKaWnz+kFWnx9SnXwRIHciOHueiCM=
+
+Name: org/eclipse/mylyn/docs/epub/core/wikitext/MarkupToOPS.class
+SHA-256-Digest: UaGOINUj6eoB+QxPUNr4tyyRz89KUSLDJB2RY6xdILw=
+
+Name: org/eclipse/mylyn/docs/epub/ncx/NCXPackage$Literals.class
+SHA-256-Digest: jaoAQKf+G45V+HvCbHUDAHc8LnCr72hnXfkU96hqhRM=
+
+Name: org/eclipse/mylyn/docs/epub/ncx/Ncx.class
+SHA-256-Digest: vg9yHba5tJkmKlJbmuNy7Z1KFq4o8dhSY9FAdriSPOg=
+
+Name: org/eclipse/mylyn/docs/epub/dc/impl/SubjectImpl.class
+SHA-256-Digest: WhXXUW8nQphuUcMm3e5s0B3N+nfq6nFN72qpDhBaNMY=
+
+Name: org/eclipse/mylyn/docs/epub/opf/impl/OPFPackageImpl$1.class
+SHA-256-Digest: FUfSRI1tKOzuvDWJ/94Et5nhgtr3K36hT6ys8HTWA3U=
+
+Name: org/eclipse/mylyn/docs/epub/ocf/OCFPackage$Literals.class
+SHA-256-Digest: VEwCxPWe68NZl8KMyk41+HiAfXc4/bHjMF+bhCtxgUQ=
+
+Name: model/opf.genmodel
+SHA-256-Digest: +1/16Ne9f1x4SUI65dA7q2FQvgia3PB4/H3XHotGCAg=
+
+Name: org/eclipse/mylyn/docs/epub/core/messages.properties
+SHA-256-Digest: kCxu9PDQ75IZ4bdMKmhoyuREj3Yrmhfxxn/gDhLEoMM=
+
+Name: org/eclipse/mylyn/docs/epub/ncx/NavMap.class
+SHA-256-Digest: xDmuVkK8+BFrfunXwYTWvbVUOpOtZzG9px0JtyXP9Rk=
+
+Name: model/ocf.ecore
+SHA-256-Digest: cfzoMnIc18JjTjhjiyejoGVoGgih7y9YtqWHCQg1IsA=
+
+Name: org/eclipse/mylyn/docs/epub/dc/util/DCAdapterFactory.class
+SHA-256-Digest: oYMLISAdPqYofA3NANGYz3eKoOsMr8BYIbLA4dBKWTY=
+
+Name: org/eclipse/mylyn/docs/epub/opf/impl/ItemrefImpl.class
+SHA-256-Digest: iTbO7HFZqu6GBkQB+/+oo0NGRzkBiuH+ecqI06K1MbE=
+
+Name: org/eclipse/mylyn/docs/epub/core/ValidationException.class
+SHA-256-Digest: FU1tymrd+guyiMWWslpplR3DIkuUdaXX7G+ylXrFvwY=
+
+Name: org/eclipse/mylyn/docs/epub/opf/util/OPFAdapterFactory.class
+SHA-256-Digest: oW3c2xp7IPJyBAvsnGlL3nVlgTXrRHcKKt2ckURMubY=
+
+Name: org/eclipse/mylyn/docs/epub/ncx/impl/TextImpl.class
+SHA-256-Digest: SeiWgd+9lE55Vl2y+OyjAICPXqSewNnV4r8URdpounA=
+
+Name: org/eclipse/mylyn/docs/epub/ncx/DocTitle.class
+SHA-256-Digest: 5ShPKnOIZekn8JaomN7SJTYowV7vLweKOgoFdUb/wYc=
+
+Name: model/dc.ecore
+SHA-256-Digest: mOcDyAnzbhr4s/Xt1WpfJpbdVNcqxVJiA9FRJVWQxNE=
+
+Name: org/eclipse/mylyn/docs/epub/opf/impl/ReferenceImpl.class
+SHA-256-Digest: NITzywKOI1Ym2Ly3lPTjw4h2YVSwfrGPLSYlir6fIqg=
+
+Name: org/eclipse/mylyn/docs/epub/dc/impl/DCPackageImpl.class
+SHA-256-Digest: Q08G0dtRdjvpaWkVeVR6EhP+pzp0YbtIhWi2tQd9vmQ=
+
+Name: org/eclipse/mylyn/docs/epub/ncx/impl/MetaImpl.class
+SHA-256-Digest: tSHYazXGVRt74CV/g7UWn/VGrt5pxDa3PdraXFQkcN4=
+
+Name: about.html
+SHA-256-Digest: HqdqYmD3eCp96+W+UzJSWsHhRFQr79+3O+7M5N2EUek=
+
+Name: org/eclipse/mylyn/docs/epub/ncx/Content.class
+SHA-256-Digest: 6I0jtjc2DONhAhXehBW5xHTI1NPV1Wzztz6M+3q69hM=
+
+Name: org/eclipse/mylyn/docs/epub/dc/impl/RelationImpl.class
+SHA-256-Digest: rGFDviwIq8YVBB7u9yzAdApB74V5refvnMMc3Akz1dk=
+
+Name: META-INF/maven/org.eclipse.mylyn.docs/org.eclipse.mylyn.docs.epu
+ b.core/pom.properties
+SHA-256-Digest: jw2GwIgZWIaA99pn7uujhjIkEjNyNKtNAUvyKEO+gAQ=
+
+Name: org/eclipse/mylyn/docs/epub/dc/impl/TypeImpl.class
+SHA-256-Digest: Q+UHVKkFprdiKhWbKRnssFPkXIeQ+YC2aIhgw9p5xWk=
+
+Name: org/eclipse/mylyn/docs/epub/internal/EPUBFileUtil$2.class
+SHA-256-Digest: MiMDp4rBs7MX0gRfUS6ewS783iJv0ySbHCjopRdQ/Vk=
+
+Name: org/eclipse/mylyn/docs/epub/opf/OPFPackage.class
+SHA-256-Digest: INZ8058cP6u+/tNSQOX2qmPQCRaBcVuMUxEe4/qOg4M=
+
+Name: org/eclipse/mylyn/docs/epub/opf/impl/OPFFactoryImpl.class
+SHA-256-Digest: quMZTx7IdiFWFggyQSwsx9dc34IFi+NZ/AdsQfibMlc=
+
+Name: org/eclipse/mylyn/docs/epub/ncx/util/NCXAdapterFactory$1.class
+SHA-256-Digest: Us6YF8q4mPJU2LAxXyrZhN/gqEtQeHuZbWJLt0dw49Q=
+
+Name: org/eclipse/mylyn/docs/epub/ncx/Meta.class
+SHA-256-Digest: xhNRaLF5uNZ8ao9//GoBCxnh3c6TtU4YnxcJVxs1Biw=
+

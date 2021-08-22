@@ -1,0 +1,1009 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.help.webapp;singleton:=true
+Archiver-Version: Plexus Archiver
+Built-By: genie.releng
+Require-Bundle: org.eclipse.help.base;bundle-version="[4.0.0,5.0.0)",o
+ rg.eclipse.core.runtime;bundle-version="[3.6.0,4.0.0)",org.eclipse.eq
+ uinox.jsp.jasper.registry;bundle-version="1.0.100",org.eclipse.equino
+ x.http.registry;bundle-version="1.0.200",org.eclipse.core.expressions
+ ;bundle-version="3.4.200"
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/platfo
+ rm/eclipse.platform.ua.git;path="org.eclipse.help.webapp";tag="M20170
+ 816-0500";commitId=244663ffaaa14421791e7f35df02b6e996874386
+Bundle-Vendor: %providerName
+Import-Package: com.ibm.icu.text;version="3.8.0",javax.servlet;version
+ ="3.1.0",javax.servlet.http;version="3.1.0",org.osgi.service.http;ver
+ sion="1.2.0"
+Export-Package: org.eclipse.help.internal.webapp;x-friends:="org.eclip
+ se.ua.tests",org.eclipse.help.internal.webapp.data;x-friends:="org.ec
+ lipse.ua.tests",org.eclipse.help.internal.webapp.parser;x-internal:=t
+ rue,org.eclipse.help.internal.webapp.service;x-friends:="org.eclipse.
+ ua.tests",org.eclipse.help.internal.webapp.servlet;x-friends:="org.ec
+ lipse.ua.tests,org.eclipse.ua.tests.doc",org.eclipse.help.internal.we
+ bapp.utils;x-friends:="org.eclipse.ua.tests",org.eclipse.help.webapp
+Bundle-Name: %help_webapp_plugin_name
+Bundle-Version: 3.9.1.v20170816-0843
+Bundle-Localization: plugin
+Bundle-Activator: org.eclipse.help.internal.webapp.HelpWebappPlugin
+Created-By: Apache Maven 3.3.3
+Build-Jdk: 1.8.0_131
+
+Name: plugin.xml
+SHA-256-Digest: 9bzD2tIq0Ic0TWfC7nOECgr3wE7lvG0h4D0oPHjIaE0=
+
+Name: basic/images/e_synch_toc_nav.gif
+SHA-256-Digest: SFCXouFWOQCvHhDqZi6IGFcHVGjqa8w8EEB/5NGY0sM=
+
+Name: org/eclipse/help/internal/webapp/jsp/advanced/search_jsp.class
+SHA-256-Digest: +MpPbAhq4pnmZ8+3ylx4t1wGH8rKBflRmX4OUajMs64=
+
+Name: advanced/navActions.js
+SHA-256-Digest: eEyWFN77KGiY0l5XLYzpL/0XEz7wfEsfsXdHs1xD+Y4=
+
+Name: advanced/tocTree.css
+SHA-256-Digest: 6UfV77aCwTuEk5F/QJ4KX0/8tfgm3aGq6iP/YT/zvfE=
+
+Name: advanced/images/bookmark_remall.gif
+SHA-256-Digest: kMwZjqt19pkiL+Bzujb9mnLtlPUmm5y7dObpCcjHVng=
+
+Name: org/eclipse/help/internal/webapp/data/ButtonData.class
+SHA-256-Digest: C2kh3DdGWfsa6jrfSV93C5kIhwoYzm0Op/QxzfOZazA=
+
+Name: org/eclipse/help/internal/webapp/servlet/InjectionFilter.class
+SHA-256-Digest: wKrH/FLJilABVEQPraye2sblEnz+lLHyXySOXH0DHAE=
+
+Name: web-archive/help/META-INF/MANIFEST.MF
+SHA-256-Digest: ujL9QVhTp+8pp9U6uSbC+2LIxm4OzDu8Gq/ilvnq/lM=
+
+Name: advanced/printAlert.css
+SHA-256-Digest: qNDWuOy2Rq7Nb5Q87MJmJpLLcH3YWOyP9oMKgsS9hhc=
+
+Name: advanced/images/e_quick_search.gif
+SHA-256-Digest: Hhc6oH45uAToD3cM/0LTg3Xf7QSuG5HNy6CE9YxOKSU=
+
+Name: org/eclipse/help/internal/webapp/servlet/ShowInTocFilter.class
+SHA-256-Digest: trj5XrGmKlLg5h1v7FaXpqCSMxrP6GL6CfWP8kCYiq8=
+
+Name: org/eclipse/help/internal/webapp/servlet/IndexServlet.class
+SHA-256-Digest: SAj9+1NIakzzX87rKivvtXAlPUf+V+QzPxHUkk1d/9g=
+
+Name: org/eclipse/help/internal/webapp/servlet/CookieUtil.class
+SHA-256-Digest: K3GpygMlYu/6BRooLw+MhQ/W9tQumDU1R08CpsIXa5k=
+
+Name: org/eclipse/help/internal/webapp/servlet/SearchServlet$HitCollec
+ tor.class
+SHA-256-Digest: ZdKvbWtvpBL7Om+n12cu3MvvVvMej4+ERT8dqmQkatk=
+
+Name: org/eclipse/help/internal/webapp/servlet/DynamicXHTMLFilter.clas
+ s
+SHA-256-Digest: D6HptRezm3RAgr+RmkcmfWZUJ8+pfOQqqHdV3LUTYiE=
+
+Name: basic/help.jsp
+SHA-256-Digest: /SB9KdJCpx0aDq3A8CUZETLqC8aL+4dV/bmdHQNGtF8=
+
+Name: org/eclipse/help/internal/webapp/data/SearchData.class
+SHA-256-Digest: 2vPMmqj4WNajOxAs2Cy1IKJD593onvMGYo9i8Y3xx+A=
+
+Name: org/eclipse/help/internal/webapp/parser/ResultParser.class
+SHA-256-Digest: 1M+MRTyffglbvnYZkHnk8VsWsFoJ/2tJu/cMarKmSnM=
+
+Name: advanced/print.css
+SHA-256-Digest: wgmCbKQHdd1PzxAYbYrnsSMszpuKO5t57fRlnBan2Iw=
+
+Name: org/eclipse/help/internal/webapp/jsp/advanced/contentToolbar_jsp
+ .class
+SHA-256-Digest: aFAxcEYsW9Dyho/GXDKFDfEAqG5gW9L7JRmLnFl+amE=
+
+Name: .api_description
+SHA-256-Digest: ua0btuZ7E0nslZG58ocMFBH39SiKvs/zrL3PkFxWk/U=
+
+Name: advanced/list.js
+SHA-256-Digest: 4lVOHLSDi5Zw5xgwnJC/jK3+mPmm4CGUxAe4KM9OU1w=
+
+Name: org/eclipse/help/internal/webapp/data/WorkingSetManagerData.clas
+ s
+SHA-256-Digest: 7e6PGuXx+sKmFs/1+s6ru1E/K7yoPBw6qtB6HUc8+yo=
+
+Name: org/eclipse/help/internal/webapp/utils/SearchXMLGenerator.class
+SHA-256-Digest: AJFdMz/5ij1Cwj8rfsXuMMUvu+rxIx6PfNBfCIR6iYE=
+
+Name: advanced/images/e_bookmarks_view.gif
+SHA-256-Digest: yOn+17L6ZMkwR757YWHXOArQPEmBcckOrxFSvy1jL/k=
+
+Name: org/eclipse/help/internal/webapp/jsp/advanced/quickSearch_jsp.cl
+ ass
+SHA-256-Digest: Qnv6Q4cN8IubOskUhqt63MdQED3gNKvvpvxV4NHsPpQ=
+
+Name: advanced/highlight.css
+SHA-256-Digest: kB778tQbLCT+Yb8JKGXxR+jA0+KDVijQcJF/OgHyR+o=
+
+Name: advanced/searchScoped.jsp
+SHA-256-Digest: LigHTlqO61TtdCI2qOvWZzmVgO2fE2y3XDcXmW1AZxo=
+
+Name: basic/header.jsp
+SHA-256-Digest: bX1lyqvr8UPPlMfX+vlGNL7zFItdgb/rqgXkW/opdfo=
+
+Name: org/eclipse/help/internal/webapp/data/View.class
+SHA-256-Digest: YS1SL7lsxPH6/viXeT3XKkCvs5mq/JRg1EMZ54tbl7Y=
+
+Name: org/eclipse/help/internal/webapp/servlet/AboutServlet.class
+SHA-256-Digest: x2e7eoxODBJzFUVGtaRciAbTt9TmYdg7bTmKawId6vA=
+
+Name: org/eclipse/help/internal/webapp/data/ActivitiesData.class
+SHA-256-Digest: VceRxxFJEkB3qGza9UJHdzIzfiQKcBIcU9UKlkWxzBA=
+
+Name: org/eclipse/help/internal/webapp/servlet/PreferenceWriter.class
+SHA-256-Digest: mUY0QEwnd8MYCGDyPmKPXB7YbNjafnhrOWJ3c7REEM4=
+
+Name: org/eclipse/help/internal/webapp/data/ServerState.class
+SHA-256-Digest: TvHie/E4Wyaz1mOl7bxhVGlgHeQoW2rgKGc221mA0jk=
+
+Name: org/eclipse/help/internal/webapp/service/AdvancedSearchService.c
+ lass
+SHA-256-Digest: uLB3J5wAvDBSYY+vUe5ofGjITqaWQannVN1BPXgKXcQ=
+
+Name: org/eclipse/help/internal/webapp/service/SearchStateService.clas
+ s
+SHA-256-Digest: r5neaOmb/QggCfd5WJJK0GnKJH129dOPTWv+l1VNTKQ=
+
+Name: advanced/views.js
+SHA-256-Digest: 1mE02w9ff6inTpZHn4u5v4Zq46j81kqfUeOGyiUU9zM=
+
+Name: advanced/images/bookmark_rem.gif
+SHA-256-Digest: /+vuM6TOJDV6ckGSO+2szTeQRupF5K+WgFD7W+/MTro=
+
+Name: advanced/images/e_highlight.gif
+SHA-256-Digest: DEdQDAHhaZK2L5Bx84n4d+azA93tcy5axFBDfoMByBs=
+
+Name: org/eclipse/help/internal/webapp/service/SearchService.class
+SHA-256-Digest: D7s/ZglHvQB2nwzir8gslHZb5Uy0FVSwksdAeFqON2U=
+
+Name: advanced/images/show_all.gif
+SHA-256-Digest: gn4wzwdkO56hXd+NQMEfRNkLPfMm5GmfATvRPkc/K0U=
+
+Name: advanced/searchView.jsp
+SHA-256-Digest: Qx7/LTxTlTKzuH4+Iu2dsowB7l7nKHrnfZ34qB3yldA=
+
+Name: advanced/printError.jsp
+SHA-256-Digest: f/xI0zBq8kgl1sZlC5PhXwARvRlxWgjJCiqA5TggZKU=
+
+Name: org/eclipse/help/internal/webapp/WebappResources.properties
+SHA-256-Digest: 3r0GUahqKJ6GOVyowd6D64qzIDh8IGSaRmdh7fwU4Yg=
+
+Name: org/eclipse/help/internal/webapp/servlet/ContentServlet.class
+SHA-256-Digest: dXH+rHEjqiqmDuPBbCK/9Nb/+BMsCeq1qGlJH0O+eu0=
+
+Name: org/eclipse/help/internal/webapp/servlet/NavServlet.class
+SHA-256-Digest: PlnzjmXznOrJ0b5gNmLy+raipNmJfyuAwxwPiX+gxXs=
+
+Name: org/eclipse/help/internal/webapp/StatusProducer.class
+SHA-256-Digest: +EheS8pGxCHILf9ZXJvBdwbuDSLdYNdfBK18+HrkQAM=
+
+Name: advanced/images/back.gif
+SHA-256-Digest: Q2oQVt+mv9JFEI/SE+oFl6ifeZihI5eEhJ85FPzf7Hw=
+
+Name: org/eclipse/help/webapp/AbstractView.class
+SHA-256-Digest: LDN94qvl+++WJ15Itwip6LPW9rXIM5zqLHTplN1RQ24=
+
+Name: basic/searchView.jsp
+SHA-256-Digest: oWtRZLoa/8izh1NBMW7AA+lYXkn/hSmxjsRMXdsUejw=
+
+Name: web-archive/help/WEB-INF/web.xml
+SHA-256-Digest: 6jRKT3yG7G77Cswxd3bx8tk2Eg+6Cey65hEcB0w/iNg=
+
+Name: org/eclipse/help/internal/webapp/data/RequestData.class
+SHA-256-Digest: Rz2u3NkBX522PS2MmSKHxTPL+f6MXABkFlG57m/sisc=
+
+Name: org/eclipse/help/internal/webapp/servlet/ContextServlet.class
+SHA-256-Digest: ulPhCPIRlUT7l8xpNYX4klk0tY3omVxjBtdRdzT7pFk=
+
+Name: org/eclipse/help/internal/webapp/jsp/advanced/searchScoped_jsp.c
+ lass
+SHA-256-Digest: lSrgm6OidtlZ2aKbtcjEOMvy/5uFHlvequtm/twvG34=
+
+Name: org/eclipse/help/internal/webapp/data/RequestScope.class
+SHA-256-Digest: TvvVO3siC2oXbV6Ep9uNdJ4zhjWxEIK1E3KsmEqmTro=
+
+Name: advanced/print.jsp
+SHA-256-Digest: /V+m1hrfCz4JajWUpFZGsHEbKomAi1Q85pkCwGFiE/w=
+
+Name: advanced/images/forward.gif
+SHA-256-Digest: cu73Gc0ofLNy8TbxjBTDEngtezg4YaretbB3oOU91r8=
+
+Name: org/eclipse/help/internal/webapp/service/IndexFragmentService.cl
+ ass
+SHA-256-Digest: NZ/J47/aE8hinEOaPqO1ts5rq/fw6zL3V7iBcgw7IyM=
+
+Name: advanced/images/topic.gif
+SHA-256-Digest: W1SXQdPwwTrdZA2VuRK90U8mIMhms8qKfBoDSXocMpI=
+
+Name: org/eclipse/help/internal/webapp/jsp/basic/indexView_jsp.class
+SHA-256-Digest: 92NqFt4dXbuGI/VEt6CDd39GoO5mr9sigizWr6BCk8g=
+
+Name: org/eclipse/help/internal/webapp/servlet/TocServlet.class
+SHA-256-Digest: AJvcXDGUsHDsRk8AO8gI5K/jLQw43oDlHDEUVafKnns=
+
+Name: advanced/header.jsp
+SHA-256-Digest: D83Z7+IfbaSGCL9wWYwn5i2KHjVXMWo6g8iFqvLU924=
+
+Name: advanced/images/e_print_toc.gif
+SHA-256-Digest: tmlNBOdYigWnK5J0ebWNc7Wob0s246YRmqEECpsgnMU=
+
+Name: advanced/utils.js
+SHA-256-Digest: ytwMfb+7weLpL/9WwV52p2PQpgRs9uP+VwY3NZamMeI=
+
+Name: org/eclipse/help/internal/webapp/jsp/advanced/workingSetManager_
+ jsp.class
+SHA-256-Digest: 4KjuKQ2ZGyepKRRTNZN4l41CDn0mnGqMxYWjNZpj8jg=
+
+Name: org/eclipse/help/internal/webapp/jsp/basic/toolbar_jsp.class
+SHA-256-Digest: km0KxyvXlY8UrkiiIq/cUc7P7XxDjE/vSBboPrDfKeQ=
+
+Name: advanced/images/plus.gif
+SHA-256-Digest: poUYXUE9kdnI4ejEPWzSAkTOsfigkiXleMWgBz9sOlQ=
+
+Name: basic/err.jsp
+SHA-256-Digest: z7XrtUqs+qE+lxujyTOkmZXtv05Ne9qQROg4q17vuBw=
+
+Name: advanced/helpToolbar.jsp
+SHA-256-Digest: ZApjb3skl9JarxOhYK/XBXXqJ+pyN2q/04p0fvLdzr8=
+
+Name: org/eclipse/help/internal/webapp/jsp/basic/livehelp_005fjs_jsp.c
+ lass
+SHA-256-Digest: bLu3e5JwJPBDc4APH04pzG+SVTV708PpDU3jp/mTCy0=
+
+Name: org/eclipse/help/internal/webapp/data/CssUtil.class
+SHA-256-Digest: E6Jh9UVDmmwH2oHpL2yOdVdxVgXhYQr/VuzdrS2ZxQM=
+
+Name: advanced/indexView.css
+SHA-256-Digest: Y7+b316+gwQd9TOocWx0JpbhTPe0Q23E6v0zZBnHZL4=
+
+Name: advanced/tree.css
+SHA-256-Digest: 4dW+bo6sivlyLw9V/AO8p5aCEkPEWHUyhpfCMuyMY1k=
+
+Name: org/eclipse/help/internal/webapp/servlet/EclipseConnector.class
+SHA-256-Digest: ZbIx6Od0V5tGnykBQt2vtUKZB/a+/1WBKTYlF+DKZrc=
+
+Name: web-archive/org.eclipse.help.infocenter-feature/build.properties
+SHA-256-Digest: PPgr9Pdnaz2PooGnhaD3Rmdv0GjLdHr1dGJJG1e/lOg=
+
+Name: org/eclipse/help/internal/webapp/jsp/advanced/printConfirm_jsp.c
+ lass
+SHA-256-Digest: MCwLAqBeVBzK41Ugq6Z5jf/ovZKeyjg7uvQ8D98TmOw=
+
+Name: org/eclipse/help/internal/webapp/servlet/ControlServlet.class
+SHA-256-Digest: lPF5opyDpMTx+MG76QtVS5R0q/rjJ38xKFg4LNkoO48=
+
+Name: org/eclipse/help/internal/webapp/servlet/TocFragmentServlet.clas
+ s
+SHA-256-Digest: houNi6q0ABaLkNZrBrSs59F2ZyDVVawBxd2uARLF5Wk=
+
+Name: advanced/images/e_maximize.gif
+SHA-256-Digest: +2/qtZIlJJ4tyZ28Z9f/TWJHhqwQuHgzXdMwD5UmvNk=
+
+Name: org/eclipse/help/internal/webapp/servlet/PluginsRootFilter.class
+SHA-256-Digest: vb+qjKO4gdkllEzw27xOuXloHkEXesuUmW3mkfeaVLs=
+
+Name: basic/tocView.jsp
+SHA-256-Digest: vAVPKe+x8vUIChz8DPAWq8DxfVvJXBSc1xIgSf062hA=
+
+Name: advanced/xmlajax.js
+SHA-256-Digest: gzImk+FSr+OlN3S6rI28PeTZ8TP5VQ4328AEgqDwnCU=
+
+Name: org/eclipse/help/internal/webapp/servlet/IndexFragmentServlet$Se
+ rializer.class
+SHA-256-Digest: K3rlSnX7dNYBpiwYmuz/GsQ1/e+ozXSmKRaSFsJkROE=
+
+Name: advanced/toolbar.jsp
+SHA-256-Digest: Z2m1SDoQVUfyp6eNw7CJu0MgUeLIC5W/ntV8DWrZVXU=
+
+Name: org/eclipse/help/internal/webapp/parser/IndexParser.class
+SHA-256-Digest: T0Wlprvvfi+hXttd8Q2YBKXZu81WKlB0cwvMU8dyfP0=
+
+Name: org/eclipse/help/internal/webapp/servlet/BreadcrumbsFilter.class
+SHA-256-Digest: MMLGAuLGwvUlZt527eq6YZe9+CqzGU3kx30bwTDSSF0=
+
+Name: basic/images/toc_open.gif
+SHA-256-Digest: iAVV/iHcztW3ktHubIMmbSTnd2uKcTow4F9T3SgmAhs=
+
+Name: org/eclipse/help/internal/webapp/data/UrlUtil.class
+SHA-256-Digest: QICWiBWMe3MKH89AIstsUWgfTbrYbOOWnETcA8ykZ1o=
+
+Name: org/eclipse/help/internal/webapp/jsp/basic/tabs_jsp.class
+SHA-256-Digest: pOX6wLl/w7pWJdsKZe2R24yJKuRlodzgbqTBdQog+Z4=
+
+Name: advanced/contentActions.js
+SHA-256-Digest: N70VF1Zgj0VuGcGydXocv4In9RPTKWngakVjjZZzCZI=
+
+Name: org/eclipse/help/internal/webapp/servlet/FramesetFilter.class
+SHA-256-Digest: +BasY+FF7+VykUUZzdR7DxWp57ZCzEQziVo0wxYo4lM=
+
+Name: org/eclipse/help/internal/webapp/servlet/HighlightFilter.class
+SHA-256-Digest: tJf7SP5pTkk/AchElSv19OcafIO5bHr6skVCsHVNWW4=
+
+Name: org/eclipse/help/internal/webapp/jsp/basic/searchView_jsp.class
+SHA-256-Digest: OoqY/1bP+cQc004dBeVFzvhoQ4ponJJS6TijzaCZg7Q=
+
+Name: org/eclipse/help/webapp/IFilter.class
+SHA-256-Digest: YYm95kjIDQVqIP3x+CrzVwBnq9mquWc0j9hIiO40loM=
+
+Name: org/eclipse/help/internal/webapp/jsp/advanced/print_jsp.class
+SHA-256-Digest: NCIJKXpE19aHT5yKWe6p/JIpeBQup/+ARQIe5dDe9jQ=
+
+Name: org/eclipse/help/internal/webapp/jsp/advanced/toolbar_jsp.class
+SHA-256-Digest: IZYdXGONJFqy0A8DpAC9lZWGJIZdHKKDzdfgAyPCDiw=
+
+Name: org/eclipse/help/internal/webapp/jsp/advanced/searchSimple_jsp.c
+ lass
+SHA-256-Digest: 8oY9+AHmvclQ9/nB+0NXCXbCRXBT0bqMZ5lUZONL97E=
+
+Name: advanced/images/e_bookmark_rem.gif
+SHA-256-Digest: I3mUvTaTIgFZHRcvy5Ck5lXfx49ffmEM0s9XLeCl/EM=
+
+Name: advanced/deferredView.jsp
+SHA-256-Digest: rztZcq1pLYBHtJmLhrMnV6LHej8jBZ9sG3ScLq2Yq88=
+
+Name: org/eclipse/help/internal/webapp/service/ContextService.class
+SHA-256-Digest: 7xVM5kqOdnNk5n7dJIZimd8QOB7s2qaKU6P1uEFEigw=
+
+Name: org/eclipse/help/internal/webapp/parser/ExtensionParser.class
+SHA-256-Digest: oGPZMldKE+5ww7xJ036dxgamXJT5Dp+oG5UnwoEUyWw=
+
+Name: org/eclipse/help/internal/webapp/servlet/WebappWorkingSetManager
+ .class
+SHA-256-Digest: BaHXpk5DAdi1tBEl18fwRWbfj0q7jNn5RNntXxIDUa0=
+
+Name: advanced/help.jsp
+SHA-256-Digest: dEpXREvbGuT57NbhTLCGNy3ZKPY8fBmTd1ghuE4kVdI=
+
+Name: basic/images/bookmark_obj.gif
+SHA-256-Digest: pabLkgYtsHafywtjfPPXSZ2cURprpeCbqE1spTtx5zA=
+
+Name: advanced/images/e_back.gif
+SHA-256-Digest: I4Bs/TypPpF2FValAaI3lNDWuD4KFikkGjdaeiyR4Yc=
+
+Name: org/eclipse/help/internal/webapp/jsp/advanced/deferredView_jsp.c
+ lass
+SHA-256-Digest: 57j+/XPz7IWtxGVHCGxNisgJuYuA6XsmVnWfkSTJSrk=
+
+Name: advanced/images/restore.gif
+SHA-256-Digest: mCh7l5aOGm+Ygc/Xq0VUFB6M3gjedpekd7I66d/HAeU=
+
+Name: org/eclipse/help/internal/webapp/servlet/ExtraFilters.class
+SHA-256-Digest: XkhXTHvMQk96GeFbo3xgrZvTw7oUUMwZjw50Q5rGGvE=
+
+Name: basic/images/e_index_view.gif
+SHA-256-Digest: Y/7m5pZZXzC70vlv66mDWrEHG59OLNW/3HJiFfoF8XE=
+
+Name: advanced/images/maximize.gif
+SHA-256-Digest: +2/qtZIlJJ4tyZ28Z9f/TWJHhqwQuHgzXdMwD5UmvNk=
+
+Name: org/eclipse/help/internal/webapp/jsp/basic/help_jsp.class
+SHA-256-Digest: 3YGrxT8rXWNREYHE9St6siepfQ0eGFP3K/gd40len4o=
+
+Name: org/eclipse/help/internal/webapp/utils/XMLHelper.class
+SHA-256-Digest: b6yH7IKDe+AvobjPopfcbVuw2Ulsm8afpbwx7Ofrd/E=
+
+Name: org/eclipse/help/internal/webapp/parser/TocParser.class
+SHA-256-Digest: +ko5XPe7tsV9TMOtAUcQTGRGumQgZYLxcZXSIx9v4Io=
+
+Name: advanced/tabs.jsp
+SHA-256-Digest: rj7rHN2pZ+xcgUk7a5TxVlhR03gLIno+83wQ4U2OMS8=
+
+Name: org/eclipse/help/internal/webapp/service/ControlService.class
+SHA-256-Digest: ne+Lj9Se41dqV5P+A2hscKUWaNyt1WYXLxI7O2nqceI=
+
+Name: advanced/images/d_topic.gif
+SHA-256-Digest: +fe6HUEvCrqJzKIpLB5JT+cmUMAywfIORpWnOo8G2sU=
+
+Name: org/eclipse/help/internal/webapp/servlet/AboutServlet$PluginComp
+ arator.class
+SHA-256-Digest: XqOwzm6vlMs0s16z+t2cWrXrKsb+mGsBQ4aGpnhC3CY=
+
+Name: advanced/blank.html
+SHA-256-Digest: BptSyHkMfGMa/3OHb3AwMJfV2u3FqN1L6fx++3AfpTQ=
+
+Name: basic/images/synch_toc_nav.gif
+SHA-256-Digest: KlmMav2DEmw9rjc5IoM15HxKVrdou9O+hMerHlXoCfo=
+
+Name: advanced/images/container_obj.gif
+SHA-256-Digest: 347lr/npvlrQkF5/FV1Rws3N5gnJckdatjmHy4z+cOE=
+
+Name: org/eclipse/help/internal/webapp/data/WorkingSetData.class
+SHA-256-Digest: 4tr+zJqaz4OafUadcX8OujhWiu3WQi7Un4xVl+rXAJQ=
+
+Name: advanced/images/e_show_categories.gif
+SHA-256-Digest: rSZZPqh2rKwDi/7e6AKZRIzu0Ngsj3QnmGYYI1P4BPA=
+
+Name: advanced/fheader.jsp
+SHA-256-Digest: bVdovm6HG1BgSrMZb5SvCBwlCyitn5mV12UoYGuZvCk=
+
+Name: advanced/images/print_toc.gif
+SHA-256-Digest: iHl1AUbR0oru7Q+FyExyIC8+15UkggHpV46Gkvq+xfg=
+
+Name: advanced/helptree.js
+SHA-256-Digest: fany6MfdNPy6wxctU6CB/oMoDMSUGBMWO/QpLqLQA2I=
+
+Name: org/eclipse/help/internal/webapp/servlet/TocFragmentServlet$Seri
+ alizer.class
+SHA-256-Digest: Gfo2hWxXYfb+h93IcctAM6vdmWUkq0Oy4N1yFEykzUU=
+
+Name: index.jsp
+SHA-256-Digest: g7Oim4YGuNMjNS9M9HFCIarxVtontQ/qNlF++SSOV88=
+
+Name: advanced/images/e_collapseall.gif
+SHA-256-Digest: vrC8rRfWUvpPxc/e6IOk3TnYdzSj1h4PDqS+lxD3kEM=
+
+Name: org/eclipse/help/internal/webapp/data/ToolbarData.class
+SHA-256-Digest: cqqfmYKLiPYbqjo4RRo2S8c22gWtCjxqfLvDJWNiEeI=
+
+Name: advanced/images/e_forward.gif
+SHA-256-Digest: IFqoxpwo9EXNAc2xh0M2KmlZWC1RBMxv8nWCwhMwRtI=
+
+Name: advanced/images/e_synch_toc_nav.gif
+SHA-256-Digest: SFCXouFWOQCvHhDqZi6IGFcHVGjqa8w8EEB/5NGY0sM=
+
+Name: org/eclipse/help/internal/webapp/jsp/advanced/tabs_jsp.class
+SHA-256-Digest: EZFLkDXLK1Tg1CjDalMXMmEuODtcLgppOJr9JoTOX5I=
+
+Name: basic/images/bookmarks_view.gif
+SHA-256-Digest: yOn+17L6ZMkwR757YWHXOArQPEmBcckOrxFSvy1jL/k=
+
+Name: web-archive/org.eclipse.help.infocenter-feature/.project
+SHA-256-Digest: a4MLP+Eli1d+MKnzueDSEYBgd9OzKU40KvR9jvrSFqQ=
+
+Name: basic/indexView.jsp
+SHA-256-Digest: s3y9lXy+SWn05NZFgt7QT9ui1cidmhmJ1Ea5BPDEMYo=
+
+Name: org/eclipse/help/internal/webapp/data/FrameData.class
+SHA-256-Digest: +gbqcTN/ndv5zHIyRarTnsHxDcwNVkYzEl+sUBSeX0c=
+
+Name: advanced/images/print_topic.gif
+SHA-256-Digest: ZUW0/1kX2aE5Vt56X+j9wNBzOYkKZwnEpWDtcznXNAI=
+
+Name: org/eclipse/help/internal/webapp/servlet/XMLGenerator.class
+SHA-256-Digest: 7U0MtVEviQk+5WXF0GjZstFF6qpSa8U8Ufm41BY9O8M=
+
+Name: org/eclipse/help/internal/webapp/jsp/advanced/nav_jsp.class
+SHA-256-Digest: Xu97sOETtomTCA16xf5++cHSfxKgWmof2DlNUOV5ccE=
+
+Name: advanced/workingSetManager.jsp
+SHA-256-Digest: ZxT4PL0Vfv52ZshygOEHGg+HlFnunVUiWT/7xHdNMWY=
+
+Name: advanced/images/e_index_view.gif
+SHA-256-Digest: Y/7m5pZZXzC70vlv66mDWrEHG59OLNW/3HJiFfoF8XE=
+
+Name: advanced/deferredView.css
+SHA-256-Digest: 1BUWEXFxW04iItIeg3SsiVjEc5z06VAR1Ol6rKr9xqE=
+
+Name: advanced/view.jsp
+SHA-256-Digest: PuoIj9iV3zPOflHDpCWhBwZjX0TpMdl7PiCbh6Lsl7A=
+
+Name: web-archive/help/WEB-INF/configuration/config.ini
+SHA-256-Digest: kWur9SSj9VESWqdDntn9AuUYuSbjMvQmiPLseXUSPps=
+
+Name: advanced/images/highlight.gif
+SHA-256-Digest: tglNoiXlMVo1upsaIMgZ0Le0CZPdxfawexRavYl+CRE=
+
+Name: advanced/indexToolbar.jsp
+SHA-256-Digest: d8P7mI9vAqEEjUct92Gu7e5gNoefxn1ue/Lx8Jja7XY=
+
+Name: advanced/synchWithToc.js
+SHA-256-Digest: CSCdd+qdyR3f8IrbZdDCNa1SZOkQBLF52CIl3UlZy14=
+
+Name: org/eclipse/help/internal/webapp/service/ExtensionService.class
+SHA-256-Digest: OdwoJD/Ci2eoO+n++dmGL/gy7jqE+R5fugXLGJ/pReA=
+
+Name: advanced/views.jsp
+SHA-256-Digest: 5l2EcnWctvb4nTwbKTJ2HLwqNOk0lpcf2FYNfhmxh1A=
+
+Name: org/eclipse/help/internal/webapp/service/NavService.class
+SHA-256-Digest: oIbOHvrkw27WWli7RmIDM5ZLOhT7K1Er/us/LdptQCI=
+
+Name: org/eclipse/help/internal/webapp/jsp/advanced/help_jsp.class
+SHA-256-Digest: pEqlJxOHF+dlS4xL1+R6toe8FrdsDNFOlFKSBRJ/h8M=
+
+Name: advanced/images/toc_open.gif
+SHA-256-Digest: iAVV/iHcztW3ktHubIMmbSTnd2uKcTow4F9T3SgmAhs=
+
+Name: web-archive/org.eclipse.help.infocenter-feature/feature.xml
+SHA-256-Digest: wF9iowpgpoayzmJ53BAPddmYJ9fjsMq1wMuxkS3rjhI=
+
+Name: advanced/images/home.gif
+SHA-256-Digest: 6J6AKWEDJySIHeyRTiitOcl8ahJMljx520P05Bp8b4k=
+
+Name: org/eclipse/help/internal/webapp/HelpWebappPlugin.class
+SHA-256-Digest: dciif7H0r5u+3ExpYVBy7bU9JNBD04cU+FDkHQHLJtE=
+
+Name: org/eclipse/help/internal/webapp/jsp/advanced/content_jsp.class
+SHA-256-Digest: bX3CWunG6pmAssSTmo9SgdJ/vsLfB4+pjMBq/zV+Vcc=
+
+Name: org/eclipse/help/internal/webapp/jsp/basic/tocView_jsp.class
+SHA-256-Digest: A289Htxd23S3pVQieDdJof7aptQ+5FRwTkMUTKraZv0=
+
+Name: org/eclipse/help/internal/webapp/servlet/PluginsRootResolvingStr
+ eam.class
+SHA-256-Digest: vtyAgwI/KO7bIa4MJ5fxfIhILvzPzJ46tAtTOHF9onk=
+
+Name: org/eclipse/help/internal/webapp/service/TocService.class
+SHA-256-Digest: VMW61XT1IrRuLzTOjkGKSzA+XgiKgOrePdB4Bci0ebo=
+
+Name: advanced/images/help_banner.jpg
+SHA-256-Digest: gajKQA3B8UNqeLm9JF4hMTH/yagfSFDheJERSPGeS2Y=
+
+Name: org/eclipse/help/internal/webapp/servlet/ExtensionServlet.class
+SHA-256-Digest: c13FMDxG3N6KuJH46qS/NYdaWq6YPBX52WflGjfG7rE=
+
+Name: org/eclipse/help/internal/webapp/jsp/advanced/livehelp_005fjs_js
+ p.class
+SHA-256-Digest: dvncblGYjW/+UeWAv3PKJFmdhOR6uk9IlvMWsSFX5rI=
+
+Name: basic/tocToolbar.jsp
+SHA-256-Digest: wKbrafPAKId444D5LtXzucYn0RkAXw9Unl71nwT8DHI=
+
+Name: org/eclipse/help/internal/webapp/parser/IndexFragmentParser.clas
+ s
+SHA-256-Digest: UXSJW4f+vysgSP4MhMbyOCo+46XqMV3rIhOG8/esMYE=
+
+Name: org/eclipse/help/internal/webapp/jsp/advanced/printError_jsp.cla
+ ss
+SHA-256-Digest: LhoPfb+HXH7iKwhHxNtt6Wra/RTQ7uadBRiCL536oJI=
+
+Name: org/eclipse/help/internal/webapp/servlet/FilterUtils.class
+SHA-256-Digest: Vx4Q8hq3fru77nTg8j5vSLm+bVq4xKpD2kTpNwBAxDw=
+
+Name: org/eclipse/help/webapp/TocSystem.class
+SHA-256-Digest: NX3lT5b+qX3dTHsimtEM3K+A5fyHo3rwq308O1wHbRM=
+
+Name: advanced/images/auto_synch_toc.gif
+SHA-256-Digest: n1PbG3SAkKxJPHpUcgiCT4O3ZUgatgIJ1uHnQP2ZEpQ=
+
+Name: org/eclipse/help/internal/webapp/data/LayoutData.class
+SHA-256-Digest: dh6z2+FdZnLhjj578gclIyOr5UZVv/36Ftv3zKwX2OM=
+
+Name: advanced/tocToolbar.jsp
+SHA-256-Digest: MlyNQ8UsiGo4BrWVUThmVQbodgQTVMq/bMp2aZjSJ/k=
+
+Name: advanced/workingSet.jsp
+SHA-256-Digest: hOoYOQouWQAqSp29cPJFb+VfrJsyeGMEUkbB/9QVCpw=
+
+Name: advanced/list.css
+SHA-256-Digest: v9skn73CllIGXAm4wJolhpsAz8HpPQF2oRP8C+1tpbU=
+
+Name: basic/images/e_search_results_view.gif
+SHA-256-Digest: kMMPiByIDY34iwht6M4ud2TJ+pmNWjFB2FrAJpGPcx0=
+
+Name: advanced/tocTree.js
+SHA-256-Digest: i8dvKUBBMzRQ62clOw8VxSJT6ABahvT486TB3vXBEXE=
+
+Name: org/eclipse/help/internal/webapp/data/IndexData.class
+SHA-256-Digest: HhTMQj1H3tzdifX6IDDViZu9aQmyttEHHNrxtBDZMQU=
+
+Name: basic/livehelp_js.jsp
+SHA-256-Digest: juklQCKuMZCKu4mfAPd8zWKs8mxSMTX/UK3la7gCgSg=
+
+Name: advanced/banner.html
+SHA-256-Digest: /Dk5Uetd8n8ku+0uVyt7iowxo9uS1OxPTPMvTQS47yo=
+
+Name: org/eclipse/help/internal/webapp/jsp/advanced/fheader_jsp.class
+SHA-256-Digest: lC/2KgnhS/UAxSJ/ahLtJeQ3jxIlqrK39q/ox8j10Vg=
+
+Name: org/eclipse/help/internal/webapp/data/CookiesData.class
+SHA-256-Digest: PF9wMsx61OXIZ3jaj19bh4rzOaZjF8tQh0Yt+/oYMuw=
+
+Name: org/eclipse/help/internal/webapp/jsp/basic/header_jsp.class
+SHA-256-Digest: U9Z/OYNCjXZiqmgdeCzJhv4IAUQYEAIYjC9KVB31UK0=
+
+Name: advanced/livehelp_js.jsp
+SHA-256-Digest: vuQ42Y1/LCwk0O6AoAMpfH7ziKhrSZyRczTlr4+ua34=
+
+Name: org/eclipse/help/internal/webapp/servlet/ServletPrintWriter.clas
+ s
+SHA-256-Digest: X6lVmV3AqMTRq8NKuW+7Av2TlEY2ggaTSZWI43plzmg=
+
+Name: advanced/tocView.jsp
+SHA-256-Digest: CVEmcAPLf6965D1Vv3MaosYCXOCfWGI4aJRh2vYM+00=
+
+Name: advanced/indexView.jsp
+SHA-256-Digest: OUG8kQjudE4QNgb+Pya9U4EMDzafkmo5+7d16hUQoAc=
+
+Name: advanced/printConfirm.jsp
+SHA-256-Digest: VEIUX7ASF47vLkwQ7x1t6DFIzLptwGNR5mbDf3k9sPE=
+
+Name: org/eclipse/help/internal/webapp/servlet/ValidatorServlet.class
+SHA-256-Digest: ZyPNSoiGlMOaU6ounP7zL8m6dvSAh2esObBbOngpta8=
+
+Name: org/eclipse/help/internal/webapp/utils/JSonHelper.class
+SHA-256-Digest: +OnDKmFyaHOItg8RRsyaDG+HZS0DGK+YSnTjCjCQXCg=
+
+Name: advanced/err.jsp
+SHA-256-Digest: a3ozbONFiskaazPhJVhvTX5paoH1YvHJbJXTEb66/RY=
+
+Name: advanced/images/e_show_all.gif
+SHA-256-Digest: YvYgbRZdhi4iYoRDr6ZYcYBHBlVjEVKECkgB7ZlYA+A=
+
+Name: org/eclipse/help/internal/webapp/jsp/advanced/bookmarksToolbar_j
+ sp.class
+SHA-256-Digest: Y4t9jl1K0N1wuZBbyGDcNLZxFpUmw7Fp4u6lqvn7+6M=
+
+Name: advanced/images/e_print_topic.gif
+SHA-256-Digest: 0PwwYuqel/stQGzlVLIgjfF9R/sW+HIArUZrPKMVrSI=
+
+Name: org/eclipse/help/internal/webapp/jsp/advanced/tocToolbar_jsp.cla
+ ss
+SHA-256-Digest: Xd00+vRKUrSfbZZTubbG+NpGiBNa5TQVkWSlbaXxKlk=
+
+Name: org/eclipse/help/internal/webapp/jsp/advanced/header_jsp.class
+SHA-256-Digest: 4Bnzh1xsdAzRi+Ls4ktlSaqyxMTTRkNl9n7q/L5fcgg=
+
+Name: org/eclipse/help/internal/webapp/data/SearchData$SearchResultFil
+ ter.class
+SHA-256-Digest: F8F6RzX3QIE6Gi9b/wy4u7cNJTJ2cICw33px+kOSioI=
+
+Name: advanced/contentToolbar.jsp
+SHA-256-Digest: 6Yb2L9YmmcBnMrSRaiATZhgtezS752fhu1LV8bb4j6U=
+
+Name: org/eclipse/help/internal/webapp/jsp/advanced/advanced_jsp.class
+SHA-256-Digest: K4haU6I3CBEhcXcM27E5+fPeFVXW73c4tIJqMAAS8lg=
+
+Name: org/eclipse/help/internal/webapp/jsp/advancedstate/workingSetSta
+ te_jsp.class
+SHA-256-Digest: WklCuJhwM9TqJ2RG71+zbj4YmJBOdtQOUFBVgw9eGWo=
+
+Name: org/eclipse/help/internal/webapp/service/LiveHelpService.class
+SHA-256-Digest: zzWc8D5C920KpZAlFEThS6VOECgej7rKkhCcpQyL5rY=
+
+Name: org/eclipse/help/internal/webapp/service/TocFragmentService.clas
+ s
+SHA-256-Digest: 6YoL1UHZiJkjIzjwoTy9hgEkYbL9n6OPnVRnEr1lBzU=
+
+Name: .options
+SHA-256-Digest: 44ZE7jMCupGvakPlXY+6gy3bnYsJdAxULuzDaVblBc0=
+
+Name: advanced/images/container_topic.gif
+SHA-256-Digest: cBt5h1QpT3QywZmZrBzxdRRPzCGBQsD8pGWQYE7DItg=
+
+Name: advanced/images/minus.gif
+SHA-256-Digest: Nq+1ljldPLzM60bwmBFOSWVin+nTpXZRbccdtHlbtGk=
+
+Name: org/eclipse/help/internal/webapp/jsp/advancedstate/scopeState_js
+ p.class
+SHA-256-Digest: CwcwdHkfDnpAnihkr+a09y+BdWYgAzfc4YLKWgf42Fo=
+
+Name: org/eclipse/help/internal/webapp/jsp/advanced/confirmShowAll_jsp
+ .class
+SHA-256-Digest: ZAjms8QSMLbwFc7kjGCDulAV6bMnypAbAoIb9qaqddA=
+
+Name: org/eclipse/help/internal/webapp/data/TocData.class
+SHA-256-Digest: d5Ac/21BB0JukGpZdjCulWeUtWBDyC4VSxXDLf4n9eg=
+
+Name: org/eclipse/help/internal/webapp/jsp/advanced/tocView_jsp.class
+SHA-256-Digest: R1leoSuhy7OAo69R/sTdebBVUKmyomYsdq9CT8vA/9U=
+
+Name: org/eclipse/help/internal/webapp/jsp/advanced/index_jsp.class
+SHA-256-Digest: LeFjXGguT0ZPCImw5XfwBkPM5MddTCxHuPMe9sfESsA=
+
+Name: org/eclipse/help/internal/webapp/jsp/advanced/err_jsp.class
+SHA-256-Digest: HuYVule762mc+jems85nb3KfugEM3t/TnWypDu3cWq0=
+
+Name: advanced/images/collapseall.gif
+SHA-256-Digest: vrC8rRfWUvpPxc/e6IOk3TnYdzSj1h4PDqS+lxD3kEM=
+
+Name: org/eclipse/help/internal/webapp/parser/NavParser.class
+SHA-256-Digest: WducGt3Sx9A5pmFcCa6IX8xB2oYB8DZu3x0trT29mWI=
+
+Name: org/eclipse/help/internal/webapp/servlet/ChildLinkInserter.class
+SHA-256-Digest: f4FgXLW6fU9wnlDpu3fajwPpb2XwF2OiTfcrtMU1I40=
+
+Name: org/eclipse/help/internal/webapp/data/ServletResources.class
+SHA-256-Digest: /DuVXNu4faMjP2u1RgTLiBmMMhqlT+GAUofFhzDODDM=
+
+Name: advanced/helptreechildren.js
+SHA-256-Digest: Ke27QTKMF2x3nfHz+tuCMXUbRursEd+hqQH8XW1q95A=
+
+Name: org/eclipse/help/internal/webapp/data/BookmarksData.class
+SHA-256-Digest: EGcGH65LmJT43VTYlObBtoJSiMV4u6xcnhbZgmCNHKE=
+
+Name: advanced/images/e_home.gif
+SHA-256-Digest: 4cB3uzSzawBtPtcQboiWU16+RMytdhxFuZZGzwENCF8=
+
+Name: org/eclipse/help/internal/webapp/jsp/advanced/workingSet_jsp.cla
+ ss
+SHA-256-Digest: GEdiZ1MddDDyRVuVlbMcec1NyAMMvS0mpmK0EzbMzwk=
+
+Name: org/eclipse/help/internal/webapp/servlet/IndexFragmentServlet.cl
+ ass
+SHA-256-Digest: J072nP1Euaoep9eU1X9nroJvbC4ejdvG0Y2YczJQNgs=
+
+Name: advanced/searchList.css
+SHA-256-Digest: 996+C6ARi0/mJScWO/OnLviUY7MIeKYNsxf+1lsicdQ=
+
+Name: org/eclipse/help/internal/webapp/servlet/AboutServlet$PluginDeta
+ ils.class
+SHA-256-Digest: tqPAxTEKG36ytFeRQGp3d8mZbZCSGg3bpKrn3HAp7hI=
+
+Name: basic/view.jsp
+SHA-256-Digest: d/CuVE89Xp6NnMNZDCv5w1G3mnyS9sea/8GTJA8bXvA=
+
+Name: org/eclipse/help/internal/webapp/data/TopicFinder.class
+SHA-256-Digest: v1g85i51jiW0hB5bzGcHIioDz/BLHs1DOqlDsWBBdEc=
+
+Name: advanced/searchToolbar.jsp
+SHA-256-Digest: q3uSNryPcyB5GEqXaDdqZDswpAgjpDknkub5+Ppx28A=
+
+Name: org/eclipse/help/internal/webapp/data/Topic.class
+SHA-256-Digest: UJipX3MhKbpuX9Frs8pHalv4FdWQSfIHXC35Wuay5V0=
+
+Name: org/eclipse/help/internal/webapp/servlet/EclipseConnector$INotFo
+ undCallout.class
+SHA-256-Digest: D0CHGraLARnA8lFc9qSGuKZNFpB/WS/Eip3zEjrdFT4=
+
+Name: org/eclipse/help/internal/webapp/parser/ContextParser.class
+SHA-256-Digest: Lkeh0yNpBQCX/wEPuxoVSMVkkb+jxo/1dAYFRcHkNCs=
+
+Name: org/eclipse/help/internal/webapp/jsp/advanced/bookmarksView_jsp.
+ class
+SHA-256-Digest: QBu43XHCJRmOj8dHb4x8A6cMKmOVIrVGeIXqop3Idng=
+
+Name: basic/searchToolbar.jsp
+SHA-256-Digest: 6SLjDDY4tJ60/EjUDIuwtSXmiRM83c9DVVfTc69vtPM=
+
+Name: org/eclipse/help/internal/webapp/WebappResources.class
+SHA-256-Digest: WnjOFg5JZqy83rBIHCZRajezL30xoOzyeg9D1aaeEVI=
+
+Name: org/eclipse/help/internal/webapp/jsp/basic/tocToolbar_jsp.class
+SHA-256-Digest: ODKW4dEx6uqB7gCjqyXCxmVwByS7rn1J9ujNHlXV9Ig=
+
+Name: basic/images/container_obj.gif
+SHA-256-Digest: P5WIvdt6U2LpOiJv+tDSxI+IGLpleCrW9MvfswWOXZY=
+
+Name: advanced/confirmShowAll.jsp
+SHA-256-Digest: pMAdP1IN5sE0+tCaarRFKi1thytqGhscSxdPB/i0UZ4=
+
+Name: advanced/images/e_restore.gif
+SHA-256-Digest: mCh7l5aOGm+Ygc/Xq0VUFB6M3gjedpekd7I66d/HAeU=
+
+Name: org/eclipse/help/internal/webapp/data/IconFinder.class
+SHA-256-Digest: YSi5q55B9hXcd5h05R09LUBKn13SJw/dr3gSlMoi9NI=
+
+Name: advanced/images/e_add_bkmrk.gif
+SHA-256-Digest: dziv8mrdkTrXEhMTWNubWkm5DqpvZt5wyfjmjyE4KFw=
+
+Name: basic/indexToolbar.jsp
+SHA-256-Digest: CZetM44UaSfvn/ZZLSPNwbuTJJD4fNd3RPGUzhvqoHc=
+
+Name: org/eclipse/help/internal/webapp/service/AboutService.class
+SHA-256-Digest: hbLNRtRrkxVp0yoKpNw3gAqAHaUWSBnJ2D4zySO8Umk=
+
+Name: org/eclipse/help/internal/webapp/jsp/basic/indexToolbar_jsp.clas
+ s
+SHA-256-Digest: F5JfM+6CzmBugJeMu+eUhRrKAA0xSJ8AzdItmhz+Eq4=
+
+Name: advanced/indexView.js
+SHA-256-Digest: Y5kO1XSGb4HMz4moxWWkNHboiu7KYLhTVEJHpR8y5u0=
+
+Name: advanced/advanced.jsp
+SHA-256-Digest: xGw7s3tbsGQGOjguXJsQ5eTZXHM2SykCRM+3+CiS7P4=
+
+Name: advanced/highlight.js
+SHA-256-Digest: KcDUOcl8d+OFXyY3sFiwbwySUeL0tA2meNi9D8zuFaQ=
+
+Name: org/eclipse/help/internal/webapp/parser/TocFragmentParser.class
+SHA-256-Digest: z67X+1vX6rTILu6cLTV//s7glrMKn3/lsufRvyjB6+4=
+
+Name: advanced/searchSimple.jsp
+SHA-256-Digest: BvivTGyanZ350UuF1HalCK8vXyRFRGFUJoHstPo3zA0=
+
+Name: org/eclipse/help/internal/webapp/jsp/advanced/searchToolbar_jsp.
+ class
+SHA-256-Digest: DIpOp3fLCaTjZIcgW3/uiDDiwItArA1SGc8x6YoRE/g=
+
+Name: org/eclipse/help/internal/webapp/jsp/basic/view_jsp.class
+SHA-256-Digest: 4/IJTQEvX5GLPDuJTjgH7zCWx9O95ZiHPS9tBPsHoQY=
+
+Name: org/eclipse/help/internal/webapp/jsp/index_jsp.class
+SHA-256-Digest: 1Yc1IE5R27dQpAZXL6VPMTksjcP+3Tm/xOykxGDSsHI=
+
+Name: org/eclipse/help/internal/webapp/jsp/advanced/views_jsp.class
+SHA-256-Digest: sSKZo5nZwUBMeNhMfaj/Jw0wbVo8EoIyOVTcu1p+q3k=
+
+Name: basic/tabs.jsp
+SHA-256-Digest: 8RhorkCCy7i8LXzyMl+0RCeeEa6fRZmMHojho9FG4r8=
+
+Name: org/eclipse/help/internal/webapp/servlet/DynamicXHTMLFilter$1.cl
+ ass
+SHA-256-Digest: xTkYtu2Fsf//nPOzQDhslN5PyxfT61jq4DiSaSlEZOE=
+
+Name: org/eclipse/help/internal/webapp/jsp/basic/index_jsp.class
+SHA-256-Digest: WblxXmSa/S2fd7pXiTfabHJKBAWUj2Q5rmJSzeOQq2U=
+
+Name: advanced/images/add_bkmrk.gif
+SHA-256-Digest: N/KrdzMdwIgzc0g40VIl5tqdx83BRCdpt31Fk4qhS/c=
+
+Name: org/eclipse/help/internal/webapp/jsp/advanced/indexToolbar_jsp.c
+ lass
+SHA-256-Digest: gD4Yss/Evcgjkrb+ZT5VOyW5bzeTk/5evCfLD6OQIpw=
+
+Name: plugin.properties
+SHA-256-Digest: 7nolyRUF4wzMiOYzpemWSzOyXsiSh8EY5T9OOHq4Bns=
+
+Name: org/eclipse/help/internal/webapp/servlet/FilterHTMLHeadOutputStr
+ eam.class
+SHA-256-Digest: hngDub1vSD/QopAMoLDrtvCvkXxZF8QfnowBVzj84Ts=
+
+Name: org/eclipse/help/internal/webapp/parser/AboutParser.class
+SHA-256-Digest: EFgimILfRdpf/aUii9QorZ+OYQ9bg3V7XbJTC3cbQ9g=
+
+Name: advanced/images/e_links_view.gif
+SHA-256-Digest: hZMUrQ4AT3UJR20vDtKUflPkI/21eIBvM2+O3P9rZgw=
+
+Name: org/eclipse/help/internal/webapp/service/ContentService.class
+SHA-256-Digest: +WzvJASudvJbHZY7s7/j0c0wT9pdWehuNQzU6OPqSzE=
+
+Name: advanced/resize.js
+SHA-256-Digest: IVKhGiFGpgZnW6OuJPgSMB49hHd7wyEtz2M2tRg5PPE=
+
+Name: org/eclipse/help/webapp/AbstractFrame.class
+SHA-256-Digest: OcpMm9oacQGovHUvqZUh1QoL3d7fwzLBwSz0jKkxuks=
+
+Name: org/eclipse/help/internal/webapp/servlet/PrioritizedFilter.class
+SHA-256-Digest: KxZQGEUOWYKVFHgteOIvIu0GZq0a81WuKlhaDr3JlJs=
+
+Name: org/eclipse/help/internal/webapp/service/IndexService.class
+SHA-256-Digest: Fjsd2Dj0V5+Emrr//OjMOkaFAEQzHUgWUNMfgeKD/9Q=
+
+Name: org/eclipse/help/internal/webapp/jsp/basic/searchToolbar_jsp.cla
+ ss
+SHA-256-Digest: Kc4LkTj8eKN0GaeuSyRP2Vmk/G8LhBx7HqVLCXXKdcw=
+
+Name: basic/toolbar.jsp
+SHA-256-Digest: 4bkDMQ/WIFXKL3NGgKpfAfFMx7XYOhit5FHjoTHA2gI=
+
+Name: advanced/quickSearch.jsp
+SHA-256-Digest: 5UoYuEay88ULbC4M1BFFqaNVRmaoiQTZlkMarZDl7FA=
+
+Name: advanced/nav.jsp
+SHA-256-Digest: r79WxyyRpmZkvjRCVQ+isuDhZt3eVrRnr055Fldtqw8=
+
+Name: basic/images/toc_closed.gif
+SHA-256-Digest: J8CIyNvNCARVgI1eWk5HgVDkuJM5bNhRQHDpvdCFzEM=
+
+Name: advanced/images/synch_toc_nav.gif
+SHA-256-Digest: KlmMav2DEmw9rjc5IoM15HxKVrdou9O+hMerHlXoCfo=
+
+Name: advanced/images/e_contents_view.gif
+SHA-256-Digest: 40h4o5eTf+SuCjCdCBOKHcIR8h0cCTFpBDLsZ1HqKS8=
+
+Name: org/eclipse/help/internal/webapp/jsp/basic/err_jsp.class
+SHA-256-Digest: RxZM5YmukDRa5ONORLdojWw2eWi5VWaGMiAzp6xOVgc=
+
+Name: advanced/breadcrumbs.css
+SHA-256-Digest: meggwDHz9hC6I6Z4IszCpIsq1Kmv5nrhTvxwXFtZ+zI=
+
+Name: org/eclipse/help/internal/webapp/jsp/advanced/indexView_jsp.clas
+ s
+SHA-256-Digest: j8x5pGnd8nYq5WcXVHDSrJcjI6ySf2AD0MsBdFmzHFY=
+
+Name: org/eclipse/help/internal/webapp/data/ToolbarButton.class
+SHA-256-Digest: t/AFVnWQpAOZl2T2fooayhzeikHCiWNaCCWF3Jjed/g=
+
+Name: org/eclipse/help/internal/webapp/servlet/SearchServlet.class
+SHA-256-Digest: 0iScNEEpeKKE2ij4rV4oHLcSh6+m1yOlAgMiAAtKhcA=
+
+Name: advanced/images/toc_closed.gif
+SHA-256-Digest: vW5QyhhWOcQ3ALEsOzzGaHgeIk0bbt4TDuA1C6vzlco=
+
+Name: advancedstate/scopeState.jsp
+SHA-256-Digest: NYGfl49q3vSt4aV8Wfbn9D2XYaKGBWWwApMwcgxY0Mk=
+
+Name: org/eclipse/help/internal/webapp/jsp/advanced/view_jsp.class
+SHA-256-Digest: IRNRDyuDQG7lnbdgarFxtLrMTc+PQa22DFCwszO3A8M=
+
+Name: org/eclipse/help/internal/webapp/servlet/FilterHTMLHeadAndBodyOu
+ tputStream.class
+SHA-256-Digest: AE/RV30MNGliM/1DMhpY49d1k/ARaBgKSdgmnPzT61o=
+
+Name: advanced/index.jsp
+SHA-256-Digest: sSgdEf8ugzFI3C4PBgR62YpJMLjakydgtU5vjrMCXbA=
+
+Name: basic/images/e_links_view.gif
+SHA-256-Digest: hZMUrQ4AT3UJR20vDtKUflPkI/21eIBvM2+O3P9rZgw=
+
+Name: org/eclipse/help/internal/webapp/data/ScopeSavingSearchData.clas
+ s
+SHA-256-Digest: 6xDqgal+lohH5tLFkk3T9Al6o/iFIIAdnfBprbrxDRI=
+
+Name: basic/images/topic.gif
+SHA-256-Digest: BijYjm0cOYBw6uOBUA/mqN5EF2YS61C4OUDHYpYhOv8=
+
+Name: org/eclipse/help/internal/webapp/data/EnabledTopicUtils.class
+SHA-256-Digest: oBIIUEoJSF0upqSbQv6uyadiaxJP+6yexaxSJi7MQY4=
+
+Name: org/eclipse/help/internal/webapp/servlet/InfocenterWorkingSetMan
+ ager.class
+SHA-256-Digest: ZOLIJ5k8rTlBhHg2D+aDfMGIGOmxQfBdXUAN5W9fwaw=
+
+Name: advanced/search.jsp
+SHA-256-Digest: ReObpQygNOhWnP0zLXSJTSpQ9mlVz1er9uDI/Yy3FhY=
+
+Name: advanced/images/e_quick_search_multi.gif
+SHA-256-Digest: o78QGUIxzX8stqSNmGDZkh1oOjY5keGPRmlQHnd1s40=
+
+Name: org/eclipse/help/internal/webapp/parser/SearchParser.class
+SHA-256-Digest: MWerkTiyq5T2VPsscOFpJSYc+IswFzTO2Lz0Bf6LCBs=
+
+Name: org/eclipse/help/internal/webapp/jsp/advanced/helpToolbar_jsp.cl
+ ass
+SHA-256-Digest: wzOw3MsUxe1HmaTU26Rv6eS4VrYnBg2Akyz5mreSdsE=
+
+Name: about.html
+SHA-256-Digest: 0RM1x9lTJa7T8YkysaegPuBIeaEvSZypRDfXoMpsJAU=
+
+Name: advanced/images/e_search_results_view.gif
+SHA-256-Digest: q1b3QkqiGyXo0p3aX3adsGSUeNcxNtWpDmeyX57pH30=
+
+Name: advanced/images/e_show_descriptions.gif
+SHA-256-Digest: tBWHXvJpfWLVPtDr6EV7HhHE41ky+P2buWUbfQ8QxCY=
+
+Name: basic/advanced.inc
+SHA-256-Digest: +8N+SoEgGvBTFsWW/FkT5fhE5KPvStEscXvXIKnayNQ=
+
+Name: org/eclipse/help/internal/webapp/data/WebappPreferences.class
+SHA-256-Digest: Y8daDRM+6ey3Y5k2dQeNOOgHq9WvvrnrFyUwmH3PE2g=
+
+Name: org/eclipse/help/internal/webapp/servlet/LiveHelpServlet.class
+SHA-256-Digest: 1h2gILY+lNQf2HSq0LOfUXZZeZqEIwB7w/kXUTgSZW4=
+
+Name: advanced/content.jsp
+SHA-256-Digest: 8oBKHYbeLVjKKI7Zu2Mr+hr1aGpFjyM3gRHnL9lrnDw=
+
+Name: web-archive/help/WEB-INF/launch.ini
+SHA-256-Digest: a0vGOLZe0kXdEajlPW+aY21LgyXRaNhrwrh36Y7IJkI=
+
+Name: basic/images/e_contents_view.gif
+SHA-256-Digest: 40h4o5eTf+SuCjCdCBOKHcIR8h0cCTFpBDLsZ1HqKS8=
+
+Name: advanced/images/e_auto_synch_toc.gif
+SHA-256-Digest: JuO7gNKL+nwlUDXNBktMoaYndj8FNnBzhWYQQnusNWs=
+
+Name: basic/index.jsp
+SHA-256-Digest: HmeCq3ZOUgKH3w0G8dGoVH1NsU8cUjai1Uy7tF/zOjg=
+
+Name: org/eclipse/help/webapp/AbstractButton.class
+SHA-256-Digest: LjN2tZZK+KNya7QVxsjIhkmKGxssmPLIfFfNVHsliI0=
+
+Name: org/eclipse/help/internal/webapp/data/PrintData.class
+SHA-256-Digest: W9ZuW2C4ClcdqEAbtfnETmOZjQ2dxqDqg8ucMC3j3CI=
+
+Name: advanced/images/e_bookmark_remall.gif
+SHA-256-Digest: Gu1a4Tgi0dd66hvTck8kr92atC4MYggRiebPmePEOdE=
+
+Name: advancedstate/workingSetState.jsp
+SHA-256-Digest: jA4wFxLRUBMCDEMfJwVwWxr2/SI6gzWdh69Na68ls6E=
+
+Name: advanced/bookmarksToolbar.jsp
+SHA-256-Digest: Y839yEsdlMmbPpL64PTcs6ljCLsccF0O2nhBUnU2uGY=
+
+Name: org/eclipse/help/internal/webapp/parser/ParseElement.class
+SHA-256-Digest: gdswQoRIWgpWAvJaPjYCPsD/m/q67XbFi7yEackC034=
+
+Name: advanced/view.js
+SHA-256-Digest: Uo91BR11VNLVly+HSfXhZakkbQ/u0Ez9PBnHIrtXD0c=
+
+Name: advanced/bookmarksView.jsp
+SHA-256-Digest: +BBq3t3GHvomXDTsliBxFgmW5zniRLitj5jU8coseBM=
+
+Name: org/eclipse/help/internal/webapp/jsp/advanced/searchView_jsp.cla
+ ss
+SHA-256-Digest: PmvkfNQobN3GwEXjaufl/ccJyfgWy5nEdHQkuIhCeg8=
+
+Name: org/eclipse/help/internal/webapp/utils/Utils.class
+SHA-256-Digest: 83lPwCBmPnXZjCSWUZ2uDhwUwjXawTawcSL+4DNIkNk=
+
+Name: org/eclipse/help/internal/webapp/servlet/ValidatorServlet$HttpSe
+ rvletResponseAdv.class
+SHA-256-Digest: 21R/CY2Zr9InS1xNcpchIrtGxwytdGaSjnAkHDi/Lh8=
+

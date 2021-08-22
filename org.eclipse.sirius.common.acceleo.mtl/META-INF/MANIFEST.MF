@@ -1,0 +1,31 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.eclipse.sirius.common.acceleo.mtl;singleton:=true
+Bundle-Version: 5.1.1.201801311428
+Bundle-ClassPath: org.eclipse.sirius.common.acceleo.mtl_5.1.1.201801311428.jar
+Bundle-Activator: org.eclipse.sirius.common.acceleo.mtl.AcceleoMTLInterpreterPlugin$Implementation
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Export-Package: org.eclipse.sirius.common.acceleo.mtl;version="3.0.0",
+  org.eclipse.sirius.common.acceleo.mtl.business.api;version="2.0.4",
+  org.eclipse.sirius.common.acceleo.mtl.business.api.extension;version="2.0.4",
+  org.eclipse.sirius.common.acceleo.mtl.business.internal.extension;version="2.0.4";x-internal:=true,
+  org.eclipse.sirius.common.acceleo.mtl.business.internal.interpreter;version="2.1.0";x-internal:=true
+Require-Bundle: org.eclipse.sirius.common;bundle-version="2.0.0",
+  org.eclipse.sirius.ecore.extender;bundle-version="2.0.0",
+  org.eclipse.acceleo.engine;bundle-version="3.4.1",
+  org.eclipse.acceleo.parser;bundle-version="3.4.1",
+  org.eclipse.core.resources;bundle-version="3.4.0",
+  org.eclipse.core.runtime;bundle-version="3.4.0",
+  com.google.guava;bundle-version="[15.0,22.0)"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Created-By: Apache Maven 3.5.2
+Archiver-Version: Plexus Archiver
+Build-Jdk: 1.8.0_162
+Eclipse-SourceReferences: scm:git:http://git.eclipse.org/gitroot/sirius/org.eclipse.sirius.git;path="plugins/org.eclipse.sirius.common.acceleo.mtl";commitId=39f8e4149e87cb02e9b1c722a802a91df7e48330
+Import-Package: org.eclipse.sirius.ext.base;version="2.1.0",
+  org.eclipse.sirius.ext.base.cache;version="2.0.0"
+Bundle-ActivationPolicy: lazy
+Built-By: genie.sirius
+Eclipse-LazyStart: true

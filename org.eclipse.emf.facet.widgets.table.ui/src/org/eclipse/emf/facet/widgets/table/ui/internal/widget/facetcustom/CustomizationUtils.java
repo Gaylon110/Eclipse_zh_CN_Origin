@@ -1,0 +1,270 @@
+/*******************************************************************************
+ * Copyright (c) 2012, 2017 Mia-Software, and Soft-Maint.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *    Gregoire Dupe (Mia-Software) - Bug 367700 - [Unit Test Failure][0.2/3.8] org.eclipse.emf.facet.widgets.table.tests.internal.v0_2.swtbot.NatTableUITests.testOpenLoadCustomizationDialog
+ *    Gregoire Dupe (Mia-Software) - Bug 369987 - [Restructuring][Table] Switch to the new customization and facet framework
+ *    Gregoire Dupe (Mia-Software) - Bug 373078 - API Cleaning
+ *    Gregoire Dupe (Mia-Software) - Bug 375087 - [Table] ITableWidget.addColumn(List<ETypedElement>, List<FacetSet>)
+ *    Gregoire Dupe (Mia-Software) - Bug 376576 - [EFacet] Change the multiplicity of Facet::extendedFacet
+ * Contributors imported from org.eclipse.emf.facet.widgets.table.ui.internal.TableWidget:
+ *    Nicolas Bros (Mia-Software) - Bug 331203 - table model editor - initial API and implementation
+ *    Nicolas Bros (Mia-Software) - Bug 332437 - NatTable : pluggable cell editors
+ *    Nicolas Guyomar (Mia-Software) - Bug 331442 - To be able to add and remove lines (model elements) from the table
+ *    Nicolas Bros (Mia-Software) - Bug 332226 - To be able to create or delete model element from the table
+ *    Nicolas Guyomar (Mia-Software) - Bug 332226 - To be able to create or delete model element from the table
+ *    Nicolas Bros (Mia-Software) - Bug 332438 - NatTable : table type
+ *    Nicolas Bros (Mia-Software) - Bug 332440 - NatTable : force cell editors
+ *    Nicolas Bros (Mia-Software) - Bug 331675 - NatTable : copy cells as text
+ *    Nicolas Bros (Mia-Software) - Bug 331900 - customizable NatTable
+ *    Nicolas Bros (Mia-Software) - Bug 332010 - view Facet customizations on NatTable
+ *    Nicolas Bros (Mia-Software) - Bug 332215 - customizable NatTable column headers
+ *    Nicolas Guyomar (Mia-Software) - Bug 332215 - customizable NatTable column headers
+ *    Nicolas Guyomar (Mia-Software) - Bug 332924 - To be able to save the table
+ *    Nicolas Guyomar (Mia-Software) - Bug 332998 - To be able to add a column and fill it with the result of a query
+ *    Gregoire Dupe (Mia-Software) - Bug 332998 - To be able to add a column and fill it with the result of a query
+ *    Gregoire Dupe (Mia-Software) - Bug 333015 - To be able to hide columns
+ *    Nicolas Guyomar (Mia-Software) - Bug 333015 - To be able to hide columns
+ *    Nicolas Guyomar (Mia-Software) - Bug 333029 - To be able to save the size of the lines and the columns
+ *    Nicolas Guyomar (Mia-Software) - Bug 333414 - The user must be able to save the column order
+ *    Nicolas Guyomar (Mia-Software) - Bug 335154 - Sort Column By Type : Cannot modify resource set without a write transaction
+ *    Nicolas Guyomar (Mia-Software) - Bug 335155 - Hide Empty Column : Cannot modify resource set without a write transaction
+ *    Nicolas Guyomar (Mia-Software) - Bug 335156 - Only Show Common column : Cannot modify resource set without a write transaction
+ *    Nicolas Guyomar (Mia-Software) - Bug 335020 - Nattable widget should use the Eclipse framework
+ *    Nicolas Guyomar (Mia-Software) - Bug 337322 - [TableConfiguration] Customization declared in the file tableconfiguration is not loaded
+ *    Nicolas Guyomar (Mia-Software) - Bug 338536 - Problem with the refresh of the table : the scrollbar returns to this initial position
+ *    Nicolas Bros (Mia-Software) - Bug 338536 - Problem with the refresh of the table : the scrollbar returns to this initial position
+ *    Nicolas Guyomar (Mia-Software) - Bug 337454 - We can't delete a query Column
+ *    Nicolas Guyomar (Mia-Software) - Bug 337395 - Unused columns should be destroyed
+ *    Nicolas Guyomar (Mia-Software) - Bug 339554 - org.eclipse.emf.facet.widgets.celleditors API cleaning
+ *    Nicolas Guyomar (Mia-Software) - Bug 339922 - INatTableWidget method isCellSelected should use the plural
+ *    Nicolas Guyomar (Mia-Software) - Bug 340681 - Facet column implementation
+ *    Vincent Lorenzo (CEA-LIST) - Bug 337326 - Show/Hide Column : Sort the columns by name
+ *    Nicolas Guyomar (Mia-Software) - Bug 340940 - To be able to view facet attributes and facet references in a table
+ *    Vincent Lorenzo (CEA-LIST) - Bug 337408 - Add an action to sort columns by name
+ *    Nicolas Guyomar (Mia-Software) - Bug 336482 - KeyBinding to edit element in Table : F2
+ *    Vincent Lorenzo (CEA-LIST) - Bug 341238 - We need to be able to specify which column have to be hidden/visible using the customization mechanism
+ *    Gregoire Dupe (Mia-Software) - Bug 341238 - We need to be able to specify which column have to be hidden/visible using the customization mechanism
+ *    Nicolas Guyomar (Mia-Software) - Bug 342451 - To be able to edit derived facet attributes and derived facet references in a table
+ *    Vincent Lorenzo (CEA-LIST) - Bug 341238 - We need to be able to specify which column have to be hidden/visible using the customization mechanism
+ *    Nicolas Guyomar (Mia-Software) - Bug 343411 - [Table] Create new elements does not support IJavaModelQuery anymore
+ *    Gregoire Dupe (Mia-Software) - Bug 343811 - EMF Facet Regression : Created elements in a table are not serialized
+ *    Vincent Lorenzo (CEA-LIST) - Bug 344125 - The API should provide a method selectRows(List<EObject> elementsToSelect)
+ *    Nicolas Guyomar (Mia-Software) - Bug 344274 - SWT BOT fail on Hudson
+ *    Nicolas Guyomar (Mia-Software) - Bug 344475 - To be able to select a cell by EStructuralFeature in the table
+ *    Nicolas Guyomar (Mia-Software) - Bug 342028 - Field can be edited even if they are marked as N/A
+ *    Nicolas Guyomar (Mia-Software) - Bug 344413 - Facet Columns are never created when we begin with an empty table
+ *    Gregoire Dupe (Mia-Software) - Bug 343859 - The local customizations are not applied when we reopen a table
+ *    Nicolas Guyomar (Mia-Software) - Bug 344670 - Problems with the columns creation : very slow + scrollbar blinked
+ *    Nicolas Guyomar (Mia-Software) - Bug 345554 - SWTBot regression on build 303
+ *    Nicolas Guyomar (Mia-Software) - Bug 344925 - Undo/Redo after the action Show Columns
+ *    Nicolas Guyomar (Mia-Software) - Bug 345730 - Deleting an element in the model breaks the table
+ *    Nicolas Guyomar (Mia-Software) - Bug 344921 - Undo/Redo just after the creation of the table
+ *    Nicolas Guyomar (Mia-Software) - Bug 346465 - [EMF Facet Table] Remove line does not remove obsolete column
+ *    Gregoire Dupe (Mia-Software) - Bug 345730 - Deleting an element in the model breaks the table
+ *    Vincent Lorenzo (CEA-LIST) - Bug 352822 - CellEditor EEnum is not available for FacetAttribute
+ *    Nicolas Bros (Mia-Software) - Bug 352822 - CellEditor EEnum is not available for FacetAttribute
+ *    Vincent Lorenzo (CEA-LIST) - Bug 351931 - Use local cell editor in table
+ *    Vincent Lorenzo (CEA-LIST) - Bug 352580 - Facets are loaded to late
+ *    Gregoire Dupe (Mia-Software) - Bug 354224 - mutually exclusive Facets
+ *    Nicolas Guyomar (Mia-Software) - Bug 342154 - EMF Facet API should be covered with Unit tests
+ *    Nicolas Bros (Mia-Software) - Bug 357593 - [Table] Table take focus after each refresh
+ *    Grégoire Dupé (Mia-Software) - Bug 356795 - [Unit Test Failure][0.2/4.2][0.2/3.8] org.eclipse.emf.facet.widgets.nattable.tests.Bug344413Test.testBug344413
+ *    Gregoire Dupe (Mia-Software) - Bug 366804 - [Restructuring] Table widget upgrade
+ *    Gregoire Dupe (Mia-Software) - Bug 367613 - Table widget refactoring
+ *    Gregoire Dupe (Mia-Software) - Bug 367700 - [Unit Test Failure][0.2/3.8] org.eclipse.emf.facet.widgets.table.tests.internal.v0_2.swtbot.NatTableUITests.testOpenLoadCustomizationDialog
+ *    Gregoire Dupe (Mia-Software) - Bug 369987 - [Restructuring][Table] Switch to the new customization and facet framework
+ *    Gregoire Dupe (Mia-Software) - Bug 371367 - Hierarchical FacetSets
+ *    Nicolas Bros (Mia-Software) - Bug 370806 - [table] rewrite the "allowed contents" query selection dialog for v0.2
+ *    Vincent Lorenzo (CEA-LIST) -  Bug 372644 - Create Customizable tooltips for the TreeViewer using a CustomizableLabelProvider
+ *    Gregoire Dupe (Mia-Software) - Bug 373078 - API Cleaning
+ *    Gregoire Dupe (Mia-Software) - Bug 374903 - [Table] ITableWidget.setLoadedFacetSets
+ *    Gregoire Dupe (Mia-Software) - Bug 375087 - [Table] ITableWidget.addColumn(List<ETypedElement>, List<FacetSet>)
+ *    Gregoire Dupe (Mia-Software) - Bug 372626 - Aggregates
+ *    Gregoire Dupe (Mia-Software) - Bug 376158 - [Table] Unexpected columns when customizations are loaded
+ *    Nicolas Bros (Mia-Software) - Bug 377614 - [Table] getSelection should return all the elements underlying the selected cells
+ *    Nicolas Bros (Mia-Software) - Bug 377754 - [Table] right click deselects elements
+ *    Nicolas Bros (Mia-Software) - Bug 377866 - selection customization
+ *    Nicolas Bros (Mia-Software) - Bug 377773 - [Table] sorting doesn't work on all columns
+ *    Nicolas Bros (Mia-Software) - Bug 378475 - unit test failures after table refactoring
+ *    Nicolas Bros (Mia-Software) - Bug 378649 - [Table] Errors with non-applicable features
+ *    Gregoire Dupe (Mia-Software) - Bug 378701 - [Unit Test Failure] org.eclipse.emf.facet.widgets.table.tests.internal.v0_2.notuithread.Bug354224Test*
+ *    Olivier Remaud (Soft-Maint) - Bug 378499 - optimizing table opening
+ *    Nicolas Bros (Mia-Software) - Bug 379436 - [Table] read-only resources should not be editable
+ *    Nicolas Bros (Mia-Software) - Bug 379535 - [Table] remove "open table" action
+ *    Nicolas Bros (Mia-Software) - Bug 379542 - [Table] cannot add non-Facet columns
+ *    Gregoire Dupe (Mia-Software) - Bug 380126 - [Table] Row sort too long
+ *    Nicolas Bros (Mia-Software) - Bug 380236 - [Table] table is not properly disposed
+ *    Gregoire Dupe (Mia-Software) - Bug 387008 - [Table] Papyrus needs methods provided by TableInstanceCommandFactory
+ *    Gregoire Dupe (Mia-Software) - Bug 387005 - [Table] ITableWidget doesn't provide a method to get the selected Rows
+ *    Gregoire Dupe (Mia-Software) - Bug 387024 - [Table] Column order is not correctly "saved"
+ *    Gregoire Dupe (Mia-Software) - Bug 388422 - [Table] Queries for InstanciationMethod needs to have 2 parameters
+ *    Gregoire Dupe (Mia-Software) - Bug 377870 - [EFacet] ETypedElementDialog doesn't show all available ETypedElement (library example problem?)
+ *    Gregoire Dupe (Mia-Software) - Bug 391442 - Select ETypedElement Dialog doesn't used the subpackages (subEFacetSet)
+ *    Gregoire Dupe (Mia-Software) - Bug 415887 - FacetManager cleaned after displaying a TableWidget
+ *    Thomas Cicognani (Soft-Maint) - Bug 438994 - Optimization of selection in TableWidget
+ *    Grégoire Dupé (Mia-Software) - Bug 440618 - Table sort action unusable
+ *    Thomas Cicognani (Soft-Maint) - Bug 468160 -  Empty table displays a message
+ *    Grégoire Dupé (Mia-Software) - Bug 474288 - IndexOutOfBoundsException in TableWidgetController.createNewElement (1150)
+ * Contributors:
+ *    Jonathan Pepin (Soft-Maint) - Bug 512179 - Table widget refactoring.
+ *******************************************************************************/
+package org.eclipse.emf.facet.widgets.table.ui.internal.widget.facetcustom;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+import org.eclipse.emf.ecore.EClassifier;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.facet.custom.core.ICustomizationManager;
+import org.eclipse.emf.facet.custom.core.ICustomizationManagerFactory;
+import org.eclipse.emf.facet.custom.metamodel.v0_2_0.custom.Customization;
+import org.eclipse.emf.facet.custom.metamodel.v0_2_0.custom.FacetCustomization;
+import org.eclipse.emf.facet.custom.ui.IContentPropertiesHandler;
+import org.eclipse.emf.facet.custom.ui.IContentPropertiesHandlerFactory;
+import org.eclipse.emf.facet.efacet.core.FacetUtils;
+import org.eclipse.emf.facet.efacet.metamodel.v0_2_0.efacet.Facet;
+import org.eclipse.emf.facet.efacet.metamodel.v0_2_0.efacet.FacetSet;
+import org.eclipse.emf.facet.util.core.Logger;
+import org.eclipse.emf.facet.widgets.table.metamodel.v0_2_0.table.Table;
+import org.eclipse.emf.facet.widgets.table.ui.internal.Activator;
+import org.eclipse.emf.facet.widgets.table.ui.internal.exported.exception.TableWidgetRuntimeException;
+
+public final class CustomizationUtils {
+
+	private CustomizationUtils() {
+		// Must not be used.
+	}
+
+	/** @return the {@link Facet}s customized by the given customizations. */
+	public static Set<FacetSet> findFacetsCustomizedBy(
+			final List<Customization> customizations) {
+		final Set<FacetSet> referencedFS = new HashSet<FacetSet>();
+		for (Customization customization : customizations) {
+			for (EClassifier eClassifier : customization.getEClassifiers()) {
+				if (eClassifier instanceof FacetCustomization) {
+					final FacetCustomization facetCustom = (FacetCustomization) eClassifier;
+					for (Facet extFacet : facetCustom.getExtendedFacets()) {
+						referencedFS.add((FacetSet) extFacet.getEPackage());
+					}
+				}
+			}
+		}
+		return referencedFS;
+	}
+
+	/** Returns the first customization among the given list of customizations that extends the given EPackage. */
+	public static Customization findCustomizationExtendingEPackage(final List<Customization> customizations,
+			final EPackage ePackage) {
+		if (ePackage == null) {
+			throw new IllegalArgumentException("ePackage must not be null"); //$NON-NLS-1$
+		}
+		Customization result = null;
+		for (Customization customization : customizations) {
+			if (customization != null
+					&& ePackage.equals(FacetUtils
+							.getExtendedEPackage(customization))) {
+				result = customization;
+				break;
+			}
+		}
+		return result;
+	}
+
+	public static boolean isOneOfTheLocalCustomizationsNotOnTheTop(
+			final Table table) {
+		boolean result = false;
+		final List<Customization> view = table.getCustomizations();
+		final List<Customization> locals = table.getLocalCustomizations();
+		if (view.size() < locals.size()) {
+			throw new TableWidgetRuntimeException(
+					"Some local customization files are not loaded"); //$NON-NLS-1$
+		}
+		for (int i = 0; i < locals.size(); i++) {
+			if (!locals.contains(view.get(i))) {
+				// one of the local custom is not on the top of the
+				// customization
+				// engine
+				result = true;
+				break;
+			}
+		}
+		return result;
+	}
+
+	public static void loadCustomizationsInTable(final Table table) {
+		final List<Customization> customsToLoad = table.getCustomizations();
+		final List<Customization> locals = table.getLocalCustomizations();
+		final ICustomizationManager customManager = getCustomManager(table);
+		if (table.getRows().size() != 0 && locals.isEmpty()) {
+			// if we get an error here, it is the fault of the developper!!!
+			// the local customs should always be contained by
+			// customizationsToLoad
+			// Assert.isTrue(!locals.isEmpty());
+			// Here I choosen a logger to avoid to break the editor whereas
+			// he can partialy work.
+			final String msg = String.format(
+					"The local customs should always be contained by customizationsToLoad, please update the model: %s", //$NON-NLS-1$
+					table.eResource().getURI());
+			Logger.logError(msg, Activator.getDefault());
+		}
+		if (!locals.isEmpty() && !customsToLoad.containsAll(locals)) {
+			// if we get an error here, it is the fault of the developper!!!
+			// the local customs should always be contained by
+			// customizationsToLoad
+			// Assert.isTrue(customizationsToLoad.containsAll(locals));
+			// Here I choosen a logger to avoid to break the editor whereas he
+			// can partialy work.
+			Logger.logError(
+					"The local customs should always be contained by customizationsToLoad", //$NON-NLS-1$
+					Activator.getDefault());
+		}
+		customManager.getManagedCustomizations().removeAll(customsToLoad);
+		for (final Customization customizationToLoad : customsToLoad) {
+			/*
+			 * see bug 341222 customization on feature defined in another
+			 * metamodel for the following line! we can define that eAnnotation
+			 * column is hidden for IModelElement and hide this column with UML
+			 * element! whitout this line ,it is not possible
+			 */
+			customManager.getManagedCustomizations().add(0,
+					customizationToLoad);
+		}
+	}
+
+	public static ICustomizationManager getCustomManager(
+			final EObject eObject) {
+		final ResourceSet resourceSet = eObject.eResource().getResourceSet();
+		return ICustomizationManagerFactory.DEFAULT
+				.getOrCreateICustomizationManager(resourceSet);
+	}
+
+	public static List<FacetSet> getKnownFacetSetsWithoutCustom(
+			final Table table) {
+		final List<FacetSet> result = new ArrayList<FacetSet>();
+		final List<FacetSet> knownFacetSets = FacetsUtils
+				.getKnownFacetSets(table);
+		for (FacetSet facetSet : knownFacetSets) {
+			if (!(facetSet instanceof Customization)) {
+				result.add(facetSet);
+			}
+		}
+		return result;
+	}
+
+	public static IContentPropertiesHandler getContentPropertiesHandler(
+			final Table table) {
+		final ICustomizationManager customManager = CustomizationUtils
+				.getCustomManager(table);
+		return IContentPropertiesHandlerFactory.DEFAULT
+				.createIContentPropertiesHandler(customManager);
+	}
+}

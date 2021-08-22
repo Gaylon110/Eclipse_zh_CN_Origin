@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<!--
+  Copyright (c) 2011-2013, 2015 Eike Stepper (Berlin, Germany) and others.
+  All rights reserved. This program and the accompanying materials
+  are made available under the terms of the Eclipse Public License v1.0
+  which accompanies this distribution, and is available at
+  http://www.eclipse.org/legal/epl-v10.html
+
+  Contributors:
+    Eike Stepper - initial API and implementation
+-->
+
+<plugin>
+
+  <extension
+        point="org.eclipse.core.runtime.adapters">
+     <factory
+           adaptableType="org.eclipse.emf.cdo.common.branch.CDOBranch"
+           class="org.eclipse.emf.cdo.internal.explorer.CDOExplorerAdapterFactory">
+        <adapter type="org.eclipse.emf.cdo.explorer.repositories.CDORepositoryElement"/>
+     </factory>
+     <factory
+           adaptableType="org.eclipse.emf.cdo.common.branch.CDOBranchPoint"
+           class="org.eclipse.emf.cdo.internal.explorer.CDOExplorerAdapterFactory">
+        <adapter type="org.eclipse.emf.cdo.explorer.repositories.CDORepositoryElement"/>
+     </factory>
+  </extension>
+
+   <extension point="org.eclipse.core.expressions.propertyTesters">
+      <propertyTester
+         id="org.eclipse.emf.cdo.explorer.repository.properties"
+         type="org.eclipse.emf.cdo.explorer.repositories.CDORepository"
+         namespace="org.eclipse.emf.cdo.explorer.repository"
+         properties="state,connected,type,id,label,folder,uri"
+         class="org.eclipse.emf.cdo.internal.explorer.repositories.CDORepositoryProperties$Tester"/>
+      <propertyTester
+         id="org.eclipse.emf.cdo.explorer.checkout.properties"
+         type="org.eclipse.emf.cdo.explorer.checkouts.CDOCheckout"
+         namespace="org.eclipse.emf.cdo.explorer.checkout"
+         properties="state,open,type,id,label,folder,rootType,canContainResources,branchID,branch,timeStamp,readOnly,rootID,dirty,repositoryConnected,repositoryType,repositoryID,repositoryLabel,repositoryFolder,repositoryURI"
+         class="org.eclipse.emf.cdo.internal.explorer.checkouts.CDOCheckoutProperties$Tester"/>
+      <propertyTester
+         id="org.eclipse.emf.cdo.explorer.object.properties"
+         type="org.eclipse.emf.ecore.EObject"
+         namespace="org.eclipse.emf.cdo.explorer.object"
+         properties="inCheckout,stateCheckout,openCheckout,typeCheckout,readOnlyCheckout"
+         class="org.eclipse.emf.cdo.internal.explorer.checkouts.CDOCheckoutObjectProperties$Tester"/>
+      <propertyTester
+         id="org.eclipse.emf.cdo.explorer.element.properties"
+         type="org.eclipse.emf.cdo.CDOElement"
+         namespace="org.eclipse.emf.cdo.explorer.object"
+         properties="inCheckout,stateCheckout,openCheckout,typeCheckout,readOnlyCheckout"
+         class="org.eclipse.emf.cdo.internal.explorer.checkouts.CDOCheckoutObjectProperties$ElementTester"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.cdo.viewProviders">
+      <viewProvider
+            class="org.eclipse.emf.cdo.internal.explorer.checkouts.CDOCheckoutViewProvider"
+            priority="500"
+            regex="cdo\.checkout://.*"/>
+   </extension>
+
+   <extension
+         point="org.eclipse.emf.ecore.protocol_parser">
+      <parser
+            class="org.eclipse.emf.cdo.eresource.impl.CDOResourceFactoryImpl"
+            protocolName="cdo.checkout"/>
+   </extension>
+
+</plugin>

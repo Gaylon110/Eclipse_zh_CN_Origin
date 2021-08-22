@@ -1,0 +1,270 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.equinox.p2.metadata.repository;single
+ ton:=true
+Archiver-Version: Plexus Archiver
+Built-By: genie.releng
+Require-Bundle: org.eclipse.equinox.common;bundle-version="[3.5.0,4.0.
+ 0)",org.eclipse.equinox.registry,org.tukaani.xz;bundle-version="1.3.0
+ "
+Bundle-ManifestVersion: 2
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/equino
+ x/rt.equinox.p2.git;path="bundles/org.eclipse.equinox.p2.metadata.rep
+ ository";tag="M20170906-1700";commitId=f94c9ac9bd27522cf55784111380d5
+ f4aebc4bab
+Bundle-Vendor: %providerName
+Import-Package: javax.xml.parsers, org.eclipse.equinox.internal.p2.cor
+ e.helpers,org.eclipse.equinox.internal.p2.metadata,org.eclipse.equino
+ x.internal.p2.metadata.index,org.eclipse.equinox.internal.p2.persiste
+ nce,org.eclipse.equinox.internal.p2.repository,org.eclipse.equinox.in
+ ternal.p2.repository.helpers,org.eclipse.equinox.internal.provisional
+ .p2.core.eventbus,org.eclipse.equinox.internal.provisional.p2.reposit
+ ory,org.eclipse.equinox.p2.core;version="[2.0.0,3.0.0)",org.eclipse.e
+ quinox.p2.core.spi;version="[2.0.0,3.0.0)",org.eclipse.equinox.p2.met
+ adata;version="[2.0.0,3.0.0)",org.eclipse.equinox.p2.metadata.express
+ ion;version="[2.0.0,3.0.0)",org.eclipse.equinox.p2.metadata.index;ver
+ sion="[2.0.0,3.0.0)",org.eclipse.equinox.p2.query;version="[2.0.0,3.0
+ .0)",org.eclipse.equinox.p2.repository;version="[2.0.0,3.0.0)",org.ec
+ lipse.equinox.p2.repository.metadata;version="[2.0.0,3.0.0)",org.ecli
+ pse.equinox.p2.repository.metadata.spi;version="[2.0.0,3.0.0)",org.ec
+ lipse.equinox.p2.repository.spi;version="[2.0.0,3.0.0)",org.eclipse.o
+ sgi.util;version="1.1.0",org.osgi.framework;version="1.3.0",org.osgi.
+ service.prefs;version="1.1.1",org.xml.sax
+Service-Component: OSGI-INF/repositoryManager.xml
+Export-Package: org.eclipse.equinox.internal.p2.metadata.repository; x
+ -friends:="org.eclipse.equinox.p2.engine,  org.eclipse.equinox.p2.pub
+ lisher,  org.eclipse.equinox.p2.reconciler.dropins,  org.eclipse.equi
+ nox.p2.ui,  org.eclipse.equinox.p2.updatesite,  org.eclipse.equinox.p
+ 2.extensionlocation,  org.eclipse.equinox.p2.repository.tools,  org.e
+ clipse.equinox.p2.publisher.eclipse",org.eclipse.equinox.internal.p2.
+ metadata.repository.io;x-friends:="org.eclipse.equinox.p2.engine",org
+ .eclipse.equinox.p2.metadata.io
+Bundle-Name: %pluginName
+Bundle-Version: 1.2.401.v20170906-1259
+Bundle-Localization: plugin
+Bundle-Activator: org.eclipse.equinox.internal.p2.metadata.repository.
+ Activator
+Created-By: Apache Maven 3.3.3
+Build-Jdk: 1.8.0_131
+
+Name: plugin.xml
+SHA-256-Digest: P8d2ofy6EDQT5OIa/yjPi2FBzDu+7DnRfTDrg2Xtk4U=
+
+Name: org/eclipse/equinox/internal/p2/metadata/repository/io/XMLConsta
+ nts.class
+SHA-256-Digest: vnIG4HQMx4QPPwA0YXyekLuxctFPt8ElrASuI/X+Mdo=
+
+Name: org/eclipse/equinox/internal/p2/metadata/repository/io/MetadataP
+ arser$ProvidedCapabilitiesHandler.class
+SHA-256-Digest: qKz8HQs7R2kp+AmuboPcfH2Tuoypu4pI/qG24EVVdkA=
+
+Name: org/eclipse/equinox/internal/p2/metadata/repository/io/MetadataP
+ arser$RepositoryReferenceHandler.class
+SHA-256-Digest: mkkK0JgZnMfsu3rJkd8U2bKf7vpKma4bvCpK9qwWpYA=
+
+Name: org/eclipse/equinox/internal/p2/metadata/repository/io/MetadataP
+ arser$TouchpointInstructionHandler.class
+SHA-256-Digest: JW/kkU/JvVtbvjXYjBykKZKNUyswd2FxudrmJrT2WE0=
+
+Name: org/eclipse/equinox/internal/p2/metadata/repository/MetadataRepo
+ sitoryIO$XMLConstants.class
+SHA-256-Digest: q6p26r4aeFPwfnn0/pzbHP3gDzly/0ccuZIgeYqlOQk=
+
+Name: org/eclipse/equinox/internal/p2/metadata/repository/io/MetadataW
+ riter.class
+SHA-256-Digest: hYUdHXH7fo7eElZ6xiS8PRJahpZp7mV/Kh0fhToKEAc=
+
+Name: org/eclipse/equinox/internal/p2/metadata/repository/io/MetadataP
+ arser$ApplicabilityScopesHandler.class
+SHA-256-Digest: IyjNf/z2NclqRMiWZNE/v9XvvesUA1yJ+sbUgwAmL8o=
+
+Name: org/eclipse/equinox/internal/p2/metadata/repository/io/MetadataP
+ arser$ArtifactHandler.class
+SHA-256-Digest: zaRHZp0GOTPcSpRaQA9FmFDcrEKm7xyIC+UxoRFpa34=
+
+Name: org/eclipse/equinox/internal/p2/metadata/repository/io/MetadataP
+ arser$ApplicabilityScopeHandler.class
+SHA-256-Digest: gw30wgnl7YsqL+BYsOnipaWw0tb6Vb83DjO1Lla+wFU=
+
+Name: org/eclipse/equinox/internal/p2/metadata/repository/io/MetadataP
+ arser$RequiredCapabilitiesHandler.class
+SHA-256-Digest: IJGsw/Wa06eYvcxjaoq8WO1XOttmx6C4Khiv3jAVIuE=
+
+Name: plugin.properties
+SHA-256-Digest: irdv0jV5KaclDarh4E2BEvjzQ89RBgXYcY6iVcvu5D8=
+
+Name: org/eclipse/equinox/internal/p2/metadata/repository/io/MetadataP
+ arser$InstallableUnitsHandler.class
+SHA-256-Digest: aNdJ8XEpQPWKLqqAg4rOXXxyosV2CfDnU3ihS42F2I0=
+
+Name: org/eclipse/equinox/internal/p2/metadata/repository/MetadataRepo
+ sitoryIO$Parser.class
+SHA-256-Digest: jGpANLq8c4QFtUnJlVD3xY4E0PwNadL4md0S5dFUbsU=
+
+Name: org/eclipse/equinox/internal/p2/metadata/repository/io/MetadataP
+ arser$TouchpointInstructionsHandler.class
+SHA-256-Digest: 1RwsO5Mh8lXHxJuxVEMmK2GUEztibYACYXOwlYwBxWI=
+
+Name: org/eclipse/equinox/internal/p2/metadata/repository/io/MetadataP
+ arser.class
+SHA-256-Digest: rgiygFp2P4JkuPwSRa07Yvbr72baCVHoPYuuUOoZ/+Y=
+
+Name: org/eclipse/equinox/internal/p2/metadata/repository/io/MetadataP
+ arser$RequirementsChangeHandler.class
+SHA-256-Digest: biSZmBZoq71mYPslPrD6iTR734bQyb0C6m5fTyB8Gt0=
+
+Name: .api_description
+SHA-256-Digest: 5PB5BoKjRVlTrxdiGyDagYZXaFXZ4ihFg4+qVgXlRzE=
+
+Name: org/eclipse/equinox/internal/p2/metadata/repository/io/MetadataP
+ arser$MetaRequiredCapabilitiesHandler.class
+SHA-256-Digest: hjmo2kZ15C2gdHdtddf+0VrrtZi8SeKFuUl3R3omEGQ=
+
+Name: org/eclipse/equinox/internal/p2/metadata/repository/io/MetadataP
+ arser$CopyrightHandler.class
+SHA-256-Digest: crDGtWXZgD24RAL1P45ESgJvT+dSTkP+FT7mGQlpIUM=
+
+Name: org/eclipse/equinox/internal/p2/metadata/repository/io/MetadataP
+ arser$InstallableUnitHandler.class
+SHA-256-Digest: qWKrigjMxTuptNDKioSZWG0HG+7geZbTzKLz/dT6NCQ=
+
+Name: org/eclipse/equinox/internal/p2/metadata/repository/io/MetadataP
+ arser$RequirementChangeHandler.class
+SHA-256-Digest: s/4sTOTKSII+M1oBr8S4t5DHq8LdjPZ3BivyHGxhQNY=
+
+Name: org/eclipse/equinox/internal/p2/metadata/repository/io/MetadataP
+ arser$TouchpointTypeHandler.class
+SHA-256-Digest: mVN3vwyUbE1lbxXAHd37efsySHT84t/fGv8TofxjqPo=
+
+Name: org/eclipse/equinox/p2/metadata/io/IUDeserializer$IUDeserializer
+ Parser$IUOnlyHandler.class
+SHA-256-Digest: x1uMlzGdD+za9hHWx4L1pRlGU8v2iZ0VW7Ve5P002SM=
+
+Name: org/eclipse/equinox/internal/p2/metadata/repository/io/MetadataP
+ arser$LifeCycleHandler.class
+SHA-256-Digest: TiQBPunkHzgb1fxyh6y4n0FpXU3KNCQthZ+vSso/hpI=
+
+Name: org/eclipse/equinox/internal/p2/metadata/repository/io/MetadataP
+ arser$LicensesHandler.class
+SHA-256-Digest: 5da8X9Up08+WTH6B8D+zbWltGWCTr+8xb5qD9dvxT/o=
+
+Name: org/eclipse/equinox/internal/p2/metadata/repository/Activator.cl
+ ass
+SHA-256-Digest: VT9mDxciQUuuGAANTx7l2xBbOvH0F++Dxcs8EzoqQMQ=
+
+Name: OSGI-INF/repositoryManager.xml
+SHA-256-Digest: Gsar8b1SZumVHjYo7zD4Uh4Q+yOub/ad4PU8X2EnFD0=
+
+Name: org/eclipse/equinox/internal/p2/metadata/repository/io/MetadataP
+ arser$RepositoryReferencesHandler.class
+SHA-256-Digest: hWbYtIyPf/8Dx8buzpdi3RtkbE++nCb1w6IeyzIvITk=
+
+Name: org/eclipse/equinox/internal/p2/metadata/repository/MetadataRepo
+ sitoryManager.class
+SHA-256-Digest: Wbz15y0XuCwW8xRfRI7JkQ53HiaYp/dM+cftn81zW8A=
+
+Name: org/eclipse/equinox/internal/p2/metadata/repository/CompositeMet
+ adataRepository.class
+SHA-256-Digest: NHhotyNJOY6Dmj7/0H4YQtx8uUHyeYU1lw/VP47lo/k=
+
+Name: org/eclipse/equinox/internal/p2/metadata/repository/io/MetadataP
+ arser$RequirementHandler.class
+SHA-256-Digest: i8O+U9GuXnEdSbjjWjD34f+mCofGBeX1BWqnmLKuK54=
+
+Name: org/eclipse/equinox/internal/p2/metadata/repository/LocalMetadat
+ aRepository.class
+SHA-256-Digest: SuoO1aJUUFw3VGlDx2ZytTma7hSOQi0wyEN2sGyQle4=
+
+Name: org/eclipse/equinox/internal/p2/metadata/repository/MetadataRepo
+ sitoryIO$Writer.class
+SHA-256-Digest: IxeezSBTUA8CTca/CHpX1Jt8fD+HNgKa25Vzr71ZnkE=
+
+Name: org/eclipse/equinox/internal/p2/metadata/repository/XZedSimpleMe
+ tadataRepositoryFactory.class
+SHA-256-Digest: 9RqZutjJ47McIeYURrE4dhRpWfD0hKNH79ZkrOEwaDg=
+
+Name: org/eclipse/equinox/internal/p2/metadata/repository/MetadataRepo
+ sitoryIO.class
+SHA-256-Digest: Er9JsfO8DjgMG9SNEhlGhBY+86CcCLHsOcRF82gEpjA=
+
+Name: ant_tasks/metadataRepository-ant.jar
+SHA-256-Digest: 6I/BZf0+N7QTVNczF0j846aM60c5aFIUVBPvnyHt8Vk=
+
+Name: org/eclipse/equinox/internal/p2/metadata/repository/io/MetadataP
+ arser$UpdateDescriptorHandler.class
+SHA-256-Digest: XBdDXHOPaiAcL802DqDM2qvQhTY7UXdmUS7C8nOZTeY=
+
+Name: org/eclipse/equinox/p2/metadata/io/IUDeserializer.class
+SHA-256-Digest: wqR4aCX2+VQ74lyEDa0Zn4LgZLeRhqCeHBeE/20v3U0=
+
+Name: org/eclipse/equinox/internal/p2/metadata/repository/io/MetadataP
+ arser$AbstractMetadataHandler.class
+SHA-256-Digest: rN5fqWmLbmqpw2tLppYCclx5iMendrvwYu2IfEp234g=
+
+Name: org/eclipse/equinox/internal/p2/metadata/repository/io/MetadataP
+ arser$HostRequiredCapabilitiesHandler.class
+SHA-256-Digest: ivPJIxO5aS2Prn8Gii8EdAxyKTGqYdfvWw2OxmNT6iw=
+
+Name: about.html
+SHA-256-Digest: 0RM1x9lTJa7T8YkysaegPuBIeaEvSZypRDfXoMpsJAU=
+
+Name: org/eclipse/equinox/internal/p2/metadata/repository/io/MetadataP
+ arser$ArtifactsHandler.class
+SHA-256-Digest: qq7Zb+wQWaIOn5ObUM3ba9vsiWWi23dNMA4j6hBB/So=
+
+Name: org/eclipse/equinox/p2/metadata/io/IUSerializer.class
+SHA-256-Digest: NRRhhBS0v6s0FIW5EPEpC3eBAky41s1rLUtQ9KRECMs=
+
+Name: org/eclipse/equinox/p2/metadata/io/IUDeserializer$IUDeserializer
+ Parser.class
+SHA-256-Digest: o3nNr+Gd8Ny+xG51P6r72WqF0T9FXFyQfZXc6GxunoY=
+
+Name: org/eclipse/equinox/internal/p2/metadata/repository/MetadataRepo
+ sitoryIO$Parser$RepositoryDocHandler.class
+SHA-256-Digest: l/zOsmFuZEE2kNkCnvJzxQlBkUdYMgr9N45n6z7ao8E=
+
+Name: org/eclipse/equinox/internal/p2/metadata/repository/MetadataRepo
+ sitoryIO$Parser$RepositoryHandler.class
+SHA-256-Digest: yrTK8XkqGVJIFHHVItDgQBm7QsrP0lojAzhSwBkBAkc=
+
+Name: org/eclipse/equinox/internal/p2/metadata/repository/io/MetadataP
+ arser$ProvidedCapabilityHandler.class
+SHA-256-Digest: 9+SUur5HzZ4tCaYVbFQ1x/f0iGZu8BmCEyQ9JCC5YaM=
+
+Name: org/eclipse/equinox/internal/p2/metadata/repository/URLMetadataR
+ epository.class
+SHA-256-Digest: 6LOfnwXe/s6gnWOVvPYlLwTnt3qtGeahGpZwPSEZY64=
+
+Name: org/eclipse/equinox/internal/p2/metadata/repository/io/MetadataP
+ arser$RequirementChangeEltHandler.class
+SHA-256-Digest: t5S+7F6H3PuJRRXoSHIBqQ1Q/H1cU3YS25+EYy36ePE=
+
+Name: org/eclipse/equinox/internal/p2/metadata/repository/CompositeMet
+ adataRepositoryFactory.class
+SHA-256-Digest: SLmC0YVX8XJvKvXlmBVq1ppUP7vMXtnOB+zbifzBpfg=
+
+Name: org/eclipse/equinox/internal/p2/metadata/repository/SimpleMetada
+ taRepositoryFactory.class
+SHA-256-Digest: cgVmPdGCpYZ6TfyFyYDawVuwTNi4udn3Be7w3quK/Uw=
+
+Name: org/eclipse/equinox/internal/p2/metadata/repository/messages.pro
+ perties
+SHA-256-Digest: elasw5YUNahAFuWnQuDL1oxn5RwjWZnjplUtjm0eM+w=
+
+Name: org/eclipse/equinox/internal/p2/metadata/repository/Messages.cla
+ ss
+SHA-256-Digest: ezw/9BNSWlh51e6hx05ShMEh3bDDbVuUnvs6hjTDdCA=
+
+Name: org/eclipse/equinox/internal/p2/metadata/repository/io/MetadataP
+ arser$LicenseHandler.class
+SHA-256-Digest: HznXIsYy9XBlKGDaM2nJMPU+/1d0WlJ2MpeQPeVEym0=
+
+Name: org/eclipse/equinox/internal/p2/metadata/repository/io/MetadataP
+ arser$TouchpointDataHandler.class
+SHA-256-Digest: op5SvYZQh3Ipqa6fQFYBJLQR8Gju8iuSB8mcRSBWRGs=
+
+Name: org/eclipse/equinox/internal/p2/metadata/repository/MetadataRepo
+ sitoryComponent.class
+SHA-256-Digest: 0ET+1Bwu7ctggTlO3DH4w0emEsDd5AAsEvydBjTCCio=
+

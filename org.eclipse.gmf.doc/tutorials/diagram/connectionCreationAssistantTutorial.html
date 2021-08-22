@@ -1,0 +1,471 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1" />
+<title>Tutorial: Connection Creation Assistants</title>
+</head>
+<body>
+<p><img src="../../logo.gif" /></p>
+
+<h1>Tutorial: Connection Creation Assistants</h1>
+
+<table border="0">
+<tr>
+<td>
+<p>Version: 1.0</p>
+</td>
+<td>
+<p>Date: January 11, 2006</p>
+</td>
+</tr>
+</table>
+
+<h2>Contents</h2>
+
+<p>&middot; <a href="#_Overview">Overview</a></p>
+
+<p>&middot; <a href="#_References">References</a></p>
+
+<p>&middot; <a href="#_Introduction">Introduction</a></p>
+
+<p>&middot; <a
+href="#_CreatingTheModelingAssistantProvider">Creating the Modeling
+Assistant Provider</a></p>
+
+<p>&middot; <a href="#_ConnectionHandles">Adding Support for
+Connection Creation with Connection Handles</a></p>
+
+<p>&middot; <a href="#_ConnectionCreationToUnspecified">Adding
+Support for Connection Creation to an Unspecified Source or
+Target</a></p>
+
+<p>&middot; <a href="#_SelectingAnExistingElement">Adding Support
+for Selecting an Existing Element as the Source or Target</a></p>
+
+<p>&middot; <a href="#_ShowingRelatedElements">Adding Support for
+Showing Related Elements with the Connection Handles</a></p>
+
+<p>&middot; <a href="#_Summary">Summary</a></p>
+
+<h2><a id="_Overview" name="_Overview"></a>Overview</h2>
+
+<p>[<a href="#top">back to top</a>]</p>
+
+<p>This tutorial provides the reader with the steps required to
+contribute to options available on the connection handle popups and
+to support connnection completion to an unknown source or
+target.</p>
+
+<h2><a id="_References" name="_References"></a>References</h2>
+
+<p>[<a href="#top">back to top</a>]</p>
+
+<p><br />
+ This tutorial references the following extension point:</p>
+
+org.eclipse.gmf.runtime.emf.ui.modelingAssistantProviders
+
+<p>More information about this extension point can be found in the
+SDK documentation.<br />
+<br />
+This tutorial assumes the connections and shapes to be created can
+already be created via a palette tool if such a tool existed. For
+more information about supporting the creation of a shape and
+connector see the following tutorials:</p>
+
+<ul>
+<li><a href="createShape.html">Creating a Shape</a></li>
+
+<li><a href="createConnection.html">Creating a Connection</a></li>
+</ul>
+
+<br />
+This tutorial uses the Geoshapes Example whose guide is available
+here: <a
+href="../../examples-guide/diagram/logicExample.html">Geometric
+Shapes Example Guide</a>.<br />
+<h2><a id="_Introduction"
+name="_Introduction"></a>Introduction</h2>
+
+<p>[<a href="#top">back to top</a>]</p>
+
+The connection assistant mechanisms to be described make it easier
+for a user to create connections than the traditional palette
+approach. These gestures require less mouse movement and mouse
+clicks from the user. They can also provide contextual specific
+suggestions as to what type of connection the user may wish to
+create.<br />
+<br />
+ This tutorial will discuss two connection assistant mechanisms:
+
+<ol>
+<li>Connection Handles</li>
+
+<li>Connection Completion to an Unspecified Target or Source</li>
+</ol>
+
+<br />
+ <b>1. Connection Handles</b><br />
+<br />
+ <b>Use Case:</b><br />
+<br />
+The connection handles appear when hovering over a shape.<br />
+ <img src="connectionHandles1.jpg" width="155" height="81" /><br />
+ The user selects the incoming or outgoing connection handle and
+drags the connection to another shape. Upon release of the mouse
+button, a popup appears listing the possible connection typess that
+can be created from which the user may select one.<br />
+ <img src="connectionHandles2.jpg" width="444"
+height="111" /><br />
+ <b>Benefits:</b>
+<ul>
+<li>The user does not have to go back and forth to the palette to
+create connections.</li>
+
+<li>The user can create a connection from source to target or from
+target to source depending on what is most convenient based on
+their current focus in the diagram.</li>
+
+<li>The diagram application can list the suggested or most common
+connection types to be created based on the source and target thus
+assisting the user in narrowing down the many choices often
+available on the palette.</li>
+</ul>
+
+<br />
+ <b>2. Connection Completion to an Unspecified Target or Source</b>
+<br />
+<br />
+ <b>Use Case</b>:<br />
+<br />
+ The user begins a connection at the source or target shape using
+either a connection handle or a palette connection tool. The user
+releases the mouse button on empty diagram space and is presented
+with the option to create a new element for the shape on the other
+end of the connection or to use an existing element for this
+shape.<br />
+ <img src="outgoingUnspecified.jpg" width="610"
+height="304" /><br />
+<br />
+ <b>Benefits:</b>
+<ul>
+<li>The user can create a connection to a shape not on the diagram
+in one step.</li>
+</ul>
+
+<br />
+ We will use the Geometric Shapes Example to illustrate how to
+contribute to the popups when using the connection handles or upon
+connection completion to an unspecified target or source. To gain
+familiarity with the Geometric Shapes Example, refer to the <a
+href="../../examples-guide/diagram/logicExample.html">Geometric
+Shapes Example Guide</a>.<br />
+<h2><a id="_CreatingTheModelingAssistantProvider"
+name="_CreatingTheModelingAssistantProvider"></a>Creating the
+Modeling Assistant Provider</h2>
+
+<p>[<a href="#top">back to top</a>]</p>
+
+The Modeling Assistant service is queried to get the list of
+connection types and shape types when creation connections to an
+unspecified source or target or when using the connection handles.
+Therefore, the first step is to create a Modeling Assistant
+provider. If your plug-in already has a Modeling Assistant provider
+for another reason, then the same provider can be used.<br />
+<br />
+ Create the Modeling Assistant provider class. The abstract
+ModelingAssistantProvider provides stubs for the methods in the
+IModelingAssistantProvider so that each method need not be
+implemented.<br />
+ <img src="modelingAssistantProvider.jpg" width="429"
+height="366" /><br />
+<br />
+ Create an extension of the
+org.eclipse.gmf.runtime.emf.ui.modelingAssistantProviders extension
+point.<br />
+<br />
+ &lt;extension id="GeoshapeModelingAssistantProvider"
+name="%ext.modelingAssistantProvider"
+point="org.eclipse.gmf.runtime.emf.ui.modelingAssistantProviders"&gt;
+&lt;modelingAssistantProvider
+class="org.eclipse.gmf.runtime.diagram.ui.geoshapes.internal.providers.GeoshapeModelingAssistantProvider"&gt;
+&lt;Priority name="Lowest"/&gt; &lt;object
+class="org.eclipse.gmf.runtime.diagram.ui.geoshapes.internal.editparts.GeoShapeEditPart(org.eclipse.gmf.runtime.diagram.ui.geoshapes)"
+id="GEOSHAPE"&gt; &lt;/object&gt; &lt;context
+elements="GEOSHAPE"&gt; &lt;/context&gt;
+&lt;/modelingAssistantProvider&gt; &lt;/extension&gt;<br />
+Here is a brief description of the attributes in the
+modelingAssistantProvider extension point:
+
+<table border="1">
+<tr>
+<td>class</td>
+<td>The modeling assistant provider class that has been
+created.</td>
+</tr>
+
+<tr>
+<td>priority</td>
+<td>The priority of this modeling assistant provider. The Modeling
+Assistant Service collects a list of types from all providers in
+order of highest priority to lowest priority.</td>
+</tr>
+
+<tr>
+<td>object definition</td>
+<td>Defines an object that will be used to describe the shapes that
+this provider is interested in providing for. In this example, we
+are defining a geoshape.</td>
+</tr>
+
+<tr>
+<td>context</td>
+<td>Lists the elements defined above by their id to indicate that
+this provider wishes to provide for these types.</td>
+</tr>
+</table>
+
+<br />
+ For more information, see the extension point documentation: <a
+href="../../reference/extension-points/org_eclipse_gmf_runtime_emf_ui_modelingAssistantProviders.html">
+org.eclipse.gmf.runtime.emf.ui.modelingAssistantProviders</a>
+<h2><a id="_ConnectionHandles" name="_ConnectionHandles"></a>Adding
+Support for Connection Creation with Connection Handles</h2>
+
+<p>[<a href="#top">back to top</a>]<br />
+<br />
+The getRelTypesOnSourceAndTarget() method determines which
+connection types can be created between a given source and target
+when using the connection handles.<br />
+<br />
+ <img src="connectionHandles2.jpg" width="444"
+height="111" /><br />
+The getRelTypesOnSource() method determines which connection types
+can be created between a given source and an unspecified target
+shape using the outgoing connection handle.<br />
+<br />
+ This method is also needed to make the outgoing connection handle
+support connection creation when the getRelTypesOnSourceAndTarget()
+method is being implemented. That is, if there are no providers
+that return types in the getRelTypesOnSource() method for a given
+source, then the outgoing connection handle will not support
+connection creation and may not even appear on that shape.<br />
+<img src="incomingUnspecifiedConnections.jpg" width="587"
+height="265" /><br />
+ Similarly, the getRelTypesOnTarget() method determines which
+connection types can be created between a given target and an
+unspecified source shape using the incoming connection handle and
+determines if the incoming connection handle should support
+connection creation.<br />
+<br />
+ The code for the geoshapes example is quite simple. Since the line
+connection type is bidirectional the result will be the same when
+creating lines using the incoming or outgoing connection handle. If
+the desired behavior was for only the outgoing connection handle to
+appear, then getRelTypesOnTarget() would not be overridden.<br />
+</p>
+
+public boolean provides(IOperation operation) { if (operation
+instanceof GetRelTypesOnSourceOperation || operation instanceof
+GetRelTypesOnTargetOperation || operation instanceof
+GetRelTypesOnSourceAndTargetOperation) { return
+super.provides(operation); } return false; } public List
+getRelTypesOnSource(IAdaptable source) { return
+Collections.singletonList(GeoshapeType.LINE); } public List
+getRelTypesOnTarget(IAdaptable target) { return
+Collections.singletonList(GeoshapeType.LINE); } public List
+getRelTypesOnSourceAndTarget(IAdaptable source, IAdaptable target)
+{ return Collections.singletonList(GeoshapeType.LINE); }
+
+<p><br />
+ <b>Notes:</b></p>
+
+<ul>
+<li>When showing the connection handles, the Modeling Assistant
+service asks all providers to contribute to the list of types that
+appear in the connection handle popups. In the case of the
+Geoshapes example, the "Line" type is contributed by the
+GeoshapeModelingAssistantProvider and the "Note Attachment" type is
+contributed by the DiagramModelingAssistantProvider.</li>
+
+<li>Prior to showing the popup menus, each type is tested to see if
+it possible to create the connection between the source and target.
+If it is not possible to create the connection then that type will
+not appear on the popup. For example, if it was impossible to
+create a line between a geoshape circle and a cylinder, then even
+though line is being contributed to the connection handle popup
+between a circle and a cylinder it would not appear as an option
+for the user to choose. This avoids having to duplicate the
+enablement criteria in the Modeling Assistant provider that already
+exists elsewhere (e.g. in the edit helpers or view providers).</li>
+</ul>
+
+<h2><a id="_ConnectionCreationToUnspecified"
+name="_ConnectionCreationToUnspecified"></a>Adding Support for
+Connection Creation to an Unspecified Source or Target</h2>
+
+<p>[<a href="#top">back to top</a>]<br />
+<br />
+The getTypesForTarget() and getTypesForSource() methods determines
+the shape types that will appear when creating a connection to an
+unspecified source or target using any connection creation
+mechanism (e.g. a palette connection tool).<br />
+<img src="paletteUnspecifiedTarget.jpg" width="548"
+height="293" /><br />
+<br />
+ Add the shape types that can be created as the target type when
+creating a connection from source to target using the
+getTypesForTarget() method. This may be based on both the source
+type and the connection type. Similarly, add the shape types that
+can be created as the source type when creating a connection from
+target to source using the getTypesForSource() method.<br />
+<br />
+</p>
+
+public List getTypesForSource(IAdaptable target, IElementType
+relationshipType) { if (relationshipType.equals(GeoshapeType.LINE))
+{ return GeoshapeType.getShapeTypes(); } return
+Collections.EMPTY_LIST; } public List getTypesForTarget(IAdaptable
+source, IElementType relationshipType) { if
+(relationshipType.equals(GeoshapeType.LINE)) { return
+GeoshapeType.getShapeTypes(); } return Collections.EMPTY_LIST; }
+
+<p><br />
+ <b>Notes:</b></p>
+
+<ul>
+<li>It is also necessary to update the provides() method
+appropriately.</li>
+
+<li>When showing the shape types that can be created, the Modeling
+Assistant service asks all providers to contribute to the list of
+shape types.</li>
+
+<li>Prior to showing the popup menus, each type is tested to see if
+it possible to create that shape type. If it is not possible to
+create the shape then that type will not appear on the popup.</li>
+</ul>
+
+<br />
+<h2><a id="_SelectingAnExistingElement"
+name="_SelectingAnExistingElement"></a>Adding Support for Selecting
+an Existing Element as the Source or Target</h2>
+
+<p>[<a href="#top">back to top</a>]<br />
+<br />
+Although the Geoshapes Example does not implement this, it is also
+possible to create a connection to an existing element that may or
+may not appear on the diagram.<br />
+<br />
+ <img src="selectExistingElement.jpg" width="432"
+height="304" /><br />
+By providing for the SelectExistingElementForTargetOperation, the
+circled entry will appear when creating a connection to an
+unspecified target. Similarly, by providing for the
+SelectExistingElementForSourceOperation, the circled entry will
+appear when creating a connection to an unspecified source. When
+the user selects this entry, the selectExistingElementForSource()
+method or selectExistingElementForTarget() method will be called in
+the provider that provided for this operation with the highest
+priority.</p>
+
+public EObject selectExistingElementForSource(IAdaptable target,
+IElementType relationshipType) { // Show a dialog from which the
+user can select an existing element. // Return the element. }
+public EObject selectExistingElementForTarget(IAdaptable source,
+IElementType relationshipType) { // Show a dialog from which the
+user can select an existing element. // Return the element. }<br />
+ <b>Notes:</b>
+<ul>
+<li>It is also necessary to update the provides() method
+appropriately.</li>
+</ul>
+
+<p><br />
+</p>
+
+<h2><a id="_ShowingRelatedElements"
+name="_ShowingRelatedElements"></a>Adding Support for Showing
+Related Elements with the Connection Handles</h2>
+
+<p><br />
+ [<a href="#top">back to top</a>]</p>
+
+<p><br />
+Although the Geoshapes Example does not implement this as there is
+no semantic model, it is also possible to support showing related
+elements when double-clicking a connection handle.<br />
+ <img src="showRelatedElementsTooltip.jpg" width="401"
+height="99" /><br />
+ By providing for the GetRelTypesForSREOnSourceOperation and
+returning a list of types in the getRelTypesForSREOnSource()
+method, the above tooltip will appear when hovering over the
+outgoing connection handle. When the user double-clicks, the list
+of types given in the getRelTypesForSREOnSource() method will
+appear. After the user selects a type, the elements related to the
+source shape in the manner selected will appear with connections to
+the source shape.<br />
+<br />
+The expanding of related shapes is not supported generically in
+GMF. The client application must respond to the
+org.eclipse.gmf.runtime.diagram.ui.requests.ShowRelatedElementsRequest
+by returning the related elements.<br />
+<br />
+ Similarly, by providing for the GetRelTypesForSREOnTargetOperation
+and returning a list of types in the getRelTypesForSREOnTarget()
+method, this gesture will also be supported on the incoming
+connection handle.</p>
+
+public List getRelTypesForSREOnSource(IAdaptable source) { //
+return relationship types that could be expanded to show related
+elements } public List getRelTypesForSREOnTarget(IAdaptable target)
+{ // return relationship types that could be expanded to show
+related elements }
+
+<p><br />
+ <b>Notes:</b></p>
+
+<ul>
+<li>It is also necessary to update the provides() method
+appropriately.</li>
+
+<li>When showing the relationship types that can be expanded, the
+Modeling Assistant service asks all providers to contribute to the
+list of types.</li>
+</ul>
+
+<h2><a id="_Summary" name="_Summary"></a>Summary</h2>
+
+<p>[<a href="#top">back to top</a>]</p>
+
+<p>In this tutorial, we did the following:</p>
+
+<ol>
+<li>Created the Modeling Assistant provider.</li>
+
+<li>Added support for connection creation with connection
+handles.</li>
+
+<li>Added support for connection creation to an unspecified source
+or target.</li>
+
+<li>Added support for selecting an existing element as the source
+or target.</li>
+
+<li>Added support for showing related elements with the connection
+handles.</li>
+</ol>
+
+<br />
+<br />
+<p><a href="http://www.eclipse.org/legal/epl-v10.html">Copyright
+(c) 2000,2005 IBM Corporation and others. All Rights
+Reserved.</a></p>
+
+<br />
+ <br />
+</body>
+</html>
+

@@ -1,0 +1,797 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.xtext.builder;singleton:=true
+Archiver-Version: Plexus Archiver
+Built-By: jenkins
+Require-Bundle: org.eclipse.xtext,org.eclipse.xtext.util,org.eclipse.e
+ mf.ecore;bundle-version="2.10.2";visibility:=reexport,com.google.guav
+ a;bundle-version="[14.0.0,22.0.0)",com.google.inject;bundle-version="
+ 3.0.0",org.eclipse.core.resources;bundle-version="3.6.0";resolution:=
+ optional;x-installation:=greedy,org.eclipse.jdt.core;bundle-version="
+ 3.6.0";resolution:=optional;x-installation:=greedy,org.eclipse.core.r
+ untime;bundle-version="3.6.0";resolution:=optional;x-installation:=gr
+ eedy,org.eclipse.jface;bundle-version="3.6.0";resolution:=optional;x-
+ installation:=greedy,org.eclipse.ui;bundle-version="3.6.0";resolution
+ :=optional;x-installation:=greedy,org.eclipse.xtext.ui,org.eclipse.ui
+ .ide;bundle-version="3.6.0";resolution:=optional;x-installation:=gree
+ dy,org.eclipse.xtext.common.types.ui;resolution:=optional;x-installat
+ ion:=greedy,org.eclipse.jdt.launching;bundle-version="3.5.200";resolu
+ tion:=optional;x-installation:=greedy,org.eclipse.ui.forms;bundle-ver
+ sion="3.4.1";resolution:=optional;x-installation:=greedy,org.eclipse.
+ jdt.ui;bundle-version="3.6.0";resolution:=optional;x-installation:=gr
+ eedy,org.eclipse.xtext.xbase.lib;visibility:=reexport,org.eclipse.emf
+ .ecore.editor;bundle-version="2.10.0";resolution:=optional;x-installa
+ tion:=greedy,org.eclipse.debug.core;bundle-version="3.6.0";resolution
+ :=optional;x-installation:=greedy,org.eclipse.debug.ui;bundle-version
+ ="3.6.0";resolution:=optional;visibility:=reexport;x-installation:=gr
+ eedy,org.eclipse.jdt.debug;bundle-version="3.6.0";resolution:=optiona
+ l;x-installation:=greedy,org.eclipse.jdt.debug.ui;bundle-version="3.5
+ .2";resolution:=optional,org.eclipse.xtend.lib,org.eclipse.ui.console
+ ;bundle-version="3.5.0",org.eclipse.xtext.smap
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: %providerName
+Import-Package: org.apache.log4j;version="1.2.15"
+Export-Package: org.eclipse.xtext.builder,org.eclipse.xtext.builder.bu
+ ilderState;x-internal:=true,org.eclipse.xtext.builder.builderState.im
+ pl;x-internal:=true,org.eclipse.xtext.builder.builderState.util;x-int
+ ernal:=true,org.eclipse.xtext.builder.clustering;x-friends:="org.ecli
+ pse.xtend.ide",org.eclipse.xtext.builder.debug;x-friends:="org.eclips
+ e.xtend.ide.tests",org.eclipse.xtext.builder.impl;x-friends:="org.ecl
+ ipse.xtend.ide",org.eclipse.xtext.builder.impl.javasupport;x-internal
+ :=true,org.eclipse.xtext.builder.internal;x-internal:=true,org.eclips
+ e.xtext.builder.nature;x-friends:="org.eclipse.xtend.ide",org.eclipse
+ .xtext.builder.preferences;x-friends:="org.eclipse.xtend.m2e,org.ecli
+ pse.xtext.m2e,org.eclipse.xtext.xbase.ui,org.eclipse.xtend.ide",org.e
+ clipse.xtext.builder.resourceloader;x-internal:=true,org.eclipse.xtex
+ t.builder.smap;x-friends:="org.eclipse.xtext.xbase.ui",org.eclipse.xt
+ ext.builder.trace;x-friends:="org.eclipse.xtext.xbase.ui,org.eclipse.
+ xtend.ide",org.eclipse.xtext.builder.trace.impl;x-internal:=true,org.
+ eclipse.xtext.builder.trace.util;x-internal:=true
+Bundle-Name: %pluginName
+Bundle-Version: 2.12.0.v20170519-0809
+Bundle-ClassPath: .
+Bundle-Localization: plugin
+Bundle-Activator: org.eclipse.xtext.builder.internal.Activator
+Created-By: Apache Maven 3.3.9
+Build-Jdk: 1.8.0_121
+
+Name: plugin.xml
+SHA-256-Digest: k4o6ayYi2n4Xqm8n5YKB8Z3+KnePs8xK431VEUyuSkQ=
+
+Name: org/eclipse/xtext/builder/builderState/PersistedStateProvider.cl
+ ass
+SHA-256-Digest: c/RKPGMtAqkEaBIRHgBQCowd2XXZTFxUOlLxngXdMgw=
+
+Name: org/eclipse/xtext/builder/resourceloader/SerialResourceLoader$1.
+ class
+SHA-256-Digest: PiPt3MwUy9xaPYiR0PuyVIATCL5+K87sNx81+JT/sd0=
+
+Name: org/eclipse/xtext/builder/EclipseResourceFileSystemAccess2.class
+SHA-256-Digest: 7B33afsI0iu5slL8LvSDk+SuVw0iQACJe+LyHZB2cQs=
+
+Name: org/eclipse/xtext/builder/JDTAwareSourceFolderProvider.class
+SHA-256-Digest: QxDyFaHyZzniZISz85X3Lya9C6aX2xe9o55fWrElMEQ=
+
+Name: org/eclipse/xtext/builder/builderState/BuilderStateUtil.class
+SHA-256-Digest: nneglmywV0ThP4jKg3uwyhXl8eUFFUWt4/mPVPvoJ6w=
+
+Name: org/eclipse/xtext/builder/resourceloader/IResourceLoader.class
+SHA-256-Digest: BtTviG3q20k/mo4CiiUCLKkvfX8MynndjL1TA7N8T9w=
+
+Name: org/eclipse/xtext/builder/resourceloader/SerialResourceLoader.cl
+ ass
+SHA-256-Digest: TT6UiWVOtpDx9scVPLcoAtEQziZVOoAf/iErCg/7tCY=
+
+Name: org/eclipse/xtext/builder/impl/ToBeBuiltComputer.class
+SHA-256-Digest: EOdRUok4zrtLa3lRgYAccXlVnKPfjSjc4O8SqcsWCIM=
+
+Name: org/eclipse/xtext/builder/resourceloader/ResourceLoaderProviders
+ .class
+SHA-256-Digest: pOg4/yYxIw0zAp5Og7cFoMe6isr9+BMzUjqdK/DsgDc=
+
+Name: org/eclipse/xtext/builder/impl/DirtyStateAwareResourceDescriptio
+ ns$3.class
+SHA-256-Digest: c30lwlLQg46E157+aYQofzKP/59My5UQfiNNd7saY7k=
+
+Name: org/eclipse/xtext/builder/resourceloader/AbstractResourceLoader.
+ class
+SHA-256-Digest: uD+kYHSnoogw95FQV8oxX2oKHPjjfeWFqZRVu/mVAfs=
+
+Name: org/eclipse/xtext/builder/impl/ProjectOpenedOrClosedListener.cla
+ ss
+SHA-256-Digest: Lw67+gwoLP6ZRCUi6N3st8i8K7AhnVU2ocbxa7oLktI=
+
+Name: org/eclipse/xtext/builder/builderState/EMFBasedPersister.class
+SHA-256-Digest: rvBRBvn6m/Yg8pkbLe4tThI5VMIxeUkfJb3mTD8c33o=
+
+Name: org/eclipse/xtext/builder/smap/StratumBreakpointAdapterFactory$2
+ .class
+SHA-256-Digest: xW+jC/wSxPnNnYb78UW3zk7Vu385H62ZwQoGliemjc8=
+
+Name: org/eclipse/xtext/builder/IXtextBuilderParticipant$BuildType.cla
+ ss
+SHA-256-Digest: sURFP2oNl6063j9Tfx/apEq8a0LVRxCMMatnrRHx7H0=
+
+Name: org/eclipse/xtext/builder/preferences/BuilderPreferenceAccess.cl
+ ass
+SHA-256-Digest: K/aNdkmrk59EnlzToi/J0OWZWgcQKHl832vBtfoheqA=
+
+Name: org/eclipse/xtext/builder/builderState/BuilderStateFactory.class
+SHA-256-Digest: Pq6S6lUHdCgpXWYj95BapB5GjM6JpvXB+Ofg0UUbzCw=
+
+Name: org/eclipse/xtext/builder/builderState/impl/BuilderStatePackageI
+ mpl.class
+SHA-256-Digest: B6GBi2HykCFacvputRd5woSNF6eMK4hmy77SICIf3vQ=
+
+Name: org/eclipse/xtext/builder/builderState/impl/BuilderStateFactoryI
+ mpl$1.class
+SHA-256-Digest: 9jDYCYBiWn8G2TJw0BOuVewDltCTyWnj7ubaKYwJ3yQ=
+
+Name: org/eclipse/xtext/builder/preferences/BuilderConfigurationBlock$
+ 3$2.class
+SHA-256-Digest: /dJYMY2gzpZ7eO8/9WffnhGNj7czl/Ar36/FWPFidfU=
+
+Name: org/eclipse/xtext/builder/builderState/EObjectDescription.class
+SHA-256-Digest: j/FdGfWa5rtdUULk+BJAAe1F76/7ONw0PpINOZ1Rx+Y=
+
+Name: org/eclipse/xtext/builder/preferences/Messages.class
+SHA-256-Digest: MaqJc/luvFg4LDWFEF7AzXgz1EkjkagkgpuPeC/7J2Q=
+
+Name: org/eclipse/xtext/builder/impl/QueuedBuildData.class
+SHA-256-Digest: seXzPLPxR2SjvE4L6xtwzrg+Q7WoRFGW/SoZpi2J+Us=
+
+Name: org/eclipse/xtext/builder/debug/IBuildLogger.class
+SHA-256-Digest: BuZcJ61RP4GEIOYZVsTCT3MMNBzVeQCckFbWZGibmmE=
+
+Name: org/eclipse/xtext/builder/builderState/util/BuilderStateSwitch.c
+ lass
+SHA-256-Digest: dNeGTmbXAgdkcif7ho6VkW3ZihC5/0OgUPCI5AeayVg=
+
+Name: org/eclipse/xtext/builder/smap/XbaseBreakpointUtil.class
+SHA-256-Digest: gilRPbGK/elHE4a04s2bHc11bgWnWfsCqLoSttUyT5A=
+
+Name: org/eclipse/xtext/builder/JavaProjectBasedBuilderParticipant.cla
+ ss
+SHA-256-Digest: nxlv9Mb6NemzGQJkzHmVaUgwQi1BbXph1pg6Izzb9f8=
+
+Name: META-INF/maven/org.eclipse.xtext/org.eclipse.xtext.builder/pom.p
+ roperties
+SHA-256-Digest: 6MKofHXwPFKJaZ1N9XWrbiBJO58SeFfinbe35KkBUrU=
+
+Name: org/eclipse/xtext/builder/trace/TracePackage$Literals.class
+SHA-256-Digest: F6zmdV0YebWjzeU9yK6F/aaxzFaEuNzIwhGISpN8Az0=
+
+Name: org/eclipse/xtext/builder/clustering/DynamicResourceClusteringPo
+ licy.class
+SHA-256-Digest: DrfUY8nWpGFih/5ulivI+Dm+b39F2GGNmWRt7WC/Ngo=
+
+Name: org/eclipse/xtext/builder/trace/TraceResourceFactory$Strategy.cl
+ ass
+SHA-256-Digest: ahngZohTDTrW/fnvi1G3p3lHZVKXfDZLpG6yw7l/LrE=
+
+Name: org/eclipse/xtext/builder/impl/XtextBuilder$3.class
+SHA-256-Digest: wbKd38F+xl32W4nrfttYcaxJ7cXOyekH/M7YyvBrHQU=
+
+Name: org/eclipse/xtext/builder/trace/impl/TraceFactoryImpl.class
+SHA-256-Digest: 0ro6kCk9VnTz9bK1bNTM+9B/j/GHQ91Dx54AwzsXEZM=
+
+Name: org/eclipse/xtext/builder/impl/XtextBuilder$2.class
+SHA-256-Digest: qgadZ7zEAt0R/PBz4asJYKDUoSToMjfkFZ7vFWGctdc=
+
+Name: org/eclipse/xtext/builder/IXtextBuilderParticipant.class
+SHA-256-Digest: 3A6rtKRTHorRlxguFk20LTtzybd2p5QGMOyMyReDVlE=
+
+Name: org/eclipse/xtext/builder/DerivedResourceMarkers$GeneratorIdProv
+ ider.class
+SHA-256-Digest: JGR/HaSV+9f2ASP1azuYNFGTd2Otj7sUIMGHy5m7sBs=
+
+Name: org/eclipse/xtext/builder/DerivedResourceCleanerJob$1.class
+SHA-256-Digest: d54fl5x5SCn79zISR7Nc0wdUyAROE9XRVBrRPkzRpjc=
+
+Name: org/eclipse/xtext/builder/JDTAwareEclipseResourceFileSystemAcces
+ s2.class
+SHA-256-Digest: B6V9Kj56ANPCibmye4yR7ab15khKuQu1ICaiUfvxAdM=
+
+Name: org/eclipse/xtext/builder/impl/javasupport/UnconfirmedStructural
+ ChangesDelta.class
+SHA-256-Digest: DkqG2X6CE7eyesLzUNlWfNhNS5u47v9vrXvoayKtUGc=
+
+Name: org/eclipse/xtext/builder/smap/XbaseLineBreakpoint.class
+SHA-256-Digest: T5igmHcS/MkjQN2RS0YaI6vzoWsfPu8BND6qFmI+zsc=
+
+Name: org/eclipse/xtext/builder/resourceloader/ParallelResourceLoader$
+ ParallelLoadOperation.class
+SHA-256-Digest: odoi9TaomK/ceeVA6jRZE8OZJYmRni/GPsQX4gZRpho=
+
+Name: model/BuilderState.genmodel
+SHA-256-Digest: r4d5gU9L9zYWQkTECTQdTYQPMpf6J3OUNeEygaF15XE=
+
+Name: org/eclipse/xtext/builder/builderState/IssuesProvider.class
+SHA-256-Digest: hKJKmbqGV/fqMymrGqL6Ns3QFBTnvycZN1LKBTsqmL8=
+
+Name: org/eclipse/xtext/builder/builderState/impl/ResourceDescriptionI
+ mpl.class
+SHA-256-Digest: 3TOsn7puM38yvvfJUNlXHaMZp8yp5rfuOlz7wYPqyoI=
+
+Name: org/eclipse/xtext/builder/nature/XtextNature.class
+SHA-256-Digest: kSFHQUcBUrT+JkIu0eNU8T5n2Q79ECVLTlQXWWWzWtM=
+
+Name: org/eclipse/xtext/builder/DerivedResourcesLookupMap.class
+SHA-256-Digest: n9E3Bsd5esJr60ncF5/bE8/oWVemtHU9N6tFyZSHLqk=
+
+Name: org/eclipse/xtext/builder/preferences/BuilderConfigurationBlock$
+ 1.class
+SHA-256-Digest: ZM2B0nNLe826Ln2fqaqMiyfQyE8DrXIdIPSlQ03Pc4U=
+
+Name: org/eclipse/xtext/builder/impl/BuildScheduler.class
+SHA-256-Digest: PMnH3iC/4701hm7JfSJrA29LnG7bUMh+de8pp2dHOEA=
+
+Name: org/eclipse/xtext/builder/impl/BuildScheduler$BuildJob.class
+SHA-256-Digest: ftdUEcOi3XFNv3ZkAsCXuTJhQdEaqqSdZuDBKsFHKto=
+
+Name: org/eclipse/xtext/builder/clustering/IResourceClusteringPolicy.c
+ lass
+SHA-256-Digest: c12o2Ko75cFIdAl7PfpjAnoGpvvgUPveb2BpxEv7d9o=
+
+Name: org/eclipse/xtext/builder/builderState/EMFBasedPersister$Resourc
+ eDescriptionResource.class
+SHA-256-Digest: gY0Wm8JTvZADMX2/JrtVB18HZXzz7Yzz6ngdWn06TUQ=
+
+Name: org/eclipse/xtext/builder/impl/javasupport/BuilderDeltaConverter
+ .class
+SHA-256-Digest: EMYlxxUv8W5fI2Tw71K16yxXwRvNoeb8syK64ePdVls=
+
+Name: org/eclipse/xtext/builder/trace/TracePackage.class
+SHA-256-Digest: BMoTjQyvz1O7bE+B9qwCg1LOE9Md0SP9PDyBZfcYElo=
+
+Name: org/eclipse/xtext/builder/trace/impl/DebugLocationDataImpl.class
+SHA-256-Digest: 41Up9ECbIs8NgoKWOAnjTzn23xLZKnB+NBTq9FXY+nY=
+
+Name: org/eclipse/xtext/builder/impl/XtextBuilder$1.class
+SHA-256-Digest: f558Xs7OrUJxAVHr3eOw0lO1AZ5nb0o53MwqWyLghxk=
+
+Name: org/eclipse/xtext/builder/ParallelFileSystemAccess.class
+SHA-256-Digest: 5lgCcyryDErtCve4VwJKrMg8y0Bt9ayZr709ddqopfs=
+
+Name: org/eclipse/xtext/builder/trace/DebugTraceBasedRegion.class
+SHA-256-Digest: f/4lMEbE3sjCq09R87z1jzwgLrPpNAqxKWn2RNTSmUM=
+
+Name: org/eclipse/xtext/builder/trace/TraceEditor$3.class
+SHA-256-Digest: mQKnbIViB0Pwd4pns3Il29iU68aqW9vxAoAIjYvVRQM=
+
+Name: org/eclipse/xtext/builder/resourceloader/ParallelResourceLoader.
+ class
+SHA-256-Digest: 7hnr/9z8UCx1y/Sdu+uH/jDdA1YeMVkY+Dpcx2RNj+Q=
+
+Name: org/eclipse/xtext/builder/resourceloader/ResourceLoaderProviders
+ $1.class
+SHA-256-Digest: IznENwYSblQbVb1Eukzg0ZIwmxGNPNaeSB8Q/472Vpg=
+
+Name: org/eclipse/xtext/builder/impl/SourceLevelURICache.class
+SHA-256-Digest: /0eIzYPpAMgHthJC9587zNAc1w7ZEL6oPQ8W+XWGLgs=
+
+Name: org/eclipse/xtext/builder/impl/RegistryBuilderParticipant$Deferr
+ edBuilderParticipant.class
+SHA-256-Digest: R7y9Umiq28fnlHXj6elSxX3u78v8LM/84u4F30VRa3I=
+
+Name: org/eclipse/xtext/builder/impl/javasupport/JdtToBeBuiltComputer$
+ ModificationStampCache.class
+SHA-256-Digest: jKmelNBi2RS8JtobepC5StB/AUmLUT3RZLcwa8Pl53k=
+
+Name: org/eclipse/xtext/builder/impl/IBuildFlag$Impl.class
+SHA-256-Digest: /yGfbCtVeo3H73UZM2QKT5St+9dtdtxeqz8uHoow7Xw=
+
+Name: org/eclipse/xtext/builder/builderState/Messages.class
+SHA-256-Digest: m8XglmfE9VSlsW1NfQib/kcEVU+ZN25lFFlI77UL2N4=
+
+Name: org/eclipse/xtext/builder/ParallelBuilderParticipant$2.class
+SHA-256-Digest: 9zlAk4PjZcOJz7Ze8bDtH7KcK4yJrUyhJvngfDBcDZg=
+
+Name: org/eclipse/xtext/builder/clustering/CopiedResourceDescription.c
+ lass
+SHA-256-Digest: 7JMYMfuLXo/xLWoCuHx0EHyea49Mr8QmiY/s8Y08ZCQ=
+
+Name: org/eclipse/xtext/builder/trace/TraceEditor.class
+SHA-256-Digest: jyomzMBvatjcLHrN91KFrsifhZJHXtdy+0aSrzFUYMo=
+
+Name: org/eclipse/xtext/builder/debug/XtextBuildConsole.class
+SHA-256-Digest: in0edoGyiaxwNfzvQj3m9BonHNZUoilOzZ3oZ7QGRXw=
+
+Name: org/eclipse/xtext/builder/impl/ToBeBuiltComputer$NullContributio
+ n.class
+SHA-256-Digest: iqeTuQMMZUyLEIlVo3yjn3f/r1y10YzX7quqril8C+k=
+
+Name: org/eclipse/xtext/builder/impl/javasupport/ProjectClasspathChang
+ eListener.class
+SHA-256-Digest: /ehj8VebvUZUe9sN90CmCaX9yUbLuFBextPfRg+7dvU=
+
+Name: org/eclipse/xtext/builder/smap/StratumBreakpointAdapterFactory.c
+ lass
+SHA-256-Digest: v+QOS5Ia9Uqgj1mrc0jbhycap8rUWNPPlYzjLFFb6a4=
+
+Name: org/eclipse/xtext/builder/resourceloader/ParallelResourceLoader$
+ ParallelLoadOperation$1.class
+SHA-256-Digest: 9C9XZRGXz5fFuO26JIKeQvjn8qNydKszmQIWIilLg/A=
+
+Name: org/eclipse/xtext/builder/impl/DirtyStateAwareResourceDescriptio
+ ns$GlobalStateListener.class
+SHA-256-Digest: DxZe1KuC2vsJu6b4vtbUoXjD5Zn/Qia6SilXrLMbjTE=
+
+Name: org/eclipse/xtext/builder/BuilderParticipant$2.class
+SHA-256-Digest: srlKgrta5v2aZPTVy4wawgGWWEYBrwyS68KM2WdZQHc=
+
+Name: org/eclipse/xtext/builder/ParallelBuilderParticipant$1.class
+SHA-256-Digest: RTnJDfdRwDn6/P3yzBiLoEomk4kezHwIX9rPqydlUbs=
+
+Name: org/eclipse/xtext/builder/clustering/CurrentDescriptions$Resourc
+ eSetAware.class
+SHA-256-Digest: 0qY8L/GyTj0OfwUpNlafZCnPOU5L0gt1t3J+fWGkbNY=
+
+Name: model/readme.txt
+SHA-256-Digest: FSlLqAQ3NtikgQnmNTfjd/HgeLuoq+AVlfTCpeuYc04=
+
+Name: org/eclipse/xtext/builder/impl/DirtyStateAwareResourceDescriptio
+ ns$2.class
+SHA-256-Digest: 4MMHER/Cr1SrqXp1Se5Fsqc67zMPclQsSQHSUuC/N1I=
+
+Name: org/eclipse/xtext/builder/impl/XtextBuilder.class
+SHA-256-Digest: NtTgEVE4hLaCbe/4r2GElMe9t8TDJK2Gj8ts87ETKxo=
+
+Name: org/eclipse/xtext/builder/builderState/impl/EObjectDescriptionIm
+ pl.class
+SHA-256-Digest: smttB65GFCYHn5fTcoeMPZyntquCDCzekWewHaP/yPc=
+
+Name: org/eclipse/xtext/builder/builderState/impl/ResourceDescriptionI
+ mpl$1.class
+SHA-256-Digest: alZC/ssCBTaVPq1Rh58178akrvEKGhkEQgFu355u1qY=
+
+Name: META-INF/maven/org.eclipse.xtext/org.eclipse.xtext.builder/pom.x
+ ml
+SHA-256-Digest: AeGYTq3jx2tWNLUAldPLnt2IBAnXZvsc61MNY5ULrS4=
+
+Name: org/eclipse/xtext/builder/ParallelBuilderParticipant$ParallelBui
+ ldContext.class
+SHA-256-Digest: tdKESuf/gdO1xmQpN/PC18zn8EhlBtdZCIn9Ua/VX8A=
+
+Name: org/eclipse/xtext/builder/builderState/AbstractBuilderState.clas
+ s
+SHA-256-Digest: Ig9aIrzYIOsee1sN8EFS63z2zDo625Fa+Px2j/p4al4=
+
+Name: org/eclipse/xtext/builder/ParallelBuilderParticipant$1$1.class
+SHA-256-Digest: N3/C2YaMWNJZ53LpIXwqXy69qmTPFAnxLYv1hMAokyw=
+
+Name: org/eclipse/xtext/builder/builderState/IMarkerUpdater.class
+SHA-256-Digest: ZGmWI0U4M9nhSpRguQtxbpWk8WBSLwKEAk1XAsXBGgo=
+
+Name: org/eclipse/xtext/builder/impl/javasupport/JdtToBeBuiltComputer.
+ class
+SHA-256-Digest: pp3+eZwF5RRasZK/zPDGSzOGcQJ/iPc5+sYYAf7vq/g=
+
+Name: org/eclipse/xtext/builder/MonitorBasedCancelIndicator.class
+SHA-256-Digest: D8/UD7XvksTg73FIUAQ0e8sC4b24ipNj26NiaZlo/d4=
+
+Name: org/eclipse/xtext/builder/builderState/BufferedBinaryResourceFac
+ tory.class
+SHA-256-Digest: hbw16b+GQWyyRLqxDwTUhXvUUkGJrTbVkVl22ue3VXM=
+
+Name: org/eclipse/xtext/builder/builderState/impl/BuilderStateFactoryI
+ mpl.class
+SHA-256-Digest: ErbYbkjPYbF7oJwuIo7PjzNCwcN22ywLUJlFPUFe6bU=
+
+Name: org/eclipse/xtext/builder/messages.properties
+SHA-256-Digest: TkqsAUbFZkojdKtPGb/tVxJC2ayjs/tiyupMMHxK4Qk=
+
+Name: org/eclipse/xtext/builder/impl/DirtyStateAwareResourceDescriptio
+ ns$1.class
+SHA-256-Digest: N63wXzC/Tsf0BKaYWKmzo8Yi5qX0Xkoxo5Y3Z+3BQMQ=
+
+Name: org/eclipse/xtext/builder/DerivedResourceCleanerJob.class
+SHA-256-Digest: 6xKbNFD+7j/dxTUSvDUoWHPXGO1riOzxFyvg+cSXNlU=
+
+Name: org/eclipse/xtext/builder/impl/BuildContext.class
+SHA-256-Digest: bliNP3fsmXiZsKrYTvCNn50hxTNpn3GSKHdyE/nngNg=
+
+Name: org/eclipse/xtext/builder/resourceloader/IResourceLoader$LoadRes
+ ult.class
+SHA-256-Digest: lKCkXY30Iuw0MV/18dhJbB/TXvLxprHSkKu0xMcaz+Q=
+
+Name: org/eclipse/xtext/builder/resourceloader/IResourceLoader$LoadOpe
+ ration.class
+SHA-256-Digest: Y5Y0OC72dO3N4ANWoixjn/Ms722EEIX55F6aSTxGCCs=
+
+Name: org/eclipse/xtext/builder/builderState/util/BuilderStateAdapterF
+ actory.class
+SHA-256-Digest: WQH99Py5LpoIXxi/xdiY3D7/0YdhYycjRdMNsMLrhh0=
+
+Name: org/eclipse/xtext/builder/impl/messages.properties
+SHA-256-Digest: H7fdGC0ynu3WgsQje7BlLcctEZcLIwcSJL5CIx8Ov0w=
+
+Name: org/eclipse/xtext/builder/preferences/BuilderConfigurationBlock.
+ class
+SHA-256-Digest: PC2ZHt5DfLb9TzAaaKQqlHBIiyvdLlMkz7l7QUkZlM4=
+
+Name: org/eclipse/xtext/builder/JavaProjectBasedBuilderParticipant$1.c
+ lass
+SHA-256-Digest: 0ZxyFTh5rmbEbS3tYTfzLV59D/gK7FxCnzQ2gFLG3Ow=
+
+Name: model/Trace.ecore
+SHA-256-Digest: VZ/6Bo8SXeTXj98d7NLI4wHXPm4XPWKH7MomHH63DJw=
+
+Name: org/eclipse/xtext/builder/BuilderParticipant$1.class
+SHA-256-Digest: AzBg7H99YdMOs4frckGNiRSmFy1G3bjMY9hfB2wsjhY=
+
+Name: org/eclipse/xtext/builder/clustering/Messages.class
+SHA-256-Digest: NofaXv/w4GXxZtFm4QRCWbtbGs0EWKFcuJkNwwsVXII=
+
+Name: org/eclipse/xtext/builder/impl/DirtyStateAwareResourceDescriptio
+ ns$5.class
+SHA-256-Digest: LhAq2nZJAFEiWeKvv4ahb8LmADDTvUjR4M8eQIX4wrc=
+
+Name: org/eclipse/xtext/builder/impl/ToBeBuiltComputer$CompositeContri
+ bution.class
+SHA-256-Digest: oKqJcm1fojC8UPqc8kYfBgv3JTRclTiYdXFwqQDcImQ=
+
+Name: org/eclipse/xtext/builder/debug/XtextBuildConsole$Factory.class
+SHA-256-Digest: T5ek33TIomxC7iN8aotGbzlGD2S3/BRgvSVnUYtr5u8=
+
+Name: org/eclipse/xtext/builder/builderState/EMFBasedPersister$2.class
+SHA-256-Digest: LZsSWy74PvqrXbOQmyaBJ3qQKYQrD2Hkdg0fRQ8GNtE=
+
+Name: org/eclipse/xtext/builder/impl/PersistentDataAwareDirtyResource.
+ class
+SHA-256-Digest: UML7OjWqFnxCApFzHdvjoj+GRVbRF65YlxcLZjkSJEU=
+
+Name: org/eclipse/xtext/builder/debug/XtextBuildConsole$Logger.class
+SHA-256-Digest: bDzd91HuodoEpVmi6CBlgTzYZ51It7nHsfJsI4RX0/k=
+
+Name: org/eclipse/xtext/builder/impl/Messages.class
+SHA-256-Digest: pNktnYvOgaiYQdtXf5JhsDI3T2PIEcK+GVUq7UDR84g=
+
+Name: org/eclipse/xtext/builder/resourceloader/ResourceLoaderProviders
+ $2.class
+SHA-256-Digest: o2CRc6XTXDh+swwkoMRRAoK5tbbtL/TJ2pPIr9hYKOE=
+
+Name: model/Trace.genmodel
+SHA-256-Digest: ZZEu0JJUsDX84MljPMqakcm5OGum1tarP4S9l5IrKnU=
+
+Name: org/eclipse/xtext/builder/impl/RegistryBuilderParticipant.class
+SHA-256-Digest: QCg7nChcweJ9vYP9R9jXsXwupilQg3yu4hWYyx7VAWo=
+
+Name: org/eclipse/xtext/builder/impl/IBuildFlag.class
+SHA-256-Digest: zz6u6ZIUb3D93bkdCy7af4vp7LOybL7mDnUQmQ6SfUw=
+
+Name: org/eclipse/xtext/builder/impl/QueuedBuildData$CompositeContribu
+ tion.class
+SHA-256-Digest: bF8KZtiM2m9l2KFIVUmsjHBn0wGdsBsYLAj1JF1VPa8=
+
+Name: org/eclipse/xtext/builder/impl/QueuedBuildData$NullContribution.
+ class
+SHA-256-Digest: KMc3Sqzr0so09vz1LZ7dfkPuEm/3p8+4k7VqcyxUkMM=
+
+Name: org/eclipse/xtext/builder/DerivedResourceMarkers$1.class
+SHA-256-Digest: 8nLoCr7UjsiI6+l4jaSjHtzSiCGaU9XDKRDRQZYM0ck=
+
+Name: org/eclipse/xtext/builder/impl/IToBeBuiltComputerContribution.cl
+ ass
+SHA-256-Digest: DKQts71vlA82OfU9imQU4D+NgN4N/8GN14igatOoCI0=
+
+Name: org/eclipse/xtext/builder/builderState/BufferedBinaryResourceFac
+ tory$1.class
+SHA-256-Digest: MfmwjdEv6B4bWL6HPWzeiEXYzcUfOWZZ0Er2H3wFpcI=
+
+Name: org/eclipse/xtext/builder/builderState/util/BuilderStateAdapterF
+ actory$1.class
+SHA-256-Digest: R+3/UqK2+ny0SuxSYqJhkZ5D1jUKaD24dbQANyYYX7Q=
+
+Name: org/eclipse/xtext/builder/impl/ProjectOpenedOrClosedListener$2.c
+ lass
+SHA-256-Digest: DK3mgzG+p9g0UvXbVHT3VcKwu1WJI3s/xS2gROaATsE=
+
+Name: org/eclipse/xtext/builder/preferences/BuilderPreferenceAccess$In
+ itializer.class
+SHA-256-Digest: b9e+BskT71L55zxybfSK7t2v9QUx8jIy89Xsg551JLM=
+
+Name: org/eclipse/xtext/builder/resourceloader/ResourceLoaderProviders
+ $3.class
+SHA-256-Digest: zumjpzKtIZH5THnmUzSqStPD8qhkEzfoYyAkb99KjzA=
+
+Name: org/eclipse/xtext/builder/clustering/ClusteringBuilderState.clas
+ s
+SHA-256-Digest: X1DA148tXnJ1K7ajot01M+55gtCNFDySCT1yRO6mK+s=
+
+Name: org/eclipse/xtext/builder/impl/DirtyStateAwareResourceDescriptio
+ ns.class
+SHA-256-Digest: kQhRKbfDhd/iDEtEE6ZMuWEl8A9dK7HQhmHSlyYg07Q=
+
+Name: org/eclipse/xtext/builder/builderState/EMFBasedPersister$1.class
+SHA-256-Digest: pyq2Y3Jnor20VnXEOi3IOUy9XFvkimbkg9dfZL3mho8=
+
+Name: org/eclipse/xtext/builder/trace/util/TraceSwitch.class
+SHA-256-Digest: +m++H/Uhp6/PzQHlScDiP3wRYAIQwnzS9l5VzsX3cJ4=
+
+Name: org/eclipse/xtext/builder/resourceloader/ResourceLoaderProviders
+ $AbstractResourceLoaderProvider.class
+SHA-256-Digest: 1kj/4l6i5y9jBJJiW48payRANw6AsHGlOHRgfVq+zw0=
+
+Name: org/eclipse/xtext/builder/builderState/ReferenceDescription.clas
+ s
+SHA-256-Digest: rFx5Y4vAYkZ4al8nDo1d6rBd0ff7Glj0NjTX49fhn7o=
+
+Name: org/eclipse/xtext/builder/builderState/EMFBasedPersister$NoOpURI
+ Handler.class
+SHA-256-Digest: GeJbHBW4ZqFuI05t3pyiHorvB/x0jv8LTRisVqShjz4=
+
+Name: org/eclipse/xtext/builder/trace/util/TraceAdapterFactory.class
+SHA-256-Digest: BkWa4IlgPZD2IA8fyVGIHYSK8021xVF5RlxG4WWJJg4=
+
+Name: org/eclipse/xtext/builder/internal/Activator.class
+SHA-256-Digest: bs3atJjpJgGs4WoeLmEicCFywMpqegFARCzlp1htTbs=
+
+Name: org/eclipse/xtext/builder/trace/TraceEditor$2.class
+SHA-256-Digest: jIxi5lZL7iUX7T9PcB5gd5ftyqlRzwT4X3hcuCVNvIE=
+
+Name: org/eclipse/xtext/builder/resourceloader/AbstractResourceLoader$
+ CheckedLoadOperation.class
+SHA-256-Digest: nMI5nzW1AQuShmI7c7zfeMOkhFw/mOS1N9Kn09mJCOo=
+
+Name: org/eclipse/xtext/builder/trace/DebugLocationData.class
+SHA-256-Digest: PGo6uLVoo3TvSQ55VRr5ajMk2ZS0Rt4ElT2regEhJzU=
+
+Name: org/eclipse/xtext/builder/builderState/BuilderStatePackage$Liter
+ als.class
+SHA-256-Digest: Y687CaT/3NoIiCScJFYJwOAgKagFqnHKsPZPhehFyO0=
+
+Name: org/eclipse/xtext/builder/impl/ProjectOpenedOrClosedListener$1.c
+ lass
+SHA-256-Digest: lzlVnc7fygJs4Z8EO2IpgR/mXRcqoXwNLPBcqrcHb8U=
+
+Name: org/eclipse/xtext/builder/trace/TraceFactory.class
+SHA-256-Digest: eWwnTq1KmpNOnojWb+yz1tFtqtDMDV0n3KoDE779tGs=
+
+Name: org/eclipse/xtext/builder/impl/RegistryBuilderParticipant$Builde
+ rParticipantReader.class
+SHA-256-Digest: eGBGlC0/wqSialH/cWeesdg4MJs5+K17yMIPE3bjeJY=
+
+Name: org/eclipse/xtext/builder/EclipseResourceFileSystemAccess2$1Acce
+ ssibleOutputStream.class
+SHA-256-Digest: tKy3R/xoeWc9VqNAR0d/aJzfuHlvRjPdzmELPyHoF94=
+
+Name: org/eclipse/xtext/builder/impl/QueuedBuildData$1.class
+SHA-256-Digest: qqubPq/JdMM8J+u/N7axJCpJXOpkUK41ulxCUO3oY5A=
+
+Name: org/eclipse/xtext/builder/IXtextBuilderParticipant$IBuildContext
+ .class
+SHA-256-Digest: llr4TwGK68biGp68zWjW9EB201RvXeQuYlCuEVj4QUc=
+
+Name: org/eclipse/xtext/builder/impl/javasupport/ProjectClasspathChang
+ eListener$1.class
+SHA-256-Digest: Bitvex3PdFiBu8VDRb826E/BBCD4lVbXdRNIZKYDUEk=
+
+Name: org/eclipse/xtext/builder/clustering/CurrentDescriptions.class
+SHA-256-Digest: xNJRul+ynVSIyCOktGciFkpe3cW/c0H8CzaNlV1k5+s=
+
+Name: org/eclipse/xtext/builder/trace/TraceEditor$1.class
+SHA-256-Digest: vq5SxQv6J7DdWHRJ0eS9i1Oe+75ql3W9LLyuiVCepAo=
+
+Name: org/eclipse/xtext/builder/nature/ToggleXtextNatureAction.class
+SHA-256-Digest: RgdrKXDOpq2EA4jo3zHQ2ZxeR8M9tiqCGMelZR+DDs8=
+
+Name: org/eclipse/xtext/builder/impl/DirtyStateAwareResourceDescriptio
+ ns$4.class
+SHA-256-Digest: cZCwcRKdPI0lJscN8VfuUOSPbua8BMli7rhibFEdNFM=
+
+Name: org/eclipse/xtext/builder/BuildExecutors.class
+SHA-256-Digest: LjVGD08wdm+mHC39PklUxvTtgMFBZMrniYBAa09ZD3E=
+
+Name: org/eclipse/xtext/builder/preferences/messages.properties
+SHA-256-Digest: lBb3cdAGXkg/bOb+0SgOI7J1nsFXzv4Ic7BXG1cm+7M=
+
+Name: org/eclipse/xtext/builder/trace/TraceResourceFactory.class
+SHA-256-Digest: B7gVDJZp+sp/nW5LShuB2v1HYNkAw3cUAL65BPTFiJ0=
+
+Name: org/eclipse/xtext/builder/impl/IQueuedBuildDataContribution.clas
+ s
+SHA-256-Digest: ZNmMKN3cLyY2/q9yQnTEf76ynqg0pUN5EgQix2kPgZQ=
+
+Name: org/eclipse/xtext/builder/resourceloader/IResourceLoader$Sorter.
+ class
+SHA-256-Digest: 02YnbixEBmHgCsYd2nDOSbUf53VHdl+naWaxinOk1KE=
+
+Name: org/eclipse/xtext/builder/EclipseSourceFolderProvider.class
+SHA-256-Digest: iL5KnHZDhVytjluZ6Vq+D6dz5BiK5PrM7NOaRA9BKPk=
+
+Name: org/eclipse/xtext/builder/nature/messages.properties
+SHA-256-Digest: 1vnu9+w5z09NAt+IGCyhGFvfEV1I1I19kOiB49+dCDM=
+
+Name: org/eclipse/xtext/builder/clustering/CopiedResourceDescription$1
+ .class
+SHA-256-Digest: j8SJjMlzhBc3HUQkVXwSk9FogkTwR+nfwjugS2MryoM=
+
+Name: org/eclipse/xtext/builder/preferences/BuilderConfigurationBlock$
+ 5.class
+SHA-256-Digest: XuitOt3aEp9TVAVIP4W7t5sEKwbeIxPKgVwNb0yyiEc=
+
+Name: schema/participant.exsd
+SHA-256-Digest: 01NepFkt53TKBp1GRNiV83eRBqF2bA0/bfgyk6omssQ=
+
+Name: org/eclipse/xtext/builder/smap/StratumBreakpointAdapterFactory$1
+ .class
+SHA-256-Digest: LI+4/7Q6BFj4gnXh+2yrOKvR/MmsC0ODzd7gG7oE6jg=
+
+Name: plugin.properties
+SHA-256-Digest: ZkplWFgmAetWii3ANQjtpJiv3Kl83DtjaZfje4TV0sU=
+
+Name: org/eclipse/xtext/builder/builderState/MarkerUpdaterImpl.class
+SHA-256-Digest: j9rPybwkZx12rwnn4CFmGI0RzHOzU5YfVWKprlBeEAw=
+
+Name: org/eclipse/xtext/builder/ParallelBuilderParticipant.class
+SHA-256-Digest: Sw2tFhLslOmn52a7NTvonlApFYQ7n9wSakgv1VbLU7A=
+
+Name: org/eclipse/xtext/builder/preferences/BuilderConfigurationBlock$
+ 2.class
+SHA-256-Digest: W2VR3f8MqRTL5Dz3gFtHplLS2WQWfmTDf2f8C6d06Dg=
+
+Name: org/eclipse/xtext/builder/clustering/messages.properties
+SHA-256-Digest: nKDLlukgwRC6PDFxyyGmZfx728qL+Y0ywS6yUfucoGw=
+
+Name: org/eclipse/xtext/builder/preferences/BuilderConfigurationBlock$
+ 3$1.class
+SHA-256-Digest: 13CksobhIsTzWMZ0CgQB7Yb7yuk7ANec7//eNyWYpig=
+
+Name: org/eclipse/xtext/builder/trace/impl/DebugTraceRegionImpl.class
+SHA-256-Digest: mbS9w7JoCWUk5BHVpKwIn0u9POmgpoDE6lYcFM+lAyw=
+
+Name: org/eclipse/xtext/builder/ParallelBuilderParticipant$Tripwire.cl
+ ass
+SHA-256-Digest: hezjlRe9uXRWYpsHYkSQKOZI9e5uQFKwhi45yrCcoeQ=
+
+Name: org/eclipse/xtext/builder/impl/javasupport/JdtQueuedBuildData.cl
+ ass
+SHA-256-Digest: HUHyEnyPrIri6TXr9QLELADBQVaL/jxvu3wZB2NGyPY=
+
+Name: org/eclipse/xtext/builder/smap/DerivedResourceMarkerCopier.class
+SHA-256-Digest: bAGT5ers+76619G1XGMnJcnHxi4/SUY5ifQ3qriH+p8=
+
+Name: org/eclipse/xtext/builder/EclipseOutputConfigurationProvider.cla
+ ss
+SHA-256-Digest: nFO1GtHuyFyQIJevvdvxwLMiW9Ryl5E/q5KCmOx6WIQ=
+
+Name: org/eclipse/xtext/builder/nature/Messages.class
+SHA-256-Digest: 2iKOpCd0+Atq2e2TDWjMkmmv1XOKSASZegX4i3a9Wn8=
+
+Name: org/eclipse/xtext/builder/builderState/impl/BuilderStateFactoryI
+ mpl$2.class
+SHA-256-Digest: 33mAMrr8tghLig4LuVowUBIgBxrT6AAheZ/SkZ5lVDw=
+
+Name: org/eclipse/xtext/builder/smap/StratumBreakpointAdapterFactory$D
+ ata.class
+SHA-256-Digest: QZZQLMFNk7r/qGKuOSp55s+j1LZyDtrEHbuu5vbq+II=
+
+Name: org/eclipse/xtext/builder/builderState/BufferedBinaryResourceFac
+ tory$1$1.class
+SHA-256-Digest: bYbVdbthuFTiy9ONoqe6o/EwToE3rhl1A9TKlTidUbk=
+
+Name: org/eclipse/xtext/builder/smap/DebugSourceInstallingCompilationP
+ articipant.class
+SHA-256-Digest: PLUSHbLUpN0bJdm8Xx9kuBbRRW9TuBHMUuZAwcdBHp8=
+
+Name: org/eclipse/xtext/builder/trace/impl/TracePackageImpl.class
+SHA-256-Digest: /Cvz+LTW15my5ggeYtrQGUGE/jd8K+gPd8wH1Rp5bmI=
+
+Name: org/eclipse/xtext/builder/EclipseResourceFileSystemAccess2$IFile
+ Callback.class
+SHA-256-Digest: 812Pk5eRWQj+5ZPqVnQvmYilyW/nAt4642YxFu6WnEw=
+
+Name: org/eclipse/xtext/builder/builderState/IBuilderState.class
+SHA-256-Digest: 8qqPIDDT1hcUcZpSF0tI5nrYMd4EwpcHnnAFirc42b8=
+
+Name: org/eclipse/xtext/builder/clustering/DisabledClusteringPolicy.cl
+ ass
+SHA-256-Digest: C6pJKjdY7YfjLyakOVXbX6S5DU2uEvNm7fchPs0vHaU=
+
+Name: org/eclipse/xtext/builder/builderState/messages.properties
+SHA-256-Digest: SLEfIQ9BNWuDh02ami3qVF9K+u7xNlvQ6woIqoG+/Y0=
+
+Name: org/eclipse/xtext/builder/impl/ToBeBuiltComputer$2.class
+SHA-256-Digest: hn4N4SZrbP4Rj1ObdOobVNUqoWOjkBm68n/uFd8RQeE=
+
+Name: model/BuilderState.ecore
+SHA-256-Digest: gJFUs1wDH4ypZ4/MX9VwtM3DGlS7TV9g7VW9d4Fn77s=
+
+Name: org/eclipse/xtext/builder/preferences/BuilderConfigurationBlock$
+ 3.class
+SHA-256-Digest: OituXqB4VlAYOZmfuTMkFtZrlLRSkoFvZVo7nYJVesM=
+
+Name: org/eclipse/xtext/builder/builderState/impl/ReferenceDescription
+ Impl.class
+SHA-256-Digest: /kmFCnLx8gd9umUYceA3zZjt2nJR7xX07zAT0vqKmfk=
+
+Name: org/eclipse/xtext/builder/nature/NatureAddingEditorCallback.clas
+ s
+SHA-256-Digest: sm8Rwi6ngU8qVa3IvtB3FolZHxYQ9BCyHYemEmkl8XQ=
+
+Name: org/eclipse/xtext/builder/resourceloader/IResourceLoader$LoadOpe
+ rationException.class
+SHA-256-Digest: bUmgi0jJNDvf+gFiGvuH5TjUTIYxtjlAPHW34XzBTr0=
+
+Name: org/eclipse/xtext/builder/preferences/BuilderPreferencePage.clas
+ s
+SHA-256-Digest: RlKwtFuze7NFNhknpsTb3BPXwwENOg6+WBUNWU4lycs=
+
+Name: org/eclipse/xtext/builder/trace/util/TraceAdapterFactory$1.class
+SHA-256-Digest: /MrvH5KhAvm1amUVX4JbUiA16BRYmpDQW99ZWs2R6ME=
+
+Name: org/eclipse/xtext/builder/preferences/BuilderConfigurationBlock$
+ TableItemData.class
+SHA-256-Digest: xr1BXy8KOsKwwLBiUHO4tP/zzsUKwI7Fwc6uZ0dcDvQ=
+
+Name: about.html
+SHA-256-Digest: nHFX9V09SN3s1mjLDEYlZfF1cHH95xsX0U6CG6LnGCg=
+
+Name: org/eclipse/xtext/builder/DerivedResourceMarkers.class
+SHA-256-Digest: 7HFN+WmCv/dlUoMT9+ySX9G6NCbyNPxYK7Qexworn10=
+
+Name: org/eclipse/xtext/builder/EclipseResourceFileSystemAccess.class
+SHA-256-Digest: +XwJUT6zKvRRYKOuwVaU/stCSs/PEHGjFUBWszmWCSg=
+
+Name: org/eclipse/xtext/builder/trace/DebugTraceRegion.class
+SHA-256-Digest: hU2+drfUiRld4WETq1TFGdRs5C6NYJcGR7I/YDH+/gI=
+
+Name: org/eclipse/xtext/builder/resourceloader/ParallelResourceLoader$
+ ParallelLoadOperation$ResourceLoadJob.class
+SHA-256-Digest: ttqA8upUhytsRvDdTxYGVfnY8Jw4RLm3iOkK+8J9efk=
+
+Name: org/eclipse/xtext/builder/trace/TraceResourceFactory$1.class
+SHA-256-Digest: D3mhu7oeNrFfTYGyYIYpTXubO7QcaRBoFRZdGjRa4Z4=
+
+Name: org/eclipse/xtext/builder/BuilderParticipant.class
+SHA-256-Digest: 1KFhJPAdscny8/4wYIyb1vZd1jmj1giF1W1M+ULqBis=
+
+Name: org/eclipse/xtext/builder/debug/XtextBuildConsolePageParticipant
+ .class
+SHA-256-Digest: r/pJ1QD2XYFJ5sof8I8mlKNnP+OuWY+tFa9jTbRpn5E=
+
+Name: org/eclipse/xtext/builder/Messages.class
+SHA-256-Digest: Rm3cfXnt/AkaF3o15g5Witk6/xwciJymJVa/tM7ZSyc=
+
+Name: org/eclipse/xtext/builder/preferences/BuilderConfigurationBlock$
+ 4.class
+SHA-256-Digest: bEVTg8QU5Ga9Z3GzZkanr6McFchvcmmoKfnJIBAI9i8=
+
+Name: org/eclipse/xtext/builder/builderState/BuilderStatePackage.class
+SHA-256-Digest: K8rhRJ3YSh2aBkFi29eUbuarD+JhYe0Vu073yTJx1cI=
+
+Name: org/eclipse/xtext/builder/impl/DirtyStateAwareResourceDescriptio
+ ns$DirtyStateListener.class
+SHA-256-Digest: txBlWJBYOk/Kr2WjLW0OH4yP2GwVxZ+aBF6d1xGEcy4=
+
+Name: org/eclipse/xtext/builder/impl/BuildData.class
+SHA-256-Digest: /wwQ8vtNLxM7iVi8ZhpKVUufuCO7eYj8t67sm9ga58U=
+
+Name: org/eclipse/xtext/builder/impl/RegistryBuilderParticipant$NoOpBu
+ ilderParticipant.class
+SHA-256-Digest: 3+1mor4qPbKTpJDQlWavLhEtxvp6Q/55hAJFSi3Anxw=
+
+Name: org/eclipse/xtext/builder/impl/ToBeBuilt.class
+SHA-256-Digest: jg6qwkmlm8lM34ln/ezFwG4TWabzwcETPorCMBCdb/c=
+
+Name: org/eclipse/xtext/builder/impl/javasupport/JavaChangeQueueFiller
+ .class
+SHA-256-Digest: zDLAtAzYuGVK7t8Ml7Vr/hybIF8uNx+ytiCFObufSls=
+
+Name: org/eclipse/xtext/builder/impl/ToBeBuiltComputer$1.class
+SHA-256-Digest: WuVeXiuTvz/SiiTNkm0YsUJD0WQ+Roaq8oGtWC6gu8U=
+
+Name: org/eclipse/xtext/builder/builderState/impl/UserDataEntryImpl.cl
+ ass
+SHA-256-Digest: Tm0A29dSWp6g2jojqSDZ8nApZ3yIu04nQXnV6Dm9EeU=
+
+Name: org/eclipse/xtext/builder/impl/ProjectOpenedOrClosedListener$2$1
+ .class
+SHA-256-Digest: iA2qpef+CYmiK6I7Q6hYeWja82ml5mAjzJTPEaPerYQ=
+
+Name: org/eclipse/xtext/builder/resourceloader/IResourceLoader$Sorter$
+ NoSorting.class
+SHA-256-Digest: raM75xZlAneWPqLrxSDVV5pEfRtjMeE/8TJNB+CjDrs=
+

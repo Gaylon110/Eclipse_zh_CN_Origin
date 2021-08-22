@@ -1,0 +1,795 @@
+<!-- 
+ ******************************************************************************
+ * Copyright (c) 2016 Oracle and Liferay
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *    Konstantin Komissarchik - initial implementation and ongoing maintenance
+ *    Gregory Amerson - [372359] Provide means to extend the behavior of adapt methods
+ *    Gregory Amerson - [358295] Need access to selection in list property editor
+ *    Gregory Amerson - [346172] Support zoom, print and save as image actions
+ ******************************************************************************
+-->
+
+<html>
+
+<head>
+  <title>Enhancements in Sapphire 0.5</title>
+  <link rel="StyleSheet" href="../../style.css" TYPE="text/css"/>
+</head>
+
+<body>
+
+<h1>Enhancements in Sapphire 0.5</h1>
+
+<ol>
+  <li><a href="#Diagrams">Diagrams</a></li>
+  <ol type="a">
+    <li><a href="#Diagrams-GEF">Straight to GEF</a></li>
+    <li><a href="#Diagrams-FlexibleLayoutPersistence">Flexible Layout Persistence</a></li>
+    <li><a href="#Diagrams-ContextHelp">Context Help</a></li>
+    <li><a href="#Diagrams-Header">Header</a></li>
+    <li><a href="#Diagrams-NewActions">New Actions</a></li>
+    <li><a href="#Diagrams-MultiSelectActions">Multi-Select Actions</a></li>
+    <li><a href="#Diagrams-FloatingToolBar">Floating Tool Bar</a></li>
+  </ol>
+  <li><a href="#Forms">Forms</a></li>
+  <ol type="a">
+    <li><a href="#Forms-DragAndDrop">Drag-n-Drop</a></li>
+    <li><a href="#Forms-PopUpListFieldForPossibleValues">Pop-Up List Field Presentation for Possible Value Properties</a></li>
+    <li><a href="#Forms-FlexibleActuatorPresentation">Flexible Actuator Presentation</a></li>
+    <li><a href="#Forms-ExprForPropertyEditorLabel">Expression for Property Editor Label</a></li>
+  </ol>
+  <li><a href="#Services">Services</a></li>
+  <ol type="A">
+    <li><a href="#Services-PartServices">Part Services</a></li>
+    <li><a href="#Services-AdapterService">AdapterService</a></li>
+    <li><a href="#Services-DiagramLayoutPersistenceService">DiagramLayoutPersistenceService</a></li>
+    <li><a href="#Services-DragAndDropService">DragAndDropService</a></li>
+    <li><a href="#Services-EqualityService">EqualityService</a></li>
+    <li><a href="#Services-ListSelectionService">ListSelectionService</a></li>
+    <li><a href="#Services-ValidationServiceAtElementLevel">ValidationService at Element Level</a></li>
+  </ol>
+  <li><a href="#Miscellaneous">Miscellaneous</a></li>
+  <ol type="A">
+    <li><a href="#Miscellaneous-ModelElementDisposed">IModelElement.disposed()</a></li>
+    <li><a href="#Miscellaneous-ImageFunction">Image Function</a></li>
+    <li><a href="#Miscellaneous-PropagatedKeyBindings">Propagated Key Bindings</a></li>
+    <li><a href="#Miscellaneous-ActionToolTips">Action Tool Tips</a></li>
+  </ol>
+</ol>
+
+<h2><a name="Diagrams"><a name="Diagrams-GEF">Straight to GEF</a></a></h2>
+
+<p>The Graphiti-based diagram presentation (introduced in 0.4 release) has been replaced with a presentation 
+written directly on top of GEF. This has significantly reduced Sapphire's dependencies and enabled diagram 
+support to more tightly integrate with the rest of Sapphire.</p> 
+
+<h2><a name="Diagrams-FlexibleLayoutPersistence">Flexible Diagram Layout Persistence</a></h2>
+
+<p>Customize how diagram layout is persisted by implementing 
+<a href="../../services/index.html#DiagramLayoutPersistenceService">DiagramLayoutPersistenceService</a>
+or take advantage of one of the provided implementations:</p>
+
+<ol>
+  <li><b>side-by-side</b> - Layout is persisted in a separate file alongside the file being edited.</li>
+  <li><b>project</b> - Layout is persisted in a semi-hidden file in project's .settings folder.</li>
+  <li><b>workspace (default)</b> - Layout is persisted in workspace's .metadata folder.</li>
+</ol>
+
+<p style="margin-left: 20px;"><b>Example</b></p>
+
+<pre class="source-code"><code><font color="#888888">&lt;diagram-page></font>
+  &lt;layout-persistence>project&lt;/layout-persistence>                
+<font color="#888888">&lt;/diagram-page></font></code></pre>
+
+<p style="margin-left: 20px;"><b>Example</b></p>
+
+<p style="margin-left: 20px;">The architecture sample provides a comprehensive example of a custom 
+<a href="../../services/index.html#DiagramLayoutPersistenceService">DiagramLayoutPersistenceService</a> 
+implementation that persists layout in the same file as data.</p>
+
+<pre class="source-code"><code><font color="#888888">&lt;diagram-page></font>
+  &lt;layout-persistence>custom&lt;/layout-persistence>
+  &lt;service>
+    &lt;implementation>ArchitectureDiagramLayoutPersistenceService&lt;/implementation>
+  &lt;/service>
+<font color="#888888">&lt;/diagram-page></font></code></pre>
+
+<h2><a name="Diagrams-ContextHelp">Diagram Context Help</a></h2>
+
+<p>Expose context sensitive help in a diagram by annotating the model being edited with @Documentation
+annotations. When "F1" is pressed in a diagram, context help will come from the model element associated
+with the selected node or connection. If nothing is selected, the context help will come from the model element
+associated with the diagram.</p>
+
+<h2><a name="Diagrams-Header">Diagram Header</a></h2>
+
+<p>Diagram editor page now displays a header just like the form editor page. The header shows page title and provides 
+another place for page-level actions. To contribute actions to the header, use Sapphire.Diagram.Header context at
+diagram page level.</p>
+
+<p style="margin-left: 20px;"><img src="images/DiagramHeader.png"/></p>
+
+<p style="margin-left: 20px;"><b>Example</b></p>
+
+<pre class="source-code"><code><font color="#888888">&lt;diagram-page>
+  &lt;action>
+    &lt;id>Sample.OpenSapphireWebSite&lt;/id>
+    &lt;label>Sapphire Web Site&lt;/label>
+    &lt;tooltip>Open Sapphire Web Site (Ctrl+Alt+Shift+S)&lt;/tooltip>
+    &lt;key-binding>CONTROL+ALT+SHIFT+s&lt;/key-binding>
+    &lt;key-binding-behavior>propagated&lt;/key-binding-behavior>
+    &lt;context>Sapphire.Diagram.Editor&lt;/context></font>
+    &lt;context>Sapphire.Diagram.Header&lt;/context>
+    <font color="#888888">&lt;location>after:Sapphire.Diagram.Print&lt;/location>
+    &lt;group>Sample.OpenSapphireWebSite&lt;/group>
+    &lt;image>Web.png&lt;/image>
+    &lt;hint>
+      &lt;name>style&lt;/name>
+      &lt;value>image+text&lt;/value>
+    &lt;/hint>
+  &lt;/action>
+  &lt;action-handler>
+    &lt;action>Sample.OpenSapphireWebSite&lt;/action>
+    &lt;id>Sample.OpenSapphireWebSite&lt;/id>
+    &lt;label>Sapphire Web Site&lt;/label>
+    &lt;impl>OpenSapphireWebSiteActionHandler&lt;/impl>
+  &lt;/action-handler>
+&lt;/diagram-page></font></code></pre>
+
+<h2><a name="Diagrams-NewActions">New Diagram Actions</a></h2>
+
+<p>Easily delete all bend points for one or more connections.</p>
+
+<p>Select all diagram parts or just the nodes using a pair of new actions. Alternatively, use
+Ctrl + A key binding to select everything.</p>
+
+<p>Use zoom actions to magnify or shrink the diagram for a better view. The zoom level is persisted between
+editing sessions.</p>
+
+<p>Print the diagram or save it as an image to share with others.</p>
+
+<p style="margin-left: 20px;"><img src="images/DiagramActions.png"/></p>
+
+<h2><a name="Diagrams-MultiSelectActions">Multi-Select Actions in Diagrams</a></h2>
+
+<p>Develop actions that work in the context where multiple nodes and/or connections are selected. Such
+actions should specify Sapphire.Diagram.MultipleParts context and be contributed at diagram page level.</P>
+
+<p style="margin-left: 20px;"><b>Example</b></p>
+
+<pre class="source-code"><code>public class ExampleActionHandler extends SapphireActionHandler
+{
+    @Override
+    protected Object run( SapphireRenderingContext context ) 
+    {
+        final SapphireDiagramEditorPagePart page = (SapphireDiagramEditorPagePart) getPart();
+
+        for( ISapphirePart selectedPart : page.getSelections() )
+        {
+            if( selectedPart instanceof DiagramNodePart )
+            {
+                ...
+            }
+            else if( selectedPart instanceof DiagramConnectionPart )
+            {
+                ...
+            }
+        }
+
+        ...
+
+        return null;
+    }
+}</code></pre>
+
+<pre class="source-code"><code><font color="#888888">&lt;diagram-page>
+    &lt;action>
+        &lt;id>Example&lt;/id>
+        &lt;label>example&lt;/label></font>
+        &lt;context>Sapphire.Diagram.MultipleParts&lt;/context>
+    <font color="#888888">&lt;/action>
+    &lt;action-handler>
+        &lt;action>Example&lt;/action>
+        &lt;impl>ExampleActionHandler&lt;/impl>
+    &lt;/action-handler>
+&lt;/diagram-page></font></code></pre>
+
+<h2><a name="Diagrams-FloatingToolBar">Floating Tool Bar on Diagram Nodes</a></h2>
+
+<p>A floating toolbar is now displayed around a diagram node when the mouse hovers
+over it. It contains all the actions that are applicable to the node.</p>
+
+<p style="margin-left: 20px;"><img src="images/DiagramFloatingToolBar.png"/></p>
+
+<h2><a name="Forms"><a name="Forms-DragAndDrop">Drag-n-Drop in Forms</a></a></h2>
+
+<p>Use drag-n-drop to arrange the elements in the content outline and in table property editors.</p>
+
+<p style="margin-left: 20px;"><img src="images/FormDragAndDrop.png"/></p>
+
+<h2><a name="Forms-PopUpListFieldForPossibleValues">Pop-Up List Field Presentation for Possible Value Properties</a></h2>
+
+<p>Two pop-up list field presentations (editable and strict) have been added for properties with a possible
+values constraint. The default presentation remains a text field with a browse button and content
+assist. The new presentations are available for both stand-alone property editors and when a property is
+edited within a table.</p>
+
+<p style="margin-left: 20px;"><b>Example</b></p>
+
+<p style="margin-left: 20px;">In this example, two properties are used to illustrate the different options. The Color property 
+specifies an error for the severity of deviation from the possible values constraint, while the Shape 
+property specifies a warning.</p>
+
+<p style="margin-left: 20px;">The default presentation is a text field with a browse button and content assist.</p>
+
+<p style="margin-left: 20px;"><img src="images/PopUpListFieldForPossibleValues-1.png"/></p>
+
+<p style="margin-left: 20px;">An editable pop-up list field presentation can be used by specifying <nobr><i>Sapphire.PropertyEditor.PopUpListField.Editable</i></nobr> as 
+the presentation style. This presentation is most appropriate when the severity of deviation from the possible values 
+constraint is something other than an error.</p>
+
+<pre class="source-code"><code><font color="#888888">&lt;property-editor>
+    &lt;property>Color&lt;/property></font>
+    &lt;style>Sapphire.PropertyEditor.PopUpListField.Editable&lt;/style>
+<font color="#888888">&lt;/property-editor>
+&lt;property-editor>
+    &lt;property>Shape&lt;/property></font>
+    &lt;style>Sapphire.PropertyEditor.PopUpListField.Editable&lt;/style>
+<font color="#888888">&lt;/property-editor></font></code></pre>
+
+<p style="margin-left: 20px;"><img src="images/PopUpListFieldForPossibleValues-2.png"/></p>
+
+<p style="margin-left: 20px;">A strict pop-up list field presentation can be used by specifying <nobr><i>Sapphire.PropertyEditor.PopUpListField.Strict</i></nobr> as 
+the presentation style. This presentation is most appropriate when the severity of deviation from the possible 
+values constraint is an error.</p>
+
+<pre class="source-code"><code><font color="#888888">&lt;property-editor>
+    &lt;property>Color&lt;/property></font>
+    &lt;style>Sapphire.PropertyEditor.PopUpListField.Strict&lt;/style>
+<font color="#888888">&lt;/property-editor>
+&lt;property-editor>
+    &lt;property>Shape&lt;/property></font>
+    &lt;style>Sapphire.PropertyEditor.PopUpListField.Strict&lt;/style>
+<font color="#888888">&lt;/property-editor></font></code></pre>
+
+<p style="margin-left: 20px;"><img src="images/PopUpListFieldForPossibleValues-3.png"/></p>
+
+<p style="margin-left: 20px;">Alternatively, let the framework choose between editable and strict pop-up list field styles depending on the property's 
+possible values constraint by specifying <nobr><i>Sapphire.PropertyEditor.PopUpListField</i></nobr> as the presentation style.</p>
+
+<pre class="source-code"><code><font color="#888888">&lt;property-editor>
+    &lt;property>Color&lt;/property></font>
+    &lt;style>Sapphire.PropertyEditor.PopUpListField&lt;/style>
+<font color="#888888">&lt;/property-editor>
+&lt;property-editor>
+    &lt;property>Shape&lt;/property></font>
+    &lt;style>Sapphire.PropertyEditor.PopUpListField&lt;/style>
+<font color="#888888">&lt;/property-editor></font></code></pre>
+
+<p style="margin-left: 20px;"><img src="images/PopUpListFieldForPossibleValues-4.png"/></p>
+
+<p style="margin-left: 20px;">The new presentations are accessible in a similar manner when properties are edited within
+a table.</p>
+
+<pre class="source-code"><code><font color="#888888">&lt;property-editor>
+    &lt;property>ColoredShapes&lt;/property>
+    &lt;show-label>false&lt;/show-label>
+    &lt;span>true&lt;/span>
+    &lt;child-property>
+        &lt;property>Color&lt;/property></font>
+        &lt;style>Sapphire.PropertyEditor.PopUpListField&lt;/style>
+    <font color="#888888">&lt;/child-property>
+    &lt;child-property>
+        &lt;property>Shape&lt;/property></font>
+        &lt;style>Sapphire.PropertyEditor.PopUpListField&lt;/style>
+    <font color="#888888">&lt;/child-property>
+&lt;/property-editor></font></code></pre>
+
+<p style="margin-left: 20px;"><img src="images/PopUpListFieldForPossibleValues-5.png"/></p>
+
+<h2><a name="Forms-FlexibleActuatorPresentation">Flexible Actuator Presentation</a></h2>
+
+<p>An actuator provides means to invoke an action. The action could be drawn from the context where actuator 
+is placed or provided as part of actuator's definition. Actuators were formerly limited to links and were
+referred to as action links. New for this release is the ability to choose either link or button presentation
+along with ability to control horizontal alignment.</p>
+
+<p style="margin-left: 20px;"><b>Example</b></p>
+
+<pre class="source-code"><code><font color="#888888">&lt;actuator>
+    &lt;action-id>Sapphire.Gallery.Actuators.DoubleTheNumber&lt;/action-id>
+    &lt;action>
+        &lt;id>Sapphire.Gallery.Actuators.DoubleTheNumber&lt;/id>
+        &lt;label>double the number&lt;/label>
+    &lt;/action>
+    &lt;action-handler>
+        &lt;id>Sapphire.Gallery.Actuators.DoubleTheNumber&lt;/id>
+        &lt;action>Sapphire.Gallery.Actuators.DoubleTheNumber&lt;/action>
+        &lt;impl>ActuatorsGalleryDoubleTheNumberActionHandler&lt;/impl>
+    &lt;/action-handler></font>
+    &lt;span>false&lt;/span>
+    &lt;horizontal-align>right&lt;/horizontal-align>
+    &lt;style>Sapphire.Actuator.Button&lt;/style>
+<font color="#888888">&lt;/actuator></font></code></pre>
+
+<p style="margin-left: 20px;"><img src="images/MoreFlexibleActuatorPresentation.png"/></p>
+
+<h2><a name="Forms-ExprForPropertyEditorLabel">Expression for Property Editor Label</a></h2>
+
+<p>Use the expression language when overriding the label in a property editor.</p>
+
+<p style="margin-left: 20px;"><b>Example</b></p>
+
+<pre class="source-code"><code><font color="#888888">&lt;property-editor>
+    &lt;property>Name&lt;/property></font>
+    &lt;label>${ Type == "Business" ? "company" : "name" }&lt;/label>
+<font color="#888888">&lt;/property-editor></font></code></pre>
+
+<h2><a name="Services"><a name="Services-PartServices">Part Services</a></a></h2>
+
+<p>Services can now be attached to parts. This enhancement allows extensibility for parts to be handled with
+the same API that adopters should already be familiar with from the model layer.</p>
+
+<p>To attach a part service via the extension system, use Sapphire.Part context.</p>
+
+<p style="margin-left: 20px;"><b>Example</b></p>
+
+<pre class="source-code"><code><font color="#888888">&lt;extension></font>
+    &lt;service>
+        &lt;id>Example.CustomLayoutPersistenceService&lt;/id>
+        &lt;context>Sapphire.Part&lt;/context>
+        &lt;type>org.eclipse.sapphire.ui.diagram.layout.DiagramLayoutPersistenceService&lt;/type>
+        &lt;factory>org.example.CustomLayoutPersistenceService$Factory&lt;/factory>
+    &lt;/service>
+<code><font color="#888888">&lt;/extension></font></code></pre>
+
+<p>Services can also be attached to parts at the local level in sdef.</p>
+
+<p style="margin-left: 20px;"><b>Example</b></p>
+
+<pre class="source-code"><code><font color="#888888">&lt;definition>
+    &lt;diagram-page></font>
+        &lt;service>            
+            &lt;implementation>CustomLayoutPersistenceService&lt;/implementation>
+        &lt;/service>
+    <font color="#888888">&lt;/diagram-page>
+&lt;/definition></font></code></pre>
+
+<h2><a name="Services-AdapterService">AdapterService</a></h2>
+
+<p>The AdapterService provides means to extend the behavior of the adapt method in a given context.</p>
+
+<p>For example, out of the box, Sapphire can adapt IModelElement to IProject assuming that the model is using
+an IFile for the underlying resource store.  However, in some cases there may be no underlying IFile, so the
+default logic will no be able to find IProject. To solve this problem, we can introduce an adapter service to 
+provide a custom method for adopting IModelElement to IProject.</p>
+
+<p style="margin-left: 20px;"><b>Example</b></p>
+
+<pre class="source-code"><code><font color="#888888">@GenerateImpl</font>
+@Service( impl = NewProjectFileOpAdapterService.class )
+
+<font color="#888888">public interface INewProjectFileOp extends IModelElement
+{
+    ...
+}</font></code></pre>
+
+<pre class="source-code"><code>public class NewProjectFileOpAdapterService extends AdapterService
+{
+    @Override
+    public &lt;A&gt; A adapt( Class&lt;A&gt; adapterType )
+    {
+        if( IProject.class == adapterType )
+        {
+            INewProjectFileOp op = context( INewProjectFileOp.class );
+            IProject project = op.getProject().resolve();
+
+            if( project != null )
+            {
+                return adapterType.cast( project );
+            }
+        }
+
+        return null;
+    }
+}</code></pre>
+
+<a name="Services-DiagramLayoutPersistenceService"><h2>DiagramLayoutPersistenceService</h2></a>
+
+<p>The DiagramLayoutPersistenceService is responsible for persisting layout of the diagram, such a location and
+size of nodes, connection bend points, etc.</p>
+
+<p>Unlike other services, DiagramLayoutPersistenceService is not defined by methods that must be
+implemented, but rather by its expected behavior.</p>
+
+<ol>
+  <li>During service initialization, the implementation is expected to load layout information and transfer it to
+    diagram parts using API such as DiagramNodePart.setNodeBounds().</li>
+  <li>After initialization, the implementation is expected to listen for changes to diagram parts and persist
+    layout information. Persistence can happen immediately or be deferred until the save event is received.</li>
+  <li>If implementation defers layout persistence until save, it is expected to implement dirty() method and to
+   issue DirtyStateEvent when this state changes.</li>
+ </ol>
+
+<p style="margin-left: 20px;"><b>Example</b></p>
+
+<p style="margin-left: 20px;">The architecture sample provides a comprehensive example of a custom 
+implementation that persists layout in the same file as data.</p>
+
+<pre class="source-code"><code><font color="#888888">&lt;diagram-page></font>
+  &lt;layout-persistence>custom&lt;/layout-persistence>
+  &lt;service>
+    &lt;implementation>ArchitectureDiagramLayoutPersistenceService&lt;/implementation>
+  &lt;/service>
+<font color="#888888">&lt;/diagram-page></font></code></pre>
+
+<a name="Services-DragAndDropService"><h2>DragAndDropService</h2></a>
+
+<p>The DragAndDropService provides means to implement drag-n-drop behavior in a diagram editor.</p>
+
+<p style="margin-left: 20px;"><b>Example</b></p>
+
+<pre class="source-code"><code>public class MapDragAndDropService extends DragAndDropService 
+{
+    @Override
+    public boolean droppable( DropContext context ) 
+    {
+        return context.object() instanceof IFile;
+    }
+
+    @Override
+    public void drop( DropContext context ) 
+    {
+        IFile file = (IFile) context.object();
+        List<String> locations = new ArrayList<String>();
+
+        InputStream in = null;
+
+        try
+        {
+            in = file.getContents();
+            final BufferedReader br = new BufferedReader( new InputStreamReader( in ) );
+
+            for( String line = br.readLine(); line != null; line = br.readLine() )
+            {
+                if( line != null )
+                {
+                    line = line.trim();
+
+                    if( line.length() > 0 )
+                    {
+                        locations.add( line );
+                    }
+                }
+            }
+        }
+        catch( CoreException e )
+        {
+            LoggingService.log( e );
+        }
+        catch( IOException e )
+        {
+            LoggingService.log( e );
+        }
+        finally
+        {
+            if( in != null )
+            {
+                try
+                {
+                    in.close();
+                }
+                catch( IOException e ) {}
+            }
+        }
+
+        if( ! locations.isEmpty() )
+        {
+            SapphireDiagramEditorPagePart diagram = context( SapphireDiagramEditorPagePart.class );
+            Map map = context( Map.class );
+
+            Point initialDropPosition = context.position();
+
+            int x = initialDropPosition.getX();
+            int y = initialDropPosition.getY();
+
+            for( String locationName : locations )
+            {
+                if( ! map.hasLocation( locationName ) )
+                {
+                    Location location = map.getLocations().insert();
+                    location.setName( locationName );
+
+                    DiagramNodePart locationNodePart = diagram.getDiagramNodePart(location);
+                    locationNodePart.setNodeBounds( x, y );
+
+                    x += 50;
+                    y += 50;
+                }
+            }
+        }
+    }
+}</code></pre>
+
+<p style="margin-left: 20px;">The DragAndDropService is typically registered as part of diagram page
+definition in the sdef file.</p>
+
+<pre class="source-code"><code><font color="#888888">&lt;diagram-page></font>
+    &lt;service>
+        &lt;implementation>MapDropService&lt;/implementation>
+    &lt;/service>
+<font color="#888888">&lt;/diagram-page></font></code></pre>
+
+<h2><a name="Services-EqualityService">EqualityService</a></h2>
+
+<p>The EqualityService provides means to implement equals() and hashCode() methods when the context object doesn't support
+implementing these methods directly. One such context is model elements, where the framework does not rely on a particular
+implementation of these methods, but having these methods behave in a way consistent with semantics of the data being modeled
+can be useful for other purposes.</p>
+
+<p style="margin-left: 20px;"><b>Example</b></p>
+
+<pre class="source-code"><code>public class ContactEqualityService extends EqualityService
+{
+    @Override
+    public boolean doEquals( Object obj )
+    {
+        Contact c1 = context( Contact.class );
+        Contact c2 = (Contact) obj;
+
+        return equal( c1.getLastName().getText(), c2.getLastName().getText() ) &&
+               equal( c1.getFirstName().getText(), c2.getFirstName().getText() );
+    }
+
+    @Override
+    public int doHashCode()
+    {
+        Contact c = context( Contact.class );
+        String lastName = c.getLastName().getText();
+        String firstName = c.getFirstName().getText();
+
+        return ( lastName == null ? 1 : lastName.hashCode() ) ^ ( firstName == null ? 1 : firstName.hashCode() );
+    }
+
+    private static boolean equal( Object obj1, Object obj2 )
+    {
+        if( obj1 == obj2 )
+        {
+            return true;
+        }
+        else if( obj1 != null && obj2 != null )
+        {
+            return obj1.equals( obj2 );
+        }
+
+        return false;
+    }
+}</code></pre>
+
+<pre class="source-code"><code><font color="#888888">@Services( {</font> @Service( impl = ContactEqualityService.class )<font color="#888888">, ... } )
+
+public interface Contact extends IModelElement
+{
+    ModelElementType TYPE = new ModelElementType( Contact.class );
+
+    ...
+}</font></code></pre>
+
+<a name="Services-ListSelectionService"><h2>ListSelectionService</h2></a>
+
+<p>The ListSelectionService functions as a conduit between the presentation layer and anything that may want to see or 
+change the selection. The presentation layer pushes selection changes made by the user to ListSelectionService and at
+the same time listens for changes to selection coming from ListSelectionService.</p>
+
+<p>An implementation of this service is provided with Sapphire. This service is not intended to be implemented by adopters.</p>
+
+<p style="margin-left: 20px;"><b>Example</b></p>
+
+<p style="margin-left: 20px;">In this example, an action handler attaches a listener to the ListSelectionService to 
+refresh action handler's enablement state when selection changes.</p>
+
+<pre class="source-code"><code>
+<font color="#888888">public class ExampleActionHandler extends SapphireActionHandler
+{
+    @Override
+    public void init( SapphireAction action, ActionHandlerDef def )
+    {
+        super.init( action, def );</font>
+
+        final ListSelectionService selectionService = action.getPart().service( ListSelectionService.class );
+
+        final Listener selectionListener = new Listener()
+        {
+            @Override
+            public void handle( Event event )
+            {
+                refreshEnablementState();
+            }
+        };
+
+        selectionService.attach( selectionListener );
+
+        attach
+        (
+            new Listener()
+            {
+                @Override
+                public void handle( Event event )
+                {
+                    if( event instanceof DisposeEvent )
+                    {
+                        selectionService.detach( selectionListener );
+                    }
+                }
+            }
+        );
+    <font color="#888888">}
+}</font></code></pre>
+
+<a name="Services-ValidationServiceAtElementLevel"><h2>ValidationService at Element Level</h2></a>
+
+<p>The ValidationService provides means to check integrity constraints and to communicate problems to the user. In
+prior releases, the developer could only attach a ValidationService to properties. Now, a ValidationService can also be
+attached to elements.</p>
+
+<p style="margin-left: 20px;"><b>Example</b></p>
+
+<p style="margin-left: 20px;">In this example, a validation service is used for detecting likely duplicate contacts. Two
+contacts are defined as duplicates of each other if e-mail and at least one of the phone numbers matches.</p>
+
+<pre class="source-code"><code>public class DuplicateContactValidationService extends ValidationService
+{
+    private Listener listener;
+
+    @Override
+    protected void init()
+    {
+        final ContactsDatabase contacts = context( Contact.class ).nearest( ContactsDatabase.class );
+
+        if( contacts != null )
+        {
+            this.listener = new FilteredListener&lt;PropertyContentEvent>()
+            {
+                @Override
+                protected void handleTypedEvent( PropertyContentEvent event )
+                {
+                    broadcast();
+                }
+            };
+
+            contacts.attach( this.listener, "Contacts/EMail" );
+            contacts.attach( this.listener, "Contacts/PhoneNumbers/*" );
+        }
+    }
+
+    @Override
+    public Status validate() 
+    {
+        Contact contact = context( Contact.class );
+        ContactsDatabase contacts = contact.nearest( ContactsDatabase.class );
+
+        if( contacts != null )
+        {
+            String email = contact.getEMail().getContent();
+            ModelElementList&lt;PhoneNumber> numbers = contact.getPhoneNumbers();
+
+            if( email != null && ! numbers.isEmpty() )
+            {
+                for( Contact x : contacts.getContacts() )
+                {
+                    if( x != contact && email.equals( x.getEMail().getContent() ) && ! x.getPhoneNumbers().isEmpty() )
+                    {
+                        for( PhoneNumber cn : numbers )
+                        {
+                            for( PhoneNumber xn : x.getPhoneNumbers() )
+                            {
+                                if( equal( cn.getAreaCode().getContent(), xn.getAreaCode().getContent() ) &&
+                                    equal( cn.getLocalNumber().getContent(), xn.getLocalNumber().getContent() ) )
+                                {
+                                    String msg = "Likely the same contact as " + x.getName() + ".";
+                                    return createWarningStatus( msg );
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        return createOkStatus();
+    }
+
+    @Override
+    public void dispose()
+    {
+        ContactsDatabase contacts = context( Contact.class ).nearest( ContactsDatabase.class );
+
+        if( contacts != null )
+        {
+            contacts.detach( this.listener, "Contacts/EMail" );
+            contacts.detach( this.listener, "Contacts/PhoneNumbers/*" );
+        }
+    }
+}</code></pre>
+
+<pre class="source-code"><code><font color="#888888">@Services( {</font> @Service( impl = DuplicateContactValidationService.class )<font color="#888888">, ... } )
+
+public interface Contact extends IModelElement
+{
+    ModelElementType TYPE = new ModelElementType( Contact.class );
+
+    ...
+}</font></code></pre>
+
+<h2><a name="Miscellaneous"><a name="Miscellaneous-ModelElementDisposed">IModelElement.disposed()</a></a></h2>
+
+<p>The new IModelElement.disposed() method provides a way to check if a model element has been disposed
+already.</p>
+
+<h2><a name="Miscellaneous-ImageFunction">Image Function</a></h2>
+
+<p>Returns the image associated with the context model element.</p>
+
+<p style="margin-left: 20px;"><b>Examples</b></p>
+
+<pre class="source-code"><code>${ Image() }
+${ Address.Image() }
+${ BusinessExpense ? BusinessAccount.Image() : PersonalAccount.Image() }</code></pre>
+
+<h2><a name="Miscellaneous-PropagatedKeyBindings">Propagated Key Bindings</a></h2>
+
+<p>When processing keyboard events, the system now takes into account actions defined in part's hierarchy rather
+than just the local ones. For instance, an action defined at editor page level can be made accessible via its
+key binding even if the focus is on a property editor. This is done by specifying propagated key binding behavior
+as part of action definition.</p> 
+
+<p style="margin-left: 20px;"><b>Example</b></p>
+
+<pre class="source-code"><code><font color="#888888">&lt;action>
+    &lt;id>Sapphire.Gallery.Open.Homepage&lt;/id>
+    &lt;label>Sapphire Homepage&lt;/label>
+    &lt;tooltip>Open Sapphire Homepage (Ctrl+Alt+Shift+S)&lt;/tooltip>
+    &lt;image>Web.png&lt;/image>
+    &lt;description>Open Sapphire project homepage.&lt;/description>
+    &lt;key-binding>CONTROL+ALT+SHIFT+s&lt;/key-binding></font>
+    &lt;key-binding-behavior>propagated&lt;/key-binding-behavior>
+    <font color="#888888">&lt;context>Sapphire.EditorPage&lt;/context>
+    &lt;hint>
+        &lt;name>style&lt;/name>
+        &lt;value>image+text&lt;/value>
+    &lt;/hint>
+&lt;/action></font></code></pre>
+
+<h2><a name="Miscellaneous-ActionToolTips">Action Tool Tips</a></h2>
+
+<p>By default, action label is used when a tool tip is necessary. If that's not appropriate, developer can now
+set the action tool tip explicitly.</p>
+
+<p style="margin-left: 20px;"><b>Example</b></p>
+
+<pre class="source-code"><code><font color="#888888">&lt;action>
+    &lt;id>Sapphire.Gallery.Open.Homepage&lt;/id>
+    &lt;label>Sapphire Homepage&lt;/label></font>
+    &lt;tooltip>Open Sapphire Homepage (Ctrl+Alt+Shift+S)&lt;/tooltip>
+    <font color="#888888">&lt;image>Web.png&lt;/image>
+    &lt;description>Open Sapphire project homepage.&lt;/description>
+    &lt;key-binding>CONTROL+ALT+SHIFT+s&lt;/key-binding>
+    &lt;key-binding-behavior>propagated&lt;/key-binding-behavior>
+    &lt;context>Sapphire.EditorPage&lt;/context>
+    &lt;hint>
+        &lt;name>style&lt;/name>
+        &lt;value>image+text&lt;/value>
+    &lt;/hint>
+&lt;/action></font></code></pre>
+
+<div class="copyright">Copyright (c) 2016 Oracle and Liferay<br/>
+Content made available under the terms of <a href="http://www.eclipse.org/legal/epl-v10.html">Eclipse Public License</a>.</div>
+
+</body>
+
+</html>

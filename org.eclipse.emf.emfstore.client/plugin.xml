@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+
+-->
+
+<plugin>
+   <extension-point id="workspaceLocationProvider" name="Workspace Location Provider" schema="schema/workspaceLocationProvider.exsd"/>
+   <extension-point id="defaultConfigurationProvider" name="Default Configuration Provider" schema="schema/defaultConfigurationProvider.exsd"/>
+   <extension-point id="workspaceInitObserver" name="Workspace Init Observer" schema="schema/workspaceInitObserver.exsd"/>
+   <extension-point id="editingDomainProvider" name="EditingDomain Provider" schema="schema/editingDomainProvider.exsd"/>
+   <extension-point id="changeRecordingOptions" name="Recording options" schema="schema/changeRecordingOptions.exsd"/>
+   <extension-point id="inverseCrossReferenceCache" name="Inverse Cross Referene Cache" schema="schema/inverseCrossReferenceCache.exsd"/>
+   <extension-point id="usersessionProvider" name="SessionProvider" schema="schema/usersessionProvider.exsd"/>
+   <extension-point id="notificationFilter" name="Notification Filter" schema="schema/notificationFilter.exsd"/>
+   <extension-point id="loginObserver" name="Login Observer" schema="schema/loginObserver.exsd"/>
+   <extension-point id="logoutObserver" name="Logout Observer" schema="schema/logoutObserver.exsd"/>
+   <extension-point id="commitObserver" name="Commit Observer" schema="schema/commitObserver.exsd"/>
+   <extension-point id="updateObserver" name="Update Observer" schema="schema/updateObserver.exsd"/>
+   <extension-point id="checkoutObserver" name="Commit Observer" schema="schema/checkoutObserver.exsd"/>
+   <extension-point id="exceptionObserver" name="Exception Observer" schema="schema/exceptionObserver.exsd"/>
+   <extension-point id="clientVersion" name="Client Version " schema="schema/clientVersion.exsd"/>
+   <extension-point id="runnableChangeContext" name="Runnable Change Context" schema="schema/runnableChangeContext.exsd"/>
+   <extension-point id="mergeObserver" name="Merge Observer" schema="schema/mergeObserver.exsd"/>
+   <extension-point id="checksumErrorHandler" name="Client Checksum Error Handler" schema="schema/checksumErrorHandler.exsd"/>
+   <extension-point id="postCreationObserver" name="Post-Creation Observer" schema="schema/postCreationObserver.exsd"/>
+   <extension-point id="shareObserver" name="Share Observer" schema="schema/shareObserver.exsd"/>
+   <extension-point id="pagedUpdate" name="Paged Update Configuration" schema="schema/pagedUpdate.exsd"/>
+   <extension-point id="resourceSetProvider" name="ResourceSet Proider" schema="schema/resourceSetProvider.exsd"/>
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <package 
+       uri = "http://eclipse.org/emf/emfstore/client/model" 
+       class = "org.eclipse.emf.emfstore.internal.client.model.ModelPackage"
+       genModel = "model/client.genmodel" /> 
+  </extension>
+
+  <extension
+        point="org.eclipse.emf.emfstore.common.observerBusExtensionPointRegistration">
+     <observer
+           extensionPointName="org.eclipse.emf.emfstore.client.loginObserver"
+           observerAttributeName="loginObserver">
+     </observer>
+  </extension>
+  <extension
+        point="org.eclipse.emf.emfstore.common.observerBusExtensionPointRegistration">
+     <observer
+           extensionPointName="org.eclipse.emf.emfstore.client.logoutObserver"
+           observerAttributeName="logoutObserver">
+     </observer>
+  </extension>
+  <extension
+        point="org.eclipse.emf.emfstore.common.observerBusExtensionPointRegistration">
+     <observer
+           extensionPointName="org.eclipse.emf.emfstore.client.updateObserver"
+           observerAttributeName="updateObserver">
+     </observer>
+  </extension>
+  <extension
+        point="org.eclipse.emf.emfstore.common.observerBusExtensionPointRegistration">
+     <observer
+           extensionPointName="org.eclipse.emf.emfstore.client.commitObserver"
+           observerAttributeName="commitObserver">
+     </observer>
+  </extension>
+  <extension
+        point="org.eclipse.emf.emfstore.common.observerBusExtensionPointRegistration">
+     <observer
+           extensionPointName="org.eclipse.emf.emfstore.client.checkoutObserver"
+           observerAttributeName="checkoutObserver">
+     </observer>
+  </extension>
+  <extension
+        point="org.eclipse.emf.emfstore.common.observerBusExtensionPointRegistration">
+     <observer
+           extensionPointName="org.eclipse.emf.emfstore.client.exceptionObserver"
+           observerAttributeName="exceptionObserver">
+     </observer>
+  </extension>
+  <extension
+        point="org.eclipse.emf.emfstore.common.observerBusExtensionPointRegistration">
+     <observer
+           extensionPointName="org.eclipse.emf.emfstore.client.mergeObserver"
+           observerAttributeName="mergeObserver">
+     </observer>
+  </extension>
+  <extension
+        point="org.eclipse.emf.emfstore.common.observerBusExtensionPointRegistration">
+      <observer
+            extensionPointName="org.eclipse.emf.emfstore.client.postCreationObserver"
+            observerAttributeName="postCreationObserver">
+     </observer>
+   </extension>
+  <extension
+        point="org.eclipse.emf.emfstore.common.observerBusExtensionPointRegistration">
+     <observer
+           extensionPointName="org.eclipse.emf.emfstore.client.shareObserver"
+           observerAttributeName="shareObserver">
+     </observer>
+  </extension>
+  <extension
+        point="org.eclipse.emf.emfstore.client.resourceSetProvider">
+     <resourceSetProvider
+           class="org.eclipse.emf.emfstore.internal.client.provider.ClientXMIResourceSetProvider"
+           priority="0">
+     </resourceSetProvider>
+  </extension>
+
+</plugin>

@@ -1,0 +1,1094 @@
+<!-- 
+ ******************************************************************************
+ * Copyright (c) 2016 Oracle
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *    Konstantin Komissarchik - initial implementation and ongoing maintenance
+ ******************************************************************************
+-->
+
+<html>
+
+<head>
+  <title>Migration Guide for Sapphire 0.5</title>
+  <link rel="StyleSheet" href="../../style.css" TYPE="text/css"/>
+  <style type="text/css">
+    pre.source-code 
+    {
+      font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; 
+      color: #000000;
+      background-color: #ffffff;
+      font-size: 12px;
+      border: 0px;
+      line-height: 14px;
+      padding: 5px;
+      margin-left: 0px;
+      margin-right: 0px;
+      overflow: auto
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>Migration Guide for Sapphire 0.5</h1>
+
+<p>This documents covers changes that need to be made by Sapphire adopters as part of migrating 
+to Sapphire 0.5 from a prior release. Only changes from the previous major release are covered.</p>
+
+<p>Table of Contents</p>
+
+<ol>
+  <li><a href="#CompositeStatusFactory">CompositeStatusFactory</a></li>
+  <li><a href="#IModelElement">IModelElement</a></li>
+  <li><a href="#LayeredListBindingImpl">LayeredListBindingImpl</a></li>
+  <li><a href="#ListBindingImpl">ListBindingImpl</a></li>
+  <li><a href="#MasterDetailsEditorPage">MasterDetailsEditorPage</a></li>
+  <li><a href="#MasterDetailsEditorPagePart">MasterDetailsEditorPagePart</a></li>
+  <li><a href="#ModelElementList">ModelElementList</a></li>
+  <li><a href="#ModelElementListener">ModelElementListener</a></li>
+  <li><a href="#ModelElementType">ModelElementType</a></li>
+  <li><a href="#ModelProperty">ModelProperty</a></li>
+  <li><a href="#ModelPropertyListener">ModelPropertyListener</a></li>
+  <li><a href="#PropertyListeners">PropertyListeners</a></li>
+  <li><a href="#SapphireActionHandler">SapphireActionHandler</a></li>
+  <li><a href="#SapphireDiagramActionHandler">SapphireDiagramActionHandler</a></li>
+  <li><a href="#SapphireEditor">SapphireEditor</a></li>
+  <li><a href="#SapphireWizardPageListener">SapphireWizardPageListener</a></li>
+  <li><a href="#Actuator">Actuator</a></li>
+  <li><a href="#ContentOutlineNodeImage">Content Outline Node Image</a></li>
+  <li><a href="#DiagramDragAndDrop">Diagram Drag-n-Drop</a></li>
+  <li><a href="#DiagramImage">Diagram Image</a></li>
+  <li><a href="#GraphitiToGef">Graphiti to GEF Transition</a></li>
+</ol>
+
+<h2><a name="CompositeStatusFactory">CompositeStatusFactory</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">factory.</font>add<font color="#888888">( status );</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">factory.</font>merge<font color="#888888">( status );</font></code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="IModelElement">IModelElement</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">element.</font>getModelElementType<font color="#888888">();</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">element.</font>type<font color="#888888">();</font></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">element.</font>isPropertyEnabled<font color="#888888">( property );</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">element.</font>enabled<font color="#888888">( property );</font></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">element.</font>addListener<font color="#888888">( listener );</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">element.</font>attach<font color="#888888">( listener );</font></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">element.</font>addListener<font color="#888888">( listener, path );</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">element.</font>attach<font color="#888888">( listener, path );</font></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">element.</font>removeListener<font color="#888888">( listener );</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">element.</font>detach<font color="#888888">( listener );</font></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">element.</font>removeListener<font color="#888888">( listener, path );</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">element.</font>detach<font color="#888888">( listener, path );</font></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">element.</font>notifyPropertyChangeListeners<font color="#888888">( property );</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">element.</font>refresh<font color="#888888">( property );</font></code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="LayeredListBindingImpl">LayeredListBindingImpl</a></h2>
+
+<p>The list binding API has been improved to more efficiently support insertion into the middle of the list along with arbitrary
+movement of existing list items.</p> 
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class ExampleListBinding extends LayeredListBindingImpl
+{</font>
+    <font color="#888888">@Override
+    protected Resource</font> createResource<font color="#888888">( Object obj )
+    {
+        ...
+    }</font>
+
+    @Override
+    protected <font color="#888888">Resource addUnderlyingObject( ModelElementType type )
+    {
+        ...
+    }</font>
+
+    @Override
+    public <font color="#888888">void swap( Resource x, Resource y )
+    {
+        ...
+    }
+
+    ...
+}</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class ExampleListBinding extends LayeredListBindingImpl
+{</font>
+    <font color="#888888">@Override
+    protected Resource</font> resource<font color="#888888">( Object obj )
+    {
+        ...
+    }</font>
+
+    @Override
+    protected Object insertUnderlyingObject( ModelElementType type, int position )
+    {
+        final Object obj = addUnderlyingObject( type );
+        move( resource( obj ), position );
+        return obj;
+    }
+
+    private <font color="#888888">Object addUnderlyingObject( ModelElementType type )
+    {
+        ...
+    }</font>
+
+    @Override
+    public void move( Resource resource, int position )
+    {
+        List&lt;Resource&gt; list = read();
+        int size = list.size();
+
+        if( position &lt; 0 || position &gt; size )
+        {
+            throw new IllegalArgumentException();
+        }
+        else
+        {
+            int oldPosition = list.indexOf( resource );
+
+            if( position &lt; oldPosition )
+            {
+                for( int i = oldPosition; i &gt;= position; i-- )
+                {
+                    moveUp( list, resource );
+                }
+            }
+            else
+            {
+                for( int i = oldPosition; i &lt;= position; i++ )
+                {
+                    moveDown( list, resource );
+                }
+            }
+        }
+    }
+
+    private void moveUp( List&lt;Resource&gt; list, Resource resource )
+    {
+        int index = list.indexOf( resource );
+
+        if( index == -1 )
+        {
+            throw new IllegalArgumentException();
+        }
+
+        if( index &gt; 0 )
+        {
+            Resource previous = list.get( index - 1 );
+            swap( resource, previous );
+        }
+    }
+
+    private void moveDown( List&lt;Resource&gt; list, Resource resource )
+    {
+        int index = list.indexOf( resource );
+
+        if( index == -1 )
+        {
+            throw new IllegalArgumentException();
+        }
+
+        if( index &lt; list.size() - 1 )
+        {
+            Resource next = list.get( index + 1 );
+            swap( resource, next );
+        }
+    }
+
+    private <font color="#888888">void swap( Resource x, Resource y )
+    {
+        ...
+    }
+
+    ...
+}</font></code></pre>
+
+<p>The above represents the quickest way to migrate an existing list binding, but is far from ideal. A better 
+solution would be to implement the new insertUnderlyingObject() and move() methods directly.</p>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="ListBindingImpl">ListBindingImpl</a></h2>
+
+<p>The list binding API has been improved to more efficiently support insertion into the middle of the list along with arbitrary
+movement of existing list items.</p> 
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class ExampleListBinding extends ListBindingImpl
+{</font>
+    @Override
+    public <font color="#888888">Resource add( ModelElementType type )
+    {
+        ...
+    }</font>
+
+    @Override
+    public <font color="#888888">void swap( Resource x, Resource y )
+    {
+        ...
+    }
+
+    ...
+}</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class ExampleListBinding extends ListBindingImpl
+{</font>
+    @Override
+    public Resource insert( ModelElementType type, int position )
+    {
+        Resource resource = add( type );
+        move( resource, position );
+        return resource;
+    }
+
+    private <font color="#888888">Resource add( ModelElementType type )
+    {
+        ...
+    }</font>
+
+    @Override
+    public void move( Resource resource, int position )
+    {
+        List&lt;Resource&gt; list = read();
+        int size = list.size();
+
+        if( position &lt; 0 || position &gt; size )
+        {
+            throw new IllegalArgumentException();
+        }
+        else
+        {
+            int oldPosition = list.indexOf( resource );
+
+            if( position &lt; oldPosition )
+            {
+                for( int i = oldPosition; i &gt;= position; i-- )
+                {
+                    moveUp( list, resource );
+                }
+            }
+            else
+            {
+                for( int i = oldPosition; i &lt;= position; i++ )
+                {
+                    moveDown( list, resource );
+                }
+            }
+        }
+    }
+
+    private void moveUp( List&lt;Resource&gt; list, Resource resource )
+    {
+        int index = list.indexOf( resource );
+
+        if( index == -1 )
+        {
+            throw new IllegalArgumentException();
+        }
+
+        if( index &gt; 0 )
+        {
+            Resource previous = list.get( index - 1 );
+            swap( resource, previous );
+        }
+    }
+
+    private void moveDown( List&lt;Resource&gt; list, Resource resource )
+    {
+        int index = list.indexOf( resource );
+
+        if( index == -1 )
+        {
+            throw new IllegalArgumentException();
+        }
+
+        if( index &lt; list.size() - 1 )
+        {
+            Resource next = list.get( index + 1 );
+            swap( resource, next );
+        }
+    }
+
+    private <font color="#888888">void swap( Resource x, Resource y )
+    {
+        ...
+    }
+
+    ...
+}</font></code></pre>
+
+<p>The above represents the quickest way to migrate an existing list binding, but is far from ideal. A better 
+solution would be to implement the new insert() and move() methods directly.</p>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="MasterDetailsEditorPage">MasterDetailsEditorPage</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">page.</font>getContentTree<font color="#888888">();</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">page.</font>outline<font color="#888888">();</font></code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="MasterDetailsEditorPagePart">MasterDetailsEditorPagePart</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">page.</font>getContentTree<font color="#888888">();</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">page.</font>outline<font color="#888888">();</font></code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="ModelElementList">ModelElementList</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">list.</font>addNewElement<font color="#888888">( ExampleElementVariant.TYPE );</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">list.</font>insert<font color="#888888">( ExampleElementVariant.TYPE );</font></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">list.</font>addNewElement<font color="#888888">();</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">list.</font>insert<font color="#888888">();</font></code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="ModelElementListener">ModelElementListener</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">public ExampleListener extends</font> ModelElementListener
+{
+    @Override
+    public void propertyChanged( ModelPropertyChangeEvent event )
+    {
+        <font color="#888888">...</font>
+    }
+}</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">public ExampleListener extends</font> FilteredListener&lt;PropertyEvent&gt;
+{
+    @Override
+    protected void handleTypedEvent( PropertyEvent event )
+    {
+        <font color="#888888">...</font>
+    }
+}</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">public ExampleListener extends</font> ModelElementListener
+{
+    @Override
+    public void validationStateChanged( final ValidationStateChangeEvent event )
+    {
+        <font color="#888888">...</font>
+    }
+}</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">public ExampleListener extends</font> FilteredListener&lt;ElementValidationEvent&gt;
+{
+    @Override
+    protected void handleTypedEvent( ElementValidationEvent event )
+    {
+        <font color="#888888">...</font>
+    }
+}</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">public ExampleListener extends</font> ModelElementListener
+{
+    @Override
+    public void handleElementDisposedEvent( final ModelElementDisposedEvent event )
+    {
+        <font color="#888888">...</font>
+    }
+}</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">public ExampleListener extends</font> FilteredListener&lt;ElementDisposeEvent&gt;
+{
+    @Override
+    protected void handleTypedEvent( ElementDisposeEvent event )
+    {
+        <font color="#888888">...</font>
+    }
+}</code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="ModelElementType">ModelElementType</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">ModelElementType.</font>getModelElementType<font color="#888888">( ... )</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">ModelElementType.</font>read<font color="#888888">( ... )</font></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">type.</font>getProperties<font color="#888888">()</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">type.</font>properties<font color="#888888">()</font></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">type.</font>getProperty<font color="#888888">( ... )</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">type.</font>property<font color="#888888">( ... )</font></code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="ModelProperty">ModelProperty</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">property.</font>addListener( <font color="#888888">...</font> )</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">property.</font>attach( <font color="#888888">...</font> )</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">property.</font>getListeners()</code></pre>
+    </td>
+    <td>
+      <p>No replacement has been provided. This method was an internal implementation detail. Any adopter with a dependency
+      on this method is urged to post details to <a href="http://www.eclipse.org/forums/index.php?t=thread&frm_id=192">Sapphire Adopter Forum</a>.</p>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="ModelPropertyListener">ModelPropertyListener</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">public ExampleListener extends</font> ModelPropertyListener
+{
+    @Override
+    public void public void handlePropertyChangedEvent( ModelPropertyChangeEvent event )
+    {
+        <font color="#888888">...</font>
+    }
+}</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">public ExampleListener extends</font> FilteredListener&lt;PropertyEvent&gt;
+{
+    @Override
+    protected void handleTypedEvent( PropertyEvent event )
+    {
+        <font color="#888888">...</font>
+    }
+}</code></pre>
+
+      <p>The above is the most direct migration target, but in many cases more efficient results can be achieved by filtering
+      on PropertyContentEvent instead.</p>
+
+<pre class="source-code"><code><font color="#888888">public ExampleListener extends</font> FilteredListener&lt;PropertyContentEvent&gt;
+{
+    @Override
+    protected void handleTypedEvent( PropertyContentEvent event )
+    {
+        <font color="#888888">...</font>
+    }
+}</code></pre>
+
+      <p>The other subclasses of PropertyEvent are PropertyEnablementEvent and PropertyValidationEvent.</p>
+
+    </td>
+  </tr>
+</table>
+
+<h2><a name="PropertyListeners">PropertyListeners</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>@PropertyListeners<font color="#888888">( ... )</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>@Listeners<font color="#888888">( ... )</font></code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="SapphireActionHandler">SapphireActionHandler</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">import org.eclipse.sapphire.ui.def.</font>ISapphireActionHandlerDef<font color="#888888">;</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">import org.eclipse.sapphire.ui.def.</font>ActionHandlerDef<font color="#888888">;</font></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class CustomActionHandler extends SapphireActionHandler
+{
+    @Override
+    public void init( SapphireAction action,</font> ISapphireActionHandlerDef <font color="#888888">def )
+    {
+        super.init( action, def );
+
+        ...
+    }
+
+    ...
+}</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class CustomActionHandler extends SapphireActionHandler
+{
+    @Override
+    public void init( SapphireAction action,</font> ActionHandlerDef <font color="#888888">def )
+    {
+        super.init( action, def );
+
+        ...
+    }
+
+    ...
+}</font></code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="SapphireDiagramActionHandler">SapphireDiagramActionHandler</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class ExampleActionHandler extends</font> SapphireDiagramActionHandler
+<font color="#888888">{</font>
+    @Override
+    public boolean canExecute( Object obj )
+    {
+        ...
+    }
+
+    <font color="#888888">...
+}</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class ExampleActionHandler extends</font> SapphireActionHandler
+<font color="#888888">{
+    ...
+}</font></code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="SapphireEditor">SapphireEditor</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>setPageId( editorPage, editorPageId, editorPagePart )</code></pre>
+    </td>
+    <td>
+      <p>Remove method call. It is no longer necessary.</p>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="SapphireWizardPageListener">SapphireWizardPageListener</a></h2>
+
+<p>The wizard page part has been converted to use common listener framework.</p>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class ExampleListener extends</font> SapphireWizardPageListener
+<font color="#888888">{
+    @Override</font>
+    public void handleShowPageEvent( SapphirePartEvent event )
+    {
+        <font color="#888888">...</font>
+    }
+<font color="#888888">}</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class ExampleListener extends</font> FilteredListener&ltVisibilityChangedEvent>
+<font color="#888888">{
+    @Override</font>
+    protected void handleTypedEvent( VisibilityChangedEvent event )
+    {
+        if( ( (SapphireWizardPagePart) event.part() ).isVisible() )
+        {
+            <font color="#888888">...</font>
+        }
+    }
+<font color="#888888">}</font></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class ExampleListener extends</font> SapphireWizardPageListener
+<font color="#888888">{
+    @Override</font>
+    public void handleHidePageEvent( SapphirePartEvent event )
+    {
+        <font color="#888888">...</font>
+    }
+<font color="#888888">}</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class ExampleListener extends</font> FilteredListener&ltVisibilityChangedEvent>
+<font color="#888888">{
+    @Override</font>
+    protected void handleTypedEvent( VisibilityChangedEvent event )
+    {
+        if( ! ( (SapphireWizardPagePart) event.part() ).isVisible() )
+        {
+            <font color="#888888">...</font>
+        }
+    }
+<font color="#888888">}</font></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">part</font>.addListener<font color="#888888">( listener )</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">part</font>.attach<font color="#888888">( listener )</font></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">part</font>.removeListener<font color="#888888">( listener )</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">part</font>.dettach<font color="#888888">( listener )</font></code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="Actuator">Actuator</a></h2>
+
+<p>The action link facility in sdef language has been generalized to support other presentations. In the
+process it was renamed as actuator.</p> 
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>&lt;action-link>
+    <font color="#888888">&lt;action-id>Sapphire.Add&lt;/action-id>
+    &lt;label>add a contact&lt;/label></font>
+&lt;/action-link>
+</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>&lt;actuator>
+    <font color="#888888">&lt;action-id>Sapphire.Add&lt;/action-id>
+    &lt;label>add a contact&lt;/label></font>
+&lt;/actuator>
+</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>&lt;action-link>
+    <font color="#888888">&lt;action-id>Sapphire.Add&lt;/action-id>
+    &lt;label>add a contact&lt;/label></font>
+    &lt;show-image/>
+&lt;/action-link>
+</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>&lt;actuator>
+    <font color="#888888">&lt;action-id>Sapphire.Add&lt;/action-id>
+    &lt;label>add a contact&lt;/label></font>
+    &lt;show-image>true&lt;/show-image>
+&lt;/actuator>
+</code></pre>
+    </td>
+  </tr>
+</table>
+
+<p style="margin-left: 20px;"><code>Scope: &nbsp;&nbsp;&nbsp;*.sdef<br/>
+<nobr>Search: &nbsp;&nbsp;(?s)&lt;action-link>(.*?)&lt;show-image/>(.*?)&lt;/action-link></nobr><br/>
+<nobr>Replace: &nbsp;&lt;actuator>\1&lt;show-image>true&lt;/show-image>\2&lt;/actuator></nobr></p>
+
+<p style="margin-left: 20px;"><code>Scope: &nbsp;&nbsp;&nbsp;*.sdef<br/>
+<nobr>Search: &nbsp;&nbsp;(?s)&lt;action-link>(.*?)&lt;/action-link></nobr><br/>
+<nobr>Replace: &nbsp;&lt;actuator>\1&lt;/actuator></nobr></p>
+
+<h2><a name="ContentOutlineNodeImage">Content Outline Node Image</a></h2>
+
+<p>Prior to advent of Sapphire Expression Language, sdef language included the "use-model-element-image" switch
+as a way to indicate to the system that content outline node's image should be the same as the image for the
+associated model element. With advent of EL, the special switch is no longer necessary as an expression can be used
+to capture the same semantics.</p> 
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>&lt;use-model-element-image/></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>&lt;image>${ Image() }&lt;/image></code></pre>    
+    </td>
+  </tr>
+</table>
+
+<p style="margin-left: 20px;"><code>Scope: &nbsp;&nbsp;&nbsp;*.sdef<br/>
+<nobr>Search: &nbsp;&nbsp;&lt;use-model-element-image[ ]*/></nobr><br/>
+<nobr>Replace: &nbsp;&lt;image>\${ Image() }&lt;/image></nobr></p>
+
+<p style="margin-left: 20px;"><code>Scope: &nbsp;&nbsp;&nbsp;*.sdef<br/>
+<nobr>Search: &nbsp;&nbsp;&lt;use-model-element-image>[ ]*&lt;/use-model-element-image></nobr><br/>
+<nobr>Replace: &nbsp;&lt;image>\${ Image() }&lt;/image></nobr></p>
+
+<h2><a name="DiagramDragAndDrop">Diagram Drag-n-Drop</a></h2>
+
+<p>Drag-n-drop support in the diagram editor has been reworked to use service mechanism instead of action mechanism.</p>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class</font> ExampleDragAndDropActionHandler <font color="#888888">extends</font> SapphireDiagramActionHandler
+<font color="#888888">{</font>
+    @Override
+    public boolean canExecute( Object obj )
+    {
+        <font color="#888888">...</font>
+    }
+
+    @Override
+    protected Object run( SapphireRenderingContext context )
+    {
+        DiagramRenderingContext ctx = (DiagramRenderingContext) context;
+        Object obj = ctx.getObject();
+
+        <font color="#888888">...</font>
+    }
+<font color="#888888">}</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class</font> ExampleDragAndDropService <font color="#888888">extends</font> DragAndDropService
+<font color="#888888">{</font>
+    @Override
+    public boolean droppable( DropContext context ) 
+    {
+        Object obj = context.object();
+
+        <font color="#888888">...</font>
+    }
+
+    @Override
+    public void drop( DropContext context ) 
+    {
+        Object obj = context.object();
+
+        <font color="#888888">...</font>
+    }
+<font color="#888888">}</font></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">&lt;diagram-page></font>
+    &lt;action-handler>
+        &lt;action>Sapphire.Drop&lt;/action>
+        &lt;impl>ExampleDragAndDropActionHandler&lt;/impl>
+    &lt;/action-handler>       
+<font color="#888888">&lt;/diagram-page></font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">&lt;diagram-page></font>
+    &lt;service>
+        &lt;implementation>ExampleDragAndDropService&lt;/implementation>
+    &lt;/service>       
+<font color="#888888">&lt;/diagram-page></font></code></pre>
+    </td>
+  </tr>  
+</table>
+
+<h2><a name="DiagramImage">Diagram Image</a></h2>
+
+<p>Image specifications inside diagram parts are now consistent with the rest of the sdef. 
+Images are now referenced at the point of use, rather than defined separately and then referenced by id.</p> 
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>&lt;image-decorator>
+    &lt;id>defaultIndicator&lt;/id>
+    &lt;path>icons/default-indicator.png&lt;/path>
+&lt;/image-decorator></code></pre>
+    </td>
+    <td>
+    Remove, path will be specified at the point of use.
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">&lt;image-decorator></font>
+    &lt;id>defaultIndicator&lt;/id>
+    <font color="#888888">&lt;decorator-placement>image&lt;/decorator-placement>
+    &lt;horizontal-align>center&lt;/horizontal-align>
+    &lt;vertical-align>top&lt;/vertical-align>
+&lt;/image-decorator></font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">&lt;image-decorator></font>
+    &lt;path>icons/default-indicator.png&lt;/path>
+    <font color="#888888">&lt;decorator-placement>image&lt;/decorator-placement>
+    &lt;horizontal-align>center&lt;/horizontal-align>
+    &lt;vertical-align>top&lt;/vertical-align>
+&lt;/image-decorator></font></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>&lt;tool-palette-image>
+    &lt;id>flowPaletteImage&lt;/id>
+    &lt;path>icons/control-flow-16.png&lt;/path>
+&lt;/tool-palette-image></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>&lt;tool-palette-image>icons/control-flow-16.png&lt;/tool-palette-image></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>&lt;image>
+    &lt;id>routerIcon&lt;/id>
+    &lt;placement>top&lt;/placement>
+    &lt;possible>
+      &lt;id>routerIcon&lt;/id>
+      &lt;path>icons/node-router.png&lt;/path>
+    &lt;/possible>        
+&lt;/image></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>&lt;image>
+    &lt;path>icons/node-router.png&lt;/path>
+    &lt;placement>top&lt;/placement>
+&lt;/image></code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="GraphitiToGef">Graphiti to GEF Transition</a></h2>
+
+<p>The Graphiti-based diagram presentation (introduced in 0.4 release) has been replaced with a presentation 
+written directly on top of GEF. This has significantly reduced Sapphire's dependencies and enabled diagram 
+support to more tightly integrate with the rest of Sapphire.</p>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td> 
+<pre class="source-code"><code><font color="#888888">import</font> org.eclipse.sapphire.ui.gef.diagram.editor<font color="#888888">.[etc];</font>
+</code></pre>
+    </td>
+    <td>
+   <pre class="source-code"><code><font color="#888888">import</font> org.eclipse.sapphire.ui.swt.gef<font color="#888888">.[etc];</font>
+</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">page = new SapphireDiagramEditor( model, path );</font>
+<font color="#888888">addPage( 0, page,</font> SapphireDiagramEditorFactory.createEditorInput( file ) <font color="#888888">);</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">page = new SapphireDiagramEditor(</font> this, <font color="#888888">model, path );
+addPage( 0, page );</font></code></pre>
+    </td>
+  </tr>
+</table>
+
+<div class="copyright">Copyright (c) 2016 Oracle<br/>
+Content made available under the terms of <a href="http://www.eclipse.org/legal/epl-v10.html">Eclipse Public License</a>.</div>
+
+</body>
+
+</html>

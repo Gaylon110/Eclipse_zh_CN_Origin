@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.core.runtime.adapters">
+      <factory
+            adaptableType="org.eclipse.egit.core.storage.GitBlobStorage"
+            class="org.eclipse.emf.compare.egit.internal.adapter.EGitAdapterFactory">
+         <adapter
+               type="org.eclipse.emf.compare.ide.utils.IStoragePathProvider">
+         </adapter>
+      </factory>
+   </extension>
+   <extension
+         point="org.eclipse.egit.core.mergeStrategy">
+      <strategy
+            class="org.eclipse.emf.compare.egit.internal.merge.StrategyRecursiveModel"
+            label="%StrategyRecursiveModel-Label">
+      </strategy>
+      <strategy
+            class="org.eclipse.emf.compare.egit.internal.merge.StrategyAdditiveModel"
+            label="%StrategyAdditiveModel-Label">
+      </strategy>
+   </extension>
+   <extension
+         point="org.eclipse.emf.compare.rcp.postProcessor">
+      <processor
+            class="org.eclipse.emf.compare.egit.internal.postprocessor.EgitPostProcessor"
+            description="Post processor used in postDiff step to detect resource attachment changes of kind Move."
+            label="EGit Post Processor"
+            ordinal="15">
+         <nsURI
+               value=".*">
+         </nsURI>
+      </processor>
+   </extension>
+   <extension
+         point="org.eclipse.emf.compare.rcp.matchEngine">
+      <engineFactory
+            class="org.eclipse.emf.compare.egit.internal.match.EGitMatchEngineFactory"
+            description="EGit implementation of the Matching engine provided by EMF Compare"
+            label="EGit Match Engine"
+            ranking="10">
+      </engineFactory>
+   </extension>
+</plugin>

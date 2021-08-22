@@ -1,0 +1,696 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<meta name=Generator content="Microsoft Word 11 (filtered)">
+<title>Tutorial: Service and Provider</title>
+
+<link rel=Stylesheet type="text/css" media=all href=technote.css>
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+h1
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:24.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+h2
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:18.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+h3
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:13.5pt;
+	font-family:"Times New Roman";
+	font-style:italic;}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:blue;
+	text-decoration:underline;}
+p
+	{margin-right:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+code
+	{font-family:"Courier New";}
+pre
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:24.0pt;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Courier New";}
+p.notabene, li.notabene, div.notabene
+	{margin-right:48.0pt;
+	margin-left:48.0pt;
+	border:none;
+	padding:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.question, li.question, div.question
+	{margin-right:48.0pt;
+	margin-left:48.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-style:italic;}
+p.backto, li.backto, div.backto
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink=blue>
+
+<div class=Section1>
+
+<p class=MsoNormal><a name=top></a><img width=347 height=134 src="../logo.gif"
+border=0></p>
+
+<h1 align=center style='text-align:center'>Tutorial: Service and Provider</h1>
+
+<table class=MsoNormalTable border=0 cellspacing=8 cellpadding=0
+ style='margin-left:24.0pt'>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Version: 0.1</p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Date: April 29, 2005</p>
+  </td>
+ </tr>
+</table>
+
+<h2>Contents</h2>
+
+<p class=MsoNormal style='margin-left:48.0pt;text-indent:-.25in'><span
+style='font-size:10.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>
+</span></span><a href="#_Overview">Overview</a></p>
+
+<p class=MsoNormal style='margin-left:48.0pt;text-indent:-.25in'><span
+style='font-size:10.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>
+</span></span><a href="#refs">References</a></p>
+
+<p class=MsoNormal style='margin-left:48.0pt;text-indent:-.25in'><span
+style='font-size:10.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>
+</span></span><a href="#trace">Introduction</a></p>
+
+<p class=MsoNormal style='margin-left:48.0pt;text-indent:-.25in'><span
+style='font-size:10.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>
+</span></span><a href="#reqs">Creating the Widget Service</a></p>
+
+<p class=MsoNormal style='margin-left:48.0pt;text-indent:-.25in'><span
+style='font-size:10.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>
+</span></span><a href="#constraints">Creating the Widget Providers</a></p>
+
+<p class=MsoNormal style='margin-left:48.0pt;text-indent:-.25in'><span
+style='font-size:10.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>
+</span></span><a href="#_Provider_Priorities">Provider Priorities</a></p>
+
+<p class=MsoNormal style='margin-left:48.0pt;text-indent:-.25in'><span
+style='font-size:10.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>
+</span></span><a href="#_Execution_Strategies">Execution Strategies</a></p>
+
+<p class=MsoNormal style='margin-left:48.0pt;text-indent:-.25in'><span
+style='font-size:10.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>
+</span></span><a href="#_Example">The Client</a></p>
+
+<p class=MsoNormal style='margin-left:48.0pt;text-indent:-.25in'><span
+style='font-size:10.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>
+</span></span><a href="#models">Summary</a></p>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<h2><a name=intro></a><a name="_Overview"></a>Overview</h2>
+
+<p class=backto><span style='font-size:10.0pt'>[<a href="#top">back to top</a>]</span></p>
+
+<p>The GMF Service Provider infrastructure provides a framework for building
+Services for clients to execute a unit of work.  The Service depends on
+Providers who actually perform the work on behalf of the Service.  Providers
+have a Priority and an optional Policy which dictate how the Service will determine
+which Provider(s) to use when executing a request on behalf of a client.<a
+name=refs></a>  The Service may be optimized in some capacity.</p>
+
+<h2>References</h2>
+
+<p class=backto><span style='font-size:10.0pt'>[<a href="#top">back to top</a>]</span></p>
+
+<p>This tutorial assumes the reader is familiar with Eclipse extension point architecture. 
+There is an abundance of on-line help in Eclipse for those unfamiliar with
+extension points.  For reference, the full source for this tutorial is
+available <a href="service_provider_src.zip">here</a>.</p>
+
+<h2><a name=trace></a>Introduction</h2>
+
+<p class=backto><span style='font-size:10.0pt'>[<a href="#top">back to top</a>]</span></p>
+
+<p>To demonstrate the Provider Service we will create a simple example Widget
+Service and two Widget Provider.  Then we will create a client to uses the
+Widget Service to create Widgets.  This tutorial requires only the
+org.eclipse.gmf.runtime.common.core plugins and its dependencies to run.</p>
+
+<h2><a name=reqs></a>Creating the Widget Service</h2>
+
+<p class=backto><span style='font-size:10.0pt'>[<a href="#top">back to top</a>]</span></p>
+
+<p>The first step in creating a Widget Service is defining the API for your
+Widget Providers.  This is done using a Java interfaces.  The Service Provider
+infrastructure defines an <code><span style='font-size:10.0pt'>IProvider</span></code>
+interface that is used to define the base interface for clients. This interface
+provides the call-backs to Providers via the <code><span style='font-size:10.0pt'>provides(IOperation)
+</span></code>method.  <code><span style='font-size:10.0pt'>IProvider</span></code>
+also provides a mechanism for Providers to receive provider change events from
+the Service.  It is expected that new Providers extend this interface for their
+own purposes.  In order to keep this tutorial simple, the Providers created in
+this tutorial do not listen to provider changes.</p>
+
+<p>To support the creation of Widgets, we will create IWidgetProvider.  The
+IWidgetProvider extends the IProvider interface and also defines the
+createWidget() method where Providers carry-out the actual work of creating
+widgets when asked by the WidgetService. </p>
+
+<div style='margin-left:24.0pt'>
+
+<div style='border:solid windowtext 1.0pt;padding:4.0pt 4.0pt 4.0pt 4.0pt'><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy'>public interface IWidgetProvider</span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy'>    extends IProvider {</span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy'>    </span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy'>    Object createWidget(int orderSize);   </span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy'>&nbsp;</span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy'>}</span><span
+Times New></pre></div>
+
+</div>
+
+<p></span> Next, create the actual WidgetService.  This is done by extending
+the abstract base class Service and implementing IWidgetProvider.  Take a
+minute to read the code before we go through it in more detail.</p>
+
+<div style='margin-left:24.0pt'>
+
+<div style='border:solid windowtext 1.0pt;padding:4.0pt 4.0pt 4.0pt 4.0pt'><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>public class WidgetService</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>    extends Service</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>    implements IWidgetProvider {</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>&nbsp;</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>    private final static WidgetService service = new WidgetService();</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>&nbsp;</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>    public static WidgetService getInstance() {</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>           return service;</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>    }</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>&nbsp;</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>    public Object createWidget(int orderSize) {</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>           return execute(new CreateWidgetOperation(orderSize));</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>           </span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>    }       </span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>    </span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>    public Object execute(IOperation operation) {</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>            List results = execute(ExecutionStrategy.FIRST, operation);</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>            return results.isEmpty() ? null : results;</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>    }</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>    </span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>    protected Service.ProviderDescriptor newProviderDescriptor(IConfigurationElement element) {</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>           return new WidgetProviderDescriptor(element);</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>    }       </span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>    </span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>    </span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>    protected static class WidgetProviderDescriptor</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>           extends Service.ProviderDescriptor {</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>&nbsp;</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>           private WidgetServiceProviderConfiguration providerConfiguration;</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>&nbsp;</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>           public WidgetProviderDescriptor(IConfigurationElement element) {</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>                   super(element);</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>&nbsp;</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>                   this.providerConfiguration =</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>                           WidgetServiceProviderConfiguration.parse(element);</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>                   assert null != element : &quot;NULL configuration element&quot;; //$NON-NLS-1$</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>           }</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>&nbsp;</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>           public boolean provides(IOperation operation) {</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>                   if (getPolicy() != null)</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>                           return getPolicy().provides(operation);</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>                   if (provider == null) {</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>                           if (isSupportedInExtension(operation)) {</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>                                  providerConfiguration = null;</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>                                  return getProvider().provides(operation);</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>                           }</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>                           return false;</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>                   }</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>                   return getProvider().provides(operation);</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>           }</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>&nbsp;</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>           private boolean isSupportedInExtention(IOperation operation) {</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>                   </span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>                   if (operation instanceof CreateWidgetOperation) {</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>                           return providerConfiguration.supports(((CreateWidgetOperation)operation).getOrderSize());</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>                   }</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>                   return false;</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>           }</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>    }       </span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>}</span></code></pre></div>
+
+</div>
+
+<p>First, notice that the WidgetService is a static instance.  This is needed
+to support the initialization of the Widget Providers, we will get to that in
+more detail in a minute.</p>
+
+<p>Next, notice that the WidgetService implements IWidgetProvider by delegating
+the service request to the actual Service.  This is done by calling the
+Service&#8217;s execute(ExecutionStrategy, IOperation) method.  Again,
+don&#8217;t worry about the understanding the ExecutionStrategy, we explain the
+ExecutionStrategies that later.  At this point the Service will find Providers
+for the given IOperation and delegate the work required in the IOperation to
+them.  Then return the results for the work done by the Providers back to the
+client.</p>
+
+<p>Now back to the Provider initialization.  In order to know about potential
+Providers for a given IOperation, the Service will find them by examining all
+the extensions of widgetProvider extension-point.  These widgetProviders are
+registered with the Service as WidgetProviderDescriptors.  Which are used by
+the service to determine if a particular Provider provides for the operation
+via provides(IOperation).  Since the providers are registered this way we
+don&#8217;t have to worry about a plugin not being loaded in order to
+contribute to the Service.  The service will load the Provider&#8217;s
+corresponding plugin when required.</p>
+
+<p>Registration of the Providers is done in the startup() method of the
+WidgetService&#8217;s corresponding xxPlugin.java.  The following code fragment
+shows the mechanics of the static initialization of Providers.</p>
+
+<div style='margin-left:24.0pt'>
+
+<div style='border:solid windowtext 1.0pt;padding:4.0pt 4.0pt 4.0pt 4.0pt'><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy'>    public static final String WIDGET_SERVICE_EXTENSION_POINT = &#8220;widgetProviders&#8221;;</span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy'>&nbsp;</span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy'>    public void startup() {</span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy'>          super.startup();</span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy'>          configureWidgetProviders();</span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy'>   }</span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy'>&nbsp;</span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy'>    public void configureWidgetProviders() {</span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy'>           WidgetService.getInstance().configureProviders(</span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy'>                   Platform.getExtensionRegistry().getExtensionPoint(getPluginId(),</span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy'>                           WIDGET_SERVICE_EXTENSION_POINT).getConfigurationElements());   </span></pre><pre
+style='margin-left:0in;border:none;padding:0in'>    }       </pre></div>
+
+</div>
+
+<p>Finally, define the &#8220;widgetProviders&#8221; extension-point for
+Providers to extend in the plugin.xml.</p>
+
+<div style='margin-left:24.0pt'>
+
+<div style='border:solid windowtext 1.0pt;padding:4.0pt 4.0pt 4.0pt 4.0pt'><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>&lt;extension-point id=&quot;widgetProviders&quot; name=&quot;%extPoint.widgetProviders&quot; schema=&quot;schema/widgetProviders.exsd&quot;/&gt;</span></code></pre></div>
+
+</div>
+
+<p style='margin-left:0in'>&nbsp;</p>
+
+<h2><a name=constraints></a>Creating the Providers</h2>
+
+<p class=backto><span style='font-size:10.0pt'>[<a href="#top">back to top</a>]</span></p>
+
+<p>Now we create the Providers that actually carry-out the requests on behalf
+of the Service.  The first step in creating a Provider is to create an
+extension of the widgetProvider extension-point for the WidgetProvider.  In the
+extension, you also define what type of request the Provider can handle and the
+Priority of the Provider.  For our WidgetProvider, we have a low Priority
+Provider that supports widget order sizes between 50 and 5000 widgets.</p>
+
+<div style='margin-left:24.0pt'>
+
+<div style='border:solid windowtext 1.0pt;padding:4.0pt 4.0pt 4.0pt 4.0pt'><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy;
+background:white'>   &lt;extension point=&quot;org.eclipse.gmf.examples.runtime.common.service.widgetProviders&quot;&gt;</span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy;
+background:white'>      &lt;widgetProvider class=&quot;org.eclipse.gmf.examples.runtime.common.service.providers.WidgetProvider&quot;&gt;</span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy;
+background:white'>         &lt;Priority name=&quot;Low&quot;/&gt;</span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy;
+background:white'>         &lt;orderSize max=&quot;5000&quot; min=&quot;50&quot;/&gt;</span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy;
+background:white'>      &lt;/widgetProvider&gt;</span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy;
+background:white'>   &lt;/extension&gt;</span></pre></div>
+
+</div>
+
+<p>Next we implement WidgetProvider.java as follows. The key point here is to
+ensure that your XML based configuration matches the Provider itself.  In this
+case we are concerned with matching the order size.</p>
+
+<div style='margin-left:24.0pt'>
+
+<div style='border:solid windowtext 1.0pt;padding:4.0pt 4.0pt 4.0pt 4.0pt'><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy'>    public boolean provides(IOperation operation) {</span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy'>           if (operation instanceof CreateWidgetOperation) {</span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy'>                   int orderSize = ((CreateWidgetOperation)operation).getOrderSize();</span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy'>                   return (orderSize &gt;= 100 &amp;&amp; orderSize &lt;= 10000);</span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy'>           }</span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy'>           return false;</span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy'>    }</span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy'>&nbsp;</span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy'>    public Object createWidget(int orderSize) {</span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy'>           List widgets = new ArrayList(orderSize);</span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy'>           for (int i = 0; i &lt; orderSize; i++) {</span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy'>                   widgets.add(I, &#8220;widget&#8221;);</span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy'>           }</span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy'>           return widgets;</span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy'>    }</span></pre></div>
+
+</div>
+
+<p>To create the second provider follow the same steps are the first.  However,
+there are a few subtle differences.  Change the Provider priority from Low to
+High and change the order size  to 100 &lt;= order size &lt;= 10000.</p>
+
+<div style='margin-left:24.0pt'>
+
+<div style='border:solid windowtext 1.0pt;padding:4.0pt 4.0pt 4.0pt 4.0pt'><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy;
+background:white'>   &lt;extension point=&quot;org.eclipse.gmf.examples.runtime.common.service.widgetProviders&quot;&gt;</span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy;
+background:white'>      &lt;widgetProvider class=&quot;org.eclipse.gmf.examples.runtime.common.service.providers.SuperWidgetProvider&quot;&gt;</span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy;
+background:white'>         &lt;Priority name=&quot;High&quot;/&gt;</span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy;
+background:white'>         &lt;orderSize max=&quot;10000&quot; min=&quot;100&quot;/&gt; </span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy;
+background:white'>      &lt;/widgetProvider&gt;     </span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy;
+background:white'>   &lt;/extension&gt;   </span></pre></div>
+
+</div>
+
+<p>Again, create SuperWidgetProvider by implementing IWidgetProvider.</p>
+
+<div style='margin-left:24.0pt'>
+
+<div style='border:solid windowtext 1.0pt;padding:4.0pt 4.0pt 4.0pt 4.0pt'><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>    public boolean provides(IOperation operation) {</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>           if (operation instanceof CreateWidgetOperation) {</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>                   int orderSize = ((CreateWidgetOperation)operation).getOrderSize();</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>                   return (orderSize &gt;= 50 &amp;&amp; orderSize &lt;= 5000);</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>           }</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>           return false;</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>    }</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>&nbsp;</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>    public Object createWidget(int orderSize) {</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>           List widgets = new ArrayList(orderSize);</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>           for (int i = 0; I &lt; orderSize; i++) {</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>                   widgets.add(i, &#8220;widget&#8221;);</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>           }</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>           return widgets;</span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>           </span></code></pre><pre
+style='margin-left:0in;border:none;padding:0in'><code><span style='color:navy'>    }</span></code></pre></div>
+
+</div>
+
+<h2><a name="_Provider_Priorities"></a>Provider Priorities</h2>
+
+<p>[<a href="#top"><span style='font-size:10.0pt'>back to top</span></a>]</p>
+
+<p>Provider Priorities are closely tied to ExecutionStrategies (described in
+the next section).  For now know that a Provider must have a Priority and that
+Priority assigns an importance to the Provider.  The following Priorities are
+defined by GMF.</p>
+
+<div style='margin-left:24.0pt'>
+
+<div style='border:solid windowtext 1.0pt;padding:4.0pt 4.0pt 4.0pt 4.0pt'><pre
+style='margin-left:0in;border:none;padding:0in'><span style='font-size:12.0pt;
+color:navy'>   ProviderPriority.HIGHEST</span></pre><pre style='margin-left:
+0in;border:none;padding:0in'><span style='font-size:12.0pt;color:navy'>   ProviderPriority.HIGH</span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='font-size:12.0pt;
+color:navy'>   ProviderPriority.MEDIUM</span></pre><pre style='margin-left:
+0in;border:none;padding:0in'><span style='font-size:12.0pt;color:navy'>   ProviderPriority.LOW</span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='font-size:12.0pt;
+color:navy'>   ProviderPriority.LOWEST</span></pre></div>
+
+</div>
+
+<h2><a name="_Execution_Strategies"></a>Execution Strategies</h2>
+
+<p>[<a href="#top"><span style='font-size:10.0pt'>back to top</span></a>]</p>
+
+<p>When collecting Providers for a given IOperation the Service can be
+instructed to find the Providers in a well-defined way.  <span REF _Ref102967140>Table
+1 Execution Strategies</span> below defines that ways in which the Service
+finds Providers to carryout the unit of work.</p>
+
+<div align=center>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='margin-left:30.2pt;border-collapse:collapse;border:none'>
+ <tr>
+  <td width=295 valign=top style='width:221.4pt;border:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-left:0in'><b>Strategy</b></p>
+  </td>
+  <td width=295 valign=top style='width:221.4pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-left:0in'><b>Description</b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=295 valign=top style='width:221.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'><pre><span style='font-size:
+  12.0pt'>ExecutionStrategy.FIRST</span></pre></td>
+  <td width=295 valign=top style='width:221.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-left:0in'>The Service will select the first Provider with
+  the highest Priority that is capable of the service request.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=295 valign=top style='width:221.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'><pre><span style='font-size:
+  12.0pt'>ExecutionStrategy.LAST</span></pre></td>
+  <td width=295 valign=top style='width:221.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-left:0in'>The Service will use the last Provider with the
+  lowest Priority that is capable of the service request.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=295 valign=top style='width:221.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'><pre><span style='font-size:
+  12.0pt'>ExecutionStrategy.FORWARD</span></pre></td>
+  <td width=295 valign=top style='width:221.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-left:0in'>The Services will use all the Providers in order
+  of highest Priority to the lowest that are capable of providing the service request. 
+  The results from the Providers are placed in a List that matches the relative
+  descending order of the Provider priorities.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=295 valign=top style='width:221.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'><pre><span style='font-size:
+  12.0pt'>ExecutionStrategy.REVERSE</span></pre></td>
+  <td width=295 valign=top style='width:221.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p style='margin-left:0in'>The Service will use all the Providers in order of
+  lowest Priority to the highest that are capable of providing the service
+  request.  The results from the Providers are placed in a List that matches
+  the relative ascending order of the Provider priorities.</p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoCaption align=center style='text-align:center'><a
+name="_Ref102967140">Table </a>1 Execution Strategies</p>
+
+<h2><a name="_Example"></a>The Client</h2>
+
+<p>[<a href="#top"><span style='font-size:10.0pt'>back to top</span></a>]</p>
+
+<p>To use the WidgetService we&#8217;ll simply create a client in the form of a
+Workbench action.  Add the following to the plugin.xml.</p>
+
+<div style='margin-left:24.0pt'>
+
+<div style='border:solid windowtext 1.0pt;padding:4.0pt 4.0pt 4.0pt 4.0pt'><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy;
+background:white'>   &lt;extension point=&quot;org.eclipse.ui.actionSets&quot;&gt;</span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy;
+background:white'>      &lt;actionSet </span></pre><pre style='margin-left:
+0in;border:none;padding:0in'><span style='color:navy;background:white'>         label=&quot;Widget Serice ActionSet&quot;</span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy;
+background:white'>         visible=&quot;true&quot;</span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy;
+background:white'>         id=&quot;org.eclipse.gmf.examples.runtime.common.service.client.actionSet&quot;&gt;</span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy;
+background:white'>         &lt;menu id=&quot;org.eclipse.gmf.examples.runtime.menu&quot;</span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy;
+background:white'>            label=&quot;Widget Service&quot;</span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy;
+background:white'>            path=&quot;additions&quot;&gt;</span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy;
+background:white'>            &lt;separator name=&quot;group1&quot;/&gt;</span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy;
+background:white'>         &lt;/menu&gt;</span></pre><pre style='margin-left:
+0in;border:none;padding:0in'><span style='color:navy;background:white'>         &lt;action id=&quot;org.eclipse.gmf.examples.runtime.common.service.client.RunExampleAction&quot;</span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy;
+background:white'>            label=&quot;Run Widget Example&quot;</span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy;
+background:white'>            menubarPath=&quot;org.eclipse.gmf.examples.runtime.menu/group1&quot;</span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy;
+background:white'>            class=&quot;org.eclipse.gmf.examples.runtime.common.service.client.RunExampleAction&quot;&gt;</span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy;
+background:white'>         &lt;/action&gt;   </span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy;
+background:white'>      &lt;/actionSet&gt;</span></pre><pre style='margin-left:
+0in;border:none;padding:0in'><span style='color:navy;background:white'>   &lt;/extension&gt;</span></pre></div>
+
+</div>
+
+<p>Next, implement the <span style='background:white'>RunExampleAction</span>&#8217;s
+run() method with the following code snipet.</p>
+
+<div style='margin-left:24.0pt'>
+
+<div style='border:solid windowtext 1.0pt;padding:4.0pt 4.0pt 4.0pt 4.0pt'><pre
+style='margin-left:0in;border:none;padding:0in'>    public void run(IAction action) {</pre><pre
+style='margin-left:0in;border:none;padding:0in'>           Object widgets = WidgetService.getInstance().createWidget(1000);</pre><pre
+style='margin-left:0in;border:none;padding:0in'>           System.out.println(widgets == null ? &quot;No widgets created&quot; : &quot;Created &quot; + ((Object[])widgets).length + &quot; widgets&quot;);//$NON-NLS-3$//$NON-NLS-2$//$NON-NLS-1$</pre><pre
+style='margin-left:0in;border:none;padding:0in'>           widgets = WidgetService.getInstance().createWidget(30);</pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy'>           System.out.println(widgets == null ? &quot;No widgets created&quot; : &quot;Created &quot; + ((Object[])widgets).length + &quot; widgets&quot;);//$NON-NLS-3$//$NON-NLS-2$//$NON-NLS-1$</span></pre><pre
+style='margin-left:0in;border:none;padding:0in'>           widgets = WidgetService.getInstance().createWidget(76);</pre><pre
+style='margin-left:0in;border:none;padding:0in'>           System.out.println(widgets == null ? &quot;No widgets created&quot; : &quot;Created &quot; + ((Object[])widgets).length + &quot; widgets&quot;);//$NON-NLS-3$//$NON-NLS-2$//$NON-NLS-1$</pre><pre
+style='margin-left:0in;border:none;padding:0in'>           </pre><pre
+style='margin-left:0in;border:none;padding:0in'>    }</pre></div>
+
+</div>
+
+<p>Run the workbench and execution the &#8220;Run Widget Action&#8221;.  You
+should see following in the Console view.  Not very exciting, but enough to
+demonstrate the Service Provider infrastructure.    In all cases the
+ExecutionStrategy.FIRST is used.  The first client request for a 1000 widgets
+is provided by  SuperWidgetProvider since is has a higher Priority than the
+WidgetProvider and it is capable of handling the order size.  In the second
+client request, no widgets were created since neither of the widgetProvider
+handles the order size.  Lastly, the small order is provided by the
+WidgetProvider since the SuperWidgetProvider does not handle order smaller than
+100 widgets.</p>
+
+<div style='margin-left:24.0pt'>
+
+<div style='border:solid windowtext 1.0pt;padding:4.0pt 4.0pt 4.0pt 4.0pt'><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy;
+background:white'>Created 1000 widgets</span></pre><pre style='margin-left:
+0in;border:none;padding:0in'><span style='color:navy;background:white'>No widgets created</span></pre><pre
+style='margin-left:0in;border:none;padding:0in'><span style='color:navy;
+background:white'>Created 76 widgets</span></pre></div>
+
+</div>
+
+<p>As a simple exercise change the ExecutionStrategy used by the WidgetService
+to see the behavior change.  You can also change the order sizes and Priority
+of the Providers.</p>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<h2><a name=principles></a><a name=examples></a><a name=models></a><a name=api></a>Summary</h2>
+
+<p><span style='font-size:10.0pt'>[<a href="#top">back to top</a>]</span></p>
+
+<p>To create and demonstrate the Service Provider Infrastructure we:</p>
+
+<p style='margin-left:1.0in;text-indent:-.25in'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Defined the IWidgetProvider interface by extending the base IProvider
+interface,</p>
+
+<p style='margin-left:1.0in;text-indent:-.25in'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Created the WidgetService by extending Service and implementing
+IWidgetProvider,</p>
+
+<p style='margin-left:1.0in;text-indent:-.25in'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Create the WidgetDescriptor to load the WidgetProvider&#8217;s XML
+descriptors,</p>
+
+<p style='margin-left:1.0in;text-indent:-.25in'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Created the widgetProvider extension-point,</p>
+
+<p style='margin-left:1.0in;text-indent:-.25in'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Add the widgetProvider extensions to the plugin.xml,</p>
+
+<p style='margin-left:1.0in;text-indent:-.25in'>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Created a widget Provider by implementing IWidgetProvider, and </p>
+
+<p style='margin-left:1.0in;text-indent:-.25in'>7.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Finally, created a simple client to use the Widget Service. </p>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<p class=MsoNormal style='margin-bottom:12.0pt'>&nbsp;</p>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<p><a href="http://www.eclipse.org/legal/epl-v10.html">Copyright (c) 2000,2005
+IBM Corporation and others. All Rights Reserved.</a></p>
+
+</hr/></br/></br/></div>
+
+</body>
+
+</html>

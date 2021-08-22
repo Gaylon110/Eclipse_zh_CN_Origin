@@ -1,0 +1,38 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.eclipse.oomph.p2.core;singleton:=true
+Bundle-Version: 1.8.0.v20170410-0909
+Bundle-ClassPath: org.eclipse.oomph.p2.core_1.8.0.v20170410-0909.jar
+Bundle-Activator: org.eclipse.oomph.p2.internal.core.P2CorePlugin$Implementation
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Export-Package: org.eclipse.oomph.p2.core;version="1.8.0";x-internal:=true,
+  org.eclipse.oomph.p2.internal.core;version="1.8.0";x-internal:=true
+Require-Bundle: org.eclipse.core.runtime;bundle-version="[3.5.0,4.0.0)",
+  org.eclipse.core.variables;bundle-version="[3.0.0,4.0.0)";resolution:=optional,
+  org.eclipse.emf.ecore.xmi;bundle-version="[2.10.0,3.0.0)",
+  org.eclipse.equinox.p2.core;bundle-version="[2.0.0,3.0.0)";visibility:=reexport,
+  org.eclipse.equinox.p2.engine;bundle-version="[2.0.0,3.0.0)";visibility:=reexport,
+  org.eclipse.equinox.p2.metadata;bundle-version="[2.0.0,3.0.0)";visibility:=reexport,
+  org.eclipse.equinox.p2.metadata.repository;bundle-version="[1.0.0,2.0.0)";visibility:=reexport,
+  org.eclipse.equinox.p2.repository;bundle-version="[2.0.0,3.0.0)";visibility:=reexport,
+  org.eclipse.equinox.p2.publisher.eclipse;bundle-version="[1.0.0,2.0.0)",
+  org.eclipse.equinox.p2.publisher;bundle-version="[1.0.0,2.0.0)",
+  org.eclipse.equinox.p2.artifact.repository;bundle-version="[1.0.0,2.0.0)";visibility:=reexport,
+  org.eclipse.equinox.p2.director;bundle-version="[2.0.0,3.0.0)",
+  org.eclipse.equinox.p2.operations;bundle-version="[2.0.0,3.0.0)",
+  org.eclipse.equinox.p2.touchpoint.natives;bundle-version="[1.0.0,2.0.0)",
+  org.eclipse.equinox.p2.touchpoint.eclipse;bundle-version="[2.0.0,3.0.0)",
+  org.eclipse.oomph.p2;bundle-version="[1.8.0,2.0.0)";visibility:=reexport,
+  org.eclipse.ecf;bundle-version="[3.1.0,4.0.0)",
+  org.eclipse.ecf.provider.filetransfer;bundle-version="[3.1.0,4.0.0)",
+  org.eclipse.ecf.filetransfer;bundle-version="[5.0.0,6.0.0)"
+Build-Jdk: 1.8.0_121
+Created-By: Apache Maven 3.0.5
+Service-Component: META-INF/lazyProfileRegistry.xml, META-INF/provisioningAgentProvider.xml
+Eclipse-SourceReferences: scm:git:https://git.eclipse.org/r/p/oomph/org.eclipse.oomph.git;path="plugins/org.eclipse.oomph.p2.core";commitId=2161405b80cf99ed791602ba56cdf44084f5ca43
+Bundle-ActivationPolicy: lazy
+Archiver-Version: Plexus Archiver
+Built-By: genie.oomph
+Bundle-RequiredExecutionEnvironment: J2SE-1.5

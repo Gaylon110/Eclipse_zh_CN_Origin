@@ -1,0 +1,19 @@
+import org.eclipse.jface.wizard.WizardPage;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.widgets.Composite;
+
+method
+	public %TypeName%() {
+		super("wizardPage");
+		setTitle("Wizard Page title");
+		setDescription("Wizard Page description");
+	}
+
+method
+	@Override
+	public void createControl(Composite parent) {
+		Composite container = new Composite(parent, SWT.NONE);
+		%container.SWTLayout%
+		setControl(container);
+	}
+

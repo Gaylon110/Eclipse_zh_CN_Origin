@@ -1,0 +1,84 @@
+<!-- 
+ ******************************************************************************
+ * Copyright (c) 2016 Oracle
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *    Konstantin Komissarchik - initial implementation and ongoing maintenance
+ ******************************************************************************
+-->
+
+<definition>
+
+    <import>
+        <definition>org.eclipse.sapphire.workspace.ui.CreateWorkspaceFileForm</definition>
+    </import>
+    <wizard>
+        <id>CreateNormalizedXmlSchemaWizard</id>
+        <label>New Normalized XML Schema</label>
+        <page>
+            <label>Normalized XML Schema</label>
+            <description>Create a normalized XML Schema.</description>
+            <image>org/eclipse/sapphire/sdk/XmlSchemaWizardBanner.gif</image>
+            <id>CreateNormalizedXmlSchemaWizard.SourcePage</id>
+            <content>
+                <property-editor>SourceFile</property-editor>
+                <property-editor>
+                    <scale-vertically>true</scale-vertically>
+                    <property>RootElements</property>
+                </property-editor>
+            </content>
+            <scale-vertically>true</scale-vertically>
+        </page>
+        <page>
+            <label>Normalized XML Schema</label>
+            <description>Create a normalized XML Schema.</description>
+            <image>org/eclipse/sapphire/sdk/XmlSchemaWizardBanner.gif</image>
+            <id>CreateNormalizedXmlSchemaWizard.SourcePage</id>
+            <content>
+                <property-editor>
+                    <child-property>Type</child-property>
+                    <property>Exclusions</property>
+                    <child-property>Name</child-property>
+                    <scale-vertically>true</scale-vertically>
+                </property-editor>
+                <property-editor>
+                    <child-property>Before</child-property>
+                    <property>TypeSubstitutions</property>
+                    <child-property>After</child-property>
+                    <scale-vertically>true</scale-vertically>
+                </property-editor>
+                <property-editor>
+                    <hint>
+                        <name>checkbox.layout</name>
+                        <value>leading.label</value>
+                    </hint>
+                    <property>SortSequenceContent</property>
+                </property-editor>
+                <property-editor>
+                    <hint>
+                        <name>checkbox.layout</name>
+                        <value>leading.label</value>
+                    </hint>
+                    <property>RemoveWildcards</property>
+                </property-editor>
+            </content>
+            <scale-vertically>true</scale-vertically>
+        </page>
+        <page>
+            <id>CreateNormalizedXmlSchemaWizard.TargetPage</id>
+            <label>Normalized XML Schema</label>
+            <description>Create a normalized XML Schema.</description>
+            <content>
+                <include>CreateWorkspaceFileForm</include>
+            </content>
+            <scale-vertically>true</scale-vertically>
+            <image>org/eclipse/sapphire/sdk/XmlSchemaWizardBanner.gif</image>
+        </page>
+        <element-type>org.eclipse.sapphire.sdk.xml.schema.normalizer.CreateNormalizedXmlSchemaOp</element-type>
+    </wizard>
+    
+</definition>

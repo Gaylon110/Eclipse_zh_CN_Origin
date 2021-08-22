@@ -1,0 +1,153 @@
+/*******************************************************************************
+ * Copyright (c) 2008-2011 Chair for Applied Software Engineering,
+ * Technische Universitaet Muenchen.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ * zardosht
+ ******************************************************************************/
+package org.eclipse.emf.emfstore.internal.client.ui.dialogs;
+
+import java.util.List;
+
+import org.eclipse.emf.emfstore.client.ESProject;
+import org.eclipse.emf.emfstore.internal.client.model.ESWorkspaceProviderImpl;
+import org.eclipse.emf.emfstore.internal.client.model.ProjectSpace;
+import org.eclipse.emf.emfstore.internal.common.model.util.ModelUtil;
+import org.eclipse.jface.dialogs.MessageDialog;
+import org.eclipse.jface.dialogs.TitleAreaDialog;
+import org.eclipse.jface.viewers.ISelectionChangedListener;
+import org.eclipse.jface.viewers.IStructuredContentProvider;
+import org.eclipse.jface.viewers.LabelProvider;
+import org.eclipse.jface.viewers.ListViewer;
+import org.eclipse.jface.viewers.SelectionChangedEvent;
+import org.eclipse.jface.viewers.StructuredSelection;
+import org.eclipse.jface.viewers.Viewer;
+import org.eclipse.jface.window.Window;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.layout.GridData;
+import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Control;
+import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.Shell;
+import org.eclipse.ui.PlatformUI;
+
+/**
+ * Dialog for project comparison.
+ *
+ * @author zardosht
+ */
+public class CompareProjectsDialog extends TitleAreaDialog {
+
+	private final ProjectSpace selectedProjectSpace;
+	private ListViewer listViewer;
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * @see org.eclipse.jface.dialogs.TitleAreaDialog#createDialogArea(org.eclipse.swt.widgets.Composite)
+	 */
+	@Override
+	protected Control createDialogArea(Composite parent) {
+		final Composite contents = new Composite(parent, SWT.NONE);
+		contents.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
+		contents.setLayout(new GridLayout());
+		final Label lbl1 = new Label(contents, SWT.NONE);
+		lbl1.setLayoutData(new GridData(SWT.BEGINNING, SWT.CENTER, false, false));
+		lbl1.setText("Selected Project:");
+		final Label lblSelectedProj = new Label(contents, SWT.BORDER);
+		lblSelectedProj.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false));
+		lblSelectedProj.setText(selectedProjectSpace.getProjectName());
+
+		final Label lbl3 = new Label(contents, SWT.NONE);
+		lbl3.setLayoutData(new GridData(SWT.BEGINNING, SWT.CENTER, false, false));
+		lbl3.setText("Compare to:");
+
+		listViewer = new ListViewer(contents, SWT.SINGLE);
+		listViewer.getList().setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
+		listViewer.setContentProvider(new IStructuredContentProvider() {
+			public Object[] getElements(Object inputElement) {
+				final List<? extends ESProject> projects = ESWorkspaceProviderImpl.getInstance().getWorkspace()
+					.getLocalProjects();
+				return projects.toArray();
+			}
+
+			public void dispose() {
+			}
+
+			public void inputChanged(Viewer viewer, Object oldInput, Object newInput) {
+			}
+		});
+
+		listViewer.setLabelProvider(new LabelProvider() {
+
+			@Override
+			public String getText(Object element) {
+				// TODO Auto-generated method stub
+				return ((ProjectSpace) element).getProjectName();
+			}
+
+		});
+		listViewer.addSelectionChangedListener(new ISelectionChangedListener() {
+
+			public void selectionChanged(SelectionChangedEvent event) {
+				final ProjectSpace secondProjectSpace = (ProjectSpace) ((StructuredSelection) event.getSelection())
+					.getFirstElement();
+				if (secondProjectSpace.equals(selectedProjectSpace)) {
+					CompareProjectsDialog.this.setErrorMessage("Selected projects must be different");
+					CompareProjectsDialog.this.getButton(Window.OK).setEnabled(false);
+				} else {
+					CompareProjectsDialog.this.setErrorMessage(null);
+					CompareProjectsDialog.this.getButton(Window.OK).setEnabled(true);
+				}
+			}
+		});
+		listViewer.setInput(new Object());
+
+		setTitle("Select a project from list to compare");
+		return contents;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * @see org.eclipse.jface.dialogs.Dialog#okPressed()
+	 */
+	@Override
+	protected void okPressed() {
+
+		final ProjectSpace secondProjectSpace = (ProjectSpace) ((StructuredSelection) listViewer.getSelection())
+			.getFirstElement();
+		final boolean areEqual = ModelUtil.areEqual(selectedProjectSpace.getProject(), secondProjectSpace.getProject());
+		String message;
+		if (areEqual) {
+			message = "The projects are identical.";
+		} else {
+			message = "The projects are NOT identical!";
+		}
+
+		MessageDialog.openInformation(PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell(), null, message);
+
+		super.okPressed();
+	}
+
+	/**
+	 * Constructor.
+	 *
+	 * @param parentShell
+	 *            the parent shell
+	 * @param selectedProjectSpace
+	 *            the selected project space
+	 */
+	public CompareProjectsDialog(Shell parentShell, ProjectSpace selectedProjectSpace) {
+		super(parentShell);
+		setShellStyle(getShellStyle() | SWT.RESIZE);
+		this.selectedProjectSpace = selectedProjectSpace;
+
+	}
+
+}

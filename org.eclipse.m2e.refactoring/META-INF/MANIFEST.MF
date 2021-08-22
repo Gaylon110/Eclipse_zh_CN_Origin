@@ -1,0 +1,32 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %Bundle-Name
+Bundle-SymbolicName: org.eclipse.m2e.refactoring;singleton:=true
+Bundle-Version: 1.8.3.20180227-2137
+Bundle-ClassPath: org.eclipse.m2e.refactoring_1.8.3.20180227-2137.jar
+Bundle-Activator: org.eclipse.m2e.refactoring.internal.Activator
+Bundle-Vendor: %Bundle-Vendor
+Export-Package: org.eclipse.m2e.refactoring.exclude;x-internal:=true
+Require-Bundle: org.eclipse.m2e.core;bundle-version="[1.8.3,1.9.0)",
+  org.eclipse.m2e.model.edit;bundle-version="[1.8.3,1.9.0)",
+  org.eclipse.m2e.maven.runtime;bundle-version="[1.8.3,1.9.0)",
+  org.eclipse.core.runtime,
+  org.eclipse.core.resources,
+  org.eclipse.core.filebuffers,
+  org.eclipse.ui.workbench,
+  org.eclipse.jface,
+  org.eclipse.jface.text,
+  org.eclipse.jdt.ui,
+  org.eclipse.compare,
+  org.eclipse.jdt.core,
+  org.eclipse.ui.ide,
+  org.eclipse.ltk.core.refactoring,
+  org.eclipse.ltk.ui.refactoring;visibility:=reexport,
+  org.eclipse.m2e.core.ui;bundle-version="[1.8.3,1.9.0)"
+Build-Jdk: 1.8.0_162
+Bundle-ActivationPolicy: lazy
+Import-Package: org.slf4j;version="1.6.2"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Created-By: Apache Maven 3.5.2
+Built-By: genie.m2e
+Archiver-Version: Plexus Archiver

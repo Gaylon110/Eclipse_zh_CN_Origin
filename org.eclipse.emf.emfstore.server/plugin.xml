@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension-point id="locationProvider" name="Location Provider" schema="schema/locationProvider.exsd"/>
+   <extension-point id="configurationResource" name="Server Configuration Resources" schema="schema/configurationResource.exsd"/>
+   <extension-point id="computeChecksum" name="Compute Checksum on Commit" schema="schema/computeChecksum.exsd"/>
+   <extension-point id="resourceSetProvider" name="ResourceSet Provider" schema="schema/resourceSetProvider.exsd"/>
+   <extension-point id="dynamicModelProvider" name="Dynamic Model Provider" schema="schema/dynamicModelProvider.exsd"/>
+   <extension-point id="serverCallObserver" name="Observer all calls to the server" schema="schema/serverCallObserver.exsd"/>
+   <extension-point id="webServerProvider" name="Web Server Provider" schema="schema/webServerProvider.exsd"/>
+   <extension-point id="resourceOptions" name="Resource Options" schema="schema/resourceOptions.exsd"/>   
+   <extension-point id="accessControl" name="Access Control Services" schema="schema/accessControl.exsd"/>
+   <extension
+         id="application"
+         name="EMFStore server"
+         point="org.eclipse.core.runtime.applications">
+      <application
+            cardinality="singleton-global"
+            icon="icon/unicase_big.png"
+            thread="main"
+            visible="true">
+         <run
+               class="org.eclipse.emf.emfstore.internal.server.EMFStoreController">
+         </run>
+      </application>
+   </extension>
+   <extension
+         id="server"
+         name="EMFStore"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="org.eclipse.emf.emfstore.server.application"
+            description="Server Application of EMFStore"
+            name="EMFStore Server">
+         <property
+               name="appName"
+               value="EMFStore Server">
+         </property>
+      </product>
+   </extension>
+   <extension
+         point="org.eclipse.emf.emfstore.server.dynamicModelProvider">
+      <dynamicModelProvider
+            class="org.eclipse.emf.emfstore.internal.server.storage.FileDynamicModelProvider"
+            priority="0">
+      </dynamicModelProvider>
+   </extension>
+   <extension
+         point="org.eclipse.emf.emfstore.server.resourceSetProvider">
+      <resourceSetProvider
+            class="org.eclipse.emf.emfstore.internal.server.storage.ServerXMIResourceSetProvider"
+            priority="0">
+      </resourceSetProvider>
+   </extension>
+</plugin>

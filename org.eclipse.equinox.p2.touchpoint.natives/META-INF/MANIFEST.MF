@@ -1,0 +1,177 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.equinox.p2.touchpoint.natives;singlet
+ on:=true
+Archiver-Version: Plexus Archiver
+Built-By: genie.releng
+Require-Bundle: org.eclipse.equinox.common,org.eclipse.equinox.app;bun
+ dle-version="1.3.0";resolution:=optional
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/equino
+ x/rt.equinox.p2.git;path="bundles/org.eclipse.equinox.p2.touchpoint.n
+ atives";tag="I20170514-1120";commitId=3ee9b476d4b2fc280f80cafb6c953f9
+ adc6caf6a
+Bundle-Vendor: %providerName
+Import-Package: org.eclipse.equinox.internal.p2.core.helpers,org.eclip
+ se.equinox.internal.p2.engine,org.eclipse.equinox.p2.core;version="[2
+ .0.0,3.0.0)",org.eclipse.equinox.p2.engine;version="[2.0.0,3.0.0)",or
+ g.eclipse.equinox.p2.engine.spi;version="[2.0.0,3.0.0)",org.eclipse.e
+ quinox.p2.metadata;version="[2.0.0,3.0.0)",org.eclipse.equinox.p2.met
+ adata.expression;version="2.0.0";resolution:=optional,org.eclipse.equ
+ inox.p2.query;version="2.0.0";resolution:=optional,org.eclipse.equino
+ x.p2.repository;version="[2.0.0,3.0.0)",org.eclipse.equinox.p2.reposi
+ tory.artifact;version="[2.0.0,3.0.0)",org.eclipse.osgi.service.enviro
+ nment;version="1.3.0",org.eclipse.osgi.util;version="1.0.0",org.osgi.
+ framework;version="1.3.0",org.osgi.service.packageadmin;version="1.2.
+ 0"
+Export-Package: org.eclipse.equinox.internal.p2.touchpoint.natives;x-i
+ nternal:=true,org.eclipse.equinox.internal.p2.touchpoint.natives.acti
+ ons;x-internal:=true
+Bundle-Name: %pluginName
+Bundle-Version: 1.2.200.v20170511-1216
+Bundle-Localization: plugin
+Bundle-Activator: org.eclipse.equinox.internal.p2.touchpoint.natives.A
+ ctivator
+Created-By: Apache Maven 3.3.3
+Build-Jdk: 1.8.0_121
+
+Name: plugin.xml
+SHA-256-Digest: J8JQmqbG5o2Qd5fwRSz90Q3JcEcvKtc9CG5Xd1qkIcA=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/natives/actions/Colle
+ ctAction.class
+SHA-256-Digest: XiJDKDYyA+4qdBbTSaTQoKeilxAult2H0Mo5136VxJU=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/natives/NativeTouchpo
+ int.class
+SHA-256-Digest: wrUIY0zCsZkyCo6tn0U8vVWYHi+3QBYEX8vqo8BvQKw=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/natives/actions/Unzip
+ Action.class
+SHA-256-Digest: jI1itmHgyitVw4gJcTia5LWmFA0kcgUT5CLQttyUuPc=
+
+Name: nativePackageScripts/debian/isInstalled.sh
+SHA-256-Digest: q96Ohr7rYAInCIfY9oJ9V6V2N3moLFpMEEpdShWpt3c=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/natives/actions/Remov
+ eAction.class
+SHA-256-Digest: fn5KnEdt5LXr1jbLIXkayMhWHw0NZPjALR286+S6GZY=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/natives/actions/Clean
+ upzipAction.class
+SHA-256-Digest: jUizJ+3xE/nh3RN3dt6odvhw30ACFzyqef5g+N0fNhI=
+
+Name: nativePackageScripts/windows/isInstalled.bat
+SHA-256-Digest: F6hzC3r4nh9EJ7W6sHDTU12rSy7YS9vy69hASR07J34=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/natives/IBackupStore.
+ class
+SHA-256-Digest: 1baQV03vKeXPS2yLdhY6S4qdjo01se2B0Wddt+PeGeQ=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/natives/actions/CopyA
+ ction.class
+SHA-256-Digest: /cVAjTnYcCNhNXnb1zmJxZfOKV6MYigxb4TywC33934=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/natives/Util.class
+SHA-256-Digest: ESwO4TOmX7VW6+UWDPiKHxsHdskr9vRY1OVU4EG4PRQ=
+
+Name: nativePackageScripts/fedora/isRunning.sh
+SHA-256-Digest: sBN4JdznnmocElAkK5HIcvrDk7iZHofiDrKXORH6pHM=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/natives/messages.prop
+ erties
+SHA-256-Digest: VLhlSNCXWMus4dED5765GYtUQnvLjaWrAefz/kN5X1s=
+
+Name: plugin.properties
+SHA-256-Digest: TiusLLKGNrvTOTEcMRCym4gsfx1GAbmUb19RcFTctqo=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/natives/Messages.clas
+ s
+SHA-256-Digest: 5dPRbnSnYGp2JP4ldIQ4AuG2TzTu4wwRR4od9jflGAo=
+
+Name: META-INF/p2.inf
+SHA-256-Digest: 87HzzFgWmM3tfe0UNCbIhb899F0qfSlBIdaKFk+uu5I=
+
+Name: about.html
+SHA-256-Digest: 0RM1x9lTJa7T8YkysaegPuBIeaEvSZypRDfXoMpsJAU=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/natives/actions/LinkA
+ ction.class
+SHA-256-Digest: 64dI3o+IDLksMjMWGY0rJGJN2Yu9wbS/blKPirhlKtc=
+
+Name: nativePackageScripts/debian/isRunning.sh
+SHA-256-Digest: Y4vgOprAGj4yaVcJ+BYhS6z4/wc4JQ6ymz1ey9FXgqo=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/natives/NativePackage
+ ExtractionApplication.class
+SHA-256-Digest: uLE0lr68UD7YL0+BQ6kRBqaajZb/CUhXpSDUbJrqKps=
+
+Name: .api_description
+SHA-256-Digest: Y8+t+RoprCmktvjKe74skxtn8QU9KMVx6NP8ev4I4N0=
+
+Name: nativePackageScripts/fedora/installCommands.txt
+SHA-256-Digest: 9mfD9FxcC/91Rt0c3NK7PCGsgMfk4UBrnbO3y/jUdB0=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/natives/actions/Clean
+ upcopyAction.class
+SHA-256-Digest: zdIWYwuaxyxFJCqnjZve4Oirhqm8Gz/Mj/Cu04Av1UQ=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/natives/LazyBackupSto
+ re.class
+SHA-256-Digest: f8fL2n5Jay1+Y46vD0YjG3vU1NuXeKGGaFGDAmmp/7s=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/natives/ClosedBackupS
+ toreException.class
+SHA-256-Digest: bvLOiVjbiKmKOw7tkOjOKathzYtG6QlZrIu2jWHquhQ=
+
+Name: nativePackageScripts/debian/installCommands.txt
+SHA-256-Digest: drbJaDNaLicPvSwgg73ywQz0+QtW3UrFVNBJeN52eEI=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/natives/actions/Rmdir
+ Action.class
+SHA-256-Digest: M3tiTw99TTXRoBMmrVemAaM3h3pi1KLTomh0g1M8EIA=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/natives/actions/Chmod
+ Action.class
+SHA-256-Digest: v8wk5u7jY/lDXKuDeFG7tEtnOSWY0JrtLWnZ0ZYCY90=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/natives/actions/Block
+ MacUpdate.class
+SHA-256-Digest: /vDwKQ+19xtqXhVlrXnoFNjnRTmoQ40dP/taC049w98=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/natives/NativePackage
+ Entry.class
+SHA-256-Digest: 3J2u5ApGia4dym4fBb8cH73C9Fw1WW/LKijB+VP9xVg=
+
+Name: nativePackageScripts/fedora/isInstalled.sh
+SHA-256-Digest: j34mktuMGRzhpqfz/YhWl0sfaXKgidy1DSLMle8/riU=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/natives/Activator.cla
+ ss
+SHA-256-Digest: S5IUs1IgLBm91x+mnOU8jPO11Ghf9s+bjf0oqmkQTeU=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/natives/BackupStore.c
+ lass
+SHA-256-Digest: xYUNS3CafQrMTWIw16/9oACOsNy6ITxIXXNIcANTdgE=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/natives/actions/Actio
+ nConstants.class
+SHA-256-Digest: tLxTpB7RmMgq9quug3mIUYQ20aAfLaWVEh2NrdjYAhI=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/natives/actions/Mkdir
+ Action.class
+SHA-256-Digest: AUqjD3VOTQeE992YljmY+krwS3ZqwUae8kmGE82xYM8=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/natives/actions/Check
+ AndPromptNativePackage.class
+SHA-256-Digest: 2IfpzdU4/9Q99N+7HQhoefyktoVioDOzVKINa1CgbHM=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/natives/actions/Clean
+ upzipAction$1.class
+SHA-256-Digest: lb3y/76AgCx8ACcbW3U/wvQrpivkdqWYapw8GkaetKc=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/natives/actions/Check
+ AndPromptNativePackageWindowsRegistry.class
+SHA-256-Digest: hBQ9wrsdCEmY7xetl3sugHKv8vkv2VB8UiqOvjT2ZMI=
+

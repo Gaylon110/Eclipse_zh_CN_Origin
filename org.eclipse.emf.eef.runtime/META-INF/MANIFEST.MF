@@ -1,0 +1,986 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.emf.eef.runtime;singleton:=true
+Archiver-Version: Plexus Archiver
+Built-By: genie.eef
+Require-Bundle: org.eclipse.ui;bundle-version="3.3.0",org.eclipse.core
+ .runtime;bundle-version="3.3.0",org.eclipse.core.resources;bundle-ver
+ sion="3.3.0",org.eclipse.jface.databinding;bundle-version="1.1.0";vis
+ ibility:=reexport,org.eclipse.emf.ecore;bundle-version="2.3.0",org.ec
+ lipse.emf.ecore.xmi;bundle-version="2.3.0",org.eclipse.emf.edit;bundl
+ e-version="2.3.0",org.eclipse.emf.edit.ui;bundle-version="2.3.0";visi
+ bility:=reexport,org.eclipse.emf.validation;bundle-version="1.1.0",or
+ g.eclipse.ui.views.properties.tabbed;bundle-version="3.3.0";visibilit
+ y:=reexport,org.eclipse.ui.ide;bundle-version="3.3.0";resolution:=opt
+ ional,org.eclipse.jdt.core;bundle-version="3.3.0";resolution:=optiona
+ l,org.eclipse.emf.workspace;bundle-version="1.1.0";resolution:=option
+ al,org.eclipse.jface.text;bundle-version="3.3.0"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ManifestVersion: 2
+Bundle-Vendor: Eclipse Modeling Project
+Export-Package: org.eclipse.emf.eef.runtime,org.eclipse.emf.eef.runtim
+ e.api.adapters,org.eclipse.emf.eef.runtime.api.component,org.eclipse.
+ emf.eef.runtime.api.context,org.eclipse.emf.eef.runtime.api.notify,or
+ g.eclipse.emf.eef.runtime.api.parts,org.eclipse.emf.eef.runtime.api.p
+ roviders,org.eclipse.emf.eef.runtime.context,org.eclipse.emf.eef.runt
+ ime.context.impl,org.eclipse.emf.eef.runtime.impl.command,org.eclipse
+ .emf.eef.runtime.impl.components,org.eclipse.emf.eef.runtime.impl.fil
+ ters,org.eclipse.emf.eef.runtime.impl.filters.business,org.eclipse.em
+ f.eef.runtime.impl.notify,org.eclipse.emf.eef.runtime.impl.operation,
+ org.eclipse.emf.eef.runtime.impl.parts,org.eclipse.emf.eef.runtime.im
+ pl.providers,org.eclipse.emf.eef.runtime.impl.services,org.eclipse.em
+ f.eef.runtime.impl.utils,org.eclipse.emf.eef.runtime.impl.validation,
+ org.eclipse.emf.eef.runtime.part.impl,org.eclipse.emf.eef.runtime.pol
+ icies,org.eclipse.emf.eef.runtime.policies.impl,org.eclipse.emf.eef.r
+ untime.providers,org.eclipse.emf.eef.runtime.providers.impl,org.eclip
+ se.emf.eef.runtime.ui,org.eclipse.emf.eef.runtime.ui.adapters;version
+ ="1.5.1",org.eclipse.emf.eef.runtime.ui.comparator,org.eclipse.emf.ee
+ f.runtime.ui.notify,org.eclipse.emf.eef.runtime.ui.parts,org.eclipse.
+ emf.eef.runtime.ui.parts.sequence,org.eclipse.emf.eef.runtime.ui.prop
+ erties.sections,org.eclipse.emf.eef.runtime.ui.providers,org.eclipse.
+ emf.eef.runtime.ui.utils,org.eclipse.emf.eef.runtime.ui.viewers,org.e
+ clipse.emf.eef.runtime.ui.viewers.filters,org.eclipse.emf.eef.runtime
+ .ui.widgets,org.eclipse.emf.eef.runtime.ui.widgets.eobjflatcombo,org.
+ eclipse.emf.eef.runtime.ui.widgets.imageviewer,org.eclipse.emf.eef.ru
+ ntime.ui.widgets.referencestable,org.eclipse.emf.eef.runtime.ui.widge
+ ts.settings,org.eclipse.emf.eef.runtime.ui.wizards
+Bundle-Name: EEF Runtime Plug-in
+Bundle-Version: 1.5.1.201601141612
+Bundle-Activator: org.eclipse.emf.eef.runtime.EEFRuntimePlugin
+Created-By: Apache Maven
+Build-Jdk: 1.7.0_80
+
+Name: plugin.xml
+SHA-256-Digest: /IckzY8DfOQM/uKMR49EyVEiJEZJh7+BLLCCX2Grw2g=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/settings/EEFFilter.class
+SHA-256-Digest: honW+m9G0WqjyYWZ5VKNaunknyqxAm2tg7e1BxdGK2U=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/EMFModelViewerDialog.clas
+ s
+SHA-256-Digest: O8YfcWOLg+EmW0KooKjjsEz3N4cSbKctqbOfBr1CDs4=
+
+Name: org/eclipse/emf/eef/runtime/impl/utils/PatternTool.class
+SHA-256-Digest: shpwwcWT3af782TGpUKBEGmAUNgw1989F+vwmfy4UsQ=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/referencestable/Reference
+ sTableContentProvider.class
+SHA-256-Digest: dztOx0G51QsWEpafk5KcCaZ9vxrkYI1MyFDXUIFQiNQ=
+
+Name: META-INF/maven/org.eclipse.emf/org.eclipse.emf.eef.runtime/pom.p
+ roperties
+SHA-256-Digest: toxML4+g5yHZgvDfgrfNSIBZN1ZkBBzaQOGLuVmsNz0=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/SWTUtils.class
+SHA-256-Digest: S0FXOxbMN+NDEeJsA30dq2JyM5FM0vek8LoRbsy56BQ=
+
+Name: org/eclipse/emf/eef/runtime/context/impl/EReferencePropertiesEdi
+ tionContext$InstanciableTypeFilter.class
+SHA-256-Digest: xkQQ7k1tVE2BH3vGZotxeYMIVuQbQ2EPuGsVbCKR4Ec=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/ReferencesTable$AddButton
+ listener.class
+SHA-256-Digest: FL/auvBxAEDiZ/o27y1SfqZP8tzBuCTAZxXus50rffk=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/TabElementTreeSelectionDi
+ alog$3.class
+SHA-256-Digest: Wrk0pvSUGBrdqpjiqGsI9xT5YR3Fad3NcuhGF+1JPvA=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/ModelChooserDialog.class
+SHA-256-Digest: bGKYX2il0qVRZdVUfuVFrzVAJWV/WhNuvN2/SwYWcWM=
+
+Name: org/eclipse/emf/eef/runtime/ui/utils/eefRuntimeUImessages.proper
+ ties
+SHA-256-Digest: 8uyMU51eIz79lSrqHCWQ+u8dXTAEHqAti49A7J+7DJM=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/settings/NavigationStepBu
+ ilder.class
+SHA-256-Digest: k0VaSNOxYvrZYVGjrvLAo2H7IYMd3J0dWEsDD2Tuk7Q=
+
+Name: META-INF/maven/org.eclipse.emf/org.eclipse.emf.eef.runtime/pom.x
+ ml
+SHA-256-Digest: Y9KkO2jll7MY02F+FiNXG0ZpePX1aawNZ9pgw2Md+ec=
+
+Name: org/eclipse/emf/eef/runtime/ui/viewers/PropertiesEditionViewer$I
+ temListener.class
+SHA-256-Digest: KBh3MH7Ksa/ukwYAuo1JLpArgUATon5BE3Ovb6yGhAU=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/ElementSelectionDialog.cl
+ ass
+SHA-256-Digest: a4KTUcAu90QjxNAvdrADxXs4Mi5gokYSSGjioSZeBjE=
+
+Name: schema/ReadOnlyPolicyProvider.exsd
+SHA-256-Digest: tGcFPUfEhWaNKrE6LjdTm7w5ZlTTe5zMRgzjDjVvrGo=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/EMFComboViewer.class
+SHA-256-Digest: 1gkXkGFezhuIkNvShIeR5jPRxc8Bhzbffxyqld+itaI=
+
+Name: org/eclipse/emf/eef/runtime/impl/services/PropertiesEditionCompo
+ nentListenerProviderService.class
+SHA-256-Digest: MlPRPXUQ3Km8tTZfE2eNjLPDhdFUe7dmTLVt98FT1EI=
+
+Name: icons/16x16/th_vertical.gif
+SHA-256-Digest: k03TWA7ufMk7rzjLG+FGDsfNyQnYEFOT9osCkVukmC4=
+
+Name: org/eclipse/emf/eef/runtime/impl/command/WizardEditingCommand.cl
+ ass
+SHA-256-Digest: uCRQU/ZcRF3Ao1N2B2R0dCl780hi7VLaRs5wnAvmfTk=
+
+Name: org/eclipse/emf/eef/runtime/ui/wizards/PropertiesEditionWizard$1
+ .class
+SHA-256-Digest: s+YN2wji9QdNvj9+Nb1qRr8Fqwko8OaDdbN2ICrS9IQ=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/ContainmentPropertiesEdit
+ ingViewer$ChildComposite$3.class
+SHA-256-Digest: dxfE75q7/BZv3eaSsEK14ENMM6RpMeKzepm7hGqLODQ=
+
+Name: org/eclipse/emf/eef/runtime/api/notify/PropertiesEditingSemantic
+ Listener.class
+SHA-256-Digest: wI1HI6iXL1Gs/uJE4NmPkr7Okh1GNeU4CiO/hUGL8gw=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/ElementSelectionDialog$1.
+ class
+SHA-256-Digest: GmdAquEcojTe4G3Qx9tyVIYykBQ8QyvpoaGXzFumli0=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/ReferencesTable$1.class
+SHA-256-Digest: p/lQ0yUpXhdeB/vgKzebvfqCHDFkNZEK1R9D8mDkpfU=
+
+Name: icons/16x16/th_horizontal.gif
+SHA-256-Digest: mo5PkJK0ov7RO0PcCAdgj6OObCLNWPOxYUiScJfKp64=
+
+Name: icons/16x16/disabled/th_vertical.gif
+SHA-256-Digest: bwxWBYyCl6wuOthcApkqLDfT0HwYOj9BFFyySAIYdbw=
+
+Name: org/eclipse/emf/eef/runtime/ui/parts/sequence/CompositionSequenc
+ e.class
+SHA-256-Digest: vLgfswCvedW/KqAvV+cwk0hP39JCt7xhSMcB5taLY6k=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/EEFFeatureEditorDialog$1.
+ class
+SHA-256-Digest: VnyjZaE5UBkTr/Qc/tMPtuDlqbDovXUkMq1Ah4UOlXA=
+
+Name: org/eclipse/emf/eef/runtime/api/notify/IPropertiesEditionEvent.c
+ lass
+SHA-256-Digest: sVjedHgN3+yNuc3D+3vrbo1GJ7siCHYSWkzDflFRp3I=
+
+Name: org/eclipse/emf/eef/runtime/EEFRuntimePlugin.class
+SHA-256-Digest: t0l5v9ypg7eakccS/r7naC6/dAIYNlQDFnaS/HzerZA=
+
+Name: org/eclipse/emf/eef/runtime/api/notify/IPropertiesEditionCompone
+ ntListener.class
+SHA-256-Digest: M8w2bIxa3efwgY9m7oyAcdE5wYUERKvtCVseV0RuhXY=
+
+Name: schema/PropertiesEditionPartProvider.exsd
+SHA-256-Digest: xUU9ijPp3cOt76fuVJOd5m+emv0vefHpnAwmY6WS9A0=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/EEFFeatureEditorDialog$7.
+ class
+SHA-256-Digest: a7S+ipgnuJUG2AUkX/mBo22iTzaBRLxSwXSj4P7FN64=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/settings/NavigationStep.c
+ lass
+SHA-256-Digest: mHjRSd3zVktXI7C+N7GGnPKL8o1DZduXV0RpZTpRioE=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/settings/EEFEditorSetting
+ sBuilder$EEFEditorSettingsImpl.class
+SHA-256-Digest: AnpXDYhVJMcl8otsD0tLCLw1ojd8gI0HcyZeufLSH64=
+
+Name: schema/PropertiesEditionComponentListenerProvider.exsd
+SHA-256-Digest: w+ScdYdZCb3Ieck1V/V6kliPmh3s/yDuZfOGRHdlpzw=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/SWTUtils$ScrollableModify
+ Listener.class
+SHA-256-Digest: DnuoDkPi829+emGL6G80sS4Ql9FgkWPMotLAa2Wo930=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/ContainmentPropertiesEdit
+ ingViewer$ChildComposite$4.class
+SHA-256-Digest: PlbV3t/YbJeAqFW3uX5Zsx2+Mdp6UDvTtzm0YMaErKE=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/SingleCompositionViewer.c
+ lass
+SHA-256-Digest: iGHCdrf7e+vxs8G2xzUJUrzIZx+unsIDmsZje+Wyo/M=
+
+Name: org/eclipse/emf/eef/runtime/impl/services/PropertiesContextServi
+ ce.class
+SHA-256-Digest: ReToWB/44shj+vfKmvESuDIIU11olWl7E6oKxrxPjf4=
+
+Name: org/eclipse/emf/eef/runtime/ui/utils/EEFLabelProvider.class
+SHA-256-Digest: mlWrHIfLhxeKDzYbo3vnzk42Z/V0JqzfYBvmEH04wxc=
+
+Name: org/eclipse/emf/eef/runtime/api/parts/ISWTPropertiesEditionPart.
+ class
+SHA-256-Digest: iefFMpqsoNzi0kSjOTN24HsNbvs6iSAKRkB01bbPV0c=
+
+Name: org/eclipse/emf/eef/runtime/ui/parts/impl/ViewHelperImpl.class
+SHA-256-Digest: 1cfltubQAqj7Off0+QXvaE4ItVHuL6iGY7bfzq3T/is=
+
+Name: icons/16x16/Create_16x16.gif
+SHA-256-Digest: I0YzqKMSi6bBzC8/TO/GdTCO2tQk7DLKnOa41ppLJmY=
+
+Name: org/eclipse/emf/eef/runtime/impl/utils/EEFUtils.class
+SHA-256-Digest: xJxQLf9rAnogBTKMf+r+xyLeZPC9C8FNXkibZNda4bg=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/EObjectFlatComboViewer$1.
+ class
+SHA-256-Digest: ClSvx0fn7Sih1NQsT4DKXRfbbcgDNqek+y2C00j3bSI=
+
+Name: org/eclipse/emf/eef/runtime/impl/components/StandardPropertiesEd
+ itionComponent.class
+SHA-256-Digest: IpXK/kSN+PJN815IBferAopXXE1lMr7VR5oUdLHZYuw=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/LinkEObjectFlatComboViewe
+ r.class
+SHA-256-Digest: CKNInPcLzy6A36xWaK/aIoSR6oM0BxYF4ph7Rns0n7Q=
+
+Name: org/eclipse/emf/eef/runtime/impl/filters/EObjectStrictFilter.cla
+ ss
+SHA-256-Digest: gT/JNZ9y3CqKzotx3JehYH8ra/+2fBQ49yHwN9VpcBI=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/EEFFeatureEditorDialog$6.
+ class
+SHA-256-Digest: jekAHMsRiTOuNQ25t309Bw5l68bBTKiBPy69Gm5noTE=
+
+Name: org/eclipse/emf/eef/runtime/impl/utils/EEFConverterUtil.class
+SHA-256-Digest: PoyIh8OhpImsVLgMe7bUUYFgsvj5gWu2W1/g3QJ3oLk=
+
+Name: icons/16x16/Edit_Part.gif
+SHA-256-Digest: Tf9NMHKdaycRKs6oogxlfK7ivYRPk/PNUM9F6gnrhhI=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/LinkEReferenceViewer$1.cl
+ ass
+SHA-256-Digest: rfuQz204a3A1QdPmTzJWgk8ShFgnCv/ZztCHPHHc7ZA=
+
+Name: org/eclipse/emf/eef/runtime/impl/validation/EEFValidator.class
+SHA-256-Digest: OQM/rwFg2I4SOvvlTtETjbc836DTy5uESuO4oQsVTA0=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/ReferencesTable.class
+SHA-256-Digest: 2x4sq/afdZe1/hEsco/YmqMc/F4ASALe1tnVaFRSYCA=
+
+Name: org/eclipse/emf/eef/runtime/impl/notify/PropertiesEditionEvent.c
+ lass
+SHA-256-Digest: ChF1VwejsSvaCxCgGn3M+D6CXm6zUpoAe9QkL4OMhrk=
+
+Name: org/eclipse/emf/eef/runtime/part/impl/SectionPropertiesEditingPa
+ rt.class
+SHA-256-Digest: jHgNbABNi1diePbIqO0BPMEZi7mqQaySSjCs9zZ57yA=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/TabElementTreeSelectionDi
+ alog$4.class
+SHA-256-Digest: wLfRBEludsKmNcqv0TXFEQwqNgfw0DlASJNOzZ0uOYU=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/EEFFeatureEditorDialog$2.
+ class
+SHA-256-Digest: UBrgJ4o8ptTj/Y0Gv0OwFX8xVjFXNaty1pIYpwq7qbI=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/ReferencesTable$DownButto
+ nlistener.class
+SHA-256-Digest: qR07MPdAhoAZ6WvqYohaB8UXpvcERrXroNWyQuIa8Cs=
+
+Name: org/eclipse/emf/eef/runtime/ui/viewers/filters/PropertiesEdition
+ PartFilter.class
+SHA-256-Digest: /OBngQg0/d35NAwVNd62+c/EnKactUQfrTnK3c3eSx0=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/ElementSelectionDialog$3.
+ class
+SHA-256-Digest: cBAFhf+wS0Wa5r6OIFYOcOto2a/Nbxs3GC4YLHeoYPU=
+
+Name: org/eclipse/emf/eef/runtime/impl/utils/StringMatcher.class
+SHA-256-Digest: n6MZ537lzjcoW0XDhD9dy13enWuxLiw9KG8TWLSrRWw=
+
+Name: org/eclipse/emf/eef/runtime/context/impl/TypedEReferenceProperti
+ esEditingContext.class
+SHA-256-Digest: PblCUHCyl9LSUY8JDDqUobTJXGRqqQZbXTJHTTUtWts=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/AbstractAdvancedEObjectFl
+ atComboViewer$EObjectFlatComboViewerListener.class
+SHA-256-Digest: jsRGHlz27qZglWYYxwcnU3gqlLJO6VHmwmMVF+2iqGg=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/EEFFeatureEditorDialog$5.
+ class
+SHA-256-Digest: uVCouyZTsL52vWSSHCc0hakPiokssultFaspm1Evrpw=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/SWTUtils$ScrollableResize
+ Listener.class
+SHA-256-Digest: knae/Qig2HytuqdfWErAb92qHx4c9Kr5vZvZgmlS2WM=
+
+Name: org/eclipse/emf/eef/runtime/impl/operation/WizardEditingOperatio
+ n.class
+SHA-256-Digest: ZV5OPTVOfAiEACtIMpIIhGy8mPHH89/DSdcgebjmbIo=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/ContainmentPropertiesEdit
+ ingViewer$ChildComposite$2.class
+SHA-256-Digest: Du/REa0nnse3c/pchYI92287rpQntYDCsApW3ntj/s4=
+
+Name: org/eclipse/emf/eef/runtime/api/providers/IPropertiesEditionPart
+ Provider.class
+SHA-256-Digest: Y38zwudAtNzPElV3BN90PNCEs0TPDGNzFKQTV4gohOA=
+
+Name: icons/16x16/ArrowDown_16x16.gif
+SHA-256-Digest: bjEgxNUcSOwYVXXZIPKdjF2q0lB4ETOBiG0dKVFisRI=
+
+Name: org/eclipse/emf/eef/runtime/impl/providers/ComposedPropertiesEdi
+ tionProvider.class
+SHA-256-Digest: FaJ4RSBKuGFJMr3EXSJKyx8t+EUD19ZjIcaBeSONmxg=
+
+Name: org/eclipse/emf/eef/runtime/api/parts/IPropertiesEditionPart.cla
+ ss
+SHA-256-Digest: c2/fTzL3JzRbnbyZyY36CvH3Lmphm0R/ujA/w2f/gCQ=
+
+Name: org/eclipse/emf/eef/runtime/ui/parts/sequence/BindingComposition
+ Step.class
+SHA-256-Digest: hMy9944ST+EPK24oA7rB+VAgLyOh47AhXID9IoINFyY=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/ContainmentPropertiesEdit
+ ingViewer$2.class
+SHA-256-Digest: yBHtZ7DimBrC8887sibIr+0n4z5N8FEMnFw5tz4BuBQ=
+
+Name: org/eclipse/emf/eef/runtime/policies/PropertiesEditingPolicyWith
+ Result.class
+SHA-256-Digest: Kq4xmaq+hMa0fhvjGGD75Dt5Oc1GXUdS5f2lypvUYHI=
+
+Name: org/eclipse/emf/eef/runtime/impl/components/StandardPropertiesEd
+ itionComponent$FirePropertiesChangedJob.class
+SHA-256-Digest: PPsNLfmu3peh8qVQCkpvLVGKf9N8Ry/K2NRTKvazd9s=
+
+Name: org/eclipse/emf/eef/runtime/impl/parts/CompositePropertiesEditio
+ nPart.class
+SHA-256-Digest: HBIwO6FSW5AVcA5BAbtir1MGJPkT+1+TbR9dc4p0FTk=
+
+Name: org/eclipse/emf/eef/runtime/impl/utils/PatternTool$PatternMatche
+ r.class
+SHA-256-Digest: NbgZWrcy9amdjuIQnz8YdQJ8MlUApZdDWQchiFo5i4c=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/eobjflatcombo/EObjectFlat
+ ComboSettings.class
+SHA-256-Digest: qL4nX+3hcftwYSX36L3wGThijsa5q0O2hRKaGrV5FjU=
+
+Name: org/eclipse/emf/eef/runtime/ui/notify/DropDownSelectionListener.
+ class
+SHA-256-Digest: QwtZfFuZ5CIoRk/5fDVJAen6aJcs/9gvCRckAZw/KVc=
+
+Name: schema/PropertiesEditionPolicyProvider.exsd
+SHA-256-Digest: 85J7Z55AXEwYiUf2z9p4gxzpcOZkHZGk7+Jjb7FEBE0=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/SingleCompositionEditor$2
+ .class
+SHA-256-Digest: Dj6CLGsbuIFtUnXvduAdyVltGQ9JROK2hWyySwIOXxI=
+
+Name: org/eclipse/emf/eef/runtime/api/notify/PropertiesEditingSemantic
+ Lister.class
+SHA-256-Digest: k5+5LGh9JsCzug4X7mnT8dA638karezePNx2PfzrUoI=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/referencestable/Reference
+ sTableSettings.class
+SHA-256-Digest: kmOQ6BzjUMIozn5QeRVmBbIh8WUlJnY8nLk6bPrftKU=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/TabElementTreeSelectionDi
+ alog$2.class
+SHA-256-Digest: reD9q1STm9w/oGlqVK9NeQ8EBpDAMCQlByeEWXfHCiQ=
+
+Name: icons/16x16/Delete_16x16.gif
+SHA-256-Digest: rvefCbcrUR7ReYbQDqo/8ahlei306gYBodoRMulQkd8=
+
+Name: org/eclipse/emf/eef/runtime/part/impl/SectionPropertiesEditingPa
+ rt$1.class
+SHA-256-Digest: dTRgwGJ86tP6FKjbUKtQFvldT5SjDPgRFkypwR1ZhFc=
+
+Name: org/eclipse/emf/eef/runtime/ui/notify/OpenWizardOnDoubleClick.cl
+ ass
+SHA-256-Digest: 2kDiSAYcXNowxI4ryZfsmNbdCtpm7//9LCHiQHnU2FA=
+
+Name: org/eclipse/emf/eef/runtime/ui/parts/PartComposer.class
+SHA-256-Digest: L1pQKikkBu/PJLCbO/Wbf0BY/5XyArkfvewf4DnQ+ls=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/ContainmentPropertiesEdit
+ ingViewer$1.class
+SHA-256-Digest: Iyc2SJydlyLIxAFU4jBUj0E6PZWxxmEbJTOem6FzweU=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/IPropertiesFilteredWidget
+ .class
+SHA-256-Digest: /0L2OuKPy9du7KXh5vAFPuMLqoOW4vNHMk/pA5fL1NQ=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/settings/EEFInitializer.c
+ lass
+SHA-256-Digest: XWEKFpYAp1qkZrIHL31RjzyIIkD8yYWeiilQg+OO7UM=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/ElementSelectionDialog$2.
+ class
+SHA-256-Digest: b9Zd/hKhVUIeaVLRZAgSGTluUzz7Wsjzej39Tq8NjSE=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/ReferencesTable$UpButtonl
+ istener.class
+SHA-256-Digest: cLvmrL+JbiQ0yUT/L+e6NJtq7qpDPb6vzj1oPWXPMOw=
+
+Name: org/eclipse/emf/eef/runtime/ui/comparator/EMFModelViewerComparat
+ or.class
+SHA-256-Digest: SNFVBkR4Nyab1xVgo2MoCetokmfZX6ui10xou3uSi3s=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/ContainmentPropertiesEdit
+ ingViewer$ChildComposite$1.class
+SHA-256-Digest: i7TwebyjTZ8pAY3HioWQ6U0pt2sWmKZVFCIMf1W7IdY=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/FlatReferencesTable.class
+SHA-256-Digest: gW0MyAJnTyJlU6s8YVckxy1s3gBPVI6hT1bxATTHqvE=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/AdvancedEObjectFlatComboV
+ iewer$EObjectFlatComboViewerListener.class
+SHA-256-Digest: VIvD8eI92il4z0iof9lE6LxmotbhKbwR5DxBsJ1Qynk=
+
+Name: org/eclipse/emf/eef/runtime/policies/impl/CreateEditingPolicy.cl
+ ass
+SHA-256-Digest: f5Cav/u8fRwPQF2C8Coua0jzmPkFqimaGQRxr9iQHTI=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/settings/NavigationStepBu
+ ilder$NavigationStepImpl.class
+SHA-256-Digest: acHc+X5iPhI137vqeMwmu6mw39CQ82BZZZEYhxqNfP4=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/EEFFeatureEditorDialog$3.
+ class
+SHA-256-Digest: Bc2Vav9SWFxxQ6Kc8R0dHEcnM/ONvcODeMumVtOg4E8=
+
+Name: org/eclipse/emf/eef/runtime/ui/wizards/IWizardOpeningPolicy.clas
+ s
+SHA-256-Digest: MX997oAD+UBvJtG6cd202pGld9vWv9+eTPpCed5U/Kc=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/TabElementTreeSelectionDi
+ alog$1.class
+SHA-256-Digest: s20TfSsB/ORpC7g8BuKCvO/v84xBsjRgcuVsJKBvtoQ=
+
+Name: org/eclipse/emf/eef/runtime/context/ExtendedPropertiesEditingCon
+ text.class
+SHA-256-Digest: MLMuJMMUynKYL5g/5l2sg5KvDbSkVGcr/RbqaH99Jp4=
+
+Name: org/eclipse/emf/eef/runtime/part/impl/SectionPropertiesEditingPa
+ rt$2.class
+SHA-256-Digest: rOFBBWn4w9ti9cKKljWdE/6sm/5/p7Ply1O+7LajQdI=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/SingleCompositionEditor$1
+ .class
+SHA-256-Digest: myGyj4R8Z93GGT6mCrF6WKnqyGJsv4E1lQ3iihVpGog=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/ContainmentPropertiesEdit
+ ingViewer$ChildComposite.class
+SHA-256-Digest: 3WoV6Wtsdmb1XREmlpnPa+/jkAekz3+CjkudI+wGVK4=
+
+Name: org/eclipse/emf/eef/runtime/policies/ILockPolicy.class
+SHA-256-Digest: b+nMqa5fItYcK++CF9J+wQ88vD1BdQ7buIqAV/QOLeI=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/SingleCompositionEditor$S
+ ingleCompositionListener.class
+SHA-256-Digest: QTC4rvftJn3yR3J2xYihOVVkqJShL0QhiPEsQynF//M=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/ButtonsModeEnum.class
+SHA-256-Digest: RHgGjZ27xHuLBZAp0piyRR9R98M0Pd8tavoHdMJXeTQ=
+
+Name: org/eclipse/emf/eef/runtime/ui/viewers/PropertiesEditionViewer.c
+ lass
+SHA-256-Digest: arveG3AbqW/EF8loGf5YuL5aXt02P/XSnW/JJTeo6AI=
+
+Name: org/eclipse/emf/eef/runtime/ui/adapters/SimplestSemanticAdapter.
+ class
+SHA-256-Digest: TZ6TXt/aNCre6K7doxv1YwDhjaR/dExMhbR4e+Nbl5I=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/ModelChooserDialog$2.clas
+ s
+SHA-256-Digest: 57dls4UzFJ10JBsLdc6JKex9OpVd8ghdhdCgjkvziMw=
+
+Name: schema/PropertiesEditionProvider.exsd
+SHA-256-Digest: sgHRiuAJ4ycAPaXzlTWEf2TmNbCbZ0oy3hMSQ+G3m2c=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/settings/EEFEditorSetting
+ s.class
+SHA-256-Digest: cbGQeL5INbsI2wtbxNvvGHBGpuRJHGSOjOxKR8eSVZE=
+
+Name: org/eclipse/emf/eef/runtime/impl/components/SinglePartProperties
+ EditingComponent.class
+SHA-256-Digest: zki+RfrtoLw2pBHn268hsgykKk8X9LCayFxLnx60nYw=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/settings/AdvancedEEFEdito
+ rContentProvider.class
+SHA-256-Digest: FtAvH/8vwy+9UYXux6LNQ6CG1MLAWZOHC6qqPeCVHgQ=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/ContainmentPropertiesEdit
+ ingViewer.class
+SHA-256-Digest: LOee0GCY29PEjTfUvEhn7KxDX3xTGxFslTuDDHpyzdM=
+
+Name: org/eclipse/emf/eef/runtime/ui/viewers/PropertiesEditionMessageM
+ anager.class
+SHA-256-Digest: gmHo5G5WkBSrR5e1fI3LVR1ybWQrz1lSmU6mH4zsA4s=
+
+Name: org/eclipse/emf/eef/runtime/ui/parts/impl/BindingViewHelper.clas
+ s
+SHA-256-Digest: 1+EUF4VFLC4nzrLsZWU6AP9g0asfRB05hVIlHa2l99A=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/imageviewer/EEFImageViewe
+ r.class
+SHA-256-Digest: QxNIdQaKqbZWaK6IaNHU65Rp6CwC5NmD50OGVqrlNu8=
+
+Name: org/eclipse/emf/eef/runtime/ui/wizards/PropertiesEditionWizard.c
+ lass
+SHA-256-Digest: XhwE9HtapdYGFEdoUESyVcOthnbliZV4IqYwGodPzxI=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/SingleCompositionEditor.c
+ lass
+SHA-256-Digest: DKPHAYvraVtmt7PK5RwzyEnGZYVSsHpiMKUuvKEWoic=
+
+Name: org/eclipse/emf/eef/runtime/impl/components/ComposedPropertiesEd
+ itionComponent.class
+SHA-256-Digest: vM7JD6EMlAQ3z6OoXZCNtwwPMrg2kYGMfj5QX8fnnx8=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/settings/EEFEditorSetting
+ sBuilder.class
+SHA-256-Digest: xH4mzNIowmXcAlqDUNjoyfR4QjdThV1Ri3v90+00Hrw=
+
+Name: icons/16x16/disabled/th_horizontal.gif
+SHA-256-Digest: y+68vmRHVWU0Hpux5bSaPpRkjUa3BMAC39pBxzhGz94=
+
+Name: org/eclipse/emf/eef/runtime/ui/parts/sequence/BindingComposition
+ Sequence.class
+SHA-256-Digest: bv4ux9YUtQhlmvqr1thjC3mQL71BUsL+yMxG4+4sA58=
+
+Name: org/eclipse/emf/eef/runtime/impl/services/ReadOnlyPolicyProvider
+ Service.class
+SHA-256-Digest: E3bT6ISyxuFOcr86k2ghO73frfC6Hb21CUTVb1vTawQ=
+
+Name: org/eclipse/emf/eef/runtime/api/context/ContextEntry.class
+SHA-256-Digest: C8X5LuYDGKkP8QrNTPBqOjku4YYMEV8AuD6fwPYTpkI=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/EMFModelViewerDialog$6.cl
+ ass
+SHA-256-Digest: lol963yaKcr4GtaJEueaZyu5xUDPsDOPP9dlpNtmpfE=
+
+Name: org/eclipse/emf/eef/runtime/impl/filters/business/CurrentModelVi
+ ewerFilter.class
+SHA-256-Digest: g3+wEeJj7A/DuqBcJvfqRXGlKQPHEpPKC3bO4zQhMnc=
+
+Name: org/eclipse/emf/eef/runtime/ui/viewers/PropertiesEditionContentP
+ rovider.class
+SHA-256-Digest: WwZiyxVpkVFwWjDlUsLsMrJMSVQ4l4z+vLq/hNLq9Yw=
+
+Name: icons/16x16/Add_16x16.gif
+SHA-256-Digest: RcE1RsO/S/9EYXHVXXlja4haZ7NWUSirZxGv24dxNoc=
+
+Name: org/eclipse/emf/eef/runtime/ui/wizards/PropertiesEditionWizard$E
+ lementCreationWizardPage$1.class
+SHA-256-Digest: vvZRjESIpzN8rJHsyAWyzQz1XxtuJ+y+dOPGWkMNGkk=
+
+Name: org/eclipse/emf/eef/runtime/impl/filters/business/ReferencedMode
+ lsViewerFilter.class
+SHA-256-Digest: WRrjReOM6zJsW2FSQ2YLEVfBNNAWKTRFdH/cdyaR9Oc=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/TabElementTreeSelectionDi
+ alog.class
+SHA-256-Digest: xp39yfWuFXUn1le/8F20Fyd6Rz45fjUBYDn/2GUq+hc=
+
+Name: org/eclipse/emf/eef/runtime/ui/viewers/PropertiesEditionMessageM
+ anager$2.class
+SHA-256-Digest: 8squU4OGUhTNYPO2JOof/POrBV9eMCrRKsm7sUbCOnU=
+
+Name: org/eclipse/emf/eef/runtime/ui/notify/OpenTransactionalWizardOnD
+ oubleClick.class
+SHA-256-Digest: uOZGqcRBMUHk4zZmwbCw+vrQSP8kfHIuX5wyLWAyiaM=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/ReferencesTable$Reference
+ sTableListener.class
+SHA-256-Digest: drKF0gGnbWOypPkAN9a1LfWJAL2OhGicJiAxLQGmbZ4=
+
+Name: org/eclipse/emf/eef/runtime/impl/components/StandardPropertiesEd
+ itionComponent$2.class
+SHA-256-Digest: 4lGKSMrqv3MIogZCIgtVNMdCsAjfI57tGeZ3V7PVctU=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/EEFFeatureEditorDialog$4.
+ class
+SHA-256-Digest: WMOtYbrnre8oh4Ip2ppPOzSKDYBUKEU0usgoBzoPg0g=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/ElementSelectionDialog$Hi
+ deResourcesContentProvider.class
+SHA-256-Digest: +VKyEkVMmvgT3uMgJURLLCljH0ivQARbRlODPsbCOa4=
+
+Name: org/eclipse/emf/eef/runtime/context/impl/DomainPropertiesEdition
+ Context.class
+SHA-256-Digest: 6F5+IXHOLlpchcIM3S+Ir2O+gCePPiMtQtfcGR+iPew=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/HorizontalBox.class
+SHA-256-Digest: cJeA9fbh5sZomza01aVQjWGzCs6H7zrervR6Z6cZrN8=
+
+Name: org/eclipse/emf/eef/runtime/ui/utils/EditingUtils.class
+SHA-256-Digest: RWnCJQwUAo1LxL3W8+04Qbhj/QM0fzcacVPL4Zuk6Ds=
+
+Name: org/eclipse/emf/eef/runtime/context/impl/EReferencePropertiesEdi
+ tionContext.class
+SHA-256-Digest: FlTrJzTKzAMpjWrL1jCuTflvL1PqbN7Ftp9x9/jTPeg=
+
+Name: org/eclipse/emf/eef/runtime/impl/services/PropertiesEditionPartP
+ roviderService.class
+SHA-256-Digest: YwCBFQ7lXgy9ufYiO6a+Qwg7yTSukhr/oAYILYniZ/A=
+
+Name: org/eclipse/emf/eef/runtime/ui/wizards/impl/StandardWizardOpenin
+ gPolicy.class
+SHA-256-Digest: L68PoFRMl4NtyYZUWCvKV5rTbEcn/OhZ7vgTOe0AMU8=
+
+Name: org/eclipse/emf/eef/runtime/api/notify/IPropertiesEditionListene
+ r.class
+SHA-256-Digest: YcO7/ZEm62XBhMEXrHayHBVtYEqTbW66JKqhEKnoLr0=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/EMFModelViewerDialog$7.cl
+ ass
+SHA-256-Digest: VY/ziXjFK+M49ClCR3YgYJgz8FKJ/YFJutXY66ZC1QI=
+
+Name: org/eclipse/emf/eef/runtime/impl/utils/ModelViewerHelper.class
+SHA-256-Digest: zxVNfBdNUs2N3mlD2g5BjgXUnFfyFNozZinBIoP48Tw=
+
+Name: org/eclipse/emf/eef/runtime/ui/viewers/PropertiesEditionMessageM
+ anager$1.class
+SHA-256-Digest: TY0Iwf7zney5p34ewBsJjsmKn1EVyjqyQxvdPlEUbkw=
+
+Name: icons/16x16/Switch_Visibility.gif
+SHA-256-Digest: dKKpepe9gH/rl8OrQWXYRODf3/3VomTDBJZcXp0C3yM=
+
+Name: org/eclipse/emf/eef/runtime/ui/adapters/EEFBatchEditingUtil.clas
+ s
+SHA-256-Digest: dL/jf2XHOa0BGY1nHC/tpDbtArFEGGRHUVjaXmeq3ik=
+
+Name: org/eclipse/emf/eef/runtime/impl/services/WizardOpeningPolicyPro
+ viderService.class
+SHA-256-Digest: 27tq05p4FXH9wSzmoKZbFPwYwk5r3SN0FOMZlMXmNTk=
+
+Name: org/eclipse/emf/eef/runtime/api/notify/ResourceSetAdapter.class
+SHA-256-Digest: JQdi9f1wo3U8peY5fR6Zyl2q5fZXbj+KDRLpDrWJ+Mw=
+
+Name: org/eclipse/emf/eef/runtime/ui/providers/EMFListContentProvider.
+ class
+SHA-256-Digest: i1CVG9Luc8yFlCQHSKuwMbhxFjQxqRwQantaM5MYtDw=
+
+Name: org/eclipse/emf/eef/runtime/part/impl/util/ValidationMessageInje
+ ctor.class
+SHA-256-Digest: 69cmUZQlWGu7ojAA9q2FEMFg2+FAkDLz045rRvWqY1E=
+
+Name: org/eclipse/emf/eef/runtime/ui/parts/sequence/CompositionStep.cl
+ ass
+SHA-256-Digest: mUEdXtIBOLU6viMwDUFM624+k7WDQVOLmm5C/0vsspw=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/LinkEReferenceViewer.clas
+ s
+SHA-256-Digest: 3Lk7+D9ke40EqrNBH63UxCx+gv8GIOKvyzPEkJruxAw=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/EMFModelViewerDialog$1.cl
+ ass
+SHA-256-Digest: /n4WT5IZ6EyEwdinh0r4uKc1BmoupT0OAQ83clUK3q4=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/TabElementTreeSelectionDi
+ alog$TreeSelectionPatternFilter.class
+SHA-256-Digest: qTk4m58luBLvp7vf+rr4NzEst2rl7Y8psEvNal5hWgI=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/AbstractAdvancedEObjectFl
+ atComboViewer.class
+SHA-256-Digest: /TpoC55d/Yv37A6na8bzrFZ9/KEOTcsu24Nw8ZrWYkk=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/FormUtils.class
+SHA-256-Digest: gB2yMi3KHg5xVw3dc5P46+e6Mt12DB5VPcq4Wzn2cgs=
+
+Name: org/eclipse/emf/eef/runtime/api/providers/IReadOnlyPolicy.class
+SHA-256-Digest: q6s2gqoeCQIymgGfFyDFHB+n0aQYkX25BTADRS6AZNY=
+
+Name: org/eclipse/emf/eef/runtime/impl/utils/StringMatcher$Position.cl
+ ass
+SHA-256-Digest: 8mymdb4TzoeufkIpJEYe9SeH2ovYx8ckb5YA/ct9If8=
+
+Name: org/eclipse/emf/eef/runtime/impl/utils/StringTools.class
+SHA-256-Digest: PqmIOkFQIf1q4qvJ1X3IQPr2TfFK469oBhoMcgO/70U=
+
+Name: org/eclipse/emf/eef/runtime/context/impl/EObjectPropertiesEditio
+ nContext.class
+SHA-256-Digest: avYP5NiXy09kjMFMUVqL+8rRpOCVRzZ7IUZn9YfgnMk=
+
+Name: schema/WizardOpeningPolicyProvider.exsd
+SHA-256-Digest: u+nrXZ9Wij0lRzZ9ukDKtDxo1rEw0MGRPSm09wwZwp0=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/AdvancedEObjectFlatComboV
+ iewer.class
+SHA-256-Digest: C0NuduOuE3fprzLJsvpc89bPLD1ffpOwoOtk4rZ87V0=
+
+Name: org/eclipse/emf/eef/runtime/ui/wizards/PropertiesEditionWizard$E
+ ditPropertyWizardPage.class
+SHA-256-Digest: jnP2FmmM7Lus9/vAcWitKZWAWindSyDhXeQzRdogFFY=
+
+Name: org/eclipse/emf/eef/runtime/api/component/IPropertiesEditionComp
+ onent.class
+SHA-256-Digest: +Rn+H6FGw8w/GogxdtbP4475j77aVIBiA1B+KUwP+G0=
+
+Name: org/eclipse/emf/eef/runtime/impl/notify/EEFLockNotification.clas
+ s
+SHA-256-Digest: giAOAKViDDQJok7EAHfv2xz7juhOmGVLncZPaVprbYo=
+
+Name: org/eclipse/emf/eef/runtime/api/notify/EClassifierNotificationFi
+ lter.class
+SHA-256-Digest: mIuNrId+ggR3tyDCvYuiRXBENcFtBGag93IsK9DotYY=
+
+Name: org/eclipse/emf/eef/runtime/api/notify/NotificationFilter.class
+SHA-256-Digest: lTBlvueBuXFX9FcRiQTdJdDRk4Qnwii5IbNCZJAOF1U=
+
+Name: schema/LockPolicyProvider.exsd
+SHA-256-Digest: ABcp1oyguGQJdW32dC5BrL58xR3bxKYP89yCPxqCDu4=
+
+Name: icons/16x16/validate.gif
+SHA-256-Digest: LtT3eJBntUv8T1i0aPuZunkWQrTrdKe1f4rxQEju1cA=
+
+Name: org/eclipse/emf/eef/runtime/context/PropertiesEditingContext.cla
+ ss
+SHA-256-Digest: B/JDb0l8Be5IybfkRipIGSzKJf9gSklCADWdeq01ioM=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/EMFModelViewerDialog$5.cl
+ ass
+SHA-256-Digest: PGGLg8xUVMXx8Ij0yf8TLtUOiZHk6NnYvgZlqEhQGSQ=
+
+Name: icons/16x16/ValidationWarnings.gif
+SHA-256-Digest: Cq5TkAB64csTkOEzRx49d1XQkG5T5eB4Oyrz6URfihc=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/LinkEObjectFlatComboViewe
+ r$1.class
+SHA-256-Digest: RRFqnZPV3oNXQs/9ObHXb41ps+c9P/pQdkN6hHmHqOY=
+
+Name: org/eclipse/emf/eef/runtime/ui/utils/EEFRuntimeUIMessages.class
+SHA-256-Digest: GSKl3PuNj5JAkjQ0vq9FmZ/ds7E+nVZjGWwIhO/HxXc=
+
+Name: org/eclipse/emf/eef/runtime/ui/UIConstants.class
+SHA-256-Digest: EImllSdcBUQNxswallJ/UCzZJOdJQE3sgk3iBFVTlMQ=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/AbstractAdvancedEObjectFl
+ atComboViewer$3.class
+SHA-256-Digest: ATgjJq6xIUAdDZddhldQu6ERs4sKDOop5N50Ro9yLLU=
+
+Name: icons/16x16/ValidationErrors.gif
+SHA-256-Digest: zn2OfLw3wjU1Iawv3bUkv+/770DU81tpN13WoQUDLG8=
+
+Name: org/eclipse/emf/eef/runtime/api/notify/PropertiesEditingSemantic
+ Lister$1.class
+SHA-256-Digest: 7La3t7DuwuFyPASKv/JOGvGrJYzFT2AWoCE7gBwE4AU=
+
+Name: org/eclipse/emf/eef/runtime/api/notify/PropertiesEditingSemantic
+ Listener$1.class
+SHA-256-Digest: VVh8KssHO/mK9SPU8tq169a7XXV3abDbxbiesImio14=
+
+Name: org/eclipse/emf/eef/runtime/impl/providers/StandardPropertiesEdi
+ tionPartProviderFactory.class
+SHA-256-Digest: WTY3LIwKJrcjx1HxeaIbYTSaUm4nysbbhAGo8ixMXdI=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/SingleCompositionViewer$2
+ .class
+SHA-256-Digest: a2OvAtj13JSso7KSqmp7tdcmdS2nuYgUiH/EHd4tCtg=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/FlatReferencesTable$2.cla
+ ss
+SHA-256-Digest: EVHxEx1hFbqE++D/sF2ZZz/xdrY0O4rtvsCQRMnTZ2k=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/ModelChooserDialog$OkButt
+ onEnabler.class
+SHA-256-Digest: reb8ydG4cM4Lz4dnMUes5d3Qwq/cz0lZdAOcj+ZGjGs=
+
+Name: org/eclipse/emf/eef/runtime/policies/impl/StandardEditingPolicy.
+ class
+SHA-256-Digest: iHToC9u9WYousagvfgXU25qTCt55hagW4eOIpSa7Chg=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/SWTUtils$1.class
+SHA-256-Digest: PsqvMVsYQfX/AYtaiF9QeHcyJ6RdPxobvpG5zIX8wXA=
+
+Name: org/eclipse/emf/eef/runtime/ui/wizards/EEFWizardDialog.class
+SHA-256-Digest: Q0GCrXq2zLtmj9+xlATCTPM6+h/qA1irMFt7wuX+qYM=
+
+Name: org/eclipse/emf/eef/runtime/impl/utils/eefRuntimeMessages.proper
+ ties
+SHA-256-Digest: mU9kaTnIBFUCrlBeYfsaPkLtn+Jd0G0Nx7ry4lsKxTg=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/ReferencesTable$EditItemL
+ istener.class
+SHA-256-Digest: nAGnNdI/BUS60N8vjWqyo1JawtE2jj0uWCKSBIYlb5M=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/EEFFeatureEditorDialog$8.
+ class
+SHA-256-Digest: Cf6jeaZ17YRB/GPvVBxZtuCv8kAwa5TH/vvlSKeu85I=
+
+Name: org/eclipse/emf/eef/runtime/ui/wizards/PropertiesEditionWizard$E
+ lementCreationWizardPage.class
+SHA-256-Digest: M+BzHckVewex/IC0mDVGFQhrq5EiGmEIL4waj0mJIIY=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/RadioViewer.class
+SHA-256-Digest: nhGQJCV2R5UYFZ4mUFAxkCultonAm6FZDba3Zp1JEuA=
+
+Name: org/eclipse/emf/eef/runtime/policies/PropertiesEditingPolicy.cla
+ ss
+SHA-256-Digest: tJASXA1pZ3EBcz1+rFKDtvkQL2B/gi0YxSaYcrW3n/k=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/ModelChooserDialog$1.clas
+ s
+SHA-256-Digest: agd4/kRE2SrzCZ3R3rpTwXst3Xke29C30WNKePyrpUU=
+
+Name: org/eclipse/emf/eef/runtime/api/providers/IPropertiesEditionPart
+ ProviderFactory.class
+SHA-256-Digest: MJhLUs6EsMPEFzWWRZVM4x9EQREWT8iU+sUV2X6+xho=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/EEFFeatureEditorDialog.cl
+ ass
+SHA-256-Digest: c1wfxPzzUgF4xZWuRieAH9agcvEEvRR6STq1bSGh3Rg=
+
+Name: org/eclipse/emf/eef/runtime/impl/utils/ValidationUtils.class
+SHA-256-Digest: 2C6xZ4RPpKYs9kN05X7h0TuB6WqdIv8AI+8g0Qpo42k=
+
+Name: org/eclipse/emf/eef/runtime/ui/notify/DropDownSelectionListener$
+ 1.class
+SHA-256-Digest: u/Yv8qRlCSpU+BqYXYzve+cVD3ol8qDF/drGA0yv5Io=
+
+Name: org/eclipse/emf/eef/runtime/api/notify/EStructuralFeatureNotific
+ ationFilter.class
+SHA-256-Digest: xl0MF+rWlajYskwa6oDS+zfLwta3ca2th4a9b3DoMaQ=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/EMFModelViewerDialog$2.cl
+ ass
+SHA-256-Digest: 4rqv/4JvrFX0aSQaiBLJz5wmhX4PZ4yDCJYph64V+dY=
+
+Name: org/eclipse/emf/eef/runtime/ui/viewers/PropertiesEditionViewer$1
+ .class
+SHA-256-Digest: LeL/xFERRJ7tFKsbrs20HmbwCTtiHTilcLUYE28vKq4=
+
+Name: icons/16x16/ArrowUp_16x16.gif
+SHA-256-Digest: Kc6R5KJqR/WY53XElwBnCOT9l2FNnQZxPnfJ9yHPVRE=
+
+Name: org/eclipse/emf/eef/runtime/impl/filters/EObjectFilter.class
+SHA-256-Digest: lQ2Xctb9YQ5+G12CD+Waob80h15LvkKunNeDNXoIiEM=
+
+Name: icons/16x16/ArrowRight_16x16.gif
+SHA-256-Digest: 6MU1H4bh5aTwmIBz34CQvyEcZii36Hrq08aYpUeRlZY=
+
+Name: icons/16x16/ArrowLeft_16x16.gif
+SHA-256-Digest: I4Bs/TypPpF2FValAaI3lNDWuD4KFikkGjdaeiyR4Yc=
+
+Name: org/eclipse/emf/eef/runtime/ui/properties/sections/EEFAdvancedPr
+ opertySection.class
+SHA-256-Digest: oc7uP1mx8FOKNrWDTOxjpP1xhCydQzbZeK8lr3Cv7gY=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/ElementSelectionDialog$Tr
+ eeSelectionPatternFilter.class
+SHA-256-Digest: YWk46GW1PJD4ri0PBo+FuEI6ziNM5ToyrM+F4nw9o6Y=
+
+Name: org/eclipse/emf/eef/runtime/impl/parts/NullCompositePropertiesEd
+ itionPart.class
+SHA-256-Digest: BYS8rIVCqQIOCIXQMKSf6XQxNEJ8tLNWqo43tA5fKt8=
+
+Name: org/eclipse/emf/eef/runtime/impl/notify/PropertiesValidationEdit
+ ionEvent.class
+SHA-256-Digest: bABOuDZr8LYeXnMCYrynh6PsdHTl95h5O8kGEQvAeiQ=
+
+Name: org/eclipse/emf/eef/runtime/impl/validation/EEFValidationClientS
+ elector.class
+SHA-256-Digest: edGWh9KhNiTnrkpeQbaPeQSfGWcMSeIi21LX7RHnWJs=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/EObjectFlatComboViewer.cl
+ ass
+SHA-256-Digest: ir7fOnKuKL4RvnU5dMjHBciZSGJlHh0CXxF+/D6QcVY=
+
+Name: org/eclipse/emf/eef/runtime/impl/services/LockPolicyProviderServ
+ ice.class
+SHA-256-Digest: HEo+oL10Ak6fRDZPoGbomXs3WzQ61AkDsgFmO7m8YKY=
+
+Name: org/eclipse/emf/eef/runtime/providers/PropertiesEditingProvider.
+ class
+SHA-256-Digest: LsB++1uLeLr69QLHDPCzmTG+2tKMP1QuaH7hFO99mq0=
+
+Name: org/eclipse/emf/eef/runtime/EEFRuntimePlugin$1.class
+SHA-256-Digest: cxuH/UhtMD/ffBWdJwDpcS6QBBUCRbbthD1U/jlNYU4=
+
+Name: org/eclipse/emf/eef/runtime/impl/utils/EEFCommandParameter.class
+SHA-256-Digest: B9pRh5l9Tzz5S1kPyzXT8Byar+GQ82kmplyA0NkjzkA=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/EMFModelViewerDialog$3.cl
+ ass
+SHA-256-Digest: oxi/tFt5Me8Wj6AwkFe0LDkVnmUv/hUvWgmqv+R6bIM=
+
+Name: org/eclipse/emf/eef/runtime/impl/utils/EEFRuntimeMessages.class
+SHA-256-Digest: SxH/E2/xJndpX9NQ0Mz8bZ5//p0Cnv+VKvAuWZikzxI=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/SWTUtils$ScrollableSource
+ Viewer.class
+SHA-256-Digest: boBFNCqPBNkEboZ6KxBP2TdKQPdH/cOslZ/C0NB6AYw=
+
+Name: org/eclipse/emf/eef/runtime/ui/parts/ViewHelper.class
+SHA-256-Digest: 1otIllBtT+9RAyW+ZsSKLIl2y3VGnIN5gE2JZYX3/iY=
+
+Name: org/eclipse/emf/eef/runtime/ui/wizards/ResizableWizardDialog.cla
+ ss
+SHA-256-Digest: nmv/cawLoQRr81sS3G587RhSGsZAqfaTjxucksivycg=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/AbstractAdvancedEObjectFl
+ atComboViewer$1.class
+SHA-256-Digest: Fihkb+46iJb9dIC9YiAKYCEEHWTfFcYaYFZ0J2jlCQM=
+
+Name: org/eclipse/emf/eef/runtime/impl/filters/business/BusinessViewer
+ Filter.class
+SHA-256-Digest: dACJurqIYSraNHLXB2cvk3zJZq93IIBcwymqovcLKb4=
+
+Name: about.html
+SHA-256-Digest: 85MjsgSVBa3+UUzmRlFgoXFhowQsZdNNimvMoy+8wE8=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/AbstractAdvancedEObjectFl
+ atComboViewer$2.class
+SHA-256-Digest: v0Xge/FGsF/UNJlFBA94V+w2rt/XGCEhB7BZNlSe5gg=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/settings/EEFEditorContent
+ Provider.class
+SHA-256-Digest: 8ZqYjQKmmP3u7ieyP5N02oJHuZ05cx3fnt5Xu024dlQ=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/imageviewer/EEFImageViewe
+ r$1.class
+SHA-256-Digest: bhtsofp2dkRJkgnoTLV6KBtjg63/dnohE9I4NGenRq4=
+
+Name: org/eclipse/emf/eef/runtime/api/adapters/SemanticAdapter.class
+SHA-256-Digest: twr2A/Fd5upDVaxqNUJN3wuZgldCKbX6exZwaMznC9c=
+
+Name: org/eclipse/emf/eef/runtime/impl/components/StandardPropertiesEd
+ itionComponent$1.class
+SHA-256-Digest: 0mYHGHFDXdpxIY/yVrqoJmBvO0hus+aJxvU5uz7fHWI=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/SelectionDialog.class
+SHA-256-Digest: KptLZz3FC17qhS7LQJ+Tz5kMepl3jfGdGif/t39/emc=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/RadioViewer$RadioSelectio
+ nChangedListener.class
+SHA-256-Digest: tBvqAfDp21qfE+LSFqZVEyHJ0+LkuJbvIhGZZ1CgvGQ=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/SingleCompositionViewer$1
+ .class
+SHA-256-Digest: LqpJpHrutbYuysHbQhOniHVcNMJRyc+VBkgG94jSeUY=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/EObjectFlatComboViewer$1$
+ 1.class
+SHA-256-Digest: OAfoLYk15VtXBUyXv1ug35QgcXbZ9/m+vIdU9BDQpHU=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/ReferencesTable$RemoveBut
+ tonlistener.class
+SHA-256-Digest: 3CMsdJMJhd/HD3F3UNA18eRlHJgL1cfcdXpD8bbScuY=
+
+Name: org/eclipse/emf/eef/runtime/api/parts/IFormPropertiesEditionPart
+ .class
+SHA-256-Digest: sTm914SOaE2c7f5M64JhaUAK6iZB7j/mTeuSlR4zD70=
+
+Name: org/eclipse/emf/eef/runtime/providers/impl/PropertiesEditingProv
+ iderImpl.class
+SHA-256-Digest: B4wQHHb3mt6aRt0yB+fTeavhozlyRE0KhjnX/Cyp5hA=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/AdvancedEObjectFlatComboV
+ iewer$1.class
+SHA-256-Digest: ZOsPkjmTvmoBkqn2JwTmhgq32l21geQQR1Jtygsg4uY=
+
+Name: org/eclipse/emf/eef/runtime/impl/command/StandardEditingCommand.
+ class
+SHA-256-Digest: 42Ag/sDnStIQPfqS6501GOoUJSThNgH4BZZQiMBaxxc=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/EMFModelViewerDialog$4.cl
+ ass
+SHA-256-Digest: psHbIlM4ys7bO7lHh20hwJ7yNvQT++oquc2fkM0zsbI=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/VerticalBox.class
+SHA-256-Digest: SJ1kirnYgnWOFwRdkqzOnzTwiXWibc8wNJz+kTjW1mc=
+
+Name: org/eclipse/emf/eef/runtime/ui/widgets/FlatReferencesTable$1.cla
+ ss
+SHA-256-Digest: lfE+K5b/fJR4b7FdZMo9BqES5zS6dv32dAJR01BTQLk=
+

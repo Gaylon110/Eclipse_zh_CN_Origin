@@ -1,0 +1,86 @@
+<!-- 
+ ******************************************************************************
+ * Copyright (c) 2016 Oracle
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *    Shenxue Zhou - initial implementation and ongoing maintenance
+ ******************************************************************************
+-->
+
+<html>
+
+<head>
+  <title>Enhancements in Sapphire 0.7.2</title>
+  <link rel="StyleSheet" href="../../style.css" TYPE="text/css"/>
+  <style type="text/css">
+    pre.source-code-compare 
+    {
+      font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; 
+      color: #000000;
+      background-color: #ffffff;
+      font-size: 12px;
+      border: 0px;
+      line-height: 14px;
+      padding: 5px;
+      margin-left: 0px;
+      margin-right: 0px;
+      overflow: auto
+    }
+    .unaffected
+    {
+      color: #888888
+    }
+    .comment
+    {
+      color: #006600;
+      font-style: italic
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>Enhancements in Sapphire 0.7.2</h1>
+
+<ol>
+  <li><a href="#ExpressionLanguage">Expression Language</a></li>
+  <ol type="A">
+    <li><a href="#ExpressionLanguage-UseInWizardLabel">Use EL in Wizard Label</a></li>
+    <li><a href="#ExpressionLanguage-UseInWizardPageLabelDescription">Use EL in Wizard Page Label and Description</a></li>
+  </ol>
+</ol>
+
+
+<h2><a name="ExpressionLanguage"><a name="ExpressionLanguage-UseInWizardLabel">Use EL in Wizard Label</a></a></h2>
+
+<p>Use the expression language when defining the wizard label (window title).</p>
+
+<pre class="source-code"><code><font color="#888888">&lt;wizard>
+    &lt;label></font>new ${ Type } file<font color="#888888">&lt;/label>
+&lt;/wizard></font></code></pre>
+
+
+<h2><a name="ExpressionLanguage-UseInWizardPageLabelDescription">Use EL in Wizard Page Label and Description</a></h2>
+
+<p>Use the expression language when defining the wizard page label and description.</p>
+
+<p style="margin-left: 20px;"><b>Example</b></p>
+
+<pre class="source-code"><code><font color="#888888">&lt;wizard>
+    &lt;page>
+        &lt;label></font>${ Type } file<font color="#888888">&lt;/label>
+        &lt;description></font>Create ${ Type == "XML" ? "an" : "a" } ${Type} file.<font color="#888888">&lt;/description>
+    &lt;/page>
+&lt;/wizard></font></code></pre>
+
+
+<div class="copyright">Copyright (c) 2016 Oracle<br/>
+Content made available under the terms of <a href="http://www.eclipse.org/legal/epl-v10.html">Eclipse Public License</a>.</div>
+
+</body>
+
+</html>

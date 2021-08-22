@@ -1,0 +1,348 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.emfforms.editor.ecore;singleton:=true
+Archiver-Version: Plexus Archiver
+Built-By: genie.ecp
+Require-Bundle: org.eclipse.core.runtime;bundle-version="[3.1.0,4.0.0)
+ ", org.eclipse.emf.ecp.edit.swt;bundle-version="[1.16.0,1.17.0)", org
+ .eclipse.emf.ecp.view.template.model;bundle-version="[1.16.0,1.17.0)"
+ , org.eclipse.emf.ecp.ui.view.swt;bundle-version="[1.16.0,1.17.0)", o
+ rg.eclipse.jface.databinding;bundle-version="[1.6.0,2.0.0)", org.ecli
+ pse.emfforms.editor;bundle-version="[1.16.0,1.17.0)", org.eclipse.emf
+ .ecore.xmi;bundle-version="[2.10.0,3.0.0)", org.eclipse.core.databind
+ ing.property;bundle-version="[1.4.0,2.0.0)", org.eclipse.emf.ecp.view
+ .core.swt;bundle-version="[1.16.0,1.17.0)", org.eclipse.ui.ide;bundle
+ -version="[3.10.0,4.0.0)", org.eclipse.jface;bundle-version="[3.10.0,
+ 4.0.0)", org.eclipse.ui.workbench;bundle-version="[3.106.0,4.0.0)", o
+ rg.eclipse.emf.edit.ui;bundle-version="[2.10.0,3.0.0)", org.eclipse.e
+ mf.edit;bundle-version="[2.10.0,3.0.0)", org.eclipse.emfforms.core.se
+ rvices;bundle-version="[1.16.0,1.17.0)", org.eclipse.emfforms.core.se
+ rvices.editsupport;bundle-version="[1.16.0,1.17.0)", org.eclipse.emf.
+ databinding;bundle-version="[1.3.0,2.0.0)", org.eclipse.emfforms.swt.
+ treemasterdetail;bundle-version="[1.16.0,1.17.0)", org.eclipse.emf.da
+ tabinding.edit;bundle-version="[1.2.0,2.0.0)", org.eclipse.emfforms.l
+ ocalization;bundle-version="[1.16.0,1.17.0)", org.eclipse.emf.ecp.vie
+ w.control.multireference;bundle-version="[1.16.0,1.17.0)", org.eclips
+ e.emf.ecp.view.util.swt;bundle-version="[1.16.0,1.17.0)", org.eclipse
+ .emfforms.editor.ecore;bundle-version="[1.16.0,1.17.0)", org.eclipse.
+ core.resources;bundle-version="[3.9.0,4.0.0)", org.eclipse.emf.ecp.vi
+ ew.group.model;bundle-version="[1.16.0,1.17.0)", org.eclipse.emfforms
+ .swt.treemasterdetail.decorator.validation.default;bundle-version="[1
+ .16.0,1.17.0)", org.eclipse.emf.ecp.common.ui;bundle-version="[1.16.0
+ ,1.17.0)"
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/emfcli
+ ent/org.eclipse.emf.ecp.core.git;path="bundles/org.eclipse.emfforms.e
+ ditor.ecore";commitId=f2dbbd13b720d1f9463c4d5909101632edfd5c17
+Bundle-Vendor: Eclipse Modeling Project
+Import-Package: javax.inject;version="1.0.0", org.eclipse.emfforms.baz
+ aar;version="[1.16.0,1.17.0)", org.eclipse.emfforms.internal.editor.e
+ core.controls;version="[1.16.0,1.17.0)", org.eclipse.emfforms.spi.swt
+ .core.di;version="[1.16.0,1.17.0)";resolution:=optional, org.osgi.ser
+ vice.component.annotations;version="[1.2.0,2.0.0)";resolution:=option
+ al
+Service-Component: OSGI-INF/InstanceTypeNameSWTRendererService.xml,OSG
+ I-INF/dataTypeControlService.xml,OSGI-INF/eenumLiteralControlService.
+ xml,OSGI-INF/org.eclipse.emfforms.internal.editor.ecore.controls.Link
+ OnlyMultiReferenceRendererService.xml,OSGI-INF/typedElementBoundsCont
+ rolService.xml,OSGI-INF/ecoreAttachmentStrategyProvider.xml,OSGI-INF/
+ ecoreEObjectSelectionStrategyProvider.xml,OSGI-INF/ecoreOpenInNewCont
+ extStrategyProvider.xml,OSGI-INF/ecoreReferenceStrategyProvider.xml
+Export-Package: org.eclipse.emfforms.internal.editor.ecore;version="1.
+ 16.0";x-internal:=true, org.eclipse.emfforms.internal.editor.ecore.ac
+ tions;version="1.16.0";x-internal:=true, org.eclipse.emfforms.interna
+ l.editor.ecore.controls;version="1.16.0";x-internal:=true, org.eclips
+ e.emfforms.internal.editor.ecore.helpers;version="1.16.0";x-internal:
+ =true, org.eclipse.emfforms.internal.editor.ecore.referenceservices;v
+ ersion="1.16.0";x-internal:=true
+Bundle-Name: Ecore Editor based on EMFForms
+Bundle-Version: 1.16.0.20180305-1637
+Created-By: Apache Maven 3.5.2
+Build-Jdk: 1.8.0_162
+
+Name: org/eclipse/emfforms/internal/editor/ecore/controls/DataTypeCont
+ rol$1.class
+SHA-256-Digest: VGd8m2LoKH3ou+o/ZbnkFVtNWT9SrI/kVZL0yIATW6g=
+
+Name: plugin.xml
+SHA-256-Digest: CtT6dcB+ncen/AyejP1tcYYiDpBTvIiXYf8mVOBxY6Q=
+
+Name: org/eclipse/emfforms/internal/editor/ecore/EcoreShortcutHandler.
+ class
+SHA-256-Digest: FwPC0PEWBsH3MOXhbL5TmwlP/+BxqCsMFcu3W7lisKo=
+
+Name: org/eclipse/emfforms/internal/editor/ecore/EcoreEditorTMDCustomi
+ zation.class
+SHA-256-Digest: zxU8W7pdAiNwHj7SYE6MTTJBDce5FPU/zaZDet2Sy+E=
+
+Name: org/eclipse/emfforms/internal/editor/ecore/controls/InstanceType
+ NameSWTRendererService.class
+SHA-256-Digest: O08/LhIZmjH7IZklyMcZY1DzZSza/cOt2rf9I2oBW7o=
+
+Name: OSGI-INF/ecoreOpenInNewContextStrategyProvider.xml
+SHA-256-Digest: JKrrSzlh3vRAqHRJToq+lIFXGxdD36teabJAmfAMRyM=
+
+Name: org/eclipse/emfforms/internal/editor/ecore/EcoreEditorTMDCustomi
+ zation$2.class
+SHA-256-Digest: ygwMqUynASaNDimuvrSLwAVzp6S9FYqI+OBF5haYlno=
+
+Name: OSGI-INF/typedElementBoundsControlService.xml
+SHA-256-Digest: h3r++2jxeNXceeJjeA1VOrJKfxabR3yUvAyTep0TSY8=
+
+Name: OSGI-INF/InstanceTypeNameSWTRendererService.xml
+SHA-256-Digest: uXRi1p6Mc5Ow4eNLDC70ejIXtqgLCuv0n97XZ9loWPE=
+
+Name: simple_viewmodels/EPackage.view
+SHA-256-Digest: kPNAe7n0XyeEIjOH2nR2AiTxUnoDQlunAw1Ixrj9R/s=
+
+Name: OSGI-INF/eenumLiteralControlService.xml
+SHA-256-Digest: e2Bptgj1wbrzzjXl72eEChB84vVwL+UEw0G4rFBVagc=
+
+Name: org/eclipse/emfforms/internal/editor/ecore/controls/TypedElement
+ BoundsRenderer$1.class
+SHA-256-Digest: Pw1aQdH7tNh/zCS9LzqR0RJ4Yc7BP7f10OoETNRdGJk=
+
+Name: org/eclipse/emfforms/internal/editor/ecore/helpers/EcoreHelpers.
+ class
+SHA-256-Digest: a3mV2mYv3TMi3hDf0SsldxdJ9sl/Wnr28KnSViKiwaU=
+
+Name: org/eclipse/emfforms/internal/editor/ecore/GroupExpansionViewMod
+ elService.class
+SHA-256-Digest: K3W+2V685BUP/DH36KBBk601FXUkAmcHlb4M5QqbbNA=
+
+Name: org/eclipse/emfforms/internal/editor/ecore/controls/DataTypeCont
+ rolService.class
+SHA-256-Digest: vDz8uapmTUf4bB8dbDdMaZHNqdxazjVZxtmYveZ5zK0=
+
+Name: org/eclipse/emfforms/internal/editor/ecore/EcoreDiagnosticCache.
+ class
+SHA-256-Digest: H7KRhn9jtpLnuQs29t+zp5BK1Jjm7nhaaJxO7OY4iBQ=
+
+Name: org/eclipse/emfforms/internal/editor/ecore/controls/Messages.cla
+ ss
+SHA-256-Digest: vCuFL8zP/Qln5X+t9jO0tLYGWuhIeUPHUstZ1GH8fI4=
+
+Name: org/eclipse/emfforms/internal/editor/ecore/controls/TypedElement
+ BoundsRenderer.class
+SHA-256-Digest: VKzCBDQBER7J364dcC4fG8Oh6lWE0Lfq3eVtsmw0Bhk=
+
+Name: simple_viewmodels/EAttribute.view
+SHA-256-Digest: hQ6KRE1jas8MnFJIRSemJLrranwnwnvdFMLoFntcoec=
+
+Name: META-INF/maven/org.eclipse.emf.ecp/org.eclipse.emfforms.editor.e
+ core/pom.xml
+SHA-256-Digest: yVlmXv9p/7nkYhMu/DTnSmiPZdLLEfuUi8tq0/au6Bw=
+
+Name: org/eclipse/emfforms/internal/editor/ecore/EcoreEditorTMDCustomi
+ zation$3.class
+SHA-256-Digest: tSDq06b+vKT51/npailTL53koWF2v38oVFuYoCq0aLI=
+
+Name: icons/EcoreModelFile.gif
+SHA-256-Digest: Rs8jApesSkmbKX2Tpvdd+veLOnvPwWB/wOU9reKEr5w=
+
+Name: org/eclipse/emfforms/internal/editor/ecore/referenceservices/Eco
+ reAttachmentStrategyProvider$1.class
+SHA-256-Digest: tezis7RXkukhDVTc2nHsDXno3uG9adfQOiyAbNvRcS8=
+
+Name: org/eclipse/emfforms/internal/editor/ecore/controls/TypedElement
+ BoundsRenderer$4.class
+SHA-256-Digest: JgKUfW4x7EgKwYyHXRAX1V1S6nLMuy0IHFuEWU0qFSE=
+
+Name: org/eclipse/emfforms/internal/editor/ecore/EcoreCreateNewChildDi
+ alog.class
+SHA-256-Digest: 6vm8XIfUgb4wOGpwGin3VWHztMjnSPEOQSsiU5USSos=
+
+Name: org/eclipse/emfforms/internal/editor/ecore/referenceservices/Eco
+ reOpenInNewContextStrategyProvider.class
+SHA-256-Digest: M5K4VFnMDqp/uUpCeblqnK1Ag5aTqORLcblmTEC/XW4=
+
+Name: OSGI-INF/org.eclipse.emfforms.internal.editor.ecore.controls.Lin
+ kOnlyMultiReferenceRendererService.xml
+SHA-256-Digest: /lrPpUeG1JOUKugF/4mw4mFdwg2RFe3al3isbJmZXfo=
+
+Name: org/eclipse/emfforms/internal/editor/ecore/controls/TypedElement
+ BoundsControlService.class
+SHA-256-Digest: dUTBH09wtZvgcUNCamaIZ64F4bjImbFQQEmWl2vfxNA=
+
+Name: org/eclipse/emfforms/internal/editor/ecore/controls/EEnumLiteral
+ ControlService.class
+SHA-256-Digest: 1LQEN8Bdt6wGVZmc6jJzg6vYIC+Nj7nef6O2mx58l0c=
+
+Name: org/eclipse/emfforms/internal/editor/ecore/referenceservices/Eco
+ reEObjectSelectionStrategyProvider$Strategy.class
+SHA-256-Digest: bVQDdJqeUCp8AQIiFD36GZJKCr1+0tG3JGdqUUZm90c=
+
+Name: simple_viewmodels/EClass.view
+SHA-256-Digest: L24IUaywjj0RznR8Ur3uWtyAmm6mLSTHmpO4/Oq3h4I=
+
+Name: org/eclipse/emfforms/internal/editor/ecore/referenceservices/Eco
+ reEObjectSelectionStrategyProvider.class
+SHA-256-Digest: LqjQu/lap1WrgpYgUsmEAK/pcXc81y5QKagweodwWdM=
+
+Name: org/eclipse/emfforms/internal/editor/ecore/CreateChildActionWith
+ Accelerator.class
+SHA-256-Digest: bK02kaEGR9DQGKpa7ci0cLNZpB40+0lt7ABI1YLo3Bs=
+
+Name: org/eclipse/emfforms/internal/editor/ecore/controls/DataTypeCont
+ rol$3.class
+SHA-256-Digest: fV/F7h1eLjHgACNODJNrZlQa9dvCY8tTwba4XCKUypc=
+
+Name: org/eclipse/emfforms/internal/editor/ecore/actions/CreateNewInst
+ anceAction.class
+SHA-256-Digest: VNE+b7kBLvZKMQcuuFOx/fVQ17GL4mgJN21C6qX+3QQ=
+
+Name: simple_viewmodels/EOperation.view
+SHA-256-Digest: zaK6B+BjHNQzD8qAqU+ZtD4lWmS9txM/CbFFBZsVcKk=
+
+Name: org/eclipse/emfforms/internal/editor/ecore/controls/InstanceType
+ NameSWTRenderer.class
+SHA-256-Digest: E6Hv+VMhceqxke3+9kPizIl58pwX9xU/XBY14EoYQk4=
+
+Name: org/eclipse/emfforms/internal/editor/ecore/GroupExpansionViewMod
+ elService$1.class
+SHA-256-Digest: 0eNyJNkbkCSV1UyoEeT0WTkFzrMwx7dy4I7RfALtjLM=
+
+Name: viewmodels/EReference.view
+SHA-256-Digest: M2PDCaz68jhYUDXbRngv1qSem3A1WE/egRX4urYWwcc=
+
+Name: org/eclipse/emfforms/internal/editor/ecore/actions/CreateNewInst
+ aceWizard.class
+SHA-256-Digest: PC7du+tncg/xLeuY+1jiPsR1uKyd8x068BI6bUbaQek=
+
+Name: OSGI-INF/l10n/bundle.properties
+SHA-256-Digest: 48j5qTHqVNQRLC7aZ9gQPX4rYjuBmyys2A+Yp/7ekIw=
+
+Name: simple_viewmodels/EParameter.view
+SHA-256-Digest: 9gc5ApW6WAjrPYL7Sgu5L9QA4PYP7qDZktWLeELas3M=
+
+Name: org/eclipse/emfforms/internal/editor/ecore/referenceservices/Eco
+ reOpenInNewContextStrategyProvider$1.class
+SHA-256-Digest: xHxpqfW1yDB2OBNuVi6jA6c817AQ75DhUYDj/T7OB3w=
+
+Name: OSGI-INF/ecoreAttachmentStrategyProvider.xml
+SHA-256-Digest: kKryqEoL7Q/qjmmsLfVNvUNNmrp4oeiHk4IKYdJj6Mo=
+
+Name: org/eclipse/emfforms/internal/editor/ecore/controls/LinkOnlyMult
+ iReferenceRendererService.class
+SHA-256-Digest: ay964dMKEGrCWULPwMKwrOpgR8wKFhihS0eBA3mbzrI=
+
+Name: simple_viewmodels/EEnum.view
+SHA-256-Digest: JSxuhGW+0FUmhkINBClac492lmrV/j2z/44gmd1s62k=
+
+Name: OSGI-INF/dataTypeControlService.xml
+SHA-256-Digest: AfoYnvJI1ePVBbbbIWDRMtLdOlZJ1KSft7e/4jCEzhE=
+
+Name: org/eclipse/emfforms/internal/editor/ecore/controls/EEnumLiteral
+ Renderer.class
+SHA-256-Digest: Zu8csA91q7PBORKXcFkrw50zi0mfRTDdrge/6G+EB8g=
+
+Name: org/eclipse/emfforms/internal/editor/ecore/controls/TypedElement
+ BoundsRenderer$3.class
+SHA-256-Digest: QZBIEOUptApatjp1KL8iWRusd+Enk704fWMdyV9JX0g=
+
+Name: org/eclipse/emfforms/internal/editor/ecore/referenceservices/Eco
+ reReferenceStrategyProvider.class
+SHA-256-Digest: UsWH/0J0jtxjTV0ahux8HhApfI6jjNQyZw30Yvu183A=
+
+Name: viewmodels/EAttribute.view
+SHA-256-Digest: Fs4Knp5EIp9Oj/0ICjtJ84Zba520kNgt8ajzh3MvL/g=
+
+Name: OSGI-INF/ecoreEObjectSelectionStrategyProvider.xml
+SHA-256-Digest: xdyWAkb5RNWEIDXtV5tkkuL7Q1SFVb921/CN7SKDkcQ=
+
+Name: org/eclipse/emfforms/internal/editor/ecore/referenceservices/Eco
+ reReferenceService.class
+SHA-256-Digest: 4pxbe97NDcyGj5LIYQSg+C6pGr3VyVw28lokLVDViZI=
+
+Name: org/eclipse/emfforms/internal/editor/ecore/controls/TypedElement
+ BoundsRenderer$6.class
+SHA-256-Digest: uPnNmnnWwwkG1IagQnFrX7RqqIJAwQrO1FZLM6afF44=
+
+Name: org/eclipse/emfforms/internal/editor/ecore/EcoreEditorTMDCustomi
+ zation$1.class
+SHA-256-Digest: W/oAsxawzxRAsdTpcKFR4ttDp9OZmjMWZpCMKfh+z4o=
+
+Name: OSGI-INF/ecoreReferenceStrategyProvider.xml
+SHA-256-Digest: lm5rcL6LgX9ySM/l53rcvg0DpH40ep8aQ7/2STqlpdc=
+
+Name: viewmodels/EEnum.view
+SHA-256-Digest: JSxuhGW+0FUmhkINBClac492lmrV/j2z/44gmd1s62k=
+
+Name: org/eclipse/emfforms/internal/editor/ecore/actions/CreateNewInst
+ aceWizard$CreateNewInstanceFileCreationPage.class
+SHA-256-Digest: FyltRcEsY4kYkdNBtY9EChFMs6G+D/dNkFaaH9YGejc=
+
+Name: viewmodels/EDataType.view
+SHA-256-Digest: yxpwp7oYuyifHwdgV6eo7d8jsu3C3Sv9wJR3MuIeOfQ=
+
+Name: org/eclipse/emfforms/internal/editor/ecore/controls/DataTypeCont
+ rol$2.class
+SHA-256-Digest: v1OpZj3EwAd5upNlSUUdeQa7uPXQwu/E06f46wYHpvM=
+
+Name: viewmodels/EPackage.view
+SHA-256-Digest: kPNAe7n0XyeEIjOH2nR2AiTxUnoDQlunAw1Ixrj9R/s=
+
+Name: about.html
+SHA-256-Digest: ZYczHLHHJbJ2GSLe/MBOpU/zRznwNG9X6G0P5BecAYs=
+
+Name: org/eclipse/emfforms/internal/editor/ecore/referenceservices/Eco
+ reAttachmentStrategyProvider.class
+SHA-256-Digest: FXVzw3Dj+jBmBRbmPbnTxfIfYzKC7+djvzAYkj06ua8=
+
+Name: org/eclipse/emfforms/internal/editor/ecore/controls/TypedElement
+ BoundsRenderer$2.class
+SHA-256-Digest: VKIV7yUiPvEMCTuPVF4mZGNl/SbbhY+gKNFZKDgQy+k=
+
+Name: viewmodels/EAnnotation.view
+SHA-256-Digest: 3eicCI7DljLnTxgOgjFj6iwoAhtlc9qkLDkoM0Ug8us=
+
+Name: org/eclipse/emfforms/internal/editor/ecore/controls/LinkOnlyMult
+ iReferenceRenderer.class
+SHA-256-Digest: +Dm7BPK4wG/XDAmJrdWt/FV/8BlxugDgTxr+IIOkOGk=
+
+Name: simple_viewmodels/EReference.view
+SHA-256-Digest: llbQDCABVUZYqdsxF97zZV6kEisaObIL3cMYlxn7u5w=
+
+Name: org/eclipse/emfforms/internal/editor/ecore/EcoreEditor.class
+SHA-256-Digest: aV2gpem0lUePbi2tJHYldZ6UUkgIdJ6zSlRTUyWE/so=
+
+Name: icons/page_white_code.png
+SHA-256-Digest: d6KxQRRSjrbjr3Zjf1LGQMg82Ao/XHLedqO7xdecFic=
+
+Name: viewmodels/EParameter.view
+SHA-256-Digest: 9sOKkKCbpBM5yS6Sz/99sIGYT/xgxv7Ljk8H8eC8FlQ=
+
+Name: org/eclipse/emfforms/internal/editor/ecore/controls/DataTypeCont
+ rol.class
+SHA-256-Digest: sdPjkVoOBeZJqUhSfgNqPOfPLtkw5E66LMzTLBIkO4Q=
+
+Name: org/eclipse/emfforms/internal/editor/ecore/referenceservices/Eco
+ reReferenceStrategyProvider$Strategy.class
+SHA-256-Digest: Q2kBb8Gd5Qm2/cEZdvBlUI+qxIIzM8+qoYzEQM4Ig7E=
+
+Name: META-INF/maven/org.eclipse.emf.ecp/org.eclipse.emfforms.editor.e
+ core/pom.properties
+SHA-256-Digest: UCAlMNNiLsNwshnzDpv1LvAmk9VMiGyQnRUsdu+DLNQ=
+
+Name: org/eclipse/emfforms/internal/editor/ecore/actions/CreateNewInst
+ aceWizard$1.class
+SHA-256-Digest: Cynq/MuoOGiCdxOnyPoHmcM0acUE+TVdDr/9gG26RHA=
+
+Name: org/eclipse/emfforms/internal/editor/ecore/EcoreEditorMenuListen
+ er.class
+SHA-256-Digest: Hz58mjD0aA1EykRHoI5crjGDUxGj0w0n/uRNPSp/At8=
+
+Name: viewmodels/EOperation.view
+SHA-256-Digest: y0X8IoVYY5e70k6Kob9BnVT1X6wJFn0OQMwgXwaY5A8=
+
+Name: org/eclipse/emfforms/internal/editor/ecore/controls/TypedElement
+ BoundsRenderer$5.class
+SHA-256-Digest: z2EA3D5WuEcbGKlCypWhbPP/fihXlxVPF9kdW1+Ba6Q=
+
+Name: simple_viewmodels/EDataType.view
+SHA-256-Digest: yxpwp7oYuyifHwdgV6eo7d8jsu3C3Sv9wJR3MuIeOfQ=
+
+Name: viewmodels/EClass.view
+SHA-256-Digest: LkPHedw/S+Rbqq/tEh8k1/RqYgdFcQX/TvpYi3bsUrA=
+

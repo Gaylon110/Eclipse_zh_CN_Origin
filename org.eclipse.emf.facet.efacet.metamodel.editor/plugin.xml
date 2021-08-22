@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Copyright (c) 2011, 2015 Mia-Software, and Soft-Maint.
+ 
+ All rights reserved. This program and the accompanying materials
+ are made available under the terms of the Eclipse Public License v1.0
+ which accompanies this distribution, and is available at
+ http://www.eclipse.org/legal/epl-v10.html
+ 
+ Contributors:
+    Gregoire Dupe (Mia-Software) - Design
+    Nicolas Guyomar (Mia-Software) - Implementation
+    Emmanuelle Rouillé (Mia-Software) - Bug 352618 - To be able to use non derived facet structural features and save them values. 
+    Nicolas Bros (Mia-Software) - Bug 361823 - [Restructuring] eFacet2 meta-model
+    Gregoire Dupe (Mia-Software) - Bug 366055 - NavigationQuery
+    Gregoire Dupe (Mia-Software) - Bug 369673 - [Facet] IsOneOfQuery
+    Olivier Remaud (Soft-Maint) - Bug 369824 - Add a simple way to return string literal constants from a customization query
+    Gregoire Dupe (Mia-Software) - Bug 369987 - [Restructuring][Table] Switch to the new customization and facet framework
+    Gregoire Dupe (Mia-software) - Bug 364325 - [Restructuring] The user must be able to navigate into a model using the Facet.
+    Nicolas Bros (Mia-Software) - Bug 372626 - [Facet] Aggregates
+    Nicolas Bros (Mia-Software) - Bug 376941 - [EFacet] Facet operation arguments in Facet model
+    Gregoire Dupe (Mia-Software) - Bug 376576 - [EFacet] Change the multiplicity of Facet::extendedFacet
+    Jonathan Pepin (Soft-Maint) - Bug 463898 - Create FacetReference not derived, without query and with opposite mechanism
+    Jonathan Pepin (Soft-Maint) - Bug 464519 - Declare file extension .efs (EMF Facet Serialization) for facet serialization file
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.eclipse.emf.facet.efacet.metamodel.v0_2_0.efacet.presentation.EFacetModelWizardID"
+            name="%_UI_EFacetModelWizard_label"
+            class="org.eclipse.emf.facet.efacet.metamodel.v0_2_0.efacet.presentation.EFacetModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/EFacetModelFile.gif">
+         <description>%_UI_EFacetModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="org.eclipse.emf.facet.efacet.metamodel.v0_2_0.efacet.presentation.EFacetEditorID"
+            name="%_UI_EFacetEditor_label"
+            icon="icons/full/obj16/EFacetModelFile.gif"
+            extensions="efacet"
+            class="org.eclipse.emf.facet.efacet.metamodel.v0_2_0.efacet.presentation.EFacetEditor"
+            contributorClass="org.eclipse.emf.facet.efacet.metamodel.v0_2_0.efacet.presentation.EFacetActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated efacet-0.2.0 -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.eclipse.emf.facet.efacet.metamodel.v0_2_0.efacet.serialization.presentation.SerializationModelWizardID"
+            name="%_UI_SerializationModelWizard_label"
+            class="org.eclipse.emf.facet.efacet.metamodel.v0_2_0.efacet.serialization.presentation.SerializationModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/SerializationModelFile.gif">
+         <description>%_UI_SerializationModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="org.eclipse.emf.facet.efacet.metamodel.v0_2_0.efacet.serialization.presentation.SerializationEditorID"
+            name="%_UI_SerializationEditor_label"
+            icon="icons/full/obj16/SerializationModelFile.gif"
+            extensions="efs"
+            class="org.eclipse.emf.facet.efacet.metamodel.v0_2_0.efacet.serialization.presentation.SerializationEditor"
+            contributorClass="org.eclipse.emf.facet.efacet.metamodel.v0_2_0.efacet.serialization.presentation.SerializationActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated efacet-0.2.0 -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.eclipse.emf.facet.efacet.metamodel.v0_2_0.efacet.query.presentation.QueryModelWizardID"
+            name="%_UI_QueryModelWizard_label"
+            class="org.eclipse.emf.facet.efacet.metamodel.v0_2_0.efacet.query.presentation.QueryModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/QueryModelFile.gif">
+         <description>%_UI_QueryModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="org.eclipse.emf.facet.efacet.metamodel.v0_2_0.efacet.query.presentation.QueryEditorID"
+            name="%_UI_QueryEditor_label"
+            icon="icons/full/obj16/QueryModelFile.gif"
+            extensions="query"
+            class="org.eclipse.emf.facet.efacet.metamodel.v0_2_0.efacet.query.presentation.QueryEditor"
+            contributorClass="org.eclipse.emf.facet.efacet.metamodel.v0_2_0.efacet.query.presentation.QueryActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated efacet-0.2.0 -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.eclipse.emf.facet.efacet.metamodel.v0_2_0.efacet.runtime.presentation.RuntimeModelWizardID"
+            name="%_UI_RuntimeModelWizard_label"
+            class="org.eclipse.emf.facet.efacet.metamodel.v0_2_0.efacet.runtime.presentation.RuntimeModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/RuntimeModelFile.gif">
+         <description>%_UI_RuntimeModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="org.eclipse.emf.facet.efacet.metamodel.v0_2_0.efacet.runtime.presentation.RuntimeEditorID"
+            name="%_UI_RuntimeEditor_label"
+            icon="icons/full/obj16/RuntimeModelFile.gif"
+            extensions="runtime"
+            class="org.eclipse.emf.facet.efacet.metamodel.v0_2_0.efacet.runtime.presentation.RuntimeEditor"
+            contributorClass="org.eclipse.emf.facet.efacet.metamodel.v0_2_0.efacet.runtime.presentation.RuntimeActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

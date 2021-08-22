@@ -1,0 +1,4880 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.sapphire.ui
+Export-Package: org.eclipse.sapphire.ui;version="9.1.0.201609301330",o
+ rg.eclipse.sapphire.ui.actions;version="9.1.0.201609301330",org.eclip
+ se.sapphire.ui.assist;version="9.1.0.201609301330",org.eclipse.sapphi
+ re.ui.assist.internal;version="9.1.0.201609301330";x-internal:=true,o
+ rg.eclipse.sapphire.ui.def;version="9.1.0.201609301330",org.eclipse.s
+ apphire.ui.def.internal;version="9.1.0.201609301330";x-friends:="org.
+ eclipse.sapphire.sdk",org.eclipse.sapphire.ui.diagram;version="9.1.0.
+ 201609301330",org.eclipse.sapphire.ui.diagram.actions;version="9.1.0.
+ 201609301330",org.eclipse.sapphire.ui.diagram.def;version="9.1.0.2016
+ 09301330",org.eclipse.sapphire.ui.diagram.editor;version="9.1.0.20160
+ 9301330",org.eclipse.sapphire.ui.diagram.layout;version="9.1.0.201609
+ 301330",org.eclipse.sapphire.ui.diagram.layout.standard;version="9.1.
+ 0.201609301330";x-friends:="org.eclipse.sapphire.ui.swt.gef,org.eclip
+ se.sapphire.workspace.ui",org.eclipse.sapphire.ui.diagram.shape.def;v
+ ersion="9.1.0.201609301330",org.eclipse.sapphire.ui.diagram.state;ver
+ sion="9.1.0.201609301330",org.eclipse.sapphire.ui.forms;version="9.1.
+ 0.201609301330",org.eclipse.sapphire.ui.forms.swt;version="9.1.0.2016
+ 09301330",org.eclipse.sapphire.ui.listeners;version="9.1.0.2016093013
+ 30",org.eclipse.sapphire.ui.util;version="9.1.0.201609301330"
+Bundle-Name: %pluginName
+Bundle-Version: 9.1.0.201609301330
+Bundle-Localization: bundle
+Require-Bundle: org.eclipse.sapphire.modeling;bundle-version="[9.1.0,9
+ .1.1)",org.eclipse.sapphire.modeling.xml;bundle-version="[9.1.0,9.1.1
+ )",org.eclipse.sapphire.java;bundle-version="[9.1.0,9.1.1)",org.eclip
+ se.sapphire.osgi;bundle-version="[9.1.0,9.1.1)",org.eclipse.core.runt
+ ime;bundle-version="[3.10.0,4.0.0)",org.eclipse.swt;bundle-version="[
+ 3.103.0,4.0.0)",org.eclipse.jface;bundle-version="[3.10.0,4.0.0)",org
+ .eclipse.jface.text;bundle-version="[3.9.0,4.0.0)",org.eclipse.ui.edi
+ tors;bundle-version="[3.8.200,4.0.0)",org.eclipse.ui.forms;bundle-ver
+ sion="[3.6.100,4.0.0)",org.eclipse.ui.ide;bundle-version="[3.10.0,4.0
+ .0)",org.eclipse.ui.views;bundle-version="[3.7.0,4.0.0)",org.eclipse.
+ ui.workbench;bundle-version="[3.106.0,4.0.0)",org.eclipse.help;bundle
+ -version="[3.6.0,4.0.0)",org.eclipse.core.resources;bundle-version="[
+ 3.9.0,4.0.0)",org.eclipse.core.filesystem;bundle-version="[1.4.100,2.
+ 0.0)"
+Bundle-ManifestVersion: 2
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-Vendor: %providerName
+Import-Package: com.ibm.icu.text
+
+Name: org/eclipse/sapphire/ui/diagram/def/IDiagramDecoratorDef.class
+SHA-256-Digest: a+Qc00PAsGgdcHl0ThIuMqb8T1vXWL2eP/Sl6UU2mOU=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/DiagramNodePart$2.class
+SHA-256-Digest: YNwB1D5Twm3G4AQVfCacZzzShpi/aneYr+P4Mhkuf7w=
+
+Name: org/eclipse/sapphire/ui/forms/internal/OutlineNodeMoveUpActionHa
+ ndler.class
+SHA-256-Digest: yRQ3V00CFrdL9bwzNwiEq/3R0/yJSFixscxV/ap0QXY=
+
+Name: org/eclipse/sapphire/ui/forms/swt/PropertyEditorPresentation$8.c
+ lass
+SHA-256-Digest: h3uHnCeDxeedGp0Sb0zR99A+NZmZY9ma2p521TcDJw4=
+
+Name: org/eclipse/sapphire/ui/diagram/internal/StandardDiagramConnecti
+ onPart$3.class
+SHA-256-Digest: qlGnGxzZAZwNPedOMt+uQopjs7tCg86ongivB1aX5ZA=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/ActuatorLinkPresentat
+ ion$1.class
+SHA-256-Digest: vAObP2gU8x2yJBTNcOIQukH7YUxt4bpqNALH6Cgz+7I=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/DiagramPartEvent.class
+SHA-256-Digest: msGXHwFc4shJLgHPDRcjLUfBz9rfsLXcsy5TWiQ0lV8=
+
+Name: org/eclipse/sapphire/ui/forms/internal/OutlineNodeShowInSourceAc
+ tionHandler$1.class
+SHA-256-Digest: ywIXqGWIWnbFHRRgH8gSyKQRr1ZPC6hS81gxCfFSeqg=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/ContainerShapePart$5.clas
+ s
+SHA-256-Digest: 8yypni4sg7AqnmjkGn7p8CQYMd27b81caiK9dhIzRjw=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/TextOverlayPainter$2.
+ class
+SHA-256-Digest: qzHrDHz0DUjXwbEnc0cNgJe1ZMODcG6wizjayJyvwUs=
+
+Name: org/eclipse/sapphire/ui/def/ActionHandlerFilterDef.class
+SHA-256-Digest: FfU64qXHgHZStgJEf3ZtSJiByhTg+rN+QH7C73OHalU=
+
+Name: org/eclipse/sapphire/ui/diagram/shape/def/ShapeLayoutDef.class
+SHA-256-Digest: 6FwNTaIMEVWGS+cLG0s3mFthlV3Nn0YB6xfaOTMiEoA=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$2.class
+SHA-256-Digest: X/1V/5CapGq6ClfHB8ShkeTMaPhY8pTWdsBf8Ensy/k=
+
+Name: org/eclipse/sapphire/ui/SapphirePart$ImageManager$1.class
+SHA-256-Digest: 8zrFqRbYqdbMrHCn6MRFBiBOgZqVH4VEHYl+/7ziQkA=
+
+Name: org/eclipse/sapphire/ui/SapphireAction$3$1$1$1.class
+SHA-256-Digest: KRSWyyFgDtD1Aj1I5Nr/3gpyrYUewInwCqyzQk22Hik=
+
+Name: org/eclipse/sapphire/ui/SapphireActionHandler$PostExecuteEvent.c
+ lass
+SHA-256-Digest: 4d4vCs4hpm8LpNs/HSMMqqhN1jsrsWvNZxrjDNMjKiU=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/HyperlinkTable$1.clas
+ s
+SHA-256-Digest: 2SS2eQZ88JLGSgJmHSn8whDJp/nqvCDVB4nlbtZ3XwI=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$23.class
+SHA-256-Digest: hjgD8Oog6hxr5N2ExbGQk3GTFEhcuAwbnF0NgPuKAdo=
+
+Name: org/eclipse/sapphire/ui/forms/swt/HelpSystem$1.class
+SHA-256-Digest: zh7SFjfBo39e3KOMDbxgFSzAGVugcDvjp+Bc2V+zax8=
+
+Name: org/eclipse/sapphire/ui/SapphirePart$PartEvent.class
+SHA-256-Digest: T7mt31PD2pxoMgRmR63VPImUvHJkpG3Wkl2RAa1k/Xw=
+
+Name: org/eclipse/sapphire/ui/assist/internal/PropertyEditorAssistDeco
+ rator$1$1.class
+SHA-256-Digest: lBocZ1D/ofMN79SX/w6QVsB10lCXWZmB4pfJ+UBCRKs=
+
+Name: org/eclipse/sapphire/ui/diagram/shape/def/BackgroundDef.class
+SHA-256-Digest: QdaFd/5hi5sUKX2f/r3Sako3b0uYM/zomm/0jFiSXfc=
+
+Name: org/eclipse/sapphire/ui/SourceEditorService.class
+SHA-256-Digest: RpQfcRrSioiwelYfocp/BNQWQ96tqKG3JQ6t8H5OWjk=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/ShapeFactoryPart$1.class
+SHA-256-Digest: Sj7ZCZgSujxAhCiIfTtpJXUQ+QIiSLG/T6T4ilofXoM=
+
+Name: org/eclipse/sapphire/ui/diagram/def/DiagramEditorPageDef.psd
+SHA-256-Digest: rs9Ge3lNK14SkLu30D20Kj922M6DjJdJLdDDq2Igjlg=
+
+Name: org/eclipse/sapphire/ui/forms/WizardPageDef.psd
+SHA-256-Digest: 3AguHjxItSYAOsHKwZhX64gt/i8zqR2xvPiOhtsznYM=
+
+Name: org/eclipse/sapphire/ui/diagram/shape/def/ValidationMarkerDef.pn
+ g
+SHA-256-Digest: fPOuQFNWBEOoZya1fwqrvQ3wnaag5724HuyBqOxrlsA=
+
+Name: org/eclipse/sapphire/ui/diagram/actions/DeleteAllBendPointsForMu
+ ltiplePartsActionHandler$2.class
+SHA-256-Digest: vXnzr/pWeZ/gfyakFqFT/6tiV7tEgfX7iRUFQYskRdo=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/ValidationMarkerPart$2$1$
+ 1.class
+SHA-256-Digest: tlxLFp9LJ+HtUDSTz6AjZT+8lgTTZ1jagpKin2zAL04=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/WithPresentation$1$5.
+ class
+SHA-256-Digest: rwYymPAamyYYNiXt2rY+Rv+p4akWgzaxNOSbnEybKuc=
+
+Name: org/eclipse/sapphire/ui/forms/TabGroupPageDef.psd
+SHA-256-Digest: 3AguHjxItSYAOsHKwZhX64gt/i8zqR2xvPiOhtsznYM=
+
+Name: org/eclipse/sapphire/ui/forms/PropertyEditorPart$2.class
+SHA-256-Digest: qOXvydXW+raTIKrYqksZKcqxAbuBgIePxtUAF99KAvg=
+
+Name: org/eclipse/sapphire/ui/SapphireActionHandler$PreExecuteEvent.cl
+ ass
+SHA-256-Digest: zqAUyJd8qXlHkNPLOECWh2JQEKO8lNgbQde6ydKFv6Q=
+
+Name: org/eclipse/sapphire/ui/assist/internal/PropertyEditorAssistDeco
+ rator$EditorControlMouseTrackListener.class
+SHA-256-Digest: uJdsZbsatV5KySuDReUsVWFoIxarWvIr6Tn7qOJ0Uxw=
+
+Name: org/eclipse/sapphire/ui/def/ServiceDef$Override.class
+SHA-256-Digest: bwWKEUZKrbmUh6C9KmI+UVnqsmERxN1DHqYHsVhUisw=
+
+Name: org/eclipse/sapphire/ui/forms/SplitFormDef-Horizontal-2.psd
+SHA-256-Digest: 57o3Lbj0ur/yqSYBLmxy3dR3+UUA9hCWIY+bLaUMjTc=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/RestoreDefaultsAction
+ Handler$PromptDialog$1.class
+SHA-256-Digest: V3LEszmt/PP/9jPgOiJdWly3jRH44dtupyiZPWTn6R8=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/FunctionUtil.class
+SHA-256-Digest: S1fTTtGkamrng877gw1hEVZEht0y42EnejgEt8SdcXQ=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$15.class
+SHA-256-Digest: lbsU6DpoK/vbuyWrJRhMCUsjUSooVJ06D5sBqtFMv3c=
+
+Name: org/eclipse/sapphire/ui/diagram/actions/MoveShapeUpActionHandler
+ $1.class
+SHA-256-Digest: o4Pl4sLbRZjmehEZrUXXiLOBe/HkL0X2ApdTnepy3+s=
+
+Name: org/eclipse/sapphire/ui/forms/SpacerDef.psd
+SHA-256-Digest: My+pGR6oUW881UwaS/D+xL3VVEj4eV4Rqbw/sQgWWkY=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/CheckBoxPropertyEdito
+ rPresentation.class
+SHA-256-Digest: uWD/pjZ7uc94Fa6KO1MydrZbcywsb66E/HcLpb/S8hU=
+
+Name: org/eclipse/sapphire/ui/forms/swt/AbstractBinding.class
+SHA-256-Digest: 0G/KX5gBN9+RKVnJ90fW5mUNMxULOtlQF8EjsIEb8mo=
+
+Name: org/eclipse/sapphire/ui/diagram/internal/StandardEmbeddedConnect
+ ionPart$2.class
+SHA-256-Digest: HaQ/xnvglB3trSZP+zDPLTafLtDfzWHYKOBcD1GMpxI=
+
+Name: org/eclipse/sapphire/ui/forms/MasterDetailsEditorPageDef.psd
+SHA-256-Digest: /+8Et2clpuIr6xTBtZujeWteD6xoVmk7PHCW3Ci+eXM=
+
+Name: org/eclipse/sapphire/ui/forms/PageBookCaseDef.png
+SHA-256-Digest: 5qI+o2Jl35R4yDRTvDb57hssBC7YEuFGNwX0sUivKcw=
+
+Name: org/eclipse/sapphire/ui/actions/Print.gif
+SHA-256-Digest: bRKH6EJ0RzB1yVG+WNKEpCYeBWnbZnpsvTIPSLuDXAY=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireKeyboardActionPresenta
+ tion$4.class
+SHA-256-Digest: He8Pht67otGP6SVnpbRF2EUt4EHP/rkHAYrOzNziiGo=
+
+Name: org/eclipse/sapphire/ui/forms/swt/CheckBoxListPropertyEditorPres
+ entation$6.class
+SHA-256-Digest: GaGXjRkPzKpRyvs9pOtzeuv19AeZI9/++07cyEM9wng=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/CheckBoxPropertyEdito
+ rPresentation$Factory.class
+SHA-256-Digest: ZpywB1QKF4kcp0+SfKmAO6WafQRlw+B4sAhAYnRhcMM=
+
+Name: org/eclipse/sapphire/ui/SapphireActionHandlerFilter.class
+SHA-256-Digest: 2ubA1ey5DjFj365DNE96lKWbak+QpwyAQ6AHSvYFtGE=
+
+Name: org/eclipse/sapphire/ui/forms/swt/PropertyEditorPresentation$3.c
+ lass
+SHA-256-Digest: 6MRBrN44jLgMqillI8ZW+FejrIbH+5JW2Xwp3Dv3C3o=
+
+Name: org/eclipse/sapphire/ui/def/internal/SapphireActionHandlerDefMet
+ hods.class
+SHA-256-Digest: G/GP9UdDHa1+HURiF5YZ73m9A4lmo/NQZcRJokR76EI=
+
+Name: org/eclipse/sapphire/ui/internal/SapphireEditorContentOutline$Su
+ bPageSite.class
+SHA-256-Digest: sZqc6NOj8ZSFF/DPAy/FVCNceQwE5QVzb9t700tXWnw=
+
+Name: org/eclipse/sapphire/ui/def/internal/SectionReferenceService.cla
+ ss
+SHA-256-Digest: 821fjA8N+VahY88VD+I9jyeStLfTCmIcCfNiGL8j4jQ=
+
+Name: org/eclipse/sapphire/ui/forms/DialogDef.psd
+SHA-256-Digest: M1SvJIZppDJbQCX2KwPOt6VPMi486pfSLtFwWemEzoo=
+
+Name: org/eclipse/sapphire/ui/SapphirePartListener.class
+SHA-256-Digest: Fh4WEcK8LnQTQ6bK3VEE7uLyqr+6e64PXLWaBi0OuXI=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/text/SapphireFormText
+ $4.class
+SHA-256-Digest: rH3s2DFuJadS36Fv6TCogqn2et65Lh67zFtNeWBBpC4=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/TextOverlayPainter$7.
+ class
+SHA-256-Digest: CRbTdGn3K6I8ErVIn1K1YTNtlD/e45ZwgzX2n0PCpgg=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/text/FormFonts.class
+SHA-256-Digest: 2tAQtLxx0NyJWRIbpyZ1dMkFmHKtUqT7KEpgWreFNMk=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/RestoreDefaultsAction
+ Handler$PromptDialog.class
+SHA-256-Digest: mY128/xiLWzsMSAbgLQUcnByprPHYcYVeumFm/vMsqw=
+
+Name: org/eclipse/sapphire/ui/diagram/shape/def/BorderTopBottomLeft.pn
+ g
+SHA-256-Digest: m23UIE12/pKHP2Z9eUzOVarVpETRDxKVuzTEoFWogxw=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/HyperlinkTable$6.clas
+ s
+SHA-256-Digest: H/DFwQkVNk9fYYs1z/gI/xjHYoGBPEY0gRySowRV0as=
+
+Name: org/eclipse/sapphire/ui/forms/swt/MasterDetailsEditorPage$TreeVi
+ ewerRefreshOp.class
+SHA-256-Digest: Pum6gpci7rCIWd/CLFvz+MohRZD/NQIBUzHTKP/uTuo=
+
+Name: org/eclipse/sapphire/ui/assist/internal/PropertyEditorAssistDial
+ og$1.class
+SHA-256-Digest: 52mqkfq8dQVW2kcZPC/QJ/nO+8v4qDjeUjxmz7JZXcU=
+
+Name: org/eclipse/sapphire/ui/diagram/StandardConnectionService$Connec
+ tionTemplateListener.class
+SHA-256-Digest: KAEhYOATi9QcWKxjVsw3OkwF+z/+tIkxZiu/AK3wJS0=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/RadioButtonGroupPrope
+ rtyEditorPresentation$Factory.class
+SHA-256-Digest: Hzm3bwFcj2ou6tMOyb5LUvvJ7/8Db2f58s/dxOpeeks=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/HtmlPanelPresentation
+ $1.class
+SHA-256-Digest: zX3Q+S8gKPD+6vHqtXSyUuBhGoNJwHSpEUWa45ltG3s=
+
+Name: org/eclipse/sapphire/ui/actions/ShowInSource.png
+SHA-256-Digest: z2gSuw1Dky0ECub3cLTLART49FQQyh0V3TFVo2n0F6I=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$28.class
+SHA-256-Digest: 1xVvZ/4Qyl3VnPbEZ6S7HqWg/PuCfNPm8DZl3SZG46M=
+
+Name: org/eclipse/sapphire/ui/forms/swt/AbstractBinding$3.class
+SHA-256-Digest: 0ChRX3qgRIvyWUwL5q8G0dOSBW7OlLWhsovgV90brRA=
+
+Name: org/eclipse/sapphire/ui/forms/SeparatorDef.class
+SHA-256-Digest: YdZZNJVHrDIEjDtSKvDZEcdNl47Q/I3GViWZnl4L1m4=
+
+Name: org/eclipse/sapphire/ui/SapphirePart$2.class
+SHA-256-Digest: Otbhim2ZGOkT9+pu5nr1jZuQ2vgj2dqNN3JmCCy1Kk0=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/ShapeFactoryPart$6.class
+SHA-256-Digest: 7ZKqpt0h8jsoVynArsgmnYb7uJ4cuhHM+kLKlJzw3K0=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$10.class
+SHA-256-Digest: 4Fz69w9V8j5zT3pfisLxB6DUmNO3cPyMAdEBYHg5G1I=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/ActuatorLinkPresentat
+ ion.class
+SHA-256-Digest: L1g+/0s3Los6j2CAur81LHpTT0Iybw3nfTwbHfSG2dk=
+
+Name: org/eclipse/sapphire/ui/forms/internal/OutlineNodeListMemberActi
+ onHandlerCondition.class
+SHA-256-Digest: TfKVRe4IvB2BiN4EbTX14My8Kg0AIB+CJ/qQoE9WmZc=
+
+Name: org/eclipse/sapphire/ui/forms/swt/MasterDetailsEditorPage$13.cla
+ ss
+SHA-256-Digest: IqcN0gEOV3ow68M/sUw74fUddtsFEfGj+jkQa53+xp0=
+
+Name: org/eclipse/sapphire/ui/forms/MasterDetailsContentOutline$1.clas
+ s
+SHA-256-Digest: ZpEqoZXQG7MYZmbuAmMptuDRB/rdvoO9NWMqDya6uLQ=
+
+Name: org/eclipse/sapphire/ui/diagram/shape/def/SequenceLayoutConstrai
+ ntDef.class
+SHA-256-Digest: AabgmOxnYTPhasMjpItpoWy1Po9fCnqwTgpv+3SGoaY=
+
+Name: org/eclipse/sapphire/ui/SapphireEditorPagePart$PropertiesViewCon
+ tributionChangedEvent.class
+SHA-256-Digest: Mb3c9Gl39ShJmpNkAgqRGJ8qsYyYyOgcQihr3oCQ/zc=
+
+Name: org/eclipse/sapphire/ui/forms/swt/AbsoluteFilePathBrowseActionHa
+ ndler.class
+SHA-256-Digest: JPAGNACYpKqwb4Zqcmb+glmGWUkj1i7IGWnQvPqmNQo=
+
+Name: org/eclipse/sapphire/ui/diagram/def/internal/ToolPaletteCompartm
+ entPossibleValuesService$1.class
+SHA-256-Digest: eyuNLnLs312FZpM/0rtmZeqK47kGazZFok3FLWwRFNs=
+
+Name: org/eclipse/sapphire/ui/forms/MasterDetailsContentNodeFactoryDef
+ .class
+SHA-256-Digest: o2S8BC+aAFXnWg8RxSdyrL31mGOIzbCs/R2IvmMkCEw=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/DiagramNodePart.class
+SHA-256-Digest: 4SbICnnR8zi7FBGmw3Ahxz0cNYEi/twabHpUji0+lx0=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SlushBucketPropertyEditorPrese
+ ntation$4.class
+SHA-256-Digest: MbOEU0SjZYkNqtAYcuYBAHpSR/W8PKhseQgvyn8r820=
+
+Name: org/eclipse/sapphire/ui/forms/WizardPagePart$2.class
+SHA-256-Digest: cLd+QNDwB3wOK5+xBFtiNjJvBgW5TeP6mC3rs8DTZI0=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/SapphireDiagramEditorPage
+ Part$3.class
+SHA-256-Digest: 3tl7JxGwZsTnqn0e1g0HBGCz3Vc5d4wisTuE3lUnVjM=
+
+Name: org/eclipse/sapphire/ui/SapphireEditorPagePart.class
+SHA-256-Digest: XTP1LQHRv8rr0N1N/lDeqh9gv16EXALG7N2okE3QONA=
+
+Name: org/eclipse/sapphire/ui/assist/internal/ProblemsAssistContributo
+ r.class
+SHA-256-Digest: dYUjoAkMOEFtvwbxspqpyltNjXF447P8Awu3cPZlGvA=
+
+Name: org/eclipse/sapphire/ui/assist/internal/ResetActionsAssistContri
+ butor$3.class
+SHA-256-Digest: WVMKjeWuj4oFVBbhAnsTl2UmrebSggKbwoNjTu/RIsQ=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireActionPresentationMana
+ ger.class
+SHA-256-Digest: cUiFtdfYNaU3IlXLovYl1uZwhqhdCtXie9IJHaO+yXk=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/SapphirePropertySheet
+ Page$4.class
+SHA-256-Digest: IKjwD7m3eFE7X6Nz4kZr3Dkel7+SqZJ/XAjZ+NTtXVI=
+
+Name: org/eclipse/sapphire/ui/Bounds.class
+SHA-256-Digest: bvCG9TkfAlRoRg1NPUyAlQ3LRfIk6awCpeD8gEbjoxI=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/ImagePart.class
+SHA-256-Digest: s0ry2VK/n5qRwepoAK/LZUZrZKYXdHhUl5UkcrsYjSE=
+
+Name: org/eclipse/sapphire/ui/forms/internal/OutlineNodeAddActionHandl
+ erFactory$ElementPropertyActionHandler$2.class
+SHA-256-Digest: u9ANcHJz5lyk1Jjbcdt9iJZoWadzYU+lOL/W3WBCh2k=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/TabbedPropertyList$6.
+ class
+SHA-256-Digest: lc+r42TRpRDRnLaSl8/GqxKmVXh+Q/R78Wc+ljsW3OM=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$PopUpListFieldColumnPresentation$1.class
+SHA-256-Digest: pnxcVhX80/aPmFd++ZC+Q45EMOJ3mD8yEhz3+kTOg3c=
+
+Name: org/eclipse/sapphire/ui/listeners/PropertyEditorListener.class
+SHA-256-Digest: fKHcbOuC9d/ESjl4SU6JKiXfi6Ba/Y27Fr5oxiN82qU=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/NamedValuesPropertyEd
+ itorPresentation$NamedValueLocal.class
+SHA-256-Digest: gV8hsP6oSdhsNJzqDuRlecgc7EVl4/56ua371gSUImY=
+
+Name: org/eclipse/sapphire/ui/diagram/shape/def/BorderRight.png
+SHA-256-Digest: DRQ23lticmNpeApeeKGxAI+EoClFxmSfIuktR14aHNE=
+
+Name: org/eclipse/sapphire/ui/forms/internal/MasterDetailsContentNodeR
+ efMethods.class
+SHA-256-Digest: AG7xgPCBcNCuvnnBanpZaQf49XoRA2PduWixVArmyWQ=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/WithPresentation$1.cl
+ ass
+SHA-256-Digest: pTYmQ8xbimd1CSh3vR9SbSSJR0RRa/eriya40RDOP0I=
+
+Name: org/eclipse/sapphire/ui/diagram/shape/def/SpacerDef.class
+SHA-256-Digest: SyMEirHYwlcX+8ftaGg1Tlc3MSJ9yDQFMHINcl5cm6U=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/TextPart.class
+SHA-256-Digest: 8Fwr0l8q4ZxPx86vC3hofWO2ZPFW17QEMVjm9883kYQ=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/NamedValuesPropertyEd
+ itorPresentation$4.class
+SHA-256-Digest: ws74hhdef2vxqAcQ7lLsQhw63joG/JWE0f8KQGQf0h0=
+
+Name: org/eclipse/sapphire/ui/forms/swt/RadioButtonsGroup$1.class
+SHA-256-Digest: KaHaWxkRQ1mAAjng32PhKHvi+1ml2ZgXA4xrN7kaZds=
+
+Name: org/eclipse/sapphire/ui/forms/internal/OutlineNodeMoveActionHand
+ ler$1.class
+SHA-256-Digest: EtpkfyZ9Hnnn0ZO+ne2ey1mdfGgWTUm+r6ShUvbjfV8=
+
+Name: org/eclipse/sapphire/ui/forms/swt/CheckBoxListPropertyEditorPres
+ entation$EnumFactory.class
+SHA-256-Digest: FVgvONXpCPQGhm546XCbWlIuNsqHiJY/FcB6u3y36hk=
+
+Name: org/eclipse/sapphire/ui/DragAndDropService$DropContext.class
+SHA-256-Digest: Z/93/A+jaJUCsxVOWMvNJkOLEdriqRnH88Ic3zDWCe8=
+
+Name: org/eclipse/sapphire/ui/forms/MasterDetailsContentNodePart$2.cla
+ ss
+SHA-256-Digest: IYpgzAh2Ucx4BzrrySuiWFV3NV46zVHqTYvQSDgoJnU=
+
+Name: org/eclipse/sapphire/ui/forms/swt/MasterDetailsEditorPage$1.clas
+ s
+SHA-256-Digest: aYxYbySO+iCXSScMNePYc66mixdLuKSx9aUhAAof/qQ=
+
+Name: org/eclipse/sapphire/ui/forms/swt/MasterDetailsEditorPage$Conten
+ tOutlineFilteredTree$2.class
+SHA-256-Digest: 4Wv+K4oduyKONP5wn9k5BS1nxKApiGwygMuOTxwFwQY=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/DiagramNodeTemplate$1.cla
+ ss
+SHA-256-Digest: dGe/yaEOFjzJiPgdF1GRMI3bJ0HbSSyMOZ2yXjbeiNA=
+
+Name: org/eclipse/sapphire/ui/forms/ActuatorPart$3.class
+SHA-256-Digest: RlQHC6jQy1YZa3ciP3hWhLm8CimF3DtLjViSePIeFTQ=
+
+Name: org/eclipse/sapphire/ui/diagram/shape/def/Border.png
+SHA-256-Digest: nIRaND8gfopwGLpi+Q+HY3zPJTiOVhFsH2hbvliTV5g=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/text/SapphireFormText
+ $9.class
+SHA-256-Digest: 9JGdQylNqEN0qhyk04ajN2lwrqb4fvsCeU7yz5rbeIE=
+
+Name: org/eclipse/sapphire/ui/SapphireEditor$2.class
+SHA-256-Digest: lDXkJ5LZgRwaQ7EBtfxZawdxW09GDqzDG0DPFIaetvE=
+
+Name: org/eclipse/sapphire/ui/forms/MasterDetailsContentNodeDef.class
+SHA-256-Digest: 5skrrlnQv7+QD9FwsecnV1HMO8r9w68IGwtVTdGx+8o=
+
+Name: org/eclipse/sapphire/ui/diagram/shape/def/RectangleDef.class
+SHA-256-Digest: bwjxwyFdPpo4BuFuMxElTUDms5VTGHQR9IbZvp3e3/8=
+
+Name: org/eclipse/sapphire/ui/util/TopologicalSorter$ExceptionCycleLis
+ tener.class
+SHA-256-Digest: cTkzhe1GadJr8fTfSsmFB4b6eUljSmkgjX8z/kPUYh8=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireMenuActionPresentation
+ $2.class
+SHA-256-Digest: Jq/dqEWH4NvIbrUTBfwi1nXuRR69c6I39eXMtcYdDJs=
+
+Name: org/eclipse/sapphire/ui/forms/SplitFormSectionDef.class
+SHA-256-Digest: CSTah2ckvcgLpFYyqrUx6ecFrHlNrojAlHe/70M1/4Q=
+
+Name: org/eclipse/sapphire/ui/forms/MasterDetailsContentNodePart$NodeF
+ actory$3.class
+SHA-256-Digest: sAj0nikinI/NGji5wtH/i0dUj87Bgde9wNjup7KfLBI=
+
+Name: org/eclipse/sapphire/ui/forms/internal/OutlineNodeShowNextProble
+ mActionHandler.class
+SHA-256-Digest: 1Qo7mSog3hyIb9d39/Iz3SmLaQoi/hzAPxNxcH2GBiA=
+
+Name: org/eclipse/sapphire/ui/forms/ActuatorDef.class
+SHA-256-Digest: 3Ayp5yg/2uSxGFvqtI2NcQvt9XxVumcHkBLTP9IPnA8=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/ImagePart$1.class
+SHA-256-Digest: hLYcHG2p/M/Pi2U47SjvsMWfgUrTDLotQrlAUUxc1Ok=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/NamedValuesPropertyEd
+ itorPresentation.class
+SHA-256-Digest: zpq277NGoajJuNlMEdPi663OfOKP1rYmsFXFrdI+Mek=
+
+Name: org/eclipse/sapphire/ui/forms/WizardPageDef.png
+SHA-256-Digest: EEhGpruE/aF7ZW+0hR4zs9Y/HkrY/+148VFaPMfLYfs=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/SapphireDiagramEditorPage
+ Part$ZoomLevelEvent.class
+SHA-256-Digest: HT2MrcZKo/jpvqRBwvBkMZuebIvGsjfiUDARuivRqOw=
+
+Name: org/eclipse/sapphire/ui/def/Orientation.class
+SHA-256-Digest: AZKPtLNCW2zIKRCdleQrPx8/BePgpNe+qVAkxZu0HlU=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireForm.class
+SHA-256-Digest: C3eKQJpFNR/dBF81k4GN1eOuySLUxcF7LA6TgRZlRkY=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$SelectionBasedActionHandler.class
+SHA-256-Digest: oRLRmS5/W2fKG9Bju1rk4XKzf34RM5p8b9LRL4ZBCnk=
+
+Name: org/eclipse/sapphire/ui/diagram/ConnectionEndpointsEvent.class
+SHA-256-Digest: Zbrp3tNQGHTXAi8vvcxi5UwjtA8TcYuW3JyBY3Sr+3o=
+
+Name: org/eclipse/sapphire/ui/forms/ActuatorPart.class
+SHA-256-Digest: jO1E6ZSQBru8wso8lVHIV6QHufx6QRFF45nvlhWRMy4=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireHotSpotsActionPresenta
+ tion$HotSpot.class
+SHA-256-Digest: eh/Jdr9jYPs9cPeM3ni0+YCWzH5lTbZa8dWSI+5ozP8=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TextCapacityFeedback$Progress.
+ class
+SHA-256-Digest: Buty4lCwdD/EYm4TwAumwdE5udzteai4eJujnfuPZOo=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/PossibleValue$Factory
+ .class
+SHA-256-Digest: JGlDJjUruahCatw84gIgWcEP2geDLQmEspiXrqds2p8=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/ShapeUpdateEvent.class
+SHA-256-Digest: k1y+deayPdHfgsRDO1boubmV7hN9dHjC0Z7153VvTmY=
+
+Name: org/eclipse/sapphire/ui/diagram/internal/DiagramImplicitConnecti
+ onTemplate$DiagramImplicitConnectionTemplateListener.class
+SHA-256-Digest: hfOW+dRVcfuwVSu/ah+2LlSJhRyTxIzheU9PJV8f6Os=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/RestoreDefaultsAction
+ Handler_ru.properties
+SHA-256-Digest: /pqA0bivr3hZLLQMPDpQzbLOH6eCxlYIu+Y+co+idJ4=
+
+Name: org/eclipse/sapphire/ui/assist/internal/RestoreInitialValueActio
+ nsAssistContributor_ru.properties
+SHA-256-Digest: Yaa1UcbWGkrm/8kvn6CLW+meoHGty2ALoD+B3SXfn24=
+
+Name: org/eclipse/sapphire/ui/diagram/shape/def/Separator.png
+SHA-256-Digest: l7TBNS4Xwo0sxgi3n40ZEyDtAO861NLBT7+pOQPdmrM=
+
+Name: org/eclipse/sapphire/ui/forms/DetailSectionPart.class
+SHA-256-Digest: z7MHH5zkDHuZaf3g7dEWAGn2y/tcbJY0zP6w+nEylFI=
+
+Name: org/eclipse/sapphire/ui/forms/PropertiesViewContributorPart.clas
+ s
+SHA-256-Digest: vwWDUC3BkthntMD0ntbPLlxEpoLsqJx5rjf6KD951TA=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/RelativePathJumpActio
+ nHandler.class
+SHA-256-Digest: aUsky7361LfufWCleg3nJBpr/t+DqZYT0mI+vsZ5xAw=
+
+Name: org/eclipse/sapphire/ui/forms/PageBookPart$PageCacheKey.class
+SHA-256-Digest: oEhBBQm8z+GqLE9vmRSg/YJBGMIle/sKW5/wmIHTV78=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/PopUpListFieldCellEdi
+ torPresentation$2.class
+SHA-256-Digest: l2qMrYhtGIpX9MWoAWx4AwHx6pzhS38ew0B/f7sc7XY=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/SapphireToolTip$3.cla
+ ss
+SHA-256-Digest: 7VpvQqJBlZTKgfDAV73MUV6Yo8ev6bmZl4bozoOExT4=
+
+Name: org/eclipse/sapphire/ui/forms/internal/OutlineNodeAddActionHandl
+ erFactory$AbstractActionHandler.class
+SHA-256-Digest: LeAfQNV82FJJIVmkF2LVewajLS6Y9+vIfoB4K9c2xvo=
+
+Name: org/eclipse/sapphire/ui/diagram/shape/def/ShapeFactoryDef.class
+SHA-256-Digest: D9yNH9bSONFbxFQK47Hr9tNz6I+TtVCcauzIvrBzoho=
+
+Name: org/eclipse/sapphire/ui/TextSelectionService.class
+SHA-256-Digest: 0nikEG5/OkmKYFgcUKkqj4irxQg3T56q6Gd/1XPAiS0=
+
+Name: org/eclipse/sapphire/ui/diagram/shape/def/ShapeFactoryDef.png
+SHA-256-Digest: 1zGQYeu9N4UzF0CvM91CBeOXRn80Fg1dqysIZkA3u6s=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireMenuActionPresentation
+ .class
+SHA-256-Digest: qsKACxKPqCZdTsxlN+wn2w4xnGxvqmXMArNP+HLtfcg=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/ShapeDeleteEvent.class
+SHA-256-Digest: O8iNXmtCFj9KXRnO76DGM7GHOL9ooDFclJVwfJBpm0Q=
+
+Name: org/eclipse/sapphire/ui/actions/BrowseMini.png
+SHA-256-Digest: zp0mgvEa9g2TpLmobkIq4H4gngUq/Y8O5fJCPW/Cilo=
+
+Name: org/eclipse/sapphire/ui/diagram/StandardConnectionService$2.clas
+ s
+SHA-256-Digest: WoP7VpoaWksHHYuSDyZvj6dYvFZSdrLQ8D60HuWDpy8=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/CheckBoxGroupProperty
+ EditorPresentation$1.class
+SHA-256-Digest: 0TzZdV/mzZzUozIeLTFa5o06HfKDcwUQ4HzR7mCy7Go=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/DiagramNodePreDeleteEvent
+ .class
+SHA-256-Digest: KpA3lGDYOZOtVwTsisgc5b2v06hFd1YNQ6n9qDTvXnY=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireActionPresentation$2.c
+ lass
+SHA-256-Digest: nni0SyT4ePaB2VEjNTIEN+6nq7UJnVbicCQOWBIGmOg=
+
+Name: org/eclipse/sapphire/ui/forms/FormPart$1.class
+SHA-256-Digest: u426SO8+yqZ8uX0p5j+bFeTveRozfFJodPLFwnDB2e0=
+
+Name: org/eclipse/sapphire/ui/forms/DialogDef.png
+SHA-256-Digest: uCBoQ/lSauAbeOyi/bOhpkklVFARlOl9/zei4Km3AKE=
+
+Name: org/eclipse/sapphire/ui/forms/SectionRef.psd
+SHA-256-Digest: DRDUJrKdv0gfhlb1w3RP34JniDJ3BXlwaL3i5CanCRM=
+
+Name: org/eclipse/sapphire/ui/forms/internal/OutlineNodeAddActionHandl
+ erFactory$AbstractActionHandler$2.class
+SHA-256-Digest: iJ8Njf16tu65E+QVvnR9lXu+9rLcV0VjCEnyhAiGvKE=
+
+Name: org/eclipse/sapphire/ui/diagram/def/ConnectionEndpointType.class
+SHA-256-Digest: PJ+V1zGqWe0QQU8VGya0o0KBIuxFjGxH0wfcsymcfPc=
+
+Name: org/eclipse/sapphire/ui/forms/SeparatorPart$1.class
+SHA-256-Digest: l04iU3oS0YNls8srpeoFTmKmOO0r5jIqhxi0JXzu4mg=
+
+Name: org/eclipse/sapphire/ui/diagram/StandardConnectionService$1.clas
+ s
+SHA-256-Digest: A0CjDgXDUzOC5pgX7O0nz07aHhh6m3aANKIl0gETMiA=
+
+Name: org/eclipse/sapphire/ui/forms/swt/FormEditorPage$1.class
+SHA-256-Digest: g/NGxd+hGtC0GTVaBWEnZV9Y/jhOu7muo0cbM6f4UAk=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SwtUtil$1.class
+SHA-256-Digest: IDo9oq3WY4HGP1PFiUkzYI/DcluTt43ixIJBn63SOCk=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TextCapacityFeedback$Progress$
+ 1.class
+SHA-256-Digest: RxtJTJ4PCIij7nA2ypWmrV+MlOTtq9zMUzq6YVBDlCA=
+
+Name: org/eclipse/sapphire/ui/forms/swt/AbstractSlushBucketPropertyEdi
+ torPresentation.class
+SHA-256-Digest: yiI/z6Y9q/LIm6/KK0W+x5IdknPfLuZ2Ub1Jpzfgxvw=
+
+Name: org/eclipse/sapphire/ui/def/ActionLocationHintBefore.png
+SHA-256-Digest: /lc45QrrooJiNRL+bOgyrtIDZq/wruvmZa/AWbRyINI=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/TabbedPropertyList$To
+ pNavigationElement$2.class
+SHA-256-Digest: /Sm+vBh0l2ekHE01ock+sK6gze2OCFOIu3RANa4T8Xs=
+
+Name: org/eclipse/sapphire/ui/assist/internal/PropertyEditorAssistDeco
+ rator$5.class
+SHA-256-Digest: LpuvrrvN+rn1sy0I+jiI4+N1TuOeBNT/rfzqVCZB52A=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/SpacerPart.class
+SHA-256-Digest: zATCoRHZDUqCb02fKqFpG/qASguE/g5CYWODhnRB6AI=
+
+Name: org/eclipse/sapphire/ui/diagram/layout/DiagramLayoutPersistenceS
+ ervice$DirtyStateEvent.class
+SHA-256-Digest: 5gXpyPrSodUVH4tENAUavyS4dkayEuuVI7/Yhf1m9Rg=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireToolBarActionPresentat
+ ion$2.class
+SHA-256-Digest: 4dlkv/echeedLh4ntaSYnMWRL2XxqcuZIhk9AzzqCnw=
+
+Name: org/eclipse/sapphire/ui/forms/DetailSectionPart$1.class
+SHA-256-Digest: VsRK8X5lQQbmjEBKQSurOYx6kAyuWcFDV5dlSe1BgGY=
+
+Name: org/eclipse/sapphire/ui/forms/swt/RelativePathBrowseActionHandle
+ r$ExtensionBasedViewerFilter.class
+SHA-256-Digest: OGBLxdcvqRB0bMNMXTMLuWY/xTVV7kEI4d4u7vS1QAg=
+
+Name: org/eclipse/sapphire/ui/forms/ProblemsTraversalServiceData.class
+SHA-256-Digest: Y3QEBwsagVBNWBZs//TCesz5Bh7TaeSVmSFSGbvzoI8=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/PossibleValuesBrowseA
+ ctionHandler.class
+SHA-256-Digest: s6gUMJ7nzJHBPqO+wFUKB/J+2KExeLsjSIq0An18alc=
+
+Name: org/eclipse/sapphire/ui/DelayedTasksExecutor.class
+SHA-256-Digest: zrjQJpGUwUjdcXVnwWrFtUqGi/pQdN7cOajSMn0ClTE=
+
+Name: org/eclipse/sapphire/ui/SapphirePart$2$1$2.class
+SHA-256-Digest: NXZloyRO+MpY7rvRLxISLPrUBoT7RsrLWNJevlx2KwM=
+
+Name: org/eclipse/sapphire/ui/def/PartDef.gif
+SHA-256-Digest: LQeXWBac75F8TaydEwUYcoAF3AQYA7Qdd/wnkvrq1VU=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$SelectionProvider.class
+SHA-256-Digest: lhiP7UR2mPHEd9YGvb7O7UPA/n/3yTBtev7Oj9+Yr2k=
+
+Name: org/eclipse/sapphire/ui/diagram/shape/def/BorderComponent.class
+SHA-256-Digest: IEf4jYWz7QOw3BGqTwhkO8FlDanNSiUS7vnBidrdAv0=
+
+Name: org/eclipse/sapphire/ui/forms/internal/OutlineNodeAddActionHandl
+ erFactory$ElementPropertyActionHandler.class
+SHA-256-Digest: fGq8R4lGuYmdJ+dCskcw4EVpqAyPjjFyD9lWU98qH58=
+
+Name: org/eclipse/sapphire/ui/diagram/ConnectionAddEvent.class
+SHA-256-Digest: w+NzZZv9X5k81CQt32OWUiC3GhOXFSYkWF82P8/C33Y=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/text/ObjectSegment.cl
+ ass
+SHA-256-Digest: XTyq/Z/GAX2oNZ08c1E4MdRRtjOb9OGL6cWN3xTlX54=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/SectionPresentation$1
+ .class
+SHA-256-Digest: /Wj9WbSTybevJaV8wxGBDVEYRDZGnI4+ZoIMKNw92m4=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/StaticTextFieldPresen
+ tation.class
+SHA-256-Digest: k3e2EoEj8HwKAiLiCSBAwpEafxhLXW6biMCZde2E3Mc=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SwtResourceCache.class
+SHA-256-Digest: uVxYgDN5gx/qlyQNRG1xCY/gnAbWukQe3jsBchhH7Pg=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/SapphireDiagramEditorPage
+ Part.class
+SHA-256-Digest: OxCKpw11zOXgz06tWLOuYA/ldHuLia/+QcmDaQ+nk/Y=
+
+Name: org/eclipse/sapphire/ui/forms/swt/HelpSystem$DocumentationContex
+ t.class
+SHA-256-Digest: gZWp9xLpx5wwnFV+kBs+JpQxqrhlKUJVcnrjTqdv7n4=
+
+Name: org/eclipse/sapphire/ui/forms/LineSeparatorPart.class
+SHA-256-Digest: AuZXQ+fim0/UGO29szIgNR/mCLDqSZ64qBxjdJd/1tM=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/CheckBoxPropertyEdito
+ rPresentation$3.class
+SHA-256-Digest: b88TAXLj6l0aUN9uXd1UQ6EsNdPleYUblIaxanokT5Y=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireDialog.class
+SHA-256-Digest: am6bnl6TCNYdxeW8trYzzUq/6fc1iKnDc2tUTIEAneU=
+
+Name: org/eclipse/sapphire/ui/assist/PropertyEditorAssistContext.class
+SHA-256-Digest: XRC7utunWq1tKucvYcJoYivG9epGq24FSB6UnZhpfuc=
+
+Name: org/eclipse/sapphire/ui/forms/PropertiesViewPageDef.class
+SHA-256-Digest: tFeh4GxykwIe8m98eBSmP2eEmuzwODGM/NFn5uWtc/Q=
+
+Name: org/eclipse/sapphire/ui/forms/SplitFormDef-Vertical-2.psd
+SHA-256-Digest: 5UZocQn0N6LLbhU3vDkh8bD77GoYc/9t/8JwaAiEoEI=
+
+Name: org/eclipse/sapphire/ui/forms/FormDef.png
+SHA-256-Digest: XJR+34EU4TH7f3arrHJacTRwC4CbytSLzYeIiRpNYuU=
+
+Name: org/eclipse/sapphire/ui/def/IDefinitionReference.class
+SHA-256-Digest: ajcOfXVe2uexZ6deSiY1DRgn+7Q3R3hmGxYvxuoQFrI=
+
+Name: org/eclipse/sapphire/ui/SapphireEditor$3.class
+SHA-256-Digest: yGcPQtOI7vTeaPWzAeGJ0sEuX5n7wAclUuNuBa6rZx0=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireWizardPage$2.class
+SHA-256-Digest: eGT7fITgzuKM/qUvyaGUsOii4VVQZm7gDoUwUf3sPjg=
+
+Name: org/eclipse/sapphire/ui/forms/swt/CompactListPropertyEditorPrese
+ ntation$2.class
+SHA-256-Digest: gUFR0QmOKeJTYs5TLrWyu9b8u3owrddRdTB8rmzU6pA=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/PopUpListFieldPropert
+ yEditorPresentation$3.class
+SHA-256-Digest: ZIbPNYjVHfN7DLRCiWQJFQFmzncCwXJWMEnBg0Prjx4=
+
+Name: org/eclipse/sapphire/ui/forms/PropertyEditorDef.class
+SHA-256-Digest: +einRQqMIzCzG7pnzfdSunzdS8vr2hO1pgOHNZim9mg=
+
+Name: org/eclipse/sapphire/ui/internal/PartValidationFunction$1$1.clas
+ s
+SHA-256-Digest: qzhJfFE0HNeyvIo8vEMWGieaFxnKDx6GcgxgZkz1oJw=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireToolBarActionPresentat
+ ion$3.class
+SHA-256-Digest: ofiQy4DX1IAsOszj9QCY3JzqNqNz3NsTEyUoJya0kzY=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/text/ControlSegment.c
+ lass
+SHA-256-Digest: t2psFcPdo65firWhEVK5KFGM07BjsqeEqdlrJKROTTo=
+
+Name: org/eclipse/sapphire/ui/forms/TabGroupPagePart.class
+SHA-256-Digest: gWIe8S4sBg2v/yFZpGjuEvHaqX/mpMyXMu3CeCzCO/g=
+
+Name: org/eclipse/sapphire/ui/forms/SplitFormDef-Horizontal-3.png
+SHA-256-Digest: r2iz5B/S2yfIsaP0SKiOo6uW1mXHQfztFa702g0fIwg=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SwtResourceCache$ImageHandle.c
+ lass
+SHA-256-Digest: gg/CTOLChaSLUPSx69RdpO3vchHPoAdh+1n7pkcNsb4=
+
+Name: org/eclipse/sapphire/ui/assist/internal/FactsAssistContributor.c
+ lass
+SHA-256-Digest: 2IWQp84YI1Mcd2nJX2Nbmw1FF+O+S1EZ8M6JZLcIB8w=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SwtUtil$2.class
+SHA-256-Digest: KADJ9KC8FK72Zk36SgfP0mzso3HL9Q1lfejdnxjfflQ=
+
+Name: org/eclipse/sapphire/ui/assist/internal/PropertyEditorAssistDial
+ og.class
+SHA-256-Digest: yvwsPNIZTAU6061/DyLGl4V0o8GRsIJMyLgsrRBJNGg=
+
+Name: org/eclipse/sapphire/ui/forms/internal/OutlineExpandAllActionHan
+ dler.class
+SHA-256-Digest: S7urIIFyZYJqpqTyzc+e/yS2qona0TchPBWlr9r2KQ0=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/text/ParagraphSegment
+ .class
+SHA-256-Digest: mPLdW/RNCZjWlV1GdPEp9mIxw4D0MMaTxrfkaTDtwEA=
+
+Name: org/eclipse/sapphire/ui/forms/PropertiesViewContributorDef.class
+SHA-256-Digest: zSLZfjLFuVe+vxG+4KQUchMKmmV+tnBtniKvDgKJyl8=
+
+Name: org/eclipse/sapphire/ui/forms/TextPart.class
+SHA-256-Digest: E0JtHIJTJTOAigQimAPSJvI+M9c7IpnEiWIZkrvGpG0=
+
+Name: org/eclipse/sapphire/ui/forms/ContainerPart.class
+SHA-256-Digest: k8ZHfQFMbYWfFFfeG9lw4ajdVBnVBGQCBZw6zqhO+IY=
+
+Name: org/eclipse/sapphire/ui/diagram/internal/DiagramEmbeddedConnecti
+ onTemplate.class
+SHA-256-Digest: 97QCgVL6mJ32ma4ruxD87sK+b9E7SAeNLRY4BdYtRiU=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireTextCellEditor$3.class
+SHA-256-Digest: UgIav4qQoQX9SaxOQUgXoPYvH8ZyLQcYQ7O9Ocahxc0=
+
+Name: org/eclipse/sapphire/ui/forms/MasterDetailsContentNodePart$6.cla
+ ss
+SHA-256-Digest: lRG57Szcwz8XNW8JZNapmoOlO1hRthfnE6kY1KBBzIc=
+
+Name: org/eclipse/sapphire/ui/actions/Create.png
+SHA-256-Digest: BLlybVt6a30fbro9/NiI9u83ecnIeuDvOY4cgQF+gV4=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TableWrapLayoutUtil.class
+SHA-256-Digest: UCwlt5LVfSYfNnja/71iFdoTIn2+8ry3FjEaCaFpcpI=
+
+Name: org/eclipse/sapphire/ui/ListSelectionService$ListSelectionChange
+ dEvent.class
+SHA-256-Digest: eprvsso088rcm98axTdE2bOVR76V27QEZR94VNtD2LU=
+
+Name: org/eclipse/sapphire/ui/diagram/ConnectionBendpointsEvent.class
+SHA-256-Digest: ZGMB0YJPbd3PTsRsiIIcRfhENk1P7ZREuCwGBDsYLGk=
+
+Name: org/eclipse/sapphire/ui/forms/TabGroupDef.png
+SHA-256-Digest: ofrO42AMDfTSJ+dAFeRzc1JXfyhL8Kv+ZnPf23aiz9I=
+
+Name: org/eclipse/sapphire/ui/forms/MasterDetailsEditorPagePart$Detail
+ sFocusRequested.class
+SHA-256-Digest: lrAS3i+IL/l1iZnM6D4RUrhRvqI8M1SPVd9LmEKJn+M=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/TabGroupPresentation.
+ class
+SHA-256-Digest: zwkOYT9g7IfhnUcf3A+pbQ+aP+BAF3bHgUZbyuXFYuE=
+
+Name: org/eclipse/sapphire/ui/forms/SpacerDef.png
+SHA-256-Digest: 5B++67vErhako1LG2itSmTN8n1hd/yYTmKXz5Su6lF0=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$ColumnHandler.class
+SHA-256-Digest: 4lToqIfQxa/yKMtX49xWpfQNLwXl8ifIqLPAbqqaBd4=
+
+Name: org/eclipse/sapphire/ui/def/PackageRef.png
+SHA-256-Digest: o1GPR1q3+XkHQ5v8UEhEgrY3Vx3TNf68vlckV698Y1o=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/DiagramNodeTemplate.class
+SHA-256-Digest: Gt3Rp6awSYc516qgJjeCFvLLI7cW7qiIhfelV97cVhs=
+
+Name: org/eclipse/sapphire/ui/forms/DetailSectionPart$2$1$1.class
+SHA-256-Digest: khi14k/iRBFcVD92V3Wmkq68Omw7sgqx+TVYw1vSirk=
+
+Name: org/eclipse/sapphire/ui/forms/PageBookDef.class
+SHA-256-Digest: t7mF8HqWgteKhqhM67ezlL5WFSKM3LSU+HcrOgGK8Rc=
+
+Name: org/eclipse/sapphire/ui/SapphireEditorPagePart$PageHeaderTextEve
+ nt.class
+SHA-256-Digest: yyZo+G1QhbGtlDOnpIoI1N+AHJCstUHvbcmpGOAeRPE=
+
+Name: org/eclipse/sapphire/ui/def/ISapphireUiDef.class
+SHA-256-Digest: lMjpr6YbV2+rUmxnCd0n3qYd30ATmb2glF2cNXCyNFU=
+
+Name: org/eclipse/sapphire/ui/diagram/StandardConnectionService$Condit
+ ion.class
+SHA-256-Digest: HGxMWTnsY10Mi1XPczx0PtrwDXNVRSTpWwmi1bl2qJs=
+
+Name: org/eclipse/sapphire/ui/forms/MasterDetailsContentNodeRef.class
+SHA-256-Digest: 4RpbkpCOJpjTggVKG6nS+WvvJejLnjvrtU6VWYkgWxE=
+
+Name: org/eclipse/sapphire/ui/forms/PropertyEditorPart.class
+SHA-256-Digest: PtgpIyJu/0TwofmynHta3GJKDQ9RdxrHG1X9qgldxoI=
+
+Name: org/eclipse/sapphire/ui/util/TopologicalSorter$PrintStreamCycleL
+ istener.class
+SHA-256-Digest: jGrJSzjVLMnWXn7G58E0uQmXVFPk3RkZoKmZR6vpEFM=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/ShapeFactoryPart$5.class
+SHA-256-Digest: hDpleXGePxQud0SjK/szbNrgdbHB0GGTNMDrm4iF01c=
+
+Name: org/eclipse/sapphire/ui/def/ISapphireDocumentationDef.class
+SHA-256-Digest: PB7EsIgdqW/cUdpkdGeCOTX28W6bBK8yIwDTOyt6WbE=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/TabbedPropertyList$5.
+ class
+SHA-256-Digest: YdtnnpiWj8Xp9r2E3CJR1QeEnx097sAwmWCKFSLdHbQ=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/ScalePropertyEditorPr
+ esentation$Factory.class
+SHA-256-Digest: 4c3To0DL6xPQYFP9wdtoOOQZoEaV+KCKQodhx1aKu2E=
+
+Name: org/eclipse/sapphire/ui/forms/internal/SplitFormDefImageService.
+ class
+SHA-256-Digest: rpwpQNrrWCscAI+jQ5agsJt3uPXZWQXjN4g1vWWAvkI=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/ShapeAddEvent.class
+SHA-256-Digest: fLGdj3PeLL0pA0IYeZ7Xigz4evR5o7lqs1grlR00e9o=
+
+Name: org/eclipse/sapphire/ui/assist/internal/InfoSectionAssistContrib
+ utor.class
+SHA-256-Digest: QP+Jqn7qWQ4c6u8Eyi+R0I21nsdx4UOmXjK7cjGXSpU=
+
+Name: org/eclipse/sapphire/ui/forms/DetailSectionDef.class
+SHA-256-Digest: XFm497U7K7YdNbi+yWTRpZopeUYuHZqCACxCyszQNHc=
+
+Name: org/eclipse/sapphire/ui/actions/DeleteBendPoints.png
+SHA-256-Digest: jaPjjud3Jaq45reOa4qtphwBAq2+Bk4OMsBKf77ch2Q=
+
+Name: org/eclipse/sapphire/ui/SapphireActionLocationHint.class
+SHA-256-Digest: n5M0kGhdJ4yHDJjSmqzrAck/mSKW7e4wPYrph5ehmrY=
+
+Name: org/eclipse/sapphire/ui/forms/PropertiesViewPageDef.png
+SHA-256-Digest: Iv0U06cVj+A+pxGf1r4EGXJV+cn2LdL9ZOhPSZfBAI4=
+
+Name: org/eclipse/sapphire/ui/forms/SectionPart$TitleEvent.class
+SHA-256-Digest: kKR8Sl9F2VK8W7XeK5Yu6rFmA99sGBJVfD+BlNTnmQQ=
+
+Name: org/eclipse/sapphire/ui/forms/TabGroupPagePart$1.class
+SHA-256-Digest: K0GRmMqsmE21yPLnJeDRo9lWUJ8qOOqnFOEkaVIcs94=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/ColumnSortComparator.
+ class
+SHA-256-Digest: vQUOeqi9HgVE/9Gkz3xRL4pWCLHxkI53yU0x2Y8qawc=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SlushBucketPropertyEditorPrese
+ ntation$5.class
+SHA-256-Digest: 0JcmhUV8HYfhKnUgBcI1yhdGJZw0jhfvnBcpUYE4qXg=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/ContainerShapePart$1.clas
+ s
+SHA-256-Digest: kT3pQR/mIdBWd1lGp3+mOYuCXyD5Hd5AeXuvU7vmoD0=
+
+Name: org/eclipse/sapphire/ui/forms/swt/MasterDetailsEditorPage$7$1.cl
+ ass
+SHA-256-Digest: 3QR0M6mV0AsYYcHpUF52qV8qRh2eCPQ+2Tqc+JE9R60=
+
+Name: org/eclipse/sapphire/ui/diagram/shape/def/LayoutConstraintDef.cl
+ ass
+SHA-256-Digest: c6godk+MbdDTTUJPOV7h9SCA8gY9cKQKJ4sk9+Ogtdg=
+
+Name: org/eclipse/sapphire/ui/diagram/def/ConnectionServiceType.class
+SHA-256-Digest: ORK4wh+ATcQ3VS44tGmnCKszIxTzJXjKTK6EMs8Bb0A=
+
+Name: org/eclipse/sapphire/ui/forms/PropertyEditorActionHandler$3.clas
+ s
+SHA-256-Digest: 3eejdAUf+EHEKqA8OTLq2fRDccYh2b/pDdUuC/Cqf6w=
+
+Name: org/eclipse/sapphire/ui/forms/HtmlPanelPart.FragmentStyle.css
+SHA-256-Digest: kaGhqDrTia2VrruXeKUEvrx94yJIFj9z7WhMVUpfpPo=
+
+Name: org/eclipse/sapphire/ui/diagram/layout/standard/StandardDiagramL
+ ayoutPersistenceService.class
+SHA-256-Digest: ODnP9uYJ1hya78d60kIewyd7a8+uxGLSADvR1MT/XjM=
+
+Name: org/eclipse/sapphire/ui/SapphireAction$4.class
+SHA-256-Digest: 4DZUmCXWjKl3NIZeph87KCKV4EnQI8KfVY2RtOb2k1M=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/HyperlinkTable$5.clas
+ s
+SHA-256-Digest: c3csPeI8f9hN1E4je+88shuJyJKh6oyFxHQTNHZyGCc=
+
+Name: org/eclipse/sapphire/ui/CorruptedResourceExceptionInterceptorImp
+ l.class
+SHA-256-Digest: uYzB1Zcsh5Y24uQIrqjUuk4LsfUvsGayXWOv4u7FhQA=
+
+Name: org/eclipse/sapphire/ui/forms/ContainerPart$1$1.class
+SHA-256-Digest: e9Iw+v2r5nRuatnOWLnlSmIPtTWWG72njAJpRy+5eRs=
+
+Name: org/eclipse/sapphire/ui/forms/swt/FormComponentPresentation.clas
+ s
+SHA-256-Digest: J1fSR8BqwFEK0WeBqHmU8JFtODqYhfp+laolrF2Cuog=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireForm$1.class
+SHA-256-Digest: AiaIUs7UTsf4ucWkW9y2UW+9QUMLR3/4+uZvQA6RUzU=
+
+Name: org/eclipse/sapphire/ui/diagram/def/ToolPaletteImageDef.class
+SHA-256-Digest: WQ51qwZo99+57+M00HtJG7izuSYmsR30BpPABsz2AOU=
+
+Name: org/eclipse/sapphire/ui/diagram/def/IDiagramConnectionEndpointDe
+ f.class
+SHA-256-Digest: wmR/haH6tp6cZzX7WXW7Z6n5X6plCyPu/xlf8vCtstQ=
+
+Name: org/eclipse/sapphire/ui/diagram/layout/DiagramLayoutPersistenceS
+ ervice$DiagramConnectionInfo.class
+SHA-256-Digest: 3XZAy6CLfSkRpwWUUrz306E/xfc6syJzvxPXV+MOp2k=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/ValidationMarkerPart$2$1.
+ class
+SHA-256-Digest: +8JtgueawrmvmzEj7BhpFOgJMpwAnY1ZgJmS5WERU3Q=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/CheckBoxPropertyEdito
+ rPresentation$2.class
+SHA-256-Digest: VrYTZZ/xX638Z2DgfyOaVxrsG/AVN4TDN0OJ3LjAgG8=
+
+Name: org/eclipse/sapphire/ui/forms/SplitFormDef-Horizontal-3.psd
+SHA-256-Digest: DM2orIdX6DmsWaUldHUK6oguClNC41MDGHW6zqkeaz8=
+
+Name: org/eclipse/sapphire/ui/PartVisibilityEvent.class
+SHA-256-Digest: PlbqKaYTFHYpUyslej3mqQmiMDSZLRIkQWayjTBgGHk=
+
+Name: org/eclipse/sapphire/ui/diagram/internal/StandardEmbeddedConnect
+ ionPart.class
+SHA-256-Digest: jXOY5QXiow4lsu97tOC/5DCwk4xz3syzOOL7n1j3XPo=
+
+Name: org/eclipse/sapphire/ui/forms/CompositePart.class
+SHA-256-Digest: Z71j/Dgy4l0RSNW89gsXZ4Ky5Tsuqz8h/SdkMjdLCGQ=
+
+Name: org/eclipse/sapphire/ui/forms/GroupDef.class
+SHA-256-Digest: +DRPSFVX6QUW2BHaFRZwzp6skYKSoArHLkMgWpEvTfM=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/NodeTemplateVisibilityEve
+ nt.class
+SHA-256-Digest: kf88JpAoHJ0ob25SLcTv8vFPGrFvYeY/2KmHKHliL64=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/PopUpListFieldPropert
+ yEditorPresentation$4.class
+SHA-256-Digest: 2cr8mlFSio7KGKlQZGdm831F+YZoDlHSl8QEwX5ycT0=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/SectionPresentation.c
+ lass
+SHA-256-Digest: 4r4x1NMId2aJNhFOa1DeJrAXa3ITFhmm5tvY36/9mqY=
+
+Name: org/eclipse/sapphire/ui/forms/swt/CompactListPropertyEditorPrese
+ ntation$3.class
+SHA-256-Digest: QNo1tDXBf0gMYDdHqfXMNsfk0BDrT99twc1AteOV018=
+
+Name: org/eclipse/sapphire/ui/internal/StateFunction.class
+SHA-256-Digest: OIalnIwBaqiTCGqsIScgO7wZX/xBPq0Bi2qZrjPYzIQ=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$14.class
+SHA-256-Digest: U5Y9GtmpqJWqP81wVlcib8nI1WOZZUxjQKVwoHPTPQo=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/ValidationMarkerContentEv
+ ent.class
+SHA-256-Digest: iJDIVJz+1lWu+1Qaj/O1lw1z2zM6msBTpnuR7bP4Gn8=
+
+Name: org/eclipse/sapphire/ui/ActuatorActionHandlerEvent.class
+SHA-256-Digest: NHF0GDjGM9bszQvwNB/wRadc9MsazskqtQJak0+CozA=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$11.class
+SHA-256-Digest: 4BnEL+huigwYOGNGe+B7p3iespdUG4t4AbLamhiWOwg=
+
+Name: org/eclipse/sapphire/ui/forms/internal/OutlineNodeDeleteActionHa
+ ndler.class
+SHA-256-Digest: W+gh5iGU0zN9QsrlzXQ1FilCmFKxoC5NRQzzD1DMkNI=
+
+Name: org/eclipse/sapphire/ui/forms/SplitFormDef-Horizontal-2.png
+SHA-256-Digest: Stvft08uH6zOnzMewinQ8a7A7IFBkR+Uc4pbE1su9Gw=
+
+Name: org/eclipse/sapphire/ui/def/KeyBindingBehavior.class
+SHA-256-Digest: 1rk6r5/8yecaj1QVwUk4nupaEhx7KR0Uyb0YYuepFZY=
+
+Name: org/eclipse/sapphire/ui/forms/TabGroupDef.class
+SHA-256-Digest: J7e9OYdnoheUPGePJX2PqU5M0iijg+gEMOBJC/jBiUQ=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireWizardPage.class
+SHA-256-Digest: qPNR94oQ2XSrgOLMh+alTgwH4yyM1JvuGdu53vpjMFA=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/TabbedPropertyList$Li
+ stElement$4.class
+SHA-256-Digest: DSBGOKfHrQl/v2OMgaijtzS6/mV+XqKfWOkNU0EZMDI=
+
+Name: org/eclipse/sapphire/ui/SapphireAction$TypeChangedEvent.class
+SHA-256-Digest: nNdNFYNJCA0NeXbsIIxvyh33HH/vfFK9ih6i4tCdRvw=
+
+Name: org/eclipse/sapphire/ui/SapphireAction$FiltersChangedEvent.class
+SHA-256-Digest: AxwV6khnYO5xW5XHAWpsqE9uQic332fAC4laF0Y5xSo=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/text/BulletParagraph.
+ class
+SHA-256-Digest: /7oWmNu97GmctOY5YXIJpUgyT2tx6vBLGik9lFU82gc=
+
+Name: org/eclipse/sapphire/ui/forms/swt/CheckBoxOn.gif
+SHA-256-Digest: JQOuyIYp1UAXEvj42gjO4KcM7T9tNOuhqRSOhH0QxXw=
+
+Name: org/eclipse/sapphire/ui/forms/internal/OutlineNodeShowInSourceAc
+ tionHandler.class
+SHA-256-Digest: huDxJtSUGHTf3Q9FSMpJze6FSZZ0iK93RBxhj1V4xRY=
+
+Name: org/eclipse/sapphire/ui/diagram/internal/DiagramImplicitConnecti
+ onTemplate.class
+SHA-256-Digest: QHdgYh5D8KtBNnApnzpQqtZVSFn41njFK9w3qJTtI2w=
+
+Name: org/eclipse/sapphire/ui/forms/ActuatorPart$EnablementChangedEven
+ t.class
+SHA-256-Digest: N07RuH0CAkHPBD9nzaSkcejMBYU2aTfkMsldRMt0zi0=
+
+Name: org/eclipse/sapphire/ui/forms/swt/ListPropertyEditorPresentation
+ $2.class
+SHA-256-Digest: 4tYO6XrRYH9Bv6vXACFaaK2nIEf6DSrst5dtUoRbT9g=
+
+Name: org/eclipse/sapphire/ui/SapphirePart$3.class
+SHA-256-Digest: s445jVBcSTg2O1qnwfJpsRG1ixzSOlECQqs8YC3bSaU=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/PageBookCasePresentat
+ ion_ru.properties
+SHA-256-Digest: NcVTZUcvs5WEBE5pd9PDBDXkCn14eREstBtSZyteYi4=
+
+Name: org/eclipse/sapphire/ui/assist/PropertyEditorAssistContributor.c
+ lass
+SHA-256-Digest: iCDBpFUmiIJDoQnPLS/Sj2Ujpnxt6RhAx64brSQrYGY=
+
+Name: org/eclipse/sapphire/ui/forms/MasterDetailsContentNodeFactoryCas
+ eDef.png
+SHA-256-Digest: 5qI+o2Jl35R4yDRTvDb57hssBC7YEuFGNwX0sUivKcw=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$MoveUpActionHandler.class
+SHA-256-Digest: yPw36sx20slZNApfU45Ha1hwbSZnM25cZxy3VNrkmIo=
+
+Name: org/eclipse/sapphire/ui/forms/FormDef.psd
+SHA-256-Digest: z8A7ceqSEvXpcW+Qekj3r6IXKmOBLVWzt1OuCq/4BQ4=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/ContainerShapePart$6.clas
+ s
+SHA-256-Digest: 8sX0Zns7ytqSR17qpy3kbg2nabcP+LKj7g3REuPXyTI=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireActionPresentation.cla
+ ss
+SHA-256-Digest: E1ilt0fu1APc3tEhnUMigz5fBYJcrIAqXebUX9tFiFk=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/text/SelectionData.cl
+ ass
+SHA-256-Digest: a8oivR49kzPYiBWoHTtjYHetdSYGkHkYB6r/ajj1AlM=
+
+Name: org/eclipse/sapphire/ui/diagram/internal/StandardImplicitConnect
+ ionPart.class
+SHA-256-Digest: EMxaUWxZbBN6ohVXGK31XNQSQ0m1Zw1dtYxdChapXQ8=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireToolBarActionPresentat
+ ion$7.class
+SHA-256-Digest: 6XdJBKXEK/JYZ2k88+a8k61rGJ32cF7P3JZvt6XPcpk=
+
+Name: org/eclipse/sapphire/ui/forms/internal/OutlineNodeAddActionHandl
+ erFactory$4.class
+SHA-256-Digest: uQtWIVqfbqj0LS6H7p7VNSNi+MZuT/S0pNpunuv9Rt4=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/SapphirePropertySheet
+ Page.class
+SHA-256-Digest: 253H/WHV4378a5aMUeeFKn9F9YoB8PaSN43xUmZwJic=
+
+Name: org/eclipse/sapphire/ui/diagram/def/LayoutPersistence.class
+SHA-256-Digest: iWL9wv9A01wBHibmpDWnW38bEp08E8mefW5xeIcZGNM=
+
+Name: org/eclipse/sapphire/ui/forms/swt/CheckBoxListPropertyEditorPres
+ entation.class
+SHA-256-Digest: AZeYMIFyI/c7GOUNJDSSO5MEDqNWuUiahMUl/h4sNvg=
+
+Name: org/eclipse/sapphire/ui/forms/swt/AbstractSlushBucketPropertyEdi
+ torPresentation$2.class
+SHA-256-Digest: 1/kax/g5twB60o8aLt51M4oxOQvJXDCcvDcn0BTO5vg=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/ColorBrowseActionHand
+ ler.class
+SHA-256-Digest: rDUaxS5s0+E5prJcvpAFIF0fIPBjvbQup8hoQNMTio4=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/ContainerShapePart$4.clas
+ s
+SHA-256-Digest: oUieoD/JkI4tM7MwWf6dI0Zo+qCUKbpSScpEWN29yQ4=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$DefaultColumnLabelProvider.class
+SHA-256-Digest: gb1J6k2pTiz+qG4Il0Wy3OFJx4SvEw+k2xqs0dOXVzg=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/HelpActionHandler.cla
+ ss
+SHA-256-Digest: GyzHq/FuofO8sc5sEMtxIggAWUkZW88++Mwxs2zuuos=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/TabbedPropertyList$1.
+ class
+SHA-256-Digest: +PC+EXZ6FXdqtGvr0wfAIRuppdttOVhoQdnAWXNLQJk=
+
+Name: org/eclipse/sapphire/ui/forms/PropertiesViewPageDef.psd
+SHA-256-Digest: oRclK+ksfekdJYXQUBwczTIqXx2xtHhNFNyh2tyIMNA=
+
+Name: org/eclipse/sapphire/ui/actions/Browse.png
+SHA-256-Digest: yh5hhEdaDwDG1Zk0MncSlwvcv/p9/i34t4Z4YblsRy4=
+
+Name: org/eclipse/sapphire/ui/assist/internal/RestoreInitialValueActio
+ nsAssistContributor.class
+SHA-256-Digest: MXepuej0fb45URtjWaTkIZc7bb0BVjjNgCoH5ese544=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/ShapePart.class
+SHA-256-Digest: XZMlqTD9Y8egfeJxuMTA+3vTjRTKr5pbucbb65F76G0=
+
+Name: org/eclipse/sapphire/ui/diagram/actions/ToggleDiagramGuidesActio
+ nHandler.class
+SHA-256-Digest: oUnSKTVgy6ldgN5vx2coq3Sgzjq3U5gz1GQKzoiJXS4=
+
+Name: org/eclipse/sapphire/ui/forms/WizardPart$1.class
+SHA-256-Digest: +EnM9qdfhBWImNK44t9S6pEmm/WyMyhb/e9LorlCJhs=
+
+Name: org/eclipse/sapphire/ui/SapphireEditorPagePart$SelectionChangedE
+ vent.class
+SHA-256-Digest: Di2u+WcLsRxrdHXifW3spAngs+QzmCQ7hMYZRzzuiLg=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/TabbedPropertyList$Bo
+ ttomNavigationElement$1.class
+SHA-256-Digest: YurGKugtTYDc0vFUU73H5dI5ZbGH6jwypTtFgIacWcg=
+
+Name: org/eclipse/sapphire/ui/SapphireAction$1.class
+SHA-256-Digest: d8hNNawGNlAbx+28Ms/CbOslna/KPcg9WOvE4PQC4aA=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/HyperlinkTable$2.clas
+ s
+SHA-256-Digest: OrnskpCVveXpK3jXQEsA4+WCVbsnKbCMqIgSp84CreE=
+
+Name: org/eclipse/sapphire/ui/forms/swt/RelativePathBrowseActionHandle
+ r$FileSystemNode.class
+SHA-256-Digest: fucmCT8LwHg2EguOp1cobS0Q9KUbqPfN5p5mtQvV72g=
+
+Name: org/eclipse/sapphire/ui/forms/swt/Popup.class
+SHA-256-Digest: f7rvWFfNOlmeZe0QMDc21H48RuDorQz7dFuqWgJSy7Q=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/text/TextSegment$Area
+ Rectangle.class
+SHA-256-Digest: XJms8pJTmu+FWbhkNoUrLm36AbfrX8Rjfe3FzACqlqw=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireToolBarActionPresentat
+ ion$8.class
+SHA-256-Digest: /LPLPFQgm3BM/TQexKKxgNYAcVTOAu1W4H53R7PYY7E=
+
+Name: org/eclipse/sapphire/ui/diagram/shape/def/ShapeFactoryCaseDef.pn
+ g
+SHA-256-Digest: 5qI+o2Jl35R4yDRTvDb57hssBC7YEuFGNwX0sUivKcw=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphirePreferencePage.class
+SHA-256-Digest: MTcGKzgTAvTpRrHTpVRAgw6M80Qk4fpydP8aOyvSGpQ=
+
+Name: org/eclipse/sapphire/ui/SapphireActionSystemPart.class
+SHA-256-Digest: IVEokcLQnDcQdnOU9M+m6fhRNws4jvQq0oLTMf/dwF4=
+
+Name: org/eclipse/sapphire/ui/forms/swt/MasterDetailsEditorPage.class
+SHA-256-Digest: yv+gbjrV6Kt0RgkMZQkfGtDEcmqo1BdD9oxGzozpNbM=
+
+Name: org/eclipse/sapphire/ui/SapphirePart$2$1$1.class
+SHA-256-Digest: 8jYrKD0WKN45rJz5j5BYMjK51e8CHTQrjQJZM01iwdQ=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireTextCellEditor$CustomA
+ ctionsPresentation$4.class
+SHA-256-Digest: DLLoYu2uGFei/jk0b9TWp7P5f/Y4iq7qkvsg0bDvCZ0=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/DiagramNodeAddEvent.class
+SHA-256-Digest: aGdVMu4RkQMouRc7wjGRWwHFx0ZnHhbeGcdsngItw3c=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/HyperlinkTable$9$1.cl
+ ass
+SHA-256-Digest: bWA52K5VCs6K83T6YQADaNv7zZtixPMiWg4HDVCse6g=
+
+Name: org/eclipse/sapphire/ui/SapphirePart.class
+SHA-256-Digest: y54RLU71ZivjEFlG3epVro1H7bH2c6fwM2oaqBnTnJs=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/PopUpListFieldStyle.c
+ lass
+SHA-256-Digest: B7CifpiTwu+sVPh+GUIupYu4WCchZ4Sqn9YSUQDpJm0=
+
+Name: org/eclipse/sapphire/ui/assist/internal/ResetActionsAssistContri
+ butor_ru.properties
+SHA-256-Digest: SOmSrCRWPls1azvbviVxrmkcZPksPdZwc2WMMr3+CCU=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/TabbedPropertyList$Li
+ stElement$3.class
+SHA-256-Digest: 4PSfcOmQ9rasT/qSZr6RnGZrUbSPRWZDREKyET0g/c4=
+
+Name: org/eclipse/sapphire/ui/assist/internal/PropertyEditorAssistDeco
+ rator$4$1.class
+SHA-256-Digest: Nj6iZx5JYGLKXoM71AFDoptwwSBkBY6zkCA7T7v4E8o=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/CalendarBrowseActionH
+ andler.class
+SHA-256-Digest: 2yTMk9asZE4s9/fUdOM+czgq0UnUP/Jw4mAuhgpmKXI=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/TabbedPropertyList$Bo
+ ttomNavigationElement$2.class
+SHA-256-Digest: RpuV0Oil6KFuHMzMpsbp1Bkh95ietCnqHDPt1bGZbw0=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/PopUpListFieldPropert
+ yEditorPresentation.class
+SHA-256-Digest: m4TxJQR/QogFLN7C/dN+vFvjAcPL03Spd2d7Mczku2U=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SlushBucketPropertyEditorPrese
+ ntation$8.class
+SHA-256-Digest: /jBq7Cm1oyHSuZU0ymyfk6K8etHPy1oZ1caKqKUOwSQ=
+
+Name: org/eclipse/sapphire/ui/TextSelectionService$TextSelectionEvent.
+ class
+SHA-256-Digest: pyoZQQkzhc1iRbxNeThp2F7OGCK0FLn9OohL8t859yY=
+
+Name: org/eclipse/sapphire/ui/def/HtmlContentSourceType.class
+SHA-256-Digest: KFUOOrZ7VEM+IbUsYagpHWYb334Bf3OOxHW1HRpI7Rs=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireMenuActionPresentation
+ $3.class
+SHA-256-Digest: HIfUyxtwdZ7491YZxrK3xHLqzDbDpAC+f7HTqCSJHVs=
+
+Name: org/eclipse/sapphire/ui/SapphireExtensionSystem.class
+SHA-256-Digest: VQeCG2MCGe/eJ73WjyY0gaAICOt28gCmG7Fnv59wzYM=
+
+Name: org/eclipse/sapphire/ui/diagram/internal/DiagramConnectionTempla
+ te$ConnectionType.class
+SHA-256-Digest: jZju1BNxU9CiiskGq+vc1tXRYRQA8t2R0VrAyq8NFF8=
+
+Name: org/eclipse/sapphire/ui/diagram/actions/ZoomActualDiagramActionH
+ andler$1.class
+SHA-256-Digest: /DaKxSngz2NRux4ioDZ7WegRYg6h47VjxTjxvDoel6E=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/ShapeFactoryPart$7.class
+SHA-256-Digest: soojYRutI1j2G/oo3cW7lit9e42HqcDnfTR0A4HsPOQ=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$8.class
+SHA-256-Digest: uuQk4mu1RQwOUWiu44KY1fN7OwKzYWR3zLK6WurAMQk=
+
+Name: org/eclipse/sapphire/ui/diagram/actions/DiagramDeleteActionHandl
+ er$1.class
+SHA-256-Digest: aT7+90Qa320J/Oh8yG2ouOpT4phUpexzk9IpuTf86YY=
+
+Name: org/eclipse/sapphire/ui/forms/WithPart$Style.class
+SHA-256-Digest: MG/x5B3tyVhkOhTp+kKZJwjLEv4VQU1Nm8ZntdJAEQA=
+
+Name: org/eclipse/sapphire/ui/forms/swt/MasterDetailsEditorPage$Conten
+ tOutlineFilteredTree$1.class
+SHA-256-Digest: X5enj5Gn+/sRXMJ/qvNXe/oSEtBOmSE7iWM9yd8gCm4=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireActionPresentation$1.c
+ lass
+SHA-256-Digest: b4BpjVQf2GRqwXNE5p1Ne50qtLgY6nMiVOdD7Up7sFI=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/RestoreDefaultsAction
+ HandlerCondition.class
+SHA-256-Digest: 5E7yQoE8zNZxlj7DuqfGVAo+HPrz046ji5T7UWP2gl4=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/RelativePathJumpActio
+ nHandlerCondition.class
+SHA-256-Digest: bnWDEJFaP+kuUjV5Hj2TNQv7NFsg2Vhuu1xeVYw32Ng=
+
+Name: org/eclipse/sapphire/ui/def/internal/SapphireUiDefMethods.class
+SHA-256-Digest: q+Nlj1ArXGi4m5xiGv4pSM31bQDJRiaCO+dFPKIxk8E=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/text/ImageHyperlinkSe
+ gment.class
+SHA-256-Digest: G7QW48BuH7cr2eWMrlc1CXZx6HUhfCMrJHFPmblYy+A=
+
+Name: org/eclipse/sapphire/ui/SapphireActionSystem$2.class
+SHA-256-Digest: aNHFsEkOwIbrL9Y8QCwgu/UhMXtVYYeyk6t+Lf5DJrE=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireToolBarManagerActionPr
+ esentation.class
+SHA-256-Digest: M6PMwI0lAlk0hBtCryc/baIx56/zM+BvFI6gFm0fztc=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireToolBarManagerActionPr
+ esentation$ToolBarContribution.class
+SHA-256-Digest: Ke0XZg49ivKHnBc0EFEWu52J5PDX6mxBcIPsOpK2Ua8=
+
+Name: org/eclipse/sapphire/ui/SapphirePart$1.class
+SHA-256-Digest: w6sSP78PsDKAHpG0KoRpq5TjE6IE9W2zZb+TOzbqvdo=
+
+Name: org/eclipse/sapphire/ui/diagram/actions/ZoomActualDiagramActionH
+ andler.class
+SHA-256-Digest: OMyIWAXI+xlXZCv7PkHLZVCg2nHUAxy3jWYYbmtDUJw=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/PopUpListFieldCellEdi
+ torPresentation.class
+SHA-256-Digest: 4/C+/UADIeFTwpvoMOaIZh3QqWsIL0DeJ1069jV6V3w=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/HyperlinkTable$7.clas
+ s
+SHA-256-Digest: BKQ0IMt/UYBflrTxaUJLKJqRO8UHTsfg9UWu75cSf7E=
+
+Name: org/eclipse/sapphire/ui/forms/internal/OutlineNodeAddActionHandl
+ erFactory.class
+SHA-256-Digest: H0GSTU/dBl9duOCuY9lrBlClz7KewIjoP6yGZ6hS7rw=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$Factory.class
+SHA-256-Digest: sz0eSDXEKrNbYvAcnhbFT0aBQfCoYdl2KkND8n5mKFc=
+
+Name: org/eclipse/sapphire/ui/SapphireAction.class
+SHA-256-Digest: 6YQvBlp9DpTCI01iG2T5e3gVZjfpwaFzRG/wSXrqunw=
+
+Name: org/eclipse/sapphire/ui/forms/LeafNode.png
+SHA-256-Digest: zCqId+8dcP+nTRgt+78TG7OtZR95eE5VTXfsgr1IGQ0=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/TabbedPropertyList$2.
+ class
+SHA-256-Digest: D08w5riKDrnwt+KRrhVXDZJa0QnVZgXAbyrU1bRwNNk=
+
+Name: org/eclipse/sapphire/ui/diagram/layout/DiagramLayoutPersistenceS
+ ervice.class
+SHA-256-Digest: /3m6Yxlk/o8MLY3CP7L7j4kJcb/YryTkI8SmZFPYlP4=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/HtmlPanelPresentation
+ .class
+SHA-256-Digest: ndHguHw4mx/wNRZav9x4el35kTlSMvtkPm8G87k34Gs=
+
+Name: org/eclipse/sapphire/ui/forms/swt/CompactListPropertyEditorPrese
+ ntation.class
+SHA-256-Digest: mpX4IFY/rn7tslgq7ElXGbWRz5/uQ6YMO9en5jfJfBU=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireKeyboardActionPresenta
+ tion.class
+SHA-256-Digest: 6khuIHpdb1gYx+jK6F445IQhPXJwDo3jlhdyNXp5ytI=
+
+Name: org/eclipse/sapphire/ui/diagram/shape/def/ShapeLayoutDef.png
+SHA-256-Digest: jv/IjCB6omvAmTRxyVazgnfCVk+w9VB0KMQ13AxjnaE=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SwtPresentation.class
+SHA-256-Digest: GLibqIayUd0LTAahutzlFszE/QuEcqpDpO4OUF8gSko=
+
+Name: org/eclipse/sapphire/ui/SapphirePart$1$1.class
+SHA-256-Digest: nKZT6bdO4meA1C29Fm130lgPbwKtT9QTOhS2nHsLquk=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SlushBucketPropertyEditorPrese
+ ntation$3.class
+SHA-256-Digest: MCs0krqMEgEHyEBWvgl9xwTUp9SULougenqYOEMB9M8=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/text/ImageSegment.cla
+ ss
+SHA-256-Digest: OrIXykE81DpdKbAiVEgFOuebUetbYqSS6ZSuXIznv+A=
+
+Name: org/eclipse/sapphire/ui/forms/swt/CheckBoxListPropertyEditorPres
+ entation$Entry$1.class
+SHA-256-Digest: RqCXk7apGQ+Gc1R4qAo3pruQGLdmr6HIN7sGCr6iIcY=
+
+Name: org/eclipse/sapphire/ui/forms/swt/MasterDetailsEditorPage$Detail
+ sSection$1.class
+SHA-256-Digest: mCWGuTjsVx58LcP1wz/2bfrtYXSoz7FqePoQNiwoZ0g=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$AddActionHandler.class
+SHA-256-Digest: 2NsFuczvmIwSEpBvqThEs8mMUFu+VlqeKYT0bwZoZtw=
+
+Name: org/eclipse/sapphire/ui/actions/ZoomActual.gif
+SHA-256-Digest: KUiTo/zEEoyYNwcWaqgsxGt1I3o9DTR9J6S0QyO3/FI=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/TextPart$2$1.class
+SHA-256-Digest: 8vMOxnJNonpJM+Ej1i7PM/Vjs0jlVeEL/930QdvEbrA=
+
+Name: org/eclipse/sapphire/ui/assist/internal/ResetActionsAssistContri
+ butor$2.class
+SHA-256-Digest: FYorY2s3cE8I52ZCNOCm6WSRhCnZ/4/EP1hBglI+mO8=
+
+Name: org/eclipse/sapphire/ui/SapphireEditor$1.class
+SHA-256-Digest: kFK7+tBhF6hvS+vtLf7yyfpO/YtTTLnUZWR/47pKcLs=
+
+Name: org/eclipse/sapphire/ui/assist/internal/ProblemsSectionAssistCon
+ tributor_ru.properties
+SHA-256-Digest: fEO/Tzm8OJJzeQFIA7YYZQh+uiJxcSxlMu26YfWOTng=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/text/ILayoutExtension
+ .class
+SHA-256-Digest: 5z2UZ1uLPLvpKU4lgqsPIhnY51OR8GnnLAxwvH39klE=
+
+Name: org/eclipse/sapphire/ui/forms/PageBookPart$1$1.class
+SHA-256-Digest: 2xePM2anhCyvSwUJLfHvLP7JYByV6Wi5Uvb3XyJoOWs=
+
+Name: org/eclipse/sapphire/ui/forms/swt/MasterDetailsEditorPage$2.clas
+ s
+SHA-256-Digest: 4Js+0lgKcKmPC23Qqs4qITC1wEA09xGL4itBBmq2omc=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$3.class
+SHA-256-Digest: 3goAjx37rDudD3O0q77wS3ob2HFU88gBuRyXg6XrlQw=
+
+Name: org/eclipse/sapphire/ui/def/ActionLocationHintAfter.png
+SHA-256-Digest: OiurkrFGk3BpZlZlHmhy/frRjsr6Jfl1kGt8RubFzAw=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/CheckBoxPropertyEdito
+ rPresentation$1.class
+SHA-256-Digest: HlEOQTLqx4bok4wn/R4gETHclNA8IDogY/qgJJgoYW8=
+
+Name: org/eclipse/sapphire/ui/forms/swt/CompactListPropertyEditorPrese
+ ntation$TextBinding.class
+SHA-256-Digest: IIDzfbyRh+Jnrb/BbRDlKJx4lQw94ksgowp4H7Bg8yw=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/SpacerPresentation.cl
+ ass
+SHA-256-Digest: w7xRWljpKPdDxQ57VNYORNa3kCd7vlTJy5rl6bXFbEk=
+
+Name: org/eclipse/sapphire/ui/diagram/shape/def/ContainerShapeDef.clas
+ s
+SHA-256-Digest: 7QFcQV12EohqlcHeyNRPD1zE48q0Iw0LwDYwzrJO5rY=
+
+Name: org/eclipse/sapphire/ui/diagram/actions/DiagramNodeAddShapeFacto
+ ry.class
+SHA-256-Digest: KF8qxLqZNVtSLBDaGQDo1zohL2TsCIxCeH0PBjIcTEU=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/TextOverlayPainter$1.
+ class
+SHA-256-Digest: CBzy7300h87nXJqjV8ZpgNyed1NLoHHyyTKyGcJDM8Y=
+
+Name: org/eclipse/sapphire/ui/def/ActionLocationHintBefore.class
+SHA-256-Digest: Ew3Cch7H9v7dxHBOFiQhDp4RucI2cl/NNG/L8dUir94=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/CalendarBrowseActionH
+ andler$1.class
+SHA-256-Digest: xlWvleEAQLCHfdjCYzWDS6VmpuJX03Oj+FOhRiKG5Zw=
+
+Name: org/eclipse/sapphire/ui/Presentation.class
+SHA-256-Digest: 6etRnCMEN5Ece56+Uo72Mdrp22uJo2quJC9dbDQ/jSI=
+
+Name: org/eclipse/sapphire/ui/def/internal/SectionDefLabelDefaultValue
+ Provider.class
+SHA-256-Digest: 0An2r2o9qugDmWi4iSrgjSmblh9rdM/AIU3Do5xUPw4=
+
+Name: org/eclipse/sapphire/ui/diagram/def/IDiagramDimension.class
+SHA-256-Digest: dnXev41QFlF1UhBrgwIhgwWqRXm9LVOtwQu9GoMcGKs=
+
+Name: org/eclipse/sapphire/ui/diagram/shape/def/LineShapeHorizontal.pn
+ g
+SHA-256-Digest: PvVHG61gaaPn3fEpVtt0GqE4OpAPJ9I/4s/Dau0B7po=
+
+Name: org/eclipse/sapphire/ui/def/internal/SapphireActionHandlerFactor
+ yDefMethods.class
+SHA-256-Digest: RCHfJnp9SKxEFoR3MCvvmBgvuCupgCZulqdqvyyiLcQ=
+
+Name: org/eclipse/sapphire/ui/def/ISapphireDocumentation.class
+SHA-256-Digest: M3saROkcSj1XNDqs7pW2GlzQm0fw9uIJxW6Wd0CuEdE=
+
+Name: org/eclipse/sapphire/ui/forms/swt/MasterDetailsEditorPage$12.cla
+ ss
+SHA-256-Digest: 9l3kEoAJecfxMmUQT7affEywapZY2VPm5ivyTEPklVU=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/ActuatorLinkPresentat
+ ion$2.class
+SHA-256-Digest: 5KKXkc6MZrN37s1gTkE0YOIUPk5k5RlKVOaBiiLu7CE=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/RelativePathBrowseAct
+ ionHandlerCondition.class
+SHA-256-Digest: PeuZgT/u6hrBn27ncZJ3erVHKWQ1cJKlp+Y29DIwf2Q=
+
+Name: org/eclipse/sapphire/ui/forms/swt/PropertyEditorPresentation$9.c
+ lass
+SHA-256-Digest: w9yl2G+9ZqonNzf8KYQE7bhjAnCQ0VLULIcWmpSM/3E=
+
+Name: org/eclipse/sapphire/ui/forms/WizardPagePart$1.class
+SHA-256-Digest: M+JoDHiLQEaPM+xWySGhMqffjAiDbn74QWufiLK8obo=
+
+Name: org/eclipse/sapphire/ui/forms/internal/OutlineNodeShowNextProble
+ mActionHandler$2.class
+SHA-256-Digest: WV38SIy4dFe7mvrirXFHP7X8TbNib/A0XftDABNugCQ=
+
+Name: org/eclipse/sapphire/ui/assist/AssistFaint.png
+SHA-256-Digest: 4qC4p8xjWcdxyMenvxx5pVg72IUchwzTgCUe1AvdJbc=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/RestoreDefaultsAction
+ Handler$PromptDialog$2.class
+SHA-256-Digest: vq+BdI4y2H00UC/Oe1b5XFiOndk2zOmOCi1p78tEK+0=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$16.class
+SHA-256-Digest: 2yPfiWnc7vqxd4AkYva0mglX+kC5uR0MFCng2N3VdMk=
+
+Name: org/eclipse/sapphire/ui/forms/swt/CheckBoxListPropertyEditorPres
+ entation$5.class
+SHA-256-Digest: +bLp6lElLqREik2n9UDgAsZ9Vpx7iN9gEwAAcGV+syA=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/DiagramNodePart$3.class
+SHA-256-Digest: edhFB5ZPVM/urWyNW+idJUMs9FHeHNukQyuB20WLIw8=
+
+Name: org/eclipse/sapphire/ui/forms/swt/PropertyEditorPresentation$2.c
+ lass
+SHA-256-Digest: ZbEd3TFrDdOljBquT2esSNnLmKNYai203orMAYtBQNI=
+
+Name: org/eclipse/sapphire/ui/forms/WizardPart.class
+SHA-256-Digest: dbgYyyVgyiJoJ1cV6BAXv2Qz0crLMqi/1cf5vNSXDoU=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/ActuatorPresentation.
+ class
+SHA-256-Digest: a4eeeL8t4s4Uftgcg/NJnJmQ+3aVxEBNeckSIeHVqjM=
+
+Name: org/eclipse/sapphire/ui/forms/swt/ActionSystemPartBridge.class
+SHA-256-Digest: OBgT4HCql5vI7gpbz8aPmW+3H2pBmZUjSraESAkhRBU=
+
+Name: META-INF/sapphire-extension.properties
+SHA-256-Digest: mII+JUxCv+D8188PA/luZxgPgQfrB+y8/xrUPxnrtNc=
+
+Name: org/eclipse/sapphire/ui/actions/MoveLeft.png
+SHA-256-Digest: iTatdzhjn6SrTOUJH2RZ4Iz5QUqGa5Lp84QkEq9ULiY=
+
+Name: org/eclipse/sapphire/ui/forms/PageBookCasePart.class
+SHA-256-Digest: pbUdtqTiN3wLQqwmfDyrdpJc49RKOGlj8716jOL55pU=
+
+Name: org/eclipse/sapphire/ui/forms/PropertyEditorPart$3.class
+SHA-256-Digest: ENHIITVhOs2lXlmiN2hgsXPq+kCULrQY88LbfwF/f1E=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/text/SapphireFormText
+ $FormTextLayout.class
+SHA-256-Digest: 5q7E2dfN5vgVYAMvQW9ilCpelmCJ2zEwU99DwaNnwn0=
+
+Name: org/eclipse/sapphire/ui/diagram/actions/DiagramDeleteActionHandl
+ er.class
+SHA-256-Digest: EfOaz43FeazpXpSfgwKv1Atuwm0VJ1vR6SvHDURlOwQ=
+
+Name: org/eclipse/sapphire/ui/diagram/shape/def/SpacerDef.png
+SHA-256-Digest: T8bp+Gl6s+YobGH8z2u4YnallMsP7t7XCrJDcVwi64I=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/TextFieldBinding$1.cl
+ ass
+SHA-256-Digest: 9DKXrfIncy3BsvhixBt8PqdGRXJ1HDptb6CLOdBOU+Y=
+
+Name: org/eclipse/sapphire/ui/forms/CompositeDef.class
+SHA-256-Digest: Cl+AELoQbv3WG702cXMEtN18gAcP8JYnvV7DbXmu5Hk=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/SapphireToolTip.class
+SHA-256-Digest: MSTFfg8sZ+Xk/UDX/e02vUKFQFLK2CFBPItgkKkxTgs=
+
+Name: org/eclipse/sapphire/ui/forms/swt/EditorPagePresentation.class
+SHA-256-Digest: R/SC3V34e/h2KSF3xc7vcbD0OFMW/BnSoNsHvAHcSmk=
+
+Name: org/eclipse/sapphire/ui/forms/swt/MasterDetailsEditorPage$RootSe
+ ction.class
+SHA-256-Digest: Bf2Y+aZVqIjSNdFLPVzCWLsIfMPLGViYbGbjfT8QGXQ=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/StatusDialog$3.class
+SHA-256-Digest: aJ1Eyv8j7kEe0bNMUnHDy2MadrlyhHumB4NyXyFxdZU=
+
+Name: org/eclipse/sapphire/ui/actions/Add.png
+SHA-256-Digest: huiMSexegCsnCxTuF9LrKVQNVd0D5JsqeuQlT6HzyDk=
+
+Name: org/eclipse/sapphire/ui/forms/swt/MasterDetailsEditorPage$9.clas
+ s
+SHA-256-Digest: p1nXmpAoxsRNGBZVmm/FeRCswqynPrWDMEzBYKD0f98=
+
+Name: org/eclipse/sapphire/ui/forms/FormEditorPageDef.psd
+SHA-256-Digest: tDoH6tVh+LAVwKH77PM9K3okR5G/26oebzQ43yYNmTc=
+
+Name: org/eclipse/sapphire/ui/diagram/shape/def/RectangleDef.png
+SHA-256-Digest: nfCfLvAWDT0rpETQE8eM98akXaP0qMuWoUT+2o/q7CQ=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/TextOverlayPainter$8.
+ class
+SHA-256-Digest: 4X79R0Yrtc5QUagRAXkKgkzsiX0Dj9crMcwdsaLPIDg=
+
+Name: org/eclipse/sapphire/ui/forms/SpacerDef.class
+SHA-256-Digest: zQspIHVgdtOiQQmtgKtehjRATBQ6ZE/aAGiXTk9S94U=
+
+Name: org/eclipse/sapphire/ui/assist/PropertyEditorAssistSection.class
+SHA-256-Digest: i+xVu4h7yHRs8A8tXlgNnnrNjEgtRyqRMN+mnpKsdkY=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireToolBarActionPresentat
+ ion$ToolItemHotSpot.class
+SHA-256-Digest: HuGJCP3coEXgJZ5eILVrqhS+h7OorI8wab2X0xQlhu0=
+
+Name: org/eclipse/sapphire/ui/diagram/DiagramConnectionPart.class
+SHA-256-Digest: 4CPkl9RA9it6W3axP8itEnxRCQKNEjWY7tDsjUcq0qI=
+
+Name: org/eclipse/sapphire/ui/forms/FormComponentDef.class
+SHA-256-Digest: uEy8vglQNHvB0y2Gu1nqPDH7mhwWWp+O2DdYwq4Bab4=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$BooleanPropertyColumnHandler$2.class
+SHA-256-Digest: J0DRCTsnEo9XpRLa04h9ZQTd3kKso/XEhw1BYFCZPmk=
+
+Name: org/eclipse/sapphire/ui/diagram/actions/DeleteAllBendPointsForMu
+ ltiplePartsActionHandler$1.class
+SHA-256-Digest: Y0kvp80LD5elMWYFyMslSA23XCc5foYOeoIjLvk1eUw=
+
+Name: org/eclipse/sapphire/ui/def/internal/SapphireHtmlPanelDefSourceB
+ inding.class
+SHA-256-Digest: QyatvOgDSbFi8O1M0m96l3Z3ycMLcvrzPc8xng5ixKI=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SlushBucketPropertyEditorPrese
+ ntation$1.class
+SHA-256-Digest: 1vmUSmBhEA4esGFYnKhwZaxdkVYnBytxHJGb3r9dfX8=
+
+Name: org/eclipse/sapphire/ui/forms/swt/ActionHandlerBridge.class
+SHA-256-Digest: JQrRI14ScXY4yOCqh6t0HuuvghHf8kX/K+DcfNlMbPw=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/SapphireDiagramEditorPage
+ Part$NodeTemplateListener.class
+SHA-256-Digest: 0mTONlRq2pBkws+UKx/nRQ553sifp3bIpIxKPXMP/ik=
+
+Name: org/eclipse/sapphire/ui/forms/MasterDetailsEditorPagePart.class
+SHA-256-Digest: 1VDqwnIw1m/bwDq9Urnr1KZqai46qKryvGFir0mbbCc=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireTextCellEditor$CustomA
+ ctionsPresentation.class
+SHA-256-Digest: WKHFZGni0cr+1htYB1z1VjqyCGwB4IrmoIdjoPWRd/M=
+
+Name: org/eclipse/sapphire/ui/forms/MasterDetailsContentNodePart.class
+SHA-256-Digest: CGIPczB4RbPlmc9ixxEkrM7Vb8Psvmrgl1W2x+Q8oaM=
+
+Name: org/eclipse/sapphire/ui/forms/SplitFormDef.class
+SHA-256-Digest: imnt4e4HspdZDdYI5rhYmVpjcsImp3Qf/+bAAFNP5vQ=
+
+Name: org/eclipse/sapphire/ui/forms/swt/ErrorOverlay.gif
+SHA-256-Digest: XHSAZl3YOLES7udJPZ4d2/Oqalcardq22/1HjZFeQGY=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/FormPresentation$1.cl
+ ass
+SHA-256-Digest: 3sSJyCyikQ/Mgg5aY7pVlk38fNGgCDb1NHRocuAqy5Y=
+
+Name: org/eclipse/sapphire/ui/diagram/actions/ShowPropertiesPageHandle
+ r.class
+SHA-256-Digest: baeFDWw/s7koQyBKWrz+rixez21sHP4lQDlfKItJKR4=
+
+Name: org/eclipse/sapphire/ui/forms/SectionPart$FoldingEvent.class
+SHA-256-Digest: LgTSW01NuWisGdhBhl7DE4xT4jj11Fg6rvBUCiu9tTE=
+
+Name: org/eclipse/sapphire/ui/forms/FormEditorPagePart$1.class
+SHA-256-Digest: P4k2hXwrp2uGYA/hZyyHP8XnUQq2vOeUYhBiShEmuAY=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/HyperlinkTable$Contro
+ ller.class
+SHA-256-Digest: t5dRJHtI4QhwjccrhJDYADVUDoPq2PjIs9gkEj+XuUI=
+
+Name: org/eclipse/sapphire/ui/forms/swt/CheckBoxListPropertyEditorPres
+ entation$7.class
+SHA-256-Digest: sN5+XxizDye5JXOshUuWWhVKyjwsBxoxpehiemmYDNg=
+
+Name: org/eclipse/sapphire/ui/internal/SapphireEditorContentOutline$Su
+ bPageSite$1.class
+SHA-256-Digest: mIANql8rhUq4LHxZV51AwZavWNBUbXHNi4ng0qfRCQ0=
+
+Name: org/eclipse/sapphire/ui/assist/internal/ShowInSourceActionAssist
+ Contributor$1.class
+SHA-256-Digest: G+B1Rdmm1knJjZJ0NBBvynWaGVIAWz3mMQMiTEz2eQY=
+
+Name: org/eclipse/sapphire/ui/forms/internal/OutlineNodeShowInSourceAc
+ tionHandler$2.class
+SHA-256-Digest: sNtBWNBUR64Eh2IYgWWNy+0YDT6vjFiBpIcsaIQ992Y=
+
+Name: org/eclipse/sapphire/ui/forms/SectionDef.psd
+SHA-256-Digest: 3AguHjxItSYAOsHKwZhX64gt/i8zqR2xvPiOhtsznYM=
+
+Name: org/eclipse/sapphire/ui/assist/internal/PropertyEditorAssistDeco
+ rator$3$1.class
+SHA-256-Digest: 843IMxHvIzXvtH40d6NnbDMTJ8NWNCqePBpDdUSZkuY=
+
+Name: org/eclipse/sapphire/ui/diagram/shape/def/Border.class
+SHA-256-Digest: iIEA9t8oTi/mydmGygskjsHBrMoR0h7CYUbF5fKb8WI=
+
+Name: org/eclipse/sapphire/ui/forms/FormEditorPagePart.class
+SHA-256-Digest: nQvz5GKMOrAKjyPjAPwdOfWyG7ptkVISFKilo/wZQ1s=
+
+Name: org/eclipse/sapphire/ui/def/internal/SapphireHintValueDefaultVal
+ ueService$1.class
+SHA-256-Digest: eU/zDf4cmJGIZaQFjO3MmXm2GPAH7r/llm/EpiumLrg=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/DiagramNodePart$1.class
+SHA-256-Digest: cVs8/XOhSeY2RqSjgRfxjLYKaO91mn8OJ/v7MOqS3I4=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/HyperlinkTable.class
+SHA-256-Digest: TNskOZhoIIb5MAelGVCNjJblAetHq4NONON8tdO6xFA=
+
+Name: org/eclipse/sapphire/ui/forms/internal/OutlineNodeAddActionHandl
+ erFactory$1.class
+SHA-256-Digest: i4V76h1+/IAODrwo9n7t3aMbJ/vx/pKwHsOVaLbFW3Y=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TextFieldPropertyEditorPresent
+ ation$ContentProposalProvider.class
+SHA-256-Digest: MPihDpVKZWMjDcFveMvMVyJxtM0Rw87FlKJo4LHP+wc=
+
+Name: org/eclipse/sapphire/ui/forms/swt/GridLayoutUtil.class
+SHA-256-Digest: mXisHEqFe453RBbzHoqwZZ9gHbnFKpPr0F0jvFZ/V4c=
+
+Name: org/eclipse/sapphire/ui/forms/WithPart.class
+SHA-256-Digest: RlAkftjqsCrJg2Z++cLuTZ0SD8qhuvvnJLqZbluWUps=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/AbsoluteFilePathBrows
+ eActionHandlerCondition.class
+SHA-256-Digest: YyAqGcc/D3g1k+VT9MwWJLuj3RNsYdOd00Ag8q6afoA=
+
+Name: META-INF/sapphire-extension.xml
+SHA-256-Digest: TQH0fiOv17agBJExdDXa+eeLAN3F5rXR/Q87MdN3JS4=
+
+Name: org/eclipse/sapphire/ui/forms/FormComponentRef.png
+SHA-256-Digest: afswHGFuCoWH1z0RdFd+otzPpnUjWxrvCvQpFzfJZMA=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/StatusDialog$1.class
+SHA-256-Digest: dE8KJ91lnntOqZiOeuhUykaqrQvjlDtFA+skZwsj8XU=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$1.class
+SHA-256-Digest: oAd2miM3bznfNYuRpfVcNImQxZz6Gs9SetRiWfMFqMY=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/text/Paragraph.class
+SHA-256-Digest: LzYaaJ3w1jA3dWyHYmkcf8Ymb3Ctv6xQ8qaltCfvDvs=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/DiagramNodeTemplate$Diagr
+ amNodeTemplateListener.class
+SHA-256-Digest: AjcaSU58WW9K40B5aKQs0EETGcTnLAzBMaJpgZ4zTcE=
+
+Name: org/eclipse/sapphire/ui/forms/swt/MasterDetailsEditorPage$Conten
+ tOutlineActionSupport.class
+SHA-256-Digest: aU7vaWQr3w5rTfNNGIaJZvQkGKDTyBkpEmR7Qnr1dcg=
+
+Name: org/eclipse/sapphire/ui/forms/MasterDetailsContentNodePart$6$1$1
+ .class
+SHA-256-Digest: R7Ivv7TEntf51kOQ0cI8N0VyaFN4K76m4vOuuyd6TDc=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/CheckBoxGroupProperty
+ EditorPresentation$4$1.class
+SHA-256-Digest: d4NrnPiV15jIFqioeH9BlHw7/0fHz6HOhmgpexUJbXM=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/CheckBoxGroupProperty
+ EditorPresentation$2.class
+SHA-256-Digest: fcoQvh8DaDAW2jkxazzySHfK0tRFBggiBptrTqhZl3I=
+
+Name: org/eclipse/sapphire/ui/forms/StaticTextFieldDef.psd
+SHA-256-Digest: +Yz9SzaI0Rj47gKOL26E6fzm7Mc/pGBdQlR11AfcMo4=
+
+Name: org/eclipse/sapphire/ui/forms/SplitFormSectionPart.class
+SHA-256-Digest: UvezVfR/Og/GmEOORLpbfIaFaN9Nl3pw2pHXNhbcY+Y=
+
+Name: org/eclipse/sapphire/ui/forms/swt/RelativePathBrowseActionHandle
+ r$FileSystemNodeComparator.class
+SHA-256-Digest: C3kiWnZJMDTEDMOvL5bHut0qne+/CnUU12HITSJ4VQQ=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireActionPresentation$3.c
+ lass
+SHA-256-Digest: ILN9MqMX++U6pZwGdUJf+KB8RQhN03SUm+9fbB1qmw0=
+
+Name: org/eclipse/sapphire/ui/forms/WizardPagePart.class
+SHA-256-Digest: 7RlkbxRWyW+gRMwFSFK+NQzxuVIPSOp7sRPcLjrSuyI=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$19.class
+SHA-256-Digest: jIutDOgLpgdqn30AL6eXrrhmTPIESF5Hq3MOVquhxRk=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/TabGroupPresentation$
+ 1.class
+SHA-256-Digest: iXQ6vDxQY6KaasAKcc8lC05DCnQXjhrOpKnrwmZrPII=
+
+Name: org/eclipse/sapphire/ui/forms/swt/CheckBoxListPropertyEditorPres
+ entation$Factory.class
+SHA-256-Digest: QwLSOg5ODm+OrOEiPcdKeOiRzTDma2BYkKarA7YlM2c=
+
+Name: org/eclipse/sapphire/ui/def/MarginPresentation.class
+SHA-256-Digest: wLuo3wL3o1+76Q3yqtdESqxwbfjRZZzXdTVW+FyKfkI=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/DiagramNodeTemplate$2.cla
+ ss
+SHA-256-Digest: p6FW6X9U23wlb3WDVh+N0gxYRBYEM2zjcERVTrhPfG4=
+
+Name: org/eclipse/sapphire/ui/forms/internal/OutlineNodeAddActionHandl
+ erFactory$AbstractActionHandler$1.class
+SHA-256-Digest: lVdp6a5SxAm+atv+wHDdATYmuRMUsf7211sM2YlWnA0=
+
+Name: org/eclipse/sapphire/ui/diagram/shape/def/BorderBottomLeftRight.
+ png
+SHA-256-Digest: GwKOQ2WoyWRxVQB5wT/Gfjd273LxN845o/MeUb0eZ/g=
+
+Name: org/eclipse/sapphire/ui/diagram/def/IDiagramNodeDef.class
+SHA-256-Digest: OIkzG0YzynoDqr1e/zi47uuYK/wYTm4oWbSF5t4TWnc=
+
+Name: org/eclipse/sapphire/ui/actions/ShowInPropertiesView.png
+SHA-256-Digest: 65k0yZcnbZ/qc7CarzSViJ2uWf24gdOJ7zFaLPwy4GE=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/ShapeFactoryPart$2.class
+SHA-256-Digest: ZpxCkoVifdhRQGI4Tu5UwLkQhraW5sXM80FtdPRprgs=
+
+Name: org/eclipse/sapphire/ui/forms/ActuatorPart$4.class
+SHA-256-Digest: ngIQR5PdzvdUWQjSfXXY8mAoIcaia5cY//cOylYQCfI=
+
+Name: org/eclipse/sapphire/ui/forms/swt/RelativePathBrowseActionHandle
+ r.class
+SHA-256-Digest: j7BAiquAp/QwuExpHLEVa3iyoOz33mtViacnRnZfz0o=
+
+Name: org/eclipse/sapphire/ui/SapphireActionSystem.class
+SHA-256-Digest: Q2dF2lnsSRNDphwVYdnTYtSKXHi6pHj1oC12nfvefUA=
+
+Name: org/eclipse/sapphire/ui/forms/FormEditorPageDef.png
+SHA-256-Digest: 6DW5wf7Gi5a7ewABIaHZcfvZE/uxGPg4ZILJFgetcgk=
+
+Name: org/eclipse/sapphire/ui/diagram/layout/ConnectionHashKey.class
+SHA-256-Digest: v7Q8SePQvNQBe0YZc6OrhVxUKl9f7IoJ3mUbIi6n96I=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/text/SapphireFormText
+ .class
+SHA-256-Digest: 2mE11aw3ctnit3KxvEKfUl5lsb6KGfdQxYlJh214DWk=
+
+Name: org/eclipse/sapphire/ui/forms/swt/MasterDetailsEditorPage$6$1.cl
+ ass
+SHA-256-Digest: 5Gpmc3hzjxy5hsFLjtNf+RcSDeVJpfHgmZC4rpQ3d9E=
+
+Name: org/eclipse/sapphire/ui/diagram/internal/DiagramConnectionTempla
+ te.class
+SHA-256-Digest: 0nqd9EacW+AGIXpmVDVtSdvxOazvokDZrS8MBcSC0Nc=
+
+Name: org/eclipse/sapphire/ui/forms/PropertiesViewContributionManager.
+ class
+SHA-256-Digest: kh+qEU3o4Cj4QbFAN1XbiXorNX4EocTMMhipz9b7hKk=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/TabbedPropertyList$To
+ pNavigationElement$1.class
+SHA-256-Digest: LrAoWYaJnsEQs8ZfeH1FrBqp0v69no8Zda0x5GEpMC4=
+
+Name: org/eclipse/sapphire/ui/def/ActionHandlerFactoryDef.class
+SHA-256-Digest: k1AwvAW8LKTwPNZCs0nwrCU7MhATOLFgChxlQn33v4k=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphirePropertyPage.class
+SHA-256-Digest: wRULLgtXBeh1N+PhIMibnFtJxOQZfhq+G+0L74Et1ZU=
+
+Name: org/eclipse/sapphire/ui/forms/HtmlPanelPart$1.class
+SHA-256-Digest: Z1uMJyvN1C2WYNCtQE1YmAyWWCeZyDYBzaxOElu0LQw=
+
+Name: org/eclipse/sapphire/ui/forms/DetailSectionPart$2$1.class
+SHA-256-Digest: /h42jtKMU5UW1k7DKkHElBvK48aRnX/rRHT+5r85JVI=
+
+Name: org/eclipse/sapphire/ui/forms/swt/MasterDetailsEditorPage$10.cla
+ ss
+SHA-256-Digest: Lvac1COiQ4YardC+tOjSjIU/5/WctG9+svW0O9BhekE=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/ProgressMonitorBridge
+ $1.class
+SHA-256-Digest: 90MZG5vs3aLRzi/SF/JAH7jIsUDpw8keCVwBLBtdKvc=
+
+Name: org/eclipse/sapphire/ui/ISapphirePart.class
+SHA-256-Digest: RMAyOHaHWryszW5+1XaoolsfmwQvsR0QvGa8uxNRloQ=
+
+Name: org/eclipse/sapphire/ui/diagram/actions/ZoomInDiagramActionHandl
+ er$1.class
+SHA-256-Digest: E7UZthIipg8+2M8rmNI0RP3zlZHIMr+kUgs3NuYYgCk=
+
+Name: org/eclipse/sapphire/ui/def/ServiceDef.class
+SHA-256-Digest: ucZDxvGW3GiuNZkOc1luFSBZFf/WRm9sdd91Cv8+BLc=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/HyperlinkTable$9.clas
+ s
+SHA-256-Digest: uVVMuggqy8v0qiQjD52HD8S/lhnL3tYyDJEhFoo8gp4=
+
+Name: org/eclipse/sapphire/ui/forms/swt/ValuePropertyEditorPresentatio
+ n.class
+SHA-256-Digest: gTlAN6R9mJtdib4CmpkZ8vU4up6FVsj8a6OGiE+0E1E=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/TabbedPropertyList$7.
+ class
+SHA-256-Digest: VNhq/VcC4AYVL2OT15hCEwzv2euo3mHJySoaOAtyZnE=
+
+Name: org/eclipse/sapphire/ui/def/IPackageReference.class
+SHA-256-Digest: i1ZOpdMkWa9INLLgQclN5qNESMOTC+ThkXsT3/tMsgE=
+
+Name: org/eclipse/sapphire/ui/forms/WizardPagePart$3.class
+SHA-256-Digest: CLKYppiF/WVYUl8Mq+QwTgf3nm7+7SQfLqEmbgM0/ik=
+
+Name: org/eclipse/sapphire/ui/util/TopologicalSorter$CycleListener.cla
+ ss
+SHA-256-Digest: OOfiioyegHVnz4iYYqcgIRDvhEK+xJf+Jb+ZLE4Eh18=
+
+Name: org/eclipse/sapphire/ui/diagram/shape/def/TextDef.class
+SHA-256-Digest: kgws4VMYD6qDU9whPsWMBY00Wnl6WdwQAFJEMdb7sHw=
+
+Name: org/eclipse/sapphire/ui/SapphireEditor$4.class
+SHA-256-Digest: ucoNg5e1LFm4Bz6wTPJ+ZRJBttGfx+wbtyDhDnpCyBI=
+
+Name: org/eclipse/sapphire/ui/diagram/shape/def/BorderBottom.png
+SHA-256-Digest: UdJZqp18KfqGhW1XOJrX6SFaiQ1JeQLuJqtOeYSbIsY=
+
+Name: org/eclipse/sapphire/ui/forms/MasterDetailsContentNodePart$NodeF
+ actory$2.class
+SHA-256-Digest: sen2NvqJPa2nK4zH0IRFdgdvUFBTnOfbFR4Q6FjpaEM=
+
+Name: org/eclipse/sapphire/ui/DelayedTasksExecutor$WorkerThread.class
+SHA-256-Digest: lH1bNGC0cnpaYa7eOUrAqr0BQSx18pycBYylgJyAVNM=
+
+Name: org/eclipse/sapphire/ui/forms/TextDef.png
+SHA-256-Digest: HUpFA4cijD1NY4V7pd30IbBaAJ8CAtn1K5nGSHIJMtg=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireMenuActionPresentation
+ $1.class
+SHA-256-Digest: M7z1AbMJNxR83DIaINMzFEnG7xAsy4w9MeBlU4bEMFU=
+
+Name: org/eclipse/sapphire/ui/forms/SplitFormSectionDef.psd
+SHA-256-Digest: 3AguHjxItSYAOsHKwZhX64gt/i8zqR2xvPiOhtsznYM=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$SelectionProvider$1.class
+SHA-256-Digest: DiEDThrZBvOo/2ZD9JdczPhaCnZawdkEPJFhmklAg/U=
+
+Name: org/eclipse/sapphire/ui/diagram/def/DecoratorPlacement.class
+SHA-256-Digest: avzVTd4XV6oONXIIoJ7WmyZCc/8jDzjUpmuS4mrMOMY=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$MoveDownActionHandler.class
+SHA-256-Digest: si3AcYhf9TvC+EfkUfakNfGD51xm+djkvh6b1IGqjnU=
+
+Name: org/eclipse/sapphire/ui/diagram/shape/def/ImageDef.class
+SHA-256-Digest: uW8gN/roLMvVZ+FPOUhvrHkY4wNjqVZ00ASsBFLbA9c=
+
+Name: org/eclipse/sapphire/ui/assist/internal/RestoreInitialValueActio
+ nsAssistContributor$1.class
+SHA-256-Digest: Ung4tPL4gC81vgT4lIwnen8OKhUTdppeEIMrAlaHABE=
+
+Name: org/eclipse/sapphire/ui/diagram/actions/ZoomOutDiagramActionHand
+ ler$1.class
+SHA-256-Digest: ENAoMYOT9JVnIjt2W1mv5wztt+UOy8PPyA81K7XD5P8=
+
+Name: org/eclipse/sapphire/ui/forms/FormComponentRef.psd
+SHA-256-Digest: GhK9gTl3mWswxyfPuQEGxZp0p2isLu4tFOl69/6nd9U=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$5.class
+SHA-256-Digest: NDZKRWfnu1IcesdAFUFki4Z6EEPkHpfm7I1Kd6nJArM=
+
+Name: org/eclipse/sapphire/ui/def/internal/SapphireHintValuePossibleVa
+ luesService$1.class
+SHA-256-Digest: G4KmYd2wR3dFzjWgWLfNDzHoBj2N+2WWgWf4btaKHMA=
+
+Name: org/eclipse/sapphire/ui/diagram/def/IDiagramExplicitConnectionBi
+ ndingDef.class
+SHA-256-Digest: 2llBitG4UisvzP0Jgxeu0ymgV7+7uRBtCOvtuhD0z3I=
+
+Name: org/eclipse/sapphire/ui/forms/swt/MasterDetailsEditorPage$Select
+ ionChangedEventFilter.class
+SHA-256-Digest: 8ynIO2qpcLWjIIjr0T1zOME6AoMqods8yWflECAgNFU=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/RadioButtonGroupPrope
+ rtyEditorPresentation.class
+SHA-256-Digest: e+aW4SoHTvOnc3GfnV9h+6+/TuMMY47+/P9KuRT1vwA=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/ValueLabelProvider.cl
+ ass
+SHA-256-Digest: QnixSex4QXXXXkw+vEt7ch2PfrFEcTgqJlmFGBsaP5I=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/SapphireDiagramEditorPage
+ Part$PostAutoLayoutEvent.class
+SHA-256-Digest: cxmWfII3jn680PFHQlSmzJ3o3PU+mLEze7VV0wTjncY=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/text/SapphireFormText
+ $13.class
+SHA-256-Digest: BYKZkxe1pUWbAb4qzC+4WpXm1rvPL/R0qeVhTam6BKU=
+
+Name: org/eclipse/sapphire/ui/forms/ProblemsTraversalService$2.class
+SHA-256-Digest: uzw+kBWgIcQ/OjOqRtthV4Y2RUJy14fXX5f0dGu99qc=
+
+Name: org/eclipse/sapphire/ui/forms/LineSeparatorDef.class
+SHA-256-Digest: u008IKYfWYLr8nkUsiz6ARiQaAGMe51FgcCu8aQcJcY=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/TabGroupPresentation$
+ 3.class
+SHA-256-Digest: YXHXIJmbVE5ai5IvIiodK7PHH7eQOygBTpwoTW8n5po=
+
+Name: org/eclipse/sapphire/ui/forms/swt/ActionBridge.class
+SHA-256-Digest: HWYa1PnOIvXMXOxPA7v+Y8gUsJwA9x62/s3PBsq4WeA=
+
+Name: org/eclipse/sapphire/ui/forms/swt/MasterDetailsEditorPage$15.cla
+ ss
+SHA-256-Digest: hm7EJ9uBa0uyK5w1CtPdO3tQMgYhpQ7uNvyuIq8B7a0=
+
+Name: org/eclipse/sapphire/ui/SapphirePart$LabelChangedEvent.class
+SHA-256-Digest: HY7xRWLjQitRmYHk/TttdvK2ZWCIXjwaczMjSQONsXs=
+
+Name: org/eclipse/sapphire/ui/diagram/actions/internal/ShowPropertiesP
+ ageCondition.class
+SHA-256-Digest: skrPlD9AqpAjYsYXUc/SD/woHsLSEeCKbYm1BzMIeAA=
+
+Name: org/eclipse/sapphire/ui/forms/MasterDetailsContentOutline$Filter
+ ChangedEvent.class
+SHA-256-Digest: Akmw8Ec8ZlbI+ViSp0l7zayu9axHnSbZKRga61Z785s=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/DiagramNodeDeleteEvent.cl
+ ass
+SHA-256-Digest: R3TLZUSHNcgC42wDHmlKfgaH2f8IwI4S9YnXlN3u4lw=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/RestoreDefaultsAction
+ Handler$PromptDialog$4.class
+SHA-256-Digest: l0Smnbz8hxawMN5bHsNRJ765qoartgv2U08NvOeH8Bk=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/text/AggregateHyperli
+ nkSegment.class
+SHA-256-Digest: NH1qW2JyHR73NhNElvbs/FV/KmV3tIsCvofVJrZGiEE=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireMenuActionPresentation
+ $6.class
+SHA-256-Digest: lGub0fYzMAQQAhiIHukmP8xmAfSi/Cr7Qnc8cpL4xAI=
+
+Name: org/eclipse/sapphire/ui/diagram/actions/DiagramSelectAllNodesAct
+ ionHandler.class
+SHA-256-Digest: xa/c2Gfj+AIRnKZ+Wds79L2mmFTn4LQQFb/oh0LcbBE=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/text/FormTextModel.cl
+ ass
+SHA-256-Digest: 8dp4Mxe33DgsGuXKDLPLgbZ+IuIzQ4PVbBV2UGomZko=
+
+Name: org/eclipse/sapphire/ui/diagram/actions/DiagramShowInSourceActio
+ nHandler.class
+SHA-256-Digest: 2E9ghGGQK508pz+xuwaayqegom9kMeQKQLcuFxY8nKs=
+
+Name: org/eclipse/sapphire/ui/forms/swt/MasterDetailsEditorPage$Master
+ Section$1.class
+SHA-256-Digest: Hb5wIs9gy9Nehsk90YTIMFakKViuYwjDcIBOV/bMV8I=
+
+Name: org/eclipse/sapphire/ui/forms/swt/AbstractBinding$1.class
+SHA-256-Digest: rcN+RDh6QWqm1Pkgj3tAfjE2L7WVaCKs1To13EhStsA=
+
+Name: org/eclipse/sapphire/ui/forms/swt/CheckBoxListPropertyEditorPres
+ entation$3.class
+SHA-256-Digest: ETHOVethAe70l3MwSlGqKwlQgYPg92QtubPsvXln2k0=
+
+Name: org/eclipse/sapphire/ui/forms/internal/OutlineCollapseAllActionH
+ andler.class
+SHA-256-Digest: BSNDelugxIoqcGsur//M8tuuPofjcGBdgGjhniPTqtI=
+
+Name: org/eclipse/sapphire/ui/forms/PropertyEditorPart$5.class
+SHA-256-Digest: Kd0yn6AtvfdE16TLPAttg44Oj69cQD2lhSbu1Ld9HCw=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/LineSeparatorPresenta
+ tion.class
+SHA-256-Digest: y7c+Y5B7WC16tpVTBsW706x/kdewjFnVhqQQivRWkas=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/TextOverlayPainter$8$
+ 1.class
+SHA-256-Digest: IGtWzl63zysWEZNok8oFQczOEXAlaIPqpBC6N31RSW0=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/text/Locator.class
+SHA-256-Digest: HDEVdTZHvvKiZK3y4JR2FB7w7JZXTpTrSBDTsFhfCi4=
+
+Name: org/eclipse/sapphire/ui/SapphireAction$3$1$1.class
+SHA-256-Digest: TMagv9/9luuHCxdJFXZEPhSXOAIAb12nOB4DJhHxAF8=
+
+Name: org/eclipse/sapphire/ui/forms/SectionRef.png
+SHA-256-Digest: QtZ9evzbGCLd7nsQBbpcDASCwQkE8OwjKLJlysuUdHA=
+
+Name: org/eclipse/sapphire/ui/def/ActionHandlerDef.class
+SHA-256-Digest: MZY8geXkKjOnhP6uSapkhtbpw7g+0BL1Xy23SlTGW6I=
+
+Name: org/eclipse/sapphire/ui/forms/swt/PropertyEditorPresentationFact
+ ory.class
+SHA-256-Digest: X33IgvmschEuQSHFGhr8YdNhwWx+J5/ia3so/DTiTsc=
+
+Name: org/eclipse/sapphire/ui/forms/TextDef.psd
+SHA-256-Digest: POfmTOI1AC4Hj99v8+jWtBc5p+P6ucz7f+/1nkCPSso=
+
+Name: org/eclipse/sapphire/ui/SourceEditorService$Range.class
+SHA-256-Digest: VLEFo2S5R2LD/Kqa3MIdL/WMGivNoersfxdvnVNtmuw=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/CheckBoxGroupProperty
+ EditorPresentation$4.class
+SHA-256-Digest: RdBcjLTSLzzUNTWUSBXGnsPk4MEHxutjzbcPLNvmjFc=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/CheckBoxGroupProperty
+ EditorPresentation.class
+SHA-256-Digest: crFSIRTLbK8yXbSDMWcqh+zdNuXuLFRqXwrZsHMXQBk=
+
+Name: org/eclipse/sapphire/ui/forms/swt/AbsoluteFolderPathBrowseAction
+ Handler.class
+SHA-256-Digest: lqzpuS3oQVMt/89vnekSqD6x04fKWANrMlrv+luxWck=
+
+Name: org/eclipse/sapphire/ui/forms/ActuatorPart$1.class
+SHA-256-Digest: vvw1HtCh6ZWQLSuZ1FGX34SgZBjpa1DCRdWnAYaOLIU=
+
+Name: org/eclipse/sapphire/ui/forms/SectionPart$DescriptionEvent.class
+SHA-256-Digest: AFGRz9a5CzCnHhqk9QsHppdnuq6sHMNy3umiw4He/VE=
+
+Name: org/eclipse/sapphire/ui/def/ActionHandlerFactoryDef.psd
+SHA-256-Digest: NSeNvAMP9TxkRXAjs/087tG40dlEocxtq2L/l5XMB40=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/CheckBoxGroupProperty
+ EditorPresentation$3.class
+SHA-256-Digest: MLmjQG28TVNRv+yXOem3ddE9Hq0F7FXQJjhZYiJaNr0=
+
+Name: org/eclipse/sapphire/ui/forms/PropertyEditorPart$4.class
+SHA-256-Digest: W4Drc3snlerPOqJh+hFQdnL+fKKcRM5yoNxph+Rbiak=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/TextFieldBinding$2.cl
+ ass
+SHA-256-Digest: T61BTf0+n16nTyJCYsFAEZxJ9kwr9TvMbOQKm4pk5wU=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireMenuActionPresentation
+ $5.class
+SHA-256-Digest: PEF4HZ8JjbckD2I6s/CyEzryg2vuznBzf4Ru6BDMtY4=
+
+Name: org/eclipse/sapphire/ui/internal/SapphireEditorContentOutline$Em
+ ptyOutlinePage.class
+SHA-256-Digest: 1oxf0PSK+BNxyYSIEc3ncioxal1AisZCAFT87JeLr08=
+
+Name: org/eclipse/sapphire/ui/forms/MasterDetailsContentNodePart$NodeF
+ actory$3$1$1.class
+SHA-256-Digest: VGAEh8kZMP3l2Aj8tOl2ISnB03g88nWpP4mKzlmR0XU=
+
+Name: org/eclipse/sapphire/ui/forms/swt/AbstractBinding$2.class
+SHA-256-Digest: /c3xxAnyroy5Uwa9KxdC3zAx/tZP/eV6Ks6/ioRUQKQ=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireWizard$1.class
+SHA-256-Digest: dOOB5bDuuX8H4tpxX8SpNCc0cwd0PCyArC7sxK13JB0=
+
+Name: org/eclipse/sapphire/ui/def/ISapphireHint.class
+SHA-256-Digest: fveGSw0xdZPKFdolpu8xF2mZZXrKvD9BLSro4J3OvMk=
+
+Name: org/eclipse/sapphire/ui/forms/MasterDetailsEditorPageDef.class
+SHA-256-Digest: R/qDsW18HI6DQaFKe4pTA+N/wkVRoq4hukM5X+9k0yg=
+
+Name: org/eclipse/sapphire/ui/def/ISapphireDocumentationRef.class
+SHA-256-Digest: JWmZ5TBOAl/DTjzNeXfaGT0GEUVU+SkG4wScmJVEi0I=
+
+Name: org/eclipse/sapphire/ui/forms/HtmlPanelDef.png
+SHA-256-Digest: rzcG6kghLHShnkkeoHdUQZZDv5FEdVCTZXCkA7Un4as=
+
+Name: org/eclipse/sapphire/ui/assist/internal/PropertyEditorAssistDeco
+ rator.class
+SHA-256-Digest: yMshVzDV+qlk1IYnt+NVHSmiY9ino7ZKkPtMh/qu+r8=
+
+Name: org/eclipse/sapphire/ui/SapphireAction$3$1.class
+SHA-256-Digest: vZu5bdzV4qn/A+OyprpXNgNr8OuMVJTQxTr3GxkHUF0=
+
+Name: org/eclipse/sapphire/ui/forms/internal/OutlineNodeShowNextProble
+ mActionHandler$1.class
+SHA-256-Digest: ejGDH4O6zlhOUGUoXEDUqLv1bnB66PCfxeRnxPHLcIo=
+
+Name: org/eclipse/sapphire/ui/forms/CustomFormComponentDef.class
+SHA-256-Digest: mFfwm5GM+QVovWVQqniCCn/aYvpAfBHjnoydukipVI8=
+
+Name: org/eclipse/sapphire/ui/forms/LineSeparatorDef.psd
+SHA-256-Digest: PcLGqu315+XqTny+ucMq6aHXIJKSxWCZ24egqKocTJQ=
+
+Name: org/eclipse/sapphire/ui/diagram/StandardConnectionService$Implic
+ itConnectionTemplateListener.class
+SHA-256-Digest: wIwc0h0f/i574oDju6JRO9onpfX2/T1HF1i8Sk6erlM=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/DiagramNodeDefaultActionP
+ art.class
+SHA-256-Digest: Xf1yV4sbejMMmFJ62KUkkoxzDk2egBD8ZxJ7+8M+fkc=
+
+Name: org/eclipse/sapphire/ui/forms/swt/MasterDetailsEditorPage$Master
+ Section.class
+SHA-256-Digest: WXLpFEdXxob4oLAfT3wGd0qS3pZV7FUlPHFICsra2II=
+
+Name: org/eclipse/sapphire/ui/ISapphireEditorActionContributor.class
+SHA-256-Digest: XGcDpO/ammTwYXOFGoAxAEoJsaHLGvrLJaqnVCVeYeQ=
+
+Name: org/eclipse/sapphire/ui/forms/BrowseActionHandler.class
+SHA-256-Digest: vgt6id3FgQZ6fELAkDgJGhlz/Ya7YxWVKKjBEYSW2Xw=
+
+Name: org/eclipse/sapphire/ui/def/ISapphireParam.class
+SHA-256-Digest: a9+cjuYbQtbZK9FEQLo/aI04GHCvgZY2bWzonO6WmcI=
+
+Name: org/eclipse/sapphire/ui/diagram/shape/def/ShapeDef.class
+SHA-256-Digest: Zaua3606fHItPa7LJVFumB3+s1DxyUjM6VZZiDr4qWQ=
+
+Name: org/eclipse/sapphire/ui/def/DefinitionLoader$CacheKey.class
+SHA-256-Digest: 9pnad0qaTimbUZHcsLh6kNCuO8sAvHCJUqFWicQ2Q1M=
+
+Name: org/eclipse/sapphire/ui/forms/ActuatorPart$2.class
+SHA-256-Digest: rX1MFB56lAEK64wMaci4EfPQ2ELNeI++hjAi1HEW+7A=
+
+Name: org/eclipse/sapphire/ui/forms/swt/File.png
+SHA-256-Digest: pNXLuQjU7YgsDlDjr2lzDxNizLWdXw5NIEF6MYvifF4=
+
+Name: about.properties
+SHA-256-Digest: F8zqXhfIGFx7Y0HR3WObGJPcMC5+6J53+uOxjzBKAzI=
+
+Name: org/eclipse/sapphire/ui/forms/swt/MasterDetailsEditorPage$Master
+ Section$2.class
+SHA-256-Digest: Xd5hPXkFfGamZq/0/QJYJ6+glu3KYdY7LqjJ89XEEmY=
+
+Name: org/eclipse/sapphire/ui/forms/swt/CheckBoxListPropertyEditorPres
+ entation$4.class
+SHA-256-Digest: wZJCzQbweHMViNiaitZLBjCZLIWVEx1aeHzf7hcH2GI=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireWizard$2.class
+SHA-256-Digest: ogpnlbLVYdwluTL1kEOVJbDu2ydTjEkNTePNi1Xu0eA=
+
+Name: org/eclipse/sapphire/ui/def/internal/FormPartIncludeReferenceSer
+ vice$1.class
+SHA-256-Digest: LyXO0woWnI0saO6m8FKhZND7K6Sm4311GXlM4BIiOMs=
+
+Name: org/eclipse/sapphire/ui/forms/swt/MasterDetailsEditorPage$7.clas
+ s
+SHA-256-Digest: L8Oh2ck0FBVbD70H4YhWYQMaPmSugPg29jDkEuZz4XI=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/TextOverlayPainter$6.
+ class
+SHA-256-Digest: IZbz2WAPfNyXLUWVBduAB0/aJnaNra0KG9BT9s2Bc2w=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireWizard.class
+SHA-256-Digest: uRMwLSGxAxucecxe221OWInSjVCkmFDJAfSBjaTxBxw=
+
+Name: org/eclipse/sapphire/ui/forms/swt/PropertyEditorPresentation$4.c
+ lass
+SHA-256-Digest: wLjBmvd0HKzaQ7mbIUMA2ESqYOTNumR0PUufsg+saKE=
+
+Name: org/eclipse/sapphire/ui/diagram/StandardConnectionService.class
+SHA-256-Digest: M4d+Yq76kkpxZvwpvkzontT9h/0+WmXe5dD+kf60kHs=
+
+Name: org/eclipse/sapphire/ui/forms/FormPart.class
+SHA-256-Digest: SGXgY0zxhw49lcgwtJkTlBop/W2edCYW8lHPxGgCj3c=
+
+Name: org/eclipse/sapphire/ui/SapphireEditorPagePart$1.class
+SHA-256-Digest: lJuUVBQWPkrwOj62INHauc1sN9NI4Z/jWnkTUC7X5es=
+
+Name: org/eclipse/sapphire/ui/forms/WithDef.class
+SHA-256-Digest: UfhL6DmsAo/XQyFzlpKwJs0mJxoAppT28VqtKgP2Eyw=
+
+Name: org/eclipse/sapphire/ui/forms/swt/MasterDetailsEditorPage$14.cla
+ ss
+SHA-256-Digest: yH53bfNCW5TBhB/gdY4UeNC34g+iC1+hPacmgcjAPNw=
+
+Name: org/eclipse/sapphire/ui/diagram/actions/DiagramNodeAddActionHand
+ ler.class
+SHA-256-Digest: q3r2bBkevhU7RjlQIiS+6dAy+kERHCJpoGlVseF8kUw=
+
+Name: org/eclipse/sapphire/ui/forms/TextDecoration.class
+SHA-256-Digest: Rm3qLJHeeRBM/aQwMjYCJxAGusT6wOhgRSQ//EnAH0s=
+
+Name: org/eclipse/sapphire/ui/diagram/shape/def/BorderTopLeftRight.png
+SHA-256-Digest: f8rGMrVi1JSORSs5ozpeB0DJrqxgTY90WmX+eNNsytg=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$4.class
+SHA-256-Digest: sDmgVM5ElZ6JcfhRj4mkbvMPE0HB4/UviSUn21QOmNM=
+
+Name: org/eclipse/sapphire/ui/forms/ProblemsTraversalService.class
+SHA-256-Digest: Ft59AXldpdGYO2p9nrcBn84UnG4LztiPu2d/cUp6IeM=
+
+Name: org/eclipse/sapphire/ui/forms/ProblemsTraversalService$1.class
+SHA-256-Digest: ob5BjofOKxIWgfRj41IYfhB9+4fIWy0LGehGwDgKWVs=
+
+Name: org/eclipse/sapphire/ui/forms/TabGroupPage.png
+SHA-256-Digest: zCqId+8dcP+nTRgt+78TG7OtZR95eE5VTXfsgr1IGQ0=
+
+Name: org/eclipse/sapphire/ui/forms/swt/PropertyEditorPresentation$7.c
+ lass
+SHA-256-Digest: dHRNqeELhWraXInUxuMpzXgG/NXMV0MVxj8AXulhAvE=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireTextCellEditor.class
+SHA-256-Digest: Ae8S5B8OYK0FxAOftFxEldgtFkZf1m5EvwnCpmtsZfw=
+
+Name: org/eclipse/sapphire/ui/forms/swt/MasterDetailsEditorPage$4.clas
+ s
+SHA-256-Digest: sOkiM2xqWPEXOaOJlRdZaZjulHKslLuG+dMsUnuAZIM=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/TextOverlayPainter$3.
+ class
+SHA-256-Digest: nuB/5zvVo41FGS3hKf87kSd3+4/qlZGYXlQaPVwhuhk=
+
+Name: org/eclipse/sapphire/ui/diagram/actions/ToggleDiagramGridActionH
+ andler.class
+SHA-256-Digest: 2FjswfXpp48HaOAWhOsgNh7dJ+57VzvSvlAav2aBN4o=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/TextPresentation.clas
+ s
+SHA-256-Digest: +mFMZswqhQPSVpG76rgQPdPIbKJZRBYAqjXuaAMWFK4=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/UrlJumpActionHandler.
+ class
+SHA-256-Digest: LF8jgtlboPyZPB4Eynv1WOBisAtbgA6CJtLESjnFyKA=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/text/SapphireFormText
+ $12.class
+SHA-256-Digest: GPqMQDvC+DU3UbZfn9f/W1/KH/ej8M6p3bSV2ftwfcA=
+
+Name: org/eclipse/sapphire/ui/util/TopologicalSorter$Entity.class
+SHA-256-Digest: LltOhV1BnL51xKq5IXDdbiXB2gSSLfA1PbrbkzEgLU4=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/CheckBoxGroupProperty
+ EditorPresentation$VerticalFactory.class
+SHA-256-Digest: ub/l39DIyxOhyajqOj0MPB+ndoSJ2kiKpsn3AZ3jDEA=
+
+Name: org/eclipse/sapphire/ui/diagram/def/IDiagramImplicitConnectionBi
+ ndingDef.class
+SHA-256-Digest: XY/p7S29nNRSPplZNSEirhWR0YDGARzftnvaoEM9zu8=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireMenuActionPresentation
+ $8.class
+SHA-256-Digest: 4eFtOsIq7BqxTQMrCIDswlss1bJR3yCbFlAxDkYtCik=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/text/SapphireFormText
+ $11.class
+SHA-256-Digest: VZXvbmG6hsJHTHuARPMQl0c9/TvbubgXXlOl3JLQoZI=
+
+Name: org/eclipse/sapphire/ui/forms/swt/PropertyEditorPresentation$6.c
+ lass
+SHA-256-Digest: +UFWiUl4wfVy5Yb0FvMsy8K0ijzvZrV712RKWPJz88U=
+
+Name: org/eclipse/sapphire/ui/forms/HtmlPanelDef.psd
+SHA-256-Digest: lQBgv7om1HJn273wZeMHKAsXuQW47ChGObrVJDpB11w=
+
+Name: org/eclipse/sapphire/ui/forms/SplitFormPart$1.class
+SHA-256-Digest: kMC2inCcoLG4qDwji8ubb82BWUgDGAAS2XJY7hvOmBo=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/DiagramNodeEvent.class
+SHA-256-Digest: cvU70QUP/k7bOTd5+YRPqjpmkhRvxjVxKxbnl/NMIyg=
+
+Name: org/eclipse/sapphire/ui/forms/HtmlPanelDef.class
+SHA-256-Digest: RK55N49V0SBkI3wfOX8afsoL9U+qFqvepV3unJunK1c=
+
+Name: org/eclipse/sapphire/ui/forms/JumpActionHandler$1.class
+SHA-256-Digest: 3eaTLePoOrmYSf1Q/sFq9T+HNSfh6KoRsrn/nTeUuxA=
+
+Name: org/eclipse/sapphire/ui/forms/swt/CheckBoxListPropertyEditorPres
+ entation$2.class
+SHA-256-Digest: UwLnINLCPPaosBtJnmUJIRtpGhnFVVMV5ScX2c9w2Zk=
+
+Name: org/eclipse/sapphire/ui/forms/swt/RelativePathBrowseActionHandle
+ r$WorkspaceContentProvider.class
+SHA-256-Digest: 7Eia2d4zI9v9NfTxjM5uMG1UZJ3fZ3OqD3bHru/aiCM=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireEditorFormPage$1.class
+SHA-256-Digest: oKKH6cMIFuAKVHO4+tVPC38708xFC9zvl2lZpSCirjs=
+
+Name: org/eclipse/sapphire/ui/forms/LineSeparatorDef.png
+SHA-256-Digest: +b2QCb1F3mqEvVH5UhOYOTnIznMEgF73/2dm4gS1IkA=
+
+Name: org/eclipse/sapphire/ui/forms/TextDecorationDef.class
+SHA-256-Digest: +MTQIMvEAzDEO8zjvIZZr3mvc1ThrdHL1bMnIYChvD0=
+
+Name: org/eclipse/sapphire/ui/SapphireEditorPagePart$3.class
+SHA-256-Digest: m1cXVwfKUDSMX/sY70NKJj1MJXvGl2IEwLjo2XOBfeQ=
+
+Name: org/eclipse/sapphire/ui/diagram/def/IDiagramConnectionBindingDef
+ .class
+SHA-256-Digest: PmHkLdO5TznV+yO8WBTfCz7SK7jCLAqqqNUwOhyfj54=
+
+Name: org/eclipse/sapphire/ui/forms/MasterDetailsEditorPageDef.png
+SHA-256-Digest: ud4w5ATG2i6Mer/klYDyl4NOZYtfiFZ1yRc0+1DQtwY=
+
+Name: org/eclipse/sapphire/ui/forms/PropertyEditorPart$1.class
+SHA-256-Digest: xJTb6s/KGzCAiT8Yo+eYPxAVZM3DqK6JEHPLImVkNRk=
+
+Name: org/eclipse/sapphire/ui/diagram/def/IDiagramGuidesDef.class
+SHA-256-Digest: E3Z4GDJJBCYLDRqFL4YxuYEY0hmZbxYOLrSGhVRm/cY=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/TextOverlayPainter$4.
+ class
+SHA-256-Digest: Z54yPk6tEvK226NwjIlBatfNA/HqmKdTfEQc7Lub1IU=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/TabbedPropertyList$Bo
+ ttomNavigationElement.class
+SHA-256-Digest: /8QJik5lkVeKACUcQnGTIaqJyo33StZitlmqIVh/9iA=
+
+Name: org/eclipse/sapphire/ui/forms/MasterDetailsContentNodeChildDef.c
+ lass
+SHA-256-Digest: gaSVMEjSWVzpwrt5UAMjyhm3CQG/lMijIn/xAK2krSo=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$7.class
+SHA-256-Digest: BSJ39NDODjsZtTeqMxxxr5YSNois3lZuYUAQaFd/UfQ=
+
+Name: org/eclipse/sapphire/ui/forms/swt/MasterDetailsEditorPage$5.clas
+ s
+SHA-256-Digest: q7SZ0NhiKEWw4gifiTipdGsqdEMOI7mHiCGWnOMA9/8=
+
+Name: org/eclipse/sapphire/ui/internal/PropertyEditorEnabledFunction.c
+ lass
+SHA-256-Digest: YHCRSx8WP8GgyECxYnMxQ34VHq6Yeu7dBbzvOjhXrG0=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireWizard$3.class
+SHA-256-Digest: czXy7LRnFjpx9YThGn/KFNYl4L4YQyI9xzljsKZZE8U=
+
+Name: org/eclipse/sapphire/ui/forms/TextPart$1.class
+SHA-256-Digest: eU7wR3a6GtukrBmI+LOT98E3F2aLtnrx/NxYnLljHks=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/TextOverlayPainter$5.
+ class
+SHA-256-Digest: 9exGUFcwtK7TRrevrahExEGYfdHOYqqGij7Tu5QqnT4=
+
+Name: org/eclipse/sapphire/ui/diagram/actions/DeleteAllBendPointsForCo
+ nnectionActionHandler$1.class
+SHA-256-Digest: FBRfPA0z3Hu3l7DSB4xdpemHuwM7M1hWNaYJmU8RyuY=
+
+Name: org/eclipse/sapphire/ui/forms/MasterDetailsContentNodePart$Decor
+ ationEvent.class
+SHA-256-Digest: cyC2vOL4ApEgZZECXafrgHZ1cjjgiov4X016C/cidPA=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TextCapacityFeedback$1.class
+SHA-256-Digest: dIoCNWF3TOxKD3ozwgrA7avykk9hwq4NRTTuTrGTwNg=
+
+Name: org/eclipse/sapphire/ui/internal/PartValidationFunction.class
+SHA-256-Digest: BKKtjUcSDa0ECWResKhCVsHTBQcnf+3p+fhUoj65mV0=
+
+Name: org/eclipse/sapphire/ui/actions/ExpandAll.png
+SHA-256-Digest: cIl0gabwEci/s6WpNSmd40VrJgyIzK6trKFqFkniQPM=
+
+Name: org/eclipse/sapphire/ui/forms/MasterDetailsContentNodePart$6$1.c
+ lass
+SHA-256-Digest: LFzpH3uYPyUvYLTMyrzUrk1Uo+Vdd04FjiEc6QkUuCg=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireMenuActionPresentation
+ $7.class
+SHA-256-Digest: x29OEO45cZNEXN/0fWX80YdDMBDN7V/awtW6I9xBRLA=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/text/SapphireFormText
+ $10.class
+SHA-256-Digest: FrFoRVo2FSZ65YZ2lgYeQPK+9ZS3xbV7BIB9vU8o+zw=
+
+Name: org/eclipse/sapphire/ui/forms/swt/RelativePathBrowseActionHandle
+ r$FileSelectionStatusValidator.class
+SHA-256-Digest: te5HgEIyJ5fjNQkcGVqbNcY+CBhAUn8HFspBcmKjAOg=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/ValidationMarkerPart$1.cl
+ ass
+SHA-256-Digest: jHAr9zMVuuVfID25MmswbRPsCmxJ26/FcBcrX21HYtY=
+
+Name: org/eclipse/sapphire/ui/diagram/internal/DiagramEmbeddedConnecti
+ onTemplate$1.class
+SHA-256-Digest: IO3zsUwQiYiTTDLWLVmaTQt8E2qMb3LsOxr/G6oDXsA=
+
+Name: org/eclipse/sapphire/ui/diagram/layout/standard/DiagramGuidesLay
+ out.class
+SHA-256-Digest: FSOcCGDC25I8Q23uviAb/Ar0qmNkBqVql0g86DPgZzE=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$6.class
+SHA-256-Digest: DgFVq+lmXxG+sYguSaYmjwUPL2Hu5nyTVq7zc6Ags3U=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/WithPresentation$1$10
+ .class
+SHA-256-Digest: DhGZ8iBmPe3WN0zSKcNX95Xmd1YThTV9RAAkat90w94=
+
+Name: org/eclipse/sapphire/ui/internal/PropertyEditorEnabledFunction$1
+ $1.class
+SHA-256-Digest: JfLERqELHzcPIKtP1/xyZ9QeT9yABMjkD1rRg3oG5aE=
+
+Name: org/eclipse/sapphire/ui/forms/swt/CheckBoxListPropertyEditorPres
+ entation$1.class
+SHA-256-Digest: 4JGYp2n9tfQhNqzKFPFyGrC1IdbMNaeepJ4rG9boZHw=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireHotSpotsActionPresenta
+ tion.class
+SHA-256-Digest: wI1324BE0w0sZZYexAtkWwel7yxfiSiW/jhqyVsMRZs=
+
+Name: org/eclipse/sapphire/ui/forms/swt/MasterDetailsEditorPage$6.clas
+ s
+SHA-256-Digest: bfYIkx3AH3AGMCpPKDquAikDl/60jXy+PNniC2G4idw=
+
+Name: org/eclipse/sapphire/ui/forms/ContainerPart$1$1$1.class
+SHA-256-Digest: ql+Ztgdg7wg2aOA0OKDbEsy3biBgxbD2vi59KO1zgZs=
+
+Name: org/eclipse/sapphire/ui/forms/ProblemsTraversalServiceData$Entry
+ .class
+SHA-256-Digest: ZpfNCnEKS0NYNlFqnm+ddxa60cx2vm1Mj8zO411Z+HI=
+
+Name: org/eclipse/sapphire/ui/SapphireEditorPagePart$2.class
+SHA-256-Digest: 50reif37kpixqH5wSNrruATvTJfgkHb8Rn43+NPu15Y=
+
+Name: org/eclipse/sapphire/ui/forms/swt/PropertyEditorPresentation$5.c
+ lass
+SHA-256-Digest: GqdLjQeJ2eyLbNdlXLq/Vxc5pxFfR1rszAqUcs9Y/CE=
+
+Name: org/eclipse/sapphire/ui/TextSelectionService$Range.class
+SHA-256-Digest: u4HCjTicaX5bRMIaSF3kezwzxRI1D2yvdAk9t8LdOdQ=
+
+Name: org/eclipse/sapphire/ui/def/EditorPageDef.class
+SHA-256-Digest: Jf4qenRAgAtfJqfkIlHo8aJv4gRSMRl6ZI3SKe9TTGE=
+
+Name: org/eclipse/sapphire/ui/diagram/def/IDiagramPaletteCompartmentDe
+ f.class
+SHA-256-Digest: a2Hmz8deR+qSTidAez5YLJ+IBW4ZrH74rSyhgBndK28=
+
+Name: org/eclipse/sapphire/ui/def/SapphireKeySequence$Modifier.class
+SHA-256-Digest: HJpERibU4ZkLayzANJbMEEkKMke5RAfpW5QxdkYYMPM=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TextFieldPropertyEditorPresent
+ ation$2.class
+SHA-256-Digest: UBCQO/oPoY5knI5uPGDJdr4TfYhJ3ySN39GgFqzuCWQ=
+
+Name: org/eclipse/sapphire/ui/diagram/actions/DiagramNodeAddActionHand
+ lerFactory.class
+SHA-256-Digest: /0mvcAg6JGbCQ46wjdzLxkGE7yfiUa5RaLJ9L4hRbFU=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/ValidationMarkerPart$2.cl
+ ass
+SHA-256-Digest: VOdQm9ixyhN2UCkgfTYlprFtXFeETlu5VVbuczX7WV4=
+
+Name: org/eclipse/sapphire/ui/diagram/shape/def/FontDef.class
+SHA-256-Digest: kmEB/PlQYwlwunSnBhmGEAQWcvOg3wkuIAEY4y/VuXU=
+
+Name: org/eclipse/sapphire/ui/forms/SectionRef.class
+SHA-256-Digest: 10PPEiyRlUg0pH0iEkFT3NYSWVB4LB26TjtG+mX7FgM=
+
+Name: org/eclipse/sapphire/ui/SapphireActionLocationHintAfter.class
+SHA-256-Digest: ev/gRAYjLOGiAx4xZoh8k+7aDTMdc0tAM7eLAwL334s=
+
+Name: org/eclipse/sapphire/ui/actions/connection.png
+SHA-256-Digest: LB4WWRKZ5GxPXMUlupf83O0CoYRsgOvRY9pB+Kx3mQw=
+
+Name: org/eclipse/sapphire/ui/forms/MasterDetailsContentNodeDef.psd
+SHA-256-Digest: PtksFSnf2g6zIaCxUdDF25TxI9I3BVPrpxkqQF4yFmA=
+
+Name: org/eclipse/sapphire/ui/forms/MasterDetailsContentNodePart$NodeF
+ actory$1.class
+SHA-256-Digest: neAfSLevsCvYAD3b8ejR/YXQufvlYFuX4cQC6ND3474=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/ScalePropertyEditorPr
+ esentation.class
+SHA-256-Digest: srONh3lJfLphfap+q7f48WUmvAUYPsbPP2+MUONWtiU=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/RectanglePart.class
+SHA-256-Digest: Vu4VeAehJJVJjZz7WyP0MSHsQEsF59rObP7EfZCrd88=
+
+Name: org/eclipse/sapphire/ui/forms/swt/MasterDetailsEditorPage$8.clas
+ s
+SHA-256-Digest: m/eYZiFAcuDL6RWDAg1yN+QeG5OCLIlAc+zd3mVHlwc=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/WithPresentation$3.cl
+ ass
+SHA-256-Digest: CKmWRnMvBiU3UVX8zWUxjSUpEnrwEPMhp60r2FRegzA=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/SapphireDiagramEditorPage
+ Part$AutoLayoutEvent.class
+SHA-256-Digest: d30HGO8cAHOahW/0Clisc07nhi2VHl8h30OZuTz+inA=
+
+Name: org/eclipse/sapphire/ui/diagram/shape/def/BorderTopBottomLeftRig
+ ht.png
+SHA-256-Digest: r8JXHCxeHS2UML586+HcE2Shgc3hexRWYammknBpGoA=
+
+Name: org/eclipse/sapphire/ui/forms/swt/RelativePathBrowseActionHandle
+ r$ContainersOnlyViewerFilter.class
+SHA-256-Digest: bhRLwPfXppQhoUzT1OMC4+IL701zaziw2MwYoc6Kgjw=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$CustomTableViewer.class
+SHA-256-Digest: CncrS7xfnipNZYqaGnGrc7PTn6pusbgWLFwwOrLS4gc=
+
+Name: org/eclipse/sapphire/ui/assist/internal/ShowInSourceActionAssist
+ Contributor_ru.properties
+SHA-256-Digest: rf6eMy4aNM7qo70t6Hozhjg9XcJAtvB6JH5WWsS1GxM=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/FormPresentation.clas
+ s
+SHA-256-Digest: urIk3bmV7G0PGgReXt3P8TqME6Ol9J7aYiIqhOWWafQ=
+
+Name: org/eclipse/sapphire/ui/forms/JumpActionHandler$2.class
+SHA-256-Digest: +z3t03zdnva8app2cqymzRaVAEwAMlasbu8M3QVbgz4=
+
+Name: org/eclipse/sapphire/ui/forms/PropertyEditorDef.psd
+SHA-256-Digest: 8ncAqejE8DMiNerHUpu2x8Q2Q39yJVsn5UlEPEcv9CY=
+
+Name: org/eclipse/sapphire/ui/forms/PropertiesViewContributionPart$1.c
+ lass
+SHA-256-Digest: Q7OdHJ6NMaUyR5mMwCm9fofW3VIh30nspv1Xjj7ec2A=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/PopUpListFieldPropert
+ yEditorPresentation$6.class
+SHA-256-Digest: FWDVxkHdSyaYEuqDeU4LkOXXF76H86XGVJWeKT5xh0o=
+
+Name: org/eclipse/sapphire/ui/forms/swt/RelativePathBrowseActionHandle
+ r$FileSystemContentProvider.class
+SHA-256-Digest: 5f1okKJd4jp5lTmfttcIfpoJ8BeLdM0uKB4gSPk6dQQ=
+
+Name: org/eclipse/sapphire/ui/def/internal/JavaTypeReferenceServiceFor
+ Sdef$Condition.class
+SHA-256-Digest: nAdEiSTD3FUMH8mY0uVF1bBsX9dCW3f2BeEDHJjpg7Y=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$ImageProvider.class
+SHA-256-Digest: 4VxEjpj/cagL/TEgRZDpO+J71jAPoZrLDuZolbH9pBk=
+
+Name: org/eclipse/sapphire/ui/def/internal/LocationHintsBinding.class
+SHA-256-Digest: +lKUvgzJdDyzefUm5ZTkESeH86jCHTbJ1ntMPYYnwkI=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/PageBookPresentation$
+ 1.class
+SHA-256-Digest: HaGzSufMCbVor6VkF4acPTBTdAUahqwHIh1fMaHXPQs=
+
+Name: org/eclipse/sapphire/ui/def/ActionHandlerFactoryDef.png
+SHA-256-Digest: UIyDzqQc+KNpXws+zwLMtIQWzB0gWyiCRFjcemKgKOY=
+
+Name: org/eclipse/sapphire/ui/SapphireActionSystemPart$EnablementChang
+ edEvent.class
+SHA-256-Digest: +574znsYYa2th2Qoe6rb0Og27rCDY1fFQxOzD4FYRk0=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireMenuActionPresentation
+ $9.class
+SHA-256-Digest: gQ2m2Zptrawl7m3pQFoozu0vpYidONoCl4bJzNovKBE=
+
+Name: org/eclipse/sapphire/ui/diagram/actions/DiagramNodeAddShapeActio
+ nHandler.class
+SHA-256-Digest: iY7y/gl9r0oahN6LosModtoGakqcaYyDtESxphDBcEg=
+
+Name: org/eclipse/sapphire/ui/forms/ActuatorDef.png
+SHA-256-Digest: 8zM2QQ4zSyypuePzuiBwKT3Ghhc3zhDik8+3u1Ls5yw=
+
+Name: org/eclipse/sapphire/ui/SapphireHelpContext$1.class
+SHA-256-Digest: ic48rszHi85tc0RN/Ib8C82HnYVTisyxwOf34CpJ41U=
+
+Name: org/eclipse/sapphire/ui/forms/WithDef.png
+SHA-256-Digest: GHwKDglIMIxFfAxnjx8gqbEIrOwe1Ce5yEJ/ZIrETFM=
+
+Name: org/eclipse/sapphire/ui/forms/swt/MasterDetailsEditorPage$Conten
+ tOutlineFilteredTree.class
+SHA-256-Digest: xqsnLuXwpz0NSWjwaaiTEzfe1kpgfXJ709ekpSBXTjg=
+
+Name: org/eclipse/sapphire/ui/assist/internal/ResetActionsAssistContri
+ butor$1.class
+SHA-256-Digest: +f4fSqPnWyAQVHAgKQuTjZqlmaQKlYBo4KZO11441Po=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireTextCellEditor$CustomA
+ ctionsPresentation$2.class
+SHA-256-Digest: zG1CAZCsHnabXP6emMD9ZYKYEuw/DpHOzPotyIloX0U=
+
+Name: org/eclipse/sapphire/ui/actions/DeselectAll.png
+SHA-256-Digest: otvQj+Pzx+olu04bZ8HO3bUB5kAuQCy51NBVRE/AUWk=
+
+Name: org/eclipse/sapphire/ui/diagram/actions/ZoomInDiagramActionHandl
+ er.class
+SHA-256-Digest: VViv5TDazzr2uVIc5ZLON2WhS62ElNwu0ZnqIKUNmZo=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TextFieldPropertyEditorPresent
+ ation$7.class
+SHA-256-Digest: XGNY9b0J5wt3IjJT1iQEFArS2cfhGYB0heAY+kt/b9c=
+
+Name: org/eclipse/sapphire/ui/internal/PartParentFunction$1.class
+SHA-256-Digest: 7+VpkRwFsq47pwN2Wol4KprDEEnVOztc7Y9Z+GSi5Sg=
+
+Name: org/eclipse/sapphire/ui/listeners/ValuePropertyEditorListener.cl
+ ass
+SHA-256-Digest: ls/fXRZSg9Myhu7LtY3kvCOcx5QeHyFMfZszuqDX3sU=
+
+Name: org/eclipse/sapphire/ui/forms/internal/OutlineNodeDeleteActionHa
+ ndlerCondition.class
+SHA-256-Digest: ic7uJacdG/BUJkkdy4jGvCNzRXMjkYGuqZT8Ak60goA=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/StatusDialog$2.class
+SHA-256-Digest: YOCbf23RBTY8EBo/VJArzWH2zo4BeBauX7k1qlO6TTM=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/TabbedPropertyList$Li
+ stElement.class
+SHA-256-Digest: Yo9aE4pdrO7ndnH8wqfY0d9B4LXWHFApeS119+J/pRk=
+
+Name: org/eclipse/sapphire/ui/diagram/internal/DiagramConnectionTempla
+ te$1.class
+SHA-256-Digest: LQnLSqiHOnHGb+oZRlb9EyDrrazkZlWbUCvFn9CedDk=
+
+Name: org/eclipse/sapphire/ui/forms/PageBookPart$PageChangedEvent.clas
+ s
+SHA-256-Digest: XNdxD4xosby7Wl4WJNp/xZ8TrLVAB0LIg0WwnPpjEi8=
+
+Name: org/eclipse/sapphire/ui/diagram/shape/def/SequenceLayoutDef.clas
+ s
+SHA-256-Digest: rMvAyQVbr+l5FNlpQw6nhwShNgZii0sPiPWnmnJ4lJ0=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SwtUtil$4.class
+SHA-256-Digest: Eq9XxMJDZRHPtZVA7QlOlbVlzOVZTjC8rQBoV1/siE4=
+
+Name: org/eclipse/sapphire/ui/forms/swt/CheckBoxListPropertyEditorPres
+ entation$Entry$2.class
+SHA-256-Digest: Ny+zkqU07LUApZsL6DRkhnEib/usNQVNsR0BMGHUR8I=
+
+Name: org/eclipse/sapphire/ui/forms/swt/MasterDetailsEditorPage$Master
+ Section$3.class
+SHA-256-Digest: cWB5hugnDSd/VbpxoNEWiJBZccUuoQUDxwX4kvtqUEw=
+
+Name: org/eclipse/sapphire/ui/forms/ContainerPart$Children$1.class
+SHA-256-Digest: VyHN5AcCKxr7VXUF79aqtvQCy9fz+O7DbxSQ7xX+HFw=
+
+Name: org/eclipse/sapphire/ui/forms/swt/MasterDetailsEditorPage$3.clas
+ s
+SHA-256-Digest: 86eGAJ9JDgg/ovUPvv2sHjRzlqDMmxwwfapuxEodigY=
+
+Name: org/eclipse/sapphire/ui/forms/GroupPart.class
+SHA-256-Digest: eLT+X/U4tZhvYUv475KyLuo7XvV6boi0+lIJk/ks7wk=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireDialog$1.class
+SHA-256-Digest: 2giy2IF+erWCGvisK1V9BnIT68qriMmZ58m3d5K9GCU=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$9.class
+SHA-256-Digest: bI6soaEo8A3BsJycF/t5ngIWc8/6zt+K1e7A0SoCDG4=
+
+Name: org/eclipse/sapphire/ui/forms/DetailSectionPart$4.class
+SHA-256-Digest: hi/uw+Z/oG3KcvrleoR4gIv8trakbOfFBOvGzwjDkD0=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireToolBarActionPresentat
+ ion$5.class
+SHA-256-Digest: E79gDajdTvNmaikM5pRbyLuXL3WOGfRYV7h07/TycLQ=
+
+Name: org/eclipse/sapphire/ui/actions/Delete.png
+SHA-256-Digest: 0LeJjejED+FDFKJ/B+FLVe8dOeIbjnH23PNKfdh+ypI=
+
+Name: org/eclipse/sapphire/ui/diagram/actions/ZoomOutDiagramActionHand
+ ler.class
+SHA-256-Digest: 9nvuOWRbAzPGX6ayoZbTLXQR1K+erXdC1NmK0eOSo9A=
+
+Name: org/eclipse/sapphire/ui/forms/MasterDetailsContentNodePart$4.cla
+ ss
+SHA-256-Digest: 1NLb3N//rmdNkntvMa5ElNOzLz646elpAwVcoovSMTY=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireMenuActionPresentation
+ $4.class
+SHA-256-Digest: R1Ce8VfXxZw49MvDXHIdF7kfkdbx0+qmAy7aiuM1b4E=
+
+Name: org/eclipse/sapphire/ui/diagram/def/IDiagramConnectionEndpointBi
+ ndingDef.class
+SHA-256-Digest: mY+V0p0JPIMRHlYtM3LHxVZxyf5udaponn4r1DD+i0g=
+
+Name: org/eclipse/sapphire/ui/forms/MasterDetailsNodeState.class
+SHA-256-Digest: S2hZB4EemeV+fjl9B8nZ5d26lwsbtyZUg/aBTo9xi5o=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/PopUpListFieldPropert
+ yEditorPresentation$1.class
+SHA-256-Digest: X5HFr/ScxHDzRKLggzTdBQ8UiSi0BS1iwYFMCH1gtt8=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/RestoreDefaultsAction
+ Handler$PromptDialog$3.class
+SHA-256-Digest: nubCQzvW/Z5tgJjls6S2yrzei6ISiuU2agJRRqRSQck=
+
+Name: org/eclipse/sapphire/ui/def/internal/StringToImageDataConversion
+ Service.class
+SHA-256-Digest: wA/0sRaEGPag3UBst02rgZIV4KvDCfkRr8jgPQ9czO8=
+
+Name: org/eclipse/sapphire/ui/diagram/shape/def/ShapeFactoryCaseDef.cl
+ ass
+SHA-256-Digest: C2MbHRVbg2HbPkYEpScxco7VI/MQ0TLPvTpZ4aWWrXU=
+
+Name: org/eclipse/sapphire/ui/forms/swt/PropertyEditorPresentation$1.c
+ lass
+SHA-256-Digest: +LIq2uKaEE+b5wp9xhYcUKQiC5DBvsfifxXQuvKgNfE=
+
+Name: org/eclipse/sapphire/ui/assist/PropertyEditorAssistContribution$
+ Factory.class
+SHA-256-Digest: 4i+6dKtBJdZEks0hIy5O8LfAplUIw0BPKAcxN6ysZ3w=
+
+Name: org/eclipse/sapphire/ui/forms/HtmlPanelPart$2.class
+SHA-256-Digest: noolBrA6Wc+nNXJXacrhlxoR1fcwwTdubtOegWmOgqE=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/CompositePresentation
+ $2.class
+SHA-256-Digest: bhfyrqISRJeXjDTXPKPL+dbcZHu5CDEWFaS2E69m9Ws=
+
+Name: org/eclipse/sapphire/ui/forms/PropertiesViewContributionDef.clas
+ s
+SHA-256-Digest: OPDsDIGFInY7OA9IhHufTftOA0wPM/vfdC72betsr/M=
+
+Name: org/eclipse/sapphire/ui/forms/swt/MasterDetailsEditorPage$11.cla
+ ss
+SHA-256-Digest: vNiLDRYDQPe3r6Qv6ikx9WMKvzlimTWB4dYBo/vvZRw=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$TableRow.class
+SHA-256-Digest: brZSu8AAgi9gijxd0fzMC3PX20w7Lz0Ex+vSXEaZQcg=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/text/SapphireFormText
+ $6.class
+SHA-256-Digest: Y25G/r2FkeZwVIgY6gC5/cM4ALLpcQcaicQtBqh+06Q=
+
+Name: org/eclipse/sapphire/ui/forms/MasterDetailsContentNodeDef.png
+SHA-256-Digest: wNEud+fQdxVqn0I2uTluRZ4zsuUhUS+R6S52ssM7Xhw=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TextCapacityFeedback.class
+SHA-256-Digest: T2jKFNwX4ZD+uKZe/bf/q8E8ASP8rKoeoX9wZ0px2/A=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/text/FormTextModel$Pa
+ rseErrorHandler.class
+SHA-256-Digest: 58/sTkHWvB8jOm7fNAxqph4uiZH6kJTkyX+cbvJ9acI=
+
+Name: org/eclipse/sapphire/ui/def/internal/SapphireHintValuePossibleVa
+ luesService.class
+SHA-256-Digest: BnhIhU0N3daZDjvgkzI2RWzeQof9lKA/fZXgYWUeQgM=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/HyperlinkTable$8.clas
+ s
+SHA-256-Digest: Pq+G+Ww9oNHglRKfnzmAhoejrWg5ahFgO6vks4tEaJc=
+
+Name: org/eclipse/sapphire/ui/assist/internal/PropertyEditorAssistDeco
+ rator$7.class
+SHA-256-Digest: jxorYxhmp6UoVO1lm6LXgaLUBgPhAVHj5TXJJQUMa1E=
+
+Name: org/eclipse/sapphire/ui/diagram/def/IModelElementTypeDef.class
+SHA-256-Digest: nrF+Htify6jg2rGPMTt6lSh/ysRfbi2o7GXhBpXLkoY=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/TextOverlayPainter$9.
+ class
+SHA-256-Digest: XJCdzBrSozoJnyh1bcjtr1lLbnFq0WbJaujFkRDBUnI=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/NamedValuesPropertyEd
+ itorPresentation$NamedValuesBinding.class
+SHA-256-Digest: cvrsMNFWMiaPqxUzNExszNMQNfzi5r05r0Tpd6FcZFE=
+
+Name: org/eclipse/sapphire/ui/SapphireAction$KeyBindingBehaviorChanged
+ Event.class
+SHA-256-Digest: ftO3/8bVxehHcRAs/5E5aNSiyy1JufMgCzrha2TFLBw=
+
+Name: org/eclipse/sapphire/ui/forms/swt/Folder.png
+SHA-256-Digest: 8tj7DYmu+PJxAfN+Ij3QHwrQr6PqP+4T+OXYhs54m2w=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/PossibleValue.class
+SHA-256-Digest: bL9Epf7UleU47d4vvB5ED0O7t/4KcXJX+LMFUqT4WZc=
+
+Name: org/eclipse/sapphire/ui/def/SapphireActionType.class
+SHA-256-Digest: opjouob9n2w/0L6+I/M9BiOQEWIvn9xi8S7WE8tkO88=
+
+Name: org/eclipse/sapphire/ui/forms/internal/OutlineNodeShowNextWarnin
+ gActionHandler.class
+SHA-256-Digest: R2eMH2PQPk0J2lgUk8T4AKt6TRTO0uaM8X6s+Nvlv9I=
+
+Name: org/eclipse/sapphire/ui/forms/PageBookPart$1$1$2.class
+SHA-256-Digest: 1S2iCpzmv79EFSS0NK/C3XkxVprL9XB8qBqITc1MpoI=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$PopUpListFieldColumnPresentation.class
+SHA-256-Digest: HvQ/TvbxYWVS/qwHtPPPk6NR2zqRBdZSDrdW7yLoN6g=
+
+Name: org/eclipse/sapphire/ui/diagram/ConnectionService.class
+SHA-256-Digest: LFKGCwXu7dkSNVccGGbccnr6l39wRs4B06w7KrB/gL4=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireEditorFormPage.class
+SHA-256-Digest: U3WTOSHSWUiVFIAD3JrmaOevTTBAMvk4KyMALdCz02U=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/text/TextHyperlinkSeg
+ ment.class
+SHA-256-Digest: cG/+dLtxe+2vBhEoS1rqLdGUBYUig83Fl569x4rUo3Y=
+
+Name: org/eclipse/sapphire/ui/AttributesContainer$Attribute.class
+SHA-256-Digest: lxPySA6wntJ2PFKKRVoeSHAm/kGeFdNXa0648ySGV1c=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/PageBookPresentation.
+ class
+SHA-256-Digest: V6VW4dROArV34MSpWUG+SfU6zdyo2xoGv8Rlougqido=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/SapphireToolTip$5.cla
+ ss
+SHA-256-Digest: 7LdTlanVdlwZo7Q8a2GPJgb3yQ0BQzsSw6qVzSollIY=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/DiagramPageEvent$DiagramP
+ ageEventType.class
+SHA-256-Digest: Xxa2nRWdmM3w20JZr7bhY78WCAmdQ4piHh8wrgAzC9M=
+
+Name: org/eclipse/sapphire/ui/diagram/shape/def/BorderBottomRight.png
+SHA-256-Digest: fsah/2VEoAuj4lkBJzCE23DBNwlwhg8tTez4VjiPXCo=
+
+Name: org/eclipse/sapphire/ui/forms/MasterDetailsContentNodeRef.png
+SHA-256-Digest: 9buYbUtHeKBc8YuOKtsWGLbHfL6B4nxxCt1XbLMrR0Y=
+
+Name: org/eclipse/sapphire/ui/internal/ListSelectionServiceCondition.c
+ lass
+SHA-256-Digest: SsIitzcVD/mZU4+Iizflb9RWZ1O7Wq1jbAx3U/CZbmo=
+
+Name: org/eclipse/sapphire/ui/diagram/shape/def/BorderTopLeft.png
+SHA-256-Digest: wSC7hGJ7ifLpmIUm7zMYbxcsJ51d3prpLRSTb1wPX4I=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/CalendarBrowseActionH
+ andler$Condition.class
+SHA-256-Digest: EibYK3un0+sQU9ELq+BX/IqOSxi+3Khx6XHf7etLdCU=
+
+Name: org/eclipse/sapphire/ui/EditorPageState.class
+SHA-256-Digest: jcymw1If0rpm0qrGbKXhPZqDe/5Www4O7B5+otPbmtY=
+
+Name: org/eclipse/sapphire/ui/def/ActionDef.psd
+SHA-256-Digest: 2oi48efghQQJ5Vm2TMWgo2xUaBJH0rDXUXPbUcYhXx0=
+
+Name: org/eclipse/sapphire/ui/diagram/actions/DiagramNodeAddActionHand
+ lerFactory$1.class
+SHA-256-Digest: qI4TVoG0EbI8JKBnm44Nlv5Bloy+goZg3TFTy9+TUOw=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/RadioButtonGroupBindi
+ ng.class
+SHA-256-Digest: CoENFJTuZiYaI9bEjSn68q+ctDi8sXtyqZyc3US60VQ=
+
+Name: org/eclipse/sapphire/ui/SapphireActionSystemPart$CheckedStateCha
+ ngedEvent.class
+SHA-256-Digest: ZBUL5M1T1CEZzPcXLmrFdXnkDcJMzJGTQtFV+vB4q40=
+
+Name: org/eclipse/sapphire/ui/diagram/actions/DiagramSelectAllActionHa
+ ndler.class
+SHA-256-Digest: CpnYQzlRtg2YJECE/Rh6SkvDGSD6+qTnBjDMnHZwUHE=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/TabbedPropertyList$8.
+ class
+SHA-256-Digest: bXwmK3ou9UBbD1H4kbUSrUuQD20khXBQzHTLIqYgdcQ=
+
+Name: org/eclipse/sapphire/ui/AttributesContainerMethods.class
+SHA-256-Digest: siw88yDkTilc0ygPiSKTP//y5WTbiWmiSlT/IQ91qjM=
+
+Name: org/eclipse/sapphire/ui/assist/internal/PropertyEditorAssistDeco
+ rator$EditorControlMouseTrackListener$1.class
+SHA-256-Digest: k9gCgQzmlfw7To5+D4NdE0RST/VFuJEghYwckFJv//w=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/ShapeEvent.class
+SHA-256-Digest: +24IwrE496iW8iZNNDxXKw0nGlOXmrXSegx6JUw9fPY=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SlushBucketPropertyEditorPrese
+ ntation$2.class
+SHA-256-Digest: 0RVcGAS2Kas1joBMwgTbaM/qzQJ5tOJ9SWFUaf9BKyw=
+
+Name: org/eclipse/sapphire/ui/forms/swt/CheckBoxListPropertyEditorPres
+ entation$9.class
+SHA-256-Digest: UxdeTgRhXgn30bOVz0qtg1qcX2LdkhI5UBu/vRiIzJA=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/TabbedPropertyList.cl
+ ass
+SHA-256-Digest: JBXbewAzR1/kOEbtJOA9SuU4HZXNHWU2kEgnGIXWr9Y=
+
+Name: sapphire-32.png
+SHA-256-Digest: aYaVKfaO2QTXVtU/44zA+2P/G7f1ch9sWEpJRuDUBdU=
+
+Name: org/eclipse/sapphire/ui/forms/WithPart$2.class
+SHA-256-Digest: g2alUrnuWKQxPSmvXxIfSaGn7sBjz626f3hJ/mvHRVM=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/CalendarBrowseActionH
+ andler$1$2.class
+SHA-256-Digest: vWKYiJjHFOab60mlsvnDfU9VeVxTqK9k3ploxBypDek=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/SapphirePropertySheet
+ Page$2.class
+SHA-256-Digest: /7yGgq71L1ojDRRqLfrASuNoQOaYF1aQtZHWz/177lU=
+
+Name: org/eclipse/sapphire/ui/def/PresentationStyleDef.class
+SHA-256-Digest: j/efrYOeoQA5pcBRzRuB79boFEroUOCPyboRbsgHq84=
+
+Name: org/eclipse/sapphire/ui/diagram/shape/def/TextDef.png
+SHA-256-Digest: yigBrFRNpLIGf3n6hNsbRpiSwmmKrh3VdLneU9xnnAQ=
+
+Name: org/eclipse/sapphire/ui/forms/SplitFormDef.png
+SHA-256-Digest: Stvft08uH6zOnzMewinQ8a7A7IFBkR+Uc4pbE1su9Gw=
+
+Name: org/eclipse/sapphire/ui/def/InvalidDefinitionException.class
+SHA-256-Digest: 3eDIT5oGbP7eh6yEuyBVeHXd/IjAba73IRUw/L6V8jk=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/WithPresentation$1$7.
+ class
+SHA-256-Digest: NH+NrtO8bdPyEZMQ5sKZYLa9OBIzu8SK7JAV4+gao90=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$26.class
+SHA-256-Digest: QPWTazNwwo8X5GHImGo5BGf0Rx0NTS6D3KThdHSpLc8=
+
+Name: org/eclipse/sapphire/ui/actions/CreateMini.png
+SHA-256-Digest: bgovas0pFVD8ioaJuUT5tdp73iG1lMweyFORRG/Yi0M=
+
+Name: org/eclipse/sapphire/ui/forms/MasterDetailsContentNodeFactoryDef
+ .png
+SHA-256-Digest: mseAXBmMiSNpFq8hSFOAfLkPsLNNySE/uBxOD3FosvM=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/TabGroupPresentation$
+ 2.class
+SHA-256-Digest: bHmO0WfyL+uOaGHzrS1nhbuGtjXEPmgZE47YRHiZYLw=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/ElementsTransfer.clas
+ s
+SHA-256-Digest: uCWzAjVDt5PLnW4KvG+BSOiuixUFVZ6np52Mvkfrnhg=
+
+Name: org/eclipse/sapphire/ui/forms/HtmlPanelPart$ContentEvent.class
+SHA-256-Digest: 6zJ+bik4TzOh9b1gpc72fiDwKvU4lYrlqSrFd3Q9Qic=
+
+Name: org/eclipse/sapphire/ui/forms/internal/OutlineNodeAddActionHandl
+ erFactory$ListPropertyActionHandler.class
+SHA-256-Digest: jJwSGQkro4cldFDizwa0pLZsxUv7AcEIHbhLcZSulcc=
+
+Name: org/eclipse/sapphire/ui/assist/internal/ActionsSectionAssistCont
+ ributor.class
+SHA-256-Digest: JqbUaqbFbtD0/vSyZhbylBkIsTL5T76YxqwhPG3DGWg=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/ShapeFactoryPart$3.class
+SHA-256-Digest: F70IpjZUj8fSo02pAksX0uiz8h0qxkarEZhAhrzTqP0=
+
+Name: org/eclipse/sapphire/ui/forms/ActuatorPart$5.class
+SHA-256-Digest: 622p3cL5qqXk01YbJHAYhK1CM96mSN3sEqKsWxRBGmc=
+
+Name: org/eclipse/sapphire/ui/SapphirePart$DescriptionChangedEvent.cla
+ ss
+SHA-256-Digest: rWSKe66B1r9gacWRnrvyW6N4aLOi7BRVrMQb6FYsp4w=
+
+Name: org/eclipse/sapphire/ui/diagram/actions/DeleteAllBendPointsForCo
+ nnectionActionHandler.class
+SHA-256-Digest: VOkgiR3uP3gBsyapHVB0fZ26bRyk4vX01JAVTX/ODNw=
+
+Name: org/eclipse/sapphire/ui/forms/swt/RelativePathBrowseActionHandle
+ r$ResourceComparator.class
+SHA-256-Digest: PDA93nMExse8ps1ohluIoI0zI53i3PTTO/+j1hsGX/o=
+
+Name: org/eclipse/sapphire/ui/def/internal/SapphirePartDefMethods.clas
+ s
+SHA-256-Digest: HNkOtiVZTu9lFjcE39TkCT1DenJ3rSgYrX5zFPgBn0Y=
+
+Name: org/eclipse/sapphire/ui/forms/swt/CheckBoxListPropertyEditorPres
+ entation$8.class
+SHA-256-Digest: Ao3LcvH4mtsRi72i2McDDHfxjl9LJg19OVga1sRmC9U=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/DiagramNodeTemplate$3.cla
+ ss
+SHA-256-Digest: 4VOzrLmY9r8q6w5q9eYnIv+1Jry9Vnor/nd6pHkUoNU=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$TableRow$1.class
+SHA-256-Digest: sJYoVX/Bx0ZKCVtQEvRXsqYuJcg2k3rLKLcweMTSGqE=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$25.class
+SHA-256-Digest: FnoBpnWWlGXNU1pGW77A9CUzWf/5+eYpgxc2KdM9x34=
+
+Name: org/eclipse/sapphire/ui/actions/SelectAll.png
+SHA-256-Digest: 7V4GevU1tr3UKDEZVZCofgYhFbkdj1RTETg0JLjWE1g=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TextFieldPropertyEditorPresent
+ ation$ImageContentProposal.class
+SHA-256-Digest: Sy8GSmCaLN/G17Bglfeb91wH0WIlbMHx9kVnQkitF98=
+
+Name: org/eclipse/sapphire/ui/forms/internal/OutlineNodeMoveActionHand
+ ler$3.class
+SHA-256-Digest: OozYybbgKPGjOCHhZZiaGEaBsVM70Z5fcp8Qhj/7+fs=
+
+Name: org/eclipse/sapphire/ui/internal/SapphireEditorContentOutline$Em
+ ptyOutlinePage$1.class
+SHA-256-Digest: bQJHkqoq/DsZHWK2LDwUjqbqTjfIU6X2XRqxTsvZQJg=
+
+Name: org/eclipse/sapphire/ui/def/DefinitionLoader$DefinitionLoaderRes
+ ourceStore$1.class
+SHA-256-Digest: UpRke8aJEBfYXXsWSL5jlV01GRSWrcMXqrdVQy1tWcc=
+
+Name: org/eclipse/sapphire/ui/forms/swt/MasterDetailsEditorPage$RootSe
+ ction$1.class
+SHA-256-Digest: L6RNcPnfJqFbHDegziChHQ6AzpGnEtO2z1atIPr84OM=
+
+Name: org/eclipse/sapphire/ui/def/internal/FormPartIncludeReferenceSer
+ vice.class
+SHA-256-Digest: pcDtB92EJ0AcqNoa2jK4xeXHGFBgLbhH1g+8hOdylN8=
+
+Name: org/eclipse/sapphire/ui/def/ActionSystemPartDef.class
+SHA-256-Digest: OMHhr8B6OmnLD0uqS3RLdzl7aWhkYESbBAZxD7dgVpM=
+
+Name: org/eclipse/sapphire/ui/diagram/internal/StandardDiagramConnecti
+ onPart$1.class
+SHA-256-Digest: auXOZlwJhJqbiGOmxligB987fZshKQSc3TuXahZdZ+I=
+
+Name: org/eclipse/sapphire/ui/SapphireEditor.class
+SHA-256-Digest: 58fv2aXPH4aOau8sqbY4WXHnciyaPfhWNCuLDXEZ8vE=
+
+Name: org/eclipse/sapphire/ui/diagram/def/ProblemDecoratorSize.class
+SHA-256-Digest: n/kMaeqwrNgeA+w4Z51YQcLo2FTHtiVkvs4HRenn2rU=
+
+Name: org/eclipse/sapphire/ui/SapphireAction$3.class
+SHA-256-Digest: 729OomHPm06XyL36Ks7QqpnI4mTOKK+rnA89IxkOwsQ=
+
+Name: org/eclipse/sapphire/ui/actions/RestoreDefaults.png
+SHA-256-Digest: iREjDARHTjhf7+XltvIWxi0ipZmiVtjkGxhBBLWQEwc=
+
+Name: org/eclipse/sapphire/ui/def/internal/JavaTypeReferenceServiceFor
+ Sdef.class
+SHA-256-Digest: hRtxu9xU7nkkhVvzRPFph2HvNuMpfgN/fXksS9273rw=
+
+Name: org/eclipse/sapphire/ui/forms/swt/PropertyEditorPresentation$Cre
+ ateMainCompositeDelegate.class
+SHA-256-Digest: U8Kme+fXEuhFzw3UUGiF9U/KyXzM2hZYjpPAQHjdrfQ=
+
+Name: org/eclipse/sapphire/ui/SapphirePart$4.class
+SHA-256-Digest: 7BBdKifAfw31thWpzVCX8lb89obv9erxXGXKYg/h/n0=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/DiagramPageEvent.class
+SHA-256-Digest: P1KtVRuUD4dut4ADQ4ri65ZQidhkE7/SkOmkvS7XsGI=
+
+Name: org/eclipse/sapphire/ui/SapphirePart$ImageChangedEvent.class
+SHA-256-Digest: xctVVlPQCxAmYFVsfMNOrFZlwCACetkntBxpk8S4Zys=
+
+Name: org/eclipse/sapphire/ui/diagram/def/DiagramEditorPageDef.class
+SHA-256-Digest: 9A4VTNZaHZ6OnJc1KI22pDPBto9uNtL8xhXLB4lQSn4=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/TabbedPropertyList$Li
+ stElement$2.class
+SHA-256-Digest: pwGwlQbM4PB+qR133Ph1zOizyjM5uy6I8XTByLpafuI=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphirePreferencePage$2.class
+SHA-256-Digest: E0Iio/sgWxyOztbZr7FS6sTTKskp09eZ1JnyqwxbTh4=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/ContainerShapePart$2.clas
+ s
+SHA-256-Digest: 0PREnNHwnrcmAhXlyns9wQ0QHlrYUCDaCI7NFSqMjpU=
+
+Name: org/eclipse/sapphire/ui/diagram/shape/def/GradientBackgroundDef.
+ class
+SHA-256-Digest: +ngdjffzYSv1AfwVKZyaDm8Ih0mHuMF7UqN3+gSwOXE=
+
+Name: org/eclipse/sapphire/ui/SapphireExtensionSystem$1.class
+SHA-256-Digest: uiEYvIdi0392mcc4x4DsyJSc/K846fjF3vvxQ/fy17s=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/text/FormFonts$BoldFo
+ ntDescriptor.class
+SHA-256-Digest: 1zfVWpzafSqFT+YGblR8nO+Fj49Hifoi/ZmAk2gEyKY=
+
+Name: org/eclipse/sapphire/ui/def/internal/LocationHintBinding.class
+SHA-256-Digest: Plhu7L6O0g+39yFz+08h0KwbpbN/nZY0+JrYpny0fts=
+
+Name: org/eclipse/sapphire/ui/forms/CompositeDef.psd
+SHA-256-Digest: 3AguHjxItSYAOsHKwZhX64gt/i8zqR2xvPiOhtsznYM=
+
+Name: org/eclipse/sapphire/ui/actions/Help.gif
+SHA-256-Digest: K8TNWtrr8CbiAyz1PLTnN1fVgXWoSCZmXiKFU418/Jg=
+
+Name: org/eclipse/sapphire/ui/forms/WithImpliedPart.class
+SHA-256-Digest: iecAGAMRw5IBs9MQ973T9amDocMvadwmf2ppKouHStI=
+
+Name: org/eclipse/sapphire/ui/forms/StaticTextFieldDef.png
+SHA-256-Digest: wlEhhZot0Ad8xr+63piHCMMwTvSG3zj2WUmMSmgaKrE=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SlushBucketPropertyEditorPrese
+ ntation$Factory.class
+SHA-256-Digest: +EKjFvcmDADMQVS7kBwsfObHr3eM5NlW3vaazSl5NII=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$18.class
+SHA-256-Digest: oZF1Y488KxOn1RSRI/1l48iOyRgl+Vu0sy/Jl3bAyZk=
+
+Name: org/eclipse/sapphire/ui/forms/swt/RadioButtonsGroup.class
+SHA-256-Digest: uJII67QMC54Rz+42sIXNH1UBhN6qxDf7wPNpssBLavs=
+
+Name: org/eclipse/sapphire/ui/def/DefinitionLoader.class
+SHA-256-Digest: lZx7r9ujNE7qNyqdcqztAYs84EegkzZrANmPP2zpqDI=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/HyperlinkTable$4.clas
+ s
+SHA-256-Digest: E5cZ1U/UGcOzuRdSYUaldZOq3rSWcUSeeTGXeDZn2y4=
+
+Name: META-INF/sapphire-extension_ru.properties
+SHA-256-Digest: Q4ExHP8iRsfv9vXsa/gvzB5bUv0L+H3DI2IwHVlNDVA=
+
+Name: org/eclipse/sapphire/ui/DragAndDropService.class
+SHA-256-Digest: aSqahLXbC38AdxZOR9PS+uZrEXMSgLTVRCrVyjvOmYk=
+
+Name: org/eclipse/sapphire/ui/internal/PartParentFunction.class
+SHA-256-Digest: OIA0+HJKmqwRcodonG2yWnejHv+ko9iyGl9s4R/N7U0=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$20.class
+SHA-256-Digest: Hn+vCh8qDzAxQYU2onCPkE0/dxmQmIvOsnZsR+ci+9s=
+
+Name: org/eclipse/sapphire/ui/forms/DetailSectionPart$3.class
+SHA-256-Digest: qsukLlSft+NpsJRfl7sdREgEuMahPZwqXcq1PFFFZDU=
+
+Name: org/eclipse/sapphire/ui/forms/PropertyEditorActionHandler$2.clas
+ s
+SHA-256-Digest: CMflCMrrxSQkyepv/3En3EtDUYuxaxovbuNElUOJUPM=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/WithPresentation$1$8.
+ class
+SHA-256-Digest: qRKyO25LmyIUEKc0XlvlMz4N9Chy+6uS/m40UD69g1I=
+
+Name: org/eclipse/sapphire/ui/ListSelectionService.class
+SHA-256-Digest: Icu4OaS2O28zA36AmLyhf2Wk/cST26rHENxUY0tCvL8=
+
+Name: org/eclipse/sapphire/ui/ProblemOverlayImageDescriptor.class
+SHA-256-Digest: KbeJ+cEefTvX4U7n5i4vosmaHMjVDbJ4gYdzxwYCO7o=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/ShapeFactoryPart$4.class
+SHA-256-Digest: KH9UJgr+MITARlBKJGmmZZH/Q7VkIazVN9Jr7QEb+QU=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$12.class
+SHA-256-Digest: dXKf86PUUEhoAiqUe/Ye37uBJkrJ3WjFIDIFL/8VsLk=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/ProgressMonitorBridge
+ $2.class
+SHA-256-Digest: IaWgOjIGzYbyhl81s6uck/OagBnV+D8QKgdcZfRjopM=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/TabbedPropertyComposi
+ te.class
+SHA-256-Digest: HBSJ8ePc0v9AEYgNHFddiKQdA91Axbum+E9BeU6opwM=
+
+Name: org/eclipse/sapphire/ui/forms/internal/ProblemsTraversalServiceC
+ ondition.class
+SHA-256-Digest: 9VPCpdHxi/Ugxij1DbXo4BKxfu5JiMbFSvgT9sh/01Y=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/SplitFormPresentation
+ .class
+SHA-256-Digest: tvV4+L4v6a4aOz2Pvkw7YQl3mpBkjtlFKMFZQcLnjFc=
+
+Name: org/eclipse/sapphire/ui/forms/swt/FormEditorPage.class
+SHA-256-Digest: eiYYU5DnqpQrbzk63M+YbGlfqD2Uuowa0hj2s/ipVpg=
+
+Name: org/eclipse/sapphire/ui/forms/SeparatorPart.class
+SHA-256-Digest: CV15W99Z2Vh8Hxl73ijOX9S6y4T55h+5QCOEpy15qag=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/PopUpListFieldPropert
+ yEditorPresentation$2.class
+SHA-256-Digest: joqQenDwKsMOgFwVku/v2BmfNdEOhvJ0JofJr6DaK5g=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/SapphireToolTip$6.cla
+ ss
+SHA-256-Digest: yjAruS7UckD+TE4/PK4kurwu2Yi8ZIuT7MVVWnONyYs=
+
+Name: org/eclipse/sapphire/ui/diagram/shape/def/BorderTopBottom.png
+SHA-256-Digest: fINTvq2EwkWYIXBD6y7qFOZdi/enBxPl/C6RtWDplXc=
+
+Name: org/eclipse/sapphire/ui/SapphirePart$ImageManager.class
+SHA-256-Digest: Akb8d0YYsajIueJG7Aqi4UtophQeF8672Qg2xhNd5QU=
+
+Name: org/eclipse/sapphire/ui/def/ActionHandlerDef.png
+SHA-256-Digest: 6WI2LctX855WKNkk/OdNtVDNISGPtWh9P6yVaeAfcuc=
+
+Name: org/eclipse/sapphire/ui/diagram/internal/DiagramConnectionTempla
+ te$DiagramConnectionTemplateListener.class
+SHA-256-Digest: zFu+0avYhFna1BLROM52jbzr5HQ3n+xMOJWHkzqWq98=
+
+Name: org/eclipse/sapphire/ui/forms/internal/OutlineNodeAddActionHandl
+ erFactory$2.class
+SHA-256-Digest: tiHvWKXJZJUjopDP/ZShZte2YC4nfDrbKG7uT9Li6+M=
+
+Name: org/eclipse/sapphire/ui/forms/swt/MasterDetailsEditorPage$TreeVi
+ ewerUpdateOp.class
+SHA-256-Digest: rDHNudujMNlxL17UWge+lrDaqxQdGVfx73zeAjYKIz8=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SwtUtil$3.class
+SHA-256-Digest: qVpk6nqllBgwrmS5qnTHMFsVsKDp+eL3kFL/F1uP0Qg=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SlushBucketPropertyEditorPrese
+ ntation$6.class
+SHA-256-Digest: /pWhmz0J7zs3zbEQzSw+eqvZEAHgJMcWxcvotVAf9zQ=
+
+Name: org/eclipse/sapphire/ui/def/VerticalAlignment.class
+SHA-256-Digest: kUr2SL6wbTosdxulFVWB8Tt9STCbQFubfzuvZQII7KY=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/text/ResourceManagerM
+ anger.class
+SHA-256-Digest: HOk7ed6OzHLmttvDlB7fLWyRCrqSTaZIfYKzBXDr9hQ=
+
+Name: org/eclipse/sapphire/ui/def/ActionDef.png
+SHA-256-Digest: UYgdn+4h9UMX8AWTrkfbE5wTHLLjMkifoWQp9Z+PoqA=
+
+Name: org/eclipse/sapphire/ui/diagram/actions/MoveShapeUpActionHandler
+ .class
+SHA-256-Digest: B2whmzvMLAlzT0wBTTImZkVFLnt4mtsoci7O2ARAynA=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/TextOverlayPainter.cl
+ ass
+SHA-256-Digest: buxAX7fS8lw5fYrdk5uzSiwO9r9ajUYLhoxuply2224=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/ContainerShapePart$7.clas
+ s
+SHA-256-Digest: L2HwAlfTvlx3+n78KgYC6Bw9+RrxBMG27bP659ED61A=
+
+Name: org/eclipse/sapphire/ui/forms/MasterDetailsContentNodeFactoryDef
+ .psd
+SHA-256-Digest: JQPpfSOhrlGcNdc0DtHoZMqX0vdwvEBapHSYz8RiCUA=
+
+Name: org/eclipse/sapphire/ui/internal/PartServiceContext.class
+SHA-256-Digest: iNDeyekX6nu8oGjLEsDYAgXnQzpKXcBq4AxZDSpnsFk=
+
+Name: org/eclipse/sapphire/ui/forms/SeparatorPart$1$1$1.class
+SHA-256-Digest: xERKe8X8wK/B/3rlVAhCr10yTWiCZbaEUW760CiMCA8=
+
+Name: org/eclipse/sapphire/ui/forms/swt/CompactListPropertyEditorPrese
+ ntation$1.class
+SHA-256-Digest: /39QJ3MbmGolfPyitB8FL8+X9WTdTKJnb3GHJidgMHw=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/CompositePresentation
+ $1.class
+SHA-256-Digest: iRVhLW0QPtTLDkWKRw1cc3WtTQ3UHyCZk/pA3ncJD4g=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SlushBucketPropertyEditorPrese
+ ntation.class
+SHA-256-Digest: gJSGCH1WGxy/gfrJjjPVU4fYV9hrDxF7ut2dmyPfwO0=
+
+Name: org/eclipse/sapphire/ui/forms/internal/OutlineNodeAddActionHandl
+ erFactory$3.class
+SHA-256-Digest: MW4H/kKX5SyXYNlvzJ1QWOfbD80iZe07BSWtGO46Jik=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/RadioButtonGroupBindi
+ ng$1.class
+SHA-256-Digest: mKqacyCXLSOLzDoLEaCeEZCuhst2Pe5yIkHZT5EfhO0=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/text/TextSegment$Text
+ Fragment.class
+SHA-256-Digest: x1uaDV8Eto1wLPtFHQe8v1JcUe1DW9HRjAR6cJiXJ0E=
+
+Name: org/eclipse/sapphire/ui/def/PartDef.class
+SHA-256-Digest: 2GTnvrJv/InnfErz/CX55si6ndhGmGJlxpc0KaKPNEY=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireHotSpotsActionPresenta
+ tion$ControlHotSpot.class
+SHA-256-Digest: /VNteS/CtGmrGlmAvRaHtW0xlLD3ybLINk+UiH/Zx94=
+
+Name: org/eclipse/sapphire/ui/SapphireActionSystemPart$VisibilityEvent
+ .class
+SHA-256-Digest: Ut3ZUjLa3PLvvp/wCF6FRQokIQPhxMN/yRO5v9yQXGM=
+
+Name: org/eclipse/sapphire/ui/diagram/actions/internal/DiagramShowInSo
+ urceActionHandlerCondition.class
+SHA-256-Digest: fC8ssdDEXHqCGEQIjJGxZYe4yiz/QmrMWdP4Of/nF0M=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireTextCellEditor$2.class
+SHA-256-Digest: YsmurZ/74Q43sjnfDGXjF53KPdSHNC5pVgUO6kQLat8=
+
+Name: org/eclipse/sapphire/ui/forms/DetailSectionDef.psd
+SHA-256-Digest: L7cLBS0/OR8QuBWO9RfKmFgV4tlsz1VdwDAXzrRxmmU=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$BooleanPropertyColumnHandler$1.class
+SHA-256-Digest: 8OVKRl6P++SDIEUgaptpJGFdxy/hSHl43IAWLnBsG3I=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n.class
+SHA-256-Digest: HW8L7b8WYDHxa4B0JbfS1SExsZPTDXd9CatMHnPLM/g=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphirePreferencePage$1.class
+SHA-256-Digest: jZks1uR+mdSRHO1xj/U2l8A2P62ttMrhW/2jBtAkPMM=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireWizardPage$1.class
+SHA-256-Digest: zO+JMgVp4NyoQc2qEnH/34A2qln28TMZzrNRKMsQJ4M=
+
+Name: org/eclipse/sapphire/ui/def/DefinitionLoader$Reference.class
+SHA-256-Digest: cubxzRLDw+UfMSkkH5rgmtRjLylvpkS93bFrzaJLv+o=
+
+Name: org/eclipse/sapphire/ui/def/SapphireKeySequence.class
+SHA-256-Digest: ffcsSmDAhlT6433mBxbth8Qqix8v4fQooMpbhE1m+0s=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/SectionPresentation$2
+ .class
+SHA-256-Digest: g3E45fdjyi0N/DFaDpjvDDIHl79HG4hTmVSDK5M5i3s=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$17.class
+SHA-256-Digest: i4AkeqSByTEfTqH7gXe/jsbJ/cAFgctuPRF+1ybdUBQ=
+
+Name: org/eclipse/sapphire/ui/assist/internal/PropertyEditorAssistDeco
+ rator$8.class
+SHA-256-Digest: 6/jDcn5uOFhN0HObtTrtVradVfp7JAUOHdgVaJXWIss=
+
+Name: org/eclipse/sapphire/ui/PartFunctionContext.class
+SHA-256-Digest: f4sgXBYvqYUGDii7hvEixAfIJHbCbRSId25oDpVpNCM=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/TabbedPropertyList$4.
+ class
+SHA-256-Digest: /OMgo1mjgrrFU94QyQTSz7jEjfUEMiFVVoSuifb+lSc=
+
+Name: org/eclipse/sapphire/ui/diagram/shape/def/LayoutConstraintDef.pn
+ g
+SHA-256-Digest: jv/IjCB6omvAmTRxyVazgnfCVk+w9VB0KMQ13AxjnaE=
+
+Name: org/eclipse/sapphire/ui/actions/SaveAsImage.gif
+SHA-256-Digest: 6U3hkMXd8mR5ToLZBS6y3vTKgKAR96hdk2w0wYdGpdo=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireTextCellEditor$1.class
+SHA-256-Digest: BThphr6HvYquOOPNYgm0MDJBBV7WeMQ8eg4KaDtQJDI=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/TabbedPropertyList$3.
+ class
+SHA-256-Digest: 33qEXclrMUucRVibO8skENJVTu41Fopp9YHjKeDPv/A=
+
+Name: org/eclipse/sapphire/ui/forms/FormEditorPageDef.class
+SHA-256-Digest: Q+upD97zuk6oNcagy3KwfQHSPW8FjegQ0bNsnnKFrv0=
+
+Name: org/eclipse/sapphire/ui/forms/SplitFormPart.class
+SHA-256-Digest: bQOq96Y2QXHOyQWdFDYFcaCuJNe9NoXsmlaP384xDkA=
+
+Name: org/eclipse/sapphire/ui/forms/BrowseActionHandler_ru.properties
+SHA-256-Digest: TYnM812gYumUevaTOeGgskI08fn06JvN/rfbgEafcGk=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/PopUpListFieldPropert
+ yEditorPresentation$7.class
+SHA-256-Digest: KZVm7kIxetemSz85APXwlmXR6IQkmMGQDOMylmVRR/Q=
+
+Name: org/eclipse/sapphire/ui/forms/MasterDetailsEditorPageState.class
+SHA-256-Digest: AyNCUKk9iMxg0VvpPLjP8eUyGmWETy0JNVIuytVjfRw=
+
+Name: org/eclipse/sapphire/ui/forms/swt/PropertyEditorPresentation2.cl
+ ass
+SHA-256-Digest: T4u4Z0bLZ5pp9XNoUYGgPMudf7STjYqp2q60GuMetpU=
+
+Name: org/eclipse/sapphire/ui/forms/MasterDetailsContentNodePart$NodeF
+ actory.class
+SHA-256-Digest: xhcg8Vkm3aaWy5cjoTUB4+DtHfz4Mw9EfN2R8zmM6S4=
+
+Name: org/eclipse/sapphire/ui/diagram/shape/def/SelectionPresentation.
+ class
+SHA-256-Digest: AYnK7r0MbDGMRDnWbZWYPizmbZaUJSxukJ7NtA7KaYo=
+
+Name: org/eclipse/sapphire/ui/SapphireActionSystem$1.class
+SHA-256-Digest: nu1MhV9TCj+wCqB1F1vXbe/whMjKu+TBIzRyXY1Jzpg=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireKeyboardActionPresenta
+ tion$2.class
+SHA-256-Digest: qf9rcBpEqcM9pU7iYL9DktGSTP48mxJ9gmTx01z/9OE=
+
+Name: org/eclipse/sapphire/ui/diagram/layout/standard/DiagramNodeLayou
+ t.class
+SHA-256-Digest: tr6k3rNI+0PLr9Ukt8leeJyMLaDMS61Xh02lBjkjpHw=
+
+Name: org/eclipse/sapphire/ui/forms/SplitFormSectionDef.png
+SHA-256-Digest: EEhGpruE/aF7ZW+0hR4zs9Y/HkrY/+148VFaPMfLYfs=
+
+Name: org/eclipse/sapphire/ui/forms/internal/OutlineNodeAddActionHandl
+ erCondition.class
+SHA-256-Digest: BtRZLDsE311l5IrgjnD2zWYB04AjiVuKNr1M8zLcrtg=
+
+Name: org/eclipse/sapphire/ui/def/ISapphireDocumentationTopicDef.class
+SHA-256-Digest: zyY6nY2iGo1VvhEEyd1ZUKP0KUOpVdtxFMF/QvJRkoI=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/ShapeReorderEvent.class
+SHA-256-Digest: Mmr/682RgcUkwxuLqAjn68sIj0ZS7y8wEsGEpjB1l70=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SlushBucketPropertyEditorPrese
+ ntation$7.class
+SHA-256-Digest: IATZ6/+V8gRYhDdC8Q7sC1ip4GFKq1V3SDNLUxlLLZI=
+
+Name: org/eclipse/sapphire/ui/forms/MasterDetailsContentNodePart$NodeF
+ actory$3$1.class
+SHA-256-Digest: R0oTSCL+pl4LPMGls4gy1XT6JIg85cM6/rd31ugOvnQ=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$21.class
+SHA-256-Digest: Ng+jOnTDzrKgmcKHF4Xz/2YvXw/3w1XMlHujLqkUxKU=
+
+Name: org/eclipse/sapphire/ui/forms/MasterDetailsContentNodePart$5.cla
+ ss
+SHA-256-Digest: TMFUwpXDRhzCZOPJAYNtyo0rYAXodeO7WhKDloJH/pg=
+
+Name: org/eclipse/sapphire/ui/forms/PropertyEditorActionHandler$1.clas
+ s
+SHA-256-Digest: 2N2ivGp/YX1XhU/w2FRid0PzwYJw4ihWV8p6RsHJ17M=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireTextCellEditor$CustomA
+ ctionsPresentation$3.class
+SHA-256-Digest: foUxr13vcUK6pDswTpt+xZGWlp6sCGN9AWmY2OCI4Jw=
+
+Name: org/eclipse/sapphire/ui/forms/ContainerPart$Children.class
+SHA-256-Digest: bdb9qRCe0WvIvKJRxHFlQs+J1i3uZWkV9NELtt39crc=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/SapphireDiagramEditorPage
+ Part$PreAutoLayoutEvent.class
+SHA-256-Digest: ejvS1Vre6uz2kqH6x4dpU8rRCqIU07GJdIiPGP7Cykk=
+
+Name: org/eclipse/sapphire/ui/SapphireAction$2.class
+SHA-256-Digest: 4uPTBwUwlrlRCV1OR3bIzrxxCGZVWQYpC/qskHd/GhA=
+
+Name: org/eclipse/sapphire/ui/SapphireActionSystemPart$ImagesChangedEv
+ ent.class
+SHA-256-Digest: SojA2IkPYpjLDpyirbG/ZR+AlRuG/kHWrtGEsiwYkjs=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/ShapeFactoryPart$8.class
+SHA-256-Digest: IvH6cDmLeGa6dY830S1y+2Hw/tHEupDvB7Nh3jdnEkU=
+
+Name: org/eclipse/sapphire/ui/def/internal/SectionDefLabelDefaultValue
+ Provider$1.class
+SHA-256-Digest: UrszvCO8ARsjLnfrZEhaahf/VsQx2x/OoWOlzxK3ilk=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/ContainerShapePart$3.clas
+ s
+SHA-256-Digest: bxvO8rRhyqzS5dY+xkN1quuX/giHQcRb7qrjvrq1kXk=
+
+Name: org/eclipse/sapphire/ui/internal/PropertyEditorEnabledFunction$1
+ .class
+SHA-256-Digest: bskdgyU6I/htzLkQLRSYJQCene8XkDCpttcDNc3YJpQ=
+
+Name: org/eclipse/sapphire/ui/internal/TextSelectionServiceCondition.c
+ lass
+SHA-256-Digest: kkSIeD5mXAvNIiLfGGdFjv+vsWxsVhPafgJinwU8x04=
+
+Name: org/eclipse/sapphire/ui/forms/swt/CheckBoxListPropertyEditorPres
+ entation$Entry.class
+SHA-256-Digest: Nfpr5kJCiqPSoFsJmPVoJxkTaJAg/a4Sz1HnL+/DbBU=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/AbsoluteFolderPathBro
+ wseActionHandlerCondition.class
+SHA-256-Digest: BZ4XnQyY2+q0uaLDPEFgmSQLItt0bkxS1zMw04z80E4=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/ActuatorButtonPresent
+ ation.class
+SHA-256-Digest: t99582TwjufPhfDG4LwDI/ArjpIXzFaOqLKP0YfLofs=
+
+Name: org/eclipse/sapphire/ui/forms/swt/CompactListPropertyEditorPrese
+ ntation$ProxyResource$ProxyBinding.class
+SHA-256-Digest: nQ99DMAtY4Cx0baxDzx1EYH6RPh34yZX6MOGlojDL70=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/TabbedPropertyList$Li
+ stElement$1.class
+SHA-256-Digest: eHlPTtglzVlt5p8k2dNOlsJqVFZlb21EQ2tuzOc7pHk=
+
+Name: org/eclipse/sapphire/ui/def/ActionHandlerDef.psd
+SHA-256-Digest: +zbJIZslKWy52noeJbHxKei63ZOgHfMpvG2uEvAjiLo=
+
+Name: org/eclipse/sapphire/ui/def/internal/DefinitionReferenceService.
+ class
+SHA-256-Digest: DbCobuxEgXAgJx3AW15Ybm3nXTquYfrgKBk3s93Abtk=
+
+Name: org/eclipse/sapphire/ui/Point.class
+SHA-256-Digest: 8bb1mXBr40Rs9ttpS0Um/Jv7Kg0r7f+ONSXSZf1WqBo=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/CheckBoxPropertyEdito
+ rPresentation$4.class
+SHA-256-Digest: RCm7LTquT7dVuLYOOxL/Htx/AK3wnOtx3R0NcPABYFs=
+
+Name: org/eclipse/sapphire/ui/def/ISapphirePartListenerDef.class
+SHA-256-Digest: mNm2mMBnG+lTY6oD0xZbc2KroDqPpK269WQAWf7lM7g=
+
+Name: org/eclipse/sapphire/ui/forms/ContainerPart$1.class
+SHA-256-Digest: c1o3FSvv6a6dTrv/tjEBJsXlg63oWsvhRPjOUcYLbFE=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/text/IHyperlinkSegmen
+ t.class
+SHA-256-Digest: UMckjD9EHNahhX4CKfCEikZjgejvvARpg5EIX0PRVkI=
+
+Name: org/eclipse/sapphire/ui/diagram/shape/def/SolidBackgroundDef.cla
+ ss
+SHA-256-Digest: veRJcvrWO3zF/3kPnOcZhB91KK5f89qju9il+RPhwyk=
+
+Name: org/eclipse/sapphire/ui/diagram/def/IDiagramConnectionDef.class
+SHA-256-Digest: FolgMx/awwKY6tS0sKffkXgP8apVd9JsS/d/6m5EMFA=
+
+Name: org/eclipse/sapphire/ui/forms/WizardPart$2.class
+SHA-256-Digest: /iIMNnUVVKNb8pcne20zmoMYQIMvP2J66mARGRtUcrk=
+
+Name: org/eclipse/sapphire/ui/forms/MasterDetailsContentNodeFactoryCas
+ eDef.class
+SHA-256-Digest: s2QoX+i+uQV5mBsE826QvsPzsFvCGwXBcJ+Emh3xUJY=
+
+Name: org/eclipse/sapphire/ui/forms/ContainerNode.png
+SHA-256-Digest: JqTmVvGRmf9VGqeU8heMXgqa0NzRlu+7kv3KOyMu6i4=
+
+Name: org/eclipse/sapphire/ui/forms/swt/ListPropertyEditorPresentation
+ $1.class
+SHA-256-Digest: WSpJOVSehWqVMA1hh6uFh/bKm8J5WHKZY2og9rQj1dM=
+
+Name: org/eclipse/sapphire/ui/forms/SectionDef.png
+SHA-256-Digest: EEhGpruE/aF7ZW+0hR4zs9Y/HkrY/+148VFaPMfLYfs=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/HyperlinkTable$3.clas
+ s
+SHA-256-Digest: 1YqEd+GtyDI/vKmSYhkUfaPZieCKfPyrede3La0qngg=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireKeyboardActionPresenta
+ tion$1.class
+SHA-256-Digest: Lq1/Dk3+dBOk7dHevk2Z3v/5Rpiqw4HMUZpWgqViByM=
+
+Name: org/eclipse/sapphire/ui/forms/swt/ActionSystemPartBridge$1.class
+SHA-256-Digest: RWtOnOdTFL1ZOmpvxMIu7gryjtlLCnNX3dZavYm7OlE=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/PopUpListFieldPropert
+ yEditorPresentation$Factory.class
+SHA-256-Digest: zvxlhQqhHLAC0dxMT+CX2VfUvwwoXPnDN7xJOO4NJvc=
+
+Name: org/eclipse/sapphire/ui/IExportModelDocumentationOp.class
+SHA-256-Digest: X+sbbSJCa1WW+BuZ1RoPqxdi7FaWv9d5N/L9Dz25a3k=
+
+Name: org/eclipse/sapphire/ui/forms/MasterDetailsEditorPagePart$Outlin
+ eHeaderTextEvent.class
+SHA-256-Digest: FrmSrZTlvIZGNVrFB7tIpOkr660E5APO7CTBAviq1Bo=
+
+Name: org/eclipse/sapphire/ui/SapphireCondition.class
+SHA-256-Digest: h5MbANfF1S5iu7hSFUhwpuGUTzEtme6WReShBIo4LPg=
+
+Name: org/eclipse/sapphire/ui/forms/PageBookCaseDef.class
+SHA-256-Digest: TQNJemCrU1F/3ZhnVycv0p0/cd6i7O1xgi8ROjuA9U8=
+
+Name: org/eclipse/sapphire/ui/forms/swt/CompactListPropertyEditorPrese
+ ntation$4.class
+SHA-256-Digest: X62cgD/NHeAAZL2p4QTe3H1kIkLYXrQ2YNH5mQuhVFM=
+
+Name: org/eclipse/sapphire/ui/forms/ActuatorPart$3$1$1.class
+SHA-256-Digest: 3EYUhk4sp1zUR+kw89tTDTSro1tDmOi3FtpXXVlyLoM=
+
+Name: org/eclipse/sapphire/ui/diagram/shape/def/SequenceLayoutOrientat
+ ion.class
+SHA-256-Digest: vPOZmqSxz3SXvzMZWfJ+oA/VfuV1XrZzsW72n2AFr04=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/PopUpListFieldPropert
+ yEditorPresentation$5.class
+SHA-256-Digest: QyNuCyAyp+7cONuour6fIDRr07viMZ0q+VTCynZ98aw=
+
+Name: org/eclipse/sapphire/ui/diagram/actions/internal/MoveShapeAction
+ HandlerCondition.class
+SHA-256-Digest: teAoznRSFpoXRG+VDWspjDdoCYduah4PeaURH6bS4JY=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$13.class
+SHA-256-Digest: cV66ce1K0ZaoegLdGapYvi9ll9/jpf8yIUrh9xKLzOU=
+
+Name: org/eclipse/sapphire/ui/diagram/def/IDiagramGridDef.class
+SHA-256-Digest: egRTFUnkgSnkEhi8147v8cRbldgBpILGtl9OCDzkEO4=
+
+Name: org/eclipse/sapphire/ui/forms/swt/AbstractSlushBucketPropertyEdi
+ torPresentation$1.class
+SHA-256-Digest: k45ng+746C/Or7TNiOIxLSNCy2n6aG5boqhhuzTbBu0=
+
+Name: org/eclipse/sapphire/ui/diagram/shape/def/ValidationMarkerSize.c
+ lass
+SHA-256-Digest: +OYdeN1RxRws3cV6ku/CsCTy6briDm7+pQq+qMVrGSk=
+
+Name: org/eclipse/sapphire/ui/forms/WizardPageDef.class
+SHA-256-Digest: BFMC617dYuELRhyrNe3vbv3jSzMJwjaLfDjnqode8PQ=
+
+Name: org/eclipse/sapphire/ui/forms/DialogDef.class
+SHA-256-Digest: 5OH0cMlifbwbwkJ/zoNqs/s1HiwqpkDgrQD5t64T5IY=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$ColumnHandler$1.class
+SHA-256-Digest: s1ou2zpnESmJq0Tx/2Hg9lSy8eC9DdNGjvRcicScitM=
+
+Name: org/eclipse/sapphire/ui/diagram/def/DiagramPaletteCompartmentCon
+ stants.class
+SHA-256-Digest: 3IurpHJFQPHKn4fqpowewU11oCokcPYqW59OD8lMudo=
+
+Name: org/eclipse/sapphire/ui/SapphireAction$GroupChangedEvent.class
+SHA-256-Digest: 7ANqWLHiXRtO32PbQtzfIHJ0a8zkqg3eV+5q5ZDydls=
+
+Name: org/eclipse/sapphire/ui/actions/ZoomOut.gif
+SHA-256-Digest: lBCk5ESUx0Go+D+xZRixGlQUZ2D1eRj7SRFC8wM7I10=
+
+Name: org/eclipse/sapphire/ui/forms/WithImpliedPart$1.class
+SHA-256-Digest: gil5caJyWq2EvXTtoCBUrAYh7t9cYuDqBZLNaT16gvE=
+
+Name: org/eclipse/sapphire/ui/forms/swt/MasterDetailsEditorPage$Conten
+ tOutline.class
+SHA-256-Digest: Dwo2hFfoiZn+hmuz0VQ887bPaWCGyjrbc+1OILYakmo=
+
+Name: org/eclipse/sapphire/ui/diagram/shape/def/ValidationMarkerDef.cl
+ ass
+SHA-256-Digest: oQS0yXEHLndqzmQRygze91fKt88zmUqEXPYqw5Ymk7E=
+
+Name: org/eclipse/sapphire/ui/diagram/actions/MoveShapeDownActionHandl
+ er.class
+SHA-256-Digest: 86tSrZmOhX12ICiJY2hYrCEX0aaggJX3u/o4v4BC3hU=
+
+Name: org/eclipse/sapphire/ui/SapphirePart$5.class
+SHA-256-Digest: H9VgcDOSQAcZJik94/jI4c1oKM7Qf00vFEvxlXT3His=
+
+Name: org/eclipse/sapphire/ui/forms/TabGroupPart.class
+SHA-256-Digest: 1j9qTPE9Scmz4NlTIV/lhMAER8UTl2+d7+euIrE2QH8=
+
+Name: org/eclipse/sapphire/ui/forms/DetailSectionDef.png
+SHA-256-Digest: HbkXGd2bi35Ngvrc0THmKkIpQP20mAxzqArX4uol8Ww=
+
+Name: org/eclipse/sapphire/ui/forms/swt/Error.png
+SHA-256-Digest: xCmu27kavHCO/K3114Je2DAqhElLcz0drdM26XCPZiw=
+
+Name: org/eclipse/sapphire/ui/diagram/def/ImagePlacement.class
+SHA-256-Digest: wDAG6nMExaLOtUombiBSCnVFT2VAgkY5AcLE4Okn1WM=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/SapphireToolTip$2$1.c
+ lass
+SHA-256-Digest: P1wW2igYqCpdW3NKNZMY13UtJ9LhF/ZKd+r5ziyIpj4=
+
+Name: org/eclipse/sapphire/ui/assist/internal/PropertyEditorAssistDeco
+ rator$6.class
+SHA-256-Digest: 3XXE5cZdbvfL1gkksD8jFUIMIYWoUZhqjaTUb+8gO88=
+
+Name: about.ini
+SHA-256-Digest: tmRLr0yE/3GCcwX/iHdMtkvnfH9Zsje6GqEPBnt8P4c=
+
+Name: org/eclipse/sapphire/ui/SapphireActionSystemPart$ToolTipChangedE
+ vent.class
+SHA-256-Digest: IbNsXB38j8cROXQh+UyDnvWc6dursb8GC5Zh97gux4U=
+
+Name: org/eclipse/sapphire/ui/forms/swt/Popup$1.class
+SHA-256-Digest: 56sMGADYB70EgGd8M6qhZsEIPLqVZuvFKsR2v+h8N/8=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/text/TextSegment.clas
+ s
+SHA-256-Digest: JZFfctEpfuspoHtyh7t14jghKOxadIkVF3bV4iBw9AI=
+
+Name: org/eclipse/sapphire/ui/forms/WizardDef.png
+SHA-256-Digest: JgjzreakgJfegmIRzBBHvc2sVbfCLQGm+7UJvXeY+xM=
+
+Name: org/eclipse/sapphire/ui/diagram/internal/StandardEmbeddedConnect
+ ionPart$1.class
+SHA-256-Digest: ge/i0U8WZQtcMVPv1wAhnSkkmV0OnCKaPB6SS8KgBog=
+
+Name: org/eclipse/sapphire/ui/forms/internal/SplitFormDefImageService$
+ 1.class
+SHA-256-Digest: 6pCAg/4DgFO5XIHb1ucE0XU6wph/HhLj2uykT8WOmIg=
+
+Name: org/eclipse/sapphire/ui/SapphireEditor$DeferredPage.class
+SHA-256-Digest: WpDOLk8N9hgeJ2A3CUR9xRPS+Ea7z0Wn5Xv7I11hd9s=
+
+Name: org/eclipse/sapphire/ui/assist/AssistClear.png
+SHA-256-Digest: yYSTeJ9KDnKi/cKEWG+msXSCkJ0Jtgw25PeZ2GOc6rY=
+
+Name: org/eclipse/sapphire/ui/forms/SplitFormDef-Vertical-3.png
+SHA-256-Digest: kxBpEXvVCperCe3cc8uEV58l/G5BpISE7KexwQKoJic=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/TextPresentation$1.cl
+ ass
+SHA-256-Digest: nj67+plkmp75Et0PPXPZunZyFfqbTYajufD93jnUlCo=
+
+Name: org/eclipse/sapphire/ui/SapphireActionLocationHintBefore.class
+SHA-256-Digest: /zlFSP4/Rqe1RC7uFAE++yXNqLoUV7tlJ4dfQUmq7/A=
+
+Name: org/eclipse/sapphire/ui/forms/MasterDetailsEditorPagePart$2.clas
+ s
+SHA-256-Digest: JNrA06sEaihQVUeM19Wth5iqCWXeuIX76Z7dqEw4/Ts=
+
+Name: org/eclipse/sapphire/ui/diagram/shape/def/BorderTopBottomRight.p
+ ng
+SHA-256-Digest: jAsopGLrFSjxfUZ4/jTYjzrB+yZ6jwNl/w1MXbt+2QU=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/PopUpListFieldCellEdi
+ torPresentation$1.class
+SHA-256-Digest: 9OsQnsUPaEdOpyBNJJh388aZmJDOhQOF5fHhsGavHCw=
+
+Name: org/eclipse/sapphire/ui/forms/WithPart$1.class
+SHA-256-Digest: XohiAhmXzZGPVATk/8ikeMDC3WhZtmPH9UwrxwdDmRk=
+
+Name: org/eclipse/sapphire/ui/actions/MoveDown.png
+SHA-256-Digest: +3yZk2L0akWpXw7x01Jd1wCAM/ot/1WAfRPgYlpTDIE=
+
+Name: org/eclipse/sapphire/ui/assist/internal/PropertyEditorAssistDeco
+ rator$EditorControlMouseTrackListener$2.class
+SHA-256-Digest: 7e1qMAmSJzNK3r1piqC/YK2qgl56iXWIkZXUJWuiz3I=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/SapphireToolTip$ToolT
+ ipOwnerControlListener.class
+SHA-256-Digest: L0TS7Zb77ZWsE/Fz9w/bDX39S6oa7IDCG9elzb+/lFE=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TextFieldPropertyEditorPresent
+ ation$8.class
+SHA-256-Digest: qlV5CrAXsQ485CgpXmPJi8bC4vJ3FMulC3kDxtwQHXw=
+
+Name: org/eclipse/sapphire/ui/def/internal/PropertyEditorDefMethods.cl
+ ass
+SHA-256-Digest: M7z64sNSMn2SG61AHf0R/JfnLKM1dCy4aCh9xNtirHE=
+
+Name: org/eclipse/sapphire/ui/internal/ExportModelDocumentationOpMetho
+ ds.class
+SHA-256-Digest: sKyI1+MR56jowE/Z9eQrDHsFMnXnPt4gJmwhCIp89qc=
+
+Name: org/eclipse/sapphire/ui/forms/StaticTextFieldPart.class
+SHA-256-Digest: zX2LRtIu0f4OR8Ln5+BGAeCHbmO55VNS1ixTX6votPw=
+
+Name: org/eclipse/sapphire/ui/assist/internal/ResetActionsAssistContri
+ butor.class
+SHA-256-Digest: /a68l48uRDah7fvMbsCy9/GliF1X3U8y6jJxd3tNIIo=
+
+Name: org/eclipse/sapphire/ui/diagram/def/ImplicitConnectionWiringStra
+ tegy.class
+SHA-256-Digest: HnvYNHNzS5+3Cov6T9LMtNY+44VsoemVN5Nd5aJTqDs=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/ShapePart$1.class
+SHA-256-Digest: OPkYLkQyEIBXUddcAihv70ssnhbHUBdd6QWMBeQ68Mg=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$29.class
+SHA-256-Digest: n1aJOQ0USHBpORh3bByDhc7TCQFv5miv2yAiyt9Z06g=
+
+Name: org/eclipse/sapphire/ui/forms/MasterDetailsContentNodePart$3.cla
+ ss
+SHA-256-Digest: 8eScmiscjdRsqYclabl3Lq5CO7LpSkSN7KUBKbchRJg=
+
+Name: org/eclipse/sapphire/ui/forms/SectionDef.class
+SHA-256-Digest: mZvbyKCI9BFKfYCY9VfC8ZDndN3VTRC65eQtAuvCa4s=
+
+Name: org/eclipse/sapphire/ui/forms/CustomFormComponentDef.png
+SHA-256-Digest: XJumRQyoLzkh3OVWKB3QEMLlFTboLbvzYJiwQeIub1Q=
+
+Name: org/eclipse/sapphire/ui/forms/PropertiesViewPagePart$1.class
+SHA-256-Digest: LOtaaZWQzWSuoZ81fiFEzGg0cW51Y9adV+Sz8VjvHrE=
+
+Name: org/eclipse/sapphire/ui/def/internal/DocumentationRefMethods.cla
+ ss
+SHA-256-Digest: 17zkIflSV+KIJ44up56JcGISFZVtmVi9wvKsKqgk3ww=
+
+Name: org/eclipse/sapphire/ui/diagram/internal/StandardDiagramConnecti
+ onPart.class
+SHA-256-Digest: 8Cx9hRB2ODFgj0jzvDC+A0+1n3kdy/YxKcoUeBudbyo=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/SapphireDiagramEditorPage
+ Part$ConnectionPalette.class
+SHA-256-Digest: XFWS1nTQC8eevbR0gLdd3SFsZBlV53LGA143YvCa2H8=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/WithPresentation$2.cl
+ ass
+SHA-256-Digest: ZPE/wuL/PWGmhRDfLDbHXrPRh6thADKfk2q0N4GYXDw=
+
+Name: org/eclipse/sapphire/ui/forms/swt/FormComponentPresentation$2.cl
+ ass
+SHA-256-Digest: 2fkRCgL43Wn6WL5qIMFp47y437Cvrmjvooog125mQW8=
+
+Name: org/eclipse/sapphire/ui/def/ActionHandlerFilterDef.psd
+SHA-256-Digest: ryc27/bEIcFvMvhkzohmUqTm4A0E29Mkk10lSIrhRrU=
+
+Name: org/eclipse/sapphire/ui/assist/internal/PropertyEditorAssistDeco
+ rator$1.class
+SHA-256-Digest: PuA1Lw04RRTH2pm1E4sVDz4mQedcp8rEEEN3qseJdA0=
+
+Name: org/eclipse/sapphire/ui/diagram/layout/standard/StandardDiagramL
+ ayout.class
+SHA-256-Digest: 4VbtEyZpymsm8Fh9Lid78hBFHk0YXrpOjH0Ppw9V1lo=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/WithPresentation$1$4.
+ class
+SHA-256-Digest: OPeZVpK7ZBvtE4e1CHl58Il9o7H9vPDemaVseeuELh0=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/ContainerShapePart.class
+SHA-256-Digest: //9bANZWCajlA1AbNB9WzcHjcqDT6EEFQwMIQyAGyPE=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/CheckBoxPropertyEdito
+ rPresentation$CheckboxLayout.class
+SHA-256-Digest: NQ/l2Rq9Cz292VPjjneHr09eWYf4q1AEdScEFR+Wit4=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireToolBarActionPresentat
+ ion.class
+SHA-256-Digest: /MFI96cgb4ndVANt4dMd3hvf3g+mSS4xywfZHgl1zik=
+
+Name: org/eclipse/sapphire/ui/def/ActionContextRef.class
+SHA-256-Digest: ogNuiaDuXnxDIJzOi5dFZKBWXMMZS3uixgmwguKGG3I=
+
+Name: org/eclipse/sapphire/ui/forms/MasterDetailsContentNodeList.class
+SHA-256-Digest: K6szwY8YNKy9mfVl/fwvW2gn6BS7rLwY5gPwc42+PD0=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TextFieldPropertyEditorPresent
+ ation$ContentProposalLabelProvider.class
+SHA-256-Digest: ZGe6PHSXExcLvsuoNF9b3YQfElb4z15wVl2BGXGE+lg=
+
+Name: org/eclipse/sapphire/ui/SapphireActionSystemPart$IdChangedEvent.
+ class
+SHA-256-Digest: /Ylq7ac7vvuS7TS8TvAnt5n+H4U2kdwmJsn7dcJ6Dw4=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireToolBarActionPresentat
+ ion$6.class
+SHA-256-Digest: VpT6cTKkhSWllC324nJUavaAvDXsagC7dtoXZhFjYR0=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SwtUtil.class
+SHA-256-Digest: 77W1GQbzf+QfRPY84fk6UdCIplNqusL9OgxgTSbcRzU=
+
+Name: org/eclipse/sapphire/ui/SapphireAction$HandlersChangedEvent.clas
+ s
+SHA-256-Digest: o757eAvcXdVAbIOityf8RgImQXO/+tACI6VQ+SfG+5w=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/SapphireDiagramEditorPage
+ Part$4.class
+SHA-256-Digest: itv1DHRtA6sBVnngA9lrfDeEGaA1DbpeycGGDC8fmPA=
+
+Name: org/eclipse/sapphire/ui/forms/ActuatorPart$3$1.class
+SHA-256-Digest: l19TrrJdhCEcG08sMwLydkkf9U7saX8cQHrd5EHiyEo=
+
+Name: org/eclipse/sapphire/ui/diagram/internal/StandardDiagramConnecti
+ onPart$4.class
+SHA-256-Digest: qnH2AhgqOOmel+Uja8+08QECGENdFIDcOdsBgepP9gs=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireTextCellEditor$CustomA
+ ctionsPresentation$1.class
+SHA-256-Digest: 8Nn4Vq+CFLti44lPQv65ZLspMZ1NfJGkBhNy4Ck+3is=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/TabbedPropertyList$It
+ em.class
+SHA-256-Digest: H0/B//eSKKHnQOLGAROQOl7ioogT8o0jpw/F41YyI1Q=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/text/SapphireFormText
+ $5.class
+SHA-256-Digest: K0ROc8BJgo8mHjg0ZL3rehs8ToXvijDIZfX7W+sJQ54=
+
+Name: org/eclipse/sapphire/ui/SapphireEditorPagePart$PageHeaderImageEv
+ ent.class
+SHA-256-Digest: 63GjlmJoY1Guia6eMh1pxgf1Q9Yita165Lm8YVGe+V0=
+
+Name: org/eclipse/sapphire/ui/forms/swt/CheckBoxListPropertyEditorPres
+ entation$10.class
+SHA-256-Digest: Fz1GHxZd92pKDhnCwtnbPS3i+EMpHEeb6/biGfu3Pec=
+
+Name: org/eclipse/sapphire/ui/diagram/actions/MoveShapeDownActionHandl
+ er$1.class
+SHA-256-Digest: 30jq84BIGXBzYYj2JPwfDzLeQ7mgg5CPaOxshdv1QmM=
+
+Name: org/eclipse/sapphire/ui/forms/SpacerPart.class
+SHA-256-Digest: G5yNbF4ild4m0K2E+Jm+n7Pr8X18a81bxJ3RBCA7CN4=
+
+Name: org/eclipse/sapphire/ui/forms/MasterDetailsContentNodePart$NodeL
+ istEvent.class
+SHA-256-Digest: 7NuZFeno0MxSc8eOmN25RPlREWKB0kt88fnpeirgqBo=
+
+Name: org/eclipse/sapphire/ui/forms/internal/OutlineNodeAddActionHandl
+ erFactory$ElementPropertyActionHandler$1.class
+SHA-256-Digest: mFGt9aAqDCm/EdvbNgJ5m3oR+ZpqlCSzYzcOgl2rsJ8=
+
+Name: org/eclipse/sapphire/ui/forms/WizardDef.class
+SHA-256-Digest: xUcV/N3eTS+PlStaCTz4YCoOXArMYqsQ+zyzHek7/4M=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$22.class
+SHA-256-Digest: ZNC1b+eVUMdrSJgvurS4TVimIPiC/Z5Ym0a/OqUESrc=
+
+Name: org/eclipse/sapphire/ui/internal/SapphireActionManager.class
+SHA-256-Digest: WIEoeufvcq/Pxh1zRjAiIJrSIjUViTPCk0SkqZ+LYF4=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireKeyboardActionPresenta
+ tion$3.class
+SHA-256-Digest: kdMOERjft9xq+bR0x0NxLQSVvi3QkqzRhM+MweYHec8=
+
+Name: org/eclipse/sapphire/ui/forms/internal/OutlineNodeMoveActionHand
+ ler.class
+SHA-256-Digest: EgGK6yWFommD+lgj9BzarwCu70HAA2s2pKIHr3v2p14=
+
+Name: org/eclipse/sapphire/ui/internal/PartFunction.class
+SHA-256-Digest: TvGzJCLH/+dglHZLn8G1WWxWwSvKhjAl0buNUDhCp14=
+
+Name: org/eclipse/sapphire/ui/forms/swt/CheckBoxOff.gif
+SHA-256-Digest: ba1ge1JYSxBlzyZPjiE0Xvvm0kQ+wxmzV7oQmyxOyL8=
+
+Name: org/eclipse/sapphire/ui/assist/internal/InfoSectionAssistContrib
+ utor_ru.properties
+SHA-256-Digest: 4yrd3PHXmFiKG4g72bx8AmkdzySbPXTO1CoQ83dXOa0=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/WithPresentation$1$6.
+ class
+SHA-256-Digest: oDzjEnsHS8xEifU3z/ZAyN5BX0J0v+kZUNQ3XMnRv/M=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/PageBookCasePresentat
+ ion.class
+SHA-256-Digest: EJAZRovU3QveebtUxF+M2vzhyHpANWWYMP3UaZdigw8=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/TextChangeEvent.class
+SHA-256-Digest: qg0BX4+5a8aRHkC9Z+RyI+EmrcBrWw3hkaeEPdX72lI=
+
+Name: org/eclipse/sapphire/ui/util/TopologicalSorter$CycleException.cl
+ ass
+SHA-256-Digest: KeKLWV1WBrE1fm/iROdU8597wNJmAJ+NndyE2GuVUxc=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/HtmlPanelPresentation
+ $2.class
+SHA-256-Digest: +dTTE6mGoZa7TOHthM9umsPZmjLs4BUH9LEW63r7CaA=
+
+Name: org/eclipse/sapphire/ui/diagram/shape/def/GradientSegmentDef.cla
+ ss
+SHA-256-Digest: MRNuB77bzWQQDXL7D+vP6qwvvG0JT0ssXSk54OiUkpU=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireToolBarActionPresentat
+ ion$4.class
+SHA-256-Digest: /bWkZ1dxyykOFYKFafp+27+knQd9K0rMaHVHtoP13QU=
+
+Name: org/eclipse/sapphire/ui/forms/CompositeDef.png
+SHA-256-Digest: EEhGpruE/aF7ZW+0hR4zs9Y/HkrY/+148VFaPMfLYfs=
+
+Name: org/eclipse/sapphire/ui/forms/SplitFormDef-Vertical-3.psd
+SHA-256-Digest: fpxiTHNNT/pJByLpNnEJ+7MhlnIqLisPvO/fcKrWasg=
+
+Name: org/eclipse/sapphire/ui/assist/PropertyEditorAssistContribution.
+ class
+SHA-256-Digest: G/h57uOh3x5pW/aSfNeKR/XiB1iQEkuD2RTcNIY8uag=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$24.class
+SHA-256-Digest: Zgyzy2I/7BtqTVbCUKjTE8mELVB49m7G+8iI+NGPeI0=
+
+Name: org/eclipse/sapphire/ui/diagram/internal/DiagramConnectionTempla
+ te$2.class
+SHA-256-Digest: xsYcWfY8K1T2O9ZBLII22Ooqa41JjkJ29sbeoBYZvtQ=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/WithPresentation$1$9.
+ class
+SHA-256-Digest: 5//sN32PiU8VfUej+03Y5D1WIGytUkd5XpZvRelA4Eo=
+
+Name: org/eclipse/sapphire/ui/diagram/layout/standard/DiagramGridLayou
+ t.class
+SHA-256-Digest: ZLe+FMgfL/rDU2q3LRjv4zq38tJJKU/9soY2VBU/5vM=
+
+Name: org/eclipse/sapphire/ui/util/MiscUtil.class
+SHA-256-Digest: 43n4y/43gTQc4097NoSaBKb1Udy/9Pi/GUMiN08j0Iw=
+
+Name: org/eclipse/sapphire/ui/forms/internal/OutlineNodeMoveDownAction
+ Handler.class
+SHA-256-Digest: csK02tgHd75cxWWeGR6+c74p2XhWwX1ypwuGzgxyrR0=
+
+Name: org/eclipse/sapphire/ui/def/ISapphireConditionHostDef.class
+SHA-256-Digest: usej3DdRoPQ1kb3ZJwgt0wdaJlFfK4a0s8cyB0ES5vs=
+
+Name: org/eclipse/sapphire/ui/forms/internal/OutlineNodeMoveActionHand
+ ler$4.class
+SHA-256-Digest: D4qVFD0KWYNguRr9QpM+fCBO7NvNcHgHCM+hrkpwvgA=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireDialog$2.class
+SHA-256-Digest: 8ETEJkggYpVv3Yw4mbCxaqBrMTiwb+8S2mtMqKLnr6M=
+
+Name: org/eclipse/sapphire/ui/forms/PropertyEditorCondition.class
+SHA-256-Digest: crZnGN23rHnsbt9QIreVLolcP0fv8FVDEDtX+2Uta1g=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireToolBarActionPresentat
+ ion$1.class
+SHA-256-Digest: Skdv/PK3W8VRLCCJy2nwq4B8WL8Z/SYal/DViFD1ZU0=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/SplitFormSectionPrese
+ ntation.class
+SHA-256-Digest: oHrF09F6AmPHhDczn651IEBEPR6zs3TCWP/wW7vWdiw=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TextFieldPropertyEditorPresent
+ ation.class
+SHA-256-Digest: NzvDCGdh7JNnduVQAw6oDRiVCNZr53on1UsXeJCurfc=
+
+Name: org/eclipse/sapphire/ui/forms/PropertiesViewPagePart.class
+SHA-256-Digest: D3Rq39wbL1dz9nqVJ3wcL3L8dyN3L7cvS8zbp8QPvP4=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/EnumPropertyEditorPre
+ sentationFactory.class
+SHA-256-Digest: GVT/pzQnMvI6FhvomMJYvIM/pl1OlPdD3WArbkYiYfQ=
+
+Name: org/eclipse/sapphire/ui/diagram/state/PalettePreferences.class
+SHA-256-Digest: /jRAaFPYL2QTrcSLUOl+0yOAToqhpx4jyPXmK/fbmIo=
+
+Name: org/eclipse/sapphire/ui/forms/internal/OutlineNodeShowNextErrorA
+ ctionHandler.class
+SHA-256-Digest: m/+Q9/NH+j9XRAyFJIJlM7OH3IlO1+akvpIzheMqxgo=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/ScalePropertyEditorPr
+ esentation$1.class
+SHA-256-Digest: dzEK79AXoYpqXw1NYxHazMVUIMdOoWXKy4cUUJG1Gl0=
+
+Name: org/eclipse/sapphire/ui/internal/SapphireEditorContentOutline.cl
+ ass
+SHA-256-Digest: hL8CBh2zVqEhOwMNNMRJKtnwy7yANDfMNflJ/YRei/o=
+
+Name: org/eclipse/sapphire/ui/forms/PropertiesViewContributionPart.cla
+ ss
+SHA-256-Digest: lenoQmqDopZK3dMEosrhEVh8J2ma41hcYkEdiKNN7lc=
+
+Name: org/eclipse/sapphire/ui/internal/PartValidationFunction$1.class
+SHA-256-Digest: EVDmk3+H2dc+NG+wU6Ecor+/MRilPHUSCAzMQioGzQw=
+
+Name: org/eclipse/sapphire/ui/SapphireEditor$SapphireEditorActionBarCo
+ ntributor.class
+SHA-256-Digest: 2Gc/EFLY5V2YTzFVz9yt8fB8exmEhbWHO29ECYs6pnc=
+
+Name: org/eclipse/sapphire/ui/diagram/shape/def/LinePresentation.class
+SHA-256-Digest: 91uaVi/h+Y+7iDpcZmSyqKtiOR7fjS+N/Iwp3a+X8J8=
+
+Name: org/eclipse/sapphire/ui/forms/TabGroupPart$1.class
+SHA-256-Digest: H1SM0o48CWTg/mM14BSYqZFUgo7JTsbu3Y3v1MJOrAo=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/PossibleValuesBrowseA
+ ctionHandlerCondition.class
+SHA-256-Digest: ZZ0CXFwqWLyj6zx0enHieA6z0ejIW8cKcoGwWd/CRPs=
+
+Name: org/eclipse/sapphire/ui/LineStyle.class
+SHA-256-Digest: slE5p5zL+zB36q+9AuvKit3nANY0OHQLuO/Sdv6MtL8=
+
+Name: org/eclipse/sapphire/ui/SapphireActionSystemPart$2.class
+SHA-256-Digest: jxTaAApmOWG93pEzYbjAWFL8dIOpjUwZOYMsfXXSD38=
+
+Name: org/eclipse/sapphire/ui/def/ServiceDef.png
+SHA-256-Digest: FUBNsKoy2gDzkqIsvB+L+5ir9q2QvnxDT2Yi4AnwjDc=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SwtUtil$4$1.class
+SHA-256-Digest: X5NuVMDVSzH9o1rwXOIxGBGgw8u+0SS3IWkds9KJxvc=
+
+Name: org/eclipse/sapphire/ui/diagram/shape/def/LineShapeDef.class
+SHA-256-Digest: wonmcoKvMradqPU+jKyU0b+ghsegZR3rMVDlZxX/Q3U=
+
+Name: org/eclipse/sapphire/ui/forms/SplitFormDef-Vertical-2.png
+SHA-256-Digest: q70L/2206AlwL46Tgijso29o3Wf+zDmTkNJGVKO1mZM=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$27.class
+SHA-256-Digest: +yxYxI387Y359R6i+vKejkJRSP/MRt4aDEhBgb5hZ1c=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/SapphireToolTip$2.cla
+ ss
+SHA-256-Digest: YOV6Dkzb5qbGyywldA8Wf+eX6TGnekR26xBZ8ksAx0I=
+
+Name: org/eclipse/sapphire/ui/diagram/def/IDiagramNodeProblemDecorator
+ Def.class
+SHA-256-Digest: jFuza/Hy4lkQNUpvyDDVe13d8BsHSbxnuORsqGCpEUQ=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/SapphirePropertySheet
+ Page$1.class
+SHA-256-Digest: o/aJy2X7fZTBBUg24LoGdzQgdqIA89Lm1at66VHfYt0=
+
+Name: org/eclipse/sapphire/ui/assist/internal/ProblemsAssistContributo
+ r$1.class
+SHA-256-Digest: 1pOiBNgjkCQhdtLZUYvFXt7IWWqe9DokquJzf+AUTng=
+
+Name: org/eclipse/sapphire/ui/SapphirePart$FocusReceivedEvent.class
+SHA-256-Digest: Olz06MIwQHc1ya3pwXvU24NMK/QRol8ltUig7stbA5A=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/text/SapphireFormText
+ $8.class
+SHA-256-Digest: mzGndnNU/N/67Wz/VOuAD94DLhojH+MgRE/lhDP5qmM=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/UrlJumpActionHandlerC
+ ondition.class
+SHA-256-Digest: sG4Jxi6YBUAClIdRv9YDFqiKd7+H0+7BB6vu/UQz4Oo=
+
+Name: org/eclipse/sapphire/ui/diagram/state/DiagramEditorPageState.cla
+ ss
+SHA-256-Digest: XpPMKDAVWdZn0WhVxd5E8EgjsCh67F6RSVMTQX8Jwh4=
+
+Name: org/eclipse/sapphire/ui/forms/internal/OutlineNodeMoveActionHand
+ ler$2.class
+SHA-256-Digest: 8CG++06Hf4MHC05yR0vYVZxN1Q9Tt98aZYnDMqnjCr0=
+
+Name: org/eclipse/sapphire/ui/SapphireActionSystemPart$LabelChangedEve
+ nt.class
+SHA-256-Digest: ryq7w3W3EwLBmjn4dOp6KU95lA3HjJJm/uqsWVswX9A=
+
+Name: org/eclipse/sapphire/ui/forms/TabGroupDef.psd
+SHA-256-Digest: c7wJ5H1WeB3Kz3MFT+5Rw4Hh7E3Tdn4yGoANTgGL8iQ=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$AbstractColumnEditingSupport.class
+SHA-256-Digest: uGYRYLYJSpdgd6YxovXdkj80NztTg7Nrp9te9jFB3L0=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/PossibleValuesListPre
+ sentationFactory.class
+SHA-256-Digest: 4t0LS/Cg94GutoAqdgRFFoIIxhLPnQNf7CQrakaH25Q=
+
+Name: org/eclipse/sapphire/ui/diagram/shape/def/ImageDef.png
+SHA-256-Digest: apwHbOrSkZC3lLEbO9meFkK518VeZH/xfUP2K17LspU=
+
+Name: org/eclipse/sapphire/ui/forms/DialogPart.class
+SHA-256-Digest: DJSqRf6kt4hqtVG/ERsbsAFdwdaAc1QTosxi2TzAUPE=
+
+Name: org/eclipse/sapphire/ui/forms/SectionPart.class
+SHA-256-Digest: y1U/xUXPO9hMxiejwPab0L4g/HFfuKRFPA5qsNsL4ys=
+
+Name: org/eclipse/sapphire/ui/assist/internal/ProblemsSectionAssistCon
+ tributor.class
+SHA-256-Digest: 2zqToKbhHAKaKEAw6cHhOsfEi/wJCh/d4uChvCh3JPU=
+
+Name: org/eclipse/sapphire/ui/forms/swt/ValuePropertyEditorPresentatio
+ n$ModifyPropertyValueTask.class
+SHA-256-Digest: n3SFsO7w4HMxNkb66Ul5tGz98UHASD7tOpAkmEjggfY=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/CompositePresentation
+ .class
+SHA-256-Digest: V/WJMhGedj+2PXnO4GGtLRLiU982bE7/9kctZlb9SkU=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/SapphireDiagramEditorPage
+ Part$1.class
+SHA-256-Digest: wpz712cR3K/k2CDKVoLITA8JlBKUDY9vTorf5G7RM2U=
+
+Name: org/eclipse/sapphire/ui/forms/DetailSectionPart$2.class
+SHA-256-Digest: nW4Dr0BoVW+IOYRdmCaR9Zb83C/UOgz4NnWQMPfO9sA=
+
+Name: org/eclipse/sapphire/ui/diagram/internal/StandardDiagramConnecti
+ onPart$2.class
+SHA-256-Digest: RVkbj1OS1PkiZUQlIXeYWTz95grglIix7RkjyGVbgD8=
+
+Name: org/eclipse/sapphire/ui/forms/TextPart$ContentEvent.class
+SHA-256-Digest: YkNbkV74xpk4AfoQpB8n8xeNEai81ogzPE/jwoC43jw=
+
+Name: org/eclipse/sapphire/ui/assist/internal/ShowInSourceActionAssist
+ Contributor.class
+SHA-256-Digest: WQz2/9QWDlBsvR6umWNdOKxMvPTOIudPSAkNXpxihRY=
+
+Name: org/eclipse/sapphire/ui/assist/internal/PropertyEditorAssistDeco
+ rator$4.class
+SHA-256-Digest: q0HHE/UXs0K9Pv+1NcVnzqF/kdV8Z5mvKywiEQ8iAJA=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/ValidationMarkerPart.clas
+ s
+SHA-256-Digest: FxsR0ei0cLDl5NunGpaSXhEtV9ypTUA3tQlio0Dxtj0=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$DeleteActionHandler.class
+SHA-256-Digest: vYqDKAYdnBw4SCOzXHkm/+Mv4Pc+/OzaRFbxiFl4qlQ=
+
+Name: org/eclipse/sapphire/ui/AttributesContainer.class
+SHA-256-Digest: dLo/ZEQ3WSwPdWchzxvQCm2mz/J8MaFsLL/w6QthMWw=
+
+Name: org/eclipse/sapphire/ui/def/ISapphireUiExtensionDef.class
+SHA-256-Digest: xHxxxYV78tcNCEL+r1W+rYVJNsEInosfFqUYJ48TT64=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TextFieldPropertyEditorPresent
+ ation$Factory.class
+SHA-256-Digest: LM+byMZPqPd3/2ttYdp40fwI7aKr45lZr45wx2HEHaQ=
+
+Name: org/eclipse/sapphire/ui/diagram/ConnectionEvent.class
+SHA-256-Digest: iLdz+lcWjPgC2BNJQsIG7WZl0/Z35akI9+qZrpYcrgk=
+
+Name: org/eclipse/sapphire/ui/forms/swt/RadioButtonsGroup$2.class
+SHA-256-Digest: hT3MC3Jwz51Jmj+pmleXgyY8xRNUz4GlePvPVFd4glY=
+
+Name: org/eclipse/sapphire/ui/def/internal/SapphireHintValueDefaultVal
+ ueService.class
+SHA-256-Digest: GhsczfNgsOiEsDAfdEwDwANd+SKuTPIA4kKrpW336hc=
+
+Name: org/eclipse/sapphire/ui/PartChildrenEvent.class
+SHA-256-Digest: kG4/7ugL9m1iXJunLuDsesCursFvX+gNcnaJAH3H9o0=
+
+Name: org/eclipse/sapphire/ui/diagram/def/IDiagramLabelDef.class
+SHA-256-Digest: AtLreEctFknKbFe2ouA6MwJIPtuKZ0xbT1sRganEt94=
+
+Name: org/eclipse/sapphire/ui/assist/AuxTextProvider.class
+SHA-256-Digest: 17spwhxZFEemaRTouhOkQr2IMuhRy3fn3jA+wZTZirI=
+
+Name: org/eclipse/sapphire/ui/forms/PageBookPart.class
+SHA-256-Digest: 6Mo9iC8uDgVY4pBwVKKUNgIzm53N57JLUA1nccANZsU=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/SapphirePropertySheet
+ Page$3.class
+SHA-256-Digest: 7TxMO03DtVCFEpJZN2o+QJF6eGvXfv4kiSuygV1b5bA=
+
+Name: org/eclipse/sapphire/ui/SapphireActionHandler.class
+SHA-256-Digest: IDtqKgLJCP6064gvs/MOEr7tvr6UbpUlcVhxG6YC5gY=
+
+Name: org/eclipse/sapphire/ui/diagram/shape/def/LineShapeVertical.png
+SHA-256-Digest: /QVu8+mXcDO/oYdCuDzufYDDicZobM0E2GogdqFpAaQ=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/WithPresentation.clas
+ s
+SHA-256-Digest: jFPNIoIsj6t6RoyX9OSHGOLTSRNsTAU9cl/IuluBBzw=
+
+Name: org/eclipse/sapphire/ui/DefaultActionImage.class
+SHA-256-Digest: DWg3c1WvVNqG3ET6QmoudlA72R6b7JWofEs62ugFn8g=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/DiagramDirectEditPartEven
+ t.class
+SHA-256-Digest: KCZUkOLHGVWkKAxKwJxLMmkJ0wn4hBVqQuyLYKOSO3g=
+
+Name: org/eclipse/sapphire/ui/forms/swt/CompactListPropertyEditorPrese
+ ntation$Factory.class
+SHA-256-Digest: 8WMPj+unfpmVhxdLhkfmLVcLeXcx5oOwXG4VvbPX3NM=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/SapphireToolTip$4.cla
+ ss
+SHA-256-Digest: JMOWk/5DdgaC/SbaA2mOvXjCXiCtnuq08bbgrwx4suc=
+
+Name: org/eclipse/sapphire/ui/diagram/layout/standard/DiagramConnectio
+ nLayout.class
+SHA-256-Digest: sJJPF1St8Zn7tVeC2ZsZ9JVSdmqklYPIV3SUPz04o8Y=
+
+Name: org/eclipse/sapphire/ui/def/ActionHandlerFilterDef.png
+SHA-256-Digest: 7FiJ7fJtDbN5lLUjZuIcf4yrMwbhbcU9EMF/9DWzXHM=
+
+Name: org/eclipse/sapphire/ui/forms/MasterDetailsContentNodePart$1.cla
+ ss
+SHA-256-Digest: HaaADTI23ZKWuDwOhtC++NIcwXV1Vxo6mpaGfWVynDY=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/CalendarBrowseActionH
+ andler$1$1.class
+SHA-256-Digest: p9Y6r8pxgp5i/pI9iZKA/NeqRViNFgP+p36W2BD5NGI=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/ColorBrowseActionHand
+ ler$Condition.class
+SHA-256-Digest: w86mXrYZphh+73dY+zNVu28sqmPqdFUK8MZeO6cg1j8=
+
+Name: org/eclipse/sapphire/ui/forms/swt/Popup$4.class
+SHA-256-Digest: txUYHtp2jv34BbMHAmxIWuO9lRkaZv+6IIhP6s8Tr/M=
+
+Name: org/eclipse/sapphire/ui/assist/internal/ActionsSectionAssistCont
+ ributor_ru.properties
+SHA-256-Digest: J9DYHDSG6dbTVpU6sRXcJ1o6A2AO2Oq+HnGAMv1e9+Q=
+
+Name: org/eclipse/sapphire/ui/PartValidationEvent.class
+SHA-256-Digest: MCyc7LPn3OwY1rxtlKWxDnLwk+qmvCSs91ZSMuliimE=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TextFieldPropertyEditorPresent
+ ation$5.class
+SHA-256-Digest: kisFxV/Rp+fYvnzAoYQnp0FMj1Ya62XgPE6QI4yC1EA=
+
+Name: org/eclipse/sapphire/ui/assist/internal/PropertyEditorAssistDeco
+ rator$3.class
+SHA-256-Digest: WIDOrU6WzEcHFonWhw8YLBWY0MGRF7knBoaKmq6//nU=
+
+Name: org/eclipse/sapphire/ui/actions/MoveRight.png
+SHA-256-Digest: jMEzWRQYpht8hVS9VO5qRXz44A9eu+Omhh98sOo3ZA4=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/ShapeFactoryPart.class
+SHA-256-Digest: mZS5N5ikWwpy860qgO9Xbu6bBBTGZlLTmp6Xkuv5WRU=
+
+Name: org/eclipse/sapphire/ui/forms/swt/ListPropertyEditorPresentation
+ .class
+SHA-256-Digest: lb1P+mUoOPchdX/2phfSiyuSI3PziFALhzdUtQHqImg=
+
+Name: org/eclipse/sapphire/ui/diagram/shape/def/BorderLeft.png
+SHA-256-Digest: Achwt/n0S01CtCMdv/f6lTSj5uNe0TEEaTw2WA/H72Y=
+
+Name: org/eclipse/sapphire/ui/SapphireActionSystemPart$1.class
+SHA-256-Digest: n5eJDvxI5nrnvWenq9AylqXSfxWwJvtE2GndL8RunXo=
+
+Name: org/eclipse/sapphire/ui/actions/Default.png
+SHA-256-Digest: BqWw0Us0iTkv49l56l7rR/1MXnVGLZFtWtUEG2C835w=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/SapphireToolTip$1.cla
+ ss
+SHA-256-Digest: FQBe4rjVVE9HJ0uPWvOrErtA2RAoqJSMrkLqTAHMWXw=
+
+Name: org/eclipse/sapphire/ui/forms/MasterDetailsContentNodeRef.psd
+SHA-256-Digest: /zWng7W11NvpYXb2Vs/QZKYvNrYakzPUXycLbOFSC84=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireTextCellEditor$CustomH
+ otSpot.class
+SHA-256-Digest: 9X44POEOCV0jcN7flVWEzCfyZLYDw+GrmV/mQxWTCqM=
+
+Name: org/eclipse/sapphire/ui/forms/FormComponentPart.class
+SHA-256-Digest: PxKZRkfwczbk2Mh5UzCs+0YZzOhAi7ZybuRsFv9esQY=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/WithPresentation$1$2.
+ class
+SHA-256-Digest: cSQG6Zq2MTk47AMOmj/1JoOWdXG5UzcF7epTvfOE1y8=
+
+Name: org/eclipse/sapphire/ui/forms/MasterDetailsOutlineState.class
+SHA-256-Digest: Z4hAFYveLmjQUsiGjno8aG+rxzINHVZvHFmpQu/K93w=
+
+Name: org/eclipse/sapphire/ui/util/TopologicalSorter.class
+SHA-256-Digest: 51eIsWg1KjT/alJQHYrpyk/4p3nJiLShpp3bwiA34LI=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/GroupPresentation.cla
+ ss
+SHA-256-Digest: 4af3Jr5fzAO/EVxdyWhKWpd6mrkqllyZCiZEBJSoYGU=
+
+Name: org/eclipse/sapphire/ui/forms/ContainerPart$VisibleChildrenEvent
+ .class
+SHA-256-Digest: iGc8mjpvAty6xiP/V8leuXeE/9DWzmULHQWlesGRRUc=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/text/SapphireFormText
+ $7.class
+SHA-256-Digest: vNnnrdQCNNpwhtQRzjzM5VeXyYvFso4ur5+C8aHEKkk=
+
+Name: org/eclipse/sapphire/ui/internal/PartFunction$1.class
+SHA-256-Digest: uF3Zfe0K0YJAZRJ8qiXrs1Bln32S2x7ZpLrtlZ+Nlvk=
+
+Name: org/eclipse/sapphire/ui/forms/swt/HelpSystem.class
+SHA-256-Digest: 3eXOx9ypE+6et2JzoWRNay9mrWx6pFkddnGCYEE0gtQ=
+
+Name: org/eclipse/sapphire/ui/def/ActionDef.class
+SHA-256-Digest: PChmOvYhRoDeMI0TKJuQhrRkZOpFpp3j3DeylF3dqPE=
+
+Name: org/eclipse/sapphire/ui/forms/FormDef.class
+SHA-256-Digest: wKfuVALoZKeka3YVkNuDLYnkVsa7TJfx8UNu2lIWnwM=
+
+Name: org/eclipse/sapphire/ui/SapphireActionSystemPart$LocationHintsCh
+ angedEvent.class
+SHA-256-Digest: 3qBQYM9rsp0JW2DQYWAaESWsjPHLfrTj298Umxh8dWs=
+
+Name: org/eclipse/sapphire/ui/diagram/shape/def/Content.png
+SHA-256-Digest: 4/mBpcImEm6E5TkHkv/R3UYjZ3nL2tCrRp3xqYDTi+g=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/RestoreDefaultsAction
+ Handler.class
+SHA-256-Digest: NRdr7/1jS87AlHUV20e6ITf3edI4FXfm62ZxbxHFkIo=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/DiagramNodeBounds.class
+SHA-256-Digest: 9Xzu+RQd/kz+zY7oeYTQn5BybhpBC0Gerz3DQlkEJbA=
+
+Name: org/eclipse/sapphire/ui/diagram/shape/def/ShapeDef.png
+SHA-256-Digest: qyuz5VEKkbXhWdwNhf8/kqq1KlYAmJkNqVArdCIfZw8=
+
+Name: org/eclipse/sapphire/ui/forms/MasterDetailsContentNodePart$NodeF
+ actory$1$1.class
+SHA-256-Digest: rH9oPaAUX99jvNmiPsmNb9SbJZbcp3sygQok88HpzaE=
+
+Name: org/eclipse/sapphire/ui/diagram/internal/DiagramImplicitConnecti
+ onTemplate$2.class
+SHA-256-Digest: M3R2ohdQ/j7rRIp0gGCT8V37JT3SAoGPZUg43Dt5frQ=
+
+Name: org/eclipse/sapphire/ui/forms/PageBookPart$2.class
+SHA-256-Digest: C3iJ8LdYgb5aQ4f6Wa8VX4lfsngUBWS78VAPojqyE9c=
+
+Name: org/eclipse/sapphire/ui/SapphirePart$PartInitializationEvent.cla
+ ss
+SHA-256-Digest: dBMAxg5oesvTsliWdt0sRETwu+hRA6e+ggL9vyUQ0wk=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/SapphireDiagramEditorPage
+ Part$2.class
+SHA-256-Digest: 0lRGzkio7Ha8GEyctXf31f3NROHEA7JKxzH5ZtkW9Mg=
+
+Name: org/eclipse/sapphire/ui/forms/swt/MasterDetailsEditorPage$Detail
+ sSection.class
+SHA-256-Digest: vl1ERstr4ZMCZaWt1wpLXQOzG//IFCgCEsrq4piPXnc=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/SapphireToolTip$Toolt
+ ipHideListener.class
+SHA-256-Digest: a1t2+TaD/Brm4t/o9o+3gR8+yM3hwT49Yv0WK/7SWIw=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/DiagramNodePostAddEvent.c
+ lass
+SHA-256-Digest: MGYyUYvEEXsxvksI1dBe1QQ0Oa5Q7UFMxV3wGPEUqqM=
+
+Name: org/eclipse/sapphire/ui/forms/MasterDetailsContentOutline$NodeEx
+ pandedStateChangedEvent.class
+SHA-256-Digest: 1lLCIsLYNZNupQSOt76rQd7Tu1+kvvHaSnko9LWK9zs=
+
+Name: org/eclipse/sapphire/ui/forms/SplitFormDef.psd
+SHA-256-Digest: mOTbCP62Fv8Anr5A5BatzauWk/Za6ZvI2XhbtdE708c=
+
+Name: org/eclipse/sapphire/ui/diagram/def/DiagramEditorPageDef.png
+SHA-256-Digest: F2ZBgxY/GGV9u2ODEFFZiD5t6qQT0iytSNMLkUuqIks=
+
+Name: org/eclipse/sapphire/ui/diagram/internal/StandardDiagramConnecti
+ onPart$5.class
+SHA-256-Digest: mfvFGfO6rkwyicL+al4/iq+8chMzcQFW+6NmxS+xLJA=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/NamedValuesPropertyEd
+ itorPresentation$3.class
+SHA-256-Digest: HqXwbKQPjOAB6g0/8nvQA114uiZ11XY9rFGvHxSeYhg=
+
+Name: org/eclipse/sapphire/ui/Rectangle.class
+SHA-256-Digest: 9BgJrrkuks60iBIOj6jmpBywTAuAXThjhYw+J+Bh5Pg=
+
+Name: org/eclipse/sapphire/ui/forms/StaticTextFieldDef.class
+SHA-256-Digest: A8RQvtVAHPb0dTrilSU4ryjyqbRdAj5ideqa3BLO+tA=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/NamedValuesPropertyEd
+ itorPresentation$Factory.class
+SHA-256-Digest: LJLYev/FSKfAYw1vCmm7GueXi6C+GpxJ/g7YsnbMvYE=
+
+Name: org/eclipse/sapphire/ui/forms/swt/CompactListPropertyEditorPrese
+ ntation$ProxyResource.class
+SHA-256-Digest: YAvdUWCHMP8KA2bS8J4C0tHod8A1QDOYl6Lusfdtsb0=
+
+Name: org/eclipse/sapphire/ui/actions/MoveUp.png
+SHA-256-Digest: a+wwKmAHg0CQvIsv/w6dLz2XIuCs8jY+FcdkXvZBFWs=
+
+Name: org/eclipse/sapphire/ui/forms/PageBookPart$1$1$1.class
+SHA-256-Digest: u+f9/WPbEQ3lbqMXc9k0clNQNIE6XYIkmwkdqB0Zp/0=
+
+Name: org/eclipse/sapphire/ui/forms/PageBookPart$1.class
+SHA-256-Digest: +PlmlQt0/83IPWFg/YOXjt1EBZ05/Kjt4RLtP5C3kyU=
+
+Name: org/eclipse/sapphire/ui/def/internal/StringToKeySequenceConversi
+ onService.class
+SHA-256-Digest: QpSoajvJvXKyGjMVx3GzcHxk0lh5BCuoS/XfrIN7JUo=
+
+Name: org/eclipse/sapphire/ui/diagram/def/IDiagramNodeDefaultActionDef
+ .class
+SHA-256-Digest: V0U+k2Tg44HilwiKMnKWYpfc0xasHD0806AgZRwf1dg=
+
+Name: org/eclipse/sapphire/ui/diagram/layout/standard/StandardDiagramL
+ ayoutPersistenceService$2.class
+SHA-256-Digest: tdJyomfQc2INiyrpNTCDNcuBSG8hV/QXm/9jMczeDDM=
+
+Name: org/eclipse/sapphire/ui/forms/SeparatorPart$1$1.class
+SHA-256-Digest: SsBdv1Sl8BhnZl5gVC+kfdK6aUmdsQr/9OnnppZEf3c=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SapphireActionPresentation$2$1
+ .class
+SHA-256-Digest: yQdbALwcEAiCLCIexbRo2F7tTrAZDbyHsJQBZaSSSVE=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/ScalePropertyEditorPr
+ esentation$2.class
+SHA-256-Digest: X8jwEd/TtOly0c38KoiS4zSY4D7m6u8W1T2ilMvQ6Do=
+
+Name: org/eclipse/sapphire/ui/DelayedTasksExecutor$TaskPriorityCompara
+ tor.class
+SHA-256-Digest: dCJQWZcrTSptlB9DUJ38u3n4HYrZfS+lG4DAOBqLw0M=
+
+Name: org/eclipse/sapphire/ui/forms/MasterDetailsContentOutline$Select
+ ionChangedEvent.class
+SHA-256-Digest: rSkD2FBXxx5SRA7EFC4MmPuZJ41pOxReEP5p2rOJrfw=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TextFieldPropertyEditorPresent
+ ation$6.class
+SHA-256-Digest: P5pIb+wIulALR/5fVUEQFG9ULcrB3Ey8lmBVWaUbM8c=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$TableSorter.class
+SHA-256-Digest: 4DuC9rsJxqI0gcTmP79z7X4DYsgkjUmjY0AbcL7lhxw=
+
+Name: org/eclipse/sapphire/ui/SapphireHelpContext.class
+SHA-256-Digest: knwqN6/q/Uihc6J6oTekftIa1SYKoZ16dYP/ZKtC/Pc=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/NamedValuesPropertyEd
+ itorPresentation$2.class
+SHA-256-Digest: q7Xu0DKLFnfrfMlpyRZQ6jPcZQicqfo1q03SWZOXrdU=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/TextPart$1.class
+SHA-256-Digest: nFrgHcJx/oHA4vaS4AU4RDSUVa6RKY8eX6+Noz50RUQ=
+
+Name: org/eclipse/sapphire/ui/forms/PropertyEditorActionHandler.class
+SHA-256-Digest: gUGKaNFMjeIN3aGzI9oSpRAPFwhI5lWrfx6Tf4Ds7rc=
+
+Name: org/eclipse/sapphire/ui/assist/internal/PropertyEditorAssistDeco
+ rator$2.class
+SHA-256-Digest: /GNow7AhDKqzwXfDis6CqqFReFckiISiDWphu4A4tiw=
+
+Name: org/eclipse/sapphire/ui/diagram/internal/DiagramImplicitConnecti
+ onTemplate$1.class
+SHA-256-Digest: TX4Ut/PjyR4c7clOE6KK4eb/HNPacf4GvFBXBVjfhMM=
+
+Name: org/eclipse/sapphire/ui/forms/HtmlPanelPart.class
+SHA-256-Digest: kvbbd6BzlSPv2m09EZTyQEt44qXYYhuXyq1jFJmE4Jo=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/WithPresentation$1$3.
+ class
+SHA-256-Digest: PC1uy8Vtj2RojeAXYFiHEdMenlKZjHOSuyfx8k5m3sc=
+
+Name: org/eclipse/sapphire/ui/forms/swt/HelpSystem$DocumentationContex
+ t$1.class
+SHA-256-Digest: bPfIuUoCXzk+QV5bWPgy7AmWni6hrtztBHXVyMI+bA0=
+
+Name: org/eclipse/sapphire/ui/diagram/ConnectionLabelEvent.class
+SHA-256-Digest: 5J3YAlSNJUs2b6AgCn6qDfGS+hS79mPh/sTaq95HXUI=
+
+Name: org/eclipse/sapphire/ui/forms/FormComponentRef.class
+SHA-256-Digest: hunSKfaSlk4+uGhPHtmb8fRwtuVY2OeAtWdxKcSdJGM=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$12$1.class
+SHA-256-Digest: QRBRQewEeZ1K0MGqsGmHIFGxENZIa5NmHQttmXDLu9w=
+
+Name: org/eclipse/sapphire/ui/forms/swt/WarningOverlay.png
+SHA-256-Digest: i3mrykqiefHcEDz2z96ka9BxQ5/SVMR6D6Y8MVQJK28=
+
+Name: org/eclipse/sapphire/ui/def/ActionContextsHostDef.class
+SHA-256-Digest: t2me9DU1Dkn3VAIY1nc3//7hn1fOixHSN78CeWS7VT4=
+
+Name: org/eclipse/sapphire/ui/SapphirePart$2$1.class
+SHA-256-Digest: eo+K/FBqeKTzke21r0PWXpRA5bY3wjrOkqreExOX1pI=
+
+Name: org/eclipse/sapphire/ui/forms/swt/FormComponentPresentation$1.cl
+ ass
+SHA-256-Digest: IEklWQatKBbxOEC96Cns7Dei9sHctKQMcMgfrJi08Y8=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/StatusDialog.class
+SHA-256-Digest: pISToJoTOOoPkiW53wdDKWhAR08RiVER5GvekDndXgI=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$12$2.class
+SHA-256-Digest: s8piTIgYx118CU+ea/2p9j08S3FERNCZ6BvPtBVB598=
+
+Name: org/eclipse/sapphire/ui/forms/JumpActionHandler.class
+SHA-256-Digest: H0qguuXOq1gs9hj8whlXMDXcKR1wPsAnSX59CDnUZ20=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$12$1$1.class
+SHA-256-Digest: tsYI9gRE90VSW7A3vfrqyFlJARKQiMyWtW+GC1oNH00=
+
+Name: org/eclipse/sapphire/ui/SapphireActionGroup.class
+SHA-256-Digest: LHqxH6dzDfnw9tCpkDclLJg95vuPQNOZZNAX9Kk/hF8=
+
+Name: org/eclipse/sapphire/ui/diagram/actions/DeleteAllBendPointsForMu
+ ltiplePartsActionHandler.class
+SHA-256-Digest: osY6xRZhmbusoXdCxs0FL89HiP0aHTWFEJM9lxdsFoQ=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/TextPart$2.class
+SHA-256-Digest: HJIL1x7kptSDh3vwH1CsrzwEE5//DiNpALKZYJZxask=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/CheckBoxGroupProperty
+ EditorPresentation$HorizontalFactory.class
+SHA-256-Digest: YxW8w8dxiVT2ZmLsdHnB4QHShQMFKHpDXD7EciMQJBc=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/NamedValuesPropertyEd
+ itorPresentation$1.class
+SHA-256-Digest: jA/62TmVf4do/cTbyi+4glr2InVQj2MBRC5ASfT3lDw=
+
+Name: org/eclipse/sapphire/ui/diagram/def/internal/ToolPaletteCompartm
+ entPossibleValuesService.class
+SHA-256-Digest: 3/6hzR0gEgxukp7MAyDlPuCGakIGAw2jhAHYKYppCa4=
+
+Name: org/eclipse/sapphire/ui/assist/Assist.png
+SHA-256-Digest: ZejIXx9jLbO0Dv+g3ddPKsWVwXKHHIyS6BuhucIcGDY=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$SelectionBasedActionHandler$1.class
+SHA-256-Digest: CparVKRI/oSNAkKinwCr97KY4zfuhCLOYTVXvHKEZ6s=
+
+Name: org/eclipse/sapphire/ui/def/DefinitionLoader$DefinitionLoaderRes
+ ourceStore.class
+SHA-256-Digest: o8U3Kb2gKbdMon6do+9LyOWY8W9vSdQFUGXTaT6MCfY=
+
+Name: org/eclipse/sapphire/ui/internal/StateFunction$1.class
+SHA-256-Digest: dlK4JWqT0w45/wvh8R8oSiWKt/3Yb1/a1KeRD85h/wc=
+
+Name: org/eclipse/sapphire/ui/DelayedTasksExecutor$Task.class
+SHA-256-Digest: IywMCOazD6V3lJvp3TwAuviDgbd44xMKJ7HUbVhx/cg=
+
+Name: org/eclipse/sapphire/ui/forms/PageBookPart$3.class
+SHA-256-Digest: s+8xE/A7rtsW/94fIg6jqnhNxWB3DuR8552hEbpOfV8=
+
+Name: org/eclipse/sapphire/ui/forms/DetailSectionPart$3$1.class
+SHA-256-Digest: BsPMr5mgDl+jXZPBOb4BzTZMJuG92f1DkcJXF0Iujwc=
+
+Name: org/eclipse/sapphire/ui/forms/WizardDef.psd
+SHA-256-Digest: u68tm7VANd8omsyGj1KGn/6jRC7nSkTt4DjCK8aOvcM=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/text/IFocusSelectable
+ .class
+SHA-256-Digest: 8dG31GXI73ZcytHMtOaHFAH+izk8Qgl+xwkmz7XITHQ=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TextFieldPropertyEditorPresent
+ ation$1.class
+SHA-256-Digest: 9lWHWpPm2ye51kFPI3Q/YWhCA9wJDBI7qbfp9popntE=
+
+Name: org/eclipse/sapphire/ui/forms/TabGroupPageDef.png
+SHA-256-Digest: EEhGpruE/aF7ZW+0hR4zs9Y/HkrY/+148VFaPMfLYfs=
+
+Name: org/eclipse/sapphire/ui/forms/swt/MasterDetailsEditorPage$Conten
+ tOutlineActionSupport$1.class
+SHA-256-Digest: tVK5JF8ygIXlhRYwT2ZUy1qhVl4EDQ1un5V69ZRKAC8=
+
+Name: org/eclipse/sapphire/ui/forms/swt/Popup$5.class
+SHA-256-Digest: mnKy9PVkiJ862mYUd7F4ggucvKMhfuopT425DospUaQ=
+
+Name: org/eclipse/sapphire/ui/SapphirePart$ImageManager$2.class
+SHA-256-Digest: dAJzvl/OEUr0R36XtN2/OjNdqKbRxkAJxGAIDS25Pjc=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/DiagramNodeMoveEvent.clas
+ s
+SHA-256-Digest: eacG2Eff28eBr3NkYVz70uUo7c6EvkmKxHWhaLscIKE=
+
+Name: org/eclipse/sapphire/ui/forms/swt/SlushBucketPropertyEditorPrese
+ ntation$MoveRightActionHandler.class
+SHA-256-Digest: o9bCDdlpp9Ztjg6sl9FW26pkIUWoPPmROstB79sZcIg=
+
+Name: org/eclipse/sapphire/ui/forms/swt/Warning.png
+SHA-256-Digest: tgQR662nwdsSKW4cyxF+LcLUtGU+Ul7twWjnJzsmWUQ=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/TextFieldBinding.clas
+ s
+SHA-256-Digest: CIoyUc3AnADKaXAuyJnfN12NrbglIQonFHfqwjsHesM=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$BooleanPropertyColumnHandler.class
+SHA-256-Digest: u0RH071eaLUB1vJfM7kqJXPIQgAmutbZVbXe2L0NZls=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/HyperlinkTable$10.cla
+ ss
+SHA-256-Digest: G4+hFqKnQujD1vFogSZqzhxL7Jt4txewfPdx9wrDFA8=
+
+Name: org/eclipse/sapphire/ui/diagram/layout/standard/StandardDiagramL
+ ayoutPersistenceService$1.class
+SHA-256-Digest: 3EkbHNHeCYgVvGrbDhAUB13FqkujMlwdhuqG5Z3w3wg=
+
+Name: org/eclipse/sapphire/ui/forms/swt/CompactListPropertyEditorPrese
+ ntation$DeleteActionHandler.class
+SHA-256-Digest: gexPhSofnEAqagkj92AGAfzYanE8G+fMabqnMw2xB3I=
+
+Name: org/eclipse/sapphire/ui/forms/internal/OutlineNodeShowInSourceAc
+ tionHandlerCondition.class
+SHA-256-Digest: dIBYoCvMqsvHbL1w5pSzTcBs2d9AMIVl/LTi+JLrQ84=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/ActuatorButtonPresent
+ ation$2.class
+SHA-256-Digest: QjSmyIYw+5nPvu6ZLMREeI18ANmmJtweXBzjuXMnQ80=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/text/BreakSegment.cla
+ ss
+SHA-256-Digest: Itk12J9HdLLftPG67zlY0FqaqPvlUufdL6FwCgVwC1M=
+
+Name: org/eclipse/sapphire/ui/forms/swt/PropertyEditorPresentation$1$1
+ .class
+SHA-256-Digest: +fc1PKrvmwT5IeM6YhzWGkDRod6LskkPiLcmKiB4wHg=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/text/SapphireFormText
+ $3.class
+SHA-256-Digest: 7pl/c1Eb82jHODhodOa4q6itkCE4viBtH0KFL7kQvbI=
+
+Name: org/eclipse/sapphire/ui/actions/ZoomIn.gif
+SHA-256-Digest: cPX6LhcUYT0PbW3FJrata06xyXNPQ/YTfJo3BwyJ8Sg=
+
+Name: org/eclipse/sapphire/ui/forms/swt/Popup$2.class
+SHA-256-Digest: 4Te98ft78bqcnJYsluMvCFFsbiWxQmoexiVwFD16E7Q=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/ActuatorButtonPresent
+ ation$1.class
+SHA-256-Digest: NsuWquBMv3ol6D7ZQd7nzhPJy22vzcKuIpn4ik5woqE=
+
+Name: bundle.properties
+SHA-256-Digest: ZMpADeuMIylES6qNeuFsYiSSC9vduWp39QyTVjUF4BQ=
+
+Name: org/eclipse/sapphire/ui/def/ActionLocationHintAfter.class
+SHA-256-Digest: Of4QawWxhXxstd5H0ba1Y2C6+VRZOZz+r2v92k2bQT4=
+
+Name: org/eclipse/sapphire/ui/def/ImageReference.class
+SHA-256-Digest: ca98VNbv3YZSJdhbisa5th83dIh4i7LFdED8gJKYYz4=
+
+Name: org/eclipse/sapphire/ui/diagram/internal/DiagramImplicitConnecti
+ onTemplate$NodeTemplateListener.class
+SHA-256-Digest: O4PR8J5+Ql+JJUTeqtHNyLafqr+7XAYLfj3qNu2/ty4=
+
+Name: org/eclipse/sapphire/ui/forms/PropertyEditorDef.png
+SHA-256-Digest: fskCPe/OhfEyoTknatRvusoc/eV7r8yTgbhM+YWqE3o=
+
+Name: org/eclipse/sapphire/ui/forms/MasterDetailsEditorPagePart$1.clas
+ s
+SHA-256-Digest: UXHYE+mOy9HRUsni3IO+mEtjibt7XtoGDE/E1ga6l4Y=
+
+Name: org/eclipse/sapphire/ui/forms/TextDef.class
+SHA-256-Digest: SadtWgUeI8Y4k1JnnLSvv/tnKLO/ZS6+Lo9xd4+Inpo=
+
+Name: org/eclipse/sapphire/ui/forms/PageBookPart$4.class
+SHA-256-Digest: JTHW6mWicFHdDCBV3uZSXWrcdS+lf/MaUne/QUGpSaE=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$SelectionBasedActionHandler$2.class
+SHA-256-Digest: CHIc4wiLd0gkuNJ17q70RbsLArvrgHj8j9RFibEeXv8=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/WithPresentation$1$1.
+ class
+SHA-256-Digest: jBbOYfNlJb1VYypy/EQid3fvijb8dY2fChmnWM6XVPw=
+
+Name: org/eclipse/sapphire/ui/diagram/editor/LinePart.class
+SHA-256-Digest: uKpJL22HO6xqg8zWMJJ0UyddXD0moEE4NgYE775Semg=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/ProgressMonitorBridge
+ .class
+SHA-256-Digest: ObPSlcHqWwZkhpNLiB3A5QbLQpBgRmW1jjNBgwulCeI=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/text/SapphireFormText
+ $1.class
+SHA-256-Digest: H5XInn2FWBN2Momhs0SXY1St+u8+lfTS3Sd40uL4RWc=
+
+Name: org/eclipse/sapphire/ui/forms/swt/PropertyEditorPresentation.cla
+ ss
+SHA-256-Digest: NuZJbvnXQC8+UWGAzDFMEAIdrjZWKdcaXmVkpbm27pE=
+
+Name: org/eclipse/sapphire/ui/forms/swt/RelativePathBrowseActionHandle
+ r$FileSystemLabelProvider.class
+SHA-256-Digest: eApSkyGb/2bJlkBRsLgLyx9oA8KxBUyht9ZnfI7zcxI=
+
+Name: org/eclipse/sapphire/ui/forms/SectionPart$1.class
+SHA-256-Digest: ooTjW7ewC4EDapocZ0hCbCQgOdYyi31lwV1fCGmMSDw=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/HelpActionHandlerCond
+ ition.class
+SHA-256-Digest: YMqfHLl6Bb5O6IncpnQJxGNzaZKlRFl4MDydVYNyH5U=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TextFieldPropertyEditorPresent
+ ation$4.class
+SHA-256-Digest: 2FQdP3oEQPUwFys22llcFs0mFTvBU5eF64hUEHGl3E8=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/text/FormUtil.class
+SHA-256-Digest: F6CypmgC9uwYj5OTfyyP6uRL32WqLpqebhFv/cDHaBM=
+
+Name: org/eclipse/sapphire/ui/def/HorizontalAlignment.class
+SHA-256-Digest: CphrhBl72XqQIrKFVALnFgA1citMSmrp2+wHlopTyrU=
+
+Name: org/eclipse/sapphire/ui/DelayedTasksExecutor$1.class
+SHA-256-Digest: ggqFwyC4Vr+y1AmJwpR5pDGPpAOIlMMIfYqn8hAde1s=
+
+Name: org/eclipse/sapphire/ui/actions/CollapseAll.png
+SHA-256-Digest: 08h5QF44ruy2GGiCFm2Z4FOM8TTXS01H5fAvLq1RxtQ=
+
+Name: about.html
+SHA-256-Digest: r7yci+fovLhj8lOC1YzVbMOq5bdYlk+LQk2Aa2VlHuo=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/TextOverlayPainter$10
+ .class
+SHA-256-Digest: Tcy/VfnjK3wE58xBGWWH3V8HQjGgrioRImHQh4AgdTc=
+
+Name: org/eclipse/sapphire/ui/forms/swt/Popup$3.class
+SHA-256-Digest: fRTm4JiOPp2G1inCrAwDQiG+lBs8ohr0QFm7jhBNhb8=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/TabbedPropertyList$To
+ pNavigationElement.class
+SHA-256-Digest: RC0L1C+fCYgyFo09fBdqoaHvIlySR7mskoCOsqjQr4k=
+
+Name: org/eclipse/sapphire/ui/actions/HideOutline.png
+SHA-256-Digest: sr6Exse7SJhhkg73I3t7y0dteDKK/bXPMJKv820Md6c=
+
+Name: org/eclipse/sapphire/ui/forms/MasterDetailsContentOutline.class
+SHA-256-Digest: 8FcPAo/JdKN9Vioz53rdABPZLQLIyQ7DyEOeWC+ymKY=
+
+Name: org/eclipse/sapphire/ui/forms/swt/internal/text/SapphireFormText
+ $2.class
+SHA-256-Digest: fg0nwEWCZ1ri8Dyn6yZgCGq8koEOFCMNpj36SjL7S4M=
+
+Name: org/eclipse/sapphire/ui/diagram/ConnectionDeleteEvent.class
+SHA-256-Digest: zDI/Jh51JBm14K0omj1x50ZNNiIXzcmzK/6niVAbg/g=
+
+Name: org/eclipse/sapphire/ui/diagram/layout/standard/DiagramBendPoint
+ Layout.class
+SHA-256-Digest: nzFE2KoKjbTDzJIXh1B6e4tE/YFzoZukz6J7H1bUaKw=
+
+Name: org/eclipse/sapphire/ui/diagram/shape/def/BorderTop.png
+SHA-256-Digest: WkrAnXVvBxH7cuDj3aK7J9Yx4n6vroOkrKe4NP1KTKM=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TextFieldPropertyEditorPresent
+ ation$3.class
+SHA-256-Digest: 241RpUJGst5CafwN20WlHbvqAmzIXi+oOb5mfbQl9as=
+
+Name: org/eclipse/sapphire/ui/forms/SectionPart$2.class
+SHA-256-Digest: JsV+8+aWcJamabMNFdEtv5tSD0d3zqew9EUGIKMVweU=
+
+Name: org/eclipse/sapphire/ui/SapphireActionHandlerFactory.class
+SHA-256-Digest: aYTNx2Hp92VACCknIFAUHItrItFRn0oSIV1pKAozAT0=
+
+Name: org/eclipse/sapphire/ui/DelayedTasksExecutor$2.class
+SHA-256-Digest: v60hVqsgKFuxdNSHtMvXiPOrhI70WgP3qrgaVPnQrsY=
+
+Name: org/eclipse/sapphire/ui/def/ActionLocationHint.class
+SHA-256-Digest: WxWhFbZlPQwYPbPBMzU5gla6ZE1aQ2XGTqa9sHk+4L0=
+
+Name: org/eclipse/sapphire/ui/forms/swt/TablePropertyEditorPresentatio
+ n$TablePropertyEditorActionHandler.class
+SHA-256-Digest: JLtYLDx9DIL/0N2LSmbbRQDB1iogrAGMuCbWo05wRUk=
+
+Name: org/eclipse/sapphire/ui/SapphireAction$KeyBindingChangedEvent.cl
+ ass
+SHA-256-Digest: oVwub6mwdaZsIsfN1hWgNE7HRX8lDfdAeF3iFguB+kM=
+
+Name: org/eclipse/sapphire/ui/forms/TabGroupPageDef.class
+SHA-256-Digest: apqW9g5p9exp8tGXwriqP7orrSDMiiVs6OBWfoUoa3g=
+

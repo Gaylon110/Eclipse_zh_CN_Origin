@@ -1,0 +1,717 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.emf.ecp.edit.swt;singleton:=true
+Archiver-Version: Plexus Archiver
+Built-By: genie.ecp
+Require-Bundle: org.eclipse.core.runtime;bundle-version="[3.7.0,4.0.0)
+ ", org.eclipse.emf.ecp.edit;bundle-version="[1.16.0,1.17.0)";visibili
+ ty:=reexport, org.eclipse.emf.ecore;bundle-version="[2.7.0,3.0.0)", o
+ rg.eclipse.emf.edit;bundle-version="[2.8.0,3.0.0)", org.eclipse.core.
+ databinding.property;bundle-version="[1.4.0,2.0.0)", org.eclipse.emf.
+ ecp.ui.view;bundle-version="[1.16.0,1.17.0)", org.eclipse.emf.ecp.vie
+ w.template.model;bundle-version="[1.16.0,1.17.0)", org.eclipse.emf.da
+ tabinding.edit;bundle-version="[1.3.0,2.0.0)", org.eclipse.emfforms.l
+ ocalization;bundle-version="[1.16.0,1.17.0)", org.eclipse.emfforms.co
+ re.services.editsupport;bundle-version="[1.16.0,1.17.0)", org.eclipse
+ .emfforms.core.services;bundle-version="[1.16.0,1.17.0)"
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/emfcli
+ ent/org.eclipse.emf.ecp.core.git;path="bundles/org.eclipse.emf.ecp.ed
+ it.swt";commitId=f2dbbd13b720d1f9463c4d5909101632edfd5c17
+Bundle-Vendor: %Bundle-Vendor
+Import-Package: org.eclipse.core.commands;version="0.0.0", org.eclipse
+ .emfforms.spi.common.report;version="[1.16.0,1.17.0)", org.eclipse.jf
+ ace.action;version="0.0.0", org.eclipse.jface.databinding.fieldassist
+ ;version="0.0.0", org.eclipse.jface.databinding.swt;version="0.0.0", 
+ org.eclipse.jface.databinding.viewers;version="0.0.0", org.eclipse.jf
+ ace.dialogs;version="0.0.0", org.eclipse.jface.fieldassist;version="0
+ .0.0", org.eclipse.jface.layout;version="0.0.0", org.eclipse.jface.op
+ eration;version="0.0.0", org.eclipse.jface.resource;version="0.0.0", 
+ org.eclipse.jface.viewers;version="0.0.0", org.eclipse.jface.window;v
+ ersion="0.0.0", org.eclipse.swt;version="0.0.0", org.eclipse.swt.cust
+ om;version="0.0.0", org.eclipse.swt.events;version="0.0.0", org.eclip
+ se.swt.graphics;version="0.0.0", org.eclipse.swt.layout;version="0.0.
+ 0", org.eclipse.swt.widgets;version="0.0.0"
+Export-Package: org.eclipse.emf.ecp.edit.internal.swt;version="1.16.0"
+ ;x-friends:="org.eclipse.emf.ecp.ui.view.editor.controls,org.eclipse.
+ emf.ecp.view.treemasterdetail.ui.swt,org.eclipse.emf.ecp.view.core.sw
+ t", org.eclipse.emf.ecp.edit.internal.swt.actions;version="1.16.0";x-
+ friends:="org.eclipse.emf.ecp.ui.view.editor.controls,org.eclipse.emf
+ .ecp.edit.ecore.swt", org.eclipse.emf.ecp.edit.internal.swt.controls;
+ version="1.16.0";  x-friends:="org.eclipse.emf.ecp.ui.view.swt,   org
+ .eclipse.emf.ecp.ui.view.editor.controls,   org.eclipse.emf.ecp.view.
+ table.ui.swt,   org.eclipse.emf.ecp.view.core.swt", org.eclipse.emf.e
+ cp.edit.internal.swt.reference;version="1.16.0";x-friends:="org.eclip
+ se.emf.ecp.edit.ecore.swt,org.eclipse.emf.ecp.ui.view.editor.controls
+ ", org.eclipse.emf.ecp.edit.internal.swt.table;version="1.16.0";x-fri
+ ends:="org.eclipse.emf.ecp.view.table.ui.swt,org.eclipse.emfforms.swt
+ .control.multiattribute", org.eclipse.emf.ecp.edit.internal.swt.util;
+ version="1.16.0";  x-friends:="org.eclipse.emf.ecp.editor,   org.ecli
+ pse.emf.ecp.explorereditorbridge,   org.eclipse.emf.ecp.ui.view.swt, 
+   org.eclipse.emf.ecp.ui.view.editor.controls,   org.eclipse.emf.ecp.
+ view.groupedgrid.ui.swt,   org.eclipse.emf.ecp.edit.ecore.swt,   org.
+ eclipse.emf.ecp.view.table.ui.swt,   org.eclipse.emf.ecp.view.categor
+ ization.swt,   org.eclipse.emf.ecp.view.treemasterdetail.ui.swt,   or
+ g.eclipse.emf.ecp.view.core.swt,   org.eclipse.emfforms.swt.control.m
+ ultiattribute", org.eclipse.emf.ecp.edit.spi.swt.actions;version="1.1
+ 6.0", org.eclipse.emf.ecp.edit.spi.swt.commands;version="1.16.0", org
+ .eclipse.emf.ecp.edit.spi.swt.reference;version="1.16.0", org.eclipse
+ .emf.ecp.edit.spi.swt.table;version="1.16.0", org.eclipse.emf.ecp.edi
+ t.spi.swt.util;version="1.16.0"
+Bundle-Name: %Bundle-Name
+Bundle-Version: 1.16.0.20180305-1637
+Bundle-Activator: org.eclipse.emf.ecp.edit.internal.swt.Activator
+Created-By: Apache Maven 3.5.2
+Build-Jdk: 1.8.0_162
+
+Name: plugin.xml
+SHA-256-Digest: DxsbLp8ad09Hk5dIJ4nKxw67ywD5YxLCvERk6GqH14Q=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/util/DialogWrapper.class
+SHA-256-Digest: Blu99MczR6uw3FtgA/Zb4CDuK5ftIPyasFqrpBtiGOE=
+
+Name: org/eclipse/emf/ecp/edit/spi/swt/commands/ProgressPasteFromClipb
+ oardCommand$4.class
+SHA-256-Digest: 1FkshBv1EBqTN9hyuj6WvWJJBWv1wEcKkApNk0JbNMI=
+
+Name: org/eclipse/emf/ecp/edit/spi/swt/commands/ProgressAddCommand.cla
+ ss
+SHA-256-Digest: iJELPOAyam2LmvcpidPCwe6s+5LMv4tS8TFBXt/Atqs=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/controls/TableControl$ECPT
+ ableEditingSupport$EditingState.class
+SHA-256-Digest: SflunpFJVSzNZSB+OMY4CLwM6OcI+6WV+vv1oLn+QdY=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/util/DefaultRenderingResul
+ tFactory.class
+SHA-256-Digest: 9MP5VoKtOlXS/5/LSlqbmg1qIkUxwAii+mxCVIAXLlI=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/util/SWTControl$1.class
+SHA-256-Digest: xMREIM0jT7kkkjwUJ1qAc5eofoGzgJKsfSXPSLV6V14=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/reference/LinkControl$7$1.
+ class
+SHA-256-Digest: z0hrFomFThD1EBCff7sX/ipS9mWU0vGi2HGk3wpvt4o=
+
+Name: icons/info_decorate.gif
+SHA-256-Digest: nv/bx1bRwoMzX6EG3vs5B64XQ6c6LgWr7MOiG9rUZj8=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/controls/EEnumControl.clas
+ s
+SHA-256-Digest: xSzjTfuKTbrNnUNbdQguG+B8mh1BRAUcITMyVH9A/r0=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/controls/BooleanControl.cl
+ ass
+SHA-256-Digest: g3WDZ6biq1CT1F8C/LYIs7DEhc2WeFP8jF5jLhKrL84=
+
+Name: icons/unset_feature.png
+SHA-256-Digest: zgeotQIuWaG96WkLcgpr8Q/Jdn22US0U6/8nguxitb8=
+
+Name: org/eclipse/emf/ecp/edit/spi/swt/table/ECPCellEditor.class
+SHA-256-Digest: Z1mf4dEnS9wDH6RUIMc6J5MrABrOZy+8RjxLuxGqihE=
+
+Name: icons/help.png
+SHA-256-Digest: UAR2u8XrAPDMnH636MR+F2iI+Qh6NMkuegVxzj31l2U=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/table/XmlDateCellEditor$5.
+ class
+SHA-256-Digest: hiOvBc1rut1Uapt2ljsymVmdBMqlVlGvYO1jNn843uA=
+
+Name: org/eclipse/emf/ecp/edit/spi/swt/table/ECPCustomUpdateCellEditor
+ .class
+SHA-256-Digest: ZZCGNrLS3VNoBdWmdbhIj4uig1SfFqyJYQRBaSU4RAU=
+
+Name: org/eclipse/emf/ecp/edit/spi/swt/commands/ProgressPasteFromClipb
+ oardCommand.class
+SHA-256-Digest: bnnLDEnoUus8h1M58KtiWb7qdBQ/RurU3th4NY1imI4=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/util/ThreeColumnRow.class
+SHA-256-Digest: wHDARE23hiGQHsmtoitSgVMGSfCcoKVvSt6dqLhb68A=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/table/DateCellStringToolti
+ pModifier.class
+SHA-256-Digest: 2swr68SQij3OdalfrAosFDhxGpfmAUaHGYr3hW9AcBQ=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/controls/TableControl$3.cl
+ ass
+SHA-256-Digest: nzk1gHAnugDwOnUk1Nz8kkbHHIIlRrQS5A0H051pVn0=
+
+Name: icons/warning_decorate.png
+SHA-256-Digest: nlJ5Z6or1bRcmpWdk46n3oCzjstLpALa0sbwZA//zmc=
+
+Name: org/eclipse/emf/ecp/edit/spi/swt/commands/ProgressCompoundComman
+ d.class
+SHA-256-Digest: w/cZEQgFZGI4uPOlHlaRRZeG2a3B8JExlRtAflu3GQk=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/controls/NumericalHelper.c
+ lass
+SHA-256-Digest: VHHKkb2/P/3iNFiAUw4UmcP3zE2bRdtrDELXUiF9DeU=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/util/DialogOpener.class
+SHA-256-Digest: dPmgyJAFK7OcIdvh8jTfuDQ7fLoWYowJ0zie5s4n5EU=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/controls/MultiControl$List
+ ChangeListener$ListDiffVisitorExtension.class
+SHA-256-Digest: vVdZRx5t+Oc+Q38/9iNY5UZxZQ0+y34WmOZr8rHnRJc=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/util/CellEditorFactory$Cel
+ lDescriptor.class
+SHA-256-Digest: K3LiCf6fKMTDR4p6mafM7L+Ep0lVtJrlMUiVHSDzYUQ=
+
+Name: icons/validation_error.png
+SHA-256-Digest: SeSppu4JXsGz8v5JtNqgN7k9Wv4pHgmu/RLZUcV98SI=
+
+Name: icons/validation_warning.png
+SHA-256-Digest: AR9OM9hrRIB4or1WtwYHcLLAeehqrStymKsNshZ1jzQ=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/util/UtilMessageKeys.class
+SHA-256-Digest: oa0a+rX4qUhXvf/zn1eg7Nc0Dwq/75DaHJI3olO0pTw=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/controls/XmlDateControlTex
+ t.class
+SHA-256-Digest: l36lSL3486rNhk8UW/RWasFegPa1Tu5w4pEICyCxFm4=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/Activator$1.class
+SHA-256-Digest: 080VAEjwU3xkXhdEvyCKddknyyHftImaa9ijUhxgr4Y=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/reference/LinkControl$6.cl
+ ass
+SHA-256-Digest: 6jl1eiEO1Kih9A6r2SFDk7odIcWthjTYTqFipduVm24=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/util/ECPControlSWT.class
+SHA-256-Digest: b++Ge6hdbBgKJI8Wkz2LIBMEL3Q7Xtt+OEUgrpcYGoA=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/controls/TableControl$6.cl
+ ass
+SHA-256-Digest: tgKG86eG6z0IzB66ivBP60uL3Q7Aa1Xl31CNewGq4lY=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/controls/TableControl$ECPT
+ ableEditingSupport.class
+SHA-256-Digest: tGwwoyozqfelHi6eBNTCP4AbbRkEzIlB1bf5f76OW9s=
+
+Name: org/eclipse/emf/ecp/edit/spi/swt/reference/AddReferenceAction$1.
+ class
+SHA-256-Digest: FV6YmVp8BIWciNrOV04rdACXFsmvLqNQOFn0MPjseuE=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/util/CellEditorFactory.cla
+ ss
+SHA-256-Digest: M/GGlXnjouOigZWT/8jKAEPKQIfgCvIbvrE4TEF9fro=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/table/XmlDateCellEditor.cl
+ ass
+SHA-256-Digest: gAcTHEAOkvbANHJ+VXFS4Q5mni6yJm6OtFs3IGinC+I=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/controls/AbstractTextContr
+ ol$ModelToTargetUpdateStrategy.class
+SHA-256-Digest: tXkMssuBeSBwT7ZLLx3Np7F2uSTd+irVTvLMKB6pVX8=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/reference/LinkCellEditor$1
+ .class
+SHA-256-Digest: C96SFxZFxEWJlCpYneGqXj/zvG2USmBNawRa1ZHtU6o=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/util/SingleColumnRow.class
+SHA-256-Digest: kfefE8k+SKEZy0UuLkT75ynXimOtbUzMvWmTpHWe0xY=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/controls/MultiControl$Widg
+ etWrapper.class
+SHA-256-Digest: pFGASsqkATbKJBs+n1PZlmPBR96V5CmBqt8xm03Ylgc=
+
+Name: org/eclipse/emf/ecp/edit/spi/swt/commands/ProgressPasteFromClipb
+ oardCommand$1.class
+SHA-256-Digest: RzskfwpG5R/dv1Ml+DTLqvzwOjGCsm9tuOtcYgucTWM=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/util/SWTControl$4.class
+SHA-256-Digest: m5L6xmoDP7hr7APEJbUyya/J8YRmvAxXagBWZMekrBQ=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/util/DefaultLayoutHelper.c
+ lass
+SHA-256-Digest: jEApLMUtxVjiBajJBSInjwZ8tfYF8uAFV3tARtBQvv4=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/controls/AbstractTextContr
+ ol$TargetToModelUpdateStrategy.class
+SHA-256-Digest: ZPlTlT0Caq6oKmzAQmuCPBL5waJotzyC4J2VoHFNgOY=
+
+Name: org/eclipse/emf/ecp/edit/spi/swt/commands/IProgressMonitorConsum
+ er.class
+SHA-256-Digest: e6xptZOYtz80wolbcdCLS9LlKNqXrx3ksCrUVcNBlwQ=
+
+Name: org/eclipse/emf/ecp/edit/spi/swt/table/MultiStringCellEditor$Tar
+ getToModelStrategy.class
+SHA-256-Digest: 9hlL5Brpn5bPHwE3U3riCNB0p/1bzepmHLwk9WaO3CY=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/table/DateCellEditor$4.cla
+ ss
+SHA-256-Digest: 20xcr1AwTcClzGrTccE73bZeBjUw5l83Y4hliOMd8Tw=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/reference/LinkControl$3.cl
+ ass
+SHA-256-Digest: AyyDbeqzgy7qoVlDKAmMcAuYV+IfsGWC/d2BXXGPcC0=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/util/ECPObservableValue.cl
+ ass
+SHA-256-Digest: x4i+irblEtiRgNqiwUe+q5uY9GcPcY510DL0VGC/374=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/controls/XmlDateControlTex
+ t$SelectionAdapterExtension$1.class
+SHA-256-Digest: 6KOnle/gSiActvA3eNeAT7p+k40qNYcKNYj0kUvHhfo=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/controls/MultiControl$Widg
+ etWrapper$3.class
+SHA-256-Digest: ELSvmqAObbinZsYEnujBLj6eKL5KImIq5aqFfj9n1WA=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/util/OverlayImageDescripto
+ r.class
+SHA-256-Digest: KCDERXIdj3DrkZuVCc0r/RgBsPlnc1monH3EyEzikwE=
+
+Name: OSGI-INF/l10n/bundle.properties
+SHA-256-Digest: W4KPS0dzb56xU7vDmOQn83UEC4sdE+OZaebBfsa3+Lg=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/table/DateCellEditor$1.cla
+ ss
+SHA-256-Digest: x5Ux2AIAWWQx9aBOuNhVXM2QJdeYSzphyqjXxCGVgp4=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/controls/ECPFocusCellDrawH
+ ighlighter.class
+SHA-256-Digest: JZ1c8fJazjI9psSYyw+ae08dwKxRbuIKpcJmFKzvlRI=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/table/XmlDateCellEditor$3.
+ class
+SHA-256-Digest: B163wj55A4eoG3JgMrUC23yWwwGwGmqnEcboVAsPfD4=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/util/PreSetValidationListe
+ ners.class
+SHA-256-Digest: O24G6686lQIF08VB6t+zNmyZjF6u/b0mXf7uqQwzgbo=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/controls/AttributeMultiCon
+ trolTester.class
+SHA-256-Digest: 3IkQM5z7as8SkQoqJaNnCoiSC34PQRduRLi5gvkc3QA=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/util/PreSetValidationListe
+ ners$PreSetVerifyListener.class
+SHA-256-Digest: e9DJ1irPmYaKQPfL+FcgpP1ZhrmI/ra2BV2tWQccF/c=
+
+Name: META-INF/maven/org.eclipse.emf.ecp/org.eclipse.emf.ecp.edit.swt/
+ pom.properties
+SHA-256-Digest: EI/chECvMSS/mSLypc0CVXgdoQk9KqwAUJA4u42/SMA=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/reference/ReferenceMultiCo
+ ntrolTester.class
+SHA-256-Digest: AhT/1z5R+zHUYr4drCkbpgpozTvcySpcJm8w04+sy2Q=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/controls/MultiControl.clas
+ s
+SHA-256-Digest: 850eAbVAG8/U2RkMX8WdiHzS+FrHJB3PmDj2rUD8hl4=
+
+Name: org/eclipse/emf/ecp/edit/spi/swt/util/SWTValidationHelper.class
+SHA-256-Digest: lzwQ9tQs/b80D2q4P8uVrc8qAUZd8w7mgKE9/f2QE1s=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/controls/TableControl$ECPT
+ ableViewerComparator.class
+SHA-256-Digest: zvnGayV1qWcGvJ/EHGStfUnIHV8Lt1CIfB8AFlSX5rU=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/controls/ECPFocusCellDrawH
+ ighlighter$1.class
+SHA-256-Digest: xgbYlxU39TqQ3lUfp+W2k1ET9JRQ/7oOP1WMAj+A3Fk=
+
+Name: org/eclipse/emf/ecp/edit/spi/swt/reference/DeleteReferenceAction
+ .class
+SHA-256-Digest: SSqMK972UHuBhk2Elye2JCjNXOiJGcz75QMto9Ck7Gg=
+
+Name: icons/error_decorate.png
+SHA-256-Digest: tHkxYiU5Ks423lYdbONbZ26hRnJ5xgyQyiPY2znB25c=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/controls/TableControl$ECPT
+ ableEditingSupport$ColumnViewerEditorActivationListenerHelper.class
+SHA-256-Digest: kv3bD4VjTOR1hUyc5kg1fXJpr3WGrVSOrXevw6owesg=
+
+Name: org/eclipse/emf/ecp/edit/spi/swt/commands/ProgressPasteFromClipb
+ oardCommand$2.class
+SHA-256-Digest: tAzChexSjcnZtKQYH19ECIZc/N7aoARbCweKRBo7cjQ=
+
+Name: org/eclipse/emf/ecp/edit/spi/swt/table/StringCellEditorTester.cl
+ ass
+SHA-256-Digest: 1FKUMPJFab0H18FmrcuvqBTPJaGcZKOmd6tKURFn+Jg=
+
+Name: org/eclipse/emf/ecp/edit/spi/swt/table/ECPCellEditorTester.class
+SHA-256-Digest: PDhOvs80bUpaQNhacBtzitMvj7km1HHqw0GvUwSt57M=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/controls/NumericalControl.
+ class
+SHA-256-Digest: GcZWOz7uTOp/0G6DvXAcGpo4rxsTee23xg9699QoTNQ=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/util/DoubleColumnRow.class
+SHA-256-Digest: qTxCpzZUxdqmY696SN0f69/vifH29y7cr3KtoyGjw6Q=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/reference/LinkCellEditorTe
+ ster.class
+SHA-256-Digest: m2zOaLygoWlvRn3EtIx3uoK3KYAdEWEXkt55H2VXk6c=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/table/TableMessageKeys.cla
+ ss
+SHA-256-Digest: vqp86fxbUp5D5LNsJZG52bJE/cGCRCzoKzi6BOc3sEk=
+
+Name: icons/link_overlay.png
+SHA-256-Digest: tVPKzBdrkq4UttB7BtUODNTUZk2xl6RDtKuRAR+7ehU=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/controls/TableControl$5.cl
+ ass
+SHA-256-Digest: Il2ONU3xsvhN2iagiwVmT6kWMzpZvAbS+UlRrsF8xLc=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/actions/ActionMessageKeys.
+ class
+SHA-256-Digest: Q6Fvp35czAL/muAdRHL+kwygY6w35Yao4z7CEZ9zisk=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/controls/XmlDateControlTex
+ t$SelectionAdapterExtension.class
+SHA-256-Digest: 9xrQ6rOR/JxGPu0/1G5LrDn8rOPHZ9Kaafji/agbZBo=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/reference/LinkControl$7.cl
+ ass
+SHA-256-Digest: ilQXxbFlGjKuAMWybdRFpNOuWg7ZO+QjDqcZdGyM/ds=
+
+Name: org/eclipse/emf/ecp/edit/spi/swt/table/StringCellEditor.class
+SHA-256-Digest: zDOTblyFWyRdj4cj3325EeTY/+9dkP1Wv7n8BmeKndE=
+
+Name: org/eclipse/emf/ecp/edit/spi/swt/reference/AddReferenceAction.cl
+ ass
+SHA-256-Digest: W6Sx0/I7IqxthKywn1KR39mv2qVpUyMvnFPQLmVPO64=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/table/DateCellEditor.class
+SHA-256-Digest: MeIbhcq+HK1eHKeFQ9Ny7baBYzHjglO+xctWYOYodt0=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/controls/DateTimeControl.c
+ lass
+SHA-256-Digest: fJR+fEJoNpi0EnWAavph1fT+3CL3yaEbf9q7ejSvcUA=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/table/XmlDateCellEditor$2.
+ class
+SHA-256-Digest: 8zEbtbZjWPD98o9EVg5VNoWFbgESum+Ljp5obv5UfE0=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/controls/MultiControl$1.cl
+ ass
+SHA-256-Digest: pdCefDDQfKfaH8uMfnL1ZCXNan/ZByHeJIE1wgP4/u0=
+
+Name: icons/arrow_down.png
+SHA-256-Digest: uNnMNx77qLmajcV3YKklU1IgqejPoxM+BQSfMfV+0ls=
+
+Name: icons/arrow_up.png
+SHA-256-Digest: fRC65kyAZzW01DzIK20IeNgO4a0RV9SD4hZniJuxEMI=
+
+Name: org/eclipse/emf/ecp/edit/spi/swt/commands/ProgressPasteFromClipb
+ oardCommand$3.class
+SHA-256-Digest: I9kqDxMtTWCgfmL6WYm14H3UbsuLy5V/4qF/w/FSXjQ=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/controls/NumericalControl$
+ 1.class
+SHA-256-Digest: BO0BXJkD92HQ+fzoSNIRcGQsFb/5dX5is/zwdKadSz4=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/controls/XmlDateControlTex
+ t$DateModelToTargetUpdateStrategy.class
+SHA-256-Digest: vR8s60QLP443kFYzH9+NvzM0BhfmoYt0aqUF5pu+kyA=
+
+Name: icons/delete.png
+SHA-256-Digest: zgeotQIuWaG96WkLcgpr8Q/Jdn22US0U6/8nguxitb8=
+
+Name: icons/add_overlay.png
+SHA-256-Digest: A3tl7q8fQ78FHhZM4Tpu/c7QbqyZ1PihjuJ01O9goYI=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/util/SWTControl.class
+SHA-256-Digest: 2Pr/GWMBLGD54q1LHwgSWTkeVSZ9ftdFpe/mUxkKX94=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/controls/MultiControl$Widg
+ etWrapper$1.class
+SHA-256-Digest: naUfnDGxO6QR+oW6NvoVkiv1ibMGz0NEnHdGKXOBFNM=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/reference/LinkCellEditor.c
+ lass
+SHA-256-Digest: gTXHEvliP5JmU/C0U9SVYw5asJlYMxfGMMYU7GvC7Ro=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/reference/LinkCellEditor$2
+ .class
+SHA-256-Digest: nf/EEptf7x4sTICnivBSNA9195IkxxLgpsc9NDGYYzY=
+
+Name: icons/date.png
+SHA-256-Digest: rg7fDrRJQ3C3w9Nz0yaK3WOoY3VQy3pmSLAzybINR0A=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/reference/LinkControl$1.cl
+ ass
+SHA-256-Digest: amQhC54mJekDxn6dnrPJ96w2tG1eCscG2ratnRh1wUI=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/controls/XmlDateControlTex
+ t$DateTargetToModelUpdateStrategy.class
+SHA-256-Digest: 4PTjHMiSp9uzZGskbMFUfOFOzRoQgvXl2wrDetcBvBM=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/controls/TableViewerColumn
+ Builder.class
+SHA-256-Digest: wWu8Puf0KTgAxr8452+oOXFOLuqHsO0V1VjfjQUBkjo=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/reference/ReferenceMessage
+ Keys.class
+SHA-256-Digest: vsZNQYZvb8dGUPURsub9D6L+tDgB7iU9whRSbYf8kpU=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/controls/TableControl$4.cl
+ ass
+SHA-256-Digest: CkCRwQHvZd3Aa2/BhfmT+2PfbKjauyq/uAxfD3DdtlE=
+
+Name: schema/cellEditor.exsd
+SHA-256-Digest: jfy/n/Wm0yV2t7yR+x3PJACAWQL2HO6nTSs0MYNg0Rw=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/ImageDescriptorToImage.cla
+ ss
+SHA-256-Digest: henQ7mxVLbe/Ax4OTmlxOq7qp281hneQK+EJkpV4vbs=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/SWTImageHelper.class
+SHA-256-Digest: xWgyjOAfhoQEvAnzkyDQ/b+OiMm2QVg/26umfJxCgDM=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/reference/LinkControl$5.cl
+ ass
+SHA-256-Digest: sYc9R/QooPY4uwX5/jO72Q56BhjnmCBj6nobcU4BcnU=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/controls/AttributeMultiCon
+ trol.class
+SHA-256-Digest: 1EBHdQg+JtrL9heqvynlyEZJjSh9mdYkbLRs1XYWyXE=
+
+Name: org/eclipse/emf/ecp/edit/spi/swt/table/ECPElementAwareCellEditor
+ .class
+SHA-256-Digest: qnElWPM6X88v94TB/B0aXvvNJ+bXVbH+TgOnK2WHBJI=
+
+Name: org/eclipse/emf/ecp/edit/spi/swt/commands/IProgressMonitorProvid
+ er.class
+SHA-256-Digest: CUP2PmBBMYqGPEJ8JV0LD5UEA5wZ1D6oal9VYvpmF6E=
+
+Name: org/eclipse/emf/ecp/edit/spi/swt/table/ECPEnumCellEditor.class
+SHA-256-Digest: SvN8ts64E3IYJk42DB/kodprjr1hJGZFVaxFVswLPeQ=
+
+Name: org/eclipse/emf/ecp/edit/spi/swt/reference/NewReferenceAction.cl
+ ass
+SHA-256-Digest: 7At/bfvD3qlzOK7YjW5y9us/2pYeqlVo4VlCv4O0QlA=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/util/SWTRenderingHelper.cl
+ ass
+SHA-256-Digest: tcskVOiF0dJhUghXPl5IEeIvYE0PjmKWjWxzHI9WDSM=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/table/XmlDateCellEditor$1.
+ class
+SHA-256-Digest: 3kUcqOkt2KqFYSFQp7kxIZrZSmzECy0RYdDbrDa+dVM=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/controls/AbstractTextContr
+ ol.class
+SHA-256-Digest: 2A6LiuBXxRlfUQWu73Ll9cxcFk22Ui7mA3RyNfBaHSc=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/util/SWTControl$5.class
+SHA-256-Digest: m13bJx5ln5p1U0def21cYN+/ab2xK5Q2R3+OrlJluVA=
+
+Name: org/eclipse/emf/ecp/edit/spi/swt/table/MultiStringCellEditor$1.c
+ lass
+SHA-256-Digest: 5P4qmnkS72cmKy1ljAAMbNaHq6utGNPDdWeXMoAq9cc=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/controls/MultiControl$Widg
+ etWrapper$2.class
+SHA-256-Digest: L3F4qrfgqjO8iG5y4J5UowF7Y9m7fM+a0md9NaM+3zo=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/controls/SingleControl.cla
+ ss
+SHA-256-Digest: fUu8LzUbH2f0R1lbPhLEFx2uFrlJMyyq6D3JyoVFy8c=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/table/NumberCellEditor$Tar
+ getToModelStrategy$1.class
+SHA-256-Digest: L8usK4xixLepySPthSvPIOI/k6GwJMElfOkqM+DAI4s=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/reference/LinkControl.clas
+ s
+SHA-256-Digest: UK2ece/wKl+juWirsqcgC61siK4D24AT/2kHq1zSSn4=
+
+Name: META-INF/maven/org.eclipse.emf.ecp/org.eclipse.emf.ecp.edit.swt/
+ pom.xml
+SHA-256-Digest: 8DHJnbZxEHtPoGG4NdpHEgi/hy4JBfBPiVE+f16wz0o=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/controls/TableControl$ECPC
+ ellLabelProvider.class
+SHA-256-Digest: lZE69PSUZrnjH84BTQiSuNuddlrz9tNDqdNZmbDPPtw=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/reference/LinkControl$2.cl
+ ass
+SHA-256-Digest: 4gdn9CgSr6TTnD+UCcTgCiXB7dJlNCsAuM9nbcHjkEQ=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/table/DateCellEditor$5.cla
+ ss
+SHA-256-Digest: +Hsj431mWFxvQoA0km+eHBrtZZTsdJDd9MMCyUaqP+Y=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/table/NumberCellEditorTest
+ er.class
+SHA-256-Digest: wlqbFfYU5hPOzWKOOrDuG+Cqi/0NAKyNN3KPzvZu+xw=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/table/XmlDateCellEditorTes
+ ter.class
+SHA-256-Digest: x8ko6hOB/PykdpW5d4eOlFvaRkQ2QrN4EnZHc9pK+Bg=
+
+Name: org/eclipse/emf/ecp/edit/spi/swt/table/ECPCellEditorComparator.c
+ lass
+SHA-256-Digest: XBaZHQRPJaS3j0RrJE4O3aPBdAXgaQzZqEPkc6J/PPQ=
+
+Name: icons/containment_overlay.png
+SHA-256-Digest: NCwzK4qbJ+tUsKpkIMvwEIoD7UJ79p9LkM0lUV1GrWI=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/reference/ReferenceMultiCo
+ ntrol.class
+SHA-256-Digest: TSa8FNXmQ5SpucPI9RR3Wee0y5eTa17S9yPh7FRxrwc=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/util/PreSetValidationListe
+ ners$1.class
+SHA-256-Digest: vDUsWCnoDmqjyJXHQftJ7/dEaqbjXbphaHiUoS43S5s=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/controls/TableControl.clas
+ s
+SHA-256-Digest: lKUZGKNevR0RhPfp0v3JUFCe1adpaM4pczvkm/JFWHQ=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/controls/AbstractTextContr
+ ol$EMFUpdateConvertValueStrategy.class
+SHA-256-Digest: b//OVuXV4xNsVFvkZ1ZspEUlP0cSr2LKmZngGsPOxUE=
+
+Name: org/eclipse/emf/ecp/edit/spi/swt/commands/ProgressStrictCompound
+ Command.class
+SHA-256-Digest: NgCk8ySXLxD1Bo4HjOc2panU/4wZcU6MXcUJH67iCu4=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/controls/MultiControl$List
+ ChangeListener.class
+SHA-256-Digest: KS0sPMNn/PxD9Iw+grk8apm0EPqjaVpSLkj6uFTJ58A=
+
+Name: org/eclipse/emf/ecp/edit/spi/swt/util/ECPDialogExecutor.class
+SHA-256-Digest: YRrXvM1Gy4Vdd+xYhWy8ZqXnm8TkEgb4yJtHeqc7taU=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/table/DateCellEditorTester
+ .class
+SHA-256-Digest: G900uC+8A48QUhAecj/QZ+lT9W5Dm6bKxuOW2OA1dOc=
+
+Name: schema/dialogWrapper.exsd
+SHA-256-Digest: 5BbytmJ5uhzaX7kJdwY7jI18EoztDt8tT1sKzJGrlfE=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/util/DateUtil.class
+SHA-256-Digest: C36/ldsQslMqwX20QcYxQWGYivBZw2S4H8NcmcOH0Bk=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/controls/DepricatedControl
+ MessageKeys.class
+SHA-256-Digest: ZHjTNfKwrV1VLuAdK2sDvkuOxLvajSap1z1ZoJDNRwk=
+
+Name: icons/unset_reference.png
+SHA-256-Digest: JfHqrdqqP46jGA2N3cpxwrLE7+Rg3asdweERSqU7mto=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/table/TableColumnConfigura
+ tion.class
+SHA-256-Digest: S5PtutG6lZ7DndCU2gsevMHHWwg4GPB2A+iYX85BxJg=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/controls/NumericalControl$
+ NumericalModelToTargetUpdateStrategy.class
+SHA-256-Digest: DQaOV495MJ0WHp79yKJbkhr3lBD43NBJdga85S/tMwA=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/table/NumberCellEditor$Tar
+ getToModelStrategy.class
+SHA-256-Digest: 1lxWFNPkwKQPCsIoP5IXraVEYsq5t8ltOT6BX8qfgg4=
+
+Name: org/eclipse/emf/ecp/edit/spi/swt/table/MultiStringCellEditorTest
+ er.class
+SHA-256-Digest: TkqfiUs1M/+5FwbEOm/Ya+ZaWTyFZnolzfj5gwYnC+c=
+
+Name: org/eclipse/emf/ecp/edit/spi/swt/table/MultiStringCellEditor.cla
+ ss
+SHA-256-Digest: Fpv+rWou7y52WrFsOnR6jfGluLQzWJUvgYyJhEUio6A=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/util/SWTControl$3.class
+SHA-256-Digest: fHHTXGMttPGoPWfvIsXd+IkrpbI1CHhU4Hw0nqthq6s=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/actions/AddAttributeAction
+ .class
+SHA-256-Digest: ac7Qf3XlW42mY0pcZMAI3f7JDAAOTK1AKakRgQDgfd0=
+
+Name: org/eclipse/emf/ecp/edit/spi/swt/actions/ECPSWTAction.class
+SHA-256-Digest: YQ9KetB/FrdgAhqiIE415etW13lz7AQSB1LHZtb0zec=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/table/DateCellEditor$3.cla
+ ss
+SHA-256-Digest: TMTUgL+66Kje/eO2ZhF8Hi7VmYg/VQQo6gi614s7nps=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/controls/TableControl$2.cl
+ ass
+SHA-256-Digest: 0mFnGGlX+FHbXYcITwwEZBTExCv9ufSgKCkxbwR8MPY=
+
+Name: icons/add.png
+SHA-256-Digest: wGpS3zNh3zgKAqRRWaCFjW982MvD9x/3MqZdbCXqavY=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/controls/NumericalControl$
+ NumericalTargetToModelUpdateStrategy.class
+SHA-256-Digest: rzMuujkmk55CzhAhMUhljEoV3ic4Xake6AtWaMmETIk=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/controls/TableControl$Vali
+ dationStatusCellLabelProvider.class
+SHA-256-Digest: U3jRrbaXfIBwDlA+ruFKH2vpAYlVBlJg/XaxU2unGGM=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/table/TableControlConfigur
+ ation.class
+SHA-256-Digest: Pbxnv/eVmZsY8XlOjSUuQGrWHsBQGr4kspNr3CXtj/8=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/controls/XmlDateControlTex
+ t$DateTargetToModelUpdateStrategy$1.class
+SHA-256-Digest: 3AEX+NjT+kJw6oC/7UIjENOXFJwxMwKG9wsRjqPPLDI=
+
+Name: org/eclipse/emf/ecp/edit/spi/swt/commands/ProgressCopyCommandFac
+ tory.class
+SHA-256-Digest: LpsXNpdicsqf2rMyPyRJeCSsk87LF//Ut10MpMuMfDU=
+
+Name: org/eclipse/emf/ecp/edit/spi/swt/reference/NewReferenceAction$1.
+ class
+SHA-256-Digest: GYFdB4DzW0yggV0DuJA/f3DoKDfoMUFuuc1XbXnBRfE=
+
+Name: org/eclipse/emf/ecp/edit/spi/swt/table/StringBasedCellEditor.cla
+ ss
+SHA-256-Digest: jiMZ9UFH5O8ME/pBokcILwjKcrakYTCEMJtvqX3wdTc=
+
+Name: about.html
+SHA-256-Digest: qpi5HCWkNV++hpNfbpGosgGCmaepib0rLjlOXmqh23E=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/util/SWTControl$2.class
+SHA-256-Digest: kDBAB0FokUSdqawoM/EnirJcx/cNsjUiDNPLkSfSNJw=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/controls/StringControl.cla
+ ss
+SHA-256-Digest: 2a1tmKy6j+K6cErE4TpWYWsZE3xkoG9qb50UzLZwy1o=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/controls/TableControl$1.cl
+ ass
+SHA-256-Digest: 8W2jgCZuNAW8u5nAWLP/k3fLOirJOik5XcyrcQs3OWc=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/Activator.class
+SHA-256-Digest: Db8OEChkr9n2N/ZMRgXFV4X0o2gi8FLobpUZJGcsoIc=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/table/DateCellEditor$2.cla
+ ss
+SHA-256-Digest: mpeCGuaE8BUqWn1aY7JUAOVvhUTMF2j5TH3QB327m9o=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/table/XmlDateCellEditor$4.
+ class
+SHA-256-Digest: onOiZkbpzpunyblx/s/XJiuVglypS61cApNPvEA9Czs=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/controls/NumericalControl$
+ NumericalTargetToModelUpdateStrategy$1.class
+SHA-256-Digest: mbsM6FaNJ+Y39OmSnLrsHXWHDLI10n0cDj8icXLcwLA=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/table/NumberCellEditor.cla
+ ss
+SHA-256-Digest: bEnpSLOz9Oa7rc4Ag6BYmAzENUdPAx0bFoUg9F2ZohI=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/controls/EEnumControl$1.cl
+ ass
+SHA-256-Digest: /af/hycKoT2b4vqImOmrtBqDacdd5VH8YJKDrrtjeyo=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/reference/LinkControl$4.cl
+ ass
+SHA-256-Digest: dMP5dlMRuiJ5ltp04BzE0Bb6rh/JYkxYD3CHRTHq3/g=
+
+Name: org/eclipse/emf/ecp/edit/internal/swt/table/NumberCellEditor$1.c
+ lass
+SHA-256-Digest: hQqbEsDSK16Z21ucom7Inq+6swOvwBIhH99hYqWHpNU=
+
+Name: org/eclipse/emf/ecp/edit/spi/swt/util/PreSetValidationStrategy.c
+ lass
+SHA-256-Digest: PxmpinflclD9fFWbQSHdruQatg68o6v2xL6yz+2NkFw=
+

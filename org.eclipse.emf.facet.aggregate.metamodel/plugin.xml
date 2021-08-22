@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+Copyright (c) 2012 Mia-Software.
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the Eclipse Public License v1.0
+which accompanies this distribution, and is available at
+http://www.eclipse.org/legal/epl-v10.html
+
+Contributors:
+   Nicolas Bros (Mia-Software) - Bug 372626 - Aggregates
+   Gregoire Dupe (Mia-Software) - Bug 372626 - Aggregates
+-->
+
+<plugin>
+<!--
+	This declaration is done by  the plug-in org.eclipse.emf.facet.aggregate.metamodel.notgenerated
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.eclipse.org/emf/facet/aggregate/0.2.incubation/aggregate"
+            class="org.eclipse.emf.facet.aggregate.metamodel.v0_2_0.aggregate.AggregatePackage"
+            genModel="model/aggregate-0.2.0.genmodel"/>
+   </extension>
+-->
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.eclipse.org/emf/facet/aggregate/0.2.incubation/aggregate/internal/aggregateProxy"
+            class="org.eclipse.emf.facet.aggregate.metamodel.v0_2_0.aggregate.internal.aggregateProxy.AggregateProxyPackage"
+            genModel="model/aggregate-0.2.0.genmodel"/>
+   </extension>
+
+</plugin>

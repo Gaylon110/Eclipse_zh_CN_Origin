@@ -1,0 +1,1200 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.pde.api.tools;singleton:=true
+Built-By: genie.releng
+Require-Bundle: org.eclipse.osgi;bundle-version="[3.4.0,4.0.0)",org.ec
+ lipse.core.runtime;bundle-version="[3.11.0,4.0.0)",org.eclipse.pde.co
+ re;bundle-version="[3.3.102,4.0.0)",org.eclipse.jdt.core;bundle-versi
+ on="[3.10.0,4.0.0)",org.eclipse.jdt.launching;bundle-version="[3.6.10
+ 0,4.0.0)",org.eclipse.core.resources;bundle-version="[3.4.0,4.0.0)",o
+ rg.eclipse.text;bundle-version="[3.4.0,4.0.0)",org.eclipse.core.fileb
+ uffers;bundle-version="[3.4.0,4.0.0)",org.eclipse.ant.core;bundle-ver
+ sion="[3.1.300,4.0.0)",org.objectweb.asm;bundle-version="[6.0.0,7.0.0
+ )",org.eclipse.team.core;bundle-version="[3.4.0,4.0.0)",org.eclipse.c
+ ore.filesystem;bundle-version="[1.2.0,2.0.0)",org.eclipse.equinox.fra
+ meworkadmin;bundle-version="[2.0.0,3.0.0)",org.eclipse.core.variables
+ ;bundle-version="[3.2.0,4.0.0)",org.objectweb.asm.tree;bundle-version
+ ="[6.0.0,7.0.0)"
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/pde/ec
+ lipse.pde.ui.git;path="apitools/org.eclipse.pde.api.tools";tag="M2018
+ 0328-0400";commitId=1df2296e60bcd7f149a58ffcf4e137151ac7a7af
+Bundle-Vendor: %providerName
+Import-Package: com.ibm.icu.text,com.ibm.icu.util
+Eclipse-LazyStart: true
+Export-Package: org.eclipse.pde.api.tools.internal;x-friends:="org.ecl
+ ipse.pde.api.tools.tests,org.eclipse.pde.api.tools.ui,org.eclipse.pde
+ .api.tools.generator",org.eclipse.pde.api.tools.internal.builder;x-fr
+ iends:="org.eclipse.pde.api.tools.ui,org.eclipse.pde.api.tools.tests"
+ ,org.eclipse.pde.api.tools.internal.comparator;x-friends:="org.eclips
+ e.pde.api.tools.ui,org.eclipse.pde.api.tools.tests",org.eclipse.pde.a
+ pi.tools.internal.descriptors;x-friends:="org.eclipse.pde.api.tools.t
+ ests,org.eclipse.pde.api.tools.ui",org.eclipse.pde.api.tools.internal
+ .model;x-friends:="org.eclipse.pde.api.tools.tests,org.eclipse.pde.ap
+ i.tools.ui",org.eclipse.pde.api.tools.internal.natures;x-internal:=tr
+ ue,org.eclipse.pde.api.tools.internal.problems;x-friends:="org.eclips
+ e.pde.api.tools.ui,org.eclipse.pde.api.tools.tests",org.eclipse.pde.a
+ pi.tools.internal.provisional;x-friends:="org.eclipse.pde.api.tools.t
+ ests,org.eclipse.pde.api.tools.ui,org.eclipse.pde.api.tools.generator
+ ",org.eclipse.pde.api.tools.internal.provisional.builder;x-friends:="
+ org.eclipse.pde.api.tools.tests,org.eclipse.pde.api.tools.ui",org.ecl
+ ipse.pde.api.tools.internal.provisional.comparator;x-friends:="org.ec
+ lipse.pde.api.tools.tests,org.eclipse.pde.api.tools.ui",org.eclipse.p
+ de.api.tools.internal.provisional.descriptors;x-friends:="org.eclipse
+ .pde.api.tools.tests,org.eclipse.pde.api.tools.ui",org.eclipse.pde.ap
+ i.tools.internal.provisional.model;x-friends:="org.eclipse.pde.api.to
+ ols.tests,org.eclipse.pde.api.tools.ui",org.eclipse.pde.api.tools.int
+ ernal.provisional.problems;x-friends:="org.eclipse.pde.api.tools.ui,o
+ rg.eclipse.pde.api.tools.tests",org.eclipse.pde.api.tools.internal.pr
+ ovisional.scanner;x-friends:="org.eclipse.pde.api.tools.tests,org.ecl
+ ipse.pde.api.tools.ui",org.eclipse.pde.api.tools.internal.provisional
+ .search;x-friends:="org.eclipse.pde.api.tools.tests,org.eclipse.pde.a
+ pi.tools.ui",org.eclipse.pde.api.tools.internal.search;x-friends:="or
+ g.eclipse.pde.api.tools.tests,org.eclipse.pde.api.tools.ui",org.eclip
+ se.pde.api.tools.internal.util;x-friends:="org.eclipse.pde.api.tools.
+ tests,org.eclipse.pde.api.tools.ui,org.eclipse.pde.api.tools.generato
+ r",org.eclipse.pde.api.tools.internal.util.profiles;x-internal:=true
+Bundle-Name: %pluginName
+Bundle-Version: 1.1.150.v20180328-0710
+Bundle-Localization: plugin
+Bundle-ClassPath: .
+Bundle-Activator: org.eclipse.pde.api.tools.internal.provisional.ApiPl
+ ugin
+Created-By: Apache Maven 3.3.3
+Build-Jdk: 1.8.0_162
+
+Name: plugin.xml
+SHA-256-Digest: nN/2I6gr4sWMW5Wo2rcFslPvxh9WC4E3IOL1wt+qt5U=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/VisibilityModifie
+ rs.class
+SHA-256-Digest: 5tvfivV46/HSAJfcLQxFs/a5KKJkYf5xZ3YRzYAc3pc=
+
+Name: org/eclipse/pde/api/tools/internal/natures/ApiToolProjectNature.
+ class
+SHA-256-Digest: AqLkLmi6hrWSSrBlH+c9c9WtA70kyby4HnAjaEo2uiE=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/IApiJavadocTag.cl
+ ass
+SHA-256-Digest: IQc23euNnIkplBak3ULzd5xAV8I4bH3qe2y8BBsxeko=
+
+Name: org/eclipse/pde/api/tools/internal/builder/ReferenceExtractor$Li
+ nePositionTracker.class
+SHA-256-Digest: uFQSqrnyLkeQdo1MmazVkW7HmbkH7FpVEWT0DFsZ5BQ=
+
+Name: org/eclipse/pde/api/tools/internal/util/Util$BuildJob.class
+SHA-256-Digest: b8PAj0hiY/S+VIWdw/ga7/dTdLYC7KnWZtDzIzS5kb0=
+
+Name: org/eclipse/pde/api/tools/internal/builder/LeakReturnTypeDetecto
+ r.class
+SHA-256-Digest: FGnU+rtq/idKO2NMNixtbKEh7iMAANjuI5luSzd5iUc=
+
+Name: org/eclipse/pde/api/tools/internal/SessionManager.class
+SHA-256-Digest: zFKWHSDz/cAJUi0YgICfQCCArr4WROoZXCJ77MiQdVw=
+
+Name: org/eclipse/pde/api/tools/internal/ApiDescriptionProcessor$ASTTa
+ gVisitor.class
+SHA-256-Digest: Jy0sgclleNvPF1SL5LdevfXcuW0eLd4GEuO55r0FE8U=
+
+Name: org/eclipse/pde/api/tools/internal/problems/ApiProblem.class
+SHA-256-Digest: cvnseGa4OzHpkGMcEnOGGNdrakeXN9dYxJV5d1k72T8=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/builder/IReferenc
+ e.class
+SHA-256-Digest: nW055vSMCuOgASPE7yGpIr/a+hmswFGfpxfy+BIxNC0=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/ITreeNode.class
+SHA-256-Digest: ocIMkAuzAVWsoNf1IOCIA3K2tB8qljJ4A1kc2zHO+gg=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/problems/IApiProb
+ lemFilter.class
+SHA-256-Digest: HydH5ViVX6xmRircUjCWlTqgSf9X9SOJ/DcK+DYteaA=
+
+Name: org/eclipse/pde/api/tools/internal/util/TarFile$1.class
+SHA-256-Digest: GiPe5KlFYOgzvpJ/RtViGKFpW8FIKGrT4nvVqecGaaE=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/builder/IApiProbl
+ emDetector.class
+SHA-256-Digest: 4F3jJULLrSisMjFWC6MvMYq4+7QED1pIxrE92NOMNHI=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/builder/IApiAnaly
+ zer.class
+SHA-256-Digest: ZowAi/We8Pi1AfulDTxk0tBzkyuCQpLh96EcneWdsgs=
+
+Name: org/eclipse/pde/api/tools/internal/search/UseReportConverter$Cou
+ ntGroup.class
+SHA-256-Digest: sJqV2w9jmgVGGIjfDEpbD3W4+aQeEWmYhzQxSp2iYUo=
+
+Name: org/eclipse/pde/api/tools/internal/search/UseMetadata.class
+SHA-256-Digest: sMNj3cOL6PshEpAc9D321G7656Hb31HwK9I+DW3Ttcc=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/comparator/ApiCom
+ parator$3.class
+SHA-256-Digest: J9V7nFnthm7rzEwmQ9TomLWxNErvogIMScXO/X8fvXI=
+
+Name: .api_description
+SHA-256-Digest: wDXxmVfAsOW9t+GT2qa0jEH5w0QeakDR2883YnjjBww=
+
+Name: org/eclipse/pde/api/tools/internal/search/UseReportConverter$Rep
+ ort.class
+SHA-256-Digest: Cy1pv4tR5fjNB/XfnSgChsRT+OHZR2spu7JPZ2JSueY=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/search/ApiSearchE
+ ngine$ReferenceExtractor.class
+SHA-256-Digest: qTqhID3KZJ2IpoiVDfQrdz12xFVlFH8N+PSbLLj7msQ=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/comparator/DeltaV
+ isitor.class
+SHA-256-Digest: NqOjrk9shPFIJ5InZ354gnkEApVIbIVJe2J8biOzAPc=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/comparator/Compar
+ eApiScopeVisitor.class
+SHA-256-Digest: ygjlXEoL5hFCYZaYoGQOy0hrzgknKVtum2YEeJzCvnU=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/scanner/TagScanne
+ r.class
+SHA-256-Digest: maxHtwDVcS6j1NB4y6KIq0l2jmt2rZndA+ADeWkNQfg=
+
+Name: org/eclipse/pde/api/tools/internal/search/MissingRefReportConver
+ ter$Report.class
+SHA-256-Digest: mNmZieCgueF9vspBaQT1pmBYHhpyWBGwxM8FdbQPFik=
+
+Name: org/eclipse/pde/api/tools/internal/ApiBaselineManager.class
+SHA-256-Digest: ecprHg7xCt4Mo+gcRW8UnEadg+Vs1K/gviILPqzusW8=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/ISession.class
+SHA-256-Digest: ZqJ99hpz4BObvy6m0+amNUddJwVSpPu5Uv1C9DgQEn8=
+
+Name: org/eclipse/pde/api/tools/internal/model/StubArchiveApiTypeConta
+ iner.class
+SHA-256-Digest: UyDfJJIRxC3uCPxv63LVc6Za9WGlOQPim18TQs9wIcU=
+
+Name: org/eclipse/pde/api/tools/internal/builder/ReferenceExtractor$Cl
+ assFileMethodVisitor.class
+SHA-256-Digest: X/0IpYopPFLi5T3+F3pgZgCZIg3jG7WoTD/MoEa8ntE=
+
+Name: org/eclipse/pde/api/tools/internal/search/UseReportConverter$Ref
+ erence.class
+SHA-256-Digest: 9bdV+JfqsT05VOmwEwaZplhxToL79ZKxM22TIL38dvI=
+
+Name: org/eclipse/pde/api/tools/internal/builder/LeakFieldProblemDetec
+ tor.class
+SHA-256-Digest: EYs+ek39a9VsEgEFbBPsrZ6ZGf9pr+3QWvbOIXPxjl8=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/descriptors/IPack
+ ageDescriptor.class
+SHA-256-Digest: N59MwEf3V5RhO4vY8sz2tHE2W8Qf3ccQL0lOU/VcFAc=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/ITreeModel.class
+SHA-256-Digest: XHwo+yxg6O3kTCHKGw2nu/sG4N+EvAKM/sy+z+tmanc=
+
+Name: org/eclipse/pde/api/tools/internal/model/TypeStructureBuilder.cl
+ ass
+SHA-256-Digest: D3REmGtzKcTueNZ/x8cJYpVmv0/6qLju3mzwQImDQAI=
+
+Name: org/eclipse/pde/api/tools/internal/search/ConsumerReportConverto
+ r.class
+SHA-256-Digest: iKvPoz4790Xga6Bxi6nL9342S7oizkUiqrVa1b2LlUg=
+
+Name: org/eclipse/pde/api/tools/internal/util/profiles/OSGi_Minimum-1.
+ 1.profile
+SHA-256-Digest: ZNH0vqkdGp0Gbi/cvPDt3q0uhgEADbIbNaTEUnRyeRw=
+
+Name: org/eclipse/pde/api/tools/internal/AntFilterStore.class
+SHA-256-Digest: 19Fjqpy9cL8bp7XJILO/Zn8mg3fgKPZEr9UqXEVjt8c=
+
+Name: org/eclipse/pde/api/tools/internal/builder/IllegalAnnotationRefe
+ renceDetector.class
+SHA-256-Digest: dNr0a6hA//H674kIkVkNsttzR2+MTeK+V0gPLQQC+ts=
+
+Name: org/eclipse/pde/api/tools/internal/builder/Validator.class
+SHA-256-Digest: ddX3zJlSFrOiJlsTR83U88Y7/Zit6GMm2g19EZNpaJQ=
+
+Name: org/eclipse/pde/api/tools/internal/util/UtilMessages.class
+SHA-256-Digest: tnKO92jsbxCn7WCbb/G3yklzGLsMZYF013a011XDQ34=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/ISessionManager.c
+ lass
+SHA-256-Digest: 5reH3qfiklnw/OQaiWUhOkZX9ZhpGfBCSgsBbMbf6Mk=
+
+Name: org/eclipse/pde/api/tools/internal/ApiDescriptionManager.class
+SHA-256-Digest: eWyIzR80a0SAIOrgiQ7Loadl7m+xZZjnxLSWj0UhBZE=
+
+Name: org/eclipse/pde/api/tools/internal/search/MissingRefReportConver
+ ter.class
+SHA-256-Digest: aawnFhEOVxief4lHLmz6b8ZEh1cR5+Mambp9uy0G28o=
+
+Name: org/eclipse/pde/api/tools/internal/descriptors/MemberDescriptorI
+ mpl.class
+SHA-256-Digest: l7IIWYnVME/tGgUdqgiAbCR0LZauCDau6ekp0ij+eC0=
+
+Name: org/eclipse/pde/api/tools/internal/model/TypeStructureBuilder$1.
+ class
+SHA-256-Digest: mX5wxKuslbO4jATGzl/31yMNJ0W5Bfu31byyow77TPc=
+
+Name: org/eclipse/pde/api/tools/internal/util/TarEntry.class
+SHA-256-Digest: vOos3Vh8fHvJQhOXO2GKrK0YRuQmrq6p9CdBtluN6vw=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/model/IApiField.c
+ lass
+SHA-256-Digest: s0Cn1BXNrN3xCaMu4BW5QDbqCwTt7K3dqGbq6Gunw6w=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/model/IApiMember.
+ class
+SHA-256-Digest: r3RoURGe4inKH5FcIFnwTr8psoqoICGbLx/2Jkv3qpE=
+
+Name: org/eclipse/pde/api/tools/internal/comparator/SignatureDescripto
+ r.class
+SHA-256-Digest: CaQpRc69QQ8nTvAIST4vCEwsO0fAIXyU+mwdnhCehWA=
+
+Name: org/eclipse/pde/api/tools/internal/JavadocTagManager$Key.class
+SHA-256-Digest: axLW8+gnbgeGL6SbghffitYcaviLBsT4C0Ea6OI6ME8=
+
+Name: org/eclipse/pde/api/tools/internal/builder/MethodLeakDetector.cl
+ ass
+SHA-256-Digest: E83ohupkEXCiYUWDJCBO+2gWHSFiHaYVU5QVfB0obpA=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/builder/IBuildCon
+ text.class
+SHA-256-Digest: SblDT823c7YbB0hOwmoZhPqCHdGzzrAvn/zZBEbECbA=
+
+Name: org/eclipse/pde/api/tools/internal/search/ReferenceLookupVisitor
+ .class
+SHA-256-Digest: rR6VpiNBZWHSMjjGGFPR9tQz8DVGHZBXUDz492V7oVU=
+
+Name: org/eclipse/pde/api/tools/internal/model/ApiElement.class
+SHA-256-Digest: cGeWJS/krEvYejmY9KQV0ArTKzw1Idi+oKTDhd6hBVI=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/descriptors/IMemb
+ erDescriptor.class
+SHA-256-Digest: be9kgQILnGb2b+1GCDBVdqWvbPR/cDtEJ6JVbh0izAA=
+
+Name: org/eclipse/pde/api/tools/internal/IApiCoreConstants.class
+SHA-256-Digest: bCqni73sFWqtV75x1EgOsTi8G/x4x7XQtvUvk6UrSII=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/comparator/Compar
+ eApiScopeVisitor$1.class
+SHA-256-Digest: Jc8aCBWYwsKJ/nxgeXOnCGrWhJuw8Gk8m3nyQKRRS1g=
+
+Name: org/eclipse/pde/api/tools/internal/descriptors/ComponentDescript
+ orImpl.class
+SHA-256-Digest: hrqAYuQSKMyhxasJ3+WLQONhBYdZCAQ2pfIMD1FvK/0=
+
+Name: org/eclipse/pde/api/tools/internal/search/UseScanReferenceVisito
+ r.class
+SHA-256-Digest: NX9yPA0zEvQmFwjVOHidb6HxKOjD+VvmWtOKPTA8CvM=
+
+Name: org/eclipse/pde/api/tools/internal/builder/IllegalOverrideProble
+ mDetector.class
+SHA-256-Digest: 6XL8CgvikesDtLE+2QyA9ykzxGEYSsXbQL0dwZe7UJo=
+
+Name: org/eclipse/pde/api/tools/internal/builder/IllegalExtendsProblem
+ Detector.class
+SHA-256-Digest: uXUhoAZB+vC3ioH2FmVZZl85Op3Y1UJ/bj2FvlQ05VI=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/IRequiredComponen
+ tDescription.class
+SHA-256-Digest: aWY8uk5dob7vV+7lK5y+YcJvZvw9zViIIPWD5koQ0hY=
+
+Name: org/eclipse/pde/api/tools/internal/util/profiles/JavaSE-1.6.prof
+ ile
+SHA-256-Digest: rmN68Np4pwLUWQYRWmDmTB/FcNGf62oNqGKUn/FkJjQ=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/IApiAccess.class
+SHA-256-Digest: QJIGRbDPaiWMwT4m2CLulDC2uthQ/aC4cwxnoEfTooU=
+
+Name: org/eclipse/pde/api/tools/internal/CRCVisitor.class
+SHA-256-Digest: rHyte2NYP4MhysxryisQuak7GIcI5iWZaY5qt5RmUHg=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/model/IApiTypeCon
+ tainer.class
+SHA-256-Digest: zBHnKl9Rnh55O1TeyB1ZOCO2SZR8BT4Wh/0oBxUHOgc=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/comparator/ApiCom
+ parator$4.class
+SHA-256-Digest: y6bFAELFwLw+UHdCvILmx/VMc/63B+wkp+DCsRovfF0=
+
+Name: org/eclipse/pde/api/tools/internal/comparator/Messages.class
+SHA-256-Digest: LLMV6a/+YmGInmD96D35XuQVfi5VT0pUDyB1GjdmZ34=
+
+Name: org/eclipse/pde/api/tools/internal/comparator/TypeParameterDescr
+ iptor.class
+SHA-256-Digest: c7A9E33QGvT3A5jyIEh6qe9XJuXxwBvqXvB+iNzF1jg=
+
+Name: org/eclipse/pde/api/tools/internal/builder/ReferenceResolver.cla
+ ss
+SHA-256-Digest: xaV4QcdMH549MC1DxdpxyvuZ5/5y8Fp38mpZUJUbGKY=
+
+Name: org/eclipse/pde/api/tools/internal/search/UseReportConverter$Mis
+ singHandler.class
+SHA-256-Digest: UNzt449liaw2bmiNFZLvtTnleqMw7wWJHrbzDldpjFI=
+
+Name: org/eclipse/pde/api/tools/internal/ProjectApiDescription.class
+SHA-256-Digest: QBQXFXUEAHpNys/pvR5/YrlHhuf3TC3hbmd3whiYfkM=
+
+Name: scripts/api-tasks.properties
+SHA-256-Digest: jQi1kmML49+h8YOcB7NAgtOJ2O+kasoAg5deCNZYDOw=
+
+Name: org/eclipse/pde/api/tools/internal/ApiPluginPreferenceInitialize
+ r.class
+SHA-256-Digest: JcUJKPpMVltJurjwzlcMCtMxD+28Q5oj7yi4QTwZSDA=
+
+Name: org/eclipse/pde/api/tools/internal/search/UseScanManager.class
+SHA-256-Digest: mSmW2VhIzmnDNkRyMFnomySp4Q7vWEYJTe9FJ33ITw8=
+
+Name: org/eclipse/pde/api/tools/internal/model/ApiField.class
+SHA-256-Digest: fike4weBWoMrbX4zw8gmDkoCdCVxRb/6kDKyRy8vbz8=
+
+Name: org/eclipse/pde/api/tools/internal/search/searchmessages.propert
+ ies
+SHA-256-Digest: w4FEgTJJfxkLJBU/FlG/15oqoIvc2OIxc6t1t2etVts=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/comparator/ApiSco
+ pe.class
+SHA-256-Digest: R9LmOOJQzAnzdIneDFhBlm1cPCCL4bmdGH08wkqOUbw=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/comparator/ApiCom
+ parator$2.class
+SHA-256-Digest: 3aO9VCoCJZo4iSZpDKoEPpMHFigw+TmjXthAVuKBBws=
+
+Name: org/eclipse/pde/api/tools/internal/builder/IncrementalApiBuilder
+ .class
+SHA-256-Digest: a2vrvTpvUZeSK68Z+cy0fp/2MRTqbccxdcx6WjrubPc=
+
+Name: org/eclipse/pde/api/tools/internal/builder/LeakImplementsProblem
+ Detector.class
+SHA-256-Digest: BHlrDVkU5DiHe92QIBk5hBdYjYwYbdu+qXhrkhkUgwg=
+
+Name: org/eclipse/pde/api/tools/internal/search/UseReportConverter.cla
+ ss
+SHA-256-Digest: DJYdOnHmvOJkd71BpQlDGcNMZva3RN2044/iS80OHvQ=
+
+Name: org/eclipse/pde/api/tools/internal/descriptors/ElementDescriptor
+ Impl.class
+SHA-256-Digest: zRJeyntTqZSKVzzYdI153ZquO+jxbFUsrfNkDanHA6I=
+
+Name: org/eclipse/pde/api/tools/internal/model/ApiModelFactory.class
+SHA-256-Digest: L+tRPw/QeRKMiGH9vYMlCKwKesoYvJKjIu0E8N4m0E0=
+
+Name: org/eclipse/pde/api/tools/internal/util/profiles/CDC-1.1_Foundat
+ ion-1.1.profile
+SHA-256-Digest: jhPK5RucNHP0oltqrVqUUqAispCklPES3VdN2msqJeM=
+
+Name: org/eclipse/pde/api/tools/internal/builder/BuildContext.class
+SHA-256-Digest: QIOC2SAFnpAoE8ru/Y1Kvx9kATxq7oosTdnzzbZwn0A=
+
+Name: org/eclipse/pde/api/tools/internal/builder/ReferenceExtractor$La
+ belInfo.class
+SHA-256-Digest: oRD8OGrc9AxxYgpNzuF+PZmJNpMpHmLATVFNdv1XoWs=
+
+Name: org/eclipse/pde/api/tools/internal/util/profiles/J2SE-1.4.profil
+ e
+SHA-256-Digest: LUzVIagmBm79p/Lc34jk1+YBQCLR41tT4THMV3xG+Rs=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/descriptors/IRefe
+ renceTypeDescriptor.class
+SHA-256-Digest: GbGRx6MXN6Wd7Cj6eEiVVgAzZ5d2hQytghZAXiDBQYs=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/ApiPlugin.class
+SHA-256-Digest: 7Sg1JLJeQafCdaPRjMgIItt8ICSa1UanglnI6s95gEY=
+
+Name: org/eclipse/pde/api/tools/internal/util/Signatures.class
+SHA-256-Digest: /ojYsA8KM+Z89wo37zawOARo1LNMCUN9ZyLuxAWAKDk=
+
+Name: org/eclipse/pde/api/tools/internal/search/ReferenceDescriptor.cl
+ ass
+SHA-256-Digest: uGex8py/NR1ODU/qRcYs2U1BZxVo3Tb0TtYhSYxIvyQ=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/IVersionRange.cla
+ ss
+SHA-256-Digest: LBRq6jKdmVcHH6yLkh7e44g0ZPKDhUtRD1ogijQFgqA=
+
+Name: org/eclipse/pde/api/tools/internal/ApiDescription$NodeComparator
+ .class
+SHA-256-Digest: VqiOdOZf0R3z36mqzie2JLl3ECdfZN9Lcdw9606fwbo=
+
+Name: org/eclipse/pde/api/tools/internal/CoreMessages.class
+SHA-256-Digest: 3VXfYhTtSxvSQAq+HZKbM7+01eYyPJZGp1puNjaRo8A=
+
+Name: org/eclipse/pde/api/tools/internal/util/TarFile$2.class
+SHA-256-Digest: AD1FpD+rWRR8X3rCYgD3dX1gqianE1a9QwD4stV+ybs=
+
+Name: org/eclipse/pde/api/tools/internal/model/ApiModelFactory$CVSName
+ Filter.class
+SHA-256-Digest: qSGNJ80nFx+q1K5VACOXIA08KO/34S7SMv5hQY5Mj1I=
+
+Name: org/eclipse/pde/api/tools/internal/coremessages.properties
+SHA-256-Digest: PY3HiIxzLm4sEvC5pnl2QkL/OMcz723znvpUmNm4nfg=
+
+Name: org/eclipse/pde/api/tools/internal/model/BundleComponent.class
+SHA-256-Digest: sd4HXUIrpkt8i/dfKl6rs1ucVgRWr6nakO/AXR06hmg=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/ISessionListener.
+ class
+SHA-256-Digest: iP51CUja/KAI5A3OSGBU8/0xeYWR5pV0vvNv6sgYrYI=
+
+Name: org/eclipse/pde/api/tools/internal/builder/BuildState.class
+SHA-256-Digest: 8kC9Lg4HZWNNjcb45DSVJW/jSgMY+fGc/cq+4x2R46s=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/model/ApiScopeVis
+ itor.class
+SHA-256-Digest: q8FedNdUT631j9RZKpRBdB8TQhUeBCALdgsOkIcAufs=
+
+Name: org/eclipse/pde/api/tools/internal/builder/BuildStamps.class
+SHA-256-Digest: 2F3GcAgcxKzo+IbvrniTbtMkOjdQN/Ez8GFlRjJ92x4=
+
+Name: org/eclipse/pde/api/tools/internal/search/UseScanParser$Referenc
+ eHandler.class
+SHA-256-Digest: 7VgK2KvV4IbSE87U417G4GDafTAtyXz0TMV16hGxm0o=
+
+Name: org/eclipse/pde/api/tools/internal/builder/SystemApiDetector.cla
+ ss
+SHA-256-Digest: WFXEQ5Sr5oVc7fyqWue/SQACX5YzpwWfK6yG4vWxNuQ=
+
+Name: org/eclipse/pde/api/tools/internal/builder/BuilderMessages.class
+SHA-256-Digest: 1D1G8dUDU4Z6gaaBvKfN3BJY1GRO4uts9Ahf2MQlqlE=
+
+Name: org/eclipse/pde/api/tools/internal/ApiDescriptionProcessor.class
+SHA-256-Digest: Uq+k5Kfh/C52XSZ6aFMUsbDchBwe7TUba2GzvNQp5xo=
+
+Name: org/eclipse/pde/api/tools/internal/ApiFilterStore$1.class
+SHA-256-Digest: lb1hcI/1xClyakfOJ33cxzd1kqKjG68atC5Sphu7gi8=
+
+Name: org/eclipse/pde/api/tools/internal/util/profiles/JavaSE-1.7.prof
+ ile
+SHA-256-Digest: nCH0GXYiyMoTbJle4YO7Ngd0TCRe5QiLw4ZvM4jhEi0=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/RestrictionModifi
+ ers.class
+SHA-256-Digest: Xo7aX/yOD+anCGZ+B79Sk/PJ+4bg++frUlpWgz6RwyM=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/descriptors/IElem
+ entDescriptor.class
+SHA-256-Digest: eijTL9dFGPJMhHRo6LxGqdwTkfECUYHTCQp7adRPGMQ=
+
+Name: org/eclipse/pde/api/tools/internal/comparator/Delta.class
+SHA-256-Digest: bcYA5slw9+DZylYPyxIZ68ZStWsRExLkRkdKoOW0Lv8=
+
+Name: org/eclipse/pde/api/tools/internal/model/DirectoryApiTypeContain
+ er$LocalApiTypeRoot.class
+SHA-256-Digest: n5nSiod6JHC4Bw3uTyqPdP2sQYkH8Mn6yFsbAhwD7Zs=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/ApiDescriptionVis
+ itor.class
+SHA-256-Digest: WGW+Q4PLHjrQYXlLD+e22QZzEig1cHwUjtAl9IPqV6E=
+
+Name: org/eclipse/pde/api/tools/internal/model/TypeStructureBuilder$En
+ closingMethodSetter.class
+SHA-256-Digest: pws3QGtxSS7fB/4RfbyihQp9/b0wgEhavJ2EEhtFYgA=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/IApiBaselineManag
+ er.class
+SHA-256-Digest: /EVgjRtF0KiNhOfJ9WitT03XShWyC0wnM5L6dBF9w0c=
+
+Name: org/eclipse/pde/api/tools/internal/builder/IllegalMethodReferenc
+ eDetector.class
+SHA-256-Digest: ZCKEJIvc+g+8Vj2VBImD2Q58E1MfhH6th9JTz5Ne5QU=
+
+Name: org/eclipse/pde/api/tools/internal/util/Util.class
+SHA-256-Digest: T2y336zmo8OCaNXFX/Ew0jnOWBykwCFj03GB/8lfHIo=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/search/IApiSearch
+ Reporter.class
+SHA-256-Digest: 25uUhVpLPk2qUs/XkGH0SEdjhNd9UUUQ1yFLjdRmZBo=
+
+Name: org/eclipse/pde/api/tools/internal/search/UseReportConverter$Mem
+ ber.class
+SHA-256-Digest: SNz+Uq9/a5v5U4zFZp060PrvnQWpvKJxFtWGDYPsjGo=
+
+Name: org/eclipse/pde/api/tools/internal/comparator/comparatormessages
+ .properties
+SHA-256-Digest: WLcEjgFkXJDs0fb3esdqB+VekQPTe4nzbfKDCg6qUis=
+
+Name: org/eclipse/pde/api/tools/internal/builder/SinceTagChecker.class
+SHA-256-Digest: RdUVHQQKIJ4bp7RKFg671qxpjjWxqndEcDOXkPgkD8A=
+
+Name: org/eclipse/pde/api/tools/internal/ProjectApiDescription$Package
+ Node.class
+SHA-256-Digest: QUx3O5ZtcNB/7Yy9eWBmR5+Z/cJxPR9tVkI6zTsFQsA=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/comparator/ApiCom
+ parator$1.class
+SHA-256-Digest: wxU98lxWHcJ3ljJsmlkQx31lK1IIDiGFQL/bRKF2Lio=
+
+Name: org/eclipse/pde/api/tools/internal/builder/TypeScope.class
+SHA-256-Digest: YGAWL8xjsrbnnLWbPvNjj3iFR12+7wAaPEbj7+te84s=
+
+Name: org/eclipse/pde/api/tools/internal/JavadocTagManager.class
+SHA-256-Digest: cavQg4Pbc0kFXYXBw3m5GkTkmCGYEFkBfxM67/9DdxY=
+
+Name: org/eclipse/pde/api/tools/internal/model/ProjectTypeContainer$Co
+ ntainerVisitor.class
+SHA-256-Digest: xPn7dZzqMmJfb6+XclSZuvSv69mxZTbO9doCaXhLC4w=
+
+Name: org/eclipse/pde/api/tools/internal/builder/LeakExtendsProblemDet
+ ector.class
+SHA-256-Digest: oQqN1Ykxn216QHYTZXTLY18UaEAgp1Um4R7dEtzDM5A=
+
+Name: META-INF/eclipse.inf
+SHA-256-Digest: h789IIx2VZ21ScrZq6Lq2iqt4hCGnGpno9tJoKKLiz4=
+
+Name: org/eclipse/pde/api/tools/internal/builder/ApiAnalysisBuilder.cl
+ ass
+SHA-256-Digest: 6sMinyFvxM8EMpMU37Qsi4sCG7C33IRwl54mIuJiTaQ=
+
+Name: org/eclipse/pde/api/tools/internal/search/ConsumerReportConverto
+ r$ListConsumersVisitor.class
+SHA-256-Digest: DYwjuPIfGKzeKxudaw8UnsvyZOS0BEW3keNHEmFN8Vs=
+
+Name: org/eclipse/pde/api/tools/internal/model/ApiMember.class
+SHA-256-Digest: MN5vdQIZZdkiMB87gOJec0137txi3aZQmuXSdIzdq8c=
+
+Name: org/eclipse/pde/api/tools/internal/model/ApiModelCache.class
+SHA-256-Digest: CmmDcsNImlQrTRfd0yc8VAwplVEU2OoUkPDaZwm1bZI=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/comparator/DeltaP
+ rocessor.class
+SHA-256-Digest: G3QcyHHVRBFVZ3YjRqwjCVkjO4yHfYiBPas+06JEJTE=
+
+Name: org/eclipse/pde/api/tools/internal/builder/ReferenceAnalyzer$Vis
+ itor.class
+SHA-256-Digest: FavIdUoEe3xsVB02T8sk2ze9a+SLqGS9PEegZ37i6kY=
+
+Name: org/eclipse/pde/api/tools/internal/search/MissingRefMetadata.cla
+ ss
+SHA-256-Digest: NMfOUOLhzI8rRhvOUbClcNtb3QxS9jj/cJg16AGEw7k=
+
+Name: org/eclipse/pde/api/tools/internal/builder/ReferenceAnalyzer$1.c
+ lass
+SHA-256-Digest: uIBqH74GkiCNWYU6ETBrYhtqs0EHcGGIeBhoBAuV+ZU=
+
+Name: org/eclipse/pde/api/tools/internal/search/ConsumerReportConverto
+ r$Type2.class
+SHA-256-Digest: zi4F2yY3FdYiAlmJTwnCgKL67wPX9adSToAIjZuC6NE=
+
+Name: org/eclipse/pde/api/tools/internal/util/profiles/CDC-1.0_Foundat
+ ion-1.0.profile
+SHA-256-Digest: Z9cq5RUVnUoW+NQONDd6HHMlJSwDr8EY6LZNhsr8Qc8=
+
+Name: org/eclipse/pde/api/tools/internal/SystemApiDescriptionProcessor
+ .class
+SHA-256-Digest: KDjIdmTN6W0YLhyfZB0FVZC7HNxTIJdoyBfQvIlt7vc=
+
+Name: org/eclipse/pde/api/tools/internal/CompositeApiDescription.class
+SHA-256-Digest: +lN1KueFOLFvUQqeBtBVyohV4lvUKJMP8Uwiw4ZwFxI=
+
+Name: org/eclipse/pde/api/tools/internal/model/AbstractApiTypeContaine
+ r.class
+SHA-256-Digest: CNpdDPy/JP3s3lh5I72JBgRG5q06Li7UAO/IeFZxNKM=
+
+Name: org/eclipse/pde/api/tools/internal/builder/AbstractIllegalTypeRe
+ ference.class
+SHA-256-Digest: x7oDRT8njwHDDym+44E68Nmjii+HelFeiefR7tWlpmM=
+
+Name: org/eclipse/pde/api/tools/internal/search/MissingRefParser.class
+SHA-256-Digest: oORssASms3V34XrEvRs9/FMb/ouEXo/q/hg/N7Ju6p8=
+
+Name: org/eclipse/pde/api/tools/internal/builder/BaseApiAnalyzer$Reexp
+ ortedBundleVersionInfo.class
+SHA-256-Digest: EI9cts6P1c2csoPQyreMumGiGcavORaspIis1IwvZsc=
+
+Name: org/eclipse/pde/api/tools/internal/util/SinceTagVersion.class
+SHA-256-Digest: K7/FvJ8zw/KeJy5XOw5rZkxgj3dvLmBpH0TB1c/Wa6s=
+
+Name: org/eclipse/pde/api/tools/internal/search/MigrationReportConvert
+ or.class
+SHA-256-Digest: 8TGoINkVO00J3vXB1rMp13FkV1fxUnfRxoku1llxMK0=
+
+Name: org/eclipse/pde/api/tools/internal/ApiDescriptionXmlCreator.clas
+ s
+SHA-256-Digest: 67tJkS5euGw3lmMGwEGsG0EnlSs1RHy8UPiwYbsMYrs=
+
+Name: report/format.xslt
+SHA-256-Digest: ayOmeFJY6NunzeO5TdG3QLog2DoLG7qCY3cE8VVwSGk=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/search/ApiSearchE
+ ngine.class
+SHA-256-Digest: Fy7uXQ2hZss7WQnThlcU2PJYbVUPO1ScqNkV+bK+t8U=
+
+Name: compare.xsl
+SHA-256-Digest: vzY/Gq8/N4i8P1E78anQ1d8z0Yh2j+gqCYceax6IzWo=
+
+Name: org/eclipse/pde/api/tools/internal/problems/problemmessages.prop
+ erties
+SHA-256-Digest: g+A4MUBvTYKuvHnXO5yLrCS4y5lxfgSWzHPFbQW+4rQ=
+
+Name: org/eclipse/pde/api/tools/internal/builder/IllegalFieldReference
+ Detector.class
+SHA-256-Digest: DKKteqOn+17XlqyybH92fUfOzZs4ygxjKfSeZOk8nDw=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/comparator/Compar
+ eApiScopeVisitor$3.class
+SHA-256-Digest: z/lZTGrRgdFpZX1gYDMPOULSeBnF9vQ9rZcoGwlSMmc=
+
+Name: org/eclipse/pde/api/tools/internal/ApiDescription.class
+SHA-256-Digest: 0+vSS74/o8nPFLYCv4PfhkgkYsbi9Aa7l6GUQdybOcI=
+
+Name: org/eclipse/pde/api/tools/internal/util/profiles/OSGi_Minimum-1.
+ 2.profile
+SHA-256-Digest: DvSmG5FW6d/p7XfBZlfj0AU4me/CpKDFNXUwBV14QPE=
+
+Name: org/eclipse/pde/api/tools/internal/util/profiles/JRE-1.1.profile
+SHA-256-Digest: BtqDj51MNocyKoRqevwMBy48WXejkz0Ci9OKh2qaDAc=
+
+Name: org/eclipse/pde/api/tools/internal/util/TarFile.class
+SHA-256-Digest: j1d69Oy6jjS7E6f+rOhjMl5PQwNA5QdKNor2q3gZ6Zw=
+
+Name: org/eclipse/pde/api/tools/internal/model/StubArchiveApiTypeConta
+ iner$ArchiveApiTypeRoot.class
+SHA-256-Digest: gkLvv/Rwt3NxNc7i/rWV3mGQ1jNMgd5tv2Y3so4SzHg=
+
+Name: org/eclipse/pde/api/tools/internal/model/ProjectTypeContainer.cl
+ ass
+SHA-256-Digest: mswgrAvPgoBicrDynxPDUmQBBd3NbvXZ6wNZWCcGzkM=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/model/IApiMethod.
+ class
+SHA-256-Digest: 53O5BoFu037YkaY7vZzyFBY9BT7fRZ8gnfgQBVcnFXw=
+
+Name: org/eclipse/pde/api/tools/internal/ApiDescription$ManifestNode.c
+ lass
+SHA-256-Digest: ah6+TjJRfhHiNxk4wO8y+iZ4VtlMkdf5RlucpHd+Zl0=
+
+Name: org/eclipse/pde/api/tools/internal/ApiDescriptionProcessor$Descr
+ iptionVisitor.class
+SHA-256-Digest: 50lZwmAJ97Zlf1YF6OFKqJDQjkv0N7nOslR8t5IBwd8=
+
+Name: org/eclipse/pde/api/tools/internal/builder/BaseApiAnalyzer.class
+SHA-256-Digest: ZNLr0Xgshg07gCxR22obaTwjL/Xin2AtWmGKkcG/nw4=
+
+Name: org/eclipse/pde/api/tools/internal/search/SkippedComponent.class
+SHA-256-Digest: lnEgcLARSOminylwxL7rEWD1EFV6RcSxggQxJN/aPxE=
+
+Name: org/eclipse/pde/api/tools/internal/descriptors/FieldDescriptorIm
+ pl.class
+SHA-256-Digest: UhtcCRimuQXENPPqwmdzUSP6I8NXZP46DMi+Pk7xaU4=
+
+Name: org/eclipse/pde/api/tools/internal/NonApiProjectDescription.clas
+ s
+SHA-256-Digest: d3QZ2F+lSs0UwOcibFOJaGA/3Rlk+0tOrchxeJH/yUE=
+
+Name: org/eclipse/pde/api/tools/internal/comparator/ComparatorMessages
+ .class
+SHA-256-Digest: 3wWRlWMS9di3LeeBoR9ZEk9Hkc1uFNpNsV08/qq2b9I=
+
+Name: org/eclipse/pde/api/tools/internal/CompilationUnit.class
+SHA-256-Digest: EamV145wTvyiWyz+9x6V8cryBVHRsFyG58AhdX5aOXk=
+
+Name: report/style.css
+SHA-256-Digest: 42a+5bTkDn0SW34Hw9zKPT+kA4LTLGP2XaylRFi+WwI=
+
+Name: org/eclipse/pde/api/tools/internal/search/MissingRefParser$Missi
+ ngRefProblemHandler.class
+SHA-256-Digest: TGR96DPSEhPUDsMyB5lFWt8Aj29k7iHp4Cx9AzFHZQY=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/comparator/ApiCom
+ parator.class
+SHA-256-Digest: zQ8i3I7p6Tv7Z8/lNwrYnNIR9b0E+sDhqx8Q3mpB1HY=
+
+Name: org/eclipse/pde/api/tools/internal/model/Component.class
+SHA-256-Digest: dtnpzUwS0jBTQrx2kK+KCLzAcWllImmNhooOPTwhA+0=
+
+Name: org/eclipse/pde/api/tools/internal/search/ConsumerReportConverto
+ r$Consumer.class
+SHA-256-Digest: EIlUu9kPBd3qnEx051MJk+jkch+w3MDdKb/ldESLn6M=
+
+Name: org/eclipse/pde/api/tools/internal/search/UseScanReferences.clas
+ s
+SHA-256-Digest: Kc//hc/tuSMKXpYxdUFkHHW4PuG9T3j2s0tNOZ8PcLo=
+
+Name: org/eclipse/pde/api/tools/internal/model/CompositeApiTypeContain
+ er.class
+SHA-256-Digest: qQp1TqEuP9JFGHQCWljg31iKrI3nt+ToFmPy+ubwHTE=
+
+Name: org/eclipse/pde/api/tools/internal/problems/ApiProblemFilter.cla
+ ss
+SHA-256-Digest: 0Dga+mx1AoJPfAjs7TzX+La+WityYnS4mhCvgjekoOE=
+
+Name: org/eclipse/pde/api/tools/internal/model/TypeStructureBuilder$Ty
+ peNameFinder.class
+SHA-256-Digest: 6cBieP+EvETvnUnbvhE9s6HKPKCIzjAnWqrieP4+t8w=
+
+Name: org/eclipse/pde/api/tools/internal/ApiAccess.class
+SHA-256-Digest: hdbEXyk+k7bNqw3MQyElnH99mH5eIEXUP1TPi8TI3P0=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/IApiFilterStore.c
+ lass
+SHA-256-Digest: 6hE07xuJRfKMzyCkaWP2R6Azui+KxeOdZAFg91ko1c4=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/IApiMarkerConstan
+ ts.class
+SHA-256-Digest: oCT8OUJ2f84R0L5USUvlQx79nfFj9XE5hTIOI1azmR8=
+
+Name: org/eclipse/pde/api/tools/internal/search/XmlReferenceDescriptor
+ Writer.class
+SHA-256-Digest: mxPnGjVX39Rm3RF6tdCrsTfIu9Zwwyz1vuW8w1Y7dqw=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/ProfileModifiers.
+ class
+SHA-256-Digest: uOz6b1FudN5he0lGVkDuawVISalAVGQwnUtL5WKKK8s=
+
+Name: org/eclipse/pde/api/tools/internal/model/TypeStructureBuilder$Ty
+ peNameFinderInConstructor.class
+SHA-256-Digest: AdrqtVJ8kzVz/uxa3Ob+o2dbqHwtgQDfT+V3I0H5XcU=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/comparator/Compar
+ eApiScopeVisitor$2.class
+SHA-256-Digest: bKv18Vf7dX+7Hzbb0+w5fH2ZxWPzcQ3dKyx4QyiYDI4=
+
+Name: org/eclipse/pde/api/tools/internal/search/HTMLConvertor.class
+SHA-256-Digest: sdUP5bGfX9BUxdC3xMw3JCbd2SLwoYI/0IirG2o+83k=
+
+Name: org/eclipse/pde/api/tools/internal/builder/AbstractLeakProblemDe
+ tector.class
+SHA-256-Digest: vvnseOWxyAhGjW/uNrhnqWvnBqFAQf87e+1RssxAR88=
+
+Name: org/eclipse/pde/api/tools/internal/util/FileManager.class
+SHA-256-Digest: FjDycgLByYuA3Z2Kg7qsCE876G0crfcWvBdpA9V/C7Q=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/comparator/IDelta
+ .class
+SHA-256-Digest: NhzM4fwxHG0CuLK811DSlnHaDw8Yyud9DfTUT3bEntA=
+
+Name: org/eclipse/pde/api/tools/internal/builder/ReferenceExtractor$Cl
+ assFileFieldVisitor.class
+SHA-256-Digest: uFGSGrrHr2XMcNohIFQAAQUtq0cOI5fb4BGycvKyeBw=
+
+Name: .options
+SHA-256-Digest: Uhd6P9HgNAbjClyt2IxTgbhfpKWP3nBNn6U1UI5NIeg=
+
+Name: org/eclipse/pde/api/tools/internal/model/ResourceApiTypeRoot.cla
+ ss
+SHA-256-Digest: GsVbcQg5xbrcebcLiUUxq8aO9B/vj03zYeRziUYiEXc=
+
+Name: notsearched.xsl
+SHA-256-Digest: YDkCwJveR0lEsL5KD4daFR6vLtcj9BkNRmNVFvPZc5w=
+
+Name: org/eclipse/pde/api/tools/internal/search/ConsumerReportConverto
+ r$ConsumerReportVisitor.class
+SHA-256-Digest: pBW0s2CXhXnCV5beCyNAJ+nc6nCXpHAVaiXdb177000=
+
+Name: org/eclipse/pde/api/tools/internal/comparator/compatible_delta_m
+ essages.properties
+SHA-256-Digest: t5ecN8DPymk5wI8ntd9X0L8VDffM92wVnvxyZ+N/GB8=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/problems/IApiProb
+ lem.class
+SHA-256-Digest: o6MpXs4mVtGT71o5ag4nA8N8I1AQuzUPLDDQ0inNsYk=
+
+Name: org/eclipse/pde/api/tools/internal/model/DirectoryApiTypeContain
+ er.class
+SHA-256-Digest: oNt1/GJ6QarihzzdO+ZCkJEhJ++9Q0f39gzRyx3KGCI=
+
+Name: org/eclipse/pde/api/tools/internal/descriptors/ReferenceTypeDesc
+ riptorImpl.class
+SHA-256-Digest: tFYYb//LKZSAzVcKpyZERm0VyXVoFpIxtxxdHBcvBr4=
+
+Name: org/eclipse/pde/api/tools/internal/builder/ReferenceExtractor$Lo
+ calLineNumberMarker.class
+SHA-256-Digest: GrQ8XaLbEe5oi8V/D5F6wv6TV8Pgiwm4uagEg18YeLg=
+
+Name: org/eclipse/pde/api/tools/internal/model/SystemLibraryApiCompone
+ nt.class
+SHA-256-Digest: RUIUYj69M1veEN8vmJojjJ9Y9/FdFop5Uz/9w+mlj4U=
+
+Name: org/eclipse/pde/api/tools/internal/builder/ReferenceExtractor$Li
+ neInfo.class
+SHA-256-Digest: uPCjsfdu5m6X85/aO1bfUQrAov85ZZ0sAd161i5yxEY=
+
+Name: org/eclipse/pde/api/tools/internal/ApiAnnotations.class
+SHA-256-Digest: oUZI4Lb9doYQ2bJqv+sB8ib6dTolptctEV7KGZA7Ryc=
+
+Name: org/eclipse/pde/api/tools/internal/builder/IncrementalApiBuilder
+ $Change.class
+SHA-256-Digest: m2qkt9mq51BDEi6wzOW4GWflD0GOrJkFydyrhcpoTVI=
+
+Name: org/eclipse/pde/api/tools/internal/search/UseReportConverter$Vis
+ itor.class
+SHA-256-Digest: yTTMpyl/b4xPO9Z1Ldc/CWee5FaOjyBtyGUc3yvhbyQ=
+
+Name: org/eclipse/pde/api/tools/internal/RequiredComponentDescription.
+ class
+SHA-256-Digest: WsX/7K1ogTHls9SPOV96I1nU5J2QSalo7fEFqQhPVUo=
+
+Name: org/eclipse/pde/api/tools/internal/IApiXmlConstants.class
+SHA-256-Digest: XU54RaHlgp4Q+8PCrKEfg7mvDzYJNx4BDmQQVStuAKA=
+
+Name: org/eclipse/pde/api/tools/internal/ApiJavadocTag.class
+SHA-256-Digest: zWBMjNfKlqs1DX3SRbWOMWkK7rlJItsyQW5DlkF5s6k=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/descriptors/IMeth
+ odDescriptor.class
+SHA-256-Digest: GwkTmU4CEC/Zyiu5gi9FP6SeWbpiRFCisEca1pl3KSA=
+
+Name: org/eclipse/pde/api/tools/internal/search/IReferenceCollection.c
+ lass
+SHA-256-Digest: Gqp7Ww00p/KcZhgVu3NNtJcfSbFxQ30D/Rj6vIguS5k=
+
+Name: org/eclipse/pde/api/tools/internal/builder/ReferenceExtractor.cl
+ ass
+SHA-256-Digest: y7w2A+ZVxTbGh36IxdD/QZ/6+cKRmx2vbeFC1lXrjJk=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/scanner/TagScanne
+ r$Visitor.class
+SHA-256-Digest: WDrNyC6g5kRKXpOvs3dnYDaLeyQBD046COp1bz8Su2Q=
+
+Name: org/eclipse/pde/api/tools/internal/model/ApiModelCache$Cache.cla
+ ss
+SHA-256-Digest: mi32nyaiQQbYXEclQ/qG9vHXZjgaEpHDo2KLDYHKtlA=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/model/IApiElement
+ .class
+SHA-256-Digest: YC42quX8c4K0BtgN6Wvvfux1Dx7FyIL2Qzsnb7pcLyw=
+
+Name: org/eclipse/pde/api/tools/internal/model/Messages.class
+SHA-256-Digest: 0xjtVuWiOxWLQXtiFWsJVAHI0F72UwU7U92aah9mJAs=
+
+Name: org/eclipse/pde/api/tools/internal/util/profiles/J2SE-1.3.profil
+ e
+SHA-256-Digest: eV3rwSbXqirG2sx3+15WtKH6kFbIPfIejqYT/12IfAM=
+
+Name: org/eclipse/pde/api/tools/internal/search/UseReportConverter$Typ
+ e.class
+SHA-256-Digest: 6g/HDViqLCLxJGN8bsJW5HN7W6k0ZL54HJFOeVt2RnY=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/search/IMetadata.
+ class
+SHA-256-Digest: KRCcbuBa625Um8cUdGE97qBZP3Nui3rh358EPhCVfxs=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/IApiDescription.c
+ lass
+SHA-256-Digest: SGfwSbm4nTdtOaKcJ7fFJipdbZpcd+X9UBEjT59cZhE=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/model/IApiScope.c
+ lass
+SHA-256-Digest: O/hl4n0zI0GmA7Ot4K7SYT646U6a1AGulVo4m++lIbQ=
+
+Name: org/eclipse/pde/api/tools/internal/model/ArchiveApiTypeContainer
+ $ArchiveApiTypeRoot.class
+SHA-256-Digest: 3owpq9BjSUWt1aovaNCWy0hvYM9Pus9kbkU/CamN7BU=
+
+Name: scripts/api-tasks.xml
+SHA-256-Digest: lrRBOeDF1tRBiQdZREB+caIkMuTU6yRFfERO1rLiZAM=
+
+Name: org/eclipse/pde/api/tools/internal/search/XmlSearchReporter.clas
+ s
+SHA-256-Digest: dCPp29T2gvjoiHvN56uQXvCqQiP1XYGY3bzcTI/iuEM=
+
+Name: org/eclipse/pde/api/tools/internal/model/MethodKey.class
+SHA-256-Digest: q/5fAK/0zF/9h7WrfETGDshfzTMIS/qEGQkSYNvlPZk=
+
+Name: org/eclipse/pde/api/tools/internal/model/Messages.properties
+SHA-256-Digest: SjLNs7W5iBr1RM1jjmwo3FO+8YG8cYMmvCsjiSAo8jw=
+
+Name: org/eclipse/pde/api/tools/internal/model/AbstractApiTypeRoot.cla
+ ss
+SHA-256-Digest: u2ssYytEq1wjFWTtfLoA4+6iWQDARXiAybmh/BtHreY=
+
+Name: org/eclipse/pde/api/tools/internal/builder/TagValidator.class
+SHA-256-Digest: 1+/7iYC6thRCih8UT2IJ2aRt7e34cW/S9Sx/un5fzHc=
+
+Name: org/eclipse/pde/api/tools/internal/comparator/ClassFileComparato
+ r.class
+SHA-256-Digest: t5fa6uVWXbgr0wiH0OHvBLUKdZmGAkQYIV351ChwUDQ=
+
+Name: org/eclipse/pde/api/tools/internal/descriptors/MethodDescriptorI
+ mpl.class
+SHA-256-Digest: L78QYN+qbeiQAzpRZlWbRZnXltizUIn7RKcUgvfTjlU=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/model/IApiCompone
+ nt.class
+SHA-256-Digest: kWrLBHPd6yNlBFfMMNMmDjtgIpPmeic3lopWj70SN0c=
+
+Name: lib/apitooling-ant.jar
+SHA-256-Digest: FxOFMT45yc7VtLFCRNfh8/GDdXDOI5YPEcoSHIF2DcI=
+
+Name: org/eclipse/pde/api/tools/internal/util/profiles/JavaSE-1.8.prof
+ ile
+SHA-256-Digest: nTLE63j54rDSO44+MpWCpIpWwsIxVXSWfE0gB+QUgmE=
+
+Name: org/eclipse/pde/api/tools/internal/util/profiles/OSGi_Minimum-1.
+ 0.profile
+SHA-256-Digest: mDI3okJ21nP91RZ43HQiKArk8atwQuzwAdugqnamE7g=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/descriptors/IFiel
+ dDescriptor.class
+SHA-256-Digest: evX0TO/MId2IfhmDWjAJ5pXg92SP+B9IKGoePcz6b1s=
+
+Name: org/eclipse/pde/api/tools/internal/util/TarFile$TarInputStream.c
+ lass
+SHA-256-Digest: ZFaixQmKXCDfdkObmIjSGliRMYASDHZvsEk0sEqZYdo=
+
+Name: org/eclipse/pde/api/tools/internal/builder/Reference.class
+SHA-256-Digest: 4GbZL4ker4GwSKJds1QCVUToORE3Go2vuNVdTpGRPfg=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/Factory.class
+SHA-256-Digest: IsOjviQr2TjexfUFLjgI6JW6302XqkpMV695i3fJL1s=
+
+Name: org/eclipse/pde/api/tools/internal/search/UseScanParser.class
+SHA-256-Digest: 1sBtMnCnqPxXHxFJkuHeHtkdWhHLmK/Ek3ymByUTEIw=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/comparator/ApiCom
+ parator$5.class
+SHA-256-Digest: Y42VPMNbyrjHQ8mQAYlpGoRMjypdh9DN1GEc/b/hXKU=
+
+Name: org/eclipse/pde/api/tools/internal/search/UseSearchRequestor.cla
+ ss
+SHA-256-Digest: z2xh4Mq5Y2j4qja75JADHRFpE2c0sdhh14TXViTkSlI=
+
+Name: plugin.properties
+SHA-256-Digest: zUz6bSJ4kOkpSo5eHwWs6QvzQISSrEGya6KNQuM9OrU=
+
+Name: org/eclipse/pde/api/tools/internal/model/ApiBaseline$1.class
+SHA-256-Digest: l4H2EvfCtbS62dvrtq9/bHUqaRk43X54kVQyDWy4MuY=
+
+Name: org/eclipse/pde/api/tools/internal/builder/AbstractTypeLeakDetec
+ tor.class
+SHA-256-Digest: 0HDg10ntOZKJUvH/Sd1WLa2+ag2NlBO8FVKRUaneCpo=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/scanner/ScannerMe
+ ssages.properties
+SHA-256-Digest: D/DLPNCBFsKdnsetf82BLb/eyjhuFaujJo1PwdN6HI0=
+
+Name: org/eclipse/pde/api/tools/internal/builder/ReferenceAnalyzer.cla
+ ss
+SHA-256-Digest: kgwISlY16W+hi+hOmWGz81fAamgJtOSrOhRXbHyaI1k=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/comparator/DeltaP
+ rocessor$1CompatibleVisitor.class
+SHA-256-Digest: dqY4lrEyR0eCwtpK5gvSuRBodmgtFDdXFTKwkTDw3RU=
+
+Name: org/eclipse/pde/api/tools/internal/model/ArchiveApiTypeContainer
+ .class
+SHA-256-Digest: 9DoHdC7nZukmQbj0oLKJLim8kq53WH4u6wT4azrhy+g=
+
+Name: org/eclipse/pde/api/tools/internal/problems/ApiProblemFactory.cl
+ ass
+SHA-256-Digest: 4SR4+KDPn47E145C55rUPPUaD3ES05YeVuaI80lt1Nk=
+
+Name: org/eclipse/pde/api/tools/internal/model/WorkspaceBaseline.class
+SHA-256-Digest: R+RNnIIWQ0dGDX7twRsYMDTVa7iuxVWxlVWp+Wv2zl8=
+
+Name: org/eclipse/pde/api/tools/internal/util/FilteredElements.class
+SHA-256-Digest: jLAsO+UBcWPDi0FXxy0b4COxdfaqE3kxn3XbWIVQM9o=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/scanner/ScannerMe
+ ssages.class
+SHA-256-Digest: B9PLclFY2AhGBtV3U3cHY0gbjiko6STtgF41I3RCOs8=
+
+Name: org/eclipse/pde/api/tools/internal/search/MissingRefReportConver
+ ter$MissingRefVisitor.class
+SHA-256-Digest: hEdMjgbtGWNtJx1lm1M9YGeTtqigqphYIsd3xMSdSaY=
+
+Name: org/eclipse/pde/api/tools/internal/search/UseReportConverter$1.c
+ lass
+SHA-256-Digest: MSg9PXqEXz/GamD7F3rkHxyl5ujK6RC07++C9gJvdAk=
+
+Name: org/eclipse/pde/api/tools/internal/builder/AbstractProblemDetect
+ or.class
+SHA-256-Digest: EEGvMGFPndVgnePLfHqREjI7HvNbZuHCU6Y6J5XPiaM=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/search/IApiSearch
+ Requestor.class
+SHA-256-Digest: gnfpGJjZ9iYkEBnDHi/16QQ2x4dQWyCbQzvQpImSfiw=
+
+Name: org/eclipse/pde/api/tools/internal/model/TypeStructureBuilder$An
+ notationDefaultVisitor.class
+SHA-256-Digest: H8+P/x4suCuKb6RuG7VOUPNp1xiLqaJyufcHzIgasek=
+
+Name: org/eclipse/pde/api/tools/internal/comparator/DeltaXmlVisitor.cl
+ ass
+SHA-256-Digest: aQGoHqopZhmh4ZPZIUvD2OgdGWlGGIYN1mqmI83oVPA=
+
+Name: org/eclipse/pde/api/tools/internal/BundleVersionRange.class
+SHA-256-Digest: dPRCKlFkGu5x0KpzIAvnSjcfZ5zdZaefWhphtQ9QVsU=
+
+Name: org/eclipse/pde/api/tools/internal/model/ApiType.class
+SHA-256-Digest: dHnnIP+BSQeb0q5yTSER6SiS3eKr61vQ7uS4LO+WZtU=
+
+Name: org/eclipse/pde/api/tools/internal/search/ConsumerReportConverto
+ r$Producer.class
+SHA-256-Digest: DGpe2W9+I0jbo3clfXXWyEQGrDhsNVCOQS+X2yR8Ib0=
+
+Name: org/eclipse/pde/api/tools/internal/search/ApiDescriptionModifier
+ .class
+SHA-256-Digest: /H5kCuZdDWWFjoATrMzSYOQ9pLX7oRwOagWWuzuIDho=
+
+Name: org/eclipse/pde/api/tools/internal/builder/buildermessages.prope
+ rties
+SHA-256-Digest: 2hNeBo5PpmOUkx8FVG99NmX/4cJha98yjQr5gnIW0/k=
+
+Name: org/eclipse/pde/api/tools/internal/search/UseScanVisitor.class
+SHA-256-Digest: 6xh3RacpttPZDVkfmEaK0wBWQHC+VIQ6P6wPnsQcd0s=
+
+Name: org/eclipse/pde/api/tools/internal/search/SearchMessages.class
+SHA-256-Digest: m5kdyqEiH8COeJejlbplqrLHxbz3TseJzuK5eB/nDmo=
+
+Name: org/eclipse/pde/api/tools/internal/builder/ReferenceExtractor$Cl
+ assFileSignatureVisitor.class
+SHA-256-Digest: brEx44H0So9hf4E5WhO+UhLQYMzAY5MIm+XSw0FjC7c=
+
+Name: org/eclipse/pde/api/tools/internal/comparator/messages.propertie
+ s
+SHA-256-Digest: g5Dq2NAmLR4SHeGDlkg+Nv6hph3XwJ8Qvz7Xgux5xsc=
+
+Name: org/eclipse/pde/api/tools/internal/descriptors/NamedElementDescr
+ iptorImpl.class
+SHA-256-Digest: nziBZGH8vKmJSDhaU7Z7BFC9yie2zG+h58TjQqyJZOY=
+
+Name: org/eclipse/pde/api/tools/internal/builder/AbstractProblemDetect
+ or$MethodFinder.class
+SHA-256-Digest: 8H9h84nO9I5tin1Q1dfXPnl9AsSiILBPU+mnHWFF0CM=
+
+Name: org/eclipse/pde/api/tools/internal/util/Util$1.class
+SHA-256-Digest: cZlSTLXUq0ODYYM8+2oMX0czR1YeZpDBeORP86zICj4=
+
+Name: org/eclipse/pde/api/tools/internal/builder/ReferenceExtractor$Fi
+ eldTracker.class
+SHA-256-Digest: MF3gmotxsST/xggraD+FbtXqAzjCgolBd77zTo8eteE=
+
+Name: org/eclipse/pde/api/tools/internal/model/ApiMethod.class
+SHA-256-Digest: I00feGxjJPCw9ATM/MxMRiewL4TV26TFpsN60MsOos8=
+
+Name: org/eclipse/pde/api/tools/internal/AnyValue.class
+SHA-256-Digest: F1PfJfnpuS2znrX7h5/luswGzkOFBKV4hQl/QD8wNAU=
+
+Name: org/eclipse/pde/api/tools/internal/model/ProjectComponent.class
+SHA-256-Digest: R5+y8boa48iWq7WeQv1DOoywUmv7UuL8kKbVso+eH6E=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/model/IApiTypeRoo
+ t.class
+SHA-256-Digest: FK04qPaDSv0SrMDt04AmIrrFxrgPJ+TvxWhNlnFEVOk=
+
+Name: org/eclipse/pde/api/tools/internal/search/UseScanManager$UseScan
+ Cache.class
+SHA-256-Digest: xPUZPzk8NwimxZ8M0ApU/GNW7/2xbQJ1pRtSGFgP5L0=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/model/IApiBaselin
+ e.class
+SHA-256-Digest: XrOA12sgZECGNWWZvaLxUIcieCbnP459eHBbYUm2riA=
+
+Name: org/eclipse/pde/api/tools/internal/builder/IllegalImplementsProb
+ lemDetector.class
+SHA-256-Digest: Go3G+7UIzy8Q4nvlkkCZ6IJ+64xK60TXUpQipHzzco4=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/problems/IApiProb
+ lemTypes.class
+SHA-256-Digest: UVJqrtx5MQIFSWxzhbPD3WbjXyaM1tKywID6VTGfjbM=
+
+Name: org/eclipse/pde/api/tools/internal/search/IReferenceDescriptor.c
+ lass
+SHA-256-Digest: /VBOGXcy99vIRkn2DNMCBVaB5dKjRIpMsWqrzGdethU=
+
+Name: references.xsl
+SHA-256-Digest: bw5+h9kqDVAgpZE9Dg6Fy3978cT2/WGU1mftOtyRy5M=
+
+Name: org/eclipse/pde/api/tools/internal/util/profiles/J2SE-1.2.profil
+ e
+SHA-256-Digest: yH6jMiZcm9JHRHtlaqPAkEQXV/Un1I8vhyfcUl7vnB8=
+
+Name: org/eclipse/pde/api/tools/internal/builder/ProblemDetectorBuilde
+ r.class
+SHA-256-Digest: vSmZ/Q/pmmNeLWd1EzSe/bVKWGkn/pcHtngvfbDKljI=
+
+Name: org/eclipse/pde/api/tools/internal/ApiFilterStore.class
+SHA-256-Digest: bZ4Kc1rARVzsU76ejWR4iSvASIG+Yzir1STeiRd7wAM=
+
+Name: org/eclipse/pde/api/tools/internal/builder/IncrementalApiBuilder
+ $ResourceDeltaVisitor.class
+SHA-256-Digest: gZUCHOSmejXb8vQYG6GGcq3rXaVnxF/cIGKOdqheWGk=
+
+Name: org/eclipse/pde/api/tools/internal/ProjectApiDescription$TypeNod
+ e.class
+SHA-256-Digest: 39FaCZNJxfzVk30g6WFhBTMFjy5NJ4vnm9XpDGcn0FE=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/model/ApiTypeCont
+ ainerVisitor.class
+SHA-256-Digest: 3JUTZZdLXg9zncInj5lHGxptLPN0jW6F3mUijlcFhAw=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/IApiAnnotations.c
+ lass
+SHA-256-Digest: 91XZPS5/oc5P/KBDtSMP9SWOBW2cai2dzGtpx0difBE=
+
+Name: org/eclipse/pde/api/tools/internal/comparator/SignatureDecoder.c
+ lass
+SHA-256-Digest: 7oZ6GkHlA1g91lSXO/a1qIvp0aDLx5hIcFvZCcsk14M=
+
+Name: org/eclipse/pde/api/tools/internal/builder/IllegalInstantiatePro
+ blemDetector.class
+SHA-256-Digest: MxT5JVk0g8QprprVaM/k8VuC+Q/2eLDbf1tUMBFBPlI=
+
+Name: about.html
+SHA-256-Digest: 0RM1x9lTJa7T8YkysaegPuBIeaEvSZypRDfXoMpsJAU=
+
+Name: org/eclipse/pde/api/tools/internal/FilterStore.class
+SHA-256-Digest: 0vKa39lJVCppV1GO6jPyKeYs5rOdh1KLWrEZCqe4EOY=
+
+Name: org/eclipse/pde/api/tools/internal/ApiAccess$NormalAccess.class
+SHA-256-Digest: mfbP2F7qHDpIUGQ90BLdpLiHhRYeXb/eqcNSXRlbr5Q=
+
+Name: scripts/usescan.xml
+SHA-256-Digest: FDq1KvM2v7/0SD1PwGoBo+vJqK4lJ4ZVLyPy2WNDzQc=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/descriptors/IComp
+ onentDescriptor.class
+SHA-256-Digest: xu1XqVaspXO4ubJHcll/CLGHVCclSgaqpIQhNzBVKmo=
+
+Name: org/eclipse/pde/api/tools/internal/builder/LeakParameterTypeDete
+ ctor.class
+SHA-256-Digest: Lo1f5qSF0Ttu5ghq7O8aTA5rbbEHE5qY23pUJ9uwCRw=
+
+Name: org/eclipse/pde/api/tools/internal/WorkspaceDeltaProcessor.class
+SHA-256-Digest: nDO5IxcJaYWJYTcwe+k2z7C2ou0p0kg1N0+hZgjLxgY=
+
+Name: org/eclipse/pde/api/tools/internal/TypeAnnotations.class
+SHA-256-Digest: FW9m2j/37QF7jaSiCCLpubnyAeNAnJZZFfESyCmtFTI=
+
+Name: org/eclipse/pde/api/tools/internal/builder/Validator$Item.class
+SHA-256-Digest: V1E5lj8t8KzlBvxpJauu2YD7dRS/8fEnm0vziLOzml0=
+
+Name: org/eclipse/pde/api/tools/internal/search/UseReportConverter$2.c
+ lass
+SHA-256-Digest: YjF27JNKxSUFZX5QeASZ/sfA4S+wjrnk7OROsCIL2q0=
+
+Name: org/eclipse/pde/api/tools/internal/util/utilmessages.properties
+SHA-256-Digest: 6WeeQh+FSoCMYG9Q3WfyK2WvAHQ9tbBW/e7OZiSaSeA=
+
+Name: org/eclipse/pde/api/tools/internal/model/StubApiComponent.class
+SHA-256-Digest: KpPt+2XxQanJnIe84arTvzl3N6JbhMJt7Y6GYT1tLN8=
+
+Name: org/eclipse/pde/api/tools/internal/model/ApiBaseline.class
+SHA-256-Digest: Q9xMQnwSJzlkwjAl6GVTpgGJxZH783TdaYv80MZTQwE=
+
+Name: org/eclipse/pde/api/tools/internal/util/TarException.class
+SHA-256-Digest: wiys9VOC9FuRMU4A+ByCNjL/kxJjVGbTbodOFg3hIjU=
+
+Name: org/eclipse/pde/api/tools/internal/descriptors/PackageDescriptor
+ Impl.class
+SHA-256-Digest: FczpC4XAzVYY0EYmuotyuvU05C1RIyibtXkj8PKpUfM=
+
+Name: org/eclipse/pde/api/tools/internal/util/SourceDefaultHandler.cla
+ ss
+SHA-256-Digest: UWSMsNCk3lbeKz/GcKMudZ6uSPxp/rSzKWtn/kzj5N4=
+
+Name: org/eclipse/pde/api/tools/internal/util/profiles/J2SE-1.5.profil
+ e
+SHA-256-Digest: 0/eX0Njt5jbSsPfPmoZekqJKMwzuxphyzzy1Xq/zT80=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/model/IApiType.cl
+ ass
+SHA-256-Digest: LMktwzecHQKOBvBep3JM49Zwf8+V2bQKMGBPp8gnXZo=
+
+Name: org/eclipse/pde/api/tools/internal/provisional/comparator/Compar
+ eApiScopeVisitor$4.class
+SHA-256-Digest: a+ch5FZULmWJbnGiij35Fm/rGdOTkLLdi8yWES8nSfc=
+
+Name: org/eclipse/pde/api/tools/internal/builder/AbstractIllegalMethod
+ Reference.class
+SHA-256-Digest: GMhelTC1Qdq884kqIz6uyQ6tto/jlsZmi90NneWLVsQ=
+

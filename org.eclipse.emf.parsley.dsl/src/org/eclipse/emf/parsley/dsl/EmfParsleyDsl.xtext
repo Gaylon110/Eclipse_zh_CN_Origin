@@ -1,0 +1,481 @@
+grammar org.eclipse.emf.parsley.dsl.EmfParsleyDsl with
+    org.eclipse.xtext.xbase.annotations.XbaseWithAnnotations
+
+import "http://www.eclipse.org/xtext/common/JavaVMTypes" as types
+
+generate model "http://www.eclipse.org/emf/parsley/dsl/EmfParsleyDsl"
+
+Model:
+	importSection=XImportSection?
+	module = Module;
+
+// if you add another element, please make sure that you update inheritance
+// relations (see, e.g., WithExtendsClause rule) and also the
+// label provider
+Module:
+	'module' name=QualifiedName (extendsClause=ExtendsClause)? '{'
+		(
+			(bindingsSpecification = BindingsSpecification)?
+			&
+			(labelProvider = LabelProvider)?
+			&
+			(tableLabelProvider = TableLabelProvider)?
+			&
+			(featureCaptionProvider = FeatureCaptionProvider)?
+			&
+			(formFeatureCaptionProvider = FormFeatureCaptionProvider)?
+			&
+			(dialogFeatureCaptionProvider = DialogFeatureCaptionProvider)?
+			&
+			(featuresProvider = FeaturesProvider)?
+			&
+			(tableFeaturesProvider = TableFeaturesProvider)?
+			&
+			(formControlFactory = FormControlFactory)?
+			&
+			(dialogControlFactory = DialogControlFactory)?
+			&
+			(proposalCreator = ProposalCreator)?
+			&
+			(menuBuilder = MenuBuilder)?
+			&
+			(configurator = Configurator)?
+			&
+			(viewerContentProvider = ViewerContentProvider)?
+			&
+			(tableViewerContentProvider = TableViewerContentProvider)?
+			&
+			(partsSpecifications = PartsSpecifications)?
+			&
+			(resourceManager = ResourceManager)?
+		)
+	'}'
+;
+
+ExtendsClause: 'extends' superType=JvmTypeReference;
+
+BindingsSpecification:
+	{BindingsSpecification} 'bindings' '{'
+		bindings += Binding*
+	'}'
+;
+
+Binding:
+	{TypeBinding} 'type' typeToBind=JvmTypeReference '->' to=XExpression |
+	{ProviderBinding} 'provide' type=JvmTypeReference '->' to=XExpression |
+	{ValueBinding} 'value' typeDecl=JvmTypeReference id=ValidID '->' to=XExpression
+;
+
+LabelProvider:
+	{LabelProvider} 'labelProvider' (extendsClause=ExtendsClause)? '{'
+		fields += FieldSpecification*
+	
+		(
+			(texts=Texts)?
+			&
+			(images=Images)?
+			&
+			(fonts=Fonts)?
+			&
+			(foregrounds=Foregrounds)?
+			&
+			(backgrounds=Backgrounds)?
+		)
+	'}'
+;
+
+FieldSpecification:
+	annotations+=XAnnotation*
+	(writeable?='var'|'val') 
+	(
+		extension?='extension' type=JvmTypeReference
+		|
+		type=JvmTypeReference?
+	) 
+	name=ValidID ('=' right=XExpression)? ';'?
+;
+
+Texts:
+	{Texts} 'text' '{'
+		specifications+=PolymorphicSpecification*
+	'}'
+;
+
+Images:
+	{Images} 'image' '{'
+		specifications+=PolymorphicSpecification*
+	'}'
+;
+
+Fonts:
+	{Fonts} 'font' '{'
+		specifications+=PolymorphicSpecification*
+	'}'
+;
+
+Foregrounds:
+	{Foregrounds} 'foreground' '{'
+		specifications+=PolymorphicSpecification*
+	'}'
+;
+
+Backgrounds:
+	{Backgrounds} 'background' '{'
+		specifications+=PolymorphicSpecification*
+	'}'
+;
+
+TableLabelProvider:
+	{TableLabelProvider} 'tableLabelProvider' (extendsClause=ExtendsClause)? '{'
+		fields += FieldSpecification*
+		(
+			(featureTexts=FeatureTexts)?
+			&
+			(featureImages=FeatureImages)?
+			&
+			(featureFonts=FeatureFonts)?
+			&
+			(featureForegrounds=FeatureForegrounds)?
+			&
+			(featureBackgrounds=FeatureBackgrounds)?
+			&
+			(rowFonts=RowFonts)?
+			&
+			(rowForegrounds=RowForegrounds)?
+			&
+			(rowBackgrounds=RowBackgrounds)?
+		)
+	'}'
+;
+
+PolymorphicSpecification:
+	parameterType=JvmTypeReference (name=ValidID)?
+	'->'
+	expression = XExpression
+;
+
+
+FeatureCaptionProvider:
+	{FeatureCaptionProvider} 'featureCaptionProvider' (extendsClause=ExtendsClause)? '{'
+		fields += FieldSpecification*
+
+		(featureTexts=FeatureTexts)?
+	'}'
+;
+
+FormFeatureCaptionProvider:
+	{FormFeatureCaptionProvider} 'formFeatureCaptionProvider' (extendsClause=ExtendsClause)? '{'
+		fields += FieldSpecification*
+
+		(
+			(featureTexts=FeatureTexts)?
+			&
+			(featureLabels=FeatureLabels)?
+		)
+	'}'
+;
+
+DialogFeatureCaptionProvider:
+	{DialogFeatureCaptionProvider} 'dialogFeatureCaptionProvider' (extendsClause=ExtendsClause)? '{'
+		fields += FieldSpecification*
+		
+		(
+			(featureTexts=FeatureTexts)?
+			&
+			(featureLabels=FeatureLabels)?
+		)
+	'}'
+;
+
+FeatureTexts:
+	{FeatureTexts} 'text' '{'
+		specifications+=FeatureAssociatedExpression*
+	'}'
+;
+
+FeatureImages:
+	{FeatureImages} 'image' '{'
+		specifications+=FeatureAssociatedExpression*
+	'}'
+;
+
+FeatureFonts:
+	{FeatureFonts} 'font' '{'
+		specifications+=FeatureAssociatedExpression*
+	'}'
+;
+
+FeatureForegrounds:
+	{FeatureForegrounds} 'foreground' '{'
+		specifications+=FeatureAssociatedExpression*
+	'}'
+;
+
+FeatureBackgrounds:
+	{FeatureBackgrounds} 'background' '{'
+		specifications+=FeatureAssociatedExpression*
+	'}'
+;
+
+FeatureLabels:
+	{FeatureLabels} 'label' '{'
+		specifications+=FeatureAssociatedExpression*
+	'}'
+;
+
+WithFeatureAssociatedExpressions:
+	FeatureTexts | FeatureImages | FeatureFonts | FeatureForegrounds | FeatureBackgrounds | FeatureLabels
+;
+
+RowFonts:
+	{RowFonts} 'rowFont' '{'
+		specifications+=PolymorphicSpecification*
+	'}'
+;
+
+RowForegrounds:
+	{RowForegrounds} 'rowForeground' '{'
+		specifications+=PolymorphicSpecification*
+	'}'
+;
+
+RowBackgrounds:
+	{RowBackgrounds} 'rowBackground' '{'
+		specifications+=PolymorphicSpecification*
+	'}'
+;
+
+WithExpressions:
+	RowFonts | RowForegrounds | RowBackgrounds | Menus | EmfMenus |
+	ConfiguratorResourceURI | ConfiguratorEClass |
+	ContentProviderElements | ContentProviderChildren |
+	Texts | Images | Fonts | Foregrounds | Backgrounds
+;
+
+/**
+ * Specify an XExpression associated to an EStructuralFeature
+ * (actually we associated to the Java get method in the generated code, which
+ * corresponds to the original EStructuralFeature).
+ */
+FeatureAssociatedExpression:
+	parameterType=JvmTypeReference ':' feature=[types::JvmMember]
+	'->'
+	expression = XExpression
+;
+
+FeaturesProvider:
+	{FeaturesProvider} 'featuresProvider' (extendsClause=ExtendsClause)? '{'
+		fields += FieldSpecification*
+		
+		(features=FeatureSpecifications)?
+	'}'
+;
+
+
+TableFeaturesProvider:
+	{TableFeaturesProvider} 'tableFeaturesProvider' (extendsClause=ExtendsClause)? '{'
+		fields += FieldSpecification*
+		
+		(features=FeatureSpecifications)?
+	'}'
+;
+
+FeatureSpecifications:
+	{FeatureSpecifications} 'features' '{'
+		featureSpecifications+=FeatureSpecification*
+	'}'
+;
+
+FeatureSpecification:
+	parameterType=JvmTypeReference
+	'->'
+	features += [types::JvmMember] (',' features += [types::JvmMember])*
+;
+
+FormControlFactory:
+	{FormControlFactory} 'formControlFactory' (extendsClause=ExtendsClause)? '{'
+		fields += FieldSpecification*
+		
+		(controls=ControlFactorySpecifications)?
+	'}'
+;
+
+DialogControlFactory:
+	{DialogControlFactory} 'dialogControlFactory' (extendsClause=ExtendsClause)? '{'
+		fields += FieldSpecification*
+		
+		(controls=ControlFactorySpecifications)?
+	'}'
+;
+
+ControlFactorySpecifications:
+	{ControlFactorySpecifications} 'control' '{'
+		specifications+=ControlFactorySpecification*
+	'}'
+;
+
+ControlFactorySpecification:
+	parameterType=JvmTypeReference ':' feature=[types::JvmMember]
+	'->'
+	expression = XExpression
+	('target' target = XExpression)?
+;
+
+ProposalCreator:
+	{ProposalCreator} 'proposals' (extendsClause=ExtendsClause)? '{'
+		fields += FieldSpecification*
+
+		proposalsSpecifications+=FeatureAssociatedExpression*
+	'}'
+;
+
+MenuBuilder:
+	{MenuBuilder} 'menuBuilder' (extendsClause=ExtendsClause)? '{'
+		fields += FieldSpecification*
+	
+		(
+			(menus=Menus)?
+			&
+			(emfMenus=EmfMenus)?
+		)
+	'}'
+;
+
+Menus:
+	{Menus} 'menus' '{'
+		specifications+=PolymorphicSpecification*
+	'}'
+;
+
+EmfMenus:
+	{EmfMenus} 'emfMenus' '{'
+		specifications+=PolymorphicSpecification*
+	'}'
+;
+
+Configurator:
+	{Configurator} 'configurator' (extendsClause=ExtendsClause)? '{'
+		fields += FieldSpecification*
+	
+		(
+			(resourceURI=ConfiguratorResourceURI)?
+			&
+			(eClassSpec=ConfiguratorEClass)?
+		)
+	'}'
+;
+
+ConfiguratorResourceURI:
+	{ConfiguratorResourceURI} 'resourceURI' '{'
+		specifications+=PolymorphicSpecification*
+	'}'
+;
+
+ConfiguratorEClass:
+	{ConfiguratorEClass} 'eClass' '{'
+		specifications+=PolymorphicSpecification*
+	'}'
+;
+
+ViewerContentProvider:
+	{ViewerContentProvider} 'viewerContentProvider' (extendsClause=ExtendsClause)? '{'
+		fields += FieldSpecification*
+		
+		(
+			(elements=ContentProviderElements)?
+			&
+			(children=ContentProviderChildren)?
+		)
+	'}'
+;
+
+TableViewerContentProvider:
+	{TableViewerContentProvider} 'tableViewerContentProvider' (extendsClause=ExtendsClause)? '{'
+		fields += FieldSpecification*
+		
+		(elements=ContentProviderElements)?
+	'}'
+;
+
+ContentProviderChildren:
+	{ContentProviderChildren} 'children' '{'
+		specifications+=PolymorphicSpecification*
+	'}'
+;
+
+ContentProviderElements:
+	{ContentProviderElements} 'elements' '{'
+		specifications+=PolymorphicSpecification*
+	'}'
+;
+
+ResourceManager:
+	{ResourceManager} 'resourceManager' (extendsClause=ExtendsClause)? '{'
+		fields += FieldSpecification*
+	
+		((
+		'initializeResource' initializeBody=SimpleMethodSpecification
+		)?
+		&
+		(
+		'saveResource' saveBody=SimpleMethodSpecification
+		)?)
+	'}'
+;
+
+SimpleMethodSpecification:
+	body=XBlockExpression
+;
+
+// a utility base class for rules which access features of an EClass
+// IMPORTANT: update EmfParsleyDslExpectedSuperTypes if you add another element
+EmfFeatureAccess:
+	FeatureAssociatedExpression |
+	FeatureSpecification |
+	ControlFactorySpecification
+;
+
+// IMPORTANT: update EmfParsleyDslExpectedSuperTypes if you add another element
+AbstractFeatureCaptionProviderWithLabel:
+	FormFeatureCaptionProvider | DialogFeatureCaptionProvider
+;
+
+// IMPORTANT: update EmfParsleyDslExpectedSuperTypes if you add another element
+AbstractFeatureProvider:
+	FeaturesProvider | TableFeaturesProvider
+;
+
+// IMPORTANT: update EmfParsleyDslExpectedSuperTypes if you add another element
+AbstractControlFactory:
+	FormControlFactory | DialogControlFactory
+;
+
+// a utility base class for rules with 'extends' clause
+// IMPORTANT: update EmfParsleyDslExpectedSuperTypes if you add another element
+WithExtendsClause:
+	Module | WithFields
+;
+
+// IMPORTANT: update EmfParsleyDslExpectedSuperTypes if you add another element
+WithFields:
+	LabelProvider | TableLabelProvider | FeatureCaptionProvider | AbstractFeatureCaptionProviderWithLabel |
+	AbstractFeatureProvider | AbstractControlFactory | ProposalCreator |
+	ViewerContentProvider | TableViewerContentProvider |
+	MenuBuilder | Configurator | ResourceManager
+;
+
+PartsSpecifications:
+	{PartsSpecifications} 'parts' '{'
+		parts += PartSpecification*
+	'}'
+;
+
+PartSpecification: ViewSpecification;
+
+ViewSpecification:
+	{ViewSpecification} 'viewpart' id=QualifiedName '{'
+		'viewname' viewName=STRING
+		'viewclass' type=JvmTypeReference
+		('viewcategory' category=QualifiedName)?
+	'}'
+;

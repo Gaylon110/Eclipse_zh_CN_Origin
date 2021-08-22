@@ -1,0 +1,1950 @@
+<!-- 
+ ******************************************************************************
+ * Copyright (c) 2016 Oracle
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *    Konstantin Komissarchik - initial implementation and ongoing maintenance
+ ******************************************************************************
+-->
+
+<html>
+
+<head>
+  <title>Enhancements in Sapphire 0.7</title>
+  <link rel="StyleSheet" href="../../style.css" TYPE="text/css"/>
+  <style type="text/css">
+    pre.source-code-compare 
+    {
+      font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; 
+      color: #000000;
+      background-color: #ffffff;
+      font-size: 12px;
+      border: 0px;
+      line-height: 14px;
+      padding: 5px;
+      margin-left: 0px;
+      margin-right: 0px;
+      overflow: auto
+    }
+    .unaffected
+    {
+      color: #888888
+    }
+    .comment
+    {
+      color: #006600;
+      font-style: italic
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>Enhancements in Sapphire 0.7</h1>
+
+<ol>
+  <li><a href="#Key">Key Enhancements</a></li>
+  <ol type="A">
+    <li><a href="#Key-DiagramNodeShapeLanguage">Diagram Node Shape Language</a></li>
+    <li><a href="#Key-OnDemandElementCompilation">On-Demand Element Compilation</a></li>
+    <li><a href="#Key-ConsolidatedConversions">Consolidated Conversions</a></li>
+    <li><a href="#Key-ExtensiblePersistentState">Extensible Persistent State</a></li>
+    <li><a href="#Key-ImprovedJavaLocalization">Improved Localization for Java Code</a></li>
+    <li><a href="#Key-ListIndexFacility">List Index Facility</a></li>
+    <li><a href="#Key-PropertyInstanceObjects">Property Instance Objects</a></li>
+  </ol>
+  <li><a href="#Core">Core</a></li>
+  <ol type="A">
+    <li><a href="#Core-Element">Element</a></li>
+    <li><a href="#Core-ElementHandle">ElementHandle</a></li>
+    <li><a href="#Core-ElementList">ElementList</a></li>
+    <li><a href="#Core-ElementType">ElementType</a></li>
+    <li><a href="#Core-Property">Property</a></li>
+    <li><a href="#Core-ReferenceValue">ReferenceValue</a></li>
+    <li><a href="#Core-RequiredConstraintService">RequiredConstraintService</a></li>
+    <li><a href="#Core-Result">Result</a></li>
+    <li><a href="#Core-Transient">Transient</a></li>
+    <li><a href="#Core-Value">Value</a></li>
+    <li><a href="#Core-RootServiceContext">Root Service Context</a></li>
+    <li><a href="#Core-ServiceRegistrationWithoutFactory">Service Registration Without a Factory</a></li>
+    <li><a href="#Core-NewConversions">New Conversions</a></li>
+    <li><a href="#Core-OrderedPossibleValues">Ordered Possible Values</a></li>
+    <li><a href="#Core-SimplerDateSerialization">Simpler Date Serialization</a></li>
+    <li><a href="#Core-LoggingService">LoggingService</a></li>
+  </ol>
+  <li><a href="#ExpressionLanguage">Expression Language</a></li>
+  <ol type="A">
+    <li><a href="#ExpressionLanguage-FunctionsAsProperties">Functions as Properties</a></li>
+    <li><a href="#ExpressionLanguage-OverloadedFunctions">Overloaded Functions</a></li>
+    <li><a href="#ExpressionLanguage-UseForValidation">Use for Validation</a></li>
+    <li><a href="#ExpressionLanguage-UseInRequired">Use in @Required</a></li>
+    <li><a href="#ExpressionLanguage-UseInWithLabel">Use in With Directive Label</a></li>
+    <li><a href="#ExpressionLanguage-NewFunctionsAndProperties">New Functions and Properties</a></li>
+    <ol type="a">
+      <li><a href="#ExpressionLanguage-AbsolutePathFunction">Absolute</a></li>
+      <li><a href="#ExpressionLanguage-ContentFunction">Content</a></li>
+      <li><a href="#ExpressionLanguage-EnabledFunction">Enabled</a></li>
+      <li><a href="#ExpressionLanguage-EndsWithFunction">EndsWith</a></li>
+      <li><a href="#ExpressionLanguage-FragmentFunction">Fragment</a></li>
+      <li><a href="#ExpressionLanguage-HeadFunction">Head</a></li>
+      <li><a href="#ExpressionLanguage-IndexFunction">Index</a></li>
+      <li><a href="#ExpressionLanguage-MatchesFunction">Matches</a></li>
+      <li><a href="#ExpressionLanguage-MessageFunction">Message</a></li>
+      <li><a href="#ExpressionLanguage-ParentFunction">Parent</a></li>
+      <li><a href="#ExpressionLanguage-PartFunction">Part</a></li>
+      <li><a href="#ExpressionLanguage-SeverityFunction">Severity</a></li>
+      <li><a href="#ExpressionLanguage-SizeFunction">Size</a></li>
+      <li><a href="#ExpressionLanguage-StartsWithFunction">StartsWith</a></li>
+      <li><a href="#ExpressionLanguage-StateFunction">State</a></li>
+      <li><a href="#ExpressionLanguage-TailFunction">Tail</a></li>
+      <li><a href="#ExpressionLanguage-TextFunction">Text</a></li>
+      <li><a href="#ExpressionLanguage-ThisProperty">This</a></li>
+      <li><a href="#ExpressionLanguage-ValidationFunction">Validation</a></li>
+    </ol>
+  </ol>
+  <li><a href="#Forms">Forms</a></li>
+  <ol type="A">
+    <li><a href="#Forms-SectionReference">Section Reference</a></li>
+    <li><a href="#Forms-ImprovedDateSupport">Improved Date Support</a></li>
+    <li><a href="#Forms-ColorBrowsing">Color Browsing</a></li>
+    <li><a href="#Forms-ConditionalWizardPages">Conditional Wizard Pages</a></li>
+    <li><a href="#Forms-NestedPropertiesInListPropertyEditor">Nested Properties in List Property Editor</a></li>
+    <li><a href="#Forms-RadioButtonImages">Radio Buttons with Images</a></li>
+    <li><a href="#Forms-WithDirectiveLabel">With Directive Label</a></li>
+  </ol>
+  <li><a href="#Diagrams">Diagrams</a></li>
+  <ol type="A">
+    <li><a href="#Diagrams-ConnectionService">ConnectionService</a></li>
+  </ol>
+  <li><a href="#Miscellaneous">Miscellaneous</a></li>
+  <ol type="A">
+    <li><a href="#Miscellaneous-JavaIdentifier">JavaIdentifier</a></li>
+    <li><a href="#Miscellaneous-ImageData">ImageData</a></li>
+    <li><a href="#Miscellaneous-ModernizedPopups">Modernized Popups</a></li>
+    <li><a href="#Miscellaneous-CreateWorkspaceFileOp">CreateWorkspaceFileOp</a></li>
+    <li><a href="#Miscellaneous-PropertyEditorPart">PropertyEditorPart</a></li>
+    <li><a href="#Miscellaneous-WithPart">WithPart</a></li>
+  </ol>
+</ol>
+
+
+<h2><a name="Key"><a name="Key-DiagramNodeShapeLanguage">Diagram Node Shape Language</a></a></h2>
+
+<p>Develop complex diagrams as easily as forms with a new diagram node shape language.</p>
+
+<p style="margin-left: 20px;"><img src="images/DiagramNodeShapeLanguage-1.png"/></p>
+
+<p>The language is composed of six primitives.</p>
+
+<ul>
+
+<li style="list-style-image:url('images/TextDef.png')"><b>Text</b> - Displays static text or content from the model, as specified by an expression. If the 
+expression contains a reference to a single property, the property can be edited in place by double-clicking on the text.</li>
+
+<li style="list-style-image:url('images/LineDef.png')"><b>Line</b> - Displays a vertical or a horizontal line. Typically used as a separator. Line style, weight and 
+color can be set as appropriate.</li>
+
+<li style="list-style-image:url('images/SpacerDef.png')"><b>Spacer</b> - Leaves a blank space of specified size. Frequently in conjunction with
+a visibility rule.</li>
+
+<li style="list-style-image:url('images/ImageDef.png')"><b>Image</b> - Displays an image. The image can be produced by an expression for a dynamic effect.</li>
+
+<li style="list-style-image:url('images/ValidationMarkerDef.png')"><b>Validation Marker</b> - Displays an image communicating the validation status of the immediate context. The user
+can click on the image to get the validation details and the related actions.</li>
+
+<li style="list-style-image:url('images/RectangleDef.png')"><b>Rectangle</b> - Contains one or more shape in a rectangular space with an optional border and background. The
+contained shapes are arranged either vertically, horizontally or in a stack, as specified by the rectangle's layout.</li>
+ 
+<li style="list-style-image:url('images/ShapeFactoryDef.png')"><b>Shape Factory</b> - Produces a shape for each entry in a list property using the specified shape templates. The
+list items can be added, removed and re-arranged through actions exposed by the shape factory. Drag-n-drop is also
+supported as a means to re-order the list items.</li>
+
+</ul>
+
+<p style="margin-left: 20px;"><img src="images/DiagramNodeShapeLanguage-2.png"/></p>
+
+
+<h2><a name="Key-OnDemandElementCompilation">On-Demand Element Compilation</a></h2>
+
+<p>In past releases, Sapphire used a Java annotation processor linked to @GenerateImpl annotation to
+produce implementation classes for model element interfaces at build time. This system has been
+replaced by on-demand compilation straight to Java bytecode. When application code instantiates an
+element for the first time, Sapphire will automatically compile it and use the compiled result for
+the duration of the JVM instance.</p>
+
+<p>This approach has several advantages.</p>
+
+<ol>
+    <li>Easier getting started process since customizing the build to compile implementation classes is no longer necessary</li>
+    <li>Smaller footprint for applications as implementation classes do not need to be distributed and stored</li>
+    <li>Faster element instantiation as the bytecode generator is faster than most disk systems</li>
+</ol>
+
+
+<h2><a name="Key-ConsolidatedConversions">Consolidated Conversions</a></h2>
+
+<p>ValueSerializationService, AdapterService and EL's TypeCast API have been consolidated with
+ConversionService. The result is a single API for implementing conversions. Many of the basic
+conversions are now available in the root service context, opening the door for novel uses.</p>
+
+<p style="margin-left: 20px;"><b>Example</b></p>
+
+<pre class="source-code"><code>Integer number = Sapphire.service( MasterConversionService.class ).convert( "123", Integer.class );</code></pre>
+
+<p style="margin-left: 20px;"><b>Example</b></p>
+
+<p style="margin-left: 20px;">In this example, the generics are used in conjunction with Sapphire's library of conversions
+to implement the pattern where the type of the default value controls the return type. This pattern
+is typically implemented as a less flexible series of overloaded methods for various types.</p>  
+
+<pre class="source-code"><code>public class AttributesContainer
+{
+    private final Map&lt;String,String> attributes = new HashMap&lt;String,String>();
+    
+    public &lt;T> T getAttribute( final String name, final T def )
+    {
+        if( name == null )
+        {
+            throw new IllegalArgumentException();
+        }
+        
+        Object value = this.attributes.get( name );
+        
+        if( value != null && def != null && def != String.class )
+        {
+            value = Sapphire.service( MasterConversionService.class ).convert( value, def.getClass() );
+        }
+        
+        if( value == null )
+        {
+            value = def;
+        }
+        
+        return (T) value;
+    }
+    
+    public String getAttribute( final String name )
+    {
+        return (String) getAttribute( name, null );
+    }
+
+    public void setAttribute( final String name, final Object value )
+    {
+        if( name == null )
+        {
+            throw new IllegalArgumentException();
+        }
+        
+        if( value == null )
+        {
+            this.attributes.remove( name );
+        }
+        else
+        {
+            final String string = Sapphire.service( MasterConversionService.class ).convert( value, String.class );
+            this.attributes.put( name, string );
+        }
+    }
+}</code></pre>
+
+
+<h2><a name="Key-ExtensiblePersistentState">Extensible Persistent State</a></h2>
+
+<p>Editor pages are able to persist user interface state between sessions independent of the data 
+that is being edited. What state is persisted is dependent on editor page type. Two common examples of
+persistent state are sizing of resizable elements and selection. The persistent state is now extensible,
+allowing adopters to persist custom data.</p>
+
+<p>The recommended approach is to extend the page's persistent state element type to add custom properties.
+The custom element type for persistent state is specified in sdef.</p> 
+
+<p style="margin-left: 20px;"><b>Example</b></p>
+
+<p style="margin-left: 20px;">In the catalog sample, a toggle action controls whether the manufacturer name is shown
+in the catalog item label. The state of this toggle is persisted by extending the state of the editor page. The
+persistent state is also used for communication between the toggle and the item label.</p>
+
+<pre class="source-code"><code>public interface CatalogEditorPageState extends MasterDetailsEditorPageState
+{
+    ElementType TYPE = new ElementType( CatalogEditorPageState.class );
+
+    // *** ShowManufacturer ***
+
+    @Type( base = Boolean.class )
+    @DefaultValue( text = "false" )
+
+    ValueProperty PROP_SHOW_MANUFACTURER = new ValueProperty( TYPE, "ShowManufacturer" );
+
+    Value&lt;Boolean> getShowManufacturer();
+    void setShowManufacturer( String value );
+    void setShowManufacturer( Boolean value );
+}</code></pre>
+
+<p style="margin-left: 20px;">The custom state element type is attached to the editor page in sdef.</p>
+
+<pre class="source-code"><code><font color="#888888">&lt;editor-page></font>
+    &lt;persistent-state-element-type>org.eclipse.sapphire.samples.catalog.CatalogEditorPageState&lt;/persistent-state-element-type>
+<font color="#888888">&lt;/editor-page></font></code></pre>
+
+<p style="margin-left: 20px;">The toggle action handler only interacts with the editor page state.</p>
+
+<pre class="source-code"><code>public final class ShowManufacturerActionHandler extends SapphireActionHandler 
+{
+    private CatalogEditorPageState state;
+
+    @Override
+    public void init( final SapphireAction action, final ActionHandlerDef def )
+    {
+        super.init( action, def );
+
+        this.state = (CatalogEditorPageState) getPart().nearest( SapphireEditorPagePart.class ).state();
+
+        final Listener listener = new FilteredListener&lt;PropertyContentEvent>()
+        {
+            @Override
+            protected void handleTypedEvent( final PropertyContentEvent event )
+            {
+                setChecked( ShowManufacturerActionHandler.this.state.getShowManufacturer().getContent() );
+            }
+        };
+
+        this.state.attach( listener, CatalogEditorPageState.PROP_SHOW_MANUFACTURER );
+
+        setChecked( this.state.getShowManufacturer().getContent() );
+
+        attach
+        (
+            new FilteredListener&lt;DisposeEvent>()
+            {
+                @Override
+                protected void handleTypedEvent( final DisposeEvent event )
+                {
+                    ShowManufacturerActionHandler.this.state.detach( listener, CatalogEditorPageState.PROP_SHOW_MANUFACTURER );
+                }
+            }
+        );
+    }
+
+    @Override
+    protected Object run( final SapphireRenderingContext context )
+    {
+        this.state.setShowManufacturer( ! this.state.getShowManufacturer().getContent() );
+
+        return null;
+    }
+}</code></pre>
+
+<p style="margin-left: 20px;">The toggle action and its handler are defined in sdef.</p>
+
+<pre class="source-code"><code><font color="#888888">&lt;editor-page></font>
+    &lt;action>
+        &lt;id>Sample.ShowManufacturer&lt;/id>
+        &lt;label>Show Manufacturer&lt;/label>
+        &lt;image>ShowManufacturer.png&lt;/image>
+        &lt;type>TOGGLE&lt;/type>
+        &lt;context>Sapphire.EditorPage&lt;/context>
+        &lt;location>before:Sapphire.Outline.Hide&lt;/location>
+    &lt;/action>
+    &lt;action-handler>
+        &lt;action>Sample.ShowManufacturer&lt;/action>
+        &lt;id>Sample.ShowManufacturer&lt;/id>
+        &lt;impl>ShowManufacturerActionHandler&lt;/impl>
+    &lt;/action-handler>
+<font color="#888888">&lt;/editor-page></font></code></pre>
+
+<p style="margin-left: 20px;">Finally, the content outline node label for a catalog item is defined using an expression that reads
+the editor page state to determine whether to include the manufacturer in the label. The label automatically updates when any
+of the properties utilized in the expression are changed.</p>
+
+<pre class="source-code"><code><font color="#888888">&lt;node-factory>
+    &lt;property>Items&lt;/property>
+    &lt;case>
+        &lt;label></font>${ Name == null ? &quot;&lt;item&gt;&quot; : ( State().ShowManufacturer &amp;&amp; Manufacturer != null ? Concat( Manufacturer, &quot; &quot;, Name ) : Name ) }<font color="#888888">&lt;/label>
+    &lt;/case>
+&lt;/node-factory></font></code></pre>
+
+<p>Alternatively, custom state can be stored as arbitrary key-value pairs without extending the persistent state element.
+All of the system-provided state element types include an Attributes property for this purpose. To make it easier to
+work with the Attributes property, methods are provided to read and write attributes by name. These methods leverage
+<a href="../../services/ConversionService.html">all conversions known to Sapphire</a>, so it is typically not necessary
+to manually convert the values to and from a string.</p>
+
+<p>This approach should only be used in situations when extending the persistent state element is not practical
+or possible. State stored as attributes is harder to access. For instance, unlike actual properties, attributes
+cannot be directly accessed from EL.</p>
+
+<p style="margin-left: 20px;"><b>Example</b></p>
+
+<p style="margin-left: 20px;">In the catalog sample, a toggle action controls whether the catalog items
+are color-coded by manufacturer. The state of this toggle is persisted as an attribute.</p>
+
+<pre class="source-code"><code>public final class ShowManufacturerColorActionHandler extends SapphireActionHandler 
+{
+    public static final String ATTRIBUTE = "ColorCode";
+
+    private CatalogEditorPageState state;
+
+    @Override
+    public void init( final SapphireAction action, final ActionHandlerDef def )
+    {
+        super.init( action, def );
+
+        this.state = (CatalogEditorPageState) getPart().nearest( SapphireEditorPagePart.class ).state();
+
+        final Listener listener = new FilteredListener&lt;PropertyContentEvent>()
+        {
+            @Override
+            protected void handleTypedEvent( final PropertyContentEvent event )
+            {
+                setChecked( ShowManufacturerColorActionHandler.this.state.getAttribute( ATTRIBUTE, false ) );
+            }
+        };
+
+        this.state.attach( listener, CatalogEditorPageState.PROP_ATTRIBUTES.getName() + "/*" );
+
+        setChecked( this.state.getAttribute( ATTRIBUTE, false ) );
+
+        attach
+        (
+            new FilteredListener&lt;DisposeEvent>()
+            {
+                @Override
+                protected void handleTypedEvent( final DisposeEvent event )
+                {
+                    ShowManufacturerColorActionHandler.this.state.detach( listener, CatalogEditorPageState.PROP_ATTRIBUTES.getName() + "/*" );
+                }
+            }
+        );
+    }
+
+    @Override
+    protected Object run( final SapphireRenderingContext context )
+    {
+        this.state.setAttribute( ATTRIBUTE, ! this.state.getAttribute( ATTRIBUTE, false ) );
+
+        return null;
+    }
+}</code></pre>
+
+<p style="margin-left: 20px;">The toggle action and its handler are defined in sdef.</p>
+
+<pre class="source-code"><code><font color="#888888">&lt;editor-page></font>
+    &lt;action>
+        &lt;id>Sample.ShowManufacturerColor&lt;/id>
+        &lt;label>Color Code Manufacturers&lt;/label>
+        &lt;image>ItemPurple.png&lt;/image>
+        &lt;type>TOGGLE&lt;/type>
+        &lt;context>Sapphire.EditorPage&lt;/context>
+        &lt;location>after:Sample.ShowManufacturer&lt;/location>
+        &lt;location>before:Sapphire.Outline.Hide&lt;/location>
+    &lt;/action>
+    &lt;action-handler>
+        &lt;action>Sample.ShowManufacturerColor&lt;/action>
+        &lt;id>Sample.ShowManufacturerColor&lt;/id>
+        &lt;impl>ShowManufacturerColorActionHandler&lt;/impl>
+    &lt;/action-handler>
+<font color="#888888">&lt;/editor-page></font></code></pre>
+
+<p style="margin-left: 20px;">A custom EL function is used to read the state attribute and to derive a color code item image
+based on the manufacturer.</p>
+
+<pre class="source-code"><code>public final class ItemImageFunction extends Function
+{
+    private final ImageData IMAGE_GENERIC = ImageData.createFromClassLoader( ItemImageFunction.class, "Item.png" );
+
+    private final ImageData[] IMAGES =
+    {
+        ImageData.createFromClassLoader( ItemImageFunction.class, "ItemBlue.png" ),
+        ImageData.createFromClassLoader( ItemImageFunction.class, "ItemGreen.png" ),
+        ImageData.createFromClassLoader( ItemImageFunction.class, "ItemOrange.png" ),
+        ImageData.createFromClassLoader( ItemImageFunction.class, "ItemPurple.png" ),
+        ImageData.createFromClassLoader( ItemImageFunction.class, "ItemRed.png" ),
+        ImageData.createFromClassLoader( ItemImageFunction.class, "ItemTurquoise.png" ),
+        ImageData.createFromClassLoader( ItemImageFunction.class, "ItemYellow.png" )
+    };
+
+    @Override
+    public String name()
+    {
+        return "CatalogItemImage";
+    }
+
+    @Override
+    public FunctionResult evaluate( final FunctionContext context )
+    {
+        if( context instanceof PartFunctionContext )
+        {
+            final SapphirePart part = ( (PartFunctionContext) context ).part();
+            final MasterDetailsEditorPagePart page = part.nearest( MasterDetailsEditorPagePart.class );
+
+            if( page != null )
+            {
+                final Element element = part.getLocalModelElement();
+
+                if( element instanceof Item )
+                {
+                    final Item item = (Item) element;
+                    final MasterDetailsEditorPageState state = page.state();
+
+                    return new FunctionResult( this, context )
+                    {
+                        private Listener listener;
+
+                        @Override
+                        protected void init()
+                        {
+                            this.listener = new FilteredListener&lt;PropertyContentEvent>()
+                            {
+                                @Override
+                                protected void handleTypedEvent( final PropertyContentEvent event )
+                                {
+                                    refresh();
+                                }
+                            };
+
+                            state.attach( this.listener, MasterDetailsEditorPageState.PROP_ATTRIBUTES.getName() + "/*" );
+                            element.attach( this.listener, Item.PROP_MANUFACTURER );
+                        }
+
+                        @Override
+                        protected Object evaluate()
+                        {
+                            final boolean color = state.getAttribute( ShowManufacturerColorActionHandler.ATTRIBUTE, false );
+
+                            if( color )
+                            {
+                                final String manufacturer = item.getManufacturer().getContent();
+                                final int hashCode = ( manufacturer == null ? 0 : manufacturer.hashCode() );
+                                final int index = abs( hashCode ) % IMAGES.length;
+
+                                return IMAGES[ index ];
+                            }
+                            else
+                            {
+                                return IMAGE_GENERIC;
+                            }
+                        }
+
+                        @Override
+                        public void dispose()
+                        {
+                            super.dispose();
+
+                            if( this.listener != null )
+                            {
+                                state.detach( this.listener, MasterDetailsEditorPageState.PROP_ATTRIBUTES.getName() + "/*" );
+                                element.detach( this.listener, Item.PROP_MANUFACTURER );
+
+                                this.listener = null;
+                            }
+                        }
+                    };
+                }
+            }
+        }
+
+        throw new FunctionException( "CatalogItemImage() function cannot be used in this context.");
+    }
+}</code></pre>
+
+<p style="margin-left: 20px;">The CatalogItemImage() function is registered as a Sapphire extension.</p>
+
+<pre class="source-code"><code><font color="#888888">&lt;extension></font>
+    &lt;function>
+        &lt;name>CatalogItemImage&lt;/name>
+        &lt;impl>org.eclipse.sapphire.samples.catalog.ItemImageFunction&lt;/impl>
+    &lt;/function>
+<font color="#888888">&lt;/extension></font></code></pre>
+
+<p style="margin-left: 20px;">Finally, the content outline node image for a catalog item is defined using a simple expression 
+that references the CatalogItemImage() function.</p>
+
+<pre class="source-code"><code><font color="#888888">&lt;node-factory>
+    &lt;property>Items&lt;/property>
+    &lt;case>
+        &lt;image></font>${ CatalogItemImage() }<font color="#888888">&lt;/image>
+    &lt;/case>
+&lt;/node-factory></font></code></pre>
+
+
+<h2><a name="Key-ImprovedJavaLocalization">Improved Localization for Java Code</a></h2>
+
+<p>Within Java code, such as an implementation of a service, Sapphire has previously relied on the NLS class copied 
+from Eclipse platform. The developer experience has been improved.</p>
+
+<ul>
+
+  <li><p>The static fields holding localizable text are able to exist in any class, not just a dedicated resource bundle class.</p></li>
+  
+  <li><p>Formatting messages using localizable text as a template is more fluid.</p>
+  
+  <p><code>Resources.message.format( x, y )</code> &nbsp;vs &nbsp;<code>NLS.bind( Resources.message, x, y )</code></p>
+  
+  <li><p>The original text can be specified using an annotation, concentrating text closer to the point of use and avoiding
+  numerous problems associated with maintaining text in discrete resource files. When time comes to do the translation, an
+  annotation processor or a similar build system can be used to extract text into resource files. Only the translated versions
+  of the resource files need to be distributed. The original text will be read from the annotations at runtime.</p></li>
+  
+</ul>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code-compare"><code><span class="unaffected">public class Validator
+{
+    public String validate( Integer value, Integer max )
+    {
+        if( value == null )
+        {
+            return</span> Resources.<span class="unaffected">mustBeSpecifiedMessage;
+        }
+        else if( max != null && value.intValue() > max.intValue() )
+        {
+            return</span> NLS.bind( Resources.<span class="unaffected">mustNotBeLargerThanMessage</span>, <span class="unaffected">max</span> )<span class="unaffected">;
+        }
+
+        return null;
+    }</span>
+
+    private static final class Resources extends NLS 
+    {
+        public <span class="unaffected">static</span> String <span class="unaffected">mustBeSpecifiedMessage;</span>
+        public <span class="unaffected">static</span> String <span class="unaffected">mustNotBeLargerThanMessage;
+
+        static 
+        {</span>
+            initializeMessages( Validator.class.getName(), Resources.class );
+        <span class="unaffected">}</span>
+    }
+<span class="unaffected">}</span>
+
+<span class="comment"># Content of Validator.properties file</span>
+
+mustBeSpecifiedMessage = <span class="unaffected">Value must be specified.</span>
+mustNotBeLargerThanMessage = <span class="unaffected">Value must not be larger than {0}.</span></code></pre>
+    </td>
+    <td>
+<pre class="source-code-compare"><code><span class="unaffected">public class Validator
+{</span>
+    @Text( "<span class="unaffected">Value must be specified.</span>" )
+    private <span class="unaffected">static</span> LocalizableText <span class="unaffected">mustBeSpecifiedMessage;</span>
+
+    @Text( "<span class="unaffected">Value must not be larger than {0}.</span>" )
+    private <span class="unaffected">static</span> LocalizableText <span class="unaffected">mustNotBeLargerThanMessage;</span>
+
+    <span class="unaffected">static
+    {</span>
+        LocalizableText.init( Validator.class );
+    <span class="unaffected">}
+
+    public String validate( Integer value, Integer max )
+    {
+        if( value == null )
+        {
+            return mustBeSpecifiedMessage</span>.text()<span class="unaffected">;
+        }
+        else if( max != null && value.intValue() > max.intValue() )
+        {
+            return mustNotBeLargerThanMessage</span>.format( <span class="unaffected">max</span> )<span class="unaffected">;
+        }
+
+        return null;
+    }
+}</span></code></pre>
+    </td>
+  </tr>
+</table>
+
+
+<h2><a name="Key-ListIndexFacility">List Index Facility</a></h2>
+
+<p>The scalability and performance of some features can benefit from constant time lookup of list entries based on the
+value of a member property.</p>
+
+<p>A list can have one or more indexes that are created on first request. Once created, an index is shared by all consumers
+of the list and updates itself automatically. The index can also notify listeners when it changes.</p>
+
+<pre class="source-code"><code>Index&lt;T extends Element>
+{
+    ElementList&lt;T> list()
+    ValueProperty property()
+    T element( String key )
+    Set&lt;T> elements( String key )
+    attach( Listener listener )
+    detach( Listener listener )
+}
+
+<font color="#888888">ElementList&lt;T extends Element>
+{</font>
+    Index&lt;T> index( ValueProperty property )
+    Index&lt;T> index( String property )
+<font color="#888888">}</font></code></pre>
+
+<p>A quick lookup is easy to write.</p>
+
+<pre class="source-code"><code>Task task = repository.getTasks().index( "Id" ).element( "1234" );</code></pre>
+
+<p>Multiple elements that share the same key value can be retrieved as a group.</p>  
+
+<pre class="source-code"><code>List&lt;Task> tasks = repository.getTasks().index( "Component" ).elements( "SDK" );</code></pre>
+
+<p>Listening for changes to the index as opposed to the whole list can help reduce the number of times an expensive
+operation is performed.</p>
+
+<pre class="source-code"><code>Index&lt;Task> index = repository.getTasks().index( "Component" );
+Set&lt;Task> tasks = index.elements( "SDK" );
+
+Listener listener = new Listener()
+{
+    @Override
+    public void handle( Event event )
+    {
+        // Do something when the index has changed.
+    }
+}
+
+index.attach( listener );
+
+...
+
+index.detach( listener );</code></pre>
+
+
+<h2><a name="Key-PropertyInstanceObjects">Property Instance Objects</a></h2>
+
+<p>Each property instance is now exposed as an object. This makes it easier to pass them around. Previously, an
+element instance and a property name was necessary to refer to a property instance.<p>
+
+<p style="margin-left: 20px;"><b>Example</b></p>
+
+<p style="margin-left: 20px;">In this example, all integer value properties within an element are incremented.</p>
+
+<pre class="source-code"><code>for( Property property : element.properties( "*" ) )
+{
+    if( property instanceof Value )
+    {
+        Object content = value.content();
+
+        if( content instanceof Integer )
+        {
+            value.write( ( (Integer) content ).intValue() + 1 );
+        }
+    }
+}</code></pre>
+
+
+<h2><a name="Core"><a name="Core-Element">Element</a></a></h2>
+
+<p>Clear all properties in an element using the new method.</p>
+
+<pre class="source-code"><code><font color="#888888">Element
+{</font>
+    void clear()
+<font color="#888888">}</font></code></pre>
+
+<p>A property can now be looked up by a path. Previously, only lookup by name was available. In addition to this, the
+result of the lookup is a <a href="#Core-Property">Property</a> object that represents an instance of
+a property within an element.</p>
+
+<pre class="source-code"><code><font color="#888888">Element
+{</font>
+    SortedSet&lt;Property> <font color="#888888">properties()</font>
+    Property <font color="#888888">property( String</font> path <font color="#888888">)</font>
+    Property property( ModelPath path )
+    Property property( ModelProperty property )
+<font color="#888888">}</font></code></pre>
+
+
+<h2><a name="Core-ElementHandle">ElementHandle</a></h2>
+
+<p>Among objects returned by property getters (Value, Transient, ElementHandle and ElementList),
+ElementHandle was the only one that had no API to retrieve the parent property.</p>
+
+<pre class="source-code"><code><font color="#888888">ElementHandle
+{</font>
+    ElementProperty property()
+<font color="#888888">}</font></code></pre>
+
+<p>For convenience, type can be specified using the type's class to avoid having to cast the result.</p>
+
+<pre class="source-code"><code><font color="#888888">ElementHandle
+{
+    T content()
+    T content( boolean force )
+    T content( boolean force, ElementType type )</font>
+    &lt;C extends Element> C content( boolean force, Class&lt;C> cl )
+<font color="#888888">}</font></code></pre>
+
+<p>In certain situations, it is useful to be able to reference a fully typed ElementHandle class object. One such scenario
+occurs when using the context lookup method as part of a service implementation. If context lookup is performed
+using ElementHandle.class, the resulting object reference is a raw ElementHandle. Trying to assign it to a typed ElementHandle results in
+an unchecked cast warning. A method has been added to make it easy to reference a fully typed ElementHandle class object.</p> 
+
+<pre class="source-code"><code><font color="#888888">ElementHandle
+{</font>
+   static &lt;TX> Class&lt;ElementHandle&lt;TX>> of( Class&lt;TX> type )
+<font color="#888888">}</font></code></pre>
+
+<p style="margin-left: 20px;"><b>Example</b></p>
+
+<pre class="source-code"><code><font color="#888888">public class ExampleValidationService extends ValidationService
+{
+    @Override
+    public Status validate()
+    {</font>
+        ElementHandle&lt;Item> item = context( ElementHandle.of( Item.class ) );
+        
+        <font color="#888888">...
+    }
+}</font></code></pre>
+
+
+<h2><a name="Core-ElementList">ElementList</a></h2>
+
+<p>In certain situations, it is useful to be able to reference a fully typed ElementList class object. One such scenario
+occurs when using the context lookup method as part of a service implementation. If context lookup is performed
+using ElementList.class, the resulting object reference is a raw ElementList. Trying to assign it to a typed ElementList results in
+an unchecked cast warning. A method has been added to make it easy to reference a fully typed ElementList class object.</p> 
+
+<pre class="source-code"><code><font color="#888888">ElementList
+{</font>
+   static &lt;TX> Class&lt;ElementList&lt;TX>> of( Class&lt;TX> type )
+<font color="#888888">}</font></code></pre>
+
+<p style="margin-left: 20px;"><b>Example</b></p>
+
+<pre class="source-code"><code><font color="#888888">public class ExampleValidationService extends ValidationService
+{
+    @Override
+    public Status validate()
+    {</font>
+        ElementList&lt;Item> items = context( ElementList.of( Item.class ) );
+        
+        <font color="#888888">...
+    }
+}</font></code></pre>
+
+
+<h2><a name="Core-ElementType">ElementType</a></h2>
+
+<p>A property can now be looked up by a path. Previously, only lookup by name was available.</p>
+
+<pre class="source-code"><code><font color="#888888">ElementType
+{
+    &lt;T extends ModelProperty> T property( String</font> path <font color="#888888">)</font>
+    &lt;T extends ModelProperty> T property( ModelPath path )
+<font color="#888888">}</font></code></pre>
+
+
+<h2><a name="Core"><a name="Core-Property">Property</a></a></h2>
+
+<p>The new Property class represents an instance of a property within an element. Many of the operations
+performed on an element that require a property to be supplied can now be performed on the property instance.
+A property instance can found using methods on <a href="#Core-Element">Element</a>.</p>
+
+<pre class="source-code"><code>Property
+{
+    Element root()
+    Element element()
+    PropertyDef definition()
+    String name()
+    &lt;T> T nearest( Class&lt;T> type )
+    void clear()
+    void copy( Element source )
+    boolean empty()
+    boolean enabled()
+    Status validation()
+    void refresh()
+    &lt;S extends Service> S service( Class&lt;S> type )
+    &lt;S extends Service> List&lt;S> services( Class&lt;S> type )
+    void attach( Listener listener )
+    void attach( Listener listener, String path )
+    void attach( Listener listener, ModelPath path )
+    void detach( Listener listener )
+    void detach( Listener listener, String path )
+    void detach( Listener listener, ModelPath path )
+    boolean disposed()
+}</code></pre>
+
+
+<h2><a name="Core-ReferenceValue">ReferenceValue</a></h2>
+
+<p>In certain situations, it is useful to be able to reference a fully typed ReferenceValue class object. One such scenario
+occurs when using the context lookup method as part of a service implementation. If context lookup is performed
+using ReferenceValue.class, the resulting object reference is a raw ReferenceValue. Trying to assign it to a typed ReferenceValue results in
+an unchecked cast warning. A method has been added to make it easy to reference a fully typed ReferenceValue class object.</p> 
+
+<pre class="source-code"><code><font color="#888888">ReferenceValue
+{</font>
+   static &lt;RX,TX> Class&lt;ReferenceValue&lt;RX,TX>> of( Class&lt;RX> referenceType, Class&lt;TX> targetType )
+<font color="#888888">}</font></code></pre>
+
+<p style="margin-left: 20px;"><b>Example</b></p>
+
+<pre class="source-code"><code><font color="#888888">public class ExampleValidationService extends ValidationService
+{
+    @Override
+    public Status validate()
+    {</font>
+        ReferenceValue&lt;JavaTypeName,JavaType> implementation = context( ReferenceValue.of( JavaTypeName.class, JavaType.class ) );
+        
+        <font color="#888888">...
+    }
+}</font></code></pre>
+
+
+<h2><a name="Core-RequiredConstraintService">RequiredConstraintService</a></h2>
+
+<p><a href="../../services/RequiredConstraintService.html">RequiredConstraintService</a> determines whether a value or 
+an element property is required to have content. Most frequently specified via an @Required annotation, which
+<a href="#ExpressionLanguage-UseInRequired">now supports EL</a> for specifying custom semantics.</p>
+
+<p style="margin-left: 20px;"><b>Example</b></p>
+
+<pre class="source-code"><code>public class CustomRequiredConstraintService extends RequiredConstraintService
+{
+    @Override
+    protected void initRequiredConstraintService()
+    {
+        // Optionally register listeners to invoke refresh method when the required constraint
+        // may need to be updated.
+    }
+
+    @Override
+    protected Boolean compute()
+    {
+        ...
+    }
+
+    @Override
+    public void dispose()
+    {
+        super.dispose();
+
+        // Remove any listeners that were added during initialization.
+    }
+}</code></pre>
+
+<pre class="source-code"><code>@Service( impl = CustomRequiredConstraintService.class )
+
+<font color="#888888">ValueProperty PROP_CATEGORY = new ValueProperty( TYPE, "Category" );
+
+Value&lt;String> getCategory();
+void setCategory( String value );</font></code></pre>
+
+
+<h2><a name="Core-Result">Result</a></h2>
+
+<p>When defining a function, the developer needs to decide if a failure will be signaled by an exception or a null return,
+but the developer of the function is often not in a position to know which approach will be more convenient for the users of
+the function. The Result class allows this decision to be left to the function caller in a way that is intuitive and does not
+contribute to API bloat.</p>
+
+<p style="margin-left: 20px;"><b>Example</b></p>
+
+<p style="margin-left: 20px;">Consider a function that looks up a purchase order by id. Notice that when the purchase order
+is not found, an exception is created, but not thrown.</p>
+
+<pre class="source-code"><code>Result&lt;PurchaseOrder> findPurchaseOrder( String id )
+{
+    PurchaseOrder po = this.orders.get( id );
+    
+    if( po == null )
+    {
+        return Result.failure( new IllegalArgumentException() );
+    }
+    
+    return Result.success( po );
+}</code></pre>
+
+<p style="margin-left: 20px;">A function caller that prefers a null return would call optional() on the function result and
+never see the exception.</p>
+
+<pre class="source-code"><code>PurchaseOrder po = findPurchaseOrder( id ).optional();</code></pre>
+
+<p style="margin-left: 20px;">Similarly, a function caller that prefers an exception would call required() to get the
+desired behavior.</p>
+
+<pre class="source-code"><code>PurchaseOrder po = findPurchaseOrder( id ).required();</code></pre>
+
+
+<h2><a name="Core-Transient">Transient</a></h2>
+
+<p>In certain situations, it is useful to be able to reference a fully typed Transient class object. One such scenario
+occurs when using the context lookup method as part of a service implementation. If context lookup is performed
+using Transient.class, the resulting object reference is a raw Transient. Trying to assign it to a typed Transient results in
+an unchecked cast warning. A method has been added to make it easy to reference a fully typed Transient class object.</p> 
+
+<pre class="source-code"><code><font color="#888888">Transient
+{</font>
+   static &lt;TX> Class&lt;Transient&lt;TX>> of( Class&lt;TX> type )
+<font color="#888888">}</font></code></pre>
+
+<p style="margin-left: 20px;"><b>Example</b></p>
+
+<pre class="source-code"><code><font color="#888888">public class ExampleValidationService extends ValidationService
+{
+    @Override
+    public Status validate()
+    {</font>
+        Transient&lt;IProject> project = context( Transient.of( IProject.class ) );
+        
+        <font color="#888888">...
+    }
+}</font></code></pre>
+
+
+<h2><a name="Core-Value">Value</a></h2>
+
+<p>In certain situations, it is useful to be able to reference a fully typed Value class object. One such scenario
+occurs when using the context lookup method as part of a service implementation. If context lookup is performed
+using Value.class, the resulting object reference is a raw Value. Trying to assign it to a typed Value results in
+an unchecked cast warning. A method has been added to make it easy to reference a fully typed Value class object.</p> 
+
+<pre class="source-code"><code><font color="#888888">Value
+{</font>
+   static &lt;TX> Class&lt;Value&lt;TX>> of( Class&lt;TX> type )
+<font color="#888888">}</font></code></pre>
+
+<p style="margin-left: 20px;"><b>Example</b></p>
+
+<pre class="source-code"><code><font color="#888888">public class ExampleValidationService extends ValidationService
+{
+    @Override
+    public Status validate()
+    {</font>
+        Value&lt;Integer> value = context( Value.of( Integer.class ) );
+        
+        <font color="#888888">...
+    }
+}</font></code></pre>
+
+
+<h2><a name="Core-RootServiceContext">Root Service Context</a></h2>
+
+<p>Certain types of services, such as many ConversionService implementations, are useful across
+different service contexts. Services that are part of the new root service context are visible to
+all other contexts.</p>
+
+<pre class="source-code"><code><font color="#888888">Sapphire
+{</font>
+    static &lt;S extends Service> S service( Class&lt;S> type )
+    static &lt;S extends Service> List&lt;S> services( Class&lt;S> type )
+    static synchronized ServiceContext services()
+<font color="#888888">}</font></code></pre>
+
+<pre class="source-code"><code><font color="#888888">Integer number =</font> Sapphire.service( MasterConversionService.class )<font color="#888888">.convert( "123", Integer.class );</font></code></pre>
+
+<pre class="source-code"><code><font color="#888888">&lt;extension xmlns="http://www.eclipse.org/sapphire/xmlns/extension">
+    &lt;service>
+        &lt;id>Sapphire.ConversionService.StringToInteger&lt;/id>
+        &lt;description>ConversionService implementation for String to Integer conversions.&lt;/description>
+        &lt;implementation>org.eclipse.sapphire.internal.StringToIntegerConversionService&lt;/implementation></font>
+        &lt;context>Sapphire&lt;/context>
+    <font color="#888888">&lt;/service>
+&lt;/extension></font></code></pre>
+
+
+<h2><a name="Core-ServiceRegistrationWithoutFactory">Service Registration Without a Factory</a></h2>
+
+<p>Registering services through Sapphire extension system has been made even easier by replacing a ServiceFactory
+with a direct reference to the implementation class and an optional ServiceCondition.</p>
+
+<pre class="source-code"><code><font color="#888888">&lt;extension xmlns="http://www.eclipse.org/sapphire/xmlns/extension">
+    &lt;service>
+        &lt;id>Sapphire.ConversionService.StringToInteger&lt;/id>
+        &lt;description>ConversionService implementation for String to Integer conversions.&lt;/description></font>
+        &lt;implementation>org.eclipse.sapphire.internal.StringToIntegerConversionService&lt;/implementation>
+        <font color="#888888">&lt;context>Sapphire&lt;/context>
+    &lt;/service>
+&lt;/extension></font></code></pre>
+
+
+<h2><a name="Core-NewConversions">New Conversions</a></h2>
+
+<p>The set of available conversions has been expanded. The new conversions can be used in a variety of contexts that 
+draw upon  <a href="../../services/ConversionService.html">ConversionService</a> implementations, such as when using
+<a href="../../services/MasterConversionService.html">MasterConversionService</a> or ModelElement.adapt() API.</p> 
+
+<table>
+  <tr>
+    <th>Source</th>
+    <th>Target</th>
+  </tr>
+  <tr>
+    <td>org.eclipse.sapphire.modeling.ModelElement</td>
+    <td>org.w3c.dom.Document</td>
+  </tr>
+  <tr>
+    <td>org.eclipse.sapphire.modeling.ModelElement</td>
+    <td>org.w3c.dom.Element</td>
+  </tr>
+  <tr>
+    <td>org.eclipse.sapphire.modeling.ModelElement</td>
+    <td>org.eclipse.sapphire.modeling.xml.XmlElement</td>
+  </tr>
+  <tr>
+    <td>org.eclipse.sapphire.modeling.xml.XmlResource</td>
+    <td>org.w3c.dom.Document</td>
+  </tr>
+  <tr>
+    <td>org.eclipse.sapphire.modeling.xml.XmlResource</td>
+    <td>org.w3c.dom.Element</td>
+  </tr>
+  <tr>
+    <td>org.eclipse.sapphire.modeling.xml.XmlResource</td>
+    <td>org.eclipse.sapphire.modeling.xml.XmlElement</td>
+  </tr>
+  <tr>
+    <td>java.lang.String</td>
+    <td>org.eclipse.sapphire.java.JavaIdentifier</td>
+  </tr>
+</table>
+
+
+<h2><a name="Core-OrderedPossibleValues">Ordered Possible Values</a></h2>
+
+<p>Typically, possible values have no particular order and it is desirable to present them
+sorted. In some cases, the order is significant. New API allows these cases to be differentiated.</p>
+
+<pre class="source-code"><code><font color="#888888">@PossibleValues
+{</font>
+    boolean ordered() default false
+<font color="#888888">}
+
+PossibleValuesService
+{</font>
+    boolean ordered()
+<font color="#888888">}</font></code></pre>
+
+<p style="margin-left: 20px;"><b>Example</b></p>
+
+<p style="margin-left: 20px;">An example of ordered possible values is task severity. The severities need to be presented in 
+the severity rank order, not in the alphabetical order.</p>
+
+<pre class="source-code"><code><font color="#888888">@PossibleValues
+{
+    values = { "blocker", "critical", "major", "normal", "minor", "trivial", "enhancement" },</font>
+    ordered = true
+<font color="#888888">}</font></code></pre>
+
+
+<h2><a name="Core-SimplerDateSerialization">Simpler Date Serialization</a></h2>
+
+<p>Easily specify date serialization using the new @Serialization annotation.</p>
+
+<p style="margin-left: 20px;"><b>Example</b></p>
+
+<pre class="source-code"><code><font color="#888888">@Type( base = Date.class )</font>
+@Serialization( primary = "yyyy-MM-dd", alternative = { "MM/dd/yyyy", "MM.dd.yyyy" } )
+
+<font color="#888888">ValueProperty PROP_DATE = new ValueProperty( TYPE, "Date" );
+
+Value&lt;Date> getDate();
+void setDate( String value );
+void setDate( Date value );</font></code></pre>
+
+
+<h2><a name="Core-LoggingService">LoggingService</a></h2>
+
+<p>Log messages and exceptions relating to system operation.</p>
+
+<pre class="source-code"><code>public abstract class LoggingService extends Service
+{
+    public final void logError( String message )
+    public final void logError( String message, Throwable e )
+    public final void logWarning( String message )
+    public final void log( Throwable e )
+    public abstract void log( Status status )
+}</code></pre>
+
+<p style="margin-left: 20px;"><b>Example</b></p>
+
+<pre class="source-code"><code><font color="#888888">try
+{
+    ...
+}
+catch( Exception e )
+{</font>
+    Sapphire.service( LoggingService.class ).log( e );
+<font color="#888888">}</font></code></pre>
+
+<p>Two implementations are provided with Sapphire. One writes to the system error stream and another writes to the Eclipse platform
+log if the framework is running in the context of Eclipse.</p>
+
+<p>If an alternate log strategy is desired, a custom LoggingService implementation can be supplied.</p>
+
+<p style="margin-left: 20px;"><b>Example</b></p>
+
+<pre class="source-code"><code>public class ExampleLoggingService extends LoggingService
+{
+    @Override
+    public void log( Status status )
+    {
+        ...
+    }
+}</code></pre>
+
+<pre class="source-code"><code><font color="#888888">&lt;extension xmlns="http://www.eclipse.org/sapphire/xmlns/extension"></font>
+    &lt;service>
+        &lt;id>ExampleLoggingService&lt;/id>
+        &lt;implementation>org.eclipse.sapphire.examples.ExampleLoggingService&lt;/implementation>
+        &lt;context>Sapphire&lt;/context>
+        &lt;overrides>Sapphire.LoggingService.Standard&lt;/overrides>
+        &lt;overrides>Sapphire.LoggingService.Platform&lt;/overrides>
+    &lt;/service>
+<font color="#888888">&lt;/extension></font></code></pre>
+
+
+<h2><a name="ExpressionLanguage"><a name="ExpressionLanguage-FunctionsAsProperties">EL Functions as Properties</a></a></h2>
+
+<p>Any single argument EL function can now be accessed using property notation. Note that functions have a lower
+precedence than properties. If a conflict with a property is encountered, function notation must be used to disambiguate. </p>
+
+<p>The following expressions are equivalent. The last variant is new for this release.</p>
+
+<pre class="source-code"><code>${ Size( PurchaseOrder.Entries ) }</code></pre>
+<pre class="source-code"><code>${ PurchaseOrder.Entries.Size() }</code></pre>
+<pre class="source-code"><code>${ PurchaseOrder.Entries.Size }</code></pre>
+
+
+<h2><a name="ExpressionLanguage-OverloadedFunctions">Overloaded Functions in EL</a></h2>
+
+<p>Previously, a Sapphire EL function implementations always applied to any parameter signature, regardless of arity or
+parameter types. That option remains, but in certain cases, it is more useful to have a different function implementation
+for different situations.</p>
+
+<p>Function implementations can now specify their signature and are matched based on how closely they match actual
+parameters. Implementations with a declared signature are considered first.</p>
+
+<p style="margin-left: 20px;"><b>Example</b></p>
+
+<p style="margin-left: 20px;">Without a signature, the following example function will be called for any parameter signature. The
+implementation is responsible for throwing FunctionException if it is unable to deal with a particular signature.</p>
+
+<pre class="source-code"><code><font color="#888888">&lt;extension xmlns="http://www.eclipse.org/sapphire/xmlns/extension">
+    &lt;function>
+        &lt;name>Increment&lt;/name>
+        &lt;impl>org.eclipse.sapphire.examples.IncrementFunction&lt;/impl>
+    &lt;/function>
+&lt;/extension></font></code></pre>
+
+<p style="margin-left: 20px;">With signatures specified, these next two example functions will only be called when
+the signature matches their declaration. Sapphire will handle picking the correct implementation and rejecting invalid signatures.</p>
+
+<pre class="source-code"><code><font color="#888888">&lt;extension xmlns="http://www.eclipse.org/sapphire/xmlns/extension">
+    &lt;function>
+        &lt;name>Increment&lt;/name></font>
+        &lt;signature>
+            &lt;parameter>java.math.BigInteger&lt;/parameter>
+        &lt;/signature>
+        <font color="#888888">&lt;impl>org.eclipse.sapphire.examples.IncrementFunctionForInteger&lt;/impl>
+    &lt;/function>
+&lt;/extension></font></code></pre>
+
+<pre class="source-code"><code><font color="#888888">&lt;extension xmlns="http://www.eclipse.org/sapphire/xmlns/extension">
+    &lt;function>
+        &lt;name>Increment&lt;/name></font>
+        &lt;signature>
+            &lt;parameter>java.math.BigDecimal&lt;/parameter>
+        &lt;/signature>
+        <font color="#888888">&lt;impl>org.eclipse.sapphire.examples.IncrementFunctionForDecimal&lt;/impl>
+    &lt;/function>
+&lt;/extension></font></code></pre>
+
+
+<h2><a name="ExpressionLanguage-UseForValidation">Use EL for Validation</a></h2>
+
+<p>The new @Validation annotation allows an expression to be used to define a validation rule rather than
+implementing a custom ValidationService. This leads to a model that is easier to understand and maintain.</p>
+
+<pre class="source-code"><code><font color="#888888">@Type( base = BigDecimal.class )
+@DefaultValue( text = &quot;0&quot; )
+@NumericRange( min = &quot;0&quot; )</font>
+    
+@Validation
+(
+    rule = &quot;${ Discount &lt;= Subtotal + Delivery }&quot;,
+    message = &quot;Discount must not exceed subtotal plus delivery charge.&quot;
+)
+
+<font color="#888888">ValueProperty PROP_DISCOUNT = new ValueProperty( TYPE, &quot;Discount&quot; );
+
+Value&lt;BigDecimal&gt; getDiscount();
+void setDiscount( String value );
+void setDiscount( BigDecimal value );</font></code></pre>
+
+<p>Multiple rules can be specified by using @Validations annotation, the message can be formulated using
+an expression, and the optional severity attribute allows the developer to make a rule failure either 
+an error or a warning.</p>
+
+<pre class="source-code"><code>@Validations
+(
+    {
+        @Validation
+        (
+            rule = &quot;${ Path == null || Path.StartsWith( '/' ) }&quot;,
+            message = &quot;Path \&quot;${ Path }\&quot; must start with a slash.&quot;
+        ),
+        @Validation
+        (
+            rule = &quot;${ Path == null || Path.StartsWith( HomePath ) }&quot;,
+            message = &quot;Path \&quot;${ Path }\&quot; is not within the home folder.&quot;,
+            severity = Status.Severity.WARNING
+        )
+    }
+)
+
+<font color="#888888">ValueProperty PROP_PATH = new ValueProperty( TYPE, &quot;Path&quot; );
+
+Value&lt;String&gt; getPath();
+void setPath( String value );</font></code></pre>
+
+
+<h2><a name="ExpressionLanguage-UseInRequired">Use EL in @Required</a></h2>
+
+<p>Use EL in the @Required annotation to define custom semantics.</p>
+
+<p style="margin-left: 20px;"><b>Example</b></p>
+
+<p style="margin-left: 20px;">In this example, the Category property is required only if the Version property is in the given range.</p> 
+
+<pre class="source-code"><code>@Required( "${ VersionMatches( Version, '[1.0-2.1)' ) }" )
+
+<font color="#888888">ValueProperty PROP_CATEGORY = new ValueProperty( TYPE, "Category" );
+
+Value&lt;String> getCategory();
+void setCategory( String value );</font></code></pre>
+
+
+<h2><a name="ExpressionLanguage-UseInWithLabel">Use EL in With Directive Label</a></h2>
+
+<p>Use the expression language when overriding the label in a with directive.</p>
+
+<p style="margin-left: 20px;"><b>Example</b></p>
+
+<pre class="source-code"><code><font color="#888888">&lt;with>
+    &lt;path>Spouse/PrimaryOccupation&lt;/path></font>
+    &lt;label>${ Spouse.Name.First }'s primary occupation&lt;/label>
+    <font color="#888888">&lt;case>
+        ...
+    &lt;/case>
+    &lt;case>
+        ...
+    &lt;/case>
+&lt;/with></font></code></pre>
+
+
+<h2><a name="ExpressionLanguage-NewFunctionsAndProperties"><a name="ExpressionLanguage-AbsolutePathFunction">Absolute Function</a></a></h2>
+
+<p>Returns the absolute path of a value for properties with a RelativePathService.</p>
+
+<pre class="source-code"><code>${ Path.Absolute }</code></pre>
+
+
+<h2><a name="ExpressionLanguage-ContentFunction">Content Function</a></h2>
+
+<p>Returns the content of a value or a transient. For value properties, the default is taken into account, if applicable.</p>
+
+<pre class="source-code"><code>${ PurchaseOrder.FulfillmentDate.Content }</code></pre>
+
+
+<h2><a name="ExpressionLanguage-EnabledFunction">Enabled Function</a></h2>
+
+<p>Returns the enablement of a property.</p>
+
+<pre class="source-code"><code>${ PurchaseOrder.FulfillmentDate.Enabled }</code></pre>
+
+<p>In the context of a property editor, Enabled function can also be called with zero arguments. This accesses the
+enablement of the property editor part.</p>
+
+<pre class="source-code"><code><font color="#888888">&lt;property-editor>
+    &lt;property>FormLoginPage&lt;/property>
+    &lt;visible-when></font>${ Enabled() }<font color="#888888">&lt;/visible-when>
+&lt;/property-editor></font></code></pre>
+
+
+<h2><a name="ExpressionLanguage-EndsWithFunction">EndsWith Function</a></h2>
+
+<p>Tests if a string ends with the specified suffix.</p>
+
+<pre class="source-code"><code>${ Path.EndsWith( ".png" ) }</code></pre>
+
+
+<h2><a name="ExpressionLanguage-FragmentFunction">Fragment Function</a></h2>
+
+<p>Returns a fragment of a string. The fragment starts at the index specified by the second argument and extends to
+the character before the index specified by the third argument. The length of the fragment is end index minus start
+index.</p>
+
+<ul>
+  <li>A negative start index is normalized to zero.</li>
+  <li>A start index exceeding the length of the input is normalized to the length of the input.</li>
+  <li>An end index exceeding the length of the input is normalized to the length of the input.</li>
+  <li>An end index that is smaller than the start index is normalized to the start index.</li>
+</ul>
+
+<pre class="source-code"><code>${ Value.Fragment( 3, 6 ) }</code></pre>
+<pre class="source-code"><code>${ Fragment( "abcdef", 0, 3 ) }</code></pre>
+
+
+<h2><a name="ExpressionLanguage-HeadFunction">Head Function</a></h2>
+
+<p>Returns a fragment of a string starting at the beginning and not exceeding the specified length.</p>
+
+<ul>
+  <li>A negative fragment length is normalized to zero.</li>
+  <li>A fragment length exceeding the length of the input is normalized to the length of the input.</li>
+</ul>
+
+<pre class="source-code"><code>${ Value.Head( 3 ) }</code></pre>
+<pre class="source-code"><code>${ Head( "abcdef", 3 ) }</code></pre>
+
+
+<h2><a name="ExpressionLanguage-IndexFunction">Index Function</a></h2>
+
+<p>Determines the index of a model element within its parent list.</p>
+
+<pre class="source-code"><code>${ This.Index }</code></pre>
+
+
+<h2><a name="ExpressionLanguage-MatchesFunction">Matches Function</a></h2>
+
+<p>Determines whether a string matches a regular expression. The full semantics are specified by Java's String.matches() function.</p>
+
+<pre class="source-code"><code>${ Entity.Name.Matches( "[a-z][a-z0-9]*" ) }</code></pre>
+
+
+<h2><a name="ExpressionLanguage-MessageFunction">Message Function</a></h2>
+
+<p>Returns the message from a validation result.</p>
+
+<pre class="source-code"><code>${ PurchaseOrder.FulfillmentDate.Validation.Message }</code></pre>
+
+
+<h2><a name="ExpressionLanguage-ParentFunction">Parent Function</a></h2>
+
+<p>Returns the parent of the given part. An implementation of this function for model elements was added in an earlier release.</p>
+
+<pre class="source-code"><code>${ Part.Parent<font color="#888888">.Validation.Severity</font> }</code></pre>
+<pre class="source-code"><code>${ Part.Parent.Parent<font color="#888888">.Validation.Severity</font> }</code></pre>
+
+
+<h2><a name="ExpressionLanguage-PartFunction">Part Function</a></h2>
+
+<p>Returns the context part.</p>
+
+<pre class="source-code"><code>${ Part<font color="#888888">.Validation.Severity</font> }</code></pre>
+
+
+<h2><a name="ExpressionLanguage-SeverityFunction">Severity Function</a></h2>
+
+<p>Returns the severity of a validation result.</p>
+
+<pre class="source-code"><code>${ PurchaseOrder.FulfillmentDate.Validation.Severity }</code></pre>
+
+
+<h2><a name="ExpressionLanguage-SizeFunction">Size Function</a></h2>
+
+<p>Determines the size of a collection, a map, an array or a string.</p>
+
+<pre class="source-code"><code>${ PurchaseOrder.Entries.Size }</code></pre>
+<pre class="source-code"><code>${ PurchaseOrder.BillingInformation.Name.Size }</code></pre>
+<pre class="source-code"><code>${ Size( "abcdef" ) }</code></pre>
+
+
+<h2><a name="ExpressionLanguage-StartsWithFunction">StartsWith Function</a></h2>
+
+<p>Tests if a string starts with the specified prefix.</p>
+
+<pre class="source-code"><code>${ Path.StartsWith( ".." ) }</code></pre>
+
+
+<h2><a name="ExpressionLanguage-StateFunction">State Function</a></h2>
+
+<p>Returns the root element of editor page's persistent state, allowing access to various state properties. This is
+particularly useful when the persistent state is extended with custom properties wired to custom actions, as it allows
+any EL-enabled facility to integrate with the custom state property.</p>
+
+<p>In the following example, a custom state property is used to control whether content outline node label for an item
+in the catalog sample should include the manufacturer.</p>
+
+<pre class="source-code"><code><font color="#888888">&lt;node-factory&gt;
+    &lt;property&gt;Items&lt;/property&gt;
+    &lt;case&gt;
+        &lt;label&gt;</font>
+        ${ 
+             Name == null 
+             ? &quot;Item&quot; 
+             : (
+                   State().ShowManufacturer &amp;&amp; Manufacturer != null 
+                   ? Concat( Manufacturer, &quot; &quot;, Name ) 
+                   : Name
+               )
+         }
+         <font color="#888888">&lt;/label&gt;
+    &lt;/case&gt;
+&lt;/node-factory&gt;</font></code></pre>
+
+
+<h2><a name="ExpressionLanguage-TailFunction">Tail Function</a></h2>
+
+<p>Returns a fragment of a string starting at the end and not exceeding the specified length.</p>
+
+<ul>
+  <li>A negative fragment length is normalized to zero.</li>
+  <li>A fragment length exceeding the length of the input is normalized to the length of the input.</li>
+</ul>
+
+<pre class="source-code"><code>${ Value.Tail( 3 ) }</code></pre>
+<pre class="source-code"><code>${ Tail( "abcdef", 3 ) }</code></pre>
+
+
+<h2><a name="ExpressionLanguage-TextFunction">Text Function</a></h2>
+
+<p>Returns the text of a value, taking into account the default, if applicable.</p>
+
+<pre class="source-code"><code>${ PurchaseOrder.FulfillmentDate.Text }</code></pre>
+
+
+<h2><a name="ExpressionLanguage-ThisProperty">This Property</a></h2>
+
+<p>In situations where EL context is established by a model element, it can be useful to directly reference that
+element in order to pass it to functions. Mirroring Java, the context now exposes "This" property.</p>
+
+<p>In this example, the expression computes the index of the context model element within
+its parent list.</p>
+
+<pre class="source-code"><code>${ This.Index }</code></pre>
+
+
+<h2><a name="ExpressionLanguage-ValidationFunction">Validation Function</a></h2>
+
+<p>Returns the validation result of a property or a part.</p>
+
+<pre class="source-code"><code>${ PurchaseOrder.FulfillmentDate.Validation }</code></pre>
+
+<pre class="source-code"><code>${ Part.Validation }</code></pre>
+
+
+<h2><a name="Forms"><a name="Forms-SectionReference">Section Reference</a></a></h2>
+
+<p>Re-use section definitions across multiple node definitions in a master-details editor page.</p>
+
+<p style="margin-left: 20px;"><b>Example</b></p>
+
+<pre class="source-code"><code><font color="#888888">&lt;definition></font>
+    &lt;section>
+        &lt;id>CommonSection&lt;/id>
+        &lt;label>common&lt;/label>
+        &lt;content>
+            ...
+        &lt;/content>
+    &lt;/section>
+    <font color="#888888">&lt;node>
+        &lt;id>Node-1&lt;/id>
+        &lt;label>node 1&lt;/label></font>
+        &lt;section-ref>CommonSection&lt;/section-ref>
+        <font color="#888888">&lt;section>
+            &lt;label>another section&lt;/label>
+            &lt;content>
+                ...
+            &lt;/content>
+        &lt;/section>
+    &lt;/node>
+    &lt;node>
+        &lt;id>Node-2&lt;/id>
+        &lt;label>node 2&lt;/label></font>
+        &lt;section-ref>CommonSection&lt;/section-ref>
+        <font color="#888888">&lt;section>
+            &lt;label>another section&lt;/label>
+            &lt;content>
+                ...
+            &lt;/content>
+        &lt;/section>
+    &lt;/node>
+&lt;/definition></font></code></pre>
+
+
+<h2><a name="Forms-ImprovedDateSupport">Improved Date Support</a></h2>
+
+<p>Date value properties are easier to define and the user experience is significantly improved. The formats specified
+by the developer using the new @Serialization annotation are visible as text overlay, in the property editor assistance popup and
+in the context help.</p>
+
+<pre class="source-code"><code><font color="#888888">@Type( base = Date.class )</font>
+@Serialization( primary = "yyyy-MM-dd", alternative = "MM/dd/yyyy" )
+
+<font color="#888888">ValueProperty PROP_ORDER_DATE = new ValueProperty( TYPE, "OrderDate" );
+
+Value&lt;Date> getOrderDate();
+void setOrderDate( String value );
+void setOrderDate( Date value );</font></code></pre>
+
+<p style="margin-left: 20px;"><img src="images/Dates-1.png"/></p>
+
+<p style="margin-left: 20px;"><img src="images/Dates-2.png"/></p>
+
+<p>The browse button opens a calendar, making it easy to quickly select the correct date.</p>
+
+<p style="margin-left: 20px;"><img src="images/Dates-3.png"/></p>
+
+
+<h2><a name="Forms-ColorBrowsing">Color Browsing</a></h2>
+
+<p>Define a color value property using the provided Color type and Sapphire will supply a browse dialog.</p>
+
+<pre class="source-code"><code><font color="#888888">@Type( base =</font> Color<font color="#888888">.class )
+
+ValueProperty PROP_COLOR = new ValueProperty( TYPE, "Color" );
+    
+Value&lt;</font>Color<font color="#888888">> getColor();
+void setColor( String value );
+void setColor(</font> Color <font color="#888888">value );</font></code></pre>
+
+<p style="margin-left: 20px;"><img src="images/ColorBrowsing.png"/></p>
+
+
+<h2><a name="Forms-ConditionalWizardPages">Conditional Wizard Pages</a></h2>
+
+<p>Define wizards with pages that appear based on a condition.</p>
+
+<pre class="source-code"><code><font color="#888888">&lt;wizard>
+    &lt;id>PurchaseComputerWizard&lt;/id>
+    &lt;element-type>org.eclipse.sapphire.samples.po.PurchaseComputerOp&lt;/element-type>
+    &lt;page>
+        &lt;id>PurchaseComputerWizard.Importance&lt;/id>
+        &lt;label>Expected Usage&lt;/label>
+        &lt;description>The expected usage of the computer determines the optimal components.&lt;/description>
+        &lt;content>
+            &lt;property-editor>PerformanceImportance&lt;/property-editor>
+            &lt;property-editor>StorageImportance&lt;/property-editor>
+            &lt;property-editor>GamingImportance&lt;/property-editor>
+        &lt;/content>
+    &lt;/page>
+    &lt;page>
+        &lt;id>PurchaseComputerWizard.Performance&lt;/id>
+        &lt;label>Performance&lt;/label>
+        &lt;description>The processor and memory selection affects the overall performance of the system.&lt;/description></font>
+        &lt;visible-when>${ PerformanceImportance == 3 }&lt;/visible-when>
+        <font color="#888888">&lt;content>
+            ...
+        &lt;/content>
+    &lt;/page>
+&lt;/wizard></font></code></pre>
+
+
+<h2><a name="Forms-NestedPropertiesInListPropertyEditor">Nested Properties in List Property Editor</a></h2>
+
+<p>Previously, only directly contained value properties could be edited by the list property editor. Now, nested
+value properties, accessible through one or more implied element property can be edited as well. This reduces the
+need to flatten the model or use workarounds, such as the page book details approach.</p>
+
+<p style="margin-left: 20px;"><b>Example</b></p>
+
+<pre class="source-code"><code>// *** Employees ***
+
+interface Employee extends Element
+{
+    ElementType TYPE = new ElementType( Employee.class );
+
+    // *** Name ***
+
+    interface Name extends Element
+    {
+        ElementType TYPE = new ElementType( Name.class );
+
+        // *** First ***
+
+        ValueProperty PROP_FIRST_NAME = new ValueProperty( TYPE, "First" );
+
+        Value&lt;String> getFirst();
+        void setFirst( String value );
+
+        // *** Last ***
+
+        ValueProperty PROP_LAST_NAME = new ValueProperty( TYPE, "Last" );
+
+        Value&lt;String> getLast();
+        void setLast( String value );
+    }
+
+    @Type( base = Name.class )
+
+    ImpliedElementProperty PROP_NAME = new ImpliedElementProperty( TYPE, "Name" );
+
+    Name getName();
+
+    // *** Location ***
+        
+    interface Location extends Element
+    {
+        ElementType TYPE = new ElementType( Location.class );
+
+        // *** City ***
+
+        ValueProperty PROP_CITY = new ValueProperty( TYPE, "City" );
+
+        Value&lt;String> getCity();
+        void setCity( String value );
+
+        // *** Country ***
+
+        ValueProperty PROP_COUNTRY = new ValueProperty( TYPE, "Country" );
+
+        Value&lt;String> getCountry();
+        void setCountry( String value );
+    }
+
+    @Type( base = Location.class )
+
+    ImpliedElementProperty PROP_LOCATION = new ImpliedElementProperty( TYPE, "Location" );
+
+    Location getLocation();
+
+    // *** Salary ***
+
+    @Type( base = BigDecimal.class )
+
+    ValueProperty PROP_SALARY = new ValueProperty( TYPE, "Salary" );
+
+    Value&lt;BigDecimal> getSalary();
+    void setSalary( String value );
+    void setSalary( BigDecimal value );
+}
+    
+@Type( base = Employee.class )
+
+ListProperty PROP_EMPLOYEES = new ListProperty( TYPE, "Employees" );
+
+ElementList&lt;Employee> getEmployees();</code></pre>
+
+<pre class="source-code"><code>&lt;property-editor>
+    &lt;property>Employees&lt;/property>
+    &lt;child-property>Name/First&lt;/child-property>
+    &lt;child-property>Name/Last&lt;/child-property>
+    &lt;child-property>Location/City&lt;/child-property>
+    &lt;child-property>Location/Country&lt;/child-property>
+    &lt;child-property>Salary&lt;/child-property>
+&lt;/property-editor></code></pre>
+
+<p style="margin-left: 20px;"><img src="images/NestedPropertiesInListPropertyEditor.png"/></p>
+
+<pre class="source-code"><code>&lt;Employee>
+    &lt;Name>
+        &lt;First>John&lt;/First>
+        &lt;Last>Smith&lt;/Last>
+    &lt;/Name>
+    &lt;Location>
+        &lt;City>Seattle&lt;/City>
+        &lt;Country>USA&lt;/Country>
+    &lt;/Location>
+    &lt;Salary>100000&lt;/Salary>
+&lt;/Employee></code></pre>
+
+
+<h2><a name="Forms-RadioButtonImages">Radio Buttons with Images</a></h2>
+
+<p>The radio buttons property editor presentation now uses value images, when available.</p>
+
+<pre class="source-code"><code><font color="#888888">enum FileType
+{
+    @Label( standard = "Java" )</font>
+    @Image( path = "JavaFile.png" )
+    
+    <font color="#888888">JAVA,
+    
+    @Label( standard = "XML" )</font>
+    @Image( path = "XmlFile.png" )
+    
+    <font color="#888888">XML,
+    
+    @Label( standard = "text" )</font>
+    @Image( path = "TextFile.png" )
+    
+    <font color="#888888">TEXT
+}
+
+@Type( base = FileType.class )
+
+ValueProperty PROP_TYPE = new ValueProperty( TYPE, "Type" );
+
+Value&lt;FileType> getType();
+void setType( String value );
+void setType( FileType value );</font></code></pre>
+
+<p style="margin-left: 20px;"><img src="images/RadioButtonImages.png"/></p>
+
+
+<h2><a name="Forms-WithDirectiveLabel">With Directive Label</a></h2>
+
+<p>The handling of labels by the with directive is now consistent with the property editor.</p>
+
+<ol>
+  <li>The label can be shown for any presentation style</li>
+  <li>The property label is used by default, but this can be overridden in sdef</li>
+  <li><a href="#ExpressionLanguage-UseInWithLabel">EL can be used</a> when overriding the label in sdef</li> 
+  <li>An explicit show label flag in sdef provides developer with control over label visibility</li>
+</ol>
+
+
+<h2><a name="Diagrams"><a name="Diagrams-ConnectionService">ConnectionService</a></a></h2>
+
+<p>ConnectionService is responsible for listing and establishing connections in a diagram.</p>
+
+<p>Typically, there is no need for the developer to implement this service as the provided StandardConnectionService
+uses the connection binding definitions in sdef to manage the connections. A custom implementation is only needed
+if sdef connection binding facilities are not sufficiently expressive or if the developer needs to customize user 
+interaction when a connection is established. In the latter case, StandardConnectionService can be extended instead
+of implementing ConnectionService from scratch.</p>
+
+<p style="margin-left: 20px;"><b>Example</b></p>
+
+<p style="margin-left: 20px;">In this example from the SQL Schema Editor sample, StandardConnectionService is extended
+to open a columns association wizard when user defines a foreign key.</p>
+
+<pre class="source-code"><code>public final class SqlSchemaConnectionService extends StandardConnectionService
+{
+    @Override
+    public StandardDiagramConnectionPart connect( final DiagramNodePart node1, final DiagramNodePart node2, final String connectionType )
+    {
+        final StandardDiagramConnectionPart fkConnectionPart = super.connect( node1, node2, connectionType );
+        final ForeignKey fk = (ForeignKey) fkConnectionPart.getLocalModelElement();
+
+        ...
+        
+        final SapphireWizard wizard = new SapphireWizard( fk, DefinitionLoader.sdef( SqlSchemaEditor.class ).wizard( "DefineForeignKeyWizard" ) )
+        {
+            @Override
+            public boolean performCancel()
+            {
+                fkConnectionPart.remove();
+                return true;
+            }
+        };
+        
+        final WizardDialog dialog = new WizardDialog( Display.getDefault().getActiveShell(), wizard );
+        
+        dialog.open();
+        
+        return ( fk.disposed() ? null : fkConnectionPart );
+    }
+}</code></pre>
+
+
+<h2><a name="Miscellaneous"><a name="Miscellaneous-JavaIdentifier">JavaIdentifier</a></a></h2>
+
+<p>The JavaIdentifier class can be used to represent a legal Java identifier, such as the name of a variable,
+a field or a method. Identifiers must conform to <nobr>[a-zA-Z_$][a-zA-Z0-9_$]*</nobr> pattern.</p>
+
+<p>Verification happens in the constructor, so any instance can be assumed
+to represent a valid identifier. This class can be used by itself or as a type of a value property.</p>
+
+<p style="margin-left: 20px;"><b>Example</b></p>
+
+<pre class="source-code"><code><font color="#888888">@Type( base =</font> JavaIdentifier.class <font color="#888888">)
+
+ValueProperty PROP_FIELD_NAME = new ValueProperty( TYPE, "FieldName" );
+
+Value&lt;</font>JavaIdentifier<font color="#888888">> getFieldName();
+void setFieldName( String value );
+void setFieldName(</font> JavaIdentifier <font color="#888888">value );</font></code></pre>
+
+
+<h2><a name="Miscellaneous-ImageData">ImageData</a></h2>
+
+<p>An ImageData can now be read from an InputStream.</p>
+
+<pre class="source-code"><code><font color="#888888">ImageData
+{</font>
+    static Result&lt;ImageData> readFromStream( InputStream stream )
+    <font color="#888888">static Result&lt;ImageData> readFromUrl( URL url )
+    static Result&lt;ImageData> readFromClassLoader( Class&lt;?> cl, String path )
+    static Result&lt;ImageData> readFromClassLoader( ClassLoader cl, String path )
+}</font></code></pre>
+
+
+<h2><a name="Miscellaneous-ModernizedPopups">Modernized Popups</a></h2>
+
+<p>The presentation of popups has been refreshed to have less pronounced rounding of the corners.</p>
+
+<p style="margin-left: 20px;"><img src="images/ModernizedPopups.png"/></p>
+
+
+<h2><a name="Miscellaneous-CreateWorkspaceFileOp">CreateWorkspaceFileOp</a></h2>
+
+<p>CreateWorkspaceFileOp now supports customizable root folder. This restricts where files can be located and helps
+to focus the corresponding UI. Further, the Folder and File properties now are reference values resolving to their
+corresponding IResource.</p>
+
+<pre class="source-code"><code><font color="#888888">CreateWorkspaceFileOp
+{</font>
+    // *** Root ***
+    
+    @Type( base = Path.class )
+    @Reference( target = IContainer.class )
+    
+    ValueProperty PROP_ROOT = new ValueProperty( TYPE, "Root" );
+    
+    ReferenceValue&lt;Path,IContainer> getRoot();
+    void setRoot( String value );
+    void setRoot( Path value );
+    
+    <font color="#888888">// *** Folder ***
+    
+    @Type( base = Path.class )</font>
+    @Reference( target = IContainer.class )
+    
+    <font color="#888888">ValueProperty PROP_FOLDER = new ValueProperty( TYPE, "Folder" );</font>
+    
+    ReferenceValue&lt;Path,IContainer> <font color="#888888">getFolder();
+    void setFolder( String value );
+    void setFolder( Path value );
+    
+    // *** File ***
+    
+    @Type( base = FileName.class )</font>
+    @Reference( target = IFile.class )
+    
+    <font color="#888888">ValueProperty PROP_FILE = new ValueProperty( TYPE, "File" );</font>
+    
+    ReferenceValue&lt;FileName,IFile> <font color="#888888">getFile();
+    void setFile( String value );
+    void setFile( FileName value );
+}</font></code></pre>
+
+
+<h2><a name="Miscellaneous-PropertyEditorPart">PropertyEditorPart</a></h2>
+
+<pre class="source-code"><code><font color="#888888">PropertyEditorPart
+{</font>
+    String label()
+    <font color="#888888">String label( CapitalizationType capitalizationType, boolean includeMnemonic )
+}</font></code></pre>
+
+
+<h2><a name="Miscellaneous-WithPart">WithPart</a></h2>
+
+<p>The with directive has an <a href="#Forms-WithDirectiveLabel">improved handling of labels</a>.</p>
+
+<pre class="source-code"><code><font color="#888888">WithPart
+{</font>
+    String label()
+    String label( CapitalizationType capitalizationType, boolean includeMnemonic )
+<font color="#888888">}</font></code></pre>
+
+
+<div class="copyright">Copyright (c) 2016 Oracle<br/>
+Content made available under the terms of <a href="http://www.eclipse.org/legal/epl-v10.html">Eclipse Public License</a>.</div>
+
+</body>
+
+</html>

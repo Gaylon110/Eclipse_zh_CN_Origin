@@ -1,0 +1,3166 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.gmf.runtime.diagram.ui; singleton:=tr
+ ue
+Archiver-Version: Plexus Archiver
+Built-By: genie.gmf-runtime
+Require-Bundle: org.eclipse.ui.views;bundle-version="[3.3.0,4.0.0)",or
+ g.eclipse.ui;bundle-version="[3.5.0,4.0.0)",org.eclipse.core.resource
+ s;bundle-version="[3.5.0,4.0.0)",org.eclipse.draw2d;bundle-version="[
+ 3.5.0,4.0.0)",org.eclipse.gef;bundle-version="[3.5.0,4.0.0)";visibili
+ ty:=reexport,org.eclipse.core.runtime;bundle-version="[3.5.0,4.0.0)",
+ org.eclipse.gmf.runtime.emf.core;bundle-version="[1.2.0,2.0.0)";visib
+ ility:=reexport,org.eclipse.gmf.runtime.emf.commands.core;bundle-vers
+ ion="[1.2.0,2.0.0)",org.eclipse.gmf.runtime.emf.ui;bundle-version="[1
+ .2.0,2.0.0)";visibility:=reexport,org.eclipse.gmf.runtime.gef.ui;bund
+ le-version="[1.2.0,2.0.0)";visibility:=reexport,org.eclipse.gmf.runti
+ me.common.ui;bundle-version="[1.2.0,2.0.0)";visibility:=reexport,org.
+ eclipse.gmf.runtime.common.ui.action;bundle-version="[1.2.0,2.0.0)";v
+ isibility:=reexport,org.eclipse.ui.views.properties.tabbed;bundle-ver
+ sion="[3.5.0,4.0.0)";visibility:=reexport,org.eclipse.gmf.runtime.not
+ ation;bundle-version="[1.2.0,2.0.0)";visibility:=reexport,org.eclipse
+ .emf.common;bundle-version="[2.5.0,3.0.0)",org.eclipse.emf.ecore;bund
+ le-version="[2.5.0,3.0.0)",org.eclipse.gmf.runtime.diagram.core;bundl
+ e-version="[1.2.0,2.0.0)";visibility:=reexport,org.eclipse.gmf.runtim
+ e.draw2d.ui.render;bundle-version="[1.2.0,2.0.0)"
+Bundle-ManifestVersion: 2
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-Vendor: %Plugin.providerName
+Import-Package: com.ibm.icu.text;version="4.0.0",com.ibm.icu.util;vers
+ ion="4.0.0"
+Export-Package: org.eclipse.gmf.runtime.diagram.ui,org.eclipse.gmf.run
+ time.diagram.ui.actions,org.eclipse.gmf.runtime.diagram.ui.commands,o
+ rg.eclipse.gmf.runtime.diagram.ui.dialogs.sortfilter,org.eclipse.gmf.
+ runtime.diagram.ui.editparts,org.eclipse.gmf.runtime.diagram.ui.editp
+ olicies,org.eclipse.gmf.runtime.diagram.ui.figures,org.eclipse.gmf.ru
+ ntime.diagram.ui.handles,org.eclipse.gmf.runtime.diagram.ui.image,org
+ .eclipse.gmf.runtime.diagram.ui.internal; x-friends:="org.eclipse.gmf
+ .tests.runtime.diagram.ui,  org.eclipse.gmf.runtime.diagram.ui.render
+ ,  org.eclipse.gmf.runtime.diagram.ui.providers.ide,  org.eclipse.gmf
+ .runtime.diagram.ui.providers,  org.eclipse.gmf.runtime.diagram.ui.pr
+ operties,  org.eclipse.gmf.runtime.diagram.ui.printing,  org.eclipse.
+ gmf.runtime.diagram.ui.geoshapes,  org.eclipse.gmf.runtime.diagram.ui
+ ,  org.eclipse.gmf.runtime.diagram.ui.actions",org.eclipse.gmf.runtim
+ e.diagram.ui.internal.actions; x-friends:="org.eclipse.gmf.tests.runt
+ ime.diagram.ui,  org.eclipse.gmf.runtime.diagram.ui.render,  org.ecli
+ pse.gmf.runtime.diagram.ui.providers.ide,  org.eclipse.gmf.runtime.di
+ agram.ui.providers,  org.eclipse.gmf.runtime.diagram.ui.properties,  
+ org.eclipse.gmf.runtime.diagram.ui.printing,  org.eclipse.gmf.runtime
+ .diagram.ui.geoshapes,  org.eclipse.gmf.runtime.diagram.ui,  org.ecli
+ pse.gmf.runtime.diagram.ui.actions",org.eclipse.gmf.runtime.diagram.u
+ i.internal.commands; x-friends:="org.eclipse.gmf.tests.runtime.diagra
+ m.ui,  org.eclipse.gmf.runtime.diagram.ui.render,  org.eclipse.gmf.ru
+ ntime.diagram.ui.providers.ide,  org.eclipse.gmf.runtime.diagram.ui.p
+ roviders,  org.eclipse.gmf.runtime.diagram.ui.properties,  org.eclips
+ e.gmf.runtime.diagram.ui.printing,  org.eclipse.gmf.runtime.diagram.u
+ i.geoshapes,  org.eclipse.gmf.runtime.diagram.ui,  org.eclipse.gmf.ru
+ ntime.diagram.ui.actions",org.eclipse.gmf.runtime.diagram.ui.internal
+ .dialogs; x-friends:="org.eclipse.gmf.tests.runtime.diagram.ui,  org.
+ eclipse.gmf.runtime.diagram.ui.render,  org.eclipse.gmf.runtime.diagr
+ am.ui.providers.ide,  org.eclipse.gmf.runtime.diagram.ui.providers,  
+ org.eclipse.gmf.runtime.diagram.ui.properties,  org.eclipse.gmf.runti
+ me.diagram.ui.printing,  org.eclipse.gmf.runtime.diagram.ui.geoshapes
+ ,  org.eclipse.gmf.runtime.diagram.ui,  org.eclipse.gmf.runtime.diagr
+ am.ui.actions",org.eclipse.gmf.runtime.diagram.ui.internal.dialogs.so
+ rtfilter; x-friends:="org.eclipse.gmf.tests.runtime.diagram.ui,  org.
+ eclipse.gmf.runtime.diagram.ui.render,  org.eclipse.gmf.runtime.diagr
+ am.ui.providers.ide,  org.eclipse.gmf.runtime.diagram.ui.providers,  
+ org.eclipse.gmf.runtime.diagram.ui.properties,  org.eclipse.gmf.runti
+ me.diagram.ui.printing,  org.eclipse.gmf.runtime.diagram.ui.geoshapes
+ ,  org.eclipse.gmf.runtime.diagram.ui,  org.eclipse.gmf.runtime.diagr
+ am.ui.actions",org.eclipse.gmf.runtime.diagram.ui.internal.editparts;
+  x-friends:="org.eclipse.gmf.tests.runtime.diagram.ui,  org.eclipse.g
+ mf.runtime.diagram.ui.render,  org.eclipse.gmf.runtime.diagram.ui.pro
+ viders.ide,  org.eclipse.gmf.runtime.diagram.ui.providers,  org.eclip
+ se.gmf.runtime.diagram.ui.properties,  org.eclipse.gmf.runtime.diagra
+ m.ui.printing,  org.eclipse.gmf.runtime.diagram.ui.geoshapes,  org.ec
+ lipse.gmf.runtime.diagram.ui,  org.eclipse.gmf.runtime.diagram.ui.act
+ ions",org.eclipse.gmf.runtime.diagram.ui.internal.editpolicies; x-fri
+ ends:="org.eclipse.gmf.tests.runtime.diagram.ui,  org.eclipse.gmf.run
+ time.diagram.ui.render,  org.eclipse.gmf.runtime.diagram.ui.providers
+ .ide,  org.eclipse.gmf.runtime.diagram.ui.providers,  org.eclipse.gmf
+ .runtime.diagram.ui.properties,  org.eclipse.gmf.runtime.diagram.ui.p
+ rinting,  org.eclipse.gmf.runtime.diagram.ui.geoshapes,  org.eclipse.
+ gmf.runtime.diagram.ui,  org.eclipse.gmf.runtime.diagram.ui.actions",
+ org.eclipse.gmf.runtime.diagram.ui.internal.figures; x-friends:="org.
+ eclipse.gmf.tests.runtime.diagram.ui,  org.eclipse.gmf.runtime.diagra
+ m.ui.render,  org.eclipse.gmf.runtime.diagram.ui.providers.ide,  org.
+ eclipse.gmf.runtime.diagram.ui.providers,  org.eclipse.gmf.runtime.di
+ agram.ui.properties,  org.eclipse.gmf.runtime.diagram.ui.printing,  o
+ rg.eclipse.gmf.runtime.diagram.ui.geoshapes,  org.eclipse.gmf.runtime
+ .diagram.ui,  org.eclipse.gmf.runtime.diagram.ui.actions",org.eclipse
+ .gmf.runtime.diagram.ui.internal.handles; x-friends:="org.eclipse.gmf
+ .tests.runtime.diagram.ui,  org.eclipse.gmf.runtime.diagram.ui.render
+ ,  org.eclipse.gmf.runtime.diagram.ui.providers.ide,  org.eclipse.gmf
+ .runtime.diagram.ui.providers,  org.eclipse.gmf.runtime.diagram.ui.pr
+ operties,  org.eclipse.gmf.runtime.diagram.ui.printing,  org.eclipse.
+ gmf.runtime.diagram.ui.geoshapes,  org.eclipse.gmf.runtime.diagram.ui
+ ,  org.eclipse.gmf.runtime.diagram.ui.actions",org.eclipse.gmf.runtim
+ e.diagram.ui.internal.l10n; x-friends:="org.eclipse.gmf.tests.runtime
+ .diagram.ui,  org.eclipse.gmf.runtime.diagram.ui.render,  org.eclipse
+ .gmf.runtime.diagram.ui.providers.ide,  org.eclipse.gmf.runtime.diagr
+ am.ui.providers,  org.eclipse.gmf.runtime.diagram.ui.properties,  org
+ .eclipse.gmf.runtime.diagram.ui.printing,  org.eclipse.gmf.runtime.di
+ agram.ui.geoshapes,  org.eclipse.gmf.runtime.diagram.ui,  org.eclipse
+ .gmf.runtime.diagram.ui.actions",org.eclipse.gmf.runtime.diagram.ui.i
+ nternal.pagesetup; x-friends:="org.eclipse.gmf.tests.runtime.diagram.
+ ui,  org.eclipse.gmf.runtime.diagram.ui.render,  org.eclipse.gmf.runt
+ ime.diagram.ui.providers.ide,  org.eclipse.gmf.runtime.diagram.ui.pro
+ viders,  org.eclipse.gmf.runtime.diagram.ui.properties,  org.eclipse.
+ gmf.runtime.diagram.ui.printing,  org.eclipse.gmf.runtime.diagram.ui.
+ geoshapes,  org.eclipse.gmf.runtime.diagram.ui,  org.eclipse.gmf.runt
+ ime.diagram.ui.actions,  org.eclipse.gmf.runtime.diagram.ui.printing.
+ render",org.eclipse.gmf.runtime.diagram.ui.internal.parts; x-friends:
+ ="org.eclipse.gmf.tests.runtime.diagram.ui,  org.eclipse.gmf.runtime.
+ diagram.ui.render,  org.eclipse.gmf.runtime.diagram.ui.providers.ide,
+   org.eclipse.gmf.runtime.diagram.ui.providers,  org.eclipse.gmf.runt
+ ime.diagram.ui.properties,  org.eclipse.gmf.runtime.diagram.ui.printi
+ ng,  org.eclipse.gmf.runtime.diagram.ui.geoshapes,  org.eclipse.gmf.r
+ untime.diagram.ui,  org.eclipse.gmf.runtime.diagram.ui.actions",org.e
+ clipse.gmf.runtime.diagram.ui.internal.properties; x-friends:="org.ec
+ lipse.gmf.tests.runtime.diagram.ui,  org.eclipse.gmf.runtime.diagram.
+ ui.render,  org.eclipse.gmf.runtime.diagram.ui.providers.ide,  org.ec
+ lipse.gmf.runtime.diagram.ui.providers,  org.eclipse.gmf.runtime.diag
+ ram.ui.properties,  org.eclipse.gmf.runtime.diagram.ui.printing,  org
+ .eclipse.gmf.runtime.diagram.ui.geoshapes,  org.eclipse.gmf.runtime.d
+ iagram.ui,  org.eclipse.gmf.runtime.diagram.ui.actions,  org.eclipse.
+ gmf.runtime.diagram.ui.printing.render",org.eclipse.gmf.runtime.diagr
+ am.ui.internal.requests; x-friends:="org.eclipse.gmf.tests.runtime.di
+ agram.ui,  org.eclipse.gmf.runtime.diagram.ui.render,  org.eclipse.gm
+ f.runtime.diagram.ui.providers.ide,  org.eclipse.gmf.runtime.diagram.
+ ui.providers,  org.eclipse.gmf.runtime.diagram.ui.properties,  org.ec
+ lipse.gmf.runtime.diagram.ui.printing,  org.eclipse.gmf.runtime.diagr
+ am.ui.geoshapes,  org.eclipse.gmf.runtime.diagram.ui,  org.eclipse.gm
+ f.runtime.diagram.ui.actions",org.eclipse.gmf.runtime.diagram.ui.inte
+ rnal.resources; x-friends:="org.eclipse.gmf.tests.runtime.diagram.ui,
+   org.eclipse.gmf.runtime.diagram.ui.render,  org.eclipse.gmf.runtime
+ .diagram.ui.providers.ide,  org.eclipse.gmf.runtime.diagram.ui.provid
+ ers,  org.eclipse.gmf.runtime.diagram.ui.properties,  org.eclipse.gmf
+ .runtime.diagram.ui.printing,  org.eclipse.gmf.runtime.diagram.ui.geo
+ shapes,  org.eclipse.gmf.runtime.diagram.ui,  org.eclipse.gmf.runtime
+ .diagram.ui.actions",org.eclipse.gmf.runtime.diagram.ui.internal.rule
+ r; x-friends:="org.eclipse.gmf.tests.runtime.diagram.ui,  org.eclipse
+ .gmf.runtime.diagram.ui.render,  org.eclipse.gmf.runtime.diagram.ui.p
+ roviders.ide,  org.eclipse.gmf.runtime.diagram.ui.providers,  org.ecl
+ ipse.gmf.runtime.diagram.ui.properties,  org.eclipse.gmf.runtime.diag
+ ram.ui.printing,  org.eclipse.gmf.runtime.diagram.ui.geoshapes,  org.
+ eclipse.gmf.runtime.diagram.ui,  org.eclipse.gmf.runtime.diagram.ui.a
+ ctions",org.eclipse.gmf.runtime.diagram.ui.internal.ruler.commands; x
+ -friends:="org.eclipse.gmf.tests.runtime.diagram.ui,  org.eclipse.gmf
+ .runtime.diagram.ui.render,  org.eclipse.gmf.runtime.diagram.ui.provi
+ ders.ide,  org.eclipse.gmf.runtime.diagram.ui.providers,  org.eclipse
+ .gmf.runtime.diagram.ui.properties,  org.eclipse.gmf.runtime.diagram.
+ ui.printing,  org.eclipse.gmf.runtime.diagram.ui.geoshapes,  org.ecli
+ pse.gmf.runtime.diagram.ui,  org.eclipse.gmf.runtime.diagram.ui.actio
+ ns",org.eclipse.gmf.runtime.diagram.ui.internal.services.decorator; x
+ -friends:="org.eclipse.gmf.tests.runtime.diagram.ui,  org.eclipse.gmf
+ .runtime.diagram.ui.render,  org.eclipse.gmf.runtime.diagram.ui.provi
+ ders.ide,  org.eclipse.gmf.runtime.diagram.ui.providers,  org.eclipse
+ .gmf.runtime.diagram.ui.properties,  org.eclipse.gmf.runtime.diagram.
+ ui.printing,  org.eclipse.gmf.runtime.diagram.ui.geoshapes,  org.ecli
+ pse.gmf.runtime.diagram.ui,  org.eclipse.gmf.runtime.diagram.ui.actio
+ ns",org.eclipse.gmf.runtime.diagram.ui.internal.services.editpart; x-
+ friends:="org.eclipse.gmf.tests.runtime.diagram.ui,  org.eclipse.gmf.
+ runtime.diagram.ui.render,  org.eclipse.gmf.runtime.diagram.ui.provid
+ ers.ide,  org.eclipse.gmf.runtime.diagram.ui.providers,  org.eclipse.
+ gmf.runtime.diagram.ui.properties,  org.eclipse.gmf.runtime.diagram.u
+ i.printing,  org.eclipse.gmf.runtime.diagram.ui.geoshapes,  org.eclip
+ se.gmf.runtime.diagram.ui,  org.eclipse.gmf.runtime.diagram.ui.action
+ s",org.eclipse.gmf.runtime.diagram.ui.internal.services.editpolicy; x
+ -friends:="org.eclipse.gmf.tests.runtime.diagram.ui,  org.eclipse.gmf
+ .runtime.diagram.ui.render,  org.eclipse.gmf.runtime.diagram.ui.provi
+ ders.ide,  org.eclipse.gmf.runtime.diagram.ui.providers,  org.eclipse
+ .gmf.runtime.diagram.ui.properties,  org.eclipse.gmf.runtime.diagram.
+ ui.printing,  org.eclipse.gmf.runtime.diagram.ui.geoshapes,  org.ecli
+ pse.gmf.runtime.diagram.ui,  org.eclipse.gmf.runtime.diagram.ui.actio
+ ns",org.eclipse.gmf.runtime.diagram.ui.internal.services.layout; x-fr
+ iends:="org.eclipse.gmf.tests.runtime.diagram.ui,  org.eclipse.gmf.ru
+ ntime.diagram.ui.render,  org.eclipse.gmf.runtime.diagram.ui.provider
+ s.ide,  org.eclipse.gmf.runtime.diagram.ui.providers,  org.eclipse.gm
+ f.runtime.diagram.ui.properties,  org.eclipse.gmf.runtime.diagram.ui.
+ printing,  org.eclipse.gmf.runtime.diagram.ui.geoshapes,  org.eclipse
+ .gmf.runtime.diagram.ui,  org.eclipse.gmf.runtime.diagram.ui.actions"
+ ,org.eclipse.gmf.runtime.diagram.ui.internal.services.palette; x-frie
+ nds:="org.eclipse.gmf.tests.runtime.diagram.ui,  org.eclipse.gmf.runt
+ ime.diagram.ui.render,  org.eclipse.gmf.runtime.diagram.ui.providers.
+ ide,  org.eclipse.gmf.runtime.diagram.ui.providers,  org.eclipse.gmf.
+ runtime.diagram.ui.properties,  org.eclipse.gmf.runtime.diagram.ui.pr
+ inting,  org.eclipse.gmf.runtime.diagram.ui.geoshapes,  org.eclipse.g
+ mf.runtime.diagram.ui,  org.eclipse.gmf.runtime.diagram.ui.actions",o
+ rg.eclipse.gmf.runtime.diagram.ui.internal.tools; x-friends:="org.ecl
+ ipse.gmf.tests.runtime.diagram.ui,  org.eclipse.gmf.runtime.diagram.u
+ i.render,  org.eclipse.gmf.runtime.diagram.ui.providers.ide,  org.ecl
+ ipse.gmf.runtime.diagram.ui.providers,  org.eclipse.gmf.runtime.diagr
+ am.ui.properties,  org.eclipse.gmf.runtime.diagram.ui.printing,  org.
+ eclipse.gmf.runtime.diagram.ui.geoshapes,  org.eclipse.gmf.runtime.di
+ agram.ui,  org.eclipse.gmf.runtime.diagram.ui.actions",org.eclipse.gm
+ f.runtime.diagram.ui.internal.type; x-friends:="org.eclipse.gmf.tests
+ .runtime.diagram.ui,  org.eclipse.gmf.runtime.diagram.ui.render,  org
+ .eclipse.gmf.runtime.diagram.ui.providers.ide,  org.eclipse.gmf.runti
+ me.diagram.ui.providers,  org.eclipse.gmf.runtime.diagram.ui.properti
+ es,  org.eclipse.gmf.runtime.diagram.ui.printing,  org.eclipse.gmf.ru
+ ntime.diagram.ui.geoshapes,  org.eclipse.gmf.runtime.diagram.ui,  org
+ .eclipse.gmf.runtime.diagram.ui.actions",org.eclipse.gmf.runtime.diag
+ ram.ui.internal.util; x-friends:="org.eclipse.gmf.tests.runtime.diagr
+ am.ui,  org.eclipse.gmf.runtime.diagram.ui.render,  org.eclipse.gmf.r
+ untime.diagram.ui.providers.ide,  org.eclipse.gmf.runtime.diagram.ui.
+ providers,  org.eclipse.gmf.runtime.diagram.ui.properties,  org.eclip
+ se.gmf.runtime.diagram.ui.printing,  org.eclipse.gmf.runtime.diagram.
+ ui.geoshapes,  org.eclipse.gmf.runtime.diagram.ui,  org.eclipse.gmf.r
+ untime.diagram.ui.actions",org.eclipse.gmf.runtime.diagram.ui.l10n,or
+ g.eclipse.gmf.runtime.diagram.ui.label,org.eclipse.gmf.runtime.diagra
+ m.ui.layout,org.eclipse.gmf.runtime.diagram.ui.menus,org.eclipse.gmf.
+ runtime.diagram.ui.parts,org.eclipse.gmf.runtime.diagram.ui.preferenc
+ es,org.eclipse.gmf.runtime.diagram.ui.providers,org.eclipse.gmf.runti
+ me.diagram.ui.requests,org.eclipse.gmf.runtime.diagram.ui.services.de
+ corator,org.eclipse.gmf.runtime.diagram.ui.services.editpart,org.ecli
+ pse.gmf.runtime.diagram.ui.services.editpolicy,org.eclipse.gmf.runtim
+ e.diagram.ui.services.layout,org.eclipse.gmf.runtime.diagram.ui.servi
+ ces.palette,org.eclipse.gmf.runtime.diagram.ui.tools,org.eclipse.gmf.
+ runtime.diagram.ui.type,org.eclipse.gmf.runtime.diagram.ui.util,org.e
+ clipse.gmf.runtime.diagram.ui.view.factories,org.eclipse.gmf.runtime.
+ diagram.ui.view.factories.optimal
+Bundle-Name: %Plugin.name
+Bundle-Version: 1.8.0.201706061437
+Bundle-Localization: plugin
+Bundle-Activator: org.eclipse.gmf.runtime.diagram.ui.internal.DiagramU
+ IPlugin
+Created-By: Apache Maven 3.1.1
+Build-Jdk: 1.8.0_121
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/ShapeCompartmentEdi
+ tPart$1.class
+SHA-256-Digest: apyzJcNXFBMNrgaSphsG2mQnsmDiHsQfohyMZ+rTWl0=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/figures/ShapeCompartmentFigur
+ e.class
+SHA-256-Digest: AnjmYj25DIO6eqjmprw6yoTEcUowrzUFhr/KJruQB28=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/actions/InsertAction
+ $1.class
+SHA-256-Digest: A4bvnWST4H6rS9+HWFDViQSQgy7wp/A/IwRpyLovV2Y=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/tools/RubberbandDrag
+ Tracker.class
+SHA-256-Digest: 6vZmYHvSZZeedihmB1Gz1Ndl6p9Exfwawo1aEzTzRDI=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/parts/DiagramEditor$1.class
+SHA-256-Digest: OG50inJumo4igQpgQaGz7ysLUNncw9DOGRLmeDc8ZtI=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/services/palette/pac
+ kage.html
+SHA-256-Digest: D2md0FqMhRHUfycqbk/R8mI8BLap9/O5I7zhXegHAuY=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/tools/DragEditPartsTrackerEx.
+ class
+SHA-256-Digest: HfPRcZIhEb9Z1Lh0n/41BAxVD/lFJ2Fq/Y/eVLIj0RM=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/view/factories/ConnectionView
+ Factory$1.class
+SHA-256-Digest: 8/WaJRPIl+x4kieR/kVXQjFIh8QXQ15r/LvNY46tnlI=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/DiagramPopupBarE
+ ditPolicy.class
+SHA-256-Digest: OQo7ZoK3zlUlCSNIz6kpMUp937A88X/+cBb9UbrZ2/w=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/view/factories/package.html
+SHA-256-Digest: wLCcY5rUZKqPxt/sa/8Oha8ytZ5nkUCEVqaqVVoCNOg=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/TextCompartmentEdit
+ Part.class
+SHA-256-Digest: 5lku94BN16+fblirUVhBzTNDWKMVn7xlz/SLcsP9Cso=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/tools/UnspecifiedTypeCreation
+ Tool.class
+SHA-256-Digest: qHGdiSKjQ9/wZdDhLbAB39g4a8qMBJYttZFgt8o0CfI=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/ConnectionNodeEditP
+ art$1.class
+SHA-256-Digest: MrmnfIgQZi6F3gl5OqewIZwMR8iNLFw4o6TSKfP9Tro=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/editparts/DefaultCom
+ partmentEditPart.class
+SHA-256-Digest: tj00us2Uhcs316eurWgddV+K8X5si1bSndAKwcXUs4w=
+
+Name: icons/text.gif
+SHA-256-Digest: J0pltbjMuSIxWRZzNfbg4YeIkqSvgNUIT4niEwQ958o=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/dialogs/PageSetupCon
+ figBlock$6.class
+SHA-256-Digest: rl78lPN7MTT1FaYGC4YgNSi2Al3HvVxA4GtvEjIo29M=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/ruler/DiagramRulerPr
+ ovider.class
+SHA-256-Digest: x5Bzry3qXBsWdO2l7YRl8tq+oIl7rcnCJbgQJ4aI2og=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/util/LabelViewConsta
+ nts.class
+SHA-256-Digest: OWBrnmwCGIi07OttCMpSK1+GpvPMfFc0yJpdPn4PVE0=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/CanonicalConnect
+ ionEditPolicy.class
+SHA-256-Digest: mULmeZtP4beeQDjTo6b+VselIKkm830e+wvw0kGsPEI=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/GraphicalNodeEdi
+ tPolicy$2.class
+SHA-256-Digest: nWr8wduKCtc40ui1NHOfE01nIPj/2qVHuK5pX1BBJgU=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/requests/ArrangeRequest.class
+SHA-256-Digest: n0RrVVE5KIe3PFXCSgqX9rvqnk3c6xSVTjQT5OkvZ8s=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/parts/DiagramEditor$6.class
+SHA-256-Digest: R17iKnKOpcMjsxc1bvTG2B7gIRf4MbS1iSkeuXxAqzw=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/dialogs/PageSetupSel
+ ectionConfigBlock$Persistor.class
+SHA-256-Digest: SdcCc1UfmstC9fjTB9JssPXrtkeF+n309KVz5aS36LI=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/l10n/DiagramUIMessages.proper
+ ties
+SHA-256-Digest: 3FrcM2OQadBe3+nnid2xt7UKr80eYv+0q0TPpFz8Xeo=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/editparts/DiagramNam
+ eCompartmentEditPart.class
+SHA-256-Digest: 0JrmcatGYmQQ+O1EpVo1NvjFYYNlmHpHNcCkb6AVgWY=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/preferences/AppearancePrefere
+ ncePage$5.class
+SHA-256-Digest: +Thi7j5f6bq6kA8Npkp8oytuckvkjDh03rwIxAAohsU=
+
+Name: icons/dlcl16/line_style_group.gif
+SHA-256-Digest: RZRqm9RCJUtm0HzHMdtqAz0z3Xtm0K1D7A/PjcFR9EQ=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/INodeEditPart.class
+SHA-256-Digest: TlMxA3ToyrYOT6ttUL6uNoTvlhvivXBMi3xKpLx+c+g=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/resources/AddBookmar
+ kHelper$1.class
+SHA-256-Digest: Ra9Mf0SzVBgNPUshmGIT3aGHMYVQkqzFIEbZ3hHqCk0=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/util/INotationType.class
+SHA-256-Digest: I/7uCDtBGWQOwyopkIUI2XYVyVIDzF63BGufCE6iPys=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/commands/SetCompartm
+ entRatioCommand.class
+SHA-256-Digest: L1Xur7MpdmaNqQZEaf9+QVS1PJ4XGGbG1+ms5BwKbvk=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/DragDropEditPoli
+ cy.class
+SHA-256-Digest: v1TIai7hU8u4ivAaoIay+BrGEj+kmjJyt7nQISiKiBY=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/GroupEditPart$Group
+ ContainerEditPolicy.class
+SHA-256-Digest: 0m1KSvXr7fQQljBSsbtGsCjBuVGG2jipN/Y+g8CVPVY=
+
+Name: icons/dlcl16/bold.gif
+SHA-256-Digest: olNAbAT0cnMN6nfbqNTvNHgkpkZvZvtCt4TMtLb+eWI=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/editparts/DefaultNod
+ eEditPart.class
+SHA-256-Digest: 5EKvaH1dP6VAHCW/y2PDXL/m5ENbDNrfucebemgVz+4=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/requests/CreateConnectionView
+ Request$ConnectionViewDescriptor.class
+SHA-256-Digest: adcwEmoUve9t/L+3Pq6s7lSBOKfR5X+BYcEMYIOub2U=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/commands/CreateViewAndOptiona
+ llyElementCommand.class
+SHA-256-Digest: tvvoRoKmELOa7KOVo7IeP6vA0MnhbCUpYu1xnGqquDE=
+
+Name: icons/overview.gif
+SHA-256-Digest: attmyInCDLk0nxAu6OkqNj8alqYhphgewCORk3bOqTQ=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/actions/DiagramAction.class
+SHA-256-Digest: z8A8ruOw8DkTttZ+h+WGnlD5zWr36/pQYEnJXTDr1jA=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/figures/GroupFigure.
+ class
+SHA-256-Digest: EPcLV8KgYfowkzW3Y7ew35QLzwsc/rargHbrvb/TDlw=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/requests/CreateViewAndElement
+ Request$ViewAndElementDescriptor.class
+SHA-256-Digest: 1If5DNit6RDZEowwt9Ea4X+VCO2/Ekiib97d2ztepbc=
+
+Name: icons/none_comp_vis.gif
+SHA-256-Digest: JZVxg36EqTwOmQ5pXWHku8YU9Q3Buk1ZHJWsJcXncSw=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/view/factories/optimal/Compar
+ tmentViewFactory.class
+SHA-256-Digest: JoM4kPGWhUPFSA3ZCq4u2tFkl/xQ814vpvLVzC17Zrk=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/actions/OpenAction.c
+ lass
+SHA-256-Digest: KqgQB8moqKZYhMpAJiS7ivxJL6Zx1jXSsVZsYVzoAzE=
+
+Name: icons/dlcl16/showconnector.gif
+SHA-256-Digest: 97NofUcshsygOWmUy//OA/RrUk760tJy5gJo2KWS/E8=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/parts/DiagramGraphicalViewer$
+ 2.class
+SHA-256-Digest: WwIhIvymqEQJE3ii92B9KnkyA8unWXyNOTY/60Vp6P0=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/dialogs/PageSetupCon
+ figBlock$MillimetresSelectionListener.class
+SHA-256-Digest: 7hLZXBCL2Zsx0kNN7gms8GNjGAKbpaPTlPm1humCFMM=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/actions/package.html
+SHA-256-Digest: FCQrRc9aBn7gBeD4ZshUTWezOgPArVmo7faRjoPlECw=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/dialogs/PageSetupCon
+ figBlock$1.class
+SHA-256-Digest: CzSmmVtOit+Ozj9KUynUouY6Wh0yMrz4gmLZExK9AVY=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/ShapeEditPart$Shape
+ ContainerEditPolicy.class
+SHA-256-Digest: lku2QM8wyTnpV5K8Z6NmHgFqmFcYQB1ADqjBklqpJbM=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/tools/ConnectionHand
+ leTool$1.class
+SHA-256-Digest: hhNlmIi2unNZxssCBEaEdoSKyid4HYt00TQvSlXKego=
+
+Name: icons/sm_arrow_up.gif
+SHA-256-Digest: f3X2rh0pIL494q192EAUeMpXBAGwNpgo0ecAywuIqPE=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/ConnectionEditPart$
+ 2.class
+SHA-256-Digest: VUz2iLmscPly/KVXLjvmoXRvu/ETCfS3MB24wiSBlus=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/IBorderItemEditPart
+ .class
+SHA-256-Digest: 0w+xVOiRKFnt1rhJVRMdf4d5WOXl+wSVwogxJEbPlCU=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/parts/DiagramEditorWithFlyOut
+ Palette$1.class
+SHA-256-Digest: pYibAV5coLSH/fuSw2vOuHbicfPI4tNm741/3HTz9cI=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/figures/NoteFigure$NoteFigure
+ Border.class
+SHA-256-Digest: Z+Z5detvHfdyBm6VU1Ef2xoeWoBDhVMKs1nDX2hNpdg=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/parts/IDiagramEditDomain.clas
+ s
+SHA-256-Digest: bd70Exn3nVbKGel8ZWr8Y8llNJ7IjqHZ9xS2K8KFL5Q=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/ConnectionHandle
+ EditPolicy.class
+SHA-256-Digest: Y1RPOwggt2UDY2pW/NQ2TvoW8cD3n1gz1Ustq4ggrCo=
+
+Name: icons/dlcl16/recalcpagebreaks.gif
+SHA-256-Digest: v+iAlstmuKA1r0b1B8q57/UAy0uV85oNBCW9doB5yaI=
+
+Name: icons/collapsedEmpty.gif
+SHA-256-Digest: nPEPpDuueVk6WGJhtc84gSDn/43OMbo9egEGrk60ir0=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/tools/AbstractPopupBarTool.cl
+ ass
+SHA-256-Digest: zfqlZlg4f2ZXrYEwgkJgL/z8EtKmQcAUfQgX0mHjELg=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/ConnectionEditPart.
+ class
+SHA-256-Digest: k8S20CIP+EkTYaU7BIbrBu4nh783bA2VF4K8izywWgY=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/commands/ArrangeCommand.class
+SHA-256-Digest: vKhcNa+r8Cy4L3VbFVWbo/OfEb7SQqB+F9wBpm/VYsk=
+
+Name: icons/dlcl16/oblique.gif
+SHA-256-Digest: JSyjytZMLZS4dRYv2Th/GBQf7SQuPi1CesM4JGG5RXQ=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/NoteEditPart.class
+SHA-256-Digest: yKd5Qwsf1GYjBi4WOy5NGZFjITMzUOAHbw7sgfF2aiM=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/IRotatableEditPart.
+ class
+SHA-256-Digest: hwMm28lzLXotBT4tfJUYwZTc0h0aWll74979OSpTkjQ=
+
+Name: icons/elcl16/font_color.gif
+SHA-256-Digest: BRoG+8YMgT34hJ5oyjechS7dyyUgLGhNhV2z0fO5yEY=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/DiagramDragDropE
+ ditPolicy.class
+SHA-256-Digest: gYkXuOFVFkDvDs0fxeuSi5strOjC9yGthnTU/A09Edw=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/services/palette/Pal
+ etteProviderConfiguration.class
+SHA-256-Digest: TkdKUu7M/2tPqFWRKevvf43ZLFZ+W/mrCT8E6FJd5CU=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/actions/PropertyChan
+ geAction$1.class
+SHA-256-Digest: VpoWrwT+RuVhPdp8fkUYyGGPLewu4aSuRwYbcjX/O6g=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/handles/ConnectionHandle.clas
+ s
+SHA-256-Digest: 3pgwlG92BA+wweDeqzDFmpjCD0GPrHFwNQ/HBcfZGSI=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/dialogs/sortfilter/p
+ ackage.html
+SHA-256-Digest: 6RPJqsmwWJvfysapDrZj0a3Cx+rOIn5ntbAMR3paEtQ=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/IGraphicalEditPart.
+ class
+SHA-256-Digest: d0rEX5KbZ8WW+Rv9gIgVtD2dMi1yfP5mw6QTt7xZef4=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/editpolicies/Connect
+ ionEditPolicy.class
+SHA-256-Digest: X9LAFwiLP/Tkfqqvm+yB5hakna2vF7JorE3PbqdtMqk=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/services/decorator/IDecorator
+ Provider.class
+SHA-256-Digest: rz2qm12bsrypqP8XBeXgfSG/Xdbmq0kyJmRY17+Smgg=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/figures/ResizableCompartmentF
+ igure.class
+SHA-256-Digest: AvOfVJPtmTPiqUinosvmxF6JJWQTdE0GY6AXqUfdgCg=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/tools/AbstractPopupBarTool$1.
+ class
+SHA-256-Digest: qzht44/zPepwYL6ZEEQvkWvRnGiavCffIqhTE4iD+LQ=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/commands/SemanticCreateComman
+ d.class
+SHA-256-Digest: 74gGWqQ+5Vu/Djig+qyoPJGLBy/83cNWKj7hA2bpjVA=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/figures/NestedResiza
+ bleCompartmentFigure.class
+SHA-256-Digest: +vKrKy2/X62csrWeNhIRosmbUHZeI6xhBuKjodKqqPI=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/services/palette/PaletteServi
+ ce$1.class
+SHA-256-Digest: /5+qtxrwdoLxo5DTH0JHLJRrqPvvJjtVIrWNgA/WJGE=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/ResizableCompart
+ mentEditPolicy$1.class
+SHA-256-Digest: 7Y7sfUSb8YwZuxFMMBEDryhiA453ap6p+dw+SBimrDg=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/TextCompartmentEdit
+ Part$2.class
+SHA-256-Digest: IWEcy5BnmSch4EJRF7QT+C5eoc8EJ1pys6i5cUmsqng=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/actions/ShowPropertiesViewAct
+ ion.class
+SHA-256-Digest: K6Ci/t+bmod470bBReD3h1ad4amT5oAbOk9uu5vYAbE=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/view/factories/NoteAttachment
+ ViewFactory.class
+SHA-256-Digest: /SFyE7xiCMH6aLGyj/zuX4l9qmHd7naByxKP4gwmHjk=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/dialogs/sortfilter/SortFilter
+ Page$3.class
+SHA-256-Digest: VvOXNA9GTBDijAxMbplANQOivuvN001jeuaHQ1JlXMY=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/ruler/DiagramRuler.c
+ lass
+SHA-256-Digest: 5qwsjYVcTKFuIXgi7+ZVDO0YmPvobhwCShBUSofKRO8=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/dialogs/sortfilter/SortFilter
+ Page$SortFilterCellModifier.class
+SHA-256-Digest: f73dI1v/KVt4+dLLYx/HWVzX6CXYWIEdG4TxjZonKuw=
+
+Name: icons/font_color.gif
+SHA-256-Digest: ciJ7uWNCnEN3UBy9LwAuAGPFxQ60tMotYFH/39Fnx5A=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/dialogs/PageSetupSel
+ ectionConfigBlock$3.class
+SHA-256-Digest: 5QlXjjIQenjnd0jNSe5bA9dtatPFl2bfuQgvHwyAfPc=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/DiagramAssistant
+ EditPolicy$HideDiagramAssistantJob.class
+SHA-256-Digest: mm5yT/COFCwoToa2r63Rp9a6Sv7rcuyekmXozgs7F6Q=
+
+Name: icons/handle_incoming_south.gif
+SHA-256-Digest: x+Ri5lN5MOZ3l4hVEtMJUoVMhMvEru55vCU9wuh0gMs=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/CanonicalEditPol
+ icy.class
+SHA-256-Digest: OtU1R6pbnd+zMnqMNxBto+NZFbsbGa2ogWxoJHAMkJo=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/services/palette/Pal
+ etteProviderConfiguration$EditorDescriptor.class
+SHA-256-Digest: chx4jb1gdi4tEbUoBh3+vApQVQVTg59qiISeguuuTvU=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/view/factories/BasicNodeViewF
+ actory$2.class
+SHA-256-Digest: bHnkbqwGD2yz4cO8BJjicmue6iBIubOdE8KusZ8WVZQ=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/ruler/package.html
+SHA-256-Digest: 6RPJqsmwWJvfysapDrZj0a3Cx+rOIn5ntbAMR3paEtQ=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/parts/IDiagramWorkbenchPart.c
+ lass
+SHA-256-Digest: pqIVyPdVmDUt7GgPfWp7BfVV/iJj9iJjAqFE/OM+sbI=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/IResizableCompartme
+ ntEditPart.class
+SHA-256-Digest: MCuenK/OUy0nOFoIPr6E5y/rY4Ygo5PSh9YNqnRGOZE=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/commands/DeferredLayoutComman
+ d.class
+SHA-256-Digest: J9mk8OA5FgbqUGp+LKfBqnKg3q2mS5+G7pPmDtzEAwQ=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/figures/LabelHelper.
+ class
+SHA-256-Digest: Aqw1YuT2+l5p4EQhguEvhT/r73b+lZHlxuShhpAyK0Q=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/services/editpart/pa
+ ckage.html
+SHA-256-Digest: KYTa1TlO/JfPjUiTSs8D/4US2ADiprXWmU3/G6nI7ck=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/image/ImageFileFormat.class
+SHA-256-Digest: koHFIXVp/RDwnQIasn9ZE+jyoVHGSu0zdBkF//Z2QKA=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/services/layout/package.html
+SHA-256-Digest: Sbu6oDH8onsv0DIErPDerAhBKYcpXD35LEmbDSMHPXI=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/preferences/RulerGridPreferen
+ cePage$1.class
+SHA-256-Digest: rjQgpjg1Ii/AT3jL9ty5lq7phtC02Bw6xscCBszsULo=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/handles/CompartmentCollapseHa
+ ndle.class
+SHA-256-Digest: SR+sWNo2YAK+qJwtbE3yMCFw54+kflvybdGe+28QD20=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/dialogs/sortfilter/F
+ ilterDialog$2.class
+SHA-256-Digest: J1UhpOqflEM/cJL1PRhf0pig5oTlkSr5p5zBUuzVhuo=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/EditPolicyRoles.
+ class
+SHA-256-Digest: XVndzkE4ZDjL6zbGdj5/zARBD7tPjPl1H2TIzgLc84c=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/GraphicalEditPart$1
+ .class
+SHA-256-Digest: iea7mdmJ3jfgHHWYb2CPY7Ddsl7a/cflb1SPRcoIcWU=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/view/factories/optimal/Standa
+ rdDiagramViewFactory.class
+SHA-256-Digest: jXbKNNdfRZkWckQZq+By2KUjJ1sAbP1tCzB89gV0Vq8=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/label/ILabelDelegate$Stub.cla
+ ss
+SHA-256-Digest: jZCIYaSq2xe1ODvVtfcR9B+aN6EBYgmXno9u/Sq1yvs=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/ContainerEditPol
+ icy$EditPartComparator.class
+SHA-256-Digest: mMn3dW2UI5jl8ow423xr/xx4SsGSbvfcMGd7IQDBWLs=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/ConnectionEditPart$
+ 3.class
+SHA-256-Digest: woHbUlqxJqZRkZG9a2sSs9AiZ+s/O/6MwaBynpk+ElA=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/ListItemComponen
+ tEditPolicy.class
+SHA-256-Digest: m8mbMIl9rcU1cFGrqnj+wWXGd4iSdPapcispABo+ovw=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/ResizableShapeEd
+ itPolicy$1SetDeferredPropertyCommand.class
+SHA-256-Digest: diVQgwFyhfZSHgPFPFDbgUGX/m3A3P7Q3u0k+iQ+RNI=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/services/palette/IPaletteProv
+ ider.class
+SHA-256-Digest: lzgWKSyd0HHRrN9YZNFnoxa9tTmVkUn5s/MiAfM1yE8=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/UnmovableConnect
+ ionEditPolicy.class
+SHA-256-Digest: li2kZJEcy9TgbsoXxuKHe/3DE79GELchGArfRBwSomQ=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/TextCompartmentEdit
+ Part$3.class
+SHA-256-Digest: SVMcbKJVsihEoUGFzTtdqlwKien/FWEuU1cDd+YEVHs=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/image/PartPositionInfo.class
+SHA-256-Digest: OvfGxE8EKHGs0s+kiFiAlxH5gdltMyTYrO7Cg9GNmLc=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/services/decorator/D
+ ecoratorProviderConfiguration.class
+SHA-256-Digest: x8QGj6NMlariWWP5PVv/cOysBx09GggrBrRc3PML33w=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/resources/package.ht
+ ml
+SHA-256-Digest: D2md0FqMhRHUfycqbk/R8mI8BLap9/O5I7zhXegHAuY=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/LabelEditPart.class
+SHA-256-Digest: IL5lvZU0CiQTycZdYEMX3sWHWL59qM+oLcrnbHWe81c=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/tools/CreationTool$1.class
+SHA-256-Digest: wALFQt86hZfz8E0YnryFb6BFON8k9/XcUxd9l7wrV4o=
+
+Name: icons/elcl16/bold.gif
+SHA-256-Digest: HcpnEUK73LBddHoPCssGn31Y3PUupgORU9WXnzMuHYQ=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/PopupBarEditPoli
+ cy.class
+SHA-256-Digest: IcrGxtfJ1Y+Cbxr8yG7MDS0OnV8+cZBBLjWh+akw22E=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/services/palette/Dia
+ gramPaletteFactory.class
+SHA-256-Digest: y/JS/3z1DegQsql0MiFZ1WbG4C3iw7Hsllq/VDqkTV4=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/PopupBarEditPoli
+ cy$PopupBarLabelHandle.class
+SHA-256-Digest: KjRyZe9lnYbshYF8mGzJgRaxGNEIOUeqbb4dVKojhQQ=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/requests/package.htm
+ l
+SHA-256-Digest: D2md0FqMhRHUfycqbk/R8mI8BLap9/O5I7zhXegHAuY=
+
+Name: icons/properties_view.gif
+SHA-256-Digest: 0bAJcDY5dX2z3GGjGBgs3HR0n7M1ng5V7MErbv7Vzeg=
+
+Name: icons/elcl16/autosize.gif
+SHA-256-Digest: muUlulQIj+ji/kmDazINn1heQnhgYMqtLC/u+UJiZ5U=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/services/decorator/D
+ ecoratorService.class
+SHA-256-Digest: Etqdqs1XorqTN3cv1gAkyAjICYD1/qwIjKYBbUuF+I4=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/ResizableShapeEd
+ itPolicy.class
+SHA-256-Digest: pfNLryVvhhiw/+/OTiqy2GvGamMIWTOGrSqxVu2oEAU=
+
+Name: .options
+SHA-256-Digest: KvAOYf7WUnmDrQwV8lxqGPBAY7mQjUIfYtg8zepjKFw=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/commands/ToggleCanon
+ icalModeCommand.class
+SHA-256-Digest: sy0a9XhEtgxIYCnj7ouF7fJ2i0jTLAcXMI394fFWPmI=
+
+Name: META-INF/maven/org.eclipse.gmf.runtime.diagram.ui/org.eclipse.gm
+ f.runtime.diagram.ui/pom.xml
+SHA-256-Digest: gH3LklaTcGhzVwWZzfbAu2Fvrvj10QY7rHxSOJqT8sI=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/figures/NoteFigure$1.class
+SHA-256-Digest: TpLN+rlceO0OLQ0Y1O0oJv0wdugmSMB5bhNpInwTay8=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/TreeEditPart.class
+SHA-256-Digest: gyi5iszMoNcoKh+X8NnOoFFtTgAhcIva2ZrP7rFWZhU=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/commands/package.htm
+ l
+SHA-256-Digest: D2md0FqMhRHUfycqbk/R8mI8BLap9/O5I7zhXegHAuY=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/handles/ConnectionHandle$Hand
+ leDirection.class
+SHA-256-Digest: hCwX59CibbyeLSA9sGm/uKvlFi04saDI7fbt+fTtoSQ=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/tools/TextDirectEditManager.c
+ lass
+SHA-256-Digest: 0SS2Z7D8YI53QU0YoDcTx46B3okmAELhUDLbfjVpc6U=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/dialogs/StringValida
+ tor.class
+SHA-256-Digest: /VeN0wpgZsNBtJGDe5ueYWZm/BHvBlLHkwb4VMfJZ/k=
+
+Name: icons/aleft.gif
+SHA-256-Digest: 5BwztvVx2XLtFTt43oqPlF8N29Ai4h21nVG1BEFg9yg=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/tools/ConnectionCreationTool.
+ class
+SHA-256-Digest: Za8EN/A6xW/z3NHl9OCjgFCYKfk7qGaGRleGp3W7p/Q=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/type/NotationTypeUti
+ l.class
+SHA-256-Digest: 2mUTe7kYixJI5w6ui49PXzjebqR2YQ8294y0KWGfKU8=
+
+Name: icons/CollectionDown.gif
+SHA-256-Digest: 1G62b1M3xEAT29WQvbFHgu4027rIm7sSbPme2kOEzdA=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/preferences/AppearancePrefere
+ ncePage$4.class
+SHA-256-Digest: BfHSyzGIcboKnKu9dvLth7iizZPkLznowGFJvQPIXKE=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/figures/BorderItemCo
+ ntainerFigure$BorderItemContainerHelper$ChildTracker.class
+SHA-256-Digest: iqNYd75HfHvcZu2oRdtdACUsO6KnGaSBxLivi+Nnw0I=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/util/EditPartUtil.class
+SHA-256-Digest: awcYxgbZoMFW3uhqzGPCDdZ+E1mR+kU7aq0C0RbKewo=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/tools/ConnectionHand
+ leTool$2.class
+SHA-256-Digest: Kt2OiCAGF1VWKrRUBHzI4cxHU5SW207/KLXiBeF0RPU=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/requests/PasteViewRequest.cla
+ ss
+SHA-256-Digest: f5T2c1yCx4SEcFv9gndrOLB1IHh91XanZlUsG86ZePI=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/commands/SetConnecti
+ onBendpointsCommand.class
+SHA-256-Digest: fjaXKvMHLgTd8LCSq2ETVc68j1/NRtJlKNKg1S+fXvE=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/view/factories/BasicNodeViewF
+ actory.class
+SHA-256-Digest: axDCE50E0C5tIQsqfQ7duo1Zdw+Kc9QaM0LAbKqbXdg=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/commands/CommandProxy.class
+SHA-256-Digest: hd8nWsYOjGE2j1FFfAbpjkVZ7Dz0yB0pmdcSagoKeqc=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/handles/CompartmentR
+ esizeHandle$1.class
+SHA-256-Digest: DebtJqUZCmTHjYdCfNb3YBfmDxeA6z6hPRQWGKFxowM=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/services/decorator/IDecorator
+ Keys.class
+SHA-256-Digest: 50R5x3xa1lSv8ZZIBwCvVYNZETF93STybMc8lllWQaM=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/ListItemEditPart.cl
+ ass
+SHA-256-Digest: yiPTrAv7h+LVg2Tnnax8y1iKrgb1KgV960Gr0SzM9e4=
+
+Name: icons/popupbar.gif
+SHA-256-Digest: ChbcMbNm5r+0+j4eQ0vWTWhnWGGRfSDXH84zR+CXRcY=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/requests/RefreshConnectionsRe
+ quest.class
+SHA-256-Digest: OEtOn9+CrMBhb/o5lzDpjumU6xG3qy1OhwBR3cm4ep4=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/tools/ZoomTool.class
+SHA-256-Digest: ovdPwZZGEuWMDB58NeKkXlg6ewgy/VrpiiopDWRMjc8=
+
+Name: icons/dlcl16/arrangeall.gif
+SHA-256-Digest: IotnNGKxNkdftFo1phDJcqMSJbhIMa9HJGSxqVNkWVM=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/commands/CopyCommand
+ .class
+SHA-256-Digest: sEEBpSlLjEWrwk4afx4i12u23KeYsNqY9tPs8/iLvi4=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/requests/CreateViewAndElement
+ Request.class
+SHA-256-Digest: QE+xuSVLqrszps5ENMidq9HVdbYBPSr2ADc/ggm5Kc0=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/dialogs/PageSetupDia
+ log.class
+SHA-256-Digest: xWoFvprbL5IGtZN4djEwb8xD65TdAw4UCESA8F5pMLI=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/ruler/DiagramGuide.c
+ lass
+SHA-256-Digest: u0vwlrc7bO2TWHzz1AEtnoKTWdp+XvwAl8SIXtxFRZE=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/commands/DeferredCreateConnec
+ tionViewCommand.class
+SHA-256-Digest: IvHYFdha0DPK6WiIdz3R3Q5NggZtXfQ4T72o2WZtU5k=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/ConnectionNodeEditP
+ art$2.class
+SHA-256-Digest: efqKAIzgWBHK9uMgwAzCFUTtEb/pdDDPcEMtgBfuUCY=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/services/layout/Layo
+ utNode.class
+SHA-256-Digest: y6pZXQKn336RcZgomKEJIHQJfWkmjkQvSvhd5mLlHTI=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/requests/ToggleConnectionLabe
+ lsRequest.class
+SHA-256-Digest: VSMjsJf137oUqR1n5IV813moT4BM3JbWG+jjPbEt5HM=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/view/factories/optimal/Connec
+ torViewFactory.class
+SHA-256-Digest: EvOzx05zYQO8wmBm25Vy2kUqfSzN9RRJZ++77ItHy64=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/tools/DirectEditManagerBase.c
+ lass
+SHA-256-Digest: zMo12a3B5ZGAYvt1aIEgl+52Kc5D1d1mYExOFF4nwNk=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/commands/MakeDiagram
+ UnmodifiableCommand.class
+SHA-256-Digest: E9cgMwIDCOsiCWrtK6qIe2vlEVrjI5zNn1itlbIsH7M=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/properties/Workspace
+ ViewerProperties.class
+SHA-256-Digest: 6HASHHh68Pqd6HnxzVEuaT0hktiNTIYjnUYTsPOcYas=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/services/editpart/IEditPartOp
+ eration.class
+SHA-256-Digest: Yx4vuTivGvkOkqLIJQkiL+q66Tt71IMXaHwp+8F8Dqg=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/services/palette/package.html
+SHA-256-Digest: nkmUIeIJ/RXHJ+iAPfoRWL5of3GNTzc/U5kqGnlkec4=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/l10n/SharedImages.class
+SHA-256-Digest: w9nYoMhVTJhZ2IRUUBJjPyOYTqg7y6pN+S+13ecfi2w=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/preferences/IPreferenceConsta
+ nts.class
+SHA-256-Digest: npKMDspIUHNvukMDK/UEwOCek3dJJNIu70gFAu1og5c=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/ShapeNodeEditPart$1
+ .class
+SHA-256-Digest: W8QhT3DL/SiTukzySRZHQHSqww8FXiVr8QdwPPiTnXo=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/figures/BorderedNodeFigure$Bo
+ rderItemClippingStrategy.class
+SHA-256-Digest: 1xm3ZJKhFTaPHb7c2a0fF/8J4yFkBmrw8eysAIvIJx0=
+
+Name: icons/tree.gif
+SHA-256-Digest: ruKU/iBrhvdh+57X2YelnMLN99jMIXwrp5CjQb9NJ2U=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/requests/SortFilterC
+ ompartmentItemsRequest.class
+SHA-256-Digest: 6DmleH6Yn+tDFFqfL7jSKV5DdIQBiXrJcTcsKzjT9Ys=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/util/MeasurementUnitHelper.cl
+ ass
+SHA-256-Digest: 5HR1pvRkkwgGLRYmXb1y1cvS1JhWCbQ3WtWwKt4RCJY=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/services/editpart/Ed
+ itPartOperation.class
+SHA-256-Digest: UWHaOi/Z38lZDYJGQVfzDJxOG19l30WwNdIERUqa9vE=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/services/editpart/EditPartSer
+ vice.class
+SHA-256-Digest: i7uR9+AC7IaTnS59/6WZ2CppWUgoJMY9YvkI5Lfznbs=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/editparts/ZoomableEd
+ itPart.class
+SHA-256-Digest: YDnsKaV0jvFwN/JiYSaNP7IuzH+vfriGpX+Ni+5UKPs=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/DescriptionCompartm
+ entEditPart$1$1.class
+SHA-256-Digest: dTctwmdFDuoxq07GmRE9E0ERoIwr2nV8mvKw29I9kio=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/commands/SetViewMutabilityCom
+ mand.class
+SHA-256-Digest: vXdhKSucowgIfIFKD7XrRIBU3jwkf8NsHY7pj6mTUUo=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/parts/DiagramDropTargetListen
+ er.class
+SHA-256-Digest: BFBTfy6aeh7n7jxtVTO8fKk7eK+kdltCU4rZNxncfuM=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/services/decorator/D
+ ecoration.class
+SHA-256-Digest: mlCJcGzTt0Npa9iORqbNwH3+PgxD3DLwytTQ+9904IQ=
+
+Name: icons/elcl16/oblique.gif
+SHA-256-Digest: Eb2jyrwTLGcb/0txqZdvviMJhpWGNmEdaohgDyL5B+8=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/requests/ChangePropertyValueR
+ equest.class
+SHA-256-Digest: bfEk/N719joopRw9Ik/pfrcCuMAiyIeCUUNDeCZEG4M=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/preferences/DiagramPreference
+ Initializer.class
+SHA-256-Digest: T3FQQEISsxXGAMUOiGsG5lgYm6oGXRu7mf3y46hY3qc=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/ConnectionEditPart$
+ 7.class
+SHA-256-Digest: a26/cpX5Sgx6hKT5Rtc8x61L+UeDm7RpSRv7Cxwt4zo=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/services/editpolicy/
+ EditPolicyProviderConfiguration.class
+SHA-256-Digest: s0o4CJbPobVY3EchJtupg05vahC92BiHS+ubAcpIr1U=
+
+Name: icons/arrangeselected.gif
+SHA-256-Digest: 9sHVEu37OtMqcZMaQFu2GY8SFtkE8Ec9An/hzW4huc8=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/ShapeNodeEditPart$2
+ .class
+SHA-256-Digest: bLWk29MhnafU/5r0Wa3ihuEs2pNad6kqR5YLbboE7go=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/figures/CanonicalShapeCompart
+ mentLayout.class
+SHA-256-Digest: 4mAYLAMsvUBZ7Fnd8/j4iTj8obEtGjxryRPi+/Ltu94=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/commands/ElementType
+ LabelProvider.class
+SHA-256-Digest: HCkcIsHfdhkup90svOgYoxYfdh24FCK3CENavrhShzg=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/requests/CreateConnectionView
+ AndElementRequest$ConnectionViewAndElementDescriptor.class
+SHA-256-Digest: G/nKoB55f/elJaPjgc6jU22e23IJXv5YAon7BoOJyIM=
+
+Name: icons/elcl16/shapecursor_source.gif
+SHA-256-Digest: 5CMgH5rrdxq0eH9hXwq6Cgus3VueH3rF9pL+emRDR5U=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/commands/CreateOrSelectElemen
+ tCommand.class
+SHA-256-Digest: dYZH5AYYaHzXME6srvLyq8Wmvh2kjBRESCBRQ/CxwyY=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/figures/BorderItemCo
+ ntainerFigure$BorderedItemContainerUpdateManagerWrapper.class
+SHA-256-Digest: 0I8ITeGIMUQ1Idj1bfN+S6ihDk3h2/V3rdLJ4wGitzU=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/dialogs/PageSetupCon
+ figBlock$InchesSelectionListener.class
+SHA-256-Digest: CyIkvGqPJla/T124Ph1/Ozbcf3UdqInLX7I/xfxMR3M=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/IBorderedShapeEditP
+ art.class
+SHA-256-Digest: VcVLumo2e9Wj1Zq+HJwykaBJDhQ+KVeNOIHBWlkNdWQ=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/IDiagramPreferenceS
+ upport.class
+SHA-256-Digest: RABCUwyO7TVXFbon4fJ+GRYNbj/R7MaBrDOecWDy+Ug=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/ShapeCompartmentEdi
+ tPart$ConnectionRefreshMgr.class
+SHA-256-Digest: QJ1Dbkan24Q6v61Xf+n0x5PZ+GN0EEWa01owgXMVjoY=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/parts/package.html
+SHA-256-Digest: D2md0FqMhRHUfycqbk/R8mI8BLap9/O5I7zhXegHAuY=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/parts/DiagramEditorWithFlyOut
+ Palette$CustomPalettePage.class
+SHA-256-Digest: vqpcxIxamBSBZ9BWpeQ90yDBxj6cy0MO5/wCsgWoz/M=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/commands/OpenDiagramCommand.c
+ lass
+SHA-256-Digest: kv6NnJ1zeLyzPk4heThj5SjPwjpo49VhVw3Dta2fOhc=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/handles/package.html
+SHA-256-Digest: Y4NecCz2zSoVfsfUqQ9zRvRfRUOlk1VdCmTbtxrE0iw=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/services/palette/SelectionToo
+ lEx.class
+SHA-256-Digest: N+ia+IVS5hzOHt8obqzHdoFDR0RKoH7IDwx4E7Fe/So=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/figures/CollapseFigu
+ re.class
+SHA-256-Digest: LpCi2h2QmVzWOmQJ+ncipBlfY9SB+6CBo21n0C3bR3Q=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/services/decorator/IDecorator
+ .class
+SHA-256-Digest: 7yMyGYBgvkr+ZPAbOlymKacux0J4xJqiSjaEG3odgg0=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/view/factories/optimal/BasicC
+ ompartmentViewFactory.class
+SHA-256-Digest: B9rAMCgC+I2u7iHqhDI7V7ISlpeelDBGo7uS0smRPQ4=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/commands/PromptForConnectionA
+ ndEndCommand.class
+SHA-256-Digest: KMf+8TNDjiUAFl4LHTkO77KKWMOId6g28UIj+sBvJh0=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/commands/DuplicateVi
+ ewsCommand.class
+SHA-256-Digest: OOze69fDkSp/hHvUyaGk8ZVTDD658ZB6BnzmtIQsARU=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/commands/PromptForConnectionA
+ ndEndCommand$ConnectionLabelProvider.class
+SHA-256-Digest: WsxGhYqBvNKWk222d3Wt3nRafU40YpkIYcPiaSAv9bA=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/parts/DiagramEditorWithFlyOut
+ Palette.class
+SHA-256-Digest: vK9gPsNYzJhkhezNH0u1yN+eh2DnRgzmIgHfjkDbRlE=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/view/factories/DiagramViewFac
+ tory.class
+SHA-256-Digest: cdVb86wEqETZhwRTgTAuoZDnxkcpOEm7KSjVb/ZCN7c=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/commands/SetBoundsCommand.cla
+ ss
+SHA-256-Digest: WA/JdtTHsb701aIMr+MAb/t1FJDxOwnlf3Jl5U8Fwfo=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/services/palette/Pal
+ etteTemplateEntry.class
+SHA-256-Digest: sSd/ZW1CCvn5ap/I2r5fVUMB7BD8ncGCTwB8bvAJ4Og=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/figures/BorderItemsAwareFreeF
+ ormLayer$1.class
+SHA-256-Digest: sdZOwL0qz7HB39GegWc1s4A7eSJkA88OZ/di0nOwPVI=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/RotatableShapeEd
+ itPolicy.class
+SHA-256-Digest: zzFBmz2GosWPmY0dcQhhiUur6E9BXfycbenyf0CGW7I=
+
+Name: icons/checkboxcleared.gif
+SHA-256-Digest: ba1ge1JYSxBlzyZPjiE0Xvvm0kQ+wxmzV7oQmyxOyL8=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/ruler/DiagramRulerPr
+ ovider$1.class
+SHA-256-Digest: KyagWgafHnHj9qCIvt3hybl8+YMH6DzDuMeWjY1KrG0=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/dialogs/sortfilter/F
+ ilterDialog$ButtonSelectionAdapter.class
+SHA-256-Digest: GCV27w/N43eCY78w6zHvV20R4/tYIroBA/t2BgQqpcY=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/label/ILabelDelegate.class
+SHA-256-Digest: rgrK0xGnxBEo93Imif0r4CbAVhBl4y3ON6B5kPu4FTU=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/figures/BorderItemCo
+ ntainerFigure$BorderItemContainerHelper.class
+SHA-256-Digest: xnmZnodv516RXLM3U2qUHjw52YnZZUR4BoLwgn5NXBY=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/dialogs/sortfilter/package.ht
+ ml
+SHA-256-Digest: B+VkjHvk6Blml/8Q3SP59m2iouI2b1W2GTutpShGnnY=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/parts/DiagramCommandStack$1.c
+ lass
+SHA-256-Digest: uUHj4MymFtaEOxhumsGmiZ4SiwEOB2ANnLv5yvwnV6A=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/OpenDiagramEditP
+ olicy.class
+SHA-256-Digest: YJeziIrL03nOiY6MnSb56xoJOuHW5k8VxqnCVQwVi78=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/ruler/commands/packa
+ ge.html
+SHA-256-Digest: 6RPJqsmwWJvfysapDrZj0a3Cx+rOIn5ntbAMR3paEtQ=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/dialogs/PageSetupCon
+ figBlock$Convertor.class
+SHA-256-Digest: DnHHRna3a1dBfSeWEBIriEmz4Sls4m71grw48GY0psg=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/requests/ChangeBound
+ sDeferredRequest.class
+SHA-256-Digest: Rb7oe8VpdPyE2mdbR0cotvsk2+rk5k1LM7pp9GK5Vxo=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/package.html
+SHA-256-Digest: pYbB1AMHbdwTJGiYUNetDhkQyKPKewFyYB3hhdr+yfE=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/editparts/package.ht
+ ml
+SHA-256-Digest: KYTa1TlO/JfPjUiTSs8D/4US2ADiprXWmU3/G6nI7ck=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/SortFilterCompar
+ tmentItemsEditPolicy.class
+SHA-256-Digest: ot7hAMdzN7wTL4/KfUB5RS1DtFpBeHZgbV86cVPQjak=
+
+Name: icons/CollectionUp.gif
+SHA-256-Digest: xbHIJbEhJxx6uWOlrLQrZhpklkFGzI8Ozxvzy1q1qEQ=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/label/WrappingLabelDelegate.c
+ lass
+SHA-256-Digest: MKi3B+WPfQIZKXqSNMgSZZp/y7W2UPLVO3H4mJeoLMY=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/ShapeEditPart.class
+SHA-256-Digest: 4hrsRriTUhVIgmSFerlN0TW5M2NFucXSO59p/lqBFgo=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/tools/RubberbandSele
+ ctionTool$MarqueeRectangleFigure$1.class
+SHA-256-Digest: LeAGNfOsmqO002R3+WtbmcUVEdUEPtQvwBsSdvsuENM=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/l10n/DiagramUIPlugin
+ Images.class
+SHA-256-Digest: osTA/afewCgmXnwp26JCgc7jJi0d0H998bmQGCLaEi4=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/dialogs/sortfilter/SortFilter
+ ViewerSorter.class
+SHA-256-Digest: bPLzsL0tOcimx2tzG56kJt4ksKExSWToGk1ceVAhZWk=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/AbstractBorderedSha
+ peEditPart.class
+SHA-256-Digest: sKxShvyw0RUuRHU+zyKDbv72Q7iQPzvtu15XdU2DnlU=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/services/decorator/package.ht
+ ml
+SHA-256-Digest: JfMMzeNG/Wa+rjy4XYrFBD0A+9z8uTYBoKZHk9y6TNs=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/IInsertableEditPart
+ .class
+SHA-256-Digest: nXd9vM0ywJVe7b+0EJHAuB1JzBQu8x1kUqfcf7d01hw=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/requests/CreateUnspecifiedTyp
+ eRequest.class
+SHA-256-Digest: 4g3P89pTUSWRdm6GWit6eDhIWh1yA3NQHNEEgNsu9Zs=
+
+Name: icons/elcl16/arrangeall.gif
+SHA-256-Digest: 3U/kEMlsn1uuEuE7cwN15wDCRylQSZe8xi/5wVtUXcw=
+
+Name: icons/handle_outgoing_west.gif
+SHA-256-Digest: 6ehOoyhFDsNgTK3AAjAt3u+89igQ9N+B13qXnizLPy4=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/services/editpolicy/
+ EditPolicyProviderConfiguration$ContextDescriptor.class
+SHA-256-Digest: QNzU/TRa5tBgX30OgP5U0W60Z9MZWI5os1XXKCXqPE0=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/TetherConnection
+ EditPolicy.class
+SHA-256-Digest: EBkZkX2QjxcG4D3LN7UgJlUHy4MaP6A8MkOFWhu8Zjw=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/services/layout/LayoutService
+ .class
+SHA-256-Digest: Vq0QNEeseOg1H0kmXGXv8epnWlLmsNKJacSOYmoufDE=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/BorderItemSelect
+ ionEditPolicy.class
+SHA-256-Digest: PrR24YQ4xaHcYTzW0RoICOVun6JagkE7FtkfnQhar88=
+
+Name: icons/dlcl16/noconnectcursor_mask.gif
+SHA-256-Digest: lo0AhJGGO/uCo0Hz8dF2kdtQRfdZ4l/5yhni9X8YqqY=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/editparts/DefaultEdi
+ tableEditPart.class
+SHA-256-Digest: Uj+YAajTpW07J+UvMnhsjGZvGWC6ZD1hFAgaGPOLUB8=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/requests/CreateViewRequestFac
+ tory.class
+SHA-256-Digest: IfGWa+m+fiu+4TtTSHo3HRMWA24bUkgcQHiLg6aJqyk=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/editparts/PageBreakE
+ ditPart.class
+SHA-256-Digest: eepmZASBSYvQ/dtBydSiGbOF1hwQMT/RGF4sUMyPYEo=
+
+Name: icons/showlabels.gif
+SHA-256-Digest: FdFn4CYnUdcTqkJDya99x0cToFCxZ2ozmxyAqydziHY=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/tools/UnspecifiedTypeConnecti
+ onTool.class
+SHA-256-Digest: mzmIzpPbMxPv1SrABI7ghyGTi2HAZTUHsjCRQsTqdZs=
+
+Name: icons/zoom100.gif
+SHA-256-Digest: BCPcwcIi/9OBcNeDS6hX3u6JxWLmCx8g2oEeEt5pUZE=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/requests/GroupRequestViaKeybo
+ ard.class
+SHA-256-Digest: yWnvQ5Oa0yBmZqYPFg3rSai8T0AvGgqXmBUkGsy1yXo=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/services/editpart/EditPartSer
+ vice$1.class
+SHA-256-Digest: YXemSMRezxvZEAVw1/ow/wuzST4/xtxEDyo3bNQnNSU=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/providers/DiagramContextMenuP
+ rovider.class
+SHA-256-Digest: fkUpcdUiGhjMnjkRt59L+UkhJb97OuJ5lbMaypF2vW4=
+
+Name: icons/show_compartments_group.gif
+SHA-256-Digest: 3T8qpaggK6InLDAbOFK6kIB9NYNKtr7TIelZil02NDw=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/figures/BorderItemsUtil.class
+SHA-256-Digest: IY5Dh6bXZeoWJLW3WkXntZfpVZedw6kjcNwINU/0ywY=
+
+Name: icons/error.gif
+SHA-256-Digest: iiyTDHy3r4F6/pRQ4NF8TlV4o7C1RGg/nKSpfDc7vKw=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/parts/DiagramEditorInput$3.cl
+ ass
+SHA-256-Digest: w9E8tpIYqAye8Y4LbbIHa80Rh/FD0iFdth1NNoSEf0U=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/editparts/DiagramNam
+ eCompartmentEditPart$DiagramLinkComponentEditPolicy.class
+SHA-256-Digest: mtbtqAvJJmgDMpEbNFgf4n773u6rq+aShV8k+jQYNic=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/ruler/commands/Chang
+ eGuideCommand.class
+SHA-256-Digest: JY57jhqB+SWBHUbGlstsAAxP/9Dwhq2RSMgYsLGzsVc=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/view/factories/BasicNodeViewF
+ actory$1.class
+SHA-256-Digest: gfJRo/dpjqkGZ4ok07YZYTW0kftR17O0fJ7kVKSEMOI=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/parts/DiagramEditor$5.class
+SHA-256-Digest: CNl3Ly1A+FDZxAtvedBFJEnF3NgTdOeSaDY/3FOYqW8=
+
+Name: icons/diagram.gif
+SHA-256-Digest: xAQHP+u2RZ7tla94qVzavF6BlJeJZ7jRfwPZiumXEgU=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/figures/package.html
+SHA-256-Digest: D2md0FqMhRHUfycqbk/R8mI8BLap9/O5I7zhXegHAuY=
+
+Name: icons/dlcl16/show_connector_group.gif
+SHA-256-Digest: 97NofUcshsygOWmUy//OA/RrUk760tJy5gJo2KWS/E8=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/ShapeNodeEditPart.c
+ lass
+SHA-256-Digest: NfNST/N44j4ZJrtfKk+fM8dFiOuj8ee5VV7VGcPj55Y=
+
+Name: icons/dlcl16/line_color.gif
+SHA-256-Digest: wk0ZG42vHNqwxJuMt7Ykip73AATmYT5zOi/0CZRKJ+E=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/parts/DiagramEditor$2.class
+SHA-256-Digest: uBKNotjR2XToncYhg46/fXteWOiQBN1lhPhsfEjXT0Y=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/CanonicalEditPol
+ icy$1.class
+SHA-256-Digest: SuwUpL/ZTAAdS+CElQEq03wu6wpT8lwwm0coK724m9Q=
+
+Name: icons/size_to_control_width.gif
+SHA-256-Digest: o+mNHdvTuf3JTJpF+YMIr0Ry33jCkthYm8Nfi0fOBN8=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/GraphicalNodeEdi
+ tPolicy$1.class
+SHA-256-Digest: aKnssKgr9og8hcxw5BckF/sKg4QpcgPAgv/gvvOccGw=
+
+Name: icons/collapse.gif
+SHA-256-Digest: KroDcfJcDNqt0rVuYYzkA8Ftt/8sZ13P0zbiEc+Lixs=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/resources/AddBookmar
+ kHelper$2.class
+SHA-256-Digest: SxfOENrIC9gufd0sXAMJe4mcwpc2W6J48erHDA8Zu/0=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/NonResizableEdit
+ PolicyEx.class
+SHA-256-Digest: UfF3l3CjJYCIZldKIqTo9Rdo7mNJU9pOm8Qau2vRrA4=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/editpolicies/ListCom
+ ponentEditPolicy.class
+SHA-256-Digest: gLThjJrEnZLFN3qSP+DlxG+/28SNXaiR1iuwHpLU/9s=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/actions/ToggleRouter
+ Action.class
+SHA-256-Digest: o2yyldXRy7w/bDUeQqFn9G0YUjhZRJ8IqTFCWU2yj/I=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/view/factories/optimal/Decora
+ tionNodeViewFactory.class
+SHA-256-Digest: i/k51Qq6o/pVHnFiz26hS4jeVe0rI9ncsNUx4r+sXak=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/services/editpolicy/
+ EditPolicyService$ProviderDescriptor.class
+SHA-256-Digest: EqaNEW2JN+Q9rZw2a/QH9kQks7+m3VqhO4uHNdgAOX4=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/view/factories/ListCompartmen
+ tViewFactory.class
+SHA-256-Digest: J2Ol/5vPGJ0zZmSEwC3jJqnOyJ2vkZeKiSn+YhL5EWw=
+
+Name: icons/dlcl16/rectilinear.gif
+SHA-256-Digest: cwwcmfqXvHffMl0Zoh/GKfOTG88dviiqMT6gpF4wMaw=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/ruler/commands/Creat
+ eGuideCommand.class
+SHA-256-Digest: 1v2MEy35NM68F5Q9mRSpvqXlNS9tAIvNHRTxZ2g755g=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/ruler/SnapToHelperUt
+ il.class
+SHA-256-Digest: msKuGQcU+8abuJCVYwtoEYjnBNL+0mV6iPWovMpvAj4=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/requests/ShowHideRelationship
+ sRequest.class
+SHA-256-Digest: dKwVLokH8wYraQHeZL1a55PNGULeU9KDXT3J3euLhy4=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/services/editpart/IE
+ ditPartProvider.class
+SHA-256-Digest: 0l1swtRbHU2xZxVetOJmj+9/7BwuWUJhY/8pWxKkjQ8=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/LabelDirectEditP
+ olicy$EObjectAdapterEx.class
+SHA-256-Digest: EE1b2XdMVDoY9jaQmics9cnNytTiN3+Te9u5iyKFp0A=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/view/factories/AbstractViewFa
+ ctory.class
+SHA-256-Digest: slyjkK/+ZHy4kT3/tutCUr9YHKD9Cm74mNdeSQd2/EA=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/view/factories/AbstractShapeV
+ iewFactory.class
+SHA-256-Digest: n0w+2bI2/zWiR2SIMW7lIUyzl/LDXLyIQxlBCLL9uvU=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/parts/DiagramGraphicalViewer$
+ 1.class
+SHA-256-Digest: poh7KwZBntHzZYLsYWwTCqVTBCOYtebKk8wpKBvcq/M=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/parts/DiagramEditorWithFlyOut
+ Palette$ActivityManagerListener.class
+SHA-256-Digest: 11LKQeLQd3Uy17Na4reqJVcXpWzpGoe6e/JlQOYlPHg=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/services/decorator/p
+ ackage.html
+SHA-256-Digest: D2md0FqMhRHUfycqbk/R8mI8BLap9/O5I7zhXegHAuY=
+
+Name: icons/viewpagebreaks.gif
+SHA-256-Digest: 84eECEMMkmLjV54JPPz0x/iZxT/hJm7uTXJNj3XcD/0=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/tools/package.html
+SHA-256-Digest: D2md0FqMhRHUfycqbk/R8mI8BLap9/O5I7zhXegHAuY=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/dialogs/sortfilter/S
+ ortFilterPageManager.class
+SHA-256-Digest: +EpmqsfYKKL6OICXJZ3BkN7H/qjm3LoUdGRXOwZEMTo=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/requests/CreateUnspecifiedTyp
+ eConnectionRequest.class
+SHA-256-Digest: QScx1puJxIE/k7YND/CPduaPqvjgN/bJVI1fEanvpCY=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/TreeDiagramEditPart
+ .class
+SHA-256-Digest: 2OhMMeT7RU/6n8czWhlDE4B01Pc2z1QL4m8AFUCx0FU=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/figures/LabelLocator.class
+SHA-256-Digest: 3Y0HVllRqPCY55CmzPolP8OUcscPeZp9cs1t65PHtMU=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/commands/PromptForConnectionA
+ ndEndCommand$1.class
+SHA-256-Digest: EQprr+upT+HRblvLkEaS73NY7X4OUTlRLMYxvEnwUmg=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/ConnectionLabels
+ EditPolicy.class
+SHA-256-Digest: 2g9Ar/303a2xdbuMeMBKNO1SoHyLgQli22eqJRFsBfg=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/figures/package.html
+SHA-256-Digest: IDTKCJMAs/1J5rOFfLMzuMX0QLr/kl2AQf6mFFI4dUc=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/parts/DiagramGraphicalViewer$
+ LightweightSystemWithUpdateToggle.class
+SHA-256-Digest: Vag5ZzxJ76snrxS0/Okf4YWqemRWzUlqQJZyfllZM4o=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/services/layout/IInt
+ ernalLayoutRunnable.class
+SHA-256-Digest: OlV1xeEivSCBMaEkpPKcSzgldmcrQL9MzZZIjM1HSNo=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/type/DiagramNotationType.clas
+ s
+SHA-256-Digest: WXXy7IsIT+pnXA85hy46/j5NiMtksqk3Vi6vtCclaeA=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/PopupBarEditPoli
+ cy$OwnerMovedListener.class
+SHA-256-Digest: 4j45xLt/dzNXSlHKhtdFl6Rgsea2+aLEe3LRWIPgxas=
+
+Name: icons/bookmark.gif
+SHA-256-Digest: VMQJGZ9IO8tJvpHTWKOvTXN1V1JJxbyxJ6DSvnqRKzM=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/ruler/SnapToGuidesEx
+ .class
+SHA-256-Digest: 6oeIPl5TFx4Y0RJmiq8L/aE6UKzeFcXIzJ6+VLCD9xw=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/tools/CreationTool.class
+SHA-256-Digest: Nq/TCUNJFBaa05QXvJNXOAqfqXHVZMrX+81bFJ8YlaE=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/pagesetup/PageSetupP
+ ageType.class
+SHA-256-Digest: oGANs3JO7HlPzRTUc4SACYQDX3K7dOJtRSMfdsbYVAg=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/ViewComponentEdi
+ tPolicy.class
+SHA-256-Digest: YrBqwbc9x7cU88oLdVVf9QEBqIMGvf5caB0hlIhX1Ow=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/commands/ICommandProxy.class
+SHA-256-Digest: 3EFFjAnjyx0jZRfK5YDAJkTRXKA/LDk/FgdmjV186qM=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/l10n/package.html
+SHA-256-Digest: owCUo+WdVoiU5puFAyI/RkFM4jEbzFtdbi0mjYEoKpM=
+
+Name: icons/noteattachment.gif
+SHA-256-Digest: ywbiuz3v2tc7bKVzMnRuxCQ/Mlod7tTG88WLR8tmeXU=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/commands/CreateCommand.class
+SHA-256-Digest: rcFdAp71/iGXBJtoefmgLamv4S87JUWsDfFEA6MohO8=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/requests/ZOrderRequest.class
+SHA-256-Digest: gMCEx9RCY6fI9vgWt1OkSqFTGnOJXoDuLx8/c20Q9I0=
+
+Name: icons/elcl16/recalcpagebreaks.gif
+SHA-256-Digest: FsuxyKiTWBe0x939SjBlng9IqlSe+IUzr+an/ZQ2XiM=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/requests/RequestConstants.cla
+ ss
+SHA-256-Digest: jaC4wLzBv2wOTK76Y/9lDoMO4/OQiaiOlwADzi972vY=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/services/editpart/package.htm
+ l
+SHA-256-Digest: pYbB1AMHbdwTJGiYUNetDhkQyKPKewFyYB3hhdr+yfE=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/parts/DiagramCommandStack$3.c
+ lass
+SHA-256-Digest: PQ3R38wS0CFz+yJT/bVF6w8DVBrHr5XrOQz85YZ6mes=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/actions/PromptingDel
+ eteAction$1.class
+SHA-256-Digest: EftMWuVSHJe1Ct4+G3dhxpam9Oena21wUkYj5i+OKug=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/dialogs/package.html
+SHA-256-Digest: D2md0FqMhRHUfycqbk/R8mI8BLap9/O5I7zhXegHAuY=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/handles/package.html
+SHA-256-Digest: 6RPJqsmwWJvfysapDrZj0a3Cx+rOIn5ntbAMR3paEtQ=
+
+Name: icons/handle_outgoing_south.gif
+SHA-256-Digest: aGZWo/FhSS/lyGWWYVwPWd8BT8mSRsHGx/O7fWplN10=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/ruler/GuideMap.class
+SHA-256-Digest: yB0yL7B9lKhgtqLyaIL2+/XUS6J203DbQhFcQba8gdc=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/tools/RubberbandSele
+ ctionTool$MarqueeRectangleFigure.class
+SHA-256-Digest: oi3q7N++PyffyPbLj9SsGBTWBqPjzEYl5AVh6YgGgko=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/dialogs/sortfilter/SortFilter
+ LabelProvider.class
+SHA-256-Digest: LwRy4fYMAA+2jZyZqbRXrr29u05yk4Euf0dlH4IST4w=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/ResizableShapeLa
+ belEditPolicy.class
+SHA-256-Digest: /cRihCThMk87PYNvmOJzxeObwIFnSrWMgyQ8aNSwLTQ=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/PopupBarEditPoli
+ cy$RoundedRectangleWithTail.class
+SHA-256-Digest: mOiM60uL6Tkokf8cRrFnpgg3/FfGf4SJH5d7BSrLzxw=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/ruler/commands/Delet
+ eGuideCommand.class
+SHA-256-Digest: 4cq1AYdgBANPCwlgSYUOx4GfBSwrsTCyhqRuwWr+LFg=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/menus/PopupMenu.class
+SHA-256-Digest: Vu13zkFap1pEADSon8MjuIKOoQs7Kh47dBYGK1cT6gA=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/preferences/DefaultDiagramPre
+ ferencesInitializer.class
+SHA-256-Digest: pDQTSBsUWeQTFgrzPzr2i7SoIeBSYekTjiKYHSnL6u0=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/dialogs/PageSetupCon
+ figBlock.class
+SHA-256-Digest: fYnh09Ro8w9v1ZbtdsnHZqSLbWe0KT5xGLg5c42DEnc=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/GraphicalNodeEdi
+ tPolicy$PromptAndCreateConnectionCommand.class
+SHA-256-Digest: +JACsYsn+YVCZKInZzLwhe9GN2NaJpg1NbtVH017n0c=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/dialogs/sortfilter/S
+ ortFilterDialog.class
+SHA-256-Digest: egrbOWNSUK1RpO5cUiXaDG0aXyaacC7Hl/zlRNoXtHw=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/parts/DiagramCommandStack$2.c
+ lass
+SHA-256-Digest: PePDG6yJAstlDHpkXkboe3F1vnA1rwfLn1vRnTI2RyA=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/DiagramEditPart.cla
+ ss
+SHA-256-Digest: BxjSo2One9wRJHMD/W67gnLX9v/klGGhjgE20FkCIT4=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/services/editpolicy/
+ EditPolicyService.class
+SHA-256-Digest: Z3e0bqhuJf1/YqWiHOzjQ/WhAUkVeIc6HOGqIVUUwZw=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/CanonicalEditPol
+ icy$AsyncCommand$1.class
+SHA-256-Digest: uf5PZeCIb0Dbwo3j/8fhaP/gJaVJQijdwKlYzXPPUME=
+
+Name: icons/handle_outgoing_north.gif
+SHA-256-Digest: Ylq7iKDaIJvh9uEvTq35v7dcarOCC9ZnfZNQ+tK+Emc=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/GroupXYLayoutEdi
+ tPolicy.class
+SHA-256-Digest: YsC7i5EpQH5aSQHJ4xvvNK13Y0GnEWdAGKlpKi1lo7g=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/parts/DiagramEditor$DiagramOu
+ tlinePage$4.class
+SHA-256-Digest: N2EAtYcqcm7M0whJ+/1nYvuofTrklTaOo1V+QI7tMvE=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/handles/ConnectionHandleLocat
+ or.class
+SHA-256-Digest: brmhFJjxEwRr7NOnEyo/u9bEHn1NwrnoSStxoEjRwP0=
+
+Name: icons/dlcl16/selectconnectors.gif
+SHA-256-Digest: uWT1Y177mf2XXGSrYsk+8P/tkWWvAk0al4JDz+Sk4E8=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/preferences/DiagramsPreferenc
+ ePage.class
+SHA-256-Digest: usl9Rb+tV04q6xt/W/Z65drLXuEr+/Y9SWPEeT6jqfk=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/commands/OpenDiagramCommand$1
+ .class
+SHA-256-Digest: 7iiorUM7nXUvHXDlERSrz/ZUrbL8voROsg3sO6tbI2o=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/ContainerNodeEdi
+ tPolicy.class
+SHA-256-Digest: mLmtQu43ofPdl0TAS81MbYOgCYBW1T81JslUj31CyXw=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/preferences/AppearancePrefere
+ ncePage.class
+SHA-256-Digest: b1Q1vZ7+uQPCzyJapUY6aVw7t1XgNpl+oo1fYE6a680=
+
+Name: icons/elcl16/viewpagebreaks.gif
+SHA-256-Digest: 84eECEMMkmLjV54JPPz0x/iZxT/hJm7uTXJNj3XcD/0=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/ShapeCompartmentEdi
+ tPart.class
+SHA-256-Digest: FpC2maSSsLNYgcilToFUe+V1hjNm5MwAEwUkAr2Gay0=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/services/editpolicy/IEditPoli
+ cyProvider.class
+SHA-256-Digest: 0V4U5gTRq66z3UbTY8TWYW8ITXRSuNmSDhbIImLLJ/s=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/figures/IExpandableF
+ igure.class
+SHA-256-Digest: eo7M3Uzu3YLQZ0IlakhvKtCw0wuA4GtaP0DONGxaK60=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/parts/DiagramEditor$DiagramOu
+ tlinePage$3.class
+SHA-256-Digest: 4pD0zfdz4o35MqbQpSP065awxHocFga6Z6FaT65RbOc=
+
+Name: icons/handle_incoming_west.gif
+SHA-256-Digest: gRBs6ykpcQ9RDt0UQjIH/6XAcdPAq7UDdWQCMP5CsHc=
+
+Name: icons/collapsed.gif
+SHA-256-Digest: mVKFwtvEDwt4L/7MTX2mI/KBlHO9yp9qPJB3lcLyW40=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/l10n/package.html
+SHA-256-Digest: 0IbtBSpHTK8vqK/karROoQU6di7hq+u1SbQ1bNPAjnc=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/tools/CompartmentCol
+ lapseTracker.class
+SHA-256-Digest: rnqclG5AgAJUzMeKmVMvaxxG6en4iTBL3xM5DyPxb9g=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/services/editpart/Ed
+ itPartProviderConfiguration$ContextDescriptor.class
+SHA-256-Digest: slPsIMolm9/xRtFvAwq1HFY8t7M/mMeIOTstaS5Q1+I=
+
+Name: icons/dlcl16/fill_color.gif
+SHA-256-Digest: Z4atTsFsCbWpV7S8G+Now1RilZEmYyHpR5ax7EHR0oc=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/actions/PropertyChan
+ geAction.class
+SHA-256-Digest: dtB4ZuYiPupwgMQnlYQTyGUsjszF2ud/HgnTkqpsRpQ=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/commands/RefreshEdit
+ PartCommand.class
+SHA-256-Digest: rG8egdsy+Q2YcsO9nBkT+QRzPF424eQaofElVYY0Olo=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/services/decorator/AbstractDe
+ corator.class
+SHA-256-Digest: 4y92qYGOSwWQpxUdEdHZaMMvUWsHdIoFdUk6sRNWiGE=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/commands/DeferredLayoutComman
+ d$1.class
+SHA-256-Digest: GH2AyjbWF5ZBeMGuEhU+tDBhjP+5SUBo/uuvYDl8CSM=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/PopupBarEditPoli
+ cy$PopupBarMouseListener.class
+SHA-256-Digest: FjUiZWQ0Jtb84QXbVkxyWeBNFhQHks6mBuTzE6XMGuw=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/dialogs/sortfilter/SortFilter
+ Page$HeaderSelectionListener.class
+SHA-256-Digest: 11qZfn+Xc/U7jaZB2lr56X9oNhfJ4+tqfkxnrr3TJ4M=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/parts/DiagramEditorInput.clas
+ s
+SHA-256-Digest: XQJvnB0dg33ctiUaRL0wmD/iFNm65a1TRFu84+wDyxg=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/NonResizableLabe
+ lEditPolicy.class
+SHA-256-Digest: 6UIVzKVBPDEc2SZ3uR5ktOLNJl2zXqGnW6DSYiCgiuU=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/requests/ChangeSortFilterRequ
+ est.class
+SHA-256-Digest: e+4gsyEZH/XZ3pDPOGnOvs5mxkxo8F0pwwvSN+3hpaM=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/services/editpart/AbstractEdi
+ tPartProvider.class
+SHA-256-Digest: EtG/udasmJ2vglpv/2eaEc4BGlgCpvJaE/oWILeqmew=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/commands/CommandUtilities.cla
+ ss
+SHA-256-Digest: snj7zUSINiM59FvUFVVpaBM19UddR6oqacWPILYcCNw=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/services/palette/PaletteFacto
+ ry.class
+SHA-256-Digest: +ARgDEqk+AOujFY4seUYrWsrv9SPqLmBAxT8NdI6D5o=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/type/NotationTypeFac
+ tory$NotationType.class
+SHA-256-Digest: YqXOG+8FLeEMg6HJ+u4Zez6FQVJT+mw7oxznt4XUVJQ=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/tools/package.html
+SHA-256-Digest: NZk9LNsysZJbpktioeoPdOUGER50WLiDq4n9XXtc1Nc=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/parts/DiagramEditor$DiagramOu
+ tlinePage$2.class
+SHA-256-Digest: vzY2s7LHaI+BneLmWrySzBsCUjNqRo2IbIFz+/IXZCY=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/handles/CompartmentR
+ esizeHandle.class
+SHA-256-Digest: gCP4Fyq52Yk5Yi8iImoFxJKpNvzsT7YRdONgL5gpTRg=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/services/editpolicy/CreateEdi
+ tPoliciesOperation.class
+SHA-256-Digest: ahQqpsLJWxMvIAjEx4RARa2LH/3ZM7dZfxE3Cdm10YI=
+
+Name: icons/sortfilter.gif
+SHA-256-Digest: K1BRwXo+r2rfMZF3bsa0/x3t4aQtk+uGiRjixim+GjU=
+
+Name: icons/actionbar_inv.gif
+SHA-256-Digest: f6+vg73x8bpiyUY1VqY8b1SfHiyd9OoHZTe62hlaEl4=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/commands/SnapCommand
+ .class
+SHA-256-Digest: IfYgCOrDhftimGpTp6ChJ69dlyNZ4CmjyOm1Yh2mcQk=
+
+Name: icons/popupbar_plus.gif
+SHA-256-Digest: oTRpuvyWqx1KEHvIe/4ZpTtY6gsFr1PuPnBrshmlIKE=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/actions/DeleteFromModelAction
+ .class
+SHA-256-Digest: G7CO0ejju/vSH7HZVzCH26M+Xf6n/nYkWoRL78pDHXQ=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/editparts/DiagramLin
+ kEditPart.class
+SHA-256-Digest: wSjogPIIAlYk6tv0WHXr689i5sX5X/Vlx+J5sBkyzgU=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/ContainerEditPol
+ icy.class
+SHA-256-Digest: HZzIQQhXtaQavqOxw+B6jC93i5UC46IZChf1oegajGg=
+
+Name: schema/editpolicyProviders.exsd
+SHA-256-Digest: Z5zXWK97OvgEONlBwAcuq17Go+pTnFbkQaCe4Ppyl/Y=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/parts/DiagramEditor$DiagramOu
+ tlinePage$1.class
+SHA-256-Digest: 8uidvd9lC3o0Q5wsgiyEHvEhzGBlBKrTOXBplQyR8vc=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/services/decorator/D
+ ecoratorService$ProviderDescriptor.class
+SHA-256-Digest: ar35c+/N1OzORpuFuT/NFS/OKm5gVEzKJc4H0In9jiY=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/services/editpart/EditPartSer
+ vice$ProviderDescriptor.class
+SHA-256-Digest: 3Hj5RRheubZXmiJKkLfOkyHfE1tIESCb+7RVoRvwFMg=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/figures/IBorderItemLocator.cl
+ ass
+SHA-256-Digest: w/xgxfQldXoJOd2rH6o2tjRArJFBLH02DK+CyPd43Ds=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/ruler/CompoundSnapTo
+ HelperEx.class
+SHA-256-Digest: wYWCk4nhPzwyZaFLkn2Pj9xisp36+PLGqhJka/9lJbo=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/l10n/DiagramColorRegistry.cla
+ ss
+SHA-256-Digest: VEqUqQoJS72q2q7zMCAF8CdbPxfkXs3OL9TyM70yDPQ=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/pagesetup/PageInfoHe
+ lper$PageMargins.class
+SHA-256-Digest: 6zw+rJ9btNK/CFvRw85bjQ0CJeSu691Pqjp5PE/tCAU=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/commands/package.html
+SHA-256-Digest: Rfw6Yr9JV1lH9kELGVhFVZIxxRcNPO2ER3u6S4NfBAQ=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/ResizableCompart
+ mentEditPolicy.class
+SHA-256-Digest: nW7tTU+y3y5zyKUhmVpYJYJzU4S7VFss/vkPybafCMU=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/layout/FreeFormLayoutEx.class
+SHA-256-Digest: Sy8rIgQkNbOxDj4XEROey2sCNlTWW9cw/mUsPmQdotQ=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/services/editpolicy/package.h
+ tml
+SHA-256-Digest: GnjcC4+ZfHEVEAaqEmyq41oHx/UzOK5OU7XVm3czhtQ=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/ConnectionBendpo
+ intEditPolicy.class
+SHA-256-Digest: 9Vjox7oS9JIOVcVHnegnXGIGK04Qn3vZIs0TYsWTe3w=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/editparts/TextEditPa
+ rt.class
+SHA-256-Digest: 7dqzBGyLHC2yg7QH3LJ/EfwclOS2Xg3SukyxE9l+zd4=
+
+Name: icons/elcl16/selectall.gif
+SHA-256-Digest: OrZ6ISB109mwnXBNbu+lzU2FGdhTAPW9UWGlY1gKIYs=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/LabelDirectEditP
+ olicy.class
+SHA-256-Digest: P+NWOJPOBdDEOQ3eill7ymHKOez1xkkesuZrPEiCgc8=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/services/decorator/IDecorator
+ Target.class
+SHA-256-Digest: nEdQVvZwqSvYUZXFLeGQehWvJtW360wBzbNEQ3KA/k4=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/DiagramRootEditPart
+ $FeedbackLayer.class
+SHA-256-Digest: Y7Pvyn0tD7yrlwvG0A5eYqcY0F5Iz4uDYeGpCec7lqQ=
+
+Name: icons/elcl16/arrangeselected.gif
+SHA-256-Digest: eYYXPJv9GhbIu0pzZvifOQYJiT2qfsDWN2wfHh16OOk=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/actions/InsertAction
+ .class
+SHA-256-Digest: /a6lmuPqcKzNzR2l8voV6kk6P+SVV93uFT74dUnI7mw=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/editparts/DefaultCon
+ nectionEditPart.class
+SHA-256-Digest: 4qsab+J9oFo7oQMLyiigQgAz3WHfDYsCnvO7u0s321Y=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/requests/SortFilterC
+ ontentRequest.class
+SHA-256-Digest: DxQmIRKJHbB8YXm7OlLpY8f5cxsWJYOPMcYs0T0744o=
+
+Name: icons/sm_arrow_dn.gif
+SHA-256-Digest: jKQaEoCNoVhKyHP9ZDMsjdbgC4u2a0fEcfuiKrkILPc=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/view/factories/optimal/ShapeV
+ iewFactory.class
+SHA-256-Digest: bFSLBjrGDH8s8sM+Qytk/nFa3Ws9n4HB75PSbnihkV0=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/requests/CreateViewRequest.cl
+ ass
+SHA-256-Digest: tA7pi080FTV6kwLj8+SHv1DBXdLr/22bDYnbC95TxmU=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/editparts/DefaultCon
+ nectionEditPart$1.class
+SHA-256-Digest: og+kjYbODJsBsDrY/ZMdbtTIc8MT1zdYxy/I9TfrRpI=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/figures/BorderItemCo
+ ntainerFigure.class
+SHA-256-Digest: MroQQHEmBOgoz896xcH8q+tZ+C55IkeIV5uPgs+yqGg=
+
+Name: icons/zoomtofit.gif
+SHA-256-Digest: DTpCreqXdRWkhKnbdnMze9sQSxO7d1iwCxrgu1NUdy0=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/parts/package.html
+SHA-256-Digest: W1GVM27hRaEYm53hfmfoQ3C3/CGo1b2lJxojqR/UbJE=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/figures/BorderItemsAwareFreeF
+ ormLayer$BorderItemAwareFreeFormHelper$ChildTracker.class
+SHA-256-Digest: 9oePDdMBC0xiGbLPDMSMIWXi/Nd549jHuZ+gPW5vurs=
+
+Name: icons/elcl16/hideconnector.gif
+SHA-256-Digest: hHT1MB1bGQyflLUxvz/ZkIEd9CyBLhEg2PVyxOk52rg=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/DiagramRootEditPart
+ $PreferenceStoreListener.class
+SHA-256-Digest: WRZPjU5sEplUskqbee2/E//GqaXdNbl4sfBQJsEjWF4=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/requests/CreateConnectionView
+ Request.class
+SHA-256-Digest: 1rF3xboYslLxG4NVXtUrC8uPIvBsS29y7hrvf1HTyNE=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/services/editpart/Ed
+ itPartProviderConfiguration.class
+SHA-256-Digest: 5TGUiDD7Th+ODtLMXJjqR/EfYDBVpbcOXSqySe46cII=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/pagesetup/PageInfoHe
+ lper.class
+SHA-256-Digest: GNocKgdiNHB/ZU4kYkgkyEh5N/fhwOMrDEUEva0/zJg=
+
+Name: icons/blank.gif
+SHA-256-Digest: bKNdnhhfbPUWEr3XjRzoZcX9K2w/fpnqrZIKlu8aJDc=
+
+Name: icons/elcl16/selectshapes.gif
+SHA-256-Digest: DbIckpdM1Su2pgKzdhMGC6L+k7ZeA52dk4MgOUwHIcY=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/util/DiagramEditorUtil.class
+SHA-256-Digest: 7EJ9N199q3WF2tmN3B3nKasWMl6KJU4Bh8pNsII+Zpo=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/parts/DiagramActionBarContrib
+ utor$ActivityManagerListener.class
+SHA-256-Digest: hcKiDRyQ1s1kd0ivQ/7v5j7yws0bK2xYRBvLfvrFmVQ=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/GraphicalEditPart$3
+ .class
+SHA-256-Digest: bvPo8xRwVhOlxb7LaMaBO0DnUP7+ZPlyIN2LAPxkTjc=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/tools/ConnectionHand
+ leTool.class
+SHA-256-Digest: y6D7TN0t4B/KAkckwkCQd4qBIZxK1UHKTQ2TC0W2Nxg=
+
+Name: icons/bold.gif
+SHA-256-Digest: Tx4x/Zm0L+gw2WgzTnJkqG1oMFE0m2E1hXD3fkoIPJI=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/pagesetup/PageSetupW
+ idgetFactory.class
+SHA-256-Digest: hRSzCPWQ9q3is2wCcsT9eeZ3Azm5Eko70CztE1f5zkM=
+
+Name: icons/dlcl16/viewpagebreaks.gif
+SHA-256-Digest: oFI/rPv/qm089md2mVJ6k7r/yYUKiPuqq92gaeZuaoE=
+
+Name: icons/expanded.gif
+SHA-256-Digest: 43XXmyx9fHBGweS9u/y8wKd3maa8yf/G7RmB4tEBbtI=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/figures/GroupFigure$
+ BorderItemContainerFigureEx.class
+SHA-256-Digest: vXGjq9qc0QgChC6R5RS+yQwgEEwGf5qFYaRAIyXmWXM=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/commands/ArrangeCommand$1.cla
+ ss
+SHA-256-Digest: 5qv2lnS7U2+P1MbvchCHmq56moYquKKX4KUiEMS0dP4=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/ConnectionEditPart$
+ 5.class
+SHA-256-Digest: FlkF6wstqJhMDSxmEbHW2SGTZqZ6g4qwh0xcR0yOMfY=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/dialogs/sortfilter/S
+ ortFilterDialog$1.class
+SHA-256-Digest: eJfpOBJOWSEJ1O3HtMNECfmYN/hxAlNvyKiHmeFPHYY=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/services/decorator/D
+ ecoratorProviderConfiguration$ContextDescriptor.class
+SHA-256-Digest: CxP9HdIrh3ImNOmwBy0s+F4t+POaQO/Z6Fg0N5NY+Cs=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/figures/IExpandableFigure.cla
+ ss
+SHA-256-Digest: cO05tsWGKbmHyf9lPU+234VE5s4Nh4yzDzvEZp3sQOo=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/editparts/PageBreakE
+ ditPart$1.class
+SHA-256-Digest: wQGcaU4mIWhYfya2F6G84+MLK8t14TMs8CqyZoyqggs=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/CreationEditPoli
+ cy.class
+SHA-256-Digest: jkV8hAn19pSCDpGOJQQ97VOW+An8UM+peUntRCjEczs=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/l10n/DiagramUIMessages.class
+SHA-256-Digest: Ltgl36Rm1c8mki88wsc3eQas7b56y7k4Y5PpDL8KWg0=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/dialogs/sortfilter/SortFilter
+ CollectionColumn.class
+SHA-256-Digest: ENDAf78DDxCqUoTFMk6HbzIM+Bn0jprhPg73lwo5TF8=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/NoteEditPart$Resour
+ ceListener.class
+SHA-256-Digest: gJ5U1jP8ThubHxhz0lw2Wf2zS9rv4/OerigNAZmR984=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/commands/PromptForConnectionA
+ ndEndCommand$EndLabelProvider.class
+SHA-256-Digest: gZIwvAGUEANdApz8IFzkyRdfHmOplgPC6wMvGn1mEoE=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/VisibilityCompon
+ entEditPolicy.class
+SHA-256-Digest: OrqFVSEnujV+CWzd051YRVXTGBRQ6B9XRziHtwnLNIs=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/CompartmentEditPart
+ .class
+SHA-256-Digest: pAa6HiUrRZRCihggVTOWdE04BgK9v4FlhVIKUI3ZT80=
+
+Name: icons/dlcl16/noshapecursor_mask.gif
+SHA-256-Digest: 2xgscyW4X9NK1mwJWyvOxgFr9qjiA1cis248QkmYPmI=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/menus/PopupMenu$1.class
+SHA-256-Digest: 0agOvWKJfLhT57rUEhGudLaxiKwc96nHmyKgf7lUjYc=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/services/layout/LayoutType.cl
+ ass
+SHA-256-Digest: MKqj//3q4An6GF+Bq6O60HaKlhRGSnVF56f7DHUuQns=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/view/factories/optimal/Semant
+ icListCompartmentViewFactory.class
+SHA-256-Digest: Et1ICubtag3acGNfUW0GO30KuXEEFUyjJFeHRtOwMb0=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/parts/DiagramEditorWithFlyOut
+ Palette$FlyoutPreferencesImpl.class
+SHA-256-Digest: 2iFFZDXzuWu7GY3p9Jc9DoZqGpam8kMOLGuESn2XjnY=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/services/layout/AbstractLayou
+ tEditPartProvider$2.class
+SHA-256-Digest: WqO2t4VxRxMQIiJsWvXg2TmQCedEqHY2oRMHtnaaeTI=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/dialogs/PageSetupCon
+ figBlock$UnitSelectionListener.class
+SHA-256-Digest: WZGKW5k8eDizQUXJb1UkEM5v7xjnJpNw10aOJrgBVoY=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/GraphicalNodeEdi
+ tPolicy.class
+SHA-256-Digest: N8i0umkv5crqvGdpgq0EB5IhQ55ZLe9fOTTTPxddTiU=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/actions/ZoomContribu
+ tionItem.class
+SHA-256-Digest: 90DQ5sbTe75nQoEYMDGkDBzqp+u40rHkJ3Cz7wgB24k=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/NonResizableLabe
+ lEditPolicy$1.class
+SHA-256-Digest: laZIPtfrMjfYSRP+w5PY6V/Btr/ShYBhI03t9gFQKys=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/DescriptionDirec
+ tEditPolicy.class
+SHA-256-Digest: QqQJWZfzOEcG9KIKkxTwOMVUO/eVPJY6s8UfuAQqHTs=
+
+Name: icons/dlcl16/tree.gif
+SHA-256-Digest: yb/SoQTthZwAc7eCEUvM+EidzWVUVh/DjWma5xZZo2g=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/dialogs/sortfilter/SortFilter
+ Page$5.class
+SHA-256-Digest: m6OJYUZlSWvw5KQL+UU9zwbih870ChfSHg6PrzsHVyM=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/parts/DiagramCommandStack.cla
+ ss
+SHA-256-Digest: HEszH0eLY1idWkPicY0PX1eRwu5OYB1/XgsUduVDbTA=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/util/package.html
+SHA-256-Digest: 9lRusSpkXOKOzV/qJusIctJ4NIiNrmWFOhU3J7C+htE=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/requests/ApplyAppear
+ ancePropertiesRequest.class
+SHA-256-Digest: vt0yYAk6drnMjS045QPEaGKE9O2JHp78HzHDwew05Uc=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/PropertyHandlerE
+ ditPolicy.class
+SHA-256-Digest: A3dUt1yVdCfcRHiMUiowkC7Yyox1FCDexTlAb0oGL5A=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/dialogs/PageSetupCon
+ figBlock$4.class
+SHA-256-Digest: qn3Q1G4UCDkgwBd9sWS14TpdnWFcdq35OpNK1mOLJP0=
+
+Name: icons/line_style_group.gif
+SHA-256-Digest: u1k9Y5kH09kfDCRbADAVjUxUMzWt6ywELb0Ct6/5VpI=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/dialogs/sortfilter/S
+ ortFilterContentProvider.class
+SHA-256-Digest: PLdAfGcPAFjiYhZZjdHqoDGHorUVJJAdUHK4DE6z0rc=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/parts/IDiagramGraphicalViewer
+ .class
+SHA-256-Digest: mDSuLMfGfKk3Rp49g4+pdvh3uBhIoQo+Uo624rEOvEs=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/ITreeBranchEditPart
+ .class
+SHA-256-Digest: bxyKxl9pNYQl9fOdJ02aTu1NEHti2LDe1JzJQeNi9sg=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/commands/PasteCommand.class
+SHA-256-Digest: u6k82MbmoQGJzwtnfcFE7Rs+hmgso9u155qug6bxeno=
+
+Name: icons/elcl16/tree.gif
+SHA-256-Digest: ruKU/iBrhvdh+57X2YelnMLN99jMIXwrp5CjQb9NJ2U=
+
+Name: icons/addnote.gif
+SHA-256-Digest: IcEwLcntMLFz/0w08ME48hHkNkp+XSp+4K9+980E5xc=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/parts/DiagramEditorInput$2.cl
+ ass
+SHA-256-Digest: LmPO2PBA7n+qGE1+2B9zNWZPP4fOpq/XlsiJJUhGQIY=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/view/factories/optimal/ListCo
+ mpartmentViewFactory.class
+SHA-256-Digest: uxo/sWjcSEU6w0e1AxEOs8AFKgp9kPnhz2eD7chIFms=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/parts/DiagramEditor$3.class
+SHA-256-Digest: nDLHfdHBGMH4GWm6vRNNu7/mCqaJZDh42ESzZ9oWncs=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/ShapeCompartmentEdi
+ tPart$3.class
+SHA-256-Digest: ZGyUf06kQQXVK1TXempfvyexyhfaC00dqDm/Qy9UnwM=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/DiagramEditPart$1.c
+ lass
+SHA-256-Digest: Df25uvv2W8i/rc+ls33QBH3PigQotziJBTMAUPX1W6A=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/ruler/DiagramRulerPr
+ ovider$2.class
+SHA-256-Digest: qV2sl6+kZ7L/ZgBERF//z0083li8lBR7QypxFNz/Puw=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/NestableListItemEdi
+ tPart.class
+SHA-256-Digest: ycR1r38537Amb87MNkthXbC3DR0MoP1CQsjQEstjvu0=
+
+Name: icons/dlcl16/selectshapes.gif
+SHA-256-Digest: /ac1EKAGYGasWOuYvrymXdIEe4H6Qus63A9/fVgqOBc=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/preferences/AppearancePrefere
+ ncePage$2.class
+SHA-256-Digest: UdJE+EHeK40LeARRtKm56kkWG/wN42lN0ENaxaL0qq8=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/parts/DiagramEditorInput$1.cl
+ ass
+SHA-256-Digest: aJRb7fKbB6ECafcSaZhQ6/72L176nz26iRhyBqVdYIc=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/tools/DirectEditManagerBase$5
+ .class
+SHA-256-Digest: bA4W7fugmSMPze6Du9GPUnpTL+KDaKZgaEScyDvf2NA=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/DiagramUIPlugin$1.cl
+ ass
+SHA-256-Digest: A2e34AicJEGuZRwuaB67f+Ht+0AdsV1XEvFVbhCO+9g=
+
+Name: icons/dlcl16/noconnectcursor_source.gif
+SHA-256-Digest: QwiKRWhS0g9dgQIeOBYEga5rmtlOEChCP3SoUXqzNCA=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/ListCompartmentEdit
+ Part.class
+SHA-256-Digest: EXNfWBmgt284tldOMQ2LqFnlKMV5QN/GMgaOnp5q77c=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/NonResizableText
+ EditPolicy.class
+SHA-256-Digest: 64GQCGGd8o4JjJtyfPHjeveaNQS2nWNLRmjVij1+sL4=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/requests/package.html
+SHA-256-Digest: 0jx3zWLj7pD5UxagMLwKA7w/5pB51WImBrv4K4Elxn4=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/UnmovableShapeEd
+ itPolicy.class
+SHA-256-Digest: iL++TFo+U0c5yLTJ363grZGF74ItsvVmmc+bH4pOz4Y=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/parts/DiagramEditor$4.class
+SHA-256-Digest: I75hrRrc7VIYblChOSiRHGmn2dog9e+G2TyC42ezk80=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/dialogs/sortfilter/F
+ ilterDialog.class
+SHA-256-Digest: kCcbLuwyo0rVlvBo90MA20coghTzoi2FY8KzX2sT04w=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/resources/AddBookmar
+ kHelper.class
+SHA-256-Digest: YK3lo70iO2HxbicEX0kRXi/HT05yUnZZ5M04EwJhHLA=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/preferences/AppearancePrefere
+ ncePage$3.class
+SHA-256-Digest: Y2J4jcsmzdwUixjd859P3Mw9z1pdEOEUsLQGXf7O/K0=
+
+Name: icons/size_to_control_height.gif
+SHA-256-Digest: ECic4kpUElou1NPMCxFBfBMWR/EPa924kt9pvKRx3Fc=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/requests/EditCommandRequestWr
+ apper.class
+SHA-256-Digest: mhut7HyXByA/Uige0kKhk46JE3nK42Z7BLLDYwmlz9c=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/GroupEditPart.class
+SHA-256-Digest: lLeIRVPhcG29IoZLEvtPLyxoTmNDXnuWDjySLg3OIuw=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/ruler/SnapToGridEx.c
+ lass
+SHA-256-Digest: gSp3/0h0BimUF+IMWiywO8VVzqErxsG0deoRxsbqmDE=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/DiagramEventBrokerThreadSafe.
+ class
+SHA-256-Digest: rnfkGk/wxB3PS9f5/6f4wqF+EQBn3MnkkOXeVGQcPGI=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/menus/PopupMenu$CascadingMenu
+ .class
+SHA-256-Digest: agJX7W/gL20Q44lgjO0jJWupdQxBlgN+1/Ct+6/6Mv0=
+
+Name: icons/outline.gif
+SHA-256-Digest: GV/z8DyHMNOUeL9PMfGbsisnEZny6O/hRbz8Irs4lZM=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/figures/ResizableCompartmentF
+ igure$1.class
+SHA-256-Digest: fTAiJZJbOOAOt8gZGVCPKwjff3GDt18wdrxwYPH/meU=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/editparts/IContained
+ EditPart.class
+SHA-256-Digest: FODxjxVz5cDXYj5szLTVQXf0M3VZBbVXgzXO6gjSR5c=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/ResizableCompartmen
+ tEditPart.class
+SHA-256-Digest: Auwua3I+jublASUR9oUveYYkuhZtTczlsWRlHgd45LA=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/parts/DiagramCommandStack$His
+ toryEventObject.class
+SHA-256-Digest: EzyZRKVssOGy9+zgNpP0klDgOtNPAKDgMLTdf+nYIiE=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/handles/RotateHandle
+ .class
+SHA-256-Digest: HNsIv3vHM+NWUBU7Yh4TuVSirroGgeLp1w9/lqkYI5c=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/dialogs/PageSetupCon
+ figBlock$11.class
+SHA-256-Digest: y5Z6JqbaEu6bcykD8wrfubZODiYoKnf69R3shxbFy38=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/editpolicies/Delegat
+ ingMouseEventsEditPolicy.class
+SHA-256-Digest: XYca8OnfTdRFkaVexeGOMvn+Y+jqEPzitWVscK55oF4=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/label/LabelExDelegate.class
+SHA-256-Digest: 3qAEsU4O4EGhWLVLOmlTCMK2nQ73/2tDde92EHmqkQk=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/services/layout/AbstractLayou
+ tEditPartProvider$1.class
+SHA-256-Digest: 0ldPALUJ9maSziqYdyMXwd6dORvq2rNHe+FOAP5JJYM=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/DescriptionCompartm
+ entEditPart$1.class
+SHA-256-Digest: RM8oadCiJZtRPP9o73iqoAlfZho8bv4NnUU+Ik7yVDA=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/properties/Propertie
+ s.class
+SHA-256-Digest: U6WrSy+P8Hs8ZsdIXIboR4OPBLesXVFbz8oWi07weqA=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/parts/DiagramGraphic
+ alViewerKeyHandler.class
+SHA-256-Digest: r7U9lDVKtZ+2KrTPbQJwUuMmwcA6tNuTP7LcTTcXbu0=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/parts/DiagramEditorWithFlyOut
+ Palette$1$2.class
+SHA-256-Digest: TF6Vmu2o4fT1ixxgQV1p9IfGM7s14Vt+ise74ogdQkE=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/services/layout/CanL
+ ayoutNodesOperation.class
+SHA-256-Digest: mubBHgvPrG4dupgFDxmLyid72heGtu7hAgyWul59xo4=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/requests/ShowRelatedElementsR
+ equest.class
+SHA-256-Digest: +tGU3hzl4Yk/cwUTHAYlJzqsdKYc2VQaYvVOTioBz60=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/editpolicies/NonSema
+ nticEditPolicy.class
+SHA-256-Digest: MijJHoiNxRu69dMGx0aQLPDISzAdLHQ8aXdUC9XtOiM=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/ConnectionEditPart$
+ 4.class
+SHA-256-Digest: FIo78Svphz56wgT3Dmmw+PuJiouak3Rqw7CCD2njzUc=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/requests/CreateUnspecifiedAda
+ pter.class
+SHA-256-Digest: L6JAyMKi/v/87r5fqj+nGeVQI5C+N4BuoJCWXnE87OE=
+
+Name: icons/dlcl16/selectall.gif
+SHA-256-Digest: krf6gJmsZ4SvScY9RKJx+HQMF4r00Qe3eb5keHZ50V8=
+
+Name: schema/paletteProviders.exsd
+SHA-256-Digest: YSyNDxHTrQKE5jrJMxIvE9l7mGT1bkmYSE/kz1QouNU=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/editparts/DefaultNod
+ eEditPart$DefaultNodeFigure.class
+SHA-256-Digest: f9F1l/EI5ekB8mTM3JL1lvqfjnj9JIoacSPIfUHk6+w=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/tools/ConnectionHand
+ leTool$3.class
+SHA-256-Digest: aCGdCJ09D6vuU8wJpG8UwqHP4ANWqK9x/Hzzu0U4hjM=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/services/palette/PaletteServi
+ ce$ProviderDescriptor.class
+SHA-256-Digest: eZzoA0rfbTuntUW5DGtrmu/FsaEMP1JpoR93RwFrUoc=
+
+Name: icons/handle_outgoing_east.gif
+SHA-256-Digest: K6ZC/WeB6gd5+oCRrA5QwTWsCSATFEzil1uL9lNJC/I=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/ConstrainedToolb
+ arLayoutEditPolicy.class
+SHA-256-Digest: 0tdZ9AGbr/uknWlU8J5/jpAeElg8+Odbn8zLUYRedug=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/services/layout/Layo
+ utNodesOperation.class
+SHA-256-Digest: eT695OJ+sRm6TsCqrCZ4et1/IhRb4r64n+phfWdY2uQ=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/PropertyHandlerE
+ ditPolicy$1.class
+SHA-256-Digest: +iJP1UKwdPxkSk05Y5AHgp7k0IpYUjPubHKusRmiMNo=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/tools/ConnectionCreationTool$
+ 1.class
+SHA-256-Digest: Dop/oCZZKWPFILknYNABUVh6GX4Vyw7yuVdPmb/9wUU=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/TreeGraphicalNod
+ eEditPolicy.class
+SHA-256-Digest: ilwTHZX1EEXN9zHyfqBoNUZ0cLo4YXjAQ7dT+LMG3Yc=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/DecorationEditPo
+ licy$DecoratorTarget.class
+SHA-256-Digest: eNjAZ8QVJfXEWY3+tjT/ygo30HKB9EfvwVoQR0ZllTQ=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/commands/ClipboardCo
+ mmand.class
+SHA-256-Digest: SBpqjOzCLcDBy2kfE+VneN0Um7bPk1VtqLtLopjXtME=
+
+Name: META-INF/maven/org.eclipse.gmf.runtime.diagram.ui/org.eclipse.gm
+ f.runtime.diagram.ui/pom.properties
+SHA-256-Digest: 3KYX+IyirPmOwjrWEGyZRhrfXqWYVJEFqLoY9ymaeNE=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/editpolicies/TextSel
+ ectionEditPolicy.class
+SHA-256-Digest: yJ30/mHP2zFj9YbU4hyfcpjTo/dIprm3DsCBCXsO1xI=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/type/NotationTypeFac
+ tory.class
+SHA-256-Digest: FhSMlep28zpxgjj07/Dabph4ix5Yb6OPFVpbdPaur+8=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/GraphicalEditPart$2
+ .class
+SHA-256-Digest: puaNvWEInZ3OnJVR2nqPw7VerxmTdkRn8TS0g0NjZU4=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/TopGraphicEditPart$
+ 1.class
+SHA-256-Digest: KXo3A45nkZvZ70/0KmYpeG5zkWU4OxyHQaiFhkt0ZWk=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/requests/ChangeChildPropertyV
+ alueRequest.class
+SHA-256-Digest: gKNGp+GuMZPHrcpdFxTx+RqOoJr5qTgqBgOu1gJKcnU=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/editparts/NoteAttach
+ mentEditPart.class
+SHA-256-Digest: Y+ArmtNQ6D0p0grpKgjizUxHsai3BfQudZiRU8lulVQ=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/ConnectionHandle
+ EditPolicy$OwnerMovedListener.class
+SHA-256-Digest: s+xMWHtFefs1lVgpBInAv2R2Hu6UcGtwQlATOgKK9q0=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/parts/DiagramEditor$DiagramOu
+ tlinePage.class
+SHA-256-Digest: 0XWfVb7KKqyIwlgV5X3lZtxcPbgouUmA+LFQnEaiqas=
+
+Name: icons/dlcl16/copy_appearance_properties.gif
+SHA-256-Digest: Ftkc/mv8/SILm3WF0bMlsi5lCr4g7tJbKAxA/bMcX6U=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/parts/ImageFileDropT
+ argetListener.class
+SHA-256-Digest: fN7oiPnPkf6VWdqX1nDIFGS00a98a9ivWCIjsTTSvQo=
+
+Name: icons/selectshapes.gif
+SHA-256-Digest: DbIckpdM1Su2pgKzdhMGC6L+k7ZeA52dk4MgOUwHIcY=
+
+Name: icons/size_to_control.gif
+SHA-256-Digest: djlMgy0aXo2w3c6Vpy5JzCwQaED51qXdP3R+dLOUO+M=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/parts/PaletteToolTra
+ nsferDragSourceListener.class
+SHA-256-Digest: T3JDB5SghyE5u3Uh4Rw5sm9CV2xSTMM4ejpbSXhoD8g=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/CanonicalEditPol
+ icy$CanonicalElementAdapter.class
+SHA-256-Digest: oyG+4QATcsV5wA5Ynhe84sTwkdXQs6qY86HvhsaATZ8=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/dialogs/sortfilter/S
+ ortFilterDialogUtil.class
+SHA-256-Digest: wawYoqFzjUkysb/N26a0xmZ5dp2uxSjJjs09DY+XDnw=
+
+Name: icons/all_comp_vis.gif
+SHA-256-Digest: bcFlBg8qn2NzjZg9/CaTJhm6xurMLARaLbx3qtR7V/U=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/EventType.class
+SHA-256-Digest: sPwFX5Xw10MujfExnE4vXW5igYMZU3BAyo5K0VcemSU=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/services/editpolicy/
+ package.html
+SHA-256-Digest: Rp3cVq/jO3+cbjeB3wr/N8oJAuSjct+IeWbPkQmFgbs=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/services/layout/ILayoutNodeOp
+ eration.class
+SHA-256-Digest: ihsSrD0LUrByI0UDBTSGcKQY3v8FBle5WbiQpUQll2I=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/view/factories/AbstractLabelV
+ iewFactory.class
+SHA-256-Digest: IO+suk902T71lq0vVSd4jDl/LoeRi/Boub/vihtM+1w=
+
+Name: icons/elcl16/fill_color.gif
+SHA-256-Digest: FIZWZ2SVQUTT3ZxnXCNAzzcSIXlp0Ut4PLteSFx7nIc=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/ComponentEditPol
+ icy.class
+SHA-256-Digest: 6M9ZiXNRgZKyZfzqvx4A2G7EmXh4yyZChG6fhj1+9iQ=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/commands/DeferredCreateConnec
+ tionViewAndElementCommand.class
+SHA-256-Digest: djvoULvhSuSfr5CM9/fp2oQZ+9ezqH6NVXxb9IsN1bE=
+
+Name: icons/elcl16/copy_appearance_properties.gif
+SHA-256-Digest: WCM0Jd/8aC/YJACGjELhp9I+UihbkLzXoo2zjAcfoBQ=
+
+Name: icons/arrangeall.gif
+SHA-256-Digest: foC8R+J4N3uleg15BoyzpKuri3jvB06c7XhMeZmHT28=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/parts/DiagramGraphicalViewer$
+ ToggleUpdateManager.class
+SHA-256-Digest: VUF4OyC6OCCRa/hgHEu+Q1mQ/sOdHsMKRj7vabUzcCA=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/requests/Suppressibl
+ eUIRequest.class
+SHA-256-Digest: JRv+V6PvfOF+sv8UIwGpaLE5yaZeauwoqT9IvgDhTWo=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/ruler/SnapToGeometry
+ Ex.class
+SHA-256-Digest: pt1MtD3kDlddv0xODYw2IkD5FcXA8TRu6Fhg1Rathts=
+
+Name: icons/elcl16/showconnector.gif
+SHA-256-Digest: DmEV970kJBoCQxWDtty9V84absgj4NQ8omaPc0yYCHs=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/dialogs/sortfilter/F
+ ilterDialog$1.class
+SHA-256-Digest: m4pAogPS4yMio+cXJvzhW7ue0HQKGa/pN8ymTWOcOl4=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/dialogs/sortfilter/S
+ ortFilterRootPreferenceNode.class
+SHA-256-Digest: SBnzKxsn7+pDHvU1s7kpG1XQptEw8rydeQGey93TwGc=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/figures/PageBreaksFi
+ gure.class
+SHA-256-Digest: AZw9q60lomglsbE2oY6CB67R35KDF3TasyGxlCYZvuk=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/dialogs/sortfilter/SortFilter
+ Page$ButtonSelectionAdapter.class
+SHA-256-Digest: lSLXXY0r2UF+z5/Ujprx9oCgfYygmAai8PG2fL+Hqho=
+
+Name: icons/recalcpagebreaks.gif
+SHA-256-Digest: FsuxyKiTWBe0x939SjBlng9IqlSe+IUzr+an/ZQ2XiM=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/parts/DiagramEditor.class
+SHA-256-Digest: aRftnafsSpl0GLU/ldu/Z5bXG3M7gP3T6Ho7ntmD9iY=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/SemanticListCompart
+ mentEditPart.class
+SHA-256-Digest: OB5zGKC3mBSCbsfdibaZt3DNImqpC1Mh9ir9wtHMH7A=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/DiagramUIStatusCodes
+ .class
+SHA-256-Digest: oDIXUMJ6VAdIEVFnQB6hH+i+KaxsQNW5oxEQ88VAst8=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/preferences/PrintingPreferenc
+ ePage.class
+SHA-256-Digest: UwQLomikQHlWggwvl43zAYeYtFeuVPmlqufZ2QDMyvc=
+
+Name: icons/handle_incoming_east.gif
+SHA-256-Digest: GAepkI6/80zuPb2dt8lS6zJje5yk74kmxvWrKwgs1Fg=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/figures/BorderItemLocator.cla
+ ss
+SHA-256-Digest: MOc47poKyTSRewDFO0Bb4TRNq0komPOB92LKtWd+qNU=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/view/factories/optimal/BasicS
+ emanticCompartmentViewFactory.class
+SHA-256-Digest: ZteXMtCet2j4s6CAOj609tjy0ENOWHLgvymia+OQMA4=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/DiagramAssistant
+ EditPolicy$FocusListener.class
+SHA-256-Digest: PMbbwCLLXPCMPQPT8KrFXQvAh4vuU0qHsrbkWpAZ8eI=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/actions/AbstractDeleteFromAct
+ ion.class
+SHA-256-Digest: BJNiG9MYYEK1AyTwVVR2n47CAfwJNGbJY+yrNNZU/tc=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/parts/PaletteToolTra
+ nsferDropTargetListener.class
+SHA-256-Digest: tyb0/xeINX4S95k8/c/zlDD8S/L6q7UZzv6/UBRKrWM=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/services/layout/AbstractLayou
+ tNodeProvider.class
+SHA-256-Digest: tCD0CBHSQo6gUG4oO9NI+rOowk57a140lK806EHlDiQ=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/services/decorator/Decoration
+ .class
+SHA-256-Digest: f4cpWnaSf5eWY3souTIGaPPODhEphXy+WW45TDvPNhI=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/services/decorator/CreateDeco
+ ratorsOperation.class
+SHA-256-Digest: J7TG5S64/5YWgvN2Ly6l8gbFHibAm0BIlkLsnHCXFu4=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/XYLayoutEditPoli
+ cy.class
+SHA-256-Digest: lcLeFWNy2b/k6vdRNx3hlAR5/aGHwHB2nCZG6cz6LU0=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/TetherConnection
+ EditPolicy$OwnerMovedListener.class
+SHA-256-Digest: C9YeASD4lnRoi7MpSd3F1lkRFbPk3nzmtVheMJ8VeOI=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/dialogs/PageSetupCon
+ figBlock$Initializer.class
+SHA-256-Digest: j4/0BbvMKoj53TMSbBm70npbxPPdgCDWgfj9XrVZX0w=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/editparts/GridLayerE
+ x.class
+SHA-256-Digest: N1yO12LHzLzJF931MHv56GCbKiMoZW6pGTdCK/78UA0=
+
+Name: icons/hidelabels.gif
+SHA-256-Digest: MFyZNjMRCeT9XEi0Z1/QeKKUoSx5pEN91Ei17ikQW18=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/GroupComponentEd
+ itPolicy.class
+SHA-256-Digest: b5UyeYJOt5jg6HdQwr0dL2jiIXcBj2oi4uCgnDy/L5g=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/dialogs/PageSetupSel
+ ectionConfigBlock.class
+SHA-256-Digest: e5sc/QzDPvJ/1YEC31Sc3pbGqTGTSCYnam/lmbf6KqQ=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/commands/PopupMenuCommand.cla
+ ss
+SHA-256-Digest: QYYmKOdEYl+86mz1EXlGYKYTg+L6zzEwpe9LMhBTbHE=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/DiagramEditPart$Pag
+ eBreaksLayoutListener.class
+SHA-256-Digest: 4t+6uQ9/hgkZLmIoY27CfgVy7iLMQklYhSTU2I2De3Y=
+
+Name: icons/elcl16/rectilinear.gif
+SHA-256-Digest: OU4z31YSmhulqSVvgjDKDGBwf4h9iW9phgRNFk/J/ps=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/ResizableLabelEd
+ itPolicy.class
+SHA-256-Digest: zpsJup9g0ZAOld2yCxHQ/e7FPEmoK5K4/7itt8erlFg=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/actions/package.html
+SHA-256-Digest: vnMk5L2gBb8ri8Br7Tl/eseWQqPrHtUvLEncK7vKpM4=
+
+Name: icons/copy_appearance_properties.gif
+SHA-256-Digest: WCM0Jd/8aC/YJACGjELhp9I+UihbkLzXoo2zjAcfoBQ=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/view/factories/ConnectionView
+ Factory.class
+SHA-256-Digest: dJ+GELOBKZuw/mET05oiSDsyF9OdLT4+yeb4plx7jVw=
+
+Name: icons/elcl16/sortfilter.gif
+SHA-256-Digest: K1BRwXo+r2rfMZF3bsa0/x3t4aQtk+uGiRjixim+GjU=
+
+Name: schema/decoratorProviders.exsd
+SHA-256-Digest: Ozh/2QwnSuMyxv2VtwTUDxBKvBNU1dqtvWJIGG4ZJtk=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/figures/NoteFigure.class
+SHA-256-Digest: q88AO1vZYqDJJmLnlvFuQjypQdl5Ob67uZ7aHfrqGGs=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/editparts/FixedLocat
+ ionResizableEditPart.class
+SHA-256-Digest: PegwXW+ETQFLvsdzE3aYoA3vk0I4fijbSg9rjRoK6H0=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/DiagramUIDebugOption
+ s.class
+SHA-256-Digest: NtX9f+tQK7BHjtlpeGke3reUfh8etapWlBot9SJFhqY=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/actions/PromptingDel
+ eteFromModelAction.class
+SHA-256-Digest: aLF5LWGT0no8+P4ugExXDlKami1/iBzOmwwPnNoGDSM=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/providers/DiagramContextMenuP
+ rovider$1.class
+SHA-256-Digest: qUiYup61VUKB9oyBCmL1GTtu8I7eikBBcCWAeqwUqJw=
+
+Name: plugin.xml
+SHA-256-Digest: MoycGscZYudHMyzpEeNQ7+vRwunlLb4D9DP8pBfpuuU=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/LabelEditPart$1.cla
+ ss
+SHA-256-Digest: LrrLXua5D+iX3qIZM6CYqR9PEdh2oDdhDeUL2PErfBY=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/services/decorator/IDecoratio
+ n.class
+SHA-256-Digest: 6UWmZhOdWTnd5diXsk0wz8sMaPjbZ+vwXcZtNJx6cZc=
+
+Name: schema/editpartProviders.exsd
+SHA-256-Digest: WXZ1K5cx169XZ6xPHYBKsDpkiLcgku9AYV+sYIAdICs=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/CreationEditPoli
+ cy$1.class
+SHA-256-Digest: hcr0oodi84CtSxvnTdi5Ea3JU8oou4ZKSHf/h1Pr3uk=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/GraphicalEditPart$4
+ .class
+SHA-256-Digest: PoTZfTmwOq/jwsa+jNW+5qh/czSXiWfdD7TCqzpWHzg=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/dialogs/sortfilter/SortFilter
+ Element.class
+SHA-256-Digest: B94LWJW93DVnN/sHcKQmZhPaIRLYUBxFfn99KMM9BIs=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/l10n/InternalDiagram
+ UIMessages.class
+SHA-256-Digest: Rgk2o5OHjpcpFuYsaRoFWdRVJyxtF6AdkuHkf1Fxy3k=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/editpolicies/ModifyS
+ ortFilterEditPolicy.class
+SHA-256-Digest: HzUXMw+Hb9t/K7e97iSy0e6jEufXM2lbHXW4dpm0mdM=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/DiagramUIPlugin.clas
+ s
+SHA-256-Digest: fnQ93gj+HPvebMzOy4mKKwrOLsSN97UBQ2kLOnpyWYs=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/DiagramAssistant
+ EditPolicy.class
+SHA-256-Digest: K8iS0lSk/92oON8ORMu/PHd2GhpqCvw6v+WXFXKq7o0=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/preferences/RulerGridPreferen
+ cePage$DoubleFieldEditor.class
+SHA-256-Digest: YPNA1p2f4ppqR29L84VDLipXKZ6dTEhRWWgd118rN0Y=
+
+Name: icons/elcl16/italic.gif
+SHA-256-Digest: pH2o+VbMWNeW38h3AKV/AxWdkX5pPFF6YYQ1GD4Odek=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/parts/DiagramEditDomain.class
+SHA-256-Digest: 9LFP/iCaMaLveNiYmmswZ2jyvVIQImKPTd9Wjsrvkzk=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/figures/BorderItemsAwareFreeF
+ ormLayer$BorderItemAwareFreeFormHelper.class
+SHA-256-Digest: z2755hQCIG0JsrLiALzK7B8bh5cpHpaaU0G4HzK1xwE=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/editparts/DiagramNam
+ eCompartmentEditPart$1.class
+SHA-256-Digest: NCPyeaPYbC2cNN2l5SWZcRy7uXB9q15euCfX74zTun8=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/figures/ResizableLab
+ elLocator.class
+SHA-256-Digest: wHm1qizplEmKjMFA432blDi0GD0tUXy2M14J38PeEg0=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/ConnectionEditPart$
+ 6.class
+SHA-256-Digest: 5FJRiebQ0U7zuUlovF+xjjWGNXb1V/Liju7YWj3WxxI=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/util/package.html
+SHA-256-Digest: 4AtWtNZhzObuQcDnsJzxUDpKp1AUuUkVxE673yVD8/c=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/requests/DuplicateRequest.cla
+ ss
+SHA-256-Digest: AnmDua0F8i0Z0uq3fVu8qnPMN75Qa+9fADqXHTtByQk=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/actions/PromptingDel
+ eteAction.class
+SHA-256-Digest: oD9NFjq8LrQFfS0OtDocl6RmAO7a27PqVFaZ13xyTOE=
+
+Name: icons/elcl16/connectcursor_mask.gif
+SHA-256-Digest: gqjNoVpz+8Iz4/x/ftFgmm1XVPOvvtnJtni5qagXnXI=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/editpolicies/Diagram
+ LinkDragDropEditPolicy.class
+SHA-256-Digest: 8OIUi5cZSfU1ZgFAWYfMkJUTnmJdWV98akvPRvwlj50=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/preferences/AppearancePrefere
+ ncePage$6.class
+SHA-256-Digest: rGxpgp/386sewUCQqIdcTGxvMhxjBtGkD1eCZdatwXQ=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/tools/PopupBarTool.class
+SHA-256-Digest: 8x4kE9rImnvFsLbAnPImo9/sWZxU+9kKHs6waLVtwbU=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/ShapeCompartmentEdi
+ tPart$1$1.class
+SHA-256-Digest: AxRTmWSNffko7VMhTQpYPIZW5qKqXigYBm0+uPv60Ao=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/figures/BorderItemsAwareFreeF
+ ormLayer.class
+SHA-256-Digest: xrZ4Vwdary0YN7Jg3Zz5VHg7ukL5S3Z7UhRUqVYveNw=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/parts/MinimalActionB
+ arContributor.class
+SHA-256-Digest: yW+vpKGratubMARUKZxYLr+tABJ/eAEHIbwxjKqy1Sc=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/image/package.html
+SHA-256-Digest: Z4AkGa7eeAa+LBQagf6Qsn1O4NuIcqIDax4wPTqzZto=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/NotationConnecti
+ onReorientEditPolicy.class
+SHA-256-Digest: obed0Yh4E3SNNVWE4yYFvvUj5AzTD4W/wHOH8sxnCi0=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/editpolicies/NoteAtt
+ achmentReorientEditPolicy.class
+SHA-256-Digest: cOUo9lZssPQZGOPO/4up/ODgO2+XLiP4Hyi151umAR8=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/services/editpart/CreateGraph
+ icEditPartOperation.class
+SHA-256-Digest: qwpCrFt6uLIzxnBQzTwVIHKDjFpk3435Q3eKs67WUps=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/view/factories/TextShapeViewF
+ actory.class
+SHA-256-Digest: SmJQq+7YqFkPS/xSkzrE3Sx+Vs1i8CHOctt9c1bQuR8=
+
+Name: icons/zoomplus.gif
+SHA-256-Digest: cPX6LhcUYT0PbW3FJrata06xyXNPQ/YTfJo3BwyJ8Sg=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/IPrimaryEditPart.cl
+ ass
+SHA-256-Digest: rgbHAjo6eEbGFJKyqYenFBbOF7s0V88ooh/vMXnKBts=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/figures/ICanonicalShapeCompar
+ tmentLayout.class
+SHA-256-Digest: 5XTjwHAfwN5sqP+upzyd3OogssuVYbo7dCiaItbwhfQ=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/dialogs/PageSetupCon
+ figBlock$5.class
+SHA-256-Digest: PlgbJbiOaqHd8wqjy9sqHzgM4lpeW7WFHctDv2iUSQc=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/requests/DropObjectsRequest.c
+ lass
+SHA-256-Digest: qK2x9ubYX82NIt1R0et9+c/d1iMIYvTCgoAZNieh7Dk=
+
+Name: icons/elcl16/selectconnectors.gif
+SHA-256-Digest: Vt/3PHcN7g7WNRbKC2/CkvtEzEeiQwAMQLdawt1DGgw=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/INotableEditPart.cl
+ ass
+SHA-256-Digest: lpamUBHi4t2P5r5pj52vaDt2FSDqV7hRa2VbFOhR7vk=
+
+Name: icons/oblique.gif
+SHA-256-Digest: Eb2jyrwTLGcb/0txqZdvviMJhpWGNmEdaohgDyL5B+8=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/parts/DiagramEditorWithFlyOut
+ Palette$1$1.class
+SHA-256-Digest: GTES9eCuvNREx2gQRTp8lKxVrtXu+IT/1qkqYzi5qMM=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/dialogs/PageSetupSel
+ ectionConfigBlock$Initializer.class
+SHA-256-Digest: Hvv/r5qZrSXqHOesh6CrDJRbhwYBU2BL3SnQUhXtjy4=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/dialogs/sortfilter/SortFilter
+ Page$2.class
+SHA-256-Digest: C4ZYF8wIHEJebq4/XLzMH2oficwUlIFAYj5JYvILYlk=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/editpolicies/LabelSn
+ apBackEditPolicy.class
+SHA-256-Digest: 7TTnfOD6PLAGc+KbyWSgxrnRNDq11fT+n2LneJCtg7c=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/DescriptionCompartm
+ entEditPart.class
+SHA-256-Digest: qMyqXN8Ufv2PnvYs1mSCFvERDDUlZAhdI+zeXU8T9hM=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/services/layout/AbstractLayou
+ tEditPartProvider.class
+SHA-256-Digest: sHD5SiyTetoiz5I+/J+TCA5tZqlpfPZHNNO6EmFtIVA=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/tools/DirectEditManagerBase$4
+ .class
+SHA-256-Digest: jbM5+UcSgnnnlD2W7aDsPbkdLLBcbRvJWCgIV3oPApw=
+
+Name: icons/dlcl16/show_compartments_group.gif
+SHA-256-Digest: pp+ikHJcUo2IqMkgSXp8NCSlWcvuYeI0eI0UreBN6qA=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/dialogs/PageSetupSel
+ ectionConfigBlock$2.class
+SHA-256-Digest: ldeB+CidHCrITngzj87kO33sKW4jMv0P6v4QsbVzKcw=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/editparts/DummyEditP
+ art.class
+SHA-256-Digest: mBn4PioEQQkBmlIH2wUsi5seqi3yWsTPOqbuZq6NRy8=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/GraphicalEditPart.c
+ lass
+SHA-256-Digest: GNHsMR6eelgp6KKuoQ0ZiBxSmPT87QBGxUO/Rv6aExs=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/ruler/commands/MoveG
+ uideCommand.class
+SHA-256-Digest: SMSCRxzCVLtF8u27wHVwbEaeMipkBdaaCgq/P1lxG5w=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/DiagramRootEditPart
+ .class
+SHA-256-Digest: QCw9xXJyjJoqaqAQyiTFycp9rO6M4I/5Ka9o2chCe8E=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/ResizableEditPol
+ icyEx.class
+SHA-256-Digest: bJpERmL1YFpLHu0MsrwN4CQbmGLvmT2lCbmIy3YrRy0=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/preferences/RulerGridPreferen
+ cePage.class
+SHA-256-Digest: XW6RppKKGN74BPbEYTFmCarB3yw0Mw0T0Q7EFNBpSlc=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/util/SelectInDiagramHelper.cl
+ ass
+SHA-256-Digest: jO2LApoBwQydIroXFQ+3ckuP+tOrNkkpm6w//Fho0Aw=
+
+Name: icons/elcl16/line_color.gif
+SHA-256-Digest: LbfzG4yvFt/Qp38BUgi+bD1SIWWli+jpjPbfdexkOW0=
+
+Name: icons/line_color.gif
+SHA-256-Digest: LbfzG4yvFt/Qp38BUgi+bD1SIWWli+jpjPbfdexkOW0=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/actions/CustomContri
+ butionItem.class
+SHA-256-Digest: 6XgMfRZZ3FuHSnuF+By9eqjUGIgjfsjx3aF77CgyjDw=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/services/decorator/IDecorator
+ Target$Direction.class
+SHA-256-Digest: EWlhuYdOt7TEv+gaP0vbIY4uDA9G55Mpo/zAB1/g0Is=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/editpolicies/PageBre
+ akNonResizableEditPolicy.class
+SHA-256-Digest: /e0f+lHUw3rWqDKegCGC45d8aiV+rIVSXcACdNeU4+A=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/DiagramUtil.class
+SHA-256-Digest: uy/NgOs7Kj2TY8hE3eDoAK4gCRN0QgAf2u2uJI99Idw=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/services/palette/PaletteServi
+ ce.class
+SHA-256-Digest: sxiSwuGWBasUinyeuitNQcCU9v0MSoDhbToZeIrZfV0=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/BorderedBorderItemE
+ ditPart.class
+SHA-256-Digest: VXo+WkZ8YQsxEdFp877N5du55K4ep5VQ6xvPh2jKuoo=
+
+Name: icons/dlcl16/font_color.gif
+SHA-256-Digest: f1wflWlD67vzi1AFImHT3Ug3BP75Wf9Mn3kcRYtDIRw=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/package.html
+SHA-256-Digest: O/UrcgDraGkXpWQhhX2muSK6jz//JAZ9k1oTkrdXFaU=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/parts/DirectEditKeyH
+ andler.class
+SHA-256-Digest: wdvAxbDCXR6RmvUvV0jcD9eqw7L+jFXxDoFrGdSrF50=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/DiagramRootEditPart
+ $WrapperMapMode.class
+SHA-256-Digest: rasuIrfwtiituS3Ldis+5p2OgScz4cnpNPHzPDmp8XA=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/dialogs/PageSetupCon
+ figBlock$10.class
+SHA-256-Digest: K+2bCMEekbsYJAOxwT54D6jQdFPlDQ8tqyXShOElObk=
+
+Name: icons/dlcl16/arrangeselected.gif
+SHA-256-Digest: GrwuoeQda4GJPk3ls3enrDpt9rfQB48WesKgCo+/X6s=
+
+Name: schema/layoutProviders.exsd
+SHA-256-Digest: GL0FBRgM2trKgJbmT+mecLdaOAgnij97FPZv58FE4uo=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/parts/ElementToEditP
+ artsMap.class
+SHA-256-Digest: phj9egGEKV2n1wQMjYNNVOtZM5o4RQen4ZJUWXojRUM=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/dialogs/sortfilter/SortFilter
+ Page$4.class
+SHA-256-Digest: uJC5ViLnibKc8o73rfwv4lVK/nysQ80o9K1kJNYQJXY=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/dialogs/PageSetupCon
+ figBlock$3.class
+SHA-256-Digest: wh7VcEIHXnq+hQReN710QaX2BXiFGr3AWJ3DjoK4DGA=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/commands/CreateOrSelectElemen
+ tCommand$LabelProvider.class
+SHA-256-Digest: JOQCRHV59keJRiDpY71omRJQYY88BBHE1VHonZuEn0M=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/l10n/InternalDiagram
+ UIMessages.properties
+SHA-256-Digest: b/pdUpo1j//oFVkYrV4+eCI0YGWpSilFA7jxdov24Eg=
+
+Name: icons/rectilinear.gif
+SHA-256-Digest: OU4z31YSmhulqSVvgjDKDGBwf4h9iW9phgRNFk/J/ps=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/util/FontHelper.clas
+ s
+SHA-256-Digest: 2/bPBvx3BpPnq6Gm7UNeu5v09GxKaN5tMbuDU0RXptI=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/ShapeCompartmentEdi
+ tPart$2.class
+SHA-256-Digest: 2DZbHapOL5isUu9tGD4szJdrSSOCR2peBvb5AttcQfQ=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/CanonicalEditPol
+ icy$AsyncCommand.class
+SHA-256-Digest: SV0HXYQjIO5gb1xohtwHnWu8+1AdvywqnLfW+xc+Xkw=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/TextCompartmentEdit
+ Part$1$1.class
+SHA-256-Digest: PCzeFLGJhW8H7N12g0vKkZbtcy931caIWs42Njxmhzo=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/ResizableCompart
+ mentEditPolicy$2.class
+SHA-256-Digest: fGWxRF/ub+NlcpS4yizzLbZ9+l/X81tOxmP3c2aY23E=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/ConnectionEditPart$
+ 1.class
+SHA-256-Digest: b+Q7ltx/T+toVATGBaH8Q8Kk5JPPZSH14syEqsiEREY=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/OffscreenEditPartFactory.clas
+ s
+SHA-256-Digest: /0V6g5fRDvyI/ZIYUCW8L1x5Aq2bRsusfsqnUGO/D8E=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/dialogs/PageSetupCon
+ trolType.class
+SHA-256-Digest: c2U5LLcSlSeK1KKWDagQfHDnKH8VbDSXb6rliAtHFfo=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/requests/CreateViewRequest$Vi
+ ewDescriptor.class
+SHA-256-Digest: +Ckn6T7TTIESrOGEx0MeMOsBSAywTbmOC+Dxr7lkqmQ=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/dialogs/PageSetupCon
+ figBlock$2.class
+SHA-256-Digest: dIBd5z1CRj/NhsJ9p69DXz1PcU3ZDHMZvpP0Uu+zO0Y=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/DiagramAssistant
+ EditPolicy$ShowDiagramAssistantJob.class
+SHA-256-Digest: XvZ/SojqLhwhI+nOhT35sE7j+GODqO2QEbIw6n4VsXQ=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/TextCompartmentEdit
+ Part$1.class
+SHA-256-Digest: XFwJ6X41oadfImG6KfuAqcO+dqzQv6kG64bNtvBZbSc=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/preferences/AppearancePrefere
+ ncePage$1.class
+SHA-256-Digest: tMirmo8odLHou16hb6y7d7P+4gL2PGVz0cxF/7+B2Ro=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/FlowLayoutEditPo
+ licy.class
+SHA-256-Digest: itG5r7cmG6HMUPyaXPG7W73qeAtxQfx58vU8Agk+NeU=
+
+Name: icons/dlcl16/autosize.gif
+SHA-256-Digest: mvYcEu+3dl23Sx3ppri7apo0HSzaWLrVE5JLVGrlG3U=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/view/factories/optimal/BasicD
+ ecorationViewFactory.class
+SHA-256-Digest: 7A2LjXetzI56isW8rxwQN+Nt2L+CQNfIup8F1cYHUQs=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/figures/BorderedNodeFigure.cl
+ ass
+SHA-256-Digest: pEI1lbYcBLRo8L4kOcAhSV8aGJ18d+zdKyM2xO8q52I=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/util/IUIConstants.cl
+ ass
+SHA-256-Digest: /4K024/wKjedHhAlrCeCE+jSMN06arK3JQIFPnRBf7w=
+
+Name: icons/dlcl16/hideconnector.gif
+SHA-256-Digest: oS9BrE9tWGI7+EYB6k2YXf48/Nogs0CEJTPP/aqRM4A=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/actions/CheckedPropertyAction
+ .class
+SHA-256-Digest: cHCtczpRsvXI5DMkWGmzYRaNvubpMRqVTc9xSHcp7fc=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/dialogs/PageSetupCon
+ figBlock$8.class
+SHA-256-Digest: +7nuu7tER66VVLKCfjlKSWtaN3FudxdQlCnCn3vDT7k=
+
+Name: icons/dlcl16/noshapecursor_source.gif
+SHA-256-Digest: fOZ4w/BHlQwgOOXbkmVxagk12HtLFsB+oS6X7CMYUbc=
+
+Name: icons/italic.gif
+SHA-256-Digest: IF8UjPJYRh7Wdj72LMoH7LLDByEbdBWqEsmgmva00CA=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/parts/DiagramActionBarContrib
+ utor.class
+SHA-256-Digest: /cjX4l7rTNAPBH6VsVOjIKfBhgM5zWNFq1B75jKLXwk=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/pagesetup/DefaultVal
+ ues.class
+SHA-256-Digest: IBOfuD/4X6BQfTBO5cfY60Z25rF322D/31G+rzjC4zw=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/dialogs/PageSetupSel
+ ectionConfigBlock$1.class
+SHA-256-Digest: NzB46m3+yIFHBJijjXefRsMe6ytqilyz52W+gvAD3Uo=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/tools/RubberbandSele
+ ctionTool.class
+SHA-256-Digest: tMNTQ4K7dUQkki8Pp3cl2DeedyTxr2JWL44md9T+4c0=
+
+Name: icons/selectall.gif
+SHA-256-Digest: OrZ6ISB109mwnXBNbu+lzU2FGdhTAPW9UWGlY1gKIYs=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/ShapeCompartment
+ DropEditPolicy.class
+SHA-256-Digest: zBYj+fnY+f+G/QwL2yWtpa+fAvHG2LWKEKRJZ6kWnk4=
+
+Name: icons/elcl16/line_style_group.gif
+SHA-256-Digest: u1k9Y5kH09kfDCRbADAVjUxUMzWt6ywELb0Ct6/5VpI=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/dialogs/sortfilter/SortFilter
+ Page$1.class
+SHA-256-Digest: 728SGWvSqRw58RhBkbKv8hESlqBk7APIjNw/BOYAVa0=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/view/factories/ResizableCompa
+ rtmentViewFactory.class
+SHA-256-Digest: 2nIO+TWAUTe8JNTaEKjy5U6S71KroRhMxTDgZOBHgG0=
+
+Name: icons/autosize.gif
+SHA-256-Digest: muUlulQIj+ji/kmDazINn1heQnhgYMqtLC/u+UJiZ5U=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/actions/ActionIds.class
+SHA-256-Digest: KuRM+2X28CL275bp0l9r08jxk+tURmjDSikvZBk4an0=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/package.html
+SHA-256-Digest: GnjcC4+ZfHEVEAaqEmyq41oHx/UzOK5OU7XVm3czhtQ=
+
+Name: icons/snapback.gif
+SHA-256-Digest: qmR2hbH4Y/3ovwtpe9rQrNYI9ha1JvTALqeCIC2I4WM=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/AbstractBorderItemE
+ ditPart.class
+SHA-256-Digest: mcQpB1rAFok1q7pJc5ZyccB+Z/59LBsiLryQg3TcpQQ=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/PopupBarEditPoli
+ cy$PopupBarDescriptor.class
+SHA-256-Digest: ma8MPr3/SzCfihHZPmDd/ydsU1YgFsXwDyHLX+Y8Ge0=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/preferences/ConnectionsPrefer
+ encePage.class
+SHA-256-Digest: SlP5cyoFgju2cY3Vg6dLRrX6D9X/8q/xddqcYAlcjuo=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/ShapeCompartmentEdi
+ tPart$4.class
+SHA-256-Digest: kUKtLZMadf0+3Nqc7kEgzCXFvk1ZwCbX4XgeGv4xGiQ=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/editpolicies/TreeCon
+ nectionBendpointEditPolicy.class
+SHA-256-Digest: 4dDl2FpuCbO3cWr4+rmYVThhXmZZgqywAv7yklXePRU=
+
+Name: icons/dlcl16/italic.gif
+SHA-256-Digest: O8OIQjiJjOiMSrgcxaTUyzPxd6Pl/lxzYzyyZUaVUWw=
+
+Name: icons/elcl16/connectcursor_source.gif
+SHA-256-Digest: EUYvMC4pAhDAxgyCJ7+jsIGetttpD1TmyF8ihEA1Je4=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/LabelEditPart$3.cla
+ ss
+SHA-256-Digest: aAnsBFsliGbz9QolOLV9GfKhVlqLE4D/ZnIqPV3yNgA=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/editparts/ISurfaceEd
+ itPart.class
+SHA-256-Digest: L9w83g00xmzzSG07Mq42sXepOEqo0/lWcHMiMlL70II=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/tools/DirectEditManagerBase$3
+ .class
+SHA-256-Digest: UXLMi3h3eY/tacyX2ChWdv5EpjGeUMUQmti3jfFo2EI=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/pagesetup/package.ht
+ ml
+SHA-256-Digest: D2md0FqMhRHUfycqbk/R8mI8BLap9/O5I7zhXegHAuY=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/DiagramRootEditPart
+ $DiagramScalableFreeformLayeredPane.class
+SHA-256-Digest: ygPxC5lbrB33R61QlkTSKJttVOgGClznND1gGiFtekM=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/DecorationEditPo
+ licy.class
+SHA-256-Digest: ISZMeNfTBk7Zow/g6C31m4W3hZXLKrlIg6LOizJOXFw=
+
+Name: icons/elcl16/show_connector_group.gif
+SHA-256-Digest: DmEV970kJBoCQxWDtty9V84absgj4NQ8omaPc0yYCHs=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/ConnectionNodeEditP
+ art.class
+SHA-256-Digest: H2yfLyYQbXQ5rpAw1+X3rwxRv8OjqVAzcjgam61CVlg=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/parts/DiagramGraphicalViewer.
+ class
+SHA-256-Digest: BxpgonhgLpA4A2rfKO795KCuXFnoFONi7IApouvEYAM=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/services/palette/PaletteFacto
+ ry$Adapter.class
+SHA-256-Digest: 301JhqqjaGSnEKMdLHz6nAc9xeFtWbSUH17XCZoCc0M=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/properties/package.h
+ tml
+SHA-256-Digest: D2md0FqMhRHUfycqbk/R8mI8BLap9/O5I7zhXegHAuY=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/editpolicies/Connect
+ ionLineSegEditPolicy.class
+SHA-256-Digest: bmOuWiIfoYdAvPyOK45qGaI7BFph2ryZOVV0V8OpDMk=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/DiagramEventBrokerThreadSafe$
+ 1.class
+SHA-256-Digest: znozeRhGeYEX8wyfVHxo6JxOAU1quHgHzqfpwPSAE6o=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/services/layout/ILayoutNode.c
+ lass
+SHA-256-Digest: I4QX06Njer49XtQCYh2trEJsb96INXSK3fGOW7rzN0o=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/services/palette/Pal
+ etteToolEntry.class
+SHA-256-Digest: 4Mt9KDCMczPGsMaxVFy8AWkkM0oa+wXIHi3NG+H80NY=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/editparts/DiagramRoo
+ tTreeEditPart.class
+SHA-256-Digest: jfq/z/0Fk29kpOM75wmIY8ynS0iazGynTykYshMa82s=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/tools/AddPopupBarTool.class
+SHA-256-Digest: Ab6Zp4hh7O+Yl2Ga590gFyNLSUTWRiltvS0oIxyNOvw=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/tools/DirectEditManagerBase$2
+ .class
+SHA-256-Digest: 88pVk9+UWUZVZ0D9QVVkTvyjgiCzhO7FUUoNfrgbVQA=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/editpolicies/package
+ .html
+SHA-256-Digest: ygN1V9aQmB9lTP3lDeElNW4CPP207dIs2rJknAEON4Y=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/tools/RotateTracker.
+ class
+SHA-256-Digest: LCJ3bp+129rApm1WcQ+8Lrr7PV4rYo+XLVsn61m5lDo=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/requests/SetAllBendpointReque
+ st.class
+SHA-256-Digest: 1uJIrVSln7kjsPmCWct8qKScPFKdj50TZkvwtSnnu1I=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/requests/Recalculate
+ PageBreaksRequest.class
+SHA-256-Digest: bXMaKJDld/KhNqs9RD1dX1wpliQJnCAMnVm/JE/rgcQ=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/pagesetup/ILabels.cl
+ ass
+SHA-256-Digest: 5cz3yHXBJXpyLh/4pUBhzGvMbVeLgIbbldGXmWG4kvE=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/handles/CompartmentCollapseHa
+ ndle$CollapseHandleLocator.class
+SHA-256-Digest: sbfDKMN/98RJRLpqbTZho2CJNs/5Q/9YFcCKc2ct7yA=
+
+Name: icons/group.gif
+SHA-256-Digest: /ydy0LFe9K0SkzE+BAfgqS68vfXKnMou8xxCuiRkA7c=
+
+Name: icons/elcl16/show_compartments_group.gif
+SHA-256-Digest: 3T8qpaggK6InLDAbOFK6kIB9NYNKtr7TIelZil02NDw=
+
+Name: icons/expand.gif
+SHA-256-Digest: TFOgnGnmEvzhVcTqbixVT/xZT+9Dw9yc4G8Jt06RXLo=
+
+Name: icons/fill_color.gif
+SHA-256-Digest: FIZWZ2SVQUTT3ZxnXCNAzzcSIXlp0Ut4PLteSFx7nIc=
+
+Name: plugin.properties
+SHA-256-Digest: y6HczwHtB85oklM1Grtw5PT4+G5VyyKKYJLHxH5GVmQ=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/ITextAwareEditPart.
+ class
+SHA-256-Digest: 9NM1eaBOoNXRGDhCxbqHfkE1EkJf07TVnAd9ijyNemE=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/tools/DirectEditManagerBase$1
+ .class
+SHA-256-Digest: mfg/PJpYNZ7n6RN91zPbE2gFJEtuAmoCicc6XtgkIaU=
+
+Name: icons/handle_incoming_north.gif
+SHA-256-Digest: pvZ3vZ0lqa6XTIKu4KKsGXt/11GRV+mzcm/fGGYa+XY=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/services/layout/ILayoutNodePr
+ ovider.class
+SHA-256-Digest: nGqbB8blFxFhaFHAR9xxnecxo0MT0HLdpVVNNtYiExg=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/requests/SelectConnectionEndR
+ equest.class
+SHA-256-Digest: v2MeI5Yp46PdzsxxABhDSnIE9roT0Ajm4DO6QT2gA/A=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/TopGraphicEditPart.
+ class
+SHA-256-Digest: X0FDZ8TdgZOqRtNeMbXV00hoY9PTNIJxQ71ITP5Gg0g=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/commands/ToggleCanon
+ icalModeCommand$1.class
+SHA-256-Digest: bBKGEt+NE1p76oLokEjUkC/YMqFxtsD2pXYdylvfP/Q=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/commands/PromptForConnectionA
+ ndEndCommand$ConnectionAndEndLabelProvider.class
+SHA-256-Digest: +TnwIpMaqO86BaZ8X89ABsnI6a3Kig96pqjAOgsxOE4=
+
+Name: icons/note.gif
+SHA-256-Digest: OcXbob5stComUFMnuVCw/mlbeIVitMvk6qk4MeoVa6M=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/menus/package.html
+SHA-256-Digest: iNfPL/bS8PU2lQlkUrLveu41P3R4LBItJNcH1F4FoFk=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/dialogs/sortfilter/SortFilter
+ Page.class
+SHA-256-Digest: AXefzMNXa//fYD5BewIjrMslr3qd4y6OzaMm73fe0h4=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/LayoutEditPolicy
+ .class
+SHA-256-Digest: iba61zA+OK/kuqz3IsGvkJVxDh2+9EN8IT04f8R1qnI=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/LabelEditPart$2.cla
+ ss
+SHA-256-Digest: z4pPAcMp9LDmlRzgX/lm5HQT/uCkZEYa6Ni4Cikg0KU=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/dialogs/PageSetupCon
+ figBlock$7.class
+SHA-256-Digest: UlT/NxzDS/tZIlHT98cIbriTXBDicGf16WGNhVV7WR4=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/IEditableEditPart.c
+ lass
+SHA-256-Digest: XBtDBH/aHxl60OQZU57SAX8y+On/6Vf7Qknnx4qKyVU=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/SemanticEditPoli
+ cy.class
+SHA-256-Digest: S44JN8ww5odmA3wM7Ddd9BqTwu4wf/OOyVjzodzPLGE=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/requests/CreateConnectionView
+ AndElementRequest.class
+SHA-256-Digest: i93dHlQupTv2rkcpdDelUxRviaNFgzwAAjjF80JiflY=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/view/factories/NoteViewFactor
+ y.class
+SHA-256-Digest: HuyHDnr6z3S59T9SGdcfRt4Ujc6z7mqJufNLh4nHsBk=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/SortFilterConten
+ tEditPolicy.class
+SHA-256-Digest: uFLiC5tkSF8Baued+BM2Ire2xs6joSbPYZ4SO62jicA=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/services/editpart/CreateRootE
+ ditPartOperation.class
+SHA-256-Digest: B75fvBErnquhpAChhNOwM45vEoF9sLHLDvEFNmlVwvE=
+
+Name: icons/zoomminus.gif
+SHA-256-Digest: lBCk5ESUx0Go+D+xZRixGlQUZ2D1eRj7SRFC8wM7I10=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/services/palette/Con
+ tributeToPaletteOperation.class
+SHA-256-Digest: QpXqo7LlV2GNIVAa8jIYhlyVoJhd6xitFS1QDMp75Tc=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/parts/IDiagramEditorInput.cla
+ ss
+SHA-256-Digest: Dc5V9X8vA4I3jHosa3cUMViUYI8tLno/bIwuDBrjTqU=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/AbstractBorderItemE
+ ditPart$1.class
+SHA-256-Digest: hBIyWzkRVHtolCJB+SQOKEVvReJUj1mSPiH6Y+35EPU=
+
+Name: icons/dlcl16/sortfilter.gif
+SHA-256-Digest: dS9Uw4WaYP8p0UpNtq4Yx0TbFu0L1pwmze4iTNNQskE=
+
+Name: icons/checkboxselected.gif
+SHA-256-Digest: JQOuyIYp1UAXEvj42gjO4KcM7T9tNOuhqRSOhH0QxXw=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/figures/DiagramColorConstants
+ .class
+SHA-256-Digest: fdYq7clshgBTKUuQVHinVJi9SBQpF9wimTJM0oq3bBY=
+
+Name: about.html
+SHA-256-Digest: nHFX9V09SN3s1mjLDEYlZfF1cHH95xsX0U6CG6LnGCg=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/type/package.html
+SHA-256-Digest: D2md0FqMhRHUfycqbk/R8mI8BLap9/O5I7zhXegHAuY=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/services/layout/pack
+ age.html
+SHA-256-Digest: D2md0FqMhRHUfycqbk/R8mI8BLap9/O5I7zhXegHAuY=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/figures/LayoutHelper.class
+SHA-256-Digest: +SJPoTLBtOR8/708u2/DEBDej8M6wpRQKyDOZPtf/N4=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editpolicies/OpenEditPolicy.c
+ lass
+SHA-256-Digest: rBTprXEFxn0BNyvKGSoQDsIVEkeeh+opPXGecz/EBTU=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/editparts/TreeContainerEditPa
+ rt.class
+SHA-256-Digest: id3WuG8U3WZWsrUbNDwtjTpYeCUYwkW0timrI5zGef8=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/commands/SetViewMutabilityCom
+ mand$1.class
+SHA-256-Digest: n1ZnjJPl9QPQHveRInOmvurEgB5aKoAurltVJWXmwUw=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/dialogs/PageSetupCon
+ figBlock$9.class
+SHA-256-Digest: wjX8J2vKRBXvs2dhJwqNiWbFQJlc928/rDF0EcSBYcE=
+
+Name: icons/elcl16/shapecursor_mask.gif
+SHA-256-Digest: XgBwhO8JqXcX7NJwUkXCZ3H1FNwF9R+A2+7W0rJf4BQ=
+
+Name: org/eclipse/gmf/runtime/diagram/ui/internal/dialogs/PageSetupCon
+ figBlock$Persistor.class
+SHA-256-Digest: qX+4d5o3qbc2iFeBMPgyYDjZrQyJslmFI+Aqx48ptyw=
+

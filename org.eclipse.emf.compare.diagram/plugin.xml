@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Copyright (c) 2013 Obeo.
+ All rights reserved. This program and the accompanying materials
+ are made available under the terms of the Eclipse Public License v1.0
+ which accompanies this distribution, and is available at
+ http://www.eclipse.org/legal/epl-v10.html
+ 
+ Contributors:
+     Obeo - initial API and implementation
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.eclipse.org/emf/compare/diagram/2.0"
+            class="org.eclipse.emf.compare.diagram.internal.extensions.ExtensionsPackage"
+            genModel="model/diagramCompare.genmodel"/>
+   </extension>
+   
+   
+   <extension
+         point="org.eclipse.emf.compare.rcp.postProcessor">
+      <processor
+            class="org.eclipse.emf.compare.diagram.internal.CompareDiagramPostProcessor"
+            description="This post processor is responsible for improving comparison results on diagrams."
+            label="Diagram Post processor"
+            ordinal="30">
+         <nsURI
+               value="http://www.eclipse.org/gmf/runtime/\d.\d.\d/notation">
+         </nsURI>
+      </processor>
+   </extension>
+   <extension
+         point="org.eclipse.emf.compare.rcp.merger">
+      <merger
+            class="org.eclipse.emf.compare.diagram.internal.merge.CompareDiagramMerger"
+            ranking="20">
+      </merger>
+      <merger
+            class="org.eclipse.emf.compare.diagram.internal.merge.AdditiveCompareDiagramMerger"
+            ranking="20">
+      </merger>
+   </extension>
+
+</plugin>

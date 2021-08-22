@@ -1,0 +1,875 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+ ******************************************************************************
+ * Copyright (c) 2016 Oracle
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *    Konstantin Komissarchik - initial implementation and ongoing maintenance
+ ******************************************************************************
+-->
+
+<extension xmlns="http://www.eclipse.org/sapphire/xmlns/extension">
+    <service>
+        <context>Sapphire.Element.Instance</context>
+        <id>Sapphire.ImageService.Static</id>
+        <implementation>org.eclipse.sapphire.internal.StaticImageService</implementation>
+        <condition>org.eclipse.sapphire.internal.StaticImageService$Condition</condition>
+    </service>
+    <service>
+        <context>Sapphire.Property.Instance</context>
+        <id>Sapphire.DefaultValueService.Standard</id>
+        <description>Implementation of DefaultValueService that draws the default value from @DefaultValue annotation.</description>
+        <implementation>org.eclipse.sapphire.internal.StandardDefaultValueService</implementation>
+        <condition>org.eclipse.sapphire.internal.StandardDefaultValueService$Condition</condition>
+    </service>
+    <service>
+        <id>Sapphire.InitialValueService.Standard</id>
+        <description>Implementation of InitialValueService that draws the initial value from @InitialValue annotation.</description>
+        <context>Sapphire.Property.Instance</context>
+        <implementation>org.eclipse.sapphire.internal.StandardInitialValueService</implementation>
+        <condition>org.eclipse.sapphire.internal.StandardInitialValueService$Condition</condition>
+    </service>
+    <service>
+        <id>Sapphire.PossibleValuesService.Static.Value</id>
+        <context>Sapphire.Property.MetaModel</context>
+        <description>Implementation of PossibleValuesService based on @PossibleValues annotation's values attribute..</description>
+        <implementation>org.eclipse.sapphire.internal.StaticPossibleValuesService</implementation>
+        <condition>org.eclipse.sapphire.internal.StaticPossibleValuesService$ValuePropertyCondition</condition>
+    </service>
+    <service>
+        <condition>org.eclipse.sapphire.internal.StaticPossibleValuesService$ListPropertyCondition</condition>
+        <description>Implementation of PossibleValuesService based on @PossibleValues annotation's values attribute..</description>
+        <id>Sapphire.PossibleValuesService.Static.List</id>
+        <implementation>org.eclipse.sapphire.internal.StaticPossibleValuesService</implementation>
+        <context>Sapphire.Property.Instance</context>
+    </service>
+    <service>
+        <description>PossibleValuesService implementation that derives its behavior from @PossibleValues annotation.</description>
+        <id>Sapphire.PossibleValuesService.ModelBased</id>
+        <context>Sapphire.Property.Instance</context>
+        <implementation>org.eclipse.sapphire.internal.ModelBasedPossibleValuesService</implementation>
+        <condition>org.eclipse.sapphire.internal.ModelBasedPossibleValuesService$Condition</condition>
+    </service>
+    <service>
+        <id>Sapphire.PossibleValuesService.Enum</id>
+        <context>Sapphire.Property.MetaModel</context>
+        <implementation>org.eclipse.sapphire.internal.EnumPossibleValuesService</implementation>
+        <condition>org.eclipse.sapphire.internal.EnumPossibleValuesService$Condition</condition>
+    </service>
+    <service>
+        <id>Sapphire.PossibleValuesService.ListFromValue</id>
+        <description>Implementation of PossibleValuesService for list properties based on PossibleValuesService implementation of list member's value property. This service implementation will only activate if the list property has one possible type, and that type has a single property, and that property is a value property, and that value property has a PossibleValuesService implementation in the property metamodel context.</description>
+        <context>Sapphire.Property.Instance</context>
+        <implementation>org.eclipse.sapphire.internal.ListFromValuePossibleValuesService</implementation>
+        <condition>org.eclipse.sapphire.internal.ListFromValuePossibleValuesService$Condition</condition>
+    </service>
+    <service>
+        <id>Sapphire.PossibleValuesService.ValueFromList</id>
+        <context>Sapphire.Property.Instance</context>
+        <description>Implementation of PossibleValuesService for value properties based on PossibleValuesService implementation of the containing list property. This service implementation will only activate if the value property is the sole property in its type, and the element is contained by a list property, and the list property has a PossibleValueService implementation in the property instance context.</description>
+        <implementation>org.eclipse.sapphire.internal.ValueFromListPossibleValuesService</implementation>
+        <condition>org.eclipse.sapphire.internal.ValueFromListPossibleValuesService$Condition</condition>
+    </service>
+    <service>
+        <condition>org.eclipse.sapphire.internal.ElementReferencePossibleValuesService$Condition</condition>
+        <context>Sapphire.Property.Instance</context>
+        <description>PossibleValuesService implementation that derives its behavior from ElementReferenceService.</description>
+        <id>Sapphire.PossibleValuesService.ElementReference</id>
+        <implementation>org.eclipse.sapphire.internal.ElementReferencePossibleValuesService</implementation>
+    </service>
+    <service>
+        <condition>org.eclipse.sapphire.internal.LengthValidationServiceForValue$Condition</condition>
+        <id>Sapphire.ValidationService.Length.Value</id>
+        <implementation>org.eclipse.sapphire.internal.LengthValidationServiceForValue</implementation>
+        <description>An implementation of ValidationService that produces a validation error when a value property's text length is outside of the constraints specified by the @Length annotation.</description>
+        <context>Sapphire.Property.Instance</context>
+    </service>
+    <service>
+        <condition>org.eclipse.sapphire.internal.LengthValidationServiceForList$Condition</condition>
+        <context>Sapphire.Property.Instance</context>
+        <description>An implementation of ValidationService that produces a validation error when a list property's item count is outside of the constraints specified by the @Length annotation.</description>
+        <id>Sapphire.ValidationService.Length.List</id>
+        <implementation>org.eclipse.sapphire.internal.LengthValidationServiceForList</implementation>
+    </service>
+    <service>
+        <description>ValidationService implementation that derives its behavior from @Validation annotation.</description>
+        <id>Sapphire.ValidationService.Declarative</id>
+        <context>Sapphire.Property.Instance</context>
+        <implementation>org.eclipse.sapphire.internal.DeclarativeValidationService</implementation>
+        <condition>org.eclipse.sapphire.internal.DeclarativeValidationService$Condition</condition>
+    </service>
+    <service>
+        <context>Sapphire.Property.Instance</context>
+        <id>Sapphire.ValidationService.Required</id>
+        <description>ValidationService implementation that validates whether the property conforms to semantics specified by RequiredConstraintService.</description>
+        <implementation>org.eclipse.sapphire.internal.RequiredConstraintValidationService</implementation>
+        <condition>org.eclipse.sapphire.internal.RequiredConstraintValidationService$Condition</condition>
+    </service>
+    <service>
+        <context>Sapphire.Property.Instance</context>
+        <id>Sapphire.ValidationService.UniqueValue</id>
+        <implementation>org.eclipse.sapphire.internal.UniqueValueValidationService</implementation>
+        <condition>org.eclipse.sapphire.internal.UniqueValueValidationService$Condition</condition>
+    </service>
+    <service>
+        <context>Sapphire.Property.Instance</context>
+        <id>Sapphire.ValidationService.Reference</id>
+        <implementation>org.eclipse.sapphire.services.internal.ReferenceValidationService</implementation>
+        <condition>org.eclipse.sapphire.services.internal.ReferenceValidationService$Condition</condition>
+    </service>
+    <service>
+        <context>Sapphire.Property.Instance</context>
+        <id>Sapphire.ValidationService.AbsolutePath</id>
+        <implementation>org.eclipse.sapphire.services.internal.AbsolutePathValidationService</implementation>
+        <condition>org.eclipse.sapphire.services.internal.AbsolutePathValidationService$Condition</condition>
+    </service>
+    <service>
+        <context>Sapphire.Property.Instance</context>
+        <id>Sapphire.ValidationService.RelativePath</id>
+        <implementation>org.eclipse.sapphire.services.internal.RelativePathValidationService</implementation>
+        <condition>org.eclipse.sapphire.services.internal.RelativePathValidationService$Condition</condition>
+    </service>
+    <service>
+        <context>Sapphire.Property.Instance</context>
+        <id>Sapphire.ValidationService.MalformedValue</id>
+        <implementation>org.eclipse.sapphire.services.internal.MalformedValueValidationService</implementation>
+        <condition>org.eclipse.sapphire.services.internal.MalformedValueValidationService$Condition</condition>
+    </service>
+    <service>
+        <context>Sapphire.Property.Instance</context>
+        <id>Sapphire.ValidationService.PossibleValues</id>
+        <implementation>org.eclipse.sapphire.services.internal.PossibleValuesValidationService</implementation>
+        <condition>org.eclipse.sapphire.services.internal.PossibleValuesValidationService$Condition</condition>
+    </service>
+    <service>
+        <context>Sapphire.Property.Instance</context>
+        <id>Sapphire.ValidationService.NumericRange</id>
+        <implementation>org.eclipse.sapphire.services.internal.NumericRangeValidationService</implementation>
+        <condition>org.eclipse.sapphire.services.internal.NumericRangeValidationService$Condition</condition>
+    </service>
+    <service>
+        <context>Sapphire.Property.Instance</context>
+        <id>Sapphire.ValidationService.VersionCompatibility</id>
+        <description>An implementation of ValidationService that produces a validation error when a property is not compatible with the version compatibility target yet contains data.</description>
+        <implementation>org.eclipse.sapphire.internal.VersionCompatibilityValidationService</implementation>
+    </service>
+    <service>
+        <id>Sapphire.ValidationService.PreferDefaultValue</id>
+        <description>Implementation of ValidationService that produces a validation warning when property value doesn't match its default.</description>
+        <context>Sapphire.Property.Instance</context>
+        <implementation>org.eclipse.sapphire.internal.PreferDefaultValueValidationService</implementation>
+        <condition>org.eclipse.sapphire.internal.PreferDefaultValueValidationService$Condition</condition>
+    </service>
+    <service>
+        <context>Sapphire.Property.Instance</context>
+        <id>Sapphire.EnablementService.ParentPropertyState</id>
+        <implementation>org.eclipse.sapphire.internal.ParentBasedEnablementService</implementation>
+        <condition>org.eclipse.sapphire.internal.ParentBasedEnablementService$Condition</condition>
+    </service>
+    <service>
+        <context>Sapphire.Property.Instance</context>
+        <id>Sapphire.EnablementService.FunctionBased</id>
+        <implementation>org.eclipse.sapphire.internal.FunctionBasedEnablementService</implementation>
+        <condition>org.eclipse.sapphire.internal.FunctionBasedEnablementService$Condition</condition>
+    </service>
+    <service>
+        <id>Sapphire.EnablementService.VersionCompatibility</id>
+        <context>Sapphire.Property.Instance</context>
+        <description>Implementation of EnablementService that determines property's enablement state based on property's compatibility with the version compatibility target.</description>
+        <implementation>org.eclipse.sapphire.internal.VersionCompatibilityEnablementService</implementation>
+    </service>
+    <service>
+        <context>Sapphire.Property.Instance</context>
+        <id>Sapphire.ValueNormalizationService</id>
+        <condition>org.eclipse.sapphire.services.internal.StandardValueNormalizationServiceCondition</condition>
+        <implementation>org.eclipse.sapphire.services.StandardValueNormalizationService</implementation>
+    </service>
+    <service>
+        <id>Sapphire.ValueNormalizationService.FileName</id>
+        <description>Implementation of ValueNormalizationService for value properties of type FileName.</description>
+        <context>Sapphire.Property.Instance</context>
+        <overrides>Sapphire.ValueNormalizationService</overrides>
+        <implementation>org.eclipse.sapphire.internal.FileNameNormalizationService</implementation>
+        <condition>org.eclipse.sapphire.internal.FileNameNormalizationService$Condition</condition>
+    </service>
+    <service>
+        <context>Sapphire.Property.Instance</context>
+        <id>Sapphire.RelativePathService.Model</id>
+        <implementation>org.eclipse.sapphire.services.internal.ModelRelativePathService</implementation>
+        <condition>org.eclipse.sapphire.services.internal.ModelRelativePathService$Condition</condition>
+    </service>
+    <service>
+        <id>Sapphire.ValueLabelService.Default</id>
+        <context>Sapphire.Property.MetaModel</context>
+        <implementation>org.eclipse.sapphire.internal.DefaultValueLabelService</implementation>
+        <condition>org.eclipse.sapphire.internal.DefaultValueLabelService$Condition</condition>
+    </service>
+    <service>
+        <id>Sapphire.ValueLabelService.Enum</id>
+        <overrides>Sapphire.ValueLabelService.Default</overrides>
+        <context>Sapphire.Property.MetaModel</context>
+        <implementation>org.eclipse.sapphire.internal.EnumValueLabelService</implementation>
+        <condition>org.eclipse.sapphire.internal.EnumValueLabelService$Condition</condition>
+    </service>
+    <service>
+        <id>Sapphire.ValueImageService.Default</id>
+        <context>Sapphire.Property.MetaModel</context>
+        <implementation>org.eclipse.sapphire.services.internal.DefaultValueImageService</implementation>
+        <condition>org.eclipse.sapphire.services.internal.DefaultValueImageService$Condition</condition>
+    </service>
+    <service>
+        <id>Sapphire.ValueImageService.Enum</id>
+        <overrides>Sapphire.ValueImageService.Default</overrides>
+        <context>Sapphire.Property.MetaModel</context>
+        <implementation>org.eclipse.sapphire.services.internal.EnumValueImageService</implementation>
+        <condition>org.eclipse.sapphire.services.internal.EnumValueImageService$Condition</condition>
+    </service>
+    <service>
+        <id>Sapphire.DocumentationService.Element.Standard</id>
+        <context>Sapphire.Element.Instance</context>
+        <implementation>org.eclipse.sapphire.services.internal.StandardElementDocumentationService</implementation>
+        <condition>org.eclipse.sapphire.services.internal.StandardElementDocumentationService$Condition</condition>
+    </service>
+    <service>
+        <id>Sapphire.DocumentationService.Property.Standard</id>
+        <context>Sapphire.Property.Instance</context>
+        <implementation>org.eclipse.sapphire.services.internal.StandardPropertyDocumentationService</implementation>
+        <condition>org.eclipse.sapphire.services.internal.StandardPropertyDocumentationService$Condition</condition>
+    </service>
+    <service>
+        <context>Sapphire.Property.Instance</context>
+        <id>Sapphire.FactsAggregationService</id>
+        <implementation>org.eclipse.sapphire.services.FactsAggregationService</implementation>
+    </service>
+    <service>
+        <description>Creates fact statements about property by using static content specified in @Fact annotations.</description>
+        <context>Sapphire.Property.Instance</context>
+        <id>Sapphire.FactsService.Static</id>
+        <implementation>org.eclipse.sapphire.services.internal.StaticFactsService</implementation>
+        <condition>org.eclipse.sapphire.services.internal.StaticFactsService$Condition</condition>
+    </service>
+    <service>
+        <description>Creates fact statements about property's default value by using semantical information specified by DefaultValueService and @DefaultValue annotation.</description>
+        <context>Sapphire.Property.Instance</context>
+        <id>Sapphire.FactsService.DefaultValue</id>
+        <implementation>org.eclipse.sapphire.services.internal.DefaultValueFactsService</implementation>
+        <condition>org.eclipse.sapphire.services.internal.DefaultValueFactsService$Condition</condition>
+    </service>
+    <service>
+        <id>Sapphire.FactsService.InitialValue</id>
+        <context>Sapphire.Property.Instance</context>
+        <description>Creates fact statements about property's initial value by using semantical information specified by InitialValueService and @InitialValue annotation.</description>
+        <implementation>org.eclipse.sapphire.services.internal.InitialValueFactsService</implementation>
+        <condition>org.eclipse.sapphire.services.internal.InitialValueFactsService$Condition</condition>
+    </service>
+    <service>
+        <description>Creates fact statements about numeric value property's range by using semantical information specified by @NumericRange annotation.</description>
+        <context>Sapphire.Property.Instance</context>
+        <id>Sapphire.FactsService.NumericRange</id>
+        <implementation>org.eclipse.sapphire.services.internal.NumericRangeFactsService</implementation>
+        <condition>org.eclipse.sapphire.services.internal.NumericRangeFactsService$Condition</condition>
+    </service>
+    <service>
+        <condition>org.eclipse.sapphire.internal.LengthFactsServiceForValue$Condition</condition>
+        <description>An implementation of FactsService that creates fact statements about a value property's text length constraints by using the semantical information specified by the @Length annotation.</description>
+        <id>Sapphire.FactsService.Length.Value</id>
+        <implementation>org.eclipse.sapphire.internal.LengthFactsServiceForValue</implementation>
+        <context>Sapphire.Property.MetaModel</context>
+    </service>
+    <service>
+        <condition>org.eclipse.sapphire.internal.LengthFactsServiceForList$Condition</condition>
+        <context>Sapphire.Property.MetaModel</context>
+        <description>An implementation of FactsService that creates fact statements about a list property's item count constraints by using the semantical information specified by the @Length annotation.</description>
+        <id>Sapphire.FactsService.Length.List</id>
+        <implementation>org.eclipse.sapphire.internal.LengthFactsServiceForList</implementation>
+    </service>
+    <service>
+        <description>FactsService implementation that contributes fact statements based on semantics specified by RequiredConstraintService.</description>
+        <context>Sapphire.Property.Instance</context>
+        <id>Sapphire.FactsService.Required</id>
+        <implementation>org.eclipse.sapphire.internal.RequiredConstraintFactsService</implementation>
+        <condition>org.eclipse.sapphire.internal.RequiredConstraintFactsService$Condition</condition>
+    </service>
+    <service>
+        <description>Creates fact statements about property's read-only state by using semantical information specified by @ReadOnly annotation.</description>
+        <context>Sapphire.Property.Instance</context>
+        <id>Sapphire.FactsService.ReadOnly</id>
+        <implementation>org.eclipse.sapphire.services.internal.ReadOnlyPropertyFactsService</implementation>
+        <condition>org.eclipse.sapphire.services.internal.ReadOnlyPropertyFactsService$Condition</condition>
+    </service>
+    <service>
+        <description>Creates fact statements about property's absolute path requirement by using semantical information specified by @AbsolutePath annotation.</description>
+        <context>Sapphire.Property.Instance</context>
+        <id>Sapphire.FactsService.AbsolutePath</id>
+        <implementation>org.eclipse.sapphire.services.internal.AbsolutePathFactsService</implementation>
+        <condition>org.eclipse.sapphire.services.internal.AbsolutePathFactsService$Condition</condition>
+    </service>
+    <service>
+        <description>Creates fact statements about existence requirement on the entity referenced by property's value by using semantical information specified by @MustExist annotation.</description>
+        <context>Sapphire.Property.Instance</context>
+        <id>Sapphire.FactsService.MustExist</id>
+        <implementation>org.eclipse.sapphire.services.internal.MustExistFactsService</implementation>
+        <condition>org.eclipse.sapphire.services.internal.MustExistFactsService$Condition</condition>
+    </service>
+    <service>
+        <description>Creates fact statements about value property's uniqueness constraint by using semantical information specified by @Unique annotation.</description>
+        <context>Sapphire.Property.Instance</context>
+        <id>Sapphire.FactsService.Unique</id>
+        <implementation>org.eclipse.sapphire.services.internal.UniqueFactsService</implementation>
+        <condition>org.eclipse.sapphire.services.internal.UniqueFactsService$Condition</condition>
+    </service>
+    <service>
+        <description>Creates fact statements about valid file extensions for property's value by using semantical information specified by @FileExtensions annotation.</description>
+        <context>Sapphire.Property.Instance</context>
+        <id>Sapphire.FactsService.FileExtensions</id>
+        <implementation>org.eclipse.sapphire.services.internal.FileExtensionsFactsService</implementation>
+        <condition>org.eclipse.sapphire.services.internal.FileExtensionsFactsService$Condition</condition>
+    </service>
+    <service>
+        <description>Creates fact statements about valid file system resource type (file or folder) for property's value by using semantical information specified by @ValidFileSystemResourceType annotation.</description>
+        <context>Sapphire.Property.Instance</context>
+        <id>Sapphire.FactsService.ValidFileSystemResourceType</id>
+        <implementation>org.eclipse.sapphire.services.internal.ValidFileSystemResourceTypeFactsService</implementation>
+        <condition>org.eclipse.sapphire.services.internal.ValidFileSystemResourceTypeFactsService$Condition</condition>
+    </service>
+    <service>
+        <description>Creates fact statements about property's deprecated state by using semantical information specified by @Deprecated annotation.</description>
+        <context>Sapphire.Property.Instance</context>
+        <id>Sapphire.FactsService.Deprecated</id>
+        <implementation>org.eclipse.sapphire.services.internal.DeprecatedPropertyFactsService</implementation>
+        <condition>org.eclipse.sapphire.services.internal.DeprecatedPropertyFactsService$Condition</condition>
+    </service>
+    <service>
+        <id>Sapphire.FactsService.PreferDefaultValue</id>
+        <description>Creates fact statements about property's recommended value by using semantical information specified by @PreferDefaultValue annotation.</description>
+        <context>Sapphire.Property.Instance</context>
+        <implementation>org.eclipse.sapphire.internal.PreferDefaultValueFactsService</implementation>
+        <condition>org.eclipse.sapphire.internal.PreferDefaultValueFactsService$Condition</condition>
+    </service>
+    <service>
+        <context>Sapphire.Property.Instance</context>
+        <description>Creates fact statements about property's version compatibility by using semantic information specified by @Since and @VersionCompatibility annotations.</description>
+        <id>Sapphire.FactsService.VersionCompatibility</id>
+        <implementation>org.eclipse.sapphire.internal.VersionCompatibilityFactsService</implementation>
+        <condition>org.eclipse.sapphire.internal.VersionCompatibilityFactsService$Condition</condition>
+    </service>
+    <service>
+        <id>Sapphire.FactsService.Serialization</id>
+        <implementation>org.eclipse.sapphire.internal.SerializationFactsService</implementation>
+        <condition>org.eclipse.sapphire.internal.SerializationFactsService$Condition</condition>
+        <context>Sapphire.Property.MetaModel</context>
+        <description>Creates fact statements about property's serialization by using semantical information specified by the @Serialization annotation.</description>
+    </service>
+    <service>
+        <description>Implementation of FileExtensionsService that derives its behavior from @FileExtensions annotation.</description>
+        <context>Sapphire.Property.Instance</context>
+        <id>Sapphire.FileExtensionsService.Declarative</id>
+        <implementation>org.eclipse.sapphire.services.internal.DeclarativeFileExtensionsService</implementation>
+        <condition>org.eclipse.sapphire.services.internal.DeclarativeFileExtensionsService$Condition</condition>
+    </service>
+    <service>
+        <description>Implementation of DependenciesService that exposes dependencies specified by the @DependsOn annotation.</description>
+        <context>Sapphire.Property.Instance</context>
+        <id>Sapphire.DependenciesService.Declarative</id>
+        <implementation>org.eclipse.sapphire.services.internal.DeclarativeDependenciesService</implementation>
+        <condition>org.eclipse.sapphire.services.internal.DeclarativeDependenciesService$Condition</condition>
+    </service>
+    <service>
+        <id>Sapphire.ConversionService.ObjectToString</id>
+        <description>ConversionService implementation for Object to String conversions that uses object's toString() method.</description>
+        <implementation>org.eclipse.sapphire.internal.ObjectToStringConversionService</implementation>
+        <context>Sapphire</context>
+    </service>
+    <service>
+        <context>Sapphire</context>
+        <description>ConversionService implementation for Date to String conversions.</description>
+        <id>Sapphire.ConversionService.DateToString</id>
+        <implementation>org.eclipse.sapphire.internal.DateToStringConversionService</implementation>
+        <overrides>Sapphire.ConversionService.ObjectToString</overrides>
+    </service>
+    <service>
+        <id>Sapphire.ConversionService.DateToString.Property</id>
+        <description>ConversionService implementation for Date to String conversions specified at property level using @Serialization annotation.</description>
+        <context>Sapphire.Property.MetaModel</context>
+        <condition>org.eclipse.sapphire.internal.DateToStringConversionServiceForProperty$Condition</condition>
+        <implementation>org.eclipse.sapphire.internal.DateToStringConversionServiceForProperty</implementation>
+        <overrides>Sapphire.ConversionService.DateToString</overrides>
+    </service>
+    <service>
+        <context>Sapphire</context>
+        <description>ConversionService implementation for Enum to String conversions.</description>
+        <id>Sapphire.ConversionService.EnumToString</id>
+        <implementation>org.eclipse.sapphire.internal.EnumToStringConversionService</implementation>
+        <overrides>Sapphire.ConversionService.ObjectToString</overrides>
+    </service>    
+    <service>
+        <id>Sapphire.ConversionService.StringToBoolean</id>
+        <implementation>org.eclipse.sapphire.internal.StringToBooleanConversionService</implementation>
+        <context>Sapphire</context>
+        <description>ConversionService implementation for String to Boolean conversions.</description>
+    </service>
+    <service>
+        <id>Sapphire.ConversionService.StringToByte</id>
+        <implementation>org.eclipse.sapphire.internal.StringToByteConversionService</implementation>
+        <context>Sapphire</context>
+        <description>ConversionService implementation for String to Byte conversions.</description>
+    </service>
+    <service>
+        <id>Sapphire.ConversionService.StringToShort</id>
+        <implementation>org.eclipse.sapphire.internal.StringToShortConversionService</implementation>
+        <context>Sapphire</context>
+        <description>ConversionService implementation for String to Short conversions.</description>
+    </service>
+    <service>
+        <id>Sapphire.ConversionService.StringToInteger</id>
+        <implementation>org.eclipse.sapphire.internal.StringToIntegerConversionService</implementation>
+        <context>Sapphire</context>
+        <description>ConversionService implementation for String to Integer conversions.</description>
+    </service>
+    <service>
+        <id>Sapphire.ConversionService.StringToLong</id>
+        <implementation>org.eclipse.sapphire.internal.StringToLongConversionService</implementation>
+        <context>Sapphire</context>
+        <description>ConversionService implementation for String to Long conversions.</description>
+    </service>
+    <service>
+        <id>Sapphire.ConversionService.StringToFloat</id>
+        <implementation>org.eclipse.sapphire.internal.StringToFloatConversionService</implementation>
+        <context>Sapphire</context>
+        <description>ConversionService implementation for String to Float conversions.</description>
+    </service>
+    <service>
+        <id>Sapphire.ConversionService.StringToDouble</id>
+        <implementation>org.eclipse.sapphire.internal.StringToDoubleConversionService</implementation>
+        <context>Sapphire</context>
+        <description>ConversionService implementation for String to Double conversions.</description>
+    </service>
+    <service>
+        <id>Sapphire.ConversionService.StringToBigInteger</id>
+        <implementation>org.eclipse.sapphire.internal.StringToBigIntegerConversionService</implementation>
+        <context>Sapphire</context>
+        <description>ConversionService implementation for String to BigInteger conversions.</description>
+    </service>
+    <service>
+        <id>Sapphire.ConversionService.StringToBigDecimal</id>
+        <implementation>org.eclipse.sapphire.internal.StringToBigDecimalConversionService</implementation>
+        <context>Sapphire</context>
+        <description>ConversionService implementation for String to BigDecimal conversions.</description>
+    </service>
+    <service>
+        <id>Sapphire.ConversionService.StringToEnum</id>
+        <implementation>org.eclipse.sapphire.internal.StringToEnumConversionService</implementation>
+        <context>Sapphire</context>
+        <description>ConversionService implementation for String to Enum conversions.</description>
+    </service>
+    <service>
+        <id>Sapphire.ConversionService.StringToDate</id>
+        <description>ConversionService implementation for String to Date conversions.</description>
+        <implementation>org.eclipse.sapphire.internal.StringToDateConversionService</implementation>
+        <context>Sapphire</context>
+    </service>
+    <service>
+        <id>Sapphire.ConversionService.StringToDate.Property</id>
+        <implementation>org.eclipse.sapphire.internal.StringToDateConversionServiceForProperty</implementation>
+        <description>ConversionService implementation for String to Date conversions specified at property level using @Serialization annotation.</description>
+        <condition>org.eclipse.sapphire.internal.StringToDateConversionServiceForProperty$Condition</condition>
+        <context>Sapphire.Property.MetaModel</context>
+        <overrides>Sapphire.ConversionService.StringToDate</overrides>
+    </service>
+    <service>
+        <id>Sapphire.ConversionService.StringToUri</id>
+        <implementation>org.eclipse.sapphire.internal.StringToUriConversionService</implementation>
+        <context>Sapphire</context>
+        <description>ConversionService implementation for String to URI conversions.</description>
+    </service>
+    <service>
+        <id>Sapphire.ConversionService.StringToUrl</id>
+        <implementation>org.eclipse.sapphire.internal.StringToUrlConversionService</implementation>
+        <context>Sapphire</context>
+        <description>ConversionService implementation for String to URL conversions.</description>
+    </service>
+    <service>
+        <id>Sapphire.ConversionService.StringToPath</id>
+        <implementation>org.eclipse.sapphire.internal.StringToPathConversionService</implementation>
+        <context>Sapphire</context>
+        <description>ConversionService implementation for String to Path conversions.</description>
+    </service>
+    <service>
+        <id>Sapphire.ConversionService.StringToFileName</id>
+        <implementation>org.eclipse.sapphire.internal.StringToFileNameConversionService</implementation>
+        <context>Sapphire</context>
+        <description>ConversionService implementation for String to FileName conversions.</description>
+    </service>
+    <service>
+        <id>Sapphire.ConversionService.StringToFunction</id>
+        <implementation>org.eclipse.sapphire.internal.StringToFunctionConversionService</implementation>
+        <context>Sapphire.Property.Instance</context>
+        <description>ConversionService implementation for String to Function conversions.</description>
+    </service>
+    <function>
+        <description>Returns the absolute path of a value for properties with a RelativePathService.</description>
+        <impl>org.eclipse.sapphire.modeling.el.internal.AbsolutePathFunction</impl>
+        <name>Absolute</name>
+        <signature>
+            <parameter>org.eclipse.sapphire.Value</parameter>
+        </signature>
+    </function>
+    <function>
+        <description>Computes the average of numbers in a collection. Typically, this function takes the collection as the sole parameter. However, when the collection is a model element list, a second parameter may be necessary to specify the name (in the form of a string) of the list entry's value property to use in aggregation. If the the collection is a model element list and the second parameter is not specified, this function will use list entry's first value property for aggregation. An average of an empty collection is 0.</description>
+        <impl>org.eclipse.sapphire.modeling.el.AvgFunction</impl>
+        <name>Avg</name>
+    </function>
+    <function>
+        <name>Concat</name>
+        <impl>org.eclipse.sapphire.modeling.el.ConcatFunction</impl>
+        <description>Concatenates two or more strings into a single string. Particularly useful in contexts where composite expressions cannot be used, such as where the result of concatenation needs to feed into another function or operator.</description>
+    </function>
+    <function>
+        <description>Returns the content of a value or a transient. For value properties, the default is taken into account, if applicable.</description>
+        <impl>org.eclipse.sapphire.modeling.el.internal.ContentFunction</impl>
+        <name>Content</name>
+        <signature>
+            <parameter>org.eclipse.sapphire.Property</parameter>
+        </signature>
+    </function>
+    <function>
+        <description>Returns the enablement of a property.</description>
+        <impl>org.eclipse.sapphire.modeling.el.internal.EnabledFunction</impl>
+        <name>Enabled</name>
+        <signature>
+            <parameter>org.eclipse.sapphire.Property</parameter>
+        </signature>
+    </function>
+    <function>
+        <description>Encodes text for use as XML element content or an attribute value.</description>
+        <impl>org.eclipse.sapphire.modeling.el.internal.EncodeToXmlFunction</impl>
+        <name>EncodeToXml</name>
+        <signature>
+            <parameter>java.lang.String</parameter>
+        </signature>
+    </function>
+    <function>
+        <name>EndsWith</name>
+        <impl>org.eclipse.sapphire.modeling.el.internal.EndsWithFunction</impl>
+        <description>Tests if a string ends with the specified suffix.</description>
+        <signature>
+            <parameter>java.lang.String</parameter>
+            <parameter>java.lang.String</parameter>
+        </signature>
+    </function>
+    <function>
+        <description>Breaks a string into segments using the provided separators and returns the first segment. If no separators are found in the string, the entire string is returned. This function takes two string operands. The first is the string to tokenize. The second is a sequence of characters that individually should be treated as valid separators.</description>
+        <impl>org.eclipse.sapphire.modeling.el.FirstSegmentFunction</impl>
+        <name>FirstSegment</name>
+    </function>
+    <function>
+        <description>Returns a fragment of a string. The fragment starts at the index specified by the second argument and extends to the character before the index specified by the third argument. The length of the fragment is end index minus start index. A negative start index is normalized to zero. A start index exceeding the length of the input is normalized to the length of the input. An end index exceeding the length of the input is normalized to the length of the input. An end index that is smaller than the start index is normalized to the start index.</description>
+        <impl>org.eclipse.sapphire.modeling.el.internal.FragmentFunction</impl>
+        <name>Fragment</name>
+        <signature>
+            <parameter>java.lang.String</parameter>
+            <parameter>java.lang.Integer</parameter>
+            <parameter>java.lang.Integer</parameter>
+        </signature>
+    </function>
+    <function>
+        <description>Returns a fragment of a string starting at the beginning and not exceeding the specified length. A negative fragment length is normalized to zero. A fragment length exceeding the length of the input is normalized to the length of the input.</description>
+        <impl>org.eclipse.sapphire.modeling.el.internal.HeadFunction</impl>
+        <name>Head</name>
+        <signature>
+            <parameter>java.lang.String</parameter>
+            <parameter>java.lang.Integer</parameter>
+        </signature>
+    </function>
+    <function>
+        <description>Returns the image associated with the context model element.</description>
+        <impl>org.eclipse.sapphire.modeling.el.ImageFunction</impl>
+        <name>Image</name>
+    </function>
+    <function>
+        <description>Determines the index of a model element within its parent list.</description>
+        <impl>org.eclipse.sapphire.modeling.el.internal.IndexFunction</impl>
+        <name>Index</name>
+        <signature>
+            <parameter>org.eclipse.sapphire.Element</parameter>
+        </signature>
+    </function>
+    <function>
+        <description>Determines if an object is of specified type. The object to be checked is the first operand and the type is the second operand. The type must be a fully-qualified Java class name.</description>
+        <impl>org.eclipse.sapphire.modeling.el.InstanceOfFunction</impl>
+        <name>InstanceOf</name>
+    </function>
+    <function>
+        <description>Breaks a string into segments using the provided separators and returns the last segment. If no separators are found in the string, the entire string is returned. This function takes two string operands. The first is the string to tokenize. The second is a sequence of characters that individually should be treated as valid separators.</description>
+        <impl>org.eclipse.sapphire.modeling.el.LastSegmentFunction</impl>
+        <name>LastSegment</name>
+    </function>
+    <function>
+        <description>Constructs a list from arbitrary number of operands.</description>
+        <impl>org.eclipse.sapphire.modeling.el.ListFunction</impl>
+        <name>List</name>
+    </function>
+    <function>
+        <description>Converts a string to lower case. Can be used either as LowerCase( Name ) or as Name.LowerCase().</description>
+        <impl>org.eclipse.sapphire.modeling.el.LowerCaseFunction</impl>
+        <name>LowerCase</name>
+    </function>
+    <function>
+        <description>Determines whether a string matches a regular expression. The full semantics are specified by Java's String.matches() function.</description>
+        <impl>org.eclipse.sapphire.modeling.el.internal.MatchesFunction</impl>
+        <name>Matches</name>
+        <signature>
+            <parameter>java.lang.String</parameter>
+            <parameter>java.lang.String</parameter>
+        </signature>
+    </function>
+    <function>
+        <description>Finds the largest number in a collection. Typically, this function takes the collection as the sole parameter. However, when the collection is a model element list, a second parameter may be necessary to specify the name (in the form of a string) of the list entry's value property to use in aggregation. If the the collection is a model element list and the second parameter is not specified, this function will use list entry's first value property for aggregation.</description>
+        <impl>org.eclipse.sapphire.modeling.el.MaxFunction</impl>
+        <name>Max</name>
+    </function>
+    <function>
+        <description>Returns the message from a validation result.</description>
+        <impl>org.eclipse.sapphire.modeling.el.internal.MessageFunction</impl>
+        <name>Message</name>
+        <signature>
+            <parameter>org.eclipse.sapphire.modeling.Status</parameter>
+        </signature>
+    </function>
+    <function>
+        <description>Finds the smallest number in a collection. Typically, this function takes the collection as the sole parameter. However, when the collection is a model element list, a second parameter may be necessary to specify the name (in the form of a string) of the list entry's value property to use in aggregation. If the the collection is a model element list and the second parameter is not specified, this function will use list entry's first value property for aggregation.</description>
+        <impl>org.eclipse.sapphire.modeling.el.MinFunction</impl>
+        <name>Min</name>
+    </function>
+    <function>
+        <description>Returns the parent of the current model element.</description>
+        <impl>org.eclipse.sapphire.modeling.el.ParentElementFunction</impl>
+        <name>Parent</name>
+    </function>
+    <function>
+        <description>Replaces all occurrences of a regular expression pattern with the provided replacement text. The full semantics are specified by Java's String.replaceAll( String, String ) function.</description>
+        <impl>org.eclipse.sapphire.modeling.el.internal.ReplaceFunction</impl>
+        <name>Replace</name>
+        <signature>
+            <parameter>java.lang.String</parameter>
+            <parameter>java.lang.String</parameter>
+            <parameter>java.lang.String</parameter>
+        </signature>
+    </function>
+    <function>
+        <description>Returns the root of the model.</description>
+        <impl>org.eclipse.sapphire.modeling.el.RootElementFunction</impl>
+        <name>Root</name>
+    </function>
+    <function>
+        <description>Determines whether Sapphire version matches a version constraint. A version constraint is a comma-separated list of specific versions, closed ranges (expressed using &quot;[1.2.3-4.5)&quot; syntax and open ranges (expressed using &quot;[1.2.3&quot; or &quot;4.5)&quot; syntax). The square brackets indicate that the range includes the specified version. The parenthesis indicate that the range goes up to, but does not actually include the specified version.</description>
+        <impl>org.eclipse.sapphire.modeling.el.SapphireVersionMatchesFunction</impl>
+        <name>SapphireVersionMatches</name>
+    </function>
+    <function>
+        <description>Changes the scale of a decimal.</description>
+        <impl>org.eclipse.sapphire.modeling.el.ScaleFunction</impl>
+        <name>Scale</name>
+    </function>
+    <function>
+        <description>Returns the severity of a validation result.</description>
+        <impl>org.eclipse.sapphire.modeling.el.internal.SeverityFunction</impl>
+        <name>Severity</name>
+        <signature>
+            <parameter>org.eclipse.sapphire.modeling.Status</parameter>
+        </signature>
+    </function>
+    <function>
+        <description>Determines the size of a collection, a map, an array or a string.</description>
+        <impl>org.eclipse.sapphire.modeling.el.internal.SizeFunction</impl>
+        <name>Size</name>
+        <signature>
+            <parameter>java.lang.Object</parameter>
+        </signature>
+    </function>
+    <function>
+        <description>Tests if a string starts with the specified prefix.</description>
+        <impl>org.eclipse.sapphire.modeling.el.internal.StartsWithFunction</impl>
+        <name>StartsWith</name>
+        <signature>
+            <parameter>java.lang.String</parameter>
+            <parameter>java.lang.String</parameter>
+        </signature>
+    </function>
+    <service>
+        <id>Sapphire.ConversionService.StringToVersion</id>
+        <implementation>org.eclipse.sapphire.internal.StringToVersionConversionService</implementation>
+        <context>Sapphire</context>
+        <description>ConversionService implementation for String to Version conversions.</description>
+    </service>
+    <service>
+        <id>Sapphire.ConversionService.StringToVersionConstraint</id>
+        <implementation>org.eclipse.sapphire.internal.StringToVersionConstraintConversionService</implementation>
+        <context>Sapphire</context>
+        <description>ConversionService implementation for String to VersionConstraint conversions.</description>
+    </service>
+    <service>
+        <id>Sapphire.ConversionService.StringToColor</id>
+        <implementation>org.eclipse.sapphire.internal.StringToColorConversionService</implementation>
+        <context>Sapphire</context>
+        <description>ConversionService implementation for String to Color conversions.</description>
+    </service>
+    <service>
+        <id>Sapphire.PossibleTypesService.Standard</id>
+        <context>Sapphire.Property.MetaModel</context>
+        <description>Implementation of PossibleTypesService using information specified by @Type annotation.</description>
+        <implementation>org.eclipse.sapphire.internal.StandardPossibleTypesService</implementation>
+    </service>
+    <service>
+        <context>Sapphire.Property.Instance</context>
+        <description>RequiredConstraintService implementation that derives its behavior from @Required annotation.</description>
+        <id>Sapphire.RequiredConstraintService.Declarative</id>
+        <implementation>org.eclipse.sapphire.internal.DeclarativeRequiredConstraintService</implementation>
+        <condition>org.eclipse.sapphire.internal.DeclarativeRequiredConstraintService$Condition</condition>
+    </service>
+    <service>
+        <id>Sapphire.ContentProposalService.PossibleValues</id>
+        <context>Sapphire.Property.Instance</context>
+        <description>Implementation of ContentProposalService based on PossibleValuesService.</description>
+        <implementation>org.eclipse.sapphire.services.internal.PossibleValuesContentProposalService</implementation>
+        <condition>org.eclipse.sapphire.services.internal.PossibleValuesContentProposalService$Condition</condition>
+    </service>
+    <service>
+        <id>Sapphire.DerivedValueService.Standard</id>
+        <context>Sapphire.Property.Instance</context>
+        <implementation>org.eclipse.sapphire.internal.StandardDerivedValueService</implementation>
+        <condition>org.eclipse.sapphire.internal.StandardDerivedValueService$Condition</condition>
+    </service>
+    <function>
+        <name>Sum</name>
+        <impl>org.eclipse.sapphire.modeling.el.SumFunction</impl>
+        <description>Computes the sum of numbers in a collection. Typically, this function takes the collection as the sole parameter. However, when the collection is a model element list, a second parameter may be necessary to specify the name (in the form of a string) of the list entry's value property to use in aggregation. If the the collection is a model element list and the second parameter is not specified, this function will use list entry's first value property for aggregation. A sum of an empty collection is 0.</description>
+    </function>
+    <function>
+        <description>Returns a fragment of a string starting at the end and not exceeding the specified length. A negative fragment length is normalized to zero. A fragment length exceeding the length of the input is normalized to the length of the input.</description>
+        <impl>org.eclipse.sapphire.modeling.el.internal.TailFunction</impl>
+        <name>Tail</name>
+        <signature>
+            <parameter>java.lang.String</parameter>
+            <parameter>java.lang.Integer</parameter>
+        </signature>
+    </function>
+    <function>
+        <description>Returns the text of a value, taking into account the default, if applicable.</description>
+        <impl>org.eclipse.sapphire.modeling.el.internal.TextFunction</impl>
+        <name>Text</name>
+        <signature>
+            <parameter>org.eclipse.sapphire.Value</parameter>
+        </signature>
+    </function>
+    <function>
+        <description>Converts a string to upper case. Can be used either as UpperCase( Name ) or as Name.UpperCase().</description>
+        <impl>org.eclipse.sapphire.modeling.el.UpperCaseFunction</impl>
+        <name>UpperCase</name>
+    </function>
+    <function>
+        <description>Returns the validation result of a property.</description>
+        <impl>org.eclipse.sapphire.modeling.el.internal.ValidationFunction</impl>
+        <name>Validation</name>
+        <signature>
+            <parameter>org.eclipse.sapphire.Property</parameter>
+        </signature>
+    </function>
+    <function>
+        <name>VersionMatches</name>
+        <impl>org.eclipse.sapphire.modeling.el.VersionMatchesFunction</impl>
+        <description>Determines whether a version matches a version constraint. A version constraint is a comma-separated list of specific versions, closed ranges (expressed using &quot;[1.2.3-4.5)&quot; syntax and open ranges (expressed using &quot;[1.2.3&quot; or &quot;4.5)&quot; syntax). The square brackets indicate that the range includes the specified version. The parenthesis indicate that the range goes up to, but does not actually include the specified version.</description>
+    </function>
+    <service>
+        <id>Sapphire.VersionCompatibilityTargetService.Declarative</id>
+        <context>Sapphire.Element.Instance</context>
+        <context>Sapphire.Property.Instance</context>
+        <description>Implementation of VersionCompatibilityTargetService that derives its behavior from @VersionCompatibilityTarget annotation.</description>
+        <implementation>org.eclipse.sapphire.internal.DeclarativeVersionCompatibilityTargetService</implementation>
+        <condition>org.eclipse.sapphire.internal.DeclarativeVersionCompatibilityTargetService$Condition</condition>
+    </service>
+    <service>
+        <id>Sapphire.VersionCompatibilityService.Declarative</id>
+        <context>Sapphire.Property.Instance</context>
+        <description>Implementation of VersionCompatibilityService that derives its behavior from @VersionCompatibility and @Since annotations.</description>
+        <implementation>org.eclipse.sapphire.internal.DeclarativeVersionCompatibilityService</implementation>
+        <condition>org.eclipse.sapphire.internal.DeclarativeVersionCompatibilityService$Condition</condition>
+    </service>
+    <service>
+        <id>Sapphire.VersionCompatibilityService.ParentBased</id>
+        <context>Sapphire.Property.Instance</context>
+        <description>Implementation of VersionCompatibilityService that derives its behavior from version compatibility of the containing element's parent property.</description>
+        <implementation>org.eclipse.sapphire.internal.ParentBasedVersionCompatibilityService</implementation>
+        <condition>org.eclipse.sapphire.internal.ParentBasedVersionCompatibilityService$Condition</condition>
+    </service>
+    <service>
+        <id>Sapphire.MasterConversionService</id>
+        <description>Converts an object to the specified type by delegating to available ConversionService and UniversalConversionService implementations. If object is null or is already of desired type, the object is returned unchanged.</description>
+        <context>Sapphire</context>
+        <context>Sapphire.Element.MetaModel</context>
+        <context>Sapphire.Element.Instance</context>
+        <context>Sapphire.Property.MetaModel</context>
+        <context>Sapphire.Property.Instance</context>
+        <context>Sapphire.Part</context>
+        <implementation>org.eclipse.sapphire.MasterConversionService</implementation>
+    </service>
+    <service>
+        <context>Sapphire.Property.Instance</context>
+        <description>Aggregates the data from all applicable version compatibility services in order to produce a single statement about version compatibility. An implementation of this service is provided with Sapphire. This service is not intended to be implemented by adopters.</description>
+        <id>Sapphire.MasterVersionCompatibilityService</id>
+        <implementation>org.eclipse.sapphire.MasterVersionCompatibilityService</implementation>
+    </service>
+    <service>
+        <id>Sapphire.LoggingService.Standard</id>
+        <implementation>org.eclipse.sapphire.internal.StandardLoggingService</implementation>
+        <context>Sapphire</context>
+    </service>
+    <function>
+        <name>Global</name>
+        <impl>org.eclipse.sapphire.modeling.el.GlobalFunction</impl>
+        <description>Returns a map of global objects maintained through Sapphire.global() API.</description>
+        <signature></signature>
+    </function>
+    <service>
+        <id>Sapphire.CollationService.Default</id>
+        <implementation>org.eclipse.sapphire.internal.DefaultCollationService</implementation>
+        <context>Sapphire.Property.MetaModel</context>
+        <condition>org.eclipse.sapphire.internal.DefaultCollationService$Condition</condition>
+        <description>A CollationService implementation that is active when an explicit collation is not specified. The provided collation matches Java's default string comparison.</description>
+    </service>
+    <service>
+        <id>Sapphire.CollationService.Declarative.Global</id>
+        <implementation>org.eclipse.sapphire.internal.DeclarativeCollationService</implementation>
+        <condition>org.eclipse.sapphire.internal.DeclarativeCollationService$GlobalCondition</condition>
+        <description>A CollationService implementation that derives its behavior from @Collation annotation.</description>
+        <overrides>Sapphire.CollationService.Default</overrides>
+        <context>Sapphire.Property.MetaModel</context>
+    </service>
+    <service>
+        <condition>org.eclipse.sapphire.internal.DeclarativeCollationService$InstanceCondition</condition>
+        <description>A CollationService implementation that derives its behavior from @Collation annotation.</description>
+        <id>Sapphire.CollationService.Declarative.Instance</id>
+        <implementation>org.eclipse.sapphire.internal.DeclarativeCollationService</implementation>
+        <overrides>Sapphire.CollationService.Default</overrides>
+        <context>Sapphire.Property.Instance</context>
+    </service>
+    <service>
+        <id>Sapphire.CollationService.ListFromValue</id>
+        <implementation>org.eclipse.sapphire.internal.ListFromValueCollationService</implementation>
+        <description>Implementation of CollationService for list properties based on CollationService implementation of list member's value property. This service implementation will only activate if the list property has one possible type, and that type has a single property, and that property is a value property.</description>
+        <condition>org.eclipse.sapphire.internal.ListFromValueCollationService$Condition</condition>
+        <context>Sapphire.Property.Instance</context>
+    </service>
+    <service>
+        <id>Sapphire.ReferenceService.ElementReference</id>
+        <context>Sapphire.Property.Instance</context>
+        <implementation>org.eclipse.sapphire.internal.DeclarativeElementReferenceService</implementation>
+        <condition>org.eclipse.sapphire.internal.DeclarativeElementReferenceService$Condition</condition>
+        <description>ReferenceService implementation that derives its behavior from @ElementReference annotation.</description>
+    </service>
+</extension>

@@ -1,0 +1,1216 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.pde.api.tools.ui; singleton:=true
+Archiver-Version: Plexus Archiver
+Built-By: genie.releng
+Require-Bundle: org.eclipse.core.runtime;bundle-version="[3.11.0,4.0.0
+ )",org.eclipse.jdt.core;bundle-version="[3.10.0,4.0.0)",org.eclipse.p
+ de.ui;bundle-version="[3.4.0,4.0.0)",org.eclipse.pde.api.tools;bundle
+ -version="1.0.600",org.eclipse.ui;bundle-version="[3.4.0,4.0.0)",org.
+ eclipse.jdt.ui;bundle-version="[3.8.0,4.0.0)",org.eclipse.jface.text;
+ bundle-version="[3.4.0,4.0.0)",org.eclipse.jdt.launching;bundle-versi
+ on="[3.6.100,4.0.0)",org.eclipse.core.resources;bundle-version="[3.4.
+ 0,4.0.0)",org.eclipse.ui.forms;bundle-version="[3.3.100,4.0.0)",org.e
+ clipse.ui.ide;bundle-version="[3.4.0,4.0.0)",org.eclipse.search;bundl
+ e-version="[3.4.0,4.0.0)",org.eclipse.ui.editors;bundle-version="[3.4
+ .0,4.0.0)",org.eclipse.ltk.core.refactoring;bundle-version="[3.4.0,4.
+ 0.0)",org.eclipse.ltk.ui.refactoring;bundle-version="[3.4.0,4.0.0)",o
+ rg.eclipse.core.expressions;bundle-version="3.4.100",org.eclipse.equi
+ nox.frameworkadmin;bundle-version="[2.0.0,3.0.0)",org.eclipse.debug.c
+ ore;bundle-version="[3.4.0,4.0.0)",org.eclipse.debug.ui;bundle-versio
+ n="[3.4.0,4.0.0)",org.eclipse.ui.trace;bundle-version="[1.0.0,2.0.0)"
+ ,org.eclipse.jdt.core.manipulation;bundle-version="1.5.0",org.eclipse
+ .core.filesystem;bundle-version="1.4.0",org.eclipse.equinox.bidi;bund
+ le-version="[0.10.0,2.0.0)"
+Bundle-ManifestVersion: 2
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/pde/ec
+ lipse.pde.ui.git;path="apitools/org.eclipse.pde.api.tools.ui";tag="M2
+ 0170814-1005";commitId=8422ca95b50e80c65c7083458ecb017d01820e34
+Bundle-Vendor: %providerName
+Import-Package: com.ibm.icu.text;version="3.6.1"
+Eclipse-LazyStart: true
+Export-Package: org.eclipse.pde.api.tools.ui.internal;x-friends:="org.
+ eclipse.pde.api.tools.tests",org.eclipse.pde.api.tools.ui.internal.ac
+ tions;x-friends:="org.eclipse.pde.api.tools.tests",org.eclipse.pde.ap
+ i.tools.ui.internal.commands;x-internal:=true,org.eclipse.pde.api.too
+ ls.ui.internal.completion;x-friends:="org.eclipse.pde.api.tools.tests
+ ",org.eclipse.pde.api.tools.ui.internal.markers;x-friends:="org.eclip
+ se.pde.api.tools.tests",org.eclipse.pde.api.tools.ui.internal.prefere
+ nces;x-friends:="org.eclipse.pde.api.tools.tests",org.eclipse.pde.api
+ .tools.ui.internal.properties;x-friends:="org.eclipse.pde.api.tools.t
+ ests",org.eclipse.pde.api.tools.ui.internal.refactoring;x-internal:=t
+ rue,org.eclipse.pde.api.tools.ui.internal.use;x-internal:=true,org.ec
+ lipse.pde.api.tools.ui.internal.views;x-internal:=true,org.eclipse.pd
+ e.api.tools.ui.internal.wizards;x-friends:="org.eclipse.pde.api.tools
+ .tests"
+Bundle-Name: %pluginName
+Bundle-Version: 1.1.101.v20170810-1621
+Bundle-Localization: plugin
+Bundle-Activator: org.eclipse.pde.api.tools.ui.internal.ApiUIPlugin
+Created-By: Apache Maven 3.3.3
+Build-Jdk: 1.8.0_131
+
+Name: plugin.xml
+SHA-256-Digest: I9oqUn3MhcgdW6rKSyoJWdPf7CVlTtad/oQjGQMb9jk=
+
+Name: icons/full/ovr16/error_ovr.gif
+SHA-256-Digest: EyqmJ4VZ9cw1MgFQ1E0RNKyyM1ZtJXxr4QD+0yhAqek=
+
+Name: org/eclipse/pde/api/tools/ui/internal/preferences/ApiUseScanPref
+ erencePage.class
+SHA-256-Digest: iVwXrMJG7BV2ej+jT3OAwsfMeM1V+egzBunC/dX0Y+A=
+
+Name: org/eclipse/pde/api/tools/ui/internal/preferences/ProjectSelecti
+ onDialog$4.class
+SHA-256-Digest: aoirRBfQRXEE4Va9TtuSouEYGOYgrlmXdv6zTGQfuwI=
+
+Name: org/eclipse/pde/api/tools/ui/internal/markers/RemoveUnsupportedA
+ nnotationOperation.class
+SHA-256-Digest: gB8mQXsnEW/d6oq5ub9WulvNz1Yd5865K6CSfT12stc=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/JavadocConversionP
+ age$3.class
+SHA-256-Digest: 0FmkT9B/Cbjej3KrtNykiPH/Mkkugi98xkTKlVp19mI=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/DirectoryBasedApiB
+ aselineWizardPage$5.class
+SHA-256-Digest: 23gzQNfVFW52EmQbov0frSsvNNPwTGHxaxyoZq+IXxk=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/ApiBaselineWizard.
+ class
+SHA-256-Digest: BbLbJN1wxCWpqG8B9hMXeaigi7oG2gu1f0ICmDNK3RM=
+
+Name: org/eclipse/pde/api/tools/ui/internal/markers/IApiToolProposalRe
+ levance.class
+SHA-256-Digest: NWoXby+BVBhpGxNLSqsoob6/X2TqokJ5LA/WCqE4PFA=
+
+Name: org/eclipse/pde/api/tools/ui/internal/preferences/ApiUseScanPref
+ erencePage$8.class
+SHA-256-Digest: Cpzwg2daOUmTqH6fsj8mCqrdi9kd2Usiac4/v6tq1oo=
+
+Name: org/eclipse/pde/api/tools/ui/internal/use/ReportPatternPage$3.cl
+ ass
+SHA-256-Digest: ZxKXZqLsU+cZVY3Jpn9BKO0pJy0pJu9eGWkPKYycfr8=
+
+Name: org/eclipse/pde/api/tools/ui/internal/ApiUIPlugin$1$1.class
+SHA-256-Digest: 3Wx3E8cErHojVxwYwCVr1lMMrxYmollM6XHGzt45zFQ=
+
+Name: org/eclipse/pde/api/tools/ui/internal/use/ApiUsePatternTab$7.cla
+ ss
+SHA-256-Digest: qxSBCPb0wqowjhD+DzKlN4tKTN1tTKq1LCKr6Cv44EI=
+
+Name: org/eclipse/pde/api/tools/ui/internal/refactoring/FilterDeletePa
+ rticipant.class
+SHA-256-Digest: eAqLaRpCYR6biZncUhV3TIFj4COdoUzRhlFJyACQrsI=
+
+Name: org/eclipse/pde/api/tools/ui/internal/properties/ApiFiltersPrope
+ rtyPage$3.class
+SHA-256-Digest: tfAZVtkilVuQReGPiQGRzfGY6AWfKbKd4us0PHAVt2s=
+
+Name: org/eclipse/pde/api/tools/ui/internal/commands/RemoveFiltersHand
+ ler.class
+SHA-256-Digest: iV37kDx698TqlCwdnAyDY01jxV+yeouNjF3Zp0gyyJk=
+
+Name: org/eclipse/pde/api/tools/ui/internal/use/ApiUseScanTab$13.class
+SHA-256-Digest: Auz+YsScZFdAeHqDV8TN4ujx7rwAlJuPr9Zk13oVszE=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/TargetBasedApiBase
+ lineWizardPage$6.class
+SHA-256-Digest: WUhhubia/ZHsoRi7LBpLxIsryZ3rrmjbBKqW/WtyoyI=
+
+Name: org/eclipse/pde/api/tools/ui/internal/markers/DefaultApiProfileR
+ esolution$1.class
+SHA-256-Digest: xEd8iyKghxXsYFbt+gRyWmyP0VYZLALrFMBTvC+HEKI=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/CompareToBaselineW
+ izard.class
+SHA-256-Digest: QPtm9UERo2rheIk5bFX5U1eiH/OMvqyFMknCGuwUYx8=
+
+Name: icons/full/dlcl16/expandall.gif
+SHA-256-Digest: PVXNxB/fvksrJr2gomYv8gUwaHdOM5ypBmbi1pN7ySQ=
+
+Name: icons/full/obj16/correction_change.gif
+SHA-256-Digest: fWYH97cRR5X2pCg01PXW35erj32oRSxYXIFRAPEePRs=
+
+Name: .api_description
+SHA-256-Digest: xM84k0++cEQ+wEyjASY9ao3fMG50L7bG72rBJLgSgWQ=
+
+Name: org/eclipse/pde/api/tools/ui/internal/messages.properties
+SHA-256-Digest: prb8s3qPL0nU/buHQKgEf8yiK8tCXKOUmrk4ScmIeI4=
+
+Name: org/eclipse/pde/api/tools/ui/internal/use/ApiUseScanTab$5.class
+SHA-256-Digest: H9yYyPdRzVUhp3Puz7A3mGK1TPsI/8bIHUhQ4Ye0yos=
+
+Name: org/eclipse/pde/api/tools/ui/internal/actions/DeltaSession.class
+SHA-256-Digest: Y1+da4Ba7Kz4sE6c2qbvK6lf8sCvbTgJK5pUBVgFcfE=
+
+Name: org/eclipse/pde/api/tools/ui/internal/views/APIToolingView$2.cla
+ ss
+SHA-256-Digest: EPgR2m+52RmOx/pQ6muMHLVrUNuP6ae2G3qBjmIVzc0=
+
+Name: org/eclipse/pde/api/tools/ui/internal/preferences/ApiErrorsWarni
+ ngsConfigurationBlock$5.class
+SHA-256-Digest: LNUwYeCCdsC+YVsKWFWKsWE0ZJi8rpxXWtuaFYwrV7Y=
+
+Name: icons/full/dlcl16/export.gif
+SHA-256-Digest: /QDCUTQ9hQtSeyR1azimBlshJdU/bJb07hLgl7frnh0=
+
+Name: org/eclipse/pde/api/tools/ui/internal/use/PatternSelectionPage$1
+ .class
+SHA-256-Digest: XAzsBVmqVreJ5uD/U2CvwvWLAiV8fA/e09gclS1TIbE=
+
+Name: org/eclipse/pde/api/tools/ui/internal/preferences/ApiUseScanPref
+ erencePage$2.class
+SHA-256-Digest: p6pv6NNIoSeoSRAhLKxbzG3TkxqZ0V7XBugJ1tKe06U=
+
+Name: org/eclipse/pde/api/tools/ui/internal/actions/ExportDialog$1.cla
+ ss
+SHA-256-Digest: PUN/3nPNRSZkXCityWtcfXp3D1THuHCJe4iXhC72adk=
+
+Name: org/eclipse/pde/api/tools/ui/internal/commands/CompareToBaseline
+ Handler.class
+SHA-256-Digest: sr5lKVlFDR6uKE57tIK5nC/HaOxiF9zE/PdUyTMxRnU=
+
+Name: org/eclipse/pde/api/tools/ui/internal/commands/messages.properti
+ es
+SHA-256-Digest: VeTYgdIN9sI4i/jVVjQjml2XcH2spkX8QKtYRMKrhhg=
+
+Name: org/eclipse/pde/api/tools/ui/internal/preferences/ApiUseScanPref
+ erencePage$3.class
+SHA-256-Digest: f3pUT2EQjryPeYN6SinnGUePZYr1avmxukWQNl0jkw4=
+
+Name: org/eclipse/pde/api/tools/ui/internal/markers/ApiMarkerResolutio
+ nGenerator.class
+SHA-256-Digest: C18JPL2QpdjkxZ0bvVCWa2f82emT0+7XE6/o0WHRtcU=
+
+Name: org/eclipse/pde/api/tools/ui/internal/use/ApiUseScanTab$6.class
+SHA-256-Digest: zuCa0kqfOT0KHjZhQSH1PYQCotR13K1ebjP17ytP7eQ=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/ApiToolingSetupWiz
+ ardPage$6.class
+SHA-256-Digest: BU6MaTpwYPsqtcMCRlr2Ve+AhDP8IuizqEyH/d4y7h4=
+
+Name: org/eclipse/pde/api/tools/ui/internal/markers/UpdateSinceTagOper
+ ation.class
+SHA-256-Digest: BXbo2MLBjFpmwQtcVaEqBeX/U7cyBSYkfMbGN/qcs2k=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/JavadocConversionR
+ efactoring$AnnotVisitor.class
+SHA-256-Digest: 7qO56E94T3gJRkqiMTK421hYe0smG12UeOaBeNZvd6I=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/CompareToBaselineW
+ izardPage.class
+SHA-256-Digest: VwZ+LzWdhRwJ0IoxTYaZux3JSMGtRAd77Y7HDbkDOIw=
+
+Name: org/eclipse/pde/api/tools/ui/internal/use/ApiUsePatternTab$8.cla
+ ss
+SHA-256-Digest: kvLdjqWn6Iv5Z40GcOi8f8+BGMJTCZnFUy28bVvkVhQ=
+
+Name: org/eclipse/pde/api/tools/ui/internal/completion/APIToolsJavadoc
+ CompletionProposal.class
+SHA-256-Digest: O85M47QnsjWD9Kp7uUbTw09R8arHJgBMG9eMVNbWwEw=
+
+Name: org/eclipse/pde/api/tools/ui/internal/markers/UpdateBundleVersio
+ nOperation$1.class
+SHA-256-Digest: kTdK3mOUMiwiBZGQSVr9L2rc+UTUhf93Dv+WBH6P4tk=
+
+Name: org/eclipse/pde/api/tools/ui/internal/actions/CollapseAllAction.
+ class
+SHA-256-Digest: W3rtCc27V0k0tvjpBe2o9oHrTZD+SdclFnT17Q0LfvE=
+
+Name: org/eclipse/pde/api/tools/ui/internal/actions/DeltaSession$TreeM
+ odel.class
+SHA-256-Digest: 5IGtMlcVIm5TPXOGoCbhpiLc6Y9Ao+pBcLsN4u6dGn0=
+
+Name: org/eclipse/pde/api/tools/ui/internal/preferences/ApiErrorsWarni
+ ngsConfigurationBlock$ControlData.class
+SHA-256-Digest: SmJK5uZryM2xTDF4uAgUGZMwYccNjCJ1rybIzGidMTs=
+
+Name: org/eclipse/pde/api/tools/ui/internal/use/ArchivePatternPage.cla
+ ss
+SHA-256-Digest: 5jKAczq+uxlwE8eJ9/C0twPC7+hn/ioEg7W7CJMmsRc=
+
+Name: icons/full/elcl16/next_nav.gif
+SHA-256-Digest: bjEgxNUcSOwYVXXZIPKdjF2q0lB4ETOBiG0dKVFisRI=
+
+Name: org/eclipse/pde/api/tools/ui/internal/use/ApiUseScanTab.class
+SHA-256-Digest: OM6vz+nX2yJesS0n4PfFyCZCotpaCE1PBhcZVZN9lx4=
+
+Name: icons/full/obj16/library_obj.gif
+SHA-256-Digest: ybbpLgjspNK9OIR/AZdvx/SHIzeWB7qrHElzTIqXkQM=
+
+Name: org/eclipse/pde/api/tools/ui/internal/markers/RemoveFilterProble
+ mResolution.class
+SHA-256-Digest: Da80wWQ7rHibqi+Ta4B3sHALBKudFkitUcmBdqBXaYA=
+
+Name: org/eclipse/pde/api/tools/ui/internal/use/ApiUsePatternTab$2.cla
+ ss
+SHA-256-Digest: yoyMq92BBF6buIaFbcIGKr4T0P1+0OZaxWxMrSCmqa4=
+
+Name: org/eclipse/pde/api/tools/ui/internal/markers/SinceTagResolution
+ $1.class
+SHA-256-Digest: 0f/ZVLXNeYCiaYSo/Axee+pKLkFi9atqtSGK8EtT+8E=
+
+Name: org/eclipse/pde/api/tools/ui/internal/commands/ConvertJavadocTag
+ sHandler.class
+SHA-256-Digest: 3EipTZcscV3Lkt1BpZjjyH92QNg0Jpn0vCQH71EHGX8=
+
+Name: org/eclipse/pde/api/tools/ui/internal/preferences/ApiUseScanConf
+ igurationBlock$Key.class
+SHA-256-Digest: YnW4IxV/GfTGJHaZlOc88FhFkdBApf+1x6rw1U9uFq4=
+
+Name: org/eclipse/pde/api/tools/ui/internal/CompositeApiImageDescripto
+ r.class
+SHA-256-Digest: L/0bmPL3SsUdp5BVSzaJk8R+8q+hoKIyvdqYxxp894g=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/TargetBasedApiBase
+ lineWizardPage$5.class
+SHA-256-Digest: oj0Ji28R1Nj2gjFnxMcud6xugSaIXBZgxG2vNay4GbY=
+
+Name: org/eclipse/pde/api/tools/ui/internal/properties/ApiFiltersPrope
+ rtyPage$TreeContentProvider.class
+SHA-256-Digest: AlVOtGOlzOCq7gCiSAGZ22YmC5kbDCiaMaRlAphm01s=
+
+Name: org/eclipse/pde/api/tools/ui/internal/markers/RemoveUnsupportedA
+ nnotationOperation$AnnotationFinder.class
+SHA-256-Digest: FM3ajFwXUCXzrKWJdZoR/MauKQNmfGVklIDnF2jP3go=
+
+Name: icons/full/obj16/collect_apis.gif
+SHA-256-Digest: 1N94b8/hAfMVeG2lPrZNlS3/Ln2lYU/qB/Q0PkLayGo=
+
+Name: org/eclipse/pde/api/tools/ui/internal/markers/ConfigureProblemSe
+ verityForAPIToolsResolution.class
+SHA-256-Digest: VtlbABNtoXQEoN3z7XpOJlFbDZ/NB5oyEguOp5rAKI4=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/ApiToolingSetupWiz
+ ardPage$5.class
+SHA-256-Digest: IL2BeoUV7hU1yt8ngvsncDJnkBJvetp5h3aLIHSz/sk=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/TargetBasedApiBase
+ lineWizardPage.class
+SHA-256-Digest: Gm4bENZTty67bs2T5qX9Lg+GijsdVUaQ4C03kAxjpA0=
+
+Name: org/eclipse/pde/api/tools/ui/internal/properties/PropertiesMessa
+ ges.class
+SHA-256-Digest: Bdabd71uxfNXEoJfZw5irFpM3ESA36jYuFL/PXi1Ry8=
+
+Name: org/eclipse/pde/api/tools/ui/internal/markers/FilterProblemResol
+ ution.class
+SHA-256-Digest: u9wttLZ1Uc9FSHu35wFXcCyvgRcrJsLtaJTw63AJl0I=
+
+Name: org/eclipse/pde/api/tools/ui/internal/actions/ExpandAllAction.cl
+ ass
+SHA-256-Digest: 8+FKNK1sLyN1JtNzBZKYfgHYyUK6rxV0TpSd2s9/dgg=
+
+Name: org/eclipse/pde/api/tools/ui/internal/markers/UpdateBundleVersio
+ nOperation.class
+SHA-256-Digest: jUtnE0BHeQ5bRM9ElfZ0QNOtJv3uwbPCB78theMKG/I=
+
+Name: org/eclipse/pde/api/tools/ui/internal/properties/ApiFiltersPrope
+ rtyPage.class
+SHA-256-Digest: 4FIroiLeibVZBiDTqwI0HrVjUGSyM8NlzUxqXSMjMBE=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/JavadocConversionP
+ age$2.class
+SHA-256-Digest: TBgtopezNwkRQK+PtvDefNkrX/4vLDg/ejyoWQtzdXY=
+
+Name: org/eclipse/pde/api/tools/ui/internal/preferences/ProjectSelecti
+ onDialog$3.class
+SHA-256-Digest: n8HMFwTiJZczQbhsSVLLsqbgnx/Tzht/v4BrTllRPns=
+
+Name: org/eclipse/pde/api/tools/ui/internal/properties/ApiFiltersPrope
+ rtyPage$2.class
+SHA-256-Digest: UuYq3Z8Y3Jx+vO0stiE1xWArGte/aa/2XTXKHbw5G20=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/ApiBaselineWizardP
+ age$ContentProvider.class
+SHA-256-Digest: kpBlhhShn2tf0fmXWX2GywXSUXvsITXpMvTRtHhdHrM=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/ApiToolingSetupRef
+ actoring.class
+SHA-256-Digest: fUfKctzvSNsp41LOy497SJbYyGC/sVbALZ654RSQG3I=
+
+Name: org/eclipse/pde/api/tools/ui/internal/use/ApiUseScanJob.class
+SHA-256-Digest: ScjTpWmSkq0BjgLgNsvG1aRAZSsKRq6iGTlQ9YgRHUU=
+
+Name: org/eclipse/pde/api/tools/ui/internal/actions/ExportSessionActio
+ n$1.class
+SHA-256-Digest: CNs0Q1il9EaA/m07IvSQfnOrOrrDqzUaAGu4iBshb98=
+
+Name: org/eclipse/pde/api/tools/ui/internal/use/ApiUsePatternTab$1.cla
+ ss
+SHA-256-Digest: b/x1yjp+ygwogaWmqoefANm1OcTv1jJz/tcNSbn+PbA=
+
+Name: org/eclipse/pde/api/tools/ui/internal/markers/DuplicateTagResolu
+ tion.class
+SHA-256-Digest: IcHLojYbccE3+SP1VJAP2ai/EgWH8Ts4xr+29WbcCqg=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/wizardmessages.pro
+ perties
+SHA-256-Digest: EE7TTCMBN1XkC6lSA+9MyFSqZGYxxGLiw2LlL+IAToI=
+
+Name: org/eclipse/pde/api/tools/ui/internal/preferences/ProjectSelecti
+ onDialog$ApiJavaElementContentProvider.class
+SHA-256-Digest: Y6mvHxKtl681nX8pQpPj+z5AfYehM7yY704Gx61gzlU=
+
+Name: org/eclipse/pde/api/tools/ui/internal/use/PatternSelectionPage.c
+ lass
+SHA-256-Digest: AfluaRXq5M0OUO7WNvi2bBB356Ogd4GZmZRdMi1GbfQ=
+
+Name: org/eclipse/pde/api/tools/ui/internal/use/ApiUseScanTab$12.class
+SHA-256-Digest: C18V1mmhuuBvpGj901DpC0k4aW5i/wqQKKpuQhYgK2o=
+
+Name: icons/full/elcl16/compare_apis.gif
+SHA-256-Digest: SyKVHkBtYgZQR1V5WlZ3auxD6FiPyUGp8iZKb0vjo2E=
+
+Name: icons/full/obj16/eclipse16.png
+SHA-256-Digest: /J3RvmGlaYuPpn6gL7yrCohkIZ3gNNth3ztHKMGjcJ0=
+
+Name: org/eclipse/pde/api/tools/ui/internal/use/ApiUseScanTab$1.class
+SHA-256-Digest: CE6+RfpW0L5LE2uiteOD8BlQBV698F0CytIvPVe/Li0=
+
+Name: icons/full/elcl16/text_edit.gif
+SHA-256-Digest: mHVZLXJs8Fjc2xvE4MLr/lhgtcNEygG3E/2ABoXnAD4=
+
+Name: icons/full/elcl16/filter_ps.gif
+SHA-256-Digest: qaQWOEMBigMKZJw4ApTh/doZ5wKLRAcTPaRnhDevV1s=
+
+Name: org/eclipse/pde/api/tools/ui/internal/views/APIToolingView$ViewL
+ abelProvider.class
+SHA-256-Digest: EmslAnebR1oFD6RsbUDxI2DGMp28qqzKfU+yvgedOtY=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/ProjectUpdateChang
+ e.class
+SHA-256-Digest: Q8SiTh3BsB5tEU1qGdVEyvpTy5v0cGX5jf7FgQ/mm7A=
+
+Name: org/eclipse/pde/api/tools/ui/internal/ApiUIPlugin$1.class
+SHA-256-Digest: a/qFIfnBtf1lRujMk+WyUPecg6a2qKdFzVt7L54Oy0E=
+
+Name: org/eclipse/pde/api/tools/ui/internal/use/ApiUseScanTab$4.class
+SHA-256-Digest: ZZO2qRHj/RlevBbUKN/dRz99MYIYblehnmKWw5fkR4w=
+
+Name: icons/full/elcl16/export.gif
+SHA-256-Digest: 7LGVmRZIdGGfIYU/1NE3Cco5umDTEYcd3TDxIN9mNDk=
+
+Name: org/eclipse/pde/api/tools/ui/internal/preferences/ApiBaselinesCo
+ nfigurationBlock$1.class
+SHA-256-Digest: mU3tsnD0p/ZD3Gm/HzW8S8j9BgQwKR8UIlhO0FEEkLI=
+
+Name: org/eclipse/pde/api/tools/ui/internal/refactoring/TypeFilterChan
+ ge.class
+SHA-256-Digest: 1t03mQq9gm7OoYyrrrLi781KYenaO4aUePRtA0LzdI8=
+
+Name: org/eclipse/pde/api/tools/ui/internal/preferences/ApiUseScanPref
+ erencePage$1.class
+SHA-256-Digest: F0aWbX8HSMknc2dEeahGnIL9LnQuemNMC0WO+2BOa8E=
+
+Name: icons/full/obj16/api_tools.gif
+SHA-256-Digest: 42iAv7H8dDrjzXzXnZMhfN3wahwNz/WyADVLR4w65xA=
+
+Name: icons/full/elcl16/remove_exc.gif
+SHA-256-Digest: XDJg87msQWxpF2z3XR27GECU0ag2lhLBVdImgAuE1+w=
+
+Name: org/eclipse/pde/api/tools/ui/internal/markers/ApiQuickFixProcess
+ or$UnknownAnnotationQuickFix.class
+SHA-256-Digest: a4N+shXkGsb4AKkKGDeIZGAHNKp421ALthxonTXW/Uw=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/CompareOperation$1
+ .class
+SHA-256-Digest: 4pe659F9Uea2qvjdxN2G1Y0XZxMXj5AyRM9703AAT8k=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/DirectoryBasedApiB
+ aselineWizardPage.class
+SHA-256-Digest: n8C6MkKd71HE7yvrTdwSG8OgELidfVSgeiFw/Wd5N1w=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/ApiToolingSetupWiz
+ ardPage$7.class
+SHA-256-Digest: 4Gu6O8GGemfKDAGK5g/sk4JEqgaXGGve0J0K8ONDmmU=
+
+Name: org/eclipse/pde/api/tools/ui/internal/markers/InstallEEDescripti
+ onProblemResolution$1.class
+SHA-256-Digest: fJBb2uqo1OXR8K7TrFAvdvlypRAuSGud6HQM5QpnvUg=
+
+Name: org/eclipse/pde/api/tools/ui/internal/preferences/preferencemess
+ ages.properties
+SHA-256-Digest: SgaS5/ifCGH+AkPNzMQcv1ssHLXLHTVIKkYYbak1mcs=
+
+Name: org/eclipse/pde/api/tools/ui/internal/use/ApiUsePatternTab$Label
+ s.class
+SHA-256-Digest: bZUI1E/29IVjqxcjKjN0HyeHcPUSe/ijLYTA1x0tjf8=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/DirectoryBasedApiB
+ aselineWizardPage$1.class
+SHA-256-Digest: /ueM5HEj+HljEH5U+XwP2DMr+OwOYfiMXu4C9/8QAJ8=
+
+Name: org/eclipse/pde/api/tools/ui/internal/preferences/ApiBaselinePre
+ ferencePage$3.class
+SHA-256-Digest: xE5JHdVcHohLl9UNaKdlCBlMgl64VEfnxlutPTMT4FA=
+
+Name: org/eclipse/pde/api/tools/ui/internal/use/ApiUsePatternTab$Patte
+ rn.class
+SHA-256-Digest: 6IIb1/WHjqgSgIixvW7XSZmaMBowUzPbMjUiNspH0Gs=
+
+Name: org/eclipse/pde/api/tools/ui/internal/markers/ConfigureProblemSe
+ verityForAPIToolsResolution$1.class
+SHA-256-Digest: X7ZpTTR7oHqF87R54yqT9Zmy+rkXztkITHdAmaEhtBw=
+
+Name: org/eclipse/pde/api/tools/ui/internal/markers/OpenPropertyPageRe
+ solution.class
+SHA-256-Digest: qUahzNa4uvR6XfvO+CEyePq3C9ajIi/1qCCOwNeMhPc=
+
+Name: org/eclipse/pde/api/tools/ui/internal/markers/ApiQuickFixProcess
+ or.class
+SHA-256-Digest: BYaU/t3GmDJfpbfzZBa+8GkV5l9JxgaWYD0m8i1wmtM=
+
+Name: org/eclipse/pde/api/tools/ui/internal/use/ApiUseScanTab$14.class
+SHA-256-Digest: xkHRe/GH+tvukKgtTI8/tmlYx6XiA2TzV/76iQUbn5Y=
+
+Name: icons/full/obj16/frgmt_obj.gif
+SHA-256-Digest: zKgHbgqPY3c3Kj9JtB193Cdl7Ixu2j11cYLzROEPT3k=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/CompareOperation.c
+ lass
+SHA-256-Digest: Pd5SDiBgc/g6r/ENwYsNUOVp0Xv+AaAJxpuuJEI3jL0=
+
+Name: org/eclipse/pde/api/tools/ui/internal/preferences/ApiBaselinePre
+ ferencePage$6.class
+SHA-256-Digest: QIaY3HHBPlMtsybQu87JLmAuHu2PcENJh4Oysvbajqs=
+
+Name: org/eclipse/pde/api/tools/ui/internal/preferences/ApiBaselinePre
+ ferencePage$BaselineLabelProvider.class
+SHA-256-Digest: GMB6b+YfAROafkSarIyPbhU8gvk/4uQc6rYLvV73B/Y=
+
+Name: org/eclipse/pde/api/tools/ui/internal/markers/SinceTagResolution
+ .class
+SHA-256-Digest: 4EgzIjoT01OO4TA/S3CiqsudFETLibCF7zBZKNIpN0c=
+
+Name: org/eclipse/pde/api/tools/ui/internal/preferences/ApiErrorsWarni
+ ngsConfigurationBlock.class
+SHA-256-Digest: vFO6lekADFujZUsXYeU6y4ff82KkSnP8RBockZZbX5M=
+
+Name: org/eclipse/pde/api/tools/ui/internal/ApiImageDescriptor.class
+SHA-256-Digest: I2z0Pp0fYq++9BJ1ahb7unGOGfRUkoolaCyNCsIse9c=
+
+Name: icons/full/obj16/collect_references.gif
+SHA-256-Digest: 7a33kjFeNZ6V5uFNSquu4WdgKcBrYOkL2VqeYpAc3cY=
+
+Name: org/eclipse/pde/api/tools/ui/internal/preferences/ApiBaselinePre
+ ferencePage$4.class
+SHA-256-Digest: scKlodDZjTtgXAZmXwFsgfcQa/bnZJvD1fhbEG0vKJg=
+
+Name: org/eclipse/pde/api/tools/ui/internal/properties/ApiFiltersPrope
+ rtyPage$4.class
+SHA-256-Digest: MRGKOy//qn9McLnBLYEEy9MwZpFUdrfzf6mI6kpauSs=
+
+Name: org/eclipse/pde/api/tools/ui/internal/markers/DefaultApiProfileR
+ esolution.class
+SHA-256-Digest: EwScmdMN3fxPvK+zwmDSfQwzc0EYTTTK3fU6ZJilZKA=
+
+Name: org/eclipse/pde/api/tools/ui/internal/properties/ApiErrorsWarnin
+ gsPropertyPage.class
+SHA-256-Digest: sTpDYgAN95Nv84K4MNl6ZzIruslIOxqNp4d0yHS5As0=
+
+Name: org/eclipse/pde/api/tools/ui/internal/properties/ApiErrorsWarnin
+ gsPropertyPage$2.class
+SHA-256-Digest: MpH0A8tFIwpzsBTi15srmXVgElJe09TEkr0Q5BjKu8E=
+
+Name: org/eclipse/pde/api/tools/ui/internal/use/ApiUseScanTab$3.class
+SHA-256-Digest: CQx/WLXR/lr8ax2nY1BPvv345Ifujx8oZtsjxsnpVeE=
+
+Name: org/eclipse/pde/api/tools/ui/internal/preferences/ApiUseScanConf
+ igurationBlock$ControlData.class
+SHA-256-Digest: 07UCQ25y+M5M2zqicAyrrMhMXL0C4S8INrwcozXeC2M=
+
+Name: org/eclipse/pde/api/tools/ui/internal/use/ApiUseTabGroup.class
+SHA-256-Digest: IiNvOiSRVyjGHqhHdtF47gMqv5y4Ax7nooQqkrZg7dA=
+
+Name: org/eclipse/pde/api/tools/ui/internal/properties/ApiFiltersPrope
+ rtyPage$CommentChange.class
+SHA-256-Digest: XHWqp2+WdbBZWQPFmymkGF8c+bxycI62mlWCfA8tpVA=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/TargetBasedApiBase
+ lineWizardPage$1.class
+SHA-256-Digest: cSZjvfYlht1yQ36dJNcgnpQ2rBS31nllqT/19wf8KLo=
+
+Name: org/eclipse/pde/api/tools/ui/internal/IApiToolsConstants.class
+SHA-256-Digest: lpGMlVJoExjQPTzdHagguXoYIyshIvEOLLBZScXnPXM=
+
+Name: org/eclipse/pde/api/tools/ui/internal/commands/SetupApiToolsHand
+ ler.class
+SHA-256-Digest: HCeecrznGKzE7myki4FtXPJ0cSoCsTuq/FXx8Psr5iA=
+
+Name: org/eclipse/pde/api/tools/ui/internal/properties/ApiFiltersPrope
+ rtyPage$5.class
+SHA-256-Digest: J7ngstAZGvKDlcXfHQ6Z+2gVylM7j0B54WkssH9YbIo=
+
+Name: org/eclipse/pde/api/tools/ui/internal/actions/CompareWithAction.
+ class
+SHA-256-Digest: d4c0wt6ZiSriHgQxK9YkB9Ts4hWOtUhyseC/WpZ+lnI=
+
+Name: org/eclipse/pde/api/tools/ui/internal/preferences/ApiBaselinePre
+ ferencePage$5.class
+SHA-256-Digest: eTpjV4BaPXH/lfasEcgB+YhV+YnTht68y7ru29186Go=
+
+Name: org/eclipse/pde/api/tools/ui/internal/use/PatternSelectionPage$L
+ P.class
+SHA-256-Digest: BvMHUMd5/0Y8sdHPbew4S7YbiPcsgIKb1+U5CLTQqbs=
+
+Name: org/eclipse/pde/api/tools/ui/internal/views/APIToolingView$ViewC
+ ontentProvider.class
+SHA-256-Digest: LYFzVH5aayv5ZuYblmvdtSz6gaUmaSyL8fk3e16ehO4=
+
+Name: org/eclipse/pde/api/tools/ui/internal/use/DescriptionPatternPage
+ .class
+SHA-256-Digest: e1ZkqXMHtn/TeZChBwn1E7jNVYAVhBt+Idw7NFGMocg=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/JavadocConversionR
+ efactoring.class
+SHA-256-Digest: CAxN9+DH9Gl8zTa8I53H/IZ91xThXnBCAh34WTBOKZA=
+
+Name: org/eclipse/pde/api/tools/ui/internal/properties/propertiesmessa
+ ges.properties
+SHA-256-Digest: 6lu1UIxoqSnukCRjJN7snEbjH/B0KQMomJpzd9EOywU=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/WizardMessages.cla
+ ss
+SHA-256-Digest: SJL1H0ROvcuBKTdBRPcBBuN93lhF7b1HEOgBO3R63ok=
+
+Name: org/eclipse/pde/api/tools/ui/internal/markers/ApiQuickFixProcess
+ or$UnknownAnnotationQuickFix$1.class
+SHA-256-Digest: Lr6C/eGDLESxKe0az1qLQvF3l7w9Gqz9c69/h7vWMGA=
+
+Name: icons/full/obj16/annotation_obj.gif
+SHA-256-Digest: 6pH8gsUG8yb3ExMd80CYxs/WhqhyRfIORCb70fyPv1Y=
+
+Name: org/eclipse/pde/api/tools/ui/internal/properties/ApiErrorsWarnin
+ gsPropertyPage$1.class
+SHA-256-Digest: o7bwWIbM8q06wv1Zn2h+8lx5OZmAD/YRfLQwGZf+UDo=
+
+Name: icons/full/dlcl16/next_nav.gif
+SHA-256-Digest: 3APtPo/wUognYPIu7LCFltn0VNbr9/NMkyk/Z58kmn0=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/TargetBasedApiBase
+ lineWizardPage$2.class
+SHA-256-Digest: P0ArfP1E406bHN9WXzualnR9R/6aivG98iAMeQlXDss=
+
+Name: org/eclipse/pde/api/tools/ui/internal/preferences/ApiErrorsWarni
+ ngsPreferencePage.class
+SHA-256-Digest: trZCFKtCRZNJqvq/+IFKNXDCj/5oLO5WVuZeK9+sMas=
+
+Name: org/eclipse/pde/api/tools/ui/internal/preferences/ApiErrorsWarni
+ ngsConfigurationBlock$2.class
+SHA-256-Digest: 7m7MwMuBU/eabRDFIHRIUo1GBXJ86rj9BmEsLNJothQ=
+
+Name: org/eclipse/pde/api/tools/ui/internal/actions/TreeViewerNavigato
+ r.class
+SHA-256-Digest: F8BfjA9A/wnpXT97xus/76FeUbH5q3HxnxS1/X77IlQ=
+
+Name: org/eclipse/pde/api/tools/ui/internal/views/APIToolingView$5.cla
+ ss
+SHA-256-Digest: PkCwes94dSO/njs8XB/8+uMW8Pd0yYvxyfbfwZ6Rd5Q=
+
+Name: org/eclipse/pde/api/tools/ui/internal/use/ApiUseScanTab$8.class
+SHA-256-Digest: Cd3QOOaWWfnM7KVcQ7p6TNqtYObn4naNRBQh91FrQmM=
+
+Name: org/eclipse/pde/api/tools/ui/internal/actions/SelectSessionActio
+ n.class
+SHA-256-Digest: 6HOQ4drq9dBbQb5vL2ZHlm4YI9/bwn7K7n37SO9+WA0=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/DirectoryBasedApiB
+ aselineWizardPage$2.class
+SHA-256-Digest: Q7HDLe+EcOIUoFG2JLXEaow2mswV7qucAndEbglLVoE=
+
+Name: org/eclipse/pde/api/tools/ui/internal/use/ApiUseScanTab$10.class
+SHA-256-Digest: 3hpdSKRC6ac+poEeOqjhisUjBLDz64hCLA2bBNfaGQI=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/ApiBaselineWizardP
+ age$EEEntry.class
+SHA-256-Digest: mrAnGRnEjyWLN9KTK+hu6QamhApAyLgqhAqWwzXlWzI=
+
+Name: org/eclipse/pde/api/tools/ui/internal/preferences/ApiBaselinePre
+ ferencePage$2.class
+SHA-256-Digest: bv4nohn90uMcWvhNZQulgBcajFavsjyk0kupCdcAOvw=
+
+Name: org/eclipse/pde/api/tools/ui/internal/markers/JavadocTagOperatio
+ n.class
+SHA-256-Digest: rU1A6YHe4wkqea9BzVkjmd0jMuMTshlB4/eNQjrB5A8=
+
+Name: org/eclipse/pde/api/tools/ui/internal/properties/ApiFiltersPrope
+ rtyPage$ApiFilterComparator.class
+SHA-256-Digest: 2EW9x9XMH3JwwhTm5i26tt9M7bSzpWNYeiINBulmA/I=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/TargetBasedApiBase
+ lineWizardPage$3.class
+SHA-256-Digest: +8KJiC84m+x2u3IB5TY9uLHgw3FHAhLznYbqBOwaOLo=
+
+Name: org/eclipse/pde/api/tools/ui/internal/use/ReportPatternPage.clas
+ s
+SHA-256-Digest: 0IkzrTOcQFfB33iutRVR2fs/+mNH0V6mn7bggZS7+7Y=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/SelectApiBaselineT
+ ypeWizardPage$1.class
+SHA-256-Digest: +FdTVMfP+r4bQhagmfZv7hvRBw4m3Uk1be/PoVSqND4=
+
+Name: org/eclipse/pde/api/tools/ui/internal/properties/ApiFiltersPrope
+ rtyPage$6.class
+SHA-256-Digest: B4hSUPxlOIwT9/j1m6zeCqVO9QhU1qK4DTqe8y0FTUY=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/CompareToBaselineW
+ izardPage$1.class
+SHA-256-Digest: 8j7aMQTVDNzRxwIE33KmjgYbMo0OQYuT3gRkYmB/XZU=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/ApiToolingSetupWiz
+ ardPage.class
+SHA-256-Digest: a9nYW794XqF/BaU/NBBblUN2AnaIYCn6a0Njf49SVvw=
+
+Name: org/eclipse/pde/api/tools/ui/internal/refactoring/FilterMovePart
+ icipant.class
+SHA-256-Digest: lSDc6L2h4uPriknI7m6FyC9qU7Ym8HCoYWOg9Jrd3UI=
+
+Name: org/eclipse/pde/api/tools/ui/internal/preferences/ApiBaselinePre
+ ferencePage.class
+SHA-256-Digest: QCE3U7tj2NS40QYk9hoUDMUVcYkWiYBHxbQMf+Ah0Ls=
+
+Name: org/eclipse/pde/api/tools/ui/internal/markers/ProblemExplainInco
+ mpatibilityResolution$1.class
+SHA-256-Digest: pmeiKtYD4efqt2I1mIZK7qVXTZMB+Gj1yyxkgHHNhOU=
+
+Name: icons/full/elcl16/expandall.gif
+SHA-256-Digest: +j1I96wTow/LB//yzFnctzfsJeguQl8CDw1EWNw/AUk=
+
+Name: org/eclipse/pde/api/tools/ui/internal/use/PatternWizard.class
+SHA-256-Digest: D9lIxVoW8EAiVSnztQaeRpqxv/HEi8wfvYY3l4D/C/8=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/TargetBasedApiBase
+ lineWizardPage$ReloadTargetOperation.class
+SHA-256-Digest: MY8pET+Q8+NaG3CZ5++Jg/oFD4f3NcA8PLcOW6jVTYE=
+
+Name: org/eclipse/pde/api/tools/ui/internal/markers/UnsupportedAnnotat
+ ionResolution.class
+SHA-256-Digest: D8NtKaAUeoVIlD2al77BPxR78Wc7yOtwCvgzVjf3Hk4=
+
+Name: org/eclipse/pde/api/tools/ui/internal/markers/FilterProblemWithC
+ ommentResolution.class
+SHA-256-Digest: wzrDbTDoiHPxUdH+ESUv7/DAn6O1fmsgQjkZGuhNQpE=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/SelectApiBaselineT
+ ypeWizardPage.class
+SHA-256-Digest: THjvw+LR4AUcBIqCqRA9phHjhABxoj4vZTQQ6QXUnRE=
+
+Name: org/eclipse/pde/api/tools/ui/internal/preferences/ApiUseScanPref
+ erencePage$5.class
+SHA-256-Digest: AV1BeGD34TCMoRIbGlxeFhUx+z6T8m8UJlpjDoFknRQ=
+
+Name: org/eclipse/pde/api/tools/ui/internal/preferences/ProjectSelecti
+ onDialog$1.class
+SHA-256-Digest: /fT06UvhbzM0IuNO/mQZ/GngRAG7Hv770xIcynDd6IM=
+
+Name: org/eclipse/pde/api/tools/ui/internal/use/ApiUseScanTab$2.class
+SHA-256-Digest: +a9HGxHvx3MA4m4QYBPBA/nuGB6tkk8mmQzqANbdkRM=
+
+Name: org/eclipse/pde/api/tools/ui/internal/preferences/ApiUseScanPref
+ erencePage$TableColumnLabelProvider.class
+SHA-256-Digest: QP3RTvY5Re3DhHkFaB9slQVM6aSLgrNOrPIKbNqr91w=
+
+Name: org/eclipse/pde/api/tools/ui/internal/preferences/ApiUseScanConf
+ igurationBlock.class
+SHA-256-Digest: g+Rj9Onc8RQPE8FiCq7CX3+cak8XehubAD2SPc4TEXM=
+
+Name: org/eclipse/pde/api/tools/ui/internal/markers/OpenPropertyPageRe
+ solution$1.class
+SHA-256-Digest: SwgCGzqSt3aL2eo5i/ORut+7Lqqe33JNyCqEImTmeVQ=
+
+Name: org/eclipse/pde/api/tools/ui/internal/use/Messages.class
+SHA-256-Digest: qOq2hwqZ6PX2rxJn5WiWtrHJt7q1RdRWCQpHlZl+f/s=
+
+Name: org/eclipse/pde/api/tools/ui/internal/markers/RemoveUnsupportedT
+ agOperation.class
+SHA-256-Digest: NR6RQKXcqK1nQxDbx14xX8qTWmZRjv3+byJK6g28xXY=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/TargetBasedApiBase
+ lineWizardPage$TargetLabelProvider.class
+SHA-256-Digest: v2oiSXZEDWEDwsVCFolMOQ/0/31oTnYgsPGbysARmqc=
+
+Name: icons/full/obj16/plugin_obj.gif
+SHA-256-Digest: 6kblN11J4QXn1CEhx6lNtscfkaFp5mpQ2ciXAw6Y7A0=
+
+Name: org/eclipse/pde/api/tools/ui/internal/use/ReportPatternPage$1.cl
+ ass
+SHA-256-Digest: nByyULdMfgaGree6fv7Uzfw0Owxzb3nUu1tNupAOvwo=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/JavadocConversionP
+ age$UpdateJob.class
+SHA-256-Digest: eJwQdG5IIFgCic+/vaM3lB7rpeu/6sR58tU9+/2eFzM=
+
+Name: org/eclipse/pde/api/tools/ui/internal/preferences/ApiBaselinesCo
+ nfigurationBlock$ControlData.class
+SHA-256-Digest: g0XnP9FeMjNJY3A8FrjQVTHIbX2Z3VtPM3wbebPx8UA=
+
+Name: org/eclipse/pde/api/tools/ui/internal/actions/DeltaSession$1Tree
+ Builder.class
+SHA-256-Digest: WaWMZkK5H480JOi+MwbpINJaeKEAb3JHHdMS6oDyAnU=
+
+Name: icons/full/obj16/bundleversion.gif
+SHA-256-Digest: 0+z0dVoc+Km/xMlcfZn1i3MoXzFMUXmKUj/QNkOvf0c=
+
+Name: org/eclipse/pde/api/tools/ui/internal/preferences/ProjectSelecti
+ onDialog.class
+SHA-256-Digest: 8ko+/Tf69u7FLJS7jZ5l/zDQnXpAHtMAwPL7DdQ9Bhk=
+
+Name: org/eclipse/pde/api/tools/ui/internal/markers/ProblemExplainInco
+ mpatibilityResolution.class
+SHA-256-Digest: +bS/6fbmm1e5fSt91qY9f5ns8zHv4EH/E84PAavWMH0=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/TargetBasedApiBase
+ lineWizardPage$4.class
+SHA-256-Digest: t88d5LnqgrETjlxAhqwvioBar4P2j1wSCXRcf9tsryE=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/DirectoryBasedApiB
+ aselineWizardPage$ReloadOperation.class
+SHA-256-Digest: 8SktK3E6q/JGYNX0jVGtlrA6qf0rO6KyH2FVow0ybic=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/StringFilter.class
+SHA-256-Digest: 7uulsnlrZ6NEKwJMyZFiZwSHtl0LU2z1HGfoFe7wfEQ=
+
+Name: org/eclipse/pde/api/tools/ui/internal/SWTFactory.class
+SHA-256-Digest: MMCVNlGxi/v/WuwUx7qlEGdtSokByUmkE/dZJeVU7AI=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/DirectoryBasedApiB
+ aselineWizardPage$3.class
+SHA-256-Digest: 7uPt+mNSC6cJSBnRaVs7dklKN4G0JfGQTQoGQlfqRrY=
+
+Name: org/eclipse/pde/api/tools/ui/internal/actions/ExportSessionActio
+ n.class
+SHA-256-Digest: eWH3TWIOSoTUrMJ5NRc8BV4KPUfPT69FIm5zO01zUp8=
+
+Name: org/eclipse/pde/api/tools/ui/internal/properties/ApiFiltersPrope
+ rtyPage$1.class
+SHA-256-Digest: f2rSLKSsTQOBCUzg43kTki+g1wbjp0H2A91h2LoP3Qc=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/JavadocConversionP
+ age$1.class
+SHA-256-Digest: l7HpkaCpP0LgsN86X5wjvpIFQiJmNJwxGXbnCYIUev0=
+
+Name: org/eclipse/pde/api/tools/ui/internal/preferences/ProjectSelecti
+ onDialog$2.class
+SHA-256-Digest: YRh3oxCMOy7qXHNaoxtMTbDmBdAMVhjHgwwg66wFeJw=
+
+Name: org/eclipse/pde/api/tools/ui/internal/preferences/ApiBaselinePre
+ ferencePage$7.class
+SHA-256-Digest: 1pK4w4QlU652IJ3DVC7iyQr3Atr4o6DRgU8yXUMoo/4=
+
+Name: org/eclipse/pde/api/tools/ui/internal/preferences/ApiErrorsWarni
+ ngsConfigurationBlock$SetAllSelectionAdapter.class
+SHA-256-Digest: R2eCmlbfQaIeXiX8LMW7ed4Ix+M0kU5vk3xvFIZGqWc=
+
+Name: org/eclipse/pde/api/tools/ui/internal/preferences/ApiErrorsWarni
+ ngsConfigurationBlock$1.class
+SHA-256-Digest: JVmZpgp/eObdHNwo7jkuMHjP76K1poCSYu0bPcrdhwo=
+
+Name: org/eclipse/pde/api/tools/ui/internal/markers/InstallEEDescripti
+ onProblemResolution.class
+SHA-256-Digest: Rl4Emci9OMJqKkrHrZn/mO8LMhslw+G9/svUsVIDQQM=
+
+Name: org/eclipse/pde/api/tools/ui/internal/actions/ExportDialog$3.cla
+ ss
+SHA-256-Digest: feuyTjx8iUPwI6K6sJBqowgYIyHIkPfiFKaprE0OnYE=
+
+Name: org/eclipse/pde/api/tools/ui/internal/completion/APIToolsJavadoc
+ CompletionProposalComputer.class
+SHA-256-Digest: Ck+AwQZLBafJ+iMevxXnoYq80LZzSIrit+L4e2HeIYE=
+
+Name: org/eclipse/pde/api/tools/ui/internal/views/APIToolingView$6.cla
+ ss
+SHA-256-Digest: 0UyzxHzDVLd78CDiQjjEeUVvuMozjtxBenZL0LnSN6o=
+
+Name: org/eclipse/pde/api/tools/ui/internal/preferences/ApiUseScanPref
+ erencePage$4.class
+SHA-256-Digest: fC5NVtVjB3v3fwmiZ19V5sGMRReyxDyRxh5mnJ8xm+Q=
+
+Name: org/eclipse/pde/api/tools/ui/internal/preferences/ApiBaselinePre
+ ferencePage$8.class
+SHA-256-Digest: C/Ej75S3+p+9/4ivJmBinbLvAXabp0ckeI21IbGCJGU=
+
+Name: org/eclipse/pde/api/tools/ui/internal/actions/ActionMessages.cla
+ ss
+SHA-256-Digest: 6FOMlMfmyv4361wSZ09JkW0bnxS/icCtCkGkJ+TAGWI=
+
+Name: org/eclipse/pde/api/tools/ui/internal/ActionFilterAdapterFactory
+ .class
+SHA-256-Digest: 6UMfihnSGjz3rrVEUi1oKE++vcxCYCY4JQ7rzjXJQN4=
+
+Name: org/eclipse/pde/api/tools/ui/internal/preferences/ApiBaselinesCo
+ nfigurationBlock.class
+SHA-256-Digest: /lGqT9G2VBr32bBk6X/FVhjFdlI4UpXW6qJthEkVKk8=
+
+Name: org/eclipse/pde/api/tools/ui/internal/preferences/ApiUseScanConf
+ igurationBlock$1.class
+SHA-256-Digest: ILGycIHXJZbysghLlwiIpeXRs1er21ZrlauZWpwpPT8=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/CompareToBaselineW
+ izardPage$2.class
+SHA-256-Digest: ghsR/dK0UR2/SzSRjeSosSdCuLl2yyaf2GjOotqQHAI=
+
+Name: org/eclipse/pde/api/tools/ui/internal/preferences/ApiBaselinePre
+ ferencePage$1.class
+SHA-256-Digest: gZE9Uy9Wz7D1MwPnAD6eMQ1vuzrp3fpGpcIvqZDm55Q=
+
+Name: org/eclipse/pde/api/tools/ui/internal/actions/NavigateAction.cla
+ ss
+SHA-256-Digest: FsbkomkrwkRd7UWFwtqA2zfXcDY2hJGgukzHfJIkSL0=
+
+Name: org/eclipse/pde/api/tools/ui/internal/use/ApiUseScanTab$7.class
+SHA-256-Digest: nGJv8nHjTcnj0tWAXDouFJ3U3hTyTbUJ8zM8wtL8l4U=
+
+Name: org/eclipse/pde/api/tools/ui/internal/use/ApiUseLaunchDelegate.c
+ lass
+SHA-256-Digest: YbOqv5qjL5Ryv6Re9ISF6LFf9ZAk1pu++xF84gZV7PU=
+
+Name: org/eclipse/pde/api/tools/ui/internal/preferences/ApiErrorsWarni
+ ngsPreferencePage$1.class
+SHA-256-Digest: ryujvY5DSlvL8EhhxW0KPgj2fJyr/wVqdiS7v1wivAk=
+
+Name: org/eclipse/pde/api/tools/ui/internal/markers/CreateApiFilterOpe
+ ration.class
+SHA-256-Digest: wgS6xAUzXpMkCBUC0BZjHbLGxdTDd2y9PPMAkM/n+98=
+
+Name: org/eclipse/pde/api/tools/ui/internal/preferences/ApiBaselinesCo
+ nfigurationBlock$Key.class
+SHA-256-Digest: Z0mJSmLNzHODsw9rVDYYWxKC3aIOv6j25bJm/fqagkI=
+
+Name: org/eclipse/pde/api/tools/ui/internal/actions/DeltaSession$TreeN
+ ode.class
+SHA-256-Digest: uL2k8k/oYIcjIVGjFH85xobe41StcATtoZO7BmbyazM=
+
+Name: org/eclipse/pde/api/tools/ui/internal/refactoring/CreateFileChan
+ ge.class
+SHA-256-Digest: v5UZLez0uiIT2ELjTmRFA6NvIHW5Q9cxN6n6LtLM3x8=
+
+Name: org/eclipse/pde/api/tools/ui/internal/actions/ExportDialog$2.cla
+ ss
+SHA-256-Digest: LipDs5IQ4hEv+RmxRlJjoORtErviJkOb/sAnAkKpn1g=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/ApiBaselineWizardP
+ age.class
+SHA-256-Digest: AgB5kjx0OSSbVL354kQOD10DyBfVRGcPGB7lIFqklhU=
+
+Name: icons/full/elcl16/configure_problem_severity@2x.png
+SHA-256-Digest: GMFr/YiSbDLbNBOqttxSoGqLIjmpPw6E/0OcldUEe9Y=
+
+Name: org/eclipse/pde/api/tools/ui/internal/use/ApiUsePatternTab$3.cla
+ ss
+SHA-256-Digest: 7DfO4+vXi17/Q43v+UlSnKRtLwltdRk0rqQLd6WhMd4=
+
+Name: org/eclipse/pde/api/tools/ui/internal/use/ApiUsePatternTab$Regex
+ Validator.class
+SHA-256-Digest: t0ytBpU3Auz0ZeLkUX5rr6AZxdZmPJDzXs+4cUBi3E8=
+
+Name: org/eclipse/pde/api/tools/ui/internal/use/UsePatternPage.class
+SHA-256-Digest: KtB0E55H9eF73D8VMcuckmAfqwba88AjPNSLIW2yD2I=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/ApiToolingSetupWiz
+ ardPage$1.class
+SHA-256-Digest: kodU0ez8/obaTF23RWz6b6lOYI2KjH6kqbjgGnDiTCs=
+
+Name: org/eclipse/pde/api/tools/ui/internal/use/ApiUseScanJob$1.class
+SHA-256-Digest: R5oghVd3QyWA1CY6juxaOZtvOHqygHWty4icpScRwm0=
+
+Name: org/eclipse/pde/api/tools/ui/internal/use/ArchivePatternPage$1.c
+ lass
+SHA-256-Digest: QXHSgYfsZnFBPE7CtnCl0tt/OFYQX0Tw6HzagXgwTZE=
+
+Name: icons/full/ovr16/success_ovr.gif
+SHA-256-Digest: fEzi7igBwSdohJdd0b2DKoYdZnu1U9rKOrIPvboqFJM=
+
+Name: org/eclipse/pde/api/tools/ui/internal/SWTFactory$1.class
+SHA-256-Digest: pCqgq2EkhBu8yxQqix+SeW0QEV/ssRIYEq+HbXwm8Ys=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/ApiBaselineWizardP
+ age$WorkingCopyOperation.class
+SHA-256-Digest: FCCDkP0afHXdhnAJ0QmCfc9k8yv5nPlonE33iZ+eGWg=
+
+Name: org/eclipse/pde/api/tools/ui/internal/views/APIToolingView$1.cla
+ ss
+SHA-256-Digest: m+GgeJRcRoH0FjqgQbiqX8I8eQQ0P9fkS63LbyqPN74=
+
+Name: plugin.properties
+SHA-256-Digest: /2IVvhCwxcjh1l5TZI2Mp/LzgbC/QIKT4Kj7EZ+pXrk=
+
+Name: org/eclipse/pde/api/tools/ui/internal/markers/PDEConfigureProble
+ mSeverityAction.class
+SHA-256-Digest: MJcRVXNSMgL7XmFJ49grIxrIbZpB6LhoqC2JBQSmx3E=
+
+Name: org/eclipse/pde/api/tools/ui/internal/use/PatternSelectionPage$P
+ atternElement.class
+SHA-256-Digest: W9nhDx09kG0Cc+W0SDxB//ErjQPL0kuy+EMF2m68Jq4=
+
+Name: org/eclipse/pde/api/tools/ui/internal/preferences/ApiErrorsWarni
+ ngsConfigurationBlock$6.class
+SHA-256-Digest: tBSkmfdge+Z6H7xhWrq8f8UyXU7EhjtBt64kD5sCBJs=
+
+Name: org/eclipse/pde/api/tools/ui/internal/preferences/ApiUseScanPref
+ erencePage$9.class
+SHA-256-Digest: oMIeC1UuwEt7QsTknpMD2PKw+P+8UjvkR65mGpEmPME=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/SelectApiBaselineT
+ ypeWizardPage$2.class
+SHA-256-Digest: gKMS9oOvU4hLrLl1qM2y5WyTBxJMHFM4777iZxzs32o=
+
+Name: org/eclipse/pde/api/tools/ui/internal/use/ApiUseScanTab$11.class
+SHA-256-Digest: D13lian9aJVF2B+7pN2mEEgrR+ATpQ3Cj+MPkY0rosY=
+
+Name: org/eclipse/pde/api/tools/ui/internal/markers/NodeFinder.class
+SHA-256-Digest: s0/5gjj1WpQeaL/Dgxd1akosdYAG6dsHVNXVQPyt3K4=
+
+Name: icons/full/obj16/category_menu.gif
+SHA-256-Digest: Rjnxqy+h+R3Lac1GyseseWOwU3rJYzgQ/BhtAr0pdRc=
+
+Name: icons/full/dlcl16/prev_nav.gif
+SHA-256-Digest: XbncXplfxH/6JlXOp7nTFrKw2/kWpLl5kUArcOK6Lm8=
+
+Name: org/eclipse/pde/api/tools/ui/internal/use/ApiUseScanTab$9.class
+SHA-256-Digest: MW+FgTm9YAbSk7F3tW68siD9P0aWpA13m+FcIpQ+N1g=
+
+Name: org/eclipse/pde/api/tools/ui/internal/use/ApiUsePatternTab$6.cla
+ ss
+SHA-256-Digest: gExIVOQtGDgPu7Yteh1zgr1p6rh82w788Qzr7ED3W4Q=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/ApiToolingSetupWiz
+ ardPage$4.class
+SHA-256-Digest: wBSZ1sQk1hb03PwHsHFX1j0+2uZNVU8+kX1Pn/GYMDU=
+
+Name: org/eclipse/pde/api/tools/ui/internal/preferences/ApiBaselinePre
+ ferencePage$9.class
+SHA-256-Digest: FitcFEJ3WIQaBZ5QrH6MBS4jwzfPKt8H3TtF7dHUTRo=
+
+Name: org/eclipse/pde/api/tools/ui/internal/ApiUIPlugin.class
+SHA-256-Digest: cH+MhW3fMK5DfUespa3sqTP0MIZJmtKRJ5p64+d4TM4=
+
+Name: org/eclipse/pde/api/tools/ui/internal/views/APIToolingView.class
+SHA-256-Digest: jligwjQfLhhBKOWNzJTzyNGfM3XGVmVACLpMaq5iP6s=
+
+Name: org/eclipse/pde/api/tools/ui/internal/use/ApiUsePatternTab.class
+SHA-256-Digest: g6LxuRoKJurn9KNXJ8GVCFMhySlSgH4cfW7mIawwhzI=
+
+Name: org/eclipse/pde/api/tools/ui/internal/ApiToolsLabelProvider.clas
+ s
+SHA-256-Digest: sYapfwwx6w+KghVsKkmtrRv5tbrpKQCUsi2Kd+bHE1g=
+
+Name: org/eclipse/pde/api/tools/ui/internal/preferences/ApiErrorsWarni
+ ngsConfigurationBlock$Key.class
+SHA-256-Digest: Iy+xDuiwtyICv68QuQZQBSm0v7tDfAph5rpVAohyOIQ=
+
+Name: icons/full/elcl16/prev_nav.gif
+SHA-256-Digest: Kc6R5KJqR/WY53XElwBnCOT9l2FNnQZxPnfJ9yHPVRE=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/DirectoryBasedApiB
+ aselineWizardPage$4.class
+SHA-256-Digest: +eNo2oKP6Yx5+2nX1+F6N/XG7Ld2WymLWo4b4mxPkag=
+
+Name: org/eclipse/pde/api/tools/ui/internal/refactoring/RefactoringMes
+ sages.class
+SHA-256-Digest: LC1jSiPURGFZcjzWznbFXAsNgA1ksW0fvql0FVwm32Q=
+
+Name: org/eclipse/pde/api/tools/ui/internal/use/ReportPatternPage$2.cl
+ ass
+SHA-256-Digest: Y67wy1vfFZioTZvK0vqEtevvzu1CgjC7FCeEvy1DR5A=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/JavadocConversionW
+ izard.class
+SHA-256-Digest: uyghDq0w53Og45jzsvGRnN18Yq+tMY+b/fge5aCPsvg=
+
+Name: org/eclipse/pde/api/tools/ui/internal/IApiToolsHelpContextIds.cl
+ ass
+SHA-256-Digest: V8DZS9J/cbOwzv5Rw8BVv3+9q5ho2z/tyz2zfUbgxVc=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/JavadocConversionP
+ age.class
+SHA-256-Digest: AWCOdq4q2nP5uHzBQAHjOIdjBEv7nJbzRtslNVEhTIE=
+
+Name: org/eclipse/pde/api/tools/ui/internal/preferences/ApiErrorsWarni
+ ngsConfigurationBlock$4.class
+SHA-256-Digest: 3V+qh5/9ELR9fPrR6t6VDe7A1xYqiVGoO/3Tb8cbJus=
+
+Name: org/eclipse/pde/api/tools/ui/internal/actions/RemoveAllSessionsA
+ ction.class
+SHA-256-Digest: eMG8/uQXESt1hBljfdkZwUWXTe+1dFBVeq4Of2/namY=
+
+Name: org/eclipse/pde/api/tools/ui/internal/use/ApiUsePatternTab$5.cla
+ ss
+SHA-256-Digest: gbgRkbjIMzHJBQGprWklaRTYQr2p/061ZmPm+ymx53E=
+
+Name: org/eclipse/pde/api/tools/ui/internal/preferences/PreferenceMess
+ ages.class
+SHA-256-Digest: pQu7HUewBoaCGCqh8Eqzwvyb/3ZPSSgPO1Dqeh33HKI=
+
+Name: org/eclipse/pde/api/tools/ui/internal/actions/SelectSessionActio
+ n$1.class
+SHA-256-Digest: sq0MWHCTpHQ+Zsjjr5SbRJJgG63Fmem/GdHR8cDewNQ=
+
+Name: org/eclipse/pde/api/tools/ui/internal/use/ArchivePatternPage$2.c
+ lass
+SHA-256-Digest: F7mpG5Yy3nDlZervZXSbHTfelWbmj4f/EYV8TxgdLjQ=
+
+Name: org/eclipse/pde/api/tools/ui/internal/markers/MarkerMessages.cla
+ ss
+SHA-256-Digest: TdsPf9L/RIo8WKRfSz3P8CLGOl0PJdNr/+4YYEhw9B8=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/ApiToolingSetupWiz
+ ardPage$UpdateJob.class
+SHA-256-Digest: p68U4gCRUlkQ3808KH4iD08u2OU9G1t8Rj/8HgWu+CQ=
+
+Name: org/eclipse/pde/api/tools/ui/internal/markers/markermessages.pro
+ perties
+SHA-256-Digest: 9zjeS+UlWxK1KcYn+TZFEW3dlrE0tlcvNcO2AqXaCVc=
+
+Name: icons/full/obj16/extract_references.gif
+SHA-256-Digest: fzFa9qLLkqIUHJhP1EOo3nV4WaRAjc1ijsmxqF0mOWE=
+
+Name: org/eclipse/pde/api/tools/ui/internal/commands/Messages.class
+SHA-256-Digest: aXh6A6sZxiBg9hfv0yh/59ChC/cGW5OD9vEOL16zw7o=
+
+Name: org/eclipse/pde/api/tools/ui/internal/refactoring/refactoringmes
+ sages.properties
+SHA-256-Digest: dhLVO08fFDMi9Mrt2AR6aBovR+p113tw3bneprtbd5k=
+
+Name: org/eclipse/pde/api/tools/ui/internal/use/PatternSelectionPage$2
+ .class
+SHA-256-Digest: SothKK1c5Xp4UcW0wxeNB5xH3SLI1ODlf3uBOhleiig=
+
+Name: icons/full/ovr16/warning_ovr.gif
+SHA-256-Digest: /h8GlulVNJkQvPIISuZCRPi688o6pLQDZlYfQVEv2nI=
+
+Name: org/eclipse/pde/api/tools/ui/internal/markers/VersionNumberingRe
+ solution$1.class
+SHA-256-Digest: rD8FAgDay+Rb9pSbhNWi2aO8xnQWNJoFh/GuXc7U4wM=
+
+Name: org/eclipse/pde/api/tools/ui/internal/refactoring/FilterChange.c
+ lass
+SHA-256-Digest: iLF9lnVXpM5hldJqk9WHsclqyMD5qvMklwOHoTaduos=
+
+Name: icons/full/elcl16/configure_problem_severity.png
+SHA-256-Digest: kbZisPW4Kf5+h60YnFqIJMmr3J13ajyAg7iAUOWxJZM=
+
+Name: org/eclipse/pde/api/tools/ui/internal/views/APIToolingView$4.cla
+ ss
+SHA-256-Digest: G7dOXnNKZKbdJm1PLDooOQFo9/1QUfVDGCmcMp8/9mw=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/JavadocConversionP
+ age$4.class
+SHA-256-Digest: spp0Zk+qMj8znZnSiRjVjNFlrOpCbSzKxYYBEmqFyrE=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/ApiToolingSetupWiz
+ ardPage$3.class
+SHA-256-Digest: z2CZVMpuP95ynKorlPhmxiPlV4LNCTqSvzCpWrHg8ZI=
+
+Name: org/eclipse/pde/api/tools/ui/internal/preferences/ApiUseScanPref
+ erencePage$6.class
+SHA-256-Digest: 0RvJVB0L11utADgwKvaPIIsumCcbckN08SAowJotNMs=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/DirectoryBasedApiB
+ aselineWizardPage$6.class
+SHA-256-Digest: AKBgpKV8PfLvroQEylXhZ0+ySJXB+LagRysRmsSOWKs=
+
+Name: org/eclipse/pde/api/tools/ui/internal/actions/ExportDialog.class
+SHA-256-Digest: DWI03L7ae2NT2YnjnYtc1LINbGMV1cO+t81yFjUXT6g=
+
+Name: about.html
+SHA-256-Digest: 0RM1x9lTJa7T8YkysaegPuBIeaEvSZypRDfXoMpsJAU=
+
+Name: org/eclipse/pde/api/tools/ui/internal/refactoring/RefactoringUti
+ ls.class
+SHA-256-Digest: 97VUBmN7Jz/qTNn8tI4RXi8Df5L2tL78sQd6U+HMU/U=
+
+Name: org/eclipse/pde/api/tools/ui/internal/preferences/ApiErrorsWarni
+ ngsConfigurationBlock$3.class
+SHA-256-Digest: iCePgx0B3ot3e6Qe2HSredzcI1Nf3zG1GqoIid7wAlA=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/JavadocConversionR
+ efactoring$TagVisitor.class
+SHA-256-Digest: zBKVMjqjlYrxE9RVemFo6uMzlKKi6HAy0t5yv8nI+WA=
+
+Name: org/eclipse/pde/api/tools/ui/internal/actions/RemoveActiveSessio
+ nAction.class
+SHA-256-Digest: v0BcvROhq0yRmXRvg2VsRgxzpJGj84hotfUfYXALWJ8=
+
+Name: org/eclipse/pde/api/tools/ui/internal/Messages.class
+SHA-256-Digest: ZxA09zAIJB8QiQ2SV5ELAFveKKBovoZuIlQ1nSpW4C0=
+
+Name: org/eclipse/pde/api/tools/ui/internal/refactoring/FilterRenamePa
+ rticipant.class
+SHA-256-Digest: 7FHCp2S1H2JBql7XrjvEsWsXGDavbjN89mOJfuQLd+Q=
+
+Name: icons/full/dlcl16/compare_apis.gif
+SHA-256-Digest: O8mTFsPtF7oL6MlAtFeZ5e8JIkFJX099SdRT7dm9Kk4=
+
+Name: icons/full/wizban/compare_wiz.png
+SHA-256-Digest: a52Y/Sp99pFFggZr+e8r/9JfWuPecI6Y2HKRwlJCK/I=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/ApiToolingSetupWiz
+ ardPage$2.class
+SHA-256-Digest: 4wl28bZ96m/htlxj/QSEjVM/72S5UDTphnrQoyH1SX4=
+
+Name: icons/full/elcl16/open_page.gif
+SHA-256-Digest: D/spPkVhyCaod+fSOTrxQzP3NVWVcUIyWbL68ZqnzS4=
+
+Name: org/eclipse/pde/api/tools/ui/internal/use/ApiUsePatternTab$4.cla
+ ss
+SHA-256-Digest: ivcR5BuDMVb5F5hLP3MmTMUfdOXFZj+acm0dIC0fZnM=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/ApiToolingSetupWiz
+ ard.class
+SHA-256-Digest: h1HJqgVohC7qg63Ufp2R0cJIjDDntMV08SU2ZpqSAJU=
+
+Name: org/eclipse/pde/api/tools/ui/internal/completion/APIToolsJavadoc
+ CompletionProposalComputer$TagCollector.class
+SHA-256-Digest: ZWxg1z0kBCE4ZUw7aROt7PP+0XfzXtMmS7hmmMh5Glk=
+
+Name: org/eclipse/pde/api/tools/ui/internal/JavaElementActionFilter.cl
+ ass
+SHA-256-Digest: xKeZTrerC22bhAO+o3Nl2LLG+OHZILNcNLDLnw0f9XI=
+
+Name: org/eclipse/pde/api/tools/ui/internal/markers/UnsupportedTagReso
+ lution.class
+SHA-256-Digest: iFd3uNSjAA77+4cRxx/OnPWYL2YsEa9tm46FjFutiTk=
+
+Name: org/eclipse/pde/api/tools/ui/internal/use/messages.properties
+SHA-256-Digest: AzY3yuhWZVKpmIqBVbJFePpm2vcxhsHGTGGx4/Raqiw=
+
+Name: org/eclipse/pde/api/tools/ui/internal/preferences/ApiUseScanPref
+ erencePage$7.class
+SHA-256-Digest: ul6O7CYhmVXxphHnLSigZSA4DhndW+uqYIngQx+WcFQ=
+
+Name: org/eclipse/pde/api/tools/ui/internal/views/APIToolingView$3.cla
+ ss
+SHA-256-Digest: tr7ablUHHMOoC1v6Ax5SrBydlGe4jzLYCyAgfWh78VU=
+
+Name: org/eclipse/pde/api/tools/ui/internal/wizards/JavadocConversionP
+ age$5.class
+SHA-256-Digest: EYeqiqtUxk6yqQcdEYFeM9VZkt0nNu7TVYx9hRmGNCw=
+
+Name: icons/full/obj16/collect_users.gif
+SHA-256-Digest: 8XE2nBRo+7v7YamU6S04U+TiyYq2FP0S+959Mb7jg40=
+
+Name: org/eclipse/pde/api/tools/ui/internal/markers/DuplicateAnnotatio
+ nResolution.class
+SHA-256-Digest: w4KbxeugJedMr8XW+kP10kfmqbiyl+W8JzH5oit46Jw=
+
+Name: org/eclipse/pde/api/tools/ui/internal/actions/actionmessages.pro
+ perties
+SHA-256-Digest: 6R5e2PLjNl7bziIrmYQj5yR8c9KalbXhxEyLp8U6OVE=
+
+Name: org/eclipse/pde/api/tools/ui/internal/markers/VersionNumberingRe
+ solution.class
+SHA-256-Digest: da+HpsbOQvfCweWGwpLEIVF/NwFxzkYRsAA2J71vS/Q=
+
+Name: org/eclipse/pde/api/tools/ui/internal/use/DescriptionPatternPage
+ $1.class
+SHA-256-Digest: si42I+Ei3yd+E+PkUd41PKqyfdr1ItIraUNvhoI0aPo=
+
+Name: icons/full/wizban/profile_wiz.png
+SHA-256-Digest: GAVR3VXz1ZAPo+EAN5buDqn8WHBcBC6K9R8CmgDf8P4=
+
+Name: icons/full/elcl16/help.gif
+SHA-256-Digest: K8TNWtrr8CbiAyz1PLTnN1fVgXWoSCZmXiKFU418/Jg=
+

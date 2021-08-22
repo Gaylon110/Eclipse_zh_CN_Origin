@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+ ******************************************************************************
+ * Copyright (c) 2016 Oracle
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *    Konstantin Komissarchik - initial implementation and ongoing maintenance
+ ******************************************************************************
+-->
+
+<extension xmlns="http://www.eclipse.org/sapphire/xmlns/extension" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <service>
+        <description>Resolves Java types visible to the Java project that the model is loaded from.</description>
+        <context>Sapphire.Property.Instance</context>
+        <id>Sapphire.Java.JDT.TypeReferenceService</id>
+        <overrides>Sapphire.Java.TypeReferenceService</overrides>
+        <implementation>org.eclipse.sapphire.java.jdt.internal.JdtJavaTypeReferenceService</implementation>
+        <condition>org.eclipse.sapphire.java.jdt.internal.JdtJavaTypeReferenceService$Condition</condition>
+    </service>
+    <service>
+        <id>Sapphire.Java.JDT.ConversionService.ElementToContext</id>
+        <implementation>org.eclipse.sapphire.java.jdt.internal.ElementToContextConversionService</implementation>
+        <description>ConversionService implementation for Element to Context conversions when the resource is inside a Java project.</description>
+        <context>Sapphire</context>
+    </service>
+    <service>
+        <id>Sapphire.ConversionService.ResourceStoreToIJavaProject</id>
+        <implementation>org.eclipse.sapphire.java.jdt.internal.ResourceStoreToIJavaProjectConversionService</implementation>
+        <description>ConversionService implementation for ResourceStore to IJavaProject conversions.</description>
+        <context>Sapphire</context>
+    </service>
+</extension>

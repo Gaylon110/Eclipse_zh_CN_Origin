@@ -1,0 +1,91 @@
+/*******************************************************************************
+ * Copyright (c) 2008-2011 Chair for Applied Software Engineering,
+ * Technische Universitaet Muenchen.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ * Otto von Wesendonk - initial API and implementation
+ ******************************************************************************/
+package org.eclipse.emf.emfstore.internal.server.connection.xmlrpc;
+
+import org.eclipse.emf.emfstore.internal.server.EMFStore;
+import org.eclipse.emf.emfstore.internal.server.accesscontrol.AccessControl;
+import org.eclipse.emf.emfstore.internal.server.connection.ConnectionHandler;
+import org.eclipse.emf.emfstore.server.ESXmlRpcWebServerProvider;
+import org.eclipse.emf.emfstore.server.exceptions.ESServerInitException;
+
+/**
+ * Connection Handler for XML RPC EMFStore interface.
+ *
+ * @author wesendon
+ */
+public class XmlRpcConnectionHandler implements ConnectionHandler<EMFStore> {
+
+	/**
+	 * String interface identifier.
+	 */
+	public static final String EMFSTORE = "EmfStore"; //$NON-NLS-1$
+
+	private static final String NAME = "XML RPC Connection Handler"; //$NON-NLS-1$
+
+	private static EMFStore emfStore;
+
+	private static AccessControl accessControl;
+
+	/**
+	 * {@inheritDoc}
+	 */
+	public String getName() {
+		return NAME;
+	}
+
+	/**
+	 *
+	 * {@inheritDoc}
+	 *
+	 * @see org.eclipse.emf.emfstore.internal.server.connection.ConnectionHandler#init(org.eclipse.emf.emfstore.internal.server.EMFStoreInterface,
+	 *      org.eclipse.emf.emfstore.internal.server.accesscontrol.AccessControl)
+	 */
+	public synchronized void init(EMFStore emfStore, AccessControl accessControl) throws ESServerInitException {
+		XmlRpcConnectionHandler.emfStore = emfStore;
+		XmlRpcConnectionHandler.accessControl = accessControl;
+		final ESXmlRpcWebServerProvider webServer = XmlRpcWebserverManager.getInstance();
+		webServer.initServer();
+		webServer.addHandler(EMFSTORE, XmlRpcEmfStoreImpl.class);
+	}
+
+	/**
+	 * Returns EMFstore.
+	 *
+	 * @return the EMFStore
+	 */
+	public static EMFStore getEmfStore() {
+		return emfStore;
+	}
+
+	/**
+	 * Returns AccessControl.
+	 *
+	 * @return access control
+	 */
+	public static AccessControl getAccessControl() {
+		return accessControl;
+	}
+
+	/**
+	 *
+	 * {@inheritDoc}
+	 *
+	 * @see org.eclipse.emf.emfstore.internal.server.connection.ConnectionHandler#stop()
+	 */
+	public void stop() {
+		final ESXmlRpcWebServerProvider webserverManager = XmlRpcWebserverManager.getInstance();
+		if (!webserverManager.removeHandler(EMFSTORE)) {
+			webserverManager.stopServer();
+		}
+	}
+
+}

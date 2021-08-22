@@ -1,0 +1,332 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.equinox.p2.ui.importexport;singleton:
+ =true
+Archiver-Version: Plexus Archiver
+Built-By: genie.releng
+Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime;bundle-version
+ ="[3.11.0,4.0.0)",org.eclipse.equinox.p2.ui,org.eclipse.equinox.p2.ex
+ tensionlocation,org.eclipse.equinox.p2.metadata;bundle-version="2.1.0
+ ",org.eclipse.ui.forms;bundle-version="3.5.0"
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/equino
+ x/rt.equinox.p2.git;path="bundles/org.eclipse.equinox.p2.ui.importexp
+ ort";tag="M20170817-0500";commitId=e54e4fe1a0d2d034e28ba3b50a2fb22659
+ 5d8565
+Bundle-Vendor: %providerName
+Import-Package: org.eclipse.equinox.internal.p2.metadata.repository.io
+ ,org.eclipse.equinox.internal.p2.persistence,org.eclipse.equinox.inte
+ rnal.p2.ui,org.eclipse.equinox.internal.p2.ui.dialogs,org.eclipse.equ
+ inox.internal.p2.ui.model,org.eclipse.equinox.internal.p2.ui.viewers,
+ org.eclipse.equinox.internal.provisional.p2.director,org.eclipse.equi
+ nox.p2.core;version="2.0.0",org.eclipse.equinox.p2.engine;version="2.
+ 0.0",org.eclipse.equinox.p2.engine.query;version="2.0.0",org.eclipse.
+ equinox.p2.metadata;version="2.0.0",org.eclipse.equinox.p2.operations
+ ;version="2.0.0",org.eclipse.equinox.p2.planner;version="2.0.0",org.e
+ clipse.equinox.p2.query;version="2.0.0",org.eclipse.equinox.p2.reposi
+ tory;version="2.0.0",org.eclipse.equinox.p2.repository.artifact;versi
+ on="2.0.0",org.eclipse.equinox.p2.repository.artifact.spi;version="2.
+ 0.0",org.eclipse.equinox.p2.repository.metadata;version="2.0.0",org.e
+ clipse.equinox.p2.repository.metadata.spi;version="2.0.0"
+Service-Component: OSGI-INF/importexport.xml
+Export-Package: org.eclipse.equinox.internal.p2.importexport;version="
+ 1.3.0";x-friends:="org.eclipse.equinox.p2.tests",org.eclipse.equinox.
+ internal.p2.importexport.internal;x-friends:="org.eclipse.equinox.p2.
+ tests"
+Bundle-Name: %pluginName
+Bundle-Version: 1.1.301.v20170816-1007
+Bundle-Localization: plugin
+Bundle-Activator: org.eclipse.equinox.internal.p2.importexport.interna
+ l.ImportExportActivator
+Created-By: Apache Maven 3.3.3
+Build-Jdk: 1.8.0_131
+
+Name: plugin.xml
+SHA-256-Digest: 76nraFDGwtPm7uilm8/Nv0hnsSv7A1w1D8kIuLaaIK4=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/wizard/Imp
+ ortPage.class
+SHA-256-Digest: FYo0vN3UaxlGO0v/sX1/i8S6/Wn9PwMt1hkcSC1cBSE=
+
+Name: org/eclipse/equinox/internal/p2/importexport/persistence/P2FPars
+ er.class
+SHA-256-Digest: 1MH/A/plSgrN9eUr/0E8rvTpTy0Wcbj61L+POW5wBHw=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/wizard/Imp
+ ortFromInstallationPage$1$1.class
+SHA-256-Digest: pHs/qC1m0ysCd1eUS+RD97bQ2wHeptqAk4lqsT3ukJQ=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/ImportExpo
+ rtImpl.class
+SHA-256-Digest: 8w+olmHlSLtLlMlPHwIs09p9qaqhhXP1JNgkldFCTYQ=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/wizard/Abs
+ tractWizard.class
+SHA-256-Digest: uyPxNeD/d9T9gZxuO3x+byY3smW3NE7wfRsuxTHWHCI=
+
+Name: org/eclipse/equinox/internal/p2/importexport/persistence/P2FPars
+ er$IUsHandler.class
+SHA-256-Digest: rHNQf0etIdVPJ2F6M1g2gUYbypvH8OEIY6wTWb7R804=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/wizard/Abs
+ tractPage$8.class
+SHA-256-Digest: bZoBG5UPUXFyFGjHK0uftuV/nxVtovuabWVh95mCDUQ=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/wizard/Abs
+ tractPage$2.class
+SHA-256-Digest: YAIQUkakdErAOxdvalC/wKWruimNNrD7/RyWahjxjbg=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/wizard/Sty
+ ledErrorDialog$1.class
+SHA-256-Digest: 8msM6zB/5WiW5NpPXN1MX7gDDAJ4iES6mSMDUMGGs/Y=
+
+Name: plugin.properties
+SHA-256-Digest: EVwyF7GHGNhdpE2EMymaUvaa3e+NIYsl05IDqgY7zuw=
+
+Name: org/eclipse/equinox/internal/p2/importexport/persistence/P2FPars
+ er$IUHandler.class
+SHA-256-Digest: SgEfAr96CYl89jMwkb22+iu15Qj7Tk5dX49Ji2nOcSM=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/wizard/Imp
+ ortFromInstallationPage$3.class
+SHA-256-Digest: Q5zJNTuKyShM9kOtdlTBqk07BD8m3twz3c9IdzbvpnM=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/wizard/Imp
+ ortWizard.class
+SHA-256-Digest: NIO/b9K9AOqOu9yZef12iB4grF8pTkR8hNB6bd1gzuA=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/wizard/Abs
+ tractPage$5.class
+SHA-256-Digest: nBcl1cG+EWPCoxnEyKsUnSnAMgEFGLDgJT7a5kks+fI=
+
+Name: org/eclipse/equinox/internal/p2/importexport/persistence/P2FPars
+ er$P2FDocHandler.class
+SHA-256-Digest: E+qQbQw7n/bwi5EFEvVcJTzFQvnH3IXNH6wbejvLwsw=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/ImportExpo
+ rtActivator.class
+SHA-256-Digest: e1+FrBVpcCe/SeV+Gv5Oyu8tfJrbyljWz7HgvYsgPQg=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/wizard/Exp
+ ortPage.class
+SHA-256-Digest: PzKXpl1ITum+KG4FFzNbuJv3RV+ZYTDX/X7Dc49Ia7E=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/wizard/Imp
+ ortFromInstallationPage$ImportFromInstallationLabelProvider.class
+SHA-256-Digest: ToGI7pXJRd/xIDSGpHJtPA5Wq4pKAddxzsvix3KKb5A=
+
+Name: org/eclipse/equinox/internal/p2/importexport/persistence/P2FPars
+ er$RepositoriesHandler.class
+SHA-256-Digest: rjJAGm5HU4GO05hNiOFKfunAvHuHbCwND7u6yFJ55d8=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/wizard/Imp
+ ortFromInstallationPage$4.class
+SHA-256-Digest: xamc3p/xSxTH78rg4jhYfq1/IU90b/2E1MZem7FpWQQ=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/wizard/Abs
+ tractPage$4.class
+SHA-256-Digest: QIKs1Vkl3sLAiYJ9GlsSHKNPgOB3hKUjCqWFY7N+Vlk=
+
+Name: .api_description
+SHA-256-Digest: Suw+jlw6MuWPe42mOW6RfVcodXiXRYeXyminUJSf1/A=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/wizard/Imp
+ ortWizard$2.class
+SHA-256-Digest: jDWhCB36DyepcjFfqQgUN4sx1svnoe7M+1nYZB2XZpQ=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/wizard/Imp
+ ortFromInstallationPage$4$2.class
+SHA-256-Digest: wHexO2YGZFumSVrOHSSEV5fQRGe9DMXGRh9WBJtLSuc=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/wizard/Abs
+ tractImportPage.class
+SHA-256-Digest: eT1O9xKTO9ON6TvmDKndjkDF6tfbskfxuQhYNLGYQNI=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/wizard/Abs
+ tractPage$ImportExportFilteredTree$1$2.class
+SHA-256-Digest: toKtjvnoXg1YRLauZKxZiobCLoKrewz6kCoVAREjB74=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/wizard/Imp
+ ortPage$InstallationLabelProvider.class
+SHA-256-Digest: jXRMgpBd7StcTgfzuyH+5vpJl673kVU4xkvws4pR/xI=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/wizard/Abs
+ tractPage$1.class
+SHA-256-Digest: 0pRWmeiQfjM8yfJo1CK/2O9dTl5S6Chnr2uMq5enAus=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/wizard/Sty
+ ledErrorDialog.class
+SHA-256-Digest: pkkgyhTmLVOABV4nCXm9uQv89Cvxm2Zaju47YRURYqg=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/wizard/Imp
+ ortFromInstallationPage.class
+SHA-256-Digest: waAARZiNXG+aNGJcMQeT0GCawu57llxb/52yBBT2c1A=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/wizard/Exp
+ ortPage$1$1.class
+SHA-256-Digest: XBCNDlDUrJ4J8yHpPONNphp4xxBVbqF8ZBiPwK7nxiI=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/wizard/Exp
+ ortPage$1.class
+SHA-256-Digest: he4VQ9HuO2sVh6RbOMznP2ypTW/8TcN3/MHy2vfoamc=
+
+Name: org/eclipse/equinox/internal/p2/importexport/persistence/P2FPars
+ er$RepositoryHandler.class
+SHA-256-Digest: h0H1N0qLmJ5lwhLrkqQTHiPzDp015ufUT7dMNqmQinU=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/wizard/Abs
+ tractImportPage$2.class
+SHA-256-Digest: f/xoxRrfjMBmZTyS7/IAyAQkX4zlPGt50Omr+aDr4Wk=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/wizard/Imp
+ ortWizard$1$1.class
+SHA-256-Digest: GDrVskh5aQzzu0kleAFF/7/1wJh1lNFCOFcvuXrcFvc=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/wizard/Abs
+ tractPage.class
+SHA-256-Digest: UuLbSvUN9/p3fFX6Rkc9KK+RET0Y9Ryp19V+B8vYN3M=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/wizard/Imp
+ ortPage$GetCheckedElement.class
+SHA-256-Digest: lQ72REShXVojQa8unHAtYwT1jFo5naYq87EWwbptFqw=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/wizard/Abs
+ tractPage$ImportExportFilteredTree$1$1.class
+SHA-256-Digest: 78LUhGq7LSnf30EIwfHMIcPCIBZz24CgeiWARakE1g4=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/wizard/Imp
+ ortFromInstallationPage$4$1.class
+SHA-256-Digest: irsQiDJ30BfXWXHB1g1JpopUsltTCDa7fMsSC1ldOVA=
+
+Name: org/eclipse/equinox/internal/p2/importexport/IUDetail.class
+SHA-256-Digest: HvPZDDRZx/j2EnpPxxxRUOmnNj1wO3iYwRdiIWqtaOw=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/wizard/Imp
+ ortWizard$1$2.class
+SHA-256-Digest: 7YZNCB2hj6p5tuxsSKGTYgMRNkrNry02y41+/gcbuls=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/wizard/Imp
+ ortFromInstallationPage$2$1.class
+SHA-256-Digest: uUwjlmPPIwHp8M/bLA1mASUkuTuDeEKcX5ML/xCOQic=
+
+Name: icons/wizban/install_wiz@2x.png
+SHA-256-Digest: Zx9J3/DZ92s372ELcNX5SOjXcy4GhKxs8Uv442TLmZg=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/wizard/Abs
+ tractPage$3.class
+SHA-256-Digest: nB4nlHYvqP1SBlRB+GOOQ0nRDXqGT+xAfhIpEdfNd6E=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/wizard/Abs
+ tractImportPage$1.class
+SHA-256-Digest: y7PhL60M4OGq6slcN8fb8yacJb7WzEDsQbh/bHaop6Y=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/wizard/Abs
+ tractPage$10.class
+SHA-256-Digest: 9QKR95pri+PiqOkdokxy3SewLQS0GNv4TlzX0c1M1Iw=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/wizard/Abs
+ tractPage$7.class
+SHA-256-Digest: 7+0Cx5Bxbr62HhaKYp7821X4hAivah17c3LeqqiXucE=
+
+Name: org/eclipse/equinox/internal/p2/importexport/persistence/P2FPars
+ er$P2FHandler.class
+SHA-256-Digest: eYqnPNnIkWQtN1sOlM13FcnAaVmEkQJLg9YOvA5+8f4=
+
+Name: icons/wizban/install_wiz.png
+SHA-256-Digest: kI3GVxSgMmvlOkvnvQCBhCLBAirBOmes+Kk1hxMxC9A=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/wizard/Imp
+ ortFromInstallationPage$1.class
+SHA-256-Digest: BHHPWVAvb6h84gewgnjCKnkSICYMDdrDItKNdzfYXZo=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/wizard/Abs
+ tractPage$ImportExportFilteredTree$1.class
+SHA-256-Digest: 7cDdZiHmtMjqOVWbPe/D4KXdFwVLYvazwBCKSNBECtc=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/Constants.
+ class
+SHA-256-Digest: ZxouajXsge6zOFbTpg/aWisc+eQWrmx8rwxbfKfFCf0=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/wizard/Abs
+ tractPage$ImportExportFilteredTree.class
+SHA-256-Digest: YkyPWRiTyBP9R2311voJe/XN94CG/O44EHlYjIdBqBM=
+
+Name: about.html
+SHA-256-Digest: 0RM1x9lTJa7T8YkysaegPuBIeaEvSZypRDfXoMpsJAU=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/wizard/Imp
+ ortPage$InstallationContentProvider.class
+SHA-256-Digest: RAM25yZKxmqMZnDzVpCuM/HqrJ44njOdd0rHYzHzx0k=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/wizard/Sty
+ ledErrorDialog$2.class
+SHA-256-Digest: mTylzgRRHarsYWQ5I9aUI0CoEGDZ912YadOfFqrZVEI=
+
+Name: org/eclipse/equinox/internal/p2/importexport/persistence/P2FWrit
+ er.class
+SHA-256-Digest: v33XLuSD+pgGO+wMOJ/FH8lT3Knhj3ygrQh2Oewu+1E=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/wizard/Exp
+ ortWizard.class
+SHA-256-Digest: lRjnphT+jOSDH0+KLDSrXiCK4TKOI6Yx/5LOSipt434=
+
+Name: org/eclipse/equinox/internal/p2/importexport/P2ImportExport.clas
+ s
+SHA-256-Digest: gzukNNu39/V4IAbwWc/t19cVwj1kbcn2HzF6qZr441k=
+
+Name: org/eclipse/equinox/internal/p2/importexport/VersionIncompatible
+ Exception.class
+SHA-256-Digest: Av6UOL68Lrg2VewUdQTQC7acuNqGcCWp9/bXZe0uK6c=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/wizard/Imp
+ ortWizard$1$1$1.class
+SHA-256-Digest: xBIh1dYvg6GV5P0puYcyDiU+Pg+7OQitb5jxZfdecbQ=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/wizard/Abs
+ tractPage$11.class
+SHA-256-Digest: yKudAZKLgKDw7vk+qFMYeMM6rQPo/IriQClVmEGJ9qM=
+
+Name: org/eclipse/equinox/internal/p2/importexport/persistence/P2FCons
+ tants.class
+SHA-256-Digest: IBOPl6HSh1ensGpcD2FpHv6x7l6nkQaONgwl+BbdzSA=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/wizard/Abs
+ tractPage$TreeViewerComparator.class
+SHA-256-Digest: nNquUTveXd/OXdlYsjXxWLNGXYIQfkBJHJIOu1Sga4U=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/Messages.c
+ lass
+SHA-256-Digest: xH7ccyQb4CmdDA89C1IxSmM8yrJqOaTcHFCeXaSTV6M=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/wizard/Imp
+ ortFromInstallationPage$2.class
+SHA-256-Digest: OkQp2PilRXvIDzpUjle1jXPi+tAy0mmHEuJu1LXdJro=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/wizard/Imp
+ ortWizard$1.class
+SHA-256-Digest: po/mWcHm4RqMgl73oX+mLe+rBmUg1qLmst1DLkmhExE=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/wizard/Abs
+ tractPage$9.class
+SHA-256-Digest: 2ci3WIm4Ey8fzCWneX4stFgJKstNGJEHjv+W86fsB90=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/wizard/Abs
+ tractPage$6.class
+SHA-256-Digest: 4xoBU8VukbKWQfTlGt+ZQI2bdAImAThuvCfommq9NkI=
+
+Name: OSGI-INF/importexport.xml
+SHA-256-Digest: LGEp221tBzwmGPPOSs2tv/S3cnbKLSLL/uSFu+quW3E=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/wizard/Imp
+ ortFromInstallationWizard.class
+SHA-256-Digest: UD6OuDv0OLIncgPbSgq4rdOtxQ4Lkz1N3d+W2HBIzZ4=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/wizard/Imp
+ ortPage$P2ImportIUPatternFilter.class
+SHA-256-Digest: pv5vKkgW8EYpvxTYjcQD/KdiXDFZous6zguJ56VQlmA=
+
+Name: org/eclipse/equinox/internal/p2/importexport/internal/messages.p
+ roperties
+SHA-256-Digest: ltXBvk9vESUr32dhzZx8OpeVL2ditA/FtENenin+3ME=
+

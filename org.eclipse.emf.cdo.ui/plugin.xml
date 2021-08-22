@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<!--
+	Copyright (c) 2007-2013, 2015, 2016 Eike Stepper (Berlin, Germany) and others.
+	All rights reserved. This program and the accompanying materials
+	are made available under the terms of the Eclipse Public License v1.0
+	which accompanies this distribution, and is available at
+	http://www.eclipse.org/legal/epl-v10.html
+
+	Contributors:
+	  Eike Stepper - initial API and implementation
+	  Christian W. Damus (CEA LIST) - bug 420528
+-->
+
+<plugin>
+
+  <extension-point id="editorOpeners" name="Editor Openers" schema="schema/editorOpeners.exsd"/>
+
+   <extension
+        point="org.eclipse.net4j.util.elementProcessors">
+     <elementProcessor class="org.eclipse.emf.cdo.ui.CDOInteractiveExceptionHandler"/>
+	 </extension>
+
+   <extension
+         point="org.eclipse.net4j.util.factories">
+      <factory
+            class="org.eclipse.emf.cdo.internal.ui.transfer.RepositoryUIProvider$Factory"
+            productGroup="org.eclipse.emf.cdo.transfer.ui.providers"
+            type="repository"/>
+   </extension>
+
+   <extension
+         point="org.eclipse.core.expressions.propertyTesters">
+      <propertyTester
+            class="org.eclipse.emf.cdo.internal.ui.SupportPropertyTester"
+            id="org.eclipse.emf.cdo.ui.Support"
+            namespace="org.eclipse.emf.cdo.ui.support"
+            properties="history,compare"
+            type="java.lang.Object">
+      </propertyTester>
+   </extension>
+
+   <extension
+         point="org.eclipse.ui.dropActions">
+      <action
+            class="org.eclipse.emf.cdo.internal.ui.transfer.RepositoryPluginDropAdapter"
+            id="org.eclipse.emf.cdo.ui.RepositoryPluginDropAdapter">
+      </action>
+   </extension>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            id="org.eclipse.emf.cdo"
+            name="%category.name.0">
+      </category>
+      <view
+            category="org.eclipse.emf.cdo"
+            class="org.eclipse.emf.cdo.internal.ui.views.CDOSessionsView"
+            icon="platform:/plugin/org.eclipse.emf.cdo.ui.shared/icons/full/view16/cdo_sessions.gif"
+            id="org.eclipse.emf.cdo.ui.CDOSessionsView"
+            name="%view.name.0">
+      </view>
+      <view
+            category="org.eclipse.emf.cdo"
+            class="org.eclipse.emf.cdo.internal.ui.views.CDOWatchListView"
+            icon="platform:/plugin/org.eclipse.emf.cdo.ui.shared/icons/full/view16/watch_list.gif"
+            id="org.eclipse.emf.cdo.ui.CDOWatchListView"
+            name="%view.name.1">
+      </view>
+      <view
+            category="org.eclipse.emf.cdo"
+            class="org.eclipse.emf.cdo.internal.ui.views.CDORemoteSessionsView"
+            icon="platform:/plugin/org.eclipse.emf.cdo.ui.shared/icons/full/view16/cdo_remote_sessions.gif"
+            id="org.eclipse.emf.cdo.ui.CDORemoteSessionsView"
+            name="%view.name.2">
+      </view>
+      <view
+            category="org.eclipse.emf.cdo"
+            class="org.eclipse.emf.cdo.internal.ui.views.CDOTimeMachineView"
+            icon="platform:/plugin/org.eclipse.emf.cdo.ui.shared/icons/full/view16/cdo_time_machine.gif"
+            id="org.eclipse.emf.cdo.ui.CDOTimeMachineView"
+            name="%view.name.3">
+      </view>
+   </extension>
+
+  <extension point = "org.eclipse.ui.editors">
+    <editor
+        id = "org.eclipse.emf.cdo.ui.CDOEditor"
+        name = "%editor.name.0"
+        icon = "platform:/plugin/org.eclipse.emf.cdo.ui.shared/icons/full/obj16/cdo_editor.gif"
+        extensions = "*"
+        class = "org.eclipse.emf.cdo.internal.ui.editor.CDOEditor"
+        contributorClass="org.eclipse.emf.cdo.internal.ui.editor.CDOActionBarContributor" >
+    </editor>
+  </extension>
+
+  <extension
+        point="org.eclipse.ui.importWizards">
+     <category
+           id="org.eclipse.emf.cdo.category"
+           name="CDO">
+     </category>
+  </extension>
+
+  <extension
+        point="org.eclipse.ui.newWizards">
+     <category
+           id="org.eclipse.emf.cdo.category"
+           name="CDO">
+     </category>
+  </extension>
+
+  <extension
+        point="org.eclipse.ui.preferencePages">
+     <page
+           class="org.eclipse.emf.cdo.internal.ui.preferences.CDOPreferencePage"
+           id="org.eclipse.emf.cdo.ui.CDOPreferencePage"
+           name="%page.name.0">
+     </page>
+     <page
+           category="org.eclipse.emf.cdo.ui.CDOPreferencePage"
+           class="org.eclipse.emf.cdo.internal.ui.preferences.CDOUIPreferencePage"
+           id="org.eclipse.emf.cdo.ui.CDOUIPreferencePage"
+           name="%page.name.1">
+     </page>
+  </extension>
+
+  <extension
+        point="org.eclipse.ui.decorators">
+     <decorator
+           adaptable="true"
+           class="org.eclipse.emf.cdo.ui.CDOLabelDecorator"
+           icon="icons/full/obj16/CDOModelFile.gif"
+           id="org.eclipse.emf.cdo.ui.CDOLabelDecorator"
+           label="%_UI_CDOLabelDecorator_label"
+           lightweight="false"
+           state="true">
+        <enablement>
+           <or>
+              <objectClass
+                    name="org.eclipse.emf.ecore.EObject">
+              </objectClass>
+              <objectClass
+                    name="org.eclipse.emf.cdo.CDOElement">
+              </objectClass>
+           </or>
+        </enablement>
+        <description>
+           %_UI_CDOLabelDecorator_description
+        </description>
+     </decorator>
+     <!--
+     <decorator
+           icon="icons/full/ovr16/error.gif"
+           id="org.eclipse.emf.cdo.ui.CDOSessionLabelDecorator"
+           label="CDOSession Offline Label Decorator"
+           lightweight="true"
+           location="BOTTOM_LEFT"
+           state="true">
+        <enablement>
+           <and>
+              <objectClass name="org.eclipse.emf.cdo.session.CDOSession"/>
+  						<test property="org.eclipse.emf.cdo.session.repositoryState" value="OFFLINE"/>
+           </and>
+        </enablement>
+     </decorator>
+     -->
+  </extension>
+
+  <extension
+        point="org.eclipse.core.runtime.adapters">
+     <factory
+           adaptableType="org.eclipse.emf.cdo.session.CDOSession"
+           class="org.eclipse.emf.cdo.internal.ui.CDOPropertyAdapterFactory">
+        <adapter type="org.eclipse.ui.views.properties.IPropertySourceProvider"/>
+        <adapter type="org.eclipse.ui.IActionFilter"/>
+     </factory>
+     <factory
+           adaptableType="org.eclipse.emf.cdo.view.CDOView"
+           class="org.eclipse.emf.cdo.internal.ui.CDOPropertyAdapterFactory">
+        <adapter type="org.eclipse.ui.views.properties.IPropertySourceProvider"/>
+        <adapter type="org.eclipse.ui.IActionFilter"/>
+     </factory>
+     <factory
+           adaptableType="org.eclipse.emf.ecore.EObject"
+           class="org.eclipse.emf.cdo.internal.ui.CDOPropertyAdapterFactory">
+        <adapter type="org.eclipse.ui.views.properties.IPropertySourceProvider"/>
+        <adapter type="org.eclipse.ui.IActionFilter"/>
+     </factory>
+     <factory
+           adaptableType="org.eclipse.emf.cdo.CDOElement"
+           class="org.eclipse.emf.cdo.internal.ui.CDOPropertyAdapterFactory">
+        <adapter type="org.eclipse.ui.views.properties.IPropertySourceProvider"/>
+        <adapter type="org.eclipse.ui.IActionFilter"/>
+     </factory>
+  </extension>
+
+	<!--
+   <extension
+         id="org.eclipse.core.filesystem.cdo.workspace"
+         point="org.eclipse.core.filesystem.filesystems">
+      <filesystem scheme="cdo.lob">
+         <run class="org.eclipse.emf.cdo.internal.ui.CDOLobEditorInput$LobFileSystem"/>
+      </filesystem>
+   </extension>
+	-->
+
+   <extension
+         point="org.eclipse.ui.editors.documentProviders">
+      <provider
+            class="org.eclipse.emf.cdo.internal.ui.CDOLobStorage"
+            inputTypes="org.eclipse.emf.cdo.internal.ui.CDOLobEditorInput"
+            id="org.eclipse.emf.cdo.ui.CDOLobStorage">
+      </provider>
+   </extension>
+
+   <!--extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="true"
+            id="org.eclipse.emf.cdo.ui.CDOResourceNodeContributionsWritableContainer"
+            objectClass="org.eclipse.emf.cdo.eresource.CDOResourceNode">
+         <action
+               class="org.eclipse.emf.cdo.internal.ui.actions.RemoveResourceActionDelegate"
+               icon="icons/full/elcl16/delete_edit.gif"
+               id="org.eclipse.emf.cdo.ui.RemoveResource"
+               label="%action.label.2"
+               tooltip="%action.tooltip.1">
+         </action>
+	       <enablement>
+              <and>
+                 <test property="org.eclipse.emf.cdo.object.permissionContainer" value="WRITE"/>
+                 <test property="org.eclipse.emf.cdo.object.viewHistorical" value="false"/>
+              </and>
+	       </enablement>
+      </objectContribution>
+      <objectContribution
+            adaptable="true"
+            id="org.eclipse.emf.cdo.ui.CDOResourceNodeContributionsWritable"
+            objectClass="org.eclipse.emf.cdo.eresource.CDOResourceNode">
+         <action
+               class="org.eclipse.emf.cdo.internal.ui.actions.RenameResourceActionDelegate"
+               id="org.eclipse.emf.cdo.ui.RenameResource"
+               label="%action.label.13"
+               tooltip="%action.tooltip.11">
+         </action>
+	       <enablement>
+              <and>
+                 <test property="org.eclipse.emf.cdo.object.permission" value="WRITE"/>
+                 <test property="org.eclipse.emf.cdo.object.viewHistorical" value="false"/>
+              </and>
+	       </enablement>
+      </objectContribution>
+      <objectContribution
+            adaptable="true"
+            id="org.eclipse.emf.cdo.ui.CDOResourceFolderContributionsWritable"
+            objectClass="org.eclipse.emf.cdo.eresource.CDOResourceFolder">
+         <action
+               class="org.eclipse.emf.cdo.internal.ui.actions.NewBinaryResourceActionDelegate"
+               icon="icons/full/elcl16/NewCDOBinaryResource.gif"
+               id="org.eclipse.emf.cdo.ui.NewBinaryResource"
+               label="%action.label.16"
+               tooltip="%action.tooltip.13">
+         </action>
+         <action
+               class="org.eclipse.emf.cdo.internal.ui.actions.NewTextResourceActionDelegate"
+               icon="icons/full/elcl16/NewCDOTextResource.gif"
+               id="org.eclipse.emf.cdo.ui.NewTextResource"
+               label="%action.label.15"
+               tooltip="%action.tooltip.12">
+         </action>
+         <action
+               class="org.eclipse.emf.cdo.internal.ui.actions.NewResourceActionDelegate"
+               icon="icons/full/elcl16/NewCDOResource.gif"
+               id="org.eclipse.emf.cdo.ui.NewResource"
+               label="%action.label.3"
+               tooltip="%action.tooltip.2">
+         </action>
+         <action
+               class="org.eclipse.emf.cdo.internal.ui.actions.NewResourceFolderActionDelegate"
+               icon="icons/full/elcl16/NewCDOResourceFolder.gif"
+               id="org.eclipse.emf.cdo.ui.NewResourceFolder"
+               label="%action.label.4"
+               tooltip="%action.tooltip.3">
+         </action>
+	       <enablement>
+              <and>
+                 <test property="org.eclipse.emf.cdo.object.permission" value="WRITE"/>
+                 <test property="org.eclipse.emf.cdo.object.viewHistorical" value="false"/>
+              </and>
+	       </enablement>
+      </objectContribution>
+      <objectContribution
+            adaptable="false"
+            id="org.eclipse.emf.cdo.ui.CDOResourceActionContributionReadable"
+            objectClass="org.eclipse.emf.cdo.eresource.CDOResource">
+         <action
+               class="org.eclipse.emf.cdo.internal.ui.actions.ExportResourceActionDelegate"
+               icon="icons/full/elcl16/export_wiz.gif"
+               id="org.eclipse.emf.cdo.ui.ExportResource"
+               label="%action.label.10"
+               tooltip="%action.tooltip.14">
+         </action>
+	       <enablement>
+	        		<test property="org.eclipse.emf.cdo.object.readable" value="true"/>
+	       </enablement>
+      </objectContribution>
+   </extension-->
+
+    <extension point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="true"
+            id="org.eclipse.emf.cdo.ui.contribution1"
+            objectClass="org.eclipse.emf.cdo.common.commit.CDOCommitInfo">
+         <action
+               class="org.eclipse.emf.cdo.internal.ui.actions.delegates.CreateBranchActionDelegate"
+               enablesFor="1"
+               icon="icons/full/obj16/branch.gif"
+               id="org.eclipse.emf.cdo.ui.CreateBranchAction"
+               label="Create Branch..."
+               menubarPath="branching"
+               style="push">
+         </action>
+      </objectContribution>
+   </extension>
+
+  <extension point="org.eclipse.ui.commands">
+      <command
+            id="org.eclipse.emf.cdo.ui.CreateBranch"
+            name="Create Branch"
+            defaultHandler="org.eclipse.emf.cdo.internal.ui.handlers.CreateBranchHandler"/>
+      <command
+            id="org.eclipse.emf.cdo.ui.LockObject"
+            name="Lock Object"
+            defaultHandler="org.eclipse.emf.cdo.internal.ui.handlers.LockingHandler$LockObject"/>
+      <command
+            id="org.eclipse.emf.cdo.ui.LockTree"
+            name="Lock Tree"
+            defaultHandler="org.eclipse.emf.cdo.internal.ui.handlers.LockingHandler$LockTree"/>
+      <command
+            id="org.eclipse.emf.cdo.ui.UnlockObject"
+            name="Unlock Object"
+            defaultHandler="org.eclipse.emf.cdo.internal.ui.handlers.LockingHandler$UnlockObject"/>
+      <command
+            id="org.eclipse.emf.cdo.ui.UnlockTree"
+            name="Unlock Tree"
+            defaultHandler="org.eclipse.emf.cdo.internal.ui.handlers.LockingHandler$UnlockTree"/>
+  </extension>
+
+  <extension point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.eclipse.ui.popup.any?after=group.new.branch">
+         <command
+               commandId="org.eclipse.emf.cdo.ui.CreateBranch"
+               icon="icons/full/obj16/branch.gif"
+               label="New Branch..."
+               style="push"
+               tooltip="Add a new branch">
+            <visibleWhen checkEnabled="false">
+               <with variable="activeMenuSelection">
+                  <and>
+                    <count value="1"/>
+                    <iterate>
+                      <adapt type="org.eclipse.emf.cdo.common.branch.CDOBranchCreationContext"/>
+                    </iterate>
+                  </and>
+               </with>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.eclipse.ui.popup.any?after=additions">
+         <command
+               commandId="org.eclipse.emf.cdo.ui.LockObject"
+               icon="icons/full/elcl16/lock.gif"
+               label="Lock Object"
+               style="push"
+               tooltip="Acquire write locks for the selected objects">
+            <visibleWhen checkEnabled="false">
+               <with variable="activeMenuSelection">
+                  <iterate ifEmpty="false">
+                    <and>
+                      <adapt type="org.eclipse.emf.ecore.EObject"/>
+                      <test property="org.eclipse.emf.cdo.object.transactional" value="true"/>
+                      <test property="org.eclipse.emf.cdo.object.writeLocked" value="false"/>
+                      <test property="org.eclipse.emf.cdo.object.writeLockedByOthers" value="false"/>
+                    </and>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+         <command
+               commandId="org.eclipse.emf.cdo.ui.LockTree"
+               icon="icons/full/elcl16/lock.gif"
+               label="Lock Tree"
+               style="push"
+               tooltip="Acquire write locks for the selected objects and their children">
+            <visibleWhen checkEnabled="false">
+               <with variable="activeMenuSelection">
+                  <iterate ifEmpty="false">
+                    <and>
+                      <instanceof value="org.eclipse.emf.ecore.EObject"/>
+                      <test property="org.eclipse.emf.cdo.object.transactional" value="true"/>
+                      <test property="org.eclipse.emf.cdo.object.writeLocked" value="false"/>
+                      <test property="org.eclipse.emf.cdo.object.writeLockedByOthers" value="false"/>
+                      <test property="org.eclipse.emf.cdo.object.children" value="true"/>
+                    </and>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+         <command
+               commandId="org.eclipse.emf.cdo.ui.UnlockObject"
+               icon="icons/full/elcl16/unlock.gif"
+               label="Unlock Object"
+               style="push"
+               tooltip="Release write locks for the selected objects">
+            <visibleWhen checkEnabled="false">
+               <with variable="activeMenuSelection">
+                  <iterate ifEmpty="false">
+                    <and>
+                      <adapt type="org.eclipse.emf.ecore.EObject"/>
+                      <test property="org.eclipse.emf.cdo.object.writeLocked" value="true"/>
+                    </and>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+         <command
+               commandId="org.eclipse.emf.cdo.ui.UnlockTree"
+               icon="icons/full/elcl16/unlock.gif"
+               label="Unlock Tree"
+               style="push"
+               tooltip="Release write locks for the selected objects and their children">
+            <visibleWhen checkEnabled="false">
+               <with variable="activeMenuSelection">
+                  <iterate ifEmpty="false">
+                    <and>
+                      <instanceof value="org.eclipse.emf.ecore.EObject"/>
+                      <test property="org.eclipse.emf.cdo.object.writeLocked" value="true"/>
+                      <test property="org.eclipse.emf.cdo.object.children" value="true"/>
+                    </and>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+  </extension>
+
+</plugin>

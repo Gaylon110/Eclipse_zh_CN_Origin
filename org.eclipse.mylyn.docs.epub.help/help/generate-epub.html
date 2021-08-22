@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>generate-epub</title><link type="text/css" rel="stylesheet" href="../book.css"/><style type="text/css">/*******************************************************************************
+ * Copyright (c) 2011, 2012 Torkild U. Resheim.
+ * 
+ * All rights reserved. This program and the accompanying materials are made
+ * available under the terms of the Eclipse Public License v2.0 which
+ * accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
+ * 
+ * Contributors: 
+ *     Torkild U. Resheim - initial API and implementation
+ *******************************************************************************/
+
+table, td, th {
+  border-color: gray; 
+  border-style: solid;
+}
+
+table {
+  width: 90%;
+  border-width: 0 0 1px 1px; 
+  border-spacing: 0; 
+  border-collapse: collapse;
+  padding: 1em;
+  }
+
+td, th {
+  margin: 0px; 
+  padding: 4px; 
+  border-width: 1px 1px 0 0; 
+  font-size: 0.9em;
+}
+
+pre {
+  margin: 0px;
+}
+
+th {
+  background-color: #c0c0c0;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+td {
+  background-color: #f0f0f0;
+}
+</style></head><body><h1 id="GenerateEPUBdirectlyfrommarkup">Generate EPUB directly from markup</h1><p>Lightweight wikitext markup can easily be converted into EPUBs. From within Eclipse right click on any supported markup file (ending in <code>*.textile</code>, <code>*.mediawiki</code> etc), then select <b>Wikitext &gt; Generate EPUB</b> from the context menu. This will bring up a wizard as illustrated below.</p><p><img border="0" src="generate-epub.png"/> </p><p>As the EPUB specification requires that certain properties are set for a publication &#8211; this dialog will offer the user interface for setting these. In addition to those that are already filled in you will have to enter a <b>title</b>, <b>language</b> and <b>subject</b>. Required properties are marked with an asterisk.</p></body></html>

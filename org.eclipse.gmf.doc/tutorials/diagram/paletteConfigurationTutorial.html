@@ -1,0 +1,432 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1" />
+<title>Tutorial: Configuring and Extending the Diagram Palette</title>
+</head>
+<body>
+<p><img src="../../logo.gif" /></p>
+
+<h1>Tutorial: Configuring and Extending the Diagram Palette</h1>
+
+<table border="0">
+<tr>
+<td>
+<p>Version: 0.1</p>
+</td>
+<td>
+<p>Date: September 13, 2005</p>
+</td>
+<td></td>
+</tr>
+
+<tr>
+<td>Version: 0.2</td>
+<td>Date: March 27, 2006</td>
+<td>Added section <a
+href="#_SeparatingDefinitionAndContribution">Separating the
+Definition and Contribution of a Palette Entry</a> and section <a
+href="#_RemovingPaletteEntry">Removing an Existing Palette
+Entry</a>.</td>
+</tr>
+</table>
+
+<h2>Contents</h2>
+
+<ul>
+<li><a href="#_Overview">Overview</a></li>
+
+<li><a href="#_References">References</a></li>
+
+<li><a href="#_Introduction">Introduction</a></li>
+
+<li><a href="#_PaletteProviderExtension">Adding a Palette Provider
+Extension</a></li>
+
+<li><a href="#_PaletteProviderFactoryClass">Creating and
+Registering the Palette Provider and Factory Classes</a></li>
+
+<li><a href="#_PaletteDrawer">Creating a Palette Drawer</a></li>
+
+<li><a href="#_PaletteStack">Creating a Palette Stack</a></li>
+
+<li><a href="#_PaletteTool">Creating a Palette Tool</a></li>
+
+<li><a href="#_AddToExisting">Adding a Palette Tool/Stack to an
+Existing Drawer or Stack</a></li>
+
+<li><a href="#_SeparatingDefinitionAndContribution">Separating the
+Definition and Contribution of a Palette Entry</a></li>
+
+<li><a href="#_RemovingPaletteEntry">Removing an Existing Palette
+Entry</a></li>
+
+<li><a href="#_Summary">Summary</a></li>
+</ul>
+
+<h2><a id="_Overview" name="_Overview"></a>Overview</h2>
+
+<p>[<a href="#top">back to top</a>]</p>
+
+<p>The palette is a UI control that displays a set of tools to be
+used in conjunction with the active diagram editor. The tools may
+be used for selection, object creation or any other action to be
+performed on the active diagram. This tutorial provides the reader
+with a guide for configuration of palette drawers, tools and
+stacks.</p>
+
+<h2><a id="_References" name="_References"></a>References</h2>
+
+<p>[<a href="#top">back to top</a>]</p>
+
+This tutorial references the following extension point:<br />
+<br />
+org.eclipse.gmf.runtime.diagram.ui.paletteProviders
+
+<p>More information about this extension points can be found in the
+palette provider's schema <a
+href="../../reference/extension-points/org_eclipse_gmf_runtime_diagram_ui_paletteProviders.html">
+documentation</a>.</p>
+
+<h2><a id="_Introduction"
+name="_Introduction"></a>Introduction</h2>
+
+<p>[<a href="#top">back to top</a>]</p>
+
+<p>In this tutorial, we will use the Logic Diagram Example to
+illustrate how to configure the palette diagram for a logic
+diagram. To gain familiarity with the Logic Diagram Example, refer
+to the <a
+href="../../examples-guide/diagram/logicExample.html">Logic Example
+Guide</a>.</p>
+
+<h2><a id="_PaletteProviderExtension"
+name="_PaletteProviderExtension"></a>Adding a Palette Provider
+Extension</h2>
+
+<p>[<a href="#top">back to top</a>]</p>
+
+Add an extension to register the palette drawer, stack and tools.
+The governing extension point for palette contribution is:
+org.eclipse.gmf.runtime.diagram.ui.paletteProviders
+
+<p>Please refer to the
+org.eclipse.gmf.runtime.diagram.ui.paletteProviders extension point
+<a
+href="../../reference/extension-points/org_eclipse_gmf_runtime_diagram_ui_paletteProviders.html">
+documentation</a> for specific information on the tags and
+attributes to use. The full extension XML can be found in
+org.eclipse.gmf.examples.runtime.diagram.logic/plugin.xml.<br />
+</p>
+
+&lt;!-- Palette Provider --&gt; <b>&lt;extension
+id="logicPaletteProvider" name="%ext.logicPaletteProvider"
+point="org.eclipse.gmf.runtime.diagram.ui.paletteProviders"&gt;</b>
+... &lt;/extension&gt;
+
+<p>The contribution given above will result in the following Logic
+Designer palette drawer, stack and tools:</p>
+
+<p><img src="logicDesignerPaletteStack.jpg" width="131"
+height="270" /></p>
+
+<h2><a id="_PaletteProviderFactoryClass"
+name="_PaletteProviderFactoryClass"></a>Creating and Registering
+the Palette Provider and Factory Classes</h2>
+
+<p>[<a href="#top">back to top</a>]</p>
+
+<p>The palette provider class reads the XML palette contributions
+from the provider's extension point and contributes them to an
+editor's palette based on the contribution criteria.</p>
+
+<p>The factory contribution is explained <a
+href="#_PaletteFactoryClassExplanation">below</a> along with an
+excerpt from <a
+href="#_LogicPaletteFactory">LogicPaletteFactory</a>.<br />
+</p>
+
+&lt;!-- Palette Provider --&gt; &lt;extension ...
+<b>&lt;paletteProvider</b>
+<b>class="org.eclipse.gmf.runtime.diagram.ui.providers.internal.DefaultPaletteProvider"</b><b>
+&gt;</b> &lt;Priority name="Low"&gt; &lt;/Priority&gt; &lt;editor
+id="LogicEditor"&gt; &lt;/editor&gt; <b>&lt;contribution</b>
+<b></b>factoryClass="org.eclipse.gmf.examples.runtime.diagram.logic.internal.providers.LogicPaletteFactory"&gt;
+... &lt;/extension&gt;
+
+<p><a id="_PaletteFactoryClassExplanation"
+name="_PaletteFactoryClassExplanation"></a>The contribution
+factoryClass defines the factory class used to map the tools to a
+tool type (e.g. CreationTool). You may want to define a new tool in
+order to add new functionality to your tool.<br />
+<br />
+</p>
+
+public class <a id="_LogicPaletteFactory"
+name="_LogicPaletteFactory">LogicPaletteFactory</a> extends
+PaletteFactory.Adapter { /** list of supported tool types. */
+private Map toolMap = new HashMap(); { toolMap.put(
+LogicConstants.TOOL_LED, new CreationTool(LogicSemanticType.LED) );
+toolMap.put( LogicConstants.TOOL_CIRCUIT, new
+CreationTool(LogicSemanticType.CIRCUIT) ); toolMap.put(
+LogicConstants.TOOL_ORGATE, new
+CreationTool(LogicSemanticType.ORGATE) ); toolMap.put(
+LogicConstants.TOOL_ANDGATE, new
+CreationTool(LogicSemanticType.ANDGATE) ); toolMap.put(
+LogicConstants.TOOL_XORGATE, new
+CreationTool(LogicSemanticType.XORGATE) ); toolMap.put(
+LogicConstants.TOOL_FLOWCONTAINER, new
+CreationTool(LogicSemanticType.FLOWCONTAINER) ); } /** list of
+supported tool types. */ private Map connectionMap = new HashMap();
+{ connectionMap.put( LogicConstants.TOOL_CONNECTION, new
+ConnectionCreationTool(LogicSemanticType.WIRE) ); } /* * Create the
+tool according to type */ public Tool createTool(String toolId) {
+if (toolId.equals(LogicConstants.TOOL_CONNECTION)) { return
+(ConnectionCreationTool)connectionMap.get(toolId); } else { return
+(CreationTool)toolMap.get(toolId); } } } 
+
+<h2><a id="_PaletteDrawer" name="_PaletteDrawer"></a>Creating a
+Palette Drawer</h2>
+
+<p>[<a href="#top">back to top</a>]</p>
+
+<p>A palette drawer is used to group a set of associated tools. The
+drawer can be open and closed by the application user.</p>
+
+<p>The palette drawer can be added and removed by adding and
+removing the entry tag with kind set to drawer. The schema <a
+href="../../reference/extension-points/org_eclipse_gmf_runtime_diagram_ui_paletteProviders.html">
+documentation specifies the rules for attributes. These attributes
+include the label, description, path, icon and id. The stack and
+tools that will reside under the drawer will need to include the
+drawer id in their respective paths. Note that removing a drawer
+requires removal of its stacks and tools.</a></p>
+
+<p>The order of the drawers, stacks and tools depend on the
+associated priority and position with respect to other entries in
+the same XML document.<br />
+</p>
+
+&lt;!-- Palette Provider --&gt; &lt;extension ... <b>&lt;entry</b>
+label="%LogicDrawer.Label" kind="drawer"
+description="%LogicDrawer.Description" <b>path="/"
+small_icon="icons/comp.gif" id="logicDrawer"&gt; &lt;expand&gt;
+&lt;content&gt; &lt;!-- expand by default for LogicEditors --&gt;
+&lt;/content&gt; &lt;/expand&gt; &lt;/entry&gt;</b> ...
+&lt;/extension&gt; 
+
+<h2><a id="_PaletteStack" name="_PaletteStack"></a>Creating a
+Palette Stack</h2>
+
+<p>[<a href="#top">back to top</a>]</p>
+
+<p>A palette stack is used to group a set of closely related tools
+(e.g. gate types on a logic diagram).</p>
+
+<p>The palette drawer can be added and removed by adding and
+removing the entry tag with kind set to stack. The schema <a
+href="../../reference/extension-points/org_eclipse_gmf_runtime_diagram_ui_paletteProviders.html">
+documentation specifies the rules for attributes. These attributes
+include the label, description, path, icon and id. The tools that
+will reside within the stack will need to include the stack id in
+their respective paths. Note that removing a stack requires removal
+of the stack's tools.<br />
+</a> &lt;!-- Palette Provider --&gt; &lt;extension ... <b>&lt;entry
+label="%GateStack.Label"</b> kind="stack"
+description="%GateStack.Description" small_icon="icons/or24.gif"
+path="/logicDrawer/" id="noteStack"&gt; &lt;/entry&gt; ...
+&lt;/extension&gt;</p>
+
+<h2><a id="_PaletteTool" name="_PaletteTool"></a>Creating a Palette
+Tool</h2>
+
+<p>[<a href="#top">back to top</a>]</p>
+
+<p>The palette tool can be added and removed by adding and removing
+the entry tag with kind set to tool. The schema <a
+href="../../reference/extension-points/org_eclipse_gmf_runtime_diagram_ui_paletteProviders.html">
+documentation specifies the rules for attributes. These attributes
+include the label, description, path, icon and id.<br />
+</a> &lt;!-- Palette Provider --&gt; &lt;extension ... <b>&lt;entry
+label="%LogicFlowTool.Label"</b> kind="tool"
+description="%LogicFlowTool.Description"
+large_icon="icons/logicflow24.gif" path="/logicDrawer/"
+small_icon="icons/logicflow16.gif" id="FlowContainer"&gt;
+&lt;/entry&gt; ... &lt;/extension&gt;</p>
+
+<h2><a id="_AddToExisting" name="_AddToExisting"></a>Adding a
+Palette Tool/Stack to an Existing Drawer or Stack</h2>
+
+<p>[<a href="#top">back to top</a>]</p>
+
+<p>To add or remove an existing drawer or stack, the user must
+specify the path to the existing drawer or stack in the entry tag
+attributes. The palette service execution is based on a REVERSE
+strategy and therefore the new tool or stack must have a higher
+priority than that of the destination.</p>
+
+<p>The following XML will contribute a new logic tool into the
+Logic Drawer set up in the logic example. The palette factory class
+will need to set up the tool internally as well. Note the priority
+is set to medium and that the contribution is made by adding this
+excerpt to org.eclipse.gmf.runtime.diagram.ui.geoshapes\plugin.xml
+file.<br />
+</p>
+
+&lt;!-- Palette Provider --&gt; &lt;extension
+id="logicPaletteProvider" name="%ext.logicPaletteProvider"
+point="org.eclipse.gmf.runtime.diagram.ui.paletteProviders"&gt;
+&lt;paletteProvider
+class="org.eclipse.gmf.runtime.diagram.ui.providers.internal.DefaultPaletteProvider"&gt;
+&lt;Priority name="Medium"&gt; &lt;/Priority&gt; &lt;editor
+id="LogicEditor"&gt; &lt;/editor&gt; &lt;contribution
+factoryClass="org.eclipse.gmf.runtime.diagram.ui.geoshapes.internal.providers.GeoshapePaletteFactory"&gt;
+<b>&lt;entry label="%NewLogicTool.Label" kind="tool"
+description="%NewLogicTool.Description"
+large_icon="icons/newlogic24.gif" path="/logicDrawer/"
+small_icon="icons/newlogic16.gif" id="NewTool"&gt;
+&lt;/entry&gt;</b> &lt;/contribution&gt; &lt;/paletteProvider&gt;
+&lt;/extension&gt;
+
+<p>The drawer now appears:</p>
+
+<p><img src="addedTool.jpg" width="127" height="141" /></p>
+
+<p>The label needs to be set in the appropriate plugin.properties
+file. It has been left uninterpolated for emphasis.</p>
+
+<h2><a id="_SeparatingDefinitionAndContribution"
+name="_SeparatingDefinitionAndContribution"></a>Separating the
+Definition and Contribution of a Palette Entry</h2>
+
+<p>[<a href="#top">back to top</a>]</p>
+
+<p>A plug-in may wish to define palette entries without
+contributing them to an editor so that other clients may contribute
+these palette entries to their editor's palette as
+appropriate.<br />
+<br />
+To define a palette entry only, simply set defineOnly to true in
+the palette entry's schema definition. The following XML will
+define the geoshapes drawer without contributing it to an
+editor.</p>
+
+&lt;extension
+point="org.eclipse.gmf.runtime.diagram.ui.paletteProviders"&gt;
+&lt;paletteProvider
+class="org.eclipse.gmf.runtime.diagram.ui.providers.DefaultPaletteProvider"&gt;
+&lt;Priority name="<b>Low</b>"&gt; &lt;/Priority&gt;
+&lt;contribution
+factoryClass="org.eclipse.gmf.runtime.diagram.ui.geoshapes.internal.providers.GeoshapePaletteFactory"&gt;
+&lt;entry <b>defineOnly="true"</b>
+description="%GeoshapeDrawer.Description" id="geoshapeDrawer"
+kind="drawer" label="%GeoshapeDrawer.Label"&gt; &lt;/entry&gt;
+&lt;entry label="%OvalTool.Label" kind="tool"
+description="%OvalTool.Description"
+large_icon="icons/IconEllipse24.gif" path="geoshapeDrawer/"
+small_icon="icons/IconEllipse.gif" id="oval"&gt; &lt;/entry&gt; ...
+&lt;/contribution&gt; &lt;/paletteProvider&gt;
+&lt;/extension&gt;<br />
+ The following XML shows how to contribute the predefined geoshapes
+drawer to an editor.<br />
+ &lt;extension
+point="org.eclipse.gmf.runtime.diagram.ui.paletteProviders"&gt;
+&lt;paletteProvider
+class="org.eclipse.gmf.runtime.diagram.ui.providers.DefaultPaletteProvider"&gt;
+&lt;Priority name="<b>Medium</b>"&gt; &lt;/Priority&gt; &lt;editor
+id="GeoshapeEditor"&gt; &lt;/editor&gt; &lt;contribution&gt;
+<b>&lt;predefinedEntry id="geoshapeDrawer" path="/"&gt;</b>
+&lt;/<b>predefinedEntry</b>&gt; &lt;/contribution&gt;
+&lt;/paletteProvider&gt; &lt;/extension&gt;<br />
+ The palette service execution is based on a REVERSE strategy and
+therefore the contribution of the palette entry must have a higher
+priority than that of the definition.<br />
+<br />
+ Other palette entries, such as palette tools can also be
+predefined and contributed by separate extensions. To add a palette
+tool from an existing drawer to a new drawer, use a predefined
+entry similar to the following:<br />
+ &lt;predefinedEntry id="existingDrawer/aTool"
+path="/myDrawer"/&gt;<br />
+Drawers that have already been contributed, can be expanded by
+default on an editor by another plugin.<br />
+ The following XML shows how an existing drawer would be
+expanded.<br />
+ &lt;extension
+point="org.eclipse.gmf.runtime.diagram.ui.paletteProviders"&gt;
+&lt;paletteProvider
+class="org.eclipse.gmf.runtime.diagram.ui.providers.DefaultPaletteProvider"&gt;
+&lt;Priority name="<b>High</b>"&gt; &lt;/Priority&gt;
+&lt;contribution&gt; <b>&lt;</b>predefinedEntry
+id="geoshapeDrawer"<b>&gt;</b> &lt;<b>expand force="true"</b>/&gt;
+&lt;/predefinedEntry&gt; &lt;/contribution&gt;
+&lt;/paletteProvider&gt; &lt;/extension&gt;
+
+<h2><a id="_RemovingPaletteEntry"
+name="_RemovingPaletteEntry"></a>Removing an Existing Palette
+Entry</h2>
+
+<p>[<a href="#top">back to top</a>]</p>
+
+<p>A plug-in may wish to remove a palette entry that another plugin
+has already contributed.<br />
+<br />
+ To remove a palette entry, simply set remove to true in the
+predefined palette entry's schema definition. The following XML
+shows how to remove a tool from the geoshapes drawer.</p>
+
+&lt;extension
+point="org.eclipse.gmf.runtime.diagram.ui.paletteProviders"&gt;
+&lt;paletteProvider
+class="org.eclipse.gmf.runtime.diagram.ui.providers.DefaultPaletteProvider"&gt;
+&lt;Priority name="<b>High</b>"&gt; &lt;/Priority&gt;
+&lt;contribution&gt; <b>&lt;predefinedEntry
+id="geoshapeDrawer/oval" remove="true"/&gt;</b>
+&lt;/contribution&gt; &lt;/paletteProvider&gt; &lt;/extension&gt;
+
+<h2><a id="_Summary" name="_Summary"></a> Summary</h2>
+
+<p>[<a href="#top">back to top</a>]</p>
+
+<p>In this tutorial, we did the following:</p>
+
+<ul>
+<li><a href="#_PaletteProviderExtension">Added a Palette Provider
+Extension</a></li>
+
+<li><a href="#_PaletteProviderFactoryClass">Created and Registed
+the Palette Provider and Factory Classes</a></li>
+
+<li><a href="#_PaletteDrawer">Created a Palette Drawer</a></li>
+
+<li><a href="#_PaletteStack">Created a Palette Stack</a></li>
+
+<li><a href="#_PaletteTool">Created a Palette Tool</a></li>
+
+<li><a href="#_AddToExisting">Added a Palette Tool to an Existing
+Drawer</a></li>
+
+<li><a href="#_SeparatingDefinitionAndContribution">Separated the
+Definition and Contribution of a Palette Drawer</a></li>
+
+<li><a href="#_RemovingPaletteEntry">Removed an Existing Palette
+Tool</a><br />
+<br />
+</li>
+</ul>
+
+<p><a href="http://www.eclipse.org/legal/epl-v10.html">Copyright
+(c) 2000,2005,2006 IBM Corporation and others. All Rights
+Reserved.</a></p>
+
+<br />
+<br />
+ <br />
+<br />
+ <br />
+<br />
+</body>
+</html>
+

@@ -1,0 +1,615 @@
+/******************************************************************************
+ * Copyright (c) 2016 Oracle
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *    Konstantin Komissarchik - initial implementation and ongoing maintenance
+ ******************************************************************************/
+
+package org.eclipse.sapphire;
+
+import static org.eclipse.sapphire.modeling.util.MiscUtil.equal;
+
+import org.eclipse.sapphire.modeling.CapitalizationType;
+import org.eclipse.sapphire.modeling.annotations.Derived;
+import org.eclipse.sapphire.modeling.localization.LocalizationService;
+import org.eclipse.sapphire.services.ValueNormalizationService;
+
+/**
+ * @author <a href="mailto:konstantin.komissarchik@oracle.com">Konstantin Komissarchik</a>
+ */
+
+public class Value<T> extends Property
+{
+    private static final int DEFAULT_CONTENT_INITIALIZED = 1 << 4;
+    
+    private String text;
+    private T content;
+    private String defaultText;
+    private T defaultContent;
+    private boolean writing;
+    
+    public Value( final Element element,
+                  final ValueProperty property )
+    {
+        super( element, property );
+    }
+    
+    /**
+     * Returns a reference to Value.class that is parameterized with the given type.
+     * 
+     * <p>Example:</p>
+     * 
+     * <p><code>Class&lt;Value&lt;Integer>> cl = Value.of( Integer.class );</code></p>
+     *  
+     * @param type the type
+     * @return a reference to Value.class that is parameterized with the given type
+     */
+    
+    @SuppressWarnings( { "unchecked", "rawtypes" } )
+    
+    public static <TX> Class<Value<TX>> of( final Class<TX> type )
+    {
+        return (Class) Value.class;
+    }
+    
+    @Override
+    public final void refresh()
+    {
+        refresh( false );
+    }
+    
+    private void refresh( final boolean refactor )
+    {
+        synchronized( root() )
+        {
+            if( ! this.writing )
+            {
+                init();
+                
+                refreshContent( false, refactor );
+                refreshDefaultContent( false );
+                refreshEnablement( false );
+                refreshValidation( false );
+            }
+        }
+    }
+    
+    private void refreshContent( final boolean onlyIfNotInitialized )
+    {
+        refreshContent( onlyIfNotInitialized, false );
+    }
+
+    private void refreshContent( final boolean onlyIfNotInitialized, final boolean refactor )
+    {
+        boolean initialized;
+        
+        synchronized( this )
+        {
+            initialized = ( ( this.initialization & CONTENT_INITIALIZED ) != 0 ); 
+        }
+        
+        if( ! initialized || ! onlyIfNotInitialized )
+        {
+            final ValueProperty p = definition();
+            
+            String afterText;
+            
+            if( p.hasAnnotation( Derived.class ) )
+            {
+                final DerivedValueService derivedValueService = service( DerivedValueService.class );
+                
+                if( ! initialized )
+                {
+                    final Listener listener = new Listener()
+                    {
+                        @Override
+                        public void handle( final Event event )
+                        {
+                            refreshContent( false );
+                        }
+                    };
+                    
+                    derivedValueService.attach( listener );
+                }
+                
+                afterText = derivedValueService.value();
+            }
+            else
+            {
+                afterText = binding().read();
+            }
+            
+            afterText = normalize( service( ValueNormalizationService.class ).normalize( p.encodeKeywords( afterText ) ) );
+            
+            final boolean proceed;
+            
+            synchronized( this )
+            {
+                initialized = ( ( this.initialization & CONTENT_INITIALIZED ) != 0 );
+                proceed = ( ! initialized || ! equal( this.text, afterText ) );
+            }
+            
+            if( proceed )
+            {
+                final T afterContent = parse( afterText );
+                
+                PropertyContentEvent event = null; 
+                
+                synchronized( this )
+                {
+                    final String beforeText = this.text;
+                    
+                    this.text = afterText;
+                    this.content = afterContent;
+                    
+                    if( initialized )
+                    {
+                        event = new ValuePropertyContentEvent( this, beforeText, afterText, refactor );
+                    }
+                    else
+                    {
+                        this.initialization |= CONTENT_INITIALIZED;
+                    }
+                }
+                
+                broadcast( event );
+            }
+        }
+    }
+    
+    private void refreshDefaultContent( final boolean onlyIfNotInitialized )
+    {
+        boolean initialized;
+        
+        synchronized( this )
+        {
+            initialized = ( ( this.initialization & DEFAULT_CONTENT_INITIALIZED ) != 0 );
+        }
+        
+        if( ! initialized || ! onlyIfNotInitialized )
+        {
+            final ValueProperty p = definition();
+            
+            String afterText = null;
+            
+            final DefaultValueService defaultValueService = service( DefaultValueService.class );
+            
+            if( defaultValueService != null )
+            {
+                if( ! initialized )
+                {
+                    final Listener listener = new Listener()
+                    {
+                        @Override
+                        public void handle( final Event event )
+                        {
+                            refreshDefaultContent( false );
+                        }
+                    };
+                    
+                    defaultValueService.attach( listener );
+                }
+                
+                afterText = defaultValueService.value();
+                
+                if( afterText != null )
+                {
+                    afterText = normalize( service( ValueNormalizationService.class ).normalize( p.encodeKeywords( afterText ) ) );
+                }
+            }
+            
+            final boolean proceed;
+            
+            synchronized( this )
+            {
+                initialized = ( ( this.initialization & DEFAULT_CONTENT_INITIALIZED ) != 0 );
+                proceed = ( ! initialized || ! equal( this.defaultText, afterText ) );
+            }
+            
+            if( proceed )
+            {
+                final T afterContent = parse( afterText );
+                
+                PropertyDefaultEvent event = null; 
+                
+                synchronized( this )
+                {
+                    this.defaultText = afterText;
+                    this.defaultContent = afterContent;
+                    
+                    if( initialized )
+                    {
+                        event = new PropertyDefaultEvent( this );
+                    }
+                    else
+                    {
+                        this.initialization |= DEFAULT_CONTENT_INITIALIZED;
+                    }
+                }
+                
+                broadcast( event );
+            }
+        }
+    }
+    
+    @Override
+    public final ValueProperty definition()
+    {
+        return (ValueProperty) super.definition();
+    }
+    
+    @Override
+    protected final ValuePropertyBinding binding()
+    {
+        return (ValuePropertyBinding) super.binding();
+    }
+    
+    @Override
+    public final boolean empty()
+    {
+        synchronized( root() )
+        {
+            init();
+            refreshContent( true );
+            
+            return ( this.text == null );
+        }
+    }
+
+    public final String text()
+    {
+        return text( true );
+    }
+    
+    public final String text( final boolean useDefaultValue )
+    {
+        init();
+        
+        refreshContent( true );
+        
+        synchronized( this )
+        {
+            if( this.text != null )
+            {
+                return this.text;
+            }
+        }
+        
+        if( useDefaultValue )
+        {
+            refreshDefaultContent( true );
+            
+            synchronized( this )
+            {
+                return this.defaultText;
+            }
+        }
+
+        return null;
+    }
+    
+    public final T content()
+    {
+        return content( true );
+    }
+    
+    public final T content( final boolean useDefaultValue )
+    {
+        init();
+        
+        refreshContent( true );
+        
+        synchronized( this )
+        {
+            if( this.content != null )
+            {
+                return this.content;
+            }
+        }
+        
+        if( useDefaultValue )
+        {
+            refreshDefaultContent( true );
+            
+            synchronized( this )
+            {
+                return this.defaultContent;
+            }
+        }
+
+        return null;
+    }
+    
+    public final String localized()
+    {
+        return localized( true );
+    }
+    
+    public final String localized( final boolean useDefaultValue )
+    {
+        return localized( useDefaultValue, CapitalizationType.NO_CAPS, true );
+    }
+    
+    public final String localized( final CapitalizationType capitalizationType,
+                                   final boolean includeMnemonic )
+    {
+        return localized( true, capitalizationType, includeMnemonic );
+    }
+    
+    public final String localized( final boolean useDefaultValue,
+                                   final CapitalizationType capitalizationType,
+                                   final boolean includeMnemonic )
+    {
+        final String sourceLangText = text( useDefaultValue );
+        
+        if( sourceLangText != null )
+        {
+            return element().adapt( LocalizationService.class ).text( sourceLangText, capitalizationType, includeMnemonic );
+        }
+        
+        return null;
+    }
+    
+    /**
+     * Returns parsed property content after running the actual property text through the localization service.
+     * 
+     * <p>Equivalent to localizedContent( true )</p>
+     * 
+     * @since 8.3 and 9.1
+     */
+    
+    public final T localizedContent()
+    {
+        return localizedContent( true );
+    }
+    
+    /**
+     * Returns parsed property content after running the actual property text through the localization service.
+     * 
+     * @param useDefaultValue indicates whether the default value should be used if property content is null
+     * @since 8.3 and 9.1
+     */
+    
+    public final T localizedContent( final boolean useDefaultValue )
+    {
+        return parse( localized( useDefaultValue ) );
+    }
+    
+    public final T getDefaultContent()
+    {
+        init();
+        refreshDefaultContent( true );
+        
+        return this.defaultContent;
+    }
+    
+    public final String getDefaultText()
+    {
+        init();
+        
+        refreshDefaultContent( true );
+        
+        return this.defaultText;
+    }
+    
+    public final boolean malformed()
+    {
+        init();
+        
+        refreshContent( true );
+        
+        synchronized( this )
+        {
+            if( this.text != null )
+            {
+                return ( this.content == null );
+            }
+        }
+        
+        refreshDefaultContent( true );
+        
+        synchronized( this )
+        {
+            return ( this.defaultText != null && this.defaultContent == null );
+        }
+    }
+    
+    /**
+     * Updates the value of the property. This method variant does not allow further model refactoring.
+     * 
+     * @param content the new value for the property, either in typed form or as an equivalent string; null is allowed
+     */
+    
+    public final void write( final Object content )
+    {
+        write( content, false );
+    }
+    
+    /**
+     * Updates the value of the property.
+     * 
+     * @param content the new value for the property, either in typed form or as an equivalent string; null is allowed
+     * @param refactor indicates whether refactoring actions can be taken as the result of the property change
+     * @throws UnsupportedOperationException is the property is not modifiable
+     */
+    
+    public final void write( final Object content, final boolean refactor )
+    {
+        init();
+        
+        if( definition().isReadOnly() )
+        {
+            throw new UnsupportedOperationException();
+        }
+
+        final ValueProperty p = definition();
+        
+        String text = null;
+        
+        if( content != null )
+        {
+            text = convertToText( content );
+        }
+        
+        text = normalize( service( ValueNormalizationService.class ).normalize( p.decodeKeywords( text ) ) );
+        
+        if( ! equal( text( false ), text ) )
+        {
+            synchronized( root() )
+            {
+                this.writing = true;
+                
+                try
+                {
+                    binding().write( text );
+                }
+                finally
+                {
+                    this.writing = false;
+                }
+                
+                refresh( refactor );
+            }
+        }
+    }
+    
+    protected String convertToText( final Object content )
+    {
+        final String text;
+        
+        if( content instanceof String )
+        {
+            text = (String) content;
+        }
+        else
+        {
+            text = service( MasterConversionService.class ).convert( content, String.class );
+            
+            if( text == null )
+            {
+                throw new IllegalArgumentException();
+            }
+        }
+        
+        return text;
+    }
+    
+    @Override
+    public final void clear()
+    {
+        write( null );
+    }
+    
+    @Override
+    public final void copy( final Element source )
+    {
+        if( source == null )
+        {
+            throw new IllegalArgumentException();
+        }
+        
+        if( definition().isReadOnly() )
+        {
+            throw new UnsupportedOperationException();
+        }
+        
+        final Property p = source.property( (PropertyDef) definition() );
+        
+        if( p instanceof Value<?> )
+        {
+            write( ( (Value<?>) p ).text( false ) );
+        }
+        else
+        {
+            clear();
+        }
+    }
+    
+    @Override
+    public final void copy( final ElementData source )
+    {
+        if( source == null )
+        {
+            throw new IllegalArgumentException();
+        }
+        
+        if( definition().isReadOnly() )
+        {
+            throw new UnsupportedOperationException();
+        }
+        
+        final Object content = source.read( name() );
+        
+        if( content != null )
+        {
+            write( content.toString() );
+        }
+        else
+        {
+            clear();
+        }
+    }
+    
+    @Override
+    
+    public boolean holds( final Element element )
+    {
+        if( element == null )
+        {
+            throw new IllegalArgumentException();
+        }
+        
+        return false;
+    }
+    
+    @Override
+    
+    public boolean holds( final Property property )
+    {
+        if( property == null )
+        {
+            throw new IllegalArgumentException();
+        }
+        
+        return ( this == property );
+    }
+    
+    @Override
+    
+    public final String toString()
+    {
+        final String text = text( false );
+        return ( text == null ? "<null>" : text );
+    }
+    
+    @SuppressWarnings( "unchecked" )
+    
+    private T parse( final String str )
+    {
+        if( str == null )
+        {
+            return null;
+        }
+        else
+        {
+            final ValueProperty p = definition();
+            
+            return (T) service( MasterConversionService.class ).convert( p.decodeKeywords( str ), p.getTypeClass() );
+        }
+    }
+    
+    private static String normalize( String str )
+    {
+        if( str != null && str.length() == 0 )
+        {
+            str = null;
+        }
+        
+        return str;
+    }
+    
+}

@@ -1,0 +1,899 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.emf.validation; singleton:=true
+Archiver-Version: Plexus Archiver
+Built-By: genie.emfservices
+Require-Bundle: org.eclipse.emf.ecore;bundle-version="[2.3.0,3.0.0)";v
+ isibility:=reexport,org.eclipse.emf.edit;bundle-version="[2.3.0,3.0.0
+ )",org.eclipse.core.expressions;bundle-version="[3.2.0,4.0.0)",org.ec
+ lipse.core.runtime;bundle-version="[3.2.0,4.0.0)",org.eclipse.core.re
+ sources;bundle-version="[3.2.0,4.0.0)";visibility:=reexport
+Bundle-ManifestVersion: 2
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-Vendor: %Plugin.providerName
+Import-Package: com.ibm.icu.text;version="4.0.0",com.ibm.icu.lang;vers
+ ion="4.0.0",com.ibm.icu.util;version="4.0.0"
+Eclipse-LazyStart: true
+Export-Package: org.eclipse.emf.validation,org.eclipse.emf.validation.
+ internal;x-friends:="org.eclipse.emf.validation.tests",org.eclipse.em
+ f.validation.internal.emfadapter;x-friends:="org.eclipse.emf.validati
+ on.tests",org.eclipse.emf.validation.internal.l10n;x-friends:="org.ec
+ lipse.emf.validation.tests",org.eclipse.emf.validation.internal.model
+ ed,org.eclipse.emf.validation.internal.modeled.model.validation,org.e
+ clipse.emf.validation.internal.modeled.model.validation.impl,org.ecli
+ pse.emf.validation.internal.modeled.model.validation.util,org.eclipse
+ .emf.validation.internal.service;x-friends:="org.eclipse.emf.validati
+ on.tests",org.eclipse.emf.validation.internal.util;x-friends:="org.ec
+ lipse.emf.validation.tests",org.eclipse.emf.validation.marker,org.ecl
+ ipse.emf.validation.model,org.eclipse.emf.validation.preferences,org.
+ eclipse.emf.validation.service,org.eclipse.emf.validation.util,org.ec
+ lipse.emf.validation.xml
+Bundle-Name: %Plugin.name
+Bundle-Version: 1.8.0.201706061352
+Bundle-Localization: plugin
+Bundle-Activator: org.eclipse.emf.validation.internal.EMFModelValidati
+ onPlugin$Implementation
+Created-By: Apache Maven 3.3.9
+Build-Jdk: 1.8.0_121
+
+Name: plugin.xml
+SHA-256-Digest: 1DMh/8dJI3e/uFYoDtVYpKfBc1BmZj4jBhLBaTeQRIo=
+
+Name: org/eclipse/emf/validation/internal/modeled/ClassProvider$Bundle
+ Provider.class
+SHA-256-Digest: Gcdure3D/hk38GMTIiy9Lj9amYU3q/fw8hS1kSNQp1U=
+
+Name: org/eclipse/emf/validation/internal/modeled/model/validation/Ena
+ blement.class
+SHA-256-Digest: 7R2hQwjdEUMHFZqjkCO0Rij5MghfkAoovgsuFnEQXjY=
+
+Name: org/eclipse/emf/validation/internal/util/XmlConfigurationElement
+ .class
+SHA-256-Digest: 3BV1dhd+SmN3NYybBMo24IczPyz/dNyGZyEPIvB8Eio=
+
+Name: org/eclipse/emf/validation/service/ConstraintFactory.class
+SHA-256-Digest: SMWNfPkvTwzhBBeTDCoNPBaKZY6w0dDSzbgtGv+pY8k=
+
+Name: org/eclipse/emf/validation/internal/service/ResourceStatus$1.cla
+ ss
+SHA-256-Digest: s3YkDZMlgCRi81X93TQblwdth93gzoh5Z/BCTs6iFg0=
+
+Name: org/eclipse/emf/validation/service/ModelValidationService$1.clas
+ s
+SHA-256-Digest: 2aRYps2m8aQss7q2rfe0JTfZNwHYRexsHzkaK8lkb6c=
+
+Name: org/eclipse/emf/validation/internal/util/ConstraintsContentHandl
+ er.class
+SHA-256-Digest: slCkAwziRKuLqrdMQwAg1JxrkQYpM9xB4FknCfSH6h8=
+
+Name: about.ini
+SHA-256-Digest: 5I7aDOYtski9BSZ5YaVncF7zRWHm8Q4bwDriYJaThtw=
+
+Name: org/eclipse/emf/validation/internal/util/TextUtils.class
+SHA-256-Digest: Nqw9lOVzEQFDOEsORZvltEhG1BHLzTUaWEHwceK3w9I=
+
+Name: org/eclipse/emf/validation/service/AbstractTraversalStrategy.cla
+ ss
+SHA-256-Digest: RW50n3nEpaYcbdjc6Etk+QyhTGzXu/Z6kJ+/Xz7sswY=
+
+Name: org/eclipse/emf/validation/model/IConstraintStatus.class
+SHA-256-Digest: Af5LueuLCUXqrUpbkXjOK1PEMSJ9skooBqbfZryoJ80=
+
+Name: org/eclipse/emf/validation/util/FilteredCollection$Filter.class
+SHA-256-Digest: Kd04827+gqtY/Kkb9k/O2EaRlzoPYgYAY5LCYmOccnM=
+
+Name: org/eclipse/emf/validation/internal/modeled/model/validation/imp
+ l/ConstraintProviderImpl.class
+SHA-256-Digest: tFQgirt4K8wNzuxoK0F45Bh0SafG/z0srfXogS7sTG0=
+
+Name: org/eclipse/emf/validation/internal/service/TraversalStrategyMan
+ ager.class
+SHA-256-Digest: t3KpwPlNQ7JnQrTTGOK1SH5BcOUP5D5B2udHfv5il9A=
+
+Name: org/eclipse/emf/validation/package.html
+SHA-256-Digest: 2Sra7o+Ue9moRQSaZCYtkW+buxUKBwLIH8EqDmf7Qlw=
+
+Name: org/eclipse/emf/validation/service/ITraversalStrategy$Recursive.
+ class
+SHA-256-Digest: /FWvU+D0R3PulI/izZgfFsM8UvEUOyZFp59Ra12PyT8=
+
+Name: org/eclipse/emf/validation/internal/modeled/model/validation/imp
+ l/CategoryImpl.class
+SHA-256-Digest: 93+ZGT9KKqiVK7R9AMihAMs2mBfJRb/MjZuRZQWXJow=
+
+Name: org/eclipse/emf/validation/internal/service/ConstraintCache$ECla
+ ssBucket.class
+SHA-256-Digest: TORoivfqJLbU0zySsnMVYA1pJ44LBCD6saypsIOgwIo=
+
+Name: org/eclipse/emf/validation/marker/MarkerUtil$2.class
+SHA-256-Digest: lD85bT8zyxVOsFW5q0qG0e1O3gz36B+6vJoLDOZRZcw=
+
+Name: org/eclipse/emf/validation/internal/modeled/model/validation/uti
+ l/ValidationSwitch.class
+SHA-256-Digest: MW3zdYoAL4EtMq3IrUyiPXHwEqtjbtScGinE4AZr1wk=
+
+Name: org/eclipse/emf/validation/internal/modeled/model/validation/Tar
+ get.class
+SHA-256-Digest: 8AS5NL4+ajg5XhXnXFD4jqFt1Y+pz54Ht+8k8BNvWAU=
+
+Name: org/eclipse/emf/validation/model/IModelConstraint.class
+SHA-256-Digest: smkoXvlTPwwqToiYzJrV/nRfoX+jQT1pk09jLhElXvc=
+
+Name: org/eclipse/emf/validation/preferences/EMFModelValidationPrefere
+ nces.class
+SHA-256-Digest: i57xwfuih3vl1nj5lUfN2L4zVgxFmv3PQiJ/ynWJeg8=
+
+Name: org/eclipse/emf/validation/service/ITraversalStrategy$Flat.class
+SHA-256-Digest: Y8dD1s9H8pf3KIHFmF1EieUbBc5T3OtRSRvi1ZJtqIw=
+
+Name: schema/constraintProviders.exsd
+SHA-256-Digest: 9fVIwoWYk3LNxBP8xMoHzapqbmpQmBymk43WozOeG04=
+
+Name: org/eclipse/emf/validation/internal/modeled/model/validation/Par
+ ameter.class
+SHA-256-Digest: 5zIvC2Ltog7k9zxp+Wjec6hZXCDzb4ZobbswKIlJIho=
+
+Name: org/eclipse/emf/validation/service/ModelValidationService.class
+SHA-256-Digest: v/6wLJugNBm2i82LV/yipu63ZhjswHJ/IcjVoYx1/wI=
+
+Name: org/eclipse/emf/validation/internal/modeled/model/validation/Cli
+ entContext.class
+SHA-256-Digest: cpto2ESs9zQYL0V1ocRaWp6AuuGBYfFgrLONHQyFILI=
+
+Name: org/eclipse/emf/validation/xml/package.html
+SHA-256-Digest: 4TApAPeta7xTq0u7TiN0afGkborMGHeFcg3pZGzkk60=
+
+Name: org/eclipse/emf/validation/internal/l10n/ValidationMessages.clas
+ s
+SHA-256-Digest: mBkfMFCqmrm9eIjarAXqrAdbmTssuWsfi2rUrZ/eIJ4=
+
+Name: org/eclipse/emf/validation/internal/modeled/model/validation/Fea
+ ture.class
+SHA-256-Digest: r+8sQqJupRPNZOrWzLt8ScPQSaA8SfLpV7RD+f6Pu7c=
+
+Name: org/eclipse/emf/validation/model/EvaluationMode.class
+SHA-256-Digest: H/Y6z1Bpu0R/t6f0nsg9IQZeFZi0gWUDgjKXzk1p2o0=
+
+Name: org/eclipse/emf/validation/internal/modeled/model/validation/imp
+ l/FeatureImpl.class
+SHA-256-Digest: MPO5DC1/yRn2JeVH2hikVlqzPOS15BGk9xsxHgUwFmM=
+
+Name: org/eclipse/emf/validation/internal/modeled/model/validation/Con
+ straintProvider.class
+SHA-256-Digest: 3gHOJ7tleQtpy4ViTTF2fksNC/xxanYXjtFDwCjs4ZY=
+
+Name: about.mappings
+SHA-256-Digest: o6VBgerqxcI8J2Mr+BX5vmFtU3eMrLZEuB+2UiS92HU=
+
+Name: org/eclipse/emf/validation/xml/ConstraintParserException.class
+SHA-256-Digest: d0z39udVYbSlkLOEUeCco/Td12AV0jj3+W1cZoopNaQ=
+
+Name: org/eclipse/emf/validation/service/IValidator.class
+SHA-256-Digest: nf4yICww89HbYEWm54fqE3B4pppi8EaWonQJT8QvNAY=
+
+Name: org/eclipse/emf/validation/model/ConstraintSeverity.class
+SHA-256-Digest: xAhNhx2rpAMbjZZ0rK94XzbeXydeF0/VJ9NalBRXs2I=
+
+Name: org/eclipse/emf/validation/util/XmlConfig.class
+SHA-256-Digest: KRucbp27gWi6kCQfR+iLnxJFzl4FSBLJWE8kpVLy3PY=
+
+Name: org/eclipse/emf/validation/model/IClientSelector.class
+SHA-256-Digest: 10rGDAxbn0t+mWkAfBDZFCovvL7A61U2wcOmJ4dw7xE=
+
+Name: org/eclipse/emf/validation/internal/modeled/model/validation/imp
+ l/ClientContextImpl.class
+SHA-256-Digest: GqGSELro0eRCCHzSKcZ0btFv1r+73x0tiIUUYKwj5hA=
+
+Name: org/eclipse/emf/validation/internal/service/LiveValidator$Attach
+ edToResourceNotificationFilter.class
+SHA-256-Digest: Y6ar4VKIFOFpckZBeLY7JZ5rbFnxzJ6OpPyF44gog2o=
+
+Name: org/eclipse/emf/validation/service/AbstractConstraintDescriptor.
+ class
+SHA-256-Digest: dnE53++yN1NlwVR7tBZMw5dFiW/mRU7sMbfTxOyb8mQ=
+
+Name: org/eclipse/emf/validation/service/IConstraintDescriptor.class
+SHA-256-Digest: 5BQAqBJw30zQid45bD2gu4pnreXM8++DH6iK3lN2cLM=
+
+Name: org/eclipse/emf/validation/internal/service/TraversalStrategyMan
+ ager$Descriptor$ThreadLocalLazyStrategy.class
+SHA-256-Digest: Yf+g74acANxIhKrFwO9atZm5jOiy2w4+ezU/BDh5nA4=
+
+Name: org/eclipse/emf/validation/service/IValidationListener.class
+SHA-256-Digest: 86VmgQJ4zTWkuoaiZBXK/WGeHQ3pOi+2/cvrB2qZg6U=
+
+Name: org/eclipse/emf/validation/internal/modeled/model/validation/uti
+ l/ValidationAdapterFactory$1.class
+SHA-256-Digest: LJjfa24dlAMPenB9cimqcR16sWr0YlOFB8wflYQzBOk=
+
+Name: org/eclipse/emf/validation/marker/IMarkerConfigurator.class
+SHA-256-Digest: HaLzCVzA2KIAumnsHadXUtAowpERJy6IdHcdMgRIo18=
+
+Name: org/eclipse/emf/validation/service/ModeledConstraintsLoader$_Pro
+ viderDescriptor.class
+SHA-256-Digest: w+//+WI0AF4evTkkg5bSnKSMzbz0tmZIT2rogAYzEI4=
+
+Name: org/eclipse/emf/validation/internal/service/ClientContextManager
+ .class
+SHA-256-Digest: p1PiHFmZWw/wJc7RjG0a9BN2bV3mIVbHaNx8Mo0SYec=
+
+Name: model/validation.ecorediag
+SHA-256-Digest: HFyhtx7eimQNCEeuqaeiuAriLft6QjJHXtfZZkCaHmU=
+
+Name: org/eclipse/emf/validation/internal/service/ClientContext$Bindin
+ gFilter$1.class
+SHA-256-Digest: rxEJoiucBPfAtVkKfHpEBdNWTG/I+MiYiXJ2JFkCzQo=
+
+Name: org/eclipse/emf/validation/internal/modeled/model/validation/imp
+ l/TraversalStrategyImpl.class
+SHA-256-Digest: 2/epmGv47z6E7/dzOw3PQWsdLaVxBTiYHaFpcpVzcFc=
+
+Name: org/eclipse/emf/validation/internal/service/GetLiveConstraintsOp
+ eration$1.class
+SHA-256-Digest: v+TVfGTxoag8HjOuBYbkbJsJKRxf0dn48Gyoj/IlLY4=
+
+Name: org/eclipse/emf/validation/internal/l10n/ValidationMessages.prop
+ erties
+SHA-256-Digest: n3TCsm5x5WdfsNZzaSYox4oobR7sZc/8PH2KLPNPs7s=
+
+Name: org/eclipse/emf/validation/internal/modeled/model/validation/imp
+ l/EventImpl.class
+SHA-256-Digest: CdQzkMZ/+peW4QAnzWG40tW4O0bkX6S0dfEed7M2HBI=
+
+Name: org/eclipse/emf/validation/internal/modeled/model/validation/imp
+ l/TargetImpl.class
+SHA-256-Digest: bnSJtaga6U/vWGw1lUxevrtuIw/XacDM4JpfuqMUOBk=
+
+Name: org/eclipse/emf/validation/internal/emfadapter/EMFConstraintPars
+ er.class
+SHA-256-Digest: aw3HhreK3MLcqM/i5FpfM+vkFPxiH2irxEY5nbX6K+E=
+
+Name: org/eclipse/emf/validation/internal/modeled/ClassProvider$ClassL
+ oaderProvider.class
+SHA-256-Digest: bNw3EucoODMwkb4vVvyfVUehXkPxjoKWQ4fhZvNDGnY=
+
+Name: org/eclipse/emf/validation/internal/util/JavaConstraintParser$Co
+ nstraintAdapter.class
+SHA-256-Digest: Fk3frPtfT0p3MsRdH0M9b8ooGrpU7kRME2fDCPH582M=
+
+Name: org/eclipse/emf/validation/internal/service/AbstractValidationCo
+ ntext$ConstraintFilter.class
+SHA-256-Digest: 0m6vo/R43tsh954EIHGpmkPGGkUvKakytW7jK2NWf2g=
+
+Name: org/eclipse/emf/validation/internal/modeled/model/validation/Unp
+ arsedConstraint.class
+SHA-256-Digest: /3ft6HbXKmWrpIYNXHNqFc2WYC8eH/6iKSr8CKOpGG0=
+
+Name: org/eclipse/emf/validation/internal/emfadapter/EMFConstraintAdap
+ ter$SubstitutionProvider.class
+SHA-256-Digest: exgD25T35k7gfdNgmhVqpNOzf1kXK4fSEdtZRL5zvaw=
+
+Name: org/eclipse/emf/validation/internal/modeled/model/validation/Eve
+ ntTypesEnum.class
+SHA-256-Digest: bwyAxFIIghkEdN04AA6b3AJGyjroSSR0EGIzRSk82Jw=
+
+Name: org/eclipse/emf/validation/internal/service/LiveValidator.class
+SHA-256-Digest: LtQX/6e5PA31uHXDdhrhDgwgIvQrSq8lQRyK46WD7AY=
+
+Name: org/eclipse/emf/validation/service/IBatchValidator.class
+SHA-256-Digest: NSc0lgi2OIKy/9SaINjGtqfBYfllB65dFLEc8eMt7GA=
+
+Name: org/eclipse/emf/validation/internal/util/XmlExpressionSelector.c
+ lass
+SHA-256-Digest: mZUa8DKuSEwAM+iSyspu+BNYj3ZN6JR4UoZiBxH3mXU=
+
+Name: org/eclipse/emf/validation/internal/service/BatchValidator$Defau
+ ltRecursiveTraversalStrategy.class
+SHA-256-Digest: 85H3zwKtHAzp9MSaY5mDyWJkdmu5xBjg4yUXlYJMc+M=
+
+Name: org/eclipse/emf/validation/service/ConstraintChangeEvent.class
+SHA-256-Digest: G25wygcwyMo/Hp0tmR/0V2YPB3eJgE+71WrTagZQjsg=
+
+Name: org/eclipse/emf/validation/IValidationContext.class
+SHA-256-Digest: TK5aV2f35hAQFCHgZ2Gv+Yct2plCuXZb/BZVAU12SVo=
+
+Name: org/eclipse/emf/validation/service/AbstractConstraintProvider.cl
+ ass
+SHA-256-Digest: KS2feEBcj5PVD4Yj5iEjkcEgql+4NeoDkh8coPly5qI=
+
+Name: org/eclipse/emf/validation/internal/modeled/model/validation/imp
+ l/ConstraintBindingsBundleImpl.class
+SHA-256-Digest: zRFtI4I4Ldm22Jytz2fIoOvHji9vRa5jTj4PFvXEDkc=
+
+Name: org/eclipse/emf/validation/internal/modeled/model/validation/Mod
+ eEnum.class
+SHA-256-Digest: OLp42Kn9QLG8kQpBD68089cAuaHYBCbgFXQ6GCuq2uM=
+
+Name: org/eclipse/emf/validation/internal/modeled/ModeledConstraintDes
+ criptor.class
+SHA-256-Digest: srdPV1Mt8r9zmY+rrHcTnQBTi+mngQUX6sQi6aJu5Lk=
+
+Name: org/eclipse/emf/validation/internal/service/GetLiveConstraintsOp
+ eration.class
+SHA-256-Digest: WH1QietLLLBZXDQEmv6LJcKpmw1XYtS/6OLahpTTcLU=
+
+Name: org/eclipse/emf/validation/service/IConstraintParser.class
+SHA-256-Digest: QxC05wRx37q6CwuZJCnhVTUsYC+9NwBrH2gewFQO7jw=
+
+Name: org/eclipse/emf/validation/internal/service/ClientContext$1.clas
+ s
+SHA-256-Digest: YkEa8n/csfao7Agjl22k14SUmzFE6dvScKU6GNajvuo=
+
+Name: org/eclipse/emf/validation/internal/package.html
+SHA-256-Digest: scYB/XHfi611ac7cSWamXLzvjd1TmaHz2FNOFsq4iQk=
+
+Name: org/eclipse/emf/validation/internal/modeled/ModeledConstraintPro
+ vider.class
+SHA-256-Digest: EfcB08YGm4NtE/41UYtR+uVE4pjLLRjYjalIV+7zMHg=
+
+Name: org/eclipse/emf/validation/internal/modeled/model/validation/Par
+ ser.class
+SHA-256-Digest: 1kO0f+D2FbI/Q5lbWMYmImNUAZutfidnRoeUcgM9T5Q=
+
+Name: org/eclipse/emf/validation/service/ILiveValidator.class
+SHA-256-Digest: nCc4P9pJKtC3kKrHZT+ajeIyd/iFH7e+KstxztwCDRg=
+
+Name: org/eclipse/emf/validation/service/package.html
+SHA-256-Digest: svIF+Wp8G8cYH31YFZG2g5t01wJNraAeksCNOd00zRQ=
+
+Name: org/eclipse/emf/validation/internal/modeled/model/validation/Cat
+ egory.class
+SHA-256-Digest: aeGY9302rn7TzA125EkUBTnlwoCwKnKTOkGCYrH2nLA=
+
+Name: org/eclipse/emf/validation/internal/modeled/model/validation/imp
+ l/EnablementImpl.class
+SHA-256-Digest: 9I6F/7NujhAk0DliEWUJopnHdnrmq+vH5WQbrV9BCeQ=
+
+Name: org/eclipse/emf/validation/model/CategoryManager$1.class
+SHA-256-Digest: wV0K6NQt468E7DErUcSszBpA+bApsyZ94i/eX/3uxLI=
+
+Name: org/eclipse/emf/validation/internal/service/ClientContext$Constr
+ aintExclusion.class
+SHA-256-Digest: kihunXxfye4R+l5al6kRB6jagaMlA+tVB2nUXldd9Vc=
+
+Name: org/eclipse/emf/validation/internal/service/AbstractValidationCo
+ ntext$1ConstraintsIterator.class
+SHA-256-Digest: /nvo0qbQZeN6pjHouUL2Cjm+s9CzqLmp7BQjmV+L+BM=
+
+Name: org/eclipse/emf/validation/xml/AbstractXmlConstraintDescriptor.c
+ lass
+SHA-256-Digest: 46MKhNG6z8JC5DaIU5tdQvA1RxEkh/UNwWqkCwnIynA=
+
+Name: org/eclipse/emf/validation/internal/modeled/model/validation/Cus
+ tomEvent.class
+SHA-256-Digest: mH4t7xKNj4WSHgwSa/Li3RkcBgLwb9HptuvaensPAlU=
+
+Name: model/validation.ecore
+SHA-256-Digest: m0dTHSN3rSwsGH+kIBb0PMJCm6ghjX/VDj565lOzibM=
+
+Name: org/eclipse/emf/validation/internal/modeled/model/validation/Con
+ straintBindingsBundle.class
+SHA-256-Digest: odD9P8M0cTvIK2SCNlUkFM65THSC2bOQRv0TbDy/PWE=
+
+Name: org/eclipse/emf/validation/service/EventTypeService$1.class
+SHA-256-Digest: wjDEKgQfYMOJlZyleCTGJh9RCjd7WWhzvzsYo1BpQ3k=
+
+Name: org/eclipse/emf/validation/internal/service/AbstractValidationCo
+ ntext.class
+SHA-256-Digest: bjuFLYgGDvYmJ+8kuFUO7D85SFPPrKnJJUIc+NL0z6Y=
+
+Name: org/eclipse/emf/validation/marker/MarkerUtil$1.class
+SHA-256-Digest: yisz0gwU2gDgs3tb3PfrgJS29FzNyYii/FukFbah9r8=
+
+Name: org/eclipse/emf/validation/marker/MarkerUtil$FileStatusListPair.
+ class
+SHA-256-Digest: xUOmWOcXrPdsXdOIAP4cSe09suQXlQGiMcjv2K7qe3A=
+
+Name: org/eclipse/emf/validation/internal/util/StringMatcher.class
+SHA-256-Digest: 4h71M6xEzG7ok/NQolhXpyGQz2Qp3636xUFS6Vc+1gw=
+
+Name: org/eclipse/emf/validation/service/ModelValidationService$LazyLi
+ stener.class
+SHA-256-Digest: lOic/0Yj3yTbq2AjqK+cIk/u7iouk5j+JOsiE8+MNX8=
+
+Name: org/eclipse/emf/validation/util/package.html
+SHA-256-Digest: V6hKxWSASb6PMUIFZYNHqccGhQD8loqkTHr6futc+lE=
+
+Name: org/eclipse/emf/validation/xml/IXmlConstraintDescriptor.class
+SHA-256-Digest: Z2tu8mpGAfMTxPzoYWKalfvDkBHrZKMw3f3RIxmRLy4=
+
+Name: org/eclipse/emf/validation/model/package.html
+SHA-256-Digest: umH4xsAs4pOwig8CsPjCs8S567OZ4P0BcTy90og97uI=
+
+Name: org/eclipse/emf/validation/internal/util/JavaConstraintParser.cl
+ ass
+SHA-256-Digest: bUrC1LoPhWGO9YH2tZVf5AXi4iw3SFHODfuGzpQtZyU=
+
+Name: org/eclipse/emf/validation/internal/util/XmlConstraintDescriptor
+ .class
+SHA-256-Digest: kBhg7tcWZgP7MW0/JUIhW88UojOL5sBOZ0chostlKYE=
+
+Name: org/eclipse/emf/validation/internal/service/ClientContextManager
+ $1.class
+SHA-256-Digest: qzFJCQhCj/GYB5ZlqTGbJmgnF/FbnGYa3/mwlR8W3dM=
+
+Name: org/eclipse/emf/validation/service/ModeledConstraintsLoader.clas
+ s
+SHA-256-Digest: KdSOqS+xofcmlhNj2nXTRnNZWyx3A7z3H9bou8eT16U=
+
+Name: org/eclipse/emf/validation/internal/modeled/model/validation/imp
+ l/ConstraintsImpl.class
+SHA-256-Digest: mPfyXF3XZnsTAwPpGOWBuv/8q35AmFIVZOzLFV/5ioU=
+
+Name: org/eclipse/emf/validation/internal/modeled/ValidationModelOpera
+ tionsImpl.class
+SHA-256-Digest: 9wDT9MYdwV9obv72CQ66DI1T6X/JxHbm5bgTb/cH6Rw=
+
+Name: org/eclipse/emf/validation/xml/IXmlConstraintParser.class
+SHA-256-Digest: Nbhd0Eofr0IWK9jJAEI8UocPae2zpKQqUDT6CPhMH54=
+
+Name: org/eclipse/emf/validation/internal/service/IClientContext.class
+SHA-256-Digest: WwHo9frR2qexYu+hiliZ3kvW7AEDafvrPM6PrHn+ORg=
+
+Name: org/eclipse/emf/validation/internal/modeled/model/validation/Con
+ straintsBundle.class
+SHA-256-Digest: jOynZCt6vBp2jovYytNFpNKk90C3EeHAwMiIkIjzst8=
+
+Name: org/eclipse/emf/validation/internal/service/ConstraintCache$1.cl
+ ass
+SHA-256-Digest: MohdbQXfK9WtxlARME96A0I+A6ZWL11wy92a5zq/lSQ=
+
+Name: org/eclipse/emf/validation/marker/MarkerUtil.class
+SHA-256-Digest: 2RbtSZt/XU67dpDtQnpC4neqPp958cd/NCKVV/cg1K0=
+
+Name: org/eclipse/emf/validation/service/ITraversalStrategy$Recursive$
+ 1.class
+SHA-256-Digest: k1xT+/DCJUeitLTdG+zYok4uwlETBtsi6q5lLSSTmYE=
+
+Name: org/eclipse/emf/validation/service/INotificationGenerator.class
+SHA-256-Digest: pDgapW8cTj9Q5HbkhVqlz+8NHcsk+x+LnapeRuyCKoA=
+
+Name: org/eclipse/emf/validation/xml/XmlConstraintProvider.class
+SHA-256-Digest: VmNHQN7f8eTQFIkYxJGz0cORCW9VCT2u1xeW8AyQgrM=
+
+Name: schema/modeledConstraintProviders.exsd
+SHA-256-Digest: PcpvgEw0fhSE8H/bQnaao9HEBhCuLWEX1JYBuTkVAm8=
+
+Name: org/eclipse/emf/validation/internal/service/ClientContext$Catego
+ rySet.class
+SHA-256-Digest: Zl2Zvm9NenxoKXqxucEjOXbu0G29C9k1diFttVjeYMI=
+
+Name: org/eclipse/emf/validation/service/IBatchValidator$1.class
+SHA-256-Digest: eI3PLy5rxKOF2KpOMl1NWVK5UcvzSShej/jKMlowiZo=
+
+Name: org/eclipse/emf/validation/model/ModelConstraint.class
+SHA-256-Digest: XMT3PnqYH9YEycDBWXVJkuBBfJLhAJOHLbtSCTy9lGo=
+
+Name: org/eclipse/emf/validation/internal/modeled/ModeledConstraintsCo
+ nfig.class
+SHA-256-Digest: d4RDu5RmVL3BB4eUR74C9LBvSqJe7E9z5yiko3tKCPQ=
+
+Name: org/eclipse/emf/validation/internal/modeled/model/validation/imp
+ l/BindingImpl.class
+SHA-256-Digest: QpQMf776uMoqqb5ItFuVp833ttsLIXwX1229Byb7to8=
+
+Name: org/eclipse/emf/validation/internal/service/ProviderDescriptor$N
+ ullProvider.class
+SHA-256-Digest: w5JmtKrM9/W7ZOs2Zm1v32a0eVGFJ62wAKNDNmPtmX8=
+
+Name: org/eclipse/emf/validation/internal/service/ResourceStatus.class
+SHA-256-Digest: VAvj8tgSmo+QJrhVng9qwFRCEpnX+jl5HhP0+nhQ9gM=
+
+Name: schema/traversal.exsd
+SHA-256-Digest: sIHzlau1RRVNbXi/10cIRwCCbaj3tsaQyu0TgFAlibI=
+
+Name: org/eclipse/emf/validation/model/ConstraintStatus$Multi.class
+SHA-256-Digest: McMdFWxsALr85dchhaJPeWs8LxMuxwiDL/IYCrpidnc=
+
+Name: org/eclipse/emf/validation/internal/service/GetBatchConstraintsO
+ peration.class
+SHA-256-Digest: qRDcN4b+jQv27LeIc7YyJ4yXNcBveDE7YuC6711HAqo=
+
+Name: org/eclipse/emf/validation/service/AbstractConstraintProvider$Co
+ nstraintProxy.class
+SHA-256-Digest: DfIqa59CPz/XPZ7jlmw/hE+gX9XNgPh9IKv9poj/o24=
+
+Name: org/eclipse/emf/validation/internal/modeled/model/validation/imp
+ l/ParameterImpl.class
+SHA-256-Digest: 59MVw/M3urqifdKmAhypCIUNW9Oy0SH4gJ2Zx6Bhsvc=
+
+Name: org/eclipse/emf/validation/internal/modeled/ClassProvider.class
+SHA-256-Digest: yH+CrlaORZz+s9SBYA97dSR5QbA/qa443ib+AlDY+/I=
+
+Name: schema/constraintParsers.exsd
+SHA-256-Digest: 6wAD3GQllZRDpvITbkH9prHeqTjt8V3sgcZGOCyi1ss=
+
+Name: org/eclipse/emf/validation/internal/emfadapter/EMFConstraintAdap
+ ter.class
+SHA-256-Digest: SOHQsYiFwEpwvdcuYeLSf0IGB+HUpbPqoQw6ouKIVtg=
+
+Name: org/eclipse/emf/validation/service/ConstraintExistsException.cla
+ ss
+SHA-256-Digest: s1OOOtp9lNK7YKn27b2TYVPWCCQeK/5ki6RCoIXJFio=
+
+Name: org/eclipse/emf/validation/internal/service/TraversalStrategyMan
+ ager$Descriptor.class
+SHA-256-Digest: xkwbfb/R3ZdsoxeEjjJ0rknHSZQr+0SSABuiMqHf2FY=
+
+Name: META-INF/maven/org.eclipse.emf.validation.plugins/org.eclipse.em
+ f.validation/pom.xml
+SHA-256-Digest: hwQ8ZFYyHZfY6Avb8pQZxf7OWYopyh+RnmdQOfmKQIU=
+
+Name: org/eclipse/emf/validation/AbstractModelConstraint.class
+SHA-256-Digest: AVUuRyZalL2V1W3L2gD0DVi/jLWDnnftLgYwwSeJpbE=
+
+Name: build.properties
+SHA-256-Digest: 0u/KFjKwBwe/gI7BBmMetXSvD8OSNFMHqAOHlPDPx00=
+
+Name: org/eclipse/emf/validation/service/ModelValidationService$4.clas
+ s
+SHA-256-Digest: mysKQbB1I54QivK92l5rsY9qhKjf9lM5DfdoPaMnycg=
+
+Name: org/eclipse/emf/validation/internal/modeled/model/validation/Con
+ straint.class
+SHA-256-Digest: eej0xUcQKt6/48p27H0C357TAySv3F5somAMsTNeiwA=
+
+Name: org/eclipse/emf/validation/internal/service/TraversalStrategyMan
+ ager$1.class
+SHA-256-Digest: FBevL4XbtTZqA2D4xLoDe3xtqNNDHVDrJY8W2gQ7hTw=
+
+Name: org/eclipse/emf/validation/internal/service/GetBatchConstraintsO
+ peration$1BatchOnlyFilter.class
+SHA-256-Digest: P4QBGXdBb8BKs9xaapLOSmxaoo0BtWtLDPZ45gfy2k4=
+
+Name: org/eclipse/emf/validation/internal/service/IProviderOperation.c
+ lass
+SHA-256-Digest: HQ7zl9WW43/ri/tz6ksF53Cm+2vv/DsNHP8sM0L71sI=
+
+Name: org/eclipse/emf/validation/service/IConstraintFilter$1.class
+SHA-256-Digest: BBcH7P0k58KBTRYuHsAu24U1pfBgIo+l9IMrOva7tRw=
+
+Name: org/eclipse/emf/validation/internal/modeled/model/validation/imp
+ l/SelectorImpl.class
+SHA-256-Digest: PV7thOEIj6uX1rGSE6YZKEusb0KFPNmoNsewvnSC2do=
+
+Name: org/eclipse/emf/validation/internal/service/AbstractValidationCo
+ ntext$SuccessStatus.class
+SHA-256-Digest: gkIZRlEKoyV00h1xuak8cOXrUZk/LGqNNYJPNki4XLk=
+
+Name: org/eclipse/emf/validation/internal/service/ClientContext.class
+SHA-256-Digest: BWM/NV6I353dlNJ6kjbt4ZZTL0XIJ6LDvmtzXlG5vXQ=
+
+Name: org/eclipse/emf/validation/internal/modeled/model/validation/imp
+ l/OclConstraintImpl.class
+SHA-256-Digest: VCfA2ATmsgTk3Rb+dOS7l2PmTilaHAwXXy13FZ3lNEk=
+
+Name: org/eclipse/emf/validation/internal/util/DisabledConstraint.clas
+ s
+SHA-256-Digest: Hl0ipYWtx2UhOMxY7F0Xl5z4nbXcUwfhyiHChEho9k8=
+
+Name: org/eclipse/emf/validation/internal/modeled/model/validation/Ocl
+ Constraint.class
+SHA-256-Digest: hw+5dpeIr8iEGlDbxGwVSZQP+e+1uUC2l6tb+0L60kA=
+
+Name: org/eclipse/emf/validation/internal/modeled/model/validation/Bin
+ ding.class
+SHA-256-Digest: ck5b7lfPjLAKNfNtusemkOBRVNF6tw+8R65thYYObsA=
+
+Name: org/eclipse/emf/validation/service/IConstraintFilter.class
+SHA-256-Digest: ZyLGRXpx9/4fv+nbRWzVKLHGaXvZiA8FD+DEQgQY/3U=
+
+Name: org/eclipse/emf/validation/internal/modeled/model/validation/Val
+ idationPackage$Literals.class
+SHA-256-Digest: kf0Mi+KZMg5HVuo4bilajbloGEgpTRJOcDaHy8zNbdA=
+
+Name: org/eclipse/emf/validation/service/ConstraintRegistry.class
+SHA-256-Digest: +FiTcerpfCO03Xh4Y6fNFTpQWKwXmeZodpt+XAhuXBY=
+
+Name: org/eclipse/emf/validation/internal/EMFModelValidationPlugin$Tra
+ cing.class
+SHA-256-Digest: 8+DKrUk5qKr7qvUYxLR5lyQBv1DYXGDMdNtNXKc6Mco=
+
+Name: org/eclipse/emf/validation/service/IParameterizedConstraintDescr
+ iptor.class
+SHA-256-Digest: X96uIrhxpDWLwoS9/ILPxiyaDhWbSd4F3/sIx6lrAzQ=
+
+Name: org/eclipse/emf/validation/internal/util/ConstraintsContentHandl
+ er$Stack.class
+SHA-256-Digest: qtCsuyfKTa76vITygHcjDOD13gaYqPq4OgxzBhsDk88=
+
+Name: org/eclipse/emf/validation/internal/EMFModelValidationPlugin.cla
+ ss
+SHA-256-Digest: O48tht7q7qIpjXx+QL/Wu8ATLAf2tFuLuMqRuN85TR4=
+
+Name: .options
+SHA-256-Digest: 6HA4++MCpcnmhyWO/lwAXIK6o123Ur/Y+pliIZLbG4M=
+
+Name: org/eclipse/emf/validation/internal/service/BatchValidator.class
+SHA-256-Digest: SGo1oRAvksnchXXHsd/pNp0JF8VNV5ZsfXX9mhxn0m4=
+
+Name: org/eclipse/emf/validation/internal/service/AbstractValidator.cl
+ ass
+SHA-256-Digest: AbbR5OU/Xiu8MjjOOoQpm5m5cpr81uLdSt2WiIn19q0=
+
+Name: org/eclipse/emf/validation/internal/EMFModelValidationPlugin$Imp
+ lementation.class
+SHA-256-Digest: i7pmcjdo+cc/SviGnIlB9peuPIByct4DtfEGUoS1xAc=
+
+Name: modeling32.png
+SHA-256-Digest: saSrfvJ79Uzl2BFpCbuVBho1UTuf14LrjD+wGJG44Ok=
+
+Name: org/eclipse/emf/validation/model/CategoryManager.class
+SHA-256-Digest: bojxVcus8TpB0b4nAbi1zkBLbsFNppJgYGOF+hGMTtM=
+
+Name: schema/constraintBindings.exsd
+SHA-256-Digest: ASml7gtZzAdassO004e5U16HAhzb3gULwUrh6Yj5O6k=
+
+Name: org/eclipse/emf/validation/internal/modeled/model/validation/imp
+ l/ConstraintsBundleImpl.class
+SHA-256-Digest: mq366LU4asc8+wlTCu2n4MAi6zealBKXqBf2BJ6PeuQ=
+
+Name: org/eclipse/emf/validation/internal/modeled/model/validation/Eve
+ nt.class
+SHA-256-Digest: 683v1QRArpFh8GKdykAzBamf8XwPYFLu3Glfk7MduXI=
+
+Name: org/eclipse/emf/validation/internal/service/ProviderDescriptor.c
+ lass
+SHA-256-Digest: kp2PsGDvlvDq+vhFYNmD3GHVWRUaKLLwV7Yc/HzHpVs=
+
+Name: org/eclipse/emf/validation/internal/modeled/model/validation/imp
+ l/CustomEventImpl.class
+SHA-256-Digest: kz5+fPcg/L9mJewEGBfarLrU+I+/L0E0y1umWQmEcXs=
+
+Name: org/eclipse/emf/validation/internal/service/ClientContext$Contex
+ tExtension.class
+SHA-256-Digest: rwLjFsFiyZkhlSLqKu5v8Oblf98v6JwhiKzHHLldQR4=
+
+Name: org/eclipse/emf/validation/internal/EMFModelValidationDebugOptio
+ ns.class
+SHA-256-Digest: eJe4P6NL2hKena2TevMuwCK03U3EvxxjWRa9QaX6uIM=
+
+Name: org/eclipse/emf/validation/service/IValidator$Option.class
+SHA-256-Digest: 4a4Z1dPXfEby8VKzNgFlYHpcOkjkxUlLyQyIYJUMeZ8=
+
+Name: schema/validationListeners.exsd
+SHA-256-Digest: W8AUDbeobi9ZkV0QPrXiRtnKdvEb+WTD4c/yU6p2u98=
+
+Name: org/eclipse/emf/validation/internal/modeled/model/validation/Val
+ idationFactory.class
+SHA-256-Digest: qI/Tn82akiHcxjwI9MJD+NgivFYCX235hbpk71TWt4w=
+
+Name: org/eclipse/emf/validation/internal/service/GetBatchConstraintsO
+ peration$1.class
+SHA-256-Digest: F1AsTMecToo/EdBVs7M/2maXfukpmKkXJXChZUxm4uI=
+
+Name: org/eclipse/emf/validation/internal/util/ConstraintsContentHandl
+ er$ResourceBundleCache.class
+SHA-256-Digest: HU7EYyGy44SaFYupYuqDwt08C514WYY84ytVD1Yd8Rc=
+
+Name: org/eclipse/emf/validation/util/FilteredCollection.class
+SHA-256-Digest: 6+ZtcQpaw9CX5gD9oIqT/R44bX77ap/WzZ0S/nQZEZY=
+
+Name: org/eclipse/emf/validation/internal/service/package.html
+SHA-256-Digest: /pibMFJ83hT49hvYy1RLMMYNZWdWNiXfqpGRw0Z4Xn8=
+
+Name: about.properties
+SHA-256-Digest: Gf2rCcwelxe0OMmwFAANTkR0yI+xIqFfSauRHk2feqY=
+
+Name: org/eclipse/emf/validation/internal/service/ConstraintCache.clas
+ s
+SHA-256-Digest: g7oJrJkwH3/NVz4TZO/c0h3hwLPC0rgGsMXkt4kLpGA=
+
+Name: org/eclipse/emf/validation/internal/emfadapter/EMFValidationCont
+ extAdapter.class
+SHA-256-Digest: A6FjDi0Yu1BXYvdpdjyrEnvpQyet7KJfDy7yoWzh3fI=
+
+Name: model/validation.genmodel
+SHA-256-Digest: bTIxxfUQg+lCnhqh25qiTRstLM4fLs2Ykd13bLS213g=
+
+Name: org/eclipse/emf/validation/internal/modeled/model/validation/Val
+ idationPackage.class
+SHA-256-Digest: v8UNPSOujLMOYxoW/xZnfFwrcysQ4B+HuUAH0JTml+U=
+
+Name: org/eclipse/emf/validation/service/EventTypeService.class
+SHA-256-Digest: KDKr6ouI97DVNNcU8aiXI4vvTl2wlDWkTxqi+NE1SaA=
+
+Name: org/eclipse/emf/validation/internal/EMFModelValidationStatusCode
+ s.class
+SHA-256-Digest: e+owGdy/vNmUXBuiRk4q3mP6VDUIKigYi08AnXq/x0Y=
+
+Name: org/eclipse/emf/validation/internal/modeled/model/validation/Sev
+ erityEnum.class
+SHA-256-Digest: iUmlebbABKQDbuCNglVk/+yWskhrdZiWt03bZCXDY4I=
+
+Name: plugin.properties
+SHA-256-Digest: X7PyHaEPnMTPSONgwM0fIupGg1l7UpeMWTDpELrZcSc=
+
+Name: org/eclipse/emf/validation/internal/modeled/model/validation/imp
+ l/ParserImpl.class
+SHA-256-Digest: GEA19ly+/8q8G1/pSF421VMNJHVX+vr3AnxIL6QtYko=
+
+Name: org/eclipse/emf/validation/internal/service/TraversalStrategyMan
+ ager$DescriptorRemover.class
+SHA-256-Digest: G6mOFUMV5MJakl0EKy8OmDc2xUB1ZY57EtawFn9ZLKs=
+
+Name: org/eclipse/emf/validation/internal/modeled/model/validation/imp
+ l/ValidationFactoryImpl.class
+SHA-256-Digest: 84SQi/DA0RMvSTiHWrmvlSGQVfkTX++ypP6Z1fgnSN8=
+
+Name: org/eclipse/emf/validation/internal/modeled/model/validation/uti
+ l/ValidationAdapterFactory.class
+SHA-256-Digest: ikIncKlINPLboORv5uzuBBGlvuDcTEJ+ZYPyFXxkEQk=
+
+Name: org/eclipse/emf/validation/internal/util/XmlConstraintFactory$1.
+ class
+SHA-256-Digest: tT4tLeVeCikoHfubINSNOFi1tLFC6rp0O6MqUX6D8o4=
+
+Name: org/eclipse/emf/validation/internal/util/XmlConstraintDescriptor
+ $TargetDescriptor.class
+SHA-256-Digest: UHy56oscNDPmGwqwdlNSJsw1JGXS8PFFhs39fmZL5tE=
+
+Name: org/eclipse/emf/validation/service/IParameterizedConstraintParse
+ r.class
+SHA-256-Digest: QWLEBUiBSUnk9WwYRpRH17vXKX1JqCYSjY/TTNVi510=
+
+Name: org/eclipse/emf/validation/internal/modeled/model/validation/imp
+ l/ValidationPackageImpl.class
+SHA-256-Digest: eU5cqdKpPfxUoFjbn/Hr3xdUWqgW2j1ciz12vxmCDb8=
+
+Name: org/eclipse/emf/validation/internal/modeled/model/validation/imp
+ l/ConstraintImpl.class
+SHA-256-Digest: wswMZK7PkACzEVge6Fctd4DWcx8K35yrs/ZetbGT4ps=
+
+Name: org/eclipse/emf/validation/internal/service/AbstractValidator$Ag
+ gregateStatus.class
+SHA-256-Digest: TSu1xIv0S+atNs7qiXbNrAUSn0XLLbj9cDb1Gzdonpw=
+
+Name: org/eclipse/emf/validation/internal/service/ClientContext$Catego
+ ryExclusion.class
+SHA-256-Digest: T45N4oZWJPY08j1CKofAhPyHncacM1RKywTbjgO4HDs=
+
+Name: org/eclipse/emf/validation/internal/service/AbstractValidationCo
+ ntext$1.class
+SHA-256-Digest: ooODobNoYEo7VVsN0N7nsgpPkaFHk4UWJFwiKrzXhPQ=
+
+Name: org/eclipse/emf/validation/preferences/package.html
+SHA-256-Digest: ISsCrAhGIyhxH7B2ZPDY/+8tN7K12F89zCA8dpMkvCc=
+
+Name: org/eclipse/emf/validation/internal/service/ValidationCanceledEx
+ ception.class
+SHA-256-Digest: tZlndXEiYBI5uoO9EQH60cHGH62TAE/XX++px/L/rOw=
+
+Name: org/eclipse/emf/validation/internal/util/StringMatcher$Position.
+ class
+SHA-256-Digest: Cjr6j64redovB1KaevWQ+4HRa/fdpyHS3Gg69cIDMSo=
+
+Name: org/eclipse/emf/validation/internal/service/AbstractValidationCo
+ ntext$ConstraintIgnorement.class
+SHA-256-Digest: vROs+u+amnsM7b3id4lVdLbE8cFHGJAQHE81i0ftl1Y=
+
+Name: org/eclipse/emf/validation/internal/emfadapter/package.html
+SHA-256-Digest: 8Qt2T7IzCmQesBduWXsL081hu3fa9FGWwlVOfmC303I=
+
+Name: org/eclipse/emf/validation/service/IModelConstraintProvider.clas
+ s
+SHA-256-Digest: EodKXns2EhQfDICbrIb9I/W89cvfMIHFqE3H8PPpyAM=
+
+Name: org/eclipse/emf/validation/internal/service/ClientContext$Constr
+ aintInclusion.class
+SHA-256-Digest: a/9d5LIfc02By07N6i6TvGIYdkmZQ+rtpuadKEWeaPs=
+
+Name: org/eclipse/emf/validation/internal/service/AbstractGetConstrain
+ tsOperation.class
+SHA-256-Digest: GiJRxYYrAWbidGchUxtm5U6VWOeLL8FB+LgkLtaurGw=
+
+Name: org/eclipse/emf/validation/internal/EMFModelValidationPlugin$Imp
+ lementation$_DebugOptionsListener.class
+SHA-256-Digest: s7Ve99f4xIujoSwHJFzRA+KKELFdOqaGwG53O6Cjs5U=
+
+Name: org/eclipse/emf/validation/service/IConstraintListener.class
+SHA-256-Digest: MnG6dP+X4+tgdBMKzchmeATx0ooyzNoBIBPcI1vPB08=
+
+Name: org/eclipse/emf/validation/internal/service/ClientContext$Catego
+ ryInclusion.class
+SHA-256-Digest: j8TcExxU1lxDWKqg/4RjpjQL4B7H3wItjuapoiQtWdM=
+
+Name: org/eclipse/emf/validation/internal/util/DisabledConstraintStatu
+ s.class
+SHA-256-Digest: mXaAd3qMSEHNmcdX6tqKmnjA8xoI0uF5xZbsZFeL7x4=
+
+Name: org/eclipse/emf/validation/service/ModelValidationService$3.clas
+ s
+SHA-256-Digest: 57JvKfoL3Clb1iIiGcifOQ0Pi/qWUIIa7CRTuR6XpAM=
+
+Name: org/eclipse/emf/validation/internal/util/Log.class
+SHA-256-Digest: D6C+lub3l+ejc8oI8VeDEFtnXLquKWLPoHf2xrmzzOs=
+
+Name: schema/eventTypes.exsd
+SHA-256-Digest: K3SRoCdpVil2Vsr9Su2kXYekfbrtqT9cuwbjlWI/V6Y=
+
+Name: org/eclipse/emf/validation/internal/service/IProviderDescriptor.
+ class
+SHA-256-Digest: +Lw58kv+CMnBOAPFLugQPuzyG88cpDv6dcg8qOytAgg=
+
+Name: org/eclipse/emf/validation/util/FilteredCollection$Iter.class
+SHA-256-Digest: 3nmz1HIm8B5TA8iiyzCtwgFB+Rl9YWYe6uY/ayF50cQ=
+
+Name: org/eclipse/emf/validation/internal/util/ConstraintsConfiguratio
+ nElement.class
+SHA-256-Digest: 29CDH3EnaDfKNrSRAvcof5SN67+djrNyN7zHSHoxyUo=
+
+Name: org/eclipse/emf/validation/internal/util/package.html
+SHA-256-Digest: tZifby+35uXe2hRAShF6OeXspazpflobKYkcHES2KtY=
+
+Name: org/eclipse/emf/validation/internal/l10n/package.html
+SHA-256-Digest: y+YA857yEjscjeZsBE2dhtFj+kbFScA1aZnhMB70D1M=
+
+Name: org/eclipse/emf/validation/EMFEventType.class
+SHA-256-Digest: HReRvMpEyGS3SXSXf+nDx68xJV4SBMrnorolhyqy4bE=
+
+Name: org/eclipse/emf/validation/service/ModelValidationService$2.clas
+ s
+SHA-256-Digest: 0OHOBS4DqSA0UQjmYO18jgfYfC7nn+EV32J4uRqQitQ=
+
+Name: org/eclipse/emf/validation/internal/util/Trace.class
+SHA-256-Digest: WSrpGyrmM1jK9h05WMg5PT68ADBM2acpDyNA+D5ZiP0=
+
+Name: org/eclipse/emf/validation/model/ConstraintStatus.class
+SHA-256-Digest: R+K/z4hctevO7H7kHMD2bp2ec3Uy6wBI7z1FAsZAwxo=
+
+Name: org/eclipse/emf/validation/internal/modeled/model/validation/imp
+ l/UnparsedConstraintImpl.class
+SHA-256-Digest: 46gpohcErv8oozvqAcxE3e2PgaAyr+se+NtPyhI2G9o=
+
+Name: about.html
+SHA-256-Digest: 5FRojPiRcb3bjH03ln4tpYeV9N+EVKwn2H7jDNFKn3c=
+
+Name: org/eclipse/emf/validation/internal/service/ClientContext$Bindin
+ gFilter.class
+SHA-256-Digest: KPF1irB6BVZOmj8a9RiXuyYyF5MPozchYsMt8RtkKAA=
+
+Name: org/eclipse/emf/validation/internal/util/XmlConstraintFactory.cl
+ ass
+SHA-256-Digest: a+4YcX/obh58M+Ze6/IQVZHjiZCW/HBq0sXxFcjzBK4=
+
+Name: org/eclipse/emf/validation/internal/service/IProviderOperationEx
+ ecutor.class
+SHA-256-Digest: YtjECBxvK4AcFI99vNRNI/7/5Zk4S5iUp7kPuloKn4w=
+
+Name: org/eclipse/emf/validation/service/ConstraintChangeEventType.cla
+ ss
+SHA-256-Digest: SIs5eBmY/9GQxNVhPxEO9wGg+uoaOuytHcCE0n2+7Lo=
+
+Name: META-INF/maven/org.eclipse.emf.validation.plugins/org.eclipse.em
+ f.validation/pom.properties
+SHA-256-Digest: Dg6HvU13qvs2+cmvS58FxYQU4nNFuMLOc2nVg/YSkvg=
+
+Name: org/eclipse/emf/validation/model/Category.class
+SHA-256-Digest: 6g4QSpB9O38qsWhQ5Noj3HI5h5GBsdJ34aAuSAqhfVg=
+
+Name: org/eclipse/emf/validation/internal/service/LiveValidator$Mergea
+ bleNotification.class
+SHA-256-Digest: OuI1H6+tXdYtKz0WLukQ01hqbn7opgNJ8TSBqQXN+JQ=
+
+Name: org/eclipse/emf/validation/internal/modeled/model/validation/Con
+ straints.class
+SHA-256-Digest: +aOqEHSDKnAVM6GhWoPFo+abGZuJP2DntYX1JDj87T4=
+
+Name: org/eclipse/emf/validation/service/ValidationEvent.class
+SHA-256-Digest: MNwnAltYS5gH5PuBvT7QpuQssacm8vHWm5Du4x8Hv/w=
+
+Name: org/eclipse/emf/validation/service/ITraversalStrategy$Recursive$
+ 1$1.class
+SHA-256-Digest: mA9CFhGkcOl71pTkw+lVcU2yakuC4ZdU3neNIwZ82lg=
+
+Name: org/eclipse/emf/validation/internal/service/ResourceStatus$1$1.c
+ lass
+SHA-256-Digest: rb9xCkIEftbDtjx3WCv4/asr+IuL7IPQpK+6Z2DQki0=
+
+Name: org/eclipse/emf/validation/internal/modeled/model/validation/Tra
+ versalStrategy.class
+SHA-256-Digest: +BHO+ncZ/IxS3Rr0bKknn9DsOkbfd3nPd7ZqurQIHAI=
+
+Name: org/eclipse/emf/validation/service/ITraversalStrategy.class
+SHA-256-Digest: lvDHeGmDWkNJJUFex8ol7gvDj2lESv7xJp2IC1OMpfo=
+
+Name: org/eclipse/emf/validation/internal/modeled/model/validation/Sel
+ ector.class
+SHA-256-Digest: z8Cp+8EoZrc1kOhRZ3YmBm/5RBZ81V9tom+tsadzGYM=
+

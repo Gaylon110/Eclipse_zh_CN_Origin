@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+	<extension point="org.eclipse.recommenders.completion.rcp.sessionprocessors">
+		<processor id="org.eclipse.recommenders.mylyn.rcp.sessionprocessors.mylyn"
+			class="org.eclipse.recommenders.internal.mylyn.rcp.MylynSessionProcessor"
+			icon="icons/obj16/mylyn-proposals.gif"
+			name="%sessionprocessors.mylyn.name"
+			description="%sessionprocessors.mylyn.description">
+		</processor>
+	</extension>
+	<extension point="org.eclipse.mylyn.tasks.bugs.support">
+		<mapping namespace="org.eclipse.recommenders.mylyn" productId="org.eclipse.recommenders">
+			<property name="component" value="Completion"/>
+		</mapping>
+	</extension>
+</plugin>

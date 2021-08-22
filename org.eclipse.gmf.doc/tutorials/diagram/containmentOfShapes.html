@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1" />
+<title>Tutorial: Supporting Containment of Shapes</title>
+</head>
+<body>
+<p><img src="../../logo.gif" /></p>
+
+<h1>Tutorial: Supporting Containment of Shapes</h1>
+
+<table border="0">
+<tr>
+<td>
+<p>Version: 0.1</p>
+</td>
+<td>
+<p>Date: August 11, 2005</p>
+</td>
+</tr>
+</table>
+
+<h2>Contents</h2>
+
+<p>&middot; <a href="#_Overview">Overview</a></p>
+
+<p>&middot; <a href="#_References">References</a></p>
+
+<p>&middot; <a href="#_Introduction">Introduction</a><br />
+ &middot; <a href="#supportContainment">Supporting containment of
+shapes</a><a href="#_Introduction"></a><br />
+ &middot; <a href="#showContainment">Show containment feedback
+inside the container</a></p>
+
+<p>&middot; <a href="#summary">Summary</a></p>
+
+<h2><a id="_Overview" name="_Overview"></a>Overview</h2>
+
+<p>[<a href="#top">back to top</a>]</p>
+
+<p>This tutorial provides the reader with the steps to containment
+of shapes with-in other shapes on the diagram surface.</p>
+
+<h2><a id="_References" name="_References"></a>References</h2>
+
+<p>[<a href="#top">back to top</a>]</p>
+
+<p>This tutorial references the following tutoral:<br />
+<br />
+ <a href="createShape.html">Create a shape</a></p>
+
+<h2><a id="_Introduction"
+name="_Introduction"></a>Introduction</h2>
+
+<p>[<a href="#top">back to top</a>]</p>
+
+<p>In this tutorial, we will use the Logic Diagram Example to
+illustrate how to create a circuit shape that can contain other
+logic elements (i.e. LED, And Gate etc.). To gain familiarity with
+the Logic Diagram Example, refer to the <a
+href="../../examples-guide/diagram/logicExample.html">Logic Example
+Guide</a>.</p>
+
+<h2><a id="_Step1" name="_Step1"></a></h2>
+
+<h2><a id="_Toc104273255" name="_Toc104273255"></a><a
+id="supportContainment" name="supportContainment">Supporting
+containment of shapes</a><br />
+ [<a href="#top">back to top</a>]</h2>
+
+<p><br />
+ Having shapes contain other shapes is a common scenario that many
+diagram editors need to handle.&nbsp; This is seen in the logic
+example in the Circuit shape.&nbsp; The top level Circuit shape is
+added to the palette and diagram surface in the same manner as the
+LED shape.&nbsp; The difference is in how the view factory
+initializes the view on creation.&nbsp; It is initializes with a
+sub view that allows for containment with-in the top level
+view.&nbsp; To demonstrate this we'll consider how the Circuit
+shape was added to the Logic example.</p>
+
+<h3><a id="_Toc104273256" name="_Toc104273256">Example: Circuit
+Shape displaying containment</a><br />
+ <img width="237" height="275" src="circuitContainer.gif" /></h3>
+
+<h3><a id="_Toc104273257" name="_Toc104273257">Add entry to the
+contribution for the palette provider for the Circuit
+shape</a></h3>
+
+<p>See <a href="createShape.html#palette">#Add entries to the
+contribution for the palette provider.</a></p>
+
+<h3>Add new View provider entry for the Circuit shape</h3>
+
+<p>This mechanism is the same as the LED shape except that we will
+create a sub view inside the Circuit shape that will store the
+children views.&nbsp; It is necessary to encapsulate this within a
+sub view because we want to have the ability to collapse the sub
+view to hide the children.</p>
+
+<p>See <a href="createShape.html#notation">#Add new View provider
+entry</a></p>
+
+<p>In the CircuitViewFactory class we create the notation view for
+the Circuit and additionally we will create a child that will be
+the container for views created by the user from the palette
+with-in the Circuit.</p>
+
+<p>In CircuitViewFactory:</p>
+
+<p>/**</p>
+
+<p>&nbsp;* @see
+org.eclipse.gmf.runtime.diagram.ui.internal.view.AbstractNodeView#decorateView(org.eclipse.gmf.runtime.diagram.ui.internal.view.IContainerView,</p>
+
+<p>&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+org.eclipse.core.runtime.IAdaptable, java.lang.String, int,
+boolean)</p>
+
+<p>&nbsp;*/</p>
+
+<p>protected void decorateView(IContainerView containerView,</p>
+
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+IAdaptable semanticAdapter, String semanticHint, int index,</p>
+
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+boolean persisted) {</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+super.decorateView(containerView, semanticAdapter, semanticHint,
+index,</p>
+
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+persisted);</p>
+
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+getViewService().createNodeView(semanticAdapter, this,</p>
+
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+"LogicCompartment", IView.APPEND); //$NON-NLS-1$</p>
+
+<p>}</p>
+
+<h3><a id="_Toc104273260" name="_Toc104273260">Add new EditPart
+provider entry for the Circuit shape</a></h3>
+
+<p>The controller for this container view is an EditPart called the
+'ShapeCompartmentEditPart'.&nbsp; This EditPart is collapsible and
+simulates some of the behavior of the root diagram drawing
+surface.&nbsp; In the Logic example we override the default
+'ShapeCompartmentEditPart' with a class called
+'LogicShapeCompartmentEditPart'.&nbsp; This override is needed to
+improve the usability of the drag behavior.&nbsp; By default, the
+shape compartment allows marquee selection of children with-in its
+bounds.&nbsp; However, this makes it difficult to move the top
+level shape.&nbsp; We decided to override this behavior to allow
+for more intuitive drag behavior of the Circuit itself.&nbsp; To
+create the 'LogicShapeCompartmentEditPart' create the EditPart
+provider entry for it with the id 'LogicCompartment' in the
+LogicEditPartProvider class.</p>
+
+<p>See <a href="createShape.html#editpart"></a><a
+href="createShape.html#editpart">#Add new EditPart provider
+entry</a></p>
+
+<p>To let the circuit contain a subcontainer for the
+shapecompartment, set the layout manager as
+ConstrainedToolbarLayout when creating a circuit figure. Otherwise
+the circuit can not position the contained shape compartment
+correctly with-in it's bounds.</p>
+
+<p>In CircuitEditPart:</p>
+
+<p>/**</p>
+
+<p>&nbsp;* Creates a new Circuit Figure and returns it.</p>
+
+<p>&nbsp;*</p>
+
+<p>&nbsp;* @return&nbsp; Figure representing the circuit.</p>
+
+<p>&nbsp;*/</p>
+
+<p>protected NodeFigure createMainFigure() {</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NodeFigure nf =&nbsp;
+FigureFactory.createNewCircuit();</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ConstrainedToolbarLayout
+layout = new ConstrainedToolbarLayout();</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+nf.setLayoutManager(layout);</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return nf;</p>
+
+<p>}</p>
+
+<p><a id="_Toc104273261" name="_Toc104273261"></a></p>
+
+<h2><a id="showContainment" name="showContainment">Show containment
+feedback inside the container</a><br />
+ [<a href="#top">back to top</a>]</h2>
+
+<p>Install a new edit policy 'ContainerHighlightEditPolicy' on
+CircuitEditPart to highlight circuits when selected. Make
+ContainerHighlightEditPolicy subclass from ContainerEditPolicy in
+org.eclipse.gmf.runtime.diagram.ui plug-in. Overwrite
+'showTargetFeedback' function in AbstractEditPolicy class.</p>
+
+<p>In ContainerHighlightEditPolicy:</p>
+
+<p>public void showTargetFeedback(Request request){</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+if(request.getType().equals(RequestConstants.REQ_MOVE) ||</p>
+
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+request.getType().equals(RequestConstants.REQ_ADD) ||</p>
+
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+request.getType().equals(RequestConstants.REQ_CLONE) ||</p>
+
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+request.getType().equals(RequestConstants.REQ_CONNECTION_START)
+||</p>
+
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+request.getType().equals(RequestConstants.REQ_CONNECTION_END)
+||</p>
+
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+request.getType().equals(RequestConstants.REQ_CREATE)</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; )</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; showHighlight();</p>
+
+<p>}</p>
+
+<p><i><br />
+</i></p>
+
+<h3><a id="_Toc104273262" name="_Toc104273262">Example: Circuit
+shape structure</a><br />
+ <img width="623" height="406" src="circuitStructure.gif" /></h3>
+
+<h2><a id="summary" name="summary">Summary</a></h2>
+
+<p>[<a href="#top">back to top</a>]</p>
+
+<p>In this tutorial, we did the following:</p>
+
+<ol>
+<li>Created container shape</li>
+
+<li>Learned how to display containment feedback when dragging
+inside container.</li>
+</ol>
+
+<br />
+<br />
+<p><a href="http://www.eclipse.org/legal/epl-v10.html">Copyright
+(c) 2000,2005 IBM Corporation and others. All Rights
+Reserved.</a></p>
+
+<br />
+ <br />
+</body>
+</html>
+

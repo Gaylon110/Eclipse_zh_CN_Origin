@@ -1,0 +1,36 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %Bundle-Name
+Bundle-SymbolicName: org.eclipse.mylyn.hudson.core;singleton:=true
+Bundle-Version: 1.15.0.v20170411-2141
+Bundle-ClassPath: org.eclipse.mylyn.hudson.core_1.15.0.v20170411-2141.jar
+Bundle-Activator: org.eclipse.mylyn.internal.hudson.core.HudsonCorePlugin
+Bundle-Vendor: %Bundle-Vendor
+Bundle-Localization: plugin
+Export-Package: org.eclipse.mylyn.hudson.core;x-friends:="org.eclipse.mylyn.hudson.ui",
+  org.eclipse.mylyn.internal.hudson.core;x-friends:="org.eclipse.mylyn.hudson.ui",
+  org.eclipse.mylyn.internal.hudson.core.client;x-friends:="org.eclipse.mylyn.hudson.ui",
+  org.eclipse.mylyn.internal.hudson.model;x-friends:="org.eclipse.mylyn.hudson.ui"
+Require-Bundle: org.eclipse.core.runtime;bundle-version="3.5.0",
+  org.eclipse.emf.ecore,
+  org.eclipse.mylyn.builds.core,
+  org.eclipse.mylyn.commons.core;bundle-version="3.8.0",
+  org.eclipse.mylyn.commons.repositories.core;bundle-version="1.0.0",
+  org.eclipse.mylyn.commons.repositories.http.core;bundle-version="1.0.0"
+Import-Package: com.google.gson;version="[2.7.0,2.8.0)",
+  org.apache.http;version="[4.4.4,4.5.0)",
+  org.apache.http.client;version="[4.5.2,4.6.0)",
+  org.apache.http.client.entity;version="[4.5.2,4.6.0)",
+  org.apache.http.client.methods;version="[4.5.2,4.6.0)",
+  org.apache.http.cookie;version="[4.5.2,4.6.0)",
+  org.apache.http.impl.client;version="[4.5.2,4.6.0)",
+  org.apache.http.message;version="[4.4.4,4.5.0)",
+  org.apache.http.protocol;version="[4.4.4,4.5.0)",
+  org.apache.http.util;version="[4.4.4,4.5.0)"
+Build-Jdk: 1.8.0_121
+Created-By: Apache Maven 3.0.5
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/mylyn/org.eclipse.mylyn.builds.git;path="org.eclipse.mylyn.hudson.core";commitId=daa05efa45def78c85ce4a982cb36557b479cd0f
+Bundle-ActivationPolicy: lazy
+Archiver-Version: Plexus Archiver
+Built-By: genie.mylyn
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8

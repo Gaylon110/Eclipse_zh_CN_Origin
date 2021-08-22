@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<!--
+	Copyright (c) 2012 Eike Stepper (Berlin, Germany) and others.
+	All rights reserved. This program and the accompanying materials
+	are made available under the terms of the Eclipse Public License v1.0
+	which accompanies this distribution, and is available at
+	http://www.eclipse.org/legal/epl-v10.html
+
+	Contributors:
+	  Eike Stepper - initial API and implementation
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.cdo.examples"
+            name="%CDOExampleCategory_name"
+            parentCategory="org.eclipse.ui.Examples">
+      </category>
+      <wizard
+            canFinishEarly="true"
+            category="org.eclipse.ui.Examples/org.eclipse.emf.cdo.examples"
+            class="org.eclipse.emf.common.ui.wizard.ExampleInstallerWizard"
+            icon="icons/full/ctool16/NewEMFExample.gif"
+            id="org.eclipse.emf.cdo.examples.ExampleMasterWizard"
+            name="%ExampleMasterWizard_name"
+            project="true">
+         <description>%ExampleMasterWizard_desc</description>
+      </wizard>
+      <wizard
+            canFinishEarly="true"
+            category="org.eclipse.ui.Examples/org.eclipse.emf.cdo.examples"
+            class="org.eclipse.emf.common.ui.wizard.ExampleInstallerWizard"
+            icon="icons/full/ctool16/NewEMFExample.gif"
+            id="org.eclipse.emf.cdo.examples.ExampleCloneWizard"
+            name="%ExampleCloneWizard_name"
+            project="true">
+         <description>%ExampleCloneWizard_desc</description>
+      </wizard>
+      <wizard
+            canFinishEarly="true"
+            category="org.eclipse.ui.Examples/org.eclipse.emf.cdo.examples"
+            class="org.eclipse.emf.common.ui.wizard.ExampleInstallerWizard"
+            icon="icons/full/ctool16/NewEMFExample.gif"
+            id="org.eclipse.emf.cdo.examples.ExampleClientWizard"
+            name="%ExampleClientWizard_name"
+            project="true">
+         <description>%ExampleClientWizard_desc</description>
+      </wizard>
+      <wizard
+            canFinishEarly="true"
+            category="org.eclipse.ui.Examples/org.eclipse.emf.cdo.examples"
+            class="org.eclipse.emf.common.ui.wizard.ExampleInstallerWizard"
+            icon="icons/full/ctool16/NewEMFExample.gif"
+            id="org.eclipse.emf.cdo.examples.ExampleOfflineWizard"
+            name="%ExampleOfflineWizard_name"
+            project="true">
+         <description>%ExampleOfflineWizard_desc</description>
+      </wizard>
+      <wizard
+            canFinishEarly="true"
+            category="org.eclipse.ui.Examples/org.eclipse.emf.cdo.examples"
+            class="org.eclipse.emf.common.ui.wizard.ExampleInstallerWizard"
+            icon="icons/full/ctool16/NewEMFExample.gif"
+            id="org.eclipse.emf.cdo.examples.ExampleModelWizard"
+            name="%ExampleModelWizard_name"
+            project="true">
+         <description>%ExampleModelWizard_desc</description>
+      </wizard>
+      <wizard
+            canFinishEarly="true"
+            category="org.eclipse.ui.Examples/org.eclipse.emf.cdo.examples"
+            class="org.eclipse.emf.common.ui.wizard.ExampleInstallerWizard"
+            icon="icons/full/ctool16/NewEMFExample.gif"
+            id="org.eclipse.emf.cdo.examples.ExampleGastroWizard"
+            name="%ExampleGastroWizard_name"
+            project="true">
+         <description>%ExampleGastroWizard_desc</description>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.emf.common.ui.examples">
+      <example
+            id="org.eclipse.emf.cdo.examples.ExampleMasterServer"
+            wizardID="org.eclipse.emf.cdo.examples.ExampleMasterWizard"
+            pageImage="icons/full/wizban/NewEMFExample.gif">
+         <fileToOpen editorID="org.eclipse.ui.browser.editor" location="org.eclipse.emf.cdo.examples.master/README.html"/>
+         <projectDescriptor
+               name="org.eclipse.emf.cdo.examples.master"
+               contentURI="examples/org.eclipse.emf.cdo.examples.master/"
+               description="%ExampleMasterProject_desc"/>
+      </example>
+      <example
+            id="org.eclipse.emf.cdo.examples.ExampleCloneServer"
+            wizardID="org.eclipse.emf.cdo.examples.ExampleCloneWizard"
+            pageImage="icons/full/wizban/NewEMFExample.gif">
+         <fileToOpen editorID="org.eclipse.ui.browser.editor" location="org.eclipse.emf.cdo.examples.clone/README.html"/>
+         <projectDescriptor
+               name="org.eclipse.emf.cdo.examples.clone"
+               contentURI="examples/org.eclipse.emf.cdo.examples.clone/"
+               description="%ExampleCloneProject_desc"/>
+      </example>
+      <example
+            id="org.eclipse.emf.cdo.examples.ExampleClient"
+            wizardID="org.eclipse.emf.cdo.examples.ExampleClientWizard"
+            pageImage="icons/full/wizban/NewEMFExample.gif">
+         <fileToOpen editorID="org.eclipse.ui.browser.editor" location="org.eclipse.emf.cdo.examples.client/README.html"/>
+         <projectDescriptor
+               name="org.eclipse.emf.cdo.examples.client"
+               contentURI="examples/org.eclipse.emf.cdo.examples.client/"
+               description="%ExampleClientProject_desc"/>
+         <projectDescriptor
+               name="org.eclipse.emf.cdo.examples.company"
+               contentURI="examples/org.eclipse.emf.cdo.examples.company/"
+               description="%ExampleModelProject_desc"/>
+         <projectDescriptor
+               name="org.eclipse.emf.cdo.examples.company.edit"
+               contentURI="examples/org.eclipse.emf.cdo.examples.company.edit/"
+               description="%ExampleEditProject_desc"/>
+      </example>
+      <example
+            id="org.eclipse.emf.cdo.examples.ExampleOffline"
+            wizardID="org.eclipse.emf.cdo.examples.ExampleOfflineWizard"
+            pageImage="icons/full/wizban/NewEMFExample.gif">
+         <projectDescriptor
+               name="org.eclipse.emf.cdo.examples.client.offline"
+               contentURI="examples/org.eclipse.emf.cdo.examples.client.offline/"
+               description="%ExampleOfflineProject_desc"/>
+      </example>
+      <example
+            id="org.eclipse.emf.cdo.examples.ExampleModel"
+            wizardID="org.eclipse.emf.cdo.examples.ExampleModelWizard"
+            pageImage="icons/full/wizban/NewEMFExample.gif">
+         <projectDescriptor
+               name="org.eclipse.emf.cdo.examples.company"
+               contentURI="examples/org.eclipse.emf.cdo.examples.company/"
+               description="%ExampleModelProject_desc"/>
+         <projectDescriptor
+               name="org.eclipse.emf.cdo.examples.company.edit"
+               contentURI="examples/org.eclipse.emf.cdo.examples.company.edit/"
+               description="%ExampleEditProject_desc"/>
+      </example>
+      <example
+            id="org.eclipse.emf.cdo.examples.ExampleGastro"
+            wizardID="org.eclipse.emf.cdo.examples.ExampleGastroWizard"
+            pageImage="icons/full/wizban/NewEMFExample.gif">
+         <fileToOpen editorID="org.eclipse.ui.browser.editor" location="org.gastro.server/README.html"/>
+         <projectDescriptor
+               name="org.gastro.inventory"
+               contentURI="examples/org.gastro.inventory/"
+               description="%ExampleProject_gastro.inventory_desc"/>
+         <projectDescriptor
+               name="org.gastro.inventory.edit"
+               contentURI="examples/org.gastro.inventory.edit/"
+               description="%ExampleProject_gastro.inventory.edit_desc"/>
+         <projectDescriptor
+               name="org.gastro.business"
+               contentURI="examples/org.gastro.business/"
+               description="%ExampleProject_gastro.business_desc"/>
+         <projectDescriptor
+               name="org.gastro.business.edit"
+               contentURI="examples/org.gastro.business.edit/"
+               description="%ExampleProject_gastro.business.edit_desc"/>
+         <projectDescriptor
+               name="org.gastro.rcp"
+               contentURI="examples/org.gastro.rcp/"
+               description="%ExampleProject_gastro.rcp_desc"/>
+         <projectDescriptor
+               name="org.gastro.rcp.department"
+               contentURI="examples/org.gastro.rcp.department/"
+               description="%ExampleProject_gastro.rcp.department_desc"/>
+         <projectDescriptor
+               name="org.gastro.rcp.table"
+               contentURI="examples/org.gastro.rcp.table/"
+               description="%ExampleProject_gastro.rcp.table_desc"/>
+         <projectDescriptor
+               name="org.gastro.server"
+               contentURI="examples/org.gastro.server/"
+               description="%ExampleProject_gastro.server_desc"/>
+         <projectDescriptor
+               name="org.gastro.server.web"
+               contentURI="examples/org.gastro.server.web/"
+               description="%ExampleProject_gastro.server.web_desc"/>
+         <projectDescriptor
+               name="org.gastro.testclient"
+               contentURI="examples/org.gastro.testclient/"
+               description="%ExampleProject_gastro.testclient_desc"/>
+      </example>
+    </extension>
+
+</plugin>

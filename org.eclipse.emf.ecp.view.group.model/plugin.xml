@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated group -->
+      <package
+            uri="http://org/eclipse/emf/ecp/view/group/model"
+            class="org.eclipse.emf.ecp.view.spi.group.model.VGroupPackage"
+            genModel="model/group.genmodel"/>
+   </extension>
+   <extension
+         point="org.eclipse.emf.edapt.migrators">
+      <migrator
+            path="model/group.history">
+      </migrator>
+   </extension>
+
+</plugin>

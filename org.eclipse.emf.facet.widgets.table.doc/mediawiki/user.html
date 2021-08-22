@@ -1,0 +1,379 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>user</title>
+	</head>
+	<body>
+		<p><h1>Table of Contents</h1></p>
+		<ol style="list-style: none;">
+			<li>
+				<a href="#View_Elements_in_a_Table">View Elements in a Table</a>
+			</li>
+			<li>
+				<a href="#Drag_.26_Drop">Drag &amp; Drop</a>
+			</li>
+			<li>
+				<a href="#Create_New_Elements">Create New Elements</a>
+			</li>
+			<li>
+				<a href="#Remove_Elements_from_a_Table">Remove Elements from a Table</a>
+			</li>
+			<li>
+				<a href="#Delete_Elements_from_the_Model">Delete Elements from the Model</a>
+			</li>
+			<li>
+				<a href="#Editing">Editing</a>
+				<ol style="list-style: none;">
+					<li>
+						<a href="#Editing_unary_attributes">Editing unary attributes</a>
+					</li>
+					<li>
+						<a href="#Editing_n-ary_attributes">Editing n-ary attributes</a>
+					</li>
+					<li>
+						<a href="#Editing_unary_references">Editing unary references</a>
+					</li>
+					<li>
+						<a href="#Editing_n-ary_references">Editing n-ary references</a>
+					</li>
+				</ol>
+			</li>
+			<li>
+				<a href="#Undo.2FRedo">Undo/Redo</a>
+			</li>
+			<li>
+				<a href="#Copy_to_Clipboard">Copy to Clipboard</a>
+			</li>
+			<li>
+				<a href="#Sorting_Columns">Sorting Columns</a>
+			</li>
+			<li>
+				<a href="#Loading_FacetSets">Loading FacetSets</a>
+			</li>
+			<li>
+				<a href="#Loading_Customizations">Loading Customizations</a>
+			</li>
+			<li>
+				<a href="#Adding_Columns">Adding Columns</a>
+				<ol style="list-style: none;">
+					<li>
+						<a href="#Hierarchical_FacetSets">Hierarchical FacetSets</a>
+					</li>
+					<li>
+						<a href="#Aggregates">Aggregates</a>
+					</li>
+				</ol>
+			</li>
+			<li>
+				<a href="#Table_Serialization">Table Serialization</a>
+				<ol style="list-style: none;">
+					<li>
+						<a href="#How_to_save_a_table">How to save a table</a>
+					</li>
+					<li>
+						<a href="#What_is_serialized_in_a_.table_file.3F">What is serialized in a .table file?</a>
+					</li>
+					<li>
+						<a href="#How_to_open_a_saved_table">How to open a saved table</a>
+					</li>
+				</ol>
+			</li>
+			<li>
+				<a href="#Select_Columns_to_Show.2FHide">Select Columns to Show/Hide</a>
+			</li>
+			<li>
+				<a href="#Preferences">Preferences</a>
+			</li>
+			<li>
+				<a href="#Restrict_Allowed_Contents">Restrict Allowed Contents</a>
+			</li>
+		</ol>
+		<h2 id="View_Elements_in_a_Table">View Elements in a Table</h2>
+		<p>You can view model elements in a table by first selecting these model elements in any model editor or view (such as the MoDisco model browser or the sample reflective Ecore model editor). Then right-click and choose 
+			<b>View in a Table</b> :
+		</p>
+		<p>
+			<img border="1" src="../img/viewInTable.png"/>
+		</p>
+		<h2 id="Drag_.26_Drop">Drag &amp; Drop</h2>
+		<p>You can drag elements from a model editor and drop them onto an open table to add them to this table. Note that the model editor and table must be opened on the same ResourceSet for this to work.</p>
+		<p>
+			<img border="1" src="../img/dragAndDropToTable.png"/>
+		</p>
+		<p>You can also drop a model element onto a reference to set a unary reference, or add the element 
+			to the list for a n-ary reference :</p>
+		<p>
+			<img border="1" src="../img/dropToReference.png"/>
+		</p>
+		<h2 id="Create_New_Elements">Create New Elements</h2>
+		<p>If the table was opened with a configuration that allows this (for example, you can create instances of Dependency
+			in a "table of dependencies"), you can add a model element by clicking on the "plus" icon :</p>
+		<p>
+			<img border="1" src="../img/createElement.png"/>
+		</p>
+		<h2 id="Remove_Elements_from_a_Table">Remove Elements from a Table</h2>
+		<p>You can remove elements from a table by selecting these elements, right-clicking and choosing 
+			<b>Remove Lines</b>.
+			<br/>
+			This only removes the elements from the view, not the model.
+		</p>
+		<p>
+			<img border="1" src="../img/removeLines.png"/>
+		</p>
+		<h2 id="Delete_Elements_from_the_Model">Delete Elements from the Model</h2>
+		<p>You can delete elements from the model by selecting these elements, right-clicking
+			and selecting 
+			<b>Delete</b>:
+		</p>
+		<p>
+			<img border="1" src="../img/delete.png"/>
+		</p>
+		<h2 id="Editing">Editing</h2>
+		<p>To edit an attribute or reference, double-click on its cell in the table, or select the cell and hit F2. The cell should then go into edit mode (if the value is editable):</p>
+		<p>
+			<img border="1" src="../img/editMode.png"/>
+		</p>
+		<p>To commit the value, hit 
+			<b>Enter</b>. To cancel the edit, hit 
+			<b>Escape</b>.
+		</p>
+		<h3 id="Editing_unary_attributes">Editing unary attributes</h3>
+		<p>You can edit all the standard Ecore data types: 
+			EString, EChar, EFloat, EFloatObject, ECharacterObject, EBoolean,
+			EBooleanObject, EDouble, EDoubleObject, EInt, EIntegerObject,
+			ELong, ELongObject, EBigInteger, EBigDecimal, EByte, EByteObject,
+			EShort, EShortObject.</p>
+		<p>If the value you entered is not valid for this type, the contents become highlighted in red, and you can't commit the value:</p>
+		<p>
+			<img border="1" src="../img/invalidCellEditor.png"/>
+		</p>
+		<h3 id="Editing_n-ary_attributes">Editing n-ary attributes</h3>
+		<p>When you enter edit mode for a n-ary attribute (one which accepts a list of values instead of just a single value), a dialog
+			opens to let you edit the values: </p>
+		<p>
+			<img border="1" src="../img/EMFFacet_NatTable_Edit_Cell_Nary_Attribute.png"/>
+		</p>
+		<p>You can add, remove, and move elements in the list by using the buttons.</p>
+		<h3 id="Editing_unary_references">Editing unary references</h3>
+		<p>For unary references, you can select a value in several ways:</p>
+		<ul>
+			<li>using the drop down</li>
+		</ul>
+		<p>
+			<img border="1" src="../img/editingUnaryContainment.png"/>
+		</p>
+		<ul>
+			<li>typing the name of the element, with help from completion</li>
+		</ul>
+		<p>
+			<img border="1" src="../img/editingUnaryContainment_completion.png"/>
+		</p>
+		<ul>
+			<li>clicking on the "..." button and selecting a value in the dialog that pops up</li>
+		</ul>
+		<p>
+			<img border="1" src="../img/editingUnaryContainment_dialog.png"/>
+		</p>
+		<p>For composite references, you will be asked for confirmation because changing a composite reference means deleting 
+			the previous value (if any) from the model, and moving the new value from its previous parent.</p>
+		<h3 id="Editing_n-ary_references">Editing n-ary references</h3>
+		<p>When you edit a n-ary reference, this dialog opens: </p>
+		<p>
+			<img border="0" src="../img/editingNaryContainmentReferenceDialog.png"/>
+		</p>
+		<ul>
+			<li>Select values in the left column and move them to the right column using the "&gt;" button to add them to the feature.</li>
+			<li>Select values in the right column and move them to the left column using the "&lt;" button to remove them from the feature.</li>
+			<li>Use the "&gt;&gt;" and "&lt;&lt;" buttons to move all values at once.</li>
+			<li>Use the "Up" and "Down" buttons to reorder the selected values in the right column.</li>
+		</ul>
+		<h2 id="Undo.2FRedo">Undo/Redo</h2>
+		<p>You can undo/redo modifications done on the model by using the undo/redo actions in the editor in which the model is opened. That is: when you open a 
+			<a href="#Table_Serialization">.table file</a>, then you can undo/redo directly in the table editor; but if you open a table view from a model editor using the 
+			<b>View in a Table</b> action, then you must call the undo/redo actions on the editor from which the table view was opened.
+		</p>
+		<h2 id="Copy_to_Clipboard">Copy to Clipboard</h2>
+		<p>Select cells and use the 
+			<b>Copy</b> action (either through the context menu or 
+			<b>Edit &gt; Copy</b> in the main menu) to copy the contents of the selected cells as text to the clipboard. You can then paste the clipboard contents into any program, such as a text or spreadsheet editor.
+		</p>
+		<h2 id="Sorting_Columns">Sorting Columns</h2>
+		<p>There are 2 ways to sort columns : </p>
+		<ul>
+			<li>You can click a column header and drag it to its desired location</li>
+			<li>You can use an action in the table view's or editor's toolbar:
+				<ul>
+					<li>
+						<img border="0" src="../img/sort_columns_by_name_A_to_Z.gif"/> 
+						<b>Sort Columns By Name (From A to Z)</b> : to sort the columns in alphabetical order
+					</li>
+					<li>
+						<img border="0" src="../img/sort_columns_by_name_Z_to_A.gif"/> 
+						<b>Sort Columns By Name (From A to Z)</b> : to sort the columns in reverse alphabetical order
+					</li>
+					<li>
+						<img border="0" src="../img/sort_links_by_type.gif"/> 
+						<b>Sort Columns By Type</b> : to sort the columns by their corresponding feature's type (whether it is an attribute or a reference, a containment, multi-valued, etc.)
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<h2 id="Loading_FacetSets">Loading FacetSets</h2>
+		<p>You can load FacetSets in a table. These FacetSets will be used in the override resolution process for Facet elements, but will 
+			<b>not</b> automatically add columns for all the Facet elements defined in the loaded FacetSets. If you want to add columns, see 
+			<a href="#Adding_Columns">Adding Columns</a>.
+		</p>
+		<p>To load FacetSets, click on the 
+			<b>Load FacetSets</b> action in the toolbar:
+		</p>
+		<p>
+			<img border="0" src="../img/loadFacetSetsInToolbar.png"/>
+		</p>
+		<p>Then select the FacetSets you want to load in the dialog, and click OK:</p>
+		<p>
+			<img border="0" src="../img/SelectFacetSetsDialog.png"/>
+		</p>
+		<p>If you unload FacetSets that contain attributes, references or operations that are currently displayed as columns in the table, then these columns will be deleted (a warning dialog will ask you if you want to proceed anyway).</p>
+		<h2 id="Loading_Customizations">Loading Customizations</h2>
+		<p>You can load customizations in a table to customize the way the elements and table headers are displayed.</p>
+		<p>To load a customization, click on 
+			<b>Load Customizations</b> in the toolbar:
+		</p>
+		<p>
+			<img border="0" src="../img/LoadCustomizationsInToolbar.png"/>
+		</p>
+		<p>In the dialog that opens, move the customizations you want to load from the left pane to the right pane, and then click OK. You can use the filter text field to narrow down the list of available customizations. The customization in the right pane that appears grayed out is called the 
+			<b>local customization</b>. It represents customizations that you applied implicitly by for example hiding columns.
+		</p>
+		<p>
+			<img border="0" src="../img/LoadCustomizationsDialog.png"/>
+		</p>
+		<h2 id="Adding_Columns">Adding Columns</h2>
+		<p>To add columns to the table, you can either click on 
+			<b>Add Columns</b> in the table editor's or view's toolbar:
+		</p>
+		<p>
+			<img border="0" src="../img/addColumnsInToolbar.png"/>
+		</p>
+		<p>Or right-click in a table and choose 
+			<b>Add Columns</b> from the contextual menu:
+		</p>
+		<p>
+			<img border="0" src="../img/addColumnsContextual.png"/>
+		</p>
+		<p>A dialog will open to let you choose an ETypedElement.
+			The ETypedElement must be either:</p>
+		<ul>
+			<li>a structural feature or operation defined on the metaclass of elements in the table</li>
+			<li>a Facet feature or operation that can be evaluated on elements in the table (when these elements conform to the parent Facet of the Facet feature or Facet operation).</li>
+		</ul>
+		<p>You can use the text filter to narrow down the list, and choose an element from the right EClass or Facet:</p>
+		<p>
+			<img border="0" src="../img/Select_ETypedElements.png"/>
+		</p>
+		<p>A new column will be added to the table to display the value of this ETypedElement for each row. If the ETypedElement cannot be evaluated for any of the elements currently in the table, then the column won't appear.</p>
+		<h3 id="Hierarchical_FacetSets">Hierarchical FacetSets</h3>
+		<p>This screenshot shows how hierarchical FacetSets are represented: the 
+			<b>org.eclipse.emf.facet.efacet.examples.library.core.facet</b> FacetSet contains two FacetSets: 
+			<b>writer</b> and 
+			<b>book</b>:
+		</p>
+		<p>
+			<img border="0" src="../img/SelectETypedElements_withHierarchicalFacetSets.png"/>
+		</p>
+		<h3 id="Aggregates">Aggregates</h3>
+		<p>This screenshot shows how aggregates are represented in this dialog: the 
+			<b>org.eclipse.emf.facet.efacet.examples.library.core.aggregate</b> FacetSet is an Aggregate that aggregates 
+			<b>org.eclipse.emf.facet.efacet.examples.library.core.facet</b> and 
+			<b>org.eclipse.emf.facet.efacet.examples.library.core.custom</b>:
+		</p>
+		<p>
+			<img border="0" src="../img/SelectETypedElements_withAggregates.png"/>
+		</p>
+		<h2 id="Table_Serialization">Table Serialization</h2>
+		<h3 id="How_to_save_a_table">How to save a table</h3>
+		<ul>
+			<li>If you opened a table editor from a .table file then you can save this table by choosing 
+				<b>File &gt; Save</b> or using the 
+				<b>Ctrl+S</b> shortcut
+			</li>
+			<li>If you opened a table view (through the 
+				<b>View in a Table</b> action), then you can export the table using the action 
+				<b>Export as XMI file</b>.
+			</li>
+		</ul>
+		<p>
+			<img border="0" src="../img/exportAsXMIFile.png"/>
+		</p>
+		<h3 id="What_is_serialized_in_a_.table_file.3F">What is serialized in a .table file?</h3>
+		<p>A .table file is a table model serialized as XMI, which contains:</p>
+		<ul>
+			<li>references to the objects contained in the table</li>
+			<li>the list of columns</li>
+			<li>the options you have checked ("Hide empty columns", "Only show common columns" ... )</li>
+			<li>the size of each column as well as the height of each row</li>
+			<li>the list of loaded customization</li>
+			<li>the list of referenced facets</li>
+			<li>an optional reference to a table configuration</li>
+		</ul>
+		<h3 id="How_to_open_a_saved_table">How to open a saved table</h3>
+		<p>To re-open a saved table, simply double-click on the .table file, or right-click and choose to open with the 
+			<b>Model Table</b> editor:
+		</p>
+		<p>
+			<img border="1" src="../img/openWithModelTableEditor.png"/>
+		</p>
+		<h2 id="Select_Columns_to_Show.2FHide">Select Columns to Show/Hide</h2>
+		<p>You can hide columns by clicking on 
+			<b>Select Columns To Hide</b>:
+		</p>
+		<p>
+			<img border="0" src="../img/selectColumnsToHide.png"/>
+		</p>
+		<p>This will open a dialog in which you can check columns to show and uncheck columns to hide:</p>
+		<p>
+			<img border="0" src="../img/Select_columns_to_show.png"/>
+		</p>
+		<p>You can also sort the columns by name in alphabetical order by checking 
+			<b>Sort Columns By Name</b>.
+		</p>
+		<p>Storage of the hidden columns is done using a local customization. We recommend to always keep the local customization at the top of the customization stack. The following dialog can appear if the local customization is not the first:</p>
+		<p>
+			<img border="0" src="../img/localCustomizationWarning.png"/>
+		</p>
+		<h2 id="Preferences">Preferences</h2>
+		<p>The action 
+			<b>Select Columns To Show/Hide</b> can display a warning message with a question. This dialog provides a checkbox to avoid further appearances of this dialog. The 
+			<b>NatTable Editor</b> preference page controls this preference:
+		</p>
+		<p>
+			<img border="0" src="../img/localCustomOnTopPreferencePage.png"/>
+		</p>
+		<h2 id="Restrict_Allowed_Contents">Restrict Allowed Contents</h2>
+		<p>You can choose an ETypedElement which determines which elements are allowed to be in the table. Any ETypedElement that is applicable on an EObject and returns a boolean is usable for this purpose.</p>
+		<p>To set this ETypedElement, click on "Change Allowed Contents" in the toolbar:</p>
+		<p>
+			<img border="0" src="../img/changeAllowedContents.png"/>
+		</p>
+		<p>This opens a dialog from which you can select the ETypedElement :</p>
+		<p>
+			<img border="0" src="../img/changeAllowedContentsETypedElementDialog.png"/>
+		</p>
+		<p>If some of the elements that were already in the table before you changed the ETypedElement don't match the new ETypedElement, then you will be asked whether you want to remove these non-presentable elements:</p>
+		<p>
+			<img border="0" src="../img/Remove_non_presentable_elements.png"/>
+		</p>
+		<p>Once the ETypedElement is changed, you won't be able to add elements that are not matched by this new ETypedElement.</p>
+		<p><font size="-2">
+			Copyright &#169; 2012 CEA LIST.
+			All rights reserved. This program and the accompanying materials
+			are made available under the terms of the Eclipse Public License v1.0
+			which accompanies this distribution, and is available at
+
+			<a href="http://www.eclipse.org/legal/epl-v10.html">http://www.eclipse.org/legal/epl-v10.html</a>.
+			Contributors: Nicolas Bros (Mia-Software)
+</font>
+		</p>
+	</body>
+</html>

@@ -1,0 +1,2024 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.pde.core; singleton:=true
+Archiver-Version: Plexus Archiver
+Built-By: genie.releng
+Require-Bundle: org.eclipse.core.runtime;bundle-version="[3.11.0,4.0.0
+ )",org.eclipse.core.resources;bundle-version="[3.2.0,4.0.0)",org.ecli
+ pse.jdt.core;bundle-version="[3.2.0,4.0.0)",org.eclipse.team.core;bun
+ dle-version="[3.2.0,4.0.0)",org.eclipse.update.configurator;bundle-ve
+ rsion="[3.1.0,4.0.0)",org.eclipse.text;bundle-version="[3.1.0,4.0.0)"
+ ,org.eclipse.jdt.launching;bundle-version="[3.2.0,4.0.0)",org.eclipse
+ .core.filebuffers;bundle-version="[3.2.0,4.0.0)",org.eclipse.core.var
+ iables;bundle-version="[3.1.0,4.0.0)",org.eclipse.pde.build;bundle-ve
+ rsion="[3.2.0,4.1.0)",org.eclipse.ant.core;bundle-version="[3.1.0,4.0
+ .0)",org.eclipse.equinox.simpleconfigurator.manipulator;bundle-versio
+ n="[2.0.0,3.0.0)",org.eclipse.equinox.frameworkadmin;bundle-version="
+ [2.0.0,3.0.0)",org.eclipse.debug.core;bundle-version="[3.5.0,4.0.0)",
+ org.eclipse.equinox.p2.engine;bundle-version="[2.0.0,3.0.0)",org.ecli
+ pse.equinox.p2.core;bundle-version="[2.0.0,3.0.0)",org.eclipse.equino
+ x.p2.metadata;bundle-version="[2.0.0,3.0.0)",org.eclipse.equinox.p2.d
+ irector;bundle-version="[2.1.0,3.0.0)",org.eclipse.equinox.p2.artifac
+ t.repository;bundle-version="[1.0.100,2.0.0)",org.eclipse.equinox.p2.
+ repository;bundle-version="[2.0.0,3.0.0]",org.eclipse.equinox.p2.repo
+ sitory.tools;bundle-version="[2.0.100,3.0.0)",org.eclipse.equinox.p2.
+ metadata.repository;bundle-version="[1.0.100,2.0.0)",org.eclipse.equi
+ nox.p2.garbagecollector;bundle-version="[1.0.100,2.0.0)",org.eclipse.
+ equinox.p2.touchpoint.eclipse;bundle-version="[2.0.0,3.0.0)",org.ecli
+ pse.core.expressions;bundle-version="[3.4.0,4.0.0)",org.eclipse.core.
+ filesystem;bundle-version="[1.0.0,2.0.0)"
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/pde/ec
+ lipse.pde.ui.git;path="ui/org.eclipse.pde.core";tag="M20180103-0400";
+ commitId=e44c4d514f53a27479eddc7458bac5ec12416b3a
+Bundle-Vendor: %provider-name
+Import-Package: com.ibm.icu.util
+Eclipse-LazyStart: true
+Export-Package: org.eclipse.pde.core,org.eclipse.pde.core.build,org.ec
+ lipse.pde.core.plugin,org.eclipse.pde.core.project,org.eclipse.pde.co
+ re.target,org.eclipse.pde.internal.core; x-friends:="org.eclipse.pde.
+ ui,  org.eclipse.pde.runtime,  org.eclipse.pde.launching,  org.eclips
+ e.pde.api.tools.ui,  org.eclipse.pde.api.tools,  org.eclipse.pde.ua.u
+ i,  org.eclipse.pde.ds.ui,  org.eclipse.pde.ua.core,  org.eclipse.pde
+ .api.tools.tests",org.eclipse.pde.internal.core.build;x-friends:="org
+ .eclipse.pde.ui,org.eclipse.pde.ds.ui,org.eclipse.pde.ua.ui",org.ecli
+ pse.pde.internal.core.builders;x-friends:="org.eclipse.pde.ui,org.ecl
+ ipse.pde.launching,org.eclipse.pde.ds.core",org.eclipse.pde.internal.
+ core.bundle;x-friends:="org.eclipse.pde.ui,org.eclipse.pde.ds.ui",org
+ .eclipse.pde.internal.core.content;x-internal:=true,org.eclipse.pde.i
+ nternal.core.exports;x-friends:="org.eclipse.pde.ui",org.eclipse.pde.
+ internal.core.feature;x-friends:="org.eclipse.pde.ui",org.eclipse.pde
+ .internal.core.ibundle; x-friends:="org.eclipse.pde.ui,  org.eclipse.
+ pde.api.tools.ui,  org.eclipse.pde.ds.ui,  org.eclipse.pde.ua.ui",org
+ .eclipse.pde.internal.core.ifeature;x-friends:="org.eclipse.pde.ui,or
+ g.eclipse.pde.launching",org.eclipse.pde.internal.core.iproduct;x-fri
+ ends:="org.eclipse.pde.ui",org.eclipse.pde.internal.core.ischema;x-fr
+ iends:="org.eclipse.pde.ui",org.eclipse.pde.internal.core.isite;x-fri
+ ends:="org.eclipse.pde.ui",org.eclipse.pde.internal.core.natures;x-fr
+ iends:="org.eclipse.pde.ui,org.eclipse.pde.ds.ui,org.eclipse.pde.api.
+ tools.tests",org.eclipse.pde.internal.core.plugin; x-friends:="org.ec
+ lipse.pde.ui,  org.eclipse.pde.ds.ui,  org.eclipse.pde.ua.core,  org.
+ eclipse.pde.ua.ui",org.eclipse.pde.internal.core.product;x-friends:="
+ org.eclipse.pde.ui",org.eclipse.pde.internal.core.project;x-friends:=
+ "org.eclipse.pde.ui,org.eclipse.pde.launching,org.eclipse.pde.ds.ui",
+ org.eclipse.pde.internal.core.schema;x-friends:="org.eclipse.pde.ui",
+ org.eclipse.pde.internal.core.search;x-friends:="org.eclipse.pde.ui",
+ org.eclipse.pde.internal.core.site;x-friends:="org.eclipse.pde.ui",or
+ g.eclipse.pde.internal.core.target;x-friends:="org.eclipse.pde.ui,org
+ .eclipse.pde.api.tools",org.eclipse.pde.internal.core.text; x-friends
+ :="org.eclipse.pde.ui,  org.eclipse.pde.ds.core,  org.eclipse.pde.ua.
+ core,  org.eclipse.pde.ds.ui,  org.eclipse.pde.ua.ui,  org.eclipse.pd
+ e.ds.tests,  org.eclipse.pde.ua.tests",org.eclipse.pde.internal.core.
+ text.build;x-friends:="org.eclipse.pde.ui",org.eclipse.pde.internal.c
+ ore.text.bundle;x-friends:="org.eclipse.pde.ui,org.eclipse.pde.api.to
+ ols.ui,org.eclipse.pde.ua.ui",org.eclipse.pde.internal.core.text.plug
+ in; x-friends:="org.eclipse.pde.ui,  org.eclipse.pde.ds.tests,  org.e
+ clipse.pde.ua.core,  org.eclipse.pde.ua.tests",org.eclipse.pde.intern
+ al.core.util; x-friends:="org.eclipse.pde.ui,  org.eclipse.pde.ua.ui,
+   org.eclipse.pde.launching,  org.eclipse.pde.ds.core,  org.eclipse.p
+ de.ds.ui,  org.eclipse.pde.ua.core,  org.eclipse.pde.api.tools",org.e
+ clipse.pde.internal.core.variables;x-internal:=true
+Bundle-Name: %name
+Bundle-Version: 3.11.101.v20171228-1230
+Bundle-Localization: plugin
+Bundle-Activator: org.eclipse.pde.internal.core.PDECore
+Created-By: Apache Maven 3.3.3
+Build-Jdk: 1.8.0_131
+
+Name: org/eclipse/pde/core/plugin/IPluginElement.class
+SHA-256-Digest: nE/7N2JLURbnu4MyTsKFil086YuNF5RC1z/LLvuG4mc=
+
+Name: org/eclipse/pde/internal/core/product/WorkspaceProductModel.clas
+ s
+SHA-256-Digest: 3RIdeKC4EASbv0oYXEqAlBEbvHB/npFJ2Pdrx58RNYA=
+
+Name: org/eclipse/pde/internal/core/ischema/ISchemaAttribute.class
+SHA-256-Digest: l/cHUqoWtkymt7xTVUNFmBNv4i6upFmtJP+K2cVn8Xk=
+
+Name: org/eclipse/pde/internal/core/text/plugin/DocumentGenericNode.cl
+ ass
+SHA-256-Digest: otwfujehD71M3M1xyMtRG3jucHjUudE+jv3hUr+2Hxs=
+
+Name: org/eclipse/pde/internal/core/ifeature/IFeaturePlugin.class
+SHA-256-Digest: AtRDfq/yKk3WZ83bHKr5ZiLuWfzOEfdgus6WkgSruss=
+
+Name: org/eclipse/pde/internal/core/variables/TargetNLVariableResolver
+ .class
+SHA-256-Digest: Ha/Zkl301TU7YLCXW8O8GHEpkmPqJMEengGO0xJI6Uw=
+
+Name: org/eclipse/pde/internal/core/IFeatureModelDelta.class
+SHA-256-Digest: y/8byJ/GYBbQuAtjnSG4jcY0zH15iXMKKP7gEeRHHMQ=
+
+Name: org/eclipse/pde/internal/core/text/bundle/RequireBundleObject.cl
+ ass
+SHA-256-Digest: Dd6ca/GIdBwMQ7o3uAmcw9Mu9BH9kx8nwytXzGHfLIQ=
+
+Name: org/eclipse/pde/internal/core/feature/FeatureInstallHandler.clas
+ s
+SHA-256-Digest: gPlhdFn6672oN5vgmkmk/YlG2oE70A8HwS//9cY+lZY=
+
+Name: org/eclipse/pde/internal/core/text/plugin/PluginLibraryNode.clas
+ s
+SHA-256-Digest: FC7vQQPBhi/D4x3mCtHb1tj9KB3cZ15uJPNutWHooDk=
+
+Name: org/eclipse/pde/core/IEditableModel.class
+SHA-256-Digest: U2Z/0kpXiW5bG9zkaGhqWf0JBfDeevyIDFyNjkA2gJA=
+
+Name: org/eclipse/pde/internal/core/target/InvalidTargetBundle.class
+SHA-256-Digest: vSnsdcp6aHZCGa8gVHUC3ScWMCd+f9WZpzUFn31Z3gA=
+
+Name: org/eclipse/pde/internal/core/text/IEditingModel.class
+SHA-256-Digest: umbgJDd82z3WI5qPn3PqzkU8GnTUOWKwOkBtJciV7gE=
+
+Name: org/eclipse/pde/internal/core/IExtensionDeltaEvent.class
+SHA-256-Digest: iOa93FAab2tJYCdSEhqdmv/p4YtS5gVBrdXX3jq3XGs=
+
+Name: org/eclipse/pde/internal/core/text/plugin/PluginParentNode.class
+SHA-256-Digest: /w/yaVXDWuKfnrEhH3f3lkZR/RjCFdhsS1zFXphSmVE=
+
+Name: org/eclipse/pde/internal/core/builders/SourceEntryErrorReporter$
+ SourceFolder.class
+SHA-256-Digest: b/vBz1GhIyh/ntgv13lUjsayXUOjn/RH4UjUaL5fpOk=
+
+Name: org/eclipse/pde/internal/core/util/XMLComponentRegistry.class
+SHA-256-Digest: EJvfmWqe3hLDQUtUZccGRo5ze2I6z+P8Hwoay2tmeKk=
+
+Name: org/eclipse/pde/internal/core/product/PluginConfiguration.class
+SHA-256-Digest: lHmcpdBUrUm0elllzs2nojAY9RGXUrvYipeUWWQQB5Y=
+
+Name: org/eclipse/pde/internal/core/build/Build.class
+SHA-256-Digest: uPq8XnYDEI5VV7RcoEoSjuGJS5lHAHTpcr1N0Cfis8M=
+
+Name: org/eclipse/pde/internal/core/schema/SchemaAttributeHandler.clas
+ s
+SHA-256-Digest: 5DU2PvN8N//nLLRY0Rw4zK/sf8R270ttKA6MAXV4y2E=
+
+Name: org/eclipse/pde/internal/core/isite/ISiteModelFactory.class
+SHA-256-Digest: hQtmh7fA0munUiW5mtunyhPB0WJG+2pKQ26FIf3Lkcw=
+
+Name: org/eclipse/pde/internal/core/site/SiteFeature.class
+SHA-256-Digest: +KTDGU622t7w9srIP9tPtPoxuCSVHqZfuymugC3YbQo=
+
+Name: org/eclipse/pde/internal/core/ibundle/IBundleFragment.class
+SHA-256-Digest: nvW0yH6/Wameq5MlspC+S921L1CvtzUorzd8nBPMilY=
+
+Name: org/eclipse/pde/internal/core/builders/ElementOccurenceChecker.c
+ lass
+SHA-256-Digest: h5HZCpggpyHEoxvtPDaGrG9AmS/W1QekGf3A6UGSgPc=
+
+Name: org/eclipse/pde/internal/core/target/TargetPersistence38Helper.c
+ lass
+SHA-256-Digest: TB8ovUIMG9uKdF5aUvDjlamHEF3VktSpQ9WYgF+o2yk=
+
+Name: org/eclipse/pde/internal/core/ischema/IMetaAttribute.class
+SHA-256-Digest: l3zmsVx5FtxAu4MnJMUhIRuvIjXHzsVX/f5ANDAR+v4=
+
+Name: org/eclipse/pde/internal/core/isite/ISiteArchive.class
+SHA-256-Digest: aVk7ogbq9PQXqA00Clm+v6E+a5NYUWeeC/HzwU7oeOg=
+
+Name: org/eclipse/pde/internal/core/target/P2TargetUtils$CollectNative
+ sPhase.class
+SHA-256-Digest: wEXT5iatM8STEipODh1HuroRwMeg0w1wq07wfZfIN34=
+
+Name: org/eclipse/pde/internal/core/target/TargetPersistence34Helper.c
+ lass
+SHA-256-Digest: k+QunIcb8t3hg+amXqKfu/Cq9UCcECAit81WlwHQq9I=
+
+Name: org/eclipse/pde/internal/core/PDEAuxiliaryState.class
+SHA-256-Digest: FYHPq0QDCNFVaPwGZ3t3yfHdLxnyB5QY/spbcwffz9M=
+
+Name: org/eclipse/pde/core/plugin/IPluginAttribute.class
+SHA-256-Digest: +K4DmKAOmg3jYxfTDWiU2acFa2MxG8+9WX6sbXZ50dM=
+
+Name: org/eclipse/pde/internal/core/builders/ManifestConsistencyChecke
+ r$SelfVisitor.class
+SHA-256-Digest: ITiVjxICdV/RA0VV+w6rLY6osvGZh++sKV2q5Sd1Q4A=
+
+Name: org/eclipse/pde/internal/core/text/DocumentAttributeNode.class
+SHA-256-Digest: C+VFZdWrXRv2AYdLBElvVwNx3E1MCP5yKIAdOH2qpvc=
+
+Name: org/eclipse/pde/internal/core/target/TargetPersistence35Helper.c
+ lass
+SHA-256-Digest: ivec96iLnBh4kdzuAMtlRcIgvCjorBKir63Qzr712UA=
+
+Name: org/eclipse/pde/internal/core/target/TargetPersistence36Helper.c
+ lass
+SHA-256-Digest: XxZHSD4b4Wy5kIYR/9BG0c+Ll5FDeKJ6p12SND3jK8I=
+
+Name: org/eclipse/pde/internal/core/PDEClasspathContainer.class
+SHA-256-Digest: vtBhW0uqKfaj77y0ui7qEKEMKs0uZjbmx149RzhchVg=
+
+Name: org/eclipse/pde/internal/core/WorkspaceFeatureModelManager.class
+SHA-256-Digest: zEpg5tY8sxPtq8k6/pJTQ7GIiUiMrTbtsg9Py4xB8dQ=
+
+Name: org/eclipse/pde/core/plugin/IPluginParent.class
+SHA-256-Digest: 06pbhcxRQPab982GdfwLvroV57T7nSsevwdwIGxWVeQ=
+
+Name: org/eclipse/pde/internal/core/project/Messages.class
+SHA-256-Digest: 1L/zfGHT586kqLWXcNnGR/JSArBQGzhuMCW8QEMmwn8=
+
+Name: org/eclipse/pde/internal/core/ExternalFeatureModelManager.class
+SHA-256-Digest: vOalGoMmDs+KmjtMRPQkjuieNylkfCvAxDXJrFtI6pM=
+
+Name: org/eclipse/pde/internal/core/project/RequirementSpecification.c
+ lass
+SHA-256-Digest: H3u/dan3R160bn7Ijohk0oN18H/RNUpwMuGI7enj94Q=
+
+Name: org/eclipse/pde/internal/core/plugin/WorkspaceExtensionsModel.cl
+ ass
+SHA-256-Digest: KvFgZUrIXyGnDhWqcmuxUiz3BI56R/JdBecvcM0SVAA=
+
+Name: org/eclipse/pde/core/project/IRequiredBundleDescription.class
+SHA-256-Digest: GG/fMCV9Sewm8lZqMQ4Mj8OLdc6bmQlxLk0Kt869am8=
+
+Name: org/eclipse/pde/internal/core/ibundle/IBundleFragmentModel.class
+SHA-256-Digest: ywH3YeSeKl0QXMETw5SKb42ykABTRWy/HN027nheEuY=
+
+Name: org/eclipse/pde/internal/core/TargetPDERegistryStrategy.class
+SHA-256-Digest: IaM5V2+kCFYwwW3yuQ6T32D6QZqOLwBR0qiXZr19DbE=
+
+Name: org/eclipse/pde/internal/core/site/Site.class
+SHA-256-Digest: V9wy7uvnbh3no09Ol7mWQ/R7pfZ5pOM63MtkncPBppM=
+
+Name: org/eclipse/pde/internal/core/WorkspacePluginModelManager.class
+SHA-256-Digest: tHEswCpFoDRuO1XDXVh1PTzpPwJgsryDX1BHoFgQjZo=
+
+Name: targets/rcpWithSource.target
+SHA-256-Digest: mdpRJBiY4U6dMNTQuXmGxW4cxn4RXV/ZewkHpY1lfv0=
+
+Name: org/eclipse/pde/internal/core/ifeature/IFeatureChild.class
+SHA-256-Digest: jff3XATgDu+iQ5lGwhYRYE/waLVRtuTQ2QtTwrrPre8=
+
+Name: org/eclipse/pde/internal/core/variables/TargetOSVariableResolver
+ .class
+SHA-256-Digest: VtKN6YCFpHN4Dt+fE8nWfzaJioi2eMQqLBQCpe17tqo=
+
+Name: org/eclipse/pde/internal/core/ibundle/IBundleModel.class
+SHA-256-Digest: 4nkr/WUO2L9YamdKdF+tNhUZZQ3nWcjhMRp05yCmEaY=
+
+Name: org/eclipse/pde/core/plugin/IMatchRules.class
+SHA-256-Digest: lS6x8fjMS0drN4mNcAMfc8DGGty+D19+wo2FFSOREKQ=
+
+Name: org/eclipse/pde/core/plugin/IPluginReference.class
+SHA-256-Digest: MuVCeG4Ar8XNmvZUgbowhkVzLhJXNr3hZJPnLupOptQ=
+
+Name: org/eclipse/pde/core/build/IBuildModelFactory.class
+SHA-256-Digest: FGkxsYrY62iDlKS3QwxpQTiraUsgaQ+yA2CPooOrIzg=
+
+Name: org/eclipse/pde/internal/core/bundle/BundleFragment.class
+SHA-256-Digest: mJihAh95k++owHSQxfAlrU5lNURSvk2ek+j+QOQ86cU=
+
+Name: org/eclipse/pde/core/IModelChangedEvent.class
+SHA-256-Digest: L93aTgtBj/Na8TyjusCnTHmynjL+zTUCkfdDkQHDZL8=
+
+Name: org/eclipse/pde/internal/core/product/ProductFeature.class
+SHA-256-Digest: IJFPpIkeAr344nWOqVN7zKV0Qq6e1BrE+Pd2DRGmpN0=
+
+Name: org/eclipse/pde/internal/core/builders/SourceEntryErrorReporter$
+ Visitor.class
+SHA-256-Digest: 1xC4UgHQ+ZBu0eEbl0JD5chP4PEK6mXRW+YvcRO5ttA=
+
+Name: org/eclipse/pde/internal/core/project/HostDescriptoin.class
+SHA-256-Digest: t8hHtSRMXX9g6dIx1hErXje7KZg+e8Ck9+UmIlYnXgE=
+
+Name: org/eclipse/pde/internal/core/builders/ManifestConsistencyChecke
+ r.class
+SHA-256-Digest: vNldbJs+C+42o+i2P11DPBTkyEc/K/h0uf2E2LU2SZc=
+
+Name: org/eclipse/pde/internal/core/BinaryRepositoryProvider$BinaryFil
+ eModificationValidator.class
+SHA-256-Digest: DUMUXLgGJOg65biI7b+gYJ5YRk8Ce+soMkO3MVkJH2A=
+
+Name: org/eclipse/pde/internal/core/product/ProductPlugin.class
+SHA-256-Digest: dSAhuwqCm3TW4N9dCBFNG+qE41/iFCFYTL2DhCzfg8A=
+
+Name: org/eclipse/pde/internal/core/ischema/IDocumentSection.class
+SHA-256-Digest: WuQ7hBSA8a5a/w2XfGX4ucneE6IFwDsNeZCaJX47MC8=
+
+Name: org/eclipse/pde/internal/core/ModelProviderEvent.class
+SHA-256-Digest: 5P/Uo+8oc2l9AonWSMOwteXLFnzE6gdH31n01taKZI4=
+
+Name: org/eclipse/pde/internal/core/text/bundle/ImportPackageHeader.cl
+ ass
+SHA-256-Digest: 0bGidsufKXDIAKEqKe2G1xlNUJbW3GLYA5oAyfCjJhg=
+
+Name: org/eclipse/pde/internal/core/text/bundle/ExportPackageHeader.cl
+ ass
+SHA-256-Digest: JHgEhNhiWM6ViHbMQg8eh0BbXrnCmC1682XtQ3M0XRE=
+
+Name: org/eclipse/pde/internal/core/builders/XMLErrorReporter.class
+SHA-256-Digest: m5x3alSFX0rGXO+/+oqJ5PpMjNdY45ncWgxBzaF4bhs=
+
+Name: org/eclipse/pde/internal/core/feature/FeatureInfo.class
+SHA-256-Digest: tNdt2PtmbflPlU2nB2Jbq5s9d+Ca1ZgO8Mkr20ndWt4=
+
+Name: org/eclipse/pde/internal/core/site/SiteCategoryDefinition.class
+SHA-256-Digest: fIWrjz/VwW/hP17zENFF5SgZeEX9HWSrTUcBHkNt5dU=
+
+Name: org/eclipse/pde/core/plugin/IPluginImport.class
+SHA-256-Digest: /IzScHdLgSNwmuLK/o1mjUeO0w0hD/Uo49KB6pIpw9A=
+
+Name: org/eclipse/pde/internal/core/XMLCopyrightHandler.class
+SHA-256-Digest: 9FIpnopVoqZabY05La69wIM4ebPPqNUginvcJKjpjVY=
+
+Name: org/eclipse/pde/internal/core/target/TargetPlatformService$2.cla
+ ss
+SHA-256-Digest: jbb7w1SNqaJT8vCCFQFTDNYVhNnG22krkN475unXlHc=
+
+Name: org/eclipse/pde/internal/core/bundle/BundleFragmentModel.class
+SHA-256-Digest: wfhXF29f7mlsRVd7ZiHRfeG04fFUTs15teVeLq6Rqw0=
+
+Name: org/eclipse/pde/internal/core/site/VersionableObject.class
+SHA-256-Digest: 3LF5dtFOmqb7BsSp/q3N3YpK5cQZQ+VbBDpBf5GHi/4=
+
+Name: org/eclipse/pde/internal/core/target/TargetDefinitionPersistence
+ Helper$1.class
+SHA-256-Digest: 9WjJEnyAgFYIy3TEt7t7BGT2f133/FUtyk633ehfDHk=
+
+Name: org/eclipse/pde/internal/core/SourceLocationKey.class
+SHA-256-Digest: AG4unQEasBnefpp+5rEB3F+bfLuzCTYsor0mxoC2O1Q=
+
+Name: org/eclipse/pde/internal/core/text/DocumentElementNode.class
+SHA-256-Digest: 4weaVjv/tSFJwFFzYI5XTYxLgLzasG6NK3+SYCCUeyg=
+
+Name: org/eclipse/pde/internal/core/builders/ManifestErrorReporter$1No
+ deListImpl.class
+SHA-256-Digest: 3PdxCQgaB+rQEDfAj1g5TCCxGsQa02q/ew+cPBSsMYc=
+
+Name: org/eclipse/pde/internal/core/product/Product.class
+SHA-256-Digest: l/amydcL3UDCnWJobYybuwK5Jk0uEO4KUFdXPaOQS3E=
+
+Name: org/eclipse/pde/internal/core/BundleManifestSourceLocationManage
+ r.class
+SHA-256-Digest: 9U8wHl/pE8rydLWB2MgWJ/DnGh4wetlaXusVavQRkFs=
+
+Name: org/eclipse/pde/internal/core/util/PackageFragmentRootPropertyTe
+ ster.class
+SHA-256-Digest: YP8mH7++Z9siQJxSYsVhKDjemBeMBS/qB0PYAv/Axcg=
+
+Name: org/eclipse/pde/core/plugin/IPluginModelFactory.class
+SHA-256-Digest: X0T4OsXO/qlFG1irbnhmhhH5CN+GZ+XEcps46TPU1ok=
+
+Name: org/eclipse/pde/internal/core/plugin/AbstractExtensions.class
+SHA-256-Digest: TYAHgq0UDoQnjssfTUaPUIXSUU4+Zmmr0F1vml6gz5g=
+
+Name: org/eclipse/pde/internal/core/schema/SchemaAttribute.class
+SHA-256-Digest: 9p7ESAgA/br1yF6bUw8tIg+49F9nVruuaNXnjNn6oLI=
+
+Name: org/eclipse/pde/internal/core/target/DirectoryBundleContainer.cl
+ ass
+SHA-256-Digest: EVYrqDMa5n/+slSgc+EEyBVZuRVaD1M5mGTnncwDgRI=
+
+Name: org/eclipse/pde/core/target/TargetBundle.class
+SHA-256-Digest: 1SKreQat6XzZ2dCPqxvffot07eIr4c4DJySDfQGLYfo=
+
+Name: org/eclipse/pde/internal/core/text/plugin/PluginDocumentHandler.
+ class
+SHA-256-Digest: fj9iMw63edJ2MXjC1dJ1ElOAK5On66XGHH9f/TqlN0g=
+
+Name: org/eclipse/pde/internal/core/EclipseHomeInitializer.class
+SHA-256-Digest: +F6BTFfCC3qLwP6oH9f3C2aM9E9NCdkM4dCZAdMTpzY=
+
+Name: org/eclipse/pde/internal/core/ischema/ISchemaCompositor.class
+SHA-256-Digest: jLlwd302IUeNKG8AsYevBcr7PpZIWQ6fuQEX9sZRZ5Q=
+
+Name: org/eclipse/pde/internal/core/PDERegistryStrategy$ExtensionListe
+ ner.class
+SHA-256-Digest: KQK2LsjqaCqL73e5nGvcQ8dbFrJsft7KOB/DKT0Cl9s=
+
+Name: org/eclipse/pde/internal/core/feature/FeaturePlugin.class
+SHA-256-Digest: gyKQXE7CLAgNCDwTKITQMDz3ZL6Nw37TF+awoqCfuYk=
+
+Name: org/eclipse/pde/internal/core/plugin/PluginHandler.class
+SHA-256-Digest: 2cu0K/VOT1zIY/KOD0yHUZ4fxIyxNmPrjVdcjb8Oc/M=
+
+Name: org/eclipse/pde/internal/core/PreferenceInitializer.class
+SHA-256-Digest: iwejiJGppdmwua4ntWqj8QEdwVZLQBZYZQifTCCqDe4=
+
+Name: org/eclipse/pde/core/project/IBundleClasspathEntry.class
+SHA-256-Digest: BHJbdqc8jj4g1UEskEURfi3MCCsVasgaInAbp1Ls+5I=
+
+Name: org/eclipse/pde/internal/core/builders/UpdateSiteErrorReporter.c
+ lass
+SHA-256-Digest: itkeNqNu08yfW3QZ7ED8sUA8AarKg+eC7Hrs7sTsvy0=
+
+Name: org/eclipse/pde/internal/core/site/WorkspaceSiteModel.class
+SHA-256-Digest: IPf1Ev4R0N841oXgFClICtN/THt0YiPZa1GKjcpqKOs=
+
+Name: org/eclipse/pde/internal/core/plugin/WorkspacePluginModel.class
+SHA-256-Digest: Z5IZNorKrSV2Oq9LHuLkxUcedXHm6UaR+LKimRf6AVw=
+
+Name: org/eclipse/pde/internal/core/RequiredPluginsInitializer.class
+SHA-256-Digest: SWCGtf2jdY928GrzAK3pAA+i/7MF+nNCH8ijqOyBTHc=
+
+Name: org/eclipse/pde/internal/core/builders/SourceEntryErrorReporter$
+ ProjectFolder.class
+SHA-256-Digest: V0C4BzLIyPbQBmgHkNHIkhKKb8dPf2eo0PihpFKKSds=
+
+Name: org/eclipse/pde/internal/core/ExternalLibraryCache.class
+SHA-256-Digest: eRgImdwax7fiuwxzlf2c7X3rCONDk+3HOnxGMy6zINM=
+
+Name: org/eclipse/pde/internal/core/builders/IHeader.class
+SHA-256-Digest: HGWo2+NZozBHeFv/suordJ4bQGK71TmQXw5isfhQNd8=
+
+Name: org/eclipse/pde/internal/core/plugin/WorkspaceFragmentModel.clas
+ s
+SHA-256-Digest: PbESIaLeijucOlgAe66Q5p8d/NF/poDsm+dNOioHpkI=
+
+Name: org/eclipse/pde/internal/core/TargetWeaver.class
+SHA-256-Digest: 6bdWNu7z1JQiqXJaQCMAF4JwZKPj1bfNYW4qv+hUrHk=
+
+Name: org/eclipse/pde/internal/core/schema/ChoiceRestriction.class
+SHA-256-Digest: iXKrtuTXXHsUj5XHEbebEjgLGSk4Zu8hMD2k7ablCYY=
+
+Name: macosx/Info.plist
+SHA-256-Digest: TDRHeFl1Q7ZaurvuHQ8i/hO3gGRxJhp696ZWKV+kSCU=
+
+Name: org/eclipse/pde/internal/core/schema/SchemaInclude.class
+SHA-256-Digest: PlRBoPEOYdzokZb36Y/kTHdf4FQ97/3nGrPCRZL69nA=
+
+Name: org/eclipse/pde/internal/core/TargetDefinitionManager$1.class
+SHA-256-Digest: VMdCbnSQshiX6Ji7N2DmoFAJy8MOB6lVUiu0Uip5jHw=
+
+Name: org/eclipse/pde/internal/core/text/plugin/PluginObjectNode.class
+SHA-256-Digest: rVhIPst/pLmOqonak9Kez+rjY5Rkk06nS/1SDkpVE60=
+
+Name: org/eclipse/pde/internal/core/plugin/PluginExtensionPoint.class
+SHA-256-Digest: vG9vHIrF0YMRgRNcaw2WfiBJ07vM2vciA6OEfyeRskQ=
+
+Name: org/eclipse/pde/internal/core/text/build/BuildEntry.class
+SHA-256-Digest: qc2i0UgfLvKff1nYwoHmcpAW3nZSABC5z3zRMpyEwVI=
+
+Name: org/eclipse/pde/internal/core/builders/PluginBaseErrorReporter.c
+ lass
+SHA-256-Digest: wH8HTDTMuKtGsCaqERhUKVgjXQUGL0Y8+xXqQOeYI8k=
+
+Name: org/eclipse/pde/internal/core/target/Messages.properties
+SHA-256-Digest: HyBEHxVF45Xxq2mRBH5FB7dsBPhUtDPkNBhDnF+7pbM=
+
+Name: org/eclipse/pde/internal/core/feature/IdentifiableObject.class
+SHA-256-Digest: jI/miAStgGobo4SjGJXuPO/aFNDJFPSYudiFvs3oo5M=
+
+Name: org/eclipse/pde/internal/core/AbstractModel.class
+SHA-256-Digest: wP0BlkLWAcGT6LM1Qn5OLOtOgmGt6RcKf70H9kTdL9M=
+
+Name: org/eclipse/pde/core/plugin/ISharedPluginModel.class
+SHA-256-Digest: 5ll8SFnEY9zPsPQZyyTg6GjJm/nvn3RvM1lUlz8PbxA=
+
+Name: org/eclipse/pde/core/IModelChangeProvider.class
+SHA-256-Digest: +nxiXeRFRKF2iOPfhs5xJ/CgY4O6b61eq26ZDWFIth4=
+
+Name: org/eclipse/pde/internal/core/project/PackageExportDescription.c
+ lass
+SHA-256-Digest: k5jtGi5s2GQtdAS1NcZMBmbZfZJdbfZ9mqgvcIdcKTo=
+
+Name: org/eclipse/pde/internal/core/ExternalJavaSearchInitializer.clas
+ s
+SHA-256-Digest: dYKfnnu5bbCsvbhKqbZO2Mup/BmG6vPSP0cZyElrrss=
+
+Name: org/eclipse/pde/internal/core/text/build/BuildModelFactory.class
+SHA-256-Digest: ia45FsDft3B1QdYUG203IlkMdzcdNIXR9AFJb3VX744=
+
+Name: org/eclipse/pde/internal/core/text/IDocumentRange.class
+SHA-256-Digest: l9uXntEw/8o53m9j5R48GJ8c/k7Y7HJLt+19qva0f+g=
+
+Name: org/eclipse/pde/internal/core/builders/SourceEntryErrorReporter$
+ OutputFolder.class
+SHA-256-Digest: zZIEuHIUgRM6v0XCjamvLKWs/cNhe8ScglIuzMBE0u0=
+
+Name: org/eclipse/pde/internal/core/builders/SchemaErrorReporter.class
+SHA-256-Digest: y5Rg80au5JKclsA3pq6qI6AWs+L1ilf82r6+GLhA1i0=
+
+Name: targets/rcp.target
+SHA-256-Digest: mbgggy0dGvw4VR+tn3izl/ALj9m13+M8JzwdpKVZCr0=
+
+Name: org/eclipse/pde/internal/core/SearchablePluginsManager.class
+SHA-256-Digest: tSC4u2kRfZLsv+zHGAlqi9hnJi8eucgCbtJMGxpvtuE=
+
+Name: org/eclipse/pde/internal/core/schema/IncludedSchemaDescriptor.cl
+ ass
+SHA-256-Digest: W+iMZtyh72duV81YxWGeIvoQaH6SD7Sg6cdihgebGdE=
+
+Name: org/eclipse/pde/internal/core/target/TargetPlatformService.class
+SHA-256-Digest: 5C4FWfFG7293Ggb5toPlV1QNifDUhhag5I90sRPo5os=
+
+Name: org/eclipse/pde/internal/core/builders/BuildErrorReporter$BuildP
+ roblem.class
+SHA-256-Digest: h1SwJtHWTBBJTM7rQuUjrMl6Rfo14oQisPXZsaWgEtU=
+
+Name: org/eclipse/pde/internal/core/util/SchemaUtil.class
+SHA-256-Digest: iuPJK9Sj6zpnEzV1KgMFqrNg7mE6FMNWN+QtJyBPnMw=
+
+Name: org/eclipse/pde/internal/core/util/PDEHTMLHelper.class
+SHA-256-Digest: zAd0HIiWJwXWNp4NimCjckv3FUOAHEBhtggMVtkp7r4=
+
+Name: org/eclipse/pde/internal/core/builders/UpdateSiteBuilder$DeltaVi
+ sitor.class
+SHA-256-Digest: g+Shg+7+habpOIMPwpO3fyFZiDs2yfvWVG8DgSb81SY=
+
+Name: org/eclipse/pde/internal/core/plugin/AbbreviatedPluginModel.clas
+ s
+SHA-256-Digest: NnIesa4+GngaCQ/aPX/EGVngIM8keWf2k9W7+KA95hM=
+
+Name: org/eclipse/pde/internal/core/ifeature/IFeatureInstallHandler.cl
+ ass
+SHA-256-Digest: I8OdjIQkypIwoFWFjaZ+nPdyinHEVc0GjH3SnhNFook=
+
+Name: org/eclipse/pde/internal/core/FeatureModelManager$2.class
+SHA-256-Digest: wHIT4amx1Ps8RFyPpKq87m6/y/95v4pjQptgZdnO4Is=
+
+Name: org/eclipse/pde/internal/core/builders/PDEBuilderHelper.class
+SHA-256-Digest: iIwYWrpZY69e6revgF/6tqGZrm1aJr2N1KWb8l+AZks=
+
+Name: org/eclipse/pde/internal/core/build/BuildModelFactory.class
+SHA-256-Digest: RLsXlhoXpF0H1TNOZ3re4Zu/OYYQhtG0E9Uwnbc8qME=
+
+Name: org/eclipse/pde/internal/core/project/Messages.properties
+SHA-256-Digest: nGzQ4gu0xxUkDtzMOelt69vAlVtDZnOxYdEuv+aitWg=
+
+Name: org/eclipse/pde/internal/core/feature/Feature.class
+SHA-256-Digest: Hd3Q8X16YHqKtYM0nmg+e+2mlNFPHN7S5/Q710AZduE=
+
+Name: org/eclipse/pde/internal/core/search/PluginJavaSearchUtil.class
+SHA-256-Digest: OQuMtTAJTzwy7fdPwm3v5SQlOwC3R5zm+1WNACSpsWU=
+
+Name: org/eclipse/pde/internal/core/variables/TargetOSArchVariableReso
+ lver.class
+SHA-256-Digest: tsXcyvZVDxYXfttEnNTrbt/VJGvmiXm3htPBUOK/G4U=
+
+Name: org/eclipse/pde/internal/core/variables/TargetHomeDynamicVariabl
+ eResolver.class
+SHA-256-Digest: torqdv9horDHyTTfqBMuROaLAsrBeDSR8Ih6eAAnWRo=
+
+Name: org/eclipse/pde/core/build/IBuild.class
+SHA-256-Digest: EqJLx1TJmUeAwwaJis5PQf5xFDpDyUBu7niktm0rBJo=
+
+Name: org/eclipse/pde/internal/core/site/ExternalSiteModel.class
+SHA-256-Digest: LlVfmS7i/qZPGWHKNWvoko/jJr8s8WJPG6dIJaxIdr4=
+
+Name: org/eclipse/pde/internal/core/site/SiteModelFactory.class
+SHA-256-Digest: HUXC2OCOWfolNumuua8t0hVd9yYGnDaT8hiXl3Jg6NI=
+
+Name: org/eclipse/pde/internal/core/project/BundleProjectService.class
+SHA-256-Digest: qpRopdTRQbbLputS+j8J1uEpfdDNwkH6mbo53FX1jk8=
+
+Name: org/eclipse/pde/internal/core/text/IDocumentTextNode.class
+SHA-256-Digest: FmqtCzx9sDenT1lgl9lvgi4j3Bw3ZvJ7PS2K24scI/k=
+
+Name: org/eclipse/pde/internal/core/plugin/IWritableDelimiter.class
+SHA-256-Digest: ZfXqdxu+l1MnrCZ5taKhO3F5dzMp/KzdhBwmOwJ+YRs=
+
+Name: org/eclipse/pde/internal/core/XMLPrintHandler.class
+SHA-256-Digest: Ij+Xzm4BBGWNISZBf7miaZA2miOkbd9ijGYuOyuQ8sI=
+
+Name: org/eclipse/pde/internal/core/target/TargetDefinitionPersistence
+ Helper.class
+SHA-256-Digest: yNXmK0Hs3LImQ6GSANN6r5Qbc/a8vkR3UC0N8+iGHzQ=
+
+Name: org/eclipse/pde/internal/core/AbstractModelManager.class
+SHA-256-Digest: jovrsIavtthVVlwpeoPbwJ3fEl+/4tE5PIWwXPJYBDE=
+
+Name: org/eclipse/pde/internal/core/util/HeaderMap.class
+SHA-256-Digest: +7by2zokm3uByYllmoXw0mZTwQOvS6Qe8VQ3N/Uxtho=
+
+Name: schema.css
+SHA-256-Digest: MlvFEJxz9Kwp5UP02LbS0B6Q8Y4UBt8mwiz8Evo3eC8=
+
+Name: org/eclipse/pde/core/IModel.class
+SHA-256-Digest: fNX/qTTt7/Tiage2bcLAcwj/rsvf+4SihfhZgeHmwcU=
+
+Name: org/eclipse/pde/internal/core/SourceLocationManager.class
+SHA-256-Digest: VH0fvqxGgdPr6RZLFw4OhpFNNjkApHXT7xY6hZyhnho=
+
+Name: org/eclipse/pde/internal/core/util/PatternConstructor.class
+SHA-256-Digest: j25HsDYeleDMmEwCZ6c+OTOWfMEJHsEoppdt8kvbsvA=
+
+Name: org/eclipse/pde/core/build/IBuildModel.class
+SHA-256-Digest: 4RU+pqK4kiF1riCEeYnAU9efnWHSeAP+sX6k3gc+cgU=
+
+Name: org/eclipse/pde/internal/core/iproduct/IProductModel.class
+SHA-256-Digest: DI2v1gWJhzn/ag45dMFp/tFEJwVHKKZCVmBSJCjJG7g=
+
+Name: org/eclipse/pde/internal/core/util/HeaderMap$HeaderComparator.cl
+ ass
+SHA-256-Digest: sZw6bR3I7jAjFbv4dyNyeoEpeH8gTKgb9BMTIWsecf8=
+
+Name: org/eclipse/pde/internal/core/ClasspathComputer.class
+SHA-256-Digest: HN7IqMXPCdMl2jPwHSGS8/CYVRAv7/BnhGySP/4WRUQ=
+
+Name: org/eclipse/pde/internal/core/builders/FeatureConsistencyChecker
+ .class
+SHA-256-Digest: RStfFHUciqs/KovzFAC6p18IvC1vdvwCM/9OxHkLLRw=
+
+Name: org/eclipse/pde/internal/core/PDECore$1.class
+SHA-256-Digest: 8Nvsn2Nwt1cu1YoBNevAFOlPQv9KB3pewrXpRKq+QIw=
+
+Name: org/eclipse/pde/internal/core/plugin/AttributeChangedEvent.class
+SHA-256-Digest: 3nPlQSB4lBEHwKxmswjoE6ToMIagcUnVmYbe2NOaNc0=
+
+Name: org/eclipse/pde/core/plugin/IFragmentModel.class
+SHA-256-Digest: coYeM6+5Qy2MFk27pCED/ZNfJlnqqHXybVNkH28B7J8=
+
+Name: org/eclipse/pde/internal/core/RequiredPluginsInitializer$1.class
+SHA-256-Digest: pcTdcuNxYgjii5AmbL3feW8aW2flrgULN/6lTCKl4g4=
+
+Name: org/eclipse/pde/internal/core/builders/DependencyLoopFinder.clas
+ s
+SHA-256-Digest: 0M19QVFhsfofxapthMgSMf/7TIYEsBY8ExPnComeZ2w=
+
+Name: org/eclipse/pde/internal/core/builders/ExtensionPointSchemaBuild
+ er$DeltaVisitor.class
+SHA-256-Digest: xz8BzZKnzqHe3WHrn0or5g/nt9tPr90vaHuLk+23t7o=
+
+Name: org/eclipse/pde/internal/core/product/ProductModel.class
+SHA-256-Digest: GhQ4kfsmBJ9w7f23ob7axNURO8lduRT2ZUIZ/4SDOr4=
+
+Name: org/eclipse/pde/internal/core/text/bundle/Bundle.class
+SHA-256-Digest: GSDzttroIBUtIHvUsVRWmpkgzLVMKKn+TMqcS211eFo=
+
+Name: org/eclipse/pde/internal/core/text/plugin/PluginExtensionPointNo
+ de.class
+SHA-256-Digest: Bbn3d8Fx3un8ouVJ/adF7bWOHbOVninQRI+LUFnzL/I=
+
+Name: org/eclipse/pde/internal/core/ClasspathHelper.class
+SHA-256-Digest: 2WDFbOpN2o2sxt0haeQAX7P2Fuzf8keWQJVi5mgKaQQ=
+
+Name: org/eclipse/pde/internal/core/text/plugin/PluginModelBase.class
+SHA-256-Digest: ReZgAQzezbytTyz+sSz+EsLrUhIxE6OWuH2sOvm/QGk=
+
+Name: org/eclipse/pde/internal/core/builders/ElementOccurrenceResult.c
+ lass
+SHA-256-Digest: /PbL11Wdptn8ZSF5AmkC9N1ylOiX3HzQQdPjhaJmCRw=
+
+Name: org/eclipse/pde/internal/core/text/IDocumentKey.class
+SHA-256-Digest: gP15Kjv0Hk+M5OZG0NiHK5karURxJYpwkknNd8cD39o=
+
+Name: org/eclipse/pde/internal/core/exports/WorkspaceExportHelper.clas
+ s
+SHA-256-Digest: cvu3WkpklY4HbkMITDf+ybED5ldrb2teJiH3qou12r0=
+
+Name: org/eclipse/pde/internal/core/text/bundle/RequireBundleHeader.cl
+ ass
+SHA-256-Digest: dgCWrsTJIZtqE6tyXsRY4Du3z8kY9FlReoJS+49wfkA=
+
+Name: org/eclipse/pde/internal/core/text/plugin/PluginModel.class
+SHA-256-Digest: rE2P6k3+Sd1I2lftnvqLzoYIZNO4OFPda3Sr5i6C8/c=
+
+Name: org/eclipse/pde/internal/core/IPluginModelListener.class
+SHA-256-Digest: kpFwHMyGeNsipKp9xZ/qUiBdcw9SrbyHH8JzQG3G+Hg=
+
+Name: org/eclipse/pde/internal/core/natures/FeatureProject.class
+SHA-256-Digest: 9vPQmoZOAwOBRMFovKWQ6LQNSiY91hO770k8mtRkGrs=
+
+Name: org/eclipse/pde/internal/core/schema/DocumentSection.class
+SHA-256-Digest: 0DYex2YTT8E+2AVmCK7DPe6xTLjTk1VtYM9ujE4jMrk=
+
+Name: org/eclipse/pde/internal/core/isite/ISiteFeature.class
+SHA-256-Digest: TgAu1G8xfEaZp7yfFHy/tKacy1N6UvDpHCwJnWa/PDI=
+
+Name: org/eclipse/pde/internal/core/text/bundle/PackageObject.class
+SHA-256-Digest: RIwpsu2/1h5st1mDjctdQ18XUceIWo8co9PDUxWd+fs=
+
+Name: org/eclipse/pde/internal/core/plugin/WorkspacePluginModelBase.cl
+ ass
+SHA-256-Digest: kyMTN4TIqy9T1hpKE+gXk1K4S57Qr11jxrfKl6db/yI=
+
+Name: org/eclipse/pde/internal/core/ischema/ISchemaRepeatable.class
+SHA-256-Digest: MRg1ekAHvqqg8MwSU2k1M2so8tfsVtTuukA7KEVjEAU=
+
+Name: org/eclipse/pde/core/IModelChangedListener.class
+SHA-256-Digest: r5siCoEdnFCxaSW6lTRNTqMcCpvJTKoxz5UPZPucSyY=
+
+Name: org/eclipse/pde/internal/core/bundle/BundlePlugin.class
+SHA-256-Digest: 1m0g47boUaP5DFAY+rbZJDgiord5sHm4Y2b7XqgxA94=
+
+Name: org/eclipse/pde/internal/core/PDEAuxiliaryState$PluginInfo.class
+SHA-256-Digest: /M8eazrU5W/a9IEYmYzqwc041+93O7+y9GRu4hizqf4=
+
+Name: org/eclipse/pde/internal/core/text/IDocumentXMLNode.class
+SHA-256-Digest: 2Lr4xDOKfiix+AKtZjCxhQm9Xy9n6DHPkp+Q25xsxOo=
+
+Name: org/eclipse/pde/internal/core/plugin/IdentifiablePluginObject.cl
+ ass
+SHA-256-Digest: kMgzkEhpJfLLrY18vyecJPqcgktt8BMk8xdeHl+JvFA=
+
+Name: org/eclipse/pde/internal/core/BinaryRepositoryProvider.class
+SHA-256-Digest: arn9wy5Ke23Cs772BaUrlFg2ASQ/e5qUFvxUv7UKUqE=
+
+Name: org/eclipse/pde/core/plugin/IPluginBase.class
+SHA-256-Digest: ER2nu3nL8+5hFr+lv8zuNZTyWxuhWeE3uYtiU6aPDEo=
+
+Name: org/eclipse/pde/internal/core/builders/UpdateSiteBuilder.class
+SHA-256-Digest: Br7e4eBWkeLifqMlTTSDRuwbQuqdkdGQei18RfUfb9E=
+
+Name: .options
+SHA-256-Digest: 6Zg9X1saKPgKcN5g9Nv8YxuUVS1l2YezCXhUA0e824o=
+
+Name: org/eclipse/pde/internal/core/build/ExternalBuildModel.class
+SHA-256-Digest: 4V5xzk4Amrvlx8WTfPp9F6rfAF2ACkZ2N0T41dNIQ9w=
+
+Name: org/eclipse/pde/internal/core/builders/SchemaErrorReporter$Stack
+ Entry.class
+SHA-256-Digest: 2v1AzwNRgKwioA63KDah52YtrjAfAAVVsr2mVlS3I4Y=
+
+Name: org/eclipse/pde/internal/core/text/IDocumentObject.class
+SHA-256-Digest: qm468z5kLe57Dk4d4mdL4eDCoy0TtplGsT19zvKybt8=
+
+Name: org/eclipse/pde/internal/core/site/SiteDescription.class
+SHA-256-Digest: cX0hf6UU5hu5hDfXsbqILmHj8wi/j9j0JixEtYU4owE=
+
+Name: org/eclipse/pde/internal/core/ifeature/IVersionable.class
+SHA-256-Digest: pTE6wVm5c60ZbSn5Vap1xVIrhDuzbQ7mlq/qpnDi2Dk=
+
+Name: org/eclipse/pde/internal/core/variables/TargetWSVariableResolver
+ .class
+SHA-256-Digest: TytWXDIxYPkYAzqMn4IrjMQMBF9bFUI4ypWHc+93oSo=
+
+Name: org/eclipse/pde/internal/core/bundle/WorkspaceBundlePluginModel.
+ class
+SHA-256-Digest: 6/N5Ag2Zq2Rh7UzA3ahlXeIMTsBL2Jz+sjukCTNRRNs=
+
+Name: org/eclipse/pde/internal/core/content/DefaultDocumentFactory.cla
+ ss
+SHA-256-Digest: Gb5kkk2IuHCgfwShLH25OqepISnKrZuVcPYpoBUC2Rs=
+
+Name: org/eclipse/pde/internal/core/text/bundle/BundleModel.class
+SHA-256-Digest: wGka3tfR6RWOdTEo+yqQUhHyvmT3o4cMvOAjTXrFnpo=
+
+Name: org/eclipse/pde/core/ISourceObject.class
+SHA-256-Digest: 8rvmnuO7jDNKrGij5Cesf09JcT3lu+Vmkgbhx3n3jNo=
+
+Name: org/eclipse/pde/internal/core/target/IUBundleContainer.class
+SHA-256-Digest: nVNr7RwcIp2PJGGnKVBdPOf7eXlGnh8sOE94W/00qJI=
+
+Name: org/eclipse/pde/core/project/IPackageImportDescription.class
+SHA-256-Digest: 90/JSsBsq2+g/AwvyfkZJ31+ifj4u0eUJ/9Zona/dMs=
+
+Name: org/eclipse/pde/internal/core/product/LicenseInfo.class
+SHA-256-Digest: CsTDW5aJ2uFSuFj+wudqR80HK84jIthwReYfVTI101A=
+
+Name: org/eclipse/pde/internal/core/text/bundle/BundleSymbolicNameHead
+ er.class
+SHA-256-Digest: 9FX25juu3OZZv8kHO5RFd8lzFWzWy06qtgf/OUe5OQQ=
+
+Name: org/eclipse/pde/internal/core/product/ProductObject.class
+SHA-256-Digest: kjbF4Fj4MgyBFXRb1IP1yooQsK8yIa4Gd2hPAKyN6Bg=
+
+Name: org/eclipse/pde/internal/core/plugin/PluginObject.class
+SHA-256-Digest: 7jL2PkPuDO7qqVj61UYROLQHTbiRC4QQdMV94Lf/NOQ=
+
+Name: org/eclipse/pde/core/target/ITargetDefinition.class
+SHA-256-Digest: axdTbTgcn7y8CoO0TEeTNBv5r9TETwhIQeFV8MEHzro=
+
+Name: org/eclipse/pde/internal/core/builders/SourceEntryErrorReporter.
+ class
+SHA-256-Digest: pr9xar0nTCI5kFQWaIeOj9y0cNKPYUA+xCXHA9PUWbo=
+
+Name: org/eclipse/pde/internal/core/ischema/ISchemaComplexType.class
+SHA-256-Digest: Sfh/3RqixbKM6Tqqm8JPmffgBMKcyLdVhzu+AiWAhNA=
+
+Name: org/eclipse/pde/internal/core/ifeature/IFeatureInfo.class
+SHA-256-Digest: zD0iBp0MP3dw77hHn/8RtHb8OdpQoLRPUrvAGmSM6So=
+
+Name: org/eclipse/pde/internal/core/text/bundle/RequiredExecutionEnvir
+ onmentHeader.class
+SHA-256-Digest: ik1OdzNPNQXFX9ZzvEAN30WCu6MsX7pR9M8qxu9KYBM=
+
+Name: org/eclipse/pde/internal/core/NLResourceHelper.class
+SHA-256-Digest: BdnyZ/Q5S0ZZT9a1aSrC5vU6KQD8g5DCJkTuL+p6A40=
+
+Name: org/eclipse/pde/core/IClasspathContributor.class
+SHA-256-Digest: 0q7Cx3J7Z1siF2bZiJj2ZeMIL+tqWD9phg4FW522OAo=
+
+Name: org/eclipse/pde/internal/core/text/build/PropertiesTextChangeLis
+ tener.class
+SHA-256-Digest: HpMbWnaiz8gERKBJF4FxO6GqtQDxvVnauV+yflgIcFU=
+
+Name: org/eclipse/pde/internal/core/target/IULocationFactory.class
+SHA-256-Digest: 5pq94Nj/aQHFUa3IeZmMBkp8M9ivjANYYJblqfizMpc=
+
+Name: org/eclipse/pde/internal/core/IFeatureModelListener.class
+SHA-256-Digest: L0XB+/iiLvFtGHgBwUwV4SDTmMMPp8Z1W4YpVQydJFA=
+
+Name: org/eclipse/pde/internal/core/search/PluginSearchScope.class
+SHA-256-Digest: ih2wGIUMqWzE0ScUx6sin6Uf4jDTyfCbg4jv7qIF+aw=
+
+Name: org/eclipse/pde/internal/core/schema/SchemaSimpleType.class
+SHA-256-Digest: SN5BJQb/NDa/UJeVVAUweiuKYoS8zeH8ysSeB7DobFo=
+
+Name: org/eclipse/pde/internal/core/ischema/ISchemaInclude.class
+SHA-256-Digest: o2IO8ODSJQNewlz/LA6lDw91XjuFl6sIcfZfInjSsV4=
+
+Name: org/eclipse/pde/internal/core/util/PDETextHelper$IntegerPointer.
+ class
+SHA-256-Digest: vlAJhID8sbzeuZzZ4B2qjdVAYc8WWbp6u0Am6Ya1hP4=
+
+Name: org/eclipse/pde/internal/core/plugin/AbbreviatedPluginHandler.cl
+ ass
+SHA-256-Digest: d4n2dDzs3LlplbarXRwM2gPUoPCI/dcfrMskSLIW2sw=
+
+Name: org/eclipse/pde/internal/core/ibundle/IBundle.class
+SHA-256-Digest: 16rRQB4+1GjHk+bdUTioalio9yFjDd5fxni9PiJ+Uck=
+
+Name: org/eclipse/pde/internal/core/feature/ExternalFeatureModel.class
+SHA-256-Digest: mconP/IsHWDjInUdr+L3mvqaXVXIntTi3gjv0tduu0w=
+
+Name: org/eclipse/pde/internal/core/text/AbstractKeyValueTextChangeLis
+ tener.class
+SHA-256-Digest: 2bRDEwp0jQ8KpO2NrUgPb1IEjdMS3aTjkDSm3Hjln6Y=
+
+Name: org/eclipse/pde/internal/core/site/SiteCategory.class
+SHA-256-Digest: clOUeg+qmW3jDQ13kgnQTZ+pRkNq4rTf3f15zpEeXyM=
+
+Name: org/eclipse/pde/core/plugin/IPluginExtension.class
+SHA-256-Digest: dwyo4he/6gd/LcgXNGsEAu1yh4x0Po5kjQFMcACEUsg=
+
+Name: org/eclipse/pde/internal/core/builders/PDEMarkerFactory.class
+SHA-256-Digest: kB08kS4VWAFglFNlvKsvuMOomvGmlrl9TcqhfxDOCBU=
+
+Name: org/eclipse/pde/internal/core/feature/FeatureURLElement.class
+SHA-256-Digest: BDGQG0OlmA/1aOor1VgZesNMFQdNkgd3ZvlImMR+tsw=
+
+Name: org/eclipse/pde/internal/core/builders/BuildErrorReporter.class
+SHA-256-Digest: PSAw+pZL5Or8jgNaYoTlv7AA6h4gU9z4lEbB4t/vEiA=
+
+Name: org/eclipse/pde/internal/core/text/plugin/XMLTextChangeListener.
+ class
+SHA-256-Digest: KlVcU8CwamtGXRc6/5L+4UksV2imIywrSwUkbJmFqEc=
+
+Name: org/eclipse/pde/internal/core/JavaElementChangeListener.class
+SHA-256-Digest: sHpD2+/kP6jzChrzY09W7Ml4nx+yEiAC1ZxxWYo3wnI=
+
+Name: org/eclipse/pde/internal/core/ClasspathContainerResolverManager.
+ class
+SHA-256-Digest: kuBq2afsx5lFAS9vmOgJ0l1RM5I46KM8oYUfvTErnTI=
+
+Name: org/eclipse/pde/internal/core/natures/BaseProject.class
+SHA-256-Digest: JPA+pa+jHvtiYjbCXgtgFFGI2uTAQSY6+dbmKWjrlvA=
+
+Name: org/eclipse/pde/internal/core/search/PluginSearchInput.class
+SHA-256-Digest: TMG5Ou5EBarIY96Gz/K6kfnf3xAHFAiiZSqSOEJH4N8=
+
+Name: org/eclipse/pde/internal/core/FileAdapter.class
+SHA-256-Digest: 5NnO6d767ufJALzGyC91X24vFlo1HvvklzCrq9FTkuU=
+
+Name: org/eclipse/pde/internal/core/text/bundle/SingleManifestHeader.c
+ lass
+SHA-256-Digest: yQDlbFXRKk8UdHVssO9f2uWkKhTesyQ0xr/zw8p/rrY=
+
+Name: org/eclipse/pde/internal/core/PDECoreMessages.class
+SHA-256-Digest: oWMGitspJTGAhsIwE59raM/DtUhSpZ1zWec6PqgcR4Y=
+
+Name: org/eclipse/pde/core/plugin/TargetPlatform.class
+SHA-256-Digest: JqrElAVU4kQBV3UtqhFKgyeuaKoGCpYTbqZiXZW3YRU=
+
+Name: org/eclipse/pde/internal/core/natures/PluginProject.class
+SHA-256-Digest: 4KkTgvOLd+OFBWCqVTvvlqPWEYoGZDprvKDDWPONMcE=
+
+Name: org/eclipse/pde/internal/core/builders/ManifestConsistencyChecke
+ r$ManifestFilter.class
+SHA-256-Digest: Bxqt8Po5CmKzmJXMAt0ghnCzpvDtQ9fmDzFHjt/y6QE=
+
+Name: org/eclipse/pde/internal/core/ifeature/IFeatureURL.class
+SHA-256-Digest: bULwAnb4EnOWt9E3hLG1gmZ1C1AVwZx9bcp4UncwJjI=
+
+Name: org/eclipse/pde/internal/core/ExtensionDeltaEvent.class
+SHA-256-Digest: DYd5FXPIyvqTsPGeS8JdpWiTZTQDFHhtMO7GRCB99fY=
+
+Name: org/eclipse/pde/internal/core/plugin/PluginExtension.class
+SHA-256-Digest: ZdsQ3QN6iMxQrkscWs0DKHCmvghzpbkNWpN4ze4LdKw=
+
+Name: org/eclipse/pde/internal/core/TargetPlatformHelper.class
+SHA-256-Digest: n1isg5j7FNN7xFNcnyiYW5bKJEWLRLXpQoqG1WqBv+w=
+
+Name: org/eclipse/pde/internal/core/builders/ManifestErrorReporter.cla
+ ss
+SHA-256-Digest: y6YCGytZ/Busq2HOuJArOWV8wiNSXCwvLLLLogROR9o=
+
+Name: org/eclipse/pde/internal/core/util/IdUtil.class
+SHA-256-Digest: VKwtaWtAjjua7ijgAXkHvrqDo4csX7hyM7pAnDM46W4=
+
+Name: org/eclipse/pde/internal/core/FeatureTable.class
+SHA-256-Digest: YXMFeywHpk5cGVM1P5LzgB0wu9FUTrXIGUmX8G2KPLI=
+
+Name: org/eclipse/pde/internal/core/ICoreConstants.class
+SHA-256-Digest: z0RNA9HwXtpYI/FANcR2ZMxfAqAzsDWKn7+NlpZEEpE=
+
+Name: org/eclipse/pde/core/plugin/ISharedExtensionsModel.class
+SHA-256-Digest: bKIFYurRKpaHLijAOMjtuqfsOaq1XliLn0AuWz6xUeY=
+
+Name: org/eclipse/pde/core/IModelProvider.class
+SHA-256-Digest: DrRs3w5Kf9Gj+CWPK2j/F9+Ewmu5tz0j3UQsKdqqJjA=
+
+Name: org/eclipse/pde/internal/core/target/WorkspaceFileTargetHandle.c
+ lass
+SHA-256-Digest: 3GjgccN2OFsU/q/0RiRzqwpbyRR8OSYhG3djlJ9Xrc4=
+
+Name: org/eclipse/pde/internal/core/project/RequiredBundleDescription.
+ class
+SHA-256-Digest: 8EY+9hsCFyZq2NzWJDjiPjiFvqX/Pn3Ltu3mnq/Y+T4=
+
+Name: org/eclipse/pde/internal/core/feature/VersionableObject.class
+SHA-256-Digest: eAUvvKvNwpZAw+E18Y9pPTljZOtTGOzyj3NJKBjUtlY=
+
+Name: org/eclipse/pde/internal/core/schema/SchemaElementReference.clas
+ s
+SHA-256-Digest: NGOT6yC1C/vLnhU99SC7Mdftwv0D3lwbg7uTzibwf4w=
+
+Name: org/eclipse/pde/core/plugin/IPluginModelBase.class
+SHA-256-Digest: HuKr//zBt8GlE2nECEIlqd76kA+ifWZCGuC1rkAPedc=
+
+Name: org/eclipse/pde/internal/core/natures/PDE.class
+SHA-256-Digest: 4XWqTYV4XGib0eCJwXjDb85CMCw//OVmOWR9Lk9sWt0=
+
+Name: org/eclipse/pde/internal/core/target/ProfileBundleContainer.clas
+ s
+SHA-256-Digest: NE1txfpgXw+7n6S7cjVDjnK8+GyHvdvV2LDal28HVVQ=
+
+Name: org/eclipse/pde/core/project/IHostDescription.class
+SHA-256-Digest: t8Z5ZBNSid5HUaAFarZ+OL0jhxtE576YYGKU/QiA/bE=
+
+Name: org/eclipse/pde/internal/core/TargetPreferenceModifyListener$Vis
+ itor.class
+SHA-256-Digest: 7n+6hG5dE5F0SnHdT8arnEbxdNUCEx9c+pCko8z5Iow=
+
+Name: org/eclipse/pde/internal/core/build/BuildEntry.class
+SHA-256-Digest: kvV2Q9r6nP5R4+k72YJpX25FM/TVNtsy60RV8nU3ZMo=
+
+Name: org/eclipse/pde/internal/core/product/AboutInfo.class
+SHA-256-Digest: zZJPADDBxP+8575xTJEgSi3XWCkqSdpOjXy7ReMGluI=
+
+Name: org/eclipse/pde/internal/core/schema/StorageSchemaDescriptor.cla
+ ss
+SHA-256-Digest: Rnmj/VoRoang2iIugOjDACKXnOm10kvHG0HIRhDn/rM=
+
+Name: org/eclipse/pde/internal/core/util/UtilMessages.properties
+SHA-256-Digest: uLHheWGTxHIpJjXJ06JhJ2gUHYWyzHUuBgvPe115ga4=
+
+Name: org/eclipse/pde/internal/core/target/P2TargetUtils$CollectNative
+ sAction.class
+SHA-256-Digest: IMQU3jAlpTeNIuSGhVB7osfHkpESigqMI8xiJwhZEW8=
+
+Name: org/eclipse/pde/internal/core/product/JREInfo.class
+SHA-256-Digest: P0coGHc3nHys72WkJDcjHc+f7nQhGuSdDe2mlWG2ofU=
+
+Name: org/eclipse/pde/internal/core/ifeature/IFeatureObject.class
+SHA-256-Digest: vKVcp9iAiFJvPIEr18/pXNds9Ye6G9yR1EzGyEKdFgQ=
+
+Name: org/eclipse/pde/internal/core/util/PDESchemaHelper.class
+SHA-256-Digest: iOpSyphewW8oKi8VvOhF7iIfunJDkLzjEqrM1Ydza2U=
+
+Name: org/eclipse/pde/internal/core/FeatureTable$Idver.class
+SHA-256-Digest: bsThXNDEfguW9pNgoNajm+7DPNFP+3wCHnfCYAjImIY=
+
+Name: org/eclipse/pde/internal/core/builders/BundleErrorReporter.class
+SHA-256-Digest: GnF2r6WNx/S4UiNtfvnRL4eDkPvN2xffXtqNUPm0ZZY=
+
+Name: org/eclipse/pde/internal/core/IModelChangedListenerFilter.class
+SHA-256-Digest: MlRsVH41yXK07x9oSo0stsliWjG4UcPkx42YtvX9QtI=
+
+Name: org/eclipse/pde/internal/core/product/ArgumentsInfo.class
+SHA-256-Digest: TtWRkZ71mORyCv6MlHcx95JTClLk8ltES0wH9sSMHaE=
+
+Name: org/eclipse/pde/internal/core/target/TargetDefinition.class
+SHA-256-Digest: fUcrJHuD2pjhlavb4jiSbkEllBKc46Z5RLfWOL49qsw=
+
+Name: org/eclipse/pde/internal/core/isite/IStatsInfo.class
+SHA-256-Digest: 9lJven0ODJlWUTn43hMrYwzmuGUDDg5l/3VTUnWH2qw=
+
+Name: org/eclipse/pde/internal/core/isite/ISiteBundle.class
+SHA-256-Digest: NG7ylQnq/r9ZNXmP9Jbe/bMcMDMbhBJlc4QnuuE9D00=
+
+Name: org/eclipse/pde/internal/core/ibundle/IBundlePluginModelBase.cla
+ ss
+SHA-256-Digest: 8O/AzD60qmNy8TFBXFLnwiIEWTQF+vp64qgvDRsxwX0=
+
+Name: org/eclipse/pde/internal/core/text/IDocumentElementNode.class
+SHA-256-Digest: gxhh/i9Ap1Xr9nm+FIEZO5KiooXklQDuF4VUb64hO1o=
+
+Name: org/eclipse/pde/internal/core/ischema/ISchemaRootElement.class
+SHA-256-Digest: ncckY+B2Z4bMVlF16LsgKmsndY8mu56o4btHK78FAh8=
+
+Name: org/eclipse/pde/core/ModelChangedEvent.class
+SHA-256-Digest: jUeb1kNVvUxWOKlBDc90E3uxfH2m5CF0amQaiXsdQXs=
+
+Name: org/eclipse/pde/internal/core/iproduct/IIntroInfo.class
+SHA-256-Digest: 6RmWGQRngV0JBjRnOepmRtgV6d7r705Fj7zL958t5qA=
+
+Name: org/eclipse/pde/internal/core/iproduct/ILauncherInfo.class
+SHA-256-Digest: SBJlVW3qJ7/e3jvgJ/JrmfC6wcw4erWh7gm++lah0Ok=
+
+Name: org/eclipse/pde/internal/core/schema/RepeatableSchemaObject.clas
+ s
+SHA-256-Digest: GLMFghLEiIW7xX6poei4xiBcdTYPqvFM5ad5goldhnE=
+
+Name: org/eclipse/pde/internal/core/text/bundle/ExecutionEnvironment.c
+ lass
+SHA-256-Digest: 5D5PylubwRb9yyT9cCkv3XbBm2x/HVy8D2z6MraRJGU=
+
+Name: org/eclipse/pde/core/target/ITargetLocationFactory.class
+SHA-256-Digest: BdDFyV28EKar7plbWNQxqUQWa4KvWrIxwlbrNIoDPGU=
+
+Name: org/eclipse/pde/internal/core/ischema/ISchemaRestriction.class
+SHA-256-Digest: hm+pEk24vt8R08fj/PbGc4RWLzZP39sxzBfcjz3TSgc=
+
+Name: org/eclipse/pde/internal/core/project/BundleClasspathSpecificati
+ on.class
+SHA-256-Digest: gzvPgw6NbqZHl2vDZ4LSpiUiJ30x8PqplEjRfhXL0Pc=
+
+Name: org/eclipse/pde/core/project/IBundleProjectDescription.class
+SHA-256-Digest: qlAUmCqfftjC+ovgAmxTEWJg2Qv8KAtjVPp+sQfhETY=
+
+Name: org/eclipse/pde/internal/core/product/LauncherInfo.class
+SHA-256-Digest: 4Sqd9QxrT6F+/inY/kx1bCt1BLhyQN0KS7QOS4HcTNo=
+
+Name: org/eclipse/pde/internal/core/iproduct/IProductFeature.class
+SHA-256-Digest: LOZo1t04WV0W/EsR8loQBtpuchfYxP0VjpJ64+21IeQ=
+
+Name: org/eclipse/pde/internal/core/iproduct/IProductModelFactory.clas
+ s
+SHA-256-Digest: aK0s8EI6UKM4NSPsrj5Qn/50ARKlMjVCKNWHR0wdCCk=
+
+Name: org/eclipse/pde/internal/core/ischema/IMetaElement.class
+SHA-256-Digest: g4jdw5NVO/miHujU3C/1bWpSniQHvq/AGt23Zfs2y4Y=
+
+Name: org/eclipse/pde/internal/core/text/DocumentTextNode.class
+SHA-256-Digest: iqMBuGyTgS8B/EYw2QNibTcD7RUGhIvUZTLXKYoLM6Y=
+
+Name: org/eclipse/pde/internal/core/pderesources.properties
+SHA-256-Digest: Vws1fAkQ2WqNvIaunvGapyxbeAvljOCLWD9DwEsOL2A=
+
+Name: org/eclipse/pde/internal/core/util/UtilMessages.class
+SHA-256-Digest: 2OenWDKS7Ja16j0ymkulBjiw+NjDVdtC2b1eAJR+gJU=
+
+Name: org/eclipse/pde/internal/core/PDEState.class
+SHA-256-Digest: YoGdcn6FzrTWZK6kiohp5Z7YR8fSxIucKjonwJ8uKlw=
+
+Name: org/eclipse/pde/internal/core/AbstractNLModel.class
+SHA-256-Digest: OItAs0PdRvklwlWKU5XF9JQ9v919160XE4DyjnKtw4g=
+
+Name: org/eclipse/pde/internal/core/target/P2TargetUtils.class
+SHA-256-Digest: 8/CzTUGamNOgNZCESNwcM/dvvT0AXm7cLEnh7Uqo2yM=
+
+Name: plugin.xml
+SHA-256-Digest: hMmUIEXvZ4Sb8kIaBABEh2mXDkzI7nBAkW2zw4G+ucM=
+
+Name: org/eclipse/pde/core/IEditable.class
+SHA-256-Digest: 4lT0QZPqfzmeQQL7fPA48/myvjnom17VjvVQ+Ln1Fgo=
+
+Name: org/eclipse/pde/internal/core/text/plugin/PluginExtensionNode.cl
+ ass
+SHA-256-Digest: 6vJm7QAWyqqZrxkmPhRzpgpNSGNJfDncXwMKEVdKzE4=
+
+Name: org/eclipse/pde/internal/core/WorkspaceModelManager.class
+SHA-256-Digest: DLhApGIqLyVp8Bao3ml7vk05ZA/vWpYLM14f9bf29oE=
+
+Name: org/eclipse/pde/internal/core/build/WorkspaceBuildModel.class
+SHA-256-Digest: 5VuHEB4PrC74+/e2hdirHVndQjU3hPU2tvLelmdFc7M=
+
+Name: org/eclipse/pde/internal/core/product/CSSInfo.class
+SHA-256-Digest: lmvpDW3s7TVGQIVBSxSA/HElxE/UegCBcqRjgawguLE=
+
+Name: org/eclipse/pde/internal/core/XMLDefaultHandler.class
+SHA-256-Digest: IHW8auIktnSvGlrJT0A4YP6ofWvwqak7pyvPQEDcIyM=
+
+Name: org/eclipse/pde/internal/core/site/RepositoryReference.class
+SHA-256-Digest: IQk0oUny4dPJbj7XII/hNnRO2Eht6GLjNpgjqEiHvuk=
+
+Name: org/eclipse/pde/core/target/TargetFeature.class
+SHA-256-Digest: qjtuOPN4kjkF73E9B3WAtIwD/oiPVGnTMv5BUgW3xuY=
+
+Name: org/eclipse/pde/internal/core/product/ConfigurationProperty.clas
+ s
+SHA-256-Digest: 5T5sHU4wUhimQCUZv9PKFIuS/Id14h2jmodeYAYbfnU=
+
+Name: org/eclipse/pde/internal/core/WorkspaceModelManager$ModelChange.
+ class
+SHA-256-Digest: po+tosrsY8Zc+pjGHKKiZUCJY1zZvFKJ+oNvMepAJE8=
+
+Name: org/eclipse/pde/internal/core/builders/ExtensionsErrorReporter.c
+ lass
+SHA-256-Digest: L0qbrltcBJbsvgXoP6JKYanrsllPqwlZLdYc16jtUCY=
+
+Name: org/eclipse/pde/internal/core/ifeature/IFeatureData.class
+SHA-256-Digest: A5fBsyflhTIJcEYpaAO006Og4NxHQnT5c4A4AtiVMok=
+
+Name: org/eclipse/pde/internal/core/text/bundle/BundleActivatorHeader.
+ class
+SHA-256-Digest: gE0wVXo4Yz473iWvvwdGVxOoafmRdlkA4WpyP93Np/g=
+
+Name: book.css
+SHA-256-Digest: GYk/T2XGSGE9pcxVLM64L6YdHmxy4RFDBTGffV+ICLQ=
+
+Name: org/eclipse/pde/internal/core/IStateDeltaListener.class
+SHA-256-Digest: bdmncz2f4L6+YU174D+nxxxpmnXkr38UHK2nKCO2CYY=
+
+Name: org/eclipse/pde/internal/core/isite/ISiteCategoryDefinition.clas
+ s
+SHA-256-Digest: xGAHllnQnx46ojbZpnD/y57xehMNXaOfhW8jPywVApg=
+
+Name: org/eclipse/pde/internal/core/text/bundle/BundleLocalizationHead
+ er.class
+SHA-256-Digest: zim9yOY2o9AELlL2NniyWyumu8+EEbR7rf8Aywv59H4=
+
+Name: org/eclipse/pde/internal/core/BinaryRepositoryProvider$BinaryMov
+ eDeleteHook.class
+SHA-256-Digest: M/L646gVPkae4kO6DTHQ2ugoQ36oOCK0ehxUA97IZic=
+
+Name: org/eclipse/pde/internal/core/plugin/Extensions.class
+SHA-256-Digest: fcV31OhGUvsxVsTOA+7mKKDMij3P0Ct7XcEAejGMRtM=
+
+Name: org/eclipse/pde/internal/core/TargetDefinitionManager.class
+SHA-256-Digest: an5IJGX38FtUPb9O4s30EnOAsh6ckQLi0Rqxr7fqTw4=
+
+Name: org/eclipse/pde/internal/core/ischema/ISchemaObjectReference.cla
+ ss
+SHA-256-Digest: NMc4OrLPsj4VX7EFFHk4oERyI0+XMIx4PowphPnF/lM=
+
+Name: org/eclipse/pde/internal/core/feature/FeatureFactory.class
+SHA-256-Digest: yjKrW+N67k/e5mPnArccttbZI2PYlSi1K8ayI0v3yW4=
+
+Name: .api_description
+SHA-256-Digest: J1YcVGxb2XIpLa3Fu/idqBbEVs1lxfQ/zXY1KjfHLqA=
+
+Name: org/eclipse/pde/internal/core/text/bundle/BundleClasspathHeader.
+ class
+SHA-256-Digest: qsXijT9JDOMzWi6wCHbgSsqHUdYBZYTYFiJj5zTuCxM=
+
+Name: org/eclipse/pde/core/target/ITargetPlatformService.class
+SHA-256-Digest: Ga59uFoBB4Yh78JF5HlVNJGimOtRKR26BQo2smkUNp4=
+
+Name: org/eclipse/pde/internal/core/ibundle/IManifestHeader.class
+SHA-256-Digest: Zgc6/dK2Kbs/B74dYzh5HXPNtFQOEL0/NsPnX6uI/yY=
+
+Name: org/eclipse/pde/internal/core/text/plugin/PluginImportNode.class
+SHA-256-Digest: sOUNa/T6WyrEOfnEpDiKUSp9asE9kD3xGyoLgi3y4mI=
+
+Name: org/eclipse/pde/internal/core/build/BuildObject.class
+SHA-256-Digest: QQL+8mLqTpZxdsh51G3CSb4hpRzrKyutfosdWebtR+Q=
+
+Name: org/eclipse/pde/internal/core/ModelFileAdapter.class
+SHA-256-Digest: M7GMBYKhcfXgelQY5WG03viFS7DQUxDR1ij0R+ePHIE=
+
+Name: org/eclipse/pde/internal/core/PDECore.class
+SHA-256-Digest: Ft8GfE4fZlJ5LTbPjNIt5oDLjKa4Rid0qNZZGfSdkeM=
+
+Name: org/eclipse/pde/internal/core/ibundle/IBundlePluginModel.class
+SHA-256-Digest: wyxX2osWIyIGCDmxIsDy59VUoDql9QeRM0hfnnptvz0=
+
+Name: org/eclipse/pde/internal/core/PDEPreferencesManager.class
+SHA-256-Digest: avwpIJRWHaFlsQlTfYK/HMd9RZEhhLwSA89kqm3SpbI=
+
+Name: org/eclipse/pde/core/IIdentifiable.class
+SHA-256-Digest: pVQ03lVxGOg+VVbh06sfRZ0598dFy5IC4WdGmrHFWXc=
+
+Name: org/eclipse/pde/internal/core/FeatureModelDelta.class
+SHA-256-Digest: 8n94WtCWtlGCa7KxyH8Bg+u5UQsvHvvvlvVVSoKcBFI=
+
+Name: org/eclipse/pde/internal/core/product/ProductModelFactory.class
+SHA-256-Digest: DdKiabb1LXB1kUE8/DHcCRgdG+fVBq5da8EPhxlG3xA=
+
+Name: org/eclipse/pde/internal/core/builders/FragmentErrorReporter.cla
+ ss
+SHA-256-Digest: jRdSAVH7MIlOxfJbZCr0/o83JqpWQ4DkLijOSb868Vk=
+
+Name: org/eclipse/pde/internal/core/text/bundle/PackageFriend.class
+SHA-256-Digest: w/BfFtRHEWaXi7Vqp6uMcGlDoJkJkdU7EPdiE5a7T4M=
+
+Name: org/eclipse/pde/internal/core/schema/SchemaDescriptor.class
+SHA-256-Digest: cvQqAcoeZEjbnBaGrWEecKyqUay1yr+hG3oqinh+52Y=
+
+Name: org/eclipse/pde/internal/core/feature/FeatureObject.class
+SHA-256-Digest: Dkq+bhlytNUfpqGTgSsNJ637fR3DzgFOcZ+/YyAHfzo=
+
+Name: org/eclipse/pde/internal/core/IModelChangeProviderExtension.clas
+ s
+SHA-256-Digest: sv1ajTpm21nDf5pX7K6OtOi1miRrLCJWFL62UzhEEmc=
+
+Name: org/eclipse/pde/internal/core/target/TargetPlatformService$3.cla
+ ss
+SHA-256-Digest: 9XGSclmtOzmsg4dEoce6CLkJ398dOdlBJojS2V9nTZU=
+
+Name: org/eclipse/pde/core/IModelProviderListener.class
+SHA-256-Digest: iVjizOScBbt97RwKKT7GoQ042HJcnFevTRY+zP+tYSo=
+
+Name: org/eclipse/pde/internal/core/target/LocalTargetHandle.class
+SHA-256-Digest: gkav4xL29yPGce38Kq15vrrK2Jfr5rYmJNu8JErNfak=
+
+Name: org/eclipse/pde/internal/core/RequiredPluginsClasspathContainer.
+ class
+SHA-256-Digest: DxYbwra3lAaYdZT3xA9TAmEdQAXkIYskqe6Cz02UWNc=
+
+Name: org/eclipse/pde/internal/core/iproduct/IPreferencesInfo.class
+SHA-256-Digest: yzOV85tcgwC0GGCJFsvB5Fuk60dlItnETy3kRR/1W4I=
+
+Name: org/eclipse/pde/internal/core/text/bundle/CompositeManifestHeade
+ r.class
+SHA-256-Digest: VoG49r6JQ6AkoFh1MMF8w0WeT167OzRQ0+UI6zjcx9s=
+
+Name: org/eclipse/pde/internal/core/ischema/ISchemaObject.class
+SHA-256-Digest: QGXZhvul1dQYAxfvoDv0rohtnOH+csRn+mWjCrC4iAw=
+
+Name: org/eclipse/pde/internal/core/plugin/AbstractPluginModelBase.cla
+ ss
+SHA-256-Digest: ljoRH//f0nKZybn50rHI2ms1Tcl7NNn0jCW0QNqoacg=
+
+Name: org/eclipse/pde/internal/core/builders/FeatureErrorReporter.clas
+ s
+SHA-256-Digest: 1EPRu7xE4oZRwnk1DiCky3bbYXzZmzk5EVu7g92WGC0=
+
+Name: org/eclipse/pde/internal/core/ifeature/IEnvironment.class
+SHA-256-Digest: j7hxOnfDmMuxyXz93+oVhyocs7yMYY7hfzsU9J0kuG4=
+
+Name: org/eclipse/pde/internal/core/schema/SchemaAnnotationHandler.cla
+ ss
+SHA-256-Digest: OqQGN5W4Llnaja4OQ3PQL2OpbmQ0IDIhYmUGXw93QpM=
+
+Name: org/eclipse/pde/internal/core/iproduct/IArgumentsInfo.class
+SHA-256-Digest: Vf10gTE4wg6D819Jm3jp4ZeYs5tnKPOJ/GpUqJIPfhY=
+
+Name: org/eclipse/pde/core/project/IBundleProjectService.class
+SHA-256-Digest: o6vkVRYlYZh4xVGxk3nQHN3bZOU7JOfqamN3EZoq2oE=
+
+Name: org/eclipse/pde/internal/core/PluginPathFinder.class
+SHA-256-Digest: rP8Tb2QZq28iGOksKjb0C0vZg9kF2ItdzxkoSKprI9E=
+
+Name: org/eclipse/pde/internal/core/plugin/ExternalPluginModelBase.cla
+ ss
+SHA-256-Digest: jQ5SW3AV5ehGRmzp0Uk30Gy+PO0z65hlwMf3/VefgME=
+
+Name: org/eclipse/pde/internal/core/text/AbstractEditingModel.class
+SHA-256-Digest: rtU/7vhvSFmg762El2M/6HlfF7SRDvuL0iAx9/pe+io=
+
+Name: org/eclipse/pde/internal/core/text/IDocumentAttributeNode.class
+SHA-256-Digest: qQyw8v97CTN3EPMCfgVaDkN6mtRTZlm/w1ICOes95Ys=
+
+Name: org/eclipse/pde/internal/core/ifeature/IFeatureModel.class
+SHA-256-Digest: wphkev0So9GZ9QTlcKc1TePRlJoQUw4gJljjD07bvOg=
+
+Name: org/eclipse/pde/internal/core/isite/ISiteDescription.class
+SHA-256-Digest: K52RbZCj+fsw9UNVHSUG3IGs6kGE4JUqtGbsWAJRyUA=
+
+Name: org/eclipse/pde/internal/core/PluginModelManager$UpdateClasspath
+ sJob.class
+SHA-256-Digest: 7OtM7LFVTzYYINsqkPLdy55SQeWxZzFfUJ/ql1mBFjE=
+
+Name: org/eclipse/pde/internal/core/search/PluginSearchOperation.class
+SHA-256-Digest: kjtsgROrgJMwsr5gL1x6JPCh8oO3yKNir2zqOWWxyN0=
+
+Name: org/eclipse/pde/core/plugin/IPluginExtensionPoint.class
+SHA-256-Digest: +G49JIs7X9Qtqwe+ROJ5cRjecXF5vMzKb1gNDtDCskE=
+
+Name: org/eclipse/pde/core/project/IPackageExportDescription.class
+SHA-256-Digest: jDZFXHvF0g2NC/PeO3nYuAhUX20m6bu5NXx3HfNs8O0=
+
+Name: org/eclipse/pde/core/plugin/PluginRegistry$PluginFilter.class
+SHA-256-Digest: PK942CNOgNG5u+uZ+SpDrJZghQ8PmOek9ganuu8fl/g=
+
+Name: org/eclipse/pde/internal/core/text/plugin/PluginElementNode.clas
+ s
+SHA-256-Digest: 2H73pxlgZpBhyFyNAf38QSdIOivR+5D3vI+bvGRjBvM=
+
+Name: org/eclipse/pde/internal/core/builders/ManifestConsistencyChecke
+ r$ClassChangeVisitor.class
+SHA-256-Digest: N+vdjfdt0GAb0tgtnz/ddEjuysWqBo9DVAlDxb4WLo0=
+
+Name: org/eclipse/pde/internal/core/product/IntroInfo.class
+SHA-256-Digest: kv2whSFYjP1GecmDNZ2aGWF8iPeJlBSDxFj5RkspInY=
+
+Name: org/eclipse/pde/internal/core/TargetPreferenceModifyListener.cla
+ ss
+SHA-256-Digest: HzbN7BtGCjF3eJ9+zeDVUZ63qwx/P4LcnQ3G4rdQX8M=
+
+Name: org/eclipse/pde/internal/core/bundle/BundlePluginBase.class
+SHA-256-Digest: vG3IzcIwXNRYtTlM7+PyUFpKhM7X9Fns5kC6L23SEcs=
+
+Name: org/eclipse/pde/internal/core/target/TargetMetadataCollector.cla
+ ss
+SHA-256-Digest: plBw6C1Bx1/UEej3d8fpFR5qq82FBpHC0E7OecwtdNY=
+
+Name: org/eclipse/pde/internal/core/text/DocumentXMLNode.class
+SHA-256-Digest: NWygTuJ2nBDtx/AWoMSOOsZDf9rJ5XVZxHdreOl0/E8=
+
+Name: org/eclipse/pde/core/IBundleClasspathResolver.class
+SHA-256-Digest: 6CjU326J91uV/1aFWXBqFImWxBJOdrWDh6Lk1qwiOK4=
+
+Name: org/eclipse/pde/internal/core/ifeature/IFeature.class
+SHA-256-Digest: 34SOyCNDD/9A/KUN0NI5DMU60Lte0LJaeLr3DodWJho=
+
+Name: org/eclipse/pde/internal/core/ischema/ISchemaElement.class
+SHA-256-Digest: n1m663pepuaye4LJmA2Y9PRfs/2QOcvmPmdpGV9GswY=
+
+Name: org/eclipse/pde/internal/core/iproduct/ISplashInfo.class
+SHA-256-Digest: sGSeCDwO+zaYK+bx4ghykaTvbzs0An2chlHJoLLu1BY=
+
+Name: org/eclipse/pde/internal/core/search/ExtensionPluginSearchScope.
+ class
+SHA-256-Digest: V5p5YHinRQtCoERQoylTGCWBSC8oN1CAkBBMOSyVNIo=
+
+Name: org/eclipse/pde/internal/core/PDEManager.class
+SHA-256-Digest: TJAeYpLy1Qy8wr7aSv9NBkGxlLC0TX3E2SwEfY2SW9E=
+
+Name: org/eclipse/pde/internal/core/iproduct/IConfigurationFileInfo.cl
+ ass
+SHA-256-Digest: nzvh10r8WNd13qGNIvIcUf+18kIR0PFRwSYezsMhgLs=
+
+Name: org/eclipse/pde/core/plugin/IPluginLibrary.class
+SHA-256-Digest: k9H+CIEaNnZg+KQHwYQa8RI7Zc3AjA3e0wSW/B4aII8=
+
+Name: org/eclipse/pde/internal/core/text/build/Build.class
+SHA-256-Digest: HCax7SWjUNHUO6NRW4bF3RNwpggm0VHe9a1yQZKcmj4=
+
+Name: org/eclipse/pde/internal/core/target/AbstractTargetHandle.class
+SHA-256-Digest: a1XhJG2CLumYQTx7pNF+/9AO8jkHm9UAwZEGw8zdwUI=
+
+Name: org/eclipse/pde/core/plugin/IExtensions.class
+SHA-256-Digest: Dh/SJQBKI60+nH40t3cJfvgGOtHtiRV9PAfjkG/Inl8=
+
+Name: org/eclipse/pde/internal/core/target/TargetLocationTypeManager.c
+ lass
+SHA-256-Digest: LUYTda2MtlV8o5EOMCn6hGSHHqBFl3FzYIB4Bzg3vJs=
+
+Name: org/eclipse/pde/internal/core/target/AbstractBundleContainer.cla
+ ss
+SHA-256-Digest: 7WHDW9BCo8sQCgP1Ofu0wAQFDHnDvz34RTW/sMPC4yY=
+
+Name: org/eclipse/pde/internal/core/PDEExtensionRegistry.class
+SHA-256-Digest: XL9aPi/tcsrA42REcY+y3U4xdRUWDYY1M+GRNcs46zM=
+
+Name: org/eclipse/pde/internal/core/text/plugin/PluginNode.class
+SHA-256-Digest: NzHV0F2JWuQ4Mg/HjA/CMJOmezN4LTqvI0GYq1FxIHc=
+
+Name: org/eclipse/pde/internal/core/text/bundle/FragmentHostHeader.cla
+ ss
+SHA-256-Digest: 1cxydgNsAdEfIC5Cg9HUM8CPNxpEWp9CMy3iqfLJm7E=
+
+Name: org/eclipse/pde/internal/core/PDERegistryStrategy$ModelListener.
+ class
+SHA-256-Digest: kV53sG0tdplqLZKrxtjhqw4/g0Sm1dgRmvCmjD3f2Bw=
+
+Name: org/eclipse/pde/internal/core/ExternalJavaSearchClasspathContain
+ er.class
+SHA-256-Digest: kG3SdXYachCqbm6U0Wvqw4DKPtLSSY6MMm9Xy2dverk=
+
+Name: org/eclipse/pde/internal/core/iproduct/IProductObject.class
+SHA-256-Digest: VuD6n5aOQrR9J9R/5fFAZO1/vZuQZ/NyEmM6LFPlSVk=
+
+Name: org/eclipse/pde/internal/core/target/TargetPlatformService$1.cla
+ ss
+SHA-256-Digest: YpPr+EEyvaZIl73xsEelg1IydRB7mMn4trAQX92gWw4=
+
+Name: org/eclipse/pde/internal/core/text/bundle/BundleVersionHeader.cl
+ ass
+SHA-256-Digest: BU83LEQudMoItkr1X2LZEU6Wf/YFw4VobJsROA87Obg=
+
+Name: org/eclipse/pde/internal/core/plugin/Fragment.class
+SHA-256-Digest: azYW1ou7wjQ+exwfiumLP7ntQh570n9Z014+aQYahzY=
+
+Name: org/eclipse/pde/internal/core/util/CoreUtility.class
+SHA-256-Digest: UHXbgVA8qijiNw0GPVLWMNGyOiOWURJXwwD0Or2D5Fs=
+
+Name: org/eclipse/pde/internal/core/util/ManifestUtils.class
+SHA-256-Digest: S6r2P7dE3g5ggbFMNrS37lwB5h/Cay/952JrdmCBFdY=
+
+Name: org/eclipse/pde/internal/core/text/bundle/BundleNameHeader.class
+SHA-256-Digest: ZPHS2CekWYso9ci8G0kGocCnoVu45URJP5CsIOvE/m4=
+
+Name: org/eclipse/pde/internal/core/content/BundleManifestDescriber.cl
+ ass
+SHA-256-Digest: r1H7A75p+mDSqSZrpYmCfdrfy0YXXZRz71Y8EImypF4=
+
+Name: org/eclipse/pde/internal/core/IExtensionDeltaListener.class
+SHA-256-Digest: vzdK9HW0VDZuFXniuPqkqR8BWuZtWUzOpxx4gr8rVd0=
+
+Name: org/eclipse/pde/internal/core/isite/ISite.class
+SHA-256-Digest: dV1deHh3oAUoat77Vc1Z3Gjd4PfFOInbUz0OydIT3nE=
+
+Name: org/eclipse/pde/internal/core/JavadocLocationManager.class
+SHA-256-Digest: hPzEeOEbQrqBCn22zR2lu5D2Wm4ugYCuxV7nvZ08N/w=
+
+Name: org/eclipse/pde/internal/core/text/bundle/BasePackageHeader.clas
+ s
+SHA-256-Digest: 3ytfih9wOF+o8IbSjdcFzCqiovKypxDRjwr82aOEnIA=
+
+Name: org/eclipse/pde/internal/core/text/plugin/PluginAttribute.class
+SHA-256-Digest: NURguCUVjd91wSpT7dbMvAv+51qokQa60H2MP9Rxz0A=
+
+Name: org/eclipse/pde/internal/core/builders/DefaultSAXParser.class
+SHA-256-Digest: s5Z7Z6sBXvL5R1ifpoaaKbGmiq8vLi7cVo8W/voDYqI=
+
+Name: org/eclipse/pde/core/plugin/IPluginModel.class
+SHA-256-Digest: irS1N4gGfFGu/A4o1ebZvRA5qSbCPaxqCYqWqqYa3rI=
+
+Name: org/eclipse/pde/internal/core/text/bundle/BundleTextChangeListen
+ er.class
+SHA-256-Digest: N1pTqm2jFIJX10gg6lPxv6KRLV9dY0QpEZOWGvwloOU=
+
+Name: org/eclipse/pde/internal/core/site/SiteBundle.class
+SHA-256-Digest: SxhFJHvMLxqvHZskY04UTzmeCLZIdgIv1AQqghSOY3A=
+
+Name: org/eclipse/pde/internal/core/text/IModelTextChangeListener.clas
+ s
+SHA-256-Digest: ebMPcqOptVg4YsZ4bDBLRWKt4HepAKzpGs/Yhj7x3mE=
+
+Name: org/eclipse/pde/internal/core/schema/BaseSchemaHandler.class
+SHA-256-Digest: 45shPXxFRe9gQ0xk6a4E21IZmwM+R3VgCMY6BAJ0v7E=
+
+Name: org/eclipse/pde/internal/core/ischema/ISchema.class
+SHA-256-Digest: X+cXLaCtDJOwaRDWezvlVJTo4oCIqNQd9bBJqQTc2Sg=
+
+Name: org/eclipse/pde/internal/core/IFileAdapterFactory.class
+SHA-256-Digest: fdp/9nu3ET6mjOLn3WUTCcw2on6kK8bgXi3AhawHH6I=
+
+Name: org/eclipse/pde/internal/core/builders/XMLErrorReporter$ElementD
+ ata.class
+SHA-256-Digest: Oj/3rCxNrAvm8eTvOiLmyeMkY+abG+EyQJyBQ/wEMp4=
+
+Name: org/eclipse/pde/core/plugin/IExtensionsModelFactory.class
+SHA-256-Digest: h6TcETK0tQIAbKhe5kYqOEGrB/jYEk0ztJOTe1LzII0=
+
+Name: org/eclipse/pde/internal/core/schema/EditableSchema.class
+SHA-256-Digest: i6eLteb3XhDWILQW8zyKIAVqPVj8ttol3fsuvqmc5Rk=
+
+Name: org/eclipse/pde/internal/core/ifeature/IFeatureModelFactory.clas
+ s
+SHA-256-Digest: 80QXF9bl27+kGaiGTTyh0Wc4YvfGV+JsLqOEf00sPAU=
+
+Name: org/eclipse/pde/internal/core/text/DocumentNodeFactory.class
+SHA-256-Digest: CUpt5/YhAnZR997pRqA8ftTrpbG/yoKCkjuXTrRAwoI=
+
+Name: org/eclipse/pde/internal/core/ischema/ISchemaSimpleType.class
+SHA-256-Digest: Kn+1R4t0T3LZ7LW3ztCZHodUH3eLcIFhzDNll4rkOjM=
+
+Name: org/eclipse/pde/internal/core/bundle/BundlePluginModelBase.class
+SHA-256-Digest: gbFS/AgvW6yGAL3rRRrmjGzk26WoDaEBOnsf7fujmNI=
+
+Name: org/eclipse/pde/internal/core/feature/FeatureData.class
+SHA-256-Digest: ed2zjA2rwdl66o9ykeju2jhDM/cozNCM1c3PNP7bc+4=
+
+Name: org/eclipse/pde/internal/core/plugin/PluginLibrary.class
+SHA-256-Digest: cFfJvBlstHKli/uwEaMolCK+nhqvb0VeJjvm5nDTyMw=
+
+Name: org/eclipse/pde/core/target/LoadTargetDefinitionJob.class
+SHA-256-Digest: dFFiRFe6+dB7LOLN62A2UNB5QwRDpZQV7KmIQBNXRkU=
+
+Name: org/eclipse/pde/internal/core/ibundle/IBundlePluginBase.class
+SHA-256-Digest: myEYUSBOAlStVCxB6wkr8hxmVysGz6sXcqceSXJgU08=
+
+Name: org/eclipse/pde/internal/core/product/PreferencesInfo.class
+SHA-256-Digest: qcaNBsNVtEcDOnUFKcuuCXUflVvzfnXAkRWDI/jAQao=
+
+Name: org/eclipse/pde/internal/core/bundle/WorkspaceBundleFragmentMode
+ l.class
+SHA-256-Digest: LYPaJJ9giooGhCiyU8SJ2+f/sa/j/t6jYmQIwW4T49o=
+
+Name: org/eclipse/pde/core/target/ITargetLocation.class
+SHA-256-Digest: ngv+nmfUlcktLi6tKyhYbuG2gePcy8FlPmrTxiaorVg=
+
+Name: org/eclipse/pde/internal/core/util/PDEXMLHelper.class
+SHA-256-Digest: mrAQr9ozy4kpY7BzJSOchcuHT9Ipf0xKTBn7yioJKmQ=
+
+Name: org/eclipse/pde/internal/core/feature/FeatureURL.class
+SHA-256-Digest: 1TFnrsR92/AzRQz/2XIodTjcLPe9Ah+WHq7EUbAPFzg=
+
+Name: org/eclipse/pde/internal/core/UpdateManagerHelper$LocalSite.clas
+ s
+SHA-256-Digest: Z8sGTG2YikBnP+ytC5Xi63B+OJ3Te7Xf3SwkaMCOttY=
+
+Name: org/eclipse/pde/internal/core/builders/FeatureRebuilder.class
+SHA-256-Digest: FG4x+V6x78In0PRBKIx++KZ9ahXxuvPZLXhi72T2Y7w=
+
+Name: org/eclipse/pde/internal/core/target/ExportTargetJob.class
+SHA-256-Digest: R+lwXAC1iDI7Y7NwqbOBMPecwNwDGV65Hk+oRXtSRF8=
+
+Name: ant_tasks/pde-ant.jar
+SHA-256-Digest: ucPnanUj9lu8AYYG6vATMH0yliUl7OBcEjq+MbKMmoc=
+
+Name: org/eclipse/pde/core/IModelProviderEvent.class
+SHA-256-Digest: vjaYHoWqO0YlWS8XPsxwZKPRzZDpyxqxcZ2KrZBjra0=
+
+Name: org/eclipse/pde/internal/core/schema/Schema.class
+SHA-256-Digest: VHyLdf9hMnj4oE2opeUP+o3v4H1FN6K27rthCUGmegE=
+
+Name: org/eclipse/pde/internal/core/text/bundle/ImportPackageObject.cl
+ ass
+SHA-256-Digest: +rCMUe0cZF8moeHG9wcGamyo81HcWpKkdZmBQKPyER0=
+
+Name: org/eclipse/pde/internal/core/target/ExternalFileTargetHandle.cl
+ ass
+SHA-256-Digest: ylK2IlvzGdoqty7kM8L3G0gmOp1r7DCeD6Zxo9mHRnw=
+
+Name: org/eclipse/pde/internal/core/text/bundle/BundleModelFactory.cla
+ ss
+SHA-256-Digest: 2JYPeM+P9WXKGmDdISffG4YAw59qoA8/HWEz0MaH6eM=
+
+Name: org/eclipse/pde/internal/core/feature/FeatureChild.class
+SHA-256-Digest: s+ArckwESZjS3qENFLm23D2oGXB/I4wVeCqKGkqLwg8=
+
+Name: org/eclipse/pde/internal/core/BundleValidationOperation.class
+SHA-256-Digest: k8duTGrxKOdV+5nmTQ37k2Zjbqu624q4uh7t203mg8E=
+
+Name: org/eclipse/pde/internal/core/ischema/ISchemaEnumeration.class
+SHA-256-Digest: jvmaSwHWrODOTa3gT9wDkdAgMniF3UAgUyu9KUdlG60=
+
+Name: org/eclipse/pde/internal/core/PluginModelManager.class
+SHA-256-Digest: +stHRZ8ytwZhIrVSo753SPKROzEQmqMrCwHT/8BmpYc=
+
+Name: org/eclipse/pde/internal/core/plugin/AbbreviatedFragmentModel.cl
+ ass
+SHA-256-Digest: U0KhMjw+/hIaH5BP9xpsR3Vx68sseQro9F8qtT3caDI=
+
+Name: org/eclipse/pde/internal/core/MinimalState.class
+SHA-256-Digest: VPa8tnBJiSEyA5hgcmi5J6WvYfunplqs8/42rv6uYsk=
+
+Name: org/eclipse/pde/internal/core/TracingOptionsManager.class
+SHA-256-Digest: /b6bv66J+efacXD4xpF8bGqLFN7YE737mZJwXR0+CBE=
+
+Name: org/eclipse/pde/internal/core/schema/SchemaRootElement.class
+SHA-256-Digest: iCM9qPZYIDTX3P/dQcWdv1JugmLsiRdIzJTK7j2Db3c=
+
+Name: org/eclipse/pde/internal/core/project/PDEProject.class
+SHA-256-Digest: KdqteQuyYToyjAPH0XRUgHZx7sl+DaPrZ/lhrdLYc18=
+
+Name: org/eclipse/pde/internal/core/product/RepositoryInfo.class
+SHA-256-Digest: 7RCCmIqcqsoGb6vcQ9dgTHbbvJNB4pGv5hAsrlqr34Y=
+
+Name: org/eclipse/pde/internal/core/target/IUBundleContainer$1.class
+SHA-256-Digest: VVQNE1uKK7mfIPokzj+oTFdIatUFxb05BCPgi4VKhKw=
+
+Name: META-INF/eclipse.inf
+SHA-256-Digest: bSW1YGboX6I6p7wDw5s2jZAEdH4VEWk6/bIPMlpzOuk=
+
+Name: org/eclipse/pde/internal/core/FeatureModelManager$1.class
+SHA-256-Digest: umkaBs/Oux/cyJY+3wuHYqoOC+q3k3B/GTaye4SVR6k=
+
+Name: org/eclipse/pde/internal/core/iproduct/ILicenseInfo.class
+SHA-256-Digest: yrfcJRd4RCtJmnqZqajgQtOudEm5/3OOIfb7AR+Asyc=
+
+Name: org/eclipse/pde/internal/core/site/SiteObject.class
+SHA-256-Digest: 7GYX8/WayJwDaPI089jpCfL07/PQyTNTTBH868se7Ts=
+
+Name: org/eclipse/pde/internal/core/ifeature/IFeatureEntry.class
+SHA-256-Digest: lbOH/EdJgLATZDF3qySCRWWARBCg75qIoJn+rWyrFHU=
+
+Name: org/eclipse/pde/internal/core/text/bundle/BundleVendorHeader.cla
+ ss
+SHA-256-Digest: t/M9sxVOELjlAfkdBd3zxHCYIH8/38aR8Ik7NHoIyq0=
+
+Name: org/eclipse/pde/internal/core/iproduct/IJREInfo.class
+SHA-256-Digest: jWZ68dPl3/V7QG00L485uwT3FdOPQqV5ndd01OjA2uw=
+
+Name: org/eclipse/pde/internal/core/target/TargetDefinition$1.class
+SHA-256-Digest: l1Gf5DETyCmK8X0VLMaI0CqICAbipUR5xaZrWDDfJ6o=
+
+Name: org/eclipse/pde/internal/core/builders/SchemaTransformer.class
+SHA-256-Digest: l2SX1sBz+hZv725FOtWdZa2OHoo2Y+Hf5RLZRFeztsA=
+
+Name: org/eclipse/pde/internal/core/product/SplashInfo.class
+SHA-256-Digest: F5ywjAGcSADzEQdFxE4Ex/LAAxzVYufUDXWZRhgtl1I=
+
+Name: org/eclipse/pde/internal/core/natures/SiteProject.class
+SHA-256-Digest: Js/NUj4mcdS1HmCK+z2TzVAN+oj2aBnYKpDRnPSnOJg=
+
+Name: org/eclipse/pde/internal/core/schema/SchemaCompositor.class
+SHA-256-Digest: WC9moRjcctvBoKed6GDUE4Vesw/PVg8ZbitNgvtS9AI=
+
+Name: org/eclipse/pde/internal/core/plugin/PluginImport.class
+SHA-256-Digest: QRouqerYPycPC9gmLyv3T3l6dN/pxR5nFsb3S+3ZBSI=
+
+Name: org/eclipse/pde/internal/core/UpdateManagerHelper.class
+SHA-256-Digest: nE3s7dZZPWCjq43nEhWhkP/8RqxSDhgbUZpWXEjwJRQ=
+
+Name: org/eclipse/pde/internal/core/PluginModelDelta.class
+SHA-256-Digest: pCZSGqVK/AG4i/yMlQrRTMrWrFFZNaYLNthMHyj9T7E=
+
+Name: org/eclipse/pde/internal/core/iproduct/IRepositoryInfo.class
+SHA-256-Digest: keCGpHKRKrFJy5i78e/bv3JvayBkALfBwpV6jcU1SwU=
+
+Name: org/eclipse/pde/internal/core/build/IBuildObject.class
+SHA-256-Digest: H93K6j2tq+g3mMKYA5qJNo5KwJa5j9IeOjp6TBWKc+8=
+
+Name: org/eclipse/pde/internal/core/plugin/PluginAttribute.class
+SHA-256-Digest: Q0JNVRn+i8phGiOgYRo18sjw8+8q064fGtYOyd4r8uc=
+
+Name: org/eclipse/pde/core/IBaseModel.class
+SHA-256-Digest: IxXN2wgwpNcTxBumvQO+yCk1Nhn3XS47HLnLErnX5CQ=
+
+Name: org/eclipse/pde/internal/core/builders/PluginErrorReporter.class
+SHA-256-Digest: yyGN+kTBCdVLmCskXoqJyOETMN+hRYrbzbT6j3bGX/E=
+
+Name: org/eclipse/pde/internal/core/builders/JarManifestHeader.class
+SHA-256-Digest: yXJqITNblFSq3qyUW/kgzXFLf8lM3oB/5CvliQx5v9I=
+
+Name: org/eclipse/pde/internal/core/schema/SchemaRegistry.class
+SHA-256-Digest: P85ar8+joC8WI5kSZiP3fVkpf/fJytXA6JXfy5bLF/4=
+
+Name: org/eclipse/pde/internal/core/feature/AbstractFeatureModel.class
+SHA-256-Digest: zojyo/6WR6lT5tBv+HI6sz3dDH6tU0TcmfstA2mYKfA=
+
+Name: org/eclipse/pde/internal/core/IWorkspaceModel.class
+SHA-256-Digest: w6lI/x/al5wo1Mf7lVVmlRHSblE0UMsWjiP4j0ZfMJE=
+
+Name: org/eclipse/pde/internal/core/PDEState$1.class
+SHA-256-Digest: vQHFqjhGSdVRahe0DcEJNxPejPptDe2hfBwjUxTOx5E=
+
+Name: org/eclipse/pde/internal/core/builders/FeatureRebuilder$1.class
+SHA-256-Digest: l5te7+Dm6IXavzN/atD1NE0N03w8VPGiF3V0/t27Fps=
+
+Name: org/eclipse/pde/internal/core/builders/PluginRebuilder.class
+SHA-256-Digest: MQKHhP9A9Qhd0GVTD6sguERZ0jUy9Q0+94BG8OoAqp0=
+
+Name: org/eclipse/pde/internal/core/text/plugin/FragmentModel.class
+SHA-256-Digest: FH/ELvBAAMBi2en9Ky1ppbJSol1e2IwFvLSc6Z90TY4=
+
+Name: org/eclipse/pde/core/plugin/PluginRegistry.class
+SHA-256-Digest: GQwbnks4cRrI7z5qdS0ays6dnPFPTGnBSZFv4VS0x/Y=
+
+Name: org/eclipse/pde/internal/core/exports/FeatureExportInfo.class
+SHA-256-Digest: jmXVOxRIR5psyIr3ZZiBL2+y43Bulkvig3JSVNjb/yI=
+
+Name: org/eclipse/pde/internal/core/plugin/Plugin.class
+SHA-256-Digest: gRcM//sAG7fvHHUxTvCMBzJrFnRWHgh6jL43rngg0nU=
+
+Name: org/eclipse/pde/internal/core/schema/SchemaObject.class
+SHA-256-Digest: HHh1U85xHpUDxQVIDKwLClMAo/A7yTuIlice/Pl73hw=
+
+Name: org/eclipse/pde/internal/core/ibundle/IBundlePluginModelProvider
+ .class
+SHA-256-Digest: 3xdGgwTUIAC468PdjH8Zs18ssY0MIRvoilZX/4fAQws=
+
+Name: org/eclipse/pde/internal/core/text/IDocumentNodeFactory.class
+SHA-256-Digest: CFgWwk68r9NbL11ZfhFxrlkxQb5FUBYhPjm2IyTxWKc=
+
+Name: org/eclipse/pde/internal/core/builders/CompilerFlags.class
+SHA-256-Digest: nKNMMfmlv/1ouUXxD6V9dIYSMmD5zVcHVuoTYTaRNIk=
+
+Name: org/eclipse/pde/internal/core/text/bundle/ExportPackageObject.cl
+ ass
+SHA-256-Digest: +ayMd09Jd2WNLuY5x+fWmwSQMIy5p382cNNJWZ9CNdc=
+
+Name: org/eclipse/pde/internal/core/project/BundleProjectDescription.c
+ lass
+SHA-256-Digest: gYW2OCge148qE+mg97k7k/LyvYUcqS4qflwTTVG3XW4=
+
+Name: org/eclipse/pde/internal/core/product/ConfigurationFileInfo.clas
+ s
+SHA-256-Digest: WSGu9hqr/PFeHHn1QbvkAggEjYOsukVwP6aBEeZk1NI=
+
+Name: org/eclipse/pde/internal/core/schema/SchemaElement.class
+SHA-256-Digest: OOQpU2qK/IfzwV2BedYleSg2ak1QDGC+4mTGZzeREqo=
+
+Name: org/eclipse/pde/internal/core/build/BuildModel.class
+SHA-256-Digest: x2xadBexiTpLb/qOkV8OMpFy1QsST13bq1Z1m1QqXJ8=
+
+Name: org/eclipse/pde/internal/core/builders/SourceEntryErrorReporter$
+ 1MissingOutputEntry.class
+SHA-256-Digest: 4Wigd2e5bn4tHHblwbp11a4RFfwxU2C6EJHyh8XOkPM=
+
+Name: org/eclipse/pde/internal/core/ibundle/IBundlePlugin.class
+SHA-256-Digest: tILi9a6NXVK1j2iVR71YLdisd+ud7yI1vqgFD0//Z1k=
+
+Name: org/eclipse/pde/internal/core/product/WindowImages.class
+SHA-256-Digest: ABVitiM8/jJ5lYHJwYCMEVltofPxY32Nb5Y4zKOJcK8=
+
+Name: org/eclipse/pde/internal/core/plugin/ImportObject.class
+SHA-256-Digest: kWprzqabodOvolRXq7Rc7DRJ51PK7pgA2ov0S9RS3jU=
+
+Name: org/eclipse/pde/internal/core/util/PDETextHelper.class
+SHA-256-Digest: JwIRiv4pck1lTbDjMzi02o8L+b33GgnNtExif8A6kx8=
+
+Name: org/eclipse/pde/internal/core/plugin/PluginParent.class
+SHA-256-Digest: ZZiqp+E9Cd5wLVsr85rdcv/JZ5kFywMJLct6h5/SPi8=
+
+Name: org/eclipse/pde/internal/core/exports/FeatureBasedExportOperatio
+ n.class
+SHA-256-Digest: ZnFnJqvyfTOJBjTwTdkgMa/4TDIFasVw1v42/XjXYDo=
+
+Name: org/eclipse/pde/core/plugin/IPluginObject.class
+SHA-256-Digest: bawpjtJHspEJh/vHccZLpmdbDaBr/AgOgVN+ePAEHkE=
+
+Name: org/eclipse/pde/internal/core/util/PDEJavaHelper.class
+SHA-256-Digest: Lj0LdqMTFWmNH1E16LNyjiP05IT9pPG6acDMF4mulmg=
+
+Name: org/eclipse/pde/core/plugin/ModelEntry.class
+SHA-256-Digest: kjyI7mRHGDISCSx9MPHXZd6/e0r+est+hHUeqXv/EpI=
+
+Name: org/eclipse/pde/internal/core/text/build/BuildModel.class
+SHA-256-Digest: wlssgZvukEaL4u6edEQ4S2TwXlVVXzdGC5jPUeYhWts=
+
+Name: org/eclipse/pde/internal/core/project/ProjectModifyOperation.cla
+ ss
+SHA-256-Digest: MmuSV1Wj59IXDYIwX4NcfQlccSDL4QnFVvf4mqRM5Go=
+
+Name: org/eclipse/pde/internal/core/builders/DependencyLoop.class
+SHA-256-Digest: jdpHxrH82V9YcADKXqM2geXHb0jlexQbLgttIHom9JY=
+
+Name: org/eclipse/pde/internal/core/PDEClasspathContainer$Rule.class
+SHA-256-Digest: DRTkYM9MRpxyyUTOIoNXbcTXhKOFg5JQNhdJBdjLGsg=
+
+Name: org/eclipse/pde/internal/core/builders/SourceEntryErrorReporter$
+ EncodingEntry.class
+SHA-256-Digest: WdejM/eaT3leGmhKKzidyxI6ZCYAoupw1Qc4h7/Z8pg=
+
+Name: org/eclipse/pde/internal/core/builders/FeatureConsistencyChecker
+ $DeltaVisitor.class
+SHA-256-Digest: KoS7fZEB5DasMTZcCMYKTzu8eAkpnUPcofSIiTyDbAU=
+
+Name: org/eclipse/pde/internal/core/util/PropertiesUtil.class
+SHA-256-Digest: l6/4V6jmFtgF3LipmlO0KvCOs+kaPE5TVv4oCH87wUA=
+
+Name: org/eclipse/pde/internal/core/target/Messages.class
+SHA-256-Digest: 0sRiKGyXT1305OYfK1DTXKwY3WYIDdRaLiJg5iThnQU=
+
+Name: org/eclipse/pde/internal/core/iproduct/IConfigurationProperty.cl
+ ass
+SHA-256-Digest: uhERQ79GHJTMyBRNezuUS4y8NUHARtdGtWQ4TdXrjeA=
+
+Name: org/eclipse/pde/internal/core/SearchablePluginsManager$Listener.
+ class
+SHA-256-Digest: Q/DjHMgvplamjmtyArleQ7SEzNUnKiPS4oNBF2Ro1+o=
+
+Name: org/eclipse/pde/internal/core/util/VMUtil.class
+SHA-256-Digest: bKEOT0XqN5qwdCW/IsxEo0KrnnU6z/B4Hlc9OLja/mc=
+
+Name: org/eclipse/pde/internal/core/text/bundle/BundleActivationPolicy
+ Header.class
+SHA-256-Digest: 0FFjzkqU/Qon0zE2Ql9JD7hPnZU5fQcNMR+9pAULIGI=
+
+Name: org/eclipse/pde/internal/core/schema/SchemaComplexType.class
+SHA-256-Digest: wSy0UPhHjwwVLonxRoenzDLIIX1FRIARQ6PMCaipUBc=
+
+Name: org/eclipse/pde/internal/core/feature/WorkspaceFeatureModel.clas
+ s
+SHA-256-Digest: 0iCfHha5aOozaLMrQ3dFrf0Z6SkdDZKOs5ZUjhMlpe0=
+
+Name: org/eclipse/pde/internal/core/text/XMLEditingModel.class
+SHA-256-Digest: INgAMcMTmdk4A+/2Ex7VW39/44dCBuTvbTnptrP1TVU=
+
+Name: org/eclipse/pde/internal/core/text/DocumentHandler.class
+SHA-256-Digest: l/pHJ1XewB6Aoa+cbLAGyHTFwNPwup1Fav2ty9rZ2Sg=
+
+Name: org/eclipse/pde/internal/core/exports/FeatureExportOperation.cla
+ ss
+SHA-256-Digest: MgL9nKUjr4mcpADhbraGGHZ8Hp6VCT6pFDF2+FBG6xw=
+
+Name: org/eclipse/pde/core/plugin/IPlugin.class
+SHA-256-Digest: Xilq1XitSRLmbP+88pLJFNLVIVnHGYfU2YmhXDIDEUI=
+
+Name: org/eclipse/pde/internal/core/builders/ExtensionPointSchemaBuild
+ er.class
+SHA-256-Digest: vw8Oy+I58bZFz84J3asUPAZglw99zt52bN9TrEF1H0c=
+
+Name: org/eclipse/pde/internal/core/project/PackageImportDescription.c
+ lass
+SHA-256-Digest: Jlf8FWfX3p8jd8xRk6QylK+0EGD5CwFpmUURyue1CpQ=
+
+Name: org/eclipse/pde/internal/core/PluginModelManager$LocalModelEntry
+ .class
+SHA-256-Digest: 0DysqHN/AGJCZ6xdYHbkKlmxwI7gIeZqb3GPQ933gtQ=
+
+Name: org/eclipse/pde/internal/core/iproduct/IWindowImages.class
+SHA-256-Digest: 5Sc0P+7aeppz7HC+YCGVUZKvkuB7nL8oT1nfme0R+bs=
+
+Name: org/eclipse/pde/internal/core/iproduct/IAboutInfo.class
+SHA-256-Digest: fx3W721cFYciYSSvRTYinJLidCKgoMvEsG7rsuTqYN0=
+
+Name: org/eclipse/pde/internal/core/plugin/ExternalPluginModel.class
+SHA-256-Digest: 13JJlZ/Cahs7jVuJAkfwjnkPAZ3m9Jvm3BwE8zOgR58=
+
+Name: org/eclipse/pde/internal/core/plugin/PluginReference.class
+SHA-256-Digest: SWrywp5HSfF+8B3aRhuxruRtDDT87zPZyAoNQEciNms=
+
+Name: org/eclipse/pde/internal/core/P2Utils.class
+SHA-256-Digest: 2QcphQJ88WxrJeagUDwBlQXW0QBiCnadUZB226CvnPA=
+
+Name: org/eclipse/pde/internal/core/util/VersionUtil.class
+SHA-256-Digest: WLvWVLdrKHlVwRfU6u58HDqp2Ka+68RgUggqmv/lZS8=
+
+Name: org/eclipse/pde/internal/core/builders/JarManifestErrorReporter.
+ class
+SHA-256-Digest: LhZpP8p/iAwsMUttXOPC3G/HVrqdcENnX9eqge5s3jw=
+
+Name: org/eclipse/pde/internal/core/isite/IRepositoryReference.class
+SHA-256-Digest: WdW7ESMZmoE/FDvo1xp1PAoVPgCMqEr8rMUPoSxwtD0=
+
+Name: org/eclipse/pde/internal/core/isite/ISiteCategory.class
+SHA-256-Digest: wHXiBkdAKfKPxKoZB/9R452YYgqRJkFjEyU35AB+2Io=
+
+Name: org/eclipse/pde/internal/core/site/StatsInfo.class
+SHA-256-Digest: qSY0f0yz/JBDmShr12YY//2VPYHjtAPN2/R+GBNf2Rw=
+
+Name: org/eclipse/pde/internal/core/util/SAXParserWrapper.class
+SHA-256-Digest: c1k1jhZqHkQJ1AwPdjoIrcrrMP5F/SxDCKDSi1ai1dg=
+
+Name: org/eclipse/pde/internal/core/exports/BuildUtilities.class
+SHA-256-Digest: ZxkFlStjHjL3tKKBe1Db/TJJ4e8KeZp4mn4ZdCVaUlo=
+
+Name: org/eclipse/pde/core/IWritable.class
+SHA-256-Digest: nhdoTbwboLX93HFnyd+N3ah7jaD78fEuaoBsWXBWeP8=
+
+Name: org/eclipse/pde/internal/core/FeatureModelManager.class
+SHA-256-Digest: bJEEA7FOBkU/hdekRjuZh9UgXokhtNy8WR88ZB/eJS4=
+
+Name: org/eclipse/pde/core/plugin/IFragment.class
+SHA-256-Digest: crJrczz0J4gmawxSky8UW5zo3lAvaScfcJAAy0GFRgU=
+
+Name: org/eclipse/pde/internal/core/ifeature/IFeatureURLElement.class
+SHA-256-Digest: FDIJtGrjNNB04+uvT/HWLQUvRlkXti8QfIU+3JbZjpE=
+
+Name: org/eclipse/pde/internal/core/target/TargetPlatformService$Resou
+ rceProxyVisitor.class
+SHA-256-Digest: FvnZXzmwjUZDD2/kS5C7InOmqT2+QG2/0ngerEKFa6U=
+
+Name: org/eclipse/pde/core/target/ITargetHandle.class
+SHA-256-Digest: m6V0vXfx6UdRWG9wkiroPbynWCYypokeSVuOiUyVRTI=
+
+Name: org/eclipse/pde/internal/core/bundle/WorkspaceBundleModel.class
+SHA-256-Digest: Wv9Kdhq3QsCce6PjysU3agLIPvCpJekn4Sh4bMzFhVs=
+
+Name: org/eclipse/pde/internal/core/ibundle/IBundleModelFactory.class
+SHA-256-Digest: a2jQwLWGb6sOxft6nHH37FBBAj06ZJw8bneoGRPQvr8=
+
+Name: org/eclipse/pde/internal/core/ischema/ISchemaType.class
+SHA-256-Digest: odmwl3mH7jsjvrrn6KK2MUEXx4jufKbQw3EbjU0qtr8=
+
+Name: org/eclipse/pde/internal/core/PDERegistryStrategy.class
+SHA-256-Digest: NFkf3OSH3C+xfUX9cpk//yXs4HgxqgePGSMuYvgVw4k=
+
+Name: org/eclipse/pde/internal/core/bundle/BundleObject.class
+SHA-256-Digest: /ufURAMgq4QPRng5BW7CxdydYI91x53d7k0Ws8GLUMg=
+
+Name: plugin.properties
+SHA-256-Digest: uNRLM+7nkmu0y2CVfg/iRNt2ODImkwylz6sknZA/Wh0=
+
+Name: org/eclipse/pde/internal/core/isite/ISiteObject.class
+SHA-256-Digest: 5dp71kIxVUxYCBPbgmRjU2hVXwIYrLYgLJMLSfq+6yc=
+
+Name: org/eclipse/pde/internal/core/feature/FeatureImport.class
+SHA-256-Digest: pCrWXRIO1usvviUPLk+ZEzzX76/7VEa8VGQYL3ODIzE=
+
+Name: org/eclipse/pde/internal/core/text/plugin/PluginBaseNode.class
+SHA-256-Digest: xpM/5ErM3tNp8tZGmu3jTOLZrn7AwYEe11iH1sLsaUw=
+
+Name: org/eclipse/pde/internal/core/SourceLocation.class
+SHA-256-Digest: hliNycbiZn3hZtl4F2Yi8N2DHe+aINAjTFafQuVmjA4=
+
+Name: org/eclipse/pde/internal/core/iproduct/IPluginConfiguration.clas
+ s
+SHA-256-Digest: PaMsnKXIpIAEG/pHF3sz5ImC8b4qShGyRlmGPnrcYz4=
+
+Name: org/eclipse/pde/internal/core/text/bundle/PDEManifestElement.cla
+ ss
+SHA-256-Digest: ldWDupomPF/xhbuzBNrMkBDPj7WYd5jbrClmAFl8zCM=
+
+Name: org/eclipse/pde/internal/core/plugin/ExternalFragmentModel.class
+SHA-256-Digest: 4Cfq5mk0F3pgWCO1kBgUcTvjW5fLssQPaA9/mQ2EQho=
+
+Name: org/eclipse/pde/internal/core/ischema/ISchemaDescriptor.class
+SHA-256-Digest: nSi6aOFiODQg0GlH+XjTe2wGI5Qrx4oybdUliBDQdwg=
+
+Name: org/eclipse/pde/core/build/IBuildEntry.class
+SHA-256-Digest: kKmYZfrKSOrynfZVNPj9/+KbvTH5LUa5czk8lWcAjmc=
+
+Name: org/eclipse/pde/internal/core/bundle/Bundle.class
+SHA-256-Digest: o9/JiKvg5SYXKmv0NcXRh3dCpnGEdxstS6hOvGpqKwM=
+
+Name: org/eclipse/pde/internal/core/PDERegistryStrategy$RegistryListen
+ er.class
+SHA-256-Digest: 9KhLFnnaPwULpSNTm+Rt+BZtth07iPC054lWHefG9a8=
+
+Name: org/eclipse/pde/internal/core/exports/ProductExportOperation.cla
+ ss
+SHA-256-Digest: MmuK0jV5cgtB+yFjUbS8pWIfUomXfVFOJ8Rly+H9Tdk=
+
+Name: org/eclipse/pde/internal/core/ischema/ISchemaAttributeProvider.c
+ lass
+SHA-256-Digest: fZGA4zreUusSK9n4AzY2u+j/InHj2agqo2M4Ypugcvk=
+
+Name: org/eclipse/pde/internal/core/builders/ErrorReporter.class
+SHA-256-Digest: ZKMnkafgqlt9arWrXtcVwqqDehN8ix4QLaaQ4VvHtJ4=
+
+Name: org/eclipse/pde/internal/core/site/SiteArchive.class
+SHA-256-Digest: LJk6KYDMa0IhLW96GsNMmRiWLtZcYelzFGHx6tpAEQY=
+
+Name: org/eclipse/pde/core/plugin/IExtensionsModel.class
+SHA-256-Digest: 93F8rTm9KkR4IvZp2FS+g2aMfTDOOGm5zCXi04fUcIw=
+
+Name: org/eclipse/pde/core/target/NameVersionDescriptor.class
+SHA-256-Digest: zV31mK7Fg+YEiwaPGE0QjM0KA1OBfsBIblL+exsL2Bc=
+
+Name: org/eclipse/pde/internal/core/ExternalModelManager.class
+SHA-256-Digest: by3HsGFXmv6Ra/LIjiLq5+fSBEzdFm666tmfCu+YDec=
+
+Name: org/eclipse/pde/internal/core/text/plugin/PluginDocumentNodeFact
+ ory.class
+SHA-256-Digest: lVMZsHHi+Qvh2KfwC758qdvkU7rhNZDDWRBveQJIXgg=
+
+Name: org/eclipse/pde/internal/core/schema/SchemaEnumeration.class
+SHA-256-Digest: BmJ3AiUbORejr74YkicP92AnUYHIZIdNR9JVP+DKE/c=
+
+Name: org/eclipse/pde/internal/core/exports/ExecutionEnvironmentProfil
+ eManager.class
+SHA-256-Digest: DJe2owzVPM9SqEb4mCijRCHIniucE/NjsF/cdaB0ZiE=
+
+Name: org/eclipse/pde/internal/core/bundle/BundlePluginModel.class
+SHA-256-Digest: C6VR7uAjk0rHKv4RmlHh0N28kq3S2Aq5GotYfrJWLYY=
+
+Name: org/eclipse/pde/internal/core/plugin/PluginElement.class
+SHA-256-Digest: 18HOXHZu4Y5ZVvwbkWbythTQP4GqzvmGBy7bq+QDENQ=
+
+Name: org/eclipse/pde/internal/core/site/AbstractSiteModel.class
+SHA-256-Digest: dl4slh2tHRmIYgpn7lUvKHVYyq69xFpfrvHE8odE/Q4=
+
+Name: macosx/Info.plist.32
+SHA-256-Digest: Sirf4tvSqk0KhifFRcnCGvBgaz0NYhFtONPiI1UBtAY=
+
+Name: org/eclipse/pde/internal/core/iproduct/IProduct.class
+SHA-256-Digest: Uhz74dC2vn77hpN6VobEnwZSRZDY/Q1fSfWZPRl7r6A=
+
+Name: org/eclipse/pde/internal/core/target/FeatureBundleContainer.clas
+ s
+SHA-256-Digest: 82P0cyo22iEAZX5xLPM7d1xRHoXLaHzMGtKX4+tvvGo=
+
+Name: org/eclipse/pde/internal/core/bundle/WorkspaceBundlePluginModelB
+ ase.class
+SHA-256-Digest: tJ4I2EnghezZ+HGBj9P/2OrYFaAFeIFUPe66v646YCQ=
+
+Name: org/eclipse/pde/internal/core/exports/PluginExportOperation.clas
+ s
+SHA-256-Digest: 0yJ3Xl9HLLPNHY951cMwWMXWPKy0T9ahblUTjdQ+qiw=
+
+Name: org/eclipse/pde/internal/core/site/IdentifiableObject.class
+SHA-256-Digest: YIsPaOip83vAP8+ZAN/RGnGcyTm955C1c4Yg1Qld9pc=
+
+Name: org/eclipse/pde/internal/core/isite/ISiteModel.class
+SHA-256-Digest: wAKtjgFiT3MH0g6mFpd1+qylwrhIwQO/cc5FiHXvr3A=
+
+Name: org/eclipse/pde/internal/core/text/bundle/ManifestHeader.class
+SHA-256-Digest: nxxRvqu/xE9UuteKcMD0ZsDk0ZUk5+wPLESau3eGPpg=
+
+Name: org/eclipse/pde/internal/core/plugin/AbstractExtensionsModel.cla
+ ss
+SHA-256-Digest: 9MCF3c0XR56CcMUFRPXsu1pxAco6uGCEdvODZxE/nS4=
+
+Name: org/eclipse/pde/internal/core/text/IReconcilingParticipant.class
+SHA-256-Digest: aaSVJyGptf8Bx93loEp6EYd//PSn2+LvO+p+Eonc+mA=
+
+Name: org/eclipse/pde/internal/core/text/plugin/FragmentNode.class
+SHA-256-Digest: G/F3HW/gj/5bcUonk7Dr+o/KrNzJCPq5iSEYlk3pKBg=
+
+Name: org/eclipse/pde/internal/core/schema/SchemaType.class
+SHA-256-Digest: ZopcDMHp84Vo0FNQteqh+UhIpF0dF3jbd76nAYxh6vM=
+
+Name: org/eclipse/pde/internal/core/DependencyManager.class
+SHA-256-Digest: /YWaj2xFu/InIGWgXP6zWhqxdCZNYyRRl+PLY1tw2Jc=
+
+Name: org/eclipse/pde/internal/core/schema/SchemaElementHandler.class
+SHA-256-Digest: EHFto89sTUmGkQGZaG7mD9MroWLriOIw6Wl4rY5lcV8=
+
+Name: org/eclipse/pde/internal/core/plugin/PluginBase.class
+SHA-256-Digest: pAJRU3CCr4BpSOdjd6XcA6659i/q6NrP+jd/lHa+AeA=
+
+Name: about.html
+SHA-256-Digest: 0RM1x9lTJa7T8YkysaegPuBIeaEvSZypRDfXoMpsJAU=
+
+Name: org/eclipse/pde/internal/core/text/bundle/LazyStartHeader.class
+SHA-256-Digest: luM9sSwdq3aBCzm9t4IUX34f0otT9sUD039HywVi/gM=
+
+Name: org/eclipse/pde/internal/core/text/DocumentObject.class
+SHA-256-Digest: ZVZGZKN8xAOCVPDIk1N8AGBwtwsiSR4XEjnMP9o1NvM=
+
+Name: org/eclipse/pde/internal/core/ClasspathUtilCore.class
+SHA-256-Digest: 9woCVOkz/ORFas/42LdsirwuxNz4WRKwPwuVuDdHXB0=
+
+Name: org/eclipse/pde/internal/core/builders/BuildErrorReporter$Wildca
+ rdFilenameFilter.class
+SHA-256-Digest: IgTCMVbKJpzjgun3WhvGu22HF4wx3B57OcytXoojJZw=
+
+Name: org/eclipse/pde/internal/core/search/ISearchResultCollector.clas
+ s
+SHA-256-Digest: NKdtbVqgVJC8Y/O6n+3LodvxHiH+M2PG22XCWE61vLA=
+
+Name: org/eclipse/pde/internal/core/iproduct/IProductPlugin.class
+SHA-256-Digest: N6Bi5Fzdm5NUGrbZvZe6QS2UCNV8eWmnSlKGMnioaLc=
+
+Name: org/eclipse/pde/internal/core/ifeature/IFeatureImport.class
+SHA-256-Digest: ENMo6+98SKqZldllmu737hBp6OZSpSlJ9ZGPPIBZmmM=
+
+Name: org/eclipse/pde/internal/core/bundle/BundleModel.class
+SHA-256-Digest: odvCd5Q4uzF1wksActlELTqlTF6eKcLYIuneeJn2BVM=
+
+Name: org/eclipse/pde/internal/core/text/AbstractTextChangeListener.cl
+ ass
+SHA-256-Digest: ul8Wo9l4/F3L+5eeITLsqx9SQLNJfT/oQJA/AiUxP9g=
+
+Name: org/eclipse/pde/internal/core/text/NodeDocumentHandler.class
+SHA-256-Digest: Cv0tg/Ie2YKXAU+qJFmUbDyGh1JsySRxEYL46R++yuk=
+
+Name: org/eclipse/pde/internal/core/exports/SiteBuildOperation.class
+SHA-256-Digest: f2EACOJ/w4cpBq+cv73OW29/1m6tPrJY0BH1qNGuft0=
+
+Name: org/eclipse/pde/internal/core/iproduct/ICSSInfo.class
+SHA-256-Digest: dgXCugkbqCruLdrMawxWkkngV7ADMMKMU9ZUcs58rjo=
+

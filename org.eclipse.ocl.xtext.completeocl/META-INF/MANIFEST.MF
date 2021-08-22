@@ -1,0 +1,546 @@
+Manifest-Version: 1.0
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-SymbolicName: org.eclipse.ocl.xtext.completeocl;singleton:=true
+Bundle-Activator: org.eclipse.ocl.xtext.completeocl.utilities.Complete
+ OCLPlugin$Implementation
+Require-Bundle: org.eclipse.core.resources;bundle-version="[3.5.0,4.0.
+ 0)",org.eclipse.core.runtime;bundle-version="[3.5.0,4.0.0)",org.eclip
+ se.emf.validation;bundle-version="[1.0.0,2.0.0)";resolution:=optional
+ ,org.eclipse.ocl.xtext.essentialocl;bundle-version="[1.3.0,2.0.0)";vi
+ sibility:=reexport,org.eclipse.ocl.pivot.uml;bundle-version="[1.3.0,2
+ .0.0)"
+Bundle-Version: 1.3.0.v20170522-1753
+Export-Package: org.eclipse.ocl.xtext.completeocl,org.eclipse.ocl.xtex
+ t.completeocl.as2cs,org.eclipse.ocl.xtext.completeocl.attributes,org.
+ eclipse.ocl.xtext.completeocl.cs2as,org.eclipse.ocl.xtext.completeocl
+ .formatting,org.eclipse.ocl.xtext.completeocl.parser.antlr,org.eclips
+ e.ocl.xtext.completeocl.parser.antlr.internal;x-friends:="org.eclipse
+ .ocl.xtext.completeocl.ui",org.eclipse.ocl.xtext.completeocl.scoping,
+ org.eclipse.ocl.xtext.completeocl.serializer,org.eclipse.ocl.xtext.co
+ mpleteocl.services,org.eclipse.ocl.xtext.completeocl.utilities,org.ec
+ lipse.ocl.xtext.completeocl.validation,org.eclipse.ocl.xtext.complete
+ oclcs,org.eclipse.ocl.xtext.completeoclcs.impl,org.eclipse.ocl.xtext.
+ completeoclcs.util
+Ant-Version: Apache Ant 1.9.4
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: %providerName
+Bundle-Name: %pluginName
+Created-By: 1.8.0_121-b13 (Oracle Corporation)
+Bundle-ManifestVersion: 2
+Import-Package: org.apache.log4j;version="[1.2.15,2.0.0)"
+
+Name: org/eclipse/ocl/xtext/completeocl/services/CompleteOCLGrammarAcc
+ ess$CompleteOCLDocumentCSElements.class
+SHA1-Digest: 78BCWSC539oW4fL2zLKzA5NBmdY=
+
+Name: org/eclipse/ocl/xtext/completeocl/utilities/CompleteOCLASResourc
+ eImpl.class
+SHA1-Digest: +wU0dzv74lW0HyTdkZ65Bo6sTbo=
+
+Name: org/eclipse/ocl/xtext/completeocl/CompleteOCLRuntimeModule$Retok
+ enizingCompleteOCLParser.class
+SHA1-Digest: jYSWMqsmTeM+5akzfGSTAqZXDnQ=
+
+Name: org/eclipse/ocl/xtext/completeoclcs/util/AbstractCompleteOCLCSVi
+ sitor.class
+SHA1-Digest: T+KaBMtA+rBazPmkmkluw4gHre0=
+
+Name: org/eclipse/ocl/xtext/completeocl/CompleteOCLGrammarResource.cla
+ ss
+SHA1-Digest: TFlAUea6p94IypRkS6XP4Kb2ADQ=
+
+Name: org/eclipse/ocl/xtext/completeocl/as2cs/CompleteOCLAS2CS$Factory
+ .class
+SHA1-Digest: 3kj2up6/D/f8O3B+6hnkc44WY/I=
+
+Name: org/eclipse/ocl/xtext/completeoclcs/CompleteOCLCSPackage$Literal
+ s.class
+SHA1-Digest: 1UN+2WWqu5bX28cZP1K2d0YEOQY=
+
+Name: org/eclipse/ocl/xtext/completeocl/CompleteOCLGrammarResource$_Es
+ sentialOCL.class
+SHA1-Digest: Gsmlzh2Qr8UG8ltr/ZeJ/nl/FKg=
+
+Name: org/eclipse/ocl/xtext/completeocl/validation/CompleteOCLJavaVali
+ dator.class
+SHA1-Digest: oVndtpT9v/62bJ5ZaizNB8M7PoY=
+
+Name: org/eclipse/ocl/xtext/completeocl/attributes/PropertyContextCSAt
+ tribution.class
+SHA1-Digest: y2YkFIjpI5PRKZJ1KIGyg/i/NFU=
+
+Name: model/ReadMe.txt
+SHA1-Digest: +jx5+OE8fTBEu+KblL9h4VNXXq4=
+
+Name: org/eclipse/ocl/xtext/completeocl/parser/antlr/internal/Internal
+ CompleteOCL.g
+SHA1-Digest: 07DcOPaJ+9H5mzs6POhviB4XPoQ=
+
+Name: org/eclipse/ocl/xtext/completeoclcs/impl/ContextDeclCSImpl.class
+SHA1-Digest: 3vNjh2OYQcROzwdjdVnXfd3lkVA=
+
+Name: org/eclipse/ocl/xtext/completeoclcs/CompleteOCLCSFactory.class
+SHA1-Digest: L+veKMN8msPsH3BtlckvFuwe7sk=
+
+Name: org/eclipse/ocl/xtext/completeocl/formatting/CompleteOCLFormatte
+ r.class
+SHA1-Digest: EyypAAw96aOiYenUlDmDv7ORbQQ=
+
+Name: org/eclipse/ocl/xtext/completeocl/as2cs/CompleteOCLSplitter$Sepa
+ rator$1.class
+SHA1-Digest: vBWswYKrTS70apcxr5QAom7/lAI=
+
+Name: org/eclipse/ocl/xtext/completeocl/utilities/PathNameDeclCSLabelG
+ enerator.class
+SHA1-Digest: XJP2jSM+rgdnxmbajHGQJgsnW84=
+
+Name: org/eclipse/ocl/xtext/completeocl/parser/antlr/internal/Internal
+ CompleteOCLParser$DFA10.class
+SHA1-Digest: rH/r7r23CCKHTvcvTy7w83f4RS0=
+
+Name: org/eclipse/ocl/xtext/completeoclcs/impl/DefCSImpl.class
+SHA1-Digest: rlNzI4L6/iKCJ9ycetkib8snhcE=
+
+Name: org/eclipse/ocl/xtext/completeocl/CompleteOCL.properties
+SHA1-Digest: MzQ2x1/TnjYdce49BLJkTW3BlT4=
+
+Name: org/eclipse/ocl/xtext/completeocl/CompleteOCLStandaloneSetup.cla
+ ss
+SHA1-Digest: +TiGTdp8gs5M01X6v05wJxlgduY=
+
+Name: org/eclipse/ocl/xtext/completeocl/parser/antlr/CompleteOCLAntlrT
+ okenFileProvider.class
+SHA1-Digest: t0inVUxEOV31XInXdiseyfSn61I=
+
+Name: org/eclipse/ocl/xtext/completeocl/cs2as/CompleteOCLCSContainment
+ Visitor.class
+SHA1-Digest: 2RG2Ixh3tSuDDu+6K0QhyLX/zKo=
+
+Name: org/eclipse/ocl/xtext/completeocl/services/CompleteOCLGrammarAcc
+ ess$ConstraintCSElements.class
+SHA1-Digest: /vRUuQrDgYdoThboHLxXL7IkcH0=
+
+Name: org/eclipse/ocl/xtext/completeocl/attributes/OperationContextCSA
+ ttribution.class
+SHA1-Digest: TagXuacY/pbTyhNrTdhPbnKz2fM=
+
+Name: org/eclipse/ocl/xtext/completeocl/as2cs/CompleteOCLAS2CS.class
+SHA1-Digest: /ImsuNcLFOQTIjo0WihbxnQqUGY=
+
+Name: org/eclipse/ocl/xtext/completeocl/serializer/AbstractCompleteOCL
+ SyntacticSequencer.class
+SHA1-Digest: ZF9AlbDFvYZLXfjTs3S7x2BK6BY=
+
+Name: org/eclipse/ocl/xtext/completeoclcs/impl/CompleteOCLCSFactoryImp
+ l.class
+SHA1-Digest: RRx4HjWzsCc5NafnO6eJJFmgPe0=
+
+Name: org/eclipse/ocl/xtext/completeoclcs/CompleteOCLDocumentCS.class
+SHA1-Digest: T2m650Gsf4XOmXT/agZMMBb2gvA=
+
+Name: org/eclipse/ocl/xtext/completeoclcs/util/CompleteOCLCSVisitor.cl
+ ass
+SHA1-Digest: KoRmLopJ8akV4n9pgJavUxD1qEM=
+
+Name: org/eclipse/ocl/xtext/completeocl/services/CompleteOCLGrammarAcc
+ ess$TemplateSignatureCSElements.class
+SHA1-Digest: Di2Ti5DYN8ddUvmfVVHphzvm0ZI=
+
+Name: org/eclipse/ocl/xtext/completeocl/as2cs/CompleteOCLSplitter$Sepa
+ rator.class
+SHA1-Digest: PNWuaVjm9qCnkM0V3OxBeSwqyV0=
+
+Name: org/eclipse/ocl/xtext/completeoclcs/util/DecorableCompleteOCLCSV
+ isitor.class
+SHA1-Digest: MGcCd59YnQuT9HukVn52O8Pp8g8=
+
+Name: org/eclipse/ocl/xtext/completeocl/utilities/CompleteOCLLoader.cl
+ ass
+SHA1-Digest: f2HAC2D5z/tqhpfhs7CXeN5keTo=
+
+Name: org/eclipse/ocl/xtext/completeocl/AbstractCompleteOCLRuntimeModu
+ le.class
+SHA1-Digest: BAlMkptECk57UiygQJHoSKp9KnE=
+
+Name: org/eclipse/ocl/xtext/completeoclcs/CompleteOCLCSPackage.class
+SHA1-Digest: Szbz7TAU80UcX41QX0623iGlVZk=
+
+Name: org/eclipse/ocl/xtext/completeoclcs/impl/DefOperationCSImpl.clas
+ s
+SHA1-Digest: lpwYqfmEvDYncJVv1bLjdXr+5fU=
+
+Name: org/eclipse/ocl/xtext/completeocl/cs2as/CompleteOCLCSLeft2RightV
+ isitor.class
+SHA1-Digest: ZOZQ2oMenzYDB7H38WUro8XYQM0=
+
+Name: org/eclipse/ocl/xtext/completeoclcs/util/AbstractCompleteOCLCSPr
+ eOrderVisitor.class
+SHA1-Digest: wvAFYHGH8L4/DwA7WzJ58jNsmpQ=
+
+Name: org/eclipse/ocl/xtext/completeoclcs/util/AbstractCompleteOCLCSCo
+ ntainmentVisitor.class
+SHA1-Digest: Iqef5vuCVJSfNN807KhbALOZ2Nk=
+
+Name: org/eclipse/ocl/xtext/completeocl/cs2as/CompleteOCLCSPostOrderVi
+ sitor.class
+SHA1-Digest: C8w/17tmDFHsa2hTm843efAWSI4=
+
+Name: org/eclipse/ocl/xtext/completeocl/as2cs/CompleteOCLSplitter$Sepa
+ rator$2.class
+SHA1-Digest: 8YkrH6Ivw7/jAZjKS6Dlk22KBqU=
+
+Name: org/eclipse/ocl/xtext/completeocl/attributes/ClassifierContextCS
+ Attribution.class
+SHA1-Digest: ciYsHmKZ8HoRRxaPBocHO3kMYrI=
+
+Name: org/eclipse/ocl/xtext/completeocl/parser/antlr/internal/Internal
+ CompleteOCLParser$DFA78.class
+SHA1-Digest: TlirPW5dwGMmwH9fCr4IMTjCx28=
+
+Name: org/eclipse/ocl/xtext/completeocl/services/CompleteOCLGrammarAcc
+ ess$SpecificationCSElements.class
+SHA1-Digest: Etkx3HjU04Yrzh+uh5gNqEa2SKI=
+
+Name: org/eclipse/ocl/xtext/completeoclcs/util/AbstractNullCompleteOCL
+ CSVisitor.class
+SHA1-Digest: 1FEhVMrz5Y4mmW4ldnCNfy8iW9k=
+
+Name: about.html
+SHA1-Digest: vWAsXILjKfPTzh/flzE7qdytznU=
+
+Name: org/eclipse/ocl/xtext/completeocl/services/CompleteOCLGrammarAcc
+ ess$NavigationOperatorNameElements.class
+SHA1-Digest: 7ux39XimgW6+gjk0tYj8eBTb1XQ=
+
+Name: org/eclipse/ocl/xtext/completeoclcs/DefOperationCS.class
+SHA1-Digest: QdmmwE/SJawRnx0yl4o0kU1Vo+o=
+
+Name: org/eclipse/ocl/xtext/completeocl/utilities/CompleteOCLPlugin.cl
+ ass
+SHA1-Digest: pLZCaJkeQ97pj6b7nu9J3akOmEQ=
+
+Name: org/eclipse/ocl/xtext/completeoclcs/impl/ClassifierContextDeclCS
+ Impl.class
+SHA1-Digest: U2iIErtNFb4x5XmGmaS2F7CcLJI=
+
+Name: org/eclipse/ocl/xtext/completeocl/parser/antlr/internal/Internal
+ CompleteOCLParser$DFA81.class
+SHA1-Digest: VIWaAmfuX+tcAvXU7Lh3M2Lg15Y=
+
+Name: org/eclipse/ocl/xtext/completeoclcs/impl/CompleteOCLCSPackageImp
+ l.class
+SHA1-Digest: TOh6iLGehmyiu4BL+/eJgUXQ33k=
+
+Name: org/eclipse/ocl/xtext/completeoclcs/util/AbstractCompleteOCLCSPo
+ stOrderVisitor.class
+SHA1-Digest: A1wf5+tuBviORHvI9WzsIvtGJVo=
+
+Name: org/eclipse/ocl/xtext/completeocl/scoping/CompleteOCLScoping.cla
+ ss
+SHA1-Digest: WoVpFEkzyDFy3x3Tm0nVYxGZgjQ=
+
+Name: org/eclipse/ocl/xtext/completeocl/services/CompleteOCLGrammarAcc
+ ess$ClassifierContextDeclCSElements.class
+SHA1-Digest: zj3542YL3erMPmofYzj5G3eB924=
+
+Name: org/eclipse/ocl/xtext/completeocl/services/CompleteOCLGrammarAcc
+ ess$DefOperationCSElements.class
+SHA1-Digest: d7v/ipB0D8/mHfq2nWopSB+qIaY=
+
+Name: org/eclipse/ocl/xtext/completeocl/utilities/CompleteOCLCSResourc
+ e.class
+SHA1-Digest: 45xX6gIRuR5WmB7Pb8zueSvtPAw=
+
+Name: org/eclipse/ocl/xtext/completeocl/services/CompleteOCLGrammarAcc
+ ess$ImportCSElements.class
+SHA1-Digest: TwTtDCB405TByEOVlt69oP08G2Q=
+
+Name: org/eclipse/ocl/xtext/completeoclcs/impl/PropertyContextDeclCSIm
+ pl.class
+SHA1-Digest: 3KakgfBFuX1jCQd4EGGO2UuLSWw=
+
+Name: org/eclipse/ocl/xtext/completeoclcs/impl/OperationContextDeclCSI
+ mpl.class
+SHA1-Digest: mgelrZ3injWCr3XvJlD2LwTWY1o=
+
+Name: org/eclipse/ocl/xtext/completeoclcs/util/CompleteOCLCSAdapterFac
+ tory$1.class
+SHA1-Digest: G8J4pMJllHb/ridjgmRPjINvy28=
+
+Name: org/eclipse/ocl/xtext/completeoclcs/impl/PackageDeclarationCSImp
+ l.class
+SHA1-Digest: P4ovQqU9rpIcskcS2tdwdV0H3Po=
+
+Name: org/eclipse/ocl/xtext/completeocl/services/CompleteOCLGrammarAcc
+ ess$PropertyContextDeclCSElements.class
+SHA1-Digest: o2P7IZY1KTMzPwkM7NHfJ+gRa+Y=
+
+Name: org/eclipse/ocl/xtext/completeocl/services/CompleteOCLGrammarAcc
+ ess$UnrestrictedNameElements.class
+SHA1-Digest: QbUiznzoUXQsNOlO5GuJ39XFWkA=
+
+Name: org/eclipse/ocl/xtext/completeoclcs/impl/PathNameDeclCSImpl.clas
+ s
+SHA1-Digest: M+lEtqoxqGF5HSOBmQXE++rk8cY=
+
+Name: org/eclipse/ocl/xtext/completeocl/services/CompleteOCLGrammarAcc
+ ess$ParameterCSElements.class
+SHA1-Digest: VCL2m1ye1XpAch5XP4ydsFyvTsc=
+
+Name: org/eclipse/ocl/xtext/completeocl/services/CompleteOCLGrammarAcc
+ ess$NavigatingArgExpCSElements.class
+SHA1-Digest: To+Z1mF4tGaEbFH6OLo/tvrsHfU=
+
+Name: org/eclipse/ocl/xtext/completeocl/scoping/CompleteOCLScopeProvid
+ er.class
+SHA1-Digest: aZhxt6QeuTM72/7Gpcc98i7u2FU=
+
+Name: org/eclipse/ocl/xtext/completeocl/parser/antlr/internal/Internal
+ CompleteOCLLexer$DFA11.class
+SHA1-Digest: b6ghBKE+Zv2pg+YwH8gO5hyJVKQ=
+
+Name: org/eclipse/ocl/xtext/completeocl/CompleteOCLRuntimeModule.class
+SHA1-Digest: MeS2+EpxjUw4TZCZ9J73k7B0UIo=
+
+Name: org/eclipse/ocl/xtext/completeocl/parser/antlr/internal/Internal
+ CompleteOCLLexer.class
+SHA1-Digest: v10K0Ak41t2MQY2LS5ED+gn3LOU=
+
+Name: org/eclipse/ocl/xtext/completeoclcs/impl/DefPropertyCSImpl.class
+SHA1-Digest: SQXoUhS12srgvmU/YRkz6DhI3CE=
+
+Name: org/eclipse/ocl/xtext/completeocl/attributes/OperationContextFil
+ ter.class
+SHA1-Digest: 3V/5M57r3dAIy1SdybylhvtYAAw=
+
+Name: model/CompleteOCLCS.ecore
+SHA1-Digest: HE6RKz7gwgot/rEd25NifUOxMco=
+
+Name: org/eclipse/ocl/xtext/completeocl/services/CompleteOCLGrammarAcc
+ ess$ContextDeclCSElements.class
+SHA1-Digest: SrXMFnV+53a73tJIyYxyDj5yPW0=
+
+Name: org/eclipse/ocl/xtext/completeoclcs/OperationContextDeclCS.class
+SHA1-Digest: Te02x83y73imqOX5KevGzXDZGjY=
+
+Name: org/eclipse/ocl/xtext/completeocl/parser/antlr/internal/Internal
+ CompleteOCLParser$DFA75.class
+SHA1-Digest: nHS4A3qFB1hgOzLHhC9paFT2Jr4=
+
+Name: org/eclipse/ocl/xtext/completeocl/services/CompleteOCLGrammarAcc
+ ess$DefPropertyCSElements.class
+SHA1-Digest: 6wWT0r/SzXs67SQlQ9FSTWQIS+c=
+
+Name: META-INF/eclipse.inf
+SHA1-Digest: KyT9FF7C7t86NoBoa2kZT3ZJBfw=
+
+Name: org/eclipse/ocl/xtext/completeocl/validation/CompleteOCLConstrai
+ ntProvider.class
+SHA1-Digest: gv7aDBYLw9MScgUqg8vRRY/NMxQ=
+
+Name: org/eclipse/ocl/xtext/completeocl/validation/CompleteOCLEObjectV
+ alidator.class
+SHA1-Digest: mKzNt8xEg+ZSWxG/zN1QxiuuZCo=
+
+Name: org/eclipse/ocl/xtext/completeocl/parser/antlr/internal/Internal
+ CompleteOCLParser.class
+SHA1-Digest: z90MBB5Zyt7Cfp7hGjOlzJsQr5g=
+
+Name: org/eclipse/ocl/xtext/completeoclcs/PathNameDeclCS.class
+SHA1-Digest: jhBhqH1qP6bhdc9LQYYwYViLn8E=
+
+Name: org/eclipse/ocl/xtext/completeocl/services/CompleteOCLGrammarAcc
+ ess$DefCSElements.class
+SHA1-Digest: V1lPPUrLxiZHp4ZzX9gEtUNyxPY=
+
+Name: org/eclipse/ocl/xtext/completeocl/as2cs/CompleteOCLSplitter.clas
+ s
+SHA1-Digest: tgmeYDLrI2voYd3MArWa713cKzw=
+
+Name: org/eclipse/ocl/xtext/completeocl/services/CompleteOCLGrammarAcc
+ ess$OperationContextDeclCSElements.class
+SHA1-Digest: TaBcoMIthGndGNpAJVKP3/Lvwrg=
+
+Name: org/eclipse/ocl/xtext/completeocl/CompleteOCLGrammarResource$_Ba
+ se.class
+SHA1-Digest: bq2OSOEhAJFs3QQ4qpFqHKzcrDw=
+
+Name: org/eclipse/ocl/xtext/completeocl/services/CompleteOCLGrammarAcc
+ ess$PackageDeclarationCSElements.class
+SHA1-Digest: pzcx97S+0LnVxWh3N6uiwZZflu8=
+
+Name: org/eclipse/ocl/xtext/completeoclcs/FeatureContextDeclCS.class
+SHA1-Digest: jCu6XEXbmDM6jmrs7mE9/V/XE+8=
+
+Name: org/eclipse/ocl/xtext/completeocl/attributes/PackageDeclarationC
+ SAttribution.class
+SHA1-Digest: znR4ckzlmzTbcE8Sz/HRLtcsPEU=
+
+Name: org/eclipse/ocl/xtext/completeocl/serializer/AbstractCompleteOCL
+ SemanticSequencer.class
+SHA1-Digest: EItB7h0uaBVSxIEoYtpiNXMXsp0=
+
+Name: build.properties
+SHA1-Digest: hKrPAnNrhzi45vcqLAGCyBisRxk=
+
+Name: org/eclipse/ocl/xtext/completeoclcs/util/AbstractCompleteOCLCSLe
+ ft2RightVisitor.class
+SHA1-Digest: X7NT1eZTJDn49Y6ipuAP0tBNfS4=
+
+Name: org/eclipse/ocl/xtext/completeoclcs/util/CompleteOCLCSSwitch.cla
+ ss
+SHA1-Digest: oM17LefJGqYFm+l0XlD1McLe2u4=
+
+Name: org/eclipse/ocl/xtext/completeocl/CompleteOCLGrammarResource$_Co
+ mpleteOCL.class
+SHA1-Digest: YcZ/LPzPXxCBAoD9ozctVIt5Ooo=
+
+Name: org/eclipse/ocl/xtext/completeocl/services/CompleteOCLGrammarAcc
+ ess$CompleteOCLNavigationOperatorNameElements.class
+SHA1-Digest: 53s1cJnU6U9TRApYqMJwnD8vv0g=
+
+Name: org/eclipse/ocl/xtext/completeocl/as2cs/CompleteOCLDeclarationVi
+ sitor.class
+SHA1-Digest: YDVX7Q5zIDRIOYBy93zubraDjoA=
+
+Name: org/eclipse/ocl/xtext/completeocl/CompleteOCLStandaloneSetupGene
+ rated.class
+SHA1-Digest: Zf6xQQDqS6JO32l1hkFtbJSSI+A=
+
+Name: org/eclipse/ocl/xtext/completeocl/cs2as/CompleteOCLCS2AS.class
+SHA1-Digest: 5QIyA2yWn35SqV8I6ITiCThlgJQ=
+
+Name: org/eclipse/ocl/xtext/completeocl/services/CompleteOCLHiddenToke
+ nSequencer.class
+SHA1-Digest: p4vjMpAN5mMmsAXYWsIII9Aa8Iw=
+
+Name: org/eclipse/ocl/xtext/completeocl/services/CompleteOCLGrammarAcc
+ ess$DefParameterCSElements.class
+SHA1-Digest: d1O79NIN3EHpRQKay4jGFinCxas=
+
+Name: org/eclipse/ocl/xtext/completeocl/services/CompleteOCLGrammarAcc
+ ess$PrimitiveTypeIdentifierElements.class
+SHA1-Digest: jvwPsOaxIFs2YfKuZ88kajzJH6g=
+
+Name: org/eclipse/ocl/xtext/completeocl/serializer/CompleteOCLSyntacti
+ cSequencer.class
+SHA1-Digest: hzWFZt8JeCaQmbeIV/T/OD41amU=
+
+Name: org/eclipse/ocl/xtext/completeoclcs/PropertyContextDeclCS.class
+SHA1-Digest: V2NxNZ0m4o0K0cp5duwRolSe54s=
+
+Name: plugin.properties
+SHA1-Digest: pZukwffYewvTjuaYpOah3WB8Rto=
+
+Name: org/eclipse/ocl/xtext/completeocl/validation/AbstractCompleteOCL
+ JavaValidator.class
+SHA1-Digest: sYSRP/KZxWmHubH4dmdSLsyGd3c=
+
+Name: org/eclipse/ocl/xtext/completeocl/CompleteOCL.xtext
+SHA1-Digest: alcVF15ji4PeuQOYi5lWFoJyUKs=
+
+Name: org/eclipse/ocl/xtext/completeocl/attributes/CompleteOCLDocument
+ CSAttribution.class
+SHA1-Digest: /HZ2XuikmdvWR3SJtEM0IB6Z8EI=
+
+Name: org/eclipse/ocl/xtext/completeocl/utilities/CompleteOCLAS2XMIidV
+ isitor.class
+SHA1-Digest: x7XEPYoUNdwpYRqCRdlj6oH3lV4=
+
+Name: org/eclipse/ocl/xtext/completeoclcs/util/AbstractExtendingComple
+ teOCLCSVisitor.class
+SHA1-Digest: OwW3SuKVOAhHNkcMe5SafOnGbfY=
+
+Name: org/eclipse/ocl/xtext/completeoclcs/impl/FeatureContextDeclCSImp
+ l.class
+SHA1-Digest: oO8p//Ntj/LgYQdFqZzsbZiXTww=
+
+Name: org/eclipse/ocl/xtext/completeocl/parser/antlr/CompleteOCLParser
+ .class
+SHA1-Digest: NhFMd7Nki8CAugREAXK7pLufbHI=
+
+Name: plugin.xml
+SHA1-Digest: MlGHzafF8SWNJs6V7+x09o56j+c=
+
+Name: org/eclipse/ocl/xtext/completeocl/cs2as/CompleteOCLCSContainment
+ Visitor$OperationDeclScopeFilter.class
+SHA1-Digest: 11Anqv3nkdoypvaHoFPYw5OQavs=
+
+Name: model/CompleteOCLCS.genmodel
+SHA1-Digest: XRZP5VlJFdzNwBKTXe1ioLf5p10=
+
+Name: org/eclipse/ocl/xtext/completeoclcs/ContextDeclCS.class
+SHA1-Digest: VKZbYfvAQkmNLc9s8aO1Y8dwWIc=
+
+Name: org/eclipse/ocl/xtext/completeoclcs/DefPropertyCS.class
+SHA1-Digest: QkSdyJeItY//WtMH8xPcnigrWzs=
+
+Name: org/eclipse/ocl/xtext/completeoclcs/PackageDeclarationCS.class
+SHA1-Digest: 6GXk5ym2K8+YaL731aBLPvyixY4=
+
+Name: org/eclipse/ocl/xtext/completeocl/services/CompleteOCLGrammarAcc
+ ess.class
+SHA1-Digest: 7nks5gov0vJR2OYe6VGzWYsL16E=
+
+Name: org/eclipse/ocl/xtext/completeocl/services/CompleteOCLGrammarAcc
+ ess$TypedRefCSElements.class
+SHA1-Digest: SfKJsJyz4SwgxHLCupOdSMG8FzE=
+
+Name: org/eclipse/ocl/xtext/completeoclcs/util/AbstractDelegatingCompl
+ eteOCLCSVisitor.class
+SHA1-Digest: 069eCkEzSMzH7KNq4PwfgH7p1WY=
+
+Name: org/eclipse/ocl/xtext/completeoclcs/impl/OCLMessageArgCSImpl.cla
+ ss
+SHA1-Digest: j6w13ioVX99bpSUEHn3BxDUBhR0=
+
+Name: org/eclipse/ocl/xtext/completeocl/parser/antlr/internal/Internal
+ CompleteOCL.tokens
+SHA1-Digest: kAqJB1saOr70aiQ+IxbTkfYwHdA=
+
+Name: org/eclipse/ocl/xtext/completeoclcs/DefCS.class
+SHA1-Digest: jK5dnIrMf1Cy9vkuc014Gebuo2w=
+
+Name: org/eclipse/ocl/xtext/completeoclcs/OCLMessageArgCS.class
+SHA1-Digest: IUO52Wx3MnDFk3eMOS+v+VOg8MI=
+
+Name: org/eclipse/ocl/xtext/completeocl/serializer/CompleteOCLSemantic
+ Sequencer.class
+SHA1-Digest: wkSoPbrKwle1F95GE18u8sGvo5k=
+
+Name: org/eclipse/ocl/xtext/completeocl/parser/antlr/internal/Internal
+ CompleteOCLParser$FollowSets000.class
+SHA1-Digest: 5lHbIfdJEkDAvOiaEEYgIIwuhcU=
+
+Name: org/eclipse/ocl/xtext/completeocl/CompleteOCL.xtextbin
+SHA1-Digest: 8MjEYZGmVMOLEYMZFQzHLVXfqRA=
+
+Name: org/eclipse/ocl/xtext/completeocl/utilities/CompleteOCLPlugin$Im
+ plementation.class
+SHA1-Digest: wiFQ+hned0SV64nw4V3TujC/4zI=
+
+Name: org/eclipse/ocl/xtext/completeocl/CompleteOCLGrammarResource$Gra
+ mmarProvider.class
+SHA1-Digest: ADs6+yn5xCfgdESPca0+hrCpSe0=
+
+Name: org/eclipse/ocl/xtext/completeoclcs/impl/CompleteOCLDocumentCSIm
+ pl.class
+SHA1-Digest: JLBHKve7Su32rjlCRUIuwVjqDMc=
+
+Name: org/eclipse/ocl/xtext/completeoclcs/util/CompleteOCLCSAdapterFac
+ tory.class
+SHA1-Digest: ZTNdyNrG7U/aJr0mYSGmAB+Hh8o=
+
+Name: org/eclipse/ocl/xtext/completeocl/cs2as/CompleteOCLCSPreOrderVis
+ itor.class
+SHA1-Digest: F/a3hI4E4e3xZelfpOH9PlAQomY=
+
+Name: org/eclipse/ocl/xtext/completeocl/utilities/CompleteOCLASResourc
+ eFactory.class
+SHA1-Digest: 953AhOvVI5ccxJ80ocGCkJ4wxzM=
+
+Name: org/eclipse/ocl/xtext/completeoclcs/ClassifierContextDeclCS.clas
+ s
+SHA1-Digest: 2WVqTk2O5Zp6CjLMjzARP3IV/94=
+

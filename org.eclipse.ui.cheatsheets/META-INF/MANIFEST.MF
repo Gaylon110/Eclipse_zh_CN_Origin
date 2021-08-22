@@ -1,0 +1,814 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.ui.cheatsheets; singleton:=true
+Archiver-Version: Plexus Archiver
+Built-By: genie.releng
+Require-Bundle: org.eclipse.ui;bundle-version="[3.6.0,4.0.0)",org.ecli
+ pse.ui.forms;bundle-version="[3.5.0,4.0.0)",org.eclipse.help;bundle-v
+ ersion="[3.5.0,4.0.0)",org.eclipse.core.runtime;bundle-version="[3.6.
+ 0,4.0.0)",org.eclipse.help.base;bundle-version="[4.0.0,5.0.0)";resolu
+ tion:=optional,org.eclipse.help.ui;bundle-version="[4.0.0,5.0.0)";res
+ olution:=optional,org.eclipse.core.expressions;bundle-version="3.4.20
+ 0"
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/platfo
+ rm/eclipse.platform.ua.git;path="org.eclipse.ui.cheatsheets";tag="I20
+ 170515-0800";commitId=279a7bb857c4e76b6fb132b8c8369fc53b41a78c
+Bundle-Vendor: %PROVIDER_NAME
+Import-Package: com.ibm.icu.text,javax.xml.parsers,org.w3c.dom,org.xml
+ .sax
+Eclipse-LazyStart: true
+Export-Package: org.eclipse.ui.cheatsheets,org.eclipse.ui.internal.che
+ atsheets;x-friends:="org.eclipse.ua.tests",org.eclipse.ui.internal.ch
+ eatsheets.actions;x-friends:="org.eclipse.ua.tests",org.eclipse.ui.in
+ ternal.cheatsheets.composite.explorer;x-friends:="org.eclipse.ua.test
+ s",org.eclipse.ui.internal.cheatsheets.composite.model;x-friends:="or
+ g.eclipse.ua.tests",org.eclipse.ui.internal.cheatsheets.composite.par
+ ser;x-friends:="org.eclipse.ua.tests",org.eclipse.ui.internal.cheatsh
+ eets.composite.views;x-friends:="org.eclipse.ua.tests",org.eclipse.ui
+ .internal.cheatsheets.data;x-friends:="org.eclipse.ua.tests",org.ecli
+ pse.ui.internal.cheatsheets.dialogs;x-friends:="org.eclipse.ua.tests"
+ ,org.eclipse.ui.internal.cheatsheets.handlers;x-friends:="org.eclipse
+ .ua.tests",org.eclipse.ui.internal.cheatsheets.registry;x-friends:="o
+ rg.eclipse.ua.tests",org.eclipse.ui.internal.cheatsheets.state;x-frie
+ nds:="org.eclipse.ua.tests",org.eclipse.ui.internal.cheatsheets.views
+ ;x-friends:="org.eclipse.ua.tests",org.eclipse.ui.internal.provisiona
+ l.cheatsheets;x-friends:="org.eclipse.ua.tests"
+Bundle-Name: %PLUGIN_NAME
+Bundle-Version: 3.5.100.v20170515-0748
+Bundle-Localization: plugin
+Bundle-Activator: org.eclipse.ui.internal.cheatsheets.CheatSheetPlugin
+Created-By: Apache Maven 3.3.3
+Build-Jdk: 1.8.0_121
+
+Name: plugin.xml
+SHA-256-Digest: Shm7M5aFTSwXU4QDAUObltRHbF9pfMOSRhi7jH2Z9Rg=
+
+Name: org/eclipse/ui/internal/cheatsheets/composite/parser/EditableTas
+ kParseStrategy.class
+SHA-256-Digest: x9ElvzrQURpBL2Ukp2gg7WswkaGakZwADx3YrobX8R4=
+
+Name: org/eclipse/ui/internal/cheatsheets/registry/CheatSheetItemExten
+ sionElement.class
+SHA-256-Digest: cT8iijYMsqn1cgMCNsYOttxFJeZPiCCgiUNFxyk5qDc=
+
+Name: org/eclipse/ui/internal/cheatsheets/composite/explorer/TreeExplo
+ rerMenu.class
+SHA-256-Digest: CGnJwrIp+eOu1fc3jSDk2cTbx88Y43P0EoxcM9w7p6E=
+
+Name: org/eclipse/ui/internal/cheatsheets/data/CheatSheetParserExcepti
+ on.class
+SHA-256-Digest: wuvYcWJTxrlDSHDEiSHPZ5h1/eO3iSUxJTaiyViDkmg=
+
+Name: icons/obj16/warning.gif
+SHA-256-Digest: Z0m8kkfpHpvlT5LcxIAW58Vtm1k2DniYvRlVUt6z4CI=
+
+Name: org/eclipse/ui/internal/cheatsheets/composite/views/TaskExplorer
+ Manager.class
+SHA-256-Digest: 4/fNqe2r7+2j47zRqssCHIJE8qpxV9BFfAfNY9fU1so=
+
+Name: org/eclipse/ui/internal/cheatsheets/views/CheatSheetExpandRestor
+ eAction.class
+SHA-256-Digest: mzLfVp8Cg09Jiz79GNqhgaIW87hp2aXYMo20po3ZMfY=
+
+Name: org/eclipse/ui/internal/cheatsheets/composite/explorer/SkipActio
+ n.class
+SHA-256-Digest: u57x+WL8bOGjDfjiFRq/0bsFMemgbEjLim5phsvrUOg=
+
+Name: org/eclipse/ui/internal/cheatsheets/data/IParserTags.class
+SHA-256-Digest: SiYYhO74LCfsmbHpoPDb7o/AuK2W3/GO7qLFLcd2MZQ=
+
+Name: icons/elcl16/start_task.gif
+SHA-256-Digest: WrfOdHxtEMtmmf1lmExmUr2KJfV863KfsH0/zXSoZD4=
+
+Name: org/eclipse/ui/internal/cheatsheets/data/IActionItem.class
+SHA-256-Digest: KuLlhky4D0rf+F0tMQqpUg5AzKb8HAgICETEB0ecT0U=
+
+Name: org/eclipse/ui/internal/cheatsheets/views/IntroItem.class
+SHA-256-Digest: puT15Tr9cdLX7tPpFONsddaY8HNlpsJxDDNlOhAytwM=
+
+Name: org/eclipse/ui/internal/cheatsheets/registry/RegistryReader$1.cl
+ ass
+SHA-256-Digest: jNAWirJgwE1wqzfllzoirTvAOzKGqh/SOQz31HAlHZI=
+
+Name: icons/elcl16/tree_explorer.gif
+SHA-256-Digest: 6DmqmG0tg94xLDntPuJAO4TZUEyVDPYezVtv5rOu7ao=
+
+Name: org/eclipse/ui/internal/cheatsheets/composite/views/CheatsheetTa
+ skEditor.class
+SHA-256-Digest: Hl4MhwLXUqfVu63pdga4DZAOCCwN+QoJHJDhF9Him/w=
+
+Name: icons/ovr16/task_complete.gif
+SHA-256-Digest: wydQZP6+O+qOLb3ByL9kJQyAL9jTggdNNhDh/1hmYp8=
+
+Name: icons/dlcl16/task_set.gif
+SHA-256-Digest: j5ZILu8gZPcq8R/QNBU6Tpqfbna9qyWWDTwKkwtVG9I=
+
+Name: .api_description
+SHA-256-Digest: NmjAhF7zkPlnCmomxHmi7/KyorZx75vSBofskv23TCQ=
+
+Name: org/eclipse/ui/internal/cheatsheets/views/CheatSheetView.class
+SHA-256-Digest: uZR4srMWa031l4cu2DbcX8iT/UaGvYSytFCrgCZe750=
+
+Name: icons/elcl16/start_cheatsheet.gif
+SHA-256-Digest: QaXG4hpHb4Ww+XS3A0k3Rfw7mhs+ANLJ4Hg9nuYbdxY=
+
+Name: org/eclipse/ui/internal/cheatsheets/composite/parser/CompositeCh
+ eatSheetParser.class
+SHA-256-Digest: V8sm124cO9EHxgauNhxhFv5Fc54nna/v2b9b4fGD+GE=
+
+Name: org/eclipse/ui/internal/cheatsheets/handlers/DialogIntegerValueC
+ onverter.class
+SHA-256-Digest: RF5Kqkg5I/n1Rh2QaWIhBTHhL/kmg+d1FjwBHpK3/88=
+
+Name: icons/elcl16/complete_task.gif
+SHA-256-Digest: csgLuuZR8EyMTgAmE+RTr1Ou4J+imJj0szsla/EZ4+Q=
+
+Name: org/eclipse/ui/internal/cheatsheets/registry/CheatSheetRegistryR
+ eader$TaskEditorNode.class
+SHA-256-Digest: XJWbv+33GLgS7F4gQyDVG9rG/A4Y8FbnVy/i/UfkBRg=
+
+Name: org/eclipse/ui/internal/cheatsheets/composite/views/CompositeChe
+ atSheetPage.class
+SHA-256-Digest: /S185xgtG5D/z7SjtSCiQRIAO4S1U8WXSbOVswHCy4E=
+
+Name: org/eclipse/ui/internal/cheatsheets/views/IntroItem$1.class
+SHA-256-Digest: 0hUdYcEIRRVt9yi0gs0soV2DGhdG7DOFbf5z8sZJn3I=
+
+Name: org/eclipse/ui/internal/cheatsheets/composite/explorer/RestartAl
+ lAction.class
+SHA-256-Digest: EGJvw8b0bCcJ4ommq1b1LOOQGGvASrJtlejBQZp4qTA=
+
+Name: org/eclipse/ui/internal/cheatsheets/dialogs/CheatSheetCategoryBa
+ sedSelectionDialog$ActivityViewerFilter.class
+SHA-256-Digest: hbHTBRXWJB8V7JoqYqXbVP/6QIzd5JuB3eUoTq4qmak=
+
+Name: org/eclipse/ui/internal/cheatsheets/composite/explorer/AbstractO
+ verlayIcon.class
+SHA-256-Digest: ubloScEmaHOYA8fA1MhuC1fPt8BnpnGWVx3r7e4l+gQ=
+
+Name: org/eclipse/ui/internal/cheatsheets/views/ViewItem$4.class
+SHA-256-Digest: mbfKFOgkarlolQgFo+bRM4AZOHY2ynKcXogCqwZ+FJk=
+
+Name: org/eclipse/ui/internal/provisional/cheatsheets/ICompositeCheatS
+ heetTask.class
+SHA-256-Digest: 14OG4EYNd+JVcEw0Le3W9gBh+TfV7YRe3OfZDfhFpA0=
+
+Name: org/eclipse/ui/internal/cheatsheets/CheatSheetPlugin.class
+SHA-256-Digest: 4lzFQY2ITxXPoxAfQa+JTJW5/OupXFtLgYa6b/M4cHc=
+
+Name: org/eclipse/ui/internal/cheatsheets/registry/CheatSheetCollectio
+ nSorter.class
+SHA-256-Digest: UHYgoSlkcv3AmRu/GcgANAepnwRG0MmeqTAKBRPl17M=
+
+Name: org/eclipse/ui/internal/cheatsheets/actions/CheatSheetMenu.class
+SHA-256-Digest: 3Ti3PNYgay01RoRqzLCZB/I+bA5HmpkqC94/X9PSGsY=
+
+Name: icons/elcl16/review_ccs_task.gif
+SHA-256-Digest: e5hm3flA4c3O7NOe+I+x3PFC9ohW20gns4CVRTtsrM8=
+
+Name: org/eclipse/ui/internal/cheatsheets/registry/CheatSheetElement.c
+ lass
+SHA-256-Digest: VenAvrekBk+jG5zzQZaTV74u8DUnpBdNYxzMKzECXYA=
+
+Name: org/eclipse/ui/internal/cheatsheets/composite/explorer/TreeLabel
+ Provider.class
+SHA-256-Digest: jzCyFjT/f6VcfoGPVYgjhwbQteE4dIioNcGpsPAT5eI=
+
+Name: org/eclipse/ui/cheatsheets/CheatSheetListener.class
+SHA-256-Digest: FfPqC/XnUVgaJIp2I0EH6tJwZV7veVZoNvJ+26wvp1M=
+
+Name: org/eclipse/ui/internal/provisional/cheatsheets/ICompositeCheatS
+ heet.class
+SHA-256-Digest: GP4m8xwb5cyG8quJRw21BXp6QZsyKg5xl1vSS5ZpSiA=
+
+Name: org/eclipse/ui/internal/cheatsheets/composite/views/CompositeChe
+ atSheetPage$3.class
+SHA-256-Digest: MKO2W5WNt3XCyaosOqmyrD3ehe/JDhW1sm8S99WTr+c=
+
+Name: org/eclipse/ui/internal/cheatsheets/composite/explorer/TreeConte
+ ntProvider.class
+SHA-256-Digest: TKfevsyceCajaKQZ/akCpA9oT1DG+lZw2G5EOft/3rw=
+
+Name: org/eclipse/ui/internal/cheatsheets/composite/explorer/ConfirmRe
+ startDialog$TaskLabelProvider.class
+SHA-256-Digest: uzrZ+b2aj3jLTAKspOQjx8z86JGcF1EMF/hl+Hppz9s=
+
+Name: org/eclipse/ui/internal/cheatsheets/data/ICheatSheet.class
+SHA-256-Digest: 1T1VdE7/M4YkM53zATDDJ1OYaIlC5JO6Z0/kjzxrW80=
+
+Name: org/eclipse/ui/internal/cheatsheets/data/CheatSheetSaveHelper.cl
+ ass
+SHA-256-Digest: 0L8zeR01BGPI34pE8HFr+KrQJ5d2Xlq6XjW11IKbNEY=
+
+Name: org/eclipse/ui/internal/cheatsheets/data/AbstractExecutable.clas
+ s
+SHA-256-Digest: S3aJOamkze1F4/WLJkESIbjuYJwPV2m3ryc3UDQ7CpA=
+
+Name: org/eclipse/ui/internal/cheatsheets/views/CheatSheetView$1.class
+SHA-256-Digest: eEjuE4UKPTV1E+UOlpXBo5Eq0CBKmF0Xy++WBe+ggM8=
+
+Name: org/eclipse/ui/internal/cheatsheets/dialogs/CheatSheetCategoryBa
+ sedSelectionDialog$BrowseListener.class
+SHA-256-Digest: 7eu/yAAgSrF45F2Ov5eUDNL11W8LUw8uUG4dxr3YyaI=
+
+Name: org/eclipse/ui/internal/cheatsheets/data/ConditionalSubItem.clas
+ s
+SHA-256-Digest: oMs53sHR8Czz8HBBx0/fGR7gyUpMS5lEns8M/Ki9Zy0=
+
+Name: org/eclipse/ui/internal/cheatsheets/handlers/OpenMessageDialogHa
+ ndler.class
+SHA-256-Digest: U+DO0pZ3EsEDtq2VjEW+7Sp2+9hbglFcdsY+kHGkwXw=
+
+Name: org/eclipse/ui/internal/cheatsheets/actions/CheatSheetCategoryBa
+ sedSelectionAction.class
+SHA-256-Digest: mbBKdrS+IKPRMZcGNeh0/g5jdVf3Azb81DRBnl1d/e4=
+
+Name: org/eclipse/ui/internal/cheatsheets/Messages.properties
+SHA-256-Digest: aWhoa+3AEAGMxPCfyI/0TZEsQJFI7AB3mKl1Cr2nyKU=
+
+Name: icons/ovr16/task_in_progress.gif
+SHA-256-Digest: 5aPSC76F+fXmftPtfjreVR/nlzxNBzqNLNo3q+8305s=
+
+Name: org/eclipse/ui/internal/cheatsheets/CheatSheetStopWatch$Entry.cl
+ ass
+SHA-256-Digest: 32YLY4K946ap/3jnPBKYQts/04AssU+iBXIBz89mxIA=
+
+Name: org/eclipse/ui/internal/cheatsheets/data/CheatSheetCommand.class
+SHA-256-Digest: hrmjWCwDpC2ABaFi/bcHO8HgPSUBDRla/GyAilUPC68=
+
+Name: icons/obj16/task_choice.gif
+SHA-256-Digest: OI/W+W3M8OLf0UvxrHWa5+MiyF+aOp1CG1KXbfIUuyM=
+
+Name: org/eclipse/ui/internal/cheatsheets/data/ISubItemItem.class
+SHA-256-Digest: /SgSv0PZ+5O5vlodrdV9OejB0Uh/FepdNUjkuLWzTL0=
+
+Name: icons/dlcl16/restart_cheatsheet.gif
+SHA-256-Digest: h0KWhutP8fbd22W0gg4aJBSGv14nRJoV4S+17vBimoU=
+
+Name: org/eclipse/ui/internal/cheatsheets/state/TrayStateManager.class
+SHA-256-Digest: spFMAsihi3jzFt5chUQf3Mk6DuOYVu0AAhGuqfORnz0=
+
+Name: org/eclipse/ui/cheatsheets/CheatSheetViewerFactory.class
+SHA-256-Digest: N8lSzYYBvTh996OoT5d63HapC/sgVM88MhOninW+p/k=
+
+Name: org/eclipse/ui/internal/cheatsheets/composite/model/EditableTask
+ .class
+SHA-256-Digest: XBkGvKsFqTCbsQbK93q6I/WLjPL5GoGZqyk4kHAyTKI=
+
+Name: org/eclipse/ui/cheatsheets/CheatSheetExtensionFactory.class
+SHA-256-Digest: NMGr2W7nj1Ss5VOFLDbeWo5W8zkNlohMsgmSawIsB+c=
+
+Name: org/eclipse/ui/internal/cheatsheets/data/PerformWhen.class
+SHA-256-Digest: 0TBuC6GhT+anDSCzZ1Cb5NUtPi0nV8x25VWNc/UbrNY=
+
+Name: org/eclipse/ui/internal/cheatsheets/views/CoreItem.class
+SHA-256-Digest: Vkv9yU0cRt/BMWFNZ7/8uY7JTQhNHF15BDZFEW15VfY=
+
+Name: icons/elcl16/restart_task.gif
+SHA-256-Digest: W+GJhCL/mQsGyzuHcekgOuJZUhdvgMzS9aPJ/t65fCk=
+
+Name: org/eclipse/ui/internal/cheatsheets/composite/views/CompositeChe
+ atSheetPage$4.class
+SHA-256-Digest: Tpoh7uvU6mDJb3GY3pyg3JgyRrIlo4JEufPPAfCB1OY=
+
+Name: org/eclipse/ui/internal/cheatsheets/ActionRunner.class
+SHA-256-Digest: YkTWjZf4uFXrdD5L0H8Lo91Q8AFl5vPALKLP1eDjnT0=
+
+Name: org/eclipse/ui/internal/cheatsheets/data/IExecutableItem.class
+SHA-256-Digest: kNHYHJMb7LL9YOiE/cQT9lX2GMF/QATKJOCo8Z7cvVU=
+
+Name: org/eclipse/ui/internal/cheatsheets/actions/CheatSheetMenu$3.cla
+ ss
+SHA-256-Digest: 2vBpgcLhxznYMEXbOPx8vLCzN44Dkt2He1UszltRopg=
+
+Name: org/eclipse/ui/internal/cheatsheets/dialogs/CheatSheetCategoryBa
+ sedSelectionDialog$FileAndUrlListener.class
+SHA-256-Digest: FfjmUNMtAIcvaRRXBGG2hX7MjP3wjE2ZFCmGmiG+tXU=
+
+Name: org/eclipse/ui/internal/cheatsheets/actions/CheatSheetMenuAction
+ $1.class
+SHA-256-Digest: GpQkbvbTK1EPCZnR7XUvhaLAjV2qCIkhl+voD6imyvY=
+
+Name: icons/obj16/cheatsheet_task.gif
+SHA-256-Digest: HwbbGpxBRRSFq1UchTf9HW3NqUpORIH7jWZhRsbXaOg=
+
+Name: org/eclipse/ui/internal/cheatsheets/state/MementoStateManager.cl
+ ass
+SHA-256-Digest: jRUIQg5ePUqbD5Q4tJrDDVqhc/QFDh+mOrSHg0OzBOI=
+
+Name: org/eclipse/ui/internal/cheatsheets/composite/explorer/TreeLabel
+ Provider$ImageSet.class
+SHA-256-Digest: KUu3q97z8sH0OtKwbd3pM+UJ7EKkgvxyNlJ0cY8ux5U=
+
+Name: org/eclipse/ui/internal/cheatsheets/composite/views/DescriptionP
+ anel.class
+SHA-256-Digest: Wbrg7SzPPRz0veNOlx6sKw0KzDQEmC888ZgwzDEE39A=
+
+Name: org/eclipse/ui/internal/cheatsheets/composite/explorer/TreeTaskE
+ xplorer.class
+SHA-256-Digest: j6NjYo1j/G5QxkUBdwvYCT52T5QbnlztWJR9nSxEjIw=
+
+Name: org/eclipse/ui/internal/cheatsheets/CheatsheetSearchParticipant.
+ class
+SHA-256-Digest: LBzhfKnzzdFgSls6Nr9GoqOaUomz+8oLDeDVKezl1Qo=
+
+Name: icons/dlcl16/linkto_help.gif
+SHA-256-Digest: /ebRJh7qmKR+eUfaVlUOiJUoPU3bvCizp4qaW2F20Dk=
+
+Name: icons/dlcl16/restart_all.gif
+SHA-256-Digest: eJpU9Qw4LcfVg/u6KlnDNgoHK5weOcmIKvaS9jTIx88=
+
+Name: org/eclipse/ui/internal/cheatsheets/data/RepeatedSubItem.class
+SHA-256-Digest: l0NQqbEGSg0utDCi2jd8Wfqvl0ZOTQKkfjdMtqXDGp4=
+
+Name: org/eclipse/ui/internal/cheatsheets/composite/model/TaskChoiceCo
+ mpletionStrategy.class
+SHA-256-Digest: HGWRlS8q8AUk+kaRsx0hS5QoZpf+knbMXOTHRXwIhI0=
+
+Name: org/eclipse/ui/internal/cheatsheets/views/CheatSheetEvent.class
+SHA-256-Digest: QNM1PDqd+rNlO29mURUd479oakvbYsLdwvTgXddZFTQ=
+
+Name: org/eclipse/ui/internal/cheatsheets/views/CoreItem$7.class
+SHA-256-Digest: Z3feZeoKK9i/AURAlxdNijiMvmCPGE0+zIoWsRCD+aA=
+
+Name: icons/dlcl16/task_choice.gif
+SHA-256-Digest: iPd2AS10TgBm4eZ+6vHZZt+W6RAu2sopvZ3M34ldcs8=
+
+Name: org/eclipse/ui/internal/cheatsheets/data/CheatSheetParser$Normal
+ izeHandler.class
+SHA-256-Digest: He/mfuVz2M7nCvXTxBs9zQDdIG7wzOwmznh4kR6XYpM=
+
+Name: icons/obj16/task_sequence.gif
+SHA-256-Digest: IZdPW13zw+4UMtYlx24cUhZazrH+vQ86qsM6J/HeiQs=
+
+Name: org/eclipse/ui/internal/cheatsheets/actions/OpenPerspective.clas
+ s
+SHA-256-Digest: VDzS3uMW9iAeX+Z2AqVrd+C5EDX+A6OgLJwcOp2JcYo=
+
+Name: org/eclipse/ui/internal/cheatsheets/views/SubItemCompositeHolder
+ .class
+SHA-256-Digest: BF6TeELq105z7tNWDxb1JhMpe24j6rXoirkRXk6Uwh0=
+
+Name: icons/elcl16/expandall.gif
+SHA-256-Digest: +j1I96wTow/LB//yzFnctzfsJeguQl8CDw1EWNw/AUk=
+
+Name: org/eclipse/ui/internal/cheatsheets/registry/CheatSheetParameter
+ Values.class
+SHA-256-Digest: dkYaL41t8ivSP5lypmBdnUrgtdAR3xIJ737PbR2ks4U=
+
+Name: icons/obj16/complete_status.gif
+SHA-256-Digest: p1cRuS+cGQc6RzhTeCs+hSxMadbZyfv5JCZ+tj/SVqY=
+
+Name: org/eclipse/ui/internal/cheatsheets/CheatSheetPlugin$1.class
+SHA-256-Digest: aAspJskzm3RItwzrqvP1P9bEiQulSgPCbRBc/kt8Il8=
+
+Name: org/eclipse/ui/internal/cheatsheets/dialogs/CheatSheetCategoryBa
+ sedSelectionDialog$CheatsheetLabelProvider.class
+SHA-256-Digest: fsdu5IQKYggNyGLRa1ZeCEYmsSK4ZanhoGJQPwXRoWU=
+
+Name: org/eclipse/ui/internal/provisional/cheatsheets/TaskEditor.class
+SHA-256-Digest: aXN67QMS2nunF0fFFVFbCPfxl9GvQw2bmNxD2VTun1Y=
+
+Name: org/eclipse/ui/internal/cheatsheets/state/DefaultStateManager.cl
+ ass
+SHA-256-Digest: lYMFtESaogUzxPnkMlEhCGombUiaUVnWbGAA+c7PPe4=
+
+Name: icons/obj16/skip_status.gif
+SHA-256-Digest: lUDEt2Y0ZUnqroxeOuebiLDjUu3p9QmjjXUnbXtRtbc=
+
+Name: icons/dlcl16/collapseall.gif
+SHA-256-Digest: +CiYBWZkdT9o5RApZ0/2xim0qd4ZZSrbxY2gVyfCL+o=
+
+Name: icons/elcl16/skip_task.gif
+SHA-256-Digest: u8emLTaZnJX1Tu60W14Lqfpqv8YN6W/YCFmroq0Rg/c=
+
+Name: org/eclipse/ui/internal/cheatsheets/views/CoreItem$5.class
+SHA-256-Digest: v3KXz5vXOxPWbCvj24XXl47smjKgnPrrd6/cfdJLr2c=
+
+Name: org/eclipse/ui/internal/cheatsheets/ICheatSheetResource.class
+SHA-256-Digest: /3gCWQ6vjytyGt/ZWqitTrHoDPNj2rqb7csCKb4xC44=
+
+Name: org/eclipse/ui/internal/cheatsheets/views/CheatSheetManager.clas
+ s
+SHA-256-Digest: kA7O2vmKxtTp5qAXYm7fQmo0xF9VTjvZOLCNr3EXMxw=
+
+Name: org/eclipse/ui/internal/cheatsheets/CommandRunner.class
+SHA-256-Digest: grWizVX9SnF/xSpomJ11VNH2XJcffxCyZcGZvAVRQE0=
+
+Name: org/eclipse/ui/internal/cheatsheets/composite/explorer/OverlayIc
+ on.class
+SHA-256-Digest: DlnXdACU5X5JJHGm8+vPOPiggsr0Zp+AmNRST7t1wsU=
+
+Name: org/eclipse/ui/internal/cheatsheets/composite/explorer/ConfirmRe
+ startDialog$TaskContentProvider.class
+SHA-256-Digest: C1P2El3dIZsxSaCNJl2m52/lhxyNQJhxIJwE+A2gbYM=
+
+Name: icons/dlcl16/start_cheatsheet.gif
+SHA-256-Digest: BgnA1c/ahi1Gr5tl+62xtlhYEy0nZ+TBYhxwRQ6IC+s=
+
+Name: org/eclipse/ui/internal/cheatsheets/CheatSheetPlugin$2.class
+SHA-256-Digest: 5gbA/hndAA/bZ9mssEHOKrxBefmwpn8ot/+Hiadg/54=
+
+Name: org/eclipse/ui/internal/cheatsheets/registry/CheatSheetCollectio
+ nElement.class
+SHA-256-Digest: sdgWvAh+7I4gK2Fc9Fi5yGoUkqGlCtFVIP4UboeJwlY=
+
+Name: org/eclipse/ui/internal/provisional/cheatsheets/IEditableTask.cl
+ ass
+SHA-256-Digest: GttdXJN+IhTiPlNAMuS+w0AbWy4NqgI7ns7DNBKqxVU=
+
+Name: icons/elcl16/goto_ccs_task.gif
+SHA-256-Digest: FALBKIW0mjo7V2XjU/DHePfaoBixY0xQJIntxXre1Gc=
+
+Name: org/eclipse/ui/internal/cheatsheets/dialogs/CheatSheetCategoryBa
+ sedSelectionDialog$RadioSelectionListener.class
+SHA-256-Digest: f+duUhEhaXeju6fvpE1o/bSVXxV/jklvxn67967/WeE=
+
+Name: org/eclipse/ui/internal/cheatsheets/data/AbstractSubItem.class
+SHA-256-Digest: OG8a0wArTXUUC5t8tbsCYeT4QvEOZyYaRl9qm5YQAy4=
+
+Name: org/eclipse/ui/internal/cheatsheets/views/CoreItem$6.class
+SHA-256-Digest: Un2iBPMaE4bKUx0npt/JSFYdWLA/qMA+Z7rbiYrl2BE=
+
+Name: org/eclipse/ui/internal/cheatsheets/composite/parser/ITaskParseS
+ trategy.class
+SHA-256-Digest: gxxNwzjTej9ByHw1AsV6a7coZFegm0zY2WM3UWot4dI=
+
+Name: org/eclipse/ui/internal/cheatsheets/composite/model/TaskSetCompl
+ etionStrategy.class
+SHA-256-Digest: 1M0qvZyO2ZxTQtOIDOYD8mw5EPR+lgK+eusqTehBlUQ=
+
+Name: org/eclipse/ui/internal/cheatsheets/views/ErrorPage.class
+SHA-256-Digest: ea+ABjVFFtDqRguytYdrgx6LfM39zApwSMrpUYZPC2o=
+
+Name: icons/dlcl16/skip_task.gif
+SHA-256-Digest: Noug0XphwcORymGS8v9CFhVelZWIeVCLRHlxSrA/7T4=
+
+Name: org/eclipse/ui/internal/cheatsheets/actions/CheatSheetHelpMenuAc
+ tion.class
+SHA-256-Digest: FyFBE7pTPMwP0TAjuYktYpld874k0vY/9g6/BY4smaQ=
+
+Name: org/eclipse/ui/internal/cheatsheets/views/Page.class
+SHA-256-Digest: 8xkltGn4mnOkL6lRXX2URMnHKEGztgoSfKLooONSgxE=
+
+Name: org/eclipse/ui/internal/cheatsheets/data/Action.class
+SHA-256-Digest: EGUrZNYMH8UJNBZlk8HFSta+uljQ8wBKTnJN9Uci+A0=
+
+Name: icons/dlcl16/complete_task.gif
+SHA-256-Digest: LFrcP0MiT97MdNsO/DioPPf6xyw7A8DkN3ZdEy7FAnU=
+
+Name: org/eclipse/ui/internal/cheatsheets/data/SubItem.class
+SHA-256-Digest: /OlJYSyzBJL2+LPXZsRO2IZVcdn0ZRhu7RYq6yAVh0I=
+
+Name: org/eclipse/ui/internal/cheatsheets/registry/CheatSheetRegistryR
+ eader.class
+SHA-256-Digest: RaaevoMdAqNIYNTbQcEPpEoAmiYAw0D/OTbEgSvCzdY=
+
+Name: org/eclipse/ui/internal/cheatsheets/CheatSheetStopWatch.class
+SHA-256-Digest: eTHy2UinVIQ72OKH6MJBJs7hApz+tpqYzbasVp7pHnw=
+
+Name: org/eclipse/ui/internal/cheatsheets/registry/CheatSheetRegistryR
+ eader$1.class
+SHA-256-Digest: PwHHVHq7WyryuFi+/4qj/AFeUw2j4w+EbmgyXfoZv9g=
+
+Name: org/eclipse/ui/internal/cheatsheets/registry/Category.class
+SHA-256-Digest: xqTdzSk478Bb3HIoyTdP0yytcbBvm5z2Py9dKscpX10=
+
+Name: org/eclipse/ui/internal/cheatsheets/views/CheatSheetPage.class
+SHA-256-Digest: 2bbmwWBQtkSdGsX46w3871GQOBJtLrH3fN284dt047I=
+
+Name: org/eclipse/ui/internal/cheatsheets/state/NoSaveStateManager.cla
+ ss
+SHA-256-Digest: ml9Ekw59DheYa/v5qkDQYAy2p3+qo7SdEn69xDjGPko=
+
+Name: icons/dlcl16/start_task.gif
+SHA-256-Digest: Y6kzQuPDOFcWK76zXgTVuIsSIzmaWIFwcd2jrt+EJlE=
+
+Name: org/eclipse/ui/internal/cheatsheets/views/ErrorPage$StatusSorter
+ .class
+SHA-256-Digest: BYaM2OB3yubUQ7A+pIs4qwk4fbNrW7GTTtSa0RKiRIc=
+
+Name: org/eclipse/ui/cheatsheets/OpenCheatSheetFromHelpAction.class
+SHA-256-Digest: Xs6nZU4bwhY4h1USZKO71b+HO5e/ApMmVFuSoA3hBh0=
+
+Name: org/eclipse/ui/internal/cheatsheets/dialogs/CheatSheetCategoryBa
+ sedSelectionDialog$1.class
+SHA-256-Digest: nbqTB7HN/5A3+K1vits4/y2P9+1xwF1d0MkzXreJ1is=
+
+Name: org/eclipse/ui/internal/cheatsheets/actions/CheatSheetMenu$1.cla
+ ss
+SHA-256-Digest: pwfd1I5NgDRyxcasN0LDEjmZmpmCD1MObaApq4VtALo=
+
+Name: org/eclipse/ui/internal/cheatsheets/handlers/OpenCheatSheetHandl
+ er.class
+SHA-256-Digest: hF3r9TRAqUx8Ku/6NqaIoavxrqbU4tUtc1jB4O9zKIE=
+
+Name: org/eclipse/ui/cheatsheets/ICheatSheetManager.class
+SHA-256-Digest: FfBVbEmI7EQ3hKtA4zcbWqTL/cwScmCWLdco7QzqUMM=
+
+Name: icons/elcl16/return_to_start.gif
+SHA-256-Digest: 1RwhTn5R1gOC8Ce7vVmyq4D+wNNNNjBYAuUBqpMERPM=
+
+Name: org/eclipse/ui/internal/cheatsheets/data/IPerformWhenItem.class
+SHA-256-Digest: +bdHCjRvflgklNtgB/PplONk/Wm+Bc/+CwoL9keVX3E=
+
+Name: org/eclipse/ui/internal/cheatsheets/composite/explorer/ResetTask
+ Action.class
+SHA-256-Digest: KoK8Bmxys4w55G9yCQF0IJYhONJhpD6pu/c4OwQ/1FY=
+
+Name: org/eclipse/ui/internal/cheatsheets/composite/model/BlockedTaskF
+ inder.class
+SHA-256-Digest: x5Zl1v0fz/KQB26OovoPky/eIbfCxzrqHYgl1D0mToc=
+
+Name: org/eclipse/ui/internal/cheatsheets/composite/model/TaskGroup.cl
+ ass
+SHA-256-Digest: KiypnCL12DOOIbdAMTN39CJG19L3hinaPnBuAF9lXzs=
+
+Name: org/eclipse/ui/internal/cheatsheets/dialogs/CheatSheetCategoryBa
+ sedSelectionDialog$2.class
+SHA-256-Digest: Wq01UGNC7ck2J1zise4ycNTwp0HREkopzHIWdThD+hA=
+
+Name: org/eclipse/ui/internal/cheatsheets/registry/Sorter.class
+SHA-256-Digest: O0NXMRi3+/JFxgHVTRgCEkBQMhyJ9VZ1R3a1X4UnkSc=
+
+Name: org/eclipse/ui/internal/cheatsheets/composite/explorer/ConfirmRe
+ startDialog.class
+SHA-256-Digest: LIojQjyg2S/EhAMiwxlWUTHXz3/L3BKvlPK+I2LKF9U=
+
+Name: org/eclipse/ui/internal/cheatsheets/views/CoreItem$4.class
+SHA-256-Digest: sOGUrhzP0Zk8umFibIODsG+WwbAizgnr5gYyvnc+JHI=
+
+Name: org/eclipse/ui/internal/cheatsheets/views/StringDelimitedTokeniz
+ er.class
+SHA-256-Digest: JckYi7ahF4ltMiZURDk79+gzZZlJXcJbxMZZFLeQC7c=
+
+Name: org/eclipse/ui/internal/cheatsheets/views/CheatSheetViewer.class
+SHA-256-Digest: YytYVTG05QJEER9vucaCpr9TdrIZqvd9GX2SLmY/jH8=
+
+Name: org/eclipse/ui/internal/cheatsheets/state/ICheatSheetStateManage
+ r.class
+SHA-256-Digest: hQgxsZNuo4dt9F9S1uDyAwpQDJvXlJyOSWYEVl5y/sQ=
+
+Name: org/eclipse/ui/internal/cheatsheets/CheatSheetHistory.class
+SHA-256-Digest: uBneXsEM9ZLkqScq12d5jABXGmdc0XVBRjcvy+ro+Pw=
+
+Name: org/eclipse/ui/internal/cheatsheets/composite/parser/MarkupParse
+ r.class
+SHA-256-Digest: fYch97n4q55+hpYUtpjByhs12F+Tk5ZiFzOgNby3pII=
+
+Name: icons/elcl16/restart_cheatsheet.gif
+SHA-256-Digest: 1RwhTn5R1gOC8Ce7vVmyq4D+wNNNNjBYAuUBqpMERPM=
+
+Name: org/eclipse/ui/cheatsheets/OpenCheatSheetAction.class
+SHA-256-Digest: SZavv8Kar+Cv/S+uEcc6/o1XDsHNVxbhyNtrV8It8Zw=
+
+Name: org/eclipse/ui/internal/cheatsheets/actions/CheatSheetMenu$2.cla
+ ss
+SHA-256-Digest: ARLqenXLm/bq3KxEee3lVs6bvPqknhDRt2ITvrt6JHY=
+
+Name: icons/elcl16/linkto_help.gif
+SHA-256-Digest: K8TNWtrr8CbiAyz1PLTnN1fVgXWoSCZmXiKFU418/Jg=
+
+Name: org/eclipse/ui/internal/cheatsheets/composite/views/TaskEditorMa
+ nager.class
+SHA-256-Digest: ceN0BqoBXxZ8+1+asfg7k3Yhl/8vuK6e5nZ2LUDcdgU=
+
+Name: icons/obj16/error.gif
+SHA-256-Digest: +FNGu4fCfFYv7Dulz2hiiVEV6FiXqj/cGx1u2/BFtoU=
+
+Name: org/eclipse/ui/internal/cheatsheets/composite/explorer/StartActi
+ on.class
+SHA-256-Digest: YWkJiGiEJRYb2ON+915JpkvKb9lvBY6zbARCwmvlLec=
+
+Name: org/eclipse/ui/internal/cheatsheets/composite/model/TaskDependen
+ cies$Dependency.class
+SHA-256-Digest: o0U1SKaKaRh5Tgn8aWO3YhGF+UhtSUC5hyadIGzjONk=
+
+Name: org/eclipse/ui/internal/cheatsheets/composite/parser/IStatusCont
+ ainer.class
+SHA-256-Digest: q7Vv4cZo9J99w6jdrO17KDPEsZdKJ9qhjoaJWPI9iX4=
+
+Name: org/eclipse/ui/internal/cheatsheets/dialogs/CheatSheetCategoryBa
+ sedSelectionDialog.class
+SHA-256-Digest: 6tMXciNKZluYp/Ql/cs9HX6ck18r3Lj+L1HcR98dBn8=
+
+Name: org/eclipse/ui/cheatsheets/ICheatSheetAction.class
+SHA-256-Digest: JP3Ceb9jTT0o523yARwQH3hdQdCju5xUoj9k+KDX7ps=
+
+Name: org/eclipse/ui/internal/cheatsheets/views/ViewUtilities.class
+SHA-256-Digest: 1zM++/LCjfyU9kciIF+XSPXOpU4qGY4KRZ2UWUqj5lw=
+
+Name: org/eclipse/ui/internal/cheatsheets/views/ViewItem.class
+SHA-256-Digest: 9B128faHO4kGCRsxjsOlqBT7xwsUWU0ujpsNrRMvCrs=
+
+Name: icons/ovr16/task_skipped.gif
+SHA-256-Digest: l+Dq9Q2sV5UQ8m4lyAX9qlgme4fVlliABHWoYt0ftbI=
+
+Name: org/eclipse/ui/cheatsheets/ICheatSheetViewer.class
+SHA-256-Digest: 3mvVNjrdGJV4aT1jTAOR03tngREQSlYw1ceFD4VI/Tk=
+
+Name: org/eclipse/ui/internal/cheatsheets/views/CoreItem$3.class
+SHA-256-Digest: GeO4+CQTd7BgGkbw6+dpiNYKWeuZhvSR0CcF9YK19Yw=
+
+Name: org/eclipse/ui/internal/cheatsheets/composite/views/CompositeChe
+ atSheetPage$EndReviewListener.class
+SHA-256-Digest: Uz1OoBlZb7MYT+AWMja/PfdA3shUnCyvsxw/2cugdyU=
+
+Name: org/eclipse/ui/cheatsheets/AbstractItemExtensionElement.class
+SHA-256-Digest: 8F7ML174nhYsEjA6rgIY7X4RpghhIALgpL6G5zBZ2cY=
+
+Name: org/eclipse/ui/internal/cheatsheets/composite/model/AbstractTask
+ .class
+SHA-256-Digest: vvrB+Zcr5hjXo9gcTJavDUOJIYpB/gecnLdjqdflr5Y=
+
+Name: icons/view16/cheatsheet_view.gif
+SHA-256-Digest: ckvYAGxdF2xwDggcd9PTBhXWi2JFdoi3ALhRT/JF7h8=
+
+Name: icons/dlcl16/restart_task.gif
+SHA-256-Digest: OU0TPmu/35pwzzY1SxAPrImx5kwy32+KmB24xgh0qBg=
+
+Name: org/eclipse/ui/internal/cheatsheets/data/Item.class
+SHA-256-Digest: 2R9CrINytPQ1s7ip07DnCv4GlycGaI/zYI8sfBVGsCM=
+
+Name: org/eclipse/ui/internal/cheatsheets/composite/model/CompositeChe
+ atSheetSaveHelper.class
+SHA-256-Digest: Rlt0A7TKsLVv85zkajTo6/8FW6Iynprreyvx5p9kFD4=
+
+Name: org/eclipse/ui/internal/cheatsheets/composite/views/CheatsheetTa
+ skEditor$TaskListener.class
+SHA-256-Digest: nskxPczL/R0UjJ/BG5cVmEFGB1I7h8oYeupttSnOCJk=
+
+Name: plugin.properties
+SHA-256-Digest: tfZPNwYGbzi1m0u/T8cMaefaflZrPi2t53N30tGmExU=
+
+Name: org/eclipse/ui/internal/cheatsheets/composite/model/TaskStateUti
+ lities.class
+SHA-256-Digest: fahQTJsqjW4Fu2mG0xYgWVkuKgQiKiZLhI32e4NTdo8=
+
+Name: icons/elcl16/skip_ccs_task.gif
+SHA-256-Digest: tR5UbclQb7KRli1rjXI6ge8ViyEzuYLGvRLXIiIWIjQ=
+
+Name: org/eclipse/ui/internal/cheatsheets/data/Intro.class
+SHA-256-Digest: vCBrpfa5h5+yd71HpgH4+vBCD/ONJrBSb+NYlCKDI/k=
+
+Name: org/eclipse/ui/internal/cheatsheets/views/ViewItem$3.class
+SHA-256-Digest: RhfXNq8jyZsSGxWXKgcOgjxNYTyFqUAIAGh9kId8NGw=
+
+Name: org/eclipse/ui/internal/cheatsheets/views/CoreItem$2.class
+SHA-256-Digest: S7lUn6iEw0Qp4o4kNVm/cWR9NbwfUfCUSJqlh+vYCck=
+
+Name: org/eclipse/ui/internal/cheatsheets/handlers/OpenInputDialogHand
+ ler.class
+SHA-256-Digest: Jjt/seP/VwtNlql1foIwBCIA1uEkD5MLVXN/OI5xvB4=
+
+Name: org/eclipse/ui/internal/cheatsheets/data/IncompatibleSiblingChec
+ ker.class
+SHA-256-Digest: lALSTvP8ZeyeB0RStH3WgBIVFHcDJlwvLu6aYybaifs=
+
+Name: icons/obj16/cheatsheet_obj.gif
+SHA-256-Digest: HwbbGpxBRRSFq1UchTf9HW3NqUpORIH7jWZhRsbXaOg=
+
+Name: org/eclipse/ui/internal/provisional/cheatsheets/TaskExplorer.cla
+ ss
+SHA-256-Digest: aIY/L8/kfL8ykHHHvhdSW13oiBbf9FrySxTahZOGlRk=
+
+Name: org/eclipse/ui/internal/cheatsheets/composite/model/SuccesorTask
+ Finder.class
+SHA-256-Digest: NrRYHHK7WyYt4A7Mx6sZvZYrf+pTNFdPwDmlS1xyp8E=
+
+Name: icons/dlcl16/task_sequence.gif
+SHA-256-Digest: YAvVDehY+jDu6E660Vc7ArjSTh2Fk9n11xBXWrVTHNE=
+
+Name: icons/obj16/information.gif
+SHA-256-Digest: 6nPRf91TzBsPUUy87cFJlZao7wPcoshhj1AHz/5pMQ8=
+
+Name: org/eclipse/ui/internal/cheatsheets/registry/CheatSheetRegistryR
+ eader$CategoryNode.class
+SHA-256-Digest: A1kuNcwC1olqo+GOecTrL2nZ7InA8F/1AeeXgA1S4Xc=
+
+Name: icons/dlcl16/collapse_expand_all.gif
+SHA-256-Digest: Av8mc+SEZVJQJohcu/OcehtXjr1xsgZNMNVPGVUQoOA=
+
+Name: org/eclipse/ui/internal/provisional/cheatsheets/ITaskGroup.class
+SHA-256-Digest: 8qvjJR2ZaetX0yeWHeFOZxzJbGFvUlZ/HT0q26/xU7E=
+
+Name: org/eclipse/ui/internal/cheatsheets/CheatSheetEvaluationContext.
+ class
+SHA-256-Digest: DeSVkakqWECyIr2c7Ji6DzHcvHLLdh4kwEQhu7G/TDA=
+
+Name: org/eclipse/ui/internal/cheatsheets/registry/CheatSheetRegistryR
+ eader$TaskExplorerNode.class
+SHA-256-Digest: Vcq6rhv70h1M0xO4xF6Jx6qRD1aV706JQDNASTDGNfs=
+
+Name: org/eclipse/ui/internal/cheatsheets/data/CheatSheetParser.class
+SHA-256-Digest: G6f3joXT97fA54RqKpZojFu5TGNxcgTdK/v9bOr4cho=
+
+Name: org/eclipse/ui/internal/cheatsheets/actions/CheatSheetMenuAction
+ .class
+SHA-256-Digest: NusL0QYiUrG86uZ0fgGsp3sByq8QN7hSsEvd9yNd9Xc=
+
+Name: org/eclipse/ui/internal/cheatsheets/views/NoopAction.class
+SHA-256-Digest: WWYlzzswOehWpFarkohDaz91zpenJ3XBXcirPYxft1Q=
+
+Name: org/eclipse/ui/internal/cheatsheets/views/CoreItem$1.class
+SHA-256-Digest: 5wGAORe9Y0zluklqRj57WRKRPGMXR3dcYOBOeeWvH9k=
+
+Name: org/eclipse/ui/internal/cheatsheets/composite/parser/TaskGroupPa
+ rseStrategy.class
+SHA-256-Digest: EEtc2Q6Q4hGbWnzJCL95p1RkcIw57+7Ww2uP51T9v68=
+
+Name: org/eclipse/ui/internal/cheatsheets/composite/views/CompositeChe
+ atSheetPage$2.class
+SHA-256-Digest: YSbYyED2IxUfj1g1w6CTM8CveJd3vQeGCT067YICOic=
+
+Name: org/eclipse/ui/internal/cheatsheets/registry/RegistryReader.clas
+ s
+SHA-256-Digest: AlM25bXL8oHRF9fw/p8Ctqa1ZU8EzctUNgKkWIwPdCM=
+
+Name: icons/elcl16/start_ccs_task.gif
+SHA-256-Digest: B+CWLShdI5RgGBtdi3n0GnxXvLo55M8yJa0PmI1PkZY=
+
+Name: org/eclipse/ui/cheatsheets/ICheatSheetEvent.class
+SHA-256-Digest: x5r4UU0DxX7VhsXbDXMFUtFZSkd3Xxnn1SkdpkSD6/Y=
+
+Name: org/eclipse/ui/internal/cheatsheets/data/ParserInput.class
+SHA-256-Digest: MyzU1XcoSJxY9592HfBs0NeyOV/rsa90ktsBiwOITcM=
+
+Name: org/eclipse/ui/internal/cheatsheets/views/ViewItem$1.class
+SHA-256-Digest: UAD17AvWR3CThvLJR+dnlRceW4SsmZMoKny+R3hDFQA=
+
+Name: org/eclipse/ui/internal/cheatsheets/composite/views/CompositeChe
+ atSheetPage$DescriptionLinkListener.class
+SHA-256-Digest: SSto2ds8rTgRQa/Q34vIUoY+D3xVZllHn8PnyomP+VE=
+
+Name: org/eclipse/ui/internal/cheatsheets/composite/model/CompositeChe
+ atSheetModel.class
+SHA-256-Digest: bjSp6AmidU4B3GFQ1zSQu/LC4lo7+wWtFFlD7II7pwc=
+
+Name: icons/obj16/composite_obj.gif
+SHA-256-Digest: gwHHLZjXRrk6YvGnu885YHUjSPh64JGv95pKCMwWrZk=
+
+Name: org/eclipse/ui/internal/cheatsheets/handlers/OpenCheatSheetURLHa
+ ndler.class
+SHA-256-Digest: yU0NuCLpoAnGP9X1Bj2VFf2hpKEBRqYBTgASwMDOBK8=
+
+Name: about.html
+SHA-256-Digest: 0RM1x9lTJa7T8YkysaegPuBIeaEvSZypRDfXoMpsJAU=
+
+Name: org/eclipse/ui/internal/cheatsheets/Messages.class
+SHA-256-Digest: 8oaXuFm9DicUjLC8gpKUr/b5mYC1vsYW9QzGVcP4E+U=
+
+Name: org/eclipse/ui/internal/cheatsheets/data/CheatSheet.class
+SHA-256-Digest: GmxPHnYPMjnwPd5u6uM2xDyNsy4EtVjNbl5rBpj0FNo=
+
+Name: org/eclipse/ui/internal/cheatsheets/composite/model/TaskGroup$Co
+ mpletionStrategy.class
+SHA-256-Digest: 3MaQ/hSthqDSRg6DYl5Q+o9HXJW8XXQakyPkwhH9v9U=
+
+Name: icons/elcl16/collapseall.gif
+SHA-256-Digest: vrC8rRfWUvpPxc/e6IOk3TnYdzSj1h4PDqS+lxD3kEM=
+
+Name: org/eclipse/ui/internal/cheatsheets/views/CheatSheetHelpPart.cla
+ ss
+SHA-256-Digest: /9ov5+S08YsFpZanFzcaY/LJDoxHsQP4NfnraoWsWWE=
+
+Name: icons/obj16/task_set.gif
+SHA-256-Digest: qWAcQ37cXHPeZkU2mEyDFLfqBFBjXwpOKuTdnL7hGkc=
+
+Name: org/eclipse/ui/internal/cheatsheets/data/ParserStatusUtility.cla
+ ss
+SHA-256-Digest: 6QYyoN+YE0NxSohQr2M7lqIENuhZc6XDUcMHVtrQSGo=
+
+Name: org/eclipse/ui/internal/cheatsheets/actions/IMenuContributor.cla
+ ss
+SHA-256-Digest: PCJNWymRC8H2Hwb4RZbMHioVrdT9O3KzNvJygb/Zh60=
+
+Name: org/eclipse/ui/internal/cheatsheets/composite/views/CompositeChe
+ atSheetPage$1.class
+SHA-256-Digest: pvHi4FsT2Ca0bruP6jK4oEnRyUGs8I0SQ1spXNkmcIg=
+
+Name: icons/elcl16/collapse_expand_all.gif
+SHA-256-Digest: ruR0iIg/eWufDrEifW1/2Bip4KyTbOhigyMNSnbZzPw=
+
+Name: icons/dlcl16/cheatsheet_task.gif
+SHA-256-Digest: /OMMTRZo/RqcTUlYXOFDq1DrawwxLJXmwmZK9cxDJbE=
+
+Name: org/eclipse/ui/internal/cheatsheets/composite/model/TaskDependen
+ cies.class
+SHA-256-Digest: RtIR7FNmvipF/+bgqO7hr/FjLmbft5fhP4FplBtlfSc=
+
+Name: icons/elcl16/restart_all.gif
+SHA-256-Digest: +zeR5XQ2jYWMXPF774RckJmb1wkrq5aXw/NDb/LIeSE=
+
+Name: org/eclipse/ui/internal/cheatsheets/composite/parser/ICompositeC
+ heatsheetTags.class
+SHA-256-Digest: ODEIkJO7huNvNdW25Z0YlxHf3rWSWL5pMoW+a82yVng=
+
+Name: org/eclipse/ui/internal/cheatsheets/views/CheatSheetPage$1.class
+SHA-256-Digest: 4RznJxNFqsE/zN1zppReIjCHpjpcxwMo7YFQuRCXsfQ=
+
+Name: org/eclipse/ui/internal/cheatsheets/views/ViewItem$2.class
+SHA-256-Digest: RB2Qg3I3W3cR/0/iFVwcK9UTb4WPjxACVgNsI28Nirw=
+

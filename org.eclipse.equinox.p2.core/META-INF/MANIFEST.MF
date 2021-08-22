@@ -1,0 +1,232 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.equinox.p2.core;singleton:=true
+Archiver-Version: Plexus Archiver
+Built-By: genie.releng
+Require-Bundle: org.eclipse.equinox.common;bundle-version="[3.5.0,4.0.
+ 0)"
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/equino
+ x/rt.equinox.p2.git;path="bundles/org.eclipse.equinox.p2.core";tag="M
+ 20170906-1700";commitId=f94c9ac9bd27522cf55784111380d5f4aebc4bab
+Bundle-Vendor: %providerName
+Import-Package: org.eclipse.osgi.framework.eventmgr;version="1.2.0",or
+ g.eclipse.osgi.framework.log;version="1.0.0",org.eclipse.osgi.service
+ .debug;version="1.0.0",org.eclipse.osgi.util;version="1.0.0",org.osgi
+ .framework;version="1.6.0",org.osgi.util.tracker;version="1.5.0"
+Service-Component: OSGI-INF/eventBus.xml, OSGI-INF/agentProvider.xml
+Export-Package: org.eclipse.equinox.internal.p2.core;x-friends:="org.e
+ clipse.equinox.p2.publisher,org.eclipse.equinox.p2.repository",org.ec
+ lipse.equinox.internal.p2.core.helpers; x-friends:="org.eclipse.equin
+ ox.frameworkadmin.test,  org.eclipse.equinox.p2.artifact.optimizers, 
+  org.eclipse.equinox.p2.artifact.processors,  org.eclipse.equinox.p2.
+ artifact.repository,  org.eclipse.equinox.p2.console,  org.eclipse.eq
+ uinox.p2.director,  org.eclipse.equinox.p2.director.app,  org.eclipse
+ .equinox.p2.directorywatcher,  org.eclipse.equinox.p2.download,  org.
+ eclipse.equinox.p2.engine,  org.eclipse.equinox.p2.extensionlocation,
+   org.eclipse.equinox.p2.garbagecollector,  org.eclipse.equinox.p2.in
+ staller,  org.eclipse.equinox.p2.metadata,  org.eclipse.equinox.p2.me
+ tadata.repository,  org.eclipse.equinox.p2.operations,  org.eclipse.e
+ quinox.p2.publisher,  org.eclipse.equinox.p2.publisher.eclipse,  org.
+ eclipse.equinox.p2.reconciler.dropins,  org.eclipse.equinox.p2.reposi
+ tory,  org.eclipse.equinox.p2.repository.tools,  org.eclipse.equinox.
+ p2.repositoryoptimizer,  org.eclipse.equinox.p2.touchpoint.eclipse,  
+ org.eclipse.equinox.p2.touchpoint.natives,  org.eclipse.equinox.p2.ui
+ ,  org.eclipse.equinox.p2.ui.admin,  org.eclipse.equinox.p2.ui.sdk,  
+ org.eclipse.equinox.p2.ui.sdk.scheduler,  org.eclipse.equinox.p2.upda
+ techecker,  org.eclipse.equinox.p2.updatechecker.app,  org.eclipse.eq
+ uinox.p2.updatesite,  org.eclipse.equinox.p2.transport.ecf,  org.ecli
+ pse.equinox.p2.discovery.compatibility,  org.eclipse.equinox.p2.ui.di
+ scovery,  org.eclipse.equinox.p2.discovery",org.eclipse.equinox.inter
+ nal.provisional.p2.core.eventbus; x-friends:="org.eclipse.equinox.p2.
+ artifact.repository,  org.eclipse.equinox.p2.director,  org.eclipse.e
+ quinox.p2.directorywatcher,  org.eclipse.equinox.p2.engine,  org.ecli
+ pse.equinox.p2.garbagecollector,  org.eclipse.equinox.p2.metadata,  o
+ rg.eclipse.equinox.p2.metadata.repository,  org.eclipse.equinox.p2.op
+ erations,  org.eclipse.equinox.p2.publisher,  org.eclipse.equinox.p2.
+ repository,  org.eclipse.equinox.p2.touchpoint.eclipse,  org.eclipse.
+ equinox.p2.touchpoint.natives,  org.eclipse.equinox.p2.ui,  org.eclip
+ se.equinox.p2.ui.admin,  org.eclipse.equinox.p2.ui.sdk,  org.eclipse.
+ equinox.p2.ui.sdk.scheduler,  org.eclipse.equinox.p2.updatesite,  org
+ .eclipse.equinox.p2.director.app,  org.eclipse.equinox.p2.transport.e
+ cf",org.eclipse.equinox.p2.core;version="2.0.0",org.eclipse.equinox.p
+ 2.core.spi;version="2.1.0"
+Bundle-Name: %pluginName
+Bundle-Version: 2.4.101.v20170906-1259
+Bundle-ClassPath: .
+Bundle-Localization: plugin
+Bundle-Activator: org.eclipse.equinox.internal.p2.core.Activator
+Created-By: Apache Maven 3.3.3
+Build-Jdk: 1.8.0_131
+
+Name: org/eclipse/equinox/internal/p2/core/helpers/OrderedProperties$S
+ tringsEnum.class
+SHA-256-Digest: eiW+RiqQ7aIOVZxVqUS5ne4spIf75fX8pAbhT3Q1p9c=
+
+Name: OSGI-INF/eventBus.xml
+SHA-256-Digest: eDFpFygqsDN+X7CPCt9m7T1F0ybdkTfekkbH8yOkWTI=
+
+Name: org/eclipse/equinox/internal/p2/core/helpers/messages.properties
+SHA-256-Digest: 5z+D3mgMRrX3LSpZ4b0LUcl7HsMYyAWGyCzRKMFXEok=
+
+Name: org/eclipse/equinox/p2/core/IPool.class
+SHA-256-Digest: j6oXCAWLHOpinooOBdfnZScyYvVihELBccrOd6Q90ho=
+
+Name: org/eclipse/equinox/internal/p2/core/helpers/SecureXMLUtil.class
+SHA-256-Digest: jf993hPejU4pKHqyR2wY3APnIszCNUO13cvPNMdldpI=
+
+Name: org/eclipse/equinox/internal/provisional/p2/core/eventbus/Synchr
+ onousProvisioningListener.class
+SHA-256-Digest: gKetGnJ0OS4wUCZn6HgwDQP5KXW+Kd1Nsbu3Sit+JAM=
+
+Name: org/eclipse/equinox/internal/p2/core/helpers/FileUtils.class
+SHA-256-Digest: SFoIPkbALYS3+/xD/BvFVcnxwPPA9grhTBheqD53X/A=
+
+Name: OSGI-INF/agentProvider.xml
+SHA-256-Digest: Nwv0u7AqZFgZwx2ckN6eXkd4zIg6BGLfDdGtyOFqsm0=
+
+Name: org/eclipse/equinox/p2/core/IProvisioningAgentProvider.class
+SHA-256-Digest: T1LE8qORB/5NnXtAjjqo6FldOd/j0aaSW3Ljo8o2DRQ=
+
+Name: org/eclipse/equinox/internal/p2/core/helpers/StringHelper.class
+SHA-256-Digest: 3F1b4V6yKoG9PNaYCbUqxHLHogZ8PQJfiU8jcUour/0=
+
+Name: plugin.properties
+SHA-256-Digest: TGbaR1ns+uY3SJf6r5QpvI7MQRhZx+8Zze1/5uHx7Bw=
+
+Name: org/eclipse/equinox/p2/core/spi/IAgentService.class
+SHA-256-Digest: DBNrJgOAr3Z0EkQQXpDxMAstSHv5+GpCWUrbwc8EMQI=
+
+Name: org/eclipse/equinox/p2/core/ProvisionException.class
+SHA-256-Digest: LdAFOW0b+Smgo8X2qznkWtRzi+WAkpyDBw1FylHZI0w=
+
+Name: org/eclipse/equinox/p2/core/IAgentLocation.class
+SHA-256-Digest: LVbwlPGxp+wR7UC30c6Ec4+bBR8L8wEFAh1+OWUoY30=
+
+Name: org/eclipse/equinox/internal/p2/core/helpers/FileUtils$3.class
+SHA-256-Digest: cZReRZwCVRWe1iGAwMjguOZpcdM+TA25SL9TqaZbczE=
+
+Name: .api_description
+SHA-256-Digest: OMwTojkIGoCtVsGQDIClkeRT3RzUaytxzYoOa3cwOO0=
+
+Name: org/eclipse/equinox/internal/p2/core/AgentLocation.class
+SHA-256-Digest: RBiQXeK+Fwe5NXtzNPiEyU8KIJgjtTIgr4o6XPrWZPE=
+
+Name: org/eclipse/equinox/internal/p2/core/helpers/TarFile.class
+SHA-256-Digest: iasc+vVfeHr4ozQLI6RHmmVTBlCJ/Ohz367C8z+UIuc=
+
+Name: org/eclipse/equinox/internal/p2/core/helpers/URLUtil.class
+SHA-256-Digest: pu5/2ZimYkoX0CllIAJxSsl6CN4nfLzVqvP5mQUWAy4=
+
+Name: org/eclipse/equinox/p2/core/StrongPool.class
+SHA-256-Digest: 0m5UgKNsbo+ABosOVO2UW7NEbRZfS124YOY+SXLzdV0=
+
+Name: org/eclipse/equinox/p2/core/UIServices$AuthenticationInfo.class
+SHA-256-Digest: +lGaQwpqrn3lZQm46HE6j5h4ItQ5OMjfq+9+8QGUwUw=
+
+Name: org/eclipse/equinox/p2/core/IProvisioningAgent.class
+SHA-256-Digest: i1AzxtVgwmvAC5ekdLfwA4JgFY5bXucUxWPtvAdGU08=
+
+Name: org/eclipse/equinox/internal/p2/core/helpers/OrderedProperties$U
+ nmodifiableProperties.class
+SHA-256-Digest: xcfOZNupPBRYWaHUZDudbW3/GDHRSD0YPPdrwxQmC8o=
+
+Name: org/eclipse/equinox/p2/core/spi/IAgentServiceFactory.class
+SHA-256-Digest: E/oimzvqeMRH1zflWNbiX9LZkgifwZLAq8ru9selmfw=
+
+Name: org/eclipse/equinox/internal/p2/core/helpers/CollectionUtils$Unm
+ odifiableArrayList$1.class
+SHA-256-Digest: cbwRI4JNW91KYQoB/CcTxwAQdnCIi8Kmz0ON/oOI+nQ=
+
+Name: org/eclipse/equinox/internal/p2/core/helpers/CollectionUtils.cla
+ ss
+SHA-256-Digest: s1Aj2oWbKNo0C25wz4DVds6PgomFL6q7CnTPFr1mZWI=
+
+Name: org/eclipse/equinox/internal/p2/core/helpers/TarException.class
+SHA-256-Digest: 68EtwraLjO81y9OnFHhOT7PijCDckkijQLaq1JKvw5Y=
+
+Name: org/eclipse/equinox/internal/p2/core/helpers/TarInputStream.clas
+ s
+SHA-256-Digest: xKt7/sTdrl+HnBh3t0g+C2jDS5fag5LEDcxBpOJNG3g=
+
+Name: org/eclipse/equinox/internal/p2/core/Activator.class
+SHA-256-Digest: Cm/vPhog5Tmyde8hKoTVjjree0CcwlE+Do/j+noBtng=
+
+Name: org/eclipse/equinox/internal/provisional/p2/core/eventbus/Provis
+ ioningListener.class
+SHA-256-Digest: Im1vvZej+J1YdcWLzoCjMtnLtjkNWP6wMlSAMErAQW4=
+
+Name: org/eclipse/equinox/internal/p2/core/helpers/ServiceHelper.class
+SHA-256-Digest: c1MRYy1YYyB5/dkeaDb3HYd/ZNx18B0v3LN1V7P62vc=
+
+Name: org/eclipse/equinox/internal/p2/core/helpers/FileUtils$2.class
+SHA-256-Digest: Z8B935h2cBxWrFIvrfASw0Pd8eBBatokIUIUUlrCeZk=
+
+Name: org/eclipse/equinox/p2/core/WeakPool.class
+SHA-256-Digest: EI82s50KIdgrsnfO+GNAEbJ4y9wDxXgviDe6MpW2jjo=
+
+Name: org/eclipse/equinox/internal/p2/core/helpers/TarFile$2.class
+SHA-256-Digest: EHqjS1mV1bJjpJdeoVgZ1aYxUnsA793Ifv9lFxIfxmk=
+
+Name: org/eclipse/equinox/p2/core/UIServices$TrustInfo.class
+SHA-256-Digest: 9PkBUQmLYIyB1zs4kSF3DmP3/UpNaBPSPCxSAsVbCpI=
+
+Name: org/eclipse/equinox/internal/provisional/p2/core/eventbus/IProvi
+ sioningEventBus.class
+SHA-256-Digest: xT5mYQxp9PbRV6z0ZxiFhuvJ2Rz1ylZVyQPkBzfTWQw=
+
+Name: org/eclipse/equinox/internal/p2/core/DefaultAgentProvider.class
+SHA-256-Digest: qcVhCRokhOkSPzVLdr1/EvR4lLpqc9R1RPLFbIjgQtw=
+
+Name: org/eclipse/equinox/internal/p2/core/helpers/Tracing.class
+SHA-256-Digest: R9HAyV+P3X+cP3wKG5oa5kzwU/vbOSn3cwRyZDKrXIo=
+
+Name: org/eclipse/equinox/internal/p2/core/helpers/Messages.class
+SHA-256-Digest: 52e0LEB0RAz04UDDCXkIes7HbV1SBO7Up9qJExnSddQ=
+
+Name: org/eclipse/equinox/internal/p2/core/ProvisioningEventBus.class
+SHA-256-Digest: ps5FQLmHFSvuTNDfohkfuW72qurvJoDU4/7I8e9NweI=
+
+Name: about.html
+SHA-256-Digest: 0RM1x9lTJa7T8YkysaegPuBIeaEvSZypRDfXoMpsJAU=
+
+Name: org/eclipse/equinox/p2/core/spi/Constants.class
+SHA-256-Digest: pYRuIZMBDYbFItUKo8e0EfNXuqhSMvCfEU5OPBwoxHU=
+
+Name: org/eclipse/equinox/internal/p2/core/helpers/TarEntry.class
+SHA-256-Digest: C/QIM/dOaA7v5NP8x9JWn7QugI+k1U0DcADqMpbi9hs=
+
+Name: org/eclipse/equinox/internal/p2/core/ProvisioningAgent.class
+SHA-256-Digest: 9WWYwRhphH1dK7+Iz8zLoTlGFNypCqmkxH2DERF9pvQ=
+
+Name: org/eclipse/equinox/internal/p2/core/helpers/FileUtils$1.class
+SHA-256-Digest: /D0JBWgU8H3QnjRi52w5dfDcpF1L94arM2VjfG+iQ4Q=
+
+Name: org/eclipse/equinox/internal/p2/core/EventBusComponent.class
+SHA-256-Digest: UwxqGC5G/x5ZuMMbnmiSxDnGU9WiaL2H+NfJpC55bPQ=
+
+Name: org/eclipse/equinox/internal/p2/core/helpers/OrderedProperties.c
+ lass
+SHA-256-Digest: OtCdfw3Uq7FNQu4T7KTDmtIhHT7gqXFe/xQHQm/NaTg=
+
+Name: org/eclipse/equinox/internal/p2/core/helpers/TarFile$1.class
+SHA-256-Digest: ZtmOQMQZxX0A+y7JzKZkqIrRMjksPD0qUo5IW7NdhxQ=
+
+Name: org/eclipse/equinox/internal/p2/core/helpers/LogHelper.class
+SHA-256-Digest: S8oB+JCFuOzgpzZEN2nfY5EppMDtsn+L76/oPVlFcXU=
+
+Name: org/eclipse/equinox/internal/p2/core/helpers/FileUtils$IPathComp
+ uter.class
+SHA-256-Digest: +3uMJP9zB/6iO8VD2rvUKvIbQfr5A7eZry/VAlK9RCo=
+
+Name: org/eclipse/equinox/internal/p2/core/helpers/CollectionUtils$Unm
+ odifiableArrayList.class
+SHA-256-Digest: cWVZsnyMJcT7oK15Ds908yh5oYcASMKI5g/7Sy819yE=
+
+Name: org/eclipse/equinox/p2/core/UIServices.class
+SHA-256-Digest: GrDLDAJmQ5IIdUSIevVa3VfAa7vAGnBIeKvy5Alo6Yw=
+
+Name: org/eclipse/equinox/internal/p2/core/helpers/FileUtils$4.class
+SHA-256-Digest: kzTB4HXt5tj7xbLMoDQFkVdjQRq3xkQkBDXVebRNfGs=
+

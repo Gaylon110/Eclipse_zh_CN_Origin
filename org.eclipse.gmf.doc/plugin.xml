@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+  
+   <extension point="org.eclipse.help.toc">
+      <toc file="toc.xml" primary="true"/>
+      <toc file="toc-runtime.xml"/>
+      <toc file="toc-tooling.xml"/>
+      <toc file="toc-runtime-ext-pt.xml"/>
+   </extension>
+   <extension
+         point="org.eclipse.help.contentProducer">
+      <binding
+            producerId="org.eclipse.help.dynamic">
+      </binding>
+   </extension>
+   <extension
+         point="org.eclipse.help.base.luceneSearchParticipants">
+      <binding
+            participantId="org.eclipse.help.base.xhtml">
+      </binding>
+   </extension>
+
+</plugin>

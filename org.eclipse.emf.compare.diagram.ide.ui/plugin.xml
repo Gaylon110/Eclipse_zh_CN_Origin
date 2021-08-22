@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+
+<!--
+ Copyright (c) 2013 Obeo.
+ All rights reserved. This program and the accompanying materials
+ are made available under the terms of the Eclipse Public License v1.0
+ which accompanies this distribution, and is available at
+ http://www.eclipse.org/legal/epl-v10.html
+ 
+ Contributors:
+     Obeo - initial API and implementation
+-->
+
+<plugin>
+     <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            category="org.eclipse.emf.compare.diagram.internal.preferences.DiagramComparePreferencesPage"
+            class="org.eclipse.emf.compare.diagram.ide.ui.internal.preferences.DiagramComparePreferencesPage"
+            id="org.eclipse.emf.compare.diagram.internal.preferences.DiagramComparePreferencesPage"
+            name="%preferencePageName">
+      </page>
+   </extension>
+     <extension
+           point="org.eclipse.emf.compare.rcp.ui.accessorFactory">
+        <factory
+              class="org.eclipse.emf.compare.diagram.ide.ui.internal.accessor.factory.DiagramDiffAccessorFactory"
+              ranking="40">
+        </factory>
+        <factory
+              class="org.eclipse.emf.compare.diagram.ide.ui.internal.accessor.factory.DiagramMatchAccessorFactory"
+              ranking="40">
+        </factory>
+     </extension>
+     <extension
+           point="org.eclipse.emf.compare.rcp.ui.filters">
+        <filter
+              activeByDefault="true"
+              class="org.eclipse.emf.compare.diagram.ide.ui.internal.structuremergeviewer.filters.GMFRefinedElementsFilter"
+              description="This filter is responsible for filtering out refined GMF differences"
+              label="Diagram Refined elements">
+        </filter>
+     </extension>
+   <extension
+         point="org.eclipse.compare.contentMergeViewers">
+      <viewer
+            class="org.eclipse.emf.compare.diagram.ide.ui.internal.contentmergeviewer.diagram.DiagramContentMergeViewerCreator"
+            extensions="diagramcompare_match, diagramcompare_diff"
+            id="org.eclipse.emf.compare.ui.diagram.contentviewer"
+            label="Model Compare (Diagram)">
+      </viewer>
+      <viewer
+            class="org.eclipse.emf.compare.ide.ui.internal.contentmergeviewer.TextFallbackCompareViewerCreator"
+            extensions="diagramcompare_match, diagramcompare_diff"
+            id="org.eclipse.emf.compare.ide.ui.internal.contentmergeviewer.TextFallbackCompareViewer"
+            label="Text Compare">
+      </viewer>
+   </extension>
+</plugin>

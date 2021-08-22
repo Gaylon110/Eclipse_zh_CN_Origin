@@ -1,0 +1,143 @@
+<!-- 
+ ******************************************************************************
+ * Copyright (c) 2016 Oracle and Liferay
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *    Konstantin Komissarchik - initial implementation and ongoing maintenance
+ *    Gregory Amerson - [342771] Support "image+label" hint for when actions are presented in a toolbar
+ *    Gregory Amerson - [374622] Add ability to specify action tooltips
+ ******************************************************************************
+-->
+
+<definition>
+
+    <import>
+        <package>org.eclipse.sapphire.sdk.internal</package>
+        <package>org.eclipse.sapphire.ui.renderers.swt</package>
+    </import>
+            
+        <node-factory>
+            <id>ActionNodeFactory</id>
+            <property>Actions</property>
+            <case>
+                <label>${ Id == null ? "&lt;action&gt;" : Id }</label>
+                <section>
+                    <label>action</label>
+                    <content>
+                        <property-editor>Id</property-editor>
+                        <property-editor>Label</property-editor>
+                        <property-editor>ToolTip</property-editor>
+                        <property-editor>KeyBinding</property-editor>
+                        <property-editor>
+                            <property>KeyBindingBehavior</property>
+                            <style>Sapphire.PropertyEditor.PopUpListField</style>
+                        </property-editor>
+                        <property-editor>
+                            <property>Type</property>
+                            <style>Sapphire.PropertyEditor.PopUpListField</style>
+                        </property-editor>
+                        <property-editor>Images</property-editor>
+                        <property-editor>
+                            <property>Description</property>
+                            <height>75</height>
+                        </property-editor>
+                    </content>
+                </section>
+                <section>
+                    <label>presentation hints</label>
+                    <content>
+                        <property-editor>
+                            <property>Hints</property>
+                            <show-label>false</show-label>
+                            <span>true</span>
+                        </property-editor>
+                    </content>
+                </section>
+                <section>
+                    <label>applicability</label>
+                    <content>
+                        <property-editor>ConditionClass</property-editor>
+                        <property-editor>Contexts</property-editor>
+                    </content>
+                </section>
+                <section>
+                    <label>location</label>
+                    <content>
+                        <property-editor>Group</property-editor>
+                        <property-editor>LocationHints</property-editor>
+                    </content>
+                </section>
+            <image>${ Image() }</image>
+            </case>
+        </node-factory>
+            
+        <node-factory>
+            <id>ActionHandlerNodeFactory</id>
+            <property>ActionHandlers</property>
+            <case>
+                <label>${ Id == null ? "&lt;action-handler&gt;" : Id }</label>
+                <section>
+                    <label>action handler</label>
+                    <content>
+                        <property-editor>Action</property-editor>
+                        <property-editor>Id</property-editor>
+                        <property-editor>Label</property-editor>
+                        <property-editor>Images</property-editor>
+                        <property-editor>
+                            <property>Description</property>
+                            <height>75</height>
+                        </property-editor>
+                        <property-editor>ImplClass</property-editor>
+                        <property-editor>Params</property-editor>
+                    </content>
+                </section>
+                <section>
+                    <label>applicability</label>
+                    <content>
+                        <property-editor>ConditionClass</property-editor>
+                        <property-editor>Contexts</property-editor>
+                    </content>
+                </section>
+                <section>
+                    <label>location</label>
+                    <content>
+                        <property-editor>LocationHints</property-editor>
+                    </content>
+                </section>
+            <image>${ Image() }</image>
+            </case>
+        </node-factory>
+
+        <node-factory>
+            <id>ActionHandlerFactoryNodeFactory</id>
+            <property>ActionHandlerFactories</property>
+            <case>
+                <label>${ Action == null ? "&lt;action-handler-factory&gt;" : Action }</label>
+                <section>
+                    <label>action handler factory</label>
+                    <content>
+                        <property-editor>Action</property-editor>
+                        <property-editor>
+                            <property>Description</property>
+                            <height>75</height>
+                        </property-editor>
+                        <property-editor>ImplClass</property-editor>
+                        <property-editor>Params</property-editor>
+                    </content>
+                </section>
+                <section>
+                    <label>applicability</label>
+                    <content>
+                        <property-editor>ConditionClass</property-editor>
+                        <property-editor>Contexts</property-editor>
+                    </content>
+                </section>
+            <image>${ Image() }</image>
+            </case>
+        </node-factory>
+    
+</definition>

@@ -1,0 +1,31 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.eclipse.cdt.dsf;singleton:=true
+Bundle-Version: 2.8.0.201802261533
+Bundle-ClassPath: org.eclipse.cdt.dsf_2.8.0.201802261533.jar
+Bundle-Activator: org.eclipse.cdt.dsf.internal.DsfPlugin
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Export-Package: org.eclipse.cdt.dsf.concurrent,
+  org.eclipse.cdt.dsf.datamodel,
+  org.eclipse.cdt.dsf.debug.internal.provisional.model;x-friends:="org.eclipse.cdt.dsf.ui,org.eclipse.cdt.dsf.gdb",
+  org.eclipse.cdt.dsf.debug.internal.provisional.service;x-friends:="org.eclipse.cdt.dsf.ui",
+  org.eclipse.cdt.dsf.debug.model,
+  org.eclipse.cdt.dsf.debug.service,
+  org.eclipse.cdt.dsf.debug.service.command,
+  org.eclipse.cdt.dsf.debug.sourcelookup,
+  org.eclipse.cdt.dsf.internal;x-friends:="org.eclipse.cdt.dsf.ui,org.eclipse.cdt.tests.dsf.gdb",
+  org.eclipse.cdt.dsf.service
+Require-Bundle: org.eclipse.core.runtime,
+  org.eclipse.debug.core,
+  org.eclipse.cdt.core,
+  org.eclipse.cdt.debug.core,
+  org.eclipse.core.resources
+Built-By: genie.cdt
+Build-Jdk: 1.8.0_162
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/cdt/org.eclipse.cdt.git;path="dsf/org.eclipse.cdt.dsf";commitId=0051cf041c7a22db297c09819a35a57710e020a8
+Created-By: Apache Maven 3.5.2
+Archiver-Version: Plexus Archiver
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8

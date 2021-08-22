@@ -1,0 +1,830 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<!--
+  Copyright (c) 2015 Eike Stepper (Berlin, Germany) and others.
+  All rights reserved. This program and the accompanying materials
+  are made available under the terms of the Eclipse Public License v1.0
+  which accompanies this distribution, and is available at
+  http://www.eclipse.org/legal/epl-v10.html
+
+  Contributors:
+    Eike Stepper - initial API and implementation
+-->
+
+<plugin>
+
+  <extension id="app" point="org.eclipse.core.runtime.applications" name="%app.name">
+      <application>
+         <run class="org.eclipse.emf.cdo.explorer.ui.application.CDOExplorerApplication"/>
+      </application>
+  </extension>
+
+   <extension id="product" point="org.eclipse.core.runtime.products">
+      <product
+        name="CDO Explorer"
+        description="%product.description"
+        application="org.eclipse.emf.cdo.explorer.app">
+          <property name="appName" value="CDO Explorer"/>
+      </product>
+   </extension>
+
+   <extension point="org.eclipse.net4j.util.factories">
+      <factory
+            class="org.eclipse.emf.cdo.explorer.ui.checkouts.PapyrusDIFactory"
+            productGroup="org.eclipse.emf.cdo.explorer.ui.checkouts.contentModifiers"
+            type="resource.group.di"/>
+   </extension>
+
+  <extension point="org.eclipse.core.runtime.adapters">
+     <factory
+           adaptableType="org.eclipse.emf.cdo.explorer.repositories.CDORepository"
+           class="org.eclipse.emf.cdo.explorer.ui.properties.ExplorerPropertiesAdapterFactory">
+        <adapter type="org.eclipse.ui.views.properties.IPropertySourceProvider"/>
+        <adapter type="org.eclipse.ui.IActionFilter"/>
+     </factory>
+     <factory
+           adaptableType="org.eclipse.emf.cdo.explorer.checkouts.CDOCheckout"
+           class="org.eclipse.emf.cdo.explorer.ui.properties.ExplorerPropertiesAdapterFactory">
+        <adapter type="org.eclipse.ui.views.properties.IPropertySourceProvider"/>
+        <adapter type="org.eclipse.ui.IActionFilter"/>
+     </factory>
+     <factory
+           adaptableType="org.eclipse.emf.cdo.internal.explorer.AbstractElement"
+           class="org.eclipse.emf.cdo.explorer.ui.properties.ExplorerUIAdapterFactory">
+        <adapter type="org.eclipse.emf.cdo.common.util.CDORenameContext"/>
+     </factory>
+     <factory
+           adaptableType="org.eclipse.emf.cdo.common.branch.CDOBranch"
+           class="org.eclipse.emf.cdo.explorer.ui.properties.ExplorerUIAdapterFactory">
+        <adapter type="org.eclipse.emf.cdo.common.util.CDORenameContext"/>
+     </factory>
+     <factory
+           adaptableType="org.eclipse.emf.cdo.eresource.CDOResourceNode"
+           class="org.eclipse.emf.cdo.explorer.ui.properties.ExplorerUIAdapterFactory">
+        <adapter type="org.eclipse.emf.cdo.common.util.CDORenameContext"/>
+     </factory>
+     <factory
+           adaptableType="org.eclipse.emf.cdo.CDOObject"
+           class="org.eclipse.emf.cdo.explorer.ui.properties.ExplorerUIAdapterFactory">
+        <adapter type="org.eclipse.emf.cdo.CDOElement$StateProvider"/>
+     </factory>
+     <factory
+           adaptableType="org.eclipse.emf.cdo.explorer.repositories.CDORepository"
+           class="org.eclipse.emf.cdo.ui.internal.team.history.CDOHistoryAdapterFactory">
+        <adapter type="org.eclipse.team.ui.history.IHistoryPageSource"/>
+     </factory>
+     <factory
+           adaptableType="org.eclipse.emf.cdo.explorer.checkouts.CDOCheckout"
+           class="org.eclipse.emf.cdo.ui.internal.team.history.CDOHistoryAdapterFactory">
+        <adapter type="org.eclipse.team.ui.history.IHistoryPageSource"/>
+     </factory>
+  </extension>
+
+  <extension point="org.eclipse.ui.perspectives">
+     <perspective
+           class="org.eclipse.emf.cdo.explorer.ui.application.CDOExplorerPerspective"
+           icon="platform:/plugin/org.eclipse.emf.cdo.ui.shared/icons/full/view16/cdo_sessions.gif"
+           id="org.eclipse.emf.cdo.explorer.ui.CDOExplorerPerspective"
+           name="%perspective.name">
+     </perspective>
+  </extension>
+
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="org.eclipse.ui.resourcePerspective">
+         <view
+               id="org.eclipse.emf.cdo.explorer.ui.CDORepositoriesView"
+               relationship="stack"
+               relative="org.eclipse.ui.views.ContentOutline"
+               visible="false">
+         </view>
+         <view
+               id="org.eclipse.ui.views.PropertySheet"
+               relationship="stack"
+               relative="org.eclipse.ui.views.TaskList">
+         </view>
+         <perspectiveShortcut id="org.eclipse.emf.cdo.explorer.ui.CDOExplorerPerspective"/>
+         <viewShortcut id="org.eclipse.emf.cdo.explorer.ui.CDORepositoriesView"/>
+      </perspectiveExtension>
+   </extension>
+
+  <extension point="org.eclipse.ui.preferencePages">
+     <page
+           category="org.eclipse.emf.cdo.ui.CDOPreferencePage"
+           class="org.eclipse.emf.cdo.explorer.ui.properties.ExplorerPreferencePage"
+           id="org.eclipse.emf.cdo.explorer.ui.CDOExplorerPreferencePage"
+           name="%preference.page.name">
+     </page>
+  </extension>
+
+  <extension point="org.eclipse.ui.views">
+      <view
+            class="org.eclipse.emf.cdo.explorer.ui.repositories.CDORepositoriesView"
+            id="org.eclipse.emf.cdo.explorer.ui.CDORepositoriesView"
+            name="CDO Repositories"
+            icon="platform:/plugin/org.eclipse.emf.cdo.ui.shared/icons/full/view16/locations.gif"
+            category="org.eclipse.emf.cdo"
+            allowMultiple="false">
+      </view>
+  </extension>
+
+  <extension point="org.eclipse.ui.importWizards">
+     <wizard
+           category="org.eclipse.emf.cdo.category"
+           class="org.eclipse.emf.cdo.explorer.ui.checkouts.wizards.CheckoutWizard"
+           icon="icons/checkout.gif"
+           id="org.eclipse.emf.cdo.explorer.ui.checkout"
+           name="Checkout from CDO">
+        <description>
+           Connect to or checkout from a CDO model repository.
+        </description>
+     </wizard>
+  </extension>
+
+  <extension point="org.eclipse.ui.newWizards">
+     <wizard
+           category="org.eclipse.emf.cdo.category"
+           class="org.eclipse.emf.cdo.explorer.ui.checkouts.wizards.NewFolderWizard"
+           hasPages="true"
+           icon="icons/CDOResourceFolder.gif"
+           id="org.eclipse.emf.cdo.explorer.ui.new.folder"
+           name="Folder">
+        <description>
+           Create a new folder.
+        </description>
+     </wizard>
+     <wizard
+           category="org.eclipse.emf.cdo.category"
+           class="org.eclipse.emf.cdo.explorer.ui.checkouts.wizards.NewResourceWizard"
+           hasPages="true"
+           icon="icons/CDOResource.gif"
+           id="org.eclipse.emf.cdo.explorer.ui.new.resource"
+           name="Model Resource">
+        <description>
+           Create a new model resource.
+        </description>
+     </wizard>
+     <wizard
+           category="org.eclipse.emf.cdo.category"
+           class="org.eclipse.emf.cdo.explorer.ui.checkouts.wizards.NewBinaryResourceWizard"
+           hasPages="true"
+           icon="icons/CDOBinaryResource.gif"
+           id="org.eclipse.emf.cdo.explorer.ui.new.resource.binary"
+           name="Binary File">
+        <description>
+           Create a new binary file.
+        </description>
+     </wizard>
+     <wizard
+           category="org.eclipse.emf.cdo.category"
+           class="org.eclipse.emf.cdo.explorer.ui.checkouts.wizards.NewTextResourceWizard"
+           hasPages="true"
+           icon="icons/CDOTextResource.gif"
+           id="org.eclipse.emf.cdo.explorer.ui.new.resource.text"
+           name="Text File">
+        <description>
+           Create a new text file.
+        </description>
+     </wizard>
+  </extension>
+
+  <extension point="org.eclipse.ui.navigator.navigatorContent">
+      <navigatorContent
+            id="org.eclipse.emf.cdo.explorer.ui.CDOCheckouts"
+            icon="icons/checkout.gif"
+            name="CDO Checkouts"
+            contentProvider="org.eclipse.emf.cdo.explorer.ui.checkouts.CDOCheckoutContentProvider"
+            labelProvider="org.eclipse.emf.cdo.explorer.ui.checkouts.CDOCheckoutLabelProvider"
+            priority="normal"
+            activeByDefault="true"
+            providesSaveables="false">
+         <triggerPoints>
+            <or>
+               <instanceof value="org.eclipse.core.resources.IWorkspaceRoot"/>
+               <instanceof value="org.eclipse.emf.cdo.explorer.checkouts.CDOCheckout"/>
+               <adapt type="org.eclipse.emf.ecore.EObject"/>
+               <adapt type="org.eclipse.emf.cdo.CDOElement"/>
+            </or>
+         </triggerPoints>
+         <possibleChildren>
+            <or>
+               <adapt type="org.eclipse.emf.cdo.eresource.CDOResourceFolder"/>
+               <adapt type="org.eclipse.emf.cdo.eresource.CDOResource"/>
+               <adapt type="org.eclipse.emf.cdo.eresource.CDOBinaryResource"/>
+               <adapt type="org.eclipse.emf.cdo.eresource.CDOTextResource"/>
+               <adapt type="org.eclipse.emf.cdo.CDOElement"/>
+               <adapt type="org.eclipse.emf.ecore.EObject"/>
+               <instanceof value="org.eclipse.emf.cdo.explorer.repositories.CDORepository"/>
+               <instanceof value="org.eclipse.emf.cdo.common.branch.CDOBranchPoint"/>
+               <instanceof value="org.eclipse.emf.cdo.common.branch.CDOBranch"/>
+               <instanceof value="org.eclipse.emf.cdo.explorer.checkouts.CDOCheckout"/>
+            </or>
+         </possibleChildren>
+         <actionProvider
+               class="org.eclipse.emf.cdo.explorer.ui.checkouts.actions.NewActionProvider"
+               id="org.eclipse.emf.cdo.explorer.ui.checkouts.NewActions">
+           <enablement>
+             <or>
+               <and>
+                 <instanceof value="org.eclipse.emf.cdo.explorer.checkouts.CDOCheckout"/>
+                 <test property="org.eclipse.emf.cdo.explorer.checkout.state" value="Open"/>
+               </and>
+               <adapt type="org.eclipse.emf.cdo.eresource.CDOResourceFolder"/>
+               <and>
+                  <adapt type="org.eclipse.emf.ecore.EObject"/>
+                  <not>
+                     <adapt type="org.eclipse.emf.cdo.eresource.CDOBinaryResource"/>
+                  </not>
+                  <not>
+                     <adapt type="org.eclipse.emf.cdo.eresource.CDOTextResource"/>
+                  </not>
+               </and>
+             </or>
+           </enablement>
+         </actionProvider>
+         <actionProvider
+              class="org.eclipse.ui.navigator.resources.GoIntoActionProvider"
+              id="org.eclipse.emf.cdo.explorer.ui.checkouts.GoIntoActions">
+           <enablement>
+               <or>
+                 <and>
+                   <instanceof value="org.eclipse.emf.cdo.explorer.checkouts.CDOCheckout"/>
+                   <test property="org.eclipse.emf.cdo.explorer.checkout.state" value="Open"/>
+                 </and>
+                 <adapt type="org.eclipse.emf.cdo.eresource.CDOResourceFolder"/>
+                 <and>
+                    <instanceof value="org.eclipse.emf.ecore.EObject"/>
+                    <test property="org.eclipse.emf.cdo.object.children" value="true"/>
+                 </and>
+               </or>
+           </enablement>
+         </actionProvider>
+         <actionProvider
+               class="org.eclipse.emf.cdo.explorer.ui.checkouts.actions.OpenWithActionProvider"
+               id="org.eclipse.emf.cdo.explorer.ui.checkouts.OpenWithActions">
+           <enablement>
+             <or>
+               <and>
+                 <instanceof value="org.eclipse.emf.cdo.explorer.checkouts.CDOCheckout"/>
+                 <test property="org.eclipse.emf.cdo.explorer.checkout.state" value="Open"/>
+               </and>
+               <adapt type="org.eclipse.emf.cdo.eresource.CDOResourceFolder"/>
+               <adapt type="org.eclipse.emf.cdo.CDOElement"/>
+               <adapt type="org.eclipse.emf.ecore.EObject"/>
+             </or>
+           </enablement>
+         </actionProvider>
+         <actionProvider
+               class="org.eclipse.emf.cdo.explorer.ui.checkouts.actions.ShowInActionProvider"
+               id="org.eclipse.emf.cdo.explorer.ui.checkouts.ShowInActions">
+            <enablement>
+               <or>
+                  <and>
+                     <instanceof value="org.eclipse.emf.cdo.explorer.checkouts.CDOCheckout"/>
+                     <test property="org.eclipse.emf.cdo.explorer.checkout.state" value="Open"/>
+                  </and>
+                  <adapt type="org.eclipse.emf.cdo.CDOElement"/>
+                  <adapt type="org.eclipse.emf.ecore.EObject"/>
+               </or>
+            </enablement>
+         </actionProvider>
+         <actionProvider
+               class="org.eclipse.emf.cdo.explorer.ui.checkouts.actions.SwitchToActionProvider"
+               id="org.eclipse.emf.cdo.explorer.ui.checkouts.SwitchToActions">
+            <enablement>
+              <and>
+                 <instanceof value="org.eclipse.emf.cdo.internal.explorer.checkouts.OnlineCDOCheckout"/>
+                 <test property="org.eclipse.emf.cdo.explorer.checkout.state" value="Open"/>
+              </and>
+            </enablement>
+         </actionProvider>
+         <actionProvider
+               class="org.eclipse.emf.cdo.explorer.ui.checkouts.actions.ReplaceWithActionProvider"
+               id="org.eclipse.emf.cdo.explorer.ui.checkouts.ReplaceWithActions">
+            <enablement>
+              <and>
+                 <instanceof value="org.eclipse.emf.cdo.internal.explorer.checkouts.OfflineCDOCheckout"/>
+                 <test property="org.eclipse.emf.cdo.explorer.checkout.state" value="Open"/>
+              </and>
+            </enablement>
+         </actionProvider>
+         <actionProvider
+               class="org.eclipse.emf.cdo.explorer.ui.checkouts.actions.MergeFromActionProvider"
+               id="org.eclipse.emf.cdo.explorer.ui.checkouts.MergeFromActions">
+            <enablement>
+              <and>
+                 <instanceof value="org.eclipse.emf.cdo.explorer.checkouts.CDOCheckout"/>
+                 <test property="org.eclipse.emf.cdo.explorer.checkout.state" value="Open"/>
+                 <test property="org.eclipse.emf.cdo.ui.support.compare" value="true"/>
+              </and>
+            </enablement>
+         </actionProvider>
+         <actionProvider
+               class="org.eclipse.emf.cdo.explorer.ui.checkouts.actions.CompareWithActionProvider"
+               id="org.eclipse.emf.cdo.explorer.ui.checkouts.CompareWithActions">
+            <enablement>
+              <and>
+                 <instanceof value="org.eclipse.emf.cdo.explorer.checkouts.CDOCheckout"/>
+                 <test property="org.eclipse.emf.cdo.explorer.checkout.state" value="Open"/>
+                 <test property="org.eclipse.emf.cdo.ui.support.compare" value="true"/>
+              </and>
+            </enablement>
+         </actionProvider>
+         <commonWizard
+              type="new"
+              wizardId="org.eclipse.emf.cdo.explorer.ui.new.folder">
+            <enablement>
+              <or>
+                <and>
+                  <instanceof value="org.eclipse.emf.cdo.explorer.checkouts.CDOCheckout"/>
+                  <test property="org.eclipse.emf.cdo.explorer.checkout.canContainResources" value="true"/>
+                </and>
+                <adapt type="org.eclipse.emf.cdo.eresource.CDOResourceFolder"/>
+              </or>
+            </enablement>
+         </commonWizard>
+         <commonWizard
+              type="new"
+              wizardId="org.eclipse.emf.cdo.explorer.ui.new.resource">
+            <enablement>
+              <or>
+                <and>
+                  <instanceof value="org.eclipse.emf.cdo.explorer.checkouts.CDOCheckout"/>
+                  <test property="org.eclipse.emf.cdo.explorer.checkout.canContainResources" value="true"/>
+                </and>
+                <adapt type="org.eclipse.emf.cdo.eresource.CDOResourceFolder"/>
+              </or>
+           </enablement>
+         </commonWizard>
+         <commonWizard
+              type="new"
+              wizardId="org.eclipse.emf.cdo.explorer.ui.new.resource.binary">
+            <enablement>
+              <or>
+                <and>
+                  <instanceof value="org.eclipse.emf.cdo.explorer.checkouts.CDOCheckout"/>
+                  <test property="org.eclipse.emf.cdo.explorer.checkout.canContainResources" value="true"/>
+                </and>
+                <adapt type="org.eclipse.emf.cdo.eresource.CDOResourceFolder"/>
+              </or>
+           </enablement>
+         </commonWizard>
+         <commonWizard
+              type="new"
+              wizardId="org.eclipse.emf.cdo.explorer.ui.new.resource.text">
+            <enablement>
+              <or>
+                <and>
+                  <instanceof value="org.eclipse.emf.cdo.explorer.checkouts.CDOCheckout"/>
+                  <test property="org.eclipse.emf.cdo.explorer.checkout.canContainResources" value="true"/>
+                </and>
+                <adapt type="org.eclipse.emf.cdo.eresource.CDOResourceFolder"/>
+              </or>
+           </enablement>
+        </commonWizard>
+        <dropAssistant
+              class="org.eclipse.emf.cdo.explorer.ui.checkouts.CDOCheckoutDropAdapterAssistant"
+              id="org.eclipse.emf.cdo.explorer.ui.checkouts.DropAdapter">
+           <possibleDropTargets>
+              <or>
+                 <instanceof value="org.eclipse.emf.cdo.explorer.checkouts.CDOCheckout"/>
+                 <adapt type="org.eclipse.emf.cdo.eresource.CDOResourceFolder"/>
+                 <adapt type="org.eclipse.emf.cdo.eresource.CDOResource"/>
+                 <adapt type="org.eclipse.emf.cdo.CDOElement"/>
+                 <adapt type="org.eclipse.emf.ecore.EObject"/>
+              </or>
+           </possibleDropTargets>
+        </dropAssistant>
+        <commonSorter
+              class="org.eclipse.emf.cdo.explorer.ui.checkouts.CDOCheckoutViewerSorter"
+              id="org.eclipse.emf.cdo.explorer.ui.checkouts.ViewerSorter">
+        </commonSorter>
+     </navigatorContent>
+  </extension>
+
+  <extension point="org.eclipse.ui.navigator.viewer">
+      <viewerContentBinding
+            viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <contentExtension
+                  pattern="org.eclipse.emf.cdo.explorer.ui.CDOCheckouts">
+            </contentExtension>
+         </includes>
+      </viewerContentBinding>
+  </extension>
+
+  <extension point="org.eclipse.ui.decorators">
+      <decorator
+            class="org.eclipse.emf.cdo.explorer.ui.repositories.CDORepositoryLabelDecorator"
+            id="org.eclipse.emf.cdo.explorer.ui.repositories.decorator"
+            label="CDO Repositories"
+            state="true">
+         <description>
+            Decorates CDO repositories with their URI.
+         </description>
+      </decorator>
+      <decorator
+            class="org.eclipse.emf.cdo.explorer.ui.checkouts.CDOCheckoutLabelDecorator"
+            id="org.eclipse.emf.cdo.explorer.ui.checkouts.decorator"
+            label="CDO Checkouts"
+            state="true">
+         <description>
+            Decorates CDO checkouts with their branch point and offline state.
+         </description>
+      </decorator>
+  </extension>
+
+  <extension point="org.eclipse.ui.commands">
+      <command
+            id="org.eclipse.emf.cdo.explorer.ui.RepositoryConnect"
+            name="Connect Repository"
+            defaultHandler="org.eclipse.emf.cdo.explorer.ui.handlers.RepositoryConnectHandler"/>
+      <command
+            id="org.eclipse.emf.cdo.explorer.ui.RepositoryDisconnect"
+            name="Disconnect Repository"
+            defaultHandler="org.eclipse.emf.cdo.explorer.ui.handlers.RepositoryDisconnectHandler"/>
+      <command
+            id="org.eclipse.emf.cdo.explorer.ui.RepositoryCheckout"
+            name="Checkout Repository"
+            defaultHandler="org.eclipse.emf.cdo.explorer.ui.handlers.RepositoryCheckoutHandler"/>
+      <command
+            id="org.eclipse.emf.cdo.explorer.ui.RepositoryCheckoutQuick"
+            name="Checkout Repository Quick"
+            defaultHandler="org.eclipse.emf.cdo.explorer.ui.handlers.RepositoryCheckoutHandlerQuick"/>
+      <command
+            id="org.eclipse.emf.cdo.explorer.ui.CheckoutOpen"
+            name="Open Checkout"
+            defaultHandler="org.eclipse.emf.cdo.explorer.ui.handlers.CheckoutOpenHandler"/>
+      <command
+            id="org.eclipse.emf.cdo.explorer.ui.CheckoutClose"
+            name="Close Checkout"
+            defaultHandler="org.eclipse.emf.cdo.explorer.ui.handlers.CheckoutCloseHandler"/>
+      <command
+            id="org.eclipse.emf.cdo.explorer.ui.CheckoutDuplicate"
+            name="Duplicate Checkout"
+            defaultHandler="org.eclipse.emf.cdo.explorer.ui.handlers.CheckoutDuplicateHandler"/>
+      <command
+            id="org.eclipse.emf.cdo.explorer.ui.WorkspaceUpdate"
+            name="Update Workspace"
+            defaultHandler="org.eclipse.emf.cdo.explorer.ui.handlers.WorkspaceUpdateHandler"/>
+      <command
+            id="org.eclipse.emf.cdo.explorer.ui.WorkspaceCheckin"
+            name="Checkin Workspace"
+            defaultHandler="org.eclipse.emf.cdo.explorer.ui.handlers.WorkspaceCheckinHandler"/>
+      <command
+            id="org.eclipse.emf.cdo.explorer.ui.WorkspaceRevert"
+            name="Revert Workspace"
+            defaultHandler="org.eclipse.emf.cdo.explorer.ui.handlers.WorkspaceRevertHandler"/>
+  </extension>
+
+  <extension point="org.eclipse.ui.handlers">
+      <handler
+            class="org.eclipse.emf.cdo.explorer.ui.handlers.RenameHandler"
+            commandId="org.eclipse.ui.edit.rename">
+         <activeWhen>
+            <iterate ifEmpty="false">
+               <adapt type="org.eclipse.emf.cdo.common.util.CDORenameContext"/>
+            </iterate>
+         </activeWhen>
+      </handler>
+      <handler
+            class="org.eclipse.emf.cdo.explorer.ui.handlers.RepositoryDeleteHandler"
+            commandId="org.eclipse.ui.edit.delete">
+         <activeWhen>
+            <iterate ifEmpty="false">
+               <instanceof value="org.eclipse.emf.cdo.explorer.repositories.CDORepository"/>
+            </iterate>
+         </activeWhen>
+      </handler>
+      <handler
+            class="org.eclipse.emf.cdo.explorer.ui.handlers.CheckoutDeleteHandler"
+            commandId="org.eclipse.ui.edit.delete">
+         <activeWhen>
+            <iterate ifEmpty="false">
+               <instanceof value="org.eclipse.emf.cdo.explorer.checkouts.CDOCheckout"/>
+            </iterate>
+         </activeWhen>
+      </handler>
+      <handler
+            class="org.eclipse.emf.cdo.explorer.ui.handlers.ObjectDeleteHandler"
+            commandId="org.eclipse.ui.edit.delete">
+         <activeWhen>
+            <iterate ifEmpty="false">
+              <or>
+                <adapt type="org.eclipse.emf.cdo.CDOElement">
+                   <and>
+                     <test property="org.eclipse.emf.cdo.explorer.object.inCheckout" value="true"/>
+                     <test property="org.eclipse.emf.cdo.explorer.object.readOnlyCheckout" value="false"/>
+                   </and>
+                </adapt>
+                <adapt type="org.eclipse.emf.ecore.EObject">
+                   <and>
+                     <test property="org.eclipse.emf.cdo.explorer.object.inCheckout" value="true"/>
+                     <test property="org.eclipse.emf.cdo.explorer.object.readOnlyCheckout" value="false"/>
+                   </and>
+                </adapt>
+              </or>
+            </iterate>
+         </activeWhen>
+      </handler>
+  </extension>
+
+  <extension point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.eclipse.ui.popup.any?after=group.open">
+         <command
+               commandId="org.eclipse.emf.cdo.explorer.ui.RepositoryConnect"
+               icon="icons/connect.gif"
+               label="Connect"
+               style="push"
+               tooltip="Connect to the repository">
+            <visibleWhen checkEnabled="false">
+               <with variable="activeMenuSelection">
+                  <iterate ifEmpty="false">
+                     <and>
+                        <instanceof value="org.eclipse.emf.cdo.explorer.repositories.CDORepository"/>
+                        <test property="org.eclipse.emf.cdo.explorer.repository.state" value="Disconnected"/>
+                     </and>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+         <command
+               commandId="org.eclipse.emf.cdo.explorer.ui.CheckoutOpen"
+               icon="icons/checkout.gif"
+               label="Open Checkout"
+               style="push"
+               tooltip="Open the checkout">
+            <visibleWhen checkEnabled="false">
+               <with variable="activeMenuSelection">
+                  <iterate ifEmpty="false">
+                    <and>
+                      <instanceof value="org.eclipse.emf.cdo.explorer.checkouts.CDOCheckout"/>
+                      <test property="org.eclipse.emf.cdo.explorer.checkout.state" value="Closed"/>
+                    </and>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.eclipse.ui.popup.any?after=group.checkout">
+         <command
+               commandId="org.eclipse.emf.cdo.explorer.ui.RepositoryCheckoutQuick"
+               icon="icons/new_checkout.gif"
+               label="Checkout"
+               style="push"
+               tooltip="Check the repository out as an online connection">
+            <visibleWhen checkEnabled="false">
+               <with variable="activeMenuSelection">
+                  <and>
+                     <count value="1"/>
+                     <iterate>
+                        <adapt type="org.eclipse.emf.cdo.explorer.repositories.CDORepositoryElement"/>
+                     </iterate>
+                  </and>
+               </with>
+            </visibleWhen>
+         </command>
+         <command
+               commandId="org.eclipse.emf.cdo.explorer.ui.RepositoryCheckout"
+               icon="icons/new_checkout.gif"
+               label="Checkout As..."
+               style="push"
+               tooltip="Check the repository out into the Project Explorer">
+            <visibleWhen checkEnabled="false">
+               <with variable="activeMenuSelection">
+                  <and>
+                     <count value="1"/>
+                     <iterate>
+                        <adapt type="org.eclipse.emf.cdo.explorer.repositories.CDORepositoryElement"/>
+                     </iterate>
+                  </and>
+               </with>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.eclipse.ui.popup.any?after=group.edit">
+         <command
+               commandId="org.eclipse.ui.edit.rename"
+               icon="icons/rename.gif"
+               label="Rename..."
+               style="push"
+               tooltip="Rename the element">
+            <visibleWhen checkEnabled="false">
+               <with variable="activeMenuSelection">
+                  <iterate ifEmpty="false">
+                     <adapt type="org.eclipse.emf.cdo.common.util.CDORenameContext"/>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+         <command
+               commandId="org.eclipse.ui.edit.delete"
+               icon="icons/delete.gif"
+               label="Delete..."
+               style="push"
+               tooltip="Delete the repositories">
+            <visibleWhen checkEnabled="false">
+               <with variable="activeMenuSelection">
+                  <iterate ifEmpty="false">
+                     <instanceof value="org.eclipse.emf.cdo.explorer.repositories.CDORepository"/>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+         <command
+               commandId="org.eclipse.ui.edit.delete"
+               icon="icons/delete.gif"
+               label="Delete..."
+               style="push"
+               tooltip="Delete the checkouts">
+            <visibleWhen checkEnabled="false">
+               <with variable="activeMenuSelection">
+                  <iterate ifEmpty="false">
+                     <instanceof value="org.eclipse.emf.cdo.explorer.checkouts.CDOCheckout"/>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+         <command
+               commandId="org.eclipse.ui.edit.delete"
+               icon="icons/delete.gif"
+               label="Delete..."
+               style="push"
+               tooltip="Delete the objects">
+            <visibleWhen checkEnabled="false">
+               <with variable="activeMenuSelection">
+                  <iterate ifEmpty="false">
+                    <or>
+                      <adapt type="org.eclipse.emf.cdo.CDOElement">
+                         <and>
+                           <test property="org.eclipse.emf.cdo.explorer.object.inCheckout" value="true"/>
+                           <test property="org.eclipse.emf.cdo.explorer.object.readOnlyCheckout" value="false"/>
+                         </and>
+                      </adapt>
+                      <adapt type="org.eclipse.emf.ecore.EObject">
+                         <and>
+                           <test property="org.eclipse.emf.cdo.explorer.object.inCheckout" value="true"/>
+                           <test property="org.eclipse.emf.cdo.explorer.object.readOnlyCheckout" value="false"/>
+                         </and>
+                      </adapt>
+                    </or>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.eclipse.ui.popup.any?after=group.build">
+         <command
+               commandId="org.eclipse.emf.cdo.explorer.ui.RepositoryDisconnect"
+               icon="icons/disconnect.gif"
+               label="Disconnect"
+               style="push"
+               tooltip="Disconnect from the repository">
+            <visibleWhen checkEnabled="false">
+               <with variable="activeMenuSelection">
+                  <iterate ifEmpty="false">
+                     <and>
+                        <instanceof value="org.eclipse.emf.cdo.explorer.repositories.CDORepository"/>
+                        <test property="org.eclipse.emf.cdo.explorer.repository.state" value="Connected"/>
+                     </and>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+         <command
+               commandId="org.eclipse.emf.cdo.explorer.ui.CheckoutClose"
+               icon="icons/checkout_closed.gif"
+               label="Close Checkout"
+               style="push"
+               tooltip="Close the checkout">
+            <visibleWhen checkEnabled="false">
+               <with variable="activeMenuSelection">
+                  <iterate ifEmpty="false">
+                    <and>
+                      <instanceof value="org.eclipse.emf.cdo.explorer.checkouts.CDOCheckout"/>
+                      <test property="org.eclipse.emf.cdo.explorer.checkout.state" value="Open"/>
+                    </and>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+         <command
+               commandId="org.eclipse.emf.cdo.explorer.ui.CheckoutDuplicate"
+               icon="icons/duplicate.gif"
+               label="Duplicate Checkout"
+               style="push"
+               tooltip="Duplicate the checkout">
+            <visibleWhen checkEnabled="false">
+               <with variable="activeMenuSelection">
+                  <iterate ifEmpty="false">
+                    <instanceof value="org.eclipse.emf.cdo.explorer.checkouts.CDOCheckout"/>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.eclipse.ui.popup.any?after=additions">
+         <command
+               commandId="org.eclipse.emf.cdo.explorer.ui.WorkspaceUpdate"
+               icon="icons/update.gif"
+               label="Update"
+               style="push"
+               tooltip="Update the checkout from the remote repository">
+            <visibleWhen checkEnabled="false">
+               <with variable="activeMenuSelection">
+                  <iterate ifEmpty="false">
+                    <and>
+                      <instanceof value="org.eclipse.emf.cdo.internal.explorer.checkouts.OfflineCDOCheckout"/>
+                      <test property="org.eclipse.emf.cdo.explorer.checkout.state" value="Open"/>
+                    </and>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+         <command
+               commandId="org.eclipse.emf.cdo.explorer.ui.WorkspaceCheckin"
+               icon="icons/checkin.gif"
+               label="Checkin"
+               style="push"
+               tooltip="Checkin the local changes into the remote repository">
+            <visibleWhen checkEnabled="false">
+               <with variable="activeMenuSelection">
+                  <iterate ifEmpty="false">
+                    <and>
+                      <instanceof value="org.eclipse.emf.cdo.internal.explorer.checkouts.OfflineCDOCheckout"/>
+                      <test property="org.eclipse.emf.cdo.explorer.checkout.state" value="Open"/>
+                    </and>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+         <command
+               commandId="org.eclipse.emf.cdo.explorer.ui.WorkspaceRevert"
+               icon="icons/revert.gif"
+               label="Revert..."
+               style="push"
+               tooltip="Revert the local changes">
+            <visibleWhen checkEnabled="false">
+               <with variable="activeMenuSelection">
+                  <iterate ifEmpty="false">
+                    <and>
+                      <instanceof value="org.eclipse.emf.cdo.internal.explorer.checkouts.OfflineCDOCheckout"/>
+                      <test property="org.eclipse.emf.cdo.explorer.checkout.state" value="Open"/>
+                    </and>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+  </extension>
+
+  <extension point="org.eclipse.ui.popupMenus">
+    <objectContribution
+          adaptable="true"
+          id="org.eclipse.emf.cdo.explorer.ui.contribution1"
+          objectClass="org.eclipse.emf.cdo.common.commit.CDOCommitInfo">
+       <action
+             class="org.eclipse.emf.cdo.explorer.ui.actions.CheckoutCommitInfoActionDelegate"
+             enablesFor="1"
+             icon="icons/new_checkout.gif"
+             id="org.eclipse.emf.cdo.explorer.ui.CheckoutCommitInfo"
+             label="Checkout As..."
+             menubarPath="additions"
+             style="push">
+       </action>
+       <action
+             class="org.eclipse.emf.cdo.explorer.ui.actions.CheckoutCommitInfoActionDelegate$Quick"
+             enablesFor="1"
+             icon="icons/new_checkout.gif"
+             id="org.eclipse.emf.cdo.explorer.ui.CheckoutCommitInfo"
+             label="Checkout"
+             menubarPath="additions"
+             style="push">
+       </action>
+    </objectContribution>
+  </extension>
+
+   <extension
+         point="org.eclipse.emf.cdo.ui.editorOpeners">
+      <editorOpener
+            class="org.eclipse.emf.cdo.explorer.ui.checkouts.CDOModelEditorOpener"
+            icon="icons/cdo_editor.gif"
+            id="org.eclipse.emf.cdo.explorer.ui.CDOModelEditorOpener"
+            name="CDO Editor"
+            priority="100"
+            regex="cdo\.checkout://.*">
+      </editorOpener>
+   </extension>
+
+</plugin>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+Copyright (c) 2011, 2014 Obeo.
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the Eclipse Public License v1.0
+which accompanies this distribution, and is available at
+http://www.eclipse.org/legal/epl-v10.html
+
+Contributors:
+    Obeo - initial API and implementation
+    Philip Langer - post processor and merger for opaque element body changes
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.eclipse.org/emf/compare/uml2/2.0"
+            class="org.eclipse.emf.compare.uml2.internal.UMLComparePackage"
+            genModel="model/uml2compare.genmodel"/>
+   </extension>
+   <extension
+         point="org.eclipse.emf.compare.rcp.postProcessor">
+      <processor
+            class="org.eclipse.emf.compare.uml2.internal.postprocessor.UMLPostProcessor"
+            description="Post Processor used for UML models."
+            label="UML Post Processor"
+            ordinal="20">
+         <nsURI
+               value="http://www.eclipse.org/uml2/\d.0.0/UML">
+         </nsURI>
+      </processor>
+      <processor
+            class="org.eclipse.emf.compare.uml2.internal.postprocessor.OpaqueElementBodyChangePostProcessor"
+            description="Post Processor for detecting conflicts specific to opaque element body changes."
+            label="Opaque Element Change Processor"
+            ordinal="25">
+         <nsURI
+               value="http://www.eclipse.org/uml2/\d.0.0/UML">
+         </nsURI>
+      </processor>
+     <processor
+            class="org.eclipse.emf.compare.uml2.internal.postprocessor.StereotypedElementChangePostProcessor"
+            description="This post processor creates macro differences for stereotyped uml elements."
+            label="Stereotyped element change post processor"
+            ordinal="25">
+         <nsURI
+               value="http://www.eclipse.org/uml2/\d.0.0/UML">
+         </nsURI>
+      </processor>
+     <processor
+           class="org.eclipse.emf.compare.uml2.internal.postprocessor.MultiplicityElementChangePostProcessor"
+           description="Post Processor for handling UML MultiplicityElement changes"
+           label="Multiplicity Element Change Post Processor"
+           ordinal="25">
+        <nsURI
+              value="http://www.eclipse.org/uml2/\d.0.0/UML">
+        </nsURI>
+     </processor>
+   </extension>
+   <extension
+         point="org.eclipse.emf.compare.rcp.merger">
+      <merger
+            class="org.eclipse.emf.compare.uml2.internal.merge.UMLMerger"
+            ranking="20">
+      </merger>
+      <merger
+            class="org.eclipse.emf.compare.uml2.internal.merge.UMLReferenceChangeMerger"
+            ranking="25">
+      </merger>
+      <merger
+            class="org.eclipse.emf.compare.uml2.internal.merge.OpaqueElementBodyChangeMerger"
+            ranking="25">
+      </merger>
+   </extension>
+
+</plugin>

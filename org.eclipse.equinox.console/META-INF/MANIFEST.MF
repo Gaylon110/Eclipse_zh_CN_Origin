@@ -1,0 +1,222 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.equinox.console
+Archiver-Version: Plexus Archiver
+Built-By: genie.releng
+Require-Bundle: org.apache.felix.gogo.runtime;bundle-version="0.10.0",
+ org.apache.felix.gogo.shell;bundle-version="0.10.0"
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/equino
+ x/rt.equinox.bundles.git;path="bundles/org.eclipse.equinox.console";t
+ ag="I20170514-1120";commitId=ebc16acfa5cbab00438582c0bb30aa84dd5a9d8e
+Bundle-Vendor: %bundleVendor
+Import-Package: org.apache.felix.service.command;status=provisional;ve
+ rsion="0.8.0",org.eclipse.osgi.framework.console,org.eclipse.osgi.rep
+ ort.resolution; version="[1.0,2.0)",org.eclipse.osgi.service.environm
+ ent,org.eclipse.osgi.util,org.osgi.framework,org.osgi.framework.hooks
+ .resolver; version="[1.0, 2.0)",org.osgi.framework.namespace;version=
+ "1.0.0",org.osgi.framework.wiring;version="1.1.0",org.osgi.resource;v
+ ersion="1.0.0",org.osgi.service.cm; version="[1.4, 2.0)"; resolution:
+ =optional,org.osgi.service.condpermadmin,org.osgi.service.packageadmi
+ n,org.osgi.service.permissionadmin,org.osgi.service.startlevel,org.os
+ gi.util.tracker
+Export-Package: org.eclipse.equinox.console.common,org.eclipse.equinox
+ .console.common.terminal,org.eclipse.equinox.console.completion.commo
+ n
+Bundle-Name: %bundleName
+Bundle-Version: 1.1.300.v20170512-2111
+Bundle-Localization: plugin
+Bundle-Activator: org.eclipse.equinox.console.command.adapter.Activato
+ r
+Created-By: Apache Maven 3.3.3
+Build-Jdk: 1.8.0_121
+
+Name: org/eclipse/equinox/console/common/terminal/VT100TerminalTypeMap
+ pings.class
+SHA-256-Digest: 4Qd+rdex0EiUvFUNsnrohggp4LwXPSEVgfGOSE6e4Jk=
+
+Name: org/eclipse/equinox/console/commands/ManCommand.class
+SHA-256-Digest: In1sltmc0CDhm3hUf6nu+2tehZ8iaR5yIie1ukYwASg=
+
+Name: org/eclipse/equinox/console/completion/FileNamesCompleter.class
+SHA-256-Digest: NEVvczMof4A+4SYLvu3PqMTpB0qp7wmEHqJEk+uuhWs=
+
+Name: org/eclipse/equinox/console/commands/DisconnectCommand.class
+SHA-256-Digest: ySJfq5zSpnXB4QQm3H/f6Gw0x1xH8Pd3F5R62+v2k8E=
+
+Name: org/eclipse/equinox/console/common/terminal/VT320TerminalTypeMap
+ pings.class
+SHA-256-Digest: oW7CbouvBk1RacNpy5jmvmW6r0To6rb+9ZFKO6cR8AM=
+
+Name: org/eclipse/equinox/console/commands/ConsoleMessages.properties
+SHA-256-Digest: tMHsTxflSSlGTydCrptpI7Knu4Zo97UFQrJ7Ci2TEEI=
+
+Name: org/eclipse/equinox/console/command/adapter/CommandProviderAdapt
+ er.class
+SHA-256-Digest: iJdUqRPjsrhwqdSHlMAkst/8H54vt4Twy7rLb+noB1E=
+
+Name: org/eclipse/equinox/console/telnet/TelnetCommand.class
+SHA-256-Digest: I4x469rUP7VKFML1Rr0OIz7+biUEmWazNCRZMX6zqmA=
+
+Name: plugin.properties
+SHA-256-Digest: gC3Gans300rm1E2nIncMN4i+OZgTeUo06vnRaXUWEQw=
+
+Name: org/eclipse/equinox/console/telnet/TelnetServer.class
+SHA-256-Digest: 7bqBX8gu0n3hGVQUQQM1opbREs/lznHmxwUDO7epV78=
+
+Name: org/eclipse/equinox/console/telnet/TelnetOutputStream.class
+SHA-256-Digest: 65WXSdjlGek6W8uXMKaHeSjw7XmmMv6KsrMS4TgR+Uk=
+
+Name: org/eclipse/equinox/console/commands/EquinoxCommandProvider$Diag
+ ReportListener.class
+SHA-256-Digest: Tjy6802DEbleLuqaEoVzMAQBeFvzsUWptrPhf637XPk=
+
+Name: org/eclipse/equinox/console/common/terminal/ANSITerminalTypeMapp
+ ings.class
+SHA-256-Digest: 1igG8tMeZ5uh0OzUPm5BFe1JUhhS+QXQZT9kezAPLd8=
+
+Name: org/eclipse/equinox/console/commands/EquinoxCommandProvider$Diag
+ ReportListener$DiagResolverHook.class
+SHA-256-Digest: ESXRKhlYUMPCcyrExTp/O0rB6tKvVyHhzjuhsVY/sHY=
+
+Name: org/eclipse/equinox/console/completion/common/Completer.class
+SHA-256-Digest: nHmCg62uoVct/a+7psKJKlh0UKZrJueElC70J35Pxew=
+
+Name: org/eclipse/equinox/console/common/Scanner.class
+SHA-256-Digest: K7uIttc63bu359z+v86/R0tDBwJOV+pzkTBfe/YXLF8=
+
+Name: org/eclipse/equinox/console/telnet/TelnetInputScanner.class
+SHA-256-Digest: zVVMrXC5FqMZV56nFPY2Uwg0GR6JIMBFiARWLlOJ8j4=
+
+Name: org/eclipse/equinox/console/completion/CommandNamesCompleter.cla
+ ss
+SHA-256-Digest: abVs/4Zkh96lb8r2i341mM1aK5NS5E/rxrJzW8A+BWM=
+
+Name: org/eclipse/equinox/console/common/ConsoleInputScanner$Candidate
+ s.class
+SHA-256-Digest: LRxEao2XY9u/oKyCM4qSCZPUUZjzkfd8+jHS/GYud7k=
+
+Name: org/eclipse/equinox/console/command/adapter/Activator$CommandCus
+ tomizer.class
+SHA-256-Digest: oxckDKzCWnp8lLXJlExAwliWaWbR769rEXJvvlJ76Uo=
+
+Name: org/eclipse/equinox/console/common/ConsoleInputStream.class
+SHA-256-Digest: gqk9qzc7U+J8ZT1CSh3/GgZCXjTkYTh+dPL/meBKrvY=
+
+Name: org/eclipse/equinox/console/commands/ConsoleMsg.class
+SHA-256-Digest: hGsvhD9uF7VaCBKhux6RQLaiWsRda9+QFH/Kh1CYCF4=
+
+Name: org/eclipse/equinox/console/command/adapter/Activator$SessionCus
+ tomizer.class
+SHA-256-Digest: ZgE+6lA69ZHgVy3/uUKdIRFqjQ7OVNeMfIcrPhCVuWY=
+
+Name: org/eclipse/equinox/console/completion/VariableNamesCompleter.cl
+ ass
+SHA-256-Digest: n0EPGJfBrG/PAtzcbUPXwDX4AIzyQNJ+VAfXI6akiew=
+
+Name: org/eclipse/equinox/console/common/InputHandler.class
+SHA-256-Digest: lOU5NumbjLhO8GhcKpa+eeA91OBYsczokULESa36YnE=
+
+Name: org/eclipse/equinox/console/common/ConsoleOutputStream.class
+SHA-256-Digest: AdDQ+Yy+VsJ/nUihEOQdOC/jHvGYSLG+GR0BWCfyYOo=
+
+Name: org/eclipse/equinox/console/command/adapter/CustomCommandInterpr
+ eter.class
+SHA-256-Digest: XVcpAw8oTMPAn6KTBEWg+CYA9rSj+vyx4W9BGm53AiU=
+
+Name: org/eclipse/equinox/console/commands/EquinoxCommandProvider.clas
+ s
+SHA-256-Digest: JQotxmVBX1uj+t4VhFSpUufRnbJuuBSdLQcrZkCtR4Y=
+
+Name: org/eclipse/equinox/console/completion/StringsCompleter.class
+SHA-256-Digest: DOC0Fr3jIbTKeh+yEAenxvLmDa+lUU4Fy27JXxrOtJM=
+
+Name: org/eclipse/equinox/console/telnet/TelnetInputHandler.class
+SHA-256-Digest: P2JKHelhYhKiOJymrE85vQb/2F0EXR52z+UdnCVODbU=
+
+Name: org/eclipse/equinox/console/telnet/Callback.class
+SHA-256-Digest: COK3qBtkfdLxJOYPmgsbqSYfloCzjaCaFzEItK6rXOo=
+
+Name: org/eclipse/equinox/console/common/ConsoleInputHandler.class
+SHA-256-Digest: SaV/9/bbdiBMz4gKfevrL14exHnTslPXalzcQ3flIlw=
+
+Name: org/eclipse/equinox/console/command/adapter/Activator$SessionCus
+ tomizer$1.class
+SHA-256-Digest: R0myGFi/TRaiECTp3Yjt3zCjYA8N+iw8lZXY9BUxBpg=
+
+Name: org/eclipse/equinox/console/commands/EquinoxCommandsConverter.cl
+ ass
+SHA-256-Digest: MMdg03evhwOylfZz8DBWA2ssVXKNGgdWyyePYukDD1A=
+
+Name: org/eclipse/equinox/console/commands/CommandsTracker.class
+SHA-256-Digest: p6zvHuQXvAB0QAdAFYKIj1zUwZ51WEtxPX81JGQdU+Y=
+
+Name: org/eclipse/equinox/console/common/SimpleByteBuffer.class
+SHA-256-Digest: aCmQifq7hLO7Ei+FVT4jeFDB71DexIBPV6aher/ehCA=
+
+Name: org/eclipse/equinox/console/telnet/TelnetCommand$TelnetConfigura
+ tor.class
+SHA-256-Digest: GEDJq3Nc2yjYHwRgLFGy6hWfcxXgcbOuxHKgcDLkYoE=
+
+Name: org/eclipse/equinox/console/common/terminal/TerminalTypeMappings
+ .class
+SHA-256-Digest: qzk5I4PPWdWnPpsLL+UIRPCtPSJUre+xhkLqvhzbd2Y=
+
+Name: org/eclipse/equinox/console/commands/HelpCommand$CommandProvider
+ Customizer.class
+SHA-256-Digest: FrF7tbmdvujroZWO9x0vbUGsETgYWLD8QLraYKa4nk8=
+
+Name: org/eclipse/equinox/console/commands/EquinoxCommandProvider$Pack
+ ageSource.class
+SHA-256-Digest: 1h9Fj1Zg/VGGRo0m4+ilede7R2RLX0ycIB2K4NeQg/A=
+
+Name: org/eclipse/equinox/console/common/KEYS.class
+SHA-256-Digest: HK1Ol9m6lCQSP7FmZ3Lgy/NSNAThmIgunygf2iSm2ds=
+
+Name: org/eclipse/equinox/console/commands/CommandsTracker$CommandsTra
+ ckerCustomizer.class
+SHA-256-Digest: D6qBTTTefsmm0FoSe2N+/2RlHstJBFd+ttrAQ4YGYAE=
+
+Name: about.html
+SHA-256-Digest: TvXC7mM4VtdHmC+ILt2ZyEzhPI5b42WLQHsYIve5Sy8=
+
+Name: org/eclipse/equinox/console/common/ConsoleInputScanner.class
+SHA-256-Digest: m1HheMTwqfF3QJPTF68b/hnabnb25r8aEhNhc8hja40=
+
+Name: org/eclipse/equinox/console/commands/HelpCommand.class
+SHA-256-Digest: F4T3KEABHJ/jFPiXp3Scsk7GOBWa5HWgNIN86eBYqho=
+
+Name: org/eclipse/equinox/console/common/terminal/SCOTerminalTypeMappi
+ ngs.class
+SHA-256-Digest: ELWHBqJhvz+K3arj3ikOLgHOAoIrzl+VGwGidPKpHck=
+
+Name: org/eclipse/equinox/console/command/adapter/Activator.class
+SHA-256-Digest: bq7QINsDT5PNOmeXPAYMyXVjLEQP9i4NPQkw2aXk//g=
+
+Name: org/eclipse/equinox/console/commands/Util.class
+SHA-256-Digest: ickzJkVPEjDN0zzvQuMKjTzkHR5yhhA8J75gPvz55h0=
+
+Name: org/eclipse/equinox/console/common/HistoryHolder.class
+SHA-256-Digest: t/GgI00aZ64ZaKW8err846etZqIQ6mCOki6wTwoe80k=
+
+Name: org/eclipse/equinox/console/command/adapter/Activator$ProcessorC
+ ustomizer.class
+SHA-256-Digest: VO7YiqJbbnCsSthMvGbaUmRB5eKaebYWZ3CLo6DuoO0=
+
+Name: org/eclipse/equinox/console/telnet/NegotiationFinishedCallback.c
+ lass
+SHA-256-Digest: V5LCHjmHbkx12f+fU+0tsMALepQFVDpTwLQZ6gQWyFU=
+
+Name: org/eclipse/equinox/console/completion/CompletionHandler.class
+SHA-256-Digest: lYRyyzS26+TjEcc2HN5HNYjwZnEG5aNYyRkan+tZsWQ=
+
+Name: org/eclipse/equinox/console/common/terminal/VT220TerminalTypeMap
+ pings.class
+SHA-256-Digest: 60+yLXMFzle7vPHg8XcD7ptDl3Fbb+FSM8PkZTgjAPI=
+
+Name: org/eclipse/equinox/console/completion/CommandLineParser.class
+SHA-256-Digest: LmNuD/KafObGs1W2TUd08jP9QRi/0YP5c0XI4/39774=
+
+Name: org/eclipse/equinox/console/telnet/TelnetConnection.class
+SHA-256-Digest: iKEuaZkK6GcHtlQ0qMNh1fMm1dlYwtUKIjHdhGcB9sg=
+

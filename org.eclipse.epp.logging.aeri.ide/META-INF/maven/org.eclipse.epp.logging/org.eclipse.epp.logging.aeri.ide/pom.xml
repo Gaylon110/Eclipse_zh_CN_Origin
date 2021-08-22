@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.eclipse.epp.logging</groupId>
+		<artifactId>bundles</artifactId>
+		<version>2.0.7-SNAPSHOT</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+
+	<artifactId>org.eclipse.epp.logging.aeri.ide</artifactId>
+	<packaging>eclipse-plugin</packaging>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.tycho.extras</groupId>
+				<artifactId>tycho-eclipserun-plugin</artifactId>
+				<configuration>
+					<!-- linebreaks not permitted in this arg line -->
+					<appArgLine>-data "${basedir}${file.separator}..${file.separator}workspace" -application org.eclipse.emf.codegen.ecore.Generator -projects "${basedir}${file.separator}..${file.separator}" -model "${basedir}${file.separator}models${file.separator}aeri.ide.genmodel"</appArgLine>
+					<dependencies>
+						<dependency>
+							<artifactId>org.eclipse.emf.codegen.ecore</artifactId>
+							<type>eclipse-plugin</type>
+						</dependency>
+					</dependencies>
+					<repositories>
+						<repository>
+							<id>mars</id>
+							<layout>p2</layout>
+							<url>http://download.eclipse.org/releases/mars</url>
+						</repository>
+					</repositories>
+				</configuration>
+				<executions>
+					<execution>
+						<id>generate-sources</id>
+						<goals>
+							<goal>eclipse-run</goal>
+						</goals>
+						<phase>generate-sources</phase>
+					</execution>
+				</executions>
+			</plugin>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>animal-sniffer-maven-plugin</artifactId>
+					<version>1.15</version>
+					<configuration>
+						<!-- Ignored due to a Tycho bug. -->
+						<!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=512697 -->
+						<skip>true</skip>
+					</configuration>
+				</plugin>
+		</plugins>
+	</build>
+</project>

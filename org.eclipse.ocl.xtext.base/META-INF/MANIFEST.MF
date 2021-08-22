@@ -1,0 +1,1042 @@
+Manifest-Version: 1.0
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-SymbolicName: org.eclipse.ocl.xtext.base;singleton:=true
+Eclipse-SourceReferences: scm:git:/gitroot/ocl/org.eclipse.ocl.git
+Bundle-Activator: org.eclipse.ocl.xtext.base.utilities.BasePlugin$Impl
+ ementation
+Require-Bundle: org.eclipse.core.runtime;bundle-version="[3.5.0,4.0.0)
+ ",org.eclipse.emf.codegen;bundle-version="[2.6.0,3.0.0)",org.eclipse.
+ ocl.pivot;bundle-version="[1.3.0,2.0.0)";visibility:=reexport,org.ecl
+ ipse.xtext;bundle-version="[2.10.0,3.0.0)";visibility:=reexport
+Bundle-Version: 1.3.0.v20170522-1753
+Export-Package: org.eclipse.ocl.xtext.base,org.eclipse.ocl.xtext.base.
+ as2cs,org.eclipse.ocl.xtext.base.attributes,org.eclipse.ocl.xtext.bas
+ e.cs2as,org.eclipse.ocl.xtext.base.formatting,org.eclipse.ocl.xtext.b
+ ase.parser.antlr,org.eclipse.ocl.xtext.base.parser.antlr.internal;x-f
+ riends:="org.eclipse.ocl.xtext.base.ui",org.eclipse.ocl.xtext.base.sc
+ oping,org.eclipse.ocl.xtext.base.serializer,org.eclipse.ocl.xtext.bas
+ e.services,org.eclipse.ocl.xtext.base.utilities,org.eclipse.ocl.xtext
+ .base.validation,org.eclipse.ocl.xtext.basecs,org.eclipse.ocl.xtext.b
+ asecs.impl,org.eclipse.ocl.xtext.basecs.util
+Bundle-ClassPath: .
+Ant-Version: Apache Ant 1.9.4
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: %providerName
+Bundle-Name: %pluginName
+Created-By: 1.8.0_121-b13 (Oracle Corporation)
+Bundle-ManifestVersion: 2
+Import-Package: org.apache.log4j;version="[1.2.15,2.0.0)"
+
+Name: org/eclipse/ocl/xtext/base/cs2as/Continuations.class
+SHA1-Digest: 56hU+5eJWLYS7xgbFA9hlCigslM=
+
+Name: org/eclipse/ocl/xtext/base/services/BaseGrammarAccess$NUMBER_LIT
+ ERALElements.class
+SHA1-Digest: SIMBvv7EUDS9B81cgYSxdq9fj6E=
+
+Name: org/eclipse/ocl/xtext/basecs/ElementRefCS.class
+SHA1-Digest: 530AzOkiwxlrI8gSUGMaw59L6Mc=
+
+Name: org/eclipse/ocl/xtext/base/parser/antlr/internal/InternalBase.to
+ kens
+SHA1-Digest: x6zSHXyn9evHUlIcxYGV6ed5ESQ=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/RootCSImpl.class
+SHA1-Digest: azSHl0CCFmVWvgxguzDxuqYYXME=
+
+Name: org/eclipse/ocl/xtext/base/Base.xtext
+SHA1-Digest: 8g2MyNIyDdOCkoK+CHiMFFExyhs=
+
+Name: org/eclipse/ocl/xtext/base/cs2as/AmbiguitiesAdapter.class
+SHA1-Digest: G/um/34ZIOjLFY2/aTmsIJ6qF44=
+
+Name: org/eclipse/ocl/xtext/basecs/TypeRefCS.class
+SHA1-Digest: L5ErweT9OJlqefxrOhSON8iEBV4=
+
+Name: org/eclipse/ocl/xtext/basecs/ModelElementRefCS.class
+SHA1-Digest: ndXfL4Xfh0n9VSditid44rTFYbw=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/ElementCSImpl.class
+SHA1-Digest: NFSVKzsCSqIiWNwbSbX/Bd7YIA4=
+
+Name: org/eclipse/ocl/xtext/base/services/BaseValueConverterService$Es
+ capedIDConverter.class
+SHA1-Digest: h/NXKuf7LowWqrB+YIWpsOf2Ye8=
+
+Name: org/eclipse/ocl/xtext/basecs/RootPackageCS.class
+SHA1-Digest: GuQxgUULW1vDPENNyWv5wZDds18=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/ModelElementRefCSImpl.class
+SHA1-Digest: mYnQDtPVRacII1ephHpmU4WLSR4=
+
+Name: org/eclipse/ocl/xtext/base/services/BaseValueConverterService$Si
+ mpleIDConverter.class
+SHA1-Digest: 9xX/dDpE/nKDHbr2BdvV0fqPLxE=
+
+Name: org/eclipse/ocl/xtext/base/services/BinaryGrammarResourceFactory
+ Impl.class
+SHA1-Digest: tH8m9oJ1th8pWlKHosVwp4qQEqM=
+
+Name: org/eclipse/ocl/xtext/basecs/MultiplicityBoundsCS.class
+SHA1-Digest: mWz45/yfey2ZLm+zcVTfXywxEJw=
+
+Name: org/eclipse/ocl/xtext/base/services/BaseValueConverterService$Un
+ reservedNameConverter.class
+SHA1-Digest: JLFWzJINRA8DYTU8eyZRGgRdGjQ=
+
+Name: org/eclipse/ocl/xtext/base/cs2as/BasicContinuation.class
+SHA1-Digest: j0ZYjSEU7RTtnAfGWrJkHf4MYsE=
+
+Name: org/eclipse/ocl/xtext/base/attributes/ElementCSAttribution.class
+SHA1-Digest: 8+d4VUt+jn432mIbwbdMlG9buaM=
+
+Name: org/eclipse/ocl/xtext/base/serializer/BaseCrossReferenceSerializ
+ er.class
+SHA1-Digest: 0a2xuAXxyVkfRFaOk8TGTMl37z4=
+
+Name: org/eclipse/ocl/xtext/base/services/BaseValueConverterService$Nu
+ mberConverter.class
+SHA1-Digest: uY8FD7LQt+ocFMuLV/pOMvGSW5o=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/TemplateableElementCSImpl.clas
+ s
+SHA1-Digest: 0pG0VMg6CQ9D5If15VkEPG/84L8=
+
+Name: org/eclipse/ocl/xtext/base/cs2as/BaseCSPreOrderVisitor$Specializ
+ edTypeRefContinuation1.class
+SHA1-Digest: LQiiUFmrOIT/PhP9FtK15A/mJnU=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/MultiplicityCSImpl.class
+SHA1-Digest: 3gbeUdY+DqFMgwgQCvprR4y3V34=
+
+Name: org/eclipse/ocl/xtext/base/services/BaseGrammarAccess$StringLite
+ ralElements.class
+SHA1-Digest: hK8WHFAyjT71m3Yd/Kb1Rj9cuPs=
+
+Name: org/eclipse/ocl/xtext/basecs/TypeParameterCS.class
+SHA1-Digest: 5e9EJo2iifoW3gnYnYpwV1ojXwk=
+
+Name: org/eclipse/ocl/xtext/base/parser/antlr/internal/InternalBase.g
+SHA1-Digest: XEBegrbBBzWSDDKqk1aLsS2lYaE=
+
+Name: org/eclipse/ocl/xtext/base/services/BaseGrammarAccess$Unrestrict
+ edNameElements.class
+SHA1-Digest: fXmU/RIKGVxda3Fwqo5FRljOrvU=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/NamedElementCSImpl.class
+SHA1-Digest: TP8vPbKjlaoCCho2jR3m5cTfg98=
+
+Name: org/eclipse/ocl/xtext/base/parser/antlr/internal/InternalBaseLex
+ er$DFA11.class
+SHA1-Digest: vZtci2YVOz9zhFxflxMj0tUAR3s=
+
+Name: org/eclipse/ocl/xtext/base/services/BaseGrammarAccess$TypeRefCSE
+ lements.class
+SHA1-Digest: oTB7tiiuIArDE7xGMstCrxbRHQQ=
+
+Name: org/eclipse/ocl/xtext/base/validation/AbstractBaseJavaValidator.
+ class
+SHA1-Digest: OlK/cVmk9wlVPqW7u75+szL2cAI=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/PathElementCSImpl.class
+SHA1-Digest: JJzDpquzWNqVr0CPSTn0XDAbf1I=
+
+Name: org/eclipse/ocl/xtext/base/services/BaseGrammarAccess$Unreserved
+ NameElements.class
+SHA1-Digest: hr0huh39QhivhRS9use0SKzo9s4=
+
+Name: org/eclipse/ocl/xtext/base/utilities/CSI2ASMapping.class
+SHA1-Digest: nKyZgf39BRu/Wxw4g2R98YdLlE0=
+
+Name: org/eclipse/ocl/xtext/base/serializer/AbstractBaseSyntacticSeque
+ ncer.class
+SHA1-Digest: uSR3oN0B3M4I7Nii5mzV+SJzG4s=
+
+Name: org/eclipse/ocl/xtext/base/services/BaseGrammarAccess$Multiplici
+ tyCSElements.class
+SHA1-Digest: +pB1BanJX/YFpPDCSAiAMOw8K/Q=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/ModelElementCSImpl.class
+SHA1-Digest: 7XQia3+Y8hA2e/VIWlGv86IooNM=
+
+Name: org/eclipse/ocl/xtext/base/cs2as/BaseCSPostOrderVisitor$ListComp
+ letion.class
+SHA1-Digest: 5ujv8OdO7s0A05qWAyY9lQV9fYs=
+
+Name: org/eclipse/ocl/xtext/basecs/util/BaseCSAdapterFactory$1.class
+SHA1-Digest: LhOqQBPF7i3irIxz0FqevIRFmaQ=
+
+Name: org/eclipse/ocl/xtext/base/cs2as/CS2AS$MessageBinder.class
+SHA1-Digest: 5ZcPfDDjSh8jKuBAYYhROm5tn+0=
+
+Name: org/eclipse/ocl/xtext/base/services/BaseValueConverterService$Do
+ ubleQuotedStringConverter.class
+SHA1-Digest: Ylut4ykvmCJHSjAwr9sXIyfO+iQ=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/StructuredClassCSImpl.class
+SHA1-Digest: mob4Yc2pxkxxhVp0S8QgPr/2ksU=
+
+Name: org/eclipse/ocl/xtext/base/cs2as/BaseCSContainmentVisitor.class
+SHA1-Digest: lal/JjyQBL9Kz/fD2zePfEiPZ/o=
+
+Name: org/eclipse/ocl/xtext/base/utilities/AbstractGrammarResource.cla
+ ss
+SHA1-Digest: KAyQfJq/qVu+4FNkUdXX2NA7u+o=
+
+Name: org/eclipse/ocl/xtext/base/cs2as/ExceptionAdapter.class
+SHA1-Digest: WTkIGpS+Wc6YRrAhV9Szz9xNkok=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/TemplateBindingCSImpl.class
+SHA1-Digest: qub8SXUTBzFrpTJlm7R/9qXCOvA=
+
+Name: org/eclipse/ocl/xtext/basecs/PivotableElementCS.class
+SHA1-Digest: 5cXERKBbgdLuP0RhyY0SAsIkW3k=
+
+Name: org/eclipse/ocl/xtext/base/utilities/CS2ASLinker.class
+SHA1-Digest: puuFOCQ9RyoxIXLAXt0pwryWy8c=
+
+Name: org/eclipse/ocl/xtext/base/utilities/ElementUtil.class
+SHA1-Digest: TgCDcf18LCD5yhDQv1mi9G5SuUY=
+
+Name: org/eclipse/ocl/xtext/basecs/DocumentationCS.class
+SHA1-Digest: H8OBTNlWMBBCVHCVOVpwoZhd39I=
+
+Name: org/eclipse/ocl/xtext/base/cs2as/AbstractDependency.class
+SHA1-Digest: 0/g1Knynma7cPD2mHn6htUNSz7Q=
+
+Name: org/eclipse/ocl/xtext/basecs/TypedRefCS.class
+SHA1-Digest: kY5EzNE8lhaTW5b6hywEfXb9K6I=
+
+Name: org/eclipse/ocl/xtext/basecs/util/AbstractExtendingBaseCSVisitor
+ .class
+SHA1-Digest: fUIPQCg2/xSpzD+uahrt9OsRNec=
+
+Name: org/eclipse/ocl/xtext/base/services/BaseGrammarAccess$NextPathEl
+ ementCSElements.class
+SHA1-Digest: yLPf4uO7JxjFE5kKbzYujv5YLm8=
+
+Name: org/eclipse/ocl/xtext/basecs/PackageCS.class
+SHA1-Digest: 9QMZj6N8EYSjy37rRI7F4wMPKJc=
+
+Name: org/eclipse/ocl/xtext/basecs/EnumerationCS.class
+SHA1-Digest: oeozgaRer6FzrwalHfd6XUi+liE=
+
+Name: org/eclipse/ocl/xtext/base/cs2as/BaseCS2AS.class
+SHA1-Digest: 604Sp/+xyLvFJm/Rt11NRU9tUzU=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/TypeCSImpl.class
+SHA1-Digest: 3oIcDLdXLGp44RSh6hqyETMOvZU=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/PackageCSImpl.class
+SHA1-Digest: gsL4qkRCt/2H/lJ56dU42wEt43I=
+
+Name: org/eclipse/ocl/xtext/basecs/AnnotationElementCS.class
+SHA1-Digest: ydhCh1vmtghmFqNqSmxkXX0hq/g=
+
+Name: org/eclipse/ocl/xtext/base/cs2as/SingleContinuation.class
+SHA1-Digest: Ga6TjBQXFg31ipJi8xPlc9nl9q8=
+
+Name: org/eclipse/ocl/xtext/base/serializer/AbstractBaseSemanticSequen
+ cer.class
+SHA1-Digest: LIxBV2sg0fWRC9r6tUyo5X5x8xQ=
+
+Name: org/eclipse/ocl/xtext/base/services/BaseLinkingService.class
+SHA1-Digest: XbELb8eoqQXNznt632vnC/M5/1E=
+
+Name: org/eclipse/ocl/xtext/base/cs2as/BaseCSPreOrderVisitor$TypedRefC
+ ontinuation.class
+SHA1-Digest: rMuCT0Jo162vApzX1Eskw88Wsrk=
+
+Name: org/eclipse/ocl/xtext/base/services/BaseGrammarAccess$Multiplici
+ tyStringCSElements.class
+SHA1-Digest: kAyAhd6GtDUf8yBjFg4DPb21+j8=
+
+Name: org/eclipse/ocl/xtext/base/as2cs/AS2CSConversion$1.class
+SHA1-Digest: 0fLZJ1iDA7pFLKU0W6YWMm/fTM4=
+
+Name: org/eclipse/ocl/xtext/base/cs2as/PivotTypeOfRefDependency.class
+SHA1-Digest: H0gHTvdBIzo0Qq4DzxLhs/w5kSI=
+
+Name: org/eclipse/ocl/xtext/base/cs2as/ImportDiagnostic.class
+SHA1-Digest: xVNd2h8Go6aE1cy/z2cg/BYAOr0=
+
+Name: org/eclipse/ocl/xtext/base/services/BaseGrammarAccess$URIElement
+ s.class
+SHA1-Digest: CPc8Nh4n5bUFeOYji1BboTux/a4=
+
+Name: org/eclipse/ocl/xtext/base/services/BaseGrammarAccess.class
+SHA1-Digest: 5G0wP/9tMlwCsr4Vmhub7z33soQ=
+
+Name: org/eclipse/ocl/xtext/base/scoping/BaseScoping.class
+SHA1-Digest: +83miLOHWzSnYN61trHmdeUTmFY=
+
+Name: org/eclipse/ocl/xtext/base/cs2as/BaseCSPreOrderVisitor$TupleCont
+ inuation.class
+SHA1-Digest: TfyAtyIGgsfhY+Y7Kax7zY2051c=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/MultiplicityBoundsCSImpl.class
+SHA1-Digest: SzZJ+K12R8dfyaXTjpnkwp+eQSI=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/TupleTypeCSImpl.class
+SHA1-Digest: rWefWADFk3uoKUBW2mxJKvs5QtI=
+
+Name: org/eclipse/ocl/xtext/base/services/BaseGrammarAccess$FirstPathE
+ lementCSElements.class
+SHA1-Digest: /76x2gob7lkraRGj3GX51dCgzsg=
+
+Name: org/eclipse/ocl/xtext/basecs/TemplateParameterSubstitutionCS.cla
+ ss
+SHA1-Digest: /FVi+G3zNHAsL1W1bmB4+QJJ348=
+
+Name: org/eclipse/ocl/xtext/base/scoping/AbstractRootCSAttribution.cla
+ ss
+SHA1-Digest: +sy1oiNoH7YuaJhtlADvKQ+gxH0=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/ParameterCSImpl.class
+SHA1-Digest: VpCWVsGfQG/V9+/DI81g/LYRO/w=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/LambdaTypeCSImpl.class
+SHA1-Digest: occ3AT69Z0t3fUEME0ZJ4doS5Zc=
+
+Name: org/eclipse/ocl/xtext/base/utilities/AbstractExtendedParserConte
+ xt.class
+SHA1-Digest: 86S0RYJBI10DaNI0+XgW1yK9Exo=
+
+Name: org/eclipse/ocl/xtext/base/cs2as/PivotDependency.class
+SHA1-Digest: e5Tud7aPBulUwzYFAQoqnsq9rQA=
+
+Name: org/eclipse/ocl/xtext/base/cs2as/BaseCSPreOrderVisitor$OperatorE
+ xpContinuation.class
+SHA1-Digest: 8nk1728u0XnCOKSKi5srhRjUbB4=
+
+Name: org/eclipse/ocl/xtext/base/scoping/BaseScopeProvider.class
+SHA1-Digest: c76lAnpqvLAifpfAEAo+49fO+VM=
+
+Name: org/eclipse/ocl/xtext/base/scoping/BaseScopeView$1.class
+SHA1-Digest: G63thZkCpcHDp/VANlbewuhkVUk=
+
+Name: org/eclipse/ocl/xtext/base/utilities/BasePlugin.class
+SHA1-Digest: BupSh+Pg/trtgzT2BiAGbMVO89U=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/TypeRefCSImpl.class
+SHA1-Digest: si76yZCdvJJBiIo27vc4otF1k5Q=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/PathElementWithURICSImpl.class
+SHA1-Digest: dsHh3urfUdcbURDVB0lezXAqlyY=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/DocumentationCSImpl.class
+SHA1-Digest: bTN5w7jM+GVoSvpp7q7dftq8Hzo=
+
+Name: org/eclipse/ocl/xtext/base/parser/antlr/BaseParser.class
+SHA1-Digest: 0gw9ThEK0gjotusxj7i7jCOflGs=
+
+Name: org/eclipse/ocl/xtext/base/scoping/QualifiedPath.class
+SHA1-Digest: cUX2x3ZHqTU5nVq8d5b1r1mhUmk=
+
+Name: META-INF/eclipse.inf
+SHA1-Digest: KyT9FF7C7t86NoBoa2kZT3ZJBfw=
+
+Name: org/eclipse/ocl/xtext/base/as2cs/BaseDeclarationVisitor$1.class
+SHA1-Digest: 31dxrPv6hyKFS7jJL6lQByt+xWo=
+
+Name: org/eclipse/ocl/xtext/basecs/util/BaseCSValidator.class
+SHA1-Digest: KsQOZSK3+N/hCwZfsrJdod/HXGc=
+
+Name: org/eclipse/ocl/xtext/basecs/TemplateableElementCS.class
+SHA1-Digest: iko0nvUXwxAOWDfr+A+cFtwWCMI=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/RootPackageCSImpl.class
+SHA1-Digest: Hs50V5YhvEdRjfuLjcsGMFrDagc=
+
+Name: org/eclipse/ocl/xtext/base/cs2as/BaseCSPreOrderVisitor$LambdaCon
+ tinuation.class
+SHA1-Digest: Ewbt8OxG0n0JrTo48Rp24kL0nKU=
+
+Name: .options
+SHA1-Digest: 6PPCR66kUjcvVm5MlYdrVZ1MPEA=
+
+Name: org/eclipse/ocl/xtext/base/cs2as/PivotDependencies.class
+SHA1-Digest: ALRBxRx5vPZ/zAgy3JcqYDNAXdU=
+
+Name: org/eclipse/ocl/xtext/base/serializer/BaseHiddenTokenSequencer.c
+ lass
+SHA1-Digest: BbBkyZlZYcmV7t0hkhWxGwgHMeI=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/AnnotationElementCSImpl.class
+SHA1-Digest: NZT8Qe9ZVGMehPvHiUMKugmumRA=
+
+Name: build.properties
+SHA1-Digest: A/msI3gj+j/DfyXGufFtx5G7L0I=
+
+Name: org/eclipse/ocl/xtext/base/BaseGrammarResource$GrammarProvider.c
+ lass
+SHA1-Digest: fnlhXOWbpfIbkoRwQyinbjm7mIM=
+
+Name: org/eclipse/ocl/xtext/basecs/BaseCSFactory.class
+SHA1-Digest: iRSFSGzS+qhyt6k2Yewg0EdpYoc=
+
+Name: org/eclipse/ocl/xtext/basecs/ImportCS.class
+SHA1-Digest: kpa97eSP2+b2gt7QYsxKfAIiz0E=
+
+Name: org/eclipse/ocl/xtext/base/cs2as/CS2AS$UnresolvedProxyMessagePro
+ vider.class
+SHA1-Digest: +d/7nhOASirDg3ynNYdn2u2U3OQ=
+
+Name: org/eclipse/ocl/xtext/basecs/util/AbstractNullBaseCSVisitor.clas
+ s
+SHA1-Digest: mzFWIpXqMkKw8Da3iibdXLa2VHQ=
+
+Name: org/eclipse/ocl/xtext/base/validation/BaseJavaValidator.class
+SHA1-Digest: QGa1kWFUDi8v837QGOoAMFI/WlA=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/BaseCSFactoryImpl.class
+SHA1-Digest: 5K4m+DXis0X9biFfyUO9ligW8Fc=
+
+Name: org/eclipse/ocl/xtext/base/parser/antlr/internal/InternalBaseLex
+ er.class
+SHA1-Digest: 8OfoV0+c0GHZ46PwoNw4+yup8OU=
+
+Name: org/eclipse/ocl/xtext/basecs/TypedTypeRefCS.class
+SHA1-Digest: eCILXurP5Cw/Rb4WpCe390Z/Xvg=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/ConstraintCSImpl.class
+SHA1-Digest: ehU4K3LwbI+Wc0NfwGIdDmfv9b8=
+
+Name: plugin.properties
+SHA1-Digest: oVOy5YyfHhs6+dDHcqtmHIOE5sM=
+
+Name: org/eclipse/ocl/xtext/base/cs2as/ValidationDiagnostic.class
+SHA1-Digest: AGHFpMAvOw0r1VEzgaDGb8vnSdc=
+
+Name: org/eclipse/ocl/xtext/base/utilities/PivotDiagnosticConverter.cl
+ ass
+SHA1-Digest: JJpg9ChCmlHNE5Yz4hjFonUvpEI=
+
+Name: org/eclipse/ocl/xtext/base/AbstractBaseRuntimeModule.class
+SHA1-Digest: NyWIE8QG9Rh13e4qJbWA3J1ZJvk=
+
+Name: org/eclipse/ocl/xtext/base/scoping/AbstractJavaClassScope.class
+SHA1-Digest: 7nbZTg7bEAsrvbTAbgGp5RDqnrk=
+
+Name: org/eclipse/ocl/xtext/base/utilities/CS2ASLinker$DiagnosticWrapp
+ edException.class
+SHA1-Digest: XP24Bcgh75njIipw7gR9gWVimx0=
+
+Name: org/eclipse/ocl/xtext/base/services/BaseValueConverterService.cl
+ ass
+SHA1-Digest: kgD5eQAK5sXr3kcLBp2ThFsmt7Y=
+
+Name: plugin.xml
+SHA1-Digest: 9Wucy7riAqdKmmcbv+F1GyRVdgI=
+
+Name: org/eclipse/ocl/xtext/basecs/WildcardTypeRefCS.class
+SHA1-Digest: 1Ziy97sp5udwhTelWznuAJpzMBQ=
+
+Name: org/eclipse/ocl/xtext/base/scoping/BaseScoping$SimpleNamedElemen
+ tRefCSTypeUnresolvedProxyMessageProvider.class
+SHA1-Digest: ut2wJ2qNJN1NXlShlCCEAld/4Rs=
+
+Name: org/eclipse/ocl/xtext/base/cs2as/CS2AS$MessageBinderWithLineCont
+ ext.class
+SHA1-Digest: VKDhmi5BACW9boqpWm2yzx6Yq6o=
+
+Name: org/eclipse/ocl/xtext/base/as2cs/AS2CSConversion.class
+SHA1-Digest: Q6Ce5Tb4GksJ2EQZ9qsp29BI73U=
+
+Name: org/eclipse/ocl/xtext/base/scoping/BaseScoping$TypedTypeRefCSTyp
+ eUnresolvedProxyMessageProvider.class
+SHA1-Digest: oe5LQHIA0rylcM6W2eBSo6KU9ag=
+
+Name: org/eclipse/ocl/xtext/basecs/ReferenceCS.class
+SHA1-Digest: Yt0JX+O6iNcK8QulcaIFVyxsn+w=
+
+Name: org/eclipse/ocl/xtext/base/as2cs/BaseLocationInFileProvider.clas
+ s
+SHA1-Digest: D6/bFR/qGzRzYT2NUldKtpXVo/k=
+
+Name: org/eclipse/ocl/xtext/base/services/BaseGrammarAccess$TemplateBi
+ ndingCSElements.class
+SHA1-Digest: IgRQgwrvtKRV0FphwPokqPpDe5w=
+
+Name: org/eclipse/ocl/xtext/base/services/BaseGrammarAccess$TemplatePa
+ rameterSubstitutionCSElements.class
+SHA1-Digest: 5AYmhaDOvOWjBZxcHE54AON0HrA=
+
+Name: org/eclipse/ocl/xtext/base/cs2as/BaseCSPostOrderVisitor.class
+SHA1-Digest: L2zY4gJ9Cp0XznSnv4V2GmsmJhk=
+
+Name: org/eclipse/ocl/xtext/base/as2cs/AS2CS.class
+SHA1-Digest: mPeteustF1doyAu9maVVag7mhgw=
+
+Name: org/eclipse/ocl/xtext/base/serializer/BaseSemanticSequencer.clas
+ s
+SHA1-Digest: YacFyPAPLcdiZwhFRjGJfHl8n6U=
+
+Name: org/eclipse/ocl/xtext/base/utilities/CSI2ASMapping$RootCSI.class
+SHA1-Digest: xrNeBt775yeCtnGzy6EWshvY2gc=
+
+Name: org/eclipse/ocl/xtext/basecs/util/BaseCSSwitch.class
+SHA1-Digest: +bRryKYm4JMbEmT7UhUzBTU8XHs=
+
+Name: org/eclipse/ocl/xtext/basecs/BaseCSPackage.class
+SHA1-Digest: si3FdxLmNkpBPiAVfQvTgBP4YVI=
+
+Name: org/eclipse/ocl/xtext/base/cs2as/MultipleContinuation.class
+SHA1-Digest: q+bKFcTCM2AGhdM69Cw4AWVkJpY=
+
+Name: org/eclipse/ocl/xtext/basecs/StructuralFeatureCS.class
+SHA1-Digest: BXwJ1i53IZEZBTuRg6bp5uDM7I8=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/BaseCSPackageImpl.class
+SHA1-Digest: frTC1Qn0BpKWZ4syqjiG2aQQmNc=
+
+Name: org/eclipse/ocl/xtext/basecs/NamespaceCS.class
+SHA1-Digest: wflLwxGcE46a+T+26MYKNXJ3Tro=
+
+Name: org/eclipse/ocl/xtext/base/utilities/PivotResourceValidator.clas
+ s
+SHA1-Digest: p9wEV/TOOgKsL/rZ82b5XAfP0Q4=
+
+Name: org/eclipse/ocl/xtext/base/parser/antlr/BaseAntlrTokenFileProvid
+ er.class
+SHA1-Digest: cMLooGzp+Sj4j63opoWqUEMxzHI=
+
+Name: org/eclipse/ocl/xtext/base/cs2as/CS2ASConversion$1.class
+SHA1-Digest: tH+IQVSKX/Hgkvj3ui8scufaKoo=
+
+Name: org/eclipse/ocl/xtext/base/cs2as/CS2AS$AbstractUnresolvedProxyMe
+ ssageProvider.class
+SHA1-Digest: 9FwMVuoK0X9OM+W+qIjPhNaj0OE=
+
+Name: org/eclipse/ocl/xtext/base/BaseStandaloneSetupGenerated.class
+SHA1-Digest: hDpeVjhWsFx1nSvJWz/O/r/h4A8=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/AttributeCSImpl.class
+SHA1-Digest: fjZG5btyxPGQjcjTAtJ92gWIiME=
+
+Name: org/eclipse/ocl/xtext/basecs/OperationCS.class
+SHA1-Digest: YyMFyGNPI9fYHp0AT01e56+PwYM=
+
+Name: org/eclipse/ocl/xtext/basecs/ContextLessElementCS.class
+SHA1-Digest: SR3AV9AUqAZB36ESdCexgF6c1ew=
+
+Name: org/eclipse/ocl/xtext/basecs/util/DecorableBaseCSVisitor.class
+SHA1-Digest: JjV9pUikBZXild3TaisadoM6MRo=
+
+Name: org/eclipse/ocl/xtext/base/parser/antlr/internal/InternalBasePar
+ ser$FollowSets000.class
+SHA1-Digest: TYEkAyFAx/rywsGDt4k04HexqtQ=
+
+Name: org/eclipse/ocl/xtext/base/services/BaseGrammarAccess$TypedRefCS
+ Elements.class
+SHA1-Digest: rSt2i9P+h96YlA3GEVWlW3meGgI=
+
+Name: org/eclipse/ocl/xtext/base/cs2as/CS2AS$DefaultMessageBinder.clas
+ s
+SHA1-Digest: heLEsbhfRoYD296NzTXwWXS4JRQ=
+
+Name: org/eclipse/ocl/xtext/base/utilities/ExtendedParserContext.class
+SHA1-Digest: JN+8MgQUW8wmWq+ub5gZt3R4pK4=
+
+Name: org/eclipse/ocl/xtext/basecs/MultiplicityCS.class
+SHA1-Digest: TpdukMSGYv5gMw9gqIEfOs9aGwY=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/ImportCSImpl.class
+SHA1-Digest: W4r1d0XDFw6UCGYMUQr4AKFFfY8=
+
+Name: model/ReadMe.txt
+SHA1-Digest: +jx5+OE8fTBEu+KblL9h4VNXXq4=
+
+Name: org/eclipse/ocl/xtext/base/services/BaseGrammarAccess$Multiplici
+ tyBoundsCSElements.class
+SHA1-Digest: 5SUb9iRfJoFg/c2z8+2eSZ51ZQ8=
+
+Name: org/eclipse/ocl/xtext/basecs/FeatureCS.class
+SHA1-Digest: hlvrPxg3jAysbrOx1bY3J2KbC1Q=
+
+Name: org/eclipse/ocl/xtext/basecs/NamedElementCS.class
+SHA1-Digest: Qg2wvvLn1QpD7HMbToyjhCNqkKU=
+
+Name: org/eclipse/ocl/xtext/base/cs2as/BaseCSPreOrderVisitor$TemplateS
+ ignatureContinuation.class
+SHA1-Digest: awPkRisIDbbB6fPXYClXyTlUvBw=
+
+Name: org/eclipse/ocl/xtext/basecs/ClassCS.class
+SHA1-Digest: 2yMJU/UTP4IN/e8tbwx9TxUzSjo=
+
+Name: org/eclipse/ocl/xtext/base/cs2as/Dependency.class
+SHA1-Digest: Wi8jCTVoJ/JYZyJR6M2uQWGQYTk=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/FeatureCSImpl.class
+SHA1-Digest: DwkNZd9RRYxUHi3C6NI9lwcaf1w=
+
+Name: org/eclipse/ocl/xtext/basecs/ElementCS.class
+SHA1-Digest: zSzc4/So1UXIU/968KNTij+551g=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/AnnotationCSImpl.class
+SHA1-Digest: FUNx8fylzKMy0eFgmTSytYYXnuA=
+
+Name: model/BaseCS.genmodel
+SHA1-Digest: vwFfT5is+GZIoSbQFMX1rDillAE=
+
+Name: org/eclipse/ocl/xtext/basecs/util/AbstractDelegatingBaseCSVisito
+ r.class
+SHA1-Digest: HOB6mqp1K/CajGI96Uf8NuuUEp4=
+
+Name: org/eclipse/ocl/xtext/base/formatting/BaseFormatter.class
+SHA1-Digest: bKd9GhbW3Tbx9q4PX4LIV7qwJ8o=
+
+Name: org/eclipse/ocl/xtext/base/cs2as/CS2AS$TypeValueFilter.class
+SHA1-Digest: jAbyvCsbS4IsFR/l0BxyfKu5YCM=
+
+Name: org/eclipse/ocl/xtext/basecs/ModelElementCS.class
+SHA1-Digest: 4pmwRhb3Ye1SN37j5eGNsyH/9OE=
+
+Name: org/eclipse/ocl/xtext/base/services/BaseValueConverterService$Na
+ meConverter.class
+SHA1-Digest: T4ModYPlFBikCVwfXpBsIzy2s7c=
+
+Name: org/eclipse/ocl/xtext/base/services/BaseQualifiedNameProvider.cl
+ ass
+SHA1-Digest: WtBJgGCzDihBviXpgyLuCi8s4uI=
+
+Name: org/eclipse/ocl/xtext/base/services/BaseLinkingDiagnosticMessage
+ Provider.class
+SHA1-Digest: m0gDyqFi2x9yHpEsUoZE8pKjeUg=
+
+Name: org/eclipse/ocl/xtext/basecs/util/VisitableCS.class
+SHA1-Digest: Btgil7JyH7rZ/m2GLW7zNwknuSc=
+
+Name: org/eclipse/ocl/xtext/base/cs2as/InterDependency.class
+SHA1-Digest: YmUmczNHz7Fwl2L12kr6DgXiwho=
+
+Name: org/eclipse/ocl/xtext/base/services/RetokenizingTokenSource.clas
+ s
+SHA1-Digest: uNy1j2rK9DIhO7RyI1uP6zAksLg=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/ReferenceCSImpl.class
+SHA1-Digest: wsDxSQitFCMh1Af9BXHSI11LbAs=
+
+Name: org/eclipse/ocl/xtext/base/attributes/PathElementCSAttribution.c
+ lass
+SHA1-Digest: 5hERxO0W3epHQwbr1dUKn5saGKU=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/TemplateParameterCSImpl.class
+SHA1-Digest: +apPSyzm4yAF8Vq2f0y9SADjcnc=
+
+Name: org/eclipse/ocl/xtext/basecs/PathElementCS.class
+SHA1-Digest: qRb494nVRyQaegSwGWNGGC+/uv0=
+
+Name: org/eclipse/ocl/xtext/base/services/BaseValueConverterService$Ab
+ stractIDConverter.class
+SHA1-Digest: LAALK0o9JwRxtwPYJZZMm/JGZbA=
+
+Name: org/eclipse/ocl/xtext/basecs/util/BaseCSAdapterFactory.class
+SHA1-Digest: MER26cnP51j5LsVcB+T+izp1P2g=
+
+Name: org/eclipse/ocl/xtext/base/services/BaseValueConverterService$ID
+ Converter.class
+SHA1-Digest: qRcV4HBRhaymWy+woVS7+hnZUl4=
+
+Name: org/eclipse/ocl/xtext/basecs/AttributeCS.class
+SHA1-Digest: R7RdcxWSXWtI9EzIbXB8Xdwxth0=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/StructuralFeatureCSImpl.class
+SHA1-Digest: kNIRuZ6JjNrDOigdksKNHCUGrbI=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/NamespaceCSImpl.class
+SHA1-Digest: I+msSIjcu3N3NM+XKT79VEd6TVM=
+
+Name: org/eclipse/ocl/xtext/base/parser/antlr/internal/InternalBasePar
+ ser.class
+SHA1-Digest: iBxtv9QS+H04hXnwQ3J2/QWEDZg=
+
+Name: org/eclipse/ocl/xtext/basecs/util/AbstractBaseCSVisitor.class
+SHA1-Digest: RGs4ZTff1wO0t0lGsATMfJyQ8/g=
+
+Name: org/eclipse/ocl/xtext/base/scoping/IScopeView.class
+SHA1-Digest: PU5OcwdYeiyiTq8RgMIJWiP1CXQ=
+
+Name: org/eclipse/ocl/xtext/basecs/AnnotationCS.class
+SHA1-Digest: 4kox6+Ry5Qy1nnnt4fpnE2ZQ6Pk=
+
+Name: org/eclipse/ocl/xtext/base/cs2as/CS2ASConversion$CacheKey.class
+SHA1-Digest: uJ1KNdWOBC/ZwJLvyfFuuNgVNyQ=
+
+Name: org/eclipse/ocl/xtext/base/attributes/ImportCSAttribution.class
+SHA1-Digest: wvBlcctrlllH5sv6tD2FbGPjJ0s=
+
+Name: org/eclipse/ocl/xtext/base/utilities/CSI2ASMapping$MultipleChild
+ CSI.class
+SHA1-Digest: 11hN6W1Lei8gyAxH9FDrITTWREg=
+
+Name: org/eclipse/ocl/xtext/basecs/ParameterCS.class
+SHA1-Digest: B8FRdRbFLmqpMdweZ+oDQXx3uto=
+
+Name: org/eclipse/ocl/xtext/base/utilities/NamedElementCSLabelGenerato
+ r.class
+SHA1-Digest: m80ZJZ8yy5InBzY0RWpu6ZV7R5M=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/OperationCSImpl.class
+SHA1-Digest: jzAQ9kYZGHl7biddnAOCGv1gNxI=
+
+Name: org/eclipse/ocl/xtext/base/services/BaseValueConverterService$Mu
+ ltiLineSingleQuotedStringConverter.class
+SHA1-Digest: I0CyIvKtQSHhYXZXKCjj8GYuRqQ=
+
+Name: org/eclipse/ocl/xtext/base/BaseRuntimeModule.class
+SHA1-Digest: XJIwksU2iN0jO3wBDPos2vh0mnE=
+
+Name: org/eclipse/ocl/xtext/base/as2cs/BaseDeclarationVisitor.class
+SHA1-Digest: F/01iR4zkf6zrIBTIk9z7S20fR0=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/ClassCSImpl.class
+SHA1-Digest: QW/xquDaAtwPHuJScHJo+FRL8uA=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/TypedElementCSImpl.class
+SHA1-Digest: FCM31ymdNWr04jFpkIFkBcrJqZo=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/ContextLessElementCSImpl.class
+SHA1-Digest: VWh7Dgq/wCY6Q4Yg2WB+rLFEHbY=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/WildcardTypeRefCSImpl.class
+SHA1-Digest: HhsIdNAyeSduf3oWjhaw8kCVGPg=
+
+Name: org/eclipse/ocl/xtext/basecs/DetailCS.class
+SHA1-Digest: oYasgJ4ipcjqq+A7fjUt932MVus=
+
+Name: org/eclipse/ocl/xtext/basecs/BaseCSPackage$Literals.class
+SHA1-Digest: GfBsZID28a+T6xPnhnEOLO992ds=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/SpecificationCSImpl.class
+SHA1-Digest: MHN4ln/xlgZHTLjghHGlP+O6VSM=
+
+Name: org/eclipse/ocl/xtext/base/attributes/RootCSAttribution.class
+SHA1-Digest: mPoAoohBrV1DZc+ej+LY2Ad2WoE=
+
+Name: about.html
+SHA1-Digest: 0JTkoQUQP6+DMkOoqOTuamUKhd0=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/EnumerationCSImpl.class
+SHA1-Digest: LJ7tnPgLBXm8XeDizD88CZaHKu0=
+
+Name: org/eclipse/ocl/xtext/base/as2cs/AliasAnalysis.class
+SHA1-Digest: PTW0YNhZsTvfc0n0muLIQk8ycTE=
+
+Name: org/eclipse/ocl/xtext/base/cs2as/BaseCSPreOrderVisitor$Specializ
+ edTypeRefContinuation2.class
+SHA1-Digest: +FNSxn+Ww7SWFroh9zZxsEPiaE0=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/PivotableElementCSImpl.class
+SHA1-Digest: LTkftxI0tvb0Emze2jFC3tUjRzo=
+
+Name: org/eclipse/ocl/xtext/base/cs2as/CS2ASConversion.class
+SHA1-Digest: 3tLKdi3cGrvCajqfDsTbB3MIJI4=
+
+Name: org/eclipse/ocl/xtext/base/BaseGrammarResource$_Base.class
+SHA1-Digest: Ezu4k1iG8Qq/gJdSKE9R3Zf6+Dk=
+
+Name: org/eclipse/ocl/xtext/base/cs2as/BaseCSPreOrderVisitor$Unspecial
+ izedTypeRefContinuation.class
+SHA1-Digest: 6WMkHruCT+lvvcyQjiZNBH18d9o=
+
+Name: org/eclipse/ocl/xtext/base/services/BaseGrammarAccess$UPPEREleme
+ nts.class
+SHA1-Digest: 1fHUPQDJIks/LB0EcUo3LefuIjw=
+
+Name: org/eclipse/ocl/xtext/base/services/BaseValueConverterService$Si
+ ngleQuotedStringConverter.class
+SHA1-Digest: YiLisNelnUV3xakbda+pHkD6WT8=
+
+Name: org/eclipse/ocl/xtext/basecs/RootCS.class
+SHA1-Digest: 7IdcaRAHmXhnTX7naOWWm8cC2wM=
+
+Name: org/eclipse/ocl/xtext/base/cs2as/CS2AS.class
+SHA1-Digest: U4i1dDw2WCv2Tw6k3S0ddMjZ+Yo=
+
+Name: org/eclipse/ocl/xtext/base/cs2as/BaseCSPreOrderVisitor$Primitive
+ TypeRefContinuation.class
+SHA1-Digest: Nm0pimGwAOHPf4Mbmuyi+WCT1vU=
+
+Name: org/eclipse/ocl/xtext/basecs/TuplePartCS.class
+SHA1-Digest: jYk9m8hD1878wHlmEoprJG+pWVY=
+
+Name: org/eclipse/ocl/xtext/basecs/EnumerationLiteralCS.class
+SHA1-Digest: iUi468Ifetcof8lLCP7mXNGHQfo=
+
+Name: org/eclipse/ocl/xtext/base/utilities/CSI2ASMapping$SingleChildCS
+ I.class
+SHA1-Digest: 0JFDwZK7RcBVoWvhA3J1YHf+xAs=
+
+Name: org/eclipse/ocl/xtext/base/cs2as/BaseCSLeft2RightVisitor.class
+SHA1-Digest: rvTNFOb89f2YfoHANRzaDEuB020=
+
+Name: org/eclipse/ocl/xtext/basecs/MultiplicityStringCS.class
+SHA1-Digest: FeEuMeyi/0wiSneK2wrwoHC8P3w=
+
+Name: org/eclipse/ocl/xtext/base/cs2as/BaseCSPreOrderVisitor$TypeParam
+ eterContinuation.class
+SHA1-Digest: dmW8oSuNfPm3BIvKFwE+Z57rMB8=
+
+Name: org/eclipse/ocl/xtext/base/services/BaseGrammarAccess$IDElements
+ .class
+SHA1-Digest: ASNpsFnq/Ej11JJ882VrbbYZsH8=
+
+Name: org/eclipse/ocl/xtext/base/utilities/BasePlugin$Implementation.c
+ lass
+SHA1-Digest: Y4tckb+gAtxh64Cgj+GHfL/td10=
+
+Name: org/eclipse/ocl/xtext/base/services/BaseGrammarAccess$TypeParame
+ terCSElements.class
+SHA1-Digest: k7lbfMD9r7/xcysIvQHAt7aVEo4=
+
+Name: org/eclipse/ocl/xtext/base/services/BaseGrammarAccess$LOWEREleme
+ nts.class
+SHA1-Digest: Bl/3+jWRmkdKWTEfOzEWWeXvL7o=
+
+Name: org/eclipse/ocl/xtext/base/services/BaseGrammarAccess$PathNameCS
+ Elements.class
+SHA1-Digest: Tj2CrnJ5FAOg7GqB/+yJG3q14HU=
+
+Name: org/eclipse/ocl/xtext/base/serializer/BaseCrossReferenceSerializ
+ er$AcceptorHelper$1.class
+SHA1-Digest: P5cv7/YaSGM2qG9D1YBd3iUBtKo=
+
+Name: org/eclipse/ocl/xtext/basecs/DataTypeCS.class
+SHA1-Digest: b5LS9rvrhYl+cBa6MeHnMBO4s5Q=
+
+Name: org/eclipse/ocl/xtext/base/services/BaseQualifiedNameConverter.c
+ lass
+SHA1-Digest: ruW4DzYDMMXhma3YbZ3iYyz63Fw=
+
+Name: model/BaseCS.ecore
+SHA1-Digest: emS5zbEkDvoqWA4AGUpQbG1giLg=
+
+Name: org/eclipse/ocl/xtext/basecs/PackageOwnerCS.class
+SHA1-Digest: F0Jned01Hexkl5nSSKtpragEvnQ=
+
+Name: org/eclipse/ocl/xtext/base/formatting/AbstractBaseFormatter.clas
+ s
+SHA1-Digest: cLrfC2nzVvtzaA0vErakS5ej610=
+
+Name: org/eclipse/ocl/xtext/base/cs2as/BaseFragmentProvider.class
+SHA1-Digest: LZHZ2dxnz4EaJProFz4paWy97R0=
+
+Name: org/eclipse/ocl/xtext/base/services/BaseValueConverterService$Un
+ quotedStringConverter.class
+SHA1-Digest: zLGSVYWYr2lIUCOmoyQ7W17nS+k=
+
+Name: org/eclipse/ocl/xtext/basecs/SpecificationCS.class
+SHA1-Digest: 9HMVnLq57V2jgIHqMQL6rjK0HeQ=
+
+Name: org/eclipse/ocl/xtext/base/cs2as/BaseCSPreOrderVisitor$Parameter
+ Continuation.class
+SHA1-Digest: VHL4WWmWr9ctc5g2ZwtgdjeGbVg=
+
+Name: org/eclipse/ocl/xtext/base/services/BaseValueConverterService$Bi
+ naryOperatorNameConverter.class
+SHA1-Digest: is1Cw+Y4uCe4O4v6SxInnzpHR6M=
+
+Name: org/eclipse/ocl/xtext/basecs/PrimitiveTypeRefCS.class
+SHA1-Digest: N4kWeCB4fBuw0W8oZe9F1o8Pbgo=
+
+Name: org/eclipse/ocl/xtext/base/as2cs/BaseAS2CS$Factory.class
+SHA1-Digest: rG1xxVJiQ+JmNq2CukAFjwk2iJY=
+
+Name: org/eclipse/ocl/xtext/base/cs2as/LibraryDiagnostic.class
+SHA1-Digest: FBDdYN4WD12337y9bU8+Bw6ANhQ=
+
+Name: org/eclipse/ocl/xtext/base/cs2as/BaseCSPreOrderVisitor.class
+SHA1-Digest: 2fKRzIYIS99+y2O9wEvSVL4/jKg=
+
+Name: org/eclipse/ocl/xtext/base/as2cs/BaseReferenceVisitor.class
+SHA1-Digest: evp2v9VXqkeTAuflScTd4HtlmTE=
+
+Name: org/eclipse/ocl/xtext/base/utilities/BaseCSResource.class
+SHA1-Digest: lNw8mVUb+Dy4eynYOxbRVR6+ZNo=
+
+Name: org/eclipse/ocl/xtext/base/utilities/CSI2ASMapping$AbstractCSI.c
+ lass
+SHA1-Digest: PW3c87ovjpyuyJ8vvGSgMWbT8P8=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/DataTypeCSImpl.class
+SHA1-Digest: erLl4tpJ2LgpZ3cS6Os7zFuBuOY=
+
+Name: org/eclipse/ocl/xtext/base/services/BinaryGrammarResourceFactory
+ Impl$1.class
+SHA1-Digest: scCmggT02KBm72sGI6kXP87owdY=
+
+Name: org/eclipse/ocl/xtext/basecs/LambdaTypeCS.class
+SHA1-Digest: Y0qRrwzrghma/xCRl6xm0gNetu0=
+
+Name: org/eclipse/ocl/xtext/base/Base.xtextbin
+SHA1-Digest: Xim34NRpSspqY0tGhX+3RB0vV74=
+
+Name: org/eclipse/ocl/xtext/base/as2cs/AS2CS$AbstractFactory.class
+SHA1-Digest: YsnBFKQ5jolLPCjjI9pU14p7jQQ=
+
+Name: org/eclipse/ocl/xtext/base/cs2as/CS2AS$UndecoratedNameFilter.cla
+ ss
+SHA1-Digest: 1ACnuvFrtJpkBW6HIhJbM5iMjCY=
+
+Name: org/eclipse/ocl/xtext/base/as2cs/AS2CS$Factory.class
+SHA1-Digest: k/sEg0EGSRQ1Ytlqf4QS4Cps7hY=
+
+Name: org/eclipse/ocl/xtext/base/cs2as/BooleanDependency.class
+SHA1-Digest: iQiVzk4rs/9z7PNfYfUxw7dr0p0=
+
+Name: org/eclipse/ocl/xtext/base/services/BaseGrammarAccess$Identifier
+ Elements.class
+SHA1-Digest: 3WrmlvHSB4M+9JeaxWQufc2e+oI=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/PackageOwnerCSImpl.class
+SHA1-Digest: QsxAHeNVg205ZlB+nPvBBW6gf30=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/TuplePartCSImpl.class
+SHA1-Digest: mPFCFOmcw6uf89xIbUTAKdxR49o=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/DetailCSImpl.class
+SHA1-Digest: mBstiUvA/UvvIIOToFYw6jX5TfQ=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/PrimitiveTypeRefCSImpl.class
+SHA1-Digest: fzeH3TUuV1UUHqbN9kZoo04xEMA=
+
+Name: org/eclipse/ocl/xtext/base/utilities/CSI2ASMapping$HashedCSIs.cl
+ ass
+SHA1-Digest: MQPOi7fDupLOGiL7+LrxshTxpaw=
+
+Name: org/eclipse/ocl/xtext/basecs/TupleTypeCS.class
+SHA1-Digest: g0ckpnPj66PQamFw4f3pChXEHwU=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/TemplateSignatureCSImpl.class
+SHA1-Digest: UMCDMGUbfO4oCRNXqMvqPZjlZ/U=
+
+Name: org/eclipse/ocl/xtext/basecs/PathElementWithURICS.class
+SHA1-Digest: DTDybkRzAZVPQRfcILlM34wBGw8=
+
+Name: org/eclipse/ocl/xtext/basecs/util/BaseCSVisitor.class
+SHA1-Digest: AC0mCHGeIURlGAgcSLdx7S1gw3w=
+
+Name: org/eclipse/ocl/xtext/base/BaseGrammarResource.class
+SHA1-Digest: SVHnUWax5U63eiIsvR2BakzyI3w=
+
+Name: org/eclipse/ocl/xtext/basecs/TypedElementCS.class
+SHA1-Digest: wIB0usgU0J1GR+bnoKmrokbgbB0=
+
+Name: org/eclipse/ocl/xtext/base/cs2as/Continuation.class
+SHA1-Digest: J10vG9PfBhJxpfobnjPfZgz3NRw=
+
+Name: org/eclipse/ocl/xtext/base/serializer/BaseCrossReferenceSerializ
+ er$AcceptorHelper.class
+SHA1-Digest: 1IriM2dedk/ZPU3v5WwKJ1c7hkM=
+
+Name: org/eclipse/ocl/xtext/basecs/StructuredClassCS.class
+SHA1-Digest: UYRfjGDmZqQR9tfDjb5W05lf05M=
+
+Name: org/eclipse/ocl/xtext/base/services/PivotResourceServiceProvider
+ .class
+SHA1-Digest: G52tAMX1Ovg0evRzfFZEY0TcSjo=
+
+Name: org/eclipse/ocl/xtext/base/scoping/BaseScopeView.class
+SHA1-Digest: WmHNmyOaVnxiO7RMPmE2jzMsB9Q=
+
+Name: org/eclipse/ocl/xtext/basecs/TemplateBindingCS.class
+SHA1-Digest: IcE7uCpWlr4SH/mFfIKwyVWI5DM=
+
+Name: org/eclipse/ocl/xtext/base/attributes/PivotableElementCSAttribut
+ ion.class
+SHA1-Digest: GsISFiW3o4HT8xlhjP2mQxv/Cm4=
+
+Name: org/eclipse/ocl/xtext/basecs/TypeCS.class
+SHA1-Digest: JFWhYk3EXsuQEkZ+M26w3o8EA/A=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/TemplateParameterSubstitutionC
+ SImpl.class
+SHA1-Digest: Vuxu7Lh+gUrfxxahYdxuoyBfw1I=
+
+Name: org/eclipse/ocl/xtext/base/services/BaseValueConverterService$Un
+ restrictedNameConverter.class
+SHA1-Digest: Qei4e562zTy4MRhofp1ylNxXjzo=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/EnumerationLiteralCSImpl.class
+SHA1-Digest: mGpRn0u36s8BT+58rs0FT2wvjiM=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/TypedTypeRefCSImpl.class
+SHA1-Digest: qwlorEwjU+WdSRcxzCTAMsH0HYI=
+
+Name: org/eclipse/ocl/xtext/base/services/BaseGrammarAccess$TemplateSi
+ gnatureCSElements.class
+SHA1-Digest: xQ6La20f7ASbgjpJE2DKr96RRAc=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/MultiplicityStringCSImpl.class
+SHA1-Digest: v2sObmQFJM5ZPKR09butDgbCiGM=
+
+Name: org/eclipse/ocl/xtext/base/as2cs/BaseAS2CS.class
+SHA1-Digest: aDkyVjuivQ6vvUvA2xdeDj1BI08=
+
+Name: org/eclipse/ocl/xtext/basecs/PathNameCS.class
+SHA1-Digest: nPbAEDlfS1Uz7vq6ipnQTbRgmCY=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/ElementRefCSImpl.class
+SHA1-Digest: gVraPHds/Xl7bbrz8sWOzMi2l0E=
+
+Name: org/eclipse/ocl/xtext/base/as2cs/BaseDeclarationVisitor$2.class
+SHA1-Digest: s9Q2jKTZXWnzXYyziLUFsooDiTY=
+
+Name: org/eclipse/ocl/xtext/base/BaseStandaloneSetup.class
+SHA1-Digest: cp+8Eg5lz4ZOmjeaMnP+1CYtWuk=
+
+Name: org/eclipse/ocl/xtext/base/cs2as/BaseCSPreOrderVisitor$ClassSupe
+ rsContinuation.class
+SHA1-Digest: JQ4XAxjme0X0RHBiXD8bUQZbm3Y=
+
+Name: org/eclipse/ocl/xtext/base/attributes/ImportCSAttribution$Import
+ Adapter.class
+SHA1-Digest: qcPDYGde2mOYT/kbJIb2Xp2X1OU=
+
+Name: org/eclipse/ocl/xtext/basecs/TemplateParameterCS.class
+SHA1-Digest: ulNiX4AMNdZZVOE+AkH2YaX9CK0=
+
+Name: org/eclipse/ocl/xtext/base/services/BaseGrammarAccess$TypedTypeR
+ efCSElements.class
+SHA1-Digest: hR7eSMFkh8sqXR3go1pyl2wV16I=
+
+Name: org/eclipse/ocl/xtext/basecs/ConstraintCS.class
+SHA1-Digest: 82SflDsa4u6N3QG6GJi31zJqI7M=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/TypeParameterCSImpl.class
+SHA1-Digest: lD/4SmQ+ORjHW9qIn1izw7R7KqE=
+
+Name: org/eclipse/ocl/xtext/base/utilities/CSI.class
+SHA1-Digest: YKb5eVIKcZX+9L4z2iyrGVHmsUs=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/TypedRefCSImpl.class
+SHA1-Digest: csyGzNCBmaOFiNZOK2xEJ53DOXI=
+
+Name: org/eclipse/ocl/xtext/base/attributes/DebugPivotCSAttribution.cl
+ ass
+SHA1-Digest: QMBBj3oMcR/q3er62l7khnrcVzY=
+
+Name: org/eclipse/ocl/xtext/base/cs2as/PivotHasSuperClassesDependency.
+ class
+SHA1-Digest: wEUYlWpv1pFdgQsOKZw4W+KNnUM=
+
+Name: org/eclipse/ocl/xtext/base/utilities/PivotResourceValidator$Vali
+ dationDiagnostic.class
+SHA1-Digest: kNpUmddGTW31HGJVDnENsZyh7Uc=
+
+Name: org/eclipse/ocl/xtext/basecs/TemplateSignatureCS.class
+SHA1-Digest: 7bCCELoALe6ILiw+E675mJL9UdA=
+
+Name: org/eclipse/ocl/xtext/basecs/impl/PathNameCSImpl.class
+SHA1-Digest: /rVM4JJNAe8YQCF8cTgw1ifV5is=
+
+Name: org/eclipse/ocl/xtext/base/serializer/BaseSyntacticSequencer.cla
+ ss
+SHA1-Digest: nkURXEZLRFb62jAmcHKL/ciy17w=
+
+Name: org/eclipse/ocl/xtext/base/services/BaseGrammarAccess$WildcardTy
+ peRefCSElements.class
+SHA1-Digest: NT+SmnU+Z0Rq7lz6PpbEeUyWhM8=
+

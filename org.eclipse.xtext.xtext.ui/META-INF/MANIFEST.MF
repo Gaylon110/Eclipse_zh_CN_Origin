@@ -1,0 +1,594 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.xtext.xtext.ui;singleton:=true
+Archiver-Version: Plexus Archiver
+Built-By: jenkins
+Require-Bundle: org.eclipse.xtext.ui,org.eclipse.ui.ide;bundle-version
+ ="3.6.0",org.eclipse.jdt.core;bundle-version="3.6.0",org.eclipse.debu
+ g.ui;bundle-version="3.6.0",org.eclipse.help;bundle-version="3.5.0",o
+ rg.eclipse.emf.codegen.ecore;bundle-version="2.10.2",org.eclipse.core
+ .expressions;bundle-version="3.4.0",org.eclipse.xtext.ui.shared,org.e
+ clipse.ui.editors;bundle-version="3.6.0",org.eclipse.ui;bundle-versio
+ n="3.6.0",org.eclipse.emf.mwe2.language;bundle-version="2.2.0";resolu
+ tion:=optional;x-installation:=greedy,org.eclipse.emf.mwe2.launch;bun
+ dle-version="2.2.0";resolution:=optional;x-installation:=greedy,org.e
+ clipse.pde.ui;bundle-version="3.6.0";resolution:=optional;x-installat
+ ion:=greedy,org.eclipse.xtext.builder,org.antlr.runtime;bundle-versio
+ n="[3.2.0,3.2.1)",org.eclipse.compare;bundle-version="3.5.101",org.ec
+ lipse.xtext.ui.codetemplates.ui,org.eclipse.xtext.xbase.lib,org.eclip
+ se.jface.databinding;bundle-version="1.3.1",org.eclipse.core.databind
+ ing;bundle-version="1.2.0",org.eclipse.core.databinding.beans;bundle-
+ version="1.2.0",org.eclipse.core.databinding.property;bundle-version=
+ "1.2.0",org.eclipse.xtend.lib;resolution:=optional,org.eclipse.xtext.
+ xtext.wizard,org.eclipse.jdt.launching;bundle-version="3.5.0",org.ecl
+ ipse.xtext.xtext.ide
+Bundle-ManifestVersion: 2
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-Vendor: %providerName
+Import-Package: org.apache.log4j;version="1.2.15"
+Export-Package: org.eclipse.xtext.ui.editor.hierarchy;x-friends:="org.
+ eclipse.xtext.xtext.ui.tests",org.eclipse.xtext.xtext.ecoreInference;
+ x-friends:="org.eclipse.xtext.xtext.ui.tests",org.eclipse.xtext.xtext
+ .launcher;x-friends:="org.eclipse.xtext.xtext.ui.tests",org.eclipse.x
+ text.xtext.ui;x-friends:="org.eclipse.xtext.xtext.ui.tests",org.eclip
+ se.xtext.xtext.ui.contentassist;x-internal:=true,org.eclipse.xtext.xt
+ ext.ui.editor.autoedit;x-friends:="org.eclipse.xtext.xtext.ui.tests",
+ org.eclipse.xtext.xtext.ui.editor.folding;x-friends:="org.eclipse.xte
+ xt.xtext.ui.tests",org.eclipse.xtext.xtext.ui.editor.outline;x-friend
+ s:="org.eclipse.xtext.xtext.ui.tests",org.eclipse.xtext.xtext.ui.edit
+ or.quickfix;x-friends:="org.eclipse.xtext.xtext.ui.tests",org.eclipse
+ .xtext.xtext.ui.editor.syntaxcoloring;x-friends:="org.eclipse.xtext.x
+ text.ui.tests",org.eclipse.xtext.xtext.ui.editor.validation;x-interna
+ l:=true,org.eclipse.xtext.xtext.ui.internal;x-friends:="org.eclipse.x
+ text.xtext.ui.tests",org.eclipse.xtext.xtext.ui.labeling;x-internal:=
+ true,org.eclipse.xtext.xtext.ui.refactoring;x-internal:=true,org.ecli
+ pse.xtext.xtext.ui.wizard.ecore2xtext;x-friends:="org.eclipse.xtext.x
+ text.ui.tests",org.eclipse.xtext.xtext.ui.wizard.project;x-friends:="
+ org.eclipse.xtext.xtext.ui.tests"
+Bundle-Name: %pluginName
+Bundle-Version: 2.12.0.v20170519-0809
+Bundle-Localization: plugin
+Bundle-Activator: org.eclipse.xtext.xtext.ui.Activator
+Created-By: Apache Maven 3.3.9
+Build-Jdk: 1.8.0_121
+
+Name: org/eclipse/xtext/xtext/ui/editor/quickfix/XtextGrammarQuickfixP
+ rovider$6$1$1.class
+SHA-256-Digest: zctCzGnvIdjEPYLdTl8kMiSGShnCeFfxOo0aDLzNeac=
+
+Name: plugin.xml
+SHA-256-Digest: 8Lr3huTwMgy0GGqAPYZwRWwwU4xdwl8HCQtJEM8wzJQ=
+
+Name: org/eclipse/xtext/xtext/ui/refactoring/EcoreRefactoringParticipa
+ nt.class
+SHA-256-Digest: 2+gNIgHiHEPh3+Unnp5PKbABfg4MECx3j9t9G3Xo14k=
+
+Name: org/eclipse/xtext/xtext/ui/internal/Activator.class
+SHA-256-Digest: qabp97kqtgZja4GghaCLA7l1bVrnFz/7+xJhExDRnbE=
+
+Name: org/eclipse/xtext/xtext/ui/editor/quickfix/XtextGrammarQuickfixP
+ rovider$7.class
+SHA-256-Digest: Vix1B3oKEngJFCNLHIh4wHHhfIvyDcMRDBNbLS1zQAg=
+
+Name: org/eclipse/xtext/xtext/ui/editor/autoedit/XtextAutoEditStrategy
+ .class
+SHA-256-Digest: OPiLmhDWHT2NYuKSKl2jfGjAv3Zxci8bizD6xZ74lWY=
+
+Name: META-INF/maven/org.eclipse.xtext/org.eclipse.xtext.xtext.ui/pom.
+ properties
+SHA-256-Digest: LmF/RzvH5B//Ryjxy27R7CFW7S3slixsdpyapPNW6+8=
+
+Name: org/eclipse/xtext/xtext/ui/wizard/ecore2xtext/WizardSelectImport
+ edEPackagePage$8$2.class
+SHA-256-Digest: DCWOf5i3uciCu+CjspuSiZJ2BJaHeAM9R7Iy3O1Qkts=
+
+Name: org/eclipse/xtext/xtext/ui/wizard/ecore2xtext/WizardSelectImport
+ edEPackagePage$7.class
+SHA-256-Digest: /NpgToCIKgZ+i/7JVOBWYORUQwWLbeImrOLisB5/TiU=
+
+Name: icons/not_checked_in/pview.gif
+SHA-256-Digest: 36XOU/14TG0MeV9q99kKkq2qECvI9GyqzEXZA1D1E9U=
+
+Name: org/eclipse/xtext/xtext/ui/contentassist/XtextProposalProvider$8
+ .class
+SHA-256-Digest: UApCKSKXPhokebrcKog83WSQbYcQMrcYV/scAC9Kn+Y=
+
+Name: org/eclipse/xtext/xtext/ui/wizard/project/XtextProjectInfo.class
+SHA-256-Digest: VtKPQBAOHQisDDuixdvVn0IpvDx8KdKXYGXk7rrvIcQ=
+
+Name: org/eclipse/xtext/xtext/ui/refactoring/XtextRenameStrategyProvid
+ er$1.class
+SHA-256-Digest: mrrgCzv2+vMWyjdhz2ZFdijXOeehgMt2Sg3Q4JJcfBE=
+
+Name: org/eclipse/xtext/xtext/ui/wizard/project/Messages.class
+SHA-256-Digest: /RTfKUkcNQwbMwkU77V/ERn6bzObSTw1bVyisJBKNes=
+
+Name: org/eclipse/xtext/xtext/ui/contentassist/XtextProposalProvider$5
+ .class
+SHA-256-Digest: AwQNxlkR61Z/G+3kiChyTsH6d846HfINiIxneYxrmqY=
+
+Name: org/eclipse/xtext/xtext/ui/contentassist/XtextProposalProvider$C
+ lassifierQualifiedNameConverter.class
+SHA-256-Digest: UwvQVvnvEmqKlIY1Bpwld48anafId/LeppnafSLwQYA=
+
+Name: org/eclipse/xtext/xtext/ui/wizard/project/WizardNewXtextProjectC
+ reationPage$2.class
+SHA-256-Digest: 9U65Jav8fDiZMtZ65GuVDttjoLeoOE9zNBOCJMsOGYY=
+
+Name: org/eclipse/xtext/xtext/ui/refactoring/XtextRenameStrategyProvid
+ er.class
+SHA-256-Digest: mVr6nySrRd7G2XJ5dT+vWgZZR026ejey1g1UAtp64jI=
+
+Name: org/eclipse/xtext/xtext/ui/editor/outline/XtextOutlineTreeProvid
+ er.class
+SHA-256-Digest: 9/3kUeMYRRni1RtMDiygtNMhtjpPepD5qXCIfrOr++Y=
+
+Name: org/eclipse/xtext/xtext/ui/refactoring/RuleOverrideUtil.class
+SHA-256-Digest: 1jlrEgpWXGdycSZLv/LISrb3ATRDR2uty7+sf1us0jI=
+
+Name: org/eclipse/xtext/xtext/ui/refactoring/RuleOverrideUtil$2.class
+SHA-256-Digest: oqvSEsa84omtPc5gEgl/ERVpKxk6lXA41BnwTvbopBg=
+
+Name: icons/filter_rule.gif
+SHA-256-Digest: XoOscpvVQE9QcmxCliXRYn63LECL/UsPbihEhYcF3MU=
+
+Name: org/eclipse/xtext/xtext/ui/editor/quickfix/XtextGrammarQuickfixP
+ rovider$6$1.class
+SHA-256-Digest: 6iU3wZxpe6uACF6RyAj8NPoqirTneJKQ5D27X9q1wDY=
+
+Name: org/eclipse/xtext/xtext/ui/editor/autoedit/XtextAutoEditStrategy
+ $1.class
+SHA-256-Digest: fLMZ8MJCFOCE9I713X2fW5o08jvuQ+/kxRUs+eRn/hI=
+
+Name: org/eclipse/xtext/xtext/ui/editor/quickfix/XtextGrammarQuickfixP
+ rovider$1.class
+SHA-256-Digest: YsL1OWqx5+v1f9WvVUKbxtmtwr4eK9ZRNfRgvmv/vwQ=
+
+Name: org/eclipse/xtext/xtext/ui/wizard/ecore2xtext/EPackageChooser$La
+ belProvider.class
+SHA-256-Digest: j9IMF7+bXnqJAYcP4sKIE2m8U8Rmls8ivvJfgwS6tzg=
+
+Name: org/eclipse/xtext/ui/editor/hierarchy/XtextCallHierarchyNodeLoca
+ tionProvider.class
+SHA-256-Digest: zHsnTppjNEp8Dd2N6LdggGH0PZK1jFeDQ5EstPK8jQM=
+
+Name: org/eclipse/xtext/xtext/launcher/SelectionUtil.class
+SHA-256-Digest: dmcv/9BlCXZTaFeSEqn63M5DHLwbtm3W/qdGOd4YqKU=
+
+Name: org/eclipse/xtext/xtext/ui/contentassist/XtextProposalProvider$E
+ nclosingGrammarAwareDescription.class
+SHA-256-Digest: szlI5ULDZo6BGCC+OI2uIwQGgzn/LtyTfqrYPG8ZvqQ=
+
+Name: org/eclipse/xtext/xtext/ui/wizard/project/AdvancedNewProjectPage
+ $2.class
+SHA-256-Digest: mr878eZdmO2pEv3CZecYgoRF24gGEgwF2dEUAFnGrgg=
+
+Name: org/eclipse/xtext/xtext/ui/wizard/ecore2xtext/Messages.class
+SHA-256-Digest: 9ydSQzjHIG1jW6BXzaAbGk9HbcWdB408HuVsLGaKBk4=
+
+Name: org/eclipse/xtext/xtext/ui/editor/quickfix/XtextGrammarQuickfixP
+ rovider$4.class
+SHA-256-Digest: lIV2Y3srVlSh/L3sd6yKlhxcFJmZAmfr2edkdHVBZnA=
+
+Name: org/eclipse/xtext/xtext/ui/XtextHyperlinkHelper.class
+SHA-256-Digest: PE9eU4PW4u4nvF6yPSQseUGA++fo/YZfTAivU2ycKFY=
+
+Name: org/eclipse/xtext/xtext/launcher/SelectionUtil$1.class
+SHA-256-Digest: cyKUpOrSi+XkbNKnvLJBFfp7pTuZKq3h1B5q66U8eCY=
+
+Name: org/eclipse/xtext/xtext/ui/wizard/ecore2xtext/WizardSelectImport
+ edEPackagePage$2.class
+SHA-256-Digest: of1egTiLtHyWnAHu+Qfiycm66xGoVtxMjDu60IvsC34=
+
+Name: org/eclipse/xtext/xtext/launcher/WorkflowPropertyTester.class
+SHA-256-Digest: se97zEdpuU0wX4rQJ5kzvou1n9q8gZenxbIu7ATsAVw=
+
+Name: icons/not_checked_in/package_obj.gif
+SHA-256-Digest: gld7a0Frv2XMmbwcJJ5kYq5Kxwhof+LhQothDASTAMI=
+
+Name: org/eclipse/xtext/xtext/launcher/WorkflowLaunchUtils.class
+SHA-256-Digest: IKt3uV7/WgpnY+hjQrtbNOKkkye1lSuzfIIXGmcc/Uk=
+
+Name: org/eclipse/xtext/xtext/ui/editor/syntaxcoloring/SemanticHighlig
+ htingCalculator.class
+SHA-256-Digest: vdyJkO6rh5DQQut3kesJEe3MwD5DqvcY58nVb0ZT2Hw=
+
+Name: icons/wizban/newxprj_wiz.gif
+SHA-256-Digest: plVAcDssgShr/U3/GFl9Md0CvK6dBPMNrWGnQjZxHuE=
+
+Name: org/eclipse/xtext/xtext/ui/wizard/project/StatusWidget.class
+SHA-256-Digest: EzjMiqeDt0BG5uQgUedjEH1okevmSlKFbxSDUW72QLQ=
+
+Name: org/eclipse/xtext/xtext/ui/editor/outline/Messages.class
+SHA-256-Digest: 9Onu87KMPVE+s73ubQyGd5sSymtqjaWdz9yy2F8n0O0=
+
+Name: org/eclipse/xtext/xtext/ui/wizard/ecore2xtext/WizardSelectImport
+ edEPackagePage$5.class
+SHA-256-Digest: M8VczjAB6uvje7o7whyUxN9N4yHmF5WVTB3f0wYcxnA=
+
+Name: org/eclipse/xtext/xtext/ui/wizard/project/AdvancedNewProjectPage
+ $3.class
+SHA-256-Digest: dEANhuLTtdJ6UMGGBo+UkyLbPBcNjbpXSl4uw8N9oeE=
+
+Name: icons/new_xproj.gif
+SHA-256-Digest: dENTJK/m0DAK6ypSDYD6FUuyPItVfv0/ETGovPLgXJE=
+
+Name: icons/not_checked_in/stckframe_obj.gif
+SHA-256-Digest: QP/3PV2ZAdf8RMpQEqeCzZmJ1zakCVTFn6EjjWiTzv8=
+
+Name: icons/not_checked_in/defaultoutlinenode.gif
+SHA-256-Digest: eUQcnI+e9teL3wxyU/AiTmNzuD41g7bUzhsxqKrB1EQ=
+
+Name: org/eclipse/xtext/xtext/ui/editor/quickfix/XtextGrammarQuickfixP
+ rovider$5.class
+SHA-256-Digest: JOvCu396AC3RJr2J7nU9D/Hq9gHnh7izzCGHMfJ94Sw=
+
+Name: org/eclipse/xtext/xtext/ui/editor/syntaxcoloring/SemanticHighlig
+ htingConfiguration.class
+SHA-256-Digest: 2Oo7ouNgH4dK4vlKaSSBeaNv4a0LeHbPSCanaDjSbO0=
+
+Name: icons/keyword.gif
+SHA-256-Digest: 2/MLAeaYrRW6WE01o+SKOvt2db/2Te1U490GVnxfPWg=
+
+Name: org/eclipse/xtext/xtext/ui/editor/outline/messages.properties
+SHA-256-Digest: G7NDu0kHX9REaxtU4mA7waTMbt/cRTYp+gohN5yIgVY=
+
+Name: org/eclipse/xtext/xtext/ui/contentassist/XtextProposalProvider$2
+ .class
+SHA-256-Digest: CtWhE3zVoarMEY0P/6btKZwX4twNVojOX7PEfE4xIx8=
+
+Name: org/eclipse/xtext/xtext/ui/editor/quickfix/XtextGrammarQuickfixP
+ rovider$8$1.class
+SHA-256-Digest: /UxHGzqR6BhSgHWi9OBTLxddtnakdLGXgxKai6700Xg=
+
+Name: org/eclipse/xtext/xtext/ui/editor/outline/FilterTerminalRulesCon
+ tribution.class
+SHA-256-Digest: S/xMr/3o/EiuyIAVhtic3PE9CAzhadier037YQi0A8Y=
+
+Name: org/eclipse/xtext/xtext/ui/editor/outline/XtextOutlineNodeCompar
+ ator.class
+SHA-256-Digest: FiTQ6C0KUrulorMFaLgtpP3CMwY9ig1ihptFB0/qIpY=
+
+Name: org/eclipse/xtext/xtext/ui/Activator.class
+SHA-256-Digest: He201TrIJQLFpEFYHmvjYOgY5qFHinRgbnjyA5a1/Qw=
+
+Name: org/eclipse/xtext/xtext/ui/contentassist/XtextProposalProvider$7
+ .class
+SHA-256-Digest: +/7V3gApyKSuEv8CITXkCTQF378zVqydmUl52pwXTtM=
+
+Name: org/eclipse/xtext/xtext/ui/editor/outline/XtextOutlineNodeLabelP
+ rovider.class
+SHA-256-Digest: 2YoiiDfKW/avCn9GQedoX9P348eqnkq6m5qeZenc5IU=
+
+Name: org/eclipse/xtext/xtext/ui/wizard/ecore2xtext/WizardSelectImport
+ edEPackagePage$4.class
+SHA-256-Digest: ZrGBP7GvDRQF7n4OmuRucMRri5LmuWUQaaNo4mmw/L8=
+
+Name: org/eclipse/xtext/xtext/ui/refactoring/XtextRenameStrategyProvid
+ er$MetamodelDeclarationRenameStrategy.class
+SHA-256-Digest: 9hgcci035iazd0aBsjRt7ocx7eAcv+z9MBO+Nod0qQk=
+
+Name: org/eclipse/xtext/xtext/ui/editor/outline/RuleNode.class
+SHA-256-Digest: G/3zMWF5v5ySPTuB7NbxNBVNhVvXjRuVl3vIHUqYneE=
+
+Name: org/eclipse/xtext/ui/editor/hierarchy/XtextCallHierarchyLabelPro
+ vider.class
+SHA-256-Digest: Ko+HbTSuInWZBkLYVWhyU+lYl07x4t7UcVHOZIrsqWc=
+
+Name: META-INF/MANIFEST.MF_gen
+SHA-256-Digest: z++3YCFSv63Ii1aE8gly81iMT2rcP3rE413kg+jwegU=
+
+Name: org/eclipse/xtext/xtext/ui/labeling/XtextLabelProvider.class
+SHA-256-Digest: FnLNFuU/J/nutiUWlsiozFJFsFaSC48d90uU6wMR/tw=
+
+Name: org/eclipse/xtext/xtext/ui/wizard/project/XtextProjectCreator$Gr
+ adleContributor.class
+SHA-256-Digest: QzWjN9PQj56EfwkzZPhkjcC2bIabtXpylQw4nMgtpWk=
+
+Name: icons/launch.gif
+SHA-256-Digest: qn7zXIAFmoV6fNT4KEQrOZQ2FlxVHX3wQgOLw8zNqAQ=
+
+Name: org/eclipse/xtext/xtext/ui/wizard/ecore2xtext/EPackageChooser$1.
+ class
+SHA-256-Digest: qQVNyF9lXhrED6FVchtOS02AzrAlcNvY4N1aezbElCQ=
+
+Name: org/eclipse/xtext/xtext/ui/wizard/project/StatusWidget$1.class
+SHA-256-Digest: KUNEQ5OC1IkWWJWa41ETm+6iZ5gwN2kkhji1xGRapJw=
+
+Name: org/eclipse/xtext/xtext/ui/refactoring/RuleOverrideUtil$1.class
+SHA-256-Digest: I18IHc8pZnUAll/fiYehkh9YcUow4p9+3UNVLtqHexc=
+
+Name: org/eclipse/xtext/xtext/ui/editor/quickfix/XtextGrammarQuickfixP
+ rovider$6$1$1$1.class
+SHA-256-Digest: carWf8cQomOR50ilNMlPWb+Evb15Xr/jjZlGoRnTH2E=
+
+Name: org/eclipse/xtext/xtext/ui/wizard/project/AdvancedNewProjectPage
+ $4.class
+SHA-256-Digest: qXP48mhZcfghhQL8l0u3tRCFGA2ZsdaO+fhQWnbeVzo=
+
+Name: org/eclipse/xtext/xtext/ui/editor/quickfix/XtextGrammarQuickfixP
+ rovider$7$1$1.class
+SHA-256-Digest: RZlC6JRo+4I0VOeRKWDZUCRrm+mvaUBnhdDMN1DmNfc=
+
+Name: org/eclipse/xtext/xtext/ui/wizard/ecore2xtext/NewXtextProjectFro
+ mEcoreWizard.class
+SHA-256-Digest: jboMmUDXeNZDZfhB4C3y7oYsOwuuWx8NPT96a7bwY2E=
+
+Name: org/eclipse/xtext/xtext/ui/editor/quickfix/XtextGrammarQuickfixP
+ rovider$6.class
+SHA-256-Digest: htR9RZYYAFLmHOcyuTnRZ3xQc76h0W9HZFU+HAplcP0=
+
+Name: org/eclipse/xtext/xtext/ui/editor/quickfix/XtextGrammarQuickfixP
+ rovider.class
+SHA-256-Digest: N7BMpwvyrSUgjCxNdyStIztrhbvIv9jAAzh+/Q1pwPU=
+
+Name: org/eclipse/xtext/xtext/ui/contentassist/XtextProposalProvider$1
+ .class
+SHA-256-Digest: ProKvupNb0JQSMeyhJ6S2LO3eMXetvkqWwljeoNQ8ow=
+
+Name: icons/import_old.gif
+SHA-256-Digest: AeOyo+vV33w/UTCQ+4lAM8l+/075r5sK3Fl33lBFq5A=
+
+Name: org/eclipse/xtext/xtext/ui/editor/autoedit/XtextAutoEditStrategy
+ $2.class
+SHA-256-Digest: r6vbVcc2gtbfmWEhxizcqggtCrCAmvRjlefZlORSkt4=
+
+Name: META-INF/maven/org.eclipse.xtext/org.eclipse.xtext.xtext.ui/pom.
+ xml
+SHA-256-Digest: FK4MjtWtOyA4IzLaLJu3VlZRGJghHIpeMPJdfNhqOyE=
+
+Name: org/eclipse/xtext/xtext/ui/wizard/ecore2xtext/WizardSelectImport
+ edEPackagePage$3.class
+SHA-256-Digest: NHo5/1+qfHCFFPKpeZnT/6F3ReFPtqMcr0KjDAx0krw=
+
+Name: org/eclipse/xtext/xtext/ui/refactoring/XtextDependentElementsCal
+ culator$1.class
+SHA-256-Digest: vfQwXYfgKtLlX4zZwNdExFroq5axwS4EkaeD6Kkgo8c=
+
+Name: org/eclipse/xtext/xtext/ui/wizard/project/AdvancedNewProjectPage
+ .class
+SHA-256-Digest: 99YbPpBaxnSHcIjB15PUYYks7DD5aEtz7whWtJTqPqI=
+
+Name: plugin.properties
+SHA-256-Digest: 6knqVJPHSR2Rr2uQK6Mq9s+fNLdspl5HqAo9uMR/YDk=
+
+Name: icons/import.gif
+SHA-256-Digest: yiVql2uJLzUiZ71s2dt8KIsnZ0QPDtwe7Ak/FYeu9fQ=
+
+Name: org/eclipse/xtext/xtext/ui/wizard/ecore2xtext/WizardSelectImport
+ edEPackagePage$6.class
+SHA-256-Digest: 4GblnrwLK/bdU9KA64XagwXyyH7l0Q/wTMCkgPMVgTc=
+
+Name: org/eclipse/xtext/xtext/launcher/GenerateArtifactsLaunchShortcut
+ .class
+SHA-256-Digest: FMFZGO2gpraSk4mqFnB//pKLQ3eFG8AbpgCHH86RePw=
+
+Name: org/eclipse/xtext/xtext/ui/refactoring/XtextRenameContextFactory
+ .class
+SHA-256-Digest: 2cujJ5b9hKMbYzy8Ww5dGZn7ITPvtSVh8YFWJF0mpnQ=
+
+Name: org/eclipse/xtext/xtext/ui/refactoring/OverridingRuleRefactoring
+ Participant.class
+SHA-256-Digest: yb3i+hO+KaIcUw1iX/18iNwEx7Qv+N4zcb7KpJBz+nE=
+
+Name: org/eclipse/xtext/xtext/ui/wizard/project/WizardNewXtextProjectC
+ reationPage$1.class
+SHA-256-Digest: TF6VeLR1cdQ+eZa1ParIaH5uXssDLFNt3N1yJqC4Wks=
+
+Name: org/eclipse/xtext/ui/editor/hierarchy/XtextCallHierarchyBuilder.
+ class
+SHA-256-Digest: sPdUYJ77eH89fgKDcpzuYBWgam4tGl9GoN2WXSrycB8=
+
+Name: org/eclipse/xtext/xtext/ui/wizard/project/XtextProjectCreator$De
+ scriptorBasedContributor.class
+SHA-256-Digest: ohP062L7dva9O7kkq0kEmz9hA0s3sa2ZJ6mQ516m2EA=
+
+Name: org/eclipse/xtext/xtext/ui/wizard/ecore2xtext/messages.propertie
+ s
+SHA-256-Digest: uICpJoUPwSIIN40k1jlW0E4RVpkJsvBmKAfHJzPAU10=
+
+Name: org/eclipse/xtext/xtext/ui/editor/quickfix/XtextGrammarQuickfixP
+ rovider$8.class
+SHA-256-Digest: 9RGgmXC23+26lrpiUgXt9k9xZzCmgx4jnaGOXcAqWRM=
+
+Name: org/eclipse/xtext/xtext/ui/wizard/project/NewXtextProjectWizard.
+ class
+SHA-256-Digest: MjJUxFmEWOL3RipHZoq9ZSFhL9Teykih2O+ozFUE0dQ=
+
+Name: org/eclipse/xtext/xtext/ui/wizard/ecore2xtext/EPackageChooser$Co
+ ntentProvider.class
+SHA-256-Digest: oOdrwJAR+W36AhYy6LWvGmVocenxbaRrM2F2kVuWUKM=
+
+Name: org/eclipse/xtext/xtext/ui/wizard/ecore2xtext/WizardSelectImport
+ edEPackagePage$8.class
+SHA-256-Digest: gIqjA04mQKC+6/ykuAoNK0t/h31MAZcgHCztO5FTs14=
+
+Name: org/eclipse/xtext/xtext/ui/wizard/project/messages.properties
+SHA-256-Digest: PrGjyPIyIOJpLHK1tTb4mU3VV+e3wJ+AULJAEiDtBUQ=
+
+Name: org/eclipse/xtext/xtext/ui/XtextExecutableExtensionFactory.class
+SHA-256-Digest: tH2uBXxmeuERXXvLxtelmXSCccNLvWzFDevdT70jOdM=
+
+Name: org/eclipse/xtext/xtext/ui/refactoring/XtextDependentElementsCal
+ culator.class
+SHA-256-Digest: DJ9SEwxVEgZlKYQ8syOOBVYfTMHPNASIfY4YaTAXmTg=
+
+Name: org/eclipse/xtext/xtext/ui/editor/validation/XtextValidatorConfi
+ gurationBlock.class
+SHA-256-Digest: pW8cNXGhnuJhZ8AaXa8XpPis5KYXuR2dmRUWVb6j7eg=
+
+Name: org/eclipse/xtext/xtext/ui/editor/validation/messages.properties
+SHA-256-Digest: k05KLQ2F7ISdkXkyQ02S0Na7d+JRN38yyFIZmkrukpI=
+
+Name: org/eclipse/xtext/xtext/ui/contentassist/XtextProposalProvider$9
+ .class
+SHA-256-Digest: ThmMu2pbsYU2T9UqP2OKsEnbz6TAzs9sVBezXAo0Bg8=
+
+Name: org/eclipse/xtext/ui/editor/hierarchy/XtextCallHierarchyViewPart
+ .class
+SHA-256-Digest: R4QZ45BEwr/0KWGXHL0TO2L6b6KCvou9tWT/OdY3YO0=
+
+Name: org/eclipse/xtext/xtext/ui/refactoring/XtextRenameStrategyProvid
+ er$RuleRenameStrategy.class
+SHA-256-Digest: CxRWEDRpOXKDiG0RtnSfs7ctSopBFyN/fpP2/sjLcJg=
+
+Name: icons/not_checked_in/repo_rep.gif
+SHA-256-Digest: SO5JR3MfoBYGQz1O3mNWMOpRRXNjSiE/HvpZvtsnyO8=
+
+Name: icons/not_checked_in/breakpoint_view.gif
+SHA-256-Digest: pak9wiAQLceXkMC0JX8ODc4RcfzRUHBlSeczu5sMY4w=
+
+Name: org/eclipse/xtext/xtext/ui/contentassist/XtextProposalProvider$6
+ .class
+SHA-256-Digest: ULGNDU52uHxassFB+wDLpxD/ajkoe5A/+w9umO02F7Q=
+
+Name: org/eclipse/xtext/xtext/ui/editor/syntaxcoloring/Messages.class
+SHA-256-Digest: Sz7B1TdCJPCSqIVVWaDTrB51OUZec8cpqLjJConvbFo=
+
+Name: icons/upcase.png
+SHA-256-Digest: RPcJmnAtJ4uKyHe+uvYpeSc4AJb5OzSwB8n79FIVQeY=
+
+Name: org/eclipse/xtext/xtext/ui/editor/quickfix/XtextGrammarQuickfixP
+ rovider$6$2.class
+SHA-256-Digest: pwrZ9hDvwLJV6a6pQXWZR1AwLJkK4etUu1V1A6reawQ=
+
+Name: icons/editor.gif
+SHA-256-Digest: 1jcdGMTZqtXurGC2eyFqWLcrIj2zbWccbg+1SDMHgJM=
+
+Name: css/e4-dark_xtext_grammar_syntaxhighlighting.css
+SHA-256-Digest: 9VQzFhpGE3+0TbvJwfc3HfRw0s7Q6GWP4WFprUCp0sE=
+
+Name: org/eclipse/xtext/xtext/ui/editor/outline/FilterTerminalRulesCon
+ tribution$Annotation.class
+SHA-256-Digest: y1MM81c21BJmAfrnmksUF3r/Y8+P/GEf2LDrGSlUNGk=
+
+Name: icons/export.gif
+SHA-256-Digest: rDwwcmFIVkgNAzCA6Rsq62V08u03zLu2a3AbAOW4QuM=
+
+Name: icons/rule.gif
+SHA-256-Digest: pv4FkrlJOstGWRsmLhNd2BOliWNcPQay6pZqxssaJoo=
+
+Name: org/eclipse/xtext/xtext/ui/contentassist/XtextProposalProvider$3
+ .class
+SHA-256-Digest: LI+ngGEriuQ/LrntX58H3ChtvkQvLc22f6cGRdwIt8o=
+
+Name: org/eclipse/xtext/xtext/ui/editor/validation/Messages.class
+SHA-256-Digest: +MNMloM4xrH6iYhgVRtC87Dirbl9TO3iVWcHruhNmMg=
+
+Name: contexts_Xtext_Xtext.xml
+SHA-256-Digest: +Ui91t9EbFZuK7AudOgj1wzUc7Q6VTGiep0ZhPXoi80=
+
+Name: org/eclipse/xtext/xtext/ecoreInference/ProjectAwareXtendXtext2Ec
+ orePostProcessor.class
+SHA-256-Digest: YH/ED3UxZVErXo8qqrZid4/OnGj8CTTWEKjcYYppNNQ=
+
+Name: org/eclipse/xtext/xtext/ui/editor/outline/XtextOutlinePage.class
+SHA-256-Digest: Xsowsc4K6/l27b0WcXh+udvDYwhLwzytioTyroaRJnk=
+
+Name: org/eclipse/xtext/xtext/ui/editor/quickfix/XtextGrammarQuickfixP
+ rovider$2.class
+SHA-256-Digest: 2twaXP1/loAzvGhnq7LLGvOl+D4Iw8pT6UehJxZzwHE=
+
+Name: org/eclipse/xtext/xtext/ui/contentassist/XtextProposalProvider$C
+ lassifierPrefixMatcher.class
+SHA-256-Digest: PmVZwxVZfCFb2lwcW/S1AA9FLcu7JEQoZi+BBHVgDsc=
+
+Name: org/eclipse/xtext/xtext/ui/editor/syntaxcoloring/messages.proper
+ ties
+SHA-256-Digest: 0JKxw4AUS332M2BVckJbeK4hJ+QAg3DvCsdU8m7M7v4=
+
+Name: org/eclipse/xtext/xtext/ui/contentassist/AbstractXtextProposalPr
+ ovider.class
+SHA-256-Digest: ApsbeoG2NMzC35qaYEZ9h7kTIcBo8WE1MsL9Spvs6rk=
+
+Name: org/eclipse/xtext/xtext/ui/contentassist/XtextProposalProvider.c
+ lass
+SHA-256-Digest: m/h03dFqVf33vGYGJ/FuviuqFtqoYQy6Z/Iaslpg49E=
+
+Name: org/eclipse/xtext/ui/editor/hierarchy/OpenCallHierarchyHandler.c
+ lass
+SHA-256-Digest: PnlU6DBDfxXZbhV6leNWSoq1SY05YDy7fxuumt+7wW8=
+
+Name: org/eclipse/xtext/xtext/ui/wizard/ecore2xtext/WizardSelectImport
+ edEPackagePage.class
+SHA-256-Digest: WP74h+hPSzONEmQd18DRC4KrKJ4n+nvif8GCPFArpUI=
+
+Name: org/eclipse/xtext/xtext/ui/wizard/ecore2xtext/WizardSelectImport
+ edEPackagePage$1.class
+SHA-256-Digest: Zzy1S1uyFaMKeXpKqVHZNxCb6uJt4rHSbUH7O18LA4o=
+
+Name: org/eclipse/xtext/xtext/ui/internal/XtextUIModuleInternal.class
+SHA-256-Digest: 8PRbEr8p3kZsiT6i1lydwZWR+P245+d2HOmKLD/psRw=
+
+Name: about.html
+SHA-256-Digest: nHFX9V09SN3s1mjLDEYlZfF1cHH95xsX0U6CG6LnGCg=
+
+Name: org/eclipse/xtext/xtext/ui/labeling/XtextDescriptionLabelProvide
+ r.class
+SHA-256-Digest: eNjGcsP6el7iXrlBmtTtHusF+0AnC/P2G32SCFjZNwE=
+
+Name: org/eclipse/xtext/xtext/ui/editor/quickfix/XtextGrammarQuickfixP
+ rovider$7$1.class
+SHA-256-Digest: v2MgVr+Etb8ciUk9ccKcl/oZgMNww7x7q8CyekCmz8k=
+
+Name: org/eclipse/xtext/xtext/ui/wizard/ecore2xtext/EPackageChooser.cl
+ ass
+SHA-256-Digest: yMzDr4PozZmm2zdfZLzYN0sBFtpaS35B/wLfnh8BeHY=
+
+Name: org/eclipse/xtext/xtext/ui/editor/folding/XtextGrammarFoldingReg
+ ionProvider.class
+SHA-256-Digest: rBlk3HQQadZg2a2qZzEgeXcHl/wLySENWWzCZRnUMjk=
+
+Name: org/eclipse/xtext/ui/editor/hierarchy/XtextCallHierarchyNode.cla
+ ss
+SHA-256-Digest: HBDmRiL+KgFHt+k/sfYIv9X9hZgBg89UrPQCc1RW1Tc=
+
+Name: org/eclipse/xtext/xtext/ui/editor/outline/HideReturnTypesContrib
+ ution$Annotation.class
+SHA-256-Digest: LbQlCyGOX+X5gE02emfY3gjppz+AeYmCzCYH86JryqM=
+
+Name: org/eclipse/xtext/xtext/ui/wizard/ecore2xtext/WizardSelectImport
+ edEPackagePage$8$1.class
+SHA-256-Digest: 2NPHJfeU3GyNw8qXWYQxNba1yl3Ld3fpM3Eng5NQhrM=
+
+Name: org/eclipse/xtext/xtext/ui/contentassist/XtextProposalProvider$4
+ .class
+SHA-256-Digest: QFGhjCFKwKpm5Rbk/9YUAfxGlnKqDZsNzhe+C/mFSpw=
+
+Name: org/eclipse/xtext/xtext/ui/wizard/project/WizardNewXtextProjectC
+ reationPage.class
+SHA-256-Digest: NAUDLxNr8MX9dDxzgWYvZHRWveE4SrRxOKAb4/zGoNs=
+
+Name: org/eclipse/xtext/xtext/ui/AbstractXtextUiModule.class
+SHA-256-Digest: G4Kl2EVrS7VhnApDRLQT+hm750S9nxlPQxPkH20bTmQ=
+
+Name: org/eclipse/xtext/xtext/ui/XtextUiModule.class
+SHA-256-Digest: PmgCnCy/jOgJl5DtPxbr+wVAM4t4iTRcxb/4fEJqg4Y=
+
+Name: org/eclipse/xtext/xtext/ui/wizard/project/XtextProjectCreator.cl
+ ass
+SHA-256-Digest: jJT34niw3QgZhziBUnwGNFwZ+GenoTy9XNK+RZz9kfI=
+
+Name: org/eclipse/xtext/xtext/ui/editor/quickfix/XtextGrammarQuickfixP
+ rovider$3.class
+SHA-256-Digest: lBFJcxrOUFpD4t5TBHtyKCUmU19oiQnAzzBpdze3p0I=
+
+Name: org/eclipse/xtext/xtext/ui/wizard/project/AdvancedNewProjectPage
+ $1.class
+SHA-256-Digest: DLcu5lKW3YdaGyzKidlPfZsrZDxg217yDtGNR/jLRyM=
+
+Name: org/eclipse/xtext/xtext/ui/editor/quickfix/XtextGrammarQuickfixP
+ rovider$6$1$2.class
+SHA-256-Digest: wl1UydVH87nY/GrH/oIbcd1tnZXF2Vn/SJWkIFoDz7g=
+
+Name: org/eclipse/xtext/xtext/ui/wizard/project/WizardNewXtextProjectC
+ reationPage$3.class
+SHA-256-Digest: XoG2qmNIu33haDfTWtrEmRK1ONsfD8T8PdnOMe7j98c=
+
+Name: org/eclipse/xtext/xtext/ui/editor/outline/HideReturnTypesContrib
+ ution.class
+SHA-256-Digest: RF+Ie2Wxupl9HJ+R5P0hL4QD1R3efcRusvJZQjz/BMs=
+
+Name: icons/language.gif
+SHA-256-Digest: rLFdrdQy+pH9ZjfqDDsmY06GdACaAD66bgH9zS+Qza0=
+

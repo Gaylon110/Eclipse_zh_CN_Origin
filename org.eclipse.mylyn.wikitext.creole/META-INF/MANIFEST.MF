@@ -1,0 +1,166 @@
+Manifest-Version: 1.0
+Bundle-Description: Mylyn WikiText provides an extensible framework an
+ d tools for parsing, editing and presenting lightweight markup. WikiT
+ ext has parsers for AsciiDoc, CommonMark, Markdown, MediaWiki, Textil
+ e, Confluence, Creole, HTML, TracWiki and TWiki markup, and        ca
+ n be extended to support other languages. WikiText provides Ant tasks
+  for converting lightweight markup to HTML, Eclipse Help, DocBook, DI
+ TA and XSL-FO. WikiText also provides an editor for editing such mark
+ up within Eclipse, and integrates with        the Mylyn task editor c
+ ausing it to be markup-aware. WikiText provides API for integrating w
+ iki markup capabilities into Eclipse, RCP, stand-alone and server-sid
+ e applications.
+Bundle-License: https://www.eclipse.org/legal/epl-2.0/
+Bundle-SymbolicName: org.eclipse.mylyn.wikitext.creole
+Built-By: jenkins
+Bnd-LastModified: 1614384548113
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-DocURL: http://eclipse.org/mylyn
+Bundle-Vendor: Eclipse Mylyn
+Import-Package: com.google.common.base;version="[21.0,22.0)",org.eclip
+ se.mylyn.wikitext.creole,org.eclipse.mylyn.wikitext.creole.internal,o
+ rg.eclipse.mylyn.wikitext.creole.internal.block,org.eclipse.mylyn.wik
+ itext.creole.internal.phrase,org.eclipse.mylyn.wikitext.creole.intern
+ al.token,org.eclipse.mylyn.wikitext.parser;version="[3.0,4)",org.ecli
+ pse.mylyn.wikitext.parser.builder;version="[3.0,4)",org.eclipse.mylyn
+ .wikitext.parser.markup;version="[3.0,4)",org.eclipse.mylyn.wikitext.
+ parser.markup.phrase;version="[3.0,4)",org.eclipse.mylyn.wikitext.par
+ ser.markup.token;version="[3.0,4)",org.eclipse.mylyn.wikitext.validat
+ ion;version="[3.0,4)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-3.2.0.201605172007
+Export-Package: org.eclipse.mylyn.wikitext.creole.internal;x-internal:
+ =true;uses:="org.eclipse.mylyn.wikitext.parser,org.eclipse.mylyn.wiki
+ text.parser.builder";version="3.0.39",org.eclipse.mylyn.wikitext.creo
+ le.internal.block;x-internal:=true;uses:="org.eclipse.mylyn.wikitext.
+ parser.markup";version="3.0.39",org.eclipse.mylyn.wikitext.creole.int
+ ernal.phrase;x-internal:=true;uses:="org.eclipse.mylyn.wikitext.parse
+ r,org.eclipse.mylyn.wikitext.parser.markup";version="3.0.39",org.ecli
+ pse.mylyn.wikitext.creole.internal.token;x-internal:=true;uses:="org.
+ eclipse.mylyn.wikitext.parser.markup";version="3.0.39",org.eclipse.my
+ lyn.wikitext.creole.internal.validation;x-internal:=true;uses:="org.e
+ clipse.mylyn.wikitext.parser.markup,org.eclipse.mylyn.wikitext.valida
+ tion";version="3.0.39",org.eclipse.mylyn.wikitext.creole;uses:="org.e
+ clipse.mylyn.wikitext.parser,org.eclipse.mylyn.wikitext.parser.markup
+ ";version="3.0.39"
+Bundle-Name: Mylyn WikiText Creole
+Bundle-Version: 3.0.39.20210227000941
+Build-Jdk: 1.8.0_202
+Created-By: Apache Maven Bundle Plugin
+
+Name: org/eclipse/mylyn/wikitext/creole/internal/block/NowikiBlock.cla
+ ss
+SHA-256-Digest: fQq4oyhv6shW/poZWk0CEQHOqATLzOZo1YHECFpds4k=
+
+Name: services/org.eclipse.mylyn.wikitext.parser.markup.MarkupLanguage
+SHA-256-Digest: 5CGdZ6Ubdr1c9L9GgAxV5A7iHZLDLDU0jTJPgLoW33s=
+
+Name: org/eclipse/mylyn/wikitext/creole/internal/token/LinkReplacement
+ Token$1.class
+SHA-256-Digest: aMHFEw59m6AfOgyLNLdshlOuhWOcFw9c/n2n7zXSOyg=
+
+Name: org/eclipse/mylyn/wikitext/creole/internal/CreoleDocumentBuilder
+ $TableCellBlock.class
+SHA-256-Digest: EoMDlLsjNxHJ8IFEJMz9sUfrBUPmzUZ7dinfBqKUjWQ=
+
+Name: org/eclipse/mylyn/wikitext/creole/internal/CreoleDocumentBuilder
+ $1.class
+SHA-256-Digest: C/BrtxfDrxfj/+RE3XCZKEyGdJhJXZPhcaqzCHoKmXE=
+
+Name: org/eclipse/mylyn/wikitext/creole/internal/token/LinkReplacement
+ Token$LinkProcessor.class
+SHA-256-Digest: ci/kJhCzy6G4sg+qPI0Y/nTNdeTB64H2EO3sGXGjgIg=
+
+Name: org/eclipse/mylyn/wikitext/creole/internal/token/LinkReplacement
+ Token.class
+SHA-256-Digest: qNzlDoF/94lhz01Zix8g60scXzo5HF58lsQSZLAygiw=
+
+Name: org/eclipse/mylyn/wikitext/creole/internal/block/HeadingBlock.cl
+ ass
+SHA-256-Digest: bVy+ukU/GmSNEDktJML7KSXyx+izog3q4RSp49K7OY4=
+
+Name: META-INF/maven/org.eclipse.mylyn.docs/org.eclipse.mylyn.wikitext
+ .creole/pom.properties
+SHA-256-Digest: sHdbAA8DTxf0rWrWF6WVWcZ4nBHLCLCnfy8TG2kB62k=
+
+Name: org/eclipse/mylyn/wikitext/creole/internal/phrase/EscapePhraseMo
+ difier.class
+SHA-256-Digest: NOu3zroSM5NBw5Jt+Mx0tWD+INi/HUAn2+z9dYlOGDE=
+
+Name: org/eclipse/mylyn/wikitext/creole/internal/CreoleDocumentBuilder
+ .class
+SHA-256-Digest: IEaV4+THAYm5zYImO/dvAvKNrPhPaXjTcXGOYg1URBM=
+
+Name: org/eclipse/mylyn/wikitext/creole/internal/validation/CreoleRefe
+ renceValidationRule.class
+SHA-256-Digest: 1E51wnvd2DF8RbeCUkQmG/g2rvsn9nJntPqr/T4J3n8=
+
+Name: plugin.properties
+SHA-256-Digest: Y5OCq3AvJMADOvTljdmKnit8MTcvFafZdwqdK/9A1kk=
+
+Name: org/eclipse/mylyn/wikitext/creole/internal/phrase/NowikiPhraseMo
+ difier.class
+SHA-256-Digest: s+bIRYPj62k+qPXVRX2YvHGdG8oRwVj95wtghpWl5e0=
+
+Name: org/eclipse/mylyn/wikitext/creole/internal/CreoleDocumentBuilder
+ $ImplicitParagraphBlock.class
+SHA-256-Digest: mZXXUBpuX8rvE+oPzAThEs5Tn4k5knzOGo07qo/kZJM=
+
+Name: org/eclipse/mylyn/wikitext/creole/internal/block/ListBlock$ListS
+ tate.class
+SHA-256-Digest: 5Cwe/SApy7I4ePp/kgVBPa3f082d9YyKsmvFPWVBYdQ=
+
+Name: org/eclipse/mylyn/wikitext/creole/internal/phrase/SimplePhraseMo
+ difier.class
+SHA-256-Digest: 7eminsVtIYi9BMJmbuhaJPqP22wM6Yrdaw1asUvwCGA=
+
+Name: about.html
+SHA-256-Digest: GWwWKwDoEPbqRj3Nm004u/ySxB5XSz/ODMj6p56lw8o=
+
+Name: org/eclipse/mylyn/wikitext/creole/internal/phrase/NowikiPhraseMo
+ difier$NowikiPhraseModifierProcessor.class
+SHA-256-Digest: Ni/uW2QYl9Q9B+YPDOrbADFIOJmnZdXaNpd1VD1Z6S4=
+
+Name: org/eclipse/mylyn/wikitext/creole/internal/phrase/SimplePhraseMo
+ difier$SimplePhraseModifierProcessor.class
+SHA-256-Digest: dcn2ebw6ova/aqyzKFkLqGYj0S6cw0AAbM1TiXdNhpo=
+
+Name: META-INF/maven/org.eclipse.mylyn.docs/org.eclipse.mylyn.wikitext
+ .creole/pom.xml
+SHA-256-Digest: 5lCn4nKoRHPSEZtPdcXs+LCDNbPBtqBANhUKW/k7vbI=
+
+Name: org/eclipse/mylyn/wikitext/creole/internal/CreoleDocumentBuilder
+ $ContentBlock.class
+SHA-256-Digest: sNmwFxje4CcT4FEQwJL7p4TluUOuKnRLlD/Umuwsa54=
+
+Name: org/eclipse/mylyn/wikitext/creole/internal/block/ListBlock.class
+SHA-256-Digest: NvgG4EGQ/afPMu+knduTNACaa4iVBpcdrDDkoLnSPUc=
+
+Name: org/eclipse/mylyn/wikitext/creole/internal/CreoleDocumentBuilder
+ $CreoleBlock.class
+SHA-256-Digest: a8ubpPpnGbyeSSdo2kJSa63HCYKHsTY+wLOTqZuJKAY=
+
+Name: org/eclipse/mylyn/wikitext/creole/internal/block/ParagraphBlock.
+ class
+SHA-256-Digest: QuZHd/xIKa3rqXaHr+OSlfFaDGhq3XX3QT3rRqk9D6c=
+
+Name: org/eclipse/mylyn/wikitext/creole/internal/block/HorizontalRuleB
+ lock.class
+SHA-256-Digest: dJpd7OEA/GLg/q1RKRC8O9GmM46WTlsB72WMkUkIwfU=
+
+Name: org/eclipse/mylyn/wikitext/creole/internal/block/TableBlock.clas
+ s
+SHA-256-Digest: ncOCOqwbehDY2XHpxYCKcdcGpA+wIS8BZyJUbNJ2S9Q=
+
+Name: org/eclipse/mylyn/wikitext/creole/internal/CreoleDocumentBuilder
+ $LinkBlock.class
+SHA-256-Digest: ocY18A0cglv8w/vfAJAtbdjT2IgXqcivp1tpqc1hnoE=
+
+Name: org/eclipse/mylyn/wikitext/creole/internal/block/ListBlock$1.cla
+ ss
+SHA-256-Digest: t3cfRGxlLKPVBLwq4/LvZHqQ+Zq1gI4lByQ6W2ontNQ=
+
+Name: org/eclipse/mylyn/wikitext/creole/CreoleLanguage.class
+SHA-256-Digest: V/YpBnvaKIxl4OQ4fUOwlpgXYxe2NKR/u/BdgAugInU=
+

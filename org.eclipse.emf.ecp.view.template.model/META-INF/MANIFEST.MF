@@ -1,0 +1,815 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.emf.ecp.view.template.model;singleton
+ :=true
+Archiver-Version: Plexus Archiver
+Built-By: genie.ecp
+Require-Bundle: org.eclipse.core.runtime;bundle-version="[3.7.0,4.0.0)
+ ", org.eclipse.emf.ecore;bundle-version="[2.7.0,3.0.0)";visibility:=r
+ eexport, org.eclipse.emf.ecp.view.model;bundle-version="[1.16.0,1.17.
+ 0)";visibility:=reexport, org.eclipse.emf.ecp.view.context;bundle-ver
+ sion="[1.16.0,1.17.0)", org.eclipse.emfforms.core.services;bundle-ver
+ sion="[1.16.0,1.17.0)"
+Bundle-ManifestVersion: 2
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/emfcli
+ ent/org.eclipse.emf.ecp.core.git;path="bundles/org.eclipse.emf.ecp.vi
+ ew.template.model";commitId=f2dbbd13b720d1f9463c4d5909101632edfd5c17
+Bundle-Vendor: %providerName
+Import-Package: org.eclipse.emfforms.spi.common.report;version="[1.16.
+ 0,1.17.0)"
+Export-Package: org.eclipse.emf.ecp.internal.view.template.model;versi
+ on="1.16.0";x-internal:=true, org.eclipse.emf.ecp.view.template.model
+ ;version="1.16.0", org.eclipse.emf.ecp.view.template.model.impl;versi
+ on="1.16.0";x-internal:=true, org.eclipse.emf.ecp.view.template.model
+ .util;version="1.16.0";x-friends:="org.eclipse.emf.ecp.view.template.
+ model.edit", org.eclipse.emf.ecp.view.template.selector.domainmodelre
+ ference.model;version="1.16.0", org.eclipse.emf.ecp.view.template.sel
+ ector.domainmodelreference.model.impl;version="1.16.0";x-internal:=tr
+ ue, org.eclipse.emf.ecp.view.template.selector.domainmodelreference.m
+ odel.util;version="1.16.0";x-friends:="org.eclipse.emf.ecp.view.templ
+ ate.model.edit", org.eclipse.emf.ecp.view.template.selector.viewModel
+ Element.model;version="1.16.0", org.eclipse.emf.ecp.view.template.sel
+ ector.viewModelElement.model.impl;version="1.16.0";x-internal:=true, 
+ org.eclipse.emf.ecp.view.template.selector.viewModelElement.model.uti
+ l;version="1.16.0", org.eclipse.emf.ecp.view.template.style.alignment
+ .model;version="1.16.0", org.eclipse.emf.ecp.view.template.style.alig
+ nment.model.impl;version="1.16.0";x-internal:=true, org.eclipse.emf.e
+ cp.view.template.style.alignment.model.util;version="1.16.0";x-friend
+ s:="org.eclipse.emf.ecp.view.template.model.edit", org.eclipse.emf.ec
+ p.view.template.style.background.model;version="1.16.0", org.eclipse.
+ emf.ecp.view.template.style.background.model.impl;version="1.16.0";x-
+ internal:=true, org.eclipse.emf.ecp.view.template.style.background.mo
+ del.util;version="1.16.0";x-friends:="org.eclipse.emf.ecp.view.templa
+ te.model.edit", org.eclipse.emf.ecp.view.template.style.fontPropertie
+ s.model;version="1.16.0", org.eclipse.emf.ecp.view.template.style.fon
+ tProperties.model.impl;version="1.16.0";x-internal:=true, org.eclipse
+ .emf.ecp.view.template.style.fontProperties.model.util;version="1.16.
+ 0", org.eclipse.emf.ecp.view.template.style.labelwidth.model;version=
+ "1.16.0", org.eclipse.emf.ecp.view.template.style.labelwidth.model.im
+ pl;version="1.16.0";x-internal:=true, org.eclipse.emf.ecp.view.templa
+ te.style.labelwidth.model.util;version="1.16.0";x-friends:="org.eclip
+ se.emf.ecp.view.template.model.edit", org.eclipse.emf.ecp.view.templa
+ te.style.mandatory.model;version="1.16.0", org.eclipse.emf.ecp.view.t
+ emplate.style.mandatory.model.impl;version="1.16.0";x-internal:=true,
+  org.eclipse.emf.ecp.view.template.style.mandatory.model.util;version
+ ="1.16.0";x-friends:="org.eclipse.emf.ecp.view.template.model.edit", 
+ org.eclipse.emf.ecp.view.template.style.tab.model;version="1.16.0", o
+ rg.eclipse.emf.ecp.view.template.style.tab.model.impl;version="1.16.0
+ ";x-internal:=true, org.eclipse.emf.ecp.view.template.style.tab.model
+ .util;version="1.16.0", org.eclipse.emf.ecp.view.template.style.table
+ StyleProperty.model;version="1.16.0", org.eclipse.emf.ecp.view.templa
+ te.style.tableStyleProperty.model.impl;version="1.16.0";x-friends:="o
+ rg.eclipse.emf.ecp.view.template.model.edit", org.eclipse.emf.ecp.vie
+ w.template.style.tableStyleProperty.model.util;version="1.16.0";x-fri
+ ends:="org.eclipse.emf.ecp.view.template.model.edit", org.eclipse.emf
+ .ecp.view.template.style.tableValidation.model;version="1.16.0", org.
+ eclipse.emf.ecp.view.template.style.tableValidation.model.impl;versio
+ n="1.16.0";x-internal:=true, org.eclipse.emf.ecp.view.template.style.
+ tableValidation.model.util;version="1.16.0", org.eclipse.emf.ecp.view
+ .template.style.textControlEnablement.model;version="1.16.0", org.ecl
+ ipse.emf.ecp.view.template.style.textControlEnablement.model.impl;ver
+ sion="1.16.0";x-internal:=true, org.eclipse.emf.ecp.view.template.sty
+ le.textControlEnablement.model.util;version="1.16.0";x-friends:="org.
+ eclipse.emf.ecp.view.template.model.edit", org.eclipse.emf.ecp.view.t
+ emplate.style.unsettable.model;version="1.16.0", org.eclipse.emf.ecp.
+ view.template.style.unsettable.model.impl;version="1.16.0";x-internal
+ :=true, org.eclipse.emf.ecp.view.template.style.unsettable.model.util
+ ;version="1.16.0", org.eclipse.emf.ecp.view.template.style.validation
+ .model;version="1.16.0", org.eclipse.emf.ecp.view.template.style.vali
+ dation.model.impl;version="1.16.0";x-internal:=true, org.eclipse.emf.
+ ecp.view.template.style.validation.model.util;version="1.16.0";x-frie
+ nds:="org.eclipse.emf.ecp.view.template.model.edit"
+Bundle-Name: %pluginName
+Bundle-Version: 1.16.0.20180305-1637
+Bundle-ClassPath: .
+Bundle-Localization: plugin
+Bundle-Activator: org.eclipse.emf.ecp.internal.view.template.model.Act
+ ivator
+Created-By: Apache Maven 3.5.2
+Build-Jdk: 1.8.0_162
+
+Name: org/eclipse/emf/ecp/view/template/style/unsettable/model/ButtonP
+ lacementType.class
+SHA-256-Digest: y2/JI2cmGL0yARDkQEad9BlSgXJfI9PiQ9mr7xR5+ZI=
+
+Name: model/domainModelReferenceSelector.ecore
+SHA-256-Digest: TbT8OcrNLy4sA/c16NzNdpjaZBUoK7GIleMIK9yVUNY=
+
+Name: plugin.xml
+SHA-256-Digest: cjrRINQOr5YbSgEQCMb7u30P3JeSF75dZ8vaPLCQRGU=
+
+Name: org/eclipse/emf/ecp/view/template/model/util/TemplateSwitch.clas
+ s
+SHA-256-Digest: Aancyk2oDcuQ+MSFMIOMehfzZgp0Fy5m7PNesALL7hw=
+
+Name: org/eclipse/emf/ecp/view/template/style/alignment/model/impl/VTA
+ lignmentPackageImpl.class
+SHA-256-Digest: eZCRmsU4J9Fd4xvjssNvAbDbR0oWQcFWkTBeZpD9WAU=
+
+Name: org/eclipse/emf/ecp/view/template/selector/domainmodelreference/
+ model/VTDomainmodelreferencePackage$Literals.class
+SHA-256-Digest: NLygIeDqanAthBeZXWjpP8hBJ1j3AKJW4JcOgVvjKZo=
+
+Name: org/eclipse/emf/ecp/view/template/style/labelwidth/model/impl/VT
+ LabelwidthFactoryImpl.class
+SHA-256-Digest: XAP29HuWU4pJ5fQhrfB7ysEMHAfH2348Rwa8YEowZOU=
+
+Name: org/eclipse/emf/ecp/view/template/style/tableValidation/model/VT
+ TableValidationPackage.class
+SHA-256-Digest: 7NAQjOY/Rhel8J7rg8lXa52xPnLWTeLPG5lKWzoyUc8=
+
+Name: org/eclipse/emf/ecp/view/template/style/unsettable/model/impl/VT
+ UnsettablePackageImpl.class
+SHA-256-Digest: 1WIZFiOi1QP4G90FBe4njHn6iiOR4FXPH+/4mBf5rjY=
+
+Name: org/eclipse/emf/ecp/view/template/style/textControlEnablement/mo
+ del/VTTextControlEnablementFactory.class
+SHA-256-Digest: q4A7fZ0HskqwbPTrLoc9zKgYKAU+oKwKYle4zaZ3Ms4=
+
+Name: org/eclipse/emf/ecp/view/template/style/mandatory/model/util/Man
+ datoryAdapterFactory$1.class
+SHA-256-Digest: AgRtQULYECC0e4fTcn/Br6qLnE92XUf/3SNPg4ewwlU=
+
+Name: org/eclipse/emf/ecp/view/template/style/alignment/model/impl/VTA
+ lignmentFactoryImpl.class
+SHA-256-Digest: Wo6LgFUFyfz9uzbcs9Kf9o+2uwfsY9kVd470xfT36M8=
+
+Name: model/mandatoryStyle.genmodel
+SHA-256-Digest: es9gt3Yg06coolvV/jk2ZpsUfoofh8CNAwJ+I7B/rDs=
+
+Name: org/eclipse/emf/ecp/view/template/model/VTStyleSelector.class
+SHA-256-Digest: B00hQLYtpSKtr0wQuwSRgt7OwevoDxEcJdIjQbyJIio=
+
+Name: org/eclipse/emf/ecp/view/template/style/tableValidation/model/VT
+ TableValidationStyleProperty.class
+SHA-256-Digest: SzDfJRvKPpLBm8hacRcms6pv7XaZRq45VWD6ifzoZfc=
+
+Name: model/tableValidationColumnStyleProperty.genmodel
+SHA-256-Digest: NEU92iQh44omPZU5GhZYzfQPQaj4y8Y7c0voovpMB8A=
+
+Name: org/eclipse/emf/ecp/view/template/style/tableValidation/model/VT
+ TableValidationFactory.class
+SHA-256-Digest: DH5Bt8v9fvpMBw95H+5j+adaSiHq2Gch9Y0O9hDsGkY=
+
+Name: about.ini
+SHA-256-Digest: AFJCrWPhOVpZRuNPuUA1PEi+yu43YdTHNbGzaQyYcV8=
+
+Name: model/validationStyle.genmodel
+SHA-256-Digest: nD0l2kWm68QMWn6KGgDcuaywvq5b5/WwHs3VZ3NUVgE=
+
+Name: org/eclipse/emf/ecp/view/template/style/unsettable/model/util/Un
+ settableAdapterFactory$1.class
+SHA-256-Digest: l8bK5Xxj4KDn6d1w+5xi8VB+wPhSyGf7je1SXh7zxNw=
+
+Name: model/viewModelElementSelector.genmodel
+SHA-256-Digest: GZ8NHZmSu+ofltbXhD3/KiitnxPUe9vNmrtQl0x5z5s=
+
+Name: org/eclipse/emf/ecp/view/template/style/labelwidth/model/VTLabel
+ WidthStyleProperty.class
+SHA-256-Digest: /sn5LiO1lt6QkqdC6nvlxm2jnR4LmVdxZQcl1bhWZ00=
+
+Name: org/eclipse/emf/ecp/view/template/style/unsettable/model/VTUnset
+ tableStyleProperty.class
+SHA-256-Digest: 5M/GBHfBd+SpjE9LKHGJ3EwIFJgGGheJz9RBimBCMhI=
+
+Name: org/eclipse/emf/ecp/view/template/selector/viewModelElement/mode
+ l/util/ViewModelElementAdapterFactory.class
+SHA-256-Digest: jtdCrdcxVD1PkPmJUmfKZEPlmTTWsvrAI86GoWxb9CQ=
+
+Name: org/eclipse/emf/ecp/view/template/style/tableValidation/model/ut
+ il/TableValidationAdapterFactory$1.class
+SHA-256-Digest: RtgVBaKPC1q1Nup8Od1/Yq/v0qsu0OnIZJeAmsH+J6s=
+
+Name: model/viewModelElementSelector.ecore
+SHA-256-Digest: zmo0ZqoEcl+a/vsI2aaBVi+ntEPvO8D9Zxwzr/zsyg4=
+
+Name: org/eclipse/emf/ecp/view/template/style/labelwidth/model/VTLabel
+ widthFactory.class
+SHA-256-Digest: WtXeudPTjmdk+ZPhHWaLgEd+dF9ScoJyIxRIK6n3T/M=
+
+Name: org/eclipse/emf/ecp/view/template/style/labelwidth/model/impl/VT
+ LabelWidthStylePropertyImpl.class
+SHA-256-Digest: j/3gn76kFJu3Ng2gk6Zy3n0XqVojkIp4msvEN/yI9vM=
+
+Name: org/eclipse/emf/ecp/view/template/style/validation/model/impl/VT
+ ValidationPackageImpl.class
+SHA-256-Digest: LBQViewU0mrxcM1WYJdSxraB5cC9WTiI3LzE/TlwlEk=
+
+Name: model/labelWidthStyle.genmodel
+SHA-256-Digest: vF+VMrIenIZhkucS4ljYofxwaC2mN2t4Zt/nIjCGZ7Q=
+
+Name: org/eclipse/emf/ecp/view/template/style/unsettable/model/ButtonA
+ lignmentType.class
+SHA-256-Digest: 0wwy08Uzdf6RLFs3pyjMvLayMtrF6BalaoMpf+vpDB0=
+
+Name: model/domainModelReferenceSelector.genmodel
+SHA-256-Digest: cKzMKGTig2J/VcQiQjITzE7G1wFn0NHtXnt3o/+m6LI=
+
+Name: org/eclipse/emf/ecp/view/template/style/mandatory/model/util/Man
+ datorySwitch.class
+SHA-256-Digest: AjLvTBfw0qhby2rv/zVj6TrtV5alPul2IMNWX4KjGQ4=
+
+Name: org/eclipse/emf/ecp/view/template/selector/viewModelElement/mode
+ l/VTViewModelElementFactory.class
+SHA-256-Digest: ThbGSgjbijCEPkKy7f8AoY17SinAfLX8uUaCpEc3AsA=
+
+Name: org/eclipse/emf/ecp/view/template/style/fontProperties/model/VTF
+ ontPropertiesPackage$Literals.class
+SHA-256-Digest: 1V5c8/cDDKXAgUoOsndkU5Y5gLxwRoT5/84d7XZWsho=
+
+Name: org/eclipse/emf/ecp/view/template/style/alignment/model/VTAlignm
+ entPackage$Literals.class
+SHA-256-Digest: 8LClyYs87engIJAyfRx0avcZgdnjpmH+qNCGwXFpnOQ=
+
+Name: model/template.ecore
+SHA-256-Digest: XOiu5uBhRE+BPv3yghiwgvSMSTYZQbd+mO4QWkXe/hk=
+
+Name: org/eclipse/emf/ecp/view/template/model/VTStyleProperty.class
+SHA-256-Digest: v5/gGhKkfxE3o6koZ9n1b3/TGpc36dSUdFC7kqc5h2Q=
+
+Name: org/eclipse/emf/ecp/view/template/style/mandatory/model/util/Man
+ datoryAdapterFactory.class
+SHA-256-Digest: DDFZOMqJyU/qg6Iukcq4qQSTM89nHjcSxuLNjXQp2X0=
+
+Name: org/eclipse/emf/ecp/view/template/style/tab/model/impl/VTTabFact
+ oryImpl.class
+SHA-256-Digest: UatE2BJCPvBAhPDWzdMcbiRAwwbj6kh5QCAUgdpWgjA=
+
+Name: org/eclipse/emf/ecp/view/template/style/tab/model/impl/VTTabStyl
+ ePropertyImpl.class
+SHA-256-Digest: 53zD4kqQ37bnUID50khaDofTk/y812blLzUe/Ll1rRQ=
+
+Name: model/textControlEnablementStyle.genmodel
+SHA-256-Digest: 9Ph216SMltoyxbkoOdl4iuWuM1w0lSDxVCfFFKCZF84=
+
+Name: org/eclipse/emf/ecp/view/template/style/mandatory/model/VTMandat
+ oryPackage$Literals.class
+SHA-256-Digest: L5Lp321jt/uRgsdzwOKUdnK46gPNGr2GpnTXEbqULKM=
+
+Name: model/mandatoryStyle.ecore
+SHA-256-Digest: Bg9GAcZv3DPVGs/9EIAv8H30gy9T0YbZeGUuqonP5YE=
+
+Name: model/tabStyle.ecore
+SHA-256-Digest: WqI6hAo4GWcZs+No8HTpYYbSx3CpIG8AeXghcc911D8=
+
+Name: org/eclipse/emf/ecp/view/template/style/labelwidth/model/VTLabel
+ widthPackage.class
+SHA-256-Digest: cMhTfso9AT/BcK5bSA1fPA5gq2NesYkZgPvcHrV1EY8=
+
+Name: org/eclipse/emf/ecp/view/template/model/impl/VTTemplateFactoryIm
+ pl.class
+SHA-256-Digest: xjktGg07QgG8cC7YmnpkL2/a9FzHfRzY6NUCEsTbCZI=
+
+Name: org/eclipse/emf/ecp/view/template/model/VTViewTemplate.class
+SHA-256-Digest: 6RI6QAqJ0sZQOb7hstEbnrtecIrWFCQ0mDYUrQHm2js=
+
+Name: org/eclipse/emf/ecp/view/template/style/tab/model/VTTabFactory.c
+ lass
+SHA-256-Digest: 3X6L8h7Yv/C5a4IRSAsC4LMFByMl00n/b0n968vq/bg=
+
+Name: org/eclipse/emf/ecp/view/template/style/tableStyleProperty/model
+ /impl/VTTableStylePropertyFactoryImpl.class
+SHA-256-Digest: fJUV6MYBf99fVuQvDoMjCKYlc1FLPnWWhCE24bHvE7k=
+
+Name: org/eclipse/emf/ecp/view/template/style/tableStyleProperty/model
+ /impl/VTTableStylePropertyPackageImpl.class
+SHA-256-Digest: H4kDyryO3El3I1TNw542taarRSHBU+/9ohWre9YhyFs=
+
+Name: org/eclipse/emf/ecp/view/template/style/labelwidth/model/util/La
+ belwidthAdapterFactory.class
+SHA-256-Digest: hTsSC2TYJlqr1iC85Ms7Edutp5QQjZfoknWPhAPeIcE=
+
+Name: model/template.genmodel
+SHA-256-Digest: Ker52L35L0AF+xA4s2drsDKvCeDWEiwi0fAQQd+huvw=
+
+Name: about.mappings
+SHA-256-Digest: ZucZG+EtVdFUqxmGDhoy0Go3l4mbfg9sdoccSBUojW0=
+
+Name: org/eclipse/emf/ecp/view/template/selector/domainmodelreference/
+ model/impl/VTDomainmodelreferencePackageImpl.class
+SHA-256-Digest: YozoVU11+JTcR51HxnwtUsqCynWXBcq88Cde0vekXaQ=
+
+Name: org/eclipse/emf/ecp/view/template/style/tableStyleProperty/model
+ /impl/VTTableStylePropertyImpl.class
+SHA-256-Digest: y0hqS85KNtvymfT/ITGsZcOOvDTPJALGQyCM/D+XFAc=
+
+Name: model/unsettableStyle.genmodel
+SHA-256-Digest: UAad1CGpEqI1UAt5eMLoeCaYTh8ZEebQ4jeaLn4rrCc=
+
+Name: org/eclipse/emf/ecp/view/template/model/util/TemplateAdapterFact
+ ory.class
+SHA-256-Digest: Oai1ALJsBEgTWNuy1zBVzWuA0anirDmksC71nVTUrEY=
+
+Name: model/backgroundStyle.ecore
+SHA-256-Digest: i6mWYT+Jk7VUV6ZVpJO74NHebXn3EEhDOWqIiDFAfMs=
+
+Name: org/eclipse/emf/ecp/view/template/style/mandatory/model/VTMandat
+ oryFactory.class
+SHA-256-Digest: y4McIvD7Y0DI8qIx1dxx9cQULHdTrNMkmKJpRgKATLs=
+
+Name: model/validationStyle.ecore
+SHA-256-Digest: X3hLs4Ao3CKIZ4eBkJXdA/8XUaafKIG73GBaaihhLWU=
+
+Name: org/eclipse/emf/ecp/view/template/style/fontProperties/model/uti
+ l/FontPropertiesSwitch.class
+SHA-256-Digest: TjlVgyu1MVbT07+1u+w7h5s8F/yK7ebgDndFTKELZ30=
+
+Name: org/eclipse/emf/ecp/view/template/style/tab/model/TabType.class
+SHA-256-Digest: saV95N+BBS3NGDPA4vzdrD62hc6Z9xOY6wU7p9z2qgs=
+
+Name: org/eclipse/emf/ecp/view/template/selector/viewModelElement/mode
+ l/util/ViewModelElementAdapterFactory$1.class
+SHA-256-Digest: IWhflp1eyz5wl1EO0fduSkI+VNUodpfIOPJY4wWezlo=
+
+Name: org/eclipse/emf/ecp/view/template/style/validation/model/util/Va
+ lidationSwitch.class
+SHA-256-Digest: NnXDMDGeHo7G2c1RDSS9OwDi7VAowjAaUO5m6DZXt90=
+
+Name: modeling32.png
+SHA-256-Digest: saSrfvJ79Uzl2BFpCbuVBho1UTuf14LrjD+wGJG44Ok=
+
+Name: org/eclipse/emf/ecp/view/template/style/mandatory/model/impl/VTM
+ andatoryFactoryImpl.class
+SHA-256-Digest: l1UzNEPAgOjP7T0xy1o9kgJJO+8H/cne6mpGjQB7jTc=
+
+Name: org/eclipse/emf/ecp/view/template/style/unsettable/model/util/Un
+ settableSwitch.class
+SHA-256-Digest: oZXvwGsfAZvTunpjnuewT6YsL11WPOS55SxCxTaXhrA=
+
+Name: org/eclipse/emf/ecp/view/template/style/tableStyleProperty/model
+ /VTTableStyleProperty.class
+SHA-256-Digest: Gts/oD4RDmNqeI51UO3zilZfPcPfdl8oDe5Mavvyc3E=
+
+Name: org/eclipse/emf/ecp/view/template/selector/viewModelElement/mode
+ l/impl/VTViewModelElementPackageImpl.class
+SHA-256-Digest: jqZpwbBkAHdeP2VWPRqSiNiaY5y8apw9rCkAqApA2Gs=
+
+Name: org/eclipse/emf/ecp/view/template/style/unsettable/model/impl/VT
+ UnsettableFactoryImpl.class
+SHA-256-Digest: CNLBGae1djBaiz3qJQ/5BYcbin71sLm6BIUaBCOZb5A=
+
+Name: org/eclipse/emf/ecp/view/template/style/validation/model/impl/VT
+ ValidationFactoryImpl.class
+SHA-256-Digest: AWgl0pd6KYC8JLA1Ue9SFgzy1YOvb8XIRRtyLh/sUOg=
+
+Name: org/eclipse/emf/ecp/view/template/style/background/model/VTBackg
+ roundPackage$Literals.class
+SHA-256-Digest: Cb8fBEbBdIzLwWtsR/Lin8lRA+VAsmwQBcUz14YP3wg=
+
+Name: org/eclipse/emf/ecp/view/template/style/textControlEnablement/mo
+ del/VTTextControlEnablementPackage.class
+SHA-256-Digest: 4VaKs7+ATbAyp50oCiIWS/MkvzCg83LmiLUxOum5Tpo=
+
+Name: org/eclipse/emf/ecp/view/template/style/background/model/VTBackg
+ roundPackage.class
+SHA-256-Digest: kRgb4UiT/nBTLRvBCsLgq5CwOGZIU2druKnsu38GQzc=
+
+Name: org/eclipse/emf/ecp/view/template/model/util/TemplateAdapterFact
+ ory$1.class
+SHA-256-Digest: /7W1w14v93/QUkFALV/kSn6lomP+5cMlDtbAGGaLXc0=
+
+Name: org/eclipse/emf/ecp/view/template/selector/domainmodelreference/
+ model/impl/VTDomainModelReferenceSelectorImpl.class
+SHA-256-Digest: wpn302iUAVieSUcQXc+UZ/g6xHuPLvCG4ObWFQhURKI=
+
+Name: org/eclipse/emf/ecp/view/template/style/tableValidation/model/ut
+ il/TableValidationAdapterFactory.class
+SHA-256-Digest: XNbjJnsV5WovtbwPgl6O7Axyuik1ve6XxLB7gCkURSE=
+
+Name: org/eclipse/emf/ecp/view/template/style/background/model/impl/VT
+ BackgroundStylePropertyImpl.class
+SHA-256-Digest: 2vxG2jLxq9R4/CbeYJKum4gpimAdXFHnqMDzbXIlFPk=
+
+Name: org/eclipse/emf/ecp/view/template/model/VTStyle.class
+SHA-256-Digest: +jVWWVwDIbshVXGgEOOI6DGn8udcs/mn2D2wNxIhMjU=
+
+Name: org/eclipse/emf/ecp/view/template/selector/domainmodelreference/
+ model/util/DomainmodelreferenceAdapterFactory.class
+SHA-256-Digest: T6dj2fsqroAiMCXPK5wWMskC37YXlqEQtjfNZ7Euw5c=
+
+Name: model/fontPropertiesStyle.genmodel
+SHA-256-Digest: eHl/ZTGlP1BAlHOLM+Id6JN2Mm7zopjUzvgIDyk7Z4I=
+
+Name: org/eclipse/emf/ecp/internal/view/template/model/Activator.class
+SHA-256-Digest: I0D1CttUTCmrJnA2rpLO3n1O6W+4pkiSm7Y+G7C9Qq8=
+
+Name: org/eclipse/emf/ecp/view/template/selector/domainmodelreference/
+ model/util/DomainmodelreferenceAdapterFactory$1.class
+SHA-256-Digest: PD/sHmJeC1dxqxEwGropiD66BkX+Ooa0EKI9R8h9Bcc=
+
+Name: org/eclipse/emf/ecp/view/template/model/VTViewTemplateProvider.c
+ lass
+SHA-256-Digest: J6iAi045KTKKfurajAMCDAvhHnyewnJalTeIh4PQSgI=
+
+Name: about.properties
+SHA-256-Digest: KfRk+3x68LWKzAVcbatbmdUcd5gpGtQFpXRsUSZ8NtM=
+
+Name: org/eclipse/emf/ecp/view/template/style/validation/model/util/Va
+ lidationAdapterFactory$1.class
+SHA-256-Digest: rWgYDQl0kG7IoaHjPwLuwHhSItYO2nJSfNSd/smT9/c=
+
+Name: org/eclipse/emf/ecp/view/template/style/background/model/util/Ba
+ ckgroundAdapterFactory$1.class
+SHA-256-Digest: Z613kEOu+L9hySAVm6XD7XlIjVLFT2ANXl4BPQ5JEDY=
+
+Name: org/eclipse/emf/ecp/view/template/style/mandatory/model/VTMandat
+ oryStyleProperty.class
+SHA-256-Digest: pFICS1ATezNFFx9E68JzzJyAi5WtrHnCgY+qd+Z4wco=
+
+Name: model/fontPropertiesStyle.ecore
+SHA-256-Digest: XL7/Xtd8RS6mNwnrCb4kdo8ksTQNno4lmGbxjzCOpec=
+
+Name: org/eclipse/emf/ecp/view/template/style/validation/model/util/Va
+ lidationAdapterFactory.class
+SHA-256-Digest: ba85nYhIUITARi0oIL4G85BVbZwfoagGEeRI4NxzMdw=
+
+Name: org/eclipse/emf/ecp/view/template/style/textControlEnablement/mo
+ del/util/TextControlEnablementAdapterFactory.class
+SHA-256-Digest: kiCj+6sPz+i7hiT2GKXJNVIgHjk4U2Mkw3hN3+WiU1U=
+
+Name: org/eclipse/emf/ecp/view/template/model/VTTemplatePackage.class
+SHA-256-Digest: OpLEda7KF6o83ue1iINQVaedQYeHGp4GIZJk2BqCfPk=
+
+Name: org/eclipse/emf/ecp/view/template/style/textControlEnablement/mo
+ del/impl/VTTextControlEnablementPackageImpl.class
+SHA-256-Digest: TrbJQj3nDMdlL+7M2mKrJ9phEd1YAexWXqVFnUb3MSc=
+
+Name: org/eclipse/emf/ecp/view/template/style/textControlEnablement/mo
+ del/impl/VTTextControlEnablementFactoryImpl.class
+SHA-256-Digest: JxRYpYduv7WReJSi1LeCWeOxUEYnjhMBGMRmythtqww=
+
+Name: org/eclipse/emf/ecp/view/template/style/validation/model/VTValid
+ ationPackage.class
+SHA-256-Digest: QhYk1xPC5drGXfFcut0NC3NgFzWanGBllIGjZ2YS1Cs=
+
+Name: org/eclipse/emf/ecp/view/template/style/textControlEnablement/mo
+ del/VTTextControlEnablementStyleProperty.class
+SHA-256-Digest: NTC2tZm0NQimPd8iFe29dO0ih9Uu5sZnG/o+7OIDQgs=
+
+Name: org/eclipse/emf/ecp/view/template/style/fontProperties/model/VTF
+ ontPropertiesPackage.class
+SHA-256-Digest: 7//VQzijXrizlNaS4MCxULDJjH55jAOGtLFYisH85VI=
+
+Name: org/eclipse/emf/ecp/view/template/selector/domainmodelreference/
+ model/VTDomainmodelreferencePackage.class
+SHA-256-Digest: lJNegDHqZxQi/B81QUzupHb3oZiLeNLBbJCGzfLWxuo=
+
+Name: org/eclipse/emf/ecp/view/template/style/unsettable/model/VTUnset
+ tableFactory.class
+SHA-256-Digest: wxG4/ksbhnBgBLDAwzoErANMhk5uyREBj1vqYq+cNwM=
+
+Name: model/alignmentStyle.ecore
+SHA-256-Digest: 2cKXIr+AFLFeLmRNm5strZgIHL03f6QuV0g07xcBgOk=
+
+Name: org/eclipse/emf/ecp/view/template/style/alignment/model/VTContro
+ lLabelAlignmentStyleProperty.class
+SHA-256-Digest: iMWR+gQRINguvVD+7TsYPsbw9IdJPF0PNqV9hATRzcU=
+
+Name: model/unsettableStyle.ecore
+SHA-256-Digest: SR4VMUP909G0XSqPD26UBH6ZqjKo6uIMMW3e/eFRlvk=
+
+Name: org/eclipse/emf/ecp/view/template/style/textControlEnablement/mo
+ del/impl/VTTextControlEnablementStylePropertyImpl.class
+SHA-256-Digest: SljKmB4Wo8z2lDZZiuuSKH4jRhQ8/ogvTcQS5khvgMY=
+
+Name: META-INF/maven/org.eclipse.emf.ecp/org.eclipse.emf.ecp.view.temp
+ late.model/pom.properties
+SHA-256-Digest: AgRIwX3JjITFAq3CcPiosVPM5L8liRR2Z4R36odzIh8=
+
+Name: org/eclipse/emf/ecp/view/template/model/VTTemplateFactory.class
+SHA-256-Digest: eBrttwoNeXHhdOENqgGPvuU8Z11xC+AFZRsuvO0ROfM=
+
+Name: model/backgroundStyle.genmodel
+SHA-256-Digest: X6W7V7SHN50NnsJfDOWqclJBRlpJ4E5DHC6fsOgjRoU=
+
+Name: plugin.properties
+SHA-256-Digest: c127rH2BtVZO3sEE1KOBTOQUTaFDdguI15U5eflipF0=
+
+Name: org/eclipse/emf/ecp/view/template/style/labelwidth/model/util/La
+ belwidthSwitch.class
+SHA-256-Digest: IJ3seqUC2bbK4CgKhKKBQE7Ar322ZgE3ybf/qddy98U=
+
+Name: model/labelWidthStyle.ecore
+SHA-256-Digest: 8aP5Yv7gMHzgXX37fvfvHmgC36RIuxYmSojcGc/sWZQ=
+
+Name: org/eclipse/emf/ecp/view/template/model/impl/VTControlValidation
+ TemplateImpl.class
+SHA-256-Digest: XUt3WC5fEyGmNj+3+iJh7MMSwP3iUF2lfnWgn1/cSlY=
+
+Name: org/eclipse/emf/ecp/view/template/style/alignment/model/Alignmen
+ tType.class
+SHA-256-Digest: A2a0vtWwRgrGICT+iY1U2LZa7wvfvQHjX8INSGj2wko=
+
+Name: org/eclipse/emf/ecp/view/template/style/tableStyleProperty/model
+ /VTTableStylePropertyFactory.class
+SHA-256-Digest: RLc0yTrJBY7JfBTx8q/axVy422sLzByqXiT9Ev/9C88=
+
+Name: org/eclipse/emf/ecp/view/template/style/validation/model/impl/VT
+ ValidationStylePropertyImpl.class
+SHA-256-Digest: YKz2ieCN30wMCif258kopjoGxNZkJpHptatLvuxrWXQ=
+
+Name: org/eclipse/emf/ecp/view/template/style/background/model/util/Ba
+ ckgroundAdapterFactory.class
+SHA-256-Digest: nSyYEcz3TUoKcnUEHclUUbDALMzv5K0dpc5xE/LLdrg=
+
+Name: org/eclipse/emf/ecp/view/template/selector/viewModelElement/mode
+ l/impl/VTViewModelElementSelectorImpl.class
+SHA-256-Digest: SpZxRSi0qSoUlJLH4lGm10SUlH+5MONOImRDbRl65dk=
+
+Name: org/eclipse/emf/ecp/view/template/selector/domainmodelreference/
+ model/impl/VTDomainmodelreferenceFactoryImpl.class
+SHA-256-Digest: gXVafsprnXd9goOD8fPIyURCoKVPlVz8axlZYCo1VBU=
+
+Name: org/eclipse/emf/ecp/view/template/style/tableValidation/model/im
+ pl/VTTableValidationFactoryImpl.class
+SHA-256-Digest: 8OA17qy3EYS5fFIT8SjJyyNj4S2WaZbsPKoznVF4KDM=
+
+Name: org/eclipse/emf/ecp/view/template/selector/domainmodelreference/
+ model/util/DomainmodelreferenceSwitch.class
+SHA-256-Digest: ET1TQQ/hRXXlkcf7L7bzXwC24Ebe9SZRCvhQumZGxV0=
+
+Name: org/eclipse/emf/ecp/view/template/style/tableStyleProperty/model
+ /util/TableStylePropertyAdapterFactory.class
+SHA-256-Digest: xfREY4KSlitQrzzJ4azPgbbo2aOPjeLF3tEmqZFb88U=
+
+Name: org/eclipse/emf/ecp/view/template/style/validation/model/VTValid
+ ationFactory.class
+SHA-256-Digest: 7qpH/P+zrnyzZNcvgY3zL4dnnKIL0y7FKiIiTzXoWDE=
+
+Name: org/eclipse/emf/ecp/view/template/style/fontProperties/model/imp
+ l/VTFontPropertiesFactoryImpl.class
+SHA-256-Digest: 1WyEII3S12sDlOc+uzsIg8NBkh1Qt5IUEvF+X8p8ISk=
+
+Name: org/eclipse/emf/ecp/view/template/style/validation/model/VTValid
+ ationStyleProperty.class
+SHA-256-Digest: crGM6fPhmMSSnzM1D9inn8BBYr4FZx10BINasNakt4Y=
+
+Name: org/eclipse/emf/ecp/view/template/style/tableStyleProperty/model
+ /util/TableStylePropertyAdapterFactory$1.class
+SHA-256-Digest: McPcPZ16I9ypD6hGNG4Nzxa/totUJ2veDvVrB7btyS8=
+
+Name: org/eclipse/emf/ecp/view/template/style/background/model/VTBackg
+ roundStyleProperty.class
+SHA-256-Digest: P58CCvCzUBKVz3mbkCEpjJ39lN6a+3wosxD45b0W8H4=
+
+Name: org/eclipse/emf/ecp/view/template/style/textControlEnablement/mo
+ del/util/TextControlEnablementSwitch.class
+SHA-256-Digest: wT0G7zkp1Bg3w9+PP48kZEn67FcjGrz2peQxx4Lt844=
+
+Name: org/eclipse/emf/ecp/view/template/style/tab/model/util/TabAdapte
+ rFactory$1.class
+SHA-256-Digest: v0kFubIC8acm9QR8UGDrsX/vXpEu3QjWLYNA9lKgNxg=
+
+Name: org/eclipse/emf/ecp/view/template/style/tableStyleProperty/model
+ /RenderMode.class
+SHA-256-Digest: 5rR0kMM5+hiirrv8nNqHWDGoNzlIpJ8uWl561smVXHc=
+
+Name: org/eclipse/emf/ecp/view/template/style/background/model/impl/VT
+ BackgroundPackageImpl.class
+SHA-256-Digest: iXdGejM13Sqmcfh6R4qA/CQQI0nV+XeA5DNs2vuLmiw=
+
+Name: org/eclipse/emf/ecp/view/template/style/tableStyleProperty/model
+ /VTTableStylePropertyPackage.class
+SHA-256-Digest: eP7oxkXjF+j62/b6Fxb7kEHFeK6bRC+8s7c0fo66uro=
+
+Name: org/eclipse/emf/ecp/view/template/style/mandatory/model/impl/VTM
+ andatoryPackageImpl.class
+SHA-256-Digest: 31JwmT4ouAiy+Hgl1a3s7Ml7bCRmiWiw89X2gFZw6J8=
+
+Name: org/eclipse/emf/ecp/view/template/style/tab/model/VTTabPackage.c
+ lass
+SHA-256-Digest: 5bsFhyhAiRt/wcGYc/klVVp+oDJ4QemQVhr4uMb0XEI=
+
+Name: model/tableValidationColumnStyleProperty.ecore
+SHA-256-Digest: to3vaRUbRiMZZlgBHuGEJ2CTP3NaVnUdbwb0RtzxT8s=
+
+Name: org/eclipse/emf/ecp/view/template/style/alignment/model/VTAlignm
+ entFactory.class
+SHA-256-Digest: NnNcIthBWu+rwH3ciwDD5RO9moqkooz1T0L0B3aF54k=
+
+Name: org/eclipse/emf/ecp/view/template/style/tableValidation/model/ut
+ il/TableValidationSwitch.class
+SHA-256-Digest: guQGCfAlTIRZcQei0mh0oGYb0oPWB7YXuFd5fHzU8ks=
+
+Name: org/eclipse/emf/ecp/view/template/style/unsettable/model/util/Un
+ settableAdapterFactory.class
+SHA-256-Digest: rhbYkoOjZM9tJg7WzwDkImf/6jdwdt5h2vA4o3ysX1U=
+
+Name: org/eclipse/emf/ecp/view/template/style/alignment/model/util/Ali
+ gnmentAdapterFactory$1.class
+SHA-256-Digest: U6PV+Z6brQSoQBAvaBvyWyieO27zaqVV4pXR/bY1ABk=
+
+Name: model/alignmentStyle.genmodel
+SHA-256-Digest: 9pi5WHwUOytmqM6rT188N0nwoayBVDsKHIA8uNWNPPs=
+
+Name: org/eclipse/emf/ecp/view/template/selector/viewModelElement/mode
+ l/util/ViewModelElementSwitch.class
+SHA-256-Digest: t4C068vSXJ6o2NyH5QD8lVkMKSa8iY/fu7QPkq32Ub8=
+
+Name: org/eclipse/emf/ecp/view/template/style/background/model/impl/VT
+ BackgroundFactoryImpl.class
+SHA-256-Digest: cYOvKSjY6KkB1XFEkmbepvp5TdN+od4i7tTPtAFOtdk=
+
+Name: org/eclipse/emf/ecp/view/template/style/unsettable/model/impl/VT
+ UnsettableStylePropertyImpl.class
+SHA-256-Digest: 9c0fFtMw2zKvDpLSAL7lx6V/wEgFqh3dTkYujpwSQhM=
+
+Name: org/eclipse/emf/ecp/view/template/selector/domainmodelreference/
+ model/VTDomainModelReferenceSelector.class
+SHA-256-Digest: 8IWAKAbQVQkK2m8jiU7fAtT3vS/JacXVGG7FciaiUEo=
+
+Name: org/eclipse/emf/ecp/view/template/style/textControlEnablement/mo
+ del/VTTextControlEnablementPackage$Literals.class
+SHA-256-Digest: kyFvGXgq4aek/+kmg4DFBKez0OQ2P60aP2d06VxlFN4=
+
+Name: org/eclipse/emf/ecp/view/template/style/background/model/VTBackg
+ roundFactory.class
+SHA-256-Digest: pqEDnLMdnPtvlenq58uyRKxFZfrz7e+YFmCJgWr2TqY=
+
+Name: model/textControlEnablementStyle.ecore
+SHA-256-Digest: oXF+wkEe/n8VGC6PWbo2tQlfJyDywJ7AO/iWXk64Fac=
+
+Name: org/eclipse/emf/ecp/view/template/style/labelwidth/model/VTLabel
+ widthPackage$Literals.class
+SHA-256-Digest: JvaRUpneo+w9CGuwIc89HNwpv5ihPXx3DOawJu44aGY=
+
+Name: org/eclipse/emf/ecp/view/template/style/tab/model/VTTabStyleProp
+ erty.class
+SHA-256-Digest: 7LyNVXqkKZGmAC9cq22ZN0X4ZWRrP5/T7aUAZ7Sh6oA=
+
+Name: org/eclipse/emf/ecp/view/template/style/tab/model/VTTabPackage$L
+ iterals.class
+SHA-256-Digest: 6EDk0jvAkEZx+DT7fzLbSaYGUnm0BCJgxuinP+l0Mac=
+
+Name: org/eclipse/emf/ecp/view/template/style/alignment/model/VTAlignm
+ entPackage.class
+SHA-256-Digest: 9gcRZH7ZNna024NE62KeiJIPN2XIV4Fdzmlvd5VUZKM=
+
+Name: org/eclipse/emf/ecp/view/template/style/fontProperties/model/uti
+ l/FontPropertiesAdapterFactory$1.class
+SHA-256-Digest: VIu4tAeYaTlTNVtzyy9vzjYzygQYIrfvNukQc2kpT68=
+
+Name: org/eclipse/emf/ecp/view/template/style/fontProperties/model/imp
+ l/VTFontPropertiesStylePropertyImpl.class
+SHA-256-Digest: eMMKZHnEdv0QFjofGLB4aheHO1pdIYAE7ZiE7yd9c/M=
+
+Name: org/eclipse/emf/ecp/view/template/style/tableStyleProperty/model
+ /VTTableStylePropertyPackage$Literals.class
+SHA-256-Digest: d1ju7X2OpND5hZIKjUnrai0e+79/eEnKAwQ1hi7Ywsw=
+
+Name: org/eclipse/emf/ecp/view/template/model/impl/VTTemplatePackageIm
+ pl.class
+SHA-256-Digest: x+a2tMVHMJjLGqZIkgRDqzjzSZA66vgFJhKjsTUY5R8=
+
+Name: org/eclipse/emf/ecp/view/template/style/fontProperties/model/VTF
+ ontPropertiesStyleProperty.class
+SHA-256-Digest: NXJoru1bPek2y8NF0b14Nd1Ickbfem2UO204Bja53PU=
+
+Name: org/eclipse/emf/ecp/view/template/style/tab/model/impl/VTTabPack
+ ageImpl.class
+SHA-256-Digest: 6m0DJHsHnSKzlkHxLAoIMCTEIlPmWSWukJO6a6mX5qg=
+
+Name: org/eclipse/emf/ecp/view/template/selector/viewModelElement/mode
+ l/VTViewModelElementPackage.class
+SHA-256-Digest: Bi7ANQQ1Bp/Foscny0o/NvkOKpkEyoG885azQUEAuW0=
+
+Name: org/eclipse/emf/ecp/view/template/model/impl/VTViewTemplateImpl.
+ class
+SHA-256-Digest: N+fKEjbaqTNZ0Hu+Td+68hjAM3VGePyERs21Z9XXkTw=
+
+Name: org/eclipse/emf/ecp/view/template/style/labelwidth/model/util/La
+ belwidthAdapterFactory$1.class
+SHA-256-Digest: ELiGQKAsP+nttHYxudX5ky0Y7GUQfasH+8745evac70=
+
+Name: org/eclipse/emf/ecp/view/template/style/tab/model/util/TabAdapte
+ rFactory.class
+SHA-256-Digest: 1rc6bpIoLGXY35WkQxXbSdqVzlU1r87FaAOpTkMUIc8=
+
+Name: org/eclipse/emf/ecp/view/template/style/fontProperties/model/imp
+ l/VTFontPropertiesPackageImpl.class
+SHA-256-Digest: mGu2HBH434wDDqjSEGU9Z0/193+p9TJW0OFNVFTNXBA=
+
+Name: model/tableStyleProperty.ecore
+SHA-256-Digest: J9lNj758y1b70/ebub7XTgOMib3NY5ZDyd6xXGFMeM4=
+
+Name: org/eclipse/emf/ecp/view/template/model/impl/VTStyleImpl.class
+SHA-256-Digest: gp9YTIt6NshdLsApi/X3wYlWk0A+Jw7I+pAjR6JbhC0=
+
+Name: org/eclipse/emf/ecp/view/template/style/alignment/model/impl/VTA
+ lignmentStylePropertyImpl.class
+SHA-256-Digest: z62X/7HMpaFR2ZLujk09zsjvENHALXMmoIEUOXJmJkM=
+
+Name: org/eclipse/emf/ecp/view/template/style/fontProperties/model/uti
+ l/FontPropertiesAdapterFactory.class
+SHA-256-Digest: 7AQI9bBF6n04hKUHw22ypRLxXdsIQu2zH0xLkeISLhA=
+
+Name: org/eclipse/emf/ecp/view/template/style/tableValidation/model/im
+ pl/VTTableValidationStylePropertyImpl.class
+SHA-256-Digest: 88OyVsicrAu9+jiWN9GI979nay7dzaRXRJ3NUu1qk8E=
+
+Name: org/eclipse/emf/ecp/view/template/style/unsettable/model/VTUnset
+ tablePackage.class
+SHA-256-Digest: jzO8xwHGanZVY3m1J3Rm0YEkGeeFuQ95l/JtquF3htI=
+
+Name: org/eclipse/emf/ecp/view/template/model/VTTemplatePackage$Litera
+ ls.class
+SHA-256-Digest: XTEaNckjzmjn7o2l9U59+G74XoPY51gd//yHC3kz/eI=
+
+Name: about.html
+SHA-256-Digest: ZYczHLHHJbJ2GSLe/MBOpU/zRznwNG9X6G0P5BecAYs=
+
+Name: org/eclipse/emf/ecp/view/template/style/fontProperties/model/VTF
+ ontPropertiesFactory.class
+SHA-256-Digest: FDWmXjTJHS6vTY9q+p2KSuU5raKb61Nb5HLiaMJxPOs=
+
+Name: org/eclipse/emf/ecp/view/template/style/background/model/util/Ba
+ ckgroundSwitch.class
+SHA-256-Digest: u1vJKLlJ7yeHA5f/RJSalgeuh0M0zlG4KrwEDC7k4Yw=
+
+Name: model/tableStyleProperty.genmodel
+SHA-256-Digest: gFQ/wH5GBiCrl7ogIYjzSMbv6Uilccd6AibueZSb7jY=
+
+Name: org/eclipse/emf/ecp/view/template/selector/viewModelElement/mode
+ l/VTViewModelElementPackage$Literals.class
+SHA-256-Digest: hgAqbxRlvrnJpSjUGS//7Zszh0Zu2mCUqspFLeyjW58=
+
+Name: org/eclipse/emf/ecp/view/template/style/validation/model/VTValid
+ ationPackage$Literals.class
+SHA-256-Digest: MfCgLo7evwgbsNTB4lZIMVafqbMsMFJQfiZJi+RGIQA=
+
+Name: org/eclipse/emf/ecp/view/template/style/mandatory/model/impl/VTM
+ andatoryStylePropertyImpl.class
+SHA-256-Digest: sWYo3tAwE4R/Y0qJc+FCH22My9t+lrATuj8mv6YUzVg=
+
+Name: org/eclipse/emf/ecp/view/template/style/alignment/model/impl/VTC
+ ontrolLabelAlignmentStylePropertyImpl.class
+SHA-256-Digest: bWS2ljyR0yB0PSvCy5T/ki3YBtrUU7Z8dLo8Ot/ptP8=
+
+Name: org/eclipse/emf/ecp/view/template/model/VTControlValidationTempl
+ ate.class
+SHA-256-Digest: J72OLxaEFSXYjovjo+9QfdU4tMB8O0xAnmbWSguAk1U=
+
+Name: org/eclipse/emf/ecp/view/template/selector/domainmodelreference/
+ model/VTDomainmodelreferenceFactory.class
+SHA-256-Digest: 3vdKSLg7gpuim9d0npIkjywVUzHaW9kXOh75dzmg7zE=
+
+Name: org/eclipse/emf/ecp/view/template/style/alignment/model/VTAlignm
+ entStyleProperty.class
+SHA-256-Digest: tIeDDZWqOKLK4pBL/mtNUShXdtwQCr2a4En+gxAlxZg=
+
+Name: org/eclipse/emf/ecp/view/template/style/mandatory/model/VTMandat
+ oryPackage.class
+SHA-256-Digest: ElYvjyY3wrar5eFj/eQnKUJCp/6Op/0KKDkXtsNdojk=
+
+Name: org/eclipse/emf/ecp/view/template/style/tableValidation/model/im
+ pl/VTTableValidationPackageImpl.class
+SHA-256-Digest: jAlvt+zTeoK3kcXzupo6uW8jVJDVjJ4EQ1ycN3OevYs=
+
+Name: org/eclipse/emf/ecp/view/template/style/labelwidth/model/impl/VT
+ LabelwidthPackageImpl.class
+SHA-256-Digest: c0+1z4D2CpI3qfkSGE5PJOWZwX/2gAk8gOHg1CluuRA=
+
+Name: org/eclipse/emf/ecp/view/template/style/unsettable/model/VTUnset
+ tablePackage$Literals.class
+SHA-256-Digest: tl+6UMPsvRVUzrk09nWCClFcGY1gTl9L5z9PfCk7r0A=
+
+Name: org/eclipse/emf/ecp/view/template/style/alignment/model/util/Ali
+ gnmentSwitch.class
+SHA-256-Digest: Tj5McrbkXz8zbRn+w4no58dKHjzS5ilGtsOAOI3URto=
+
+Name: model/tabStyle.genmodel
+SHA-256-Digest: +vTkYhrgr1j0GeKnpDkN4xYJUEiwFGzvOFhJeMQ7UnE=
+
+Name: META-INF/maven/org.eclipse.emf.ecp/org.eclipse.emf.ecp.view.temp
+ late.model/pom.xml
+SHA-256-Digest: fg2qR0tQJQG7wbu5AYk7yXKQ/bzFSdgTvLzNlxp6RQc=
+
+Name: org/eclipse/emf/ecp/view/template/selector/viewModelElement/mode
+ l/VTViewModelElementSelector.class
+SHA-256-Digest: ryzrPtI7ElkKuG9juzQXd7oveu4krPok+aPevpHNex4=
+
+Name: org/eclipse/emf/ecp/view/template/style/tab/model/util/TabSwitch
+ .class
+SHA-256-Digest: Xnzympt1031Rr28ZekHb2CR4p+bf7Am0It3CE+VSxC4=
+
+Name: org/eclipse/emf/ecp/view/template/selector/viewModelElement/mode
+ l/impl/VTViewModelElementFactoryImpl.class
+SHA-256-Digest: /kmdkXj92ohfzE3WWngdS2HI3G1ZiI8+y5PlzrlL1/s=
+
+Name: org/eclipse/emf/ecp/view/template/style/tableStyleProperty/model
+ /util/TableStylePropertySwitch.class
+SHA-256-Digest: C3TDe9Say1xrk1EP2e11wM0N9wWR21ZgLeJpnmgRoLc=
+
+Name: org/eclipse/emf/ecp/view/template/style/tableValidation/model/VT
+ TableValidationPackage$Literals.class
+SHA-256-Digest: ptvHdsIXKs9uFmgn+Do8Gk8qJ5Ip2dBTfdTXY9tl+JY=
+
+Name: org/eclipse/emf/ecp/view/template/style/textControlEnablement/mo
+ del/util/TextControlEnablementAdapterFactory$1.class
+SHA-256-Digest: egLW2nfhuRU73TJ9m7+Tq8llJbKETiDuE9/naH81yEo=
+
+Name: org/eclipse/emf/ecp/view/template/style/alignment/model/util/Ali
+ gnmentAdapterFactory.class
+SHA-256-Digest: MqR2mDpRqfj85IM/wA1Rp5UTExknQ2gr7ZTmEzcnSZI=
+

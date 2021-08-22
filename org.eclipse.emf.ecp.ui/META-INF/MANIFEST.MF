@@ -1,0 +1,555 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.emf.ecp.ui;singleton:=true
+Archiver-Version: Plexus Archiver
+Built-By: genie.ecp
+Require-Bundle: org.eclipse.core.runtime;bundle-version="[3.4.0,4.0.0)
+ ", org.eclipse.emf.ecp.core;bundle-version="[1.16.0,1.17.0)";visibili
+ ty:=reexport, org.eclipse.net4j.util;bundle-version="[3.0.0,4.0.0)", 
+ org.eclipse.core.expressions;bundle-version="[3.4.0,4.0.0)", org.ecli
+ pse.emf.ecp.edit;bundle-version="[1.16.0,1.17.0)", org.eclipse.emf.ec
+ p.view.context;bundle-version="[1.16.0,1.17.0)", org.eclipse.emf.ecp.
+ common.ui;bundle-version="[1.16.0,1.17.0)"
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/emfcli
+ ent/org.eclipse.emf.ecp.core.git;path="bundles/org.eclipse.emf.ecp.ui
+ ";commitId=f2dbbd13b720d1f9463c4d5909101632edfd5c17
+Bundle-Vendor: Eclipse Modeling Project
+Import-Package: org.eclipse.core.commands;version="0.0.0", org.eclipse
+ .emf.edit.ui.action;version="0.0.0", org.eclipse.emf.edit.ui.dnd;vers
+ ion="0.0.0", org.eclipse.emf.edit.ui.provider;version="0.0.0", org.ec
+ lipse.jface.action;version="0.0.0", org.eclipse.jface.dialogs;version
+ ="0.0.0", org.eclipse.jface.layout;version="0.0.0", org.eclipse.jface
+ .resource;version="0.0.0", org.eclipse.jface.viewers;version="0.0.0",
+  org.eclipse.jface.window;version="0.0.0", org.eclipse.jface.wizard;v
+ ersion="0.0.0", org.eclipse.swt;version="0.0.0", org.eclipse.swt.cust
+ om;version="0.0.0", org.eclipse.swt.dnd;version="0.0.0", org.eclipse.
+ swt.events;version="0.0.0", org.eclipse.swt.graphics;version="0.0.0",
+  org.eclipse.swt.layout;version="0.0.0", org.eclipse.swt.widgets;vers
+ ion="0.0.0", org.eclipse.ui;ui.workbench=split;version="0.0.0", org.e
+ clipse.ui.dialogs;ui.workbench=split;version="0.0.0", org.eclipse.ui.
+ handlers;version="0.0.0", org.eclipse.ui.part;ui.workbench=split;vers
+ ion="0.0.0", org.eclipse.ui.plugin;version="0.0.0", org.eclipse.ui.vi
+ ews.properties;ui.views=split;version="0.0.0"
+Export-Package: org.eclipse.emf.ecp.internal.ui;version="1.16.0";  x-f
+ riends:="org.eclipse.emf.ecp.explorereditorbridge,   org.eclipse.emf.
+ ecp.edit.ecore.swt,   org.eclipse.emf.ecp.emfstore.ui,   org.eclipse.
+ emf.ecp.ui.rcp", org.eclipse.emf.ecp.internal.ui.composites;version="
+ 1.16.0";x-internal:=true, org.eclipse.emf.ecp.internal.ui.dialogs;ver
+ sion="1.16.0";x-friends:="org.eclipse.emf.ecp.explorereditorbridge", 
+ org.eclipse.emf.ecp.internal.ui.model;version="1.16.0";x-friends:="or
+ g.eclipse.emf.ecp.ui.e4,org.eclipse.emf.ecp.ui.e3,org.eclipse.emf.ecp
+ .ui.transaction", org.eclipse.emf.ecp.internal.ui.tester;version="1.1
+ 6.0", org.eclipse.emf.ecp.internal.ui.util;version="1.16.0";  x-frien
+ ds:="org.eclipse.emf.ecp.explorereditorbridge,   org.eclipse.emf.ecp.
+ ui.e3,   org.eclipse.emf.ecp.ui.e4,   org.eclipse.emf.ecp.emfstore.ui
+ .e3,   org.eclipse.emf.ecp.validationvieweditorbridge,   org.eclipse.
+ emf.ecp.emfstore.ui,   org.eclipse.emf.ecp.ui.rcp", org.eclipse.emf.e
+ cp.internal.wizards;version="1.16.0";  x-friends:="org.eclipse.emf.ec
+ p.edit.ecore.swt,   org.eclipse.emf.ecp.explorereditorbridge,   org.e
+ clipse.emf.ecp.workspace.ui,   org.eclipse.emf.ecp.view.table.editor,
+    org.eclipse.emf.ecp.emfstore.ui", org.eclipse.emf.ecp.internal.wiz
+ ards.page;version="1.16.0";x-friends:="org.eclipse.emf.ecp.explorered
+ itorbridge", org.eclipse.emf.ecp.spi.ui;version="1.16.0", org.eclipse
+ .emf.ecp.spi.ui.util;version="1.16.0", org.eclipse.emf.ecp.ui;version
+ ="1.16.0", org.eclipse.emf.ecp.ui.common;version="1.16.0";  x-friends
+ :="org.eclipse.emf.ecp.edit.ecore.swt,   org.eclipse.emf.ecp.explorer
+ editorbridge,   org.eclipse.emf.ecp.ui.e3,   org.eclipse.emf.ecp.view
+ .table.editor,   org.eclipse.emf.ecp.view.ui.editor.test,   org.eclip
+ se.emf.ecp.workspace.ui,   org.eclipse.emf.ecp.ui.e4", org.eclipse.em
+ f.ecp.ui.common.dnd;version="1.16.0";x-friends:="org.eclipse.emf.ecp.
+ ui.view.editor.controls", org.eclipse.emf.ecp.ui.util;version="1.16.0
+ "
+Bundle-Name: ECP UI
+Bundle-Version: 1.16.0.20180305-1637
+Bundle-Activator: org.eclipse.emf.ecp.internal.ui.Activator
+Created-By: Apache Maven 3.5.2
+Build-Jdk: 1.8.0_162
+
+Name: plugin.xml
+SHA-256-Digest: Rg9jABEEBtwjdCJnReefaw+oRZRobxAarw1oMhFefDc=
+
+Name: org/eclipse/emf/ecp/ui/util/ECPModelElementOpenTester.class
+SHA-256-Digest: hP+cwvU6ae1PvZv7joQVqsnejSFOkzL0RJRkV5TpfMg=
+
+Name: org/eclipse/emf/ecp/internal/ui/composites/AddRepositoryComposit
+ eImpl$2.class
+SHA-256-Digest: E4mZJq+h8d7DXYPUisDqwcRm8And3v1vQ3wKCYK8BcY=
+
+Name: org/eclipse/emf/ecp/internal/wizards/page/SelectRepositoryPage$1
+ .class
+SHA-256-Digest: ig7iiUgLOwAULjmjtZIqnjPFqhl2pej+bLLK9cyyJxE=
+
+Name: org/eclipse/emf/ecp/internal/ui/composites/CreateProjectComposit
+ eImpl$2.class
+SHA-256-Digest: 10RJnjwVsv43t7BsrfifhzVSEjQ/uYCbMeGbk4x+uS8=
+
+Name: icons/property_obj.gif
+SHA-256-Digest: x16IVK/p2gw8J2vD9oTgXo8Fp76LsJE4xtDUADyjIFI=
+
+Name: org/eclipse/emf/ecp/internal/ui/composites/PropertiesComposite$2
+ .class
+SHA-256-Digest: dru0/+hqYN0UV4oL6mCCAtBWuTGMkFTMrPc2RRNkEJw=
+
+Name: org/eclipse/emf/ecp/internal/ui/util/ECPFileDialogHelper.class
+SHA-256-Digest: RHx9MmSNoQUrvTtilel1JVMJXHuqyDJVkMClvSnFZSY=
+
+Name: org/eclipse/emf/ecp/internal/ui/model/TreeContentProvider.class
+SHA-256-Digest: 0ZIB+J5x/QsBwkBje4j4gwboXn4RfG7iE3mMWkmweNU=
+
+Name: org/eclipse/emf/ecp/internal/ui/util/ECPExportHandlerHelper.clas
+ s
+SHA-256-Digest: 9B7WQ4bxr/E/X2RQ09D/UiBYm7wlOBagUrt5yjXYZx4=
+
+Name: org/eclipse/emf/ecp/ui/util/ECPModelElementOpener.class
+SHA-256-Digest: FzBqNmdxL5EpVrcMf0YUY2libmPSj2SDnp552VZkbvU=
+
+Name: org/eclipse/emf/ecp/ui/common/dnd/ECPDropAdapter.class
+SHA-256-Digest: M834U5a8Q3N/MvboOmypse4l656N//qCRuYGeDiocFY=
+
+Name: org/eclipse/emf/ecp/spi/ui/util/ECPHandlerHelper$3.class
+SHA-256-Digest: CWP4PWEHHe9GpTpOs7Zx3wOcnzHISjEes6PlTpz5RK8=
+
+Name: copyright.txt
+SHA-256-Digest: I69RqU+fwNWG+MFLmGSstLo+KojmONiVcZM4D4ECBOo=
+
+Name: org/eclipse/emf/ecp/internal/ui/composites/CreateProjectComposit
+ eImpl.class
+SHA-256-Digest: sQsSzFKDxW/sOKgcXsreFkw4FpXLl6DXCo8HoHN4YRU=
+
+Name: org/eclipse/emf/ecp/internal/wizards/page/SelectOrCreateReposito
+ ryPage$2.class
+SHA-256-Digest: onFFcqkSxEJWycRpF20bJ0OjgaF2SHrUzNZIcS43eVM=
+
+Name: icons/delete.gif
+SHA-256-Digest: rvefCbcrUR7ReYbQDqo/8ahlei306gYBodoRMulQkd8=
+
+Name: icons/checkout_project_old.gif
+SHA-256-Digest: yr5l4e1UDR+BUhEBiRNkf/8CJFlTgUrjxQHyFzeSMx0=
+
+Name: org/eclipse/emf/ecp/ui/common/ECPViewerFactory.class
+SHA-256-Digest: zXmHxP4BLJMMr+HOOIwGCOh7hNBFm1Y39fywmmMNK8A=
+
+Name: org/eclipse/emf/ecp/spi/ui/DefaultUIProvider$7.class
+SHA-256-Digest: ymzRPU0A6rXlJt0en9Ov8hXvb0+rzCMVo9Zid+qjACw=
+
+Name: icons/EPackageUnknown.gif
+SHA-256-Digest: zaExB/U/HAAtgwcTqdUUaTGIuhlIdBBeC0JgJJFyWok=
+
+Name: org/eclipse/emf/ecp/internal/wizards/AddReferenceModelElementWiz
+ ard.class
+SHA-256-Digest: BdttP2nRWLt3owHW02w4z4PaQD8wyO7xqOH6WG7qzM8=
+
+Name: org/eclipse/emf/ecp/ui/common/CheckoutProjectComposite$CheckoutP
+ rojectChangeListener.class
+SHA-256-Digest: Yz1iMzJ4ex5yX0Fg+kZYYOCg6eWwxojTsbHeFkNjQuk=
+
+Name: org/eclipse/emf/ecp/internal/ui/Messages.class
+SHA-256-Digest: fYRWPpm4nNueelxG6DnamYZiJH1qvD/79kD7WAYqEDo=
+
+Name: org/eclipse/emf/ecp/spi/ui/DefaultUIProvider$4.class
+SHA-256-Digest: i44RWc+DV7rus/ZnDvcYmntkuOpTUNLcdeLBDz0Eg7I=
+
+Name: icons/pending.gif
+SHA-256-Digest: C9QLUbleW9zE88a1DgtudXpTBV2OuppW0tTz7jv317Q=
+
+Name: org/eclipse/emf/ecp/internal/ui/model/TreeContentProvider$Synthe
+ ticElement.class
+SHA-256-Digest: I8reSx+ah5Py0Y2PBdVPL4TNIgb/D4kET0xdnB+yzkk=
+
+Name: org/eclipse/emf/ecp/internal/ui/model/ModelLabelProvider.class
+SHA-256-Digest: WsZMPL5CZODhN7GY9yjiHuxlqDudYQQOndT39M7kEt8=
+
+Name: org/eclipse/emf/ecp/ui/common/dnd/ModelExplorerDropAdapter$1.cla
+ ss
+SHA-256-Digest: 16n9Y729+JH28uZIM2rBtM8baNxTIEgKAFKY5WxQ6mI=
+
+Name: org/eclipse/emf/ecp/internal/wizards/AddRepositoryWizard.class
+SHA-256-Digest: noAt22fpYdUi87OER5dp4afzzGuLJ3aMHGmLXOlcQ3w=
+
+Name: org/eclipse/emf/ecp/ui/util/ECPModelElementOpenerWithContext.cla
+ ss
+SHA-256-Digest: xa7qdF9HHJdddIQugeH4YX4oyZJNV2OZ/6/m1NSaHXs=
+
+Name: org/eclipse/emf/ecp/internal/ui/model/ModelContentProvider.class
+SHA-256-Digest: 4yY15YWciRN/+pCoNRQ6Vl4IUNyIhLZw6XdeN4H9hrw=
+
+Name: org/eclipse/emf/ecp/internal/ui/PreferenceHelper.class
+SHA-256-Digest: Dn7DzCK4e089K9AGo01chTu25uFrZ7wW3VQ2rj3PyI8=
+
+Name: org/eclipse/emf/ecp/internal/ui/model/IECPLabelProvider.class
+SHA-256-Digest: vx9EmZ9YWWZW7ZPmm7Ct4eOOCMaMrvxX84k+gg9U0rI=
+
+Name: org/eclipse/emf/ecp/internal/ui/Activator.class
+SHA-256-Digest: IVJ2p22Zg1UFZkglIOPoR6G9Gai4xCavqW1moUY1D6E=
+
+Name: org/eclipse/emf/ecp/internal/ui/tester/ECPMenuContributionsEnabl
+ ementTester.class
+SHA-256-Digest: v0AWMX7HmfW1Loaqg1y217pmU8GrfFQYV9ZEFMQ4Hxs=
+
+Name: org/eclipse/emf/ecp/spi/ui/UIProviderRegistry.class
+SHA-256-Digest: GfXhDGAxNxHMXZ1CadmysXpbw0BTqBufqSoHbvMFlTQ=
+
+Name: icons/EPackage.gif
+SHA-256-Digest: Al+MwYpLAbEutip2PLYRqBqRBaWIIEQ1VQpd6X+SaHA=
+
+Name: org/eclipse/emf/ecp/spi/ui/util/ECPHandlerHelper$2.class
+SHA-256-Digest: S3eTm9JZzsFzm44XRtF90XD5ziKnsDjzOFsaYNqFG1E=
+
+Name: org/eclipse/emf/ecp/internal/ui/model/TreeContentProvider$SlowCh
+ ildrenList$1.class
+SHA-256-Digest: FrBVo9Z1AEZphM6RgrfLeklJsGtPi94lLSGy+sN6+m0=
+
+Name: org/eclipse/emf/ecp/internal/ui/model/StructuredContentProvider.
+ class
+SHA-256-Digest: m9JASM8nSQBkmspTx5odSuC4FopdwFAKrZuhl0AqJhc=
+
+Name: org/eclipse/emf/ecp/internal/wizards/CreateProjectWizard.class
+SHA-256-Digest: HoB6Uo7pyNP9BETlA2IC6zx9naa7fTZf+Xu4FS2Xm0w=
+
+Name: org/eclipse/emf/ecp/internal/ui/model/RepositoriesLabelProvider.
+ class
+SHA-256-Digest: XIIuzkF4tRNFEtI2+w1KFwXrLcTdJVENF1ND1m5nnE0=
+
+Name: org/eclipse/emf/ecp/spi/ui/DefaultUIProvider$5.class
+SHA-256-Digest: CifKD0gqphzkidzWtwnRhC9S86Z2Ym+HEVvEVp8chLE=
+
+Name: org/eclipse/emf/ecp/internal/ui/composites/PropertiesComposite$3
+ .class
+SHA-256-Digest: j8vXqFcdHN6BbuZT0DX/1MjoI4GP5ovDpmDE/UQqPeE=
+
+Name: org/eclipse/emf/ecp/internal/ui/model/StructuredContentProvider$
+ 1.class
+SHA-256-Digest: 5tWlIrLXeVhrfdozh0/Pw7hN+J0+3iQq8FOc88oE7Sg=
+
+Name: org/eclipse/emf/ecp/internal/ui/model/TreeContentProvider$SlowEl
+ ement.class
+SHA-256-Digest: mqsLPZDuNRg7cj35a6BrudTBZi8K2+alDBR89+UaBGA=
+
+Name: org/eclipse/emf/ecp/ui/common/CheckoutProjectComposite.class
+SHA-256-Digest: BIGrZtN7fN5weKbyMGagJJaJ15mBwISYu4ZedgYnn7E=
+
+Name: org/eclipse/emf/ecp/internal/wizards/SelectEStructuralFeaturesWi
+ zard$1.class
+SHA-256-Digest: NegxkgpgjBA/WP7x2Atk4GP+r+C+OmFzyKcm4eVreOg=
+
+Name: org/eclipse/emf/ecp/internal/ui/dialogs/PropertyDialog$2.class
+SHA-256-Digest: atRDImxA/Dh2BBbcnbo4MmnizFGIQyN2cDVYTOgZd8E=
+
+Name: org/eclipse/emf/ecp/internal/ui/composites/PropertiesComposite.c
+ lass
+SHA-256-Digest: BtR7/EM7pYPiwRg4tkdOex7Y98rOsNmbhq6pOROvaz8=
+
+Name: org/eclipse/emf/ecp/internal/ui/UIProviderRegistryImpl.class
+SHA-256-Digest: /BHyLYvUOhX9RvF5Vh3OWY9zaebBkeNeIa9gLCo0aMo=
+
+Name: org/eclipse/emf/ecp/internal/ui/model/TreeContentProvider$1.clas
+ s
+SHA-256-Digest: uHNF7uu0236VRqS4CCJ6baz+zX7nUjFwvb/Xj60XBnc=
+
+Name: org/eclipse/emf/ecp/internal/ui/composites/ECPProjectSelectionMo
+ delClassCompositeImpl.class
+SHA-256-Digest: jGoFJT66IEvzPcao0Y0z9QxC/gyVAem83iIRhf/O8BU=
+
+Name: org/eclipse/emf/ecp/internal/wizards/FilterModelElementWizard.cl
+ ass
+SHA-256-Digest: 0E/MzWJ81vv4w+U+fbDvDuDwqCPdks/JkTduia4usJs=
+
+Name: icons/checkout_project.gif
+SHA-256-Digest: AZA4QWaWIs2daOAWdvEP89rFPwTK1RXI9Z+6ZsxP7q4=
+
+Name: org/eclipse/emf/ecp/spi/ui/DefaultUIProvider.class
+SHA-256-Digest: V4/B+hGdjYH2vp6sUN64dLvB7NxpQFnhCLFCmpNdSC8=
+
+Name: org/eclipse/emf/ecp/spi/ui/util/ECPHandlerHelper$1.class
+SHA-256-Digest: +AbZxkYM9OtarH4ZW9WCtD4CH0c5QgUm3LoHwInTAj8=
+
+Name: org/eclipse/emf/ecp/internal/ui/model/ProvidersLabelProvider.cla
+ ss
+SHA-256-Digest: D6v2mV59mie8IReROlbYK0fKqdzvt3EaZJ1EtvaGLiw=
+
+Name: org/eclipse/emf/ecp/internal/wizards/ShareWizard.class
+SHA-256-Digest: LSa/OVYJTCd+d52BQa1Zei71KxuDZmspec+HI3mCcmk=
+
+Name: org/eclipse/emf/ecp/ui/common/AddRepositoryComposite$AddReposito
+ ryChangeListener.class
+SHA-256-Digest: NkOSEyAZnb+pdzupqz8gV2whO0v4jSve2Q0sHolUBrA=
+
+Name: icons/providers.gif
+SHA-256-Digest: kYlPfTP9ZV4nJM7eEv6JI11HCVT2eU4VbHgmKemropw=
+
+Name: icons/repository.gif
+SHA-256-Digest: Hwvgq10wE4bO9fvy0vfREtmkmo9tWVlyIw1Pd0gQK5I=
+
+Name: org/eclipse/emf/ecp/internal/wizards/CheckoutProjectWizard$1$1.c
+ lass
+SHA-256-Digest: tFjKlxRuEMkqqTpxH5Poa+jaeNMUvCCFGCLTDORK9Ds=
+
+Name: org/eclipse/emf/ecp/ui/common/CreateProjectComposite$CreateProje
+ ctChangeListener.class
+SHA-256-Digest: NcNJqOazbkhh943vMXoqT0GcJl9OKAm+WG2CQUcgbe8=
+
+Name: org/eclipse/emf/ecp/internal/ui/util/ECPImportHandlerHelper.clas
+ s
+SHA-256-Digest: WJF5/jo40IX7i8P9I82SrsRR7haFPuZElYiqAxfFF3g=
+
+Name: META-INF/maven/org.eclipse.emf.ecp/org.eclipse.emf.ecp.ui/pom.xm
+ l
+SHA-256-Digest: YVIo1nX7Apw9G7ONROwis/EnPE8c8sWHvTphiz2wHBo=
+
+Name: org/eclipse/emf/ecp/internal/ui/dialogs/RepositoryPropertiesDial
+ og.class
+SHA-256-Digest: fk9NU26jU+dKTOloBz6jgfYPYErcrbI/WrjfokZzbkM=
+
+Name: org/eclipse/emf/ecp/ui/common/AddRepositoryComposite.class
+SHA-256-Digest: TiBL/1HOiwXFTMVEKMenRNTj9SuexhAD1KXmuBvgPiU=
+
+Name: schema/menuContributionEnablement.exsd
+SHA-256-Digest: t94K9d2CMWET7WO8AaEXvEg60MyYRXl3imEX6PzBW1o=
+
+Name: icons/provider_disabled.gif
+SHA-256-Digest: B5MhGe6Xc+C1kn1AVwku4rVJ8Y5IEygI5uVUTKoVwC8=
+
+Name: org/eclipse/emf/ecp/internal/ui/model/ECPContentProvider.class
+SHA-256-Digest: Iaa0+S2fsu998EOn0Dq2FSLYYcPfdt643BVVmtFqSQo=
+
+Name: icons/magnifier.png
+SHA-256-Digest: R1pjNftSwhtfpzJRjolAj0J3d5v1sBU5E1iwR2Ariv8=
+
+Name: org/eclipse/emf/ecp/internal/ui/composites/CheckoutProjectCompos
+ iteImpl$1.class
+SHA-256-Digest: aw+J0CcesOTVWI832XIMdwMpP74tKgPZe+x8vMMUuMw=
+
+Name: schema/modelElementOpener.exsd
+SHA-256-Digest: iGMQ9whkBYDfj7z8gwutaJVrzoiGWEF3abrq4PWkltc=
+
+Name: icons/refresh.gif
+SHA-256-Digest: UNrXeNFeLP0C3wBxRhio8pcw09z35sw60VyMsfAZTJY=
+
+Name: icons/properties_wiz.png
+SHA-256-Digest: /LHSAHvM0PZxuQFsB0Wm1E2E7izV54eZcCZ91YOzYeY=
+
+Name: icons/delete_wiz.png
+SHA-256-Digest: gqt3gGGH7h5De9osI4YOzEgmBv8XVhpfvd7LN/+hXJw=
+
+Name: org/eclipse/emf/ecp/spi/ui/DefaultUIProvider$6.class
+SHA-256-Digest: h2Sdo0wBLQ22MIFQnmY+EfnPqLoXPvV553B/uO5PHY8=
+
+Name: org/eclipse/emf/ecp/spi/ui/util/ECPHandlerHelper.class
+SHA-256-Digest: PX1VKo0iI2zwzGtFRzkGJzL7XXGsDJbkzpzPdPtKkbY=
+
+Name: org/eclipse/emf/ecp/internal/ui/model/TreeContentProvider$SlowCh
+ ildrenList.class
+SHA-256-Digest: DYuH5H3d6ZhC5Al/Z5WuPhvolVJIyNdQHPk/7PER97M=
+
+Name: org/eclipse/emf/ecp/spi/ui/ECPDeleteServiceImpl.class
+SHA-256-Digest: o6k0NeH7h9U2DEb5GAYlx3j5yVvLvhkTdc1sNhF70KE=
+
+Name: org/eclipse/emf/ecp/internal/wizards/AddReferenceModelElementWiz
+ ard$1.class
+SHA-256-Digest: MypoS7xhKBxumokp/jalnDOG71A2qnZVUGTfBmiLk+Y=
+
+Name: org/eclipse/emf/ecp/internal/ui/model/ECPLabelProvider.class
+SHA-256-Digest: pghHBlpI/4HpRypUcVp0ho8iQ6ucSsKSe+W4qiyuyac=
+
+Name: org/eclipse/emf/ecp/spi/ui/DefaultUIProvider$3.class
+SHA-256-Digest: 3JfyNvh30BmxFLiSYw0eIQj/nGNjwj9neDMefmt2lIA=
+
+Name: icons/error.gif
+SHA-256-Digest: iiyTDHy3r4F6/pRQ4NF8TlV4o7C1RGg/nKSpfDc7vKw=
+
+Name: org/eclipse/emf/ecp/internal/ui/dialogs/ProjectPropertiesDialog.
+ class
+SHA-256-Digest: brYQhgTqqxxYCJvt0tBjObXfn/uvyeYYYxp3z078nAU=
+
+Name: schema/uiProviders.exsd
+SHA-256-Digest: DLGiVmjPYfpTeELL6ZGovXs3Nc6a35U4/3eplIcNwto=
+
+Name: org/eclipse/emf/ecp/internal/ui/UIProviderRegistryImpl$UIProvide
+ rDescriptor.class
+SHA-256-Digest: dJg45bYfigAriLQijGP5F52GiqBsskvdk78hDlrCaYE=
+
+Name: org/eclipse/emf/ecp/internal/ui/composites/AddRepositoryComposit
+ eImpl.class
+SHA-256-Digest: B0zLqvrlqsKcIGCaC/mBQRxEDpPsymFi+56sWLfHWrk=
+
+Name: org/eclipse/emf/ecp/internal/ui/composites/PropertiesComposite$1
+ .class
+SHA-256-Digest: AeR3Lfkuv81bQLh54etb0Nn3hGvi1FQBOqZ8QUqeg2c=
+
+Name: org/eclipse/emf/ecp/internal/wizards/CreateProjectWizard$1.class
+SHA-256-Digest: 5F3XpYONg17bWyQGl1jiT9LB1nituw6Kt03qaEOgw6Q=
+
+Name: org/eclipse/emf/ecp/ui/messages.properties
+SHA-256-Digest: DOYa+MA+q6wVkdi/6FNHE8XGoefQpR1oGyhBSx7NQhI=
+
+Name: org/eclipse/emf/ecp/internal/ui/model/ProvidersContentProvider.c
+ lass
+SHA-256-Digest: ePkuEFkgjh6w74QGyh9zQVxsif+xdqCruasTGzTwNnA=
+
+Name: org/eclipse/emf/ecp/internal/ui/composites/CreateProjectComposit
+ eImpl$1.class
+SHA-256-Digest: uZT2FWvom7rZfNZ35pxXV2bqsiFV5oy6D3Hg26XUD2A=
+
+Name: org/eclipse/emf/ecp/internal/ui/dialogs/DeleteDialog.class
+SHA-256-Digest: TfViN3MSBoW4alf+jJMKlyCAaWKigRX3Ai97pcpX/S0=
+
+Name: org/eclipse/emf/ecp/internal/ui/composites/AddRepositoryComposit
+ eImpl$1.class
+SHA-256-Digest: ccCdQidrs6YTE/U4LT5uKudAsRhojxbBKPqMPicZPRg=
+
+Name: icons/provider.gif
+SHA-256-Digest: 6kblN11J4QXn1CEhx6lNtscfkaFp5mpQ2ciXAw6Y7A0=
+
+Name: icons/checkout_project_wiz.png
+SHA-256-Digest: dATKdTWEDBB76LBOmW9zTy0tCzCOasHMGUo0+m363vQ=
+
+Name: org/eclipse/emf/ecp/internal/ui/dialogs/PropertyDialog$1.class
+SHA-256-Digest: SySBKi2bGkHZAwCIVX6Ea9w+ef4cKOhaWpZGKBK1mXU=
+
+Name: org/eclipse/emf/ecp/internal/wizards/page/SelectOrCreateReposito
+ ryPage.class
+SHA-256-Digest: 0k5tiIuTx486779ApNptgyDfWWQCLwvTqEGtPpBGRX0=
+
+Name: icons/add.gif
+SHA-256-Digest: RcE1RsO/S/9EYXHVXXlja4haZ7NWUSirZxGv24dxNoc=
+
+Name: org/eclipse/emf/ecp/internal/ui/model/ECPLabelProvider$1.class
+SHA-256-Digest: yo0rnPrb1XiL+rZrHlbPiYUvJ5CDrDZIwhKhoxURNfI=
+
+Name: org/eclipse/emf/ecp/internal/ui/model/PropertiesLabelProvider.cl
+ ass
+SHA-256-Digest: mdeAewn28KApcYTaYBKDeCYvMnITsgqEIzkTErxRvU4=
+
+Name: schema/labelProvider.exsd
+SHA-256-Digest: UeDoKlD8MmKifu/ok2v1QyTVOYvC4RyIySYDRDxzsi8=
+
+Name: org/eclipse/emf/ecp/internal/ui/UIProviderRegistryImpl$UIProvide
+ rParser.class
+SHA-256-Digest: 6SuwHynPTYmYRC49mdJqImAb+Tjk92WJ7KkMPLlsr5E=
+
+Name: org/eclipse/emf/ecp/internal/wizards/CheckoutProjectWizard.class
+SHA-256-Digest: ET+kSamTGfJYj94ryXEI9gzr2mN0IPuP32ngOF0N5hU=
+
+Name: org/eclipse/emf/ecp/internal/wizards/CheckoutProjectWizard$1.cla
+ ss
+SHA-256-Digest: OcFEjcDpMLlzbzG2bH1jFcIBjHLbFxf1Hr8NWr6E7xA=
+
+Name: schema/dropAdapter.exsd
+SHA-256-Digest: iWHBO94bDW/04b/qBmujTKbAqmbTaYqKrWwEuVDKbYk=
+
+Name: org/eclipse/emf/ecp/spi/ui/DefaultUIProvider$1.class
+SHA-256-Digest: 7gWGj24HX5Zw1V/KTGhdT0xZYdlvSCENLGK+wFLYYAc=
+
+Name: org/eclipse/emf/ecp/spi/ui/CompositeStateObserver.class
+SHA-256-Digest: /P2YvATP7yKptBbrn9+Tr8eaJBuKDrSLlKLV26OHbLU=
+
+Name: org/eclipse/emf/ecp/internal/ui/model/PropertiesContentProvider.
+ class
+SHA-256-Digest: JPaN1J5FAxxCyJtd7x5MNrmiwB7gcDXDQhqiKYYxrY4=
+
+Name: icons/project_open.gif
+SHA-256-Digest: 6zny5Xyr/XQKuNDF+0sm/FynGzNOLPyNZIHDSEK0w2A=
+
+Name: org/eclipse/emf/ecp/internal/ui/util/HandlerHelperUtil.class
+SHA-256-Digest: JCIKkcyPgXKzyTGaj9X8HoR+pHIAgVeo2tyxMkiyyBg=
+
+Name: org/eclipse/emf/ecp/spi/ui/ECPReferenceServiceImpl.class
+SHA-256-Digest: 8cqTirghrTpw3r7xTEIIVx6JL74kIvoF8PD8t6UyNHQ=
+
+Name: schema/modelExplorerSettings.exsd
+SHA-256-Digest: i3eUnXm/2QymoTwPQv/lIK1igWPkh2dTD/lMaDAOb0E=
+
+Name: org/eclipse/emf/ecp/ui/common/ECPViewerFactory$1.class
+SHA-256-Digest: tkXk9H/BYS5n8ocWuam1iz45JxWlwq1rpPP8/efHcz4=
+
+Name: org/eclipse/emf/ecp/ui/common/ECPCompositeFactory.class
+SHA-256-Digest: i0UV+qEOq20yhEcw/gOTg71/XILZwFDW0lVCtNz5pnM=
+
+Name: org/eclipse/emf/ecp/internal/wizards/page/AddRepositoryPage.clas
+ s
+SHA-256-Digest: pYFCgyHth4KUpuWRhf0fCE0ylQfaAox1R/Zw6gmN028=
+
+Name: org/eclipse/emf/ecp/internal/wizards/CreateProjectWizard$1$1.cla
+ ss
+SHA-256-Digest: uGT3aZXu7i03v2Los0farEKHt389YSLoJ5FXMIb/OII=
+
+Name: org/eclipse/emf/ecp/internal/wizards/SelectEStructuralFeaturesWi
+ zard.class
+SHA-256-Digest: sCognoKKHwg7nVx6c8MSmfaYYyV6mmCp3pB+iKBrrBI=
+
+Name: org/eclipse/emf/ecp/internal/wizards/FilterModelElementWizard$1.
+ class
+SHA-256-Digest: cSS3uEWqE5hnMZUvHoMZa9DyifrvFV5SSY4xPFG6O3o=
+
+Name: org/eclipse/emf/ecp/internal/ui/model/RepositoriesContentProvide
+ r.class
+SHA-256-Digest: OZI2RoBBlZKJwm8T7HqYOwHYeriQtp2vTrZqenaMPQw=
+
+Name: icons/project_closed.gif
+SHA-256-Digest: QGnn8+rM5PW9J/khQB1sFdzDFAxZygpJBDMj5fEPTfw=
+
+Name: org/eclipse/emf/ecp/internal/ui/composites/CreateProjectComposit
+ eImpl$3.class
+SHA-256-Digest: gCVAwrkMxpy6gf6PQUrBgV7QHoFnAKDsvpKxZ4HEb+Y=
+
+Name: org/eclipse/emf/ecp/internal/ui/dialogs/PropertyDialog.class
+SHA-256-Digest: xJ5o1WbrCO3YCGFG6C72bo8ikTGxLOEic1GcmLiF3nw=
+
+Name: about.html
+SHA-256-Digest: ZYczHLHHJbJ2GSLe/MBOpU/zRznwNG9X6G0P5BecAYs=
+
+Name: org/eclipse/emf/ecp/internal/ui/composites/AddRepositoryComposit
+ eImpl$3.class
+SHA-256-Digest: qYDXx182GH0wobkrn30zCleZ6sScZwOJ+colN9IUM74=
+
+Name: org/eclipse/emf/ecp/internal/ui/model/TreeContentProvider$ErrorE
+ lement.class
+SHA-256-Digest: D0m52gBwWD8q7AYrW6gdHEr9N/8oSt8UfggcBy37k5A=
+
+Name: org/eclipse/emf/ecp/ui/common/CreateProjectComposite.class
+SHA-256-Digest: TSoa1aQldq31TmDwCapgz8cRlB1TBuw5TMOaN75n+Co=
+
+Name: org/eclipse/emf/ecp/spi/ui/DefaultUIProvider$2.class
+SHA-256-Digest: iwFZIKYYrYqkE3xB9xtu3nwVPeng73FUsaG/PxyQRu4=
+
+Name: org/eclipse/emf/ecp/internal/ui/dialogs/PropertiesDialog.class
+SHA-256-Digest: mF1mHKHm1So8WmEoHhLmGnPeGlQBtWyPRRHt8VJciJk=
+
+Name: icons/repositories.gif
+SHA-256-Digest: RpadV1eHJ4JBqv+V7pIBDERuKJqFwiBmbamcu6scpNs=
+
+Name: org/eclipse/emf/ecp/internal/ui/composites/CheckoutProjectCompos
+ iteImpl.class
+SHA-256-Digest: 4V0oh058UOfg1TKXf563DSl5gvIu+/QL31qK9fe0MUU=
+
+Name: icons/sample.gif
+SHA-256-Digest: 6jMftqI7oSaDQ6w4VCjJEtTiJvYpMr0Z1u+lWgsbkjY=
+
+Name: org/eclipse/emf/ecp/internal/wizards/page/SelectRepositoryPage.c
+ lass
+SHA-256-Digest: UwCYcb8NdLL3wDPrdX2MgNIw1EZ+/umkrg04F/68fs4=
+
+Name: META-INF/maven/org.eclipse.emf.ecp/org.eclipse.emf.ecp.ui/pom.pr
+ operties
+SHA-256-Digest: pnaf8xfcmZhMePHWRGHk70PczNFfI6bepHPLh+wYzKs=
+
+Name: org/eclipse/emf/ecp/internal/ui/util/ECPImportHandlerHelper$1.cl
+ ass
+SHA-256-Digest: DK1rIK9RetEsumSItmOROFVcEDbIgYxoHAGzqDP+C5M=
+
+Name: org/eclipse/emf/ecp/internal/wizards/page/SelectOrCreateReposito
+ ryPage$1.class
+SHA-256-Digest: u3qCBvkZlZNri5nFSucL7L9BtZM8+QdhwSpMdIRLn2E=
+
+Name: org/eclipse/emf/ecp/spi/ui/UIProvider.class
+SHA-256-Digest: 0EZuR2gAJapYNeYDxTk4HQMyGjf7VlCVTNmnq7gePd8=
+
+Name: org/eclipse/emf/ecp/internal/wizards/page/AddRepositoryPage$1.cl
+ ass
+SHA-256-Digest: oWigIDtgau/g6pSNvLl7F3uF5fAqMyU8fIC/ImO5ODw=
+
+Name: org/eclipse/emf/ecp/ui/common/dnd/ModelExplorerDropAdapter.class
+SHA-256-Digest: UOmce3O3eF04Yj8kQv4Iv7l7vvHOEsJEGMlNHdLYFgI=
+

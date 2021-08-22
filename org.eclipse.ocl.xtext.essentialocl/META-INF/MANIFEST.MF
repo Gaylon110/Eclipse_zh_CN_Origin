@@ -1,0 +1,1108 @@
+Manifest-Version: 1.0
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-SymbolicName: org.eclipse.ocl.xtext.essentialocl;singleton:=tru
+ e
+Eclipse-SourceReferences: scm:git:/gitroot/ocl/org.eclipse.ocl.git
+Bundle-Activator: org.eclipse.ocl.xtext.essentialocl.utilities.Essenti
+ alOCLPlugin$Implementation
+Require-Bundle: org.eclipse.core.runtime;bundle-version="[3.5.0,4.0.0)
+ ",org.eclipse.core.resources;bundle-version="[3.5.0,4.0.0)",org.eclip
+ se.ocl.xtext.base;bundle-version="[1.3.0,2.0.0)";visibility:=reexport
+Bundle-Version: 1.3.0.v20170522-1753
+Export-Package: org.eclipse.ocl.xtext.essentialocl,org.eclipse.ocl.xte
+ xt.essentialocl.as2cs,org.eclipse.ocl.xtext.essentialocl.attributes,o
+ rg.eclipse.ocl.xtext.essentialocl.cs2as,org.eclipse.ocl.xtext.essenti
+ alocl.formatting,org.eclipse.ocl.xtext.essentialocl.parser.antlr,org.
+ eclipse.ocl.xtext.essentialocl.parser.antlr.internal;x-friends:="org.
+ eclipse.ocl.xtext.essentialocl.ui",org.eclipse.ocl.xtext.essentialocl
+ .scoping,org.eclipse.ocl.xtext.essentialocl.serializer,org.eclipse.oc
+ l.xtext.essentialocl.services,org.eclipse.ocl.xtext.essentialocl.util
+ ities,org.eclipse.ocl.xtext.essentialocl.validation,org.eclipse.ocl.x
+ text.essentialoclcs,org.eclipse.ocl.xtext.essentialoclcs.impl,org.ecl
+ ipse.ocl.xtext.essentialoclcs.util
+Bundle-ClassPath: .
+Ant-Version: Apache Ant 1.9.4
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: %providerName
+Bundle-Name: %pluginName
+Created-By: 1.8.0_121-b13 (Oracle Corporation)
+Bundle-ManifestVersion: 2
+Import-Package: org.apache.log4j;version="[1.2.15,2.0.0)"
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$CollectionLiteralExpCSElements.class
+SHA1-Digest: BA3cjyYIISzHE9ydRraI3IfV1eQ=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/IterateCallExpCS.class
+SHA1-Digest: +icWoEO1B10DJ8Tsc/u9W9hb6gg=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/impl/PrimitiveLiteralExpCSI
+ mpl.class
+SHA1-Digest: s2jHdFzoZd/lVJYaNKnypQ4QeEE=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$PatternExpCSElements.class
+SHA1-Digest: cChdBjWB8VMl0E488FXUJZfA3yc=
+
+Name: org/eclipse/ocl/xtext/essentialocl/as2cs/EssentialOCLExpressionV
+ isitor.class
+SHA1-Digest: pCMGg0mLyiBBJYxhZ/QH1nJpVnY=
+
+Name: org/eclipse/ocl/xtext/essentialocl/parser/EssentialOCL.l
+SHA1-Digest: dI/wGHVdGE3J1fOSUzY/7LAxMkQ=
+
+Name: org/eclipse/ocl/xtext/essentialocl/attributes/AbstractOperationM
+ atcher$1.class
+SHA1-Digest: LqGIDpLC5BY0gWUSRCxq/o8s60o=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/impl/InfixExpCSImpl.class
+SHA1-Digest: gPJX77IGdeCaf+WUdxhB5cNdgZQ=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/TupleLiteralPartCS.class
+SHA1-Digest: CSiRHTt/VMnGcQ57apg4kFvSi4g=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$UnaryOperatorNameElements.class
+SHA1-Digest: wh0UbXKWWE7aqkVIRMQoswaHs04=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$NavigatingBarArgCSElements.class
+SHA1-Digest: QolmdjhKYPxuV9IWXz4wnjCB4yA=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$PrefixedLetExpCSElements.class
+SHA1-Digest: RjI9qe6LnqToN6/FJBWGZ23qnLI=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/EssentialOCLCSPackage$Liter
+ als.class
+SHA1-Digest: tGd5q907AswwNMEJlI6QC+ILVpM=
+
+Name: org/eclipse/ocl/xtext/essentialocl/cs2as/EssentialOCLCS2AS.class
+SHA1-Digest: ynOZNTfWSF+Vwz7tBxts+hcacjk=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/util/AbstractNullEssentialO
+ CLCSVisitor.class
+SHA1-Digest: 2lg36h2qmTd5aD82bRw97ZUHfC8=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/impl/ShadowExpCSImpl.class
+SHA1-Digest: v1OieltFl4gI0y0BxVs4vnm4Un4=
+
+Name: org/eclipse/ocl/xtext/essentialocl/parser/OCLKWLexer.gi
+SHA1-Digest: lcHEniiAZkWXK+6m80ykU+mrdoY=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/AbstractNameExpCS.class
+SHA1-Digest: TI2mi8aqbZUMFGEHZTu9QeOLTF8=
+
+Name: org/eclipse/ocl/xtext/essentialocl/validation/EssentialOCLJavaVa
+ lidator.class
+SHA1-Digest: GhV81Ngn+tAUrxwOTNTbaTsbnrw=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/EssentialOCLCSPackage.class
+SHA1-Digest: oMJhchajzA9yh6Xz4u+sO+IKpXQ=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/impl/MapLiteralExpCSImpl.cl
+ ass
+SHA1-Digest: W4Zy0Nd45mvpiqFLPmqT1Y2OtiE=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/ShadowExpCS.class
+SHA1-Digest: xj/i/p8xB8LBZGXRvDq1NxWZMu4=
+
+Name: org/eclipse/ocl/xtext/essentialocl/EssentialOCLGrammarResource$G
+ rammarProvider.class
+SHA1-Digest: XIRkcZ6M0EWtgLkE5IIaknl38VI=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/IfThenExpCS.class
+SHA1-Digest: 2ZNuZSpbQuGn5sxSXuQA1Ka7iy4=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/impl/NullLiteralExpCSImpl.c
+ lass
+SHA1-Digest: iABbhpX+Mbc7WW7DD62Y5RCacm0=
+
+Name: org/eclipse/ocl/xtext/essentialocl/attributes/AbstractOperationM
+ atcher.class
+SHA1-Digest: r800Ox0AWCKq1ge3yqDrxqc+l4I=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/MapLiteralPartCS.class
+SHA1-Digest: cAwiYHwPptcI5+6kt4ibrKBoi9c=
+
+Name: org/eclipse/ocl/xtext/essentialocl/parser/antlr/internal/Interna
+ lEssentialOCLParser$DFA38.class
+SHA1-Digest: QFOpQyKax1VSVdGQi47RDrSG+Vk=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$URIFirstPathElementCSElements.class
+SHA1-Digest: K8ZnYikn9JgmxCeYo7SjYQH7QKA=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/MapLiteralExpCS.class
+SHA1-Digest: kd9DFpSFUTJFPSbER0gEdYHBuo8=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/util/EssentialOCLCSSwitch.c
+ lass
+SHA1-Digest: iFoM2I5IjbXOGbpHqFJTRQQo+HM=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/CurlyBracketedClauseCS.clas
+ s
+SHA1-Digest: N3QlYpgSeFgOp3FPWy3a7NWi8CE=
+
+Name: org/eclipse/ocl/xtext/essentialocl/parser/OCLKWLexer.l
+SHA1-Digest: uIsrKo6D3zjPPbRtCMCRo6Had7E=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/SelfExpCS.class
+SHA1-Digest: +8bGSQTwRbU+Mx+BYTu3B2vIeQ0=
+
+Name: org/eclipse/ocl/xtext/essentialocl/parser/antlr/internal/Interna
+ lEssentialOCLParser$FollowSets000.class
+SHA1-Digest: xqmYHSGNhdO1lwRXCdUirhccCkQ=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/util/AbstractDelegatingEsse
+ ntialOCLCSVisitor.class
+SHA1-Digest: OyXCt+5fXZLCU1V7TM7pslYWCvs=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$PrimaryExpCSElements.class
+SHA1-Digest: 32Fq+t7LH/0RkT1SLH46D3Y/E6E=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$UnreservedNameElements.class
+SHA1-Digest: K2eldbAj8ywwUljRplWqlm042dc=
+
+Name: org/eclipse/ocl/xtext/essentialocl/serializer/EssentialOCLSyntac
+ ticSequencer.class
+SHA1-Digest: inkvGJn1F92jZBvhAxrxIPZEqfg=
+
+Name: org/eclipse/ocl/xtext/essentialocl/parser/OCLParser.g
+SHA1-Digest: LdsiFT2l7DzJ9GNNWO6F/I1PD0I=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$EssentialOCLUnaryOperatorNameElements.class
+SHA1-Digest: Idexj5Zn6yZ0R152MY1974uDSGw=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$NestedExpCSElements.class
+SHA1-Digest: I9ocLShSAdV3hG8e4q1WlDZRC08=
+
+Name: org/eclipse/ocl/xtext/essentialocl/parser/OCLParser.l
+SHA1-Digest: 9XnEAZXgPT/K6qufchRzyhh+zPo=
+
+Name: org/eclipse/ocl/xtext/essentialocl/attributes/NavigatingArgCSAtt
+ ribution.class
+SHA1-Digest: UY3QB0Ie4FLsrReIGe4xeZxZOFg=
+
+Name: org/eclipse/ocl/xtext/essentialocl/parser/antlr/internal/Interna
+ lEssentialOCLParser$DFA41.class
+SHA1-Digest: k22k8cxG//iYs/mUexzWe8Cm7xo=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$MapLiteralPartCSElements.class
+SHA1-Digest: nbAfL1ZA9ESiYSvSb64yC469Fs0=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/impl/AbstractNameExpCSImpl.
+ class
+SHA1-Digest: n2OX8lKAMWRGLtByZLVdc9WavKI=
+
+Name: org/eclipse/ocl/xtext/essentialocl/serializer/EssentialOCLSemant
+ icSequencer.class
+SHA1-Digest: pHlOWOg6xDt3/7/FdRmRC5irDDA=
+
+Name: org/eclipse/ocl/xtext/essentialocl/cs2as/EssentialOCLCSLeft2Righ
+ tVisitor$ResolvedInvocation.class
+SHA1-Digest: XuOY7eouQDBbey4BoFgV9l2ugpU=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/NavigatingArgCS.class
+SHA1-Digest: nvA4IzOoLXGHUJ/BohTQKI70yc8=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/PropertyCallExpCS.class
+SHA1-Digest: B47G27IsAYVANAyfOi+meWtmTJc=
+
+Name: org/eclipse/ocl/xtext/essentialocl/EssentialOCL.properties
+SHA1-Digest: uFUwymij2yZPo/H/dHsm9IQTjnw=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$TypeNameExpCSElements.class
+SHA1-Digest: bYLxCR/bYlxn6SJ6StyAshPC4u8=
+
+Name: org/eclipse/ocl/xtext/essentialocl/attributes/NavigationUtil.cla
+ ss
+SHA1-Digest: UOnadU6t/HD/SWLmPaIq89DwpKU=
+
+Name: org/eclipse/ocl/xtext/essentialocl/utilities/EssentialOCLCSResou
+ rce.class
+SHA1-Digest: Uu1KYJ+XiHk+KfiKQADOaSR2A1o=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$NumberLiteralExpCSElements.class
+SHA1-Digest: d8srA8ffkK5Uc19BUJWpeCp7srU=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/CollectionPatternCS.class
+SHA1-Digest: jBlD3zFGPMbKBgIqo7WqQ5EsRAs=
+
+Name: org/eclipse/ocl/xtext/essentialocl/parser/EssentialOCLLexer.gi
+SHA1-Digest: ZtdhnawZ1iPWZH5QEet7PLUtHhI=
+
+Name: org/eclipse/ocl/xtext/essentialocl/utilities/EssentialOCLCSResou
+ rce$TransientASResourceFactory.class
+SHA1-Digest: ahFEd9rcVyw21Gb/rYWIVKmqSsI=
+
+Name: org/eclipse/ocl/xtext/essentialocl/cs2as/EssentialOCLCSPostOrder
+ Visitor$ConstraintCSCompletion.class
+SHA1-Digest: gUbXZZY/dgXtIduNJYihBLaUGek=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$TypeExpCSElements.class
+SHA1-Digest: cvB8ecLfJ9o8pTawA21hP4YMPKU=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/OperatorExpCS.class
+SHA1-Digest: 5VkL4CGyKHg4liLtSELYbDrMvXw=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/impl/PrefixExpCSImpl.class
+SHA1-Digest: zZsBGi27626YKo8AbcqxRFa8IKE=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$TypeExpWithoutMultiplicityCSElements.class
+SHA1-Digest: NrPCE57MmCZXzzDuL7xS3wzc8pI=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/impl/ContextCSImpl.class
+SHA1-Digest: oIAouYnTaQGckoIKwneDGC851Dk=
+
+Name: org/eclipse/ocl/xtext/essentialocl/attributes/OperationMatcher.c
+ lass
+SHA1-Digest: 5XO/XDR99PmBwn7wf7vPLjbHDmw=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$InfixOperatorNameElements.class
+SHA1-Digest: qHk+0s1/ar+XxM6NV/F5jzgNrNY=
+
+Name: org/eclipse/ocl/xtext/essentialocl/parser/antlr/internal/Interna
+ lEssentialOCLParser$DFA35.class
+SHA1-Digest: 9zxQO8bJerjm2NpglX1wb7rAm1M=
+
+Name: org/eclipse/ocl/xtext/essentialocl/parser/antlr/internal/Interna
+ lEssentialOCLParser.class
+SHA1-Digest: zaSJbvERRMjUTTEw/GUmIG1npVw=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/util/AbstractEssentialOCLCS
+ PreOrderVisitor.class
+SHA1-Digest: oMiBaw1f5mUDxpp4Zplz/2rH7Dc=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$TuplePartCSElements.class
+SHA1-Digest: UntX4BSTqHRBnBDLDhfMFboLYTU=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/util/EssentialOCLCSAdapterF
+ actory.class
+SHA1-Digest: u69wjTaPl58WOSco+H1v0YcUtak=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/util/DecorableEssentialOCLC
+ SVisitor.class
+SHA1-Digest: XovHlJQz+exhYWJahwJEus1s34E=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$ExpCSElements.class
+SHA1-Digest: ykzgmNhEFyyD1t8uJdeUPz/Wz60=
+
+Name: org/eclipse/ocl/xtext/essentialocl/cs2as/EssentialOCLCSContainme
+ ntVisitor.class
+SHA1-Digest: q5e2nZ05xDkRE1bdOhaw0TTCC1c=
+
+Name: org/eclipse/ocl/xtext/essentialocl/lpg/Ascii.g
+SHA1-Digest: gS/hRoY1z0nJjiduTPujtd9l/6A=
+
+Name: org/eclipse/ocl/xtext/essentialocl/utilities/EssentialOCLCSResou
+ rce$TransientASResource.class
+SHA1-Digest: rs/B6SKJd0MM4vfZ5pbUBREXWos=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/BooleanLiteralExpCS.class
+SHA1-Digest: brMxF7zf2GrOm7U6TnlplY6kL9Q=
+
+Name: org/eclipse/ocl/xtext/essentialocl/lpg/KeywordTemplateF.gi
+SHA1-Digest: 12xctEg9xxUtvEQOTST6dZV85Ts=
+
+Name: org/eclipse/ocl/xtext/essentialocl/EssentialOCL.xtext
+SHA1-Digest: Rub7vt5zGUuma0gxRpO8fDI3Lyk=
+
+Name: org/eclipse/ocl/xtext/essentialocl/cs2as/EssentialOCLCSLeft2Righ
+ tVisitor$PropertyScopeFilter.class
+SHA1-Digest: YrqRM2DULvaTeTkYRREx7uZOrnY=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/StringLiteralExpCS.class
+SHA1-Digest: gG04nDioCF6FGcMNrWDQxk49zvQ=
+
+Name: org/eclipse/ocl/xtext/essentialocl/attributes/BinaryOperationMat
+ cher.class
+SHA1-Digest: tDCUi31wJyYlg+EqNH6gBnciK9U=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/InvalidLiteralExpCS.class
+SHA1-Digest: J0L7jovzl94B36Bf+hqElJ/s0fw=
+
+Name: org/eclipse/ocl/xtext/essentialocl/cs2as/EssentialOCLCSLeft2Righ
+ tVisitor$Invocations.class
+SHA1-Digest: lZmyQ6V4RA4Bz1ir/Htj/Cq2z/0=
+
+Name: META-INF/eclipse.inf
+SHA1-Digest: KyT9FF7C7t86NoBoa2kZT3ZJBfw=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$MapTypeCSElements.class
+SHA1-Digest: 7Fk6NKfPxdAOQN64JlB2jbo0WWA=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$CollectionTypeIdentifierElements.class
+SHA1-Digest: w/NChXikiQ/ILHbXtVlcNFUrkXk=
+
+Name: org/eclipse/ocl/xtext/essentialocl/EssentialOCLRuntimeModule$Ret
+ okenizingEssentialOCLParser$1.class
+SHA1-Digest: C1+fLlAHIRGeCDzAN4zCV0ASdGI=
+
+Name: org/eclipse/ocl/xtext/essentialocl/parser/EssentialOCL.gi
+SHA1-Digest: /nbYHotm+GrnkxcHRND7qr/xbq4=
+
+Name: org/eclipse/ocl/xtext/essentialocl/validation/AbstractEssentialO
+ CLJavaValidator.class
+SHA1-Digest: aEJ5pjKz4JqNgqRbnC/O31AMCy4=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/impl/IterationCallExpCSImpl
+ .class
+SHA1-Digest: ZdbeNe/idd8XhNsSFqfBnfz/23E=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$UnlimitedNaturalLiteralExpCSElements.class
+SHA1-Digest: Q+/PBSmzhUFJgUoJSwy/9Sh8c/g=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess.class
+SHA1-Digest: 5JfK1kxAl/iEHjFad8LKjCubjfs=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/impl/EssentialOCLCSFactoryI
+ mpl.class
+SHA1-Digest: ZzhR6//nFnnl0y7d8jBiChGCCZc=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/util/AbstractEssentialOCLCS
+ ContainmentVisitor.class
+SHA1-Digest: Ld8v9XwZCmEJvcuGCAyZ9E/r588=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/ShadowPartCS.class
+SHA1-Digest: I3QJy5nFFDGwVn6HWyycL1vPaqs=
+
+Name: org/eclipse/ocl/xtext/essentialocl/lpg/dtParserTemplateF.gi
+SHA1-Digest: xLtP1Cr2mw/WYcrfb9MzrTX9L2g=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/util/EssentialOCLCSVisitor.
+ class
+SHA1-Digest: Dz1QORErC7V5LNN5feB0NQhwrp4=
+
+Name: org/eclipse/ocl/xtext/essentialocl/cs2as/EssentialOCLCSPreOrderV
+ isitor$TypeNameExpContinuation.class
+SHA1-Digest: uKxQUybl/rd9VSG3bbGSwepRVRQ=
+
+Name: build.properties
+SHA1-Digest: osPcw0xncMxcO/yEwAcK1qJPR+s=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$EssentialOCLInfixOperatorNameElements.class
+SHA1-Digest: /PoV0f44bi8ZGs44HgoIzx+OKv4=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/impl/AssociationClassCallEx
+ pCSImpl.class
+SHA1-Digest: GyZ1Dh6Grc1rNk07esVeikkl+Yc=
+
+Name: org/eclipse/ocl/xtext/essentialocl/parser/antlr/EssentialOCLPars
+ er.class
+SHA1-Digest: EvlP7KLcThBsPiD2nU/1YOBvNH4=
+
+Name: model/EssentialOCLCS.ecore
+SHA1-Digest: eSv5izasYNWzkvGsEeeS8XMFEII=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/ExpCS.class
+SHA1-Digest: ml/z14NOEMrh3XJp+Pf1rIgKKTk=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$CollectionPatternCSElements.class
+SHA1-Digest: gepedd4eBP/ISemqY3oyFDfmGrc=
+
+Name: org/eclipse/ocl/xtext/essentialocl/lpg/KWLexerMapF.gi
+SHA1-Digest: WarK44DvirriBIDw6bLXK0CFQQo=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$ShadowPartCSElements.class
+SHA1-Digest: 8ysf/KD8ERK1wlud09gEJoLpUIA=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/ContextCS.class
+SHA1-Digest: ymTgKGuJ2/lFVa3UxGbaK5LZs2U=
+
+Name: org/eclipse/ocl/xtext/essentialocl/cs2as/AbstractImplicitSourceN
+ amedElementIterator.class
+SHA1-Digest: 7fBxgQsCPwIndYDZkah5PVu+5lc=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$NavigatingArgExpCSElements.class
+SHA1-Digest: o7BYHImcMqdkOZVPDqU7q6hcBIU=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/impl/VariableExpCSImpl.clas
+ s
+SHA1-Digest: 8CvswETFzYLusVGhNIdhycNt3Rc=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$EssentialOCLUnrestrictedNameElements.class
+SHA1-Digest: H+v/cesb/EO9Lq8IMtuheygbAd0=
+
+Name: org/eclipse/ocl/xtext/essentialocl/utilities/EssentialOCLPlugin$
+ Implementation.class
+SHA1-Digest: 9RYOYpZr3V8ujuVyIvuV7wtEQek=
+
+Name: plugin.properties
+SHA1-Digest: LlSS1eMpVbDFv5QLduhgiC767nc=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/MapTypeCS.class
+SHA1-Digest: UpkOq/q+ZZGYZKJPtEs1cOY+Jlk=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/NullLiteralExpCS.class
+SHA1-Digest: FYe8fRP1UlEaKOV5RT/Nb01Gqoc=
+
+Name: org/eclipse/ocl/xtext/essentialocl/parser/antlr/internal/Interna
+ lEssentialOCL.tokens
+SHA1-Digest: WuM0E43SU8pZfYZitIXRlRKfi1A=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/LambdaLiteralExpCS.class
+SHA1-Digest: 3MnLrvIU7SceXp7O80cBxBP2pCw=
+
+Name: org/eclipse/ocl/xtext/essentialocl/EssentialOCLRuntimeModule.cla
+ ss
+SHA1-Digest: IAFWNS8wIWiA/oPD3oNhFgVQrlM=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$BinaryOperatorNameElements.class
+SHA1-Digest: Fkb5Lb4txnZzwbBpzF2J7KrSiJM=
+
+Name: org/eclipse/ocl/xtext/essentialocl/utilities/EssentialOCLASResou
+ rceFactory.class
+SHA1-Digest: woDprCk0qYp1YhWpIJMspm2eyqg=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/impl/LiteralExpCSImpl.class
+SHA1-Digest: otdWIW0kwvHcNVz3EEHET2BaYbw=
+
+Name: plugin.xml
+SHA1-Digest: HYsq41r32oR4TMabgbs6Ll7LgJA=
+
+Name: org/eclipse/ocl/xtext/essentialocl/serializer/AbstractEssentialO
+ CLSemanticSequencer.class
+SHA1-Digest: TVzcpCMkUS9v4x35AxoY+PiMl+c=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/impl/CollectionPatternCSImp
+ l.class
+SHA1-Digest: yuZNRaMFi8/zh3qHM34S4Nc5AkA=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/util/AbstractEssentialOCLCS
+ Left2RightVisitor.class
+SHA1-Digest: 4YVVClW8uq5iAYYRDN+kA3INubs=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/impl/CollectionTypeCSImpl.c
+ lass
+SHA1-Digest: LYvO0b11ZYZRgYSH1hSJwl2k+JE=
+
+Name: org/eclipse/ocl/xtext/essentialocl/cs2as/EssentialOCLCSPreOrderV
+ isitor$CollectionTypeContinuation.class
+SHA1-Digest: LuyyBaS78VyY0yjrWPsd4nddJoc=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$PrefixedPrimaryExpCSElements.class
+SHA1-Digest: YXB3dCkdB+Si2Ak4zTvffH5Ubho=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/impl/VariableCSImpl.class
+SHA1-Digest: 3XbTj3yZRe0TxUzvbHVFtacBTuY=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$BooleanLiteralExpCSElements.class
+SHA1-Digest: b0XaIW43+30zJUjq6UJrpG7c3Xc=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/impl/EssentialOCLCSPackageI
+ mpl.class
+SHA1-Digest: K2tgO2pTrrhDS7Ze023ou0NBePE=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/InfixExpCS.class
+SHA1-Digest: 05DdEQy28rxBPggYdGA9aN8JXsI=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/impl/ExpCSImpl.class
+SHA1-Digest: VTqYt5adqwRKYzlQntXGCjQKEHM=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/impl/LetExpCSImpl.class
+SHA1-Digest: OLq4g5O/lqFHAEM9HrRGEL53tXY=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$IfExpCSElements.class
+SHA1-Digest: tzJquLytUUWzM6BRZielRB56lnY=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$PrimitiveTypeCSElements.class
+SHA1-Digest: dCIiv2Wt/o11CQsGGLRJkJq5jw0=
+
+Name: org/eclipse/ocl/xtext/essentialocl/EssentialOCLGrammarResource$_
+ Base.class
+SHA1-Digest: Kw7/yAqomWH4wyt9iNYWAn/R85o=
+
+Name: org/eclipse/ocl/xtext/essentialocl/parser/OCLLexer.l
+SHA1-Digest: WTMEb4wR+TYY9PG9heG4tXqJ/bo=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$CollectionLiteralPartCSElements.class
+SHA1-Digest: aZQS8eymEvdshyHqPkGdLz3FxJ8=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/CollectionTypeCS.class
+SHA1-Digest: MM1DBetchKnfegSZ01KvPNnmMvw=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/NavigationRole.class
+SHA1-Digest: HdoopWpvusJRjPjetpGHELlRGX0=
+
+Name: org/eclipse/ocl/xtext/essentialocl/utilities/EssentialOCLCSResou
+ rce$2.class
+SHA1-Digest: MTMdxNOLDlAmKQNsjoEZxrB18Ew=
+
+Name: org/eclipse/ocl/xtext/essentialocl/parser/antlr/internal/Interna
+ lEssentialOCLLexer$DFA11.class
+SHA1-Digest: +LNcfckL3t99iraiJTAZohPIRz4=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/impl/SelfExpCSImpl.class
+SHA1-Digest: PIo8OgBWiWavN/+djFIQL3p0L1I=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/impl/LambdaLiteralExpCSImpl
+ .class
+SHA1-Digest: 4X3STzdPPF4x/NvBhGMIYzL6XlE=
+
+Name: org/eclipse/ocl/xtext/essentialocl/parser/OCLLexer.gi
+SHA1-Digest: rD79Je0RiurCyfRL+dWl9Nqz2sc=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/IterationCallExpCS.class
+SHA1-Digest: QRio5sn7LAv5fWD5rOgyE6WBJX4=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/LetExpCS.class
+SHA1-Digest: 6+BKC5CgS4ySzu0io9tmnCCemhs=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/impl/UnlimitedNaturalLitera
+ lExpCSImpl.class
+SHA1-Digest: bbgGb5HJVOqrH37MxafzUefbYKo=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/impl/NumberLiteralExpCSImpl
+ .class
+SHA1-Digest: xjq31792D9CX8ZYxNH+2xt5s8Og=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/impl/MapTypeCSImpl.class
+SHA1-Digest: KVjjn789YI/8JqO9KihK6tmLwp0=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/impl/BooleanLiteralExpCSImp
+ l.class
+SHA1-Digest: EMnrZa0ZJLMNIt9+9W2I/2HCrmA=
+
+Name: org/eclipse/ocl/xtext/essentialocl/scoping/EssentialOCLScoping.c
+ lass
+SHA1-Digest: bAME4RepVzt1rjn19XUEQKnj3xE=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/impl/SquareBracketedClauseC
+ SImpl.class
+SHA1-Digest: NP3J64Yyw2TNuZPKXDmBoI3YGvQ=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$TypeLiteralWithMultiplicityCSElements.class
+SHA1-Digest: /G6giGuOSVBx39iQ79BDuvXMhSY=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$CollectionTypeCSElements.class
+SHA1-Digest: iHQfeFqwlbC1cn+RDtxbyaKb6pY=
+
+Name: org/eclipse/ocl/xtext/essentialocl/parser/antlr/EssentialOCLAntl
+ rTokenFileProvider.class
+SHA1-Digest: pI54lPAj6uCKEYuCpE/4KVwKd+c=
+
+Name: org/eclipse/ocl/xtext/essentialocl/formatting/AbstractEssentialO
+ CLFormatter.class
+SHA1-Digest: 0Nl1W8KrRHsPO7xUPFN/2+WohRw=
+
+Name: org/eclipse/ocl/xtext/essentialocl/cs2as/EssentialOCLCSPreOrderV
+ isitor$InfixExpContinuation.class
+SHA1-Digest: 1yRz5AXC/1oraiYX+96LE+ctGlM=
+
+Name: model/ReadMe.txt
+SHA1-Digest: +jx5+OE8fTBEu+KblL9h4VNXXq4=
+
+Name: org/eclipse/ocl/xtext/essentialocl/scoping/EssentialOCLScopeProv
+ ider.class
+SHA1-Digest: Uy6dEGz5aKXOZ9pUZnm9I3XgziI=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$LetExpCSElements.class
+SHA1-Digest: mndfeYQFYLGbIYZmB8qF3ZlpbaE=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/util/EssentialOCLCSAdapterF
+ actory$1.class
+SHA1-Digest: cIT2burZIWUWnsKfnCVgISz/P0U=
+
+Name: org/eclipse/ocl/xtext/essentialocl/attributes/NavigationOperator
+ CSAttribution.class
+SHA1-Digest: oVlD7/E7Upgniz3p6bAcLSMa5ys=
+
+Name: org/eclipse/ocl/xtext/essentialocl/attributes/UnaryOperationMatc
+ her.class
+SHA1-Digest: TuSPhNUJA3Yq9cawG37FlDI37JE=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$SelfExpCSElements.class
+SHA1-Digest: tn9vpFgZ1+E6s2E4uZG2iEyUGF0=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/impl/TupleLiteralExpCSImpl.
+ class
+SHA1-Digest: 3epPkky4/+BmsAmlGF7fcrcO74A=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$LetVariableCSElements.class
+SHA1-Digest: lPsynx7lfYKe5pYIlg+PmZ2Az6w=
+
+Name: org/eclipse/ocl/xtext/essentialocl/as2cs/EssentialOCLLocationInF
+ ileProvider.class
+SHA1-Digest: Tyl6+Fw9vvTIZO/q5vSml4XNbi0=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/impl/MapLiteralPartCSImpl.c
+ lass
+SHA1-Digest: xG1ilWl2IEQOJ11zgfdcLmEU+Rw=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/impl/IfThenExpCSImpl.class
+SHA1-Digest: pdClVIX2EMlLMtvVawzfAYFO0V8=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/util/AbstractEssentialOCLCS
+ Visitor.class
+SHA1-Digest: Z6/YEFL8GyM+DgvquuC2jQ9ftNE=
+
+Name: org/eclipse/ocl/xtext/essentialocl/attributes/LetExpCSAttributio
+ n.class
+SHA1-Digest: pOwCEXUpgPD15gi1puEuRmmjhH8=
+
+Name: org/eclipse/ocl/xtext/essentialocl/cs2as/EssentialOCLCSPostOrder
+ Visitor.class
+SHA1-Digest: fgoeKxmwqkAi0a0AY2XjnoJJgUM=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$EssentialOCLNavigationOperatorNameElements.class
+SHA1-Digest: T42vvnu2z4CvdO/oDddxv/iFYL4=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/OperationCallExpCS.class
+SHA1-Digest: V+7bLecXhPIQUW1/nXn/o/epqqk=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$StringLiteralExpCSElements.class
+SHA1-Digest: 5JldnmXRoU9cAczKVGTCCZ2ioq4=
+
+Name: org/eclipse/ocl/xtext/essentialocl/lpg/LexerTemplateD.gi
+SHA1-Digest: ghaK8jmAHjthyEXI6KswCW8lfc8=
+
+Name: org/eclipse/ocl/xtext/essentialocl/EssentialOCL.xtextbin
+SHA1-Digest: giyBQ9WY7fZ+muirOJpmnjHL1rM=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/VariableCS.class
+SHA1-Digest: equv5yAxRWOvHA2P5gj966dPYxE=
+
+Name: org/eclipse/ocl/xtext/essentialocl/lpg/KWLexerMap.gi
+SHA1-Digest: yWNcncObhaj4t2nBIMoJlpdKGmw=
+
+Name: org/eclipse/ocl/xtext/essentialocl/cs2as/EssentialOCLCSLeft2Righ
+ tVisitor.class
+SHA1-Digest: z/5qz2VFbcGWcqTY4xJTUXXNS0g=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/impl/TypeNameExpCSImpl.clas
+ s
+SHA1-Digest: 1rRaljQFUQ6RgXmGGLqfRsFMHKA=
+
+Name: org/eclipse/ocl/xtext/essentialocl/EssentialOCLGrammarResource.c
+ lass
+SHA1-Digest: nrwDzqNU2wJRp0RSIVqA2obsd4Q=
+
+Name: org/eclipse/ocl/xtext/essentialocl/EssentialOCLGrammarResource$_
+ EssentialOCL.class
+SHA1-Digest: WDP6Ho4Cc6BCPEyGTyefK22XN48=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$URIPathNameCSElements.class
+SHA1-Digest: DRv+pxV0JQligPWP1ux3NIp43w8=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/impl/ExpSpecificationCSImpl
+ .class
+SHA1-Digest: jMMJiFO5rnOb+RW4xPoZd8WoAxg=
+
+Name: org/eclipse/ocl/xtext/essentialocl/cs2as/EssentialOCLCSLeft2Righ
+ tVisitor$UnresolvedInvocations.class
+SHA1-Digest: +VNTloftqaX10HsRoUaQN1zNiGc=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/LetVariableCS.class
+SHA1-Digest: swGoEqSbz+eqNXneCXWw2Wm08tc=
+
+Name: org/eclipse/ocl/xtext/essentialocl/AbstractEssentialOCLRuntimeMo
+ dule.class
+SHA1-Digest: MIouU/dqbDSLo1b6tc//Iz0ONis=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/impl/NavigatingArgCSImpl.cl
+ ass
+SHA1-Digest: +nslszHnuSMMXGhxKK7RkIH9uqM=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$EssentialOCLReservedKeywordElements.class
+SHA1-Digest: XXjtDdmi7RFrkjyrSrItwJu1nJE=
+
+Name: org/eclipse/ocl/xtext/essentialocl/utilities/EssentialOCLPlugin.
+ class
+SHA1-Digest: 1RWtXrpOI9bT6zWm21iRu5IRmvM=
+
+Name: org/eclipse/ocl/xtext/essentialocl/scoping/EssentialOCLScoping$P
+ athElementCSUnresolvedProxyMessageProvider.class
+SHA1-Digest: Gqdsl9vzpDDw4A/iNGl6B+bFllQ=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/RoundBracketedClauseCS.clas
+ s
+SHA1-Digest: wHpSuJW97UHrZFpD5AEU9BTGAbA=
+
+Name: org/eclipse/ocl/xtext/essentialocl/cs2as/EssentialOCLCSPreOrderV
+ isitor$PrefixExpContinuation.class
+SHA1-Digest: oczouRyLXXQoGRg2KnptzuJMuLk=
+
+Name: org/eclipse/ocl/xtext/essentialocl/as2cs/EssentialOCLAS2CS$Facto
+ ry.class
+SHA1-Digest: JxvnqxQ9A3T4WvzXogTmHT8AGtA=
+
+Name: model/EssentialOCLCS.genmodel
+SHA1-Digest: u1tbeE+CBPPPTrkN+L6OH4nlEcw=
+
+Name: org/eclipse/ocl/xtext/essentialocl/cs2as/EssentialOCLCSPreOrderV
+ isitor.class
+SHA1-Digest: Y7aF/yNwmxKWpvB9hlh4HrM1NP0=
+
+Name: org/eclipse/ocl/xtext/essentialocl/EssentialOCLStandaloneSetup.c
+ lass
+SHA1-Digest: GCK6rA3USm+sTpIqNho2HcTtx28=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$ModelElements.class
+SHA1-Digest: hLkEqb+g8pn0joqSdN0+kMvBj28=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/CollectionLiteralExpCS.clas
+ s
+SHA1-Digest: +SqUuz+MefD9dnB0UFvdxCs2AF4=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/LiteralExpCS.class
+SHA1-Digest: dVsHZQfxOZ+xmw6lVEZmL9jHwEQ=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$LambdaLiteralExpCSElements.class
+SHA1-Digest: E99uol7lRwsfhyYvNG7GSVs64iU=
+
+Name: about.html
+SHA1-Digest: vWAsXILjKfPTzh/flzE7qdytznU=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/impl/IterateCallExpCSImpl.c
+ lass
+SHA1-Digest: j3sCnmfJhJbgAnPBejFaUBAAsWY=
+
+Name: org/eclipse/ocl/xtext/essentialocl/cs2as/EssentialOCLCSPreOrderV
+ isitor$MapTypeContinuation.class
+SHA1-Digest: w2mc0IbYVB3mXegIjCu7n0GTVtk=
+
+Name: org/eclipse/ocl/xtext/essentialocl/parser/antlr/internal/Interna
+ lEssentialOCL.g
+SHA1-Digest: wcwsVloP2sQhXAyB3/tw9LF6a3Q=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/impl/NestedExpCSImpl.class
+SHA1-Digest: d92OOl7v6sWgRlR9qxTnTkSUt1I=
+
+Name: org/eclipse/ocl/xtext/essentialocl/utilities/EssentialOCLCSResou
+ rce$UnixOutputStream.class
+SHA1-Digest: y42CmoaDs7pP0Umnq54EAoub/1E=
+
+Name: org/eclipse/ocl/xtext/essentialocl/EssentialOCLStandaloneSetupGe
+ nerated.class
+SHA1-Digest: 2/+WOoOJxoirJ7vrd+7ckPbrY/s=
+
+Name: org/eclipse/ocl/xtext/essentialocl/parser/antlr/internal/Interna
+ lEssentialOCLLexer.class
+SHA1-Digest: qHnpTk2xkFHT3Fub+8iAA84Xzdo=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$NameExpCSElements.class
+SHA1-Digest: wWF5zTwbLocwwR6sJY34ap0cgKw=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/AssociationClassCallExpCS.c
+ lass
+SHA1-Digest: I1aE9jjA0WYzKdqlzzH7REO7dRw=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/impl/LetVariableCSImpl.clas
+ s
+SHA1-Digest: UJ5mRuRo0z0LaR119QjV+ZOXgIw=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$TypeLiteralCSElements.class
+SHA1-Digest: ps57b2ItCDHPbk5HdbgK0OrsVTY=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/PrefixExpCS.class
+SHA1-Digest: r7TKB5Ev7ppjkfnI8pYdMjU1wXE=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$PrimitiveTypeIdentifierElements.class
+SHA1-Digest: 52mzzAgnAIVnza9dkR5k94WAVE0=
+
+Name: org/eclipse/ocl/xtext/essentialocl/attributes/LetVariableCSAttri
+ bution.class
+SHA1-Digest: DB1ePFlNpxussicUwYzqtxSDJt8=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/impl/IfExpCSImpl.class
+SHA1-Digest: fFrRXC2HqpcWqiqZyqM/pja6Nek=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/impl/RoundBracketedClauseCS
+ Impl.class
+SHA1-Digest: G0WgW+nHNp6DTwkev0Fq8b1kwPw=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/impl/CollectionLiteralPartC
+ SImpl.class
+SHA1-Digest: D84GHmYJK+t5i5A1SNhqywJWvZM=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/impl/InvalidLiteralExpCSImp
+ l.class
+SHA1-Digest: O8BVWaRDyRhPm9gBJD3E4Ui3JMs=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/UnlimitedNaturalLiteralExpC
+ S.class
+SHA1-Digest: 8t0YRLIOSf2QeR3UNQolRrSd2ic=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/TypeNameExpCS.class
+SHA1-Digest: ifkpYUOZ6pIAOj+kuopayF3wdgM=
+
+Name: org/eclipse/ocl/xtext/essentialocl/formatting/EssentialOCLFormat
+ ter.class
+SHA1-Digest: yZoaAux0Y8AhZW7K7nPeTP+68Kc=
+
+Name: org/eclipse/ocl/xtext/essentialocl/utilities/EssentialOCLCSResou
+ rce$RenamedDiagnostic.class
+SHA1-Digest: 6gvVoVXa9Wr/rFyk9H4AVlt68Ro=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/SquareBracketedClauseCS.cla
+ ss
+SHA1-Digest: 20+6voj8rL3aOwBtTAm1sSiB7FY=
+
+Name: org/eclipse/ocl/xtext/essentialocl/serializer/AbstractEssentialO
+ CLSyntacticSequencer.class
+SHA1-Digest: fFJj5SioEoWN8or8E79D6VTYaVc=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/impl/CollectionLiteralExpCS
+ Impl.class
+SHA1-Digest: VZnKOpVYn21KQZwul3Xn5KKZaJA=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/impl/PropertyCallExpCSImpl.
+ class
+SHA1-Digest: b9RMKoBIuBQ+Olb+5AZNdI37zyo=
+
+Name: org/eclipse/ocl/xtext/essentialocl/as2cs/EssentialOCLDeclaration
+ Visitor.class
+SHA1-Digest: pnvllrTtmoDyi7KYWIcDQguCkEo=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$MapLiteralExpCSElements.class
+SHA1-Digest: lTs7MPW6cCYC3J4PPLEfe4GnetA=
+
+Name: org/eclipse/ocl/xtext/essentialocl/parser/EssentialOCLKWLexer.gi
+SHA1-Digest: M+yFr7BthK8iHCnmbCBKNrQlyxs=
+
+Name: org/eclipse/ocl/xtext/essentialocl/EssentialOCLRuntimeModule$Ret
+ okenizingEssentialOCLParser.class
+SHA1-Digest: iAU6uor3r8ju3cyADM7WyZN6/do=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/IfExpCS.class
+SHA1-Digest: u4uY5dRRDV9pHr0xmFIp3fVmFbI=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/VariableExpCS.class
+SHA1-Digest: 5O0K4aapH6eBb5U6ZoEHmpMbNaM=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/impl/ShadowPartCSImpl.class
+SHA1-Digest: vfLsf5U8jiF0yX2x1+BgOO7sGAk=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/CollectionLiteralPartCS.cla
+ ss
+SHA1-Digest: EBU9QG6nXCRxuOy4vEPK1mwE78k=
+
+Name: org/eclipse/ocl/xtext/essentialocl/as2cs/EssentialOCLAS2CS.class
+SHA1-Digest: zBtIErz5+Lm9jDdXGNwfcI2jdDg=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/ExpSpecificationCS.class
+SHA1-Digest: f3zYyAvtVQdrB55sTtetoGmggzo=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$PrimitiveLiteralExpCSElements.class
+SHA1-Digest: EssJEiflVFLIv7gvBFQLS2jt2Og=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/impl/OperatorExpCSImpl.clas
+ s
+SHA1-Digest: b3lRHEW17y/sBpks5MapW1QxU5k=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$NavigationOperatorNameElements.class
+SHA1-Digest: HfvCmogNm6OXPAFGVWxMNjL/1jw=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/impl/CallExpCSImpl.class
+SHA1-Digest: Bt18egu7Zfi3NhGq/Ld9hvWm9CA=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/NameExpCS.class
+SHA1-Digest: sMxVtCPO2I/Sflo644Z3GmNRnv8=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$TupleLiteralPartCSElements.class
+SHA1-Digest: Q+qsEBPkEUMpgVSVGa3yknYynXg=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/impl/TypeLiteralExpCSImpl.c
+ lass
+SHA1-Digest: fQZ+APzW5Tjmlrc49syZcwLla1c=
+
+Name: org/eclipse/ocl/xtext/essentialocl/lpg/LexerBasicMap.gi
+SHA1-Digest: xAAdwsS78gKvbEoWdfwupDoYpiw=
+
+Name: org/eclipse/ocl/xtext/essentialocl/utilities/EssentialOCLCSResou
+ rce$1.class
+SHA1-Digest: 8FFxZfaqfnonOL2Rl+Zpj90T7gA=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$NavigatingArgCSElements.class
+SHA1-Digest: +SUXsx+BUIsK8dwjs8FkmZV4szQ=
+
+Name: org/eclipse/ocl/xtext/essentialocl/cs2as/EssentialOCLCSPostOrder
+ Visitor$ExpSpecificationCSCompletion.class
+SHA1-Digest: t69lMpPj6rdziepgdMX0qZmvazI=
+
+Name: org/eclipse/ocl/xtext/essentialocl/cs2as/ImplicitSourceVariableI
+ terator.class
+SHA1-Digest: iEBAs0mdkN2VtjUsuXkwySKisCA=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/impl/TupleLiteralPartCSImpl
+ .class
+SHA1-Digest: AJCl+aU0n8Lvbh5XazYNGvUP7PY=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/TypeLiteralExpCS.class
+SHA1-Digest: /M++bpwWDvzM9iIHcxw6Xx5uOQU=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$UnrestrictedNameElements.class
+SHA1-Digest: 1387d0tlCvQK9elV9sF5sMFm1qo=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$TupleLiteralExpCSElements.class
+SHA1-Digest: bB0EtQFh21dEh5lhC2SyYq4KTuI=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/impl/StringLiteralExpCSImpl
+ .class
+SHA1-Digest: X3FjjQA8BnkmYvkIScSQ8TWoUzg=
+
+Name: org/eclipse/ocl/xtext/essentialocl/lpg/LexerBasicMapF.gi
+SHA1-Digest: XchKUCLG4zeQA4MarTfWvLhhvvk=
+
+Name: org/eclipse/ocl/xtext/essentialocl/cs2as/EssentialOCLCSPostOrder
+ Visitor$ContextCSCompletion.class
+SHA1-Digest: QREc8DT1gs+bHi0MYKwGUQqu8sI=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/PrimitiveLiteralExpCS.class
+SHA1-Digest: 6ls9mBh3awCKXoOebVTt3ualOaA=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$TupleTypeCSElements.class
+SHA1-Digest: HtBElm/W7J5O5E2WSW1ucAshMF4=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/util/AbstractEssentialOCLCS
+ PostOrderVisitor.class
+SHA1-Digest: TxR8EcDLYygdHEPF416QpNebTJg=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/NumberLiteralExpCS.class
+SHA1-Digest: SzLvQUiZEw1eN6CBviYfI6lzP/s=
+
+Name: org/eclipse/ocl/xtext/essentialocl/lpg/KeywordTemplateD.gi
+SHA1-Digest: 3JYzfqoUlHTBANGQYIwwIcogIlQ=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/impl/PatternExpCSImpl.class
+SHA1-Digest: +jHhDeqqy4CTRhzccTCxfP9TaQg=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$ElseIfThenExpCSElements.class
+SHA1-Digest: 25LjvUwzOi/jHwCMtN2nkgSTyAM=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$EssentialOCLUnreservedNameElements.class
+SHA1-Digest: qMvUEWEDn+P5uOhekd0lO7xMGjU=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$TypeLiteralExpCSElements.class
+SHA1-Digest: yfwVFEtcm0pSzkplFiN4cHbIams=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$CurlyBracketedClauseCSElements.class
+SHA1-Digest: h17HxHsZLS6kxn9tLkH3CvIxd1Q=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/impl/NameExpCSImpl.class
+SHA1-Digest: okZCpAlvsugOQkZo9dxXFYw+VcY=
+
+Name: org/eclipse/ocl/xtext/essentialocl/attributes/ShadowPartCSAttrib
+ ution.class
+SHA1-Digest: Nj04+GQL53XOqkOKKfdqKtrPU2c=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/impl/OperationCallExpCSImpl
+ .class
+SHA1-Digest: S/y3iVTGk1hVoUPIs7dXvA37OCE=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$NavigatingCommaArgCSElements.class
+SHA1-Digest: RuM9dWJnoNsWol6CGXgzxxVhtes=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/util/AbstractExtendingEssen
+ tialOCLCSVisitor.class
+SHA1-Digest: Nu6HXMy/DI+Z/r8FEedXHewY7rM=
+
+Name: org/eclipse/ocl/xtext/essentialocl/as2cs/EssentialOCLReferenceVi
+ sitor.class
+SHA1-Digest: JIn8nio5USr/IXqDmRrC1ZuDIls=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$SquareBracketedClauseCSElements.class
+SHA1-Digest: 3FkJcMrUSXnmToC+K0jz763lDyM=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/PatternExpCS.class
+SHA1-Digest: Yk0WvW2echot5o8mcpVOER4k1dM=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$NavigatingSemiArgCSElements.class
+SHA1-Digest: e1YwbDNSuo+ewg/O9MZswfdtsmw=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$NullLiteralExpCSElements.class
+SHA1-Digest: kccUgVikUSxkBIOSkVVRM+AjeIM=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/TupleLiteralExpCS.class
+SHA1-Digest: CgAo0fN5UvW75VS8JdVjP+66bTs=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/impl/CurlyBracketedClauseCS
+ Impl.class
+SHA1-Digest: 7nTTljvZbLz/p97VMx8ejeAwJnY=
+
+Name: org/eclipse/ocl/xtext/essentialocl/lpg/btParserTemplateF.gi
+SHA1-Digest: QpUEHpSt8lB55nmHhLnpkQdUT78=
+
+Name: org/eclipse/ocl/xtext/essentialocl/lpg/LexerTemplateF.gi
+SHA1-Digest: EY1fJKSu3EwrBuzdqh49UhCh8RQ=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$InvalidLiteralExpCSElements.class
+SHA1-Digest: lNTDYq9aC1KaxDdDePRKRUcJtoE=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/CallExpCS.class
+SHA1-Digest: n5fvb0joZdi3gllK6l8L5QWp1L4=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/EssentialOCLCSFactory.class
+SHA1-Digest: g6HaHT7W0T8TIxEbkz9i5dVSlrM=
+
+Name: org/eclipse/ocl/xtext/essentialocl/services/EssentialOCLGrammarA
+ ccess$RoundBracketedClauseCSElements.class
+SHA1-Digest: 59vLXr0TTyZFbNBz5VC0z2WTmbQ=
+
+Name: org/eclipse/ocl/xtext/essentialocl/cs2as/ImplicitSourceTypeItera
+ tor.class
+SHA1-Digest: Y9ob1dFhvUtQw5VAvCesyToNhl4=
+
+Name: org/eclipse/ocl/xtext/essentialoclcs/NestedExpCS.class
+SHA1-Digest: DePcgL6x/AqojJjk+KfdeS2ihok=
+

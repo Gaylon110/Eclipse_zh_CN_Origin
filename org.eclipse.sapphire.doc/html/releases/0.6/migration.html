@@ -1,0 +1,1780 @@
+<!-- 
+ ******************************************************************************
+ * Copyright (c) 2016 Oracle
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *    Konstantin Komissarchik - initial implementation and ongoing maintenance
+ ******************************************************************************
+-->
+
+<html>
+
+<head>
+  <title>Migration Guide for Sapphire 0.6</title>
+  <link rel="StyleSheet" href="../../style.css" TYPE="text/css"/>
+  <style type="text/css">
+    pre.source-code 
+    {
+      font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; 
+      color: #000000;
+      background-color: #ffffff;
+      font-size: 12px;
+      border: 0px;
+      line-height: 14px;
+      padding: 5px;
+      margin-left: 0px;
+      margin-right: 0px;
+      overflow: auto
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>Migration Guide for Sapphire 0.6</h1>
+
+<p>This documents covers changes that need to be made by Sapphire adopters as part of migrating 
+to Sapphire 0.6 from a prior release. Only changes from the previous major release are covered.</p>
+
+<p>Table of Contents</p>
+
+<ol>
+  <li><a href="#DefaultValueService">DefaultValueService</a></li>
+  <li><a href="#DerivedValueService">DerivedValueService</a></li>
+  <li><a href="#EnablementService">EnablementService</a></li>
+  <li><a href="#FactsAggregationService">FactsAggregationService</a></li>
+  <li><a href="#FactsService">FactsService</a></li>
+  <li><a href="#Filter">Filter</a></li>
+  <li><a href="#FormEditorPage">FormEditorPage</a></li>
+  <li><a href="#FormPart">FormPart</a></li>
+  <li><a href="#FormPartDef">FormPartDef</a></li>
+  <li><a href="#IModelElement">IModelElement</a></li>
+  <li><a href="#ISapphireCompositeDef">ISapphireCompositeDef</a></li>
+  <li><a href="#ISapphireDialogDef">ISapphireDialogDef</a></li>
+  <li><a href="#ISapphireSectionDef">ISapphireSectionDef</a></li>
+  <li><a href="#ISapphireSeparatorDef">ISapphireSeparatorDef</a></li>
+  <li><a href="#ISapphireSpacerDef">ISapphireSpacerDef</a></li>
+  <li><a href="#ISapphireWizardDef">ISapphireWizardDef</a></li>
+  <li><a href="#ISapphireWizardPageDef">ISapphireWizardPageDef</a></li>
+  <li><a href="#MasterDetailsContentNode">MasterDetailsContentNode</a></li>
+  <li><a href="#MasterDetailsContentOutline">MasterDetailsContentOutline</a></li>
+  <li><a href="#MasterDetailsEditorPage">MasterDetailsEditorPage</a></li>
+  <li><a href="#ModelElementType">ModelElementType</a></li>
+  <li><a href="#ModelProperty">ModelProperty</a></li>
+  <li><a href="#PartDef">PartDef</a></li>
+  <li><a href="#PropertyEditorDef">PropertyEditorDef</a></li>
+  <li><a href="#ReadOnlyListFactory">ReadOnlyListFactory</a></li>
+  <li><a href="#ReadOnlyMapFactory">ReadOnlyMapFactory</a></li>
+  <li><a href="#ReadOnlySetFactory">ReadOnlySetFactory</a></li>
+  <li><a href="#SapphireControl">SapphireControl</a></li>
+  <li><a href="#SapphireDiagramEditor">SapphireDiagramEditor</a></li>
+  <li><a href="#SapphireDialog">SapphireDialog</a></li>
+  <li><a href="#SapphireEditor">SapphireEditor</a></li>
+  <li><a href="#SapphireEditorForXml">SapphireEditorForXml</a></li>
+  <li><a href="#SapphireModelCondition">SapphireModelCondition</a></li>
+  <li><a href="#SapphirePart">SapphirePart</a></li>
+  <li><a href="#SapphirePartContainer">SapphirePartContainer</a></li>
+  <li><a href="#SapphirePropertyEnabledCondition">SapphirePropertyEnabledCondition</a></li>
+  <li><a href="#SapphireSection">SapphireSection</a></li>
+  <li><a href="#SapphireSeparator">SapphireSeparator</a></li>
+  <li><a href="#SapphireSpacer">SapphireSpacer</a></li>
+  <li><a href="#SapphireUiDefFactory">SapphireUiDefFactory</a></li>
+  <li><a href="#SapphireWizard">SapphireWizard</a></li>
+  <li><a href="#Service">Service</a></li>
+  <li><a href="#Status">Status</a></li>
+  <li><a href="#ValidationChangedEvent">ValidationChangedEvent</a></li>
+  <li><a href="#Conditional">Conditional</a></li>
+  <li><a href="#SectionVisibility">Section Visibility</a></li>
+  <li><a href="#NodeVisibility">Node Visibility</a></li>
+  <li><a href="#NodeFactoryVisibility">Node Factory Visibility</a></li>
+  <li><a href="#HideIfDisabledHint">Hide If Disabled Hint</a></li>
+</ol>
+
+<h2><a name="DefaultValueService">DefaultValueService</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class ExampleDefaultValueService extends DefaultValueService
+{
+    @Override</font>
+    protected <font color="#888888">DefaultValueServiceData data()
+    {
+        ...
+    }
+}</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class ExampleDefaultValueService extends DefaultValueService
+{
+    @Override</font>
+    public <font color="#888888">DefaultValueServiceData data()
+    {
+        ...
+    }
+}</font></code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="DerivedValueService">DerivedValueService</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class ExampleDerivedValueService extends DerivedValueService
+{
+    @Override</font>
+    protected <font color="#888888">DerivedValueServiceData data()
+    {
+        ...
+    }
+}</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class ExampleDerivedValueService extends DerivedValueService
+{
+    @Override</font>
+    public <font color="#888888">DerivedValueServiceData data()
+    {
+        ...
+    }
+}</font></code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="EnablementService">EnablementService</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class ExampleEnablementService extends EnablementService
+{
+    @Override</font>
+    protected <font color="#888888">EnablementServiceData data()
+    {
+        ...
+    }
+}</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class ExampleEnablementService extends EnablementService
+{
+    @Override</font>
+    public <font color="#888888">EnablementServiceData data()
+    {
+        ...
+    }
+}</font></code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="FactsAggregationService">FactsAggregationService</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>List<font color="#888888">&lt;String> facts = element.service( property, FactsAggregationService.class ).facts()</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>SortedSet<font color="#888888">&lt;String> facts = element.service( property, FactsAggregationService.class ).facts()</font></code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="FactsService">FactsService</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class ExampleFactsService extends FactsService
+{
+    @Override
+    protected void facts(</font> List<font color="#888888">&lt;String> facts )
+    {
+        ...
+    }
+}</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class ExampleFactsService extends FactsService
+{
+    @Override
+    protected void facts(</font> SortedSet<font color="#888888">&lt;String> facts )
+    {
+        ...
+    }
+}</font></code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="Filter">Filter</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">org.eclipse.sapphire</font>.modeling<font color="#888888">.util.Filter</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">org.eclipse.sapphire.util.Filter</font></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class ExampleFilter extends Filter&lt;String>
+{
+    @Override
+    public boolean</font> check<font color="#888888">( String element )
+    {
+        ...
+    }
+}</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class ExampleFilter extends Filter&lt;String>
+{
+    @Override
+    public boolean</font> allows<font color="#888888">( String element )
+    {
+        ...
+    }
+}</font></code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="FormEditorPage">FormEditorPage</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">new FormEditorPage
+{
+    this, element,</font>
+    new Path( "org.eclipse.sapphire.examples/org/eclipse/sapphire/examples/Examples.sdef/ExamplePage" )
+<font color="#888888">}</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">new FormEditorPage
+{
+    this, element,</font>
+    DefinitionLoader
+        .context( getClass().getClassLoader() )
+        .sdef( "org.eclipse.sapphire.examples.Examples" )
+        .page( "ExamplePage" )
+<font color="#888888">}</font></code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="FormPart">FormPart</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>FormPart</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>FormComponentPart</code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="FormPartDef">FormPartDef</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>FormPartDef</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>FormComponentDef</code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="IModelElement">IModelElement</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">ContactAddress address = element.read( Contact.PROP_ADDRESS );</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">ContactAddress address = element.read( Contact.PROP_ADDRESS )</font>.element()<font color="#888888">;</font></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">element.write(</font> (ValueProperty)<font color="#888888"> property, content )</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">element.write( property, content )</font></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">element.write(</font> (TransientProperty)<font color="#888888"> property, content )</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">element.write( property, content )</font></code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="ISapphireCompositeDef">ISapphireCompositeDef</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>ISapphireCompositeDef</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>CompositeDef</code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="ISapphireDialogDef">ISapphireDialogDef</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>ISapphireDialogDef</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>DialogDef</code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="ISapphireSectionDef">ISapphireSectionDef</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>ISapphireSectionDef</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>SectionDef</code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="ISapphireSeparatorDef">ISapphireSeparatorDef</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>ISapphireSeparatorDef</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>LineSeparatorDef</code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="ISapphireSpacerDef">ISapphireSpacerDef</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>ISapphireSpacerDef</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>WhitespaceSeparatorDef</code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="ISapphireWizardDef">ISapphireWizardDef</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>ISapphireWizardDef</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>WizardDef</code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="ISapphireWizardPageDef">ISapphireWizardPageDef</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>ISapphireWizardPageDef</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>WizardPageDef</code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="MasterDetailsContentNode">MasterDetailsContentNode</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">node.</font>isVisible<font color="#888888">()</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">node.</font>visible<font color="#888888">()</font></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">node.</font>hasChildNodes()</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">node.</font>nodes().visible().isEmpty()</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">node.</font>getChildNodes()</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">node.</font>nodes().visible()</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">node.</font>getChildNodeByLabel<font color="#888888">( text )</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">node.</font>findNode<font color="#888888">( text )</font></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">node.</font>findNodeByModelElement<font color="#888888">( element )</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">node.</font>findNode<font color="#888888">( element )</font></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">MasterDetailsContentNode.</font>HINT_HIDE_IF_DISABLED</code></pre>
+    </td>
+    <td>
+<p>The hide.if.disabled hint no longer exists. See <a href="#HideIfDisabledHint">migration notes</a> for equivalent functionality.</p> 
+    </td>
+  </tr>
+</table>
+
+<h2><a name="MasterDetailsContentOutline">MasterDetailsContentOutline</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">outline</font>.refresh()</code></pre>
+    </td>
+    <td>
+<p>No direct equivalent has been provided. The outline will update itself without explicit refresh calls. For further guidance, 
+post a question on <a href="http://www.eclipse.org/forums/index.php?t=thread&frm_id=192">Sapphire Adopter Forum</a>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>outline<font color="#888888">.attach
+(
+    new Listener()
+    {
+        @Override
+        public void handle( Event event )
+        {
+            if(</font> event instanceof MasterDetailsContentOutline.NodeUpdatedEvent <code><font color="#888888">)
+            {
+                ...
+            }
+        }
+    }
+)</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>node<font color="#888888">.attach
+(
+    new Listener()
+    {
+        @Override
+        public void handle( Event event )
+        {
+            if(</font> event instanceof SapphirePart.LabelChangedEvent || 
+                event instanceof SapphirePart.ImageChangedEvent <code><font color="#888888">)
+            {
+                ...
+            }
+        }
+    }
+)</font></code></pre>
+
+<p>Note that the equivalent events are on the nodes, not on the outline.</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>outline<font color="#888888">.attach
+(
+    new Listener()
+    {
+        @Override
+        public void handle( Event event )
+        {
+            if(</font> event instanceof MasterDetailsContentOutline.NodeStructureChangedEvent <code><font color="#888888">)
+            {
+                ...
+            }
+        }
+    }
+)</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>node<font color="#888888">.attach
+(
+    new Listener()
+    {
+        @Override
+        public void handle( Event event )
+        {
+            if(</font> event instanceof SapphirePart.VisibilityChangedEvent || 
+                event instanceof MasterDetailsContentNode.NodeListEvent <code><font color="#888888">)
+            {
+                ...
+            }
+        }
+    }
+)</font></code></pre>
+
+<p>Note that the equivalent events are on the nodes, not on the outline.</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">outline</font>.notifyOfNodeUpdate( <font color="#888888">node</font> )</code></pre>
+    </td>
+    <td>
+<p>No direct equivalent has been provided. The outline will update itself without explicit notify calls. For further guidance, 
+post a question on <a href="http://www.eclipse.org/forums/index.php?t=thread&frm_id=192">Sapphire Adopter Forum</a>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">outline</font>.notifyOfNodeStructureChange( <font color="#888888">node</font> )</code></pre>
+    </td>
+    <td>
+<p>No direct equivalent has been provided. The outline will update itself without explicit notify calls. For further guidance, 
+post a question on <a href="http://www.eclipse.org/forums/index.php?t=thread&frm_id=192">Sapphire Adopter Forum</a>.</p>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="MasterDetailsEditorPage">MasterDetailsEditorPage</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">new MasterDetailsEditorPage
+{
+    this, element,</font>
+    new Path( "org.eclipse.sapphire.examples/org/eclipse/sapphire/examples/Examples.sdef/ExamplePage" )
+<font color="#888888">}</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">new MasterDetailsEditorPage
+{
+    this, element,</font>
+    DefinitionLoader
+        .context( getClass().getClassLoader() )
+        .sdef( "org.eclipse.sapphire.examples.Examples" )
+        .page( "ExamplePage" )
+<font color="#888888">}</font></code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="ModelElementType">ModelElementType</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">type</font>.attach( listener )</code></pre>
+    </td>
+    <td>
+<p>No direct equivalent has been provided, but attaching the listener via @Listener annotation may be a viable
+substitute in some cases. For further guidance, post a question 
+on <a href="http://www.eclipse.org/forums/index.php?t=thread&frm_id=192">Sapphire Adopter Forum</a>.</p>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="ModelProperty">ModelProperty</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>property.refine( type )</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>type.property( property.getName() )</code></pre> 
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>property.refine( element )</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>element.property( property.getName() )</code></pre> 
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">property</font>.attach( listener )</code></pre>
+    </td>
+    <td>
+<p>No direct equivalent has been provided, but attaching the listener via @Listener annotation may be a viable
+substitute in some cases. For further guidance, post a question 
+on <a href="http://www.eclipse.org/forums/index.php?t=thread&frm_id=192">Sapphire Adopter Forum</a>.</p>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="PartDef">PartDef</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">PartDef.</font>HINT_HIDE_IF_DISABLED</code></pre>
+    </td>
+    <td>
+<p>The hide.if.disabled hint no longer exists. See <a href="#HideIfDisabledHint">migration notes</a> for equivalent functionality.</p> 
+    </td>
+  </tr>
+</table>
+
+<h2><a name="PropertyEditorDef">PropertyEditorDef</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">PropertyEditorDef.</font>HINT_HIDE_IF_DISABLED</code></pre>
+    </td>
+    <td>
+<p>The hide.if.disabled hint no longer exists. See <a href="#HideIfDisabledHint">migration notes</a> for equivalent functionality.</p> 
+    </td>
+  </tr>
+</table>
+
+<h2><a name="ReadOnlyListFactory">ReadOnlyListFactory</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>ReadOnlyListFactory</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>ListFactory</code></pre> 
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">ReadOnlyListFactory.</font>create<font color="#888888">()</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">ListFactory.</font>start<font color="#888888">()</font></code></pre> 
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">ReadOnlyListFactory.</font>create<font color="#888888">( element )</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">ListFactory.</font>singleton<font color="#888888">( element )</font></code></pre> 
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">ReadOnlyListFactory.</font>create<font color="#888888">( collection )</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">ListFactory.</font>unmodifiable<font color="#888888">( collection )</font></code></pre> 
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">ReadOnlyListFactory.</font>create<font color="#888888">( array )</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">ListFactory.</font>unmodifiable<font color="#888888">( array )</font></code></pre> 
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">ReadOnlyListFactory.create().add( element ).</font>export<font color="#888888">()</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">ListFactory.start().add( element ).</font>result<font color="#888888">()</font></code></pre> 
+    </td>
+  </tr>
+</table>
+
+<h2><a name="ReadOnlyMapFactory">ReadOnlyMapFactory</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>ReadOnlyMapFactory</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>MapFactory</code></pre> 
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">ReadOnlyMapFactory.</font>create<font color="#888888">()</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">MapFactory.</font>start<font color="#888888">()</font></code></pre> 
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">ReadOnlyMapFactory.</font>create<font color="#888888">( key, value )</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">MapFactory.</font>singleton<font color="#888888">( key, value )</font></code></pre> 
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">ReadOnlyMapFactory.</font>create<font color="#888888">( map )</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">MapFactory.</font>unmodifiable<font color="#888888">( map )</font></code></pre> 
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">ReadOnlyMapFactory.create().add( element ).</font>export<font color="#888888">()</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">MapFactory.start().add( element ).</font>result<font color="#888888">()</font></code></pre> 
+    </td>
+  </tr>
+</table>
+
+<h2><a name="ReadOnlySetFactory">ReadOnlySetFactory</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>ReadOnlySetFactory</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>SetFactory</code></pre> 
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">ReadOnlySetFactory.</font>create<font color="#888888">()</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">SetFactory.</font>start<font color="#888888">()</font></code></pre> 
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">ReadOnlySetFactory.</font>create<font color="#888888">( element )</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">SetFactory.</font>singleton<font color="#888888">( element )</font></code></pre> 
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">ReadOnlySetFactory.</font>create<font color="#888888">( collection )</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">SetFactory.</font>unmodifiable<font color="#888888">( collection )</font></code></pre> 
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">ReadOnlySetFactory.</font>create<font color="#888888">( array )</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">SetFactory.</font>unmodifiable<font color="#888888">( array )</font></code></pre> 
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">ReadOnlySetFactory.create().add( element ).</font>export<font color="#888888">()</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">SetFactory.start().add( element ).</font>result<font color="#888888">()</font></code></pre> 
+    </td>
+  </tr>
+</table>
+
+<h2><a name="SapphireControl">SapphireControl</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>SapphireControl</pre>
+    </td>
+    <td>
+<pre class="source-code"><code>SapphireForm</pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">new SapphireControl
+{
+    parent, element,</font>
+    "org.eclipse.sapphire.examples/org/eclipse/sapphire/examples/Examples.sdef!ExampleComposite"
+<font color="#888888">}</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">new SapphireForm
+{
+    parent, element,</font>
+    DefinitionLoader
+        .context( getClass().getClassLoader() )
+        .sdef( "org.eclipse.sapphire.examples.Examples" )
+        .form( "ExampleComposite" )
+<font color="#888888">}</font></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">form.</font>getModelElement()</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">form.</font>element()</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">form.</font>getPart()</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">form.</font>part()</code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="SapphireDiagramEditor">SapphireDiagramEditor</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>page.setDiagramHeaderText( text )</code></pre>
+    </td>
+    <td>
+<p>No direct equivalent has been provided, but page header text can now be specified as an expression. This accounts
+for the dynamic header text use cases. For further guidance, post a question 
+on <a href="http://www.eclipse.org/forums/index.php?t=thread&frm_id=192">Sapphire Adopter Forum</a>.</p>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="SapphireDialog">SapphireDialog</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">new SapphireDialog
+{
+    shell, element,</font>
+    "org.eclipse.sapphire.examples/org/eclipse/sapphire/examples/Examples.sdef!ExampleDialog"
+<font color="#888888">}</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">new SapphireDialog
+{
+    shell, element,</font>
+    DefinitionLoader
+        .context( getClass().getClassLoader() )
+        .sdef( "org.eclipse.sapphire.examples.Examples" )
+        .dialog( "ExampleDialog" )
+<font color="#888888">}</font></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">dialog.</font>getModelElement()</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">dialog.</font>element()</code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="SapphireEditor">SapphireEditor</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class ExampleEditor extends SapphireEditor
+{
+    public ExampleEditor()
+    {</font>
+        super( "org.sapphire.examples" );
+    <font color="#888888">}
+}</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class ExampleEditor extends SapphireEditor
+{
+    public ExampleEditor()
+    {</font>
+        super();
+    <font color="#888888">}
+}</font></code></pre>
+    </td>
+</table>
+
+<h2><a name="SapphireEditorForXml">SapphireEditorForXml</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class ExampleEditor extends SapphireEditorForXml
+{
+    public ExampleEditor()
+    {</font>
+        super( "org.sapphire.examples" );
+
+        setRootModelElementType( ExampleElement.TYPE );
+        setEditorDefinitionPath( "org.eclipse.sapphire.examples/org/eclipse/sapphire/examples/Examples.sdef/EditorPage" );
+    <font color="#888888">}
+}</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">public class ExampleEditor extends SapphireEditorForXml
+{
+    public ExampleEditor()
+    {</font>
+        super
+        (
+            ExampleElement.TYPE,
+            DefinitionLoader
+                .context( ExampleEditor.class.getClassLoader() )
+                .sdef( "org.eclipse.sapphire.examples.Examples" )
+                .page( "EditorPage" )
+        );
+    <font color="#888888">}
+}</font></code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="SapphireModelCondition">SapphireModelCondition</a></h2>
+
+<p>SapphireModelCondition class has been removed as part of the transition from SapphireCondition architecture
+to using <a href="../../el/index.html">Sapphire Expression Language</a>. Depending on context, other sections of this migration 
+guide may provide more details on expected migration. For further guidance, post a question 
+on <a href="http://www.eclipse.org/forums/index.php?t=thread&frm_id=192">Sapphire Adopter Forum</a>.</p>
+
+<h2><a name="SapphirePart">SapphirePart</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">part.</font>visible()</code></pre>
+    </td>
+    <td>
+<p>SapphirePart has a new public final visible() method that is linked with the "visible when" feature in sdef. A custom part
+implementation may be defining this method already, in which case the method will need to be renamed. For further guidance, 
+post a question on <a href="http://www.eclipse.org/forums/index.php?t=thread&frm_id=192">Sapphire Adopter Forum</a>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">part.</font>getValidationState()</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">part.</font>validation()</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">part.</font>computeValidationState()</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">part.</font>computeValidation()</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">part.</font>updateValidationState()</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">part.</font>refreshValidation()</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>SapphirePart.ValidationChangedEvent</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>PartValidationEvent</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>SapphirePart.VisibilityChangedEvent</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>PartVisibilityEvent</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>SapphirePart.StructureChangedEvent</code></pre>
+    </td>
+    <td>
+<p>The StructureChangedEvent has been eliminated and its function subsumed by other events, such as PartVisibilityEvent
+and PartChildrenEvent.</p> 
+    </td>
+  </tr>
+</table>
+
+<h2><a name="SapphirePartContainer">SapphirePartContainer</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>SapphirePartContainer</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>FormPart</code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="SapphirePropertyEnabledCondition">SapphirePropertyEnabledCondition</a></h2>
+
+<p>SapphirePropertyEnabledCondition class has been removed as part of the transition from SapphireCondition architecture
+to using <a href="../../el/index.html">Sapphire Expression Language</a>. Depending on context, other sections of this migration 
+guide may provide more details on expected migration. For further guidance, post a question 
+on <a href="http://www.eclipse.org/forums/index.php?t=thread&frm_id=192">Sapphire Adopter Forum</a>.</p>
+
+<h2><a name="SapphireSection">SapphireSection</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>SapphireSection</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>SectionPart</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">section.</font>checkVisibleWhenCondition<font color="#888888">()</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">section.</font>visible<font color="#888888">()</font></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">section</font>.getVisibleWhenCondition()</code></pre>
+    </td>
+    <td>
+<p>No direct equivalent has been provided. It is possible to check section visibility using visible() method and to listen for
+visibility changes using VisibilityChangedEvent, but it is no longer possible to access the actual visibility condition.
+For further guidance, post a question on <a href="http://www.eclipse.org/forums/index.php?t=thread&frm_id=192">Sapphire Adopter Forum</a>.</p>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="SapphireSeparator">SapphireSeparator</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>SapphireSeparator</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>LineSeparatorPart</code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="SapphireSpacer">SapphireSpacer</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>SapphireSpacer</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>WhitespaceSeparatorPart</code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="SapphireUiDefFactory">SapphireUiDefFactory</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>ISapphireUiDef def = SapphireUiDefFactory.load
+(
+    "org.eclipse.sapphire.examples", 
+    "org/eclipse/sapphire/examples/Examples.sdef"
+);</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>DefinitionLoader.Reference&lt;ISapphireUiDef> defref = DefinitionLoader
+    .context( BundleBasedContext.adapt( "org.eclipse.sapphire.examples" ) )
+    .sdef( "org.eclipse.sapphire.examples.Examples" )
+    .root();
+
+try
+{
+    ISapphireUiDef def = defref.resolve();
+}
+finally
+{
+    // Do not dispose the definition reference until the definition is not
+    // needed any longer.
+
+    defref.dispose();
+}</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>ISapphireUiDef def = SapphireUiDefFactory.load
+(
+    sapphireUiDefinition, 
+    "org/eclipse/sapphire/examples/Examples.sdef"
+);</code></pre>
+    </td>
+    <td>
+<p>No direct equivalent has been provided. For further guidance, post a question 
+on <a href="http://www.eclipse.org/forums/index.php?t=thread&frm_id=192"><nobr>Sapphire Adopter Forum</nobr></a>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>ISapphireUiDef def = SapphireUiDefFactory.load
+(
+    xmlResourceStore, 
+    writable
+);</code></pre>
+    </td>
+    <td>
+<p>No direct equivalent has been provided. For further guidance, post a question 
+on <a href="http://www.eclipse.org/forums/index.php?t=thread&frm_id=192"><nobr>Sapphire Adopter Forum</nobr></a>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>ISapphireCompositeDef def = SapphireUiDefFactory.getCompositeDef
+(
+   "org.eclipse.sapphire.examples/org/eclipse/sapphire/examples/Examples.sdef!ExampleComposite"
+);</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>DefinitionLoader.Reference&lt;FormComponentDef> defref = DefinitionLoader
+    .context( BundleBasedContext.adapt( "org.eclipse.sapphire.examples" ) )
+    .sdef( "org.eclipse.sapphire.examples.Examples" )
+    .form( "ExampleComposite" );
+
+try
+{
+    CompositeDef def = (CompositeDef) defref.resolve();
+}
+finally
+{
+    // Do not dispose the definition reference until the definition is not
+    // needed any longer.
+
+    defref.dispose();
+}</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>ISapphireCompositeDef def = SapphireUiDefFactory.getCompositeDef
+(
+    "org.eclipse.sapphire.examples",
+    "org/eclipse/sapphire/examples/Examples.sdef",
+    "ExampleComposite"
+);</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>DefinitionLoader.Reference&lt;FormComponentDef> defref = DefinitionLoader
+    .context( BundleBasedContext.adapt( "org.eclipse.sapphire.examples" ) )
+    .sdef( "org.eclipse.sapphire.examples.Examples" )
+    .form( "ExampleComposite" );
+
+try
+{
+    CompositeDef def = (CompositeDef) defref.resolve();
+}
+finally
+{
+    // Do not dispose the definition reference until the definition is not
+    // needed any longer.
+
+    defref.dispose();
+}</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>ISapphireDialogDef def = SapphireUiDefFactory.getDialogDef
+(
+   "org.eclipse.sapphire.examples/org/eclipse/sapphire/examples/Examples.sdef!ExampleDialog"
+);</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>DefinitionLoader.Reference&lt;DialogDef> defref = DefinitionLoader
+    .context( BundleBasedContext.adapt( "org.eclipse.sapphire.examples" ) )
+    .sdef( "org.eclipse.sapphire.examples.Examples" )
+    .dialog( "ExampleDialog" );
+
+try
+{
+    DialogDef def = defref.resolve();
+}
+finally
+{
+    // Do not dispose the definition reference until the definition is not
+    // needed any longer.
+
+    defref.dispose();
+}</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>ISapphireDialogDef def = SapphireUiDefFactory.getDialogDef
+(
+    "org.eclipse.sapphire.examples",
+    "org/eclipse/sapphire/examples/Examples.sdef",
+    "ExampleDialog"
+);</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>DefinitionLoader.Reference&lt;DialogDef> defref = DefinitionLoader
+    .context( BundleBasedContext.adapt( "org.eclipse.sapphire.examples" ) )
+    .sdef( "org.eclipse.sapphire.examples.Examples" )
+    .dialog( "ExampleDialog" );
+
+try
+{
+    DialogDef def = defref.resolve();
+}
+finally
+{
+    // Do not dispose the definition reference until the definition is not
+    // needed any longer.
+
+    defref.dispose();
+}</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>ISapphireWizardDef def = SapphireUiDefFactory.getWizardDef
+(
+   "org.eclipse.sapphire.examples/org/eclipse/sapphire/examples/Examples.sdef!ExampleWizard"
+);</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>DefinitionLoader.Reference&lt;WizardDef> defref = DefinitionLoader
+    .context( BundleBasedContext.adapt( "org.eclipse.sapphire.examples" ) )
+    .sdef( "org.eclipse.sapphire.examples.Examples" )
+    .wizard( "ExampleWizard" );
+
+try
+{
+    WizardDef def = defref.resolve();
+}
+finally
+{
+    // Do not dispose the definition reference until the definition is not
+    // needed any longer.
+
+    defref.dispose();
+}</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>ISapphireWizardDef def = SapphireUiDefFactory.getWizardDef
+(
+    "org.eclipse.sapphire.examples",
+    "org/eclipse/sapphire/examples/Examples.sdef",
+    "ExampleWizard"
+);</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>DefinitionLoader.Reference&lt;WizardDef> defref = DefinitionLoader
+    .context( BundleBasedContext.adapt( "org.eclipse.sapphire.examples" ) )
+    .sdef( "org.eclipse.sapphire.examples.Examples" )
+    .wizard( "ExampleWizard" );
+
+try
+{
+    WizardDef def = defref.resolve();
+}
+finally
+{
+    // Do not dispose the definition reference until the definition is not
+    // needed any longer.
+
+    defref.dispose();
+}</code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="SapphireWizard">SapphireWizard</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">new SapphireWizard
+{
+    element,</font>
+    "org.eclipse.sapphire.examples/org/eclipse/sapphire/examples/Examples.sdef!ExampleWizard"
+<font color="#888888">}</font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">new SapphireWizard
+{
+    element,</font>
+    DefinitionLoader
+        .context( getClass().getClassLoader() )
+        .sdef( "org.eclipse.sapphire.examples.Examples" )
+        .wizard( "ExampleWizard" )
+<font color="#888888">}</font></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">wizard.</font>getModelElement()</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">wizard.</font>element()</code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="Service">Service</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>broadcast( <font color="#888888">new Event()</font> )</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>broadcast( <font color="#888888">new ServiceEvent( this )</font> )</code></pre>
+
+<p>Events broadcast by a service must now extend ServiceEvent class. This facilitates differentiation
+of service events from other events and identifies the originating service.</p>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="Status">Status</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>List<font color="#888888">&lt;Status> children = status.children()</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>SortedSet<font color="#888888">&lt;Status> children = status.children()</font></code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">Status.Severity.</font>INFO</font></code></pre>
+    </td>
+    <td>
+<p>INFO is no longer available as validation severity. Use WARNING or OK instead.</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">Status.</font>createInfoStatus( message )</code></pre>
+    </td>
+    <td>
+<p>INFO is no longer available as validation severity. Use WARNING or OK instead.</p>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="ValidationChangedEvent">ValidationChangedEvent</a></h2>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code>SapphirePart.ValidationChangedEvent</code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code>PartValidationEvent</code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="Conditional">Conditional</a></h2>
+
+<p>The conditional construct in sdef has been converted to use <a href="../../el/index.html">Sapphire Expression Language</a> instead 
+of a class implementing SapphireCondition.</p>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">&lt;if>
+    &lt;condition></font>
+        &lt;class>ExampleCondition&lt;/class>
+        &lt;parameter>...&lt;/parameter>
+    <font color="#888888">&lt;/condition>
+    &lt;then>
+        ...
+    &lt;/then>
+    &lt;else>
+        ...
+    &lt;/else>
+&lt;/if></font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">&lt;if>
+    &lt;condition></font>${ <i>corresponding logic as an expression</i> }<font color="#888888">&lt;/condition>
+    &lt;then>
+        ...
+    &lt;/then>
+    &lt;else>
+        ...
+    &lt;/else>
+&lt;/if></font></code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="SectionVisibility">Section Visibility</a></h2>
+
+<p>The method of specifying visibility of a section in sdef has been converted to use <a href="../../el/index.html">Sapphire Expression Language</a> instead 
+of a class implementing SapphireCondition.</p>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">&lt;section>
+    &lt;visible-when></font>
+        &lt;class>ExampleCondition&lt;/class>
+        &lt;parameter>...&lt;/parameter>
+    <font color="#888888">&lt;/visible-when>
+    &lt;content>
+        ...
+    &lt;/content>
+&lt;/section></font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">&lt;section>
+    &lt;visible-when></font>${ <i>corresponding logic as an expression</i> }<font color="#888888">&lt;/visible-when>
+    &lt;content>
+        ...
+    &lt;/content>
+&lt;/section></font></code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="NodeVisibility">Node Visibility</a></h2>
+
+<p>The method of specifying visibility of a master-details content node in sdef has been converted to 
+use <a href="../../el/index.html">Sapphire Expression Language</a> instead of a class implementing SapphireCondition.</p>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">&lt;node>
+    &lt;visible-when></font>
+        &lt;class>ExampleCondition&lt;/class>
+        &lt;parameter>...&lt;/parameter>
+    <font color="#888888">&lt;/visible-when>
+    &lt;section>
+        ...
+    &lt;/section>
+&lt;/node></font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">&lt;node>
+    &lt;visible-when></font>${ <i>corresponding logic as an expression</i> }<font color="#888888">&lt;/visible-when>
+    &lt;section>
+        ...
+    &lt;/section>
+&lt;/node></font></code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="NodeFactoryVisibility">Node Factory Visibility</a></h2>
+
+<p>The method of specifying visibility of a master-details content node factory in sdef has been converted to 
+use <a href="../../el/index.html">Sapphire Expression Language</a> instead of a class implementing SapphireCondition.</p>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">&lt;node-factory>
+    &lt;property>...&lt;/property>
+    &lt;visible-when></font>
+        &lt;class>ExampleCondition&lt;/class>
+        &lt;parameter>...&lt;/parameter>
+    <font color="#888888">&lt;/visible-when>
+    &lt;case>
+        ...
+    &lt;/case>
+&lt;/node-factory></font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">&lt;node-factory>
+    &lt;property>...&lt;/property>
+    &lt;visible-when></font>${ <i>corresponding logic as an expression</i> }<font color="#888888">&lt;/visible-when>
+    &lt;case>
+        ...
+    &lt;/case>
+&lt;/node-factory></font></code></pre>
+    </td>
+  </tr>
+</table>
+
+<h2><a name="HideIfDisabledHint">Hide If Disabled Hint</a></h2>
+
+<p>The use cases covered by hide.if.disabled hint have been subsumed by the "visible when" feature.</p>
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+<pre class="source-code"><code><font color="#888888">&lt;node></font>
+    &lt;hint>
+        &lt;name>hide.if.disabled&lt;/name>
+        &lt;value>true&lt;/value>
+    &lt;/hint>
+<font color="#888888">&lt;/node></font></code></pre>
+    </td>
+    <td>
+<pre class="source-code"><code><font color="#888888">&lt;node></font>
+    &lt;visible-when>${ Enabled( "ExampleProperty" ) }&lt;/visible-when>
+<font color="#888888">&lt;/node></font></code></pre>
+    </td>
+  </tr>
+</table>
+
+<div class="copyright">Copyright (c) 2016 Oracle<br/>
+Content made available under the terms of <a href="http://www.eclipse.org/legal/epl-v10.html">Eclipse Public License</a>.</div>
+
+</body>
+
+</html>

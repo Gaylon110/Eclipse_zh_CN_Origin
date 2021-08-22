@@ -1,0 +1,285 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.equinox.p2.touchpoint.eclipse;singlet
+ on:=true
+Archiver-Version: Plexus Archiver
+Built-By: genie.releng
+Require-Bundle: org.eclipse.equinox.common;bundle-version="[3.5.0,4.0.
+ 0)"
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/equino
+ x/rt.equinox.p2.git;path="bundles/org.eclipse.equinox.p2.touchpoint.e
+ clipse";tag="M20170906-1700";commitId=f94c9ac9bd27522cf55784111380d5f
+ 4aebc4bab
+Bundle-Vendor: %providerName
+Import-Package: javax.xml.parsers,org.eclipse.equinox.frameworkadmin;v
+ ersion="[2.0.0,3.0.0)",org.eclipse.equinox.internal.p2.core.helpers,o
+ rg.eclipse.equinox.internal.p2.engine,org.eclipse.equinox.internal.p2
+ .garbagecollector,org.eclipse.equinox.internal.p2.metadata,org.eclips
+ e.equinox.internal.provisional.frameworkadmin,org.eclipse.equinox.int
+ ernal.provisional.p2.repository,org.eclipse.equinox.internal.simpleco
+ nfigurator.manipulator,org.eclipse.equinox.p2.core;version="[2.0.0,3.
+ 0.0)",org.eclipse.equinox.p2.core.spi;version="[2.1.0,3.0.0)",org.ecl
+ ipse.equinox.p2.engine;version="[2.0.0,3.0.0)",org.eclipse.equinox.p2
+ .engine.spi;version="[2.0.0,3.0.0)",org.eclipse.equinox.p2.metadata;v
+ ersion="[2.0.0,3.0.0)",org.eclipse.equinox.p2.metadata.expression;ver
+ sion="[2.0.0,3.0.0)",org.eclipse.equinox.p2.planner;version="[2.0.0,3
+ .0.0)";resolution:=optional,org.eclipse.equinox.p2.publisher;resoluti
+ on:=optional,org.eclipse.equinox.p2.publisher.eclipse;resolution:=opt
+ ional,org.eclipse.equinox.p2.query;version="[2.0.0,3.0.0)",org.eclips
+ e.equinox.p2.repository;version="[2.0.0,3.0.0)",org.eclipse.equinox.p
+ 2.repository.artifact;version="[2.3.0,3.0.0)",org.eclipse.equinox.p2.
+ repository.artifact.spi;version="[2.0.0,3.0.0)",org.eclipse.equinox.p
+ 2.repository.metadata;version="[2.0.0,3.0.0)",org.eclipse.equinox.sim
+ pleconfigurator.manipulator;version="[2.0.0,3.0.0)",org.eclipse.osgi.
+ service.datalocation;version="1.0.0",org.eclipse.osgi.service.environ
+ ment;version="1.0.0",org.eclipse.osgi.service.resolver;version="1.2.0
+ ";resolution:=optional,org.eclipse.osgi.util;version="1.1.0",org.osgi
+ .framework;version="1.3.0",org.osgi.service.prefs;version="1.1.1",org
+ .osgi.util.tracker;version="1.4.0",org.w3c.dom,org.xml.sax
+Export-Package: org.eclipse.equinox.internal.p2.touchpoint.eclipse;ver
+ sion="2.0.0"; x-friends:="org.eclipse.equinox.p2.reconciler.dropins, 
+  org.eclipse.equinox.p2.extensionlocation,  org.eclipse.equinox.p2.ui
+ .importexport,  org.eclipse.equinox.p2.ui.sdk.scheduler",org.eclipse.
+ equinox.internal.p2.touchpoint.eclipse.actions;version="2.0.0";x-inte
+ rnal:=true,org.eclipse.equinox.internal.p2.update;version="2.0.0";x-f
+ riends:="org.eclipse.equinox.p2.reconciler.dropins,org.eclipse.equino
+ x.p2.extensionlocation,org.eclipse.equinox.p2.directorywatcher",org.e
+ clipse.equinox.p2.touchpoint.eclipse.query;version="2.0.0"
+Bundle-Name: %pluginName
+Bundle-Version: 2.1.501.v20170906-1259
+Bundle-Localization: plugin
+Bundle-Activator: org.eclipse.equinox.internal.p2.touchpoint.eclipse.A
+ ctivator
+Created-By: Apache Maven 3.3.3
+Build-Jdk: 1.8.0_131
+
+Name: plugin.xml
+SHA-256-Digest: 1ZQlNzlAgIyy0P+5unpzdAznD2Guh/a8dBU6C0rBoac=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/eclipse/actions/AddPr
+ ogramPropertyAction.class
+SHA-256-Digest: a1mjOHacCVttYwEtnovkhgj1YctH3iTnsjzExVxrRUU=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/eclipse/AgentFromInst
+ all.class
+SHA-256-Digest: 3huHrTVUAAaaBRi9xSjUMxaSIZ8K+x3h3ug0LzL+Ai8=
+
+Name: org/eclipse/equinox/internal/p2/update/Messages.class
+SHA-256-Digest: eM4R1x9VbsIzRgB5QGQzwH9l/5IJdheTnL625vfn3pI=
+
+Name: org/eclipse/equinox/internal/p2/update/Site.class
+SHA-256-Digest: MapLcOADWMNKzc4CIKTFu5iM40/77uuYXuxg+Yk+0Qk=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/eclipse/actions/AddPr
+ ogramArgumentAction.class
+SHA-256-Digest: 0PH6B2XyMo6yi0OaLQ9/dygso+/cekvGqCekFf+Z8vo=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/eclipse/WhatIsRunning
+ .class
+SHA-256-Digest: jw6KmwoGcIu52YMLAkP+usS0FFR/SQpjexuxbU95x2I=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/eclipse/actions/SetLa
+ uncherNameAction.class
+SHA-256-Digest: EdJpz7Izbzxe466CSKRm/7voc+HmFNBxkZ9MCIOJITY=
+
+Name: org/eclipse/equinox/internal/p2/update/Feature.class
+SHA-256-Digest: Pf5VJ6EYB8sAHAV63q3pF+PfHpIyYVdOqgDxpwOHPbs=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/eclipse/actions/Unins
+ tallFeatureAction.class
+SHA-256-Digest: D2+BPTstnaY122u/3icgOVVVy/khwaHIDUVLFbQ5zu4=
+
+Name: org/eclipse/equinox/internal/p2/update/messages.properties
+SHA-256-Digest: iVaq1ydUwESQe9blndHU8Hj9VAkGEQREi64LHqHbFf8=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/eclipse/actions/Insta
+ llFeatureAction.class
+SHA-256-Digest: 3+LQD8Om38ic5VC+6WqxhaiSqGhWP1hL+E+lmgskFcY=
+
+Name: plugin.properties
+SHA-256-Digest: YsCrojnIkvBeod4xZKCNzUnvMR4jTd6R3CbTbMhVvhU=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/eclipse/actions/SetJv
+ mAction.class
+SHA-256-Digest: tYzwIr/iDD4dvQrp87lVz5/mGzR1xFEArd+ZblQNJ3w=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/eclipse/actions/Remov
+ eProgramPropertyAction.class
+SHA-256-Digest: ++d6PZ6aCog24jzCpwyKdH0mF06qOvHqjF13nErJOkI=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/eclipse/LazyManipulat
+ or.class
+SHA-256-Digest: UdJQZLlzUf3gGkcKx+LX8B8ZK2D7WvxUPclo7Qt6Ljg=
+
+Name: .api_description
+SHA-256-Digest: niMLFTKrXPPJIeaMI+vPabpjdgA8uUVW0VTAX6zGxT4=
+
+Name: org/eclipse/equinox/internal/p2/update/ConfigurationIO$CacheEntr
+ y.class
+SHA-256-Digest: HkwK7yyL8DT2Z+p/85YzSw1FwXjoybceC9UNKUXPzAA=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/eclipse/messages.prop
+ erties
+SHA-256-Digest: h5Nv17Bdts8l5kZPGpBz1aMMV4w+CGPtFmWBe6J6B2Y=
+
+Name: org/eclipse/equinox/internal/p2/update/ConfigurationCache$CacheE
+ ntry.class
+SHA-256-Digest: ptfUl0aUmObCyfpZ3dUdOPgVRFihjoLQDb+jdKiz69k=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/eclipse/actions/Check
+ TrustAction.class
+SHA-256-Digest: AnE/6WAvuYsIIaXfM4etkfmhLxNwMiEHPYYBzOpSLJc=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/eclipse/Activator.cla
+ ss
+SHA-256-Digest: XmH9mA9RkXf/aYJV/DCduSuaw3u2/og/ehkYzR1r0uw=
+
+Name: org/eclipse/equinox/internal/p2/update/XMLWriter.class
+SHA-256-Digest: e3Kxo2712M/nwDhyjQBiiicSd8DhKHWBIh3EPQRO2bI=
+
+Name: org/eclipse/equinox/internal/p2/update/ConfigurationCache.class
+SHA-256-Digest: pwCxosxwkWGaTa2kQPO/GCUv5P0U1VyPrTm+mPQSwG0=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/eclipse/AggregatedBun
+ dleRepository.class
+SHA-256-Digest: eSplBewuWt1C4ZJNrS7cjglSOUVai2fbZq6bwAWSWew=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/eclipse/actions/AddRe
+ positoryAction.class
+SHA-256-Digest: 1QTpsv+HFaF6bLyswCZk5GuD27nD474cdsMha89zNuU=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/eclipse/actions/MarkS
+ tartedAction.class
+SHA-256-Digest: OBcWgNGDxkYOkFuMF2UYUZ30nPG7rsjmR5sdNWfW4ik=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/eclipse/Util.class
+SHA-256-Digest: xdc8KYsRikTmf2JwlHAEEbgv7y6kKjkjps2oS8eXcus=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/eclipse/actions/Repos
+ itoryAction.class
+SHA-256-Digest: lSJ+sW83Jil08zTxZ8b6itI6CwlZe+gBhhedPWA6yfE=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/eclipse/actions/Colle
+ ctAction.class
+SHA-256-Digest: K5leU5UHCd2MWFSSRAZtgWJqOI06qVoHFtcGeirp6gQ=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/eclipse/EclipseMarkSe
+ tProvider.class
+SHA-256-Digest: ga84xTVeac+NSNfofqN2MKpiEwOcmsBlSxj8RiCFZMo=
+
+Name: org/eclipse/equinox/internal/p2/update/ConfigurationIO.class
+SHA-256-Digest: jDwkm3GZIL1XCDm/56qeIOAMsO8CwZOGQdIQd+nFNBk=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/eclipse/PlatformConfi
+ gurationWrapper.class
+SHA-256-Digest: dnN3G+mfAeGwBsScnv00HO2MvAmHP3LnZC7YRdmUCqc=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/eclipse/actions/Chmod
+ Action.class
+SHA-256-Digest: SqJVK5Ervjkuqw0NUS6kSxHwWiWv5hZu2LWJEm/L3Jk=
+
+Name: org/eclipse/equinox/internal/p2/update/ConfigurationConstants.cl
+ ass
+SHA-256-Digest: r67Fqd9awHodWteJMPKfIVhDH/bAhX7qY+Xj9m1Uzd4=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/eclipse/actions/Unins
+ tallBundleAction.class
+SHA-256-Digest: 90ZXRS2uSn9/U5Zx7uFBUMKz2qQDHV52xI0vPVQqYkA=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/eclipse/EclipseTouchp
+ oint.class
+SHA-256-Digest: trV1hTSz9b0u9R/mPBq8n40Ymha/N35BbNCi+vR+GDc=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/eclipse/PublisherUtil
+ .class
+SHA-256-Digest: lYfsqieHGm9hz+cCdahMeYiC5UPdwWy9NFaEMR6xL+w=
+
+Name: org/eclipse/equinox/internal/p2/update/Configuration.class
+SHA-256-Digest: yP3WmHrOAnrNq1RZeKCvzwoSlV3M1j+1PadvDnEASiM=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/eclipse/AgentFromInst
+ all$1.class
+SHA-256-Digest: A6d9MUpwhSfg9HkY5XJzOa7lx6pV2QrUwFbJ4N7Rycw=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/eclipse/DirectorUtil.
+ class
+SHA-256-Digest: MD5TCjue6aws6544sBTvpayc4GPcC/fjr2rNxrWMev0=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/eclipse/Messages.clas
+ s
+SHA-256-Digest: iZoq6RQe4v6MhlnQsQrf6ddixawqTkVB+JmZ80kRcq4=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/eclipse/SourceManipul
+ ator.class
+SHA-256-Digest: 36vZ7rXeiEccZoQiS90LXAr6eJTZKfsXev+vHYVilqE=
+
+Name: about.html
+SHA-256-Digest: 0RM1x9lTJa7T8YkysaegPuBIeaEvSZypRDfXoMpsJAU=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/eclipse/actions/AddJV
+ MArgumentAction.class
+SHA-256-Digest: x3TuvjnNL7M2BFvFpIqHOq/0uzu97rfzXR9FM+C0M4o=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/eclipse/actions/Remov
+ eRepositoryAction.class
+SHA-256-Digest: HxZ72N97gbWNzMkZ/MzllYfE180BsiQoxUfamobQ2Kg=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/eclipse/actions/SetPr
+ ogramPropertyAction.class
+SHA-256-Digest: cpTM52cICqBTleYz5SsWqDzugviEEmp93NLBme76lzU=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/eclipse/actions/Remov
+ eProgramArgumentAction.class
+SHA-256-Digest: ejr43/C/lICZnqNFC3/5D7ppqH5uvEW3wttWNjdz/p0=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/eclipse/actions/messa
+ ges.properties
+SHA-256-Digest: vlq5o97TYE8rbMvRuT3uLTkc7zr7PlFV9Nb33uznAyA=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/eclipse/actions/Remov
+ eJVMArgumentAction.class
+SHA-256-Digest: mjv2iaAUzZJhrbHfGnvTp7wru/H/lNPCrABzu59WPL8=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/eclipse/actions/SetSt
+ artLevelAction.class
+SHA-256-Digest: O0RUEfedt4Ti90teU1dZFRNqO2s+kLyMGmBS0qC4QCY=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/eclipse/actions/AddSo
+ urceBundleAction.class
+SHA-256-Digest: qsxSzmdCtaUcqNjiE3n8OY1x4uFl+2Toa/i+nc8eQh4=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/eclipse/actions/Remov
+ eSourceBundleAction.class
+SHA-256-Digest: /eVajzEzymGe/rIR+UpVk2L5y2hg6jKDTKKcUSzIE+U=
+
+Name: org/eclipse/equinox/internal/p2/update/PathUtil.class
+SHA-256-Digest: Rsum+N+iBj0pxQeqgm9p+dLroCiiP6WycgJMJD5hj9Y=
+
+Name: org/eclipse/equinox/internal/p2/update/ConfigurationWriter.class
+SHA-256-Digest: HIYO1dkQ1USrXE+0h+KrJSTfiiHs691zv5/kw8YwH7Q=
+
+Name: org/eclipse/equinox/p2/touchpoint/eclipse/query/OSGiBundleQuery.
+ class
+SHA-256-Digest: lKYQHAvtcN9L7EYWhESDv/K2H6nNanjOhbTottPFi8o=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/eclipse/actions/Insta
+ llBundleAction.class
+SHA-256-Digest: tS8udwSAkodfxEKcsukv0iOzpGf1cExfKVh/fzTKRsM=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/eclipse/actions/Actio
+ nConstants.class
+SHA-256-Digest: 0xnrDMAicBW52oB0j+WkgzAwIQ+4CTGk6zL1VH+SI3s=
+
+Name: org/eclipse/equinox/internal/p2/update/ConfigurationParser.class
+SHA-256-Digest: EWXroXLkU5ijSGkQKw0NS8OFk4ocH1zFP+bcknDdxzs=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/eclipse/actions/Messa
+ ges.class
+SHA-256-Digest: PCrETI75lFxIs+B1Y6mmQG4WuUdTLOn8x82ylVYazck=
+
+Name: org/eclipse/equinox/internal/p2/touchpoint/eclipse/actions/LinkA
+ ction.class
+SHA-256-Digest: gLMCz/RRvcpEKaweeQPGkRSdCnQsXLxHgyK8xSGliyU=
+

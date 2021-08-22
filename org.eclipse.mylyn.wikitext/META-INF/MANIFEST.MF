@@ -1,0 +1,907 @@
+Manifest-Version: 1.0
+Bundle-Description: Mylyn WikiText provides an extensible framework an
+ d tools for parsing, editing and presenting lightweight markup. WikiT
+ ext has parsers for AsciiDoc, CommonMark, Markdown, MediaWiki, Textil
+ e, Confluence, Creole, HTML, TracWiki and TWiki markup, and        ca
+ n be extended to support other languages. WikiText provides Ant tasks
+  for converting lightweight markup to HTML, Eclipse Help, DocBook, DI
+ TA and XSL-FO. WikiText also provides an editor for editing such mark
+ up within Eclipse, and integrates with        the Mylyn task editor c
+ ausing it to be markup-aware. WikiText provides API for integrating w
+ iki markup capabilities into Eclipse, RCP, stand-alone and server-sid
+ e applications.
+Bundle-License: https://www.eclipse.org/legal/epl-2.0/
+Bundle-SymbolicName: org.eclipse.mylyn.wikitext
+Built-By: jenkins
+Bnd-LastModified: 1614384512441
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-DocURL: http://eclipse.org/mylyn
+Bundle-Vendor: Eclipse Mylyn
+Import-Package: com.google.common.base;version="[21.0,22.0)",com.googl
+ e.common.collect;version="[21.0,22.0)",com.google.common.escape;versi
+ on="[21.0,22.0)",com.google.common.xml;version="[21.0,22.0)",javax.la
+ ng.model,javax.xml.namespace,javax.xml.parsers,javax.xml.stream,org.e
+ clipse.mylyn.wikitext.internal.parser.html,org.eclipse.mylyn.wikitext
+ .internal.util,org.eclipse.mylyn.wikitext.parser,org.eclipse.mylyn.wi
+ kitext.parser.builder,org.eclipse.mylyn.wikitext.parser.builder.event
+ ,org.eclipse.mylyn.wikitext.parser.css,org.eclipse.mylyn.wikitext.par
+ ser.markup,org.eclipse.mylyn.wikitext.parser.markup.block,org.eclipse
+ .mylyn.wikitext.parser.markup.token,org.eclipse.mylyn.wikitext.parser
+ .outline,org.eclipse.mylyn.wikitext.parser.util,org.eclipse.mylyn.wik
+ itext.util,org.jsoup;version="[1.8,2)",org.jsoup.helper;version="[1.8
+ ,2)",org.jsoup.nodes;version="[1.8,2)",org.jsoup.select;version="[1.8
+ ,2)",org.w3c.dom,org.xml.sax,org.xml.sax.helpers
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-3.2.0.201605172007
+Export-Package: org.eclipse.mylyn.wikitext.internal.parser.html;x-inte
+ rnal:=true;uses:="org.eclipse.mylyn.wikitext.parser,org.jsoup.nodes,o
+ rg.xml.sax";version="3.0.39",org.eclipse.mylyn.wikitext.internal.util
+ ;x-internal:=true;version="3.0.39",org.eclipse.mylyn.wikitext.parser;
+ uses:="org.eclipse.mylyn.wikitext.parser.markup,org.xml.sax";version=
+ "3.0.39",org.eclipse.mylyn.wikitext.parser.builder;uses:="org.eclipse
+ .mylyn.wikitext.parser,org.eclipse.mylyn.wikitext.parser.builder.even
+ t,org.eclipse.mylyn.wikitext.parser.outline,org.eclipse.mylyn.wikitex
+ t.util";version="3.0.39",org.eclipse.mylyn.wikitext.parser.builder.ev
+ ent;uses:="org.eclipse.mylyn.wikitext.parser";version="3.0.39",org.ec
+ lipse.mylyn.wikitext.parser.css;version="3.0.39",org.eclipse.mylyn.wi
+ kitext.parser.markup;uses:="org.eclipse.mylyn.wikitext.parser,org.ecl
+ ipse.mylyn.wikitext.parser.util";version="3.0.39",org.eclipse.mylyn.w
+ ikitext.parser.markup.block;uses:="org.eclipse.mylyn.wikitext.parser.
+ markup,org.eclipse.mylyn.wikitext.parser.outline";version="3.0.39",or
+ g.eclipse.mylyn.wikitext.parser.markup.phrase;uses:="org.eclipse.myly
+ n.wikitext.parser.markup";version="3.0.39",org.eclipse.mylyn.wikitext
+ .parser.markup.token;uses:="org.eclipse.mylyn.wikitext.parser.markup"
+ ;version="3.0.39",org.eclipse.mylyn.wikitext.parser.outline;uses:="or
+ g.eclipse.mylyn.wikitext.parser,org.eclipse.mylyn.wikitext.parser.mar
+ kup";version="3.0.39",org.eclipse.mylyn.wikitext.parser.util;uses:="o
+ rg.eclipse.mylyn.wikitext.parser.markup,org.eclipse.mylyn.wikitext.pa
+ rser.outline,org.eclipse.mylyn.wikitext.util";version="3.0.39",org.ec
+ lipse.mylyn.wikitext.splitter;uses:="org.eclipse.mylyn.wikitext.parse
+ r,org.eclipse.mylyn.wikitext.parser.builder,org.eclipse.mylyn.wikitex
+ t.parser.outline,org.eclipse.mylyn.wikitext.parser.util";version="3.0
+ .39",org.eclipse.mylyn.wikitext.util;uses:="javax.xml.stream,org.ecli
+ pse.mylyn.wikitext.parser,org.eclipse.mylyn.wikitext.parser.markup,or
+ g.xml.sax";version="3.0.39",org.eclipse.mylyn.wikitext.validation;use
+ s:="org.eclipse.mylyn.wikitext.parser.markup";version="3.0.39"
+Bundle-Name: Mylyn WikiText
+Bundle-Version: 3.0.39.20210227000941
+Build-Jdk: 1.8.0_202
+Created-By: Apache Maven Bundle Plugin
+
+Name: org/eclipse/mylyn/wikitext/splitter/Messages.class
+SHA-256-Digest: 99WT3ZxcDb89H0zaiYgMNE+RNhgPtDh8PiD+Ot1Vtts=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/XslfoDocumentBuilder$R
+ egion.class
+SHA-256-Digest: ffOkouB53SWw/2Io5XnzrNFntmrVxS1nfJQO1ztOuQo=
+
+Name: org/eclipse/mylyn/wikitext/internal/parser/html/HtmlParser.class
+SHA-256-Digest: XT3OzzMFoBvwGAuH0EDP+56yPaW/oZ993SEXz7zXlJ8=
+
+Name: about.ini
+SHA-256-Digest: JptQQG6e/ayk1d+4N98q5z9SMqrDsRWe4zWP/kNaBSY=
+
+Name: org/eclipse/mylyn/wikitext/parser/css/Stylesheet.class
+SHA-256-Digest: Y/enKADklqcWxndsk55txLrZM7kTx+eZARdU4a8Ru8g=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/JavadocShortcutUriProc
+ essor.class
+SHA-256-Digest: s1HcazNH6hFIECf7hXnfNkmWtenG3zK22P17G7tCl6M=
+
+Name: org/eclipse/mylyn/wikitext/util/LocationTrackingReader.class
+SHA-256-Digest: B+jHZ7yFQujG7FaUKT2bcfyKnze0YxSJYOxfz/DibZE=
+
+Name: org/eclipse/mylyn/wikitext/parser/DocumentBuilder$SpanType.class
+SHA-256-Digest: TuPoL1+I9KYXqyK4VxvGAjAG8juteLtolaIRiFfVs7c=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/HtmlDocumentBuilder$El
+ ementInfo.class
+SHA-256-Digest: M5Ptk6+BVQYW89mgoxWJTn1BMXtU18qzada59Hx3MUI=
+
+Name: org/eclipse/mylyn/wikitext/validation/ValidationProblem$Severity
+ .class
+SHA-256-Digest: nQsvapSAyt55ZYc8n31EjzHUxznkYtsOh72vGgQ/I7o=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/AbstractXmlDocumentBui
+ lder.class
+SHA-256-Digest: FD1zSXEzRYNCsuo/jHvB9fcuDiJPHAx61YSUAOJ1v20=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/AbstractMarkupDocument
+ Builder$1.class
+SHA-256-Digest: CqiVoXQnmXFix2GcjCuWMgO2qotGjJ8RRQGpWz4QjQQ=
+
+Name: org/eclipse/mylyn/wikitext/parser/DocumentBuilder.class
+SHA-256-Digest: OenyNlXUqf2eP6jaYdphGaFCNoDOL8GyjqjhDcZSrX0=
+
+Name: org/eclipse/mylyn/wikitext/parser/outline/OutlineParser.class
+SHA-256-Digest: FLNpicyDtCBhtDVKCmA43yAUtgDbRoU7flmg/HxMRlk=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/event/BeginBlockEvent.
+ class
+SHA-256-Digest: 9SDLTpOxywzka7BZnA2eBScIdDGarFYWzDCCisFE7IY=
+
+Name: org/eclipse/mylyn/wikitext/parser/HeadingAttributes.class
+SHA-256-Digest: Yo4/XRlhN7IOUiKIuKFQ2v8/kYeBwHpyDNLo+x9My4A=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/HtmlDocumentBuilder$De
+ faultDocumentHandler.class
+SHA-256-Digest: WLN6GOffr0mXe6oaZP8VGizsIhXbsedVwdZgGp7T7eo=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/event/BeginDocumentEve
+ nt.class
+SHA-256-Digest: 96P9xM+NYVzgZzLiprrFrByiUwIkMh3KbTWWLF0lcTY=
+
+Name: org/eclipse/mylyn/wikitext/internal/parser/html/AbstractSaxHtmlP
+ arser$DocumentBuilderAdapter$ContentElementHandler.class
+SHA-256-Digest: LF1jUdEMhzCqjlloRRn9RzCn8t1CqoPUishwIyrbPAI=
+
+Name: org/eclipse/mylyn/wikitext/internal/parser/html/AbstractSaxHtmlP
+ arser$DocumentBuilderAdapter$PreformattedBlockElementHandler.class
+SHA-256-Digest: NciOUjRfNB8ElFj8uYy0e5j5ZJaN1pZMpLoHLwYEU7Y=
+
+Name: org/eclipse/mylyn/wikitext/parser/markup/PatternBasedElement.cla
+ ss
+SHA-256-Digest: Wm1L7CYWohbQSSFdqvZXLrI2yPGY9HsITs+GhvLqO4M=
+
+Name: org/eclipse/mylyn/wikitext/internal/parser/html/HtmlParser$NodeH
+ andler.class
+SHA-256-Digest: +dDb5d3lmVXPmefB+d8gyij5WcHXwqFxCgQ3rpllo8c=
+
+Name: org/eclipse/mylyn/wikitext/parser/markup/phrase/HtmlCommentPhras
+ eModifier.class
+SHA-256-Digest: foV5PidALenRRyp71an1Jm8MlrYG0XN+C8767mGsHLk=
+
+Name: org/eclipse/mylyn/wikitext/parser/markup/MarkupLanguage.class
+SHA-256-Digest: gIvghH00fC9ya4xjqSebncK83758kd/e3mnjm/Drr9c=
+
+Name: org/eclipse/mylyn/wikitext/validation/ValidationRules.class
+SHA-256-Digest: qIenosMA6pnOJ2Up4gQbl2zIRGlrs0XQ9awUNvP03+4=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/AbstractMarkupDocument
+ Builder.class
+SHA-256-Digest: 22N1lFveM1Sh0DBPgJGzGKpDKS0hKFBxAeERhQeYfbY=
+
+Name: org/eclipse/mylyn/wikitext/parser/ImageAttributes.class
+SHA-256-Digest: ju4U7EfExoU6q/imHkU05YxIshNJbbjrF1m/ruidoxo=
+
+Name: org/eclipse/mylyn/wikitext/parser/markup/IdGenerationStrategy.cl
+ ass
+SHA-256-Digest: UN9c5RC74FNsiPZeYETS5SOqWH2SMw32MSV8TPI7yh8=
+
+Name: org/eclipse/mylyn/wikitext/internal/parser/html/HtmlParser$Docum
+ entHandler.class
+SHA-256-Digest: d0/SALb5Uj8PH6hgWJjUcKphqBrEl2ChYAU0U3TnGDA=
+
+Name: org/eclipse/mylyn/wikitext/parser/css/Block.class
+SHA-256-Digest: zoRkxa0rzeOdBp56GNT4PKvQCEV+QmXuS2BxozCTFfg=
+
+Name: org/eclipse/mylyn/wikitext/internal/parser/html/AbstractSaxHtmlP
+ arser$1.class
+SHA-256-Digest: TggWluVzozeyefF2WPvdirK6/5ivqqPl2vuWQXP9Z5c=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/event/AcronymEvent.cla
+ ss
+SHA-256-Digest: IhpvaFKojxrYthIBI2+fkDbsBOrHW4nK1QiSozjIKzM=
+
+Name: org/eclipse/mylyn/wikitext/parser/markup/phrase/LimitedHtmlStart
+ TagPhraseModifier.class
+SHA-256-Digest: ouMaLgOJ5A1HiMZkNHQLqFhyBGZDDZiQ7MJ5MmdIq7U=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/AbstractMarkupDocument
+ Builder$NewlineDelimitedBlock.class
+SHA-256-Digest: jy34M71bf+vlxeDdPl8ocZCm7ll/j2sqidpwM33R8zQ=
+
+Name: org/eclipse/mylyn/wikitext/parser/markup/block/JavaStackTraceBlo
+ ck.class
+SHA-256-Digest: vG8rYWwIfaQqHCWCaHv61r3pWf0QcqtlYfppwWDsSnk=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/event/HorizontalRuleEv
+ ent.class
+SHA-256-Digest: LShsgBHDwDjDvlVxIZBbF4vIaO7i6A2iII6MO6ATum4=
+
+Name: org/eclipse/mylyn/wikitext/parser/outline/OutlineParser$OutlineB
+ uilder.class
+SHA-256-Digest: kYNVrupMq9+PFpjqvByVNr9r1aWDvElrRAJotpxbiNo=
+
+Name: org/eclipse/mylyn/wikitext/validation/DocumentLocalReferenceVali
+ dationRule$OutlineParserExtension.class
+SHA-256-Digest: rEuv/5AfCC/2atH717yoj1GDeijbJoDaoz2lC9LcKxw=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/event/DocumentBuilderE
+ vent.class
+SHA-256-Digest: XIK6srrXF3UL0Oo3v43EEEXjG/rtLAXO05tzO3YQem4=
+
+Name: org/eclipse/mylyn/wikitext/internal/parser/html/AbstractSaxHtmlP
+ arser$DocumentBuilderAdapter$HorizontalRuleHandler.class
+SHA-256-Digest: OO5i+G9OuiLS24E2OQ2fGGts7tWqOe2vEJ2p1ITmZ7Y=
+
+Name: org/eclipse/mylyn/wikitext/util/ServiceLocator$MarkupLanguageVis
+ itor.class
+SHA-256-Digest: cIHtpn3vsgo2jlLHwHc59RNpYvef0ZszXbHKH489crk=
+
+Name: org/eclipse/mylyn/wikitext/parser/css/SparseCharSequence$Segment
+ .class
+SHA-256-Digest: ta5ZpZEUYt6e2SEGNc5yq4eC1uf8kRy7nIH07pS4asA=
+
+Name: org/eclipse/mylyn/wikitext/parser/ImageAttributes$Align.class
+SHA-256-Digest: UoPRpri8FtyIRERoxLaMzhyumoGXIE2o8rM3PO6mT/4=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/DocBookDocumentBuilder
+ $BlockDescription.class
+SHA-256-Digest: eTvz6epmX1Q8kiNvX20UD01MXmADwFV8CGv2lMdymWk=
+
+Name: org/eclipse/mylyn/wikitext/parser/css/CssParser.class
+SHA-256-Digest: M641cX5E1BtQ1NQa5imLhpkj6b5rs5jP9pO0U4CB+WM=
+
+Name: org/eclipse/mylyn/wikitext/validation/Messages.class
+SHA-256-Digest: LXbuOkQoSspLSckBbGM06YSXtvdXTlJ9IE1FiPRpSTA=
+
+Name: org/eclipse/mylyn/wikitext/parser/css/NameSelector.class
+SHA-256-Digest: 9464X1aJA4Dfax4SiAbDo03n3NiOO0yLm/z2JJZe+Mc=
+
+Name: org/eclipse/mylyn/wikitext/internal/parser/html/RemoveExcessiveS
+ tylesProcessor.class
+SHA-256-Digest: JS8fLp6pEW3s9Iwp95iVN92rB6vCuqHvOnn6fTyBc7I=
+
+Name: org/eclipse/mylyn/wikitext/parser/Attributes.class
+SHA-256-Digest: EgcZd9DChkd8IcgHbq2OFL4adfEXd8MgrDtVOoz2/Cw=
+
+Name: org/eclipse/mylyn/wikitext/splitter/NoSplittingStrategy.class
+SHA-256-Digest: 4l7RQGUNwxdOOV4mO3TovdgAB0MD/8iVD4joh7ChrCo=
+
+Name: org/eclipse/mylyn/wikitext/splitter/SplitOutlineItem.class
+SHA-256-Digest: xys9dQKwMhT6q22aPrJNGY9RHagHteqIRUOvAm1nhQQ=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/XslfoDocumentBuilder.c
+ lass
+SHA-256-Digest: qQyn66Ho+eHGZk1ftZfM0eoLDmzhGM25Tfl4koPOC0g=
+
+Name: org/eclipse/mylyn/wikitext/parser/util/MarkupToEclipseToc.class
+SHA-256-Digest: uICbavpEamB/CFZRkXbiXitINMGCm08RDKfwPXzAABs=
+
+Name: org/eclipse/mylyn/wikitext/parser/markup/Processor.class
+SHA-256-Digest: ay7jMDjzLrRTZ8ElkGPBQ5ne5KK5nnp42qcAiplFj6E=
+
+Name: org/eclipse/mylyn/wikitext/parser/outline/OutlineItem$NearestIte
+ mVisitor.class
+SHA-256-Digest: B48hIQU5d4QXeFNrlqxCodYUEHBhvJAGMe6S1FmydK0=
+
+Name: org/eclipse/mylyn/wikitext/validation/ValidationRule.class
+SHA-256-Digest: wdB2BmiDLeIJ8EA26vH1q70Mj/8GlzHV/RjwUfCfRw8=
+
+Name: org/eclipse/mylyn/wikitext/parser/markup/AbstractMarkupLanguage$
+ PatternBasedSyntax.class
+SHA-256-Digest: 4IoQoo8bTr9sOTsgbQdN954kWh46zFCfKu100OUiMQo=
+
+Name: org/eclipse/mylyn/wikitext/parser/markup/block/GlossaryBlock.cla
+ ss
+SHA-256-Digest: gIxumFo5gqBkvZ5nDkyReTBbRYhsBJ60ePVa4EczB0w=
+
+Name: org/eclipse/mylyn/wikitext/internal/parser/html/AbstractSaxHtmlP
+ arser$DocumentBuilderAdapter.class
+SHA-256-Digest: o42obpftaIskWqmoG89jDY2eocSAO0V1Q7wGuDtpwDs=
+
+Name: org/eclipse/mylyn/wikitext/parser/markup/token/ImpliedHyperlinkR
+ eplacementToken$1.class
+SHA-256-Digest: cHmf3AAQ4ng2gJ+A1fD0ajaiPeZ+3PqlR00EXqDRiJ4=
+
+Name: org/eclipse/mylyn/wikitext/parser/css/CssParser$CssRuleIterator.
+ class
+SHA-256-Digest: oTcGsMYLWDfJNJx3D/a+t5fLRc1Mw3CqVsRG9iFz4jQ=
+
+Name: org/eclipse/mylyn/wikitext/util/Messages.class
+SHA-256-Digest: ui7l0oYedwj0RQamxtCw4HAKK0Tif+2V0fN6dTSEnlw=
+
+Name: org/eclipse/mylyn/wikitext/splitter/DefaultSplittingStrategy.cla
+ ss
+SHA-256-Digest: 0xCCuJ6fJVZy2e6kV2t5vEZsFNHm+0rbZeuX1HzpJH8=
+
+Name: org/eclipse/mylyn/wikitext/splitter/messages.properties
+SHA-256-Digest: QLjxjkI07U3HHNcm2fnLsmho3LnxUhftXsiCyLGbvwY=
+
+Name: org/eclipse/mylyn/wikitext/validation/DocumentLocalReferenceVali
+ dationRule.class
+SHA-256-Digest: P6cH9SKqXgjrTKVdbjrGPXCxW2dzvibjO5CdQ758R7I=
+
+Name: org/eclipse/mylyn/wikitext/parser/markup/token/PatternEntityRefe
+ renceReplacementToken.class
+SHA-256-Digest: nJjf3/b3+/9W678lSvSvaWmpknei1ypkKMX/jo7oSY8=
+
+Name: org/eclipse/mylyn/wikitext/parser/markup/token/LineBreakReplacem
+ entTokenProcessor.class
+SHA-256-Digest: pUU3RIY84tQQi52Rmi+1koym+wdGaNsECoR3kCB0KgM=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/DitaTopicDocumentBuild
+ er$2.class
+SHA-256-Digest: fu3A/oGpURZiCVTksM8WqKNZPho0HO5aYC3ZdP9Uszg=
+
+Name: org/eclipse/mylyn/wikitext/parser/IdGenerator.class
+SHA-256-Digest: 7YBqF9R73n7ZGWw8sHKysAn8EkLsZXqiohIWUcM1+Ms=
+
+Name: org/eclipse/mylyn/wikitext/validation/DocumentLocalReferenceVali
+ dationRule$1.class
+SHA-256-Digest: MGR+rXGcmL9pf4wwf+c9inUUc1x+i2735OVr1qJHURg=
+
+Name: org/eclipse/mylyn/wikitext/parser/markup/DefaultIdGenerationStra
+ tegy.class
+SHA-256-Digest: Tyf3xO/mLrbQnQkz0zF/HTgUpHdmLCIvZtkQOkACb94=
+
+Name: org/eclipse/mylyn/wikitext/parser/markup/AbstractMarkupLanguage$
+ 1.class
+SHA-256-Digest: c2lJOybxoqWS33Sor6MqbKs2S8bRX0sKU1zmijLaYmY=
+
+Name: org/eclipse/mylyn/wikitext/parser/markup/phrase/HtmlEndTagPhrase
+ Modifier.class
+SHA-256-Digest: 86MIKmwkN1foeVYY7AqVf3uGYGMofH7TFjYgYf2AKdo=
+
+Name: org/eclipse/mylyn/wikitext/parser/css/SparseCharSequence.class
+SHA-256-Digest: FperixPkuQ8XOA5BetpuQTWyue4uJy17fGPP69JbTO4=
+
+Name: org/eclipse/mylyn/wikitext/util/XmlStreamWriterAdapter$1.class
+SHA-256-Digest: 4ZxUikJCbdYgR4FdhXxxhUt4MqCjMXDYzrzNpKhk1ls=
+
+Name: org/eclipse/mylyn/wikitext/parser/css/IdSelector.class
+SHA-256-Digest: U+gqTUajPTv/vYG8ojICUQLXQJdxgDsBI36Lrww9Aso=
+
+Name: org/eclipse/mylyn/wikitext/internal/parser/html/WhitespaceCleanu
+ pProcessor.class
+SHA-256-Digest: WYa/m7YplBIM5/qakjrkjTND0PSaaRZDE6i09J2h4bo=
+
+Name: org/eclipse/mylyn/wikitext/parser/markup/token/AcronymReplacemen
+ tToken.class
+SHA-256-Digest: PdTNTwdWnLqENtKQn88hbQXPqGX/USq6lFqwbNXQSP4=
+
+Name: org/eclipse/mylyn/wikitext/parser/util/MatcherAdaper.class
+SHA-256-Digest: 1XYsYqHpu9CO/+L+NuOAOhTqzyFObc+arUqKu9rvXjs=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/XslfoDocumentBuilder$S
+ panInfo.class
+SHA-256-Digest: 3bCA/Y+qccT5YSCxiX/aaEl+jXGMBr3bAiyoakThbzc=
+
+Name: org/eclipse/mylyn/wikitext/internal/parser/html/HtmlParser$1.cla
+ ss
+SHA-256-Digest: iuD5Ucctg2eip3kU+8qRSU2wJcUQGKccqJXk4r7ypwc=
+
+Name: org/eclipse/mylyn/wikitext/parser/markup/MarkupLanguageProvider.
+ class
+SHA-256-Digest: 6gGxp5+RcAnljKcU++cOkc8aBP2lkhLxxBLTBsYjhNk=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/DitaTopicDocumentBuild
+ er.class
+SHA-256-Digest: DOe/YbnTXpWqKYpS1NEiRXyg+8EVKKv5f6cDej+ou0c=
+
+Name: org/eclipse/mylyn/wikitext/internal/parser/html/AbstractSaxHtmlP
+ arser$DocumentBuilderAdapter$HeadingElementHandler.class
+SHA-256-Digest: 14KiH3/8ojP0yqUgcdJwmWxErVWUBtdZyPQ8P9ZMGw4=
+
+Name: org/eclipse/mylyn/wikitext/parser/css/DescendantSelector.class
+SHA-256-Digest: Bw4Yosba/uPYEPQK9ORPnCOyDzjAtro1odBwQnH/Rlg=
+
+Name: org/eclipse/mylyn/wikitext/parser/QuoteAttributes.class
+SHA-256-Digest: f1msADcRv+HBHvv/gatVtAolP5/bVsZxPh8rN/9+mWc=
+
+Name: org/eclipse/mylyn/wikitext/parser/markup/Block.class
+SHA-256-Digest: kH8E48Om1ZqeFhJvuEzJ0t+xT1Wz5Q3KrmywNYvFLW0=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/DitaBookMapDocumentBui
+ lder.class
+SHA-256-Digest: JHDniSMthYV5nmhYMTFzzuW7XFmWxL9JddZZMqoUQx0=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/AbstractMarkupDocument
+ Builder$SuffixBlock.class
+SHA-256-Digest: T/T7ByH1PVt+DYwefbx7xolKB+YODbtZCxfmDqrICsA=
+
+Name: org/eclipse/mylyn/wikitext/parser/markup/token/AcronymReplacemen
+ tToken$AcronymReplacementTokenProcessor.class
+SHA-256-Digest: WKfHab+qiney36OuxIthYTH+E2h0WEuR/n+IEcmOH2U=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/event/CharactersEvent.
+ class
+SHA-256-Digest: +vojBCMb3EOPrYy/Y3y+KxeWjSVDvY8UpA2TUJEurrQ=
+
+Name: org/eclipse/mylyn/wikitext/internal/parser/html/HtmlParser$TextH
+ andler.class
+SHA-256-Digest: jZ00zAtwsldXP59TbmVwomQRd0r8LpdJ/Tvmc+EDM3w=
+
+Name: org/eclipse/mylyn/wikitext/parser/markup/phrase/HtmlStartTagPhra
+ seModifier.class
+SHA-256-Digest: rCWhQtNYPGJmNKr4WakTf8hvD1OyL9Qg+lVK9wD54UY=
+
+Name: org/eclipse/mylyn/wikitext/internal/parser/html/Html.class
+SHA-256-Digest: vrwu9Y6YH1Fj0s76PNleBAqSb9pmeEozGBYbbA0AOuY=
+
+Name: org/eclipse/mylyn/wikitext/parser/TableRowAttributes.class
+SHA-256-Digest: tPHnIl9S7nyrK8ZECUfnSkTjrOJWCygQUcXWO92RHOk=
+
+Name: org/eclipse/mylyn/wikitext/parser/markup/phrase/LimitedHtmlEndTa
+ gPhraseModifier.class
+SHA-256-Digest: wWeNXsoSnS9WGAXRkW1vcnoBtFKeAXfNFcsnWH1lssk=
+
+Name: org/eclipse/mylyn/wikitext/parser/TableCellAttributes.class
+SHA-256-Digest: fsivMpCPPoXdkvVBHQ4nWMn3M8+CIb+XP8nq8GTAI3M=
+
+Name: org/eclipse/mylyn/wikitext/parser/HtmlParser.class
+SHA-256-Digest: fOIOwW/oHn1PEEf0guGWA/xIAzR7jJhGb26F/lN/FvQ=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/AbstractMarkupDocument
+ Builder$MarkupWriter.class
+SHA-256-Digest: LpqnNnhC6A+B0LWBIfM7vXrTTAiChOGi57ljVzAvRAs=
+
+Name: org/eclipse/mylyn/wikitext/parser/Locator.class
+SHA-256-Digest: uavXo2yjiEP85UA3JANTx5tNMP8CmCbwVf5FHnub6T4=
+
+Name: org/eclipse/mylyn/wikitext/parser/markup/token/PatternLineBreakR
+ eplacementToken.class
+SHA-256-Digest: ux1MGmiNJ03ZTgdcoMk/UwtGgpuHi+HeAtBzhsWflTc=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/event/BeginHeadingEven
+ t.class
+SHA-256-Digest: BoHQSM1EmqkP78yLAWxNsXdjav8Vp9n8MLnrn48zIAs=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/XslfoDocumentBuilder$E
+ lementInfo.class
+SHA-256-Digest: 3g3Z5f3qVFszkuH+zV7CqtkbW5KCkZ4WCN+BZ4z20Jg=
+
+Name: org/eclipse/mylyn/wikitext/util/FormattingXMLStreamWriter.class
+SHA-256-Digest: owZWTLlxD3UG1Bm88N0ch2+jllnfvzZ5YlqBAGQ95DQ=
+
+Name: org/eclipse/mylyn/wikitext/parser/outline/OutlineItem.class
+SHA-256-Digest: cy4NerIGnj5jLdJKg9fj1JBF5oNE/RZrzRsnCGZ6w5w=
+
+Name: org/eclipse/mylyn/wikitext/parser/css/Stylesheet$Receiver.class
+SHA-256-Digest: /3eGrm1IDJ0JIxtddLOlT3x3lQgdQpvxygpd0yKEgaI=
+
+Name: org/eclipse/mylyn/wikitext/internal/parser/html/HtmlParser$EndDo
+ cumentHandler.class
+SHA-256-Digest: r0QPD/hDWg0jEqKDRRSSpQclH8nMiGqzym4QspEWN2Y=
+
+Name: org/eclipse/mylyn/wikitext/splitter/SplittingMarkupToEclipseToc.
+ class
+SHA-256-Digest: vXGdP3fPMlJxOwgX09HuK6cpeSEq4WrU3TQfO+J3S3M=
+
+Name: org/eclipse/mylyn/wikitext/internal/util/ConcatenatingReader.cla
+ ss
+SHA-256-Digest: tFoRuJUa9cSZkWSeHMjDPnttjagYtUtZyWsLChspuLo=
+
+Name: org/eclipse/mylyn/wikitext/parser/util/Matcher.class
+SHA-256-Digest: zxpRqsV6F509RFd4W96JICsu603OSHXAgzUynMklL6s=
+
+Name: org/eclipse/mylyn/wikitext/internal/parser/html/AbstractSaxHtmlP
+ arser$ElementState.class
+SHA-256-Digest: 6dhnS6k1XbTOcwq55HEwzpju7iP8jIMOnR8eadIJ30A=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/event/LinkEvent.class
+SHA-256-Digest: oIjKSkb0/gpsBwIP0g7Dheq67yOe1BleWcrAbTNzaH4=
+
+Name: org/eclipse/mylyn/wikitext/internal/parser/html/HtmlParser$EndEl
+ ementHandler.class
+SHA-256-Digest: d/uWtkB4XFS9iiEoS70/+qCbgv0a4LXOTb/j7Wyfnxc=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/event/EndDocumentEvent
+ .class
+SHA-256-Digest: +/xMVurMq3iOoO6GhHEeLZaMAPOm7qt8T8HbMXi1PFE=
+
+Name: org/eclipse/mylyn/wikitext/parser/css/CssRule.class
+SHA-256-Digest: sGkfUIhfFc4ZbbFm+Cjbr8VunqkPnWXC33wMmbrVaec=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/XslfoDocumentBuilder$M
+ argins.class
+SHA-256-Digest: ZY964RzDi7jBRk9P4pJxCr14IDF+oItak3JE3u60/OE=
+
+Name: org/eclipse/mylyn/wikitext/internal/parser/html/AbstractSaxHtmlP
+ arser.class
+SHA-256-Digest: fVjf2zUO2H5DykRNYIj4o4pxaTUYmkVlIMupMRHKiws=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/EventDocumentBuilder.c
+ lass
+SHA-256-Digest: NQQNWfRDiZpBpy1rk9ucq205NS2iCGmMYzKMMXbaREI=
+
+Name: org/eclipse/mylyn/wikitext/splitter/SplittingStrategy.class
+SHA-256-Digest: RCYfMm51zCJpAZfL4krKOvbD/D79jDQV4hdDYUPBXAU=
+
+Name: org/eclipse/mylyn/wikitext/parser/ListAttributes.class
+SHA-256-Digest: BsojsTDoBSK/QKpP8aTBPDLbIeKN6SFp6rRTx7XFLQ8=
+
+Name: org/eclipse/mylyn/wikitext/internal/parser/html/HtmlCleaner.clas
+ s
+SHA-256-Digest: 9f+j84Cx5wHvn6/dHuQuRc7qrFnjjERzPCkRyUEdZ5U=
+
+Name: org/eclipse/mylyn/wikitext/internal/parser/html/AbstractSaxHtmlP
+ arser$DocumentBuilderAdapter$SpanElementHandler.class
+SHA-256-Digest: aYTg8O+8EKhzACx7kRuHpmBeUPEDNmEF2fehdtoIuq0=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/DitaTopicDocumentBuild
+ er$1.class
+SHA-256-Digest: z5wvQtsS2e+jx26e2NLKJSmigFhh1Cq4Wy/AizLYkHY=
+
+Name: org/eclipse/mylyn/wikitext/internal/parser/html/XHtmlParser.clas
+ s
+SHA-256-Digest: OBRdi86MIgZfdmA4emJXO1bJ0oFd1E8+yq6DYqSzesA=
+
+Name: org/eclipse/mylyn/wikitext/internal/parser/html/AbstractSaxHtmlP
+ arser$DocumentBuilderAdapter$ElementHandler.class
+SHA-256-Digest: uwfGHvmnyDaGnnQxoYjX5Q2uQRxa/8Fvnpq49Z8MZMs=
+
+Name: org/eclipse/mylyn/wikitext/util/ServiceLocator$ResourceDescripto
+ r.class
+SHA-256-Digest: LDVQwqToASAU4CLJigKlBWvM9yFQgNRRxzyK8BtQpdQ=
+
+Name: org/eclipse/mylyn/wikitext/parser/MarkupParser.class
+SHA-256-Digest: SKXI1VgDZAJKB/ER8BsfqEGreL6ygnrcC+Kt/WgeArg=
+
+Name: org/eclipse/mylyn/wikitext/parser/LinkAttributes.class
+SHA-256-Digest: 5os1XBRsrTerrt19D/pTxLyy8H5DlDbqgAFrmQLhGTY=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/event/EndHeadingEvent.
+ class
+SHA-256-Digest: IgED9h0eJ/NpbksL5o7BINciTbWGxZjOCuUV8xbcKF8=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/messages.properties
+SHA-256-Digest: VjMlSs9wyO7el3Ajaj38BXj5QbPxYs5SpyA153mnboE=
+
+Name: META-INF/maven/org.eclipse.mylyn.docs/org.eclipse.mylyn.wikitext
+ /pom.properties
+SHA-256-Digest: FA68TG1I1IsMBP2j/oLjRB/xR/4qmIsIXoq7+jNpezQ=
+
+Name: icons/wikitext-32.gif
+SHA-256-Digest: r+wm8U3CLI4WQAGRR5y0c+kDymqdT2GPDgv/vMz2a4U=
+
+Name: org/eclipse/mylyn/wikitext/parser/markup/token/EntityReferenceRe
+ placementToken.class
+SHA-256-Digest: o/dcN03VIgPF7z16jdrSyQIfCV5s5QLzA3tC3Lzs1KE=
+
+Name: org/eclipse/mylyn/wikitext/parser/util/MarkupToDocbook.class
+SHA-256-Digest: XCGpF93RX1xffAQnooujzLW+NWAsZDpB/AJDHApMbtc=
+
+Name: org/eclipse/mylyn/wikitext/parser/css/ElementInfo.class
+SHA-256-Digest: mhRKCCdNrzqFY8ChVRt9961BeLb+aktPGBLJwPQA4E0=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/HtmlDocumentBuilder$2.
+ class
+SHA-256-Digest: VOK341Gx5mwmZ/zGFy66jzw8o7UgDG2IhJD0br1xGh0=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/XslfoDocumentBuilder$C
+ onfiguration.class
+SHA-256-Digest: aeywCM66NBE6Ghk0kvw33iTIgYI28HdXCa7yJjDmtXA=
+
+Name: org/eclipse/mylyn/wikitext/util/DefaultXmlStreamWriter.class
+SHA-256-Digest: hKlRez5avdhDgC9InnoBW9P/Q5myLrjZYxX+IMmxyqU=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/HtmlEntities.class
+SHA-256-Digest: EdezBbR4lD4sqoJRqfcrJF5KUdXyE6kT90Hf9D+8vIY=
+
+Name: org/eclipse/mylyn/wikitext/validation/DocumentLocalReferenceVali
+ dationRule$OutlineParserExtension$OutlineBuilderExtension.class
+SHA-256-Digest: YL6MOpshETlp5szeQh6vnk1CuSpNJCosCtmBgrfU4sg=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/EventLoggingDocumentBu
+ ilder.class
+SHA-256-Digest: ycG+F3E1iKEnClUgbzwVilPsNCRzJxTB11O0D+lqS84=
+
+Name: org/eclipse/mylyn/wikitext/parser/markup/token/EntityWrappingRep
+ lacementToken$EntityWrappingReplacementTokenProcessor.class
+SHA-256-Digest: rGw1MJrH8+m6Y3bHGBE14dmpuHqV51cQy7YhL/bpeXY=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/html-entity-references
+ .txt
+SHA-256-Digest: Y6EbWqNzKOWl8u1dvITamrUvaO/pv3Q+/t5sEuh3nqI=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/HtmlDocumentBuilder$St
+ ylesheet.class
+SHA-256-Digest: M7+a5mY5HIwg49NqQ5bbKnGHNfpggVi11oXIKrD31wk=
+
+Name: org/eclipse/mylyn/wikitext/parser/markup/AbstractMarkupLanguage.
+ class
+SHA-256-Digest: xqv93eFhtIM423vOwGIyYtq1Dy7XCq9Eg8a/XX8i3PA=
+
+Name: org/eclipse/mylyn/wikitext/internal/parser/html/AbstractSaxHtmlP
+ arser$DocumentBuilderAdapter$NumericListElementHandler.class
+SHA-256-Digest: Ycb3yM+cZqD9k8cayoUur4wel9ptmAEB3g01a6HOJKs=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/EntityReferences.class
+SHA-256-Digest: zEgPZwOLoOTFe1J/fG7Ls8bvnepzCbVF3q5OrUwa9zY=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/DitaTopicDocumentBuild
+ er$TopicInfo.class
+SHA-256-Digest: N/PpwG7sVqBrcmy8AZry0llFXmBK3GYiXRUfqw8snn8=
+
+Name: org/eclipse/mylyn/wikitext/parser/TableAttributes.class
+SHA-256-Digest: hpYLievjaDwUmGPUcXUCb49R4dhwVgxomAQ9QGpldsQ=
+
+Name: org/eclipse/mylyn/wikitext/util/XmlStreamWriter.class
+SHA-256-Digest: Olw6rBJjQ2Qqk5Y8DaY+micAu87pauJljwhePwAVCbg=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/event/EndBlockEvent.cl
+ ass
+SHA-256-Digest: vkIF9GKTGdDI73M28AcL9vWvD4tIHCa9qBybZU1NQvI=
+
+Name: org/eclipse/mylyn/wikitext/parser/markup/block/BugzillaQuoteBloc
+ k.class
+SHA-256-Digest: /vPlXLD1eMyi9qC+OgrEJ5pnozZbhsF5WqCAkSbbzFc=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/event/LineBreakEvent.c
+ lass
+SHA-256-Digest: +L/tfXoEYnI33f3CZfs5jFCHeOeUIYHjyachQLs++es=
+
+Name: org/eclipse/mylyn/wikitext/internal/parser/html/AbstractSaxHtmlP
+ arser$DocumentBuilderAdapter$ImageElementHandler.class
+SHA-256-Digest: 0EoJWsotym+pDr3mNF40cvnYn76cF4AeV8ss97ddsHM=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/DocBookDocumentBuilder
+ $2.class
+SHA-256-Digest: k2p98OqosVkca9mOsIMfrtkXyOgjbRXzqYhNKIn3ll0=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/DocBookDocumentBuilder
+ .class
+SHA-256-Digest: hOpm7xWgbCsgfmOTUjjd28t/IttIa9PtW39sTKmBFNg=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/HtmlDocumentBuilder$1.
+ class
+SHA-256-Digest: 4cogaIcnJgEqeh/J1uCq6bTrye2GHoJTdQ2g6sm77Ho=
+
+Name: org/eclipse/mylyn/wikitext/parser/markup/PatternBasedElementProc
+ essor$Group.class
+SHA-256-Digest: L2XfJWoTjXwULdn8EUiFnZurfY9xr5PI2RcgPMwtJuo=
+
+Name: about_files/NOTICE
+SHA-256-Digest: LwvwyEX52UX62j7JRIAJ9dTfS3ompHkLNsogba/daMA=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/UriProcessor.class
+SHA-256-Digest: rMHLeP9gkGI0RrHlEfVY4AloiHefbAfMTist0m2L/0Y=
+
+Name: org/eclipse/mylyn/wikitext/parser/css/Selector.class
+SHA-256-Digest: 1JDqzYQg8McA55r+jJmZYUH9VxCx7JAhiOXhUOrDJ8w=
+
+Name: org/eclipse/mylyn/wikitext/parser/markup/token/PatternLiteralRep
+ lacementToken.class
+SHA-256-Digest: E/b3Da4NEsjWbVClVGMY2dyvJ4bSwwyUyFDVXfXL7p0=
+
+Name: org/eclipse/mylyn/wikitext/parser/css/CssClassSelector.class
+SHA-256-Digest: +2vD0dllKcf/AsZ4N7G2WzIniIsgm7zknr04G5I+ynk=
+
+Name: org/eclipse/mylyn/wikitext/parser/markup/ContentState.class
+SHA-256-Digest: 4GC/pAEiW9dKGgTE5CA/batdptg7H2fNZN+MO7vh0LQ=
+
+Name: org/eclipse/mylyn/wikitext/parser/markup/phrase/LiteralPhraseMod
+ ifierProcessor.class
+SHA-256-Digest: mZM9rlGz8cQ2TkDL/wr6O/tOOfsWVE2pF+aqg47sApo=
+
+Name: org/eclipse/mylyn/wikitext/splitter/SplittingHtmlDocumentBuilder
+ .class
+SHA-256-Digest: 28Zt7Rp0F1cVDVpVti5lbXCKCSbxB8o39PVsg4+bUdk=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/DocBookDocumentBuilder
+ $ContentEmitter.class
+SHA-256-Digest: xGs4FYGBzVDddtMEki0n3X/Dg/R8N2oJ/7x+Cj1ObYQ=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/event/CharactersUnesca
+ pedEvent.class
+SHA-256-Digest: whXdZ7hHW+c6av/1Eg1fxwsbi51kNH4vQSbjZpzMssI=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/DocBookDocumentBuilder
+ $1.class
+SHA-256-Digest: djX0w28RxqalmwvvDTrjVNsr9qjtT09HDsOOmRzPgs8=
+
+Name: org/eclipse/mylyn/wikitext/parser/markup/ConfigurationBuilder.cl
+ ass
+SHA-256-Digest: VNOlpjnsAcZ4JY3NfUoWTNsexQKOMnEAY5B23L2Acu4=
+
+Name: org/eclipse/mylyn/wikitext/internal/parser/html/HtmlParser$Eleme
+ ntHandler.class
+SHA-256-Digest: UHgcMD1GzyKLs1/R46GcWp0b844kDFu62wH6VS7fLZA=
+
+Name: org/eclipse/mylyn/wikitext/validation/DocumentLocalReferenceVali
+ dationRule$LocalReference.class
+SHA-256-Digest: bFTMt/ha4lkbHuAlQ6uhnm4ynuJXkdcTSrFJyMYkbxw=
+
+Name: org/eclipse/mylyn/wikitext/parser/outline/OutlineItem$Visitor.cl
+ ass
+SHA-256-Digest: RtSgbfyjMfdpnmHcKBkFSLvHugqv9hRCMukpK4kqlks=
+
+Name: org/eclipse/mylyn/wikitext/validation/MarkupValidator.class
+SHA-256-Digest: CDonsWP2mxX6iuKmuNTC2l0kvuPxSTZBq9Y6gEjroes=
+
+Name: org/eclipse/mylyn/wikitext/util/XmlStreamWriterAdapter.class
+SHA-256-Digest: Eh37sa+NTkTtNjjqSfpKersaz7SIOOzqpERretA60LU=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/HtmlDocumentHandler.cl
+ ass
+SHA-256-Digest: MeKOk04EKX5Vo1DpnWHBdKCTUxnpectwzdt7Ls+wx28=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/event/ImageEvent.class
+SHA-256-Digest: opkhbbb9IhEtT04EeKN2/3m2tOccSOVj9OaZezFVhRU=
+
+Name: org/eclipse/mylyn/wikitext/parser/markup/block/HtmlPreformattedB
+ lock.class
+SHA-256-Digest: iBzKTITl/sYFxJGjW9ela41Tok/kIsDAvROL90UUdTY=
+
+Name: org/eclipse/mylyn/wikitext/splitter/SplittingOutlineParser.class
+SHA-256-Digest: 5pJFyQJnpdoOzrSxHuZZkFp4lccAZ+GTQZUhB17Ad6I=
+
+Name: org/eclipse/mylyn/wikitext/parser/markup/token/ImpliedHyperlinkR
+ eplacementToken$HyperlinkReplacementTokenProcessor.class
+SHA-256-Digest: aFxJqaHlxVG+Nrnysnlx3OMuiL5pCUUgbTfBvENZvWw=
+
+Name: org/eclipse/mylyn/wikitext/parser/css/AnySelector.class
+SHA-256-Digest: gIDIb3VuSiGz2UNIUu9qCpQmqyV4uxRrbAHfbSBD52k=
+
+Name: plugin.properties
+SHA-256-Digest: MjNf0nLuJCY8uazw7Ep9pZdKwR94CTcjwxh0NjIBnF4=
+
+Name: org/eclipse/mylyn/wikitext/internal/parser/html/RemoveEmptySpans
+ Processor.class
+SHA-256-Digest: z1wXJPmXhNJcT8I03XdAjXe+3udnVQAcsrkLs0jU8jE=
+
+Name: about_files/LICENSE
+SHA-256-Digest: jG2zQEdRNt88EgHUWPpXVWmOrOduUQRx7MnYV9YIPaw=
+
+Name: org/eclipse/mylyn/wikitext/parser/markup/token/LiteralReplacemen
+ tTokenProcessor.class
+SHA-256-Digest: tt6FHZxtmZYCUfXXJDSueB5/ezNqFEp9yXI9kJ+SJF4=
+
+Name: org/eclipse/mylyn/wikitext/internal/parser/html/AbstractSaxHtmlP
+ arser$DocumentBuilderAdapter$LineBreakHandler.class
+SHA-256-Digest: vogdDuSaTwnF4+Xt2a+nkE/OtanaDprWyK+6j5nhYqU=
+
+Name: org/eclipse/mylyn/wikitext/internal/parser/html/RepairBrokenCSSC
+ olorStylesProcessor.class
+SHA-256-Digest: 2a4rEzFIA/jAexkE5nOCYodkUZc735B0Q6sRm8zyb08=
+
+Name: org/eclipse/mylyn/wikitext/validation/StandaloneMarkupValidator.
+ class
+SHA-256-Digest: GxxBIm4YjsGWfsmAsyMH26NIkf4J+nrvJYbVs39k0fQ=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/DitaTopicDocumentBuild
+ er$BlockDescription.class
+SHA-256-Digest: OCeHIUbki5qrPPbAOuKpskMqDcInREKZFk8VluNVpCE=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/MultiplexingDocumentBu
+ ilder.class
+SHA-256-Digest: QA5YtFfgujhVK2d++aGFFw1mjYosARdt4tFAJZyVHGI=
+
+Name: org/eclipse/mylyn/wikitext/util/ServiceLocator.class
+SHA-256-Digest: 9kOZC46KOQHyFEIljcE6UbB+amSWVNbXS/Ehn3932jQ=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/AbstractMarkupDocument
+ Builder$Block.class
+SHA-256-Digest: fZR9HMRLUyvdfnxpyuvJCizRsm3QQPl2WhhBLqUrJBY=
+
+Name: org/eclipse/mylyn/wikitext/util/IgnoreDtdEntityResolver.class
+SHA-256-Digest: Ce3njxfdhE9PzArnnfGvQINk8R7zkHODEYWn7Lq++z8=
+
+Name: org/eclipse/mylyn/wikitext/internal/parser/html/AbstractSaxHtmlP
+ arser$DocumentBuilderAdapter$BlockElementHandler.class
+SHA-256-Digest: xDsMXGBUnSN+f5wUDJAT9g40tUYfZVAUPuj+1WDvX9w=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/XslfoDocumentBuilder$1
+ .class
+SHA-256-Digest: qIvaG51+01WHHQ0v+sONOt9VbYMPp+RtzPJKzcpXx0o=
+
+Name: org/eclipse/mylyn/wikitext/parser/markup/AbstractMarkupLanguage$
+ Group.class
+SHA-256-Digest: IQ/NLITxk/46aKgylUSVuWrl7fusMBgXM8/Accul0L8=
+
+Name: org/eclipse/mylyn/wikitext/parser/markup/token/EntityWrappingRep
+ lacementToken.class
+SHA-256-Digest: xJLqQPIT3Y2TFnF2TT3GjtmLoreGoB3lDc/uvWqssuw=
+
+Name: org/eclipse/mylyn/wikitext/parser/markup/MarkupLanguageConfigura
+ tion.class
+SHA-256-Digest: mkc9okpaHCfB6H/b385w3VrUeFxNRprXxWJZ8pfDWOI=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/event/BeginSpanEvent.c
+ lass
+SHA-256-Digest: wyFMCEXvtoC4uvbEdSCoujJaQtXgbKzI/lVsndwHcxU=
+
+Name: feature.gif
+SHA-256-Digest: evPv9OzLNoUebPm67Y6x5osMr6OccrwfLp6cGSOQYNw=
+
+Name: org/eclipse/mylyn/wikitext/validation/ValidationProblem.class
+SHA-256-Digest: xESUitPiANpI7UlepaNQ3srBvszj5nYGaQwWl5tI4Zk=
+
+Name: org/eclipse/mylyn/wikitext/parser/util/MarkupToDocbook$1.class
+SHA-256-Digest: FS0tyRBMcznloufUJp7qRmlv8mjze+q6Lm7MXk9KOjY=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/HtmlDocumentBuilder.cl
+ ass
+SHA-256-Digest: I+Hxe/e1FmcQ0+SrwWaUWtsMJToQzTujc6WBez0CV+0=
+
+Name: org/eclipse/mylyn/wikitext/parser/markup/PatternBasedElementProc
+ essor.class
+SHA-256-Digest: 3oS4jJp/oWafqrX/LJPeOOFhYf8zB4ZhhWPUHhlSexY=
+
+Name: org/eclipse/mylyn/wikitext/parser/markup/block/AbstractTableOfCo
+ ntentsBlock.class
+SHA-256-Digest: eSpdsRkP2KDj5tbal1XBr36dHuxpHpK0MqanqUK9OR8=
+
+Name: org/eclipse/mylyn/wikitext/parser/markup/block/BugzillaGenerated
+ CommentBlock.class
+SHA-256-Digest: MMoWXTRWJotOenM2EfXEgL0mT0gEjwsTXBYTaASc4vA=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/AbstractMarkupDocument
+ Builder$ImplicitParagraphBlock.class
+SHA-256-Digest: /IJhdSe/H0jcdI4CZ57N+PFWCjKb1GOMVCrES4uNJc8=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/event/EndSpanEvent.cla
+ ss
+SHA-256-Digest: v9/az5a+UZiZTiHnZ+56VWc7TyAZOgWioy6juyoXqs4=
+
+Name: org/eclipse/mylyn/wikitext/parser/markup/token/AcronymReplacemen
+ tToken$1.class
+SHA-256-Digest: okQUosuao1vp7Ow0ScgYu7E4jKlpac6kOdJ20MdgJIo=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/NoOpDocumentBuilder.cl
+ ass
+SHA-256-Digest: GOUb35G+EIxvDzzjjC2WS0Otq7pvHkprAsDLhErCTgo=
+
+Name: org/eclipse/mylyn/wikitext/parser/css/CompositeSelector.class
+SHA-256-Digest: AxxtsCNze/SlbN+XkQ2lC5V9qlJAM+o8Ws3c1Ko8/gs=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/event/DocumentBuilderE
+ vents.class
+SHA-256-Digest: hGCri+ykjImi/P2djLOCZrOVL9zmzC2/w856Ut+4xjw=
+
+Name: META-INF/maven/org.eclipse.mylyn.docs/org.eclipse.mylyn.wikitext
+ /pom.xml
+SHA-256-Digest: uaTN3GCkXfGCmDFbBbzOxKXNxZv6VgAfJfYNJpZbvHA=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/XslfoDocumentBuilder$B
+ lockInfo.class
+SHA-256-Digest: /4R9vnXaw1nZOS1yT6mAUtLLJN4Bep/QOiRAHCi9cmc=
+
+Name: about.html
+SHA-256-Digest: HqdqYmD3eCp96+W+UzJSWsHhRFQr79+3O+7M5N2EUek=
+
+Name: org/eclipse/mylyn/wikitext/util/LocatorImpl.class
+SHA-256-Digest: gn5jh3TuTpyK3LpGPvHMxWnfQGRxJKYGAoVcOhNyczM=
+
+Name: org/eclipse/mylyn/wikitext/internal/parser/html/AbstractSaxHtmlP
+ arser$DocumentBuilderAdapter$FontElementHandler.class
+SHA-256-Digest: AtUWN5KYXD6Q9LZvMi+cboMocTot2LVB7M2OCbjQxTM=
+
+Name: org/eclipse/mylyn/wikitext/parser/markup/AbstractMarkupLanguage$
+ LineState.class
+SHA-256-Digest: cod1KM2LvkH8mjqDYr9HmxhFfJAe3aD3rukqLqM2aKo=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/Messages.class
+SHA-256-Digest: oUU0Ncu0ytqb9xFCZBcN1lGHaO0Y/zINfz3QTn2Mygw=
+
+Name: org/eclipse/mylyn/wikitext/parser/markup/block/EclipseErrorDetai
+ lsBlock.class
+SHA-256-Digest: N+o4YIsf3BjPVnRnp4hA+Rk17nendyFg+emYr1JWmBs=
+
+Name: org/eclipse/mylyn/wikitext/validation/messages.properties
+SHA-256-Digest: esbzOsWlIw+jcRrOUOgoR6f0IoMsiAcd3QcfkOUjy3M=
+
+Name: org/eclipse/mylyn/wikitext/parser/markup/token/ImpliedHyperlinkR
+ eplacementToken.class
+SHA-256-Digest: h+hEETXFELR6zH4I8ANVh5eirct2J6nrjBSt4bYDS8k=
+
+Name: org/eclipse/mylyn/wikitext/parser/markup/token/EntityReplacement
+ TokenProcessor.class
+SHA-256-Digest: QkUaYH/TLYIXsWxxGIqz8gXN+G+lHY9TusPS483bvC4=
+
+Name: org/eclipse/mylyn/wikitext/internal/parser/html/DocumentProcesso
+ r.class
+SHA-256-Digest: ctz0tNZ/W9yf2TKSzi+vJE4UltESgfOpTGMGB76W6rQ=
+
+Name: org/eclipse/mylyn/wikitext/parser/markup/block/AbstractHtmlBlock
+ .class
+SHA-256-Digest: KVipg7Sv9mKmr/W5slBrmFlRaXPRKkKOVxSz7yd/DTg=
+
+Name: org/eclipse/mylyn/wikitext/util/messages.properties
+SHA-256-Digest: CLYKAwj3ua5n67eo5cDXkgklMEaPKzl1YGL1KAchFQU=
+
+Name: org/eclipse/mylyn/wikitext/parser/DocumentBuilder$BlockType.clas
+ s
+SHA-256-Digest: A7Lisj302FwjrirNiU34XBS+bBN8BeAYdSq9HcSUpj4=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/event/EntityReferenceE
+ vent.class
+SHA-256-Digest: 86Zls/fd5A8tAwAY1kty/wcZw/3cqgiBdqqtvPz9SOE=
+
+Name: org/eclipse/mylyn/wikitext/parser/builder/event/ImageLinkEvent.c
+ lass
+SHA-256-Digest: g1ImSdOVo8xfvFaxLzXZAEReM32Oe9CBA/Mjb3dQbFo=
+

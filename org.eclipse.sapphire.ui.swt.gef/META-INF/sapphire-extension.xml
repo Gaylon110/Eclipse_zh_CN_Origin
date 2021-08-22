@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+ ******************************************************************************
+ * Copyright (c) 2016 Oracle and Liferay
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *    Ling Hao - initial implementation and ongoing maintenance 
+ *    Gregory Amerson - [346172] Support zoom, print and save as image actions in the diagram editor
+ ******************************************************************************
+-->
+
+<extension xmlns="http://www.eclipse.org/sapphire/xmlns/extension">
+    <action>
+        <id>Sapphire.Diagram.DirectEdit</id>
+        <context>Sapphire.Diagram.Node.Hidden</context>
+        <context>Sapphire.Diagram.Connection.Hidden</context>
+        <context>Sapphire.Diagram.Node.Shape.Hidden</context>
+        <label>direct edit</label>
+        <key-binding>F2</key-binding>
+        <description>Direct edit a node, shape or connection</description>
+    </action>
+    <action-handler>
+        <action>Sapphire.Diagram.Layout</action>
+        <impl>org.eclipse.sapphire.ui.swt.gef.actions.HorizontalGraphLayoutActionHandler</impl>
+        <id>Sapphire.Diagram.Layout.Horizontal</id>
+        <label>horizontally</label>
+        <context>Sapphire.Diagram.Editor</context>
+    </action-handler>    
+    <action-handler>
+        <action>Sapphire.Diagram.Layout</action>
+        <impl>org.eclipse.sapphire.ui.swt.gef.actions.VerticalGraphLayoutActionHandler</impl>
+        <id>Sapphire.Diagram.Layout.Vertical</id>
+        <label>vertically</label>
+        <context>Sapphire.Diagram.Editor</context>
+    </action-handler>    
+    <action-handler>
+        <action>Sapphire.Diagram.DirectEdit</action>
+        <impl>org.eclipse.sapphire.ui.swt.gef.actions.DiagramDirectEditActionHandler</impl>
+        <id>Sapphire.Diagram.DirectEdit</id>
+        <context>Sapphire.Diagram.Node.Hidden</context>
+        <context>Sapphire.Diagram.Node.Shape.Hidden</context>
+        <context>Sapphire.Diagram.Connection.Hidden</context>
+    </action-handler>
+    <action-handler>
+        <action>Sapphire.Diagram.Print</action>
+        <id>Sapphire.Diagram.Print</id>
+        <context>Sapphire.Diagram.Editor</context>
+        <context>Sapphire.Diagram.Header</context>
+        <impl>org.eclipse.sapphire.ui.swt.gef.actions.PrintDiagramActionHandler</impl>
+    </action-handler>
+    <action-handler>
+        <action>Sapphire.Diagram.SaveAsImage</action>
+        <id>Sapphire.Diagram.SaveAsImage</id>
+        <context>Sapphire.Diagram.Editor</context>
+        <context>Sapphire.Diagram.Header</context>
+        <impl>org.eclipse.sapphire.ui.swt.gef.actions.SaveAsImageDiagramActionHandler</impl>
+    </action-handler>
+    <action-handler-factory>
+        <action>Sapphire.Diagram.Connect</action>
+        <impl>org.eclipse.sapphire.ui.swt.gef.actions.ConnectActionHandlerFactory</impl>
+        <context>Sapphire.Diagram.Node</context>
+    </action-handler-factory>
+
+</extension>

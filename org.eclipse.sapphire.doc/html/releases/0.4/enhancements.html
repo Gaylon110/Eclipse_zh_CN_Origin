@@ -1,0 +1,602 @@
+<!-- 
+ ******************************************************************************
+ * Copyright (c) 2016 Oracle, Accenture and Liferay
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *    Konstantin Komissarchik - initial implementation and ongoing maintenance
+ *    Kamesh Sampath - [355457] Improve DTD doctype specification in XML binding
+ *    Kamesh Sampath - [355751] General improvement of XML root binding API
+ *    Gregory Amerson - [363551] JavaTypeConstraintService
+ ******************************************************************************
+-->
+
+<html>
+
+<head>
+  <title>Enhancements in Sapphire 0.4</title>
+  <link rel="StyleSheet" href="../../style.css" TYPE="text/css"/>
+</head>
+
+<body>
+
+<h1>Enhancements in Sapphire 0.4</h1>
+
+<ol>
+  <li><a href="#ExpressionLanguage">Expression Language</a></li>
+  <ol type="A">
+    <li><a href="#ScaleFunction">Scale Function</a></li>
+    <li><a href="#AggregateFunctions">Aggregate Functions</a></li>
+    <li><a href="#ExprInDerived">Use in @Derived</a></li>
+    <li><a href="#ExprDefaultValue">Use in @DefaultValue</a></li>
+    <li><a href="#ExprInitialValue">Use in @InitialValue</a></li>
+  </ol>
+  <li><a href="#Services">Services</a></li>
+  <ol type="A">
+    <li><a href="#FactsService">FactsService</a></li>
+    <li><a href="#InitialValueService">InitialValueService and @InitialValue</a></li>
+    <li><a href="#PossibleTypesService">PossibleTypesService</a></li>
+    <li><a href="#ContentProposalService">ContentProposalService</a></li>
+    <li><a href="#JavaTypeConstraintService">JavaTypeConstraintService</a></li>
+  </ol>
+  <li><a href="#UI">User Interface</a></li>
+  <ol type="A">
+    <li><a href="#SplitForm">Split Form</a></li>
+    <li><a href="#MultiSectionFormEditorPage">Multi-Section Form Editor Page</a></li>
+  </ol>
+  <li><a href="#XML">XML</a></li>
+  <ol type="A">
+    <li><a href="#XmlDocumentType">@XmlDocumentType Annotation</a></li>
+    <li><a href="#XmlSchema">@XmlSchema Annotation</a></li>
+    <li><a href="#ListElementPropertyBindingNoMappings">List and Element Property Binding Without Mappings</a></li>
+  </ol>
+  <li><a href="#Miscellaneous">Miscellaneous</a></li>
+  <ol type="A">
+    <li><a href="#Copy">Model Copy Method</a></li>
+  </ol>
+</ol>
+
+<h2><a name="ExpressionLanguage"><a name="ScaleFunction">Scale Function</a></a></h2>
+
+<p>When working with decimals, controlling the scale of the number is very
+important, whether to decrease the scale in order to round the number or to
+increase the scale ahead of arithmetic operations.</p>
+
+<p style="margin-left: 20px;"><b>Example</b></p>
+
+<pre class="source-code"><code>${ Scale( UnitPrice * Scale( Quantity, 2 ), 2 ) }</code></pre>
+
+<h2><a name="AggregateFunctions">Aggregate Functions</a></h2>
+
+<p>Compute the sum, the average, the min or the max of numbers in a collection. Typically, these function 
+takes the collection as the sole parameter. However, when the collection is a model element list, a second 
+parameter may be necessary to specify the name (in the form of a string) of the list entry's value property 
+to use in aggregation. If the the collection is a model element list and the second parameter is not 
+specified, these functions will use list entry's first value property for aggregation.</p>
+
+<p style="margin-left: 20px;"><b>Examples</b></p>
+
+<pre class="source-code"><code>${ Sum( Entries, 'Total' ) }
+${ Avg( Entries, 'Total' ) }
+${ Min( Entries, 'Total' ) }
+${ Max( Entries, 'Total' ) }
+${ Sum( List( 1.2, 3.4, 5.6, 7.8 ) ) }</code></pre>
+
+<h2><a name="ExprInDerived">Use in @Derived</a></h2>
+
+<p>Use expression language when specifying derived value in @Derived annotation.</p>
+
+<pre class="source-code"><code><font color="#888888">@Type( base = BigDecimal.class )</font>
+@Derived( text = "${ Scale( UnitPrice * Scale( Quantity, 2 ), 2 ) }" )
+
+<font color="#888888">ValueProperty PROP_TOTAL = new ValueProperty( TYPE, "Total" );
+
+Value&lt;BigDecimal> getTotal();</font></code></pre>
+
+<h2><a name="ExprDefaultValue">Use in @DefaultValue</a></h2>
+
+<p>Use expression language when specifying default value in @DefaultValue annotation.</p>
+
+<pre class="source-code"><code>@DefaultValue( text = "${ Parent().BillingInformation.Street }" )
+
+<font color="#888888">ValueProperty PROP_STREET = new ValueProperty( TYPE, "Street" );
+
+Value<String> getStreet();
+void setStreet( String street );</font></code></pre>
+
+<h2><a name="ExprInitialValue">Use in @InitialValue</a></h2>
+
+<p>Use expression language when specifying initial value in @InitialValue annotation.</p>
+
+<pre class="source-code"><code>@InitialValue( text = "${ Parent().BillingInformation.Street }" )
+
+<font color="#888888">ValueProperty PROP_STREET = new ValueProperty( TYPE, "Street" );
+
+Value<String> getStreet();
+void setStreet( String street );</font></code></pre>
+
+<h2><a name="Services"><a name="FactsService">FactsService</a></a></h2>
+<p>When a property is described to a user in documentation one does it with a series of short statements that
+define its semantics, such as "must be specified" or "maximum value is 100". When a property is
+described to Sapphire one does it with a series of annotations, such as @Required or
+@NumericRange. This duplicate specification is a maintenance problem.</p>
+
+<p>A FactsService provides a means to dynamically derive statements about property's semantics
+based on property's metadata. The derived facts can then be presented to the user as part of documentation,
+property editor information popup and in other relevant places.</p>
+
+<p style="margin-left: 20px;"><img src="images/FactsService.png"/></p>
+
+<p>The concept of deriving facts from metadata has existed in limited capacity in past releases.
+New for 0.4 is formalization of this system via FactsService API that allows adopters to participate
+in generation of facts on equal footing with the framework. Also new for 0.4 is a much longer list
+of annotations that generate corresponding facts.</p>
+
+<p><a href="../../services/index.html#FactsService">See Documentation</a></p>
+
+<h2><a name="InitialValueService">InitialValueService and @InitialValue</a></h2>
+
+<p>The InitialValueService produces a value to assign to a property when the containing model element is
+created.</p>
+
+<p>The concept of an initial value is different from a default value. The initial value is explicitly
+assigned to the property during containing model element's creation. This includes writing to the backing resource
+(such as an XML document). In comparison, the default value is used when null is read for a property from the 
+backing resource. As such, the default value is only visible to model consumers (such as the user interface), 
+while the initial value is persisted.</p> 
+
+<p>Whether you use an initial value or a default value is frequently dictated by the requirements of the 
+backing resource. As an example, let's consider an XML document that stores phone numbers. In this XML document, 
+the phone number element has a type child element which contains a value like home, mobile, work, etc.
+Let's further say that semantically, we wish to use mobile phone number type unless specified differently.
+Now, if the XML schema dictates that the phone number type element is required, we would need to specify 
+"mobile" as the initial value. If the phone number type element is optional, it would be better to specify
+"mobile" as the default value.</p>
+
+<p><a href="../../services/index.html#InitialValueService">See Documentation</a></p>
+
+<h2><a name="PossibleTypesService">PossibleTypesService</a></h2>
+
+<p>The set of possible types for a list or an element property is usually static and as such can be
+specified using @Type annotation. However, when the model needs to be extensible or the set of possible
+types needs to vary due to runtime conditions, a custom PossibleTypesService implementation can now
+be supplied.</p>
+
+<p><a href="../../services/index.html#PossibleTypesService">See Documentation</a></p>
+
+<h2><a name="ContentProposalService">ContentProposalService</a></h2>
+
+<p>The ContentProposalService provides a conduit for content assist in property editors. If a property
+has this service, content assist will be automatically enabled in the property editor. The manner in which
+content assist is presented is specific to the presentation, but usually involves a popup window with
+proposals, activated by some combination of key strokes (such as CTRL+SPACE).</p>
+
+<p>The framework provides an implementation of ContentProposalService for properties with @PossibleValues 
+annotation or a custom PossibleValuesService, but this service can also be implemented directly by
+adopters.</p> 
+
+<p style="margin-left: 20px;"><img src="images/ContentProposalService.png"/></p>
+
+<p><a href="../../services/index.html#ContentProposalService">See Documentation</a></p>
+
+<h2><a name="JavaTypeConstraintService">JavaTypeConstraintService</a></h2>
+
+<p>The JavaTypeConstraintService describes constraints on the Java type that a property can reference, such as the kind of
+type (class, interface, etc.) and the types that the type must extend or implement. The information provided by this
+service is used for validation, content assist and other needs.</p>
+
+<p>The framework provides an implementation of JavaTypeConstraintService for properties with @JavaTypeConstraint 
+annotation, but this service can also be implemented directly by adopters. This is particularly useful when Java
+type constraint can vary at runtime.</p> 
+
+<p><a href="../../services/index.html#JavaTypeConstraintService">See Documentation</a></p>
+
+<h2><a name="UI"><a name="SplitForm">Split Form</a></a></h2>
+
+<p>Use available screen real estate more efficiently by splitting a form into two or more sections. The
+sections can be arranged vertically or horizontally. The developer can specify the desired initial distribution of
+available space among the sections and the provided sashes allow the user to adjust the space allocation
+as necessary at runtime.</p> 
+
+<p>A split form can nest inside another split form. This is particularly useful when the two split forms 
+use different split orientation.</p>
+
+<p style="margin-left: 20px;"><b>Example</b></p>
+
+<p style="margin-left: 20px;">In this example, a dialog is split vertically into two sections. The top section
+holds a list property editor while the bottom section holds the editor for the description property linked to
+the selection in the list property editor. The split form allows the user to control the amount of space allocated
+to the list property editor versus the description text field.</p>
+
+<pre class="source-code"><code><font color="#888888">&lt;dialog>
+    &lt;id>SplitFormDialog&lt;/id>
+    &lt;label>split form dialog&lt;/label>
+    &lt;width>600&lt;/width>
+    &lt;height>400&lt;/height>
+    &lt;scale-vertically>true&lt;/scale-vertically>
+    &lt;content></font>
+        &lt;split-form>
+            &lt;orientation>vertical&lt;/orientation>
+            &lt;scale-vertically>true&lt;/scale-vertically>
+            &lt;block>
+                &lt;weight>7&lt;/weight>
+                &lt;content><font color="#888888">
+                    &lt;property-editor>
+                        &lt;property>List1&lt;/property>
+                        &lt;span>true&lt;/span>
+                        &lt;show-label>false&lt;/show-label>
+                        &lt;child-property>Entity&lt;/child-property>
+                        &lt;child-property>Size&lt;/child-property>
+                        &lt;scale-vertically>true&lt;/scale-vertically>
+                    &lt;/property-editor></font>
+                &lt;/content>
+            &lt;/block>
+            &lt;block>
+                &lt;weight>3&lt;/weight>
+                &lt;content>
+                    <font color="#888888">&lt;separator>
+                        &lt;label>description&lt;/label>
+                    &lt;/separator>
+                    &lt;switching-panel>
+                        &lt;list-selection-controller>
+                            &lt;property>List1&lt;/property>
+                        &lt;/list-selection-controller>
+                        &lt;default-panel>
+                            &lt;content>
+                                &lt;label>Select an entry above to view or edit description.&lt;/label>
+                            &lt;/content>
+                        &lt;/default-panel>
+                        &lt;panel>
+                            &lt;key>SplitFormGalleryListEntry&lt;/key>
+                            &lt;content>
+                                &lt;property-editor>
+                                    &lt;property>Description&lt;/property>
+                                    &lt;span>true&lt;/span>
+                                    &lt;show-label>false&lt;/show-label>
+                                    &lt;scale-vertically>true&lt;/scale-vertically>
+                                &lt;/property-editor>
+                            &lt;/content>
+                        &lt;/panel>
+                        &lt;scale-vertically>true&lt;/scale-vertically>
+                    &lt;/switching-panel></font>
+                &lt;/content>
+            &lt;/block>
+        &lt;/split-form>
+    <font color="#888888">&lt;/content>
+&lt;/dialog></font></code></pre>
+
+<p style="margin-left: 20px;"><img src="images/SplitForm.png"/></p>
+
+<h2><a name="MultiSectionFormEditorPage">Multi-Section Form Editor Page</a></h2>
+
+<p>Create form editor pages with highly configurable section layouts. The feature is used in conjunction
+with split form feature to break the page into resizable blocks where sections are places.</p>
+
+<p style="margin-left: 20px;"><b>Example</b></p>
+
+<p style="margin-left: 20px;">In this example, two multi-section form editor pages are used to organize
+purchase order entry fields.</p>
+
+<pre class="source-code"><code>&lt;form-editor-page>
+    &lt;id>GeneralPage&lt;/id>
+    &lt;page-name>general&lt;/page-name>
+    &lt;page-header-text>purchase order&lt;/page-header-text>
+    &lt;content>
+        &lt;split-form>
+            &lt;orientation>horizontal&lt;/orientation>
+            &lt;scale-vertically>true&lt;/scale-vertically>
+            &lt;block>
+                &lt;content>
+                    &lt;section>
+                        &lt;label>general&lt;/label>
+                        &lt;content>
+                            <font color="#888888">&lt;property-editor>Id&lt;/property-editor>
+                            &lt;property-editor>Customer&lt;/property-editor>
+                            &lt;property-editor>InitialQuoteDate&lt;/property-editor>
+                            &lt;property-editor>OrderDate&lt;/property-editor>
+                            &lt;property-editor>FulfillmentDate&lt;/property-editor></font>
+                        &lt;/content>
+                    &lt;/section>
+                &lt;/content>
+            &lt;/block>
+            &lt;block>
+                &lt;content>
+                    &lt;section>
+                        &lt;label>billing information&lt;/label>
+                        &lt;content>
+                            <font color="#888888">&lt;with>
+                                &lt;path>BillingInformation&lt;/path>
+                                &lt;default-panel>
+                                    &lt;content>
+                                        &lt;property-editor>Name&lt;/property-editor>
+                                        &lt;property-editor>Organization&lt;/property-editor>
+                                        &lt;property-editor>Street&lt;/property-editor>
+                                        &lt;property-editor>City&lt;/property-editor>
+                                        &lt;property-editor>State&lt;/property-editor>
+                                        &lt;property-editor>ZipCode&lt;/property-editor>
+                                    &lt;/content>
+                                &lt;/default-panel>
+                            &lt;/with></font>
+                        &lt;/content>
+                    &lt;/section>
+                    &lt;section>
+                        &lt;label>shipping information&lt;/label>
+                        &lt;content>
+                            <font color="#888888">&lt;with>
+                                &lt;path>ShippingInformation&lt;/path>
+                                &lt;default-panel>
+                                    &lt;content>
+                                        &lt;property-editor>Name&lt;/property-editor>
+                                        &lt;property-editor>Organization&lt;/property-editor>
+                                        &lt;property-editor>Street&lt;/property-editor>
+                                        &lt;property-editor>City&lt;/property-editor>
+                                        &lt;property-editor>State&lt;/property-editor>
+                                        &lt;property-editor>ZipCode&lt;/property-editor>
+                                    &lt;/content>
+                                &lt;/default-panel>
+                            &lt;/with></font>
+                        &lt;/content>
+                    &lt;/section>
+                &lt;/content>
+            &lt;/block>
+        &lt;/split-form>
+    &lt;/content>
+&lt;/form-editor-page>
+&lt;form-editor-page>
+    &lt;id>EntriesPage&lt;/id>
+    &lt;page-name>entries&lt;/page-name>
+    &lt;page-header-text>purchase order&lt;/page-header-text>
+    &lt;content>
+        &lt;split-form>
+            &lt;orientation>horizontal&lt;/orientation>
+            &lt;scale-vertically>true&lt;/scale-vertically>
+            &lt;block>
+                &lt;content>
+                    &lt;section>
+                        &lt;label>entries&lt;/label>
+                        &lt;content>
+                            <font color="#888888">&lt;property-editor>
+                                &lt;property>Entries&lt;/property>
+                                &lt;scale-vertically>true&lt;/scale-vertically>
+                                &lt;show-label>false&lt;/show-label>
+                                &lt;span>true&lt;/span>
+                                &lt;child-property>Item&lt;/child-property>
+                                &lt;child-property>Description&lt;/child-property>
+                                &lt;child-property>Quantity&lt;/child-property>
+                                &lt;child-property>UnitPrice&lt;/child-property>
+                                &lt;hint>
+                                    &lt;name>column.widths&lt;/name>
+                                    &lt;value>100:1,100:6,100:1,100:1,100:1&lt;/value>
+                                &lt;/hint>
+                                &lt;child-property>Total&lt;/child-property>
+                            &lt;/property-editor></font>
+                        &lt;/content>
+                        &lt;scale-vertically>true&lt;/scale-vertically>
+                    &lt;/section>
+                &lt;/content>
+                &lt;weight>7&lt;/weight>
+            &lt;/block>
+            &lt;block>
+                &lt;weight>3&lt;/weight>
+                &lt;content>
+                    &lt;section>
+                        &lt;label>summary&lt;/label>
+                        &lt;content>
+                            <font color="#888888">&lt;property-editor>Subtotal&lt;/property-editor>
+                            &lt;property-editor>Discount&lt;/property-editor>
+                            &lt;property-editor>Delivery&lt;/property-editor>
+                            &lt;property-editor>Total&lt;/property-editor></font>
+                        &lt;/content>
+                    &lt;/section>
+                &lt;/content>
+            &lt;/block>
+        &lt;/split-form>
+    &lt;/content>
+&lt;/form-editor-page></code></pre>
+
+<p style="margin-left: 20px;"><img src="images/MultiSectionFormEditorPage1.png"/></p>
+
+<p style="margin-left: 20px;"><img src="images/MultiSectionFormEditorPage2.png"/></p>
+
+<h2><a name="XML"><a name="XmlDocumentType">@XmlDocumentType Annotation</a></a></h2>
+
+<p>The new @XmlDocumentType annotation can be used when working with DTD-based documents to easily specify systemId or
+publicId/systemId pair. Sapphire XML binding will manage the XML DOCTYPE declaration.</p>
+
+<p style="margin-left: 20px;"><b>Example</b></p>
+
+<pre class="source-code"><code>@XmlDocumentType( publicId = "-//Sapphire//DTD Root 1.0.0//EN", systemId = "http://www.eclipse.org/sapphire/example.dtd" )
+@XmlBinding( path = "root" )
+
+public interface Root extends IModelElement
+{
+    ...
+}</code></pre>
+
+<p style="margin-left: 20px;">The above declaration will create an XML document like the following.</p>
+
+<pre class="source-code"><code>&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;!DOCTYPE country PUBLIC "-//Sapphire//DTD Country 1.0.0//EN" "http://www.eclipse.org/sapphire/example.dtd"&gt;
+&lt;root>
+    ...
+&lt;/root></code></pre>
+
+<h2><a name="XmlSchema">@XmlSchema Annotation</a></h2>
+
+<p>The new @XmlSchema annotation can be used when working with XSD-based documents to easily specify schema location for a
+given namespace. Sapphire XML binding will manage the xsi:schemaLocation declaration.</p>
+
+<p style="margin-left: 20px;"><b>Example</b></p>
+
+<pre class="source-code"><code>@XmlNamespace( uri = "http://www.eclipse.org/sapphire/example", prefix = "e" )
+@XmlSchema( namespace = "http://www.eclipse.org/sapphire/example", location = "http://www.eclipse.org/sapphire/example/1.0" )
+@XmlBinding( path = "e:root" )
+
+public interface Root extends IModelElement
+{
+    ...
+}</code></pre>
+
+<p style="margin-left: 20px;">The above declaration will create an XML document like the following.</p>
+
+<pre class="source-code"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;e:root 
+    xmlns:e="http://www.eclipse.org/sapphire/example"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://www.eclipse.org/sapphire/example http://www.eclipse.org/sapphire/example/1.0"&gt;
+    ...
+&lt;/e:root&gt;</code></pre>
+
+<p>To specify locations of multiple schemas, use @XmlSchemas annotation.</p>
+
+<h2><a name="ListElementPropertyBindingNoMappings">List and Element Property Binding Without Mappings</a></h2>
+
+<p>When declaratively specifying XML binding for a list or an element property, the adopter must tell the framework
+what XML element name to use for a given child model element type. In the past, the only way to do that was via
+the mappings attribute of @XmlListBinding or @XmlElementBinding annotation. These declarations can now be made
+via @XmlBinding annotations placed on the model element type. If the property's mappings do not contain
+a declaration for a given model element type, the framework will look for the type's @XmlBinding annotation.</p>
+
+<p>Which approach you choose to use depends on the requirements. Explicitly specifying mappings is useful when
+the same model element type is used in different properties where it must bind to different XML element names.
+Using @XmlBinding on model element type instead of mappings is less verbose and is particularly useful in cases
+where a custom PossibleTypesService is provided. In those situations, list or element property's author may
+not be able to enumerate possible types at design time, so explicitly specifying mappings is not possible.</p>
+
+<p style="margin-left: 20px;"><b>Example</b></p>
+
+<p style="margin-left: 20px;">The following two listings are equivalent.</p>
+
+<pre class="source-code"><code><font color="#888888">@GenerateImpl</font>
+@XmlBinding( path = "root" )
+
+<font color="#888888">public interface Root extends IModelElement
+{
+    ModelElementType TYPE = new ModelElementType( Root.class );
+
+    // *** List ***
+
+    @Type( base = Child.class, possible = { ChildA.class, ChildB.class } )</font>
+    @XmlListBinding( path = "" )
+
+    <font color="#888888">ListProperty PROP_LIST = new ListProperty( TYPE, "List" );
+
+    ModelElementList&lt;Child> getList();
+
+    ...
+}
+
+public interface Child extends IModelElement
+{
+    ModelElementType TYPE = new ModelElementType( Child.class );
+
+    ...
+}
+
+@GenerateImpl</font>
+@XmlBinding( path = "a" )
+
+<font color="#888888">public interface ChildA extends Child
+{
+    ModelElementType TYPE = new ModelElementType( Child.class );
+
+    ...
+}
+
+@GenerateImpl</font>
+@XmlBinding( path = "b" )
+
+<font color="#888888">public interface ChildB extends Child
+{
+    ModelElementType TYPE = new ModelElementType( Child.class );
+
+    ...
+}</font></code></pre>
+
+<pre class="source-code"><code><font color="#888888">@GenerateImpl</font>
+@XmlBinding( path = "root" )
+
+<font color="#888888">public interface Root extends IModelElement
+{
+    ModelElementType TYPE = new ModelElementType( Root.class );
+
+    // *** List ***
+
+    @Type( base = Child.class, possible = { ChildA.class, ChildB.class } )</font>
+
+    @XmlListBinding
+    (
+        mappings = 
+        {
+            @XmlListBinding.Mapping( element = "a", type = ChildA.class ),
+            @XmlListBinding.Mapping( element = "b", type = ChildB.class )
+        }
+    )
+
+    <font color="#888888">ListProperty PROP_LIST = new ListProperty( TYPE, "List" );
+
+    ModelElementList&lt;Child> getList();
+
+    ...
+}
+
+public interface Child extends IModelElement
+{
+    ModelElementType TYPE = new ModelElementType( Child.class );
+
+    ...
+}
+
+@GenerateImpl
+
+public interface ChildA extends Child
+{
+    ModelElementType TYPE = new ModelElementType( Child.class );
+
+    ...
+}
+
+@GenerateImpl
+
+public interface ChildB extends Child
+{
+    ModelElementType TYPE = new ModelElementType( Child.class );
+
+    ...
+}</font></code></pre>
+
+<h2><a name="Miscellaneous"><a name="Copy">Model Copy Method</a></a></h2>
+
+<p>Easily copy content of model elements using the new copy method. Copy a few model elements or the
+entire model. Even copy across different resource stores.</p>
+
+<p style="margin-left: 20px;"><b>Example</b></p>
+
+<p style="margin-left: 20px;">In this example, the copy method is used to duplicate the entities held in a list
+property.</p>
+
+<pre class="source-code"><code>ModelElementList&lt;Entity> entities = model.getEntities();
+
+for( int i = 0, n = entities.size; i < n; i++ )
+{
+    final Entity original = entities.get( i );
+    final Entity duplicate = entities.addNewElement();
+    duplicate.copy( original );
+}</code></pre>
+
+<p style="margin-left: 20px;">Here, an entire model is copied to a memory resource. Perhaps the original model
+instance was loaded from disk via an XML resource.</p>
+
+<pre class="source-code"><code>Model original = ...
+Model duplicate = Model.TYPE.instantiate();
+duplicate.copy( original );</code></pre>
+
+<div class="copyright">Copyright (c) 2016 Oracle, Accenture and Liferay<br/>
+Content made available under the terms of <a href="http://www.eclipse.org/legal/epl-v10.html">Eclipse Public License</a>.</div>
+
+</body>
+
+</html>

@@ -1,0 +1,1914 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.emf.emfstore.client.ui;singleton:=tru
+ e
+Archiver-Version: Plexus Archiver
+Built-By: genie.emfstore
+Require-Bundle: org.eclipse.core.expressions;bundle-version="[3.4.0,4.
+ 0.0)",org.eclipse.emf.emfstore.client.model.edit;bundle-version="[1.9
+ .0,2.0.0)",org.eclipse.core.runtime;bundle-version="[3.5.0,4.0.0)",or
+ g.eclipse.emf.edit;bundle-version="[2.5.0,3.0.0)",org.eclipse.emf.emf
+ store.server.model.edit;bundle-version="[1.9.0,2.0.0)",org.eclipse.em
+ f.emfstore.server.model
+Bundle-ManifestVersion: 2
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-Vendor: Eclipse Modeling Project
+Import-Package: org.eclipse.core.commands;version="0.0.0",org.eclipse.
+ emf.edit.ui.provider;version="0.0.0",org.eclipse.jface.action;version
+ ="0.0.0",org.eclipse.jface.dialogs;version="0.0.0",org.eclipse.jface.
+ layout;version="0.0.0",org.eclipse.jface.operation;version="0.0.0",or
+ g.eclipse.jface.preference;version="0.0.0",org.eclipse.jface.resource
+ ;version="0.0.0",org.eclipse.jface.util;version="0.0.0",org.eclipse.j
+ face.viewers;version="0.0.0",org.eclipse.jface.window;version="0.0.0"
+ ,org.eclipse.jface.wizard;version="0.0.0",org.eclipse.swt;version="0.
+ 0.0",org.eclipse.swt.custom;version="0.0.0",org.eclipse.swt.dnd;versi
+ on="0.0.0",org.eclipse.swt.events;version="0.0.0",org.eclipse.swt.gra
+ phics;version="0.0.0",org.eclipse.swt.layout;version="0.0.0",org.ecli
+ pse.swt.widgets;version="0.0.0",org.eclipse.ui;ui.workbench=split;ver
+ sion="0.0.0",org.eclipse.ui.dialogs;ui.workbench=split;version="0.0.0
+ ",org.eclipse.ui.forms.events;version="0.0.0",org.eclipse.ui.forms.wi
+ dgets;version="0.0.0",org.eclipse.ui.handlers;version="0.0.0",org.ecl
+ ipse.ui.help;version="0.0.0",org.eclipse.ui.part;ui.workbench=split;v
+ ersion="0.0.0",org.eclipse.ui.plugin;version="0.0.0",org.eclipse.ui.p
+ rogress;version="0.0.0",org.eclipse.ui.services;version="0.0.0",org.e
+ clipse.ui.views.properties;ui.views=split;version="0.0.0"
+Export-Package: org.eclipse.emf.emfstore.client.ui;version="1.9.0"; us
+ es:="org.eclipse.emf.ecore,  org.eclipse.emf.emfstore.client,  org.ec
+ lipse.swt.widgets,  org.eclipse.emf.emfstore.server.model.versionspec
+ ",org.eclipse.emf.emfstore.internal.client.ui;version="1.9.0";x-inter
+ nal:=true,org.eclipse.emf.emfstore.internal.client.ui.common;version=
+ "1.9.0";x-friends:="org.eclipse.emf.emfstore.client.test.ui,org.eclip
+ se.emf.ecp.emfstore.ui",org.eclipse.emf.emfstore.internal.client.ui.c
+ ontroller;version="1.9.0";x-friends:="org.eclipse.emf.emfstore.client
+ .test.ui,org.eclipse.emf.ecp.emfstore.ui",org.eclipse.emf.emfstore.in
+ ternal.client.ui.decorators;version="1.9.0";x-internal:=true,org.ecli
+ pse.emf.emfstore.internal.client.ui.dialogs;version="1.9.0";x-interna
+ l:=true,org.eclipse.emf.emfstore.internal.client.ui.dialogs.admin;ver
+ sion="1.9.0";x-internal:=true,org.eclipse.emf.emfstore.internal.clien
+ t.ui.dialogs.admin.acimport;version="1.9.0";x-internal:=true,org.ecli
+ pse.emf.emfstore.internal.client.ui.dialogs.admin.acimport.wizard;ver
+ sion="1.9.0";x-internal:=true,org.eclipse.emf.emfstore.internal.clien
+ t.ui.dialogs.admin.action;version="1.9.0";x-internal:=true,org.eclips
+ e.emf.emfstore.internal.client.ui.dialogs.login;version="1.9.0";x-int
+ ernal:=true,org.eclipse.emf.emfstore.internal.client.ui.dialogs.merge
+ ;version="1.9.0";x-internal:=true,org.eclipse.emf.emfstore.internal.c
+ lient.ui.dialogs.merge.ui;version="1.9.0";x-internal:=true,org.eclips
+ e.emf.emfstore.internal.client.ui.dialogs.merge.ui.components;version
+ ="1.9.0";x-internal:=true,org.eclipse.emf.emfstore.internal.client.ui
+ .dialogs.merge.ui.widgets;version="1.9.0";x-internal:=true,org.eclips
+ e.emf.emfstore.internal.client.ui.dialogs.merge.util;version="1.9.0";
+ x-internal:=true,org.eclipse.emf.emfstore.internal.client.ui.epackage
+ s;version="1.9.0";x-internal:=true,org.eclipse.emf.emfstore.internal.
+ client.ui.exceptions;version="1.9.0";x-internal:=true,org.eclipse.emf
+ .emfstore.internal.client.ui.handlers;version="1.9.0";x-internal:=tru
+ e,org.eclipse.emf.emfstore.internal.client.ui.handlers.exportimport;v
+ ersion="1.9.0";x-internal:=true,org.eclipse.emf.emfstore.internal.cli
+ ent.ui.testers;version="1.9.0";x-internal:=true,org.eclipse.emf.emfst
+ ore.internal.client.ui.util;version="1.9.0";x-internal:=true,org.ecli
+ pse.emf.emfstore.internal.client.ui.views.changes;version="1.9.0";x-i
+ nternal:=true,org.eclipse.emf.emfstore.internal.client.ui.views.emfst
+ orebrowser.views;version="1.9.0";x-friends:="org.eclipse.emf.ecp.emfs
+ tore.ui",org.eclipse.emf.emfstore.internal.client.ui.views.historybro
+ wserview;version="1.9.0";x-internal:=true,org.eclipse.emf.emfstore.in
+ ternal.client.ui.views.historybrowserview.graph;version="1.9.0";x-int
+ ernal:=true,org.eclipse.emf.emfstore.internal.client.ui.views.scm;ver
+ sion="1.9.0";x-internal:=true,org.eclipse.wb.swt;version="1.9.0";x-in
+ ternal:=true;uses:="org.eclipse.jface.resource,org.eclipse.swt.graphi
+ cs"
+Bundle-Name: EMFStore Client UI
+Bundle-Version: 1.9.0.v20170530-0703
+Bundle-ClassPath: .,lib/dmp.jar
+Bundle-Activator: org.eclipse.emf.emfstore.internal.client.ui.Activato
+ r
+Created-By: Apache Maven
+Build-Jdk: 1.8.0_121
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/emfstorebrowse
+ r/views/CertificateSelectionDialog.class
+SHA-256-Digest: 3xEbaxzMFAoCYtMes1/7Zv8abCiHnvXDpTg5GWnRZds=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/decorators/ChildrenD
+ ecorator.class
+SHA-256-Digest: sc9K6Z2iCZajYcvZEQWLH2Sm8eItSWP6FiZIsmG8t9A=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/emfstorebrowse
+ r/views/ElementListSelectionDialog.class
+SHA-256-Digest: HclzeKZUKGR3eht0eKYlSPJm88buTi0fnIyNupOp2So=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/UpdateDialog
+ .class
+SHA-256-Digest: zgwZeMxCnSD2foK3u3AJpoSFxfbfttJTqPfS5PDvpU0=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UIUpdateP
+ rojectController$4.class
+SHA-256-Digest: IxiHdn6NQgydCIZ09VQmHn4d8jAi/Y6wcOUzWTSno54=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/historybrowser
+ view/HistoryCompare.class
+SHA-256-Digest: /q8A+ziB9lLugvkSSV92szxOOqLtoeqkSDf6JhcvO7M=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/acimpo
+ rt/LdapImportSource.class
+SHA-256-Digest: JYiqRe2bNfSxcv3GMH0S7mxMMzYu9qIc2BhmKrUcIcg=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/testers/IsAdminTeste
+ r.class
+SHA-256-Digest: 6f9cB8Qxt4qd26mSsDfifR8WEeyJuGRRZV0t4QEDXAI=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/common/RunInUI$2.cla
+ ss
+SHA-256-Digest: fWxXdv2MJJbPgpuQmd9Oyp9+vUHlDzFD0W+4V2L2h90=
+
+Name: icons/tag_blue_delete.png
+SHA-256-Digest: oTTaY+0YZTzoreEYGZk4lzmaHrtlxv5srMV/HypdpLA=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/emfstorebrowse
+ r/views/NewRepositoryWizardPageOne$CertificateSelectionDialogLabelPro
+ vider.class
+SHA-256-Digest: 9uoSmO1mQYoyN4x/XQIAgDr/1RIiZbPHyVi9rIGk61A=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/testers/ProjectHasLo
+ calChangesTester$1.class
+SHA-256-Digest: my6W2r+1E+VvGDh4FPUuhUcDgfL9K1R93o/rxyCzc4Q=
+
+Name: icons/tag_blue_add.png
+SHA-256-Digest: z5a3h0yc2/FCYINyw4AjaaFYQSPWIcdIhmLsvRa8Gfs=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/common/Messages.clas
+ s
+SHA-256-Digest: qMHHPPedSzLUdl6sBsdDMHglnxYOnSRi5XPVVfXLifQ=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/Messag
+ es.class
+SHA-256-Digest: Xj/6lzNmIFmQUaMM2z0YzhCyNk3/2X6Bhwmfk9qpzIE=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UIUpdateP
+ rojectToVersionController$1.class
+SHA-256-Digest: uC+xi7YEpKmvOKw67sXVGIc8mR3DhbmehKkdResMqYo=
+
+Name: icons/ProjectInfo.gif
+SHA-256-Digest: jp7tj1rvzqmM87VzVDzXsmMBCIKDp7VJW7xR3292v+k=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/CreateTagDia
+ log$Field.class
+SHA-256-Digest: EAgUgRjNzkcrwFhCPJ8Dp+fTNiKIYyIHfNjo/MapLeM=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/Projec
+ tComposite.class
+SHA-256-Digest: P4dFa0hCY+Z/3ZZnnG7N2PlXBC99wY/gi5rYQBqBZxs=
+
+Name: emfstore.png
+SHA-256-Digest: EYQTGZhL3hv5HMqIzPyB1ExSjIbKJ8NGT9DZKkD/ECU=
+
+Name: icons/folder_go.png
+SHA-256-Digest: VHWiuzwAmydgXKO+K6bSNIozuC8V+V83pOeSeApvv08=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/CreateTagDia
+ log.class
+SHA-256-Digest: YItJIP7SMeV4boX3wdyLFTsinnsBbyYF6pVZUv1x0Vc=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/BranchSelect
+ ionDialog$CheckoutSelection.class
+SHA-256-Digest: kxD26X0KYfv+vKrFrlfcsF726ijW9adf5kspeWMhM4I=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UICreateB
+ ranchController$3.class
+SHA-256-Digest: 4Ht/XGyeJBD1zGD86k9K7e4VuHPlcxvK8BsT7KgkCWw=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/testers/IsServerAdmi
+ nTester.class
+SHA-256-Digest: 0/2TW+tqdX4krqj2Hu3KpUGod+zOE4vskEvmbe7Nc/o=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UICommitP
+ rojectController$5.class
+SHA-256-Digest: cI6oUiAmqSKE63s30qFHVyLxWqpWozLfzRI7sXyxSO4=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/util/EMFStoreFileDia
+ logHelper.class
+SHA-256-Digest: UmDe7xAGDMVZYUTOzcrC8wO5VDoNM1uotIVaMEyK7S0=
+
+Name: icons/bullet_delete.png
+SHA-256-Digest: 2wXkEDJ83TytnrlZjyhN4cvBXgGHPsdSLhYqkCfZkJo=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/GroupT
+ abContent.class
+SHA-256-Digest: oSpAYQk+7mHlfxvMGg7wGsfmHy4kPFqruB8MUYMCi/Q=
+
+Name: icons/close.png
+SHA-256-Digest: V4QV+zvg49ckNBG0T107kRmdhRkjbedtgy0fHw79OGA=
+
+Name: icons/cog.png
+SHA-256-Digest: xa2PqB3NJOKl3v90Hf3jTVhryJT68ZQ8ZXVdOH3prXY=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/historybrowser
+ view/HistoryBrowserView$5$1.class
+SHA-256-Digest: TuW5lAvWMHeCjn62FJxHTVwIkUhmtCmLbMrCorhroRU=
+
+Name: icons/homer.png
+SHA-256-Digest: xL/HcH1p/q05+5dh39ZX80xacYLeP0pL0EFia4Ou7WU=
+
+Name: icons/merge/merge_wizard.gif
+SHA-256-Digest: 6Dz7ddDST/jvPqqsorjef3YTbb+2SgKJQPdg0l/xGIY=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/handlers/AbstractEMF
+ StoreHandlerWithResult.class
+SHA-256-Digest: KTVUalBLAiwEzxQEQubJYJDehRF0VoOvDjY6KRt8p6I=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/Proper
+ tiesComposite$3.class
+SHA-256-Digest: PiH1zkJvUO8mtJdZgZEVitfs8qaVMlyDfsagcJSVCMI=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/acimpo
+ rt/wizard/AcUserImportPageTwo$2.class
+SHA-256-Digest: d4/i3Dv/6yllfwhBglMqQxtKKQAcZfovloC1Ip/J+ds=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/merge/ui/Des
+ criptionComponenptUtil.class
+SHA-256-Digest: tC0Dh8Aq55IcPwYHt44stJPVny5Zqw6UkiEOc66uj/4=
+
+Name: icons/guest.png
+SHA-256-Digest: VQIKSk8fu5MGJtO4qBn2Kftj2ETCbSKy0JqRCgNtyNk=
+
+Name: contexts.xml
+SHA-256-Digest: lgin2lMZuK8qCVe8ELKKiuOpjOu9CWphHlvatYDGCTI=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UICreateB
+ ranchController.class
+SHA-256-Digest: voBneQY8AfltPMbm0Gvk9rWQrw1G9MxTsdZxpplJ1Lc=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/handlers/CreateBranc
+ hHandler.class
+SHA-256-Digest: 29PrDh7pAZsBygCEEpXnnQd54kx0FbKd0Lu/pjDsIog=
+
+Name: icons/emfstore.png
+SHA-256-Digest: +ArV+jtrwUA4o8hwfh3lF/Awvg7ek3t7YhP8/nc5JAs=
+
+Name: about.mappings
+SHA-256-Digest: UmVD1CT3Xd6ZUvULRh417IeiK/1H8t0DqSwWQH3JyP4=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/historybrowser
+ view/HistorySCMLabelProvider.class
+SHA-256-Digest: C3DibN5CurvuCEstGBpzeyq4eUrw8nqrL/+FJzF9Z+U=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/CompareProje
+ ctsDialog.class
+SHA-256-Digest: UBV99aT48JvlH5OOwQMYLtVZnqO4mK/N+q+/i1ceKUo=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/TabCon
+ tent$2.class
+SHA-256-Digest: PK3I9vdP4ws/wUjCJUHCHV7AoNMJhsHNhYP4MsVGoUg=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/login/Server
+ InfoSelectionDialog.class
+SHA-256-Digest: jMTqrdI72ybGg1wIMS+lynS5W6VMux8//sx2FIzEFwI=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/merge/MergeW
+ izardPage.class
+SHA-256-Digest: LG5FfCBMDmLTgCDlTKHcKfPFtiqk55v5P/qZriYaveQ=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/handlers/LoadChangeP
+ ackagesHandler.class
+SHA-256-Digest: bA0xla4nLaOd9eCIngQNaDyhw1udHdqSKzcJ8gphu+Q=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/GroupT
+ abContent$2.class
+SHA-256-Digest: 8UYPHiGe9qVxrXxQ1Or7faxfx9gT+OA08L6Is1JX14g=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/historybrowser
+ view/HistoryBrowserView$5.class
+SHA-256-Digest: qnrJNfa0CgBOQfUvBcj/RrTrH5RqI2tBOZC1+r3rqKE=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/merge/ui/com
+ ponents/DetailsComponent.class
+SHA-256-Digest: Sfj3teJTmjmx6AZuxJuloJaToEKyC+5Nex47UVQpiT0=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/BranchSelect
+ ionDialog$1.class
+SHA-256-Digest: 7jYhioOAVFix0oiHJsMaZeAyMXSMCJGfHWo0j69Ix68=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/util/EMFStoreHandler
+ Util.class
+SHA-256-Digest: uDIL0ws5f7dMUHklsszm/9vA/ztr7k5CHJKTY/q8UW8=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UIRemoveS
+ erverController$2.class
+SHA-256-Digest: EeU1d9+rbucFdCLG50OFZrj1jHpYYYnuN6QzAGKlV+8=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/handlers/UpdateProje
+ ctVersionHandler.class
+SHA-256-Digest: JOuZuwv6z4bGVpyTtatRnNnDkgksCZ/cl/tUC+yxzik=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/action
+ /DeleteUserAction.class
+SHA-256-Digest: QvLMDVJmKv8uF+mZ8BB9BNeqGOfGf1aUO8GpJWPJFHk=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/historybrowser
+ view/graph/PlotCommitProvider.class
+SHA-256-Digest: J8zn2QIUVuq3FKV9AzoRIIabHZ5CJ4iIKB9Lcci5mlI=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UIShowPro
+ jectPropertiesController.class
+SHA-256-Digest: WK3z7zV9XIw6fpfBvf1kYCBDnRIORko1Q7TQBAwqD4c=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/handlers/exportimpor
+ t/ImportProjectHandler.class
+SHA-256-Digest: pWVyOvVMX93OOAaA8C31veR3BJIy1RzqNJnqMXBh47Y=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/historybrowser
+ view/graph/PlotLane.class
+SHA-256-Digest: rLsAIlKxEF+tZN1EikO2AolGgzXoPt8F9fsSb088k0w=
+
+Name: icons/serverLoginAs.png
+SHA-256-Digest: oZJIChNSvEivqA8xPm6BUA3IKru4MZOagJR6DBgEMXQ=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/Manage
+ OrgUnitsDialog.class
+SHA-256-Digest: GW/i+e4LvWogy7ecsXLFrLerkR42nlX7qajjcshBz+I=
+
+Name: schema/filteredTypes.exsd
+SHA-256-Digest: 6wrupEZKNzIHbIPypMB+npjnbcIvcSUkVi7ac/hiMkI=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UIRevertC
+ ommitController$1.class
+SHA-256-Digest: aVIz/75tHd0PDTN1t6tqxyazsuP8YVEREsm5HudLxDM=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/login/LoginD
+ ialogController.class
+SHA-256-Digest: hfbLU0QRfW0E9bqSbxJMfsemuA4axaS/Q4BbBMzDnBo=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/handlers/CommitProje
+ ctHandler.class
+SHA-256-Digest: txNZzZmEHaIjaty9Zkeb0jdUw+yIqG3TBsyqrNniPyA=
+
+Name: icons/collapseall.gif
+SHA-256-Digest: vrC8rRfWUvpPxc/e6IOk3TnYdzSj1h4PDqS+lxD3kEM=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/emfstorebrowse
+ r/views/ElementListSelectionDialog$1.class
+SHA-256-Digest: JhMqAtQUCJ3zNWuwUW/N8McGllqjA+5qnRwS2KlDZR8=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/historybrowser
+ view/HistoryBrowserView$3.class
+SHA-256-Digest: G9DUopRKsxhq/nXcP84a7B6FyayM6vQcaXUDzfVbchg=
+
+Name: icons/merge/multiref.gif
+SHA-256-Digest: 3+MlkRae4/rTD/AleYvEB364J1b8rOBIP9lmQU2pDos=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/handlers/exportimpor
+ t/ExportWorkspaceHandler.class
+SHA-256-Digest: pzLPZ5rjq0XYgfhWLoES40hEU6Yfq9ObA+84KeqDog8=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/handlers/ManageOrgUn
+ itsHandler.class
+SHA-256-Digest: RoaL7z31mzrh+fZgPUmzHAXjNo7B/E5e5o65wTk74XU=
+
+Name: icons/arrow_right.png
+SHA-256-Digest: LQQoj2IKYJGLb2WQWJs7sgWux6jC+gSCq7e9zK+D3WA=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UICommitP
+ rojectController$7.class
+SHA-256-Digest: c+Mbw10pYY5z02B2epqx2Svb/wd7VRiWVpmUnfZIat0=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/handlers/exportimpor
+ t/ExportProjectHandler.class
+SHA-256-Digest: e67AFre/Pelws1KSk6AvmZ4uYnu+yxlPipKByVgDhHQ=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/TabCon
+ tent$4.class
+SHA-256-Digest: zec9HSew2fT+uU8jbp6X7EQeM1TwOPL86WwSdnWKc1g=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UIUpdateP
+ rojectToVersionController$3.class
+SHA-256-Digest: wzpxKwFb5CCWNNDOO+NNnBi7bYQgLAgrLDgmHV+XhLI=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/emfstorebrowse
+ r/views/MessageLine.class
+SHA-256-Digest: OCUq43R8uVOpmXnqpeTVoNKHA2T3h18WpUsBtTzXNlI=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/testers/IsAdminTeste
+ r$1.class
+SHA-256-Digest: /wkigxobcYSkb5OTrsUS91nf2H1jmDRsusOyy+Ba8Dg=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UIImportC
+ ontroller.class
+SHA-256-Digest: /xy2FMU39L3K1w+KLIvAebcPAFtyY5FYzr0sOitPaI8=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/historybrowser
+ view/HistoryBrowserView$15.class
+SHA-256-Digest: FW9Lg0as7LC3ikO+wSkOpc2+YhT106xliXV2KdBGfiw=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UICheckou
+ tController.class
+SHA-256-Digest: TYMkYvzar18gfVpE5htYSlQ5FrVUDB5R8EBvKrfybRw=
+
+Name: org/eclipse/emf/emfstore/client/ui/ESWhitelistFilter.class
+SHA-256-Digest: vbtV6J3XV5D/H63u7084rZsV5ErZ5k3pjefzHoNerpo=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UICheckou
+ tController$1.class
+SHA-256-Digest: +gUpcNvblpCfZAzxow8OZdyi7VumNwjRdYnUJrYv8Ns=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/merge/ui/wid
+ gets/MergeTextWidget.class
+SHA-256-Digest: sT2YSBjV4y5zVjTvTdH5o6CG0x+035fIQKJCJHH2n2o=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UIManageO
+ rgUnitsController.class
+SHA-256-Digest: VFPxccrdS+x1BkiWXgsGiLE/x/mUPGTnn8rciJweb3w=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/emfstorebrowse
+ r/views/ElementListSelectionDialog$3.class
+SHA-256-Digest: PaFakAuLsmPa19/wN8115Gtk4yakAkmLvL9LjourKr4=
+
+Name: icons/serverDB.png
+SHA-256-Digest: NrThfAXQzzAkzJWTl16lGA18O7D8r5VioOq/9DfY4PQ=
+
+Name: icons/arrow_out.png
+SHA-256-Digest: TY00QL3JG0y5ANQSs0KglKfF60BPQEdTOqlntBjyYD4=
+
+Name: icons/key.png
+SHA-256-Digest: Dw7ShK/PlPcoQQ5yDKmshBB9kKZ2hkx4Cwo93XDY5Ys=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/merge/MergeP
+ rojectHandler$1.class
+SHA-256-Digest: VxnQ8NzOZoedmTm2BPHBsX1XeMGAzs5GSDv+GYJuWf8=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/epackages/EPackageTr
+ eeSelectionDialog.class
+SHA-256-Digest: alpmac/AKLfKcgKKF0Pm2kjNEHAVDWNKm+jKj2c0jP4=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/common/UIRunnableCon
+ text$1.class
+SHA-256-Digest: A3sIjTEC/Rii5eEMVwhzBIMeeHyNK4aLOMiC15DP0cs=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/historybrowser
+ view/PaginationManager$QueryMargins.class
+SHA-256-Digest: QadYhxaUDlD/Q/IPYvU9eNtbZidbhaoEzvUrfRaA7W8=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/action
+ /CreateUserAction.class
+SHA-256-Digest: sPYws5P0W8NjvFwoQs/n641WDEmwvMbs0Th+XgQLgV4=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/common/RunInUI$RunIn
+ UIThreadWithResult$1.class
+SHA-256-Digest: GDzza+3dt4iy0HwJlpkfDyiAmdnh7cPYUXLTx7Zl9Jg=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/CommitDialog
+ .class
+SHA-256-Digest: EXMjC5lGGc7/XU+HBco82m5LpJqyyJ9GDksFHaIIluY=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/acimpo
+ rt/ImportLabelProvider.class
+SHA-256-Digest: hDz0RIz4+ijPCWsdJLZfoxsDjmdAbiYWKDBqCYv6DkU=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/login/Server
+ InfoSelectionDialog$ServerInfoLabelProvider.class
+SHA-256-Digest: lE4g9i/G4Gq5gIwTbOEZI++EBztWMRa9OdOyMMF9g94=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/merge/MergeW
+ izardPage$SelectAllSelectionListener.class
+SHA-256-Digest: hhaWIRVDTcFAs/ZgmzDiRl27Sz6F5QP0iON7SDzxIXk=
+
+Name: icons/merge/singleref.gif
+SHA-256-Digest: YK2/KtNmKUDNNlK4m+6fYUJsXMQujhzwS1J4q/nGwyQ=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UIRemoveT
+ agController$1.class
+SHA-256-Digest: yBuhYri4QI+j2yvHq6q/uVEAJe+ldpMNoRRpbuQ1YrQ=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UIEditSer
+ verPropertiesController.class
+SHA-256-Digest: 40U7OUbRHXZ3nxFQt2E1TmdO6jI9crTXOyX1xm5Me9E=
+
+Name: icons/details.png
+SHA-256-Digest: 6UQ9jsuQ7zsqwFwn04mR9qN4MAywtumr9ecA2XiN7T0=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UISharePr
+ ojectController$1.class
+SHA-256-Digest: tNgnaNR5B9w+ch5brtPJPOJKQcZVct0MHso5p1drsI0=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/action
+ /DeleteOrgUnitAction.class
+SHA-256-Digest: 8ZD0Ocfxowb0D3kdR0rTucWaz0Imhidex/MDnZtgOx8=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/acimpo
+ rt/LdapSourceDialog.class
+SHA-256-Digest: /Lw1V23vBXh5+8Js3PjAOsOwLySHt6UHmI1izdI2LXM=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/handlers/AbstractEMF
+ StoreHandlerWithResult$1.class
+SHA-256-Digest: 6vvlvv0TfZ4RTBnN/ZX2MQf4uP79+IRxJQx3U4GS4lg=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/merge/ui/Opt
+ ionComponent.class
+SHA-256-Digest: Y+YOnrGAJJDv5fUX3FClR7naa0bIfWCWOcuFRSyT85o=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/changes/Defaul
+ tOperationLabelProvider.class
+SHA-256-Digest: KQ1I9ZAtxayc42FrLY4eN0ZPcQADZGxQxvau+Bnmdgo=
+
+Name: icons/groupByME.png
+SHA-256-Digest: b18QRSXEea+uzfn9aGtGmuVJMS4jFFGx18sVOdt5AP0=
+
+Name: icons/serverAdd.png
+SHA-256-Digest: dp4452WKNbre/GZ1ArRoAB0ui1fuQ1Q8FsGudaGl8QQ=
+
+Name: icons/serverLock.png
+SHA-256-Digest: PQy/CP5fgbEafBvMew4nyA3Vg2XHTM2kd3sIwNXPI8g=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/Proper
+ tiesComposite$ILabelProviderImplementation.class
+SHA-256-Digest: A85Fsx+DNwoFFyEwx9/32uDnMIG1o8HUbOQfvLcd4GI=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/historybrowser
+ view/HistoryBrowserAdminTester.class
+SHA-256-Digest: 8PPtj4eb/qphRFAcvTZy2QaIyvuQkLySOoywTvWceV4=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/handlers/ShareProjec
+ tHandler.class
+SHA-256-Digest: RAUXiQb3yo56D7WQDlBAOfC/QRtfB8SD2Db6/ELjx4I=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/util/messages.proper
+ ties
+SHA-256-Digest: mbDW/us/mHX2ojZDvCO+aE3puBTkcyCpo5McpooubzU=
+
+Name: icons/sample.gif
+SHA-256-Digest: 6jMftqI7oSaDQ6w4VCjJEtTiJvYpMr0Z1u+lWgsbkjY=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/handlers/DeleteProje
+ ctHandler.class
+SHA-256-Digest: gu6PPdJTg0ToBhAG/bksljwOa4NvaOq1QRn4HkCejko=
+
+Name: icons/merge/delete.gif
+SHA-256-Digest: sOwOvw/EmNGIqvnVe6uPTX3EJ/3dSntTNeeCnLVgsBs=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/Messages.
+ class
+SHA-256-Digest: AcBtttGgpd02JQqczcuHO0CLCTJhdsHWuuR+0WAwofY=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/scm/SCMLabelPr
+ ovider.class
+SHA-256-Digest: nOM6ytdkN24DIyJ/R1FMTbZSWeiaTDJt/Y56AQ7vn4Y=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/Activator.class
+SHA-256-Digest: QJ0/n3oN8xa+JgVS6LmLowsV0cIARmvJ/TeST2vdX+k=
+
+Name: src/org/eclipse/emf/emfstore/internal/client/ui/views/scm/messag
+ es.properties
+SHA-256-Digest: QEbllwD4eqkkDzWhHMUobZWcrcAhAYDFvO17fkQ49/0=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/historybrowser
+ view/graph/PlotCommitProvider$1.class
+SHA-256-Digest: sLp1BoijMTecnFkU3vqqpbjQ659e8GYTVAm9Hk3t0MI=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/common/OperationCust
+ omLabelProvider$CanRender.class
+SHA-256-Digest: nc4fuDlncRJFgc8kbZgKdUu501TrhGqCokoAWOoLqIQ=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UIExportC
+ ontroller.class
+SHA-256-Digest: Q7IHWRYfINElZHB8RY1AqCpGjX5eWNzIN86DkhVEc1k=
+
+Name: icons/arrow_left.png
+SHA-256-Digest: QyJbfbwSWATlR/IR7wcZlRykFIFtPOSifMk26HMYn0A=
+
+Name: icons/HistoryInfo_current.png
+SHA-256-Digest: 4f/ygvUifgfxYWT8Opkb9hPdwnjLgi/yqEaTBjfyjCM=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/acimpo
+ rt/ImportItemWrapper.class
+SHA-256-Digest: Huq6V154UXbIls4sElKSk/ElIAQp2hXK6mhXSKeW3cg=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/handlers/RevertHandl
+ er.class
+SHA-256-Digest: FMn/myaZ7EgS+iQHbP4AVaBqSgSEgbnqWInDaONvRb8=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UILoginSe
+ ssionController.class
+SHA-256-Digest: UPU0HviNFw7X5YxDTzbuLfp3r0Aj6ujpgtVMEGkMtps=
+
+Name: icons/link_with_editor.gif
+SHA-256-Digest: QDqJvieRo8o5BVQKtIHtDSGJ//p3qN7wMrRCCdK5MHY=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/handlers/RevertCommi
+ tHandler.class
+SHA-256-Digest: 1GyKs64s5xzs3+b0VIs8W6uXvnDYaFaE54DjmYd1gJQ=
+
+Name: icons/refresh.png
+SHA-256-Digest: 9J1iHaI+2zXZ5Rpi7hL9u/Fu5lnycogKxDaD/RBFMic=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/UserTa
+ bContent$2.class
+SHA-256-Digest: izCZx2mv3SSW5dD2xZ4ILfVFORck2kIaKNKQ+nZMCKk=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UIUndoLas
+ tOperationController.class
+SHA-256-Digest: H12YMYZxWgxf/zvPHh8X109zGMruXbEbcMFFNsIy7i4=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/acimpo
+ rt/Messages.class
+SHA-256-Digest: gzEla45NnRUgtOb4kxo7qwXcwSQLaPsi9xKiEX9Fu7g=
+
+Name: icons/comments.png
+SHA-256-Digest: oZ7BF11V1/T5Zacec9KqzaTpoyQjYW800bftH7vNLJM=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/merge/util/D
+ efaultMergeLabelProvider.class
+SHA-256-Digest: meYo//QVmwd4Eatjy2UwKEFVlS9g73KrdhsjdITtW7k=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/testers/IsAutoSaveEn
+ abledTester.class
+SHA-256-Digest: HO8KInt/KoHhHCQy3lRTKCNJBl7FB3KylQIpu7eD8lI=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/historybrowser
+ view/HistoryBrowserView$7.class
+SHA-256-Digest: ZP0JP8YTG/2UxSmKCBFPnXeOBSfkRLSxoXWZDfIbnJc=
+
+Name: src/org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/me
+ ssages.properties
+SHA-256-Digest: /HnUg3sQDUhqHCJNSaRkW8sHzlarO9Ons8s1Gl6ar2k=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/messag
+ es.properties
+SHA-256-Digest: /HnUg3sQDUhqHCJNSaRkW8sHzlarO9Ons8s1Gl6ar2k=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UIRegiste
+ rEPackageController$2.class
+SHA-256-Digest: +PcuskTLnIHt6Kzz9+Xc5sEe6TlzjX6EVqc/SnRxdkE=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/login/messag
+ es.properties
+SHA-256-Digest: r0JP171ZqyLNRc3/MbED7bKltAaH2v6vcN0Fcj+g9oI=
+
+Name: icons/prev.png
+SHA-256-Digest: DIjwd/CPUM0PkoL6J7Np0T+he8gP0z4abwibqXw0hvY=
+
+Name: icons/serverLogin.png
+SHA-256-Digest: yeCH8m2lBNU7XAHv9gZ+2XRt+PZ976JtSlVgt9mis1w=
+
+Name: icons/createrepos.gif
+SHA-256-Digest: 17e1445FRvD9dsHSY0y5IL2D+eRs7npJcxlusKK24IY=
+
+Name: icons/info.png
+SHA-256-Digest: /5xI2MLQY5Mseq3V4V3f3Ha3ERvwcV86GSu6Jt8sUxw=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/UserCo
+ mposite.class
+SHA-256-Digest: WgIDVetWiQYSiVaK5GIf+DqE9E7327XNElJnu94PLFc=
+
+Name: icons/empty.png
+SHA-256-Digest: SklxFk6Ll4rUz8mhSSK4xWb4FQ9R6KDzKYbyOvdttLY=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/CommitDialog
+ $2.class
+SHA-256-Digest: /NBXEV5yLfTqh8Xs+DzC8vxkMDPnP8LuqyJkRGF9Qls=
+
+Name: icons/merge/composite.gif
+SHA-256-Digest: sSz98NqZjaAb1+sDwNvJFC6mR2XlHOlG8S/5aEXrSqU=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/merge/ui/Des
+ criptionComponent.class
+SHA-256-Digest: icibXsVu3e0kjimrQXiI9XCI3TC1rOF/T0223OIj1GM=
+
+Name: icons/down.png
+SHA-256-Digest: PHyfjbSA2dpSOdvTSvA03DcgvUuA4WnyCAcEvKxNFQY=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/login/LoginD
+ ialogController$3.class
+SHA-256-Digest: BWJnXXFWAX3IAukYfP7BkLMainZ0pqY5Dc4ZuetAIMo=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/scm/FilteredOp
+ erationsResult.class
+SHA-256-Digest: ftmao5K7zXazSQCAk78/Ne4HCZHTY9HEkfejyLtElJY=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UIUpdateP
+ rojectController$6.class
+SHA-256-Digest: KyhmmLetdjKQYHlKGnP2T12eBqmsz1nuQldwvzWMw8o=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/historybrowser
+ view/HistoryBrowserView$TreeViewerWithModelElementSelectionProvider.c
+ lass
+SHA-256-Digest: 0fTx3IXWfvBN1Ml4E0o/G7UJSrB3aINVdCBZJoNpRbM=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/action
+ /CreateOrgUnitAction.class
+SHA-256-Digest: Zu1sHDifMqg2Qz8L5DL0qdu6s/gVdHLwsWw/fld6JqI=
+
+Name: icons/expandall.gif
+SHA-256-Digest: k3dDtTVy4fQvtssg4GSs7q7BKO2f30EOv7I53j571dg=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/handlers/ServerLogin
+ Handler.class
+SHA-256-Digest: gO8SurEdUO/9pX0U+T83Q1BlRh54Qx8w/OJcsfS0/Dw=
+
+Name: icons/guest_thumb.png
+SHA-256-Digest: MQBi/LK89mHN5vZhH92qOc+DOOCD5QuyAFM2YmjOHa4=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/testers/ProjectIsDir
+ tyTester.class
+SHA-256-Digest: rFOp26Lqz3flFmFtkvc9MmVKUaQ9wi6mbOy7vWUnxc4=
+
+Name: modeling32.png
+SHA-256-Digest: saSrfvJ79Uzl2BFpCbuVBho1UTuf14LrjD+wGJG44Ok=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/Proper
+ tiesComposite$1.class
+SHA-256-Digest: QMLuSp0Hxz20Rgm7hm0SlaSSyyfXYeWiupSbFgCmOdw=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/changes/Change
+ PackageVisualizationHelper.class
+SHA-256-Digest: gH8vh/TyYEApQTvScCv6oJDeKoDVOrtluZimtzs+cTU=
+
+Name: org/eclipse/wb/swt/ResourceManager.class
+SHA-256-Digest: UtWq6iEE698mHYANqoY1l/AaTrUAvmZohH1v36ItzQY=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/AbstractLogi
+ nDialog.class
+SHA-256-Digest: ViCZ03hUT2QEBY2a5laMT9jp0DsEiTpJH7fjIXisVMI=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/CommitDialog
+ $1.class
+SHA-256-Digest: rXtkO3yD8IDaQT/+ppkR4yTykX27t3kN31X6Tp6Pd28=
+
+Name: org/eclipse/emf/emfstore/client/ui/ESCompare.class
+SHA-256-Digest: Vob9Y9awvetpRyDvmunCne6DjxW3X31RiWZTcQ8CHYM=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/util/FileDialogHelpe
+ r.class
+SHA-256-Digest: +GgtfoXs/QVHXnaBnurPALxr7sD81PxnlufgN1ha08k=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/handlers/ProjectProp
+ ertiesHandler.class
+SHA-256-Digest: HBdvWlVzfwSjqvpb7ZfQgtpl9LUqCTRUbwG97uRZRx0=
+
+Name: icons/revert.png
+SHA-256-Digest: vhg//QeuIwQ/ckQrcn3T1kd/Bc56h9RiP2/WPaty/Qo=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/handlers/CreateProje
+ ctOnServerHandler.class
+SHA-256-Digest: +vZq3YBmD7kvpwiGqgJfHH74rLFiS1P/NBIhBDARcnA=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UICompare
+ RevisionsController.class
+SHA-256-Digest: a8N1arlvJWf3a0M6H/NnJQAyyz12zlR49StrgaZc6Yc=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/handlers/BranchCheck
+ outHandler.class
+SHA-256-Digest: WSR0vPdcj/RIxyO2h14QGaRTLFp0va0r3a8BLNJ8omU=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UIAddServ
+ erController.class
+SHA-256-Digest: vUijdsBZSmBYXS2Ulf5mei/tzr3pbAZuGZqX5xYU0F0=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/Projec
+ tTabContent$1.class
+SHA-256-Digest: tjMD/4h3XszBbSO1/eYKWuJ2iC5KNc6mta8F+VPO6nY=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/handlers/CompareProj
+ ectsHandler.class
+SHA-256-Digest: 5K/spHtf8smEpDD60tkrwr9crImYsFoWpPiN+PJ0QhI=
+
+Name: icons/magnifier.png
+SHA-256-Digest: R1pjNftSwhtfpzJRjolAj0J3d5v1sBU5E1iwR2Ariv8=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/common/OperationCust
+ omLabelProvider.class
+SHA-256-Digest: d+LpH3M+DbA0vgvfH6Ue3fBtaxy9int5m5D5tL2ls1Q=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/decorators/UsernameD
+ ecorator.class
+SHA-256-Digest: 1oTddvXXIMzx/Ocgm++CUo025yxwcDIvGJyrRy/esFg=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/emfstorebrowse
+ r/views/CertificateSelectionDialog$CertificateSelectionListener.class
+SHA-256-Digest: gXUJaKTdv/wjABZhGFvBp0OrJFiopWd/NkQZIDBNMZU=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UIUpdateP
+ rojectController.class
+SHA-256-Digest: lwvomjH0BDzuV9jizmpEuDfr/toJHzeU+vcgoX0vT88=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/historybrowser
+ view/HistoryBrowserView$9.class
+SHA-256-Digest: suYSSmVs6slIXN1DoRPe/+7hytbhxcyWT6/RleCDuuk=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/merge/MergeW
+ izardPage$ColorSwitcher.class
+SHA-256-Digest: WEfbaV+iwyC495OOtJnzHUSX6NWzJBuWjPFttzeZOtY=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/Proper
+ tiesComposite$5.class
+SHA-256-Digest: 25vceI7DHDSJY5CONYqs4+EVyhlsz8iHBPXsjVjtU6c=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/Proper
+ tiesComposite$2.class
+SHA-256-Digest: DIK5MfHlr7CHiQfUQLFK8qsSv66rZULvvB2HE2+AQ+s=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/acimpo
+ rt/CSVImportSource.class
+SHA-256-Digest: Gb4tWqe2OHrlBTDBcuUh7QtTDxC9rx9JUHREIuZqgEE=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UICommitP
+ rojectController$4.class
+SHA-256-Digest: NZC4LhO3SSbDGhMoehY+2BMzz9SXJqlqHSveOhGVCrM=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/merge/messag
+ es.properties
+SHA-256-Digest: HhviJJxuHXtsFjujbhXDw51ke3xgRcwVCSfdqcirY0M=
+
+Name: icons/database_save.png
+SHA-256-Digest: +CZzkJMn9+nuZtTJBJdh9IIxaQdrylc4F1wEcg4eOOs=
+
+Name: icons/checkout.png
+SHA-256-Digest: KsVAAGg6JjOull6KD4ZfSGlepBlfweEGoUlo//rYQEY=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/historybrowser
+ view/graph/PlotCommit.class
+SHA-256-Digest: HYPsf2pj/dfslrvmSQKh7G4p0s0PEa90Af1UK+Pggbk=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/historybrowser
+ view/LogMessageColumnLabelProvider.class
+SHA-256-Digest: 9gEZUAvhg8//cwgR8yjo+QWXQsZsJZRJqblK1r/GGTg=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/decorators/ModelElem
+ entDirtyDecorator.class
+SHA-256-Digest: 8WXcdNh1KeuDF63HueF6kRhmE3fOwMwXozL/e/5+NNE=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/historybrowser
+ view/HistoryBrowserView$6.class
+SHA-256-Digest: UXr1eRBzNK2H8U8SsAUqtnmYO6AFHZ1LnR/brkrYi8g=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UIRevertO
+ perationController.class
+SHA-256-Digest: xeekTQdb1+yDxc6k6VehxRuTlZfSO8sYSuMcWC9eF2c=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/Proper
+ tiesComposite$TableLabelProvider.class
+SHA-256-Digest: jn7y3mIYEZjmq0EGKxtQ591/WJtj/z+SEx8hz5jYF1k=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UIRegiste
+ rEPackageController$1.class
+SHA-256-Digest: SOrUU7nYKFAp5DTpOXma0zIaqPcAkfCKdZ24/KAkZlw=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/acimpo
+ rt/wizard/AcUserImportPageOne.class
+SHA-256-Digest: I9K+s19e85B7MMLJVWvlWeNfgoTmDpNnSS8Z1Bmbqi0=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/handlers/RemoveTagHa
+ ndler.class
+SHA-256-Digest: ZSnKJ5axtIiHJfYDAdd3haYfHOyLJ5u8+zcf+ydV7FA=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/UserTa
+ bContent$1.class
+SHA-256-Digest: 7ZJVXg83GymAQqYlC2V7mc424hlCk3VAab5CfqzMLHo=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/CompareProje
+ ctsDialog$1.class
+SHA-256-Digest: JYklPkWNVuUFPCNUv35+FDswLgpS+I5EnCSW9BfhO4w=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UICommitP
+ rojectController$1.class
+SHA-256-Digest: yen8rleRRTYmZvPZ4z2gZ8q0mjZtailHDDW65mdOQtw=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/historybrowser
+ view/graph/SWTPlotRenderer.class
+SHA-256-Digest: JjGkbhoL2jpWmBxmtxNNfwI4JkEkYs3oxELAPMXIS/k=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/scm/messages.p
+ roperties
+SHA-256-Digest: QEbllwD4eqkkDzWhHMUobZWcrcAhAYDFvO17fkQ49/0=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/common/RunInUI$1.cla
+ ss
+SHA-256-Digest: tYow2Gt5Op2USxTp/FVGxXV7Z9P1fCJr2R9LyV2LvWo=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/acimpo
+ rt/CorruptedSourceException.class
+SHA-256-Digest: f8Qxp8PCKsBTGFc/6nkIIqB6bRAQLhsX0+Kfw1vVLxs=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/handlers/exportimpor
+ t/ImportChangesHandler.class
+SHA-256-Digest: f4Kw4Rg+wAYWn9A2buWo0Sr9DTt7oJKB6jRFLoSNNGE=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/BranchSelect
+ ionDialog$Creation.class
+SHA-256-Digest: Vb6XsaHmkPKuvWv3IjR+pHZUgeDN3k+E6czMWsc1w9s=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/login/LoginD
+ ialogController$2.class
+SHA-256-Digest: p9QMmXKFvFTlvNrbPpF8Mp/fMCDYvBB8zvp/iQk2y4I=
+
+Name: icons/merge/attribute2.gif
+SHA-256-Digest: cl3s1CmpCXjWvE72Nhh2mb6Al5wJ6cSJiQ5dSvL9JAs=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/merge/ui/com
+ ponents/DetailsPart.class
+SHA-256-Digest: fX4V5vSMMyd6a71G7kseeDidyIIs+BionuyHdQHqnQ0=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/merge/ui/wid
+ gets/MergeTextWidget$1.class
+SHA-256-Digest: VhDeFbU+rdC5F4kzp6AAEWXLIDeFTNhbZpgLSbXV3VY=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/handlers/UpdateProje
+ ctHandler.class
+SHA-256-Digest: aZntAsA7KvoCIVQJ5vTcXI3Rdwlpmj1bSeYfQFb7YTg=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/testers/CurrentProje
+ ctSpaceHasUnsavedChangesTester.class
+SHA-256-Digest: WNGly7xpC3fu7sGk29RHxEkMSEnU/MPPzm0r9WKJ/yE=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UICommitP
+ rojectController.class
+SHA-256-Digest: MElaHpMVtPw2SbiDWEAoU+wLYTDuMNzUVEUltSU16zU=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/historybrowser
+ view/Messages.class
+SHA-256-Digest: SiggcuGx1TFFoKwREkEkP9yYrtBMtMdLE/wa25xi3pk=
+
+Name: icons/add.png
+SHA-256-Digest: UDJ8fFQoPpeDCrdCTWUKmf4nD3KideL/SxHSuq925sM=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/emfstorebrowse
+ r/views/CertificateAliasDialog.class
+SHA-256-Digest: iMUnet3qfTN42xHm9o+S0VAH7pGPmHB84XkgwnBxHPA=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/Proper
+ tiesComposite$4.class
+SHA-256-Digest: Q1ol7oeOi8QF0vFZY24qhVQZuufgf6gwRAF9iYWvj4c=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/handlers/SaveProject
+ SpaceHandler.class
+SHA-256-Digest: f11i3Xm41gyrlELgekk+Y9wyRnWA1GwBevzENJLKuuE=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/historybrowser
+ view/HistoryBrowserView$8.class
+SHA-256-Digest: DfTAC+ZPTf9HPCj5lpG2u5226qTPibhdyUzyFr3KyG4=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/util/EMFStorePrefere
+ nceHelper.class
+SHA-256-Digest: l8KPDc/d1/Q87zJ2GMVjGP4V+5vK+XoOLw+bIBaX0rk=
+
+Name: icons/ServerInfo.gif
+SHA-256-Digest: pxxOCTA12QUoNW5WJ6Bay9y6rHn/S4qAzMcEcvm5E9M=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UIDeleteP
+ rojectController.class
+SHA-256-Digest: kqzYSB0RL0q3NLuwFlZsNM2qmL7kRqbFNo9q1xB0hlY=
+
+Name: icons/link_break.png
+SHA-256-Digest: xLDrYRsNR2Oh0SOte6dROl4yhaQaY93JhM9a1iRIpQs=
+
+Name: icons/merge/multiref2.gif
+SHA-256-Digest: dgJd1KyuEBOMs9TPGZoLiKm5QWd9pcR+2/ykmaLbb/A=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UILogoutS
+ essionController.class
+SHA-256-Digest: 02xdx2bTmlPrqb/req4p5dopbshMPkhAqnbqCAMRkhg=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/handlers/exportimpor
+ t/ImportProjectHistoryHandler.class
+SHA-256-Digest: PEHhk5/fv0gkPuF7ZVvch2+nSwnnXagbAhXWxLz5pHo=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/Proper
+ tiesComposite$TableContentProvider.class
+SHA-256-Digest: O27qw/htHjs/uMeD/oZZJdIIdzwkrjkE7Y/fEW7p7d8=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UICommitP
+ rojectController$2.class
+SHA-256-Digest: wm21EvyVOiC8uoqJl8I6xV1VRdWVese+Lxop0AYqGqU=
+
+Name: icons/table.png
+SHA-256-Digest: iaBcHAOYhGR+AN4v6mspgRjNrNt4+G7YhOBpLn5K+CQ=
+
+Name: icons/prj_obj.gif
+SHA-256-Digest: 6zny5Xyr/XQKuNDF+0sm/FynGzNOLPyNZIHDSEK0w2A=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UICommitP
+ rojectController$3.class
+SHA-256-Digest: CeiTjuDpJHYdFruCnxqnhtD5UsdetT9l17bc4O60pgs=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/login/LoginD
+ ialogController$1.class
+SHA-256-Digest: +/tC1t9NlKnuKr3ZFpiX0WcD55FW3RHQbwFGkZYiBaI=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/historybrowser
+ view/messages.properties
+SHA-256-Digest: 9hfi/m7njtIpeVW/PgGDrmkefX7PpasCY7VR+XJ0y20=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/handlers/UndoLastOpe
+ rationHandler.class
+SHA-256-Digest: 7Bf5gMbCQ3UYEY4Scf6KiOWppQZe/5xx4sJXBLhqA5E=
+
+Name: src/org/eclipse/emf/emfstore/internal/client/ui/util/messages.pr
+ operties
+SHA-256-Digest: mbDW/us/mHX2ojZDvCO+aE3puBTkcyCpo5McpooubzU=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UIShowHis
+ toryController.class
+SHA-256-Digest: oPI8o88Y7SerZAlWGhKeu46+huq+RI7sNug8XNP+Ifo=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/historybrowser
+ view/CommitInfoColumnLabelProvider.class
+SHA-256-Digest: 2swfrt+XYNG1GqCddFL6Nb590PoooEl6yUcCLeBJv6M=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/EMFStoreMess
+ ageDialog.class
+SHA-256-Digest: iB24GyXjLFcObMmgo7/xd+bSSVmGbS2s1s1c3AX6auE=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UIAddTagC
+ ontroller.class
+SHA-256-Digest: c+5HmNNshRv6h0VHDFxFu3tSpdOdXtgbUN+/S+qQJMs=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/action
+ /CreateGroupAction.class
+SHA-256-Digest: K/EE+HpdWZ0lxQxwpMHA4r1Q8S5iLoVDXYXS3p1/XPQ=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UIDeleteR
+ emoteProjectController.class
+SHA-256-Digest: IWc5583lMGZdkrZwrVcpk3/M7Mjl3hihtXMq5BtCDIU=
+
+Name: icons/tticon2.png
+SHA-256-Digest: Iz2r+EvVJ1RQ8dOfUIsobX+EeqECnDoDa0GCEFkV2JU=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/UserTa
+ bContent$ChangePasswordAction.class
+SHA-256-Digest: oS6KQejgRtvCaZD9TmaoTrRgsDOp7HeQ9ejeIudj1jg=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UIRemoveT
+ agController.class
+SHA-256-Digest: bhv7fAUqc78irdSKC/oLkebfXpkTcu+oUZbAAhRvoHI=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/testers/ServerInfoIs
+ LoggedInTester.class
+SHA-256-Digest: Qj2sm+tHutDEzWA1RrsK5IRofFGj/asllhfq2Jh84kg=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UIUpdateP
+ rojectToVersionController.class
+SHA-256-Digest: NLcP4gve1FExDB5SScUVlySDeqRE+TR6a3v3ANcQIr0=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/CompareProje
+ ctsDialog$2.class
+SHA-256-Digest: QAb51CYPB6i15EAYAXKT8gzhxGNusDoboeH40MLOyI0=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/changes/Messag
+ es.class
+SHA-256-Digest: K6X9xK20MEiWaeK780r2kmdhLLI+S2A6+i4YZTSQfFw=
+
+Name: plugin.xml
+SHA-256-Digest: 7qH8kEerBCyi5TBsosOCBc/dFIw/W6BXlEDbE3Ql6dI=
+
+Name: icons/lock.png
+SHA-256-Digest: Eu0OHP8LLuqZooqkceOqxeEf781WITMkmi0Aj4zm4M0=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/GroupT
+ abContent$1.class
+SHA-256-Digest: oTXC1UQXp2WD60Nr/MYY0297bjwMQheJYCiRbLbHkxI=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UICreateR
+ emoteProjectController$2.class
+SHA-256-Digest: T+EBj2bJXETkL9yiDL9mE7lu1LqZTn1vLTkct6zM5iQ=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/handlers/DeleteServe
+ rHandler.class
+SHA-256-Digest: 6SM5YUAtwL30WjvTagXU27ZCEYHfvB+pEO96rcBeols=
+
+Name: schema/historyBrowserComparator.exsd
+SHA-256-Digest: nvt63t5t/6NnRr3uegf0d1+tAhhh/Id8/CQHtxhfIJc=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/common/RunInUI$WithE
+ xception.class
+SHA-256-Digest: DVgGHUK5bGr+wT8QWCHpi3lJJzDxLREVKUeE5FrFjkc=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UIRevertC
+ ommitController.class
+SHA-256-Digest: T7phXkBySogcuY/Zkd+fOjuTSsLjHFoqCZLChwBiOxY=
+
+Name: icons/update.gif
+SHA-256-Digest: 5NoNOfuh+KRd1QYN5BOzHoeEVYay0CMTPTukvUNxeaY=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UICreateR
+ emoteProjectController.class
+SHA-256-Digest: Aj+T37ajWoKjX0Xb4cacw8B40mPVG9nCYOwto46Ky70=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/action
+ /NewOrgUnitDialog.class
+SHA-256-Digest: caYCu/PV3HbLn1cM3EPOMqKUoFBJ9Q3Suppp1TEMtZM=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/CompareProje
+ ctsDialog$3.class
+SHA-256-Digest: S6261raD/+O42aaMGzwIvGdOMymrCxagFzUUbfUcbM4=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/testers/ProjectIsSha
+ redTester$1.class
+SHA-256-Digest: AMt4dzmtQq99jWaJI2+B3XMZedKt2BdCM5DgGhv05rc=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/handlers/ProjectInfo
+ PropertiesHandler.class
+SHA-256-Digest: KM0UGYDo5v5GcQ4nuQHDWH01MheUdkE+lJnvMihuPYY=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/common/MonitoredEMFS
+ toreAction$1.class
+SHA-256-Digest: 7JEYspsO488RuT6j/7fiqgElmbL7EgkZxxbFBuh2btk=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/handlers/CreateLocal
+ ProjectHandler.class
+SHA-256-Digest: edOjT8Dl8wb7dCH8OjlfgdeXcOHWKI7RS6h2kVbaumk=
+
+Name: about.ini
+SHA-256-Digest: SLNvFQU8324NuaQqyKAcbDVLL2mOvQAvJe+WNpzlgoQ=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/historybrowser
+ view/HistoryBrowserView$11.class
+SHA-256-Digest: goJIl5umC0DHQ826j4D9RHPPJpTrBry48Nk+uQZNO9Y=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/action
+ /DeleteGroupAction.class
+SHA-256-Digest: Z8co4SqAufTaAQar1ylGTbEbHvNjiyrGTF29AVbGKmU=
+
+Name: icons/arrow_undo.png
+SHA-256-Digest: 5l/zPYARBAFxPOa5UB5CRY4u6HOaT0t8EnD25pDUr2M=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/historybrowser
+ view/HistoryBrowserView$16$1.class
+SHA-256-Digest: g3/+QoFd1KB5QbsBWDgpRVszUNgwnZ05fGV91Husqj4=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/CommitDialog
+ Tray.class
+SHA-256-Digest: w0EQ4ugvCZb6Id0HtvMw3q51LHOgT3g83UG2yYn67h0=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/acimpo
+ rt/ImportController.class
+SHA-256-Digest: PB0EIML+tYRKYe48iYDLGun0n4Fs5BsneEC034q0vVI=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/login/Messag
+ es.class
+SHA-256-Digest: XFTkQcLmnPL0Yp5cxPPfvDi3nRHGkQJJkJ2rLBA16cA=
+
+Name: icons/find.png
+SHA-256-Digest: ZOdPZjxO2s2RropFGSGrIniiJw7PmizBiIuXfVic/s4=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/Projec
+ tTabContent.class
+SHA-256-Digest: bnbLHwEPDgSrhst43vDYKzG4MhsIzIia14GAbdDjTD0=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/messages.
+ properties
+SHA-256-Digest: SKYeHpeGXu7cMqXKH/C16rVeplGEk6+/z7fMoACiPrU=
+
+Name: schema/uiRunnableProvider.exsd
+SHA-256-Digest: HcXTb+VZp1eNhkyet/Rq9ClRB5ZdVZ5/DAsftePG5gU=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/epackages/EPackageRe
+ gistryHelper.class
+SHA-256-Digest: 36Y1q6LuxVpn5AO/La+vik3ncKwp+xbIqYISc722NJM=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/merge/MergeW
+ izardPage$1.class
+SHA-256-Digest: VqnpTDEb9emnJbBCzxRbe0dIGfB2AP8T5Qz6OfzrNJo=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/emfstorebrowse
+ r/views/NewRepositoryWizard.class
+SHA-256-Digest: 0dDquOPUHZuq5S5IgbtHhX0NbKbRp4XMzcB4e/Hmhog=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/handlers/CheckoutRev
+ isionHandler.class
+SHA-256-Digest: SQeJMmW2R+myc18t2QVF2ygbGsoCQtTMjUeu8ORaA/4=
+
+Name: icons/bullet_green.png
+SHA-256-Digest: yMfPLXz6WmUHPHwSOOb6ktGQ643dQSpSan1tdAl5zbU=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/historybrowser
+ view/HistoryBrowserView$4.class
+SHA-256-Digest: j9OZgx/B8jZuKHlOMYvg7LN8B00/Z1JsAzjuVD+fkiw=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/emfstorebrowse
+ r/views/CertificateSelectionDialog$DeleteButtonSelectionListener.clas
+ s
+SHA-256-Digest: lbfX9H/GOr0zwqAW3ebXVcR9jRHb/F8+RYYCjuCgu4g=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UIUpdateP
+ rojectToVersionController$2.class
+SHA-256-Digest: LYq6CjpgKl6oxMOYWHGYR3S2f8gJfVxP0DMgwAEidso=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UISharePr
+ ojectController.class
+SHA-256-Digest: 8ifMa2mtQotWCfAJB9+Z0hQwgrjtd3dZZfDus19rOZo=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UICreateB
+ ranchController$2.class
+SHA-256-Digest: bUpBY6BHrYpVD0qLJ5Tlx3HNt/u30SbQ58tbGm4qEOw=
+
+Name: icons/user.png
+SHA-256-Digest: J6MRg78jbj1g9s9xlI2sZQq3MjJGun/bb3Kn0qQixlI=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/decorators/VersionDe
+ corator$1.class
+SHA-256-Digest: sN8gsu2MpOETiq+9q/QS0FGE6VrBLlVXwqABJbuRyuc=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/acimpo
+ rt/wizard/AcUserImportPageTwo$1.class
+SHA-256-Digest: Pkw6GmCYr7ZJNJJd15EdVy5quIff9RHaM2rM9H54sMs=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/merge/util/U
+ IDecisionConfig.class
+SHA-256-Digest: pm0B6O36Dr9eQYbeiFHEWlJybccQvFi+fvttfSN6lfE=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/BranchSelect
+ ionDialog.class
+SHA-256-Digest: Bv3M6eWbJrjiIaheueCNVTms0zRASreW0IQVRE+beWs=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/historybrowser
+ view/PaginationManager.class
+SHA-256-Digest: K/BIQ87LbctVyTFAsq6VlYlFa24+AjLEiOgPB7s24Qc=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/handlers/AddServerHa
+ ndler.class
+SHA-256-Digest: kUhnrd0n7X6rknIRWFXyfbypRfetYzkyRSZ6BWs4PzY=
+
+Name: icons/arrow_up.png
+SHA-256-Digest: fRC65kyAZzW01DzIK20IeNgO4a0RV9SD4hZniJuxEMI=
+
+Name: icons/HistoryInfo_head.png
+SHA-256-Digest: P8r+uVJ9J8Ie22mS1Eudh2I/E5cCWdids/ymRvcRUII=
+
+Name: org/eclipse/wb/swt/ResourceManager$PluginResourceProvider.class
+SHA-256-Digest: Kmm0XAYKUQHvHO4SS9kKz3pOMuHzPI+jpaVvb23mGJI=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/Projec
+ tComposite$RoleEditingSupport.class
+SHA-256-Digest: XGBvUOur6muEhBBdklc/8bGaAgJDJL+vbTc0wJCymR4=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UICommitP
+ rojectController$6.class
+SHA-256-Digest: Ymd/3QymsuD3UyfamTTDPsiRS+pyao5pesM1gQsmI6Q=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/testers/IsACUserTest
+ er.class
+SHA-256-Digest: ylQ0eOtU4p5GaI85HQOXdGLtqPK0idWRQrVnZA5Fh50=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/emfstorebrowse
+ r/views/Messages.class
+SHA-256-Digest: 1h43XFeySiChmpK2hu/crCPqwSiYMWYsM10v7h6B/GU=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/TabCon
+ tent$3.class
+SHA-256-Digest: C2CzCRj8CXojyXroNAEEBny2MPwfsd3giey8H+3GAhA=
+
+Name: src/org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/ac
+ tion/messages.properties
+SHA-256-Digest: UmBcc6bt7YOBzVoqn7IeHSFiTY6Azhq7P+12jjjkI1g=
+
+Name: lib/dmp.jar
+SHA-256-Digest: 0ZGXkr46C9CMJ3dxQR3qyeko4U9R6vmIxzyF9WVkk4Q=
+
+Name: schema/showPasswordControls.exsd
+SHA-256-Digest: hCKpxOdm8d/W3REiX35qKemhCm4VKGSzjPlBdm4sU8w=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/historybrowser
+ view/HistoryBrowserView$ExpandCollapseAction.class
+SHA-256-Digest: 14cZ7ypBifSAOXSeTQ87dpXIa9XMOTgnG7zEkhk2pSI=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/emfstorebrowse
+ r/views/messages.properties
+SHA-256-Digest: bV7MN94TIz0xE0tK6GvmK+fe8LvejLk5WwZloqQh+es=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/handlers/exportimpor
+ t/ExportProjectHistoryHandler.class
+SHA-256-Digest: 7r8mWBQ5vl+zPZYtPTnWx+dDvQsKp6n/nFmyEpkYxXs=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UIRemoveS
+ erverController$1.class
+SHA-256-Digest: FlipiZe22X4BB4PT5+W7+Gekm4e2kPFe9bXEy2JKk9o=
+
+Name: org/eclipse/wb/swt/ResourceManager$1.class
+SHA-256-Digest: w/asiprNvksLWqTaZNkNbPZsFk5aoHUzkixPDtPYj38=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/common/RunInUI$WithE
+ xception$1.class
+SHA-256-Digest: tJqELj43v6X2jU/aiDskz0/N3BfYsovnv2E1PaUw6jA=
+
+Name: icons/revert.gif
+SHA-256-Digest: ZnD7AzLy9gA4b7teefgLz0qWed4zqaWKfBdDETei7JI=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/acimpo
+ rt/wizard/Messages.class
+SHA-256-Digest: AZlOPHKZfKeCt8ffvQqs+J3bhw3smm/znmpEVYXQO68=
+
+Name: icons/user_comment.png
+SHA-256-Digest: U9mwD6bbzZltWc57K6v6NDlZIfhWJVBrVRkHh1+CIOM=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/merge/ui/com
+ ponents/DetailsDialog.class
+SHA-256-Digest: KDEuXUxoUIQZlRLST9tHFay6A7i2tvluTv8p7VYAbsE=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/handlers/ChangeSessi
+ onHandler.class
+SHA-256-Digest: zWlmbU79+rHUFZeC3OJ4oRFpEgF+pqpbp4kEqf/QIEk=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UIUpdateP
+ rojectController$3.class
+SHA-256-Digest: kNp8+OCYFogzA4oOrijbInz/0gNA0htTUgKEDW0G4SQ=
+
+Name: icons/cross.png
+SHA-256-Digest: 0E7PyT/4bET2/DnjWUXj2Kdki6j82XomNZIN8uiIk7M=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/exceptions/RequiredS
+ electionException.class
+SHA-256-Digest: YQhru6RfZZGHf0sdMlh0K3+pxTJOhHPp4g2rrsNwLi8=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UIRemoveS
+ erverController.class
+SHA-256-Digest: nhqYrKZknHyTa9/6KSUMOtEhCOB29egxJse9mKbU7HE=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UIUndoLas
+ tOperationController$1.class
+SHA-256-Digest: oACF2M3Va+WR8SPgSXN37f0FAwLqsjGWsK5pt0kPmUs=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/handlers/ServerPrope
+ rtiesHandler.class
+SHA-256-Digest: zA1hbvkTLxz0qvoaGoYPR/e0wUgi/AohoHkbWOZ8ZPo=
+
+Name: src/org/eclipse/emf/emfstore/internal/client/ui/views/changes/me
+ ssages.properties
+SHA-256-Digest: hseDS3ZkDJ7jHQcReaOBMP+pSCHdcYzngUOEECeevl8=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/UserTa
+ bContent.class
+SHA-256-Digest: i7MceT+BDnaHUj+2GvcBpUr61A7PK4FFM5J8GWZBVZA=
+
+Name: org/eclipse/emf/emfstore/client/ui/ESUIControllerFactory.class
+SHA-256-Digest: Yx9UyqYPjA+Bqz8fxLzJp6UjhAlpBvzpFwHdzvXBLHk=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UIUpdateP
+ rojectController$5.class
+SHA-256-Digest: K9zTTJvHKdIUgN5GWVQHRl5TFjlvTw/A/Uq0Y2LhpMw=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/common/messages.prop
+ erties
+SHA-256-Digest: 6wCNwDXX2CM0pcDqxzNqfdpKF/XrVoKiywuZoLSbkKw=
+
+Name: icons/HistoryInfo_base.png
+SHA-256-Digest: A3YCG3imwXzaRTTiyDjxqMsG2w0PZhMpWlj9ekxer4U=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/merge/ui/wid
+ gets/OtherInvolvedWidget.class
+SHA-256-Digest: sLmZtntl9uIpW4fhRDGGS46dMZZ04XVB03bsWgj6I/U=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/handlers/DeleteProje
+ ctOnServerHandler.class
+SHA-256-Digest: nTEPoU5sZbpV0OzWQmIUvHvvCqhBGvabee7ZBsX41ok=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/action
+ /Messages.class
+SHA-256-Digest: 0qeiOoONzUgXWK4/9sLu83LFxlNuD/SKMm8KXC+TZFE=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/scm/FilterOper
+ ations.class
+SHA-256-Digest: 9jMKhRMQfxbUPB+fHATTmevatWGhatXcfGskfLHaPOU=
+
+Name: icons/merge/singleref2.gif
+SHA-256-Digest: SwkDMhN7MqaUu4NG0ayzvLdJAneju6f9gmrWopmIzJg=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/common/UIRunnableCon
+ text.class
+SHA-256-Digest: XTWkNX2k2j93UPt4kja4tLenQh2TcfXpR0n9i9eMpMI=
+
+Name: schema/disableSaveControls.exsd
+SHA-256-Digest: TUmodbjyXHkSVZZAHPS0qmioNmvnaHkWFoQm/uILA0Q=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/historybrowser
+ view/HistoryBrowserView$16.class
+SHA-256-Digest: WwxREV9fxYxI0oliiF+kVLl1w5E1CdkA4f0CDd2gLaE=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/scm/SCMContent
+ Provider.class
+SHA-256-Digest: Vpzz1BBc0WqVdGuiXopzpR1OePW3DSET2fxNpcMAyW8=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/historybrowser
+ view/HistoryBrowserView$1.class
+SHA-256-Digest: C81fnlWNISBiu6dRAmgYEu9SKKvzILkQK20CmdR2hC4=
+
+Name: icons/merge/delete2.gif
+SHA-256-Digest: L7IhHwQZFwZ5Cwk+V9oW7oCC12BCG61rmvDxn2iPLhU=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/acimpo
+ rt/wizard/AcUserImportPageTwo.class
+SHA-256-Digest: mYfrctDlEDaja1dj33Survsossx1AP2Ia+gAX0UJFAI=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/login/BasicU
+ ISessionProvider$1.class
+SHA-256-Digest: YnzN/4xHNgiQs1NmZkixowGc5CoCmoojjCXKuEFTDhc=
+
+Name: schema/enableLazyLoadingOfChangePackages.exsd
+SHA-256-Digest: Ac0/mmljUFtySrUAvLjCrhn21huhjLbJufvc6iFGzvE=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/handlers/exportimpor
+ t/ImportProjectSpaceHandler.class
+SHA-256-Digest: qEmofcJOmwU1qNAm7GJV/vMm5irgcHFEAkXtnXwpHpc=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/Messages.cla
+ ss
+SHA-256-Digest: ye7kzxjo7bptzFr9Zuq9mRAmBhhOTDao7aontKD+L5Y=
+
+Name: icons/comment.png
+SHA-256-Digest: lEJ8IYGHFdBEb8AKZ/LP94DNlUamc8lvO8VgaMe+RAc=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/handlers/ShowHistory
+ Handler.class
+SHA-256-Digest: bupDtGPPgBqksTHISgKL0+w6O1zzJF5Khmhc6eQIsuk=
+
+Name: org/eclipse/emf/emfstore/client/ui/ESClassFilter.class
+SHA-256-Digest: mkF0f1u5p8ASsVFsxfpSNF0C7qbYeE6ff3TqWoQR9fM=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/emfstorebrowse
+ r/views/ElementListSelectionDialog$2.class
+SHA-256-Digest: cw1Rlq0PeiS4wHZlTIx5jp9zmjnU57HUQKkTD5C9GnM=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/merge/util/U
+ IDecisionUtil.class
+SHA-256-Digest: Eixfk0uC1LK3oMLaKQ/fOp0UVAn8DEnpH2dgvxy0VZA=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UICreateL
+ ocalProjectController.class
+SHA-256-Digest: UU47OIhDtGKczkKZuyf5mT7B1TGIk1o3s1brxH2L7mE=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/OrgUni
+ tManagementGUI$1.class
+SHA-256-Digest: pe0TVnyfTYq68AVDSLQLjlbA55sNTpHWahVfg2oJdCs=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/handlers/exportimpor
+ t/ExportChangesHandler.class
+SHA-256-Digest: 5er6x3cr1btH9yIGgIYc4FBFZK5aJ4dauonvJhFTOJo=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/historybrowser
+ view/HistoryBrowserView$2.class
+SHA-256-Digest: zWEdLtCfn76xGyZGmWAZf7rs8DIRgG4iv7ieWgf/Rm4=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/UserCo
+ mposite$1.class
+SHA-256-Digest: ApWYw2PiHN0MNNzVcalMo1FFv6mLSEKQM2g6FJzy9k8=
+
+Name: src/org/eclipse/emf/emfstore/internal/client/ui/dialogs/messages
+ .properties
+SHA-256-Digest: ct7s+Uf/WU0Pm+NzLGkO9vzSb4o1JVpq9zwzOv36af0=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/acimpo
+ rt/messages.properties
+SHA-256-Digest: aUAXUfOYoGGC9uykeDDoK5w+12Wz4kSecar7dXbDg+g=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/testers/ProjectIsSha
+ redTester.class
+SHA-256-Digest: Cd8eS6sZ1LW2zXZK8ffhqr6VRCc7/7lsySHrOyBKqHg=
+
+Name: icons/up.png
+SHA-256-Digest: SLjS9EW6AJ7EEb44RSBzFXat34SLXhJBfYpqXnC8SEo=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/login/BasicU
+ ISessionProvider.class
+SHA-256-Digest: bpT8UVCwvPxmlKtvfbqtE1flzPjQ5fbMEC3N7CB2K+A=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/historybrowser
+ view/HistoryBrowserView$14.class
+SHA-256-Digest: kg7sOP23HT3gSMsPTIrWbF+EZOZKI+LwgE8a4Kjsmwg=
+
+Name: icons/projectAdd.png
+SHA-256-Digest: COgRVU3RXkCUZyyByqwgrQ4vH856u3RYXL6EVGjZMec=
+
+Name: META-INF/maven/org.eclipse.emf.emfstore/org.eclipse.emf.emfstore
+ .client.ui/pom.properties
+SHA-256-Digest: V9QUlotpqtjmM3n001b8uJLSfxb5/XSg4Nevqoi4yYM=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/Projec
+ tComposite$1.class
+SHA-256-Digest: /tWqLM8NOM1Lfthy08YHK9OZmPVXxonk9R/bFAZF1xY=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/EMFStoreTitl
+ eAreaDialog.class
+SHA-256-Digest: dHe1coiuitBZlLmWwwKKTHLsZNfnOy98RD6SrfcByTA=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UIUpdateP
+ rojectToVersionController$4.class
+SHA-256-Digest: FvT4PneIeKgWnp5FCQWbPGuOKGNGWypfpqj1o1kr8hA=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/merge/ui/Mer
+ geComponent.class
+SHA-256-Digest: CEg6KPBnfqXROLhQ52in3E4AgBd/yIG0+SX7/5dLbBM=
+
+Name: icons/Group.gif
+SHA-256-Digest: 9uf4xCk8gxhgrzye4i3kozeGvDgXHUDjTKzBBnOc59w=
+
+Name: icons/delete.gif
+SHA-256-Digest: EG6+SD9JOjZhUud94wUCYJn8a/8STS9ZWZD0F6i+C6c=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/Proper
+ tiesComposite.class
+SHA-256-Digest: DAXKmPsfrhhAmTiKK1VBdCtUPepjOHuMZK3fxwTwYB8=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/messages.pro
+ perties
+SHA-256-Digest: ct7s+Uf/WU0Pm+NzLGkO9vzSb4o1JVpq9zwzOv36af0=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/login/ILogin
+ DialogController.class
+SHA-256-Digest: szb/tEZpogD74yIYQR8oPAzEItzlop6JNk6frPUY8Ko=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UISharePr
+ ojectController$1$1.class
+SHA-256-Digest: SiLFwNYF/re3oWeUP+VhzEr5fsSVB6gK6hJJ5AOkjTM=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/handlers/exportimpor
+ t/ExportProjectSpaceHandler.class
+SHA-256-Digest: GkKn7gdOeIUmppfNvgFkxS3xKChHvMdeJTBoPNJvels=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/common/RunInUI$WithE
+ xception$2.class
+SHA-256-Digest: R1rHowp7A+yeU4fac93IsRPQwZvVh9d2iJAIIe73+Ic=
+
+Name: icons/historyview.png
+SHA-256-Digest: 6FBesNORw5j26sDPaNuNLl4BP8Qs4t3AWWDlosO7sYY=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/handlers/exportimpor
+ t/ImportProjectHandler$1.class
+SHA-256-Digest: kYTV0t/43T83EUEOR/rpiSEC27QqGrQpPwY/yBNf4Ow=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/merge/ui/com
+ ponents/DetailsComponent$1.class
+SHA-256-Digest: K7G0EFNI0tMkUxy9uwm601Nym6/+LlgzMiejP6Cs0a4=
+
+Name: org/eclipse/emf/emfstore/client/ui/ESUIRunnableProvider.class
+SHA-256-Digest: QsWAymDrxm2vKG2ncaln42DYO0p/0x1bA7GfndiEArk=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/AbstractE
+ MFStoreUIController$1.class
+SHA-256-Digest: tX6krPMqpWSxw8fVckpflT359oyOHrlm1QN6iCP80Po=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/common/MonitoredEMFS
+ toreAction.class
+SHA-256-Digest: b4CCo39BVFV57XfNEo7HVhjk9CJ4ITm6XbVLPXsAetA=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/testers/ProjectHasLo
+ calChangesTester.class
+SHA-256-Digest: PfK0Ded6VixElZwr0w+IrZfasdErTPAl38Rf3F6felg=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/scm/VirtualNod
+ e.class
+SHA-256-Digest: cs3kjQm7t7msXdSPhD2vLygF8dzncVMoZTNO2z5vuDE=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UICreateB
+ ranchController$6.class
+SHA-256-Digest: fu1pDGON0E/ApRDEjNUk70IVPwRG7CnFDsDOsPqfkd4=
+
+Name: icons/login_icon.png
+SHA-256-Digest: RwZ8R9Wu0qqOlkuj1ZVL4PzyvHHxEhM1XPY1OzgwXsc=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/changes/messag
+ es.properties
+SHA-256-Digest: hseDS3ZkDJ7jHQcReaOBMP+pSCHdcYzngUOEECeevl8=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UIUpdateP
+ rojectController$2.class
+SHA-256-Digest: zVj08yuFTboRrvWih8Or9De/LsdnDz/R9U+jkimNGzo=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/GroupC
+ omposite$1.class
+SHA-256-Digest: mDSzVvkYNhN/zCN9iqPMcuPXeyo+RTA8l2X7AqxHc8I=
+
+Name: icons/merge/notset.gif
+SHA-256-Digest: 2L9+Dt8aJ1T0cpYeiHV9H60BFiSp3SiQOtUDXgtgrlA=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/util/Messages.class
+SHA-256-Digest: sNwwy0VNOG/666OzumrIrQdXlQOSrL5U686DRe65kjA=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/scm/Messages.c
+ lass
+SHA-256-Digest: 7lxV9/nZf2q3HoeIfqg6DZQh4vWROnHTe+nYOBlOhKs=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/TabCon
+ tent.class
+SHA-256-Digest: 5X5XZncHiDp3xkFZjTaxb23kxXML2wgG1H9y7uIgpOo=
+
+Name: icons/next.png
+SHA-256-Digest: JNz+/m6j1hKp3Bk8TqCWHAyJ9wS+T8sOr3X2XTaem2E=
+
+Name: src/org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/ac
+ import/messages.properties
+SHA-256-Digest: aUAXUfOYoGGC9uykeDDoK5w+12Wz4kSecar7dXbDg+g=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/merge/MergeP
+ rojectHandler.class
+SHA-256-Digest: guAoEvL6lkwrCEAQA9e4ry4uudonZZOrjYcKDbyB5AY=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/emfstorebrowse
+ r/views/NewRepositoryWizardPageOne$SelectionDialogListener.class
+SHA-256-Digest: cjUCyV/6UZOThVDFWZko1fckM9KbwgmOWpLDs/we1zQ=
+
+Name: icons/validation.png
+SHA-256-Digest: 0fXqca77jUoFCf8vp00NccWcm7lFvuwNn2P4Cc932D8=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/action
+ /messages.properties
+SHA-256-Digest: UmBcc6bt7YOBzVoqn7IeHSFiTY6Azhq7P+12jjjkI1g=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/historybrowser
+ view/HistoryBrowserView$13.class
+SHA-256-Digest: AQdt9iAe8sSwjY2bgtMgjsxpxsvC29kdGoj/X5xWcsM=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UIMergeCo
+ ntroller$1.class
+SHA-256-Digest: Qhl2cDcv0WpCLm4m5EOFnOnvLurBwxQaZAUWxo7EGsY=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/merge/MergeW
+ izard.class
+SHA-256-Digest: Wipf0GgijrlfpvkEPvzxlcvIjAB16NozmS41jtz5CMY=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UIShowHis
+ toryController$1.class
+SHA-256-Digest: MBIjrAi/muy1bPOUd5w/gC+iUL/ThB8EXpSJYv8JDe8=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/acimpo
+ rt/wizard/AcUserImportWizard.class
+SHA-256-Digest: tR78HZ6bCx9YOOuvux5ivUsKo9HJ0wLQ9JvfCIOV6VU=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UIUpdateP
+ rojectController$1.class
+SHA-256-Digest: USjOUTsQnl8mGEqT/tqsHsbpNoC3jdvHfk9ck3iVYjM=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/handlers/AddTagHandl
+ er.class
+SHA-256-Digest: 8zPNzQR/s3hBoSGd6AuFDDFNYCtrHDDzK0QMbXClR0g=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/scm/ProxyIniti
+ alizer.class
+SHA-256-Digest: e2FtDXdbAXkclL+Zdwuwpd0ZEQST2kqDoNKAaQDrQEQ=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/handlers/AbstractEMF
+ StoreHandler.class
+SHA-256-Digest: olbM6BjTshjdhNPOPHqWZO+p1G1/JwmZmn2C8VwYx38=
+
+Name: icons/merge/attribute.gif
+SHA-256-Digest: 2VfBFYs/6PqPI2al2djBz6D+g406YseYp0PKnyIkK64=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UICreateB
+ ranchController$1.class
+SHA-256-Digest: W/TZgeFhfJHaFzILATFJsvdMbefXvnjxP6htEB1UsMI=
+
+Name: src/org/eclipse/emf/emfstore/internal/client/ui/views/historybro
+ wserview/messages.properties
+SHA-256-Digest: 9hfi/m7njtIpeVW/PgGDrmkefX7PpasCY7VR+XJ0y20=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UICheckou
+ tController$2.class
+SHA-256-Digest: xqJkZk4ncPjNGFK0JwHnUtWqFNISzjl2/133bL1HNNE=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UIMergeCo
+ ntroller.class
+SHA-256-Digest: jr3GqqbMLwzIpvoCQf1kkizbiMd5LF6YMGlmeqfXYho=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/decorators/ProjectSp
+ aceDirtyDecorator.class
+SHA-256-Digest: m9LZIm45mwfjRiM51ZUR9evnXymQ5Cmkk3yJaYCVp3g=
+
+Name: icons/importuser.png
+SHA-256-Digest: u36Ct9PbZf6eq9y7NOO7vJuNDaYE1Zwp70tmyqw3+8s=
+
+Name: org/eclipse/wb/swt/SWTResourceManager.class
+SHA-256-Digest: VaNr2TO5XbOR/2d1ukWv6zFDWkeYyHkbMrhGsgXRJao=
+
+Name: about.properties
+SHA-256-Digest: Q1omxXaDCgxGyoBPtEd5FsTmNsbUpvMeCAS5MsrtaZ8=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/emfstorebrowse
+ r/views/NewRepositoryWizardPageOne.class
+SHA-256-Digest: ZAWVIbPOmh7NPrH2YwctaZlTD5L14qC4QV2XdryB44s=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/acimpo
+ rt/wizard/AcUserImportPageOne$1.class
+SHA-256-Digest: K/hiQjkT7O1r7u+ueEHYl9rg4zgDET109214OZ5/n7Q=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/testers/IsACUserTest
+ er$1.class
+SHA-256-Digest: dN5t7j/zFn7tbZ+Y4Td7UCRMTdrVfae7Whh2Xke3y/Y=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/acimpo
+ rt/wizard/AcUserImportAction.class
+SHA-256-Digest: Ea3uzg6R3VYH2WNHQgCs94B0rRcdZViIdtIHg2iRHsA=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/epackages/EPackageTr
+ eeSelectionDialog$EPackageTreeContentProvider.class
+SHA-256-Digest: /mLe/6u9wbj6na4h7hqrleKdykBw6QQjHuSFby+BuO0=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UICreateB
+ ranchController$4.class
+SHA-256-Digest: G3qaT+7oIJX1Rna4AHxJ0rRZ4vR46NztZRbyzM5juT8=
+
+Name: icons/remove.png
+SHA-256-Digest: Sk1YC2y7AM8QbC+OyYCfaZsgTUMZaWjmM2O0Rk2XcuQ=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/AbstractE
+ MFStoreUIController$2.class
+SHA-256-Digest: +YuRohycetvyt5SiXBodzxff1wkm/oaqNDYSolu37AM=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/OrgUni
+ tManagementGUI.class
+SHA-256-Digest: 4+WQ9R07OM8C7hfhhSQ/s+pzxADVs6P+85uBJr2Jymk=
+
+Name: icons/merge/composite2.gif
+SHA-256-Digest: 2YICJnczviCHN5r3tCXibe/Abop8ARTvO41+Wf8ajoE=
+
+Name: icons/arrow_branch.png
+SHA-256-Digest: 1szrB5NybDWePCSUwpAbVC2Bpq6ZQcNsnEfjip2MKYM=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UIRegiste
+ rEPackageController.class
+SHA-256-Digest: LbmDavQPwNjv+wc/nNF8Xwfn7Mcgx0dfKooGNYliJLw=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/decorators/VersionDe
+ corator.class
+SHA-256-Digest: 4U1mRKEsx006TvbMG0cgd5azfpswqwHp3yQ6op0pU5c=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UICheckou
+ tController$3.class
+SHA-256-Digest: gYMDNbuKm9reCSkRs33yFJ3aiTyJQp/e8Uy0zXRtnO0=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/historybrowser
+ view/graph/IPlotCommit.class
+SHA-256-Digest: 7HB2HXUgxjxpiCoI6ugx1ZYJ2RrZBSL5GUdeIpH7uuQ=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/acimpo
+ rt/wizard/messages.properties
+SHA-256-Digest: fuEVWec3gxty7seP4ARpWP/bC925lFFnZrHx8Lp/JsM=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/Projec
+ tComposite$2.class
+SHA-256-Digest: I/3qWPfAKtZU6RVqlmnQwBu6MHBAjh7iyAO+HeJn8eo=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/merge/Messag
+ es.class
+SHA-256-Digest: jdiZNC10Ahe8MKgJqFgefubrzhlrFAKQSHx40lcxKU4=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/Proper
+ tiesForm.class
+SHA-256-Digest: giKnyrNAjuMIPhp9HNgD6G5tAT+TkCgfipjR30kZEMc=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/emfstorebrowse
+ r/views/CertificateSelectionDialog$SelectionListenerImplementation.cl
+ ass
+SHA-256-Digest: WWAD5TgBA+U3+XoNSP8ugHTT+8fSaOB/jK3y7AQjQCk=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/emfstorebrowse
+ r/views/NewRepositoryWizard$1.class
+SHA-256-Digest: h64SyshvbpSgS2CKaDEWoSHJbp+oW18CqUkpbqqJIFY=
+
+Name: icons/serverGo.png
+SHA-256-Digest: oTOmd6u3Y2bCqWBGRTZFxD2cA5p7EjNvcV1Nu4sJR8Q=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/TabCon
+ tent$SimpleAlphabeticSorter.class
+SHA-256-Digest: ja7t+MaEISsnvTMTvqT82tEBNJ14GmMwLtpBVIJ+GZU=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/merge/ui/Dec
+ isionBox.class
+SHA-256-Digest: ix9gjAAjWVl2vbRd9PxlLer+7GPbwIeS9H08vQxpL1w=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/acimpo
+ rt/ImportSource.class
+SHA-256-Digest: AQwnBnCbU8JvJtYuHLcGIGtL5hCOHjwWGvWYJ4wr+Uc=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/TabCon
+ tent$1.class
+SHA-256-Digest: sAkVEfoF/WIYBXx3FhcEva3iLrN6s9WhI1NydmykhK4=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/common/RunInUI$RunIn
+ UIThreadWithResult.class
+SHA-256-Digest: Y5a9bTLqox/UX+LFMDZaatAYx4KpCWrrVOJITe9Ju9g=
+
+Name: icons/database_go.png
+SHA-256-Digest: CvnLDB/vNM1y0vFGA78AziCHMRAGNYe+6Jl+QPysPws=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/emfstorebrowse
+ r/views/CreateProjectDialog.class
+SHA-256-Digest: RRy6TmUcQdOLUSp6NsKZlKfzBKXtTwl0Rb/b2POU7+g=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/common/RunInUI.class
+SHA-256-Digest: MDB4vIRMaM7CWG2DR0ZXuxXVYlb01x5ux2SMLttew3U=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/historybrowser
+ view/HistoryBrowserView$12.class
+SHA-256-Digest: gzcEVZ/d41sxjDuUcuVLN7avrXgqMvZhqKb/QRLIrQY=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/Projec
+ tTabContent$ITableLabelProviderImplementation.class
+SHA-256-Digest: mfelQaQNG6nZ8zfX5Vy153tBI3ddan4RgjnkriQsCEI=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/common/EClassFilter.
+ class
+SHA-256-Digest: pUgtGq2PCv89nzOXfPe3QRKfaQkYEYCbC46jr9dAwGk=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/historybrowser
+ view/ESBrowserLabelProvider.class
+SHA-256-Digest: hzJLK+UFxQu5aOmX0O7kdzDKYE2cuSxbf/v0M7jS/04=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/testers/HistoryCompa
+ reEnabledTester.class
+SHA-256-Digest: +t0Ugqo4rr0hZ+B8c1+0fyJJ/FHGD0PWd56xgxfxD3Y=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UIControl
+ lerFactoryImpl.class
+SHA-256-Digest: TRVnYQSS78DdVojn56UD+L8alxe9wnvWn7zCFqqw6Zk=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/acimpo
+ rt/wizard/AcUserImportPageTwo$4.class
+SHA-256-Digest: YiAVtR4crra+MID1Vgzmii5Z/IXi3H5tiXADrkMrNus=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/historybrowser
+ view/graph/AbstractPlotRenderer.class
+SHA-256-Digest: iEZReZBcm5617X5Nn8fmPrV31TX1rRgLv5EaX4mvnhk=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/testers/IsServerAdmi
+ nTester$1.class
+SHA-256-Digest: t5usmKBscXitTS+x6l6ZDXNqHqhPUiPTvsdtQgMwfHY=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/handlers/RegisterEPa
+ ckageHandler.class
+SHA-256-Digest: r6rr6JP1td0Tk+kCUnpM9n/r7EuU006v0A+YGfDwxsM=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/GroupC
+ omposite.class
+SHA-256-Digest: 0piYiuEryS3kKuu8CWdNNJkWoO7NxNbgbt/LV2BsMDA=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/AbstractE
+ MFStoreUIController.class
+SHA-256-Digest: fyfDtI20iB/y09rrfLhLS0jeczAINL/kmZ/M0FGsN28=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/merge/ui/com
+ ponents/ContextComponent.class
+SHA-256-Digest: /vj4QC4sTqRcrteigHvG3mCENuw/nUJck6GZRNuMc5c=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/handlers/CompareRevi
+ sionsHandler.class
+SHA-256-Digest: TjdvkrHdrM2IJz49rds+7SBVcnRc/7xJGGqfHX8fquo=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/historybrowser
+ view/HistoryCompare$1.class
+SHA-256-Digest: LVFGjZgwireL3dLtsYA/fxwTjoUNkmy9bQCFzql9PFo=
+
+Name: icons/serverEdit.png
+SHA-256-Digest: JSt+7p7ynYNXDM3wcn9hkklQ3FO0pFSLk1vJVjs9bAs=
+
+Name: META-INF/maven/org.eclipse.emf.emfstore/org.eclipse.emf.emfstore
+ .client.ui/pom.xml
+SHA-256-Digest: 6uOv1D49woZzS5LuK4TnHNl9/q+7KNIPeK9WsGT0wdE=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UICreateR
+ emoteProjectController$1.class
+SHA-256-Digest: p6XZAnt162NVJXosEktzvWfx8o2G5wuskyaItYEMMaM=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/historybrowser
+ view/graph/IPlotCommitProvider.class
+SHA-256-Digest: chVAzd1qX14nB0JLbR8gYW8yZolHWouJW0F/2fRWLUc=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/changes/Tabbed
+ ChangesComposite.class
+SHA-256-Digest: GXR1znco1TYkommQkkhjLqS1CZmziGGs03KJeIf/g1E=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/dialogs/admin/acimpo
+ rt/wizard/AcUserImportPageTwo$3.class
+SHA-256-Digest: BQx/i0WysYTMDMN/453UWwaYYd35jparz22OBdSGDYw=
+
+Name: about.html
+SHA-256-Digest: ZYczHLHHJbJ2GSLe/MBOpU/zRznwNG9X6G0P5BecAYs=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/handlers/MergeBranch
+ Handler.class
+SHA-256-Digest: mrsaH1M4+aXq4HzaVMfOZof87U6TQka9DYwqiqXeFG8=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/common/RunInUI$RunIn
+ UIThread.class
+SHA-256-Digest: qn55A0QSJnIJwbtbzDiEp+poYej941R44/CchDdaA5E=
+
+Name: icons/merge/merge_wizard2.gif
+SHA-256-Digest: 4qNSb2xJg+wbwwRuLWsFu4QFsKjKJl/shFFbxZ65rqk=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UICreateB
+ ranchController$5.class
+SHA-256-Digest: n08Xfux1AES33hP+lAr2zwjZ1UvlLDsA+v+JKbAS4QM=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/controller/UIGeneric
+ ExportImportController.class
+SHA-256-Digest: /oH5kR89mlryhYfJZAkvNH1uq+ubLenP36OSB14CBVI=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/historybrowser
+ view/BranchGraphLabelProvider.class
+SHA-256-Digest: RNcpswRKfIEcijyfgso9UiaAe3iiWgjnWVF7CunmKc0=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/historybrowser
+ view/HistoryBrowserView$10.class
+SHA-256-Digest: AWy2xBpwgc9/mJeD4bg9NdogmYfVzEwoLQwZ/OyOM8M=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/views/historybrowser
+ view/HistoryBrowserView.class
+SHA-256-Digest: q60gdSoB6vKi9ZUnW7g3kr2X+xlmfEnYX+TAmdbf1Jk=
+
+Name: org/eclipse/emf/emfstore/internal/client/ui/handlers/CheckoutHan
+ dler.class
+SHA-256-Digest: MeQBw0VbaH2i5jgCFqmiGT/t+HqoFj1W3sbeBNtAq2s=
+

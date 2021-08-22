@@ -1,0 +1,1414 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.equinox.p2.ui;singleton:=true
+Archiver-Version: Plexus Archiver
+Built-By: genie.releng
+Require-Bundle: org.eclipse.ui;bundle-version="3.107.0",org.eclipse.co
+ re.runtime;bundle-version="[3.11.0,4.0.0)",org.eclipse.core.expressio
+ ns,org.eclipse.equinox.security.ui;bundle-version="[1.0.0,2.0.0)"
+Bundle-ManifestVersion: 2
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/equino
+ x/rt.equinox.p2.git;path="bundles/org.eclipse.equinox.p2.ui";tag="M20
+ 171016-0050";commitId=904840ba860fc4ec6ec2b395860f6eba92ad7446
+Bundle-Vendor: %providerName
+Import-Package: com.ibm.icu.text,javax.xml.parsers,org.eclipse.equinox
+ .internal.p2.artifact.repository,org.eclipse.equinox.internal.p2.core
+ .helpers,org.eclipse.equinox.internal.p2.director,org.eclipse.equinox
+ .internal.p2.metadata,org.eclipse.equinox.internal.p2.metadata.reposi
+ tory,org.eclipse.equinox.internal.p2.repository.helpers,org.eclipse.e
+ quinox.internal.provisional.configurator,org.eclipse.equinox.internal
+ .provisional.p2.core.eventbus,org.eclipse.equinox.internal.provisiona
+ l.p2.repository,org.eclipse.equinox.p2.core;version="[2.0.0,3.0.0)",o
+ rg.eclipse.equinox.p2.core.spi;version="[2.0.0,3.0.0)",org.eclipse.eq
+ uinox.p2.engine;version="[2.0.0,3.0.0)",org.eclipse.equinox.p2.engine
+ .query;version="[2.0.0,3.0.0)",org.eclipse.equinox.p2.metadata;versio
+ n="[2.0.0,3.0.0)",org.eclipse.equinox.p2.metadata.expression;version=
+ "[2.0.0,3.0.0)",org.eclipse.equinox.p2.operations;version="[2.0.0,3.0
+ .0)",org.eclipse.equinox.p2.planner;version="[2.0.0,3.0.0)",org.eclip
+ se.equinox.p2.query;version="[2.0.0,3.0.0)",org.eclipse.equinox.p2.re
+ pository;version="[2.0.0,3.0.0)",org.eclipse.equinox.p2.repository.ar
+ tifact;version="[2.0.0,3.0.0)",org.eclipse.equinox.p2.repository.meta
+ data;version="[2.0.0,3.0.0)",org.eclipse.osgi.util;version="1.1.0",or
+ g.osgi.framework;version="1.6.0",org.osgi.service.packageadmin;versio
+ n="1.2.0",org.w3c.dom,org.xml.sax
+Service-Component: OSGI-INF/repositoryTracker_component.xml, OSGI-INF/
+ serviceui.xml
+Export-Package: org.eclipse.equinox.internal.p2.ui; x-friends:="org.ec
+ lipse.equinox.p2.ui.admin,  org.eclipse.pde.ui,  org.eclipse.equinox.
+ p2.ui.sdk,  org.eclipse.equinox.p2.ui.rcp,  org.eclipse.equinox.p2.ui
+ .importexport,  org.eclipse.equinox.p2.ui.sdk.scheduler,  org.eclipse
+ .equinox.p2.discovery,  org.eclipse.equinox.p2.ui.discovery",org.ecli
+ pse.equinox.internal.p2.ui.actions;x-friends:="org.eclipse.equinox.p2
+ .ui.admin,org.eclipse.equinox.p2.ui.sdk.scheduler",org.eclipse.equino
+ x.internal.p2.ui.dialogs; x-friends:="org.eclipse.equinox.p2.ui.admin
+ ,  org.eclipse.equinox.p2.ui.sdk.scheduler,  org.eclipse.pde.ui,  org
+ .eclipse.equinox.p2.ui.importexport",org.eclipse.equinox.internal.p2.
+ ui.misc;x-internal:=true,org.eclipse.equinox.internal.p2.ui.model; x-
+ friends:="org.eclipse.equinox.internal.p2.ui.analysis,  org.eclipse.e
+ quinox.p2.ui.admin,  org.eclipse.equinox.p2.ui.sdk.scheduler,  org.ec
+ lipse.equinox.p2.ui.sdk,  org.eclipse.equinox.p2.ui.importexport",org
+ .eclipse.equinox.internal.p2.ui.query;x-friends:="org.eclipse.equinox
+ .internal.p2.ui.analysis,org.eclipse.equinox.p2.ui.admin",org.eclipse
+ .equinox.internal.p2.ui.viewers;x-friends:="org.eclipse.equinox.p2.ui
+ .admin,org.eclipse.equinox.p2.ui.sdk.scheduler,org.eclipse.equinox.p2
+ .ui.importexport",org.eclipse.equinox.p2.ui;version="2.0.0"
+Bundle-Name: %bundleName
+Bundle-Version: 2.5.2.v20171013-1525
+Bundle-Localization: plugin
+Bundle-Activator: org.eclipse.equinox.internal.p2.ui.ProvUIActivator
+Created-By: Apache Maven 3.3.3
+Build-Jdk: 1.8.0_131
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/UninstallWizard.class
+SHA-256-Digest: NlFyOzqQA5pUzMT7VK5iXDKAVy9y/TCK0nEPq4hp5pk=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/RepositorySelectionGr
+ oup$13.class
+SHA-256-Digest: wx0jC9hKaq4zgNKCDc1k9594rGIeqekA1VCxSecSIJA=
+
+Name: plugin.xml
+SHA-256-Digest: tSb6Px0UFIX/H2JPHX2jO6M5MrrDXE8Aumxv44UPcMs=
+
+Name: org/eclipse/equinox/internal/p2/ui/model/EmptyElementExplanation
+ .class
+SHA-256-Digest: P1Sq+ftIXOqNTMT80Bcq06zyYwhG/jMaUzPCCeDX0hE=
+
+Name: org/eclipse/equinox/p2/ui/RepositoryManipulationPage$15.class
+SHA-256-Digest: NVztgoCim2oNtuS9tCQWctofXotc5o4q5j4ZyYXZGLE=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/InstallWizardPage.cla
+ ss
+SHA-256-Digest: UZw8ZSrlJiDz+1lAyfIiz7fhls66vJnUaJXKNi5jK7E=
+
+Name: icons/obj/iu_notadd@2x.png
+SHA-256-Digest: lJ40G3TP/Y9bpGeCyfat83CbaMcgZP9UUl7KfRd+WkA=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/RemediationGroup$2.cl
+ ass
+SHA-256-Digest: /RqiASRvOgi0OEbW3sIfbxymGtGZMzKPQTnkiebaLJM=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/AvailableIUsPage$10.c
+ lass
+SHA-256-Digest: nUy43UqMw6C6Sv+2oh/MNXiyfWZMoFQrDLP2DHnP4pw=
+
+Name: org/eclipse/equinox/internal/p2/ui/ProvUIImages.class
+SHA-256-Digest: RvVXAltHfPi/K7zWtDUGj0QdQz6K/iN6XV0px19PHdk=
+
+Name: org/eclipse/equinox/internal/p2/ui/actions/UninstallAction.class
+SHA-256-Digest: l3bb1dMyHoqciJCOxCgl/qScehWMs4cXjnCD3mszFRk=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/IUCopyrightPropertyPa
+ ge$1.class
+SHA-256-Digest: EmDpbUCg6At6xuG1rUqNlEMi6udTEOUVu9GswINzaCY=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/UpdateWizard.class
+SHA-256-Digest: 6m42DLjWJUXBjEVUohSWCNfr2NlrmC2vY5UFhE4KaAk=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/AvailableIUGroup$3.cl
+ ass
+SHA-256-Digest: NpdoDDFNcphz/Xb15wX420HtC+xuRFPCczhTNR2S3vk=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/AvailableIUGroup.clas
+ s
+SHA-256-Digest: KM2VUcCAN26iVxNJjJ70x/deMy0+wP74ISCd6nzAX64=
+
+Name: org/eclipse/equinox/internal/p2/ui/misc/StringMatcher.class
+SHA-256-Digest: nGroZmWC3WdJ1FAMpPCYNQ+TtitbS3ltunL+GtHWBMQ=
+
+Name: icons/ovr/removed_overlay.png
+SHA-256-Digest: zHcabe3RQW0TZBZjlqgr4gCHxWAHH5kFoazpF1Lu6Eg=
+
+Name: org/eclipse/equinox/internal/p2/ui/QueryProvider.class
+SHA-256-Digest: 5BOAYI99/JFsH6zTSp3/QnQXdbBMuSABabDCkUJvr+s=
+
+Name: org/eclipse/equinox/internal/p2/ui/ColocatedRepositoryTracker$1.
+ class
+SHA-256-Digest: bsu8HnXWKiOaOnjRevtsoEG0YZDd2aoRFCgAIEHtxTM=
+
+Name: org/eclipse/equinox/internal/p2/ui/actions/ExistingIUInProfileAc
+ tion.class
+SHA-256-Digest: cr99FfKWjflablBN0ni4HZhRA2gnpqXnhI9WvcaUK14=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/IViewMenuProvider.cla
+ ss
+SHA-256-Digest: lebxYUenCplCImk/NlF3gSs0gzwXoZGQL4sCeuC2weo=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/AvailableIUsPage$6.cl
+ ass
+SHA-256-Digest: gzBMZ2DQrO0D6jlyKeTxoqvE4jKr4C5YYB3q/tyxX2c=
+
+Name: org/eclipse/equinox/p2/ui/RepositoryManipulationPage$3.class
+SHA-256-Digest: HlilwzyO9gO95DqNcZ3sSOG1WjyTCK29nmdwW6FLV8Y=
+
+Name: org/eclipse/equinox/internal/p2/ui/model/Profiles.class
+SHA-256-Digest: ikdWDvXDPacSXmLj5C29T3bNYUXOytZvSAuTzlS9PF0=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/DelayedFilterCheckbox
+ Tree$3.class
+SHA-256-Digest: b6SsHEYy1CjFnV6IWsgmrNl9WzJByPmk2KtbDF3Yotk=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/RepositorySelectionGr
+ oup$9.class
+SHA-256-Digest: 5HlNMSwIQObZTGTCi8uW/0yYbAkYX8MKgdGFOn8tS7Y=
+
+Name: org/eclipse/equinox/internal/p2/ui/viewers/ProvElementContentPro
+ vider$1.class
+SHA-256-Digest: Srv6vAQMa00Oskt4wBzBZ5O5tjWXBPQ1jCqQwplDims=
+
+Name: .api_description
+SHA-256-Digest: H9227Fu/tvWP9oEtC0id2BFKpWUYLIxpKdy8cXmT93I=
+
+Name: org/eclipse/equinox/internal/p2/ui/ProvisioningOperationRunner$2
+ .class
+SHA-256-Digest: GXkbqB6ow1JbHJh20VgD9flxQDOY/OgnhoCD6IsXF1Q=
+
+Name: org/eclipse/equinox/p2/ui/InstalledSoftwarePage.class
+SHA-256-Digest: u3B0AcRo0d1N8rc0d0YQJydkxUJAlFqLqtJpSkSsnx0=
+
+Name: OSGI-INF/serviceui.xml
+SHA-256-Digest: eP9Lrk19TJTQZzkaC1nUZThd0VGzT4dIGmhR/ClNhMM=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/CopyUtils$2.class
+SHA-256-Digest: b0MVuamHMyxc9dUSMFFAb9l9Es+PhTlHqr2vSpRC284=
+
+Name: org/eclipse/equinox/p2/ui/RepositoryManipulationPage$22.class
+SHA-256-Digest: DQZtFnocg9IUhniYA4CFnR+MEVz5gjz13mStN3rcz18=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/ContainerCheckedTreeV
+ iewer.class
+SHA-256-Digest: rBChsJbfb4Hn3XLzIgzEMeaRN0ONKJvxoVYClkqrd18=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/UserValidationDialog.
+ class
+SHA-256-Digest: r/Qaaj/8ChYiQokY7qZT573KJQVODHAjV89pSw0SW5o=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/SelectableIUsPage$4.c
+ lass
+SHA-256-Digest: 7GePJSnR1/+7730WvHtPrv3s8mDgCkHsnkDQAoTqfY8=
+
+Name: org/eclipse/equinox/p2/ui/Policy.class
+SHA-256-Digest: iZw2HGHswvPXyaRf+7xZOyJTUiN5hOkH8B3/wrSFsts=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/RepositorySelectionGr
+ oup.class
+SHA-256-Digest: nGnkqdBRVlVTRpR/iWUV2WkMmtYrrn5wHCNZ/PuRiaY=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/IUDetailsGroup.class
+SHA-256-Digest: HTaurZKhFbOh1jA0rxRuPFR8wtG2co7aCRQeptVXe2Y=
+
+Name: icons/obj/iu_info@2x.png
+SHA-256-Digest: VjnBzZgAa/UsyyjAehi2ZDw8uSdYF2WCNpxzLB9BT/Q=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/DelayedFilterCheckbox
+ Tree$4$2.class
+SHA-256-Digest: u6NDexLKpjUp1zOZVMkWuO0ueLnpnuBluPf73WRSgU0=
+
+Name: org/eclipse/equinox/p2/ui/RepositoryManipulationPage$10.class
+SHA-256-Digest: qyLa4YN5k2eph2uw30KKxh+yEhj0gl7iDuoa4NLArlc=
+
+Name: icons/wizban/revert_wiz@2x.png
+SHA-256-Digest: q68OwDA9re0yp7VLrW6aRCbIqFJbc2bH4/Fxa3aGB+I=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/TrustCertificateDialo
+ g$3.class
+SHA-256-Digest: w+Q3LJ3a8VbJZSU4Kjn5blBcF3U5aefSkL1uQGzWHlk=
+
+Name: org/eclipse/equinox/internal/p2/ui/viewers/IUColumnConfig.class
+SHA-256-Digest: BCX6CbMFHkwicZU/QZnZiVEQPoGG9gA4kTyT6+vPQto=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/InstallWizard$1.class
+SHA-256-Digest: n2nTnog4k34Mpqn6gGffG4pcw5pPPV/CD7f2xH89u2k=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/ContainerCheckedTreeV
+ iewer$2.class
+SHA-256-Digest: zgd+waNHaTYoHr7HzzwZq/tnixVM39N47BQ8BOfNF+o=
+
+Name: org/eclipse/equinox/internal/p2/ui/query/AvailableIUWrapper.clas
+ s
+SHA-256-Digest: eCPWZKWRX/CKN3rNCZEpEyoSpbxqE3l/kvMUpfmUNEE=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/AvailableIUsPage$7.cl
+ ass
+SHA-256-Digest: O+PErCTz9WXxT1x7RWVpkPAmLdqwbYtkan219y/0pME=
+
+Name: org/eclipse/equinox/internal/p2/ui/actions/UpdateAction$2$1.clas
+ s
+SHA-256-Digest: unfKoLeEehMV+eBE58ubf/ZkTw664CuvxXQSPZEV3Vo=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/DelayedFilterCheckbox
+ Tree$4$1.class
+SHA-256-Digest: YRsBhk0CjPOMStN05oVTJ6qMiIoBTAzSF9DDmcbdsG8=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/DelayedFilterCheckbox
+ Tree.class
+SHA-256-Digest: 7VgbNCQ6b3w1QuuJB21xmDDUpzR4/Mw112am2WPRVnM=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/RepositorySelectionGr
+ oup$3.class
+SHA-256-Digest: xO8480+vurWv3ou6jIuoWD5RgbyL3xjBsnIuFeZq4aA=
+
+Name: org/eclipse/equinox/internal/p2/ui/ElementQueryDescriptor.class
+SHA-256-Digest: 0oaDGUpm4pwOlxL7qo6ekPI88hf8WD8LSAD2D4LH36I=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/AvailableIUsPage$15.c
+ lass
+SHA-256-Digest: u5BNSC9qWs3HGXfGsOq85yTRYLdYGcMjErD3vcEcs1E=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/CopyPopup$1.class
+SHA-256-Digest: GhJYliZM65wt7XKnwXZ6Rhyf4UgF9bdZYUL66J7ds84=
+
+Name: org/eclipse/equinox/internal/p2/ui/ProvisioningOperationRunner.c
+ lass
+SHA-256-Digest: 4TB9TGjxQdGgjeeLH/bODHPTIJIcUfn/A/JTipEyC2w=
+
+Name: org/eclipse/equinox/internal/p2/ui/query/CategoryElementWrapper.
+ class
+SHA-256-Digest: W4QOBuwg7Y/zPq79ldOzJ3cj0dJfEoWNyVSsdc+tE/c=
+
+Name: org/eclipse/equinox/internal/p2/ui/ValidationDialogServiceUI$1.c
+ lass
+SHA-256-Digest: ZiO7n+J93eP15R7sYy776Wh6WPzo1YWZwp3GSLTb5Ds=
+
+Name: icons/wizban/update_wiz@2x.png
+SHA-256-Digest: rBFHoV5UBdZWRwxVUuGL3EE84H76nqiJdLTLgWqW8FU=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/ComboAutoCompleteFiel
+ d.class
+SHA-256-Digest: liKjKqqjFgMDDaqorAZ57oaioBqwzt1EfuWOteR//Ro=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/CopyUtils$1.class
+SHA-256-Digest: f3Qu85Pozt0iias6uPHXmtTDPnrVmUCEVCeO5r/g9Fg=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/IUDetailsGroup$1.clas
+ s
+SHA-256-Digest: F6DQkHGYjJqfy9ReCdm4Su+DBqIdwFce4bz+xPNcJIM=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/IRepositoryManipulati
+ onHook.class
+SHA-256-Digest: ioyF+/ViGTn5VaX8UAjoYr9jBHcgXRSW54h7TOz9Nts=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/RemediationGroup$1.cl
+ ass
+SHA-256-Digest: x87ZZvndbC15SPBYbEJmcRNz3felWf/RU2WE7xya+Jk=
+
+Name: icons/obj/iu_patch_obj@2x.png
+SHA-256-Digest: 9gmkPjhruWArv7cjyMFWxHH69hYncek/CD5lfvc/2lM=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/IUGeneralInfoProperty
+ Page$1.class
+SHA-256-Digest: 7gC2PVE8uTn6E7vJ1q8tkviTv4v6CCbyLTFEt3YyUh4=
+
+Name: org/eclipse/equinox/internal/p2/ui/viewers/CertificateLabelProvi
+ der.class
+SHA-256-Digest: lux3NDEdgPJOsdQiHffk41uhrRH+tF71nKe49ceK1z0=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/InstalledIUGroup$1.cl
+ ass
+SHA-256-Digest: Yq5ao6x/cLMtykfAn9LbczhzXMA7ZNQjJf+LWkonpbc=
+
+Name: org/eclipse/equinox/internal/p2/ui/query/ArtifactKeyWrapper.clas
+ s
+SHA-256-Digest: pwupRepPMQ4kqf92kSebanvUEgmcZvs5q5o1WYQg4SA=
+
+Name: org/eclipse/equinox/internal/p2/ui/model/IUElementListRoot.class
+SHA-256-Digest: /4cxpbAE3cc5Dk/GL3n8ZfIAOTbV3C76QvGjOVBHhBk=
+
+Name: icons/wizban/uninstall_wiz.png
+SHA-256-Digest: 5jHf50d8FKlXSQLBYoV9J7Eur8ZewXyoa4DOP+OFwE0=
+
+Name: icons/obj/iu_add@2x.png
+SHA-256-Digest: U7EXdfuU0Bhe0rJo4fOCyve7bPn/2aWoRjlxI5RBRGc=
+
+Name: org/eclipse/equinox/p2/ui/ProvisioningUI.class
+SHA-256-Digest: oeOSiP7PK8A1vapHttjCyAhKvP9skSMiE76pPGpT4Jc=
+
+Name: org/eclipse/equinox/internal/p2/ui/actions/UpdateAction.class
+SHA-256-Digest: 48FkfNULmLZbBskFJ7f6ItiXU3QuiUwwjK1dKA7klQ0=
+
+Name: org/eclipse/equinox/p2/ui/AcceptLicensesWizardPage.class
+SHA-256-Digest: AyFc4mYjo76KCWazaimJusnYtJtDKh5l0mFGl4YdMFI=
+
+Name: org/eclipse/equinox/p2/ui/AcceptLicensesWizardPage$IUWithLicense
+ Parent.class
+SHA-256-Digest: /JlFBBDJiyFqkeSqOYtBWhgsak5QHGuoNO0FVCbmWYA=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/UpdateSingleIUWizard.
+ class
+SHA-256-Digest: iukMWBWv82Nb4RAP0sTCPavvohFBASNT7vllQ0YIu8w=
+
+Name: org/eclipse/equinox/internal/p2/ui/ValidationDialogServiceUI$OkC
+ ancelErrorDialog.class
+SHA-256-Digest: RIyftzukjx+b3Nw+z1EmimKxv5Hu4+ETyW6ZK7wcJ20=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/AvailableIUsPage$1.cl
+ ass
+SHA-256-Digest: mOeK7VXfoRTCtzFYyj6T6p12R1wb3YKMCZoRAFa9Tec=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/RepositorySelectionGr
+ oup$4.class
+SHA-256-Digest: 8GopPcV9nX13CKn+kE8v5R8M78HdkF3Puetx6m1EfjA=
+
+Name: org/eclipse/equinox/internal/p2/ui/QueryableRepositoryManager$1.
+ class
+SHA-256-Digest: okhc+YGuMTFwF52NdkW/Aw998nLmY6IczkMN+KSx+jk=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/RemediationPage.class
+SHA-256-Digest: uw4GteCpEw++De3GfaFVcTFOy4YvBs/IMbkQ+pU+oFA=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/TrustCertificateDialo
+ g$2.class
+SHA-256-Digest: CpYYMQdgf2o1gzjyqk4pvbRwHvduzR3LFZ/h7Bb79x0=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/AddRepositoryDialog.c
+ lass
+SHA-256-Digest: zGz2B6rgjOHH7u8jPwIhFSgQ34/TpdaeCyOi86Y+4V4=
+
+Name: icons/obj/iu_add.png
+SHA-256-Digest: GpiywoNyTjttl/AlCwFrfsjIzYV+Y+5aH8rroMxftHY=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/RepositorySelectionGr
+ oup$12.class
+SHA-256-Digest: Dj10CAKwMBRpu/15V9jrZEs8b++e8znHLgcV+Fv0OBg=
+
+Name: icons/obj/iu_obj.png
+SHA-256-Digest: rtJFtj8sbecB7KISMSdHIaLG99hD6fhGexQNSMaFMtY=
+
+Name: org/eclipse/equinox/internal/p2/ui/viewers/RepositoryDetailsLabe
+ lProvider.class
+SHA-256-Digest: kLriylZVTQJWX3coCAyYtGEiPuqJ0EdufExo+ls/nrE=
+
+Name: org/eclipse/equinox/p2/ui/RepositoryManipulationPage$23.class
+SHA-256-Digest: YC5jkjK6aC1loZbElhKuhPY1xZF9IbX7suHYkx6EeXU=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/DelayedFilterCheckbox
+ Tree$4.class
+SHA-256-Digest: jsZMqBS3M4y35pgg597tX8unCVRJhojD7Hj1k0DFRgU=
+
+Name: org/eclipse/equinox/internal/p2/ui/ProvUIMessages.class
+SHA-256-Digest: +9Px+NTz5iQjhGdbIM8QOnYGGkBxsIbI2NFii1upxrs=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/UpdateWizardPage.clas
+ s
+SHA-256-Digest: QjqHJh44JVyJTE365KJr+dA7IrKnTkhCRQUu/YFy9kM=
+
+Name: org/eclipse/equinox/internal/p2/ui/model/AvailableIUElement.clas
+ s
+SHA-256-Digest: 0n9wi4zktRh4EOdL847k9Ny8Scztgcx0CWMP7zNKPVY=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/AvailableIUsPage$16.c
+ lass
+SHA-256-Digest: y3Mw8gYi7Bbue7YEgfc+exQmutlm5hESVsCiIEyAyGA=
+
+Name: org/eclipse/equinox/internal/p2/ui/viewers/MetadataRepositoryEle
+ mentComparator.class
+SHA-256-Digest: LFcFJcHuTjE2UC5fTcjMUchbg+6K+xyyIlhZVtIHdr0=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/ResolutionResultsWiza
+ rdPage$1.class
+SHA-256-Digest: +4May0ZTNW+7gxxFRbZOIHZqpt2M6euSgJO4KrWtstg=
+
+Name: icons/obj/iu_patch_obj.png
+SHA-256-Digest: x2dqnIRejItLVr4vP+PoTJdecJjUHTbEq8e0fuWSOOI=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/ApplyProfileChangesDi
+ alog.class
+SHA-256-Digest: TUPA0eT1KxOXVTx4GOT4vpW/vceFuluwHb+8OiPbe2Q=
+
+Name: org/eclipse/equinox/p2/ui/InstalledSoftwarePage$2.class
+SHA-256-Digest: q7Lq0eNWL5SCVtKgSoAGbLjecObrI21EFp8jJ6cABno=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/AvailableIUGroup$7.cl
+ ass
+SHA-256-Digest: jExVvX9EVzrYXw3h4bWQXggIz8eUp/b6kJMy+/KcBd4=
+
+Name: org/eclipse/equinox/p2/ui/RepositoryManipulationPage$11.class
+SHA-256-Digest: BVw+8ePlRzly0z2MbJRgriWWD45C8uWn5Tpx6Ao20JE=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/CopyUtils.class
+SHA-256-Digest: p9ggMFPz3rLm8bamaMyPut3xSzoOCR/bG4mUKI9EcLc=
+
+Name: org/eclipse/equinox/internal/p2/ui/viewers/ProvElementContentPro
+ vider.class
+SHA-256-Digest: mNZ3CK8qblI0P79vfa8tTcm8EgQWbvUf9x9vQTeA+W8=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/RemediationGroup$6.cl
+ ass
+SHA-256-Digest: V0YtuiAo39xoyvM2v1/a4zucSy3CTfFK2zj4lm99r+0=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/DelayedFilterCheckbox
+ Tree$5.class
+SHA-256-Digest: WC4/g8yPqLDUBj9+7wOoUv8eNkXFt+eqoBAq4G8Hw7M=
+
+Name: icons/obj/artifact_repo_obj@2x.png
+SHA-256-Digest: bzvZjAS4biMm395+QM8tYCuXNrzBed4PLzeEFq+a34M=
+
+Name: org/eclipse/equinox/internal/p2/ui/actions/RemoveColocatedReposi
+ toryAction.class
+SHA-256-Digest: ErkG9B2zJilJXmUtVhAKNuMePQG6GFoVqHin8hsHq3w=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/AvailableIUsPage$17.c
+ lass
+SHA-256-Digest: 8Amk+92axVYiFlWH9jn185rx0lV8iQnnir/bm+EGX4A=
+
+Name: icons/obj/iu_notadd.png
+SHA-256-Digest: sm2qqJtuM9zgx0+V/5WEcp6DtB/ecbd8bxocQ/eL4OU=
+
+Name: org/eclipse/equinox/p2/ui/RepositoryManipulationPage$19.class
+SHA-256-Digest: DxDB0HeoavmpEvMiNpSO5ye0pfia8fecnDkd0X3iKoc=
+
+Name: icons/obj/iu_disabled_patch_obj@2x.png
+SHA-256-Digest: ZvJnv52RVuHdLJc6sHp32txOe8ZnrMcj8/bWTRnMB4c=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/ResolutionResultsWiza
+ rdPage.class
+SHA-256-Digest: kbHB2fURG5etJbjMfG8TouJBkuBGr+B2jpiPMI1EYgA=
+
+Name: icons/obj/iu_info.png
+SHA-256-Digest: WA4vw75Z7BqFy0XxL7VFPmArG+Ze/J3Epa9x0PVUY7I=
+
+Name: org/eclipse/equinox/p2/ui/AcceptLicensesWizardPage$3.class
+SHA-256-Digest: k9WxSQ6xUWcugTPKQOISIkA0o6qn6AoT2evLzGmzkp0=
+
+Name: org/eclipse/equinox/p2/ui/RevertProfilePage$1.class
+SHA-256-Digest: Y3G8IOcc8Dw6iS2AV/xdShHaW2EZbTpixw3oPGzBd9I=
+
+Name: org/eclipse/equinox/internal/p2/ui/query/ArtifactRepositoryEleme
+ ntWrapper.class
+SHA-256-Digest: MkbpP7WK4TTjQqe/tvhKIV5JuUNmFaVUpoJny8c5dw4=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/RepositorySelectionGr
+ oup$2.class
+SHA-256-Digest: dOHky/Iz0EwKG7OkG9Es7OTNmw91Y9PIfues3BVJnmI=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/AvailableIUsPage$8.cl
+ ass
+SHA-256-Digest: Dl6IAo54pCeII0uTVWQrLZg4sIr7OlYmI191w3ftob4=
+
+Name: org/eclipse/equinox/internal/p2/ui/viewers/IUDetailsLabelProvide
+ r$2.class
+SHA-256-Digest: ThrVjg+5b8O7MF3GXAE0372qAmdy67V/01M47dSM/84=
+
+Name: org/eclipse/equinox/internal/p2/ui/model/RollbackProfileElement.
+ class
+SHA-256-Digest: jSd5wa+uJWxWYjNakSUMWHyBNErAFvtU1rkNXPGTHLI=
+
+Name: org/eclipse/equinox/p2/ui/RevertProfilePage$4.class
+SHA-256-Digest: yssxXZr4sgOELQFk+Hm9RRAXGg3mBaYTPgSWmw1KSng=
+
+Name: org/eclipse/equinox/internal/p2/ui/RepositoryLocationQuery.class
+SHA-256-Digest: vpZI6Hd7d074vyKRmFj5a8iETnJUEr4aqKyF9YpMwqU=
+
+Name: org/eclipse/equinox/p2/ui/RepositoryManipulationPage$4.class
+SHA-256-Digest: 3MyzhYAfGynL9Nw/RmsoQSrm5TKE9Iqq+O8YNzD08TE=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/SizeComputingWizardPa
+ ge.class
+SHA-256-Digest: 89jiADwMHQzJgfV0qppVJDU1mHlldchEAdtD9dqJYHw=
+
+Name: org/eclipse/equinox/internal/p2/ui/ValidationDialogServiceUI$Mes
+ sageDialogWithLink$1.class
+SHA-256-Digest: q7kbLV0bUeWKwwMN4BDAIKikvL8gmWriNnRFc/yjQSw=
+
+Name: icons/obj/category_obj.png
+SHA-256-Digest: IKWbOMGzNobrtiJtHHDvp385Puore7nwixgYJ9d5/YM=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/ResolutionResultsWiza
+ rdPage$4.class
+SHA-256-Digest: HtDql6N8SDyviaYDV7b9XDXrir0cnHUmMF6L9qPZzRw=
+
+Name: org/eclipse/equinox/p2/ui/RevertProfilePage$TagEditingSuport.cla
+ ss
+SHA-256-Digest: ebEga9Ons4tiYAzchuN7AGL8lju1P7N+sI8RPPzAz7I=
+
+Name: org/eclipse/equinox/internal/p2/ui/viewers/ProvElementContentPro
+ vider$1$1.class
+SHA-256-Digest: BPVIKPd86MeTmSjuJ5ytKhS1laYE/qkgUSR9Z34zpoI=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/RemediationGroup$4.cl
+ ass
+SHA-256-Digest: jN8jOEGClMal/Fp32sFPDclfqx9yhmmhVVCOexSUZlU=
+
+Name: icons/ovr/added_overlay@2x.png
+SHA-256-Digest: IQhiCjsVi7q7olB3o3s7LVXYsidxO1wZqyZHfMjjK/U=
+
+Name: org/eclipse/equinox/internal/p2/ui/QueryableArtifactRepositoryMa
+ nager.class
+SHA-256-Digest: WYtilWMkwyxp00J3243GUfqnVEQ+a/dSq25U33/RLLY=
+
+Name: org/eclipse/equinox/internal/p2/ui/actions/PropertyDialogAction.
+ class
+SHA-256-Digest: d+kO4uJJLUnnJ9bCaRg7hmYLJbcg45/7XlETTZhqiCw=
+
+Name: org/eclipse/equinox/p2/ui/RevertProfilePage$2.class
+SHA-256-Digest: pqVo4rB5SEYmuT1FwuL7cu5m3i3KbedUaPmD3nqFAMQ=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/ISelectableIUsPage.cl
+ ass
+SHA-256-Digest: oD5mnYZseOgWShhg7C8U0iEwBTJWf3C3dwulju9JOWQ=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/ResolutionResultsWiza
+ rdPage$4$1.class
+SHA-256-Digest: aZ006a2hBYs+6QMzeOBCeSFZ7GNzurYqGQ5a8FA6bvc=
+
+Name: org/eclipse/equinox/internal/p2/ui/model/CategoryElement.class
+SHA-256-Digest: Qu6CxuTvkeJwb3OjVlNbAv9d8iZJNY1eWufxtMp3OYE=
+
+Name: org/eclipse/equinox/internal/p2/ui/query/MetadataRepositoryEleme
+ ntWrapper.class
+SHA-256-Digest: GjJOpaJO2l9g3BigVBuMmHZV+qBLxlI9wS+XTlxiZ1w=
+
+Name: icons/obj/iu_update_obj.png
+SHA-256-Digest: 49rPVBrFeMjrspo7Xkb6AomsddO1vLdNx59bR7bXXUM=
+
+Name: org/eclipse/equinox/p2/ui/RepositoryManipulationPage$1.class
+SHA-256-Digest: 4G4n2m5AKSxyqZCvR+qHOGSqYCbwEmNuZqQmlCRgL9o=
+
+Name: org/eclipse/equinox/internal/p2/ui/QueryableMetadataRepositoryMa
+ nager.class
+SHA-256-Digest: AWdKVA3pGt3+cnWZV8imEL6QEizBonrU8pusmRFAcsg=
+
+Name: org/eclipse/equinox/internal/p2/ui/model/QueriedElementWrapper.c
+ lass
+SHA-256-Digest: xQTeQNgBqHi0xqfUPOvxwRThAg4GGCDZIPNv/5MN2qs=
+
+Name: icons/wizban/install_wiz.png
+SHA-256-Digest: kI3GVxSgMmvlOkvnvQCBhCLBAirBOmes+Kk1hxMxC9A=
+
+Name: org/eclipse/equinox/p2/ui/InstalledSoftwarePage$1.class
+SHA-256-Digest: 68ARZ94ejZPRK1u2Y8JRMXJX0xZOxBPNFbFk5vf7kuA=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/IPreFilterJobProvider
+ .class
+SHA-256-Digest: Cigbk9uCLsE6gEfn/vEjrTg7MENKRkYKe8CA2K8/lQE=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/SelectableIUsPage$3.c
+ lass
+SHA-256-Digest: EobtQYgOq6zD9onHXbsGgIbz2eUxofZtDKox+spBuyk=
+
+Name: org/eclipse/equinox/p2/ui/AcceptLicensesWizardPage$1.class
+SHA-256-Digest: F3uP/dK3pBVhoNX+ePtmYTj7FekZZJbs1L4oy7JQH7U=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/ResolutionResultsWiza
+ rdPage$3.class
+SHA-256-Digest: NwNn4x0Aewnz7airqtwuWlbd6gp3fYBKgbaORatsd0o=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/SelectableIUsPage$2.c
+ lass
+SHA-256-Digest: dt+WnGu9jiQNrLAdF0VHmLYQ2E3KN1WjW1+B32a2sS8=
+
+Name: org/eclipse/equinox/p2/ui/RepositoryManipulationPage$27.class
+SHA-256-Digest: 0lhAEIxQQQrNCl0HM9IXi6fG1Jfq0JSWkXXtGBr6uco=
+
+Name: org/eclipse/equinox/internal/p2/ui/ValidationDialogServiceUI.cla
+ ss
+SHA-256-Digest: 3a+IR/AmR9z9aHjfFa6xGQYqbLPEOmLj8/Wg/OCEbCE=
+
+Name: org/eclipse/equinox/internal/p2/ui/viewers/ProvElementContentPro
+ vider$1$2.class
+SHA-256-Digest: /V5ROodzlJb92mecFKcJwkwje/eb382ePFMFWkXAXW0=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/RepositorySelectionGr
+ oup$14.class
+SHA-256-Digest: mRki6PetC3DnIc/2Q6NC+rUCHriTaZoOK2No0Q88yyw=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/AvailableIUGroup$9.cl
+ ass
+SHA-256-Digest: lt9Ejqs2XlKH38fkWOFjPC6UslCwBWLjYTHPVUkAdmc=
+
+Name: org/eclipse/equinox/internal/p2/ui/viewers/IDeferredQueryTreeLis
+ tener.class
+SHA-256-Digest: C8XWVlLRTgQhUiVMWjzv6Z/ZAk7vjkG2C8DObjCSOJU=
+
+Name: org/eclipse/equinox/internal/p2/ui/RepositoryTrackerComponent.cl
+ ass
+SHA-256-Digest: p7b1C/x9IH+A+JPFgMzl1nGJqmfYA6G/X5p7kypA6kg=
+
+Name: org/eclipse/equinox/internal/p2/ui/model/QueriedElement.class
+SHA-256-Digest: esZatc5xU4MpeLEFp8guj6VzbiHMgTkcAUpW3vlpkiI=
+
+Name: org/eclipse/equinox/internal/p2/ui/misc/StringMatcher$Position.c
+ lass
+SHA-256-Digest: 0cIBY1Twd3E1UFXOJhfE9EuIu5julYNZtLE2+SoNTf8=
+
+Name: org/eclipse/equinox/internal/p2/ui/ServiceUIComponent.class
+SHA-256-Digest: L7UNr5q7fgIIBptiB+czBFRO7CDlhcCOkPkIiOVp3h0=
+
+Name: icons/obj/iu_disabled_obj.png
+SHA-256-Digest: File+x5Hcp7wUMRF8adZUIQRXKEUgpWEbECB1sY91M8=
+
+Name: org/eclipse/equinox/p2/ui/RepositoryManipulationPage$26.class
+SHA-256-Digest: 7nbClg1dz6jMJSxiBg8+ENCYpiJRoWHfW+Ri//RNicY=
+
+Name: org/eclipse/equinox/p2/ui/RevertProfilePage$3.class
+SHA-256-Digest: BtP7Hou/k6YeICwQuBn7ZvpyRL75+FqOBLtsBeYPXWo=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/InstalledIUGroup.clas
+ s
+SHA-256-Digest: BbFNm+B8+KB/SD7quMfvARSERJ0NA+9d/VkscevugKU=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/RemediationGroup$3.cl
+ ass
+SHA-256-Digest: 9gmafyrqWxqVmJbzEvBLT/7209Cs+a33bv+8oeRXl6A=
+
+Name: org/eclipse/equinox/internal/p2/ui/model/IRepositoryElement.clas
+ s
+SHA-256-Digest: Ij8iteXC65Ca92fpusxDYMyUpQul63YB2VM9u5qTCFQ=
+
+Name: org/eclipse/equinox/internal/p2/ui/viewers/IUDragAdapter.class
+SHA-256-Digest: JMimT8xSvDVaewhS/IeRlUYn8G5Fv4VYKyCDDHMfkwI=
+
+Name: org/eclipse/equinox/internal/p2/ui/MessageDialogWithLink.class
+SHA-256-Digest: msGk8eGvWGU2Usxo9s3IPUBTdEO5044L4pqwtkrz6xk=
+
+Name: org/eclipse/equinox/internal/p2/ui/model/RemedyElementCategory.c
+ lass
+SHA-256-Digest: t6hxc1kL1h4uTrXJnkH6iwUs5BgubgBkx9UudMvqwa0=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/ResolutionResultsWiza
+ rdPage$2.class
+SHA-256-Digest: tTwznaKRoDzUBMH3W/eTlBndFBibHn5XlgGNzXiMZ30=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/RepositorySelectionGr
+ oup$1.class
+SHA-256-Digest: GCWnDMhkyGKnZvYQSCGJ5vC3CNIeWHfNMEPMJuJA1Gg=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/AvailableIUGroup$8.cl
+ ass
+SHA-256-Digest: 9fZjFor7ivlXKxLcKQ8RV6Y2U+ldp0vCbQIyhwqB2sY=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/ComboAutoCompleteFiel
+ d$1.class
+SHA-256-Digest: UhbWmF5zkrVDiW6mFez8PeZLZN3Cf0ZdOmULTYOn0xI=
+
+Name: org/eclipse/equinox/p2/ui/RepositoryManipulationPage$2.class
+SHA-256-Digest: B8QirBrq6/F4+VCoJpqhpYE0J9/WD79entRk3iPzh/E=
+
+Name: org/eclipse/equinox/p2/ui/ICopyable.class
+SHA-256-Digest: PKF+XUfvY6hUrRbG5fs5o7H6ns2184jCKPGJ/bDMCjw=
+
+Name: org/eclipse/equinox/p2/ui/AcceptLicensesWizardPage$2.class
+SHA-256-Digest: 1wXvKQjI7kkIqz4f5ZSdRXfqGp3loRzjWg7oZcBLS8E=
+
+Name: icons/obj/category_obj@2x.png
+SHA-256-Digest: 7TMuMYUJe3hRy4Cp9n30qyCFtvWmsrehDlHxEr66Z1g=
+
+Name: org/eclipse/equinox/internal/p2/ui/QueryableRepositoryManager.cl
+ ass
+SHA-256-Digest: DPpFfsSzur5GYLY9gUkUmIUZq9Zp7xwydHKAflMHcBc=
+
+Name: org/eclipse/equinox/p2/ui/LicenseManager.class
+SHA-256-Digest: z53NELHi5BzeYAn6xa6rlDZpwNs8hs3L9yvZy2B16e8=
+
+Name: org/eclipse/equinox/internal/p2/ui/model/MetadataRepositories.cl
+ ass
+SHA-256-Digest: 47i+ItQyztR35lmxEEyJSqOEAEy4Mtq9xm3syp+CuHo=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/ResolutionStatusPage.
+ class
+SHA-256-Digest: xgKbg6KkuJ5zAYiAbbHtik1qs/qC/5QHbeSapDBfV8o=
+
+Name: org/eclipse/equinox/internal/p2/ui/actions/ProfileModificationAc
+ tion$1$1.class
+SHA-256-Digest: Ww4VkaU0NG3QaIp/VgM+r15XS9PBUTxt+op0QF1VUXI=
+
+Name: org/eclipse/equinox/internal/p2/ui/model/ProfileSnapshots.class
+SHA-256-Digest: i/9Ekazjq216vlrRGar6nQl53IGxAFT5ZngubnlKYdo=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/UninstallWizardPage.c
+ lass
+SHA-256-Digest: a3/VOnv+rppn8eiQULfU19YQDkplD5KAkviO9opHrVM=
+
+Name: org/eclipse/equinox/p2/ui/RepositoryManipulationPage$6.class
+SHA-256-Digest: xYWvQMFja/0LGcPzKCtuBUvEYybjm/oywuR5I9Jsm+0=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/CopyPopup.class
+SHA-256-Digest: dp+1lBD4W3QlKNfKuNOVzC1+z/Bg6Em1jm/BnPyQAUE=
+
+Name: org/eclipse/equinox/internal/p2/ui/ElementWrapper.class
+SHA-256-Digest: F005y0ylZlU52R5+I6mYqA6geb9FuSKm7zSzaVTZva4=
+
+Name: org/eclipse/equinox/internal/p2/ui/model/MetadataRepositoryEleme
+ nt.class
+SHA-256-Digest: YrHRpFTBWXNFfaw+r/gfyjVjiwcMWTWjwNr2inyUQJA=
+
+Name: org/eclipse/equinox/p2/ui/RepositoryManipulationPage$25.class
+SHA-256-Digest: 2TddQTZ1BVPG1CG9x4BgRQYKYpul+GwqrEzPEr09Abc=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/SizeComputingWizardPa
+ ge$1$1.class
+SHA-256-Digest: reWBOceVltmYdymMpOqobVSnj9zM3MjcA0wkyKZl9PE=
+
+Name: org/eclipse/equinox/internal/p2/ui/viewers/IInputChangeListener.
+ class
+SHA-256-Digest: b9jR7UzL3u5PnSx/iR58mMQBzynnT6FJdMlpyLjkbHE=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/AvailableIUsPage$9.cl
+ ass
+SHA-256-Digest: 1U6Tf4kC0vuAj7T12+2pikYo9/hJocPKIPvXu0vFAJ8=
+
+Name: org/eclipse/equinox/internal/p2/ui/RepositoryOperationBeginningE
+ vent.class
+SHA-256-Digest: ADRKqNZ00mObBRLGRZb+acs1w7SxHme8dX7TzoV/L2I=
+
+Name: org/eclipse/equinox/p2/ui/LoadMetadataRepositoryJob.class
+SHA-256-Digest: a+IQIowYnGeBboSujIzp+Y9bZ/eA8ckrnHTi27Av2V0=
+
+Name: org/eclipse/equinox/internal/p2/ui/model/ArtifactRepositoryEleme
+ nt.class
+SHA-256-Digest: Hyx799SQrIT1LGAfZov2FLqX9gvDH5gzOJ8YLn/pq7I=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/CopyHandler.class
+SHA-256-Digest: 7cQliflNBvahyMTUsyrI5m8wwiWfLtnE1LQ4G3A05ic=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/DelayedFilterCheckbox
+ Tree$3$1.class
+SHA-256-Digest: yZYciondkoUjARmbgJuIkFXVs0kjs3gLgpQ36QPtigQ=
+
+Name: icons/obj/iu_disabled_obj@2x.png
+SHA-256-Digest: zxg5iK5YZ9Js3dFaqg16su8L+46MzZP7fTCG9d7vgYM=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/RepositoryNameAndLoca
+ tionDialog$2.class
+SHA-256-Digest: E3JmZD2WxdsP6lNjWi6KBZAQgOJr1CGNM0Bh20TfcTE=
+
+Name: org/eclipse/equinox/internal/p2/ui/viewers/DeferredQueryContentP
+ rovider$1.class
+SHA-256-Digest: Q8xi3xuNQnaXFpVB6XHJopFmUFh9jVTGY6ihY8ZQ9xI=
+
+Name: org/eclipse/equinox/internal/p2/ui/actions/ColocatedRepositoryAc
+ tion.class
+SHA-256-Digest: 5CToct38Yox4itZ8NUpIYQddR1Oy/GU1/JQtxNtZLeI=
+
+Name: org/eclipse/equinox/p2/ui/RepositoryManipulationPage$12.class
+SHA-256-Digest: kO8KdLoOaQZAHL5Fl2KSZuCQpZewsH+Mw3Cd6oUKWtA=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/AvailableIUGroup$10$1
+ .class
+SHA-256-Digest: PxHYl1tbmoGMjzXMiKgjhyB8x+vI5JqBtl1CYA8n90A=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/AddRepositoryDialog$1
+ .class
+SHA-256-Digest: aah8JQhd5mMgiI872IMib0FFwCw0qbuC5St+z6165tI=
+
+Name: icons/wizban/revert_wiz.png
+SHA-256-Digest: O0TyY/pIwRH7ykF7eM91MDF41cxnJvQj/SambDQ8ykU=
+
+Name: org/eclipse/equinox/internal/p2/ui/viewers/DeferredQueryTreeCont
+ entManager$ElementPendingUpdateAdapter.class
+SHA-256-Digest: D3eJKSnNCSxdYp3qgflE57kl1OGuueRemhEk6NI7xx4=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/AvailableIUGroup$6.cl
+ ass
+SHA-256-Digest: 9WIoDVWgtZAUZRtsSbWMDxOoK5Q3q9uur5MB0AEufSA=
+
+Name: org/eclipse/equinox/internal/p2/ui/query/IUViewQueryContext.clas
+ s
+SHA-256-Digest: ULdoHL8GCXIdnwYgta6Udoup3Pej0FK3lTjivJEzyXI=
+
+Name: org/eclipse/equinox/internal/p2/ui/RepositoryOperationEndingEven
+ t.class
+SHA-256-Digest: vAo9eX0VCAJ2xOrY2yrqOCzNuu8OGoZ3DeoaU4fX3q4=
+
+Name: org/eclipse/equinox/internal/p2/ui/viewers/ProvElementLabelProvi
+ der.class
+SHA-256-Digest: tuXfnbnCyG17rBNmOcTI6mp6+xh/6zm+7ParvkhuD6U=
+
+Name: org/eclipse/equinox/p2/ui/ProvisioningUI$1.class
+SHA-256-Digest: rHvmwWax9QltTjM1tIASwwqfLd/rnEdCTMAgFBNDeZo=
+
+Name: org/eclipse/equinox/internal/p2/ui/ValidationDialogServiceUI$3.c
+ lass
+SHA-256-Digest: 0LJphBbOMkpREd3yI87EV/YbyhM8ITNtEo34977Z+8s=
+
+Name: OSGI-INF/repositoryTracker_component.xml
+SHA-256-Digest: jeBBS7N/dw9CCTwnzblh45/xEnHP2twl9I7tUouDY5E=
+
+Name: org/eclipse/equinox/internal/p2/ui/actions/UpdateAction$2.class
+SHA-256-Digest: D7aB/20bNipPupStCW/65bGmCep+7AECsaH179Mi1zo=
+
+Name: org/eclipse/equinox/internal/p2/ui/model/ProvElement.class
+SHA-256-Digest: 9YAlxzCkbaaU77zKhFuc+f78nhjvJSTMtWEno6lHGJE=
+
+Name: org/eclipse/equinox/internal/p2/ui/query/InstalledIUElementWrapp
+ er.class
+SHA-256-Digest: /roR4JEXVlmR+qjysII7RR5ddpFtlyWygnVthrJcz80=
+
+Name: org/eclipse/equinox/internal/p2/ui/query/AvailableIUWrapper$Info
+ rmationCache.class
+SHA-256-Digest: csy8oRm1cKyxf32B9QYAtDzlwL673q61GR5ZcU89whs=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/RepositoryManipulator
+ DropTarget.class
+SHA-256-Digest: X1TyHjOEJZO/w7TVMrfFw/+k2xXvf0CLJJLqvTqnaK0=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/InstallWizard.class
+SHA-256-Digest: uVMxaUDhO9roXnEW8HlcqrKLw/hEkXKbjcwiwkvENC4=
+
+Name: icons/wizban/def_wizban.jpg
+SHA-256-Digest: 9l6cnn82ZLw6OyiGT3Tu/SxVT266w90ATp18kbDZLJ4=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/InstallWizard$1$1.cla
+ ss
+SHA-256-Digest: nFF0/zGy6I/8BhdLSCblJwcKUeAu7xLXJfXag+Twa5c=
+
+Name: org/eclipse/equinox/internal/p2/ui/model/RootElement.class
+SHA-256-Digest: JgcIwbkyOxE5PWs1zV7dmdtd8Db433tCVVKKMc2VgYs=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/AvailableIUGroup$8$1.
+ class
+SHA-256-Digest: tFSeMAbUAuV20IWJT11ZCA/AbJ4gUEkG6rYJFY3fZhY=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/RepositoryManipulator
+ DropTarget$1.class
+SHA-256-Digest: WXLugxdTW4qK6AywYkJk0uOh6jNWPoe1oq63OI/9bjQ=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/RepositorySelectionGr
+ oup$6.class
+SHA-256-Digest: agfT1P62JFnwP0pwxq6Ti2pWcCLfBuNQi/NS8/Y0SnY=
+
+Name: org/eclipse/equinox/internal/p2/ui/query/RequiredIUsQuery.class
+SHA-256-Digest: KsZp1pRWWDOBujBWGL2EvMf0SdrUTi7Ixf8eKmN8RSY=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/RepositoryNameAndLoca
+ tionDialog.class
+SHA-256-Digest: YTEiKcbsoez6k9iPKILfhpM3wsSoIwV1TNXx7jih9zA=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/UpdateSingleIUPage.cl
+ ass
+SHA-256-Digest: GjQAaUYu/7soDRDiTx41GcVdpiYc5nc7cxfW6Nemhns=
+
+Name: icons/obj/artifact_repo_obj.png
+SHA-256-Digest: VMMj4u95Em169pG5NGpuiq3xWVml5HCWf9oZqanQrOs=
+
+Name: org/eclipse/equinox/internal/p2/ui/actions/ProfileModificationAc
+ tion$1.class
+SHA-256-Digest: GSpg/fQm6d2O8Ad1IZzIWib6yV3V5B29lTdxUeMPcB4=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/SelectableIUsPage$1.c
+ lass
+SHA-256-Digest: ZS6xozXU8oQs1WsbgIfb4rUQGtZIRTvtcl9pUHUm5+Q=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/IUCopyrightPropertyPa
+ ge.class
+SHA-256-Digest: DRkwIC3z2a8AodxanW0DoCSDKGINV5vlaL3MTs0IidM=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/RemediationGroup$5.cl
+ ass
+SHA-256-Digest: jDSVh/u9T7slpwRh3iVZKZqsGBo71Wypdld4cfnpxso=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/RepositorySelectionGr
+ oup$10.class
+SHA-256-Digest: D08wygHSWfiiCs14NMsK6Dqr1dH20hB6GbaszNabt/4=
+
+Name: org/eclipse/equinox/internal/p2/ui/actions/UpdateAction$1.class
+SHA-256-Digest: h2rmlVrLQPoLoSToIKR1zXSFnWBiWP4fopII3H8GQ74=
+
+Name: org/eclipse/equinox/p2/ui/InstalledSoftwarePage$4.class
+SHA-256-Digest: lDL1EPp3v5RDBoEd1lLLppYm/EKa4ECChYqNRYaRRuk=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/AvailableIUGroup$5.cl
+ ass
+SHA-256-Digest: MBJxCZvIboQlrIVX1Yj3o8/lEUdLDKvY80rO4SOEBEw=
+
+Name: org/eclipse/equinox/internal/p2/ui/ColocatedRepositoryTracker$1$
+ 1.class
+SHA-256-Digest: i3aDp74tWwQPzfsz5ioFIU87hzdqIefJYiIYfUjrM44=
+
+Name: org/eclipse/equinox/internal/p2/ui/viewers/ProvElementComparer.c
+ lass
+SHA-256-Digest: B76hyLY5r5Yd6DJPxjqNkdxXDQ5CkibVf9zx0x8pEPs=
+
+Name: org/eclipse/equinox/p2/ui/RepositoryManipulationPage.class
+SHA-256-Digest: cQlgBQqSuIaLnY9p253moFk7jFDcBNdVperVnQVdkS0=
+
+Name: org/eclipse/equinox/internal/p2/ui/model/ElementUtils.class
+SHA-256-Digest: D96mEXDhT/gCVCUxql4QkdfN9UED9W8TPnumxviLfJU=
+
+Name: icons/obj/iu_disabled_patch_obj.png
+SHA-256-Digest: IyEdZCicj2pcfm/k6aHaPGAz5qRjVmMj9sGB0O9Ffiw=
+
+Name: org/eclipse/equinox/internal/p2/ui/viewers/IUDetailsLabelProvide
+ r.class
+SHA-256-Digest: 1NPszZJ5FlW31XhOY7+jDpw8QgCiltGJrghyiGZpyZk=
+
+Name: org/eclipse/equinox/internal/p2/ui/viewers/IUDetailsLabelProvide
+ r$1.class
+SHA-256-Digest: hJI6uLj2/i/Z5qxtjDNwxctPOm0zQ5mZV062i2wCfpM=
+
+Name: icons/wizban/update_wiz.png
+SHA-256-Digest: XFTz6FBTVTF0mF9+gPER3AfOHG8E9C5O26F9JQ/8VwY=
+
+Name: org/eclipse/equinox/internal/p2/ui/viewers/RepositoryContentProv
+ ider.class
+SHA-256-Digest: tYNSwsrAjOmCKrsl3QrqSQyZF5dtTSu0Wo1D4gIWPog=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/TrustCertificateDialo
+ g$1.class
+SHA-256-Digest: lcj33Efz8xKvS47UD66WpIIJzMHarhfG9qQe/Djc/YQ=
+
+Name: org/eclipse/equinox/p2/ui/RepositoryManipulationPage$17.class
+SHA-256-Digest: QNPpyuLQjzKmQQWUs8a/RHHZYet/e2DjROExyqyzXXI=
+
+Name: org/eclipse/equinox/internal/p2/ui/ColocatedRepositoryTracker.cl
+ ass
+SHA-256-Digest: TBPeoOFfeygbeUOCMYsrlVeBVf7olINvwWb74qh1tsI=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/RepositorySelectionGr
+ oup$11.class
+SHA-256-Digest: ATHwTq2WOXpS3fu9KY1g/Yjx4rB0zAEd/qqVrAWO340=
+
+Name: icons/obj/metadata_repo_obj.png
+SHA-256-Digest: vC54F7tqpzdQ+O8K3jbB340XKIBpX1cB45A7AsXMJ84=
+
+Name: org/eclipse/equinox/internal/p2/ui/actions/RefreshAction$1.class
+SHA-256-Digest: n0R10DUmXPz4dK3utlH661V8wdSrpbO+YvE0gOxUcG0=
+
+Name: icons/ovr/added_overlay.png
+SHA-256-Digest: krFYV3Nb55hIPkQZU7Cut6tR/Ftt58oYCM/yt1xM9QU=
+
+Name: org/eclipse/equinox/p2/ui/RevertProfilePage$5.class
+SHA-256-Digest: END+EcWzzUCSlx34Fwi0r5FdLjVzgNQeV4ftcDKetXQ=
+
+Name: org/eclipse/equinox/p2/ui/RepositoryManipulationPage$24.class
+SHA-256-Digest: Q/yiVkiq0WexbMPC3PibxW3cIBGo3P+d3yvw33+hu0w=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/SelectableIUsPage.cla
+ ss
+SHA-256-Digest: 2Wf/HAVXROjZxQvjGQgulO5s1/+X4OooGQ8uMDVvqdc=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/AvailableIUPatternFil
+ ter.class
+SHA-256-Digest: 2WrQWRtK8iYOoxyfpND6Z3LOICB7O9oAOFIInQwc38s=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/ILayoutConstants.clas
+ s
+SHA-256-Digest: n+v9lInqw3/dYBCOTYK9ht1QRUT6vw1pIbZQ2eQDxXQ=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/ProvisioningWizardDia
+ log.class
+SHA-256-Digest: 0q3ufaKLNCLHLGJHkb/1+lQKRAU/9QLjvv24m/+49+E=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/WizardWithLicenses.cl
+ ass
+SHA-256-Digest: SVNNJlPzwHQCN2dpw2b8itCHJO69l/EJYxlDeBycIaU=
+
+Name: org/eclipse/equinox/internal/p2/ui/ValidationDialogServiceUI$2.c
+ lass
+SHA-256-Digest: NM2bHyz1NrWZVAVm1bsw/7OeXUHTGai+34dXmZ8ttSU=
+
+Name: icons/obj/iu_remove.png
+SHA-256-Digest: dReXGHWOLPHdDi5XoWlkd36IHiUIQHRUcOYsvdrhUXM=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/ResolutionResultsWiza
+ rdPage$5.class
+SHA-256-Digest: Vx9lUbbTRcCgaWvvl0PyZKS4kUefdsnd7y3y5m4jLfg=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/ContainerCheckedTreeV
+ iewer$1.class
+SHA-256-Digest: OC8uHczUQAEZ02KRn9/lLnyCOteY32rbc4iZLmnFgM0=
+
+Name: icons/obj/iu_downgraded@2x.png
+SHA-256-Digest: OgvD1ouy0gfi1fiz3lcvNyh5Xb6TWFigrZ5rhdEUdi8=
+
+Name: icons/obj/metadata_repo_obj@2x.png
+SHA-256-Digest: +iU97uqEWzlBKx1cbsFkUV2aIa4Xo+0iIwSr+1u58TU=
+
+Name: org/eclipse/equinox/p2/ui/RepositoryManipulationPage$5.class
+SHA-256-Digest: 4b/tIEHbojlLT+bzQhNWT9qtXak33/E27DS1XUPkBAw=
+
+Name: icons/wizban/uninstall_wiz@2x.png
+SHA-256-Digest: JPs+xTALPQsxqlv+MPolh32ZqK0zX8Q2XV6CgkBC1YU=
+
+Name: org/eclipse/equinox/p2/ui/RepositoryManipulationPage$18.class
+SHA-256-Digest: 04/jtvt65fBNdK9/ha/lkAVWnbRereIP7QRgRrh2UKU=
+
+Name: org/eclipse/equinox/internal/p2/ui/query/QueryableProfileRegistr
+ y.class
+SHA-256-Digest: DqpUN77EGJFwWdBt/FYQpKCq+nhR7XV9InGpv2NkqeU=
+
+Name: org/eclipse/equinox/internal/p2/ui/model/RemoteQueriedElement.cl
+ ass
+SHA-256-Digest: AMJyl4aOPQibYZVwIuQUJjEXEcmEfRC6ml8Yn+6cnuM=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/AddRepositoryDialog$2
+ .class
+SHA-256-Digest: V2HtVapgyZHLfhUdXvGbLrKZW4TsWZVEX1nQKWZ2TF8=
+
+Name: org/eclipse/equinox/internal/p2/ui/ProvUIProvisioningListener.cl
+ ass
+SHA-256-Digest: 2TZrj9bAzDZBL35t6plcTdCMls/JGshJEj2gZN3znTg=
+
+Name: org/eclipse/equinox/p2/ui/InstalledSoftwarePage$3.class
+SHA-256-Digest: rozEmsI6Q0VjWCFpualIIuNxpxixJ+9qdPvEVBFd/lo=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/ProvisioningOperation
+ Wizard$1.class
+SHA-256-Digest: qHZ+RzfU5eNl6he+rfgBkYK2oxD2JIflrPpAEVbKZUY=
+
+Name: org/eclipse/equinox/internal/p2/ui/model/ArtifactElement.class
+SHA-256-Digest: LwVAYLOzP+Z+qXYusN/JnYGkwLZ7rlX6rhTWcfmDQrM=
+
+Name: icons/ovr/removed_overlay@2x.png
+SHA-256-Digest: 5VnXS7HyzxVTsnh5hRQ/HkFCjAHoPfH1UjciAf6hV/M=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/DelayedFilterCheckbox
+ Tree$2.class
+SHA-256-Digest: LetS1aIc29cYRW71G3uq4yXft8Uaq9UEtjAjR2jmUko=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/IULicensePropertyPage
+ .class
+SHA-256-Digest: LboO5tAHQH0U+/IvHQxFU+Z8/ifvQ6TuaGeB6WnPA50=
+
+Name: icons/obj/iu_upgraded@2x.png
+SHA-256-Digest: cBKJpTfqkXZFxc+QwEX34hbaUfW1oe2AouoKSsrAa5Q=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/IUPropertyPage.class
+SHA-256-Digest: u4xoiPIkcfNy9hnTHcexeLyEJYYPma6R3N5u77a+CWg=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/RepositorySelectionGr
+ oup$5.class
+SHA-256-Digest: o0QaSHNfXFFupLigXstOJXSOoDPsQayrGlGB1w0/zns=
+
+Name: org/eclipse/equinox/internal/p2/ui/viewers/DeferredQueryTreeCont
+ entManager.class
+SHA-256-Digest: JBRlqDz3GSQ/jL3Yu2fgoUdSA1eSyJrH5P8FmJe5hMQ=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/RemediationGroup.clas
+ s
+SHA-256-Digest: WQL1YN0nTQkUnX6OOXWbE7WgfpieN5YGa/VeiRRiM3M=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/RemediationGroup$Reme
+ dyContentProvider.class
+SHA-256-Digest: O7j4+Y/0kGiN3oPRItGBtxc+vwJ38JtrBrG/y//4byc=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/RemediationGroup$Tree
+ ViewerComparator.class
+SHA-256-Digest: bzmFv/eHJQVtXasB/z0b3moe7lPOOJCjN0OmpjzAaWw=
+
+Name: org/eclipse/equinox/p2/ui/RepositoryManipulationPage$21.class
+SHA-256-Digest: 5kVsg7ptj0XaIqEBF/TsC49mopzgGeJC+chvdXtSfD0=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/ComboAutoCompleteFiel
+ d$1$1.class
+SHA-256-Digest: loFwtz25edd8K1wp/ZxKJs3F48C3l3a2PJlH/R5axbQ=
+
+Name: org/eclipse/equinox/p2/ui/RepositoryManipulationPage$MetadataRep
+ ositoryPatternFilter.class
+SHA-256-Digest: 37EH6dINTes68ZSMhbrxJV1QGoAGq/AMpQGkmrCR7uA=
+
+Name: org/eclipse/equinox/internal/p2/ui/viewers/StructuredViewerProvi
+ sioningListener.class
+SHA-256-Digest: PrW1TuetVBL6TUHS0OoOMROdK+2REy3Av7HBG91ZRZQ=
+
+Name: plugin.properties
+SHA-256-Digest: mlq5XfAnYj1QVRf7RsZH5PL/xf+s7dPIzjR+uXe28Zo=
+
+Name: org/eclipse/equinox/internal/p2/ui/actions/ProfileModificationAc
+ tion.class
+SHA-256-Digest: 7Jk0/ge/ootKqkvdGNdpXtg9dxaLIabqU+WUgkE9EYo=
+
+Name: org/eclipse/equinox/internal/p2/ui/model/ArtifactRepositories.cl
+ ass
+SHA-256-Digest: bbr0McN7jV7ZD5dm7BLOtRZUzhQSA7D/Vzoke2OkOYU=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/DelayedFilterCheckbox
+ Tree$4$3.class
+SHA-256-Digest: cZyToQG+GlAX6O7CrfupidsYwMN3MlEAX0UW/BDw7vs=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/RepositorySelectionGr
+ oup$8.class
+SHA-256-Digest: BHTWXRIA9aIqbZR/kl0B2AE575rErxEeEZPQQ4AQE0A=
+
+Name: org/eclipse/equinox/internal/p2/ui/viewers/StructuredViewerProvi
+ sioningListener$1.class
+SHA-256-Digest: e7JN/gdYJXPVgsArsZ3dr+QbgT7SGI4EE8+Z6l3ijME=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/ProvisioningOperation
+ Wizard$5.class
+SHA-256-Digest: M1tVk+6N1gDDtPj5FdeS+OQQoSEzA1T21kD4MxDWfGg=
+
+Name: org/eclipse/equinox/internal/p2/ui/query/QueryableUpdates.class
+SHA-256-Digest: pEOkfNrd89KHt/fULIj9YWhTD24DbOWF2kA9EdiTQOM=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/ProvisioningOperation
+ Wizard$2.class
+SHA-256-Digest: dJyM8wqWwI1ZvgvQw1GzOag580TqJMuRf5F3oK5DUXA=
+
+Name: org/eclipse/equinox/p2/ui/RevertProfilePage.class
+SHA-256-Digest: MCY4t0nF8Wh6muBYIc8ZD89iohs9kgmYglO9juKgi28=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/AvailableIUGroup$4.cl
+ ass
+SHA-256-Digest: JazyaYuL4gdPxCZ/zEtk7vHa4KVGVeINbcfylSIoz8E=
+
+Name: org/eclipse/equinox/internal/p2/ui/actions/RefreshAction.class
+SHA-256-Digest: KHYvpSXF8yigNlQ+Zf8ROCjn6LCeu78Y+PgRR6Z//tU=
+
+Name: icons/obj/iu_obj@2x.png
+SHA-256-Digest: oRmfKQ4PcR82cZZ+vZ718mwR9/scF4uJAAAMT2yYRHE=
+
+Name: org/eclipse/equinox/p2/ui/InstalledSoftwarePage$5.class
+SHA-256-Digest: CaWB8mHl2akqrIYAORvLNt0Dzigi9jWtuspJrHSTNsw=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/IResolutionErrorRepor
+ tingPage.class
+SHA-256-Digest: zPrIv6kQt5OMVIU1oRKmWDN14bgt8+YUWT+TBFIyvzM=
+
+Name: org/eclipse/equinox/internal/p2/ui/model/IIUElement.class
+SHA-256-Digest: bssH1qGMb5pCdtsR8fzSUuYMqy+kSZEcYpC3+29Qjvk=
+
+Name: org/eclipse/equinox/internal/p2/ui/model/AvailableUpdateElement.
+ class
+SHA-256-Digest: /YWm7Pb9DqnCzhUY59ebKL1v+3lv8JKl1mR9cSsvZLs=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/AvailableIUsPage.clas
+ s
+SHA-256-Digest: uzR5CGCEt5gxks2i7Yr2U8B3HR4NuJE/nxLxHdA2Hfk=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/IRepositorySelectionL
+ istener.class
+SHA-256-Digest: Y6/21U7U6n6DP6rbD01vbI70/hgWNL1WizFeccAELXQ=
+
+Name: org/eclipse/equinox/p2/ui/RepositoryManipulationPage$16.class
+SHA-256-Digest: 6OWRIU6p1JNByo0IlxfoysqU9b1rga/N1EzHzj6aVvg=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/AvailableIUsPage$14.c
+ lass
+SHA-256-Digest: yza9uN0Ubsk79ku1U+MbGyglXBVkV97B3K9FAaWeyWk=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/StructuredIUGroup.cla
+ ss
+SHA-256-Digest: hygOPGpa92cVyQjXRbO2CdOhz9GNSusEVzAWe3BLvzU=
+
+Name: org/eclipse/equinox/internal/p2/ui/ProvUIAdapterFactory.class
+SHA-256-Digest: bawE8ve15H9C6Qiqs1bZkdOob4QxW5yGqQ/9LB12AZE=
+
+Name: org/eclipse/equinox/internal/p2/ui/model/Updates.class
+SHA-256-Digest: 5GhgiyXxd0zEckDDefb8SC7ZeOEbHn5fUX6OFtz/v8A=
+
+Name: org/eclipse/equinox/p2/ui/RepositoryManipulationPage$13.class
+SHA-256-Digest: DtTTDYSdVAlVLe1Mi1hGFjziLIug8GEA/bhkR6V+8WU=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/AvailableIUsPage$5.cl
+ ass
+SHA-256-Digest: EJk6v2pvEc2pzBypQhtySoekmyO18n2PMxqD3QqRkxg=
+
+Name: org/eclipse/equinox/internal/p2/ui/viewers/DeferredQueryContentP
+ rovider.class
+SHA-256-Digest: m6q+SETbXDYhEvw9iji4FR3S7cPSFUNumczPPmdpIlk=
+
+Name: org/eclipse/equinox/internal/p2/ui/ProvUI.class
+SHA-256-Digest: 7pgLZEfWe4MHJMHjHokgpCmOV7yW87FESoi2PJQ9naA=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/AvailableIUsPage$11.c
+ lass
+SHA-256-Digest: dsF1DvihNZw1RrjkAGuRmCHGnSIxGUMyuHZlzEnOsuo=
+
+Name: org/eclipse/equinox/internal/p2/ui/ValidationDialogServiceUI$4.c
+ lass
+SHA-256-Digest: Xa10Lgv89K6YMY5Lu3tbJr3F1go/MExUBSV+TqMrHdM=
+
+Name: org/eclipse/equinox/p2/ui/RepositoryManipulationPage$7.class
+SHA-256-Digest: ab2taaZTrsa8dX682+gRR5mxhqwPoF0TEnuRXl3k0nk=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/AvailableIUsPage$2.cl
+ ass
+SHA-256-Digest: 0aXDQ7ZXxmiheX1zxDjkw+s0RFBEqGlaySJwNj1t4QQ=
+
+Name: icons/obj/iu_upgraded.png
+SHA-256-Digest: pdlEJui5itiwu0r7nr/D+v0zzRXRQPJy1fe2BUZN+ps=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/IULicensePropertyPage
+ $1.class
+SHA-256-Digest: 6hz13d48NIRqgHN+uXFfIxvT8/co6EHrjnfBv09vZKw=
+
+Name: org/eclipse/equinox/p2/ui/AcceptLicensesWizardPage$LicenseConten
+ tProvider.class
+SHA-256-Digest: j+u5iVAMUELqUNge2wgJvexuAhFov1TXeN4fVECnXf8=
+
+Name: icons/wizban/install_wiz@2x.png
+SHA-256-Digest: Zx9J3/DZ92s372ELcNX5SOjXcy4GhKxs8Uv442TLmZg=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/TrustCertificateDialo
+ g.class
+SHA-256-Digest: BmgUxln2id1+yDLSIumy8oDZz6y7PFiVdnQ2hmWce4M=
+
+Name: icons/obj/profile_obj@2x.png
+SHA-256-Digest: tU069fxWZPktEt6+hJuAuMEzB7S4Y8/a4XMjYmMCpHs=
+
+Name: org/eclipse/equinox/internal/p2/ui/query/ProfileElementWrapper.c
+ lass
+SHA-256-Digest: 6K51i9y0ItqmFpDvde32dtmd/expfQFC2JADFyH18ec=
+
+Name: org/eclipse/equinox/internal/p2/ui/ProvisioningOperationRunner$1
+ .class
+SHA-256-Digest: 23p0sK2Sp2xOKDMOcWg6Sbll3cs371Iur8DHoicMAO4=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/ProvisioningOperation
+ Wizard$3.class
+SHA-256-Digest: jlmg4pNdduT2diRvE7E3qPCmowigLTtMLq0JA30aQi8=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/AvailableIUsPage$4.cl
+ ass
+SHA-256-Digest: H9XxDGlcCG+/K5fOj6x+57aExNclZhLZwuGIyyqGtLI=
+
+Name: org/eclipse/equinox/p2/ui/InstalledSoftwarePage$IUPatternFilter.
+ class
+SHA-256-Digest: SVfPrZPQGjwyt5BA5sukYxkiFGu2T1Z5xOZ5AF3aEIo=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/AvailableIUsPage$12.c
+ lass
+SHA-256-Digest: WeRIx3yBUNtRSeV1vOGhJBb6Qgi1KqunhiV0cAc+DT8=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/TrustCertificateDialo
+ g$4.class
+SHA-256-Digest: xCS9zOPf86JoCuodtDMKfDaRPL25SDqNtgYQJmYgbBM=
+
+Name: org/eclipse/equinox/internal/p2/ui/ValidationDialogServiceUI$5.c
+ lass
+SHA-256-Digest: 10Mk2qbNllGvGbvYftN9w20CAMGmCgVl+qE1q8k9XdU=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/ProvisioningOperation
+ Wizard.class
+SHA-256-Digest: 2ylNUZ+jzTCXCn7X0cR/xck1xH6nq1fWYGU5ZrC8m14=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/AvailableIUsPage$3.cl
+ ass
+SHA-256-Digest: wVTSDYcnaZ0nyLklW4ZKiRCFu9dVR3OD5kXQZDmwwZ0=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/PreselectedIUInstallW
+ izard.class
+SHA-256-Digest: qLw0UG/vvC41JIelAJ27RetJvfQiAKkzWHr0cSlGPb4=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/ProvisioningWizardPag
+ e.class
+SHA-256-Digest: K13hTpDtby4eib+zM4LQRTLPE62t0A2H2x+OGo9+8Uk=
+
+Name: org/eclipse/equinox/internal/p2/ui/ProvUI$1.class
+SHA-256-Digest: R8903vQUktjfFxF41bwSAc1YTr6/kdM4IvmOVtz0fus=
+
+Name: org/eclipse/equinox/p2/ui/RepositoryManipulationPage$8.class
+SHA-256-Digest: jM0kAfRqUOLzwKJohAKKEltJYLIrX43CLpYNtSlxyB0=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/URLDropAdapter.class
+SHA-256-Digest: dtD3FnCVrgmaC65nooweGfBJlpHzkUzAdjvOa8pkw/E=
+
+Name: org/eclipse/equinox/internal/p2/ui/viewers/IUDetailsLabelProvide
+ r$1$1.class
+SHA-256-Digest: WgP2I9Q4gCwy9qHlT9SJwsOwrbcXNCkDv9i2cgNZMCo=
+
+Name: org/eclipse/equinox/p2/ui/RepositoryManipulationPage$14.class
+SHA-256-Digest: KOHMDaUWEIzxjLIGcxQGdQM+YLoR1tVlAFF4CiwHyW0=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/AvailableIUGroup$1.cl
+ ass
+SHA-256-Digest: od0ihrsK6QioDOUw7MgZcynn5AJCc/CNg2OvoxW+J0c=
+
+Name: org/eclipse/equinox/internal/p2/ui/model/ProfileElement.class
+SHA-256-Digest: 5Cv25ziuKJWH8qpMyRwb7DmCRRWP3uQn4ioGt6atJjc=
+
+Name: icons/obj/profile_obj.png
+SHA-256-Digest: 0ONmZSrXBuqcX4FWSKlp7+I80x1hK2tpXBMaMShloKY=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/AvailableIUGroup$10.c
+ lass
+SHA-256-Digest: 0DBZONRYf0Ti+KdPk20agV/UOFv26naAPftS8UmduOc=
+
+Name: org/eclipse/equinox/internal/p2/ui/IProvHelpContextIds.class
+SHA-256-Digest: /XZ1ZHlfP4Nv4uDPbSm1Pys0PGvbu5hWyU6+Hpc7oEM=
+
+Name: icons/obj/iu_remove@2x.png
+SHA-256-Digest: A5mBlys7ruIjKgSdYyLp7P7GMcWLEWa2+EmmvHI3TM0=
+
+Name: about.html
+SHA-256-Digest: 0RM1x9lTJa7T8YkysaegPuBIeaEvSZypRDfXoMpsJAU=
+
+Name: org/eclipse/equinox/p2/ui/AcceptLicensesWizardPage$LicenseLabelP
+ rovider.class
+SHA-256-Digest: wHHO85evZ/zSwE+5uyStWsGVwIFrURvYUOwgz7D41D0=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/SizeComputingWizardPa
+ ge$1.class
+SHA-256-Digest: lt2xWCgzQhfA9ieRlhnJbB36wQLw6fqKgfT/NxyzHcU=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/IUGeneralInfoProperty
+ Page.class
+SHA-256-Digest: Lerge5AMIURLA1SbFSQFDPT61fCbIe9OB2UKmYliCs0=
+
+Name: org/eclipse/equinox/internal/p2/ui/UpdateManagerCompatibility.cl
+ ass
+SHA-256-Digest: fZWm/SUYherww9DZ6vMPizj7mLBG7LAF7tnKtmQ3WLI=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/DelayedFilterCheckbox
+ Tree$1.class
+SHA-256-Digest: Jcvp3CUs15tiwPLrqLQoVgjo0LCwftMp3H/1uuzT2lQ=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/TextURLDropAdapter.cl
+ ass
+SHA-256-Digest: n5WNOYMZ9P3Q48LJpWvmAssfM62vdJyQ5qfbHotvL9E=
+
+Name: org/eclipse/equinox/internal/p2/ui/actions/ProvisioningAction.cl
+ ass
+SHA-256-Digest: gbvurroXS8PxdbrXhkk7m5Hy6d0yrPgN6l5/N1i0JbY=
+
+Name: icons/obj/iu_downgraded.png
+SHA-256-Digest: gHxp5rgse0mYkb7cmxBH9IlD48zMmnjxYA5dqzKXOks=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/RepositorySelectionGr
+ oup$7.class
+SHA-256-Digest: HMkcRenMgh+VavAOoFbbwbmWG9M+VOx51XfMqCT163o=
+
+Name: org/eclipse/equinox/p2/ui/RepositoryManipulationPage$4$1.class
+SHA-256-Digest: VF7/L3+tQjtwsl5DJuktsXCY37GfYlE8Pm/n0jgmtfY=
+
+Name: org/eclipse/equinox/p2/ui/RepositoryManipulationPage$CachedMetad
+ ataRepositories.class
+SHA-256-Digest: WYJKOHOTQO3YdoOBC7IKLbN/JR/vU8G8H6IDLVFYSzw=
+
+Name: org/eclipse/equinox/internal/p2/ui/model/InstalledIUElement.clas
+ s
+SHA-256-Digest: NF8zZv3mvSXhVgrejDBf6zTSSw+kXaUa698oJmepFAY=
+
+Name: org/eclipse/equinox/p2/ui/RepositoryManipulationPage$9.class
+SHA-256-Digest: 6anWUZAiiRZHmIXtOvvRUTW/cplv8j8hLyS8svXE8MY=
+
+Name: org/eclipse/equinox/internal/p2/ui/messages.properties
+SHA-256-Digest: dzQU5PZVmcPQSMpv3ppbrTLbYyS6O193n4bbwCY5U2A=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/AvailableIUsPage$13.c
+ lass
+SHA-256-Digest: XsoBolLPucYNzLkf+TIapWuJCbl1yl2hly8STg7N890=
+
+Name: org/eclipse/equinox/internal/p2/ui/viewers/IUComparator.class
+SHA-256-Digest: +Pml1V+jed59z7mKQNLVL7Qe1aTmJWhsPz3tD5yud84=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/AvailableIUGroup$2.cl
+ ass
+SHA-256-Digest: pZeT/MGotuu2CeZUFZDpqSVLU08dcQ3gkrnTzxP0iZg=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/ProvisioningOperation
+ Wizard$4.class
+SHA-256-Digest: EAchSmUW3emMMs6oFdyH9VSyK4bejFQTAwvSex3a1v4=
+
+Name: org/eclipse/equinox/internal/p2/ui/dialogs/RepositoryNameAndLoca
+ tionDialog$1.class
+SHA-256-Digest: dPSAN1ht+JfuccrWz42ejHY0QudzspgR4NP8eld30XY=
+
+Name: icons/obj/iu_update_obj@2x.png
+SHA-256-Digest: B8d7/T+YhHv4MGz2+fD7NyvP2TKDswYUWCS2sLxamvI=
+
+Name: org/eclipse/equinox/internal/p2/ui/viewers/StructuredViewerProvi
+ sioningListener$2.class
+SHA-256-Digest: XLMEgAL47oQXerT2GujyG/jbQxEW/QzyNki6rMdGyJ0=
+
+Name: org/eclipse/equinox/p2/ui/RepositoryManipulationPage$20.class
+SHA-256-Digest: Y2Y9hpNJriydFSk04WkhjklEVWlO6fZZ5RgKZVdFxhE=
+
+Name: org/eclipse/equinox/internal/p2/ui/ProvUIActivator.class
+SHA-256-Digest: BqoIgZ+D4srlqVKz0F10TpCLTiI4nRWJoS8DzSVTAfo=
+
+Name: org/eclipse/equinox/internal/p2/ui/ValidationDialogServiceUI$Mes
+ sageDialogWithLink.class
+SHA-256-Digest: DE4cfZOWhAzQVZM82jp4JLUzZOthnNaR28HfaGAblhs=
+

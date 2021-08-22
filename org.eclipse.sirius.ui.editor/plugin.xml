@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<!--
+  Copyright (c) 2017 Obeo
+  All rights reserved. This program and the accompanying materials
+  are made available under the terms of the Eclipse Public License v1.0
+  which accompanies this distribution, and is available at
+  http://www.eclipse.org/legal/epl-v10.html
+
+  Contributors:
+       Obeo - Initial API and implementation
+-->
+
+<plugin>
+   <extension-point id="sessionEditorPageProvider" name="%sessionEditorPageProviderExtensionPointName" schema="schema/sessionEditorPageProvider.exsd"/>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="org.eclipse.sirius.ui.editor.SessionEditor"
+            default="true"
+            extensions="aird"
+            icon="icons/SiriusFile.gif"
+            id="org.eclipse.sirius.ui.editor.session"
+            name="%UI_SessionEditor_label">
+      </editor>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="org.eclipse.sirius.ui.editor.internal.preferences.SessionEditorPreferencesInitializer">
+      </initializer>
+   </extension>
+   <extension
+         point="org.eclipse.ui.navigator.viewer">
+      <viewer
+            viewerId="org.eclipse.sirius.ui.editor.internal.graphicalcomponents.semanticModelsViewer">
+      </viewer>
+      <viewerContentBinding
+            viewerId="org.eclipse.sirius.ui.editor.internal.graphicalcomponents.semanticModelsViewer">
+         <includes>
+            <contentExtension
+                  isRoot="true"
+                  pattern="org.eclipse.sirius.ui.commonFilter.*">
+            </contentExtension>
+            <contentExtension
+                  isRoot="true"
+                  pattern="org.eclipse.sirius.ui.editor.graphicalcomponents.semanticModelsViewer.contentExtension.*">
+            </contentExtension>
+            <contentExtension
+                  pattern="org.eclipse.sirius.ui.linkHelper.modeling.explorer.*">
+            </contentExtension>
+         </includes>
+      </viewerContentBinding>
+      <viewerActionBinding
+            viewerId="org.eclipse.sirius.ui.editor.internal.graphicalcomponents.semanticModelsViewer">
+         <includes>
+            <actionExtension
+                  pattern="org.eclipse.sirius.ui.editor.graphicalcomponents.semanticModelsViewer.actionExtension.*">
+            </actionExtension>
+         </includes>
+      </viewerActionBinding>
+   </extension>
+   <extension
+         point="org.eclipse.ui.navigator.navigatorContent">
+      <navigatorContent
+            activeByDefault="true"
+            contentProvider="org.eclipse.sirius.ui.tools.internal.views.common.navigator.SiriusCommonContentProvider"
+            icon="icons/SessionResourceFile.gif"
+            id="org.eclipse.sirius.ui.editor.graphicalcomponents.semanticModelsViewer.contentExtension.defaultContentProvider"
+            labelProvider="org.eclipse.sirius.ui.tools.internal.views.common.navigator.SiriusCommonLabelProvider"
+            name="%UI_sessionEditor_modelsBlock_defaultContentProvider_name"
+            priority="high">
+         <triggerPoints>
+        </triggerPoints>
+         <dropAssistant
+               class="org.eclipse.sirius.ui.editor.internal.ModelCommonDropAdapterAssistant"
+               id="org.eclipse.sirius.ui.editor.modelDropAssistant">
+               <possibleDropTargets>
+                  <adapt
+                        type="java.lang.Object">
+                  </adapt>
+               </possibleDropTargets>
+         </dropAssistant>
+      </navigatorContent>
+   </extension>
+    <extension
+       point="org.eclipse.ui.menus">
+    <menuContribution
+          allPopups="false"
+          locationURI="popup:org.eclipse.ui.popup.any?before=additions">
+       <command
+             commandId="org.eclipse.sirius.ui.closeSessionCommand"
+             icon="icons/close.gif"
+             id="org.eclipse.sirius.ui.closeSessionMenuContribution"
+             label="%UI_CloseSession_label"
+             style="push">
+          <visibleWhen
+                checkEnabled="false">
+             <iterate>
+                  <adapt
+                   type="org.eclipse.core.resources.IResource">
+                <test
+                      property="org.eclipse.sirius.ui.isSessionFile">
+                </test>
+             </adapt>
+             </iterate>
+          </visibleWhen>
+       </command>
+    </menuContribution>
+ </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+ <command
+       categoryId="org.eclipse.ui.category.file"
+       defaultHandler="org.eclipse.sirius.ui.business.internal.commands.CloseSessionHandler"
+       id="org.eclipse.sirius.ui.closeSessionCommand"
+       name="%UI_CloseSessionCommand_name">
+ </command>		
+	</extension>
+	
+</plugin>

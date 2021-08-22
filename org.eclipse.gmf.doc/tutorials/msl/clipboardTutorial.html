@@ -1,0 +1,259 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1" />
+<title>Tutorial: EMF Clipboard Copy and Paste</title>
+</head>
+<body>
+<p><a id="top" name="top"></a><img src="../../logo.gif" /></p>
+
+<h1>Tutorial: EMF Clipboard Copy and Paste</h1>
+
+<table border="0">
+<tr>
+<td>
+<p>Version: 0.1</p>
+</td>
+<td>
+<p>Date: June 08, 2005</p>
+</td>
+</tr>
+</table>
+
+<h2>Contents</h2>
+
+<ul>
+<li><a href="#overview">Overview</a></li>
+
+<li><a href="#refs">References</a></li>
+
+<li><a href="#intro">Introduction</a></li>
+
+<li><a href="#resource_setup">EMF Resource Setup</a></li>
+
+<li><a href="#clipboard_support">Clipboard Support Setup</a></li>
+
+<li><a href="#copying_objects">Copying EObjects</a></li>
+
+<li><a href="#pasting_objects">Pasting EObjects</a></li>
+
+<li><a href="#summary">Summary</a></li>
+</ul>
+
+<h2><a id="overview" name="overview"></a>Overview</h2>
+
+<p>[<a href="#top">back to top</a>]</p>
+
+<p>The EMF clipboard support allows EObjects to be copied and
+pasted in an intelligent way. This is accomplished by providing
+clipboard support to a metamodel so that any instances of that
+metamodel may be copied in a specific way that is intuitive for
+users of that metamodel.</p>
+
+<h2><a id="refs" name="refs"></a>References</h2>
+
+<p>[<a href="#top">back to top</a>]</p>
+
+<p>This tutorial assumes that the reader is familiar with EMF and
+in particular EPackages, EClasses, EStructuralFeatures and
+EReferences. A crucial part of understanding EMF is being able to
+understand its reflective mechanisms. Also, extension parsers and
+EPackage namespace URIs should be understood before beginning to
+add clipboard support for a metamodel.</p>
+
+<p>For reference, the full <a
+href="../../examples-guide/msl/clipboardExample.html">example</a>
+for this tutorial is available.</p>
+
+<h2><a id="intro" name="intro"></a>Introduction</h2>
+
+<p>[<a href="#top">back to top</a>]</p>
+
+<p>In order to demonstrate EMF clipboard support, we will be making
+use of the Library metamodel. This metamodel is a variant of the
+standard EMF example metamodel used in many of its tutorials.</p>
+
+<p>For those readers who are not familiar with this metamodel, it
+models a library with books and writers. A book has an author that
+is a writer and both writers and books may be owned by a library.
+When copying and pasting writers, their books should be copied
+along with them even though the writer doesn't contain their
+books.</p>
+
+<h2><a id="resource_setup" name="resource_setup"></a>EMF Resource
+Setup</h2>
+
+<p>[<a href="#top">back to top</a>]</p>
+
+<p>One important prerequisite for EMF clipboard support is that the
+resources that will contain EObjects to be copied and/or pasted
+must support UUID(Universally Unique IDs) URIs for the EObjects.
+EMF clipboard will use these UUIDs to discover whether another
+EObject is the original EObject and should be overwritten with the
+clipboard contents. EMF's XMIResourceImpl does not normally use
+UUIDs.</p>
+
+<p>To ensure EMF will use a compatible resource, we will create a
+new subclass of the XMIResourceImpl so that our resource is
+serialized as XMI but with UUIDs:</p>
+
+public class LibraryResource extends XMIResourceImpl { public
+LibraryResource() { super(); } public LibraryResource(URI uri) {
+super(uri); } protected boolean useUUIDs() { return true; } }
+
+<p>As well, we will need a resource factory to provide to EMF so
+that it will construct our resource implementation rather than its
+own XMIResourceImpl:</p>
+
+public class LibraryResourceFactory extends XMIResourceFactoryImpl
+{ public LibraryResourceFactory() { super(); } public Resource
+createResource(URI uri) { return new LibraryResource(uri); } }
+
+<p>Finally, we will write an extension that will register our
+factory with EMF when it encounters the "library" file
+extension:</p>
+
+&lt;extension point="org.eclipse.emf.ecore.extension_parser"&gt;
+&lt;parser type="library"
+class="org.eclipse.gmf.examples.runtime.emf.clipboard.library.LibraryResourceFactory"/&gt;
+&lt;/extension&gt;
+
+<h2><a id="clipboard_support"
+name="clipboard_support"></a>Clipboard Support Setup</h2>
+
+<p>[<a href="#top">back to top</a>]</p>
+
+<p>Now that we have set up the resource to use UUIDs, we can add
+clipboard support for the library metamodel:</p>
+
+class LibraryClipboardSupport extends AbstractClipboardSupport {
+public LibraryClipboardSupport() { super(); } /** * Provide a
+mapping of name attributes for the EClasses of * the Library
+metamodel. */ protected EAttribute getNameAttribute(EClass eClass)
+{ EAttribute result; switch (eClass.getClassifierID()) { case
+LibraryPackage.BOOK: result =
+LibraryPackage.eINSTANCE.getBook_Title(); break; case
+LibraryPackage.LIBRARY: result =
+LibraryPackage.eINSTANCE.getLibrary_Name(); break; case
+LibraryPackage.WRITER: result =
+LibraryPackage.eINSTANCE.getWriter_Name(); break; default: result =
+null; break; } return result; } /** * Merge an author into an
+existing author of the same name when pasting. */ public
+PasteAction getPasteCollisionAction(EClass eClass) { if (eClass ==
+LibraryPackage.eINSTANCE.getWriter()) { return PasteAction.MERGE; }
+else { return super.getPasteCollisionAction(eClass); } } /** * We
+always copy an author's books. */ public boolean
+isCopyAlways(EObject context, EReference eReference, Object value)
+{ if (eReference == LibraryPackage.eINSTANCE.getWriter_Books()) {
+return true; } else { return super.isCopyAlways(context,
+eReference, value); } } }
+
+<p>In the above class, we extend the AbstractClipboardSupport and
+we provide three key pieces of information: the name EAttribute of
+an EClass, the action to perform in case of a collision of an
+EObject of a particular EClass and whether to copy the contents of
+an EReference. The reason for the first piece of information is
+made clear in the library metamodel because although the Writer and
+Library EClasses has a "name" EAttribute, the Book has a "title"
+EAttribute. In cases where a paste will cause a collision with
+another EObject of the same EClass, the <a
+href="../../reference/api/runtime/org/eclipse/gmf/runtime/emf/clipboard/core/IClipboardSupport.html#getPasteCollisionAction(org.eclipse.emf.ecore.EClass)">
+getPasteCollisionAction()</a> method will dictate whether the
+EObjects should be merged, added, cloned, replaced and other
+possible actions (see the PasteAction class). The final piece of
+information provided by the <a
+href="../../reference/api/runtime/org/eclipse/gmf/runtime/emf/core/clipboard/IClipboardSupport.html#isCopyAlways(org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EReference, java.lang.Object)">
+isCopyAlways()</a> method will provide information regarding which
+EReferences should be copied along with the EObject. In our case,
+we request that the author's books be copied along with the author.
+The AbstractClipboardSupport class provides a default
+implementation that specifies that all containment EReferences
+should be copied while all derived or transient EReferences should
+not be copied.</p>
+
+<p>To register the LibraryClipboardSupport to the EMF Clipboard
+framework, we will need to create a factory as follows:</p>
+
+public class LibraryClipboardSupportFactory implements
+IClipboardSupportFactory { private final IClipboardSupport support
+= new LibraryClipboardSupport(); public
+LibraryClipboardSupportFactory() { super(); } public
+IClipboardSupport newClipboardSupport(EPackage ePackage) { return
+support; } }
+
+<p>Finally, an extension is written to register the factory against
+the namespace URI of the Library EPackage:</p>
+
+&lt;extension
+point="org.eclipse.gmf.runtime.emf.clipboard.core.clipboardSupport"&gt;
+&lt;factory
+class="org.eclipse.gmf.examples.runtime.emf.clipboard.library.LibraryClipboardSupportFactory"
+nsURI="http:///org/eclipse/emf/examples/library/extlibrary.ecore/1.0.0"
+priority="highest"/&gt; &lt;/extension&gt;
+
+<h2><a id="copying_objects" name="copying_objects"></a>Copying
+EObjects</h2>
+
+<p>[<a href="#top">back to top</a>]</p>
+
+<p>Once Clipboard support has been added for a metamodel, it is
+relatively trivial to start copying and pasting EObjects. When
+copying EObjects, they are serialized into the form of a string
+where they may be later pasted into another location:</p>
+
+String clipString = ClipboardUtil.copyElementsToString(
+getSelectedObjects(), null, new NullProgressMonitor());
+
+<p>The clipString may be passed around using some simple
+data-passing scheme, IPC scheme or given to the operating system
+clipboard using the org.eclipse.swt.dnd.Clipboard class in a
+specialized org.eclipse.swt.dnd.Transfer object.</p>
+
+<h2><a id="pasting_objects" name="pasting_objects"></a>Pasting
+EObjects</h2>
+
+<p>[<a href="#top">back to top</a>]</p>
+
+<p>After retrieving the original string from a copy operation, it
+is an equivalently trivial task to paste the EObjects back into
+another location underneath another EObject. The advantage of this
+paste operation in the context of the library metamodel is that
+authors will be pasted along with their books into other
+libraries.</p>
+
+EObject target; Collection pasted =
+ClipboardUtil.pasteElementsFromString( clipString, target, null,
+new NullProgressMonitor()); if (pasted == null || pasted.isEmpty())
+{ System.out.println("A EMF clipboard paste error has occurred. No
+EObjects have been pasted."); }
+
+<h2><a id="principles" name="principles"></a><a id="summary"
+name="summary"></a><a id="models" name="models"></a><a id="api"
+name="api"></a>Summary</h2>
+
+<p>[<a href="#top">back to top</a>]</p>
+
+<p>In this tutorial, we did the following:</p>
+
+<ol>
+<li>Created an EMF resource that will satisfy the prerequisites for
+EMF clipboard</li>
+
+<li>Developed the necessary clipboard support for library
+metamodel</li>
+
+<li>Copied a group of EObjects into a string object</li>
+
+<li>Pasted a group of EObjects from the string object</li>
+</ol>
+
+<br />
+<br />
+<hr />
+<p><a href="http://www.eclipse.org/legal/epl-v10.html">Copyright (c) 2000,2005
+IBM Corporation and others. All Rights Reserved.</a></p>
+</body>
+</html>
+

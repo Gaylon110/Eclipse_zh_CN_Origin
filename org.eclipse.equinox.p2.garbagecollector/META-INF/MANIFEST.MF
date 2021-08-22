@@ -1,0 +1,98 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.equinox.p2.garbagecollector;singleton
+ :=true
+Archiver-Version: Plexus Archiver
+Built-By: e4Build
+Require-Bundle: org.eclipse.equinox.p2.engine,org.eclipse.equinox.regi
+ stry;bundle-version="[3.4.0,4.0.0)"
+Bundle-ManifestVersion: 2
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/equino
+ x/rt.equinox.p2.git;path="bundles/org.eclipse.equinox.p2.garbagecolle
+ ctor";tag="I20160504-2000";commitId=fa638c587cace72b2aedb9c3db9bc9574
+ 5ff901a
+Bundle-Vendor: %providerName
+Import-Package: org.eclipse.core.runtime.preferences,org.eclipse.equin
+ ox.app;version="1.0.0",org.eclipse.equinox.internal.p2.core.helpers,o
+ rg.eclipse.equinox.internal.provisional.p2.core.eventbus,org.eclipse.
+ equinox.p2.core;version="[2.0.0,3.0.0)",org.eclipse.equinox.p2.core.s
+ pi;version="[2.0.0,3.0.0)",org.eclipse.equinox.p2.metadata;version="[
+ 2.0.0,3.0.0)",org.eclipse.equinox.p2.query;version="[2.0.0,3.0.0)",or
+ g.eclipse.equinox.p2.repository;version="[2.0.0,3.0.0)",org.eclipse.e
+ quinox.p2.repository.artifact;version="[2.0.0,3.0.0)",org.eclipse.osg
+ i.service.debug;version="1.2.0",org.eclipse.osgi.util;version="1.1.0"
+ ,org.osgi.framework;version="1.6.0",org.osgi.service.prefs;version="1
+ .1.0"
+Service-Component: OSGI-INF/garbagecollector.xml
+Export-Package: org.eclipse.equinox.internal.p2.garbagecollector;x-fri
+ ends:="org.eclipse.equinox.p2.touchpoint.eclipse,org.eclipse.pde.core
+ ,org.eclipse.equinox.p2.ui.sdk.scheduler"
+Bundle-Name: %pluginName
+Bundle-Version: 1.0.300.v20160504-1450
+Bundle-Localization: plugin
+Bundle-Activator: org.eclipse.equinox.internal.p2.garbagecollector.GCA
+ ctivator
+Created-By: Apache Maven 3.3.3
+Build-Jdk: 1.8.0_51
+
+Name: plugin.xml
+SHA-256-Digest: 9+y1kOi9TZAQ9DWUtEETqzYnN5JtlQy60XZ7NSti5ro=
+
+Name: org/eclipse/equinox/internal/p2/garbagecollector/CoreGarbageColl
+ ector.class
+SHA-256-Digest: x9Mo9P7PnkxpOgZ7EVTcg1v6LiF3yfeH5q860r+3qgI=
+
+Name: about.html
+SHA-256-Digest: 0RM1x9lTJa7T8YkysaegPuBIeaEvSZypRDfXoMpsJAU=
+
+Name: org/eclipse/equinox/internal/p2/garbagecollector/CoreGarbageColl
+ ector$1.class
+SHA-256-Digest: ecYIMJD2M903Gy20SBQQQ9ENkD6IHzAF7NWK32pTYy4=
+
+Name: org/eclipse/equinox/internal/p2/garbagecollector/MarkSet.class
+SHA-256-Digest: t1YDop933Xz/h39qaAeRSqa8RPnNQdxufqyvjvZthto=
+
+Name: org/eclipse/equinox/internal/p2/garbagecollector/messages.proper
+ ties
+SHA-256-Digest: ee2T3HvCP/26qKyia3S74IPp2W8cWe98XpYIbyUksFQ=
+
+Name: org/eclipse/equinox/internal/p2/garbagecollector/GarbageCollecto
+ rComponent.class
+SHA-256-Digest: dfLPl2FDcfSHI8rMgd2G9wrJFZxE4mSvAQZoJJI/6N0=
+
+Name: schema/GarbageCollector.exsd
+SHA-256-Digest: RhXYbhSczflFl6kg6CCTo9NFLI1es8hTmmWoTw4BELU=
+
+Name: .api_description
+SHA-256-Digest: qb4hYrY1PtyFMPRWTw8z7op0cHDTyxRlU3ZkKr5Frq8=
+
+Name: org/eclipse/equinox/internal/p2/garbagecollector/GarbageCollecto
+ r$ParameterizedSafeRunnable.class
+SHA-256-Digest: n4k8eyNTclqPXIWwVpXb+S6JMhZtoOm0gvv3clwwuT0=
+
+Name: org/eclipse/equinox/internal/p2/garbagecollector/MarkSetProvider
+ .class
+SHA-256-Digest: +a9IQXuMubfGI+TKb6mh0LXfIu7Lg6FAubZkD5CUWDA=
+
+Name: org/eclipse/equinox/internal/p2/garbagecollector/Messages.class
+SHA-256-Digest: 5Uy7KXWfh8OztOqoE/1JNOhsAs0xFy8RGnXGymq6ryg=
+
+Name: OSGI-INF/garbagecollector.xml
+SHA-256-Digest: Lls2SQ6d/f6CZChCFxH7VxVXSVhHZoS4QlByoux4PVA=
+
+Name: org/eclipse/equinox/internal/p2/garbagecollector/GCActivator.cla
+ ss
+SHA-256-Digest: DmEqed37cHkKqc1ziCV45yI98ubgL6delYISWlIa/vI=
+
+Name: org/eclipse/equinox/internal/p2/garbagecollector/Application.cla
+ ss
+SHA-256-Digest: 197A9gTiTV5n/ndL6uZxaTT7RxhautMEGJ2HIwX5UTs=
+
+Name: plugin.properties
+SHA-256-Digest: upknFzipTApfwBHWs3jZyBljBzYZDYX+dyt6i5EUM8I=
+
+Name: org/eclipse/equinox/internal/p2/garbagecollector/GarbageCollecto
+ r.class
+SHA-256-Digest: 2ZSD25X1mPlhzAQZjbqi0ZTYeh4tcZP8XU/OBkOGku0=
+

@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %Bundle-Name
+Bundle-SymbolicName: org.eclipse.recommenders.utils.rcp;singleton:=true
+Bundle-Version: 2.5.2.v20180401-1226
+Bundle-ClassPath: org.eclipse.recommenders.utils.rcp_2.5.2.v20180401-1226.jar
+Bundle-Vendor: %Bundle-Vendor
+Export-Package: org.eclipse.recommenders.utils.rcp;
+   uses:="org.eclipse.core.runtime,
+    com.google.common.base,
+    org.eclipse.swt.widgets,
+    org.eclipse.jface.viewers",
+  org.eclipse.recommenders.utils.rcp.preferences;uses:="org.eclipse.ui,org.eclipse.swt.widgets,org.eclipse.jface.preference"
+Require-Bundle: org.eclipse.core.runtime,
+  org.eclipse.recommenders.utils,
+  org.eclipse.ui
+Import-Package: com.google.common.annotations;version="[15.0.0,16.0.0)",
+  com.google.common.base;version="[15.0.0,16.0.0)",
+  com.google.common.collect;version="[15.0.0,16.0.0)",
+  com.google.common.primitives;version="[15.0.0,16.0.0)"
+Created-By: Apache Maven 3.5.2
+Build-Jdk: 1.8.0_162
+Automatic-Module-Name: org.eclipse.recommenders.utils.rcp
+Eclipse-SourceReferences: scm:git:https://git.eclipse.org/r/recommenders/org.eclipse.recommenders;path="plugins/org.eclipse.recommenders.utils.rcp";tag="v2.5.2";commitId=720a805d454015a5f4b61a4f778170b278d7e6ff
+Built-By: genie.recommenders
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

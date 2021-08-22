@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension point="org.eclipse.ui.newWizards">
+      <wizard
+            category="org.eclipse.emf.facet.common.ui.wizardsCategory"
+            class="org.eclipse.emf.facet.common.sdk.ui.internal.wizards.NewProjectWizard"
+            id="org.eclipse.emf.facet.common.ui.NewProjectWizard"
+            name="EMF Facet Project"
+            icon="icons/newProject.png"
+            project="true">
+         <description>
+            Create an EMF Facet Project
+         </description>
+      </wizard>
+   </extension>
+   <extension
+         point="org.eclipse.ui.ide.projectNatureImages">
+      <image
+            icon="icons/natureOverlay.png"
+            id="org.eclipse.emf.facet.common.ui.projectNatureOverlay"
+            natureId="org.eclipse.emf.facet.common.sdk.core.ProjectNature">
+      </image>
+   </extension>
+</plugin>

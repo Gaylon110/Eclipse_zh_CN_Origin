@@ -1,0 +1,294 @@
+Manifest-Version: 1.0
+Bundle-Description: Mylyn WikiText provides an extensible framework an
+ d tools for parsing, editing and presenting lightweight markup. WikiT
+ ext has parsers for AsciiDoc, CommonMark, Markdown, MediaWiki, Textil
+ e, Confluence, Creole, HTML, TracWiki and TWiki markup, and        ca
+ n be extended to support other languages. WikiText provides Ant tasks
+  for converting lightweight markup to HTML, Eclipse Help, DocBook, DI
+ TA and XSL-FO. WikiText also provides an editor for editing such mark
+ up within Eclipse, and integrates with        the Mylyn task editor c
+ ausing it to be markup-aware. WikiText provides API for integrating w
+ iki markup capabilities into Eclipse, RCP, stand-alone and server-sid
+ e applications.
+Bundle-License: https://www.eclipse.org/legal/epl-2.0/
+Bundle-SymbolicName: org.eclipse.mylyn.wikitext.tracwiki
+Built-By: jenkins
+Bnd-LastModified: 1614384552618
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-DocURL: http://eclipse.org/mylyn
+Bundle-Vendor: Eclipse Mylyn
+Import-Package: org.eclipse.mylyn.wikitext.parser;version="[3.0,4)",or
+ g.eclipse.mylyn.wikitext.parser.markup;version="[3.0,4)",org.eclipse.
+ mylyn.wikitext.parser.markup.phrase;version="[3.0,4)",org.eclipse.myl
+ yn.wikitext.parser.markup.token;version="[3.0,4)",org.eclipse.mylyn.w
+ ikitext.tracwiki,org.eclipse.mylyn.wikitext.tracwiki.internal.block,o
+ rg.eclipse.mylyn.wikitext.tracwiki.internal.phrase,org.eclipse.mylyn.
+ wikitext.tracwiki.internal.token,org.eclipse.mylyn.wikitext.validatio
+ n;version="[3.0,4)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-3.2.0.201605172007
+Export-Package: org.eclipse.mylyn.wikitext.tracwiki.internal.block;x-i
+ nternal:=true;uses:="org.eclipse.mylyn.wikitext.parser.markup";versio
+ n="3.0.39",org.eclipse.mylyn.wikitext.tracwiki.internal.phrase;x-inte
+ rnal:=true;uses:="org.eclipse.mylyn.wikitext.parser,org.eclipse.mylyn
+ .wikitext.parser.markup";version="3.0.39",org.eclipse.mylyn.wikitext.
+ tracwiki.internal.token;x-internal:=true;uses:="org.eclipse.mylyn.wik
+ itext.parser.markup";version="3.0.39",org.eclipse.mylyn.wikitext.trac
+ wiki.internal.validation;x-internal:=true;uses:="org.eclipse.mylyn.wi
+ kitext.parser.markup,org.eclipse.mylyn.wikitext.validation";version="
+ 3.0.39",org.eclipse.mylyn.wikitext.tracwiki;uses:="org.eclipse.mylyn.
+ wikitext.parser.markup";version="3.0.39"
+Bundle-Name: Mylyn WikiText TracWiki
+Bundle-Version: 3.0.39.20210227000941
+Build-Jdk: 1.8.0_202
+Created-By: Apache Maven Bundle Plugin
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/phrase/EscapePhrase
+ Modifier$EscapeProcessor.class
+SHA-256-Digest: 2q9F2fgw/CLVNMoWUfLkToVBhXoHPV4nxgdkaLEsZ54=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/token/SourceLinkRep
+ lacementToken$LinkReplacementTokenProcessor.class
+SHA-256-Digest: 2xrGeRVW/wnlM9kUfAGw2vn1QniAr/W0Gnl7GiuZvzo=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/token/LineBreakToke
+ n$1.class
+SHA-256-Digest: wpMPZJhRo1qH4KFtl9Abv1+kzdMfDcu+jz4NSSkRfm8=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/token/WikiLinkRepla
+ cementToken$WikiLinkProcessor.class
+SHA-256-Digest: p11VySoboNHwMZek1L2/lxttVF+h2vKY1rUOXzHiljM=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/TracWikiLanguage.class
+SHA-256-Digest: TpiSl7+OwD3Vai4jDrq/JudscJWqDIxVaKJzdxHwUZk=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/block/QuoteBlock$1.
+ class
+SHA-256-Digest: k2+C1QLIQ4opPWMoRmB6PEdR4Hut8mYv6uFauIjiyQw=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/token/MilestoneLink
+ ReplacementToken$LinkReplacementTokenProcessor.class
+SHA-256-Digest: CO4YclsB/45Ejyi2XGzXSMfyW8J0PUn0NRcyOy0/KiY=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/block/HeadingBlock.
+ class
+SHA-256-Digest: GGjXqcXbvRAI6qbgzMgNrWUqw1h7z63xXV2p87XIpzI=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/phrase/EscapePhrase
+ Modifier.class
+SHA-256-Digest: nSn0flX6Z96O79FKFkPMFVOo2cRGUTSVK+y/DuFulpA=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/token/ChangesetLink
+ ReplacementToken$1.class
+SHA-256-Digest: 6ztZ1vdjSj1NK99jWzMOTAt5rGsSLIb5eRuTrVo3jgs=
+
+Name: META-INF/maven/org.eclipse.mylyn.docs/org.eclipse.mylyn.wikitext
+ .tracwiki/pom.xml
+SHA-256-Digest: fscHEouUAau70vRr0os7WPaSuTRlp6YHUq0QL73EkOg=
+
+Name: plugin.properties
+SHA-256-Digest: SsHSl8mTeyPiXCg/WrmTeX50Zepg/y3NZwK1ZKj4dPE=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/token/TicketAttachm
+ entLinkReplacementToken$1.class
+SHA-256-Digest: JClRYKR14wsDLqzrjjPuvHK6WSYv1ur9nYDW/LzyROc=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/token/RevisionLogRe
+ placementToken.class
+SHA-256-Digest: IXlzCoFb2W6mQ5yjNEbzoRyD1dPu/1ZOiRuww6jISFA=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/token/WikiWordRepla
+ cementToken$1.class
+SHA-256-Digest: 4bp51hdXMQ2j8zev/6+JkoNeEtiCjRMzU8GVkCJ+qr4=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/block/TableBlock.cl
+ ass
+SHA-256-Digest: bHoHoVk/OucmZHz34xMjEegnP/+NqfssvqMgM9YiGEc=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/token/MacroReplacem
+ entToken$MacroReplacementTokenProcessor.class
+SHA-256-Digest: n1ZgSWlV2K49bw5ssJjbE/uOC2gvW4cLvVrT2EqeWjo=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/token/ChangesetLink
+ ReplacementToken$ChangesetReplacementTokenProcessor.class
+SHA-256-Digest: W/oi5qTYybEGL1EyZlNjBKuyY6blEyb+JWyi4VqxkvY=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/token/ReportLinkRep
+ lacementToken$1.class
+SHA-256-Digest: x8X7oCA+QHXNFTTC9xvjEuydEwpuryR6WGuR3CUZvrY=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/token/MilestoneLink
+ ReplacementToken$1.class
+SHA-256-Digest: ooX+ohVHJ6pQZnqavPvKcZM7s1avcMbbEqiIeB/ssZY=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/token/HyperlinkRepl
+ acementToken$HyperlinkReplacementTokenProcessor.class
+SHA-256-Digest: RkJYxtarzYjOgSMY6brC0GTsBnlvBkt90Bld6pvc+rc=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/phrase/MonospacePhr
+ aseModifier.class
+SHA-256-Digest: gkovonwTnVgPPwFsMFdCs4tviXelnv2iD8wqzYG/R8w=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/block/ListBlock.cla
+ ss
+SHA-256-Digest: tAOzcWUT4465WYRfSRYgCb/KJBMuna8rCKafKHvzYIo=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/token/SourceLinkRep
+ lacementToken$1.class
+SHA-256-Digest: 1dg3B/AIbQFBuVKy+I377XsvM5JGMWmgWuZ/tjIOCfg=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/token/ChangesetLink
+ ReplacementToken.class
+SHA-256-Digest: XVX4Mvkz0g0ZZEAF4Xb9h3nLDpWJWaxZkYSeLM9Qvo0=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/token/RevisionLogRe
+ placementToken$1.class
+SHA-256-Digest: WShB+sPjwRgk0G/THMJGW/l+RYlT0GFQWShSWzhThFs=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/phrase/MonospacePhr
+ aseModifier$MonospaceElementProcessor.class
+SHA-256-Digest: bZL9Ytt2r2VhkfRY0seOHCaWKwA9eiZ+xRSSwuDEaPU=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/block/ListBlock$1.c
+ lass
+SHA-256-Digest: yscV9tgXQuVzc1di4bNhsBQX5ANCLUv0KrY6afR62v0=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/token/MacroReplacem
+ entToken.class
+SHA-256-Digest: zhIwIoQ4fSpWqZEbWO5FB4rzw2N54+dCkjlhDsOcak0=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/token/ReportLinkRep
+ lacementToken$ReportLinkReplacementTokenProcessor.class
+SHA-256-Digest: Yb78ain82KGgPgt7pj28hNFcpxVCyYRjk1Udd6oRUCw=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/block/QuoteBlock.cl
+ ass
+SHA-256-Digest: 8iqGaKBuSuLWqf8P8d4sas2iJFWnkNHnefZxQlmQzH8=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/token/ReportLinkRep
+ lacementToken.class
+SHA-256-Digest: EMBzwLpuB3pg8yO6DoE1O5FM/AQNQ/W4c/Wl31ekW/U=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/token/LineBreakToke
+ n$LineBreakProcessor.class
+SHA-256-Digest: 6Mq7IUeditvHHEs324Aii4n+rRVqh6lJhLDWWRIsnUY=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/token/LineBreakToke
+ n.class
+SHA-256-Digest: 3qkUbpMQyKA8ino4EM672cYOWgiOcy2hJB/hEcqqND8=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/phrase/SimpleWrappe
+ dPhraseModifier$SimplePhraseModifierProcessor.class
+SHA-256-Digest: f+q3fVqxRTVlYIR5Z9mvRSd1trJc8jnaj7encPeUS6c=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/block/ListBlock$Lis
+ tState.class
+SHA-256-Digest: Er8lkgYWqzqI9RFi/0/DqEwPlz8pSa3trVb5o/Rx+hk=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/phrase/EscapePhrase
+ Modifier$1.class
+SHA-256-Digest: cbb+VEATKmGHiEwqnWem1TtQXfaC6yYJ228lqkoatL0=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/token/RevisionLogRe
+ placementToken$RevisionLogReplacementTokenProcessor.class
+SHA-256-Digest: kId2vUC26GOi4n6gaet/5jYAUfLNz6SnPg3AWQzLffA=
+
+Name: services/org.eclipse.mylyn.wikitext.parser.markup.MarkupLanguage
+SHA-256-Digest: XJcQQPxdQJJ8jiAWKgwYRFWShKKwCd5F5Lnq2pqYhGM=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/token/HyperlinkRepl
+ acementToken$1.class
+SHA-256-Digest: q5DHvnuF/HSlcC1sre5ieBenncLNCAldhewdZzE3ZkA=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/block/QuoteBlock$Bl
+ ockState.class
+SHA-256-Digest: VZzT32QdBKu1sRNchTG9F4lwo4ogX4zVDeH87vVDSfY=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/block/PreformattedB
+ lock.class
+SHA-256-Digest: 20BrcDN/O4t/cuPoiQQ2ZobbwX7q1mgfHOGzPMyCzdQ=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/token/TicketAttachm
+ entLinkReplacementToken$LinkReplacementTokenProcessor.class
+SHA-256-Digest: vqyGwevU7l46M7lNCtTRclzwEbjyCq3UJJ/OkRItlzY=
+
+Name: META-INF/maven/org.eclipse.mylyn.docs/org.eclipse.mylyn.wikitext
+ .tracwiki/pom.properties
+SHA-256-Digest: q8HewYg6dx3vrgrsPLCBBGcceAmbmzEkTVg7gDp5fjA=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/block/ParagraphBloc
+ k.class
+SHA-256-Digest: /a4E0UnfRdDY6HfEX8x1ODf39KsYLWYagf+z2iRan+k=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/token/BangEscapeTok
+ en.class
+SHA-256-Digest: 7JmD7MGNd/uH0KyCf4iU9HpsvVuJ7XFAhRNF7deKQfA=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/token/WikiLinkRepla
+ cementToken$1.class
+SHA-256-Digest: zIyWK7oZBc/6pkjnYgU3V3Gbfz+uJYuqfuI9USKDXP8=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/token/WikiWordRepla
+ cementToken$WikiWordProcessor.class
+SHA-256-Digest: LO8zOZHBlyb0erYXUExoS6rnmo+rTwSlDdNTdQ0HNUQ=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/token/TicketLinkRep
+ lacementToken$TicketLinkReplacementTokenProcessor.class
+SHA-256-Digest: QIGJEMEQuwIJCDl3HFm2+4VCuRODsjV+7hq3itCmL+0=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/token/WikiLinkRepla
+ cementToken.class
+SHA-256-Digest: yqCSKaWMlKmD2ksUDDadX2nT8G+IkcKPpZ8e1M+vwQk=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/token/MacroReplacem
+ entToken$1.class
+SHA-256-Digest: rKEJiFPl/+TnNWHGiyo63vwrDxwb/kccww/L7r8I2ks=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/token/WikiWordRepla
+ cementToken.class
+SHA-256-Digest: C9iZGthZ/NSxQdqqKtCWr0qJHkVWCTKQiT2+KJPZtH0=
+
+Name: about.html
+SHA-256-Digest: GWwWKwDoEPbqRj3Nm004u/ySxB5XSz/ODMj6p56lw8o=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/block/DefinitionLis
+ tBlock.class
+SHA-256-Digest: hcsUFDJ3jchp+jbCJyJmi1W6SwGtX9rDeZt6mTLDVJ0=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/token/MilestoneLink
+ ReplacementToken.class
+SHA-256-Digest: zq5qA+XTZ7q/ilhT7gntRKA0p6aAb402i2sJX55HeW4=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/token/SourceLinkRep
+ lacementToken.class
+SHA-256-Digest: VGGagnHdcdHh3xs9peXq7ygXbQTNbpY3pJAm2GeiLnA=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/token/TicketLinkRep
+ lacementToken$1.class
+SHA-256-Digest: prgueaFzs4MPZAK4XKAY6pfNxX2/vcPV4vTo/YvTRZo=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/validation/TracWiki
+ ReferenceValidationRule.class
+SHA-256-Digest: tjfJOA/58P8DXxCzCWUChrTZw9eK72S2nzBCfNtWVW4=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/phrase/SimplePhrase
+ Modifier.class
+SHA-256-Digest: cW4iyvW0hoaUwheCXo4TeAG2BNvN0siRlBDx6bzy1uw=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/phrase/SimpleWrappe
+ dPhraseModifier.class
+SHA-256-Digest: nPBMjThl9oNeOLpVe1c27AEkxeR78o3ymli6IOFhSwY=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/token/TicketAttachm
+ entLinkReplacementToken.class
+SHA-256-Digest: Wg5L+1I/OcB6oMCgDfROZ7g38LjrrjTLehLKnpXJWLo=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/token/HyperlinkRepl
+ acementToken.class
+SHA-256-Digest: XNBI80pUzzLJUaLucb63WCGNocnuOSnviu4vKJjz7gc=
+
+Name: org/eclipse/mylyn/wikitext/tracwiki/internal/token/TicketLinkRep
+ lacementToken.class
+SHA-256-Digest: K6h01YcKfhYckx7pD21aNNZ00jnORWUyKIaX1tNlCpE=
+

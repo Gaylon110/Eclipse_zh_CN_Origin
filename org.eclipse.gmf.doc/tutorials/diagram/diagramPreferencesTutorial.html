@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1" />
+<title>Tutorial: Diagram Preferences</title>
+</head>
+<body>
+<p><img src="../../logo.gif" /></p>
+
+<h1>Tutorial: Diagram Preferences</h1>
+
+<table border="0">
+<tr>
+<td>
+<p>Version: 0.1</p>
+</td>
+<td>
+<p>Date: July 13, 2005</p>
+</td>
+</tr>
+</table>
+
+<h2>Contents</h2>
+
+<p>&middot; <a href="#_Overview">Overview</a></p>
+
+<p>&middot; <a href="#_References">References</a></p>
+
+<p>&middot; <a href="#_Introduction">Introduction</a></p>
+
+<p>&middot; <a href="#_Step1">Creating the Preference Page
+Classes</a></p>
+
+<p>&middot; <a href="#_Step2">Registering the Preference Page
+Classes</a></p>
+
+<p>&middot; <a href="#_Step3">Creating the Preferences
+Initializer</a></p>
+
+<p>&middot; <a href="#_Step4">Registering the Preferences
+Initializer</a></p>
+
+<p>&middot; <a href="#_Step5">Registering the Preference
+Store</a></p>
+
+<p>&middot; <a href="#models">Summary</a></p>
+
+<h2><a id="_Overview" name="_Overview"></a>Overview</h2>
+
+<p>[<a href="#top">back to top</a>]</p>
+
+<p>This tutorial provides the reader with the steps to setup
+diagram preferences for a diagram client. The following diagram
+preferences can be configured for your diagram so that the user can
+configure certain aspects of a diagram.</p>
+
+<h2><a id="_References" name="_References"></a>References</h2>
+
+<p>[<a href="#top">back to top</a>]</p>
+
+This tutorial references the following extension points:<br />
+<br />
+org.eclipse.ui.editors org.eclipse.ui.preferencePages
+org.eclipse.core.runtime.preferences
+
+<p>More information about these extension points can be found in
+the Eclipse documentation.</p>
+
+<h2><a id="_Introduction"
+name="_Introduction"></a>Introduction</h2>
+
+<p>[<a href="#top">back to top</a>]</p>
+
+<p>In this tutorial, we will use the Logic Diagram Example to
+illustrate how to configure diagram preferences for a logic
+diagram. To gain familiarity with the Logic Diagram Example, refer
+to the <a
+href="../../examples-guide/diagram/logicExample.html">Logic Example
+Guide</a>.</p>
+
+<h2><a id="_Step1" name="_Step1"></a>Creating the Preference Page
+Classes</h2>
+
+<p>[<a href="#top">back to top</a>]</p>
+
+<p>Create a subclass of the diagram preference page that you wish
+to expose to your diagram users. In the constructor of each
+subclass, set the preference store to be that from your
+plug-in.<br />
+<br />
+ public class LogicAppearancePreferencePage extends
+AppearancePreferencePage { public LogicAppearancePreferencePage() {
+super();
+setPreferenceStore(LogicDiagramPlugin.getInstance().getPreferenceStore());
+} }</p>
+
+<h2><a id="_Step2" name="_Step2"></a>Registering the Preference
+Page Classes</h2>
+
+<p>[<a href="#top">back to top</a>]</p>
+
+Add an extension to register each preference page.<br />
+<br />
+ &lt;extension point="org.eclipse.ui.preferencePages"&gt; &lt;page
+name="%PreferencePage.Root.Diagrams"
+class="org.eclipse.gmf.examples.runtime.diagram.logic.internal.preferences.LogicDiagramsPreferencePage"
+id="org.eclipse.gmf.examples.runtime.diagram.logic.internal.preferences.LogicDiagramsPreferencePage"&gt;
+&lt;/page&gt; &lt;page name="%PreferencePage.Appearance"
+category="org.eclipse.gmf.examples.runtime.diagram.logic.internal.preferences.LogicDiagramsPreferencePage"
+class="org.eclipse.gmf.examples.runtime.diagram.logic.internal.preferences.LogicAppearancePreferencePage"
+id="org.eclipse.gmf.examples.runtime.diagram.logic.internal.preferences.LogicAppearancePreferencePage"&gt;
+&lt;/page&gt; &lt;page name="%PreferencePage.Connections"
+category="org.eclipse.gmf.examples.runtime.diagram.logic.internal.preferences.LogicAppearancePreferencePage"
+class="org.eclipse.gmf.examples.runtime.diagram.logic.internal.preferences.LogicConnectionsPreferencePage"
+id="org.eclipse.gmf.examples.runtime.diagram.logic.internal.preferences.LogicConnectionsPreferencePage"&gt;
+&lt;/page&gt; &lt;page name="%PreferencePage.RulerGrid"
+category="org.eclipse.gmf.examples.runtime.diagram.logic.internal.preferences.LogicAppearancePreferencePage"
+class="org.eclipse.gmf.examples.runtime.diagram.logic.internal.preferences.LogicRulerGridPreferencePage"
+id="org.eclipse.gmf.examples.runtime.diagram.logic.internal.preferences.LogicRulerGridPreferencePage"&gt;
+&lt;/page&gt; &lt;/extension&gt; 
+
+<h2><a id="_Step3" name="_Step3"></a>Creating the Preferences
+Initializer</h2>
+
+<p>[<a href="#top">back to top</a>]</p>
+
+Create a subclass of the diagram preference initializer and in its
+constructor, set the preference store to be that from your
+plug-in.<br />
+<br />
+ public class LogicPreferencesInitializer extends
+DiagramPreferenceInitializer { protected IPreferenceStore
+getPreferenceStore() { return
+LogicDiagramPlugin.getInstance().getPreferenceStore(); } }
+
+<h2><a id="_Step4" name="_Step4"></a>Registering the Preferences
+Initializer</h2>
+
+<p>[<a href="#top">back to top</a>]</p>
+
+Add an extension to register the preference initializer.<br />
+<br />
+ &lt;extension point="org.eclipse.core.runtime.preferences"&gt;
+&lt;initializer
+class="org.eclipse.gmf.examples.runtime.diagram.logic.internal.preferences.LogicPreferencesInitializer"
+/&gt; &lt;/extension&gt;
+
+<h2><a id="_Step5" name="_Step5"></a>Registering the Preference
+Store</h2>
+
+<p>[<a href="#top">back to top</a>]</p>
+
+<p>Register the preference store against a preference hint with the
+editor id of the diagram editor. The Logic Diagram Example
+registers its preference store in its plug-in's doStartUp()
+method.<br />
+<br />
+ public void doStartup() { super.doStartup();
+PreferencesHint.registerPreferenceStore( new
+PreferencesHint("LogicEditor"), getPreferenceStore()); }<br />
+ The editor id was defined in the Logic Diagram Example plugin.xml
+file:<br />
+<br />
+ &lt;extension point="org.eclipse.ui.editors"&gt; &lt;editor ...
+id="LogicEditor"&gt; &lt;/editor&gt; &lt;/extension&gt;</p>
+
+<h2><a id="principles" name="principles"></a><a id="examples"
+name="examples"></a><a id="models" name="models"></a><a id="api"
+name="api"></a>Summary</h2>
+
+<p>[<a href="#top">back to top</a>]</p>
+
+<p>In this tutorial, we did the following:</p>
+
+<ol>
+<li>Created the preference page classes.</li>
+
+<li>Registered the preference page classes.</li>
+
+<li>Created the preference initializer.</li>
+
+<li>Registered the preference initializer.</li>
+
+<li>Registered the preference store.</li>
+</ol>
+
+<br />
+<br />
+<p><a href="http://www.eclipse.org/legal/epl-v10.html">Copyright
+(c) 2000,2005 IBM Corporation and others. All Rights
+Reserved.</a></p>
+
+<br />
+ <br />
+<br />
+<br />
+ <br />
+<br />
+</body>
+</html>
+

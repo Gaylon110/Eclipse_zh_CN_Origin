@@ -1,0 +1,4670 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.mylyn.tasks.ui;singleton:=true
+Archiver-Version: Plexus Archiver
+Built-By: genie.mylyn
+Require-Bundle: org.eclipse.ui,org.eclipse.compare,org.eclipse.core.ru
+ ntime,org.eclipse.core.expressions,org.eclipse.core.net,org.eclipse.c
+ ore.resources,org.eclipse.jface.text,org.eclipse.ui.browser,org.eclip
+ se.ui.editors,org.eclipse.ui.forms,org.eclipse.ui.ide,org.eclipse.ui.
+ navigator;resolution:=optional,org.eclipse.ui.views,org.eclipse.ui.wo
+ rkbench.texteditor,org.eclipse.mylyn.discovery.ui;bundle-version="3.8
+ .0";resolution:=optional;x-installation:=greedy,org.eclipse.mylyn.com
+ mons.core;bundle-version="3.8.0",org.eclipse.mylyn.commons.identity.c
+ ore;bundle-version="1.0.0",org.eclipse.mylyn.commons.net;bundle-versi
+ on="3.8.0",org.eclipse.mylyn.commons.notifications.core;bundle-versio
+ n="1.0.0",org.eclipse.mylyn.commons.notifications.feed;bundle-version
+ ="1.0.0",org.eclipse.mylyn.commons.notifications.ui;bundle-version="1
+ .0.0",org.eclipse.mylyn.commons.repositories.core;bundle-version="1.0
+ .0",org.eclipse.mylyn.commons.repositories.ui;bundle-version="1.0.0",
+ org.eclipse.mylyn.commons.ui;bundle-version="3.8.0",org.eclipse.mylyn
+ .commons.workbench;bundle-version="3.8.0",org.eclipse.mylyn.monitor.c
+ ore;bundle-version="3.8.0",org.eclipse.mylyn.monitor.ui;bundle-versio
+ n="3.8.0",org.eclipse.mylyn.tasks.core;bundle-version="3.8.0",com.goo
+ gle.guava;bundle-version="[21.0.0,22.0.0)"
+Bundle-ManifestVersion: 2
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/mylyn/
+ org.eclipse.mylyn.tasks.git;path="org.eclipse.mylyn.tasks.ui";commitI
+ d=501815298751560cc2776f061f97cedbea102322
+Bundle-Vendor: %Bundle-Vendor
+Import-Package: com.ibm.icu.text,org.apache.commons.logging;version="[
+ 1.0.4,2.0.0)"
+Export-Package: org.eclipse.mylyn.internal.provisional.tasks.ui.wizard
+ s;x-internal:=true,org.eclipse.mylyn.internal.tasks.ui;x-internal:=tr
+ ue,org.eclipse.mylyn.internal.tasks.ui.actions;x-internal:=true,org.e
+ clipse.mylyn.internal.tasks.ui.commands;x-internal:=true,org.eclipse.
+ mylyn.internal.tasks.ui.compare;x-internal:=true,org.eclipse.mylyn.in
+ ternal.tasks.ui.context;x-internal:=true,org.eclipse.mylyn.internal.t
+ asks.ui.dialogs;x-internal:=true,org.eclipse.mylyn.internal.tasks.ui.
+ editors;x-internal:=true,org.eclipse.mylyn.internal.tasks.ui.editors.
+ outline;x-internal:=true,org.eclipse.mylyn.internal.tasks.ui.migrator
+ ;x-internal:=true,org.eclipse.mylyn.internal.tasks.ui.notifications;x
+ -internal:=true,org.eclipse.mylyn.internal.tasks.ui.preferences;x-int
+ ernal:=true,org.eclipse.mylyn.internal.tasks.ui.properties;x-internal
+ :=true,org.eclipse.mylyn.internal.tasks.ui.search;x-internal:=true,or
+ g.eclipse.mylyn.internal.tasks.ui.util;x-internal:=true,org.eclipse.m
+ ylyn.internal.tasks.ui.views;x-internal:=true,org.eclipse.mylyn.inter
+ nal.tasks.ui.wizards;x-internal:=true,org.eclipse.mylyn.internal.task
+ s.ui.workingsets;x-internal:=true,org.eclipse.mylyn.tasks.ui,org.ecli
+ pse.mylyn.tasks.ui.editors,org.eclipse.mylyn.tasks.ui.wizards
+Bundle-Name: %Bundle-Name
+Bundle-Version: 3.23.3.v20180622-1953
+Bundle-Localization: plugin
+Bundle-Activator: org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin
+Created-By: Apache Maven 3.5.3
+Build-Jdk: 1.8.0_162
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AbstractTaskEditorPage$11.cla
+ ss
+SHA-256-Digest: eXIoCvaKUebAQLADU5fDtKSuxAt1bvTyOzdz9zAXmJM=
+
+Name: icons/etool12/repository-synchronize-small.png
+SHA-256-Digest: 81xrgTCRpiMZrbBw0Keaor815EeWxJiUi+qg/Y1pvrA=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/AbstractTaskRepositoryPage$Co
+ ntributionComparator.class
+SHA-256-Digest: 4ujvSvDPalypfgiH/xonO6Ua8GVZrTPJvDCJiPt+pRo=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AbstractTaskEditorPage$20$1.c
+ lass
+SHA-256-Digest: 6es2/MiwMmkG9jjudSmTs7Tn7vvUuk8I7OxiCcXi6fE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListDropAdapter$2.
+ class
+SHA-256-Digest: 2cuwh3YgEUS/4J6zXbXMMERJ01k5dGFO+BiKlSidw0Y=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/GoToUnreadTaskHandl
+ er$2.class
+SHA-256-Digest: 6jf/CcxjW06f/4w6l6t+hIWNSBANtygTlMVfBCGMKFM=
+
+Name: icons/etool16/context-clear.gif
+SHA-256-Digest: GO4lKOeOsRMxW8JNemV3Pa4LcFhn6PT97zRsJseRB10=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListFilteredTree$1
+ .class
+SHA-256-Digest: 5g+YJcE7bQFoEBL5C1eG95WciRdf/44yxAEf/3vgwTI=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/RichTextAttributeEdi
+ tor$1.class
+SHA-256-Digest: lPuiRGBEnzgLSV2jj981t4s3vPN/VJEqLOLhH/7nkmw=
+
+Name: icons/obj16/repository-small-top.gif
+SHA-256-Digest: hW4QJJUEtF68oL6uPoKF+CFLGz1c+jKk85oNlF1fv28=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/TaskAttachmentWizard
+ $1.class
+SHA-256-Digest: Nenr63rBZtihU679fVMqEElibkNFEABGNt8b19n9Z/I=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/PriorityDropDownAction
+ $3.class
+SHA-256-Digest: dd67jDO8t8dNDsmjYBd+KTIJ4BEdJlXDyzj4IaO6XzY=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorAttachment
+ Part$1.class
+SHA-256-Digest: vcnyHIg/gSSA3XP28PWqF3Q08BFG3au0B0i2FUaeCX0=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AbstractTaskEditorPage$24.cla
+ ss
+SHA-256-Digest: O47nfpeFWGd1lDyAhrFjXUkrgjaeYuekYgYhewjb2xw=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/migrator/TaskPredicates$3.cl
+ ass
+SHA-256-Digest: hU4rFp4Io6WLZWXaVwhtnn/xch+9/TEFoAHuT5Ra3zA=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/AbstractRetrieveTitleFr
+ omUrlJob.class
+SHA-256-Digest: C8eGHtziAqf234HMrItCaR5JvL4rGzlMOgJlt9yipak=
+
+Name: icons/etool16/task-inactive.gif
+SHA-256-Digest: qAagzrJPfHE6yU63ZWIZLXuuDiewyJTmpZptpvM95Bs=
+
+Name: icons/etool16/sub-task-new.gif
+SHA-256-Digest: jjLJa3WjGi/KQEDZJ+sebi5cPfBoFbfP2Wdc+nuxnp8=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AbstractTaskEditorPage$NotInT
+ askListListener$1.class
+SHA-256-Digest: FDtBYyRZXHErTxBEl6bhZ3G44F5zm2mdnazyQAw4/iE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/preferences/TasksUiPreferenc
+ ePage$3.class
+SHA-256-Digest: tcEwwkTeJp3sNkW4UTiJFcFJYznu3Q26j4J30xC2Yzs=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TaskLabelDecorator.class
+SHA-256-Digest: W8BZcgtbPJTsnoX7Zq3g0Ogi/mowJfLsvOr0VieiBEQ=
+
+Name: org/eclipse/mylyn/internal/provisional/tasks/ui/wizards/Abstract
+ QueryPageSchema$FieldFactory.class
+SHA-256-Digest: FbAJTUjf1/i7ska2KElm6HgXmWHJZ1xX7T6P7z5PMv0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/TaskDataImportWizard
+ $FileCopyJob$1.class
+SHA-256-Digest: 6t5YhUwO+oVR7uGBC4wqHCnevCdRrwlZ9ZuwIl0bks0=
+
+Name: icons/etool16/open-task.gif
+SHA-256-Digest: ZVcia19neYsxEuFnwB4O/14DY+n5AfBVxiHnqUFM4ns=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorAttachment
+ Part$6.class
+SHA-256-Digest: KH1uARPts7oL/7RBDB/KiETGG/FGTeul+eheZ9pmIXo=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/ImportExportUtil.class
+SHA-256-Digest: gM3R6ani5s4UNbbm2jPK2tmcu1/S87bEYRR4CUJbBTk=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/workingsets/TaskWorkingSetPa
+ ge$CustomSorter.class
+SHA-256-Digest: +NYfIj6hblx0UFgNj/0NcyImrivcUSrvjXxS7BfpwpY=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/TaskSelectionDialog$
+ EditWorkingSetAction.class
+SHA-256-Digest: HimeyTeUljM7MZc8CzAaKFj43001HF1V05SWBtQJj6o=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/AbstractRepositorySettingsPag
+ e$6.class
+SHA-256-Digest: pAb+NCYex2ihMiWU7Bbt9xU/SXqqVl1PKA8OpyaEbHk=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/MarkTaskHandler$Mar
+ kTaskReadGoToPreviousUnreadTaskHandler.class
+SHA-256-Digest: Wd3Dwq/wozk3nQknA0bv7kHclEwMyIb38q+iGNZLIwQ=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/workingsets/TaskWorkingSetEl
+ ementAdapter.class
+SHA-256-Digest: cfxwPT3HJ4MxlNstH+q1Z1De8GemUEv/AZzYS4Xyz14=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AbstractTaskEditorPage$NotInT
+ askListListener.class
+SHA-256-Digest: 6Tzwxn97VIdcBj3zyP0n3mBHeoiTCa+u/SWE4kNAC3E=
+
+Name: icons/etool16/task-remote.gif
+SHA-256-Digest: JwEUAII1kYa+qKEB1isSDDT7m5fYwAezNZPjCbVGKtA=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/notifications/TaskListNotifi
+ cationPopup.class
+SHA-256-Digest: PSppcEEA/cjIb14D/9FSzJTCZYKSOMjPc8zKAC7dxAw=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/ClipboardCopier$TextPro
+ vider.class
+SHA-256-Digest: BgqMH6I+I+YLhvbgrrKn4uz2rwvplbxR32gdlozumyc=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListFilteredTree$6
+ .class
+SHA-256-Digest: ch6j/RLJrV6voHOGtp/04ddsm78MQf2JyprqDCPZJ64=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TaskListSynchronizationSched
+ uler$1.class
+SHA-256-Digest: 2S4oqfe04L7U6KXbemSzxx5BbP0+U6/5NpDVm6gDIH4=
+
+Name: icons/archive/find.gif
+SHA-256-Digest: yYKcSfzwM6P5/aZaNpFf3qVykK6E36kNfMozRrw+LYM=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AbstractTaskEditorPage$16.cla
+ ss
+SHA-256-Digest: VcCUJRbYppT39x89ExxkXE0QfR2vFl5sfJSjY7dre3k=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/RefreshRepositoryTas
+ ksAction.class
+SHA-256-Digest: BfIj5d5vOA/6q9VcQHAFej0C1Hu1tiWmW/3mt4DfXpo=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/PlanningPart$3.class
+SHA-256-Digest: SGuEI0r3jlcFI4PvEzUscosS2uIb86X/OCwfsh/WzPk=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/search/DefaultSearchHandler.
+ class
+SHA-256-Digest: Wfbe4QvLrtK1RSR8fyonRrqGCwraVMh9K674lffjcAo=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/AttachmentPreviewPag
+ e$4$1.class
+SHA-256-Digest: B8masDJ3nfHjAeX4ozlGqNYTjTsyI0dCCnrroj4B99A=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/TaskRepositoryWizardDialog.cl
+ ass
+SHA-256-Digest: ry1Ax6Z7GVNVietiG9cd+ExEeEtIcHVgkEolV8RmUKw=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/SelectRepositoryPage
+ $CustomWizardNode.class
+SHA-256-Digest: QGY/D/CLMnb+yfVhG9/mPtD8WNBL2f6X5t1MQ6Vw588=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/DeleteAction$2.class
+SHA-256-Digest: C+CDrt2Osw7qGXjKfQLwOP0hbn7YoyuE9wNPNocqrtI=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorDescriptio
+ nPart$3.class
+SHA-256-Digest: ihnMunOxbZxUK6P/uu9OkvGAljRv+xtKxhjz9mwM1DU=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/NewTaskWizard.class
+SHA-256-Digest: EnvibX3qBy296NgURwHTZpjQMcB/uTV0EvXOYOC6clA=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorPlanningPa
+ rt$1.class
+SHA-256-Digest: QDHTnD1CDYE+gL2zkwz5f3fk94xLaLgrFmHyieGvuUY=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/NewTaskAction$1.clas
+ s
+SHA-256-Digest: f9uObok1eQ8upDO/eZOflcIQ4xmzcJUhN6zfDDQBPg4=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/DoubleAttributeEdito
+ r.class
+SHA-256-Digest: uSbnWhDmXJCs1JNhmutkM0wCNksGawgDzNWAdW/UOyw=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/context/ContextRetrieveWizar
+ dPage$1.class
+SHA-256-Digest: 28xTWQMvo/hIfxIOdq8k5vRHPRrurvyYEuUBuXh7TOg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskRepositoriesView$2
+ $2.class
+SHA-256-Digest: Z0Lb2D4zcEG29BGZ90kVpyEXp2qzv6+ecBi89ye7hGs=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/MoveToCategoryMenuContributo
+ r$2.class
+SHA-256-Digest: 4+LFF+UexRzPkjJisn3d+6OwTNCiB+99/U+5Su4W1PA=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TasksUiPlugin$10.class
+SHA-256-Digest: 3MmjlXNWK332t1/FFJ5zma5MvIgL75lfabbJVnIj6RU=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/MarkTaskHandler$Mar
+ kTaskReadOperation.class
+SHA-256-Digest: wLPKo/IkgI9iZeT70r6B+TBodoCYXJPU+YDtOlOCoZ4=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/dialogs/UiLegendControl$1.cl
+ ass
+SHA-256-Digest: J2H6Hl9QJm+505CDL//+id5fMEcU4vIoNXuYpW+vAa4=
+
+Name: org/eclipse/mylyn/internal/provisional/tasks/ui/wizards/QueryPag
+ eDetails.class
+SHA-256-Digest: ENYVLJsxDnN1ellAkgSLUSqDmTJr/nm1yjk3eBZ48sA=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/PriorityEditor.class
+SHA-256-Digest: 6c620uhwyq5MLPA1mLkeiCURIaBGnTADmU4N4oJZtr8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/AbstractTaskEditorSe
+ ction$3.class
+SHA-256-Digest: nVd1lz11O144DuKAzBSCEL7lxylMEGUiTJb5PeTPJv0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/dialogs/TaskCompareDialog$4.
+ class
+SHA-256-Digest: 0BTcWLWflYCe+y+RguXzCzoZCZZ3vFYMM7IoNHgXx5k=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/dialogs/messages.properties
+SHA-256-Digest: qOh6qLKC5raTLA4xwTMWlIgG+kg985rYsY5JzNtPfhU=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TaskRepositoryLocationUi$Pas
+ swordRunner.class
+SHA-256-Digest: qXT58UzTlklxe1DAggXAuN8AjBuAcxU67ZLZK52n4ww=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/AbstractReplyToComme
+ ntAction.class
+SHA-256-Digest: 6gWBDHF9ArTQdbK1guK31+XOUqBNqoUnO1sSdYsQGYU=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/NewAttachmentWizardD
+ ialog.class
+SHA-256-Digest: +9rg+OfsKrywFO27xhz4VBN+WxKtPzUaGCfWYAUIWeM=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/AbstractTaskRepositoryPageCon
+ tribution$Listener.class
+SHA-256-Digest: LryjQUf2VcXWIHRePqX3hycEyv79fdqgTThnJ3OsE9A=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/dialogs/AbstractWorkingSetDi
+ alogCOPY$2.class
+SHA-256-Digest: 7aZFIN53Rq/uVF6EJ2bwKvrNT7718oh+Dwll6h1VHBs=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/DeleteTaskRepository
+ Action$1$1.class
+SHA-256-Digest: YxaBiwrEuvGb7Yij+s/egU61WHQHoRIKDj9mJh2tj6E=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/AbstractRepositorySettingsPag
+ e$29.class
+SHA-256-Digest: F4WkPODr2+NJzBfjz/GqnTPIudPs799vVuqjcXTSLYg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorActionPart
+ $SelectButtonListener.class
+SHA-256-Digest: M7EJNrba6fdUakv+gihxKb185ZhniAek4CNoNCEv/eM=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/properties/Messages.class
+SHA-256-Digest: ZV/jEPm0p/rcC8Zv/snswasl2pG93hDUYD3hMd6eXP0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/SynchronizeAllAction
+ .class
+SHA-256-Digest: +VqiuS+tynUZSDKns3am1N5Uxc7yv/+3ZDPTtwodEEY=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListFilteredTree$1
+ 0.class
+SHA-256-Digest: tKUYXCDawA3wKkgT+j+lGV+t/D5/VeeGEjJ/YIBFVWM=
+
+Name: icons/etool16/capture-pause.gif
+SHA-256-Digest: y5UPUUZ4l5iLHlGR+N0VsU8z0imJD2pP80sa86m34Mo=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorFindSuppor
+ t$3.class
+SHA-256-Digest: i/Z7IFlgf0XWwdZbPkdpOlEokE6N5iM2KMw7FvaL1dY=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/MoveToCategoryMenuContributo
+ r.class
+SHA-256-Digest: rcNH0lY83tBZ3z/JP1kDlY9kwrR5/AezFJC0BE4zlVs=
+
+Name: org/eclipse/mylyn/tasks/ui/TaskRepositoryLocationUiFactory.class
+SHA-256-Digest: kCVgcKWMeIAmclOFlmSjAP6KAq9EwSZx3NFk1DF6o2Y=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/NewTaskPage.class
+SHA-256-Digest: gjugJUlNTLHbRgfFYeYBZ/JznY2aIzHJDtYbnzfy0KQ=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListView$2$1.class
+SHA-256-Digest: MECPw5ynt5TQ60deP62bhd4z59OUCPYsC6mv1Y40Uzo=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/AbstractRepositorySettingsPag
+ e$11.class
+SHA-256-Digest: F5gqPoixatpymYGPaOiIgGobTNpnU/vODT+7ChC5Uoo=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/context/TaskAttachmentCompar
+ ator.class
+SHA-256-Digest: skRsZtvgVNw+/GW03Jf3DB2wUGudy21yBIccB2YYptg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/TasksUiInternal$6.class
+SHA-256-Digest: vISaRhyuLN45yquRrySRGaxk3+J1/QKHOvryWN+OVPs=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/FocusTracker.class
+SHA-256-Digest: fpsZvvD4dce8ASX1V7skbOZfZM21M8tl+pjnXGqRBo8=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AbstractTaskEditorPage$1$1$1.
+ class
+SHA-256-Digest: IZMICF5bDhNIHk7LLofF/Nno147YwOE09XA8SkBtM2k=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/MarkTaskHandler$Mar
+ kTaskReadOperation$1.class
+SHA-256-Digest: e9OkRZDMoiuaF4NCNUvLs0kPHQghIhKAA/7kYbR0JL4=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/TaskEditor$1.class
+SHA-256-Digest: DrGrwLenllllFw+DdYL/1Ei2jvUN09yWxzDso488mW4=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/PersonAttributeEdito
+ r$2$1.class
+SHA-256-Digest: wFG0kN2ee/wLBvTvOi1O5dS+WjHHm0ZSRV+hC4OvET8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/DisconnectRepository
+ Action.class
+SHA-256-Digest: IgnGnWoFhTJ8WwywJQBwyXcZOJIf72JnqsdnunCAxs8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/AttachmentUtil.class
+SHA-256-Digest: eCE+ITzurt++AHc3Hqh9yKktdJuVaMonH+oSdy94ooc=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListView$13.class
+SHA-256-Digest: XuO1CVmpVEXAiqQIBkVTomvq/1T9XW+2bm4GTSPREK0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/PlanningPart$2$2.cla
+ ss
+SHA-256-Digest: 7uG/PpjdCNFJ+lRf4Iuk5sklxCg0w/HQSvmGPvhf8NA=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/ComboSelectionDialog.class
+SHA-256-Digest: DRuEmLIfDPdP3Y5IWHfLHINoLN/PYdI+ujWtXcWfSrs=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorCommentPar
+ t$ReplyToCommentActionWithMenu.class
+SHA-256-Digest: ipwaUB4jd1VlQA6xyxsmP3vm4BuSzchRZ2A4CxfJaTg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/CommentActionGroup.c
+ lass
+SHA-256-Digest: KZULUNQwYS6pFWgwQ0XAeXK7Ht3T80NDF2useq5/0B0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/BrowserPreviewViewer
+ $2$2.class
+SHA-256-Digest: hoS/TttoViWx24iG5zR5OSkODQVuT2FpcWeIT3oSyTk=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/ScheduleTaskMenuContributor$
+ 3.class
+SHA-256-Digest: ah0cHp5uwn3zuT/tGoiO+RTb5iqGdi1yQVxBdMBmfho=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/EditorUtil$2.class
+SHA-256-Digest: w77hJlpXfPdgqpkC2n9c1p6XiwH8YbRqVS0aFuIZbts=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/AbstractTaskListVie
+ wHandler.class
+SHA-256-Digest: l2WOlgaNB3+cvVIO2xB7pl03OM35rVpTIIrPVdT+WI4=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/DateAttributeEditor$
+ 1.class
+SHA-256-Digest: 6Hd/KlGfAtWJeCb7Zj4nCMaKc1RKRi8gtag5gEBFmgs=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/RepositoryCompletion
+ Processor$ProposalComputer.class
+SHA-256-Digest: vVifQspSDq8+z+KrxmoqsCvBJmqya3lCdQAiI5/v5XE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/outline/QuickOutline
+ Dialog.class
+SHA-256-Digest: Q/HMkjPHB59MhbW6mjAI5IkZyouSRjaknUCZVLhJ4w8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/SynchronizeSelectedA
+ ction.class
+SHA-256-Digest: NqkJAZJPR9l/AaywZeGQWHI8s54qkeHWi6vJmyfSxJ8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/dialogs/TaskRepositoryCreden
+ tialsDialog$3.class
+SHA-256-Digest: nKsmQ4cHYlMt84ezHtTjOPbP3dj5syOO6ved3vIHQdQ=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/AbstractTaskRepositoryPage$4.
+ class
+SHA-256-Digest: 5G7MJIpyq+sXOaKBWVQBabjHss6CvHL4Am9+TIJqgYM=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/RichTextAttributeEdi
+ tor.class
+SHA-256-Digest: +/dWnJ1reB3gARjlWhFBuabfPJ3HTZ5t48eS0qkqDV4=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/ActivateTaskHandler
+ .class
+SHA-256-Digest: xLhm00GaXQFyFqHaMT1BFTF6mh7MC2bBa2vV5nTIzno=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/PriorityEditor$2.cla
+ ss
+SHA-256-Digest: 0p9yLL8vQ1Iy7vqR/ICYeo+ByVv2FvJ1hP9BZM5H6u4=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/ActivateTaskDialogAc
+ tion.class
+SHA-256-Digest: dvN7cPsUzB0YezBn0nJ4KOIiE8nI2mRUn1xu3rK1cxw=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/LabelsAttributeEdito
+ r$1.class
+SHA-256-Digest: ebd1/M0VFgb6DtKcZ/8QcCzZZKoOstWIHHThuEOktdk=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/SelectRepositoryConn
+ ectorPage$3.class
+SHA-256-Digest: fZZQazmUwP4MlFJshHkrMOGgGA7qpAbXTywV+O7bPeY=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/CompareAttachmentsAc
+ tion$1.class
+SHA-256-Digest: MGFHuBFAkCPNPlmsASk7+68MtP0151ANq/FRGOlYJr4=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/ShowTasksUiLegendAct
+ ion.class
+SHA-256-Digest: CRP2h/L5xKGJkPvW+OGSIIuTYyQgZial8IQnhupDGhc=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/FocusTaskListAction$
+ 1.class
+SHA-256-Digest: tPYX7J+aAzeVB19QQaUhufUey9N/j8LwhsVDSnedgyQ=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/compare/TaskDataDiffNode.cla
+ ss
+SHA-256-Digest: oAb7G1rUTXcMvYIF+OSmCVIb9Hs0Y8c11RhV6LkP73c=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TaskTrimWidget$1.class
+SHA-256-Digest: H8RWjoKB5vjetdMWUhLAklKkIr13BI+T0OXdWd0VruY=
+
+Name: icons/etool16/presentation-categorized.png
+SHA-256-Digest: /oLtcu9HNkBT82DWWEkqFACWb37xE+5qUejf1PovCcA=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/NewTaskFromSelection
+ Action.class
+SHA-256-Digest: Rg30W7q8O7srE0WSmK1xMAXqqH/FVrHqYas7Df3vviM=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/migrator/ConnectorMigrationU
+ i$2.class
+SHA-256-Digest: wm07wEOegAf5NdNDG/x7TNWmlGxuHWDOETDgU/lOFmc=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/TaskSelectionDialog$
+ 2.class
+SHA-256-Digest: 4kUc7f28IA7sysFExTehjdnc9r6GyJFHV9y66EFm2f4=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/MarkTaskHandler$Cle
+ arOutgoingHandler.class
+SHA-256-Digest: w53OKpu/IK0/5L38H0jptuovXyfJY93qMQhFov3D95U=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TasksUiPlugin$TasksUiInitial
+ izationJob.class
+SHA-256-Digest: EELCoIsKyw97auACvhUtu8BQ6fbGQvr0KYS6smfeNgA=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/OpenTasksUiPreferenc
+ esAction.class
+SHA-256-Digest: Pf9hwxQTZr96RQUdFKTyKwLLQIaL3lbZ/3Fyg5qIDNw=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/workingsets/TaskWorkingSetPa
+ ge$5.class
+SHA-256-Digest: /skovYDblLjs5LBWplRsmWavif6YzrblT31qw9hC0Hk=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/migrator/ConnectorMigrator$2
+ .class
+SHA-256-Digest: pswQb8K4dMMnIV9jGC3WDN8JJ8gSzY8A8QZl/BxJ8yg=
+
+Name: icons/archive/overlay-due.gif
+SHA-256-Digest: w0hEGLq1cf6vsMoi6FuLw4CdiA/FxX+W6hQotxwU61w=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/SaveAttachmentsActio
+ n.class
+SHA-256-Digest: 9cxGCOoyQX7fvpp6b+R/A0ZS/DcRUOjUQv9AfEIs7N8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/AttributePart$3.clas
+ s
+SHA-256-Digest: j7qo/gKWCC0uIoM7QWKahddQ3XwbYa/goLr62XGYR40=
+
+Name: org/eclipse/mylyn/tasks/ui/TaskDropListener$Operation.class
+SHA-256-Digest: 2+SP8wTRYHWDDLpijq4xSGAzGXwHfK2UvbIG4OKDS1c=
+
+Name: icons/etool16/repository-new.gif
+SHA-256-Digest: GpdwFi+SxfiHRca3+Vh30yV4OkdOOVVoYiR47j3YANI=
+
+Name: icons/etool16/tasklist-export.png
+SHA-256-Digest: 6qX/pHwIvONahXgBcUO1wnnhfIygu3KIemaA9dME6v8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorRichTextPa
+ rt$1.class
+SHA-256-Digest: mL9Jsmm12LJ3moEKsWz//j6k3WoLG8QsxzKzUXnv79s=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/Messages.class
+SHA-256-Digest: mOia4E3Sm3jlc6VlPkc5kK9ihI7rbzH+hNM9X/EpXuk=
+
+Name: icons/eview16/task-search.gif
+SHA-256-Digest: l84iMbiUjsrI3wxl3CMOigS3JTNJQBwL3gvx5iZpEMs=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/TaskSelectionDialog$
+ SelectWorkingSetAction.class
+SHA-256-Digest: dzIOIm7NBMuZ+VlZFQY9r2qy5qh592wZyp9LyfN3j4s=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/AttachmentPreviewPag
+ e.class
+SHA-256-Digest: VYPQqO8QfuLjf1u0EGNd0O00Kg1gkrI8KFsjpJFOSt4=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TaskScalingHyperlink.class
+SHA-256-Digest: iICo3ZpcxJOqj5KqtsuYZX5Uye4SnfJUWym8FSkDQsE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskScheduleContentPro
+ vider$Completed.class
+SHA-256-Digest: uQDKooAfGielVxLdME5aCaTPc+CpO4UwMYS5W+VHnLA=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/AttachmentUtil$1.class
+SHA-256-Digest: JSD5ST/ZUOPHkAY4vgDdosKV87RzACVidF4UfPtAO9Q=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TaskJobFactory.class
+SHA-256-Digest: r85qB4IbBjv151HoZH7CkfO3HwiYZqKIydWCSMCxDUY=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorCommentPar
+ t$CommentGroupViewer$3.class
+SHA-256-Digest: s9EPoX30mTcXcb9eg24cPg1iCm3UmW3waU+I9E00bh0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorExtensionS
+ ettingsContribution$1.class
+SHA-256-Digest: Hk0t989/BpzK6GX7UhK/KRtjHdvipw7lxrbs/apuStE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TaskPriorityFilter.class
+SHA-256-Digest: 5tF2Gh9iAEZWb8lwb33gq6cUS+Ia4s/3rPNiL419xaI=
+
+Name: icons/etool16/context-attach.gif
+SHA-256-Digest: Mh/akBvxpmgdZs+Wrg3pZjuoACafrOkdm6x1mKjQo2g=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/EditorBusyIndicator.
+ class
+SHA-256-Digest: ik9XqNAtbFn7CT9NMAjFkAGhokFiyBSX4lYPmrcvFuM=
+
+Name: icons/etool16/repository-submit.gif
+SHA-256-Digest: BRHHREN93aIee7+Pq9AOTa6b0VPLrLGNXtzQUr+WUcA=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/AbstractHyperlinkTex
+ tPresentationManager$Support.class
+SHA-256-Digest: EcACiBR5Cty6DAPxn53AlF2sLxKmQen+pNF3KW7C0RU=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/AbstractTaskRepositoryPage$3.
+ class
+SHA-256-Digest: aLTRVuTQEvlSFpSjb+izFSA+jbTWa3dY26W/JmogYp8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/SubmitTaskHandler.c
+ lass
+SHA-256-Digest: TpzSIdDxHAX7yFm2MeGAQfLwwKMjgOEbBPjqm9huz1Y=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorOutlineMod
+ el.class
+SHA-256-Digest: fAyluqXI8Xl24Tzstg1w+96aQnQUr9l3yLkfp/hi34I=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/notifications/TaskListNotifi
+ cation.class
+SHA-256-Digest: qUehbD0nlaCAUEzPd/S+r1WbX79sVLO1rnzOAH4C+pg=
+
+Name: icons/etool12/lock.gif
+SHA-256-Digest: qH71rle1rv4kXpQclgwmuZCvaUyKhYiPMKg9FEPVIIg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/SelectionProviderAdapte
+ r$1.class
+SHA-256-Digest: Q8g1JbMPp4uFGnTjM4u6CMUjzFSGIPPE7BFe9u9kxaQ=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/SortCriterion.class
+SHA-256-Digest: 88T/IxYgtSyIZSliasirK1+ty9km97M+3xQEQlH77mA=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorRichTextPa
+ rt$2.class
+SHA-256-Digest: 11FbXbLBuxwdRDOotmWaJg/NMp4xw5BBNQuYeMypTIQ=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/notifications/TaskListServic
+ eMessageControl$2.class
+SHA-256-Digest: 3xICz5jK958mH2RQoGhwil+NUIgtc8I5I6DqjdT+Owg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskHyperlinkDetecto
+ r$1.class
+SHA-256-Digest: wSKWlUoKCYg+HvLZ8eotFNuibgJM+AOmtGpUWvxB6co=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/LocalRepositoryMigrator.clas
+ s
+SHA-256-Digest: JIADUs9topZIwlHq6y3p/cOypFotlPYc09wFF2KQuGE=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AbstractTaskEditorPage$Submit
+ TaskJobListener.class
+SHA-256-Digest: vBiU0q9rKtsAM5W2Sb9M8McoOh72VFNy52QDPosj9+8=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AbstractTaskEditorPage$6.clas
+ s
+SHA-256-Digest: d8OPmLA0LUWqC8Af3vO9SkUJOyetmGwTiXdGxAfrPp0=
+
+Name: org/eclipse/mylyn/tasks/ui/TasksUiUtil.class
+SHA-256-Digest: y/fF/V8BoPKpZU43ILwrBdA2MenDueE+Djj+JL3+PGg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorAttributeP
+ art.class
+SHA-256-Digest: bUosDdxvb5wF3ie496UPtSbWQ3OBuLEWMXlY2TZK6fQ=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/PriorityEditor$1.cla
+ ss
+SHA-256-Digest: XxvhFyJ+NAFU/fpG8FWZkfPQC0l/RPK8Uhxw8ksrnVE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TaskAttachmentAdapterFactory
+ $1.class
+SHA-256-Digest: GOVAMB2OAT6GdMdEGGMWzdEuMwau6LWmpLO1vGS7TWk=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/TaskAttachmentWizard
+ $ImageSource.class
+SHA-256-Digest: 7mh7CWApg+KNPT2zp9MMk6hcjOs3y5N/kzjPjDULGeM=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TaskListSynchronizationSched
+ uler.class
+SHA-256-Digest: zaBE2yHvW+UHN06wdZs6mc6rC91z6wJ6LGHNYye+6dI=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/RemoteTaskSelection
+ Dialog$7.class
+SHA-256-Digest: rFlTQkoU++yOS+Nr0UsS7K5etgWA911CWKdogjHXo5A=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/RichTextEditor$10.cl
+ ass
+SHA-256-Digest: 1XxRdhgrn1V96ysJYdlL16pwXy5b0u3ipnNMl0tAZcg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListCellModifier.c
+ lass
+SHA-256-Digest: zJiPLn4FHZM5xmCK7bym9f6jbYg72U82vRCLEB6mlDs=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TasksUiPlugin$5.class
+SHA-256-Digest: UjBVDhWjeNJhp7X2H2hpIUFHZSK+RBBzAtg/jjJecSM=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/SelectRepositoryPage
+ $4.class
+SHA-256-Digest: jegGpQGTC4dNnGfURb/FFSQ2QI9Ry9RC90QwrCth+vU=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/migrator/CompleteConnectorMi
+ grationWizard$5.class
+SHA-256-Digest: S8RZse8lqF7tTRMKw2Z1/1FXK7sU5AC2yr8QL4zhVZo=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/context/Messages.class
+SHA-256-Digest: 4f2Nu61RoNLjjtuvYjMDpj3wosyLsheIoaQJi/gDDV0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskRepositoriesNaviga
+ torContentProvider.class
+SHA-256-Digest: vU16H6HUBi53y3q0ggHRJEcn74NWaJM0f/oN4Nv06z0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListRefreshJob$1.c
+ lass
+SHA-256-Digest: CI46DHK21I7f39d50Fuz7tzsJUmJg34ou19zhFWv584=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/workingsets/TaskWorkingSetPa
+ ge$1.class
+SHA-256-Digest: ZNt7aYsUaLJfRK0cIZurIxAabrIpskbGJtG0wCVFRV4=
+
+Name: icons/etool12/image_capture.png
+SHA-256-Digest: AdxsNSTleFitJo2bBCmETc9c5kroEA+8iphxqx6tUqw=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskListChangeAdapte
+ r.class
+SHA-256-Digest: nAwFCO3CKMpjHbVReXnCl3T3UZM6Jftd9bSqq2LlqJE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/outline/QuickOutline
+ Dialog$4.class
+SHA-256-Digest: uTXpKnV4mxpOExWFFSi4Gcrne/LVNQEcA/KpSH3xnKg=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/TaskAttachmentPage$4.class
+SHA-256-Digest: ZOkvDEF6MBU8A8yVmhVmIOIhg78iHXLvzgVBwzPFdBo=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/CopyCommentDetailsUr
+ lAction$1.class
+SHA-256-Digest: 9YjrwvWSD0VKzwffOO/zrB7J4sWuW1LgHb0vY2iwdAk=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorFindSuppor
+ t.class
+SHA-256-Digest: 7XO/EivGzoxaRRJBqYmQgJ45ZPHjgUlkZQtW1oSd8Y4=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/AbstractTaskReposito
+ ryAction.class
+SHA-256-Digest: Tsgg+5/LvozmCDipcSjG75nuSR06YZxQC2Nb4tYa4Gk=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TasksUiPlugin$6.class
+SHA-256-Digest: rzK4WJtQXE9w4amr2hItDUfvk/jSTV2A4BA5cDGb1DU=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/RemoteTaskSelection
+ Dialog$8.class
+SHA-256-Digest: LFwUKU0wT65focPpoU3LnxHhtNMTK8rjiThzOoDsDlg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/NewLocalTaskHandler
+ .class
+SHA-256-Digest: Hw8BzHHTW1kyNXC7RddCXMkJAhXw1ciG+QbsrNBfoiw=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/AbstractRepositorySettingsPag
+ e$10.class
+SHA-256-Digest: JHIJVBuZ0BvCtAV8VM+zRTPX3KhvHzIgVm8B/bC3R78=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/MarkTaskHandler$Mar
+ kTaskIncompleteHandler.class
+SHA-256-Digest: QNQK1kvik7EAUIZJZ83VvXakWTP08uAlX1cPhBq3SdM=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorPlanningPa
+ rt$NotesAction.class
+SHA-256-Digest: 1Y8uB1BC/sSXDiHwBPN9AaD2fD8pOBMHEexgtL9/CtI=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/TaskEditor$12.class
+SHA-256-Digest: QsqLGE29Z19FTtxDkcxijDmrvj/uqBfkfubnShEw1NM=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/AbstractTaskEditorSe
+ ction$2.class
+SHA-256-Digest: bMymwZLYTt+pT344qOOKrf1YdmAoOC+oQbdRe3Pu2Yk=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorOutlineCon
+ tentProvider.class
+SHA-256-Digest: 11D8MffYS0t0NtFWjfu9EhC7zb32og8LpBk67KUKHNE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/NewTaskAction.class
+SHA-256-Digest: WoAF8Y2pKBqro3ddMxyDWVaUJ/dCVBjukT3LwVoWxIs=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/TasksUiInternal$1.class
+SHA-256-Digest: I11laS5VU6+LSpgxXQEn6GZXvMpE4GaA92NIwSvTwYM=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AbstractTaskEditorPage$1.clas
+ s
+SHA-256-Digest: YlMaswAT7kKnzVyA1+/9mFdu0ZZNsJJSFvqgnxltUr4=
+
+Name: icons/etool16/compare.png
+SHA-256-Digest: ZGpWc6cOLk7cp+RnT5whA58IzDbkry+/2SyNjb4fA3w=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/Messages.class
+SHA-256-Digest: bwMHMywvRLdKlCgggACekAnSmtA38ZjKmYvp1WY7cuE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorNewComment
+ Part.class
+SHA-256-Digest: T9AgiLDNk+l2nALTmLWDiQkv0yNSrqC3F52pGsskes8=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AttributeEditorFactory$2.clas
+ s
+SHA-256-Digest: dXZyNNhorwaB47keRkL68ghjpCR2gzL/ymYqRpWO1uM=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListRefreshJob$1$1
+ .class
+SHA-256-Digest: 4k+OplNK8fPU7nR8imMc7X/boP5LE1Ywf69x3A8DxEw=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/ITaskCommandIds.class
+SHA-256-Digest: RUQZ7Iv4FNfbS4zNiLMIVWBvx1XCbhr8ytTqFY6bzZI=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/MarkTaskHandler$Mar
+ kTaskReadHandler.class
+SHA-256-Digest: RRNGx9xsHzTnC05OgzuRfKsCpzGeYXU34l+GugCk/KQ=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/ShowTaskRepositories
+ ViewAction.class
+SHA-256-Digest: VrCZfVuvm7GNLKJX/WbDqf474XAfML9zviAVzK74FTE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/outline/QuickOutline
+ Dialog$5.class
+SHA-256-Digest: hA1P3nyzCPN7FUfT2lrEugcxlSSWmVOV4BOZcktoKGw=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/EditorUtil$3.class
+SHA-256-Digest: MQUD/yKyZ0vCHP9oAnhBqcB+jBSs/7swdsJPff1s4yg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/AttachmentFileEditorInput.cl
+ ass
+SHA-256-Digest: q/icopb2j0DQYLkZF/twDOK3d4Qm0e7KXm99sne+8a4=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/TaskAttachmentPage$5.class
+SHA-256-Digest: NsFqrcf13rCXKqmesIYaVu6kX7XNUbIXmHudXoVxacI=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/migrator/CompleteConnectorMi
+ grationWizard$MapContentProvider.class
+SHA-256-Digest: CMCxmwjJChqCJcjLKpZcXDGlRYqWwLkWN32xr/5AOuI=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/TasksUiInternal$2.class
+SHA-256-Digest: vrJuByjQeVVD3nrg9phU/aIRGaD6NZA1uuxRl+fVGos=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorActionCont
+ ributor.class
+SHA-256-Digest: xFtrvZft5k7S767mrBg4z35DSUNLMhWXe7Tyg/kPdXE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/NewQueryAction.class
+SHA-256-Digest: fjxIroySerOx2HNwKq3h8tYFkxQkXS3cEcrDZIG05a4=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/RemoteTaskSelection
+ Dialog$2.class
+SHA-256-Digest: GW1PO6rgSXXXgcIdUiI0eveV2WG/FUPhMSqtW8kSE8I=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/RepositoryQueryWizard.class
+SHA-256-Digest: utGfbj95A2GLRzYB/nkDpCbyULtbb8AMZqcKr3Zl+hI=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/context/RetrieveLatestContex
+ tDialog$2.class
+SHA-256-Digest: hIh+G8167xg/rkjffVHgyj0FFZA956pnJ5ipdJE/mOc=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/TasksUiInternal$1$4.cla
+ ss
+SHA-256-Digest: 9vYLL/2kJ3Ns1nfW1Gba03lABl6y5BwvMNDjZCRSWp4=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/context/RetrieveLatestContex
+ tDialog.class
+SHA-256-Digest: A4PsOuBrnKoE04eGyYDEev9UfkNeUf6kC89G4/IA1DI=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/migrator/TaskPredicates$7.cl
+ ass
+SHA-256-Digest: 4gwbmY28aCcwhVCyRHOTyhsbpPeXgiHlgxLEp1NqAxg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/RichTextEditor$State
+ ChangedListener.class
+SHA-256-Digest: uF4yq9sQJFI8x/5yyX8JV0YQTSxf3BN6ICOR9zcwTYE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/DownloadAndOpenTaskAttachmen
+ tJob$1.class
+SHA-256-Digest: Xm9xeSWGKAV5MPV8gj0KveTnN+2IFLOC1ibFIZLPGYM=
+
+Name: icons/wizban/bug-wizard.gif
+SHA-256-Digest: eD+eI5zsE/vT8pt5CvAfxqoeEtGkvDoWbuUoHnU+gHk=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/CopyCommentDetailsAc
+ tion$1.class
+SHA-256-Digest: /eBgqIT4S4nOcCyHP9vc0IjR3sVP+gWAVJ+CPVYe6LI=
+
+Name: icons/etool16/export.gif
+SHA-256-Digest: LihOEOKm/6rmkOT553ABjlZExUK68XNc+XsFiffGBzE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/OpenTaskSearchAction
+ .class
+SHA-256-Digest: AQSdqFJe9nKM64ke87xjjuHzsaXlm7KctdKPweCeofs=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/outline/QuickOutline
+ LabelProvider.class
+SHA-256-Digest: CJ88QE1gHiKAAqoDvZ73asfL9dzO6rLZM3Aht9QOdkI=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/messages.properties
+SHA-256-Digest: 8qRYiZkLx+GNVovbNoqFFfNeBAoWpWnhBKp2zxhmbD4=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorAttachment
+ Part$5.class
+SHA-256-Digest: hsifEDEyl3TCsizohtAku0LJNbEKgdygmrzoHCnjWxI=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/PlanningPart$4$1.cla
+ ss
+SHA-256-Digest: soiE/38KWI4cUxj3mfxhGVbN8uEXEDRNSNXRQRavN1A=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/SelectRepositoryPage
+ $5.class
+SHA-256-Digest: HC+9su5Qj2LR9Rdz+cueG1+MTrN1cdbR+Isn57iaHxQ=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TasksUiPlugin$1.class
+SHA-256-Digest: dizhVKeq6UPuVnSfFRQU3QOAdp4IErZuGEFB9rzs/jc=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskRepositoriesNaviga
+ torContentProvider$Listener$1.class
+SHA-256-Digest: GAQpbfdRK5XJy+uSuK0iSpY+Wz8PjIzUiphGl1nMmzs=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/RemoteTaskSelection
+ Dialog$3.class
+SHA-256-Digest: yk4Zc1VNizYP2M+frVMWM3jaK1WTOUGCHRWF1I5E3rE=
+
+Name: icons/etool16/context-add.gif
+SHA-256-Digest: reGAwbCwes6AWERTnHA35eLVhL/Yk2zpz+/EZPQO8ic=
+
+Name: org/eclipse/mylyn/internal/provisional/tasks/ui/wizards/Abstract
+ QueryPageSchema$Flag.class
+SHA-256-Digest: XF6Jh4e6Vrv3Mm3EvT8U2E3ibVrdyO70IGmT7rQCAHM=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AbstractRenderingEngine.class
+SHA-256-Digest: N5B1nAf7/RWGSqrIuGBRGTwWJwHksU5h7R4el4bpuL8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/ITaskAttachmentViewer.class
+SHA-256-Digest: yOwoZxrdU6pxKctRrqeM9KkXsw3cLj2Qo1X5/JKi/F4=
+
+Name: icons/etool16/file-new-16x16.png
+SHA-256-Digest: i/TQ3ei597Mv3HrBIe+qw3Sntm37HagLL2a0XOyJB+g=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/dialogs/UiLegendControl.clas
+ s
+SHA-256-Digest: FUkHL28G74aYI6yH+S8IdtHbQyzKRXMLuUXtxRw5T/U=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/migrator/CompleteConnectorMi
+ grationWizard$4.class
+SHA-256-Digest: rBVBZUISeT+Mpw9RyoWEaDP9zsOQcqFxXlxucMq2F3U=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/RichTextEditor$State
+ ChangedEvent.class
+SHA-256-Digest: Wxvm6pAshh83k4Y1m+qNr8mPirO07B1xL/FuPNm2Flk=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/AbstractHyperlinkTex
+ tPresentationManager.class
+SHA-256-Digest: Ueq6DNXTFMmks0jZFJHZX1Ed1hN0OwZJdjNwybAt200=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/DownloadAndOpenTaskAttachmen
+ tJob.class
+SHA-256-Digest: a8JDCVzisL6ET2gamv6sS5ni5LGZXFyje+Si60ASKyo=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskScheduleContentPro
+ vider$Outgoing.class
+SHA-256-Digest: pJODtMhboFzbAjkzIhT0cH4CQwAkoBJRa0iefoPnae8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListSorter.class
+SHA-256-Digest: Q1RYiplL9mq3W2Q6boc+wlsd10Ac75/X+/MWZ+Ek1zQ=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/CopyCommenterNameAct
+ ion.class
+SHA-256-Digest: wVXkQJgRGvaXdZ+V8rNiQ9I4tyJFI6PfMNinr423ov8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/PriorityDropDownAction
+ $4.class
+SHA-256-Digest: 16x/Y+ghMeg3i2VuHigeR4aWhlF3roz6XDGQ4T6Fx/I=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TasksReminderDialog$3.class
+SHA-256-Digest: D8DfMTksLMp7jbIyvSy+d83sQj31q7AdOxbhHDLebbQ=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/AbstractTaskRepositoryPage.cl
+ ass
+SHA-256-Digest: R7q3cWN1QWFhgoIHAS7tGsFExBXaXjtmdbOSnS3LH7c=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/workingsets/TaskWorkingSetPa
+ ge$TaskRepositoryProjectMapping.class
+SHA-256-Digest: FzRLtC0yMg1+fu08iMKiTVN82a5dzs4koJRnlOE26u8=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/NewTaskWizard$1.class
+SHA-256-Digest: z6NyQXJXahAK8TGFeD3zgdgNaH+c5JGPN+fJ8lrow00=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/TaskEditor$13.class
+SHA-256-Digest: XZEpVnTkVr1KrvFExP6FQkxYRdzodIDZh+fIwuZS/UY=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/workingsets/messages.propert
+ ies
+SHA-256-Digest: M9DcNAZWw0CF7GMH9TfY97jhULXkTvWoLrunp6pwjQg=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AbstractTaskEditorPage$5.clas
+ s
+SHA-256-Digest: /a8SbbqUHeA3Dk/eQXLyvsZNKYCIHnvdO1SkcVTTi3s=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TextAttributeEditor.
+ class
+SHA-256-Digest: STyQD8TVKXwHgKIury5IcDZHohOWhCc7okbOiz/iHhk=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/preferences/TasksUiPreferenc
+ ePage$7.class
+SHA-256-Digest: lkVQ2tumJ6Ql/oRXx30UPv7eGD1899DUj3giWmnN5IA=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AbstractTaskEditorExtension.c
+ lass
+SHA-256-Digest: 2tYiB6Fw8WsoT60DrRxcIPPwXRJ65LkMdRX+0mjtZ/g=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskPlanningEditor$4
+ .class
+SHA-256-Digest: q/rhgAqyc4vsRjjUkdyUZ7Sk7+PrLDSvPGFSww2Urpo=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/AttachmentPreviewPag
+ e$2.class
+SHA-256-Digest: yhkB0mj/KFEGDofIB9HkRrntSkShrVaEF4tyM6ILe6w=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorInputFacto
+ ry.class
+SHA-256-Digest: YNxjU7hT89iSY5sr/PltpHflWjdxoW8xvXgMaPy9avU=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorSummaryPar
+ t.class
+SHA-256-Digest: WOCJKjBKREK8esGKM+VwlX3ku7mB/UWRfmxDfzZ5sl8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/migrator/JobListener.class
+SHA-256-Digest: OnRNJSfsf2zqcoOglLJsNY8v+/iNsbi/7sUrOhBLSLw=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/outline/QuickOutline
+ Dialog$OpenListener.class
+SHA-256-Digest: IUKVAZ7MctBmdkULCyZ0TWVQgFHqUMdges42aC2AO4c=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/AddTaskRepositoryHa
+ ndler.class
+SHA-256-Digest: 8boXk6nraAnBVaaIAN7POLooJTcAbx+rej6rbEGunOg=
+
+Name: org/eclipse/mylyn/tasks/ui/TasksUi.class
+SHA-256-Digest: 7d7J6CBCdGGQqaoUiOUXzfYgsSbZv4uueeGpg0gqliM=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/OpenRepositoryTaskJob$3.clas
+ s
+SHA-256-Digest: clYk3HOHZ/8bs5Z/p2jKArVTDUAUop1LDXQ7tHc0V8o=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/context/ContextAttachWizardP
+ age$1.class
+SHA-256-Digest: fI2YK4xDDJvGhxAV6BMD9JYtWVuCQWnHy332zNh1hoo=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskRepositoryLabelPro
+ vider.class
+SHA-256-Digest: V88+hn/YXFHR9Er4Hf8jpZB4CB8ODf8JTjrWv0YkYHk=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/SynchronizeEditorAct
+ ion$1.class
+SHA-256-Digest: G4ewBjAzxbAJINL6hF5w4Xixjh2hix8PNqevBh6iOGY=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/preferences/TasksUiPreferenc
+ ePage$8.class
+SHA-256-Digest: voCYlidQbnGKI8LV46ZxbefJallmGCE2tVYkYF2ToBA=
+
+Name: doc/toc.xml
+SHA-256-Digest: s8OpgS/yvvSnr00hRbW+5GzlMkZv3DBWHZAj9F93xKo=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/FocusTaskListAction.
+ class
+SHA-256-Digest: MDW46v0x8r8XQGzSGXgEyy6wSuTQXKuZ2/5zgRHhOIs=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/PlatformUtil$Eclipse36C
+ hecker.class
+SHA-256-Digest: w8XdqCgrXams945mirKG+R+xzYTUrn5I98kBKZCr5r8=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AbstractTaskEditorPage$Parent
+ ResizeHandler.class
+SHA-256-Digest: I6ySgHOJZUVkZqhWcI+gaOmgcXW2xN4RG6eLC7QrSyo=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/OpenTaskAttachmentH
+ andler.class
+SHA-256-Digest: AlVwQabuc+7vcbO9Ymp1Jqhtb0eu1ExCFOUKbFHLVvA=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/notifications/TaskDiffUtil.c
+ lass
+SHA-256-Digest: kT/6KL91HharDQNcxC+ORVMo/LViZ21n23OfINu10+4=
+
+Name: icons/archive/task-repository-completed.gif
+SHA-256-Digest: qkwZcbSgw0tl8v6vaJQ+lym6t9JJbRJbCp4Y306J9Mc=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/ShowAllQueriesAction
+ .class
+SHA-256-Digest: OUlMVf1MJ7DPrPxiqbZH1MoPAxUYP0aHUMnZ4wYH7W0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/AttachmentPreviewPag
+ e$1.class
+SHA-256-Digest: /3QLuB2tJQQCBkPXsnsHUmZP6NkUs5fbs7rYJXBYl0w=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskPlanningEditor$3
+ .class
+SHA-256-Digest: 3GJ4BUI9vcHFMl1OjSRrvMNLO1pU/O4abFBzeJZ+RPE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/context/AttachContextHandler
+ .class
+SHA-256-Digest: 6DfpeyFFU/C1PuwLbtoegDsR5EwjoAZQKXMKrJADCdo=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/LocalTaskEditorContr
+ ibutionDescriptor.class
+SHA-256-Digest: oQk7Bsjc7CWVbQrYwsO3app0IJSsartkqWcea4jXUxI=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/RenameAction.class
+SHA-256-Digest: jnMdWrZWkSmRXijHxZPAAlZg+fVxrjUbUzQTusiW0ok=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/notifications/TaskListServic
+ eMessageControl$1.class
+SHA-256-Digest: WMhnaqbInh446n/RpTUBIylFuGV+lYIhQf2FCZiRReM=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskRepositoriesConten
+ tProvider.class
+SHA-256-Digest: do0IOsyn8743t2CmtOuWnkbxjl1j+FeO+1MTveFhe8U=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/migrator/TaskPredicates$4.cl
+ ass
+SHA-256-Digest: bwo/MIzuMp+zz6uPisiRK95y/aQzsn2GlHTxvuQ893Y=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/RepositoryTextViewer
+ Configuration$RepositoryTextScanner.class
+SHA-256-Digest: jLYP+SrACyFQ1gR+BFpJ1eUODUnjqBZS5VdF4xfUJV4=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/preferences/TasksUiPreferenc
+ ePage$9.class
+SHA-256-Digest: 1eeYB6cw+w4qnmC60PxdFM5wEEz/qcwbL0OlpQhgyn4=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/OpenRepositoryTaskJob$2.clas
+ s
+SHA-256-Digest: 14oG2VjvyF6CYjk2Q2ZPfa61aNPf3C2eRvJCsRktN6Y=
+
+Name: icons/etool12/file-delete-line-12x12.png
+SHA-256-Digest: u5qdfNGHbT3FGXhMHIKyzQGzt6BUqcosr0b3UyRQ9pQ=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TasksReminderDialog$2.class
+SHA-256-Digest: Nn/1W1AVZZo0I+HL/w/xl2yn3Sw9SRsyW21er5QjZ0Y=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/ITaskRepositoryPage.class
+SHA-256-Digest: wPj3/juKbEnCxyTP14mVVX95bPb2nF0gXQSiGXKQqfo=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorAttachment
+ Part.class
+SHA-256-Digest: 9oeJt/YEegNWLL+x8pqIsaWyON5ZdXQ59m/fIXQB3gQ=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/GoUpAction.class
+SHA-256-Digest: yKhp5pOrbUMC9HkhZ0SsBdOCBH6srYiTUHrnVUbD1aQ=
+
+Name: icons/eview16/perspective-planning.png
+SHA-256-Digest: 42s9gjP8yFL96H/6Oqc2cMufRSM9Pq9leRyLl5JD6r0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/PriorityDropDownAction
+ $2.class
+SHA-256-Digest: jlKXftPlhTZnFjcVSyI0tJcaqo+ZWhmAiz/dYvCtgOw=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/TasksUiMenus$2.class
+SHA-256-Digest: x0qcLMHDwIXu1s7SVZJXOnB7j8f4rbV8NoJoouiBSy8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/UserAttributeEditor$
+ 1.class
+SHA-256-Digest: kPQyolqGnIbQCsTxbiHJffaRkflXMFPe9KmmQfpldIE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskRepositoriesNaviga
+ torContentProvider$Listener.class
+SHA-256-Digest: fgL9Vc7ViuQM/Qz66j+ylYz9F5LTfg0G0QDz/ffM0bw=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskPlanningEditor$2
+ $1.class
+SHA-256-Digest: ogNicE7tbqry3ZWuaiN7sQBR+6Ul6sBDY7btrmV2HaQ=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/TaskEditorPartDescriptor.clas
+ s
+SHA-256-Digest: 1j3r1m/XqJC1I9j6kis9xngF9sKljaSV56/QkUBVlz8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/dialogs/TaskCompareDialog$3.
+ class
+SHA-256-Digest: auvMmkbUII2dw/UsoUXAcCq/jplMAt6d5RgD7Qkh9b8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TextAttributeEditor$
+ 1.class
+SHA-256-Digest: 1U5p2758dPQ7jsJMSiEav02Qblh3c2t5JwkJYoAYIDo=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/AttachmentSourcePage
+ .class
+SHA-256-Digest: 9OHtj3kcgse0vbsSijVYp3DYHRNqRsVQiwXoWBmA9LM=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/TaskDataImportWizard
+ Page$3.class
+SHA-256-Digest: 6mzERrnrs4S4xd7YJLtk9ZVK1TsO1q2s2Ef2IK6y17k=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/LayoutHint$RowSpan.class
+SHA-256-Digest: 9+2z66ehYld9QhAGXdljOCVFOcjNuQ2xwh773NHLZvI=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListView$12.class
+SHA-256-Digest: I/88fTh7WF8Ki03DzzsbKEHr60nnPjDUpasSH5c9QCU=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/TaskAttachmentPage$1.class
+SHA-256-Digest: qI47xKFUPpGcnHEQhgatsSoyX11b5UW9VtuajVLO164=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/BrowserPreviewViewer
+ $1.class
+SHA-256-Digest: xWZ1I98MKv5A3gdKwVcH/RC6yvSvXrAO5N3cCD+PB7Y=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/NewWebTaskPage.class
+SHA-256-Digest: IyZeYHxGn7sg4PZvS0xQtxJYNBtvIiaijltXACIUCE0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskDetailLabelProvide
+ r.class
+SHA-256-Digest: spxXA0hJ3boEZyao1Iz5FnxrcTzsCcZU49BJNXki9f4=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/PriorityAttributeEdi
+ tor.class
+SHA-256-Digest: tvQvFORMoJ5UeM4kZ5eIqQ4uonr8b92HSi7qMDTCnNs=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/ImportAction.class
+SHA-256-Digest: nRWgh/ci67+kZ+2TUZM3CZ5KrcsPgUW3J1cKbrVkDKk=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/ITasksUiPreferenceConstants.
+ class
+SHA-256-Digest: bDHtjFjQ05GuHNBPJz7KAC3xeH4MxiQ57/dEFbwD030=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/UserAttributeEditor.
+ class
+SHA-256-Digest: jdLdLK5SnF1jb878NDFR+eGK2Y9ElG2KWQDt75fYhco=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/TaskOpenListener.class
+SHA-256-Digest: w3GA7nIRlu54JcCJLfdx5s4AFYo3e6CB8ON9pQ+VRjI=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/migrator/TasksState.class
+SHA-256-Digest: otns/VK2Xva+y1HhF6m0NzEX/KOujfo26UoIwd0KuR0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/RichTextEditor$9.cla
+ ss
+SHA-256-Digest: lrIoIG38EwZMQanZuvMPd71gqgvkdd9gbawELTpxfp0=
+
+Name: org/eclipse/mylyn/internal/provisional/tasks/ui/wizards/Reposito
+ ryQuerySchemaPage.class
+SHA-256-Digest: kZaHw2U98Hk5imUJXrOVElTFiMt0gwuDTE15V8wCAXQ=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/EditorUtil$6.class
+SHA-256-Digest: PgiZSsKZiOs9pIShlcw2x/4aBgIUTO3enq3qqBls1f8=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AbstractAttributeEditor$3.cla
+ ss
+SHA-256-Digest: pI5A/MAHrW8kUrkM7gF0+bP2PqPNOGekiMccdLPiw6A=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/dialogs/AbstractWorkingSetDi
+ alogCOPY$3.class
+SHA-256-Digest: n734BPPfa2Boy7awpZKg/DWn8xTWmS1xbpgJDVyAsm8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/SelectRepositoryPage
+ $1.class
+SHA-256-Digest: zka/vp/cgjAn/cyDt8ewtr7nggNK/AovXeevk2X1Ycg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/ViewSourceHandler.c
+ lass
+SHA-256-Digest: gQ6+Aa2vXGo/1wZJsFMbMKoMIU5UO4GHH6MgJyXpUWc=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/NewTaskFromSelection
+ Action$1.class
+SHA-256-Digest: mo+VB54vbUXA6JnkgYACnvbm76xemWxvlvsII4aJBYM=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/DeactivateTaskHandl
+ er.class
+SHA-256-Digest: 8xeCZ/UC/V0DnHVIs25JXn0bhymnnxJ/9I+d7I7a5V4=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/notifications/TaskListNotifi
+ cation$1.class
+SHA-256-Digest: X5vcNA+6tqPdf0PG22scmS2k0vw7rL5HOt+Xw5gqOvY=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/AttributePart$2.clas
+ s
+SHA-256-Digest: R2xZqSeSTmQPZinG51dLhjDNEEj2+P1gZ/TMy2+UpRE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/EmptyCategoriesFilter.
+ class
+SHA-256-Digest: dfTZpIB7qusLYQqSnL/C6VgkIZ5P3WjkpHdubjeJmyk=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/MarkTaskHandler$Mar
+ kTaskCompleteHandler.class
+SHA-256-Digest: MzQI5zJI9VSAZYmCWijwgXLCG5RAoetjGNTjho7k3tM=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/DeleteAction.class
+SHA-256-Digest: 1/6HCGUueHHzL95CGQoA4YOdzgWAvJ9kUjc3yw4cXK8=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AbstractTaskEditorPart$Maximi
+ zePartAction.class
+SHA-256-Digest: PNB022x5ABWbN+R7Kqkhr/zhavtkLquG3y4Mdz8Cl6E=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/migrator/ConnectorMigrationU
+ i$3.class
+SHA-256-Digest: DYMtJo0u2Mbzfil3Jrv1CmxRqJbxz+OqJzoq0s02FR8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorFindSuppor
+ t$2.class
+SHA-256-Digest: 01lN4Tw5HiyszwpV7VVdTt69831lPBdAPifB+fVR8BE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/DeleteAction$3.class
+SHA-256-Digest: eXswsTa1MHSB5ORvpQjF5iUh2A2IVr+sI414XIAq8cs=
+
+Name: icons/etool16/task-complete.gif
+SHA-256-Digest: JQOuyIYp1UAXEvj42gjO4KcM7T9tNOuhqRSOhH0QxXw=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TaskListBackupManager$1.clas
+ s
+SHA-256-Digest: rPd6da/JZjovek4+UTZeL9ZKVx5OCassfPNV0b4rx60=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/RichTextEditor$ViewS
+ ourceAction.class
+SHA-256-Digest: n+CtqoWPj70NWMl5ab9tRKmAHffGPmUrZs6WkdyYNtM=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/RichTextEditor$4.cla
+ ss
+SHA-256-Digest: wYcXwoICLcQX9BUTbHZLnMNEBK7aLBOQvuLtqeKZwwo=
+
+Name: org/eclipse/mylyn/tasks/ui/ITasksUiFactory.class
+SHA-256-Digest: 2OzaGL4vC3Hzr/Xz3OMaeQvhSx7VQYDmFi5hvmbwc6k=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/dialogs/TaskRepositoryCreden
+ tialsDialog$4.class
+SHA-256-Digest: /ohbw2TfawDK9+bBOiEKk3caI7Ij/YV2GYkQuI+N5bM=
+
+Name: icons/etool12/filter-obsolete.gif
+SHA-256-Digest: cP/PoR8fGK3qNuHMllC2DPTGvjJsKe6aiy2yQ4uH6dA=
+
+Name: org/eclipse/mylyn/tasks/ui/TaskHyperlinkPresenter.class
+SHA-256-Digest: jD27V5GykYFgD7ioSrGuEQBCok9Joi52yyx/n17m5jQ=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/migrator/TaskPredicates$2.cl
+ ass
+SHA-256-Digest: 4OKFMta7GTJJJC03WuhAiieGQ596SHKFHHaaVGdTF4Q=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/DownloadAttachmentJob.c
+ lass
+SHA-256-Digest: /OARK0TC5c/iGaHsNnM1IZ/AuGuOjVAWNA1/7uQLBzo=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/SynchronizeEditorAct
+ ion.class
+SHA-256-Digest: fd4IPfIhRT+d0FRl5dFXgSRXgOKOQBE9UOeSpAsEQBM=
+
+Name: org/eclipse/mylyn/internal/provisional/tasks/ui/wizards/SimpleUR
+ LQueryPageSchema.class
+SHA-256-Digest: 3j3FCCDpe95eFhNSWbbJ1HHCXluEe43jGTS/K3rJwuc=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TableDecoratingLabelPr
+ ovider.class
+SHA-256-Digest: yRgil8zO0z3aR8fkzEDuAFK444MTdCQ8NFld5E+pUIE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskScheduleContentPro
+ vider$1.class
+SHA-256-Digest: m9wFCx3yXilZyGF7+jULSPfH09tKohxWGvbbZccd4ck=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/BrandManager.class
+SHA-256-Digest: mfBikR8jHbPzt99jUdMsQTK9EAjiRkJ4rlBZzjbcU6I=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/OpenTaskAction.class
+SHA-256-Digest: Nwb+efqnxrTgWXqaZ/00bOCtEmIpb91HPn556HhVy2g=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/ScheduleDatePicker.class
+SHA-256-Digest: dFGYK3hrjQ6j/ZThnvPl6wJvQkKamoxNokMqyPwXLkY=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskUrlHyperlink.cla
+ ss
+SHA-256-Digest: IfS5fpkb4WoCorbpwWFXHshB6OQmUa2fbogY3Yp0V6c=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/AbstractRepositorySettingsPag
+ e$5.class
+SHA-256-Digest: KZR6aNcijWs4YYFxwKusIU3UuOlacgJXJNZTPazqiGI=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TaskAttachmentAdapterFactory
+ .class
+SHA-256-Digest: d03gh19nRLs1MDoAkbAowwrZbPPoAMWr22yCibUGc20=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorAttachment
+ Part$2.class
+SHA-256-Digest: Io9mJmUnGMlDamHIAqEDW8keS2vsZAXdrD4GC5ZPVA0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/search/SearchUtil.class
+SHA-256-Digest: kmfqjdyN78WypS+iXGpFLUSyTyAV6c/chjQK2FPyYW8=
+
+Name: org/eclipse/mylyn/internal/provisional/tasks/ui/wizards/Abstract
+ QueryPageSchema$Field.class
+SHA-256-Digest: a6F4QnO7NAcXFPjLlx5THn8O6GlRZqJqsxAe1371qwU=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AbstractTaskEditorPage$17.cla
+ ss
+SHA-256-Digest: QfT1HBF6ZASAflI5tTLwKGrcj4xcIBr9nO0Ud5jwQgY=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/TaskEditor$12$1.class
+SHA-256-Digest: CWPAJYByoS4zEcsvSWOnRPJflCvSPqDVtvY1DbTAsHQ=
+
+Name: icons/etool16/task.gif
+SHA-256-Digest: dGQ8hmEb88o2CBnPuEpoeQo8Ck8oF3P+dsX73jXhEZc=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/TaskAttachmentWizard
+ $3$1.class
+SHA-256-Digest: 6E8TfQWlXq86C4OO4rZGMLG6a2yyfNO/CsIhuGeE9Kk=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/notifications/TaskListNotifi
+ cationPopup$1.class
+SHA-256-Digest: cXcXGav/mqQRKAdu1TZOiCxaH5iGPqR7KQqrpPiIe3Y=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskRepositoriesNaviga
+ torActionProvider.class
+SHA-256-Digest: 1ePli40VFEdje2kfU90Dvwuy7iHd/Q9BGPow3vqjRHI=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/compare/TaskDataDiffNode$Byt
+ eArrayInput.class
+SHA-256-Digest: r3HQbqosIfNrIBUuV1pBuGuz6tX+W1/ap/ftvi7UqWc=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/GoToUnreadTaskHandl
+ er$1.class
+SHA-256-Digest: yuVAIYM8Ltpq9l9djIkZxlavDXf3sfcaqNDEn/bwMpg=
+
+Name: icons/elcl16/bug-search.gif
+SHA-256-Digest: O96nHfIAMkuQK34lRqGA5eElDQ6YIhCAL9P1688JqSQ=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/SynchronizeEditorAct
+ ion$1$1.class
+SHA-256-Digest: nOpGp3gjxC62t74qhoQePffhdyD1VBQMmyvPbsNxwMY=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/TaskAttachmentWizard
+ $2.class
+SHA-256-Digest: Rzz+ixSg2rdYHK8y6LCySM5WLIsrV2MqAeL5aAHfYQ0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TaskListBackupManager.class
+SHA-256-Digest: uNIlp59gP7DeMDU62WfzYlTLzEUu1hmE/nfS+RUvkx0=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AbstractTaskEditorPage$10.cla
+ ss
+SHA-256-Digest: /V5ghmWLqoZafsULgXPaXoMEtk0DCxFq6s5vsCut/UY=
+
+Name: org/eclipse/mylyn/tasks/ui/TasksUiImages.class
+SHA-256-Digest: JISwxmANX3kuQ1ovYbImcqcZZKoDX1aLGREol75fT9Y=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/TaskSelectionDialog$
+ 3.class
+SHA-256-Digest: gVOSNsq9q2RHz97hrVKOvIxpPUcGW4jLa3PO4lTDgqo=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/AttributePart$4.clas
+ s
+SHA-256-Digest: ZmGygAfXNBEicrorKwlaQAhsc3MbNcknLrsbnFmogt0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/migrator/ConnectorMigrationU
+ i$CompleteMigrationJob.class
+SHA-256-Digest: d2Ek9GXm2Mob3ivlfg5InfYhi6JZ+RGHDKtQEJzl0EE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/TasksUiInternal$1$3.cla
+ ss
+SHA-256-Digest: yuk66Y6VEItjxNwt8CTAlp4KoInrUQby57EkCFIDMq0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/AddRepositoryAction.
+ class
+SHA-256-Digest: 6rvm3LOWOeZRFyFpwKDoy3RN47JJg+cRun9G0YXuYJY=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TasksUiPlugin$11.class
+SHA-256-Digest: cMmAU5TxtdSE34kEmhZftmzBxBQ4d26UI85CcYrCFf8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListView$7.class
+SHA-256-Digest: aG/x063QwFBAXo5Brjo82fJBNck5ji97zFqtvnUSNgo=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/EditorBusyIndicator$
+ Animator.class
+SHA-256-Digest: SJv0fhq1rO+d12QZs5waxUWPp3IT2k54dloaE3gwymU=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskRepositoriesView.c
+ lass
+SHA-256-Digest: dFUQllw+HBM9cA/4NZh6FSQ4ZLnqzAVUL5crh8Dshtg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/RemoteTaskSelection
+ Dialog$9.class
+SHA-256-Digest: KtRWhCZqKJz5rDp2O1cIjToGmH0LqpsFvpQwgLb0dhc=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TaskRepositoryAdapterFactory
+ $1.class
+SHA-256-Digest: PTCwS5/K/l9ZHJduTvP72848HvgrNZukEYA0TU3dQRE=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AbstractAttributeEditor$1.cla
+ ss
+SHA-256-Digest: CjbOzJyk6Dzo8ymF2JS4ADcjmeJehdx6gLwYBpInsro=
+
+Name: org/eclipse/mylyn/tasks/ui/AbstractTaskHyperlinkDetector.class
+SHA-256-Digest: ykTTg9/a30tCMBrk7QhjFwZeCuF2L+K6DdpL4zEWwUQ=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/outline/ShowQuickOut
+ lineHandler.class
+SHA-256-Digest: vaBigECwwjLska32y0bWZ2N/cBzM7JY8ZUZoSNJx5mk=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TasksUiPlugin$7.class
+SHA-256-Digest: ygWoQ7v6ZVaYOuYTbr6aa/9oxt9PUM3+njiPfRdduXw=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/TaskDropHandler.class
+SHA-256-Digest: Nl9Qficbmmmt4WQNmfW76XKCbwUVReqRP/BRK6jl0LE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/outline/Messages.cla
+ ss
+SHA-256-Digest: a3nv14mYXSRVStINyhjnDc1oke1/GqvJ1jdi64lseJU=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AttributeEditorToolkit$1.clas
+ s
+SHA-256-Digest: FXmKlCweEC+69JQIvOiL/YVNLY3HLJKi1aS+f2cfwe8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TaskHistoryDropDown$Activate
+ DialogAction.class
+SHA-256-Digest: UBLrtLEQA0HHr7Lg1vg+7paCiDqgEjncBi5ZsTZRzaA=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/SelectionProviderAdapte
+ r.class
+SHA-256-Digest: ei7k8r1GXWjZ2O7EoYFymjScAzV2gNsXAVNU8SUfxec=
+
+Name: icons/etool16/context-transfer.gif
+SHA-256-Digest: nMFnjoyqdZi7bwG+IkM9wxQ0EQLNzLYRsD+Yc4Cd7XM=
+
+Name: icons/etool16/open-repository-task.gif
+SHA-256-Digest: rs8PnOe36D5V257C2H6GcvVV+hsDSD7tTb9FgZoLjGM=
+
+Name: icons/etool16/task-completed.gif
+SHA-256-Digest: Win/ZBSnQQaAuo8BfpAj0kFaJ5VNyc5AvD1QzGneGNE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/ScheduleTaskMenuContributor.
+ class
+SHA-256-Digest: HRO9mZPMyTclLR82duYkTVNsI0ExDesk8AtW9ljT5i4=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/ScheduleDatePicker$2.class
+SHA-256-Digest: FvIUDF7vNEgo828igKK5TpPF7NwR0ozgiknK7+DtpTQ=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/AbstractRepositorySettingsPag
+ e$14.class
+SHA-256-Digest: /ILGX6My3ZerK34Fg1YKZIL7EUxakTzKW66ZlamKkmA=
+
+Name: org/eclipse/mylyn/internal/provisional/tasks/ui/wizards/QueryPag
+ eSearch.class
+SHA-256-Digest: gBb5qJsDGir4dfGliQeTwhvQLHUsUWbGbDuImcOrams=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AbstractTaskEditorPage$4$1.cl
+ ass
+SHA-256-Digest: 2Gq0N8ljA9E75hS9srrVIg34OMJahmDlZRcWQGypX2s=
+
+Name: icons/etool16/tasklist-import.png
+SHA-256-Digest: 1cGHt5mSR5ZrLbpeZu3ho8UnaSCfhXBrcUYKciqEUTc=
+
+Name: icons/eview16/focus.gif
+SHA-256-Digest: +jm/KVMRn420HXJ3+mkTZOlCN5VebkF26jM0gSvwAGc=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/dialogs/AbstractWorkingSetDi
+ alogCOPY.class
+SHA-256-Digest: yzKjpab2+/bh++MhP0YOfuVk/BMlR+j5QI1MdmtQExc=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/workingsets/TaskWorkingSetPa
+ ge$4.class
+SHA-256-Digest: BWf6buRuR+11yJuN2kDYLYHSNjt2iJ/ao6JroVhL8r4=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/WebBrowserDialog.class
+SHA-256-Digest: 8fGmTfuz3Aet+feNYLRSkLF6mRS3QPPbz3SAv0CmWP8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/ExportAction.class
+SHA-256-Digest: 1kWinQp4rsyIRFWMU+Bt4QSLrZbjaPOAcVIyPQ70y/Y=
+
+Name: icons/eview16/repository-middle.gif
+SHA-256-Digest: U4+AtbaGJlUb6LMnVfHDnexQ662Bubq0ycnSySoy06U=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/migrator/ConnectorMigrator$3
+ .class
+SHA-256-Digest: L/XMqGKUy7bVFkTtm7aAv5JbgEq9A152z1Gc5EFjijc=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/LayoutHint$ColumnSpan.class
+SHA-256-Digest: 2H4cr8DIzUXgoJNXSWRRWR0D0ZK0WRTQm60c+ndBOC4=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListView$10.class
+SHA-256-Digest: rvrThUBeXgNJj23XgHGITCGq1Q7zYuSW10lVLaDEPAU=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/ToolBarButtonContrib
+ ution.class
+SHA-256-Digest: R2CNWTq+sxD+Wx4o1AZRfVWRRyZe7+rfpZoLb1eufXo=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/SummaryPart$4.class
+SHA-256-Digest: nW4RikAow0NJAcNXdixK3Eo/6P+xKRWDdNA5E+PpooI=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/PresentationDropDown
+ SelectionAction$PresentationSelectionAction.class
+SHA-256-Digest: aiPCWtUR57Ce79OYdNKOfImfKiqK+4gBXStrFihP8FE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/ScheduleTaskMenuContributor$
+ 2.class
+SHA-256-Digest: WJ+/DyErmXvjru7JJ686eF2D2AmyhSBKprQvj4i3FSA=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/TaskSelectionDialog$
+ 1.class
+SHA-256-Digest: mIKnDtuNQRdW1jYrvblub+Ebdtrte6nbHLbIdco1sKg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskRepositoriesView$1
+ $1.class
+SHA-256-Digest: MA+SJrwRUbmIK0xkoEp6j5sbNKql7zTDDCmDm6BKmvY=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/TaskDragSourceListener.
+ class
+SHA-256-Digest: gjxNEu2XXWy/vPKIVutOLCQwHmus3sPZ2ackzLw28B8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/dialogs/TaskRepositoryCreden
+ tialsDialog$1.class
+SHA-256-Digest: 1Cq3IeXv2nWX4ptaTotQ9590CduotP+pJupcaeMpGyg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/dialogs/TaskCompareDialog.cl
+ ass
+SHA-256-Digest: uDL8ElSnyEI9Y851GTUAEGPHt8Q5pf/x6XH/yzPvH5g=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/RichTextEditor$7.cla
+ ss
+SHA-256-Digest: L9KPUoSiQqVPqVUn44kWkX4D1JtI91dIwp5f+MRPlPY=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/migrator/ConnectorMigrationW
+ izard.class
+SHA-256-Digest: QKmumrFuO0/6B+Bs9RdZDFJzXtTz/HDlMqej7l22KbU=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/EditorUtil$1.class
+SHA-256-Digest: x8CiMJhYANgXTvh1LqJPbNzuxkpsDqXLD+L368owVB0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TasksUiPlugin$9.class
+SHA-256-Digest: AwESZu+cbQrF/kmCHFPTUZ8jiq/kS0vW/HPibzvJkdg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/NewCategoryAction.cl
+ ass
+SHA-256-Digest: XZzAjML2XLT8UHsbJ1umTgQZkaMLOHFA5kwYBGHwTt0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorOutlinePag
+ e.class
+SHA-256-Digest: 16Tcaq2tHiz02zmmZooeCwy3YRKk3JgrUPf2AnG8ejo=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/AbstractTaskRepositoryPage$5.
+ class
+SHA-256-Digest: YX3D3gsNXi+5B6Q7kabT33R2rlfgb6SIc2cGnh4DhY0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/migrator/DefaultTasksState.c
+ lass
+SHA-256-Digest: I+uETVclnyyBqZP7XJFs8zPw0tSSLDQFrbwJZSfhvxQ=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/dialogs/AbstractWorkingSetDi
+ alogCOPY$1.class
+SHA-256-Digest: Q3Pu90E6XUYqEUl67MM5VRQXKXgWxtWwS+/iK80vxMI=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TaskListNotificationManager$
+ 1$1.class
+SHA-256-Digest: bco+7wcY7GZPsIvoF3EFYmv6dtqvpQrOQ9TtFACFIgc=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/workingsets/TaskWorkingSetPa
+ ge$AggregateLabelProvider.class
+SHA-256-Digest: KQtRrIV2K/HqXWACpCHOVgOVHxR4Bnj6dIhB+f3x5SY=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AbstractTaskEditorPage$19.cla
+ ss
+SHA-256-Digest: nxueylhPkwTHef931AC3uRtix5ijJAWILrvofex0CIc=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TasksReminderDialog$Reminder
+ TasksContentProvider.class
+SHA-256-Digest: klVACtgCvkE7UwbqQco1wHSZeKYg3kvgXHB1vfzYlXQ=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/migrator/ConnectorMigrationU
+ i$1.class
+SHA-256-Digest: PmbVNCoS01pUaQ6+JWx0uxIcLjt3OuTrOoyewexvot8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TaskRepositoryComparator.cla
+ ss
+SHA-256-Digest: 4gJj0jsstilYOvQRArwGlv+AGb/Su7B86SdbGKmm1oc=
+
+Name: icons/etool16/task-incomplete.gif
+SHA-256-Digest: ba1ge1JYSxBlzyZPjiE0Xvvm0kQ+wxmzV7oQmyxOyL8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/AutoUpdateQueryActio
+ n$1.class
+SHA-256-Digest: /ESrfEK751Vy9JSgOmf4LGR4nHlp0+MacyvX0U53ulU=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/CopyTaskDetailsActio
+ n$Mode.class
+SHA-256-Digest: WwSz25hFaAqWEBdXH59LiqRst/R7vagOjrTfIn8f/kQ=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/AbstractRepositorySettingsPag
+ e$7.class
+SHA-256-Digest: 5v+DKF+tCwEbrfGZAiUoBUc12LwP9seP3Nun1lethd8=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/TaskFormPage.class
+SHA-256-Digest: VBzNqENPfgq8ZmlpyjaQ893DRQwhv3nz5ofQcIm0HSc=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/LabelsAttributeEdito
+ r$2.class
+SHA-256-Digest: 09ojlF7agNebeDuJtQtsUqN4dio6yaaiOo2Up4HzOoE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/TaskAttachmentWizard
+ $ClipboardTaskAttachmentSource.class
+SHA-256-Digest: 7jpyFKEBRBnZ8it4HwD1Ab/YTQ3JDDCM7O7yKvaOVqM=
+
+Name: org/eclipse/mylyn/tasks/ui/TaskHyperlink$1.class
+SHA-256-Digest: LNRrD+0LKB6HxJnq/jpBXW5HNe97jclOCWKWDb99Bs0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/TasksUiInternal$1$1.cla
+ ss
+SHA-256-Digest: 0Ey/zrc53DqyMvAcZI3/fxrMXtNVLjt7299Nw5I8pfc=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/ClipboardCopier.class
+SHA-256-Digest: 8hyLYnendQGptIgG4IpLG3Cb6zsrkLJgsGQuc1t3jWg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/SelectRepositoryPage
+ .class
+SHA-256-Digest: /S2xuDiC5oZJLdCTzZ78i43gWIPWrzjmKIW5JZ9sARc=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/FocusTaskListAction$
+ 2.class
+SHA-256-Digest: /JCNGeNxZesPCUCexJodelYjsGYs3mBJAskmaVA1qCA=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/BrowserFormPage.class
+SHA-256-Digest: 9WwtLMjDAI4UxJoHoMtmtGF9PFguFIsIYkKTsfIcOeE=
+
+Name: org/eclipse/mylyn/internal/provisional/tasks/ui/wizards/Abstract
+ QueryPageSchema.class
+SHA-256-Digest: Es10n84aU7kGMuLnA4Mi/SFGEC1ph2ZMNzrPAIoP2pE=
+
+Name: icons/archive/task-bug.gif
+SHA-256-Digest: ARzSWSduOdmUYbRw4BvZFfuZEpmKCgtqRqsApP7XgXg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/CopyAttachmentToClipboa
+ rdJob.class
+SHA-256-Digest: /S+Mjc8SnHo/k9Wm/4doVD6tVQVHAnpX6Q8rqt89KOY=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListView$9.class
+SHA-256-Digest: wU492fVmOASK6BF7UC5RyOFQZQkIQzYjI2VP0rh0lwY=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/AbstractRepositorySettingsPag
+ e$12.class
+SHA-256-Digest: zPDT/B+TWQW7lDRpXBUaDKQTrlczfI+7jvx9bRbkMlo=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/FilterMyTasksAction.
+ class
+SHA-256-Digest: uLcNv/wQiWROv2JrQLRELOEwdniaanR5Zzhrt2x0p/U=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/AbstractRepositorySettingsPag
+ e$3.class
+SHA-256-Digest: Ew39irScol1sbRDuNqSt/iSYTBut0m54FCxFZp4wVVA=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/TreeWalker$Direction.cl
+ ass
+SHA-256-Digest: k+ktNWT2djNDRs17IVdNNVx0KlG5jKI4n/1Hn8yVvmM=
+
+Name: icons/etool16/task-repository-history.gif
+SHA-256-Digest: wbTDVOgEdHxkqMsUbhkEX/Zyb09SO77/OMz5190MCF0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorPeoplePart
+ .class
+SHA-256-Digest: b5UECVJTXavFKao2SaGreFIicuCDkgNpotI9ce6/Iv0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/notifications/messages.prope
+ rties
+SHA-256-Digest: WnROLJzGcA8vNp6pynt/C587NiOdpoqrVMtupovb81Q=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/AbstractTaskHandler
+ .class
+SHA-256-Digest: 6rYcOx4C0Yd2E9p1ME2ZvIjnkcXtlCfYsrlSwj2ozAE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/RichTextEditor$6.cla
+ ss
+SHA-256-Digest: hEbZtkInf8RDFMGpn8331rwiott8W9uhJ1lbQYz7pKI=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/workingsets/TaskWorkingSetPa
+ ge$6.class
+SHA-256-Digest: UbJScGbX/SQzj5JmI8obCmi0tIFu19LaHHsTAi9QXHI=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/TaskEditorScheduleAc
+ tion$1$1.class
+SHA-256-Digest: nqZK7vvpHL4AWaArVMylpcN02eYPftVzl+jBEKNrpgA=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/migrator/CompleteConnectorMi
+ grationWizard.class
+SHA-256-Digest: mPD26V+ha+IOzHwlK/MU6QscWBPo1ZlUXXpYcag6424=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/ShowInTaskListAction
+ .class
+SHA-256-Digest: c+zu9Nz0rtrIctcn+2IOPkZAo4F9eCX4mfyUTSMz9fE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/SummaryPart$2.class
+SHA-256-Digest: F+Retuaft8SSLSccMEqCa6hb/Aof9MkMB+IH5ows8xY=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/dialogs/TaskRepositoryCreden
+ tialsDialog$2.class
+SHA-256-Digest: jLfQUx4E4srjPvgkcZNK95RLmoq7DmPP1S/piKP1fDE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/ScheduleDatePicker$3.class
+SHA-256-Digest: ezqv8lkPmqnjEocK4aLRdVO5ssmBF1DO6T7GvEvRG9U=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/UpdateRepositoryConfig
+ urationAction.class
+SHA-256-Digest: woX5yHG8t6YuchXtiAsMCr1EEw/oKBTw3AgSCudSbEM=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AbstractTaskEditorPage$14.cla
+ ss
+SHA-256-Digest: lHi4At7eTgQa0/ofs4s0uQ3gM1ba6LL0uQ6+rtnh1uM=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/ScheduleTaskMenuContributor$
+ 4.class
+SHA-256-Digest: 3YDPeEpf+xXYR83u8sgk1357CzXJIs57QfIkVjhK71c=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskAttachmentEditor
+ Input.class
+SHA-256-Digest: LZ/sbUNaCHWgF/fuwWplJuofpDlVOxGsssXzrUvth04=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListView$15.class
+SHA-256-Digest: b747tyr/kq/QSryBgoZwe2Et2CsIhKGkbJmbxk+OXWY=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/AttributePart$5.clas
+ s
+SHA-256-Digest: XXrDTGPP0v8knhlusFMpd/X4LR5Y28BWS6qNEMInMKc=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/FocusTaskListAction$
+ 3.class
+SHA-256-Digest: wi/zIL4yC6+gvrKOqBET7D+mEHejSMb1majiWYDEb2U=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/DialogErrorReporter$1.class
+SHA-256-Digest: tU7YXroCwBXpQagoUkJo05vpxTEDMpoEOSRZoYrwFHs=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListView$3$1.class
+SHA-256-Digest: zlR3n6Sv9Q8MrtDaWP0OT9C7FrMEMaS8g5611zetS8A=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListSearchHistoryP
+ opupDialog.class
+SHA-256-Digest: uUjgH8DUtFmrGkRoZiKhN70JvoYlCUdIAmdTbCLymHE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/migrator/ConnectorMigrationU
+ i$6.class
+SHA-256-Digest: z1GjGbkpwWe+9rykumulx0cgUop9DaTUgy0uthP+Tws=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/GoIntoAction.class
+SHA-256-Digest: 4nEOurX8LyXthxmdmnLXahzEKKHEABUScv6ckQaCJpk=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TaskHistoryDropDown.class
+SHA-256-Digest: AZSAwM2bfP4yZ9QzycUClU3c4weJ/oqNG7tV+gX4+sY=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/LocalRepositoryConnectorUi.c
+ lass
+SHA-256-Digest: G34NbWxwPddygyHqpeBS0jZZhAWZizxCiUjtjy3DfYo=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/notifications/TaskListNotifi
+ cationPopup$3.class
+SHA-256-Digest: gyHJZgOOFcoFYifKJlVSgmPh//84IMuIelrQiJLHhjw=
+
+Name: org/eclipse/mylyn/tasks/ui/TaskElementLabelProvider$CompositeIma
+ geDescriptor.class
+SHA-256-Digest: 6j3l3o5NzBfKj8c/JlgPZ7F73D5IiuCywBf8FmrMqrs=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/TaskDataExportWizard
+ Page.class
+SHA-256-Digest: 6KI7izXhVyl5XrlmBu8zonE248EYF1RPWbByioXV2uc=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListSorter$GroupBy
+ .class
+SHA-256-Digest: tisjccUaAC0jDodmB1Y85tD3DQcRqAW61rtmUIrpQds=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/TaskEditor$7.class
+SHA-256-Digest: lf/Rf/TalifI6ddT8yacW6QGGllLEjVGBt+nh1lpjv8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/SynchronizeAllHandl
+ er.class
+SHA-256-Digest: eWToM89mULey2u3g4/LFxIlVqtGhsKrumUZDAYYrsYk=
+
+Name: icons/etool16/task-repository.gif
+SHA-256-Digest: wE0epOsuH588djcB4Tal8mZg/ZXHNVcqTYHdkqRnv3Y=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/TaskListViewActionGr
+ oup.class
+SHA-256-Digest: La2lNmZSQ5kG7A5EckIwchQsUwjMSyek2dXw1XgkOlo=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/migrator/ConnectorMigrator$1
+ .class
+SHA-256-Digest: czVbyCpADD5DmxFaHu4sos7WvxydG1s7uSbelY12HmQ=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AttributeEditorFactory.class
+SHA-256-Digest: 0eJvfXHHjDYbYpRZe2ol63tLGDqGt014jlDnZ+WEmSI=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/TaskSelectionDialogW
+ ithRandom.class
+SHA-256-Digest: ACC4eLHw9sZgWzXAaJyrST8eDVrAsAKwHlviGP+cl+o=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/MoveToCategoryMenuContributo
+ r$1.class
+SHA-256-Digest: /ixYcFlIBC/Mb2VXma53lOs7hHtYE24dhHBZgTvx+o4=
+
+Name: icons/etool16/calendar.gif
+SHA-256-Digest: h0fScFMPVumXWF++re3Zscr4k6jEr7DXltjjD/1IoQ8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TaskListScheduledSynchroniza
+ tionManager.class
+SHA-256-Digest: SrsncM60wDv8VF+zkFrtecdu4k7/5VUo1Lb17YJqETc=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/OpenRepositoryTaskAc
+ tion$1.class
+SHA-256-Digest: es7RanV4c1ePduR9p1/SYbrmabR4OQbrVIzBLt2AGZU=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/TasksUiInternal$3$1.cla
+ ss
+SHA-256-Digest: b+bKZfQi/GXVM/rj2WV3Y66pLwbs1SFSy5qTKDfuANw=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/context/RetrieveContextHandl
+ er.class
+SHA-256-Digest: M/UEEjRQP4fdjZDFCDanICXPkcHkFvAzN1ypskSCMqE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/SummaryPart$1.class
+SHA-256-Digest: fJsS4+Y/0cL+lG0TO5dRgIvSicvyfhpsHvQLdAbPnRw=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/migrator/ConnectorMigrationU
+ i$5.class
+SHA-256-Digest: sT+OGXqLhMB+Py4OKGNmxKSsamEGiML2YrwMfGp3Rbc=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/DeleteAction$1.class
+SHA-256-Digest: Lla5Ix0qLEH3vMocHKkQzmaazobqLw2U053/6Nz65AE=
+
+Name: icons/etool16/navigate-previous-pause.gif
+SHA-256-Digest: MlfUSTkh7o3vJ+24XaU+h+OF6Dtjr5o50jroEuBQxeU=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListView$5.class
+SHA-256-Digest: YeX6h8CMg6irPp1mY0mbotHJ5GAMYYaEgQ6MKqYYf3U=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/dialogs/TaskCompareDialog$5.
+ class
+SHA-256-Digest: mCAwGvVwGIPn8wrpthkmOqgY5yXPY43zkDD1iib/AOw=
+
+Name: doc/images/tasklist-overview.gif
+SHA-256-Digest: p4Z2cvUtr7jzBzaYrATX0/jcEW+WdIEzS0DeWZ7rqkE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/TaskSelectionDialog.
+ class
+SHA-256-Digest: blMpQgUk0xAs6VagaqyycDA609gIE6bTIOR6vGzVs4o=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/AbstractChangeComple
+ tionAction.class
+SHA-256-Digest: pRTx121FrX4fHFTM02UBeEgy8rgbPOvyZj0US2bovDE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorCommentPar
+ t$5.class
+SHA-256-Digest: 9vWIwEP2R8TOUUIQPYGXKt49t2fWk/pr5HxxnBNc4gM=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/TasksUiInternal.class
+SHA-256-Digest: Ub42/uv1LMz/heVVdk2BoRGhltk4on4J6ZazbX7WuEs=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/QueryCloneAction.cla
+ ss
+SHA-256-Digest: k6Y9EdUlr6t2aZKZT98lHSicKCErLYLVVTZZw//aV7A=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskScheduleContentPro
+ vider.class
+SHA-256-Digest: rg4PGQuQUeOJYEYjM50scrrXboHm9BZUbfotpL+XvS4=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/dialogs/UiLegendDialog.class
+SHA-256-Digest: I6l/1xgPMczxEywv0op663FIYjyZDbK0yVycRF06JXU=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/TaskEditor$8.class
+SHA-256-Digest: pn+7l9c06Dzv0i7BQzaLLGs0jaHcwR77Odp7yRPYuDQ=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/TaskSelectionDialog$
+ 4.class
+SHA-256-Digest: sHXykQuzhr7EiadNT1yyvDkTUtMobOmlgKRjtz/J9/A=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListView$6.class
+SHA-256-Digest: uen2gRyE3jQaRcA/ygYhjLNXdpi0O4/SEm2LE+fLhc0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/TasksUiInternal$12.clas
+ s
+SHA-256-Digest: cwUla/MlycLX3BHoryHY3BnP/6jURGGBTjPPgEdS1Xo=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/AbstractRepositorySettingsPag
+ e$15.class
+SHA-256-Digest: hBvAdA+7tivdnXNb4xCBTs2syQlHB8HHbREw1MP47eY=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListView$14.class
+SHA-256-Digest: yhjgEelAzVLk87+xI+9Lk005gZTkWxQejYTpvWj4TY0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/IntegerAttributeEdit
+ or$1.class
+SHA-256-Digest: n/hDDw/qqzEtBauxaaBliBJv2Hi7pCZuAayEn2z+e/I=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/dialogs/AbstractWorkingSetDi
+ alogCOPY$5.class
+SHA-256-Digest: cBQY1ILCjmilBUiJ5XvhOnxlbbdZJCnjuWQgJHez/vU=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/ScheduleTaskMenuContributor$
+ 5.class
+SHA-256-Digest: GSOadhhZ1cuOYaYDrl81g/Zx+SeCMpRcB3raPU9C39Y=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/TaskRepositoryParam
+ eterValues.class
+SHA-256-Digest: 6+Q5jdLzJT7IPjguuExk0SBhDOZ2BYt+I2RlU0b92Go=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/RichTextEditor$5.cla
+ ss
+SHA-256-Digest: +tiVRI59XE5v+i1JiUFlVqL6QUJmIGdGmxNFLSa0NGc=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/AbstractRepositorySettingsPag
+ e$4.class
+SHA-256-Digest: vmnri4qUSHAzkiTxS7pXdxorzgjmWbSGP3CyFMVBj9s=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/TaskEditor$2.class
+SHA-256-Digest: ztGVoXlwtcsZKoaxROq3BIpYHY0N4VGKIX4y0yCtOY0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListView$3$2.class
+SHA-256-Digest: lj3v6JMXLSaD8GSNHWEY5p5QM4DWklYwG0f8EoEcbFQ=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/HighlightingHyperlin
+ kTextPresentationManager.class
+SHA-256-Digest: bHgY76PCpfzw5Jz5MP+3ne3XDa6rwmWyoMwNBaCGOT0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/search/AbstractSearchHandler
+ $IFilterChangeListener.class
+SHA-256-Digest: Xe1KQhPs8vZp2PfpEtw3pU34OQoCQmgsT0MuvSgx+XM=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/TasksUiInternal$11.clas
+ s
+SHA-256-Digest: LBJJK9n0V3hqHSlO85gvXCdr7KuIiRpSfqHMZy44C1o=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/TaskEditorCopyAction
+ .class
+SHA-256-Digest: No8EpU/JXvilaEqjf+++gnNGMB+RaelK2avBQNhBqhw=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/TaskAttachmentWizard
+ $ClipboardTaskAttachmentSource$1.class
+SHA-256-Digest: vDRm2bNT6eLbcloSsAbG1ZBzyffS5wQaYXjFVR3NPvg=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/AbstractRepositorySettingsPag
+ e$19.class
+SHA-256-Digest: LAMybR0xl4yY1cRFtTnS/mOuWj3BzbjH7nci8yjWcCg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskPlanningEditor$4
+ $1.class
+SHA-256-Digest: whtiAIiU5mVxVHaFxO1qZsUK+CsZ/rTGMGk3o8603CE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/NewTaskFromSelection
+ Action$2.class
+SHA-256-Digest: r7pUCft7ewsDgq3FkJGSxXn7Q9bfne0rpV9gKG1TQ0I=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/RichTextEditor$2.cla
+ ss
+SHA-256-Digest: Lo8vfxREO7FfGfXNqVCq6Ztq/Asp9fZbhTuE8qblRFg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskMigrator$1.class
+SHA-256-Digest: BOaqqe7BgS7jfVfpjfh6s7h0UYfJakm55G0hHY+P8rU=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskScheduleContentPro
+ vider$RolloverCheck.class
+SHA-256-Digest: CqER33pKtFiRt1zZmuqa1H8DX2WTtGr4gG+L7QF7TGo=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/TaskEditor$6.class
+SHA-256-Digest: dMOCLT26smcbiG/lasz0qJ28TG0XhsznjRIRIG9QISM=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/notifications/TaskListNotifi
+ cationPopup$2.class
+SHA-256-Digest: 5ZbeZkuo6YgPfJ7t0XfUMrdSYrNz+OyhiOKXUFQjnnk=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/PlanningPerspectiveFactory.c
+ lass
+SHA-256-Digest: 07LnDZ+emTTjMKys9+SGUYvSyljC3X0zcuYdauTJHBU=
+
+Name: icons/etool16/category.gif
+SHA-256-Digest: CDVyjageaoAW6LlpK3TlxSxKTfNr7EPVd2QtJzfk/bc=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorCommentPar
+ t.class
+SHA-256-Digest: TBqr22OzYuTH3bBIF5pdMSIruCj+Y27yA7UmZh+9XEE=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/AbstractRepositorySettingsPag
+ e$16.class
+SHA-256-Digest: exNwAS46gRGXQ19Hn6Yy0RNz5783emLuXDAsOvljIec=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/OptionsProposalProvider$1.cl
+ ass
+SHA-256-Digest: jOoHwcAMsx9Jo70z9do7rnFnQKrVn/5Ad5ODo7tyUS4=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorActionCont
+ ributor$SelectionProviderAdapterExtension.class
+SHA-256-Digest: HeYEuZC0LBRjfk6lrGLyZqke1lRMaKB/GzUXoLO60EQ=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/CommentEditor.class
+SHA-256-Digest: BhAk49G0QoNhTD0lmIsvaM9se6KsI5u9+9Ui4SC/LUg=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AbstractTaskEditorPage$12.cla
+ ss
+SHA-256-Digest: Zie7AUkEYBAAXFPvN2t6+ZrXBYsBDF6WsFZxBUGBhZ4=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/TaskEditor$3.class
+SHA-256-Digest: NGXGXcEKXTNYrKvGeNE3qQj0DwJES3po1270XDGfWBg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/AbstractTaskListFilter.class
+SHA-256-Digest: aFChUtbpY6I/gOqMVQq7RbY5kXhR2hj5rg6IzA0+WRg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListView$16.class
+SHA-256-Digest: gGNmyDieEUsMWcRrNRUj9kU/qWGYHv3cSL//7bmTCR4=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/AbstractRepositorySettingsPag
+ e$31.class
+SHA-256-Digest: hhs1JosYH+WlgAaZPPQLFXgwbbrmpH27Hw0R1CyN/vI=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListView$1.class
+SHA-256-Digest: vk35Vm77DUZojAUZbmAi7GCJIOt1b+CS0pw6o2USDFc=
+
+Name: icons/wizban/banner-repository.gif
+SHA-256-Digest: XKeds987htHr34tyAiUfwkADH5CPqZhKAowk1G0svXU=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/TaskDataImportWizard
+ Page$2.class
+SHA-256-Digest: xXiEESrIU+5qECBwPYgurQl05Q/agiju01g/83UiPhs=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TasksUiPlugin$ReportOpenMode
+ .class
+SHA-256-Digest: bnOGe57xOt1cmLB/4ljQK7i9295WX3DSvBiqZ26zJ24=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorCommentPar
+ t$1.class
+SHA-256-Digest: 7kcPx8nSD9ZDC4J0cNF89HZ1EKs6X6iDjgv7T38ESZ0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/ActivateTaskHistoryD
+ ropDownAction.class
+SHA-256-Digest: weL2r4hixrIpXKsxocQnpUFGb3758yC+PecuKFljcLg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/NewSubTaskAction.cla
+ ss
+SHA-256-Digest: IEVPSg+cE/NF8I29mVaCvbLoFhvOiPAd3HW2RO2sMJQ=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/AbstractRepositorySettingsPag
+ e$2.class
+SHA-256-Digest: 15fCgKec77hxvixhUXYJ0Xqks9P+4Tg6rYhM4oyAlNs=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorCommentPar
+ t$ReplyToCommentAction.class
+SHA-256-Digest: nbnz/KRL3dC8CCHL08EMKeFdTBRHtRN9mAR9jOQcm/o=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/dialogs/TaskCompareDialog$2.
+ class
+SHA-256-Digest: gX/HEcTV+RKMV+AyOlLJl+xBMBdSAEbIna9NdYr99WE=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AbstractTaskEditorPage$15.cla
+ ss
+SHA-256-Digest: uIVbxUABnh8Td7b9pMLWKpzIq3mns+aETMWX6hmFFmg=
+
+Name: icons/etool16/repository-synchronize-attributes.png
+SHA-256-Digest: JCjCITiPIDUlAtkKPcuHhIGb0lYZt0xsa8CpW54jMk0=
+
+Name: icons/etool12/reply.gif
+SHA-256-Digest: WPl0t7FpXofndtIbI/xT7q11Y5y9IMmqQPSguoAYP5k=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorCommentPar
+ t$4.class
+SHA-256-Digest: JNzL6kgfFqsN3kRIqcEaZA9HbAp6E16btXxA0AY5M5s=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListView$4.class
+SHA-256-Digest: Dwvx7B0y2ma4HZXlZfhjZS/+AtjBYfbxulZCOj9Wqr4=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListView$19.class
+SHA-256-Digest: h4r3IzM4RtwlB8LB7+lm/ADsf0hF0yoiB9muT7GjZ3k=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/dialogs/UiLegendDialog$Close
+ DialogAction.class
+SHA-256-Digest: c3sdeHx803OLmdXOj/1fqkb7aJgeacWVsHjXxg1ut48=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListView$2.class
+SHA-256-Digest: 4WEeS9prPefPpdH2g0mZY6sLPr9dyEevTKHYo5ql9E0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListView$17.class
+SHA-256-Digest: jhZPS2FD6ey/nJtbARSJlXPNhPGKkPpEMBvBisaSmt0=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/AbstractRepositorySettingsPag
+ e$30.class
+SHA-256-Digest: 1JrQXa28kMLjllYyN+UV/Wi0J2cvH3xWp10n6MA+CGo=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorCommentPar
+ t$2.class
+SHA-256-Digest: x5SliaWeZnMBSdQ/ASj4j40z+dBmYksjmKaJNI0Cmh0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/PlanningPart$1$1.cla
+ ss
+SHA-256-Digest: 197+YtAuU0gKiGJb6pXHZzR0UT4ejvzxGBZRZfz/yJg=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AbstractTaskEditorPage$MenuCr
+ eator.class
+SHA-256-Digest: 0e5o2Fa5M4K/rGd96zjEHbGjkJCseoWaultFWNLPDH0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/CopyCommenterNameAct
+ ion$1.class
+SHA-256-Digest: MvB0Oe8StjbdRbNOQ2lW/LYKz5uU5HrD9/Nu5JtmWys=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/AbstractRepositorySettingsPag
+ e$17.class
+SHA-256-Digest: yA6qcJk8izcJhjLpMq5EXs34zSwlut5gKDMlPbVDFew=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/RepositoryTextViewer
+ Configuration$1.class
+SHA-256-Digest: 5xIFZnTpyycc+hwCxuPqAXVrcnJJQJ7yyzn21CQWlHc=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/dialogs/TaskCompareDialog$1.
+ class
+SHA-256-Digest: BF4dSHwJj1qvWD4uR000dEpOJHzT7ImBaBLzzt5zmes=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AbstractTaskEditorPage$13.cla
+ ss
+SHA-256-Digest: yJpy0KQb2R4QGu7KBhcotp+d3K0C7/gSpb+XDlZagiw=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/TaskEditor$4.class
+SHA-256-Digest: FnbMNZ7BuSEnPmaRp/GzgNZpJY45BGHERQj6x1PcsWM=
+
+Name: org/eclipse/mylyn/tasks/ui/LegendElement.class
+SHA-256-Digest: b6QqoyipNa7hvHhI+iT3U/2q2i1/yyJrwONiz1dD/7Y=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/migrator/ConnectorMigrationU
+ i$CompleteMigrationJob$1$1.class
+SHA-256-Digest: MBk1NWFd0EfgLupb1KRFQB5XJIanG9CI85i8de+v37k=
+
+Name: icons/elcl16/context-clear.gif
+SHA-256-Digest: GO4lKOeOsRMxW8JNemV3Pa4LcFhn6PT97zRsJseRB10=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskHyperlinkTextPre
+ sentationManager.class
+SHA-256-Digest: G485VjchIMG9hDEkyTe1egYaK5SpmfID7Jnm8EMEgQ0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/RichTextEditor$1.cla
+ ss
+SHA-256-Digest: Kmiy0F+/MFLFOb7lNbEbh1gkk+KLnukUjVhETPKasig=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/context/messages.properties
+SHA-256-Digest: h0n/I8Gsy6UAiT6aydBGLK/O5vt1HSs6kdCqnc8+tYg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/notifications/TaskListNotifi
+ cationReminder.class
+SHA-256-Digest: modGX3cc5RT5hW6e32t4Ykij/2xLkh2YGFXk0VPTLEY=
+
+Name: doc/planning.html
+SHA-256-Digest: qx4zQoTfbrKFUtburmBcr/OIeF3Lf3LOGDroBaGoESI=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/FocusTracker$1.class
+SHA-256-Digest: 5WSRdc/KJ1EMG5FlxgUPHs6U6y3FiDnr2pS3RcTvTK4=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/workingsets/TaskWorkingSetUp
+ dater$TaskWorkingSetDelta.class
+SHA-256-Digest: BU/MmNgtgVf5Szs+NnxXBEuhAc/1DZi9e/fhxwfKHFA=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/TasksUiInternal$10.clas
+ s
+SHA-256-Digest: I0YTWpR6GYlojnqaZsoRmIx4znkGFfealyZ7eN+4ESw=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/CopyTaskDetailsActio
+ n.class
+SHA-256-Digest: vOjzCsF2ftPg2N2m+MvxKAGcQxK4qM/PXiaaYXxbOGE=
+
+Name: icons/etool16/category-new.gif
+SHA-256-Digest: O8m+v0K4bH2nZvQrnN3br8QHto3xanicxRRI12g2wU8=
+
+Name: icons/etool16/task-repository-new.gif
+SHA-256-Digest: ZJVRe301086m9WjMdjfcnnK8mD5I3FykP2YKl+My5ok=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/PlanningPart.class
+SHA-256-Digest: DivWFQ+rNeOgOvK+ASn7PJ/g5Li8c5B2JDH+bpLAUTE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/migrator/ConnectorMigrationW
+ izard$CollectionContentProvider.class
+SHA-256-Digest: uIBydXhdFZDUAh5oaCbViIpmHdV/JaZI4n/tyzV4opc=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/RemoveFromCategoryAc
+ tion.class
+SHA-256-Digest: 3j2uLgG/TRuHtNMBnD6cp2bEJNOPgJ6ijwZuW0OdoTA=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorCommentPar
+ t$3.class
+SHA-256-Digest: fRwPFR56MKJ1GgETPK+10KY9bsxxGEJxtxbk2byaT0k=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/NewLocalTaskWizard.c
+ lass
+SHA-256-Digest: 820Yt67N4eEx2xVkDFBrsBwDX8ecyMD8mF7mLl7o+9I=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListView$18.class
+SHA-256-Digest: bkhtX3aS85UhnYtqz6QIhCDWCKOm5QhFLSGJEaXDBX0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListView$3.class
+SHA-256-Digest: mZcAekGYwZgK1Ch2zUh0BEmTSi3NyFj7w4gSjWnhr18=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/TaskWorkingSetAction
+ $ConfigureWindowWorkingSetsDialog.class
+SHA-256-Digest: K/MzJNptElg9ZYY00kF9AUkOJoaAUgC5nyebyCpl2nA=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/dialogs/Messages.class
+SHA-256-Digest: sORf7sfbOG7loSGVNBU0vm0aQCff0ly/uDKX4NzWBlo=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/notifications/TaskListServic
+ eMessageControl.class
+SHA-256-Digest: 1SeYuEZTDu8kEiGY+wT1Ub1LJVTb7Ep70Y5HKk0IB08=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/AbstractRepositorySettingsPag
+ e$18.class
+SHA-256-Digest: /7GK2grv0GBqGHAneUmw4S2HFDuot7SYCaYRXsGRQpo=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/TaskEditor$5.class
+SHA-256-Digest: pzd9QH/K8P1aLU1CILC8P0TLfvWp0lQVWoiJwfRwcE0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TasksUiPlugin$OrderComparato
+ r.class
+SHA-256-Digest: ndt8qfaO/PQ3JWDoOUzRlm6REEBn3uuwWNWJ8eWF97o=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/workingsets/TaskWorkingSetUp
+ dater.class
+SHA-256-Digest: ti7ti0BQAjKZGatFKg5FtnHkA01KC6gRZFOuvW1B7iw=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TasksUiPlugin$7$1.class
+SHA-256-Digest: Q9pWU4dpK7JxZUUy4R0t52V1KNXyxKasIEDG7M9xyrE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/MultiSelectionAttrib
+ uteEditor.class
+SHA-256-Digest: N+4RDx5dWdwetY17bOlzoTdPoJnvv3RZYKYvaDKbncE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/context/ContextAttachWizard.
+ class
+SHA-256-Digest: AnGSfjhjlcycqXURfUXG0MyitaWfuPmMQKxjwMLmmC8=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/AbstractRepositorySettingsPag
+ e$1.class
+SHA-256-Digest: sAuDfmGOIdY+bhmedUDluEf/wgJHSg98tRYNHjlI1Mg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/SelectRepositoryConn
+ ectorPage$ConnectorBrandContentProvider.class
+SHA-256-Digest: VBfjFdf9ggChtnMq8cIAUiCYCqw4vUC9e4GGX+23NX4=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TaskAttachmentBrowserViewer.
+ class
+SHA-256-Digest: bTbnX+kztiWIRJPefcoMXBHmkw+LRdeBSrJ/MjoVvsc=
+
+Name: org/eclipse/mylyn/tasks/ui/TaskHyperlink.class
+SHA-256-Digest: xbWmxMmF6tKo2NUu2KdiYxiu59aXMuzAw1k0p3CUj50=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/TaskDataImportWizard
+ Page$1.class
+SHA-256-Digest: Dpkm0ytyHlZxAnO83mPNWDHxekpT5KBzx5bIkZzJFFU=
+
+Name: icons/etool16/import.gif
+SHA-256-Digest: 0Solpi6twcplJEnLduIl1SOj9ywbICMd/zkjm+Wgci4=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/notifications/TaskListNotifi
+ er.class
+SHA-256-Digest: zCpZ0MUzzY68vF/NUlnpx8F7Xc3b7yXOicGoJ0SCvPU=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListDropAdapter.cl
+ ass
+SHA-256-Digest: FcQvpQte5Y+mSNfU47gb/bFW5mn04tRwyivLL1Gybes=
+
+Name: icons/etool16/task-inactive-centered.gif
+SHA-256-Digest: IEMooOz9RTI8vGkAaDkUEqi/TfU5G+fQyFVnx+XwqY4=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/SelectRepositoryConn
+ ectorPage$1.class
+SHA-256-Digest: e4tGxcqAuMHpUs9J8L6AlpAJC/iMmBLtrhLp3sr9MQY=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorExtensionS
+ ettingsContribution.class
+SHA-256-Digest: TUtkAnufeenn7OlE1E0TUtWzPkq6s+nrJVcPlZfVK+M=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AbstractTaskEditorPage$3.clas
+ s
+SHA-256-Digest: KbuK+VNAx4QoNsWg/CdYfsQC34URRU/ZXKU5OVN1Gr8=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/ITaskSearchPage.class
+SHA-256-Digest: NP8a72lpi/t+3NkgLMlfnuHoypQ4SUgeKSh4Ertv4HU=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorFindSuppor
+ t$1$2.class
+SHA-256-Digest: MPydEOjgCItN9wN8N6Z2n4POgcfbNzxRI5ddz17qIAo=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorAttachment
+ Part$AttachmentTableFilter.class
+SHA-256-Digest: wyKTFParlYdcomFUP0vUFw0Pq41aTYbdvX3xzTBzhng=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/PersonProposalProvider.class
+SHA-256-Digest: GN1esBJ9XWLFQqJuKVwecjiYmAobD1E61TDKdlraF4s=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/migrator/TaskPredicates.clas
+ s
+SHA-256-Digest: c9QXPz+B+lEZpDM8L5wr5eRxL/OB5TJRPgEY8DBBP1E=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/workingsets/TaskWorkingSetPa
+ ge$ElementCategory.class
+SHA-256-Digest: vRx+vQdvZqL1InGumutykyGKeOAyD9y2ytXyeXmDMH0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/AttachmentSourcePage
+ $3.class
+SHA-256-Digest: Op8sG+/2HbElNKBYeRsA1ZlYTUPVuoa8Vc+7iqWsMaY=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/SingleSelectionAttri
+ buteEditor$1.class
+SHA-256-Digest: 6h7gQ9fBz/Vqa3NPW6W1OCT5EcmxVfJKlPEULyoAo3M=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/CopyTaskDetailsActio
+ n$1.class
+SHA-256-Digest: HiCkSUcbFMdYd4kEBcqq4rCHEXc/s1mp9crVL5LTtxE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/TaskAttachmentWizard
+ .class
+SHA-256-Digest: lbySmPgAvw/iqmNOdATTRhTpOOyzEoKl4WBNAGHc5Ko=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/WelcomeIntroAction.c
+ lass
+SHA-256-Digest: HaP0fsgolHLRq99mprQ0TBDJJQQ9H4GmB+mDoSGYQqY=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/workingsets/TaskWorkingSetPa
+ ge$3.class
+SHA-256-Digest: WOof0a9JhatiM3hn8UDM7Py8PozyHNwS+2fTXFCJ+uI=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/TasksUiInternal$4.class
+SHA-256-Digest: JkMn9dDd8G/SemEfNN8J+GXdu+Da2SIeSq0MLDLm7tI=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/LabelsAttributeEdito
+ r.class
+SHA-256-Digest: 27kUf+eAjah7Eph1zX7PNn5zSObOC5Hsrc21PGcLtNs=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/Messages.class
+SHA-256-Digest: DjB2TbIlJNci+trYTPfMXkowTsxxWFI2tFanMNrSurU=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskTableLabelProvider
+ .class
+SHA-256-Digest: YdM6H+FWJWPRPr5ARjMK4naIprgrnp56dGxDxrtYlt8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListView$8.class
+SHA-256-Digest: z7fnu60jWSYxzSmSA794rUt4BS0JcLsDtBzmZBNXZG4=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/TaskListSortAction.c
+ lass
+SHA-256-Digest: ZR6m5fDfQtg04bS8nn7mlwJdH3BUrmz0LoMndIT2cXE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/PersonAttributeEdito
+ r$1.class
+SHA-256-Digest: SCw4HGXfFW7C+lVNkhwib/xlxAVfNaxeVR3cxS5olQs=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/AttributePart.class
+SHA-256-Digest: Uu6ZugRG71eJLwMAPaJhH332mzmZ91LqU8hkvjijno4=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/SummaryPart.class
+SHA-256-Digest: GV8VnDmcRuT6nVyR26YsTfAC8paOxc0vXyQmRK94Yqw=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/OpenRepositoryTaskAc
+ tion.class
+SHA-256-Digest: qhoaqFTuVAKc79WUKV9jqPPbjUPvQ3YdnQ4rQ6kjAaM=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/migrator/CompleteConnectorMi
+ grationWizard$2.class
+SHA-256-Digest: DVs9Aw7KlQ4CP3aJG6+ZS2NaU99ZH4jkdRhgz48cWcs=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/RichTextEditor$3.cla
+ ss
+SHA-256-Digest: iCMs2WYW3+iyVDru93vCaPKtaAOaQG8Zt6DfEm12TuA=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/SelectRepositoryConn
+ ectorPage.class
+SHA-256-Digest: WOsK+nw2ztTv9UWq70EYvWut6lUJk0ub8ARjsJlaONw=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/TaskAttachmentPage$7.class
+SHA-256-Digest: xHmIWP2ksVCLj8jSP300KKmQem+eEPSQ/Vo0IZWBuFE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/PriorityAttributeEdi
+ tor$1.class
+SHA-256-Digest: daIwHPftQgYX0h+/tCQgIVilsZhbO2jUhg4jRFeb/m4=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TaskHistoryDropDown$Activate
+ TaskAction.class
+SHA-256-Digest: 0YhqDlHEne37LePPsvbbKpBwuc8cMcvF1+YeCHeSG9o=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/EditRepositoryWizard
+ .class
+SHA-256-Digest: B+zteLKiDYKdzaAXUkdI3sj2eqyPDdRLyed/r42YL6A=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/TasksUiInternal$1$2.cla
+ ss
+SHA-256-Digest: 2o1C1ZL6XVtaFsuubkKZFCfEu5MES1QmA11Y1PjWUDU=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/PersonContentProposal.class
+SHA-256-Digest: Dk/llcrcaIbWHaGipdvjJp8MZlPTNBmp/DwtFj7Talo=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/context/ContextRetrieveWizar
+ dPage.class
+SHA-256-Digest: 4spuJzZWfQv9SarkY28WIKaT3LeUVzhfcpHWa172GjE=
+
+Name: icons/eview16/overlay-due.gif
+SHA-256-Digest: w0hEGLq1cf6vsMoi6FuLw4CdiA/FxX+W6hQotxwU61w=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/RefactorRepositoryUrlOperati
+ on.class
+SHA-256-Digest: fINUJQIdyNGzQuuEkzJhDkkogXBpUDLa8KMOZb9qN6M=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/OpenRepositoryTaskH
+ andler.class
+SHA-256-Digest: KwaHdYcirRjAdv7URChA4a0h0aIujPl7fCInxWyfLLI=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/NewTaskAction$Reposi
+ torySelectionAction.class
+SHA-256-Digest: X6LFqb4QiLsDNfEOr/lV8QOLnDY4pjt6Jxom7YOxVhI=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TasksUiPlugin$8.class
+SHA-256-Digest: Y1nHMtv5anbW6foGEC1SfOB/8sz95pHU+u2FL9oX754=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AbstractAttributeEditor.class
+SHA-256-Digest: bRy15Y0bjbB33PcV1sNtIVGq40AYItkrQekwxfPArAQ=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/migrator/messages.properties
+SHA-256-Digest: GDSwVvldhsAzKkzvJL5XbWGKZujuEw1jriIjIoIUR0g=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/ConnectorBrand.class
+SHA-256-Digest: jhKoNXMpyjTkiflqn7/pO3NTpetGtTGa4QWqaqEAUYs=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/CommentGroupStrategy
+ $CommentGroup.class
+SHA-256-Digest: TXhtYmiREoDmzZn4a0qTPeCLYq510SCM/yxblbCpZd4=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AbstractTaskEditorPage$8.clas
+ s
+SHA-256-Digest: +tQGmgAsHUnANhxro4RGTfo0FQfVfUhUz1cxlDFP8tY=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/RepositoryCompletion
+ Processor$TaskCompletionProposal.class
+SHA-256-Digest: T4Ikipdchi12kowV7k+5mABskuZkfeXtvYJCgkBo7wM=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/ToggleTaskActivation
+ Action.class
+SHA-256-Digest: jRnQ0LI1XHeoeLwrk78VVY6aZl5b96bx7XFMeiYwwOw=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorActionPart
+ $2.class
+SHA-256-Digest: wPVxJOxlriMSeA2wcOnuRjze57r5pYPBOpGnqZSthTc=
+
+Name: icons/etool16/file-delete-16x16.png
+SHA-256-Digest: CiTofL5HJ0R7vxjCpxnYcjBY/y+US9Ef0pWC3MdK2/0=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AbstractAttributeEditor$2.cla
+ ss
+SHA-256-Digest: faqhry2HC7TSzQCNvObDgRep+hlSsxZrn2e7ZJRGjhQ=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorDescriptio
+ nPart.class
+SHA-256-Digest: qxAJ8LkKn9aSBeRL7+GHc/9sYsTjtiIyfS9JSLzdk80=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/PlanningPart$3$1.cla
+ ss
+SHA-256-Digest: 0q8F0dsm1Bg0/IwIctrty0VjDdCMdlQnnuSwAeQ9aJU=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/CheckboxMultiSelectA
+ ttributeEditor.class
+SHA-256-Digest: E3bHqcTftmPcBylkFYtmXSAGQljlJ0kV0UIYtiOGJIw=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/notifications/Messages.class
+SHA-256-Digest: 0aoccbx1lL/tQC0UUpsqs0Q9xsJRswsPy9nW/UzprFE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/dialogs/AbstractWorkingSetDi
+ alogCOPY$4.class
+SHA-256-Digest: 9m+doIIiJUw3wKC6AMnaQdRYYTBmVaD12FXQf670szs=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskPlanningEditor$1
+ .class
+SHA-256-Digest: lyvKGk5mwum8kxMJb2NJncqnDtCxNCehLXXjcN6ox/o=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/AbstractRepositoryQueryPage.c
+ lass
+SHA-256-Digest: 9/5FFuta/J11G9AyxFnvuliytVObuwcfkx2vHEYyVpc=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/AttachmentSourcePage
+ $8.class
+SHA-256-Digest: bqv48SieJuolONUC5+eQCVSAwK84wEhQ2b0SuvI8pmE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/TasksUiMenus$1.class
+SHA-256-Digest: nP0IBSvtvdij+XHZhELU3Cv7H3su2kpHZfdoaK0Z/Vc=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/TasksUiInternal$9.class
+SHA-256-Digest: quV2L9UpvT0QxfErMCOQNcpgSLWJ/VoJhLpsA4e1x6s=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/dialogs/TaskRepositoryCreden
+ tialsDialog$5.class
+SHA-256-Digest: blJnYyMyS7TJmDM1W8iX/ygVx+eSOFvGeS4IXJl4woc=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/AbstractRetrieveTitleFr
+ omUrlJob$1.class
+SHA-256-Digest: 3IEeSdroBEIOM1QT9Qvj4qXfeuMb9tN0/wrhQHaH0CQ=
+
+Name: icons/etool16/person.gif
+SHA-256-Digest: 76HEd0al5d28wnXq2JopTfwuMQ9wvC7K8zROsObZE0g=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/UserAttributeEditor$
+ 2.class
+SHA-256-Digest: Lf2Z4yypEfblMO7jJgO5ujhIa7bsOF5rtu649RIksQM=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorRichTextPa
+ rt$4.class
+SHA-256-Digest: duXnIUaHL75N8vW4ryAbiB/vjhKtaMdsDYLwq3xHM8E=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskPlanningEditor.c
+ lass
+SHA-256-Digest: K3M/esaz1rusGnx3feeCQ9JUmyqMcN02HPAVRHS7lHA=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListSorter$SortEle
+ ment.class
+SHA-256-Digest: V9gc6gAf5cXBIU0V82SXwmh3iyWtg5gzV1xz1s5pQHM=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/RepositoryElementAct
+ ionGroup$1.class
+SHA-256-Digest: nW/9vxpmdJ93ED75iIvW3y2CTSI8M1Y8MqwpftTNlNg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/CompareAttachmentsAc
+ tion$CompareItem.class
+SHA-256-Digest: fNRTyoZInXOQO48jTzre7lcSPwdgbgE7Oxf3LycyV5I=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/TaskDataImportWizard
+ Page$4.class
+SHA-256-Digest: 3Tl5Jq0ZwP5FpI5WfAVUWN56TOQ+g/+T2yzPYWxZvwY=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/ScheduleDatePicker$1.class
+SHA-256-Digest: vB/nt9PYAEMQbtrx+fHUiANTxf2NbLLzUpXH+2WCOUE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/CategorizedPresentation.clas
+ s
+SHA-256-Digest: RdHspKiX8cwkzFkWDWtv5Bw9s4iB882BMalYRw8978Q=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListFilteredTree$1
+ 2.class
+SHA-256-Digest: rXXNjAH7MVforuuAsT0xy8pY8m72n6O+CXYdz+lHuzI=
+
+Name: org/eclipse/mylyn/tasks/ui/TasksUiUtil$1.class
+SHA-256-Digest: 6zcnLHBdUj79+QtHDlC3ou5u7lWsQSgHivNpbFLwEls=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/RefreshRepositoryHa
+ ndler.class
+SHA-256-Digest: hoigCc+qGrWPYvV+z0xWI4Emt9Nkd7/kAKem2CoORRY=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/messages.properties
+SHA-256-Digest: iUZ5bD6X+nfiYmhpEmSweibTWlVCSnCeArefhRNOHSY=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListInterestFilter
+ .class
+SHA-256-Digest: TME8G+ptKnubhrevgFNsz+pBuUP199BtSh/xfGxatss=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AbstractTaskEditorPage$18.cla
+ ss
+SHA-256-Digest: DS5wcXq+wrtQJZ5s8DfrE8I1dn7spAUHvsRkQlcOaW8=
+
+Name: icons/archive/bug-search.gif
+SHA-256-Digest: O96nHfIAMkuQK34lRqGA5eElDQ6YIhCAL9P1688JqSQ=
+
+Name: org/eclipse/mylyn/internal/provisional/tasks/ui/wizards/QueryPag
+ eFilter.class
+SHA-256-Digest: Js7r/u3nvuJrAsuRhULrxjfqBqTJoXofNNANS07HPW0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/TaskDataImportWizard
+ Page.class
+SHA-256-Digest: a9m2WAHyQPihvlZVmlvB3zVlDOjE8rNVjrPLY85y1tU=
+
+Name: doc/book.css
+SHA-256-Digest: p+xzHbClyNpo/STakMEndetb9ipMpDOPF+atMMU0nSw=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/migrator/Messages.class
+SHA-256-Digest: eqFwi9+dKDRevuAXGF1su4g+mkVOyMu2V+8NIIXIXvI=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/CloneTaskAction.clas
+ s
+SHA-256-Digest: XknmipEz+KQsHSAzONIK9VtLuSMVpQVeHjwfCK8Adm0=
+
+Name: icons/etool16/task-context.gif
+SHA-256-Digest: c3z0xWOPIcYfNw+on7TTF5gqMI4x2mXAdHwPjoQm/7c=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/TaskEditor$10.class
+SHA-256-Digest: 2yGu62nt6UITYy/P0akOAIE3EOJ1/sfOYRVbzV49fCw=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/OpenWithBrowserActio
+ n.class
+SHA-256-Digest: K3CUGqrTKFLinGFJTEr7NguV8iFb5q4R71yzxlNZtpM=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/TaskEditor$9.class
+SHA-256-Digest: cayZoEdjiH7q99qcPexN0VnjCLP2/u7Z75zM8iyAeAo=
+
+Name: icons/etool16/comment.gif
+SHA-256-Digest: 46adacepOC8nqOS3SsyN3ZYdrHToGA2ayw003ZcDkl8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/migrator/ConnectorMigrationU
+ i$4.class
+SHA-256-Digest: i1C/+Eej3j56eNzCUyqP5ZsoZWLNtM30wDJEdupl/jc=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AbstractTaskEditorPage$Submit
+ TaskJobListener$1.class
+SHA-256-Digest: 8nVQKENqqk1V0FLQOhU3IrKts76o8SttkDgLsZy6Dd0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/CommentGroupStrategy
+ .class
+SHA-256-Digest: E7os8dc0/ZCCXtvp1IFE9JyA1oY+6gtETECVSk8TmNQ=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/ToggleAllWorkingSets
+ Action.class
+SHA-256-Digest: j+iKmZcQwFZZ4znFFfvWVMzj9YN/4HyxChSMuohOBJw=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TaskTrimWidget$3.class
+SHA-256-Digest: +NHLFDr00QBF9i2eNIO1dJLPV++1RUtztOSYB3PHywQ=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/messages.properties
+SHA-256-Digest: YLi8HO0WEySCRtVdR1waO7lAvAJ5DmS9owRQI5mDuj0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/PlanningPart$11.clas
+ s
+SHA-256-Digest: J2AGQOA2j/MEUlx9AhHJifIpTEIjJgHBtQ7ITuH2gvQ=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/preferences/Messages.class
+SHA-256-Digest: gAhWKMamlHyC13RAhel1cP8qupMvSIsas6LcsrcgyGg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/AttributePart$1.clas
+ s
+SHA-256-Digest: gwVF19EG9EUCGdUF+sWEm77WO7/vUMRN4tXT10WEmZ8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/SelectRepositoryPage
+ $2.class
+SHA-256-Digest: yea1SfkZaDpW2mbivSqkyC1Rhvvu5H+AxCLhwsDhqX8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/LongTextAttributeEdi
+ tor.class
+SHA-256-Digest: kzJoQf1z6T7sxLBa5C0xGtqEt+YXJQQTcLsPnGvcgpk=
+
+Name: icons/etool16/category-archive.gif
+SHA-256-Digest: kSbAb3uKKXqPD+gJhKa+upSSHIfIxFGJ679yH3VNoes=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/TaskWorkingSetAction
+ $ManageWorkingSetsAction.class
+SHA-256-Digest: yb18r1/rs6Hk7LK19Nx61lOxexPPMhfgGFyTPwzGsIg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/preferences/messages.propert
+ ies
+SHA-256-Digest: XMNFS9mBIoKAf4p8JXaJ6QVZ47Lo+f3K0mukIt8frbM=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/RepositoryConnectorUiEx
+ tensionReader$1.class
+SHA-256-Digest: TzHLEUfuJNOcgeo0bgOM/NaDcwmUQr2GvmV2jrRxUuQ=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskUrlHyperlinkDete
+ ctor.class
+SHA-256-Digest: /wkmCu6bC1MpnS0+g0UrvrdjFRr3fwLpOhlo/Rtwm9Q=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/RepositoryElementAct
+ ionGroup.class
+SHA-256-Digest: xXyHNFJDjEdPzvcX1OreteGMZgAkLTvuD/C7RgtbLCc=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/preferences/TasksUiPreferenc
+ ePage$1.class
+SHA-256-Digest: bTqLDeHWiHPXiqoGNAOlcvS+QWD+mL09HO8RcAk/BKE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/migrator/ConnectorMigrationU
+ i$CompleteMigrationJob$1.class
+SHA-256-Digest: xZDDW1aUb+2abUpR8Wx/p7tE+boDymhsCC00CUIF3CE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/TaskComparator.class
+SHA-256-Digest: pBNTlRMdo0NCbVnz0P81pZT6lJDn3ytF432Xz2IVTvY=
+
+Name: icons/wizban/banner-repository-context.gif
+SHA-256-Digest: 84u+P/mEX2HXHBRBKSgj/XBpBW/dkUbBV0QW5i5iMHg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/TreeWalker.class
+SHA-256-Digest: pS57K/GDDAN/TzqFLL4lYTZSP6IqLkNFa/yy+hnfE48=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/AbstractTaskEditorAt
+ tributeSection$3$1.class
+SHA-256-Digest: ONIFLvMmzWvUV/ZDA2gFQaS2tN6Vks4NZdM3SJVArz8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/SelectRepositoryPage
+ $RepositoryContentProvider.class
+SHA-256-Digest: EkZ+l50fO9oL/vomoSNAzoUkbv6zCVaafYgeSra7tBo=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/AttachmentSizeFormat
+ ter.class
+SHA-256-Digest: sND516VpwAhVCYnu0nu6oRWrIR/c0C4bgIBOO/35dSs=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/MultipleTaskHyperlin
+ kDetector.class
+SHA-256-Digest: axq4gbW0VzL9HNYRgAdvCOXImIECxn1yYmIgtqVNBSA=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorSummaryPar
+ t$1.class
+SHA-256-Digest: hbUCn8nCkCm4R7tTTuXGR7EgoexWt4idS2dG/6g32EA=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/messages.properties
+SHA-256-Digest: m4aWcgV0dnTHtEOWdgn0chnOsFs+/N2f05+HuYqOKMg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/preferences/NotificationsLin
+ kPreferencesPage.class
+SHA-256-Digest: bz5D3ENKoGKhQZMSFfQ5p4fLQQSGlaV+1BIltT1RS/A=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/SummaryPart$3.class
+SHA-256-Digest: rvvi2D9NMD2QAAs0jPjxyTje1ZcmX5jOmNAELDqcyWs=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/HideQueryAction$1.cl
+ ass
+SHA-256-Digest: nS5IY3SQMX3GuC96SGPXUGVBA7RctYzOm9vfhz4Z5PM=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/migrator/ConnectorMigrator.c
+ lass
+SHA-256-Digest: 9mO9SShwdEl/ZuVUPY1JdkfiPZrebf/rv6AVJG8J+Yg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/LocalRepositorySetti
+ ngsPage.class
+SHA-256-Digest: DyZeimTMKY37mxh+P88l7z1X6Brd8nc6Nj4ldsIe5p8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TasksUiPlugin$13.class
+SHA-256-Digest: 9mxxe/Uiz/1ZSiL1wAh8/TzscJVzJGxMTGwvvbauzTQ=
+
+Name: icons/wizban/banner-repository-settings.gif
+SHA-256-Digest: Fng2eOBNrKWiQfekhmCo51n/vcQ0ZFBwT8oNMwSGZA4=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/BrowserPreviewViewer
+ $1PreviewWikiJob.class
+SHA-256-Digest: hL7CBF7X2xcESFqudmbpv12Q+09jgcR7PJETRKkhldM=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AttributeEditorToolkit$2.clas
+ s
+SHA-256-Digest: G+Y3AQE36bqAGM+3PQ8nLLsI8Dz0JMLsc0L4l1VCaoo=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListFilteredTree$3
+ .class
+SHA-256-Digest: P5r7X2TGYL+kKSTiwJnpDtu6l7lrOQV8Gkh9kLsdhVo=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/RemoteTaskSelection
+ Dialog.class
+SHA-256-Digest: TebcglHt2JO46FgOlWJ/abfAr4oc6ZOGvpq8JzKzp0M=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/GoToUnreadTaskHandl
+ er$GoToNextUnreadTaskHandler.class
+SHA-256-Digest: lIICQjoNLNFara/HA09jb+f09hW4TgTi2bceSpz25Pg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TraverseOnTabKeyList
+ ener.class
+SHA-256-Digest: DpUdHIR7Xdtov1qOrR427wBfA+oFTutCaFA+1CzRnHA=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/NewQueryWizard$Selec
+ tRepositoryPageForNewQuery.class
+SHA-256-Digest: Qj2kPuRPYS9kT61mRXTnb2lHiEkcogFEG6NpZ00z+bw=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/AbstractRepositorySettingsPag
+ e$13.class
+SHA-256-Digest: x+Eazbajo3ukZ/SGXMxUtx0jo7uRQdV4Cgh6ObOLe9Q=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/AbstractRepositorySettingsPag
+ e$8.class
+SHA-256-Digest: SAkvLM6Xx8L2kAd9B0AJQdS1eBjlLVI0lmzBLDd3NVA=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/NewWebTaskWizard.class
+SHA-256-Digest: gipxRsV0DYCULOY5CBrQbPDxoEtDLL96s2DzDMWat+g=
+
+Name: icons/etool12/file-new-12x12.png
+SHA-256-Digest: qcNabxhaEhDT5Dxx5ezpDuvm06zo872Vl0KJschNXbE=
+
+Name: icons/etool16/task-active-centered.gif
+SHA-256-Digest: hyo+HSyHx2p4NDSt2yunfajUgisskGDgTa5LN/Kg874=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/AbstractTaskEditorAt
+ tributeSection$3$1$1.class
+SHA-256-Digest: hys8uHetlIjgbsS7aNWJUmQ/tscvNN+Hqjg9WOEt93A=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/workingsets/Messages.class
+SHA-256-Digest: 1UKMQJ4LhGc9vs8nmePbeUwNWK2CegU/sMEIQWDqr44=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorExtensionR
+ eader.class
+SHA-256-Digest: n4eLYllX+pgvVtrnXduVK5m831aweAininmhjw/ASQc=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/TaskContainerComparator
+ .class
+SHA-256-Digest: iwJ/hFnboV6VgD4O0JjbMyC8dKwsKjleY7RuJTwaurw=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorFindSuppor
+ t$1.class
+SHA-256-Digest: FFiLyRVB+AVxoy+1EdPMpPkZOdGpF60N8elmWeNavK4=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListView$11.class
+SHA-256-Digest: r0yO6xFtZZMSVj2sAK3WcvrMAgOa6/q0PVRcXCi11H4=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TaskArchiveFilter.class
+SHA-256-Digest: b/ZVPpiSvHSRhTk1p7wSv+zehO/pGvMeTmr2KFCnhqs=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/PlatformUtil.class
+SHA-256-Digest: eCwFe+68/XTU4bfPlqhhOe77xh3HKZaPMIkAMWeon8E=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/OpenTaskListElementA
+ ction.class
+SHA-256-Digest: 90uv88iaGloZF5MFwevPdd9GvyV68eqJVBR48CyTz/I=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/SynchronizeAutomatic
+ allyAction.class
+SHA-256-Digest: kBo+p3J5OBoKbtaqALUmQane8zrioVps7DXvvK8dorQ=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/TaskWorkingSetAction
+ $ToggleEnableAllSetsAction.class
+SHA-256-Digest: qYeEmrsulscBnphJU2tmX3g/KXRLsf0ug4oQdBcc4mM=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/ToggleWorkingSetActi
+ on.class
+SHA-256-Digest: 18bohqaKTeUxrIYgTiubHf/QSlqLiP7hU/kdaePd33g=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/ScheduleTaskMenuContributor$
+ 1.class
+SHA-256-Digest: i04wGg5WZdJEXFy82md00cq21uZbcVl117ecO8772Mw=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/CustomTaskListDecorati
+ onDrawer.class
+SHA-256-Digest: P/PCM9y5jPPupHDfo/1qi//W+AmXKFZeH8ElgXBadQA=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskAttachmentStorag
+ e.class
+SHA-256-Digest: gkAk9vDM0AIcugUcRRYydkBHch3wh/w7bJIv8Ok8+Dw=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/DeleteTaskRepository
+ Action.class
+SHA-256-Digest: 0Vjm+bj6sAk8obP8/rSXs+hw3FQLgsd8pEvegj5hk8U=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/DisconnectHandler.c
+ lass
+SHA-256-Digest: afQxk8hNfZz25Tfk+ZqPX+atCBfGnHwp0t92gBsUG0Q=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/DoubleAttributeEdito
+ r$1.class
+SHA-256-Digest: idGC9Iijy87eTmrPYwmsicsObf7tHzLK8rAiHFumOVE=
+
+Name: icons/eview16/task-list.gif
+SHA-256-Digest: 1+TtYpbt0BDNTOiyswsKAE1pEJ57EiwWylWQ0CgRdZI=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListFilteredTree$4
+ .class
+SHA-256-Digest: NBPF4nOzzrPguODqDx/02vOGDP885MsdO4wCtRfeltI=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/RichTextEditor$8.cla
+ ss
+SHA-256-Digest: q1hXgUj7yATuvuw3miuTy0owe2CjJLzEkKb9SvC5A54=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/CustomTaskListDecorati
+ onDrawer$1.class
+SHA-256-Digest: Jo7bravlZCrnbk8mxkrDYHWkQk/CaueUW3N0k2Ur4Ys=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AttributeEditorToolkit$3.clas
+ s
+SHA-256-Digest: cM/Fu+TFnMfNRe9VjttH+q5v6zvIXtUehX02NTQOItg=
+
+Name: icons/etool12/task-narrow.gif
+SHA-256-Digest: 05BIjsCAaYmkQeANQshx+bKVpTldM9FcbRVRZdRDces=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/PlanningPart$1.class
+SHA-256-Digest: E6Iw5Ypmx2VWn/D1gEdlzkBw4JkZi8MuyT2wzKYmHHw=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/properties/messages.properti
+ es
+SHA-256-Digest: fe0VnQjyFwFd/UNLBLDKsQcC+2qj9rtZfVZS25wd0ns=
+
+Name: icons/eview16/repositories.gif
+SHA-256-Digest: 33dPbgpGZpN6BVq/K/x7zqtx5nRk85nvgkwm5yfSLDQ=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TaskUrlHandler.class
+SHA-256-Digest: KoFF6M3yvSeOJ6CH0mvXoBB2ZlrvoVjBg0re9lJ0dyw=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorExtensionP
+ artDescriptor.class
+SHA-256-Digest: eaDIiBIgF+LuqQ/aFG6bzRlM4MpyciDhUighz3pUhGE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/TasksUiMenus.class
+SHA-256-Digest: XnYzd7sEZfJKA1lsfZpS6Zh4B6ny3k5/ZRLAGZmHROU=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/TaskPreferenceTester.cl
+ ass
+SHA-256-Digest: w0WOdeID8TXS449pQIsKfzy/UZqg1RnT1mT3KpMIzn4=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TasksReminderDialog.class
+SHA-256-Digest: SLXuY2T6vOWu5/wBjqfmurm5IYhe3Xivdc2BuTHk8FY=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/search/AbstractSearchProvide
+ r.class
+SHA-256-Digest: YixcyGlV4ZOueEVokG0FHWyePiWZwYTNLM6pl5oCmW0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/TaskAttachmentWizard
+ $4.class
+SHA-256-Digest: pJLY+B6YaX4CZZlgiHloUw1NBTMVRk0vqAroGK4idVw=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/compare/messages.properties
+SHA-256-Digest: 81swHbIYJMzDNuqkp4ttK8BVSlFq9jFmdQVxfoaWKVI=
+
+Name: icons/archive/overlay-repository.gif
+SHA-256-Digest: nE5OX4gkwNYTAbJoK28dKSx1paWIwCMgYL1+3ycVmSc=
+
+Name: icons/eview16/repositories-blue.gif
+SHA-256-Digest: zvvE3bNknKBIEkkr5ihoHbq+pqmPkUltRmjPvCZBngE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/NewSubTaskHandler.c
+ lass
+SHA-256-Digest: MXmsx+Q9JZEuQXT1Hmqy3t/b5VKoaxHgAWRoqQ1XXXU=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/AttachmentPreviewPag
+ e$4.class
+SHA-256-Digest: vBW863zXDJaBR/uiz1ra5ZNAlAm233YbXpxKnt1at6w=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListFilteredTree$1
+ 1$1.class
+SHA-256-Digest: pNCdMA8M38Y+TycrEkFPYqF7rezp/pENTb7NfFjsqzw=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TaskWorkingSetFilter.class
+SHA-256-Digest: 49E2jEudvW4+1ucIqcZ4VP+3VN1SMLucHdas8vSrZJo=
+
+Name: icons/obj16/attachment-patch.gif
+SHA-256-Digest: KiZI+uZdzX0e0fVDFXMd2RegoyqdZNtDiksKo4z1Rv0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/RepositoryTextViewer
+ Configuration.class
+SHA-256-Digest: UjpU/IVAjDXSXcqQAzMSXYiXpsTDYztk56encX9rQ9o=
+
+Name: org/eclipse/mylyn/tasks/ui/AbstractRepositoryConnectorUi.class
+SHA-256-Digest: xUyBVpcO1bGdOhuF141jWMfpHR8oF09pbGuD9h8ReqI=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/messages.properties
+SHA-256-Digest: PWYbL55DI2q0mC06iHtEDU4k0R3A+tRZp8dctrP3sc0=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AbstractTaskEditorPage.class
+SHA-256-Digest: Ynn3zvLWDjyGRf/xfeglgK+xtk5/jzZIoHfpcFknaek=
+
+Name: icons/etool16/reply.gif
+SHA-256-Digest: 4au+BGcsuO8uTk9Bgov4lBjAk9neqne/ONJt4bj/T2Q=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TasksUiPlugin$TaskListSaveMo
+ de.class
+SHA-256-Digest: pfkOf0RtmhqYaydOnjvv3OO1Gc5kBtYNNkydL/cdzfE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TasksUiPlugin$12.class
+SHA-256-Digest: QlC02uAClQXnT9MO4+L6/XDGMaqb6kmEa6Ialn5/uj0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/PresentationFilter.cla
+ ss
+SHA-256-Digest: slZ9WxqwGfg/YskotAwde1yGg4GSjnOoMfabNU3ECH0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/AttachmentFileStorage.class
+SHA-256-Digest: OlL42B/QWb886A7vCrbKzF0C3BXJCO8P6eSfxY1sSZs=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorAttachment
+ Part$9.class
+SHA-256-Digest: 32SANXYjDLDErK7PoQdoY8WXeSF7ejJP1Y8/DipKR4E=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/OpenTaskAttachmentW
+ ithMenu.class
+SHA-256-Digest: /1We6k0ipF7A+B2TahdyLCz6VtLztexgJeduJYyiv28=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TaskAttachmentEditorViewer.c
+ lass
+SHA-256-Digest: rG4IerMnao0asJVMro5ceyoAVKZJu1/dic67F8OwO3I=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/WorkweekProgressBar.cl
+ ass
+SHA-256-Digest: RBkkeW1t+a5eB32+kMFcrdMtES4wO1QqLzvzaYZFGzs=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/BooleanAttributeEdit
+ or.class
+SHA-256-Digest: RC/CDPJO5YS/T5sSlwo+AhlOWYjJMTLQ5uhEJRwhG+o=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/outline/messages.pro
+ perties
+SHA-256-Digest: gEvn3TRLTqvi/OI5eV9sfDryOQQLB/06Vlmx59SZ1dI=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/migrator/TaskPredicates$6.cl
+ ass
+SHA-256-Digest: mvav5YootHx2QXj9VAJ/fkHJm+/ig+/JpVDUtpsStpo=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListFilteredTree$9
+ .class
+SHA-256-Digest: ctY5dOGTKBs7rXpq0VXN1iYPZo4XY/9QGdLquhB5wSA=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/ExpandAllAction.clas
+ s
+SHA-256-Digest: T8IS1XyHfW6Zc0+ykB39q9iXZSctY9dtw3zMWgOGkvM=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/AbstractTaskEditorSe
+ ction$1.class
+SHA-256-Digest: WVH2rh5sVCtOqtAd0QePWBXTFi01xcC/YEn9mcQ0SDY=
+
+Name: icons/etool16/task-active.gif
+SHA-256-Digest: 3h32+jRzZm1mk89RZoubi4Na0rcuxsPuPTXiNBZGjLQ=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/TaskDataSnapshotOperati
+ on.class
+SHA-256-Digest: Wx0qkz6aV5y9KHrbNvgnKdOd0BqLdEFnNuW5Zu/qOWY=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/AbstractRepositorySettingsPag
+ e$9.class
+SHA-256-Digest: dGSgs4Fe1B+r0FCtrwTyQstka8/Cgc/QZpzyP+n+tsY=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/AbstractTaskEditorAc
+ tion.class
+SHA-256-Digest: STvEtZTXQr4hyVbAdsiIPCWrwm76DrfaNP6b0Bjh+fM=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/dialogs/TaskRepositoryCreden
+ tialsDialog.class
+SHA-256-Digest: 7fic0uhNdZCU6rLEXUKOrDujc9/RlYwvWO10b7+AIKc=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/TaskRepositoryPropertyT
+ ester.class
+SHA-256-Digest: Y0h5C4LNEsM59HR9/0P/3Ba6KvSV+gxiY1cM7/6b59I=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/IBusyEditor.class
+SHA-256-Digest: YrTeuMWRbr9uwzwUvIQLXfFu6rbeTouUJPfFGFZMc0o=
+
+Name: org/eclipse/mylyn/tasks/ui/AbstractTaskRepositoryLinkProvider.cl
+ ass
+SHA-256-Digest: nQ7CPKOZrEpJVkzhPT3z9T1TKTchUV+raR1lBusVhbs=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorAttachment
+ Part$3.class
+SHA-256-Digest: TVqe7XAS85O2giPxlugAPZcaMs5XzQTLPPMphJCep9c=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/EditRepositoryProper
+ tiesAction.class
+SHA-256-Digest: 7hbQmY/9AEEXchDXAXlzCZTPyLXWfiNYwVEpzzQG3BQ=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/preferences/TasksUiPreferenc
+ ePage$5.class
+SHA-256-Digest: 09dptiw84sXOiBpe0O1juGsDWvyMw3xc0nv9j0244sY=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/PersonAttributeEdito
+ r.class
+SHA-256-Digest: T5LZ80L1wZheR0GjGrvTVEwAH5oS/1eyXXgxHX90c08=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListView.class
+SHA-256-Digest: IVzjfXe77sagkgXLbIRuqDyBDMSMOnE/zkkiC/7cBZ8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/PriorityDropDownAction
+ $5.class
+SHA-256-Digest: GIwC1Q9D17u2BAzI0JF9LLG0zR+Z7TR1U9AhbGW/2zw=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/EditorUtil$4.class
+SHA-256-Digest: CcMmduRHaBEkqxbEuvGOQJaKsVL/6apCLw/25Vh4je8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/CopyCommentDetailsAc
+ tion.class
+SHA-256-Digest: TSd1oIf/5w3FGwuAIK8BDQVns7EyxP7mpgkYUenpQj8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/ShowTasksConnectorD
+ iscoveryWizardCommandHandler.class
+SHA-256-Digest: ItVi0I69m0fUvDVnlR+/xifqbSSJ+X88Qd/FuV+10So=
+
+Name: icons/archive/overlay-offline.gif
+SHA-256-Digest: HoRE5ES3dWZIHFI06dx+Dfc2UMbX9fzIAhHtKT6hn9g=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/GoToUnreadTaskHandl
+ er.class
+SHA-256-Digest: FvRD8Nbhvcn/WpWC0+pARyVikKAld0AYB4MdEkQqx5M=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/OpenTaskRepositoryP
+ ropertiesHandler.class
+SHA-256-Digest: LP39ez6CCd7f3Qns1QGGBcgMMXC1wUzVMsyML21o5FU=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/TaskSelectionDialog$
+ FilterWorkingSetAction.class
+SHA-256-Digest: KHHypA2WCNGMwErWsyygRil4ejZy0Bj9iI8E1GSyaEo=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/NewTaskWizardInterna
+ l.class
+SHA-256-Digest: VsZGPKOzW4cWLjuNB3eDTTcp3HIkRe2JD8s5r2CGAJU=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListRefreshJob$2.c
+ lass
+SHA-256-Digest: asDT9NweCSqiqDwuEUTqPkCago571FvnI9u6Rk3t4MA=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/context/RetrieveLatestContex
+ tDialog$1.class
+SHA-256-Digest: QBkr2UlfTDPDaHxWfkHjDIV7QndRJnGUQwGwyWds5Lg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/ShowInSearchViewActi
+ on.class
+SHA-256-Digest: fhpLq6frMpJS7lbfYh1hfkdE0IGxPA7ps8LIWYh7D9A=
+
+Name: icons/etool16/task-owned.gif
+SHA-256-Digest: 0nml23+PgZI0CEUqaqupPHTZ7IlZ19FOYNjKgs6sLu0=
+
+Name: org/eclipse/mylyn/tasks/ui/TaskDropListener$TaskDropEvent.class
+SHA-256-Digest: WmEzp9R/iGgr+7RMaKH6pR3p0JwsuGKDJExYbjUV+z0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/RemoteTaskSelection
+ Dialog$1.class
+SHA-256-Digest: EB2WUv6xjTr8JjZv8mwLvZw7Qcd2OcQAY5n8vohEYcA=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/RepositoryConnectorUiEx
+ tensionReader.class
+SHA-256-Digest: F3UOgfeFsad+Ua/iJru4EmyAHzksnBJ0fXDWmQKW0w4=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/CopyCommentDetailsUr
+ lAction.class
+SHA-256-Digest: Qtd02OKouceH2jPLYKKrDdsTANE/x6EO6Fyc+LPwQgc=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/migrator/TaskPredicates$1.cl
+ ass
+SHA-256-Digest: FOTLzARajWWzc8x1pplO/1puL83g+Cx158PZL49dMCw=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/TaskActivateAction.c
+ lass
+SHA-256-Digest: LfqqLJFCCtWbmwmiu1YdrvKWE4cIscVbwYXM61nPKEc=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AbstractTaskEditorPart.class
+SHA-256-Digest: k16SvwxroJBN4BZ0XaSdHKotqzuGS3zSOsRKBACdDdM=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/preferences/TasksUiPreferenc
+ ePage$6.class
+SHA-256-Digest: gFh/nlG4++s3JRsRmjdhaoXhLclOLBKai2L0UWNdNxM=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorOutlineNod
+ e.class
+SHA-256-Digest: crL48/ZAT+zWEjEJpn9gQOMGbNR1i8ENcGypHIpH2l4=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/LastCommentedAttribu
+ teEditor.class
+SHA-256-Digest: 67IrOZORWvnJlnPF9HdwNV9YhKWTN3ix7Pkb6+M6HCI=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/CompareAttachmentsAc
+ tion.class
+SHA-256-Digest: 8PFSfwrReEj1ScsODM3C8mYfR9Whdcx2CN9F8dElIAs=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/AbstractTaskRepositoryPage$2.
+ class
+SHA-256-Digest: lwuUdjVbFycbG2ofipZEcU9plvylfZmvh/BeuJ1Vzz8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/context/CopyContextHandler.c
+ lass
+SHA-256-Digest: fmXRPmVI5VaXylHN5akDZRo+YM4yg3ckywoeDf+pH8I=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/TaskEditor$11.class
+SHA-256-Digest: Ip5tD8uByxqvf7XvmfFfUS9xVsAZxD9hgrzIRuy7vUU=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/IntegerAttributeEdit
+ or.class
+SHA-256-Digest: 3Y6PtSjZIPGE4EqLUL6ru6QdFlrj9j4lnqBCAcQDLC8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListRefreshJob.cla
+ ss
+SHA-256-Digest: toEkzj0hKSiwuUn/SrZSMn7Qy8JMw32gLs9VUzXeAW4=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListSearchHistoryP
+ opupDialog$1.class
+SHA-256-Digest: VLVs+Ra59MSZdtSqZuhUfI2KoLCJEJ3Gdlw/f7P93L4=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskAttachmentDropLi
+ stener.class
+SHA-256-Digest: jEZpPLVixA9T+vr+1H5pWT/WU8VinQzKykPuI2aypCg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/OpenTaskListElement
+ PropertiesHandler.class
+SHA-256-Digest: AsFNDKOq7UxpxdRN8vjruxYGHvvem9IPVYERlnvlMxg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/SelectRepositoryPage
+ $3.class
+SHA-256-Digest: 41Vzf1ZFGI4hQaUD7jvNZla8tzZi2miOhiGF0ZOBpaE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskRepositoriesSorter
+ .class
+SHA-256-Digest: oL5ylppwissPJstWYzlZlmjeG7pZS0rHf5wRVKOXFb4=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/RepositoryCompletion
+ Processor$1.class
+SHA-256-Digest: Z5nx34IzTCJufsa3EUf+pU9LSD0WIJjgCyOMrp1iRgA=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/DeleteTaskRepositor
+ yHandler.class
+SHA-256-Digest: C75/Z8fZ1ARQUWLhaAJXnV97wuxM6xqGfNUyOa9vsSM=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AbstractTaskEditorPage$7.clas
+ s
+SHA-256-Digest: rSCIaxqyBZOt5ID2qfpYG9Fc1ieHktDIKNr0wW1ck0k=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/ScheduledPresentation.class
+SHA-256-Digest: QWXGpyr8LVH2htux+l8krD8fAWNmr+GWOwjGsThadWI=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/TaskWorkingSetAction
+ $ConfigureWindowWorkingSetsDialog$1.class
+SHA-256-Digest: GIN1K6mrjjp+KbIEzAcp7Ozuko5LGDb+7xHm0u600uM=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorAttachment
+ Part$8.class
+SHA-256-Digest: WiQw9PbRMwqTjV/W2llKCU0HDtojpi/DSfiz6YTDy1o=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/RemoteTaskSelection
+ Dialog$6.class
+SHA-256-Digest: 49bUbpW3T8nF8t0cvFFd8VjJdGOQobDZdAL+lB+cvWI=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/BrowserPreviewViewer
+ .class
+SHA-256-Digest: fJkBkBIr+xX2gK+RnfH35XDrF/UOwwYqBo5882Tz488=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/QueryWizardDialog.cl
+ ass
+SHA-256-Digest: Xzs5kkJGItM3egSLSmTq53m8uIVErttL0JctZiGHkzY=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AbstractTaskEditorPart$1.clas
+ s
+SHA-256-Digest: 54sipBgBsghO+ccoOjCd5VsxJs9o11fSbCdlOTjLCnk=
+
+Name: icons/archive/task-activity.gif
+SHA-256-Digest: hlBNtLpY/SYCjkAA6mc2LXU+r7YyDWySVd0nkGyYAPQ=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/OpenRepositoryTaskJob$4.clas
+ s
+SHA-256-Digest: wbGWBt06kyzGA2cNWwFtjRd+D7Vz731Kn1OCKqdmuQ4=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/OpenRepositoryTaskJob$1.clas
+ s
+SHA-256-Digest: 1sPLJru85fo/l7KrjYiPwvwBy0ZZC0PjmYURDOnwLPk=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/TaskDataExportWizard
+ Page$1.class
+SHA-256-Digest: VtqmUEzhWEMVLweZXXVy+dTK7hQfo37JvL93i7mlOE0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/DeleteTaskRepository
+ Action$1.class
+SHA-256-Digest: ZkIrK5nEAlURuuyXG+So4WLjwh4l4OQQKxroricujiw=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/ShowNonMatchingSubta
+ sksAction.class
+SHA-256-Digest: V5MnV3WZF1bHWZshG18JXPrxNxYVojyuU7axDfSOvAg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/workingsets/TaskWorkingSetPa
+ ge$2.class
+SHA-256-Digest: hNTG7brDvpwFsb+UT8GjeQUKxrKUD6aYErRj1n63JAI=
+
+Name: icons/etool16/icons-legend.gif
+SHA-256-Digest: 35apWjEBcFtczt9hdhVE4722PDvgv42NBX0jJqqGduQ=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TaskCompletionFilter.class
+SHA-256-Digest: 1Ku3Liaq7AeyibgJMQKKAziIWs2A13ifqD2ALPsVO08=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/TaskDataExportOperation
+ .class
+SHA-256-Digest: dW5yhb76vI/LULteYV9Ut8qcBjdxO2E9A60O8gb6YAQ=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TasksUiPlugin$4.class
+SHA-256-Digest: nND/OtC0OT4ogol3p7xL54gmpdzQ9tqvBIMZLxECoaY=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskScheduleContentPro
+ vider$Incoming.class
+SHA-256-Digest: NHylKb0Myv1TlZohN5IZV9e9P/BblOYJ3KRXp9q7/m8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/outline/QuickOutline
+ Dialog$3.class
+SHA-256-Digest: +GJdBIrxDMMBrPToKLckahEPQ/MrQkNu+sgy2PRkP+0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListFilteredTree$8
+ .class
+SHA-256-Digest: u0TT2TaK2DVo0Xkugl6r0RBngxcsRV2kXdgpwgBSuPw=
+
+Name: icons/archive/task-repository-notes.gif
+SHA-256-Digest: f8JpTRZENTEFqJUB72+9cHH37yBkoCW3RcNMJBUnEwM=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/Messages.class
+SHA-256-Digest: ZCA0Fhrl9YMasbRKRXttqu1S4fSnrLlM5xXgTtm4rhs=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/migrator/ConnectorMigrator$O
+ ldTaskState.class
+SHA-256-Digest: l3ipXtlCMkq4Rk/JgZwnJeHUkqhlgv2hUcwjM1KUNe0=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AttributeEditorFactory$1.clas
+ s
+SHA-256-Digest: y9Yok6dj3WsWG5lBl9cvLrOnQ5+kYBEPUu7Y+MBMVrM=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorAttachment
+ Part$AttachmentTableViewerComparator.class
+SHA-256-Digest: EonOb7+1oCR1wUPR6oFLeS5iNPynBVfSgQ7K15qpKh8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/PriorityDropDownAction
+ $1.class
+SHA-256-Digest: j0/Rpvkf5wDZWnzq0We3D/j8IA58x9UGPuGaI+fXJSQ=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/AttachmentPreviewPag
+ e$3.class
+SHA-256-Digest: TeFuKF0TAEM9KuKs42aorFEgCfi4xBFn0BMpUN2edRw=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/TaskAttachmentWizard
+ $3.class
+SHA-256-Digest: piB9K/5Y33D5bs3ZpE5/BeJyUvRXWLtqfqPXZIZjkaE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/TasksUiExtensionReader.
+ class
+SHA-256-Digest: VJulPrQcqz6DGCQDGXry0zZiKp0bnUKzdWQ7iF72Knk=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/outline/QuickOutline
+ Dialog$1.class
+SHA-256-Digest: auI4LQJliAtlAu6hpSTBp6IegQeKOPqUZxKtVpvKjtQ=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/context/ProgressContainer.cl
+ ass
+SHA-256-Digest: qix3A2eG+mUMAG1+YO1NsZcXm3S+iFCNwc+rXM+XiTo=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/AbstractTaskRepositoryPage$1.
+ class
+SHA-256-Digest: W452vl2TtIIa6uAvEyC6aXFpjw2e8CL+MaoVJG2nFcg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorExtensions
+ .class
+SHA-256-Digest: 5EhM8+8eZwgzrp6djK4Pq1jsu2yWiG/tc/2bvOYi7bY=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/BrowserPreviewViewer
+ $2.class
+SHA-256-Digest: e1jitbaRa1gY4m4UyQ1z4svJTrmjwTD2qUl8UtBFqzM=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/EditorUtil$5.class
+SHA-256-Digest: Rdfr7hxrDhUWrXPe8nGc/SBTOapEt5vV8wYhLCJz+Pk=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AbstractTaskEditorPage$2.clas
+ s
+SHA-256-Digest: aEzPKNJ2+3FEfssOQMmd1sOJFqjTySyc8+fMnT0HInk=
+
+Name: org/eclipse/mylyn/tasks/ui/IHighlightingHyperlink.class
+SHA-256-Digest: dmKjKjhxczKXtfY3VNCOkD6IO/aRRhmSoH6jyp2HsDU=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/notifications/TaskListServic
+ eMessageControl$2$1.class
+SHA-256-Digest: Su88K7rNu8qwT55PiaWvfHTAVOKCwkkY+wRIDVMOq/c=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/TaskSelectionDialog$
+ TaskSelectionHistory.class
+SHA-256-Digest: IF5YDqhSe9iweUQwPU7iNf6/fUJA+ioNhY1Va6EEIHQ=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/LinkWithEditorAction
+ .class
+SHA-256-Digest: 5FICInvX91OLcuKgoANB5Z762N2iOm14/lVRyXTerjg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/migrator/CompleteConnectorMi
+ grationWizard$6.class
+SHA-256-Digest: z1rbLi5GjYqRH/3pj6SiSpbE5M4PFfXo1NTuB9sZg00=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/Messages.class
+SHA-256-Digest: qmbG+P3B03gaaRDKe+y1k3YZqiceAmWW+UslyPsq0Tg=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/TaskAttachmentPage$3.class
+SHA-256-Digest: t/ic9qjpgEfAdTL++/iMgTmZPR+rWAn0lS+SHqZTX1M=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/AbstractTaskRepositoryPageCon
+ tribution.class
+SHA-256-Digest: xK9vMAiaWGufitvpBPnDZ8BsTzZlzKC76v8v92DJW3E=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TasksReminderDialog$1.class
+SHA-256-Digest: T2smUwYePJ+6TsZkpHPgNy+RGq+UQw08sBRBDwwd7BQ=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/RemoteTaskSelection
+ Dialog$4.class
+SHA-256-Digest: aTwmUMO02Dn2zV1h3vmwxGc/+EtKN26e0/2EQvBPHu0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListFilteredTree.c
+ lass
+SHA-256-Digest: os/V+B0CDe+Zl4l230hGReKBPcTwwiBfFGh2MRorCdY=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/migrator/TaskPredicates$5.cl
+ ass
+SHA-256-Digest: aDHMnmmMU7Jc6uElTWpctIr7Al3zZpgcqS8vWQphZsA=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TasksUiPlugin$2.class
+SHA-256-Digest: 4Xorefwi89B2wno7TY5ykK2yHOTRoyvplo5Xvz24wLk=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TasksAdapterFactory.class
+SHA-256-Digest: fOZDPtQ2qYTLgsmqPq6ezQbeA7WuotTyU5cAHQmOr+Y=
+
+Name: icons/archive/overlay-web.gif
+SHA-256-Digest: TFdR6K0Y7VMUVf72XRtW2tZ9tiBcbQ82zzsSVd8YPc4=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorAttachment
+ Part$4.class
+SHA-256-Digest: Ax5vwBW+MAUvtUVhWmeya7mHBGLfX283ZXlK9De6z+Y=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskRelationHyperlin
+ kDetector.class
+SHA-256-Digest: DQ/3+hNgQmmbNxwye6SG03C2BEPUaK/O82+YMMJyuCw=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/BrowserFormPage$1.class
+SHA-256-Digest: vEouikhx9paKcW47GXej0qlhmebu6xSWrN8AGWy3txY=
+
+Name: doc/tasklist.html
+SHA-256-Digest: VaE07zG5AyR46ISwSqlHwnHVS4pAWAAgEq+CAqGYJg8=
+
+Name: icons/obj16/resource_obj.gif
+SHA-256-Digest: mujMEbeMZ9xD+kiZnC77jFUJnB5EqhNkuyAwm5siiu0=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/TaskAttachmentPage$2.class
+SHA-256-Digest: hGlkKtmDQLOw5ZxjLwQ0Vy08sb3B2HpRlHcsksJ8Kyk=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AbstractTaskEditorPage$4.clas
+ s
+SHA-256-Digest: gxuErSL18O7oUtEaI2H7n0V1IcuQTeYOrgZoaaGRl9c=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListToolTip$Progre
+ ssData.class
+SHA-256-Digest: +qW+8T1x6kHArBj+42RdD5NOroGIkAC0DibDMJK0P34=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/outline/QuickOutline
+ Dialog$2.class
+SHA-256-Digest: LGZJpeyTLZ7Qruo67q2x2boFUKQjFcpuDtRODA1lan0=
+
+Name: icons/etool12/unlock.gif
+SHA-256-Digest: 2/7iZ76wyazmyiZNwYs9k21F7uLHLcYyKqkipyUa8dw=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/RemoteTaskSelection
+ Dialog$5.class
+SHA-256-Digest: D6VCQy6W4OtavyWO6ALeMSHdwnoxGTyoV1CQvbu2F0s=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TaskEditorBloatMonitor.class
+SHA-256-Digest: DczmSOJ/kQGA9UnV/Dsch2ofN7WM/F3se3w/yEoBCEU=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/LongAttributeEditor$
+ 1.class
+SHA-256-Digest: gslihtX6t1MybkTvcD6hcxPNGCutSPLC/mAf+WocbpQ=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/ImportAction$ImportS
+ tatus.class
+SHA-256-Digest: 5OAsoqnKWWgWHSU/kiZ+mKY8bAT/zmlgI87xBWDEk9Y=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/TaskDataExportWizard
+ .class
+SHA-256-Digest: Dm7jKgIJpmTeLAWH0nvTM35y6UZe96/DnC1OJpeZ0rM=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/migrator/ConnectorMigrationW
+ izard$1$1.class
+SHA-256-Digest: c2aeEZRotf7I5hsf7bEDW4UzWVvIV86fQ6BqiOnGH8w=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskHyperlinkDetecto
+ r.class
+SHA-256-Digest: Qap1HfHYUUrc9zi65Sc3tbXueVt85wW/PkEP7keUCmg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TasksUiPlugin$3.class
+SHA-256-Digest: G30TMHbjoBnej4AN2Tgd2AHIKX2kFYdFMilLihWzhuA=
+
+Name: plugin.xml
+SHA-256-Digest: WOfCOqY1cNGPxTX6PgowJYkDMerZsHTqA8iUcF97Lf8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/AbstractTaskAction.c
+ lass
+SHA-256-Digest: GY4WOR2U12l0ayesEkAOv5Z+wBHz8ucuZ2/gXqT00w0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/context/ContextRetrieveWizar
+ d.class
+SHA-256-Digest: RKQ0QQURky4zwmgsm6YaP7WmaGWAzv1y6CX1GqRbapw=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/AbstractRepositorySettingsPag
+ e$25.class
+SHA-256-Digest: h0dOAbbT/mvGlXL7WMfllZ81ECZmghPS13n3pM7SJWI=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TaskHistoryDropDown$Deactiva
+ teTaskAction.class
+SHA-256-Digest: GUi8TGGp4oDY3HZMaBlKAJUd+i+BD4fCWuZzwiULza0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskRepositoriesViewSo
+ rter.class
+SHA-256-Digest: eA69gk0uWarNrP+KZ8MaDZuk7xEIBYfW/a1t6QX+hdM=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/PlanningPart$10.clas
+ s
+SHA-256-Digest: Y8ZaEI3kGnePJ9uo7BBmsI+61cXC3pkkEiraqSeCwh4=
+
+Name: icons/elcl16/context-transfer.gif
+SHA-256-Digest: nMFnjoyqdZi7bwG+IkM9wxQ0EQLNzLYRsD+Yc4Cd7XM=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/TaskAttachmentWizard
+ $Mode.class
+SHA-256-Digest: 16BxSCu0ckiqSX9ZG3xENXu00S+uEGG05qqz+cwLBkU=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListFilteredTree$1
+ 1.class
+SHA-256-Digest: 4VUwIU2mcCY1V7Br8T87s6CMl9uSmOnN/mX8njtE560=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/AbstractTaskEditorAt
+ tributeSection.class
+SHA-256-Digest: o5+fi8ZLvl2YHzdEG1WJyb2SifkVHcreVhi7VNVbte8=
+
+Name: icons/etool16/task-new.gif
+SHA-256-Digest: 54zGcnKqFZkZ7NZftK3pSo/32Qeh1lIpIop9/lZAgqw=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AbstractTaskEditorPage$1$1.cl
+ ass
+SHA-256-Digest: rhNItPzQN6AhZ0ebnFLEagkwjurDk3OmZu7ongOUph8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/EditorUtil.class
+SHA-256-Digest: 4n5mQOiiy4wVH2tiraB8hj3PFD8uaYn8X/lTknDjSLg=
+
+Name: icons/etool16/task-notes.gif
+SHA-256-Digest: ZffAGlbWMf+3U94ArmcorRxgbfpM+ZC+c2QfAEjUqk8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorRichTextPa
+ rt.class
+SHA-256-Digest: Hh/GgDOr/34+zo7h3Q/fTmQ5jnufTHhqK3e3FqMb+hU=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/SynchronizeRelevantTasksJob.
+ class
+SHA-256-Digest: yx1Sh2m13qndFbJozf9rl9/ZcVR6RGppm0gSdbiDSh0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/PlanningPart$9.class
+SHA-256-Digest: 2Rw3DIuyVPU0WV7e7PB8S3w25KVhi78jJ9TxWEnie0A=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AbstractTaskEditorPage$9.clas
+ s
+SHA-256-Digest: PpqV27mFD0x9Vm7DviClTwmKjGZPDn2v0IyXUbpV49U=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/CommentEditor$1.clas
+ s
+SHA-256-Digest: MJOY6jmn3KIVsi+tkM9XuanjPko6/PWyaB5pD0F+JRU=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/NewLocalCategoryWiza
+ rd.class
+SHA-256-Digest: xp9saAe3PS0zkCMqvynP4FDCscTsvZtX6GVOLNh8NKo=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TaskListModifyOperation.clas
+ s
+SHA-256-Digest: AwE95a8YaKCn5A7SS0B91aQO56db7Jdj1O43U4XEZH8=
+
+Name: org/eclipse/mylyn/internal/provisional/tasks/ui/wizards/Reposito
+ ryQuerySchemaPage$1.class
+SHA-256-Digest: gikFiToHeaV5e8QUyh+OPDismWNX200zzjk7sjClOXc=
+
+Name: icons/obj16/workingSet.gif
+SHA-256-Digest: W3DjtG2740Q8HrZMegEbqupgFtU3lLHXtjsBR/G1kWA=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/NewRepositoryWizard$
+ 1.class
+SHA-256-Digest: e0URvIYuXQgxj8N0Vx/Xb/4nVg6xOykobdVltVEj6hk=
+
+Name: icons/etool16/repository-synchronize.gif
+SHA-256-Digest: ZXqGbpE7vnP+8wxzKEF8wYZyM15km5xPuvO59ag2O/s=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/AbstractRepositoryQueryPage2$
+ 4.class
+SHA-256-Digest: cFMMj46GhQMlGH8vZWVfOSmRFzdjrCt5iq3iZqfMKbM=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/UpdateRepositoryCon
+ figuration.class
+SHA-256-Digest: WyuuNCt8zqc3NlHzK9Ir0A2eqDTqJPF2BG5id1rGVY8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/LongTextAttributeEdi
+ tor$1.class
+SHA-256-Digest: wZGj/nGA53rGxjYcX2TAXKQzAt0muIRyya7r28Zt5Zc=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/Messages.class
+SHA-256-Digest: gXMGEc6ezqo9RCBqapAKJ547Pu2yE8L0ppwGJlPfjjY=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/TaskEditorInput.class
+SHA-256-Digest: Bogy55BQgJdYhVgOsyyT/vYQ6ensFOntk8bd1cefYMc=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AbstractTaskEditorPage$Parent
+ ResizeHandler$1.class
+SHA-256-Digest: MXrQEEa3a3c99PtCes7NuGon7xX0MEWDRUTc+FEm8Ds=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/SingleSelectionAttri
+ buteEditor.class
+SHA-256-Digest: ouaXL2oQa/99aCzAe3Y5A7jyCtpHxwtU+HlmOueSbnE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/OpenSelectedTaskHan
+ dler.class
+SHA-256-Digest: DWIabfL8dmhZWQAWtHK4Oz3/9ioZvHK+ltjMCm4BI/o=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TaskListNotificationManager$
+ 1.class
+SHA-256-Digest: Vu/JkQRKMoNM5VzwcEhuUqoxcH93Ko+qQmIzjAgaCRk=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/workingsets/TaskWorkingSetPa
+ ge$WorkingSetPageContentProvider.class
+SHA-256-Digest: SukiG5WfUT6GdfN9jmCxkFhvy5iBDQuWO3ORV7mo4Zo=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskPlanningEditor$2
+ .class
+SHA-256-Digest: 9QSL7uwhjA/6GpHaQtGUgICM2mIBHmOZpMRo/HF95as=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TaskTrimWidget$2.class
+SHA-256-Digest: Wv+kvqpGxPRZmfjKQxjbMti6koToMmrZejWQkeMNYSI=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/GroupSubTasksAction.
+ class
+SHA-256-Digest: j3/RBZoJx4dmTP4LBahxWPYXPEkwDcFDoyDQ24x3aT0=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/TaskAttachmentPage$6.class
+SHA-256-Digest: cpd2q/yuAOK4NraEVWgYa2hXRjyesvUEDrWJ2hOLEmE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/dialogs/UiLegendControl$2.cl
+ ass
+SHA-256-Digest: 1LgXp1PSTltpszcPiGEjQ2LBj4OhFns2QbTBH9t20OM=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListView$20.class
+SHA-256-Digest: EgYNsgph+WZiNhVZyu1aO5S1b3jvIMKq6y/89d8tzUs=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/TaskSelectionDialog$
+ ShowCompletedTasksAction.class
+SHA-256-Digest: uQNUdDvYBWsWoG+oCkeYRF7xWfiHPdnul9o7hdzFt6E=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/context/ContextRetrieveWizar
+ dPage$2.class
+SHA-256-Digest: VvsjRuEWXGNCq1K/EVJQGOYaV18VKsW9SwfntxbWdwI=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/OpenTaskAttachmentI
+ nBrowserHandler.class
+SHA-256-Digest: IJvR45WTwBs0fjZUOJSlTbxcjGk146IC1O4ghkhKB2Q=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/messages.properties
+SHA-256-Digest: W+x1oBcwUk5GR3ug+x2vFidCtN6r0ajxky5JJzS8rQ0=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AbstractTaskEditorPage$23.cla
+ ss
+SHA-256-Digest: r7c+d1g7mfHOtPChVDR1ylWEkukVvOQb0Gi4mnkys24=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListInterestSorter
+ .class
+SHA-256-Digest: IfW/+7O0CGHUTpf2pT3WeN77v0bMr1XKf3p7xk4OMcA=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/BooleanAttributeEdit
+ or$2.class
+SHA-256-Digest: SE0YbaERvLkeESnxZMJCAjzPoLEAytTf7LI0/GNC2iI=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/AbstractRepositorySettingsPag
+ e$20.class
+SHA-256-Digest: 9GDe2VAav/nmZ/nRw0lOkQyAxPZ0Bcnu1nDTmKoafsE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorFindSuppor
+ t$1$1.class
+SHA-256-Digest: NfMAh+z7SrV9aX+GHaoEMPjvWmVGoeK8r92o/JR/Ix0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/TaskSelectionDialog$
+ TaskHistoryItemsComparator.class
+SHA-256-Digest: QiYPvGTsD9s9RH1XLHpvqFK5PUQuzBhyErw1VMCUxfw=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/TaskDataExportWizard
+ Page$2.class
+SHA-256-Digest: gC5E3+5NbFNi95pMtrJ+4sWVdJOu9eKsCaylZaMF9AM=
+
+Name: icons/obj16/repository-small.gif
+SHA-256-Digest: ca0XA6uoqnVaV9LnBkuLjsnTbrNiTqVYHmOkPVScZeI=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorAttachment
+ Part$7.class
+SHA-256-Digest: 0NrQV2mafBBDOmOdd6m9tfUm2nn7bUBAg8d4apHhbns=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/SortCriterion$SortKey.c
+ lass
+SHA-256-Digest: A8OEfFtp0CKoXV/EYVF85coOYtjfeiRp5BCigt+fq9Y=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/AbstractHyperlinkTex
+ tPresentationManager$RegionComparator.class
+SHA-256-Digest: D6nFA2B0zzXVVvUj0B3NXT7VdQIWoct37U+MxGol+zE=
+
+Name: icons/etool16/navigate-previous.gif
+SHA-256-Digest: Wni3O3f6ACIKtPDX3dOKgyTLaCn6CZEfdsZcySP81Rw=
+
+Name: doc/bugzilla.html
+SHA-256-Digest: 2pe58oNh3+xiXbg6EzWzmgmBqXoXHQnR4QN8CnRjSsU=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskRepositoriesView$2
+ $3.class
+SHA-256-Digest: p5+M80BCzgCI03YkjSOQd5Cy6ktWv982ZNha9LoGi/A=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/messages.properties
+SHA-256-Digest: EnChrAl3C0x9e4Auob8GJ32nYIhFJXGcOhgWGn4jiVg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/NewRepositoryWizard.
+ class
+SHA-256-Digest: DpIQNs36g27cW6G7tcnEBcZKOEHSDrSpW0QKf1Ux/bg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/RestoreTaskListActio
+ n.class
+SHA-256-Digest: FeoUtkrkXAQnUmDSlKqYPpEojw0gh5Nghy6eU6bS7j4=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorCommentPar
+ t$CommentViewer$3.class
+SHA-256-Digest: WMWC6vL4kMo4C4K6zr1aVZMxe+Ob+2zaSvypoF2Nxhg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListFilteredTree$7
+ .class
+SHA-256-Digest: jLgclUziPQCcjhzVcQHewuP6RKcyQJHAqCjMea9jJXU=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorOutlineNod
+ eLabelProvider.class
+SHA-256-Digest: SJihTWuadV3OxNfXsbjUmeuvOFcvOYPx2DEo2xM7/Ss=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/AbstractRepositorySettingsPag
+ e.class
+SHA-256-Digest: BAebnFwQME9u/AHDgWtyMjii66dbeXvHmKzttRM1imA=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/search/SearchUtil$NullSearch
+ Provider.class
+SHA-256-Digest: YE2JqCnC0JJ2+wq/afAN4gwgdTxAsL8ly+VaeNRGK0E=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TasksReminderDialog$Reminder
+ TasksLabelProvider.class
+SHA-256-Digest: eWxYJsdEGz/fsEwbBP5aq/UYMtL5poA7QsVJ409Z+TY=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/MaximizePartHandler
+ .class
+SHA-256-Digest: YyY8idR4eMza4INYM7PwGM4SWh3l/zCNORtkxAKgE9c=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TaskHistoryDropDown$1.class
+SHA-256-Digest: KuNqHhwkm/2iREU+qSgJCip7GB2tuudNqAE2uBe02ao=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorActionPart
+ $3.class
+SHA-256-Digest: CHku+1+SXggVwNazj8d0OgrA4gw6QIDOJNrL8N5Benw=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/BrowserPreviewViewer
+ $2$1.class
+SHA-256-Digest: hw3fla2J7MowVGd2+joSicCEvtlZ5db4SZMeydfK2Q8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/TaskWorkingSetAction
+ .class
+SHA-256-Digest: xO2VhEMFayDeF+PKKkAuFdZz4GBwGFfuCR5GnXIgHaI=
+
+Name: icons/archive/overlay-repository-context.gif
+SHA-256-Digest: HmwH0O3csNKrXKdTy46AvXoYoba5dY0G18XViQuyKRk=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/migrator/ConnectorMigrationU
+ i$1$1.class
+SHA-256-Digest: /d1r5uLsBYd3eKYaW8p8kvAhplL+rkgDCFixECcqXvQ=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/IDynamicSubMenuContributor.c
+ lass
+SHA-256-Digest: DrAVORxFGFZILsATuJCw49Kum1Fh/gNumomaMd/4nYE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/PlanningPart$4.class
+SHA-256-Digest: 7izv8FQ20b2pV8KZg7zgLkzD/Pa+Umpd2QQ+kU1zIsw=
+
+Name: icons/etool16/bug-report.gif
+SHA-256-Digest: JOqvMPPIxnTS0W6dEvxw9ng8A1LKAUcclgdjewfr3iI=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/TaskSelectionDialog$
+ TasksFilter.class
+SHA-256-Digest: Sb4ptY7bkt1i5X54LMpE0KLRrq7SwBd/YRZ9/MGoLBk=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/migrator/CompleteConnectorMi
+ grationWizard$3.class
+SHA-256-Digest: zHHHWxeg85FIERvY17NUMtzpeHjfqMWQnfFHysLFu3Q=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/migrator/CompleteConnectorMi
+ grationWizard$1.class
+SHA-256-Digest: bFumSgAeVXfbg2TAWbk8SrC2tS9pA3UE9N29Nd98Ue8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TaskTrimWidget$2$1.class
+SHA-256-Digest: CxMpxEes3FERhze+kQnLC+WaRcgqNnEBZFys7zNwgHY=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/ITaskSearchPageContainer.clas
+ s
+SHA-256-Digest: g2Of0mvMxfMPRZ2MSlyQc4EBt7Im74L0JXYn8IFNIK8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/PersonProposalLabelProvider.
+ class
+SHA-256-Digest: Txyebj//xMkzWMCiqiSBp6VMY4Oi5ZwQQy79ZWXxmKw=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/preferences/TasksUiPreferenc
+ ePage.class
+SHA-256-Digest: 1k5kN2N21wpV5zY+ijnXDfRxYOOz9vAvNZ1rEkpiTPY=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TasksReminderDialog$Reminder
+ TaskSorter.class
+SHA-256-Digest: alCLPAjcM8/0f29n8UJCbo/F2VuwbacMOVzcZUAPnDY=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/RepositoryCompletion
+ Processor.class
+SHA-256-Digest: oU7p9ljs303omeYdAQEEKbxg56JA0NOYONB+/6oYSsU=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/context/RetrieveContextAttac
+ hmentHandler.class
+SHA-256-Digest: l8zDp5XbJ0OHTzESP3kizrql9Jd0jcS26QQOeQ1CYWc=
+
+Name: icons/etool16/query.gif
+SHA-256-Digest: BcpBFoTaqRD2E5f1uPSuxbOpU5EdX7PvdSZyoAvp018=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/PersonAttributeEdito
+ r$2.class
+SHA-256-Digest: h5L01bmSt4H5GukdmvJOYGvOl+PYe5ezsJ62dPF1CBU=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/TreeWalker$TreeVisitor.
+ class
+SHA-256-Digest: s76uinOmHcchevL1hM8doj6iIYp7ppdLTBeSVfBXN3A=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorPlanningPa
+ rt.class
+SHA-256-Digest: A4WItp/bjgt7plcjmifAq9C+3mHGc839wCR82/xYxmY=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/AbstractRepositorySettingsPag
+ e$RepositoryStringFieldEditor.class
+SHA-256-Digest: jvjrmir9R1Z1UzzUu8ehj8tmWrfFUa53kgM2COIbw0o=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/RepositoryTextViewer
+ Configuration$Mode.class
+SHA-256-Digest: yQ8hMYf5riUi3Z/vAQHnLpd5Oq7og+FptXXCEcvzV1w=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorActionPart
+ $1.class
+SHA-256-Digest: AA4a1ay0WbYuexF8ibOK3ucyz9mHevWuO/s9tbxk0iY=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/NewQueryWizard.class
+SHA-256-Digest: 6nf2M9VdBidaMNLd7F061n0AwrKY2n2DCUrUM33zzig=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/PlanningPart$2.class
+SHA-256-Digest: lUI7YqCXB8kyfoKJdtv/0f2WE6rP4NdRLwyCTC+ys9o=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/workingsets/TaskWorkingSetAd
+ apterFactory$1.class
+SHA-256-Digest: pwhq5HpRq5x2yPzXVBLV1f3eOw/17h7qmD/8JyBtA0Y=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListFilteredTree$2
+ .class
+SHA-256-Digest: 9c380BLmAXxzCJQxx5J0+imA+PCmhktgn4RI2vKsWX0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/SelectRepositoryConn
+ ectorPage$2.class
+SHA-256-Digest: zXIABvVr2V+DMAtufogQwtV7+lCIJGMbwdKD9ZkFraI=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListFilteredTree$5
+ .class
+SHA-256-Digest: REQs97BVjONlvnvPrStGxQWubZlVWWFc2W4EfsgiV9o=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/TaskEditorScheduleAc
+ tion.class
+SHA-256-Digest: V8IjbdvCyhQmlben8Ls6Ot0iv0qIh9RCjs0uOwK0+vY=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorCommentPar
+ t$CommentGroupViewer$1.class
+SHA-256-Digest: G0mQ5c88FzWeYzyaYiAOevnoDIgMM+iUEq6Q04xPBmM=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/AutoUpdateQueryActio
+ n.class
+SHA-256-Digest: 4bFl4jGJ8Jt7Y74jmUArCYw8oVirhR99Si2iHHJl4HE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/TasksUiInternal$3.class
+SHA-256-Digest: M5YKgTOGlpyKYqPzeXipRW6ja1wpPFGpYzqB3o+wC8c=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/AbstractLocalEditorP
+ art.class
+SHA-256-Digest: 2pWKfXAddrcr5JPswUJaJaU3oVnArpYfVrc8bNHzAtU=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorActionPart
+ .class
+SHA-256-Digest: nIz1Cmz9f3jlMOHE5uHgpuTJVTBoiUsgDnbR6niC3lw=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/preferences/TasksUiPreferenc
+ ePage$4.class
+SHA-256-Digest: xv4KLI6Q/boYWiscOO1AUGojpkLUozk+BXEmrKWCaaM=
+
+Name: icons/archive/task-server.gif
+SHA-256-Digest: 2pWSnhyanr/D8SRoP5nBrXGp9Q7dNvg3FvwFQjoVlC4=
+
+Name: icons/etool12/file-delete-12x12.png
+SHA-256-Digest: bm9ylny40WfzqBCzvlux1RR85jbEDhlO31pAwroeuQ4=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/migrator/ConnectorMigrationW
+ izard$2$1.class
+SHA-256-Digest: xyUnJGZjApwMO3Jf1GuBLhM3oeuRh4h2Abx1jaK09Ro=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/ComboSelectionDialog$1.class
+SHA-256-Digest: vpCeJV1sHgh3yuwKotBNbzffKiN/Y5EGzCmwpkJ6mzA=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/migrator/JobListener$1.class
+SHA-256-Digest: YmaieUHdAByko4VfBrR9vPRbJAuFK0chL91ddOLtlLg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/MultiSelectionAttrib
+ uteEditor$1.class
+SHA-256-Digest: zLN9CypkM05pvH8TFHjQaR7CshUKhkk25kIacc1dm90=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorRichTextPa
+ rt$3.class
+SHA-256-Digest: Zne0iXantW5D13UEOFJ3JNkfxTY7ED9P48nsvu3Mmsk=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/AttachmentUtil$2.class
+SHA-256-Digest: J7AlCOVkvBCUzQpOTkMT9O6/UzUzaTncfGeXq9pEBmg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskScheduleContentPro
+ vider$Unscheduled.class
+SHA-256-Digest: +x9Xx1VREKL5IkQCEJtI/87ew2qToCu7SC670Eqf7Gg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/ITaskListNotificationProvide
+ r.class
+SHA-256-Digest: A132y9I88WGY7MlRqmSthu3s9jcldwbJqZuLNshLovI=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/TaskPropertyTester.clas
+ s
+SHA-256-Digest: 8+eT7s6SrbTNJkEVvgC4J9qeDITfh8MyBBjgUV2Q+L4=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/MarkTaskHandler$Mar
+ kTaskUnreadHandler.class
+SHA-256-Digest: P/2C3pLEf9nKALpPFvD7/uk3umj7b95GIaacscZXQUc=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskScheduleContentPro
+ vider$StateTaskContainer.class
+SHA-256-Digest: yRVMbj94RwwPh+PeL9hEhAAzUvQphGkpeOoQ+q0j9do=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/ShowTasksConnectorD
+ iscoveryWizardCommandHandler$1$1.class
+SHA-256-Digest: 1uoEeZMrkIJEpxKlk4wIvdtpKJ/G6ZrxAryvP8ruSOY=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/RichTextEditor.class
+SHA-256-Digest: IPRD4yk0sH6+s8WHLd788ekcLfgy++jQH1qMMjz6cww=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/AbstractRepositoryQueryPage2.
+ class
+SHA-256-Digest: 4dpnmb56N27VzlDf+M7fDPHNHQVU0nTvRuSkcaRL+Zk=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/TaskAttachmentPropertyT
+ ester.class
+SHA-256-Digest: Fw7rHH6uQLHTyIoldUK+TtBiitesNiF9zpyZeAbEvs4=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/TaskTemplateVariableResolver.
+ class
+SHA-256-Digest: UyPrx/eEwIa2sjHxiS8wP393a3+1Fd8hqpsCAop/dhY=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/workingsets/TaskWorkingSetEl
+ ementFactory.class
+SHA-256-Digest: JucXqbxVL81AO5SrJIWAcj4V54q/RU3Cm9PuzldbbHg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TaskHistoryHandler.class
+SHA-256-Digest: 2wmrYPn8NmtDnAICWlqpsnlaBlzMWFeFAqa79vGhcpo=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListToolTip.class
+SHA-256-Digest: o+1rXeS2WwL8plDQuls2wpTfq0RxDxUbLQglLV/8S8s=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/FilterCompletedTasks
+ Action.class
+SHA-256-Digest: xtbodcOPU94alc71gknIUZ6zjFtyY0s4jxykwnRB9XY=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/AbstractTaskListView.c
+ lass
+SHA-256-Digest: QZZESUPB4xH34zzzvXFKwrSN4w3/IBDFJKrRyEBJRig=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AbstractTaskEditorPage$25.cla
+ ss
+SHA-256-Digest: +TeumLlWIEQyKqpYqQTxtXh1BjNz4onwjk3qIp4Sus8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/workingsets/TaskWorkingSetPa
+ ge.class
+SHA-256-Digest: LSsap0xN3KkEt38U8MUBsKDDUSAeb+7iqUx84Hp2xPg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/UserAttributeEditor$
+ 1$1.class
+SHA-256-Digest: qfif1DblfuC1Cgr5QOs62SZN1ozP+L7h+HR4UgE2LZk=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/preferences/TasksUiPreferenc
+ ePage$2.class
+SHA-256-Digest: 0gN3t9O40ffmBqKX41BeTSIFDog4o9PSYmh9rNcYFKA=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/PriorityEditor$3.cla
+ ss
+SHA-256-Digest: wjuJkz/JyORs4MVJ7AuB0B7/8fPlTDpA31bk8NDg3CI=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AbstractTaskEditorPageFactory
+ .class
+SHA-256-Digest: tH86ooydKg7BGIvvbxQXsBfGLmiQ9gI4xGuxqMI6LUs=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/MarkTaskHandler$Cle
+ arActiveTimeHandler.class
+SHA-256-Digest: 47yiRpkKcIgn1tsZHBWBMimjD9Sna80ClaZFcT6nYLo=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/TasksUiInternal$5.class
+SHA-256-Digest: Y/sPPxgDbwOuM0oP+IlzPPXmhUVWJDcKSx0h3W23YZA=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/PlanningPageFactory.
+ class
+SHA-256-Digest: 4rKKDC5+mZedkRAF7bsKHfG3WiPC42/b7gCH6MQDVrw=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/migrator/ConnectorMigrationU
+ i.class
+SHA-256-Digest: 5ITVSwBMU6DAq/U0e13rGcFauYBko8uRlzGVY7fEmE0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorCommentPar
+ t$CommentGroupViewer$2.class
+SHA-256-Digest: 3YHLUWleYInTdZRGTepsoldmQfM2hw2S6NVtlPkTXBA=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/RichTextEditor$10$1.
+ class
+SHA-256-Digest: yQL9lME6jrwOW10r3ovCwuDhQo9fX1YLdA5eDg4QfM0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListFilteredTree$1
+ 4.class
+SHA-256-Digest: 4Eh37XXrq+CRLTMq/IvLft4IqoQlzKKAqs/DS2nYRjo=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/preferences/NotificationsLin
+ kPreferencesPage$1.class
+SHA-256-Digest: X6q9V4zFUFIiV51KwOfgm0V+o2Y+47q40pb9eRISGOI=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/AttachmentSourcePage
+ $6.class
+SHA-256-Digest: nqVRhBREOSJARKXwSNATUhUkLXaNW1zX1AnkStdSFpI=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AbstractTaskEditorPage$21.cla
+ ss
+SHA-256-Digest: 3crmnKnK8Mjeb3rcT5TQV088VGGBLqqezDbpx2Y77JQ=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/AbstractTaskEditorAt
+ tributeSection$1.class
+SHA-256-Digest: 8YDG+aUZHc5tnwoaNXDmdw1oNtNWhLfaW+qScoR4Q+o=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/PlanningPart$2$1.cla
+ ss
+SHA-256-Digest: Xdpgr2mzalINrsNvkXngv0cwrftQjOMakkAzGQ9mJLQ=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/TasksUiInternal$7.class
+SHA-256-Digest: 9WoGm3OZKCv9Acdp5z5u2rCENDhdSY5LQckFB7085s0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListView$22.class
+SHA-256-Digest: xESSzJzANoaeJQuG5SaoCEL6OzO98yL51JfNZllFAhE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/MarkTaskHandler.cla
+ ss
+SHA-256-Digest: izIyqRbc+fWJdqiHZARaQuyuTiJwJo/2D1yt3tZi6/s=
+
+Name: org/eclipse/mylyn/tasks/ui/TaskElementLabelProvider.class
+SHA-256-Digest: T/4pI+Dn3VLkCtY1AMVm9fnSsoNNhEPvQ39m0zKet+A=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/migrator/ConnectorMigrationW
+ izard$2.class
+SHA-256-Digest: d8yq/pWdQKIDBWuawSnaS2z8Z16yiVTtyAdiG1Q4JJk=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/TaskSelectionDialogW
+ ithRandom$1.class
+SHA-256-Digest: iiFei5L2aPkF7dBSjlHV7k2H7BtqnAcBzdgOBgg02mg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TaskListNotificationManager.
+ class
+SHA-256-Digest: /b/WMMc911FvNvXTqCtsFcRj/eQUsHlZGh6pwcBtVAU=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/LayoutHint.class
+SHA-256-Digest: IowX0LiHXJF8rRy4ciUqHWIyYfI324MWJBnDxrzkJKs=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorContributi
+ onExtensionReader.class
+SHA-256-Digest: uelyDkFVmimaICbpkSN3VdiQBJvBpyBoj6vpQd/5Bfo=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/TaskDataImportWizard
+ $FileCopyJob.class
+SHA-256-Digest: oQKHk+nx+aYWd0KUA+zAqYPl/2rwfqsaJfucMPAnC3M=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/WorkweekProgressBar$1.
+ class
+SHA-256-Digest: jjqku69nvtteW1pNctIluI8mikQeaPx6mKPvWePwgH8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/AttachmentTableLabel
+ Provider.class
+SHA-256-Digest: Ebv7dw6sZFNoQ7O+3guX9+b88FWnb6AOR7XOR2+9BQE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/workingsets/TaskWorkingSetAd
+ apterFactory$2.class
+SHA-256-Digest: PdTSa4GxmD64VzNVlvz9V24xI54stRkfEjT04Arb6v8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/CheckboxMultiSelectA
+ ttributeEditor$1.class
+SHA-256-Digest: 8eF3TtoZV6kARQiDRSTdOCbEN2Zg94z92flzBA1PyQQ=
+
+Name: icons/etool16/context-retrieve.gif
+SHA-256-Digest: Sz0Eft1p4ElBwWhM0APY8rxIysNGITBiYg82mC+Z2mY=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorActionCont
+ ributor$EditorPageCallback.class
+SHA-256-Digest: +yMsdAX8pGbKsKeCW5+iiWr/jmV1BKrNmmgoMrEux4M=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorDescriptio
+ nPart$1.class
+SHA-256-Digest: zKmPYJVXNCKzfnKullhvDxk58XxCjbntOZkr5GTBR5s=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/MyTasksFilter.class
+SHA-256-Digest: vYUEXoA/PJkPmLKjBwhWd49afZJsz4r4g0ldNhyHttA=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/DialogErrorReporter.class
+SHA-256-Digest: kFOIJ4YNklFNrz6aDV08Epsqk40dISF0+zAQb19ebl4=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TaskReviewArtifactFilter.cla
+ ss
+SHA-256-Digest: tZIHmzKzMzUd/+dTaJ0zxhbf+B7rBo+mkq90DOIVDHE=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/AbstractRepositoryQueryPage2$
+ 1.class
+SHA-256-Digest: 94C+94C/gQZtTe2cVGwrTWJQYibAbFR3CArRbW65UlM=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/Messages.class
+SHA-256-Digest: YsprzdDRxKrQ0nrCmy/lVjqNwhfERsu/AIzw0WyWWFI=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListContentProvide
+ r.class
+SHA-256-Digest: H+B0Tb8WYDbsv3w4KYmk/koqt7AiODt9A2nBjuXMNao=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/AbstractTaskListConten
+ tProvider.class
+SHA-256-Digest: W9j6PKTcaLzzEm2W7xjnUbkFnZszz4ZUZzMbHOfK1OU=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/PresentationDropDown
+ SelectionAction.class
+SHA-256-Digest: IjWasd66WjaJYMEti7HuIwE/6D58OO4gFQ28HJkYCE8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/TaskEditorScheduleAc
+ tion$1.class
+SHA-256-Digest: Sc348mBd64JdT+rJTtA+aoa2BMujEfxR8uk3QJUJEEw=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/AbstractRepositorySettingsPag
+ e$28.class
+SHA-256-Digest: 2Bd383ez8OjVWQsGUvx+kM0GAigeYZitO3o5SzTiazc=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/DateAttributeEditor.
+ class
+SHA-256-Digest: OkngwRypuYkTyryKABniCn0uHu9t5FXuycqLNRMR6p8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/PriorityDropDownAction
+ .class
+SHA-256-Digest: WyCDVEqScsBRQ8pG7+Gd0/zR448qRXD0nm2zPlnK8hA=
+
+Name: icons/archive/filter-archive.gif
+SHA-256-Digest: IZzg+W+UtaesZJs+E7Kqirxhfthrk0WsTOxSQBeb0q4=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/AbstractTaskListPresen
+ tation.class
+SHA-256-Digest: wHCswLNW+HYzpuyL3AroJTVEiCRnmMeFEtjgnnY+0+Y=
+
+Name: icons/wizban/secur_role_wiz.gif
+SHA-256-Digest: gsDfjGpzpDZXSWSFo4QqyBo//jyHtZ05ZPNcI4E7Jm0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/OpenRepositoryTaskJob.class
+SHA-256-Digest: NiaxRxFek3rnRoyizVTytb0hlOvVSaXOEBKpBinYLN0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/properties/ProjectTaskReposi
+ toryPage$2.class
+SHA-256-Digest: NSzm2H1+wZ795gaxXQzKSw77+KlK/FOwatfiFowdWU8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/PlanningPart$6.class
+SHA-256-Digest: F2xHzhSJ0MNtq5JYowjS0cQY9E3xxDy0pp6PkTX7Eqs=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/dialogs/TaskListSortDialog.c
+ lass
+SHA-256-Digest: Xg3b2GQ9RxPk/OP8e+vuxNgo15SUa7MUPJDni1zExkE=
+
+Name: icons/eview16/repository.gif
+SHA-256-Digest: boPTpR4pALSl0fQIA046rhlGBcT7AiG2J1RedbEecag=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/AbstractRepositorySettingsPag
+ e$22.class
+SHA-256-Digest: UoBW87iKtEQDZYYOD8fVnkVkyBTO8kAteq1QHO20tqM=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TaskTrimWidget$5.class
+SHA-256-Digest: SAuUJL4KmBeN/YvyOVPDUc1INrO2qeUjOddIk6mtZ00=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/AbstractRepositorySettingsPag
+ e$27.class
+SHA-256-Digest: fY8zG+jnVXzyOENW61edJEeZBUdBRGbnHRiHbumNWiQ=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/AttachmentSourcePage
+ $1.class
+SHA-256-Digest: LhY+te0r/WaNIHzakereWx7/OkjjbLjulH8rLG2jkKc=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/TaskOpenEvent.class
+SHA-256-Digest: jLJa1q2y3Prfcxqx+Y3yWREfMxf/uer+2pGfqs65d3s=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/outline/QuickOutline
+ Dialog$TaskEditorOutlineLabelDecorator.class
+SHA-256-Digest: sK8hADAGZhgKhJSt8B1rV30svP/ZptfRob/oIeJ8eC8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/preferences/MylynPreferenceP
+ age.class
+SHA-256-Digest: TbKXVd5bFzsYrdKacLd0bFqxacEeKCyZIQQDqs15MDE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorCommentPar
+ t$CommentGroupViewer.class
+SHA-256-Digest: kREY7U96L6Ihn7SQwt/4dVYW6plOVpke8pt3Ep7uTfY=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/HideQueryAction.clas
+ s
+SHA-256-Digest: Y+IonxGYNLGcqjIOx1Jd7RX6urrVigFwF/pJOPPJkKA=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TasksUiFactory.class
+SHA-256-Digest: p6sZmPQFyAhdAcvCeyR4fxtZgY9v4jhZyB99rvzkPig=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/OptionsProposalProvider.clas
+ s
+SHA-256-Digest: oFJEWR2yuuvhfnyq+wgD/FV8P5CSO4GbvxhdDK+NtGM=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/compare/Messages.class
+SHA-256-Digest: NsJmKXO8mHC+s1JG8jL7mgBHAxlJB9cgTLIT1qcXotI=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TaskRepositoryUtil.class
+SHA-256-Digest: ZjjdVifHgmDBjI9KTOpV7jpa2MiE8KO/qDovMwOZzVc=
+
+Name: icons/etool16/navigate-previous-active.gif
+SHA-256-Digest: 4XWkyfHITfcF3sxDWfBPzsX7W6FlagEBK8K0oNSQgYk=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListFilteredTree$1
+ 3.class
+SHA-256-Digest: u3iAM0yOm+gptFo7P4cmz2blqreGXEEyLhDL2+Ur430=
+
+Name: icons/etool16/navigate-next.gif
+SHA-256-Digest: PRTiPMfc3vwKqxLEy4gq3+SjzntCgWYVUfYGORlP+aM=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/BooleanAttributeEdit
+ or$1.class
+SHA-256-Digest: LuAr9C6wOcmU4AWoudjPkquhI6c1tOcSJp/F6bLoO0Y=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/AbstractRepositoryQueryPage2$
+ 6.class
+SHA-256-Digest: Obd9PrOZHrvj/6WLJh8IxqurF3ACdsrQvRxXw5hsO4U=
+
+Name: icons/ovr16/overlay-notes.gif
+SHA-256-Digest: jRVVeCqRIAG0uI15PA73GxBucY4Nc7LI3WVSN1DnU1o=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/TaskDataImportWizard
+ .class
+SHA-256-Digest: Z466+cberI0xZT3F4Zm+FW6UR5D4cFnZmgKT7vdWTrI=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/AbstractRepositorySettingsPag
+ e$21.class
+SHA-256-Digest: iZS89BhXowW2EokRMwIzSm9jKnTRRuRTWNYAb1ECaqw=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TasksUiPlugin.class
+SHA-256-Digest: YGsblMzaD97vkGej8CYEr1KaHS2gz1VTUgIWKT56Y3g=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskRepositoriesView$1
+ .class
+SHA-256-Digest: xkTSpgVQeJJFxBfShz3u4w62hryB0aanrsVJYqto/RQ=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TaskTrimWidget$4.class
+SHA-256-Digest: U0tTYZStrNVkuIAC8af2/7vyWgKyOrDOoKTneCAU0OU=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/properties/ProjectTaskReposi
+ toryPage.class
+SHA-256-Digest: lrXaR91o6/jKF0glTZ7pSmBxo4M9r2vrDJreOhNN1xM=
+
+Name: icons/etool16/task-retrieve.gif
+SHA-256-Digest: mG6xzDdPwkzhYJpy5TKRObRzBcYFjPKVWUvdrVMxpDI=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/migrator/ConnectorMigrationW
+ izard$1.class
+SHA-256-Digest: OfkL1MljMKB/nHRMLmKYyj9pL31xOlDlyhIwFlHLwvg=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AbstractTaskEditorPage$22.cla
+ ss
+SHA-256-Digest: rqzNXNhPGXVp88yecD3ZhfWuRV+iqfRZOcLDekDvFWg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/AttachmentSourcePage
+ $7.class
+SHA-256-Digest: TbAZrIay3j1yicf8Px8ThojiiQ6gVxmtS8dL+NbLCVE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/IBrandManager.class
+SHA-256-Digest: PKz1bOZBb/bnCvHtRII07qdNPc3M8Bm2KuR55Ec3zo8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/TasksUiInternal$8.class
+SHA-256-Digest: y6mS+6D3bB39ah7awuY0PW0NQW3heRovDnav/Acqfu0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/AbstractTaskEditorSe
+ ction.class
+SHA-256-Digest: EhbxKOe/sPIULpy9ydLw5/iNUEcRCM5vxCWYjQGPoyg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/workingsets/TaskWorkingSetAd
+ apterFactory.class
+SHA-256-Digest: qnaLlC/Pv3Znnptav+1021/mTvaAdDiKmNtz/u/vvfI=
+
+Name: icons/wizban/workset_wiz.png
+SHA-256-Digest: 36D8kMJcPOhZSDRSRmi4i231OCK5cNrT48ni2pnvEkM=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/PlanningPart$12.clas
+ s
+SHA-256-Digest: JBqLd6zcHneAlc2Acum3VrlRsZGgSC+yo5yWp1nNVxU=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/MarkTaskHandler$Mar
+ kTaskReadGoToNextUnreadTaskHandler.class
+SHA-256-Digest: dbKMoGSW/4k8z0nFgsD0+d6zkfKnx/Bfl/YNbZnkZA8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/TaskEditorActionGrou
+ p.class
+SHA-256-Digest: N5gdyjj+ANMpu6CVTWZkr0PtCp0xj850SDfZIG+6Qu0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/TaskListToolTipHand
+ ler.class
+SHA-256-Digest: v98Mn66Yr1hptBauMh7YuoqjGRUnZxvwzOTXrL0BwFM=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/outline/QuickOutline
+ Dialog$Filter.class
+SHA-256-Digest: Bp+bABvfMk7TNRp/qR1WoCnUIWf7ZzKHlnHdMzS+3sY=
+
+Name: icons/etool16/presentation-scheduled.png
+SHA-256-Digest: +4JgLym1KQTpT/PpBlkmWPA/m0MzsCiz+rS65QMe00o=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorCommentPar
+ t$CommentViewer$2.class
+SHA-256-Digest: pudkqsvSG8O9STD7/NAL+wz6xRC+2oU52AjBOdQGrRk=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/PlanningPart$8.class
+SHA-256-Digest: /zXYJX4DMvGNNY1TJfpEqAkP8Jkw/K0Z7EgQ6DbBpYs=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorExtensions
+ $RegisteredTaskEditorExtension.class
+SHA-256-Digest: 03QVdwyT2FxR27rWgUzRvKExBjF9PULnxKhZuatvmus=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/AbstractRepositoryQueryPage2$
+ 2.class
+SHA-256-Digest: mo/A+LHrx3zP9F5MlgA9WfKrLtx2BE5SbvhyFONoFpY=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskRepositoriesView$2
+ $1.class
+SHA-256-Digest: 9eVZ4KdtlaccOChaLA/xll5us+1gbRuIc6hGFENtXFA=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/CopyAttachmentToClipboa
+ rdJob$1.class
+SHA-256-Digest: OVK2uyNuX3TtcxJ8NY5KE/NghyJ3xFBeYsr9zv4E5mM=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorDescriptio
+ nPart$2.class
+SHA-256-Digest: AaP64R22o6zk3JNlJRvuJbY2BNMmcceurq44rPdfHls=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/RichTextEditor$State
+ .class
+SHA-256-Digest: aKoeccD5lK4jvLePuOKxlU8GupVZDIkVSgEsGIdueTU=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/properties/ProjectTaskReposi
+ toryPage$1.class
+SHA-256-Digest: Rh9/Ona63yw+enex4RTDiYwgjU1CAVGv9KCN2brmJmI=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/properties/ProjectProperties
+ LinkProvider.class
+SHA-256-Digest: IpcriFsVGpUf9BTvvkff0KOi+t5p4j8vCwcg5jtt7l0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TaskRepositoryLocationUi.cla
+ ss
+SHA-256-Digest: mC2rkdvmy45j5v8VWbuAZ2ydA2Mp/xskb6YTvdQVfXI=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/util/TaskDropHandler$1.class
+SHA-256-Digest: +vpZNrVtOu9kAiO0lIsPiH9c9esbBKT4bDGriZMH+k4=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/AbstractRepositoryQueryPage2$
+ 5.class
+SHA-256-Digest: wOMwhvbdyD/nyNZTDVBdRgXPCXiCXQWNPoNmjunx0bc=
+
+Name: plugin.properties
+SHA-256-Digest: eWkCuJckMYXtERqa+EflXSFTkOqU+FMOVzJ3WTHJ6IA=
+
+Name: icons/etool16/query-unmatched.png
+SHA-256-Digest: GoYqEW11m8YLXAXWtf0mj/YpZoSXJAlkNa8YWtu6deU=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/dialogs/UiLegendControl$3.cl
+ ass
+SHA-256-Digest: 9+PY7akwKDopKrzUxfoGV+jetT/I9JL92iz4P2DQnmQ=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/AbstractRepositorySettingsPag
+ e$26.class
+SHA-256-Digest: xHKB3fnI1vUZ5kmynhF5zgXjcE3IAP23owM0aUjKd40=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/LongAttributeEditor.
+ class
+SHA-256-Digest: jovbjLUhC6OIZjY7ue3vKeMXTev4F00GvPUngrDPRPg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/PlanningPart$5.class
+SHA-256-Digest: +TIb67f7sAcEkMGQplZJMDZ4vujvGuipARfrAqv1fIk=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskMigrator.class
+SHA-256-Digest: tm6IQE00ennXp8RSdF8s2CGpqK2x2cPg6NLy/SGVUfg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/search/AbstractSearchHandler
+ .class
+SHA-256-Digest: /zG3bLPFtwzHNf8HeghXXomYtkRzOd7yhjrIeBYgcd0=
+
+Name: icons/etool16/query-new.gif
+SHA-256-Digest: OxboMhUZsv80It5oMBVVsd5cAMcieSad2KOWzeku1z0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TaskAttachmentViewerManager.
+ class
+SHA-256-Digest: wPRGTttspFaLRUjNIZf9eO8o0k5lshTjiANQM9lhoBg=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TaskTrimWidget$6.class
+SHA-256-Digest: S67flK81KfsPXSW9aYhpUEtYkQjTA9WVrbGNfdc3WhU=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/TaskEditor.class
+SHA-256-Digest: mN2+oVvEe/fgriUEz5C47OPrHfBh2iw5OOonvv2GrV4=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/NewSubTaskAction$1.c
+ lass
+SHA-256-Digest: qyao5CJm5RgtCyEvvx711H5s/wW2gMLBGJmLnfmwjbc=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AttributeEditorToolkit.class
+SHA-256-Digest: 3tLkGgVWwBUrv9KQ/OfhETLE8YuLIPU9ygFBI2e3eMo=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/TaskSelectionDialog$
+ DeselectWorkingSetAction.class
+SHA-256-Digest: oaZUTtcAqT3/8utwCMLctHzQc55oK0io2rQGQHvQNrY=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/OpenTaskAttachmentW
+ ithMenu$RunAssociatedViewer.class
+SHA-256-Digest: xr9HRAhlU5CnU7c06eDo4wUJKIuw09l8K36efzUhaW8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/AttachmentSourcePage
+ $2.class
+SHA-256-Digest: njCrafHQDVIArw+H7ZNrVVtwDDnkYg7sHr1GNPzpH4M=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskRepositoriesView$5
+ .class
+SHA-256-Digest: pqkHlQzJJfrX+FL2OlMCD2XLBpoW8XVWVjY+163xcCc=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/MultiRepositoryAware
+ Wizard.class
+SHA-256-Digest: Xxejlu1mFD4MbcO25A7fpBULpBhBDQUHvUoRDk6gF5s=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListDropAdapter$1.
+ class
+SHA-256-Digest: gvR+pNAF0ovxgzUoH6oA6GO0I3fOGk5FkLtLC9uJEuU=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/CheckboxMultiSelectA
+ ttributeEditor$2.class
+SHA-256-Digest: lPNmT15ISkWAZuY7ejmI7xx+idDUUBnWXNE0JQgrUlo=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/DeleteAction$2$1.cla
+ ss
+SHA-256-Digest: GMoLjaKgdajXPVNBV0/JZSaZ35y2vzcnReOcGIsflQM=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/DeleteTaskEditorActi
+ on.class
+SHA-256-Digest: OT6VEeHdnE7ulvChKioQU3SYyUqPn0oOrJxdjI4HixU=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TaskTrimWidget.class
+SHA-256-Digest: WFHWR1UgMkZNGmwoxT5o+l1lc+s0XOmiG/yP133R37c=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListView$24.class
+SHA-256-Digest: Tz55RwbZHzDLJLwhBijERLA41M0xmEYM29LHAa5/uYw=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/AbstractTaskEditorAt
+ tributeSection$3.class
+SHA-256-Digest: 3v17bxkdhhm1H6UF4u78A8p9VmYYfUBej0xz47GXHjA=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/workingsets/WorkingSetLabelC
+ omparator.class
+SHA-256-Digest: 0ur9DIjfGFvbzCHX3Q0o96ndS0uuLJkN91V2pFxiIFw=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskKeyComparator.clas
+ s
+SHA-256-Digest: 3C4VTM0DXl5MvaBDPsLZlRLhkE75n5SnnWJk+6hKO8c=
+
+Name: org/eclipse/mylyn/tasks/ui/editors/AbstractTaskEditorPage$20.cla
+ ss
+SHA-256-Digest: iYNGK0agK+XbpJI4FsOPQi7OVvpXLPdHvi8vK0eoqMM=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/migrator/ConnectorMigrationW
+ izard$3.class
+SHA-256-Digest: nKdtRsGgFRsK0Ucnmf4hTLR/tZ0P01QhSuPJZ/fWwdc=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskRepositoriesView$2
+ .class
+SHA-256-Digest: KRn6MjpDeCgzw1Y2JW01gkNo0z7InalwWaaYhWoLH2k=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListView$21.class
+SHA-256-Digest: nhz4/Yfx+67LEI3QBORWpYSUZCtyKCydUidri+YQGak=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/context/AbstractTaskAttachme
+ ntCommandHandler.class
+SHA-256-Digest: ISuu1r0rm0Rg7loIepFVXPQQwx8Ezn6o4mWIJB82ZXc=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/context/ClearContextHandler.
+ class
+SHA-256-Digest: 0U0ICX/+O+86Je1aVhcoH5rd0Dj3FzZylJBwlnJ5Qrc=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/WorkweekProgressBar$2.
+ class
+SHA-256-Digest: VeEQ0ji5iXPG2kWzT1ayCqdlZC3K4PVCgywcCaMHSL0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TaskRepositoryAdapterFactory
+ .class
+SHA-256-Digest: twvWr5+ZJhDBgIc+21KilezkFShGX08asXWOthPZZjw=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorCommentPar
+ t$CommentViewer.class
+SHA-256-Digest: fcjCprJ2WF/8Wx14mkiqAHcVuOLaQIetCbtKzhZbIIk=
+
+Name: org/eclipse/mylyn/tasks/ui/ITasksUiConstants.class
+SHA-256-Digest: S5uTVbs5tF+ToJfkCfTTbJEjM3IOvy3fufwPIeWTu+8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/CollapseAllAction.cl
+ ass
+SHA-256-Digest: Wu62BmDG5hjIXlwwXchqRZOUS3g9zp3OWYkcbbp7Xm4=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListToolTip$TaskLi
+ stToolTipListener.class
+SHA-256-Digest: qTuXvXzdWTRAY/Rlo4Ct5GXgTl9pdR0E9a7H9pnSm+M=
+
+Name: org/eclipse/mylyn/tasks/ui/TaskDropListener.class
+SHA-256-Digest: JmG4Yc+HvwZc2oiyKJAC7lfFTFUcOyOyrB+PnJUgDuc=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/AbstractRepositorySettingsPag
+ e$Validator.class
+SHA-256-Digest: o6WtsoYPIYnthF6LxFc5SQ/UMK/QZlfjtZVeNkrowkw=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskRepositoriesView$4
+ .class
+SHA-256-Digest: /WhunaBhDOTuf794cAO8dwVLaZG4XrkYeXK5zn536ec=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/DeactivateAllTasksAc
+ tion.class
+SHA-256-Digest: Vaa1ANwS1070IcB1Z1Otwg7FhLMmVHFId7kBvI54/2Y=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListView$23.class
+SHA-256-Digest: FjatWb0kHdk3Khh0bPCzHwObqIlPH5pbDOImAERYzZ0=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/dialogs/UiLegendControl$5.cl
+ ass
+SHA-256-Digest: IlRkUUGfRy3bdTCthbLd0GVR1u+uk1K7pzu+Nuquyvs=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/ShowTasksConnectorD
+ iscoveryWizardCommandHandler$1.class
+SHA-256-Digest: N8lGZVaKp65xKBwfOSsjVJNyO2dvCqWvYTUNVkO+j0U=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/AbstractRepositoryQueryPage2$
+ 3.class
+SHA-256-Digest: LlS6tkeneWfKdIBH9MiUf0l2br74fkd/N5hxVjSHkr0=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/AbstractRepositorySettingsPag
+ e$23.class
+SHA-256-Digest: viyRnI4FHEHwxO/ZktC4+Nw0Zs5XvTSmNpr9JZxbDd8=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/TaskEditorCommentPar
+ t$CommentViewer$1.class
+SHA-256-Digest: RZgIwub1oJWW5SgpYg+YSAaT//yCj9tk52MTiGoAw3U=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/AttachmentSourcePage
+ $5.class
+SHA-256-Digest: slNklDD34pAopVEZV5TUNTNMqlxH+OwgecjQA91boKw=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TasksUiPlugin$TasksUiStartup
+ .class
+SHA-256-Digest: QKyn80Gt/JASV3LnoIbGCVFIF/8cUoijvWBhTGaetwk=
+
+Name: about.html
+SHA-256-Digest: WwKSWxYNEk9KIw+W3CKPzhz5zCc57YLBxdFaTYEb4VA=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskRepositoriesView$3
+ .class
+SHA-256-Digest: noe4aNpU2eBJ/a5I+f5/+Ml2OswWobwplQp5rlCGu+o=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/migrator/ConnectorMigrationW
+ izard$4.class
+SHA-256-Digest: VV5Xon7mNeUk4JXXu9ckfZcUiJwELO3Vl2gvOKl6Dqk=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/ClearOutgoingAction.
+ class
+SHA-256-Digest: A9f/yyUFrlBsi9+q8Xqi/ScM/zYT5LYLaV44ZmllH4c=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/actions/TaskDeactivateAction
+ .class
+SHA-256-Digest: UbNy7RX7LUlLLTrjBi6XO4nExmw/lrgqUdGdTVyotRs=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/views/TaskListFilteredTree$1
+ 5.class
+SHA-256-Digest: yaVhsiXvwmQcsHDZ6o0Ko/vHomduEZIeBq5BcWvsyZE=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/AbstractTaskEditorAt
+ tributeSection$2.class
+SHA-256-Digest: BHmkCGxDz9Rh7+BeZrbxPbIYkopx7htlJIMm+LnzRbU=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/context/ContextAttachWizardP
+ age.class
+SHA-256-Digest: M9WuNgTiNEijmfqyCTBIMaLgVkqmgQD0sIRnYvRAa3I=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/editors/PlanningPart$7.class
+SHA-256-Digest: yhlsJG44h+oTQAETiarOpNc9wTUtfCEK8UXXVsehfwU=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/TaskAttachmentPage.class
+SHA-256-Digest: tm/HL09itcp6GpiSUkBBZm8ev0IfI0ZgBsMvcYsR29A=
+
+Name: icons/archive/task-items.gif
+SHA-256-Digest: 5RfUdcQGbByXJuiFLOIQTTqil9npPP+qi5WPozjKzqo=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/properties/ProjectTaskReposi
+ toryPage$3.class
+SHA-256-Digest: G9vj6Kn2Y4aut2Ge9IGLcrkSX26KM7YVzljCsIJf4Oo=
+
+Name: icons/ovr16/overlay-local.gif
+SHA-256-Digest: DNbHxLIZFWLckJTuQHTIo7r0SW2vSZyAAypGrOvrW1Y=
+
+Name: org/eclipse/mylyn/tasks/ui/wizards/AbstractRepositorySettingsPag
+ e$24.class
+SHA-256-Digest: xvEymjBZEAjwpfSh668YIOQFxFqkkyI6jn4vMC9zjTM=
+
+Name: icons/etool16/file-delete-line-16x16.png
+SHA-256-Digest: DK5aRhnlctLFDKBD04VYWblsFtw9acbBZC0tQNnix+4=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/TasksUiPlugin$TasksUiInitial
+ izationJob$1.class
+SHA-256-Digest: OOXQ4ubl1USMBy5q3PNG8rKjpArsqfybZOirEa0ua2w=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/wizards/AttachmentSourcePage
+ $4.class
+SHA-256-Digest: Eh0tNmREY827CrZBZV+ckJJpBZdlimzkKoKPG6+mKDQ=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/commands/GoToUnreadTaskHandl
+ er$GoToPreviousUnreadTaskHandler.class
+SHA-256-Digest: DyXDh+ghrKbYsBlM+Z+2ZRVFJaXBGt1jD7b0TL3qR9E=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/dialogs/UiLegendControl$4.cl
+ ass
+SHA-256-Digest: zatE9EJOa+IjBLnS2ZyVKSJ/XvBtU99WErZd1xHXnyw=
+
+Name: org/eclipse/mylyn/internal/tasks/ui/dialogs/TaskListSortDialog$1
+ .class
+SHA-256-Digest: SnR2fjo4A9o+r45QRwymK24JjDINKFa4itN1i9+yTW4=
+

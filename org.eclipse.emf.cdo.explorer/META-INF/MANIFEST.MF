@@ -1,0 +1,428 @@
+Manifest-Version: 1.0
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-SymbolicName: org.eclipse.emf.cdo.explorer;singleton:=true
+Bundle-Activator: org.eclipse.emf.cdo.internal.explorer.bundle.OM$Acti
+ vator
+Require-Bundle: org.eclipse.core.runtime;bundle-version="[3.5.0,4.0.0)
+ ",org.eclipse.core.expressions;bundle-version="[3.4.0,4.0.0)",org.ecl
+ ipse.equinox.security;bundle-version="[1.0.0,2.0.0)",org.eclipse.emf.
+ cdo.net4j;bundle-version="[4.0.0,5.0.0)";visibility:=reexport,org.ecl
+ ipse.emf.cdo.workspace;bundle-version="[4.0.0,5.0.0)",org.eclipse.emf
+ .cdo.server;bundle-version="[4.0.0,5.0.0)",org.eclipse.emf.cdo.server
+ .db;bundle-version="[4.0.0,5.0.0)",org.eclipse.net4j.db.h2;bundle-ver
+ sion="[4.0.0,5.0.0)"
+Bundle-Version: 4.5.100.v20161101-0751
+Export-Package: org.eclipse.emf.cdo.explorer;version="4.5.100",org.ecl
+ ipse.emf.cdo.explorer.checkouts;version="4.5.100",org.eclipse.emf.cdo
+ .explorer.repositories;version="4.5.100",org.eclipse.emf.cdo.internal
+ .explorer;version="4.5.100";x-friends:="org.eclipse.emf.cdo.explorer.
+ ui",org.eclipse.emf.cdo.internal.explorer.bundle;version="4.5.100";x-
+ internal:=true,org.eclipse.emf.cdo.internal.explorer.checkouts;versio
+ n="4.5.100";x-friends:="org.eclipse.emf.cdo.explorer.ui",org.eclipse.
+ emf.cdo.internal.explorer.repositories;version="4.5.100";x-friends:="
+ org.eclipse.emf.cdo.explorer.ui"
+Bundle-ClassPath: .
+Ant-Version: Apache Ant 1.9.6
+Eclipse-BuddyPolicy: registered
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: %providerName
+Bundle-Name: %pluginName
+Created-By: 1.8.0_121-b13 (Oracle Corporation)
+Bundle-ManifestVersion: 2
+Import-Package: org.h2;version="[1.0.0,2.0.0)";resolution:=optional,or
+ g.h2.command;version="[1.0.0,2.0.0)";resolution:=optional,org.h2.expr
+ ession;version="[1.0.0,2.0.0)";resolution:=optional,org.h2.jdbc;versi
+ on="[1.0.0,2.0.0)";resolution:=optional,org.h2.jdbcx;version="[1.0.0,
+ 2.0.0)";resolution:=optional,org.h2.util;version="[1.0.0,2.0.0)";reso
+ lution:=optional,org.h2.value;version="[1.0.0,2.0.0)";resolution:=opt
+ ional
+
+Name: org/eclipse/emf/cdo/internal/explorer/checkouts/OfflineCDOChecko
+ ut.class
+SHA1-Digest: 4ESPSmFu0VJpbQUQRFWwbOHQl/s=
+
+Name: org/eclipse/emf/cdo/internal/explorer/AbstractElement.class
+SHA1-Digest: xZTGQP4DctxK9lev3G4vr/SaM5E=
+
+Name: org/eclipse/emf/cdo/internal/explorer/repositories/CDORepository
+ Properties$6.class
+SHA1-Digest: 2U1SRr+gzhYsxSRMIZkzWFOmKlI=
+
+Name: org/eclipse/emf/cdo/explorer/CDOExplorerElement.class
+SHA1-Digest: xCoavItTFsE0+BgXYLAWsJFEt5g=
+
+Name: org/eclipse/emf/cdo/internal/explorer/checkouts/CDOCheckoutImpl$
+ 1.class
+SHA1-Digest: b9iTv6K/37nsRSTcc6zsQ9y+bDw=
+
+Name: org/eclipse/emf/cdo/internal/explorer/checkouts/CDOCheckoutManag
+ erImpl.class
+SHA1-Digest: flGxZKno9O6+K/7fSvosJ0Oh+s0=
+
+Name: org/eclipse/emf/cdo/internal/explorer/checkouts/CDOCheckoutPrope
+ rties$Tester.class
+SHA1-Digest: ZPYsPEcdPUMq2Q/rL4hnFfA4PLk=
+
+Name: org/eclipse/emf/cdo/internal/explorer/checkouts/CDOCheckoutObjec
+ tProperties$Tester.class
+SHA1-Digest: Cw4UR4RuaUhLqFrXRXzaLduSP6Y=
+
+Name: org/eclipse/emf/cdo/internal/explorer/checkouts/CDOCheckoutPrope
+ rties$13.class
+SHA1-Digest: rm5XgCp/1BPwYk31NU7xkQgs2lQ=
+
+Name: org/eclipse/emf/cdo/internal/explorer/AbstractElement$1.class
+SHA1-Digest: eb+vPLdzZh/0ffHiy1Z6DAU7ptQ=
+
+Name: org/eclipse/emf/cdo/internal/explorer/checkouts/CDOCheckoutViewP
+ rovider.class
+SHA1-Digest: gGxAydO5GTdnsOYtvYhOuafpyEA=
+
+Name: org/eclipse/emf/cdo/internal/explorer/checkouts/CDOCheckoutPrope
+ rties$17.class
+SHA1-Digest: dmSpdogK6p4nC3GxR/ZdHHqJGc4=
+
+Name: org/eclipse/emf/cdo/internal/explorer/checkouts/CDOCheckoutPrope
+ rties$2.class
+SHA1-Digest: qFxv/0qvC9DqeFUKnL8naxMHxAA=
+
+Name: org/eclipse/emf/cdo/explorer/repositories/CDORepositoryManager.c
+ lass
+SHA1-Digest: 5zetouVMdLcgqatJ63Usmn+7PLQ=
+
+Name: org/eclipse/emf/cdo/internal/explorer/checkouts/CDOCheckoutPrope
+ rties$6.class
+SHA1-Digest: VfaAlEisGTXWQnQPgFiRa2a1dvo=
+
+Name: org/eclipse/emf/cdo/internal/explorer/checkouts/CDOCheckoutViewP
+ rovider$CheckoutViewProviderAdapter.class
+SHA1-Digest: WdPMGSoRHSrCV29A4WuGMIxYkNU=
+
+Name: org/eclipse/emf/cdo/explorer/repositories/CDORepositoryElement.c
+ lass
+SHA1-Digest: XberQvIy4GAUUm49ypAmH3F1Qj4=
+
+Name: org/eclipse/emf/cdo/internal/explorer/checkouts/CDOCheckoutPrope
+ rties$20.class
+SHA1-Digest: XFN+6V63gov1cRde/nXvXeyZkKI=
+
+Name: org/eclipse/emf/cdo/internal/explorer/repositories/CDORepository
+ Impl$3.class
+SHA1-Digest: SpT+aiDcMtnKoAm0/qScXDMphtM=
+
+Name: org/eclipse/emf/cdo/internal/explorer/repositories/CDORepository
+ Impl$7.class
+SHA1-Digest: j5wbwfklF3LdNzbe3rrctcrwZmY=
+
+Name: org/eclipse/emf/cdo/internal/explorer/bundle/OM.class
+SHA1-Digest: JiSFL5gn2LcCtXRnQaFkjpETIi4=
+
+Name: org/eclipse/emf/cdo/internal/explorer/checkouts/CDOCheckoutObjec
+ tProperties$1.class
+SHA1-Digest: xEzrWzs85pFjBExhSqXa0fkdT9k=
+
+Name: org/eclipse/emf/cdo/internal/explorer/checkouts/CDOCheckoutObjec
+ tProperties$5.class
+SHA1-Digest: yvAJw4AO+sxlivU5spWfl0lrQkM=
+
+Name: org/eclipse/emf/cdo/internal/explorer/repositories/CDORepository
+ Impl$7$1.class
+SHA1-Digest: V4pSkVy2MtV6sYmwPmAiu4cZTxE=
+
+Name: org/eclipse/emf/cdo/internal/explorer/repositories/CDORepository
+ Properties$3.class
+SHA1-Digest: AVjJ6c78ksbE2viYaeiBv5bf4qw=
+
+Name: org/eclipse/emf/cdo/internal/explorer/repositories/CDORepository
+ Properties$7.class
+SHA1-Digest: jHAsBhhS4kndZ7IM0Deh820hqpA=
+
+Name: org/eclipse/emf/cdo/explorer/repositories/CDORepository.class
+SHA1-Digest: 5ZBNDyv8x7CpkKEkBByUzE/vgy8=
+
+Name: org/eclipse/emf/cdo/internal/explorer/repositories/CDORepository
+ Properties$Tester.class
+SHA1-Digest: VvvG5bLprxw5sJCUi3ZmQixzrRo=
+
+Name: org/eclipse/emf/cdo/internal/explorer/checkouts/CDOCheckoutImpl$
+ 2.class
+SHA1-Digest: kMBT8aw8+/fcSEId4i+TDmF/kgM=
+
+Name: org/eclipse/emf/cdo/explorer/repositories/CDORepositoryManager$R
+ epositoryConnectionEvent.class
+SHA1-Digest: pkD6as1k2Ja4xOQ6UFKvixhvhCY=
+
+Name: org/eclipse/emf/cdo/internal/explorer/checkouts/CDOCheckoutPrope
+ rties$10.class
+SHA1-Digest: NwWj/1vcXrrrheBfHPJxBd4eJgA=
+
+Name: org/eclipse/emf/cdo/internal/explorer/checkouts/OfflineCDOChecko
+ ut$1.class
+SHA1-Digest: ejnVo0NJoD/HgBMIyNgnzQVLeNg=
+
+Name: org/eclipse/emf/cdo/explorer/CDOExplorerUtil.class
+SHA1-Digest: qN8pJWwoQBLbBjwWsuKTrCnjRBM=
+
+Name: org/eclipse/emf/cdo/internal/explorer/checkouts/CDOCheckoutPrope
+ rties$14.class
+SHA1-Digest: vI2KJ6KtK0cCSwO5rpTrN0GxxPM=
+
+Name: org/eclipse/emf/cdo/explorer/repositories/CDORepository$State.cl
+ ass
+SHA1-Digest: 36kGwLvutPksGLWkmNBXE9S5DBw=
+
+Name: org/eclipse/emf/cdo/internal/explorer/checkouts/CDOCheckoutPrope
+ rties$18.class
+SHA1-Digest: g1xrPZDGNUOblerN6bsVtoU+Zng=
+
+Name: org/eclipse/emf/cdo/explorer/checkouts/CDOCheckoutManager$Checko
+ utStateEvent.class
+SHA1-Digest: +8gVMOimDNb41ht3kFdR1Y7zdbc=
+
+Name: org/eclipse/emf/cdo/explorer/repositories/package-info.class
+SHA1-Digest: XiPh9X898McJelqhw7TxsWLUmUc=
+
+Name: org/eclipse/emf/cdo/internal/explorer/checkouts/CDOCheckoutPrope
+ rties$3.class
+SHA1-Digest: W39RLYmmreaqJWuJtpNQ8X0clJ0=
+
+Name: org/eclipse/emf/cdo/explorer/checkouts/CDOCheckout$State.class
+SHA1-Digest: jlh1QNEb8yZvR9tHswAEHGPrnBA=
+
+Name: org/eclipse/emf/cdo/internal/explorer/checkouts/CDOCheckoutPrope
+ rties$7.class
+SHA1-Digest: eg5BdKWpl3G1AXIjldaWWs9XgV8=
+
+Name: org/eclipse/emf/cdo/explorer/CDOExplorerManager$ElementsChangedE
+ vent.class
+SHA1-Digest: Wr0g30cf+qj1P2rmiIcrnUWRjPk=
+
+Name: about.html
+SHA1-Digest: mLkmRLtG3amkcY0I7KSYZX6qKhs=
+
+Name: org/eclipse/emf/cdo/explorer/checkouts/package-info.class
+SHA1-Digest: kBOjOerQpdkuu8kr11Zn2zbsiVY=
+
+Name: org/eclipse/emf/cdo/internal/explorer/repositories/CDORepository
+ Impl$4.class
+SHA1-Digest: ZcTzbQpX6cnhpqHg1ZQHUDQez8U=
+
+Name: org/eclipse/emf/cdo/internal/explorer/CDOExplorerAdapterFactory.
+ class
+SHA1-Digest: FnSC3aqALXKn/JzWGxPs6vlBwSY=
+
+Name: org/eclipse/emf/cdo/explorer/checkouts/CDOCheckoutManager.class
+SHA1-Digest: KNgVwNZXfGtiiSX8xGgELLWXnw0=
+
+Name: org/eclipse/emf/cdo/internal/explorer/repositories/CDORepository
+ ManagerImpl$RepositoryConnectionEventImpl.class
+SHA1-Digest: hGSOt7j/oGDyjadCRNv/Etkmm1s=
+
+Name: org/eclipse/emf/cdo/internal/explorer/repositories/RemoteCDORepo
+ sitory.class
+SHA1-Digest: vMAYDPdqZETGnM1yoQB/T/DELts=
+
+Name: org/eclipse/emf/cdo/internal/explorer/checkouts/CDOCheckoutObjec
+ tProperties$2.class
+SHA1-Digest: wj6vsn/mY+TjztxLauhgKMt7+bY=
+
+Name: org/eclipse/emf/cdo/internal/explorer/checkouts/OfflineCDOChecko
+ ut$RemoteSessionConfiguration.class
+SHA1-Digest: Kz1liMAucHm4CYFcaQ/lMfeZGYM=
+
+Name: org/eclipse/emf/cdo/internal/explorer/checkouts/CDOCheckoutManag
+ erImpl$CheckoutStateEventImpl.class
+SHA1-Digest: pDyTNjDLewc630DS697QxZPJfk0=
+
+Name: org/eclipse/emf/cdo/internal/explorer/repositories/CDORepository
+ Properties$4.class
+SHA1-Digest: pHAieK/e23E+nwex0kvFW8xcgHE=
+
+Name: org/eclipse/emf/cdo/internal/explorer/repositories/CDORepository
+ ManagerImpl.class
+SHA1-Digest: 8poseocauZ246L4wnP+jteC8d5Y=
+
+Name: org/eclipse/emf/cdo/internal/explorer/repositories/CloneCDORepos
+ itory.class
+SHA1-Digest: ZPXU1UvNGc5vuNXnxocHJJ2PaFY=
+
+Name: org/eclipse/emf/cdo/internal/explorer/checkouts/CDOCheckoutPrope
+ rties$11.class
+SHA1-Digest: qpldBiL4QsEkGP6b8kB8LNs4kCQ=
+
+Name: org/eclipse/emf/cdo/internal/explorer/checkouts/CDOCheckoutPrope
+ rties.class
+SHA1-Digest: H34EDlAaGteRemXfGqh0HDFq3j4=
+
+Name: org/eclipse/emf/cdo/internal/explorer/checkouts/OfflineCDOChecko
+ ut$2.class
+SHA1-Digest: 7QwqksU7ntnUJJkz/95WKqnQ/qc=
+
+Name: org/eclipse/emf/cdo/internal/explorer/checkouts/CDOCheckoutPrope
+ rties$15.class
+SHA1-Digest: uNOosqIeTSg3uLjb0z2fvCocuik=
+
+Name: org/eclipse/emf/cdo/explorer/checkouts/CDOCheckout.class
+SHA1-Digest: evKw7f/8XfMyV+xlHSz4BRnMas4=
+
+Name: org/eclipse/emf/cdo/internal/explorer/checkouts/CDOCheckoutPrope
+ rties$19.class
+SHA1-Digest: tw1Pklv/OdWW/eRKP0HEP48jVqE=
+
+Name: org/eclipse/emf/cdo/internal/explorer/repositories/CloneCDORepos
+ itory$1.class
+SHA1-Digest: dw09T5SW+POgpmP/MNfLytEZwyA=
+
+Name: org/eclipse/emf/cdo/internal/explorer/checkouts/CDOCheckoutPrope
+ rties$4.class
+SHA1-Digest: t8/Eikn1TIKzMtIzI5/bsd67pXw=
+
+Name: org/eclipse/emf/cdo/internal/explorer/checkouts/CDOCheckoutViewP
+ rovider$1.class
+SHA1-Digest: a7bJOyy7HpP5jDdzEtmtCO5IVqQ=
+
+Name: org/eclipse/emf/cdo/explorer/repositories/CDORepository$Versioni
+ ngMode.class
+SHA1-Digest: zwbSoCiCiFx1geT+xB9i7G7+xWg=
+
+Name: org/eclipse/emf/cdo/internal/explorer/checkouts/CDOCheckoutPrope
+ rties$8.class
+SHA1-Digest: NJLdGFFUH8OIr6d+W+FILIVQC3w=
+
+Name: META-INF/eclipse.inf
+SHA1-Digest: KyT9FF7C7t86NoBoa2kZT3ZJBfw=
+
+Name: org/eclipse/emf/cdo/internal/explorer/checkouts/CDOCheckoutObjec
+ tProperties.class
+SHA1-Digest: PLOouBPoUmXGL6gvQiPEKICgEZI=
+
+Name: org/eclipse/emf/cdo/internal/explorer/repositories/CDORepository
+ Impl$1.class
+SHA1-Digest: GL0nzA2DopL8Ocmy/MEtxlhTM5U=
+
+Name: org/eclipse/emf/cdo/internal/explorer/repositories/CDORepository
+ Impl$5.class
+SHA1-Digest: KyfYwQ3M+mPR9gETpZd76tsxPhk=
+
+Name: .options
+SHA1-Digest: Kg/cSXfSzwMr1rHueC1+0+AA+R4=
+
+Name: org/eclipse/emf/cdo/internal/explorer/repositories/CDORepository
+ Properties.class
+SHA1-Digest: nB8I2Nmswov0bNNslCjUCxRONvY=
+
+Name: org/eclipse/emf/cdo/internal/explorer/checkouts/OnlineCDOCheckou
+ t$1.class
+SHA1-Digest: 76SZN7V3ujhphdpVAreMoyOmLnc=
+
+Name: org/eclipse/emf/cdo/internal/explorer/checkouts/CDOCheckoutObjec
+ tProperties$3.class
+SHA1-Digest: FiWQf4nfGAnTNnWWAPbshFwlm80=
+
+Name: org/eclipse/emf/cdo/internal/explorer/repositories/LocalCDORepos
+ itory.class
+SHA1-Digest: AiCmAeRnuqOdUNq1Q01fK8sN2TU=
+
+Name: org/eclipse/emf/cdo/internal/explorer/repositories/CDORepository
+ Properties$1.class
+SHA1-Digest: 9O/XdE6Yc8L3Z1EFNtWXGZB4/tM=
+
+Name: org/eclipse/emf/cdo/explorer/checkouts/CDOCheckout$ObjectType.cl
+ ass
+SHA1-Digest: Foycw2DLOQaJ1RSgYKuqeWjhDUk=
+
+Name: org/eclipse/emf/cdo/internal/explorer/checkouts/CDOCheckoutObjec
+ tProperties$ElementTester.class
+SHA1-Digest: itgVg3fm4jD6zYqiFmDIxZM1EYo=
+
+Name: org/eclipse/emf/cdo/internal/explorer/repositories/CDORepository
+ Properties$5.class
+SHA1-Digest: LZiYlFYS7bzlTiDtzdVwpmTxJQk=
+
+Name: org/eclipse/emf/cdo/internal/explorer/bundle/OM$Activator.class
+SHA1-Digest: sLmag2EGbqawUlZcnvkB5bm7pqU=
+
+Name: org/eclipse/emf/cdo/explorer/repositories/CDORepository$IDGenera
+ tion.class
+SHA1-Digest: pre4bBsjPc7SH8YeTj9Ib5vi2Po=
+
+Name: org/eclipse/emf/cdo/explorer/package-info.class
+SHA1-Digest: rGLGPGVwRPS5xnmxhOFyOmQ5ab4=
+
+Name: org/eclipse/emf/cdo/internal/explorer/checkouts/CDOCheckoutPrope
+ rties$12.class
+SHA1-Digest: 7HPocqroXvlum4VjTHf59ixK1E8=
+
+Name: plugin.properties
+SHA1-Digest: SyZyur/HDjR4OkDrWIopTagPEGE=
+
+Name: org/eclipse/emf/cdo/internal/explorer/checkouts/CDOCheckoutPrope
+ rties$16.class
+SHA1-Digest: FQ8Hsr21TPa35Qrhbip4XWit81Y=
+
+Name: org/eclipse/emf/cdo/internal/explorer/checkouts/CDOCheckoutPrope
+ rties$1.class
+SHA1-Digest: rn2z8cR/Rzxp9iZ4izF7LNHGPw4=
+
+Name: plugin.xml
+SHA1-Digest: IkFr1AO8+E2Zdp3iLAiazT/5AGY=
+
+Name: org/eclipse/emf/cdo/internal/explorer/checkouts/CDOCheckoutPrope
+ rties$5.class
+SHA1-Digest: hNc4WbpA0v8hsON/rFFtUBb8KoY=
+
+Name: org/eclipse/emf/cdo/internal/explorer/repositories/CDORepository
+ Impl.class
+SHA1-Digest: LYpdfdnjVYdvAgyikkCtwV8NbJs=
+
+Name: org/eclipse/emf/cdo/internal/explorer/checkouts/CDOCheckoutPrope
+ rties$9.class
+SHA1-Digest: B9tNPq8SDWml0D5JhKlXf/950Hk=
+
+Name: org/eclipse/emf/cdo/internal/explorer/checkouts/OnlineCDOCheckou
+ t.class
+SHA1-Digest: kj8ItPV1cM5MLAVV/lv9OOWVO4A=
+
+Name: org/eclipse/emf/cdo/internal/explorer/AbstractManager$ElementsCh
+ angedImpl.class
+SHA1-Digest: GAIvn26JpTa74Bb+GdfFTU8uogo=
+
+Name: org/eclipse/emf/cdo/internal/explorer/checkouts/CDOCheckoutViewP
+ rovider$CheckoutViewProviderAdapter$1.class
+SHA1-Digest: q/cbqj+w/BAYWPXpX6hxiDkFrSE=
+
+Name: org/eclipse/emf/cdo/internal/explorer/repositories/CDORepository
+ Impl$2.class
+SHA1-Digest: ml+Mw7K/cxrQUtqyI6nv6e3uu9Q=
+
+Name: org/eclipse/emf/cdo/internal/explorer/repositories/CDORepository
+ Impl$6.class
+SHA1-Digest: j9XvHBKfvqKTnUijrTkeVrasq1M=
+
+Name: org/eclipse/emf/cdo/internal/explorer/AbstractManager.class
+SHA1-Digest: FSInNbjq+7t5OAP9DZTPV2srC3o=
+
+Name: org/eclipse/emf/cdo/explorer/CDOExplorerManager.class
+SHA1-Digest: Jj2X35wQxHAxRO8d/M1xltydJpU=
+
+Name: org/eclipse/emf/cdo/internal/explorer/checkouts/CDOCheckoutImpl.
+ class
+SHA1-Digest: m4cIP9y3EmJ88STD0eh1hsu9l+4=
+
+Name: org/eclipse/emf/cdo/internal/explorer/checkouts/CDOCheckoutObjec
+ tProperties$4.class
+SHA1-Digest: SqbnhhzViAhF/WRO5CGfWNtMSWo=
+
+Name: org/eclipse/emf/cdo/explorer/CDOExplorerManager$ElementsChangedE
+ vent$StructuralImpact.class
+SHA1-Digest: hZ06xrAx6FcUfD/rtTcQ1vRsQ3U=
+
+Name: org/eclipse/emf/cdo/internal/explorer/CDOExplorerAdapterFactory$
+ 1.class
+SHA1-Digest: efie8Zmwd1H2xt0YLN9M6qASEbs=
+
+Name: org/eclipse/emf/cdo/internal/explorer/repositories/CDORepository
+ Properties$2.class
+SHA1-Digest: FfAWxemm9GSITTYOgoCU0gjU7a0=
+

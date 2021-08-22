@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (c) 2007, 2008 Sonatype, Inc.
+  All rights reserved. This program and the accompanying materials
+  are made available under the terms of the Eclipse Public License v1.0
+  which accompanies this distribution, and is available at
+  http://www.eclipse.org/legal/epl-v10.html
+-->
+<?eclipse version="3.2"?>
+<plugin>
+
+  <extension point="org.eclipse.ui.menus">
+       <menuContribution
+            locationURI="popup:org.eclipse.jdt.ui.refactoring.menu?after=additions">
+        <command
+            commandId="org.eclipse.m2e.editor.RenameArtifactAction"
+            icon="icons/m2.gif"
+            label="%action.rename.label"
+            id="org.eclipse.m2e.editor.RenameArtifactAction">
+            <visibleWhen
+                  checkEnabled="false">
+               <with variable="selection">
+                    <count value="1"/>
+             		<iterate>
+             			<or>
+             			  <adapt type="org.eclipse.core.resources.IProject">
+             				<test property="org.eclipse.core.resources.projectNature" value="org.eclipse.m2e.core.maven2Nature"/>
+                		  </adapt>
+                		  <adapt type="org.eclipse.core.resources.IResource">
+             				<test property="org.eclipse.core.resources.name" value="pom.xml"/>
+                		  </adapt>
+                		</or>
+             		</iterate>
+           		</with>
+            </visibleWhen>
+         </command>
+   		</menuContribution>
+  </extension> 
+  
+  <extension
+		point="org.eclipse.ui.commands">
+	<command
+			id="org.eclipse.m2e.editor.RenameArtifactAction"
+			name="%action.rename.label"
+			defaultHandler="org.eclipse.m2e.refactoring.rename.RenameArtifactHandler"/>	
+  </extension> 
+   
+  <extension point="org.eclipse.ui.popupMenus">
+     
+     <!-- actions in pom editor -->
+     <objectContribution
+           id="org.eclipse.m2e.refactoring.exclude.artifactContributor"
+           objectClass="org.apache.maven.artifact.Artifact"
+           adaptable="true">
+        <action id="org.eclipse.m2e.projectMenu.action"
+              class="org.eclipse.m2e.refactoring.exclude.DependencyExcludeAction"
+              enablesFor="+"
+              icon="icons/exclude.gif"
+              label="%action.exclude1.label"
+              menubarPath="additions"/>
+     </objectContribution>
+
+     <objectContribution
+           id="org.eclipse.m2e.refactoring.exclude.dependencyContributorAether"
+           objectClass="org.eclipse.aether.graph.DependencyNode"
+           adaptable="true">
+        <action id="org.eclipse.m2e.projectMenu.action"
+            class="org.eclipse.m2e.refactoring.exclude.DependencyExcludeAction"
+            enablesFor="+"
+            icon="icons/exclude.gif"
+            label="%action.exclude3.label"
+            menubarPath="additions"/>
+     </objectContribution>
+
+     <objectContribution
+           id="org.eclipse.m2e.refactoring.set.dependencyContributorAether"
+           objectClass="org.eclipse.aether.graph.DependencyNode"
+           adaptable="true">
+        <action id="org.eclipse.m2e.projectMenu.depSetAction"
+            class="org.eclipse.m2e.refactoring.dependencyset.DependencySetAction"
+            enablesFor="+"
+            icon="icons/exclude.gif"
+            label="Lock Transitive Dependency Version..."
+            menubarPath="additions"/>
+         <enablement>
+           	<test property="org.eclipse.m2e.isTransitiveDependencyTreeNode"/>
+         </enablement>
+            
+     </objectContribution>
+     
+     
+       <objectContribution id="org.eclipse.m2e.refactoring.DependencyExclude"
+                          objectClass="org.eclipse.jdt.core.IPackageFragmentRoot"
+                          adaptable="true">
+         <action id="org.eclipse.m2e.refactoring.DependencyExclude"
+                 class="org.eclipse.m2e.refactoring.exclude.DependencyExcludeAction"
+                 label="%action.exclude3.label"
+                 icon="icons/exclude.gif"
+                 style="push"
+                 menubarPath="org.eclipse.m2e.classpathMenu/open"
+                 enablesFor="+"/>
+         <enablement>
+           	<test property="org.eclipse.m2e.hasArtifactKey"/>
+         </enablement>
+      </objectContribution>
+      <objectContribution id="org.eclipse.m2e.refactoring.DependencyExclude2"
+           objectClass="org.eclipse.jdt.internal.ui.packageview.ClassPathContainer$RequiredProjectWrapper"
+                          adaptable="true">
+         <action id="org.eclipse.m2e.refactoring.DependencyExclude"
+                 class="org.eclipse.m2e.refactoring.exclude.DependencyExcludeAction"
+                 label="%action.exclude3.label"
+                 icon="icons/exclude.gif"
+                 style="push"
+                 menubarPath="org.eclipse.m2e.classpathMenuWrapper/open"
+                 enablesFor="+"/>
+         <enablement>
+           	<test property="org.eclipse.m2e.hasArtifactKey"/>
+         </enablement>
+      </objectContribution> 
+       
+  </extension>
+  
+</plugin>

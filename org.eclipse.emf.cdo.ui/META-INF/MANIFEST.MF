@@ -1,0 +1,1343 @@
+Manifest-Version: 1.0
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-SymbolicName: org.eclipse.emf.cdo.ui;singleton:=true
+Bundle-Activator: org.eclipse.emf.cdo.internal.ui.bundle.OM$Activator
+Require-Bundle: org.eclipse.core.expressions;bundle-version="[3.4.0,4.
+ 0.0)";resolution:=optional;visibility:=reexport,org.eclipse.core.reso
+ urces;bundle-version="[3.5.0,4.0.0)";resolution:=optional,org.eclipse
+ .ui;bundle-version="[3.5.0,4.0.0)";visibility:=reexport,org.eclipse.u
+ i.workbench.texteditor;bundle-version="[3.5.0,4.0.0)";resolution:=opt
+ ional,org.eclipse.jface.text;bundle-version="[3.5.0,4.0.0)";resolutio
+ n:=optional,org.eclipse.emf.edit.ui;bundle-version="[2.5.0,3.0.0)";vi
+ sibility:=reexport,org.eclipse.emf.ecore.edit;bundle-version="[2.5.0,
+ 3.0.0)";visibility:=reexport,org.eclipse.net4j;bundle-version="[4.0.0
+ ,5.0.0)";visibility:=reexport,org.eclipse.net4j.util.ui;bundle-versio
+ n="[3.0.0,4.0.0)";visibility:=reexport,org.eclipse.net4j.ui.shared;bu
+ ndle-version="[4.0.0,5.0.0)",org.eclipse.emf.cdo;bundle-version="[4.0
+ .0,5.0.0)";visibility:=reexport,org.eclipse.emf.cdo.edit;bundle-versi
+ on="[4.0.0,5.0.0)";visibility:=reexport,org.eclipse.emf.cdo.transfer.
+ ui;bundle-version="[4.2.0,5.0.0)";visibility:=reexport,org.eclipse.em
+ f.cdo.transfer.repository;bundle-version="[4.2.0,5.0.0)";visibility:=
+ reexport,org.eclipse.emf.cdo.ui.shared;bundle-version="[4.0.0,5.0.0)"
+ ,org.eclipse.emf.ecp.edit;bundle-version="[1.5.0,2.0.0)";resolution:=
+ optional,org.eclipse.emf.ecp.edit.swt;bundle-version="[1.5.0,2.0.0)";
+ resolution:=optional,org.eclipse.emf.ecp.ui.view.swt;bundle-version="
+ [1.5.0,2.0.0)";resolution:=optional
+Export-Package: org.eclipse.emf.cdo.internal.ui;version="4.6.0"; x-fri
+ ends:="org.eclipse.emf.cdo.ui.ide,  org.eclipse.emf.cdo.ui.location, 
+  org.eclipse.emf.cdo.tests.ui,  org.eclipse.emf.cdo.dawn.ui,  org.ecl
+ ipse.emf.cdo.explorer,  org.eclipse.emf.cdo.explorer.ui,  org.eclipse
+ .emf.cdo.ui.team,  org.eclipse.emf.cdo.ui.compare",org.eclipse.emf.cd
+ o.internal.ui.actions;version="4.6.0"; x-friends:="org.eclipse.emf.cd
+ o.ui.ide,  org.eclipse.emf.cdo.ui.location,  org.eclipse.emf.cdo.test
+ s.ui,  org.eclipse.emf.cdo.dawn.ui,  org.eclipse.emf.cdo.explorer,  o
+ rg.eclipse.emf.cdo.explorer.ui,  org.eclipse.emf.cdo.ui.team,  org.ec
+ lipse.emf.cdo.ui.compare",org.eclipse.emf.cdo.internal.ui.handlers;ve
+ rsion="4.6.0"; x-friends:="org.eclipse.emf.cdo.ui.ide,  org.eclipse.e
+ mf.cdo.ui.location,  org.eclipse.emf.cdo.tests.ui,  org.eclipse.emf.c
+ do.dawn.ui,  org.eclipse.emf.cdo.explorer,  org.eclipse.emf.cdo.explo
+ rer.ui,  org.eclipse.emf.cdo.ui.team,  org.eclipse.emf.cdo.ui.compare
+ ",org.eclipse.emf.cdo.internal.ui.actions.delegates;version="4.6.0";x
+ -internal:=true,org.eclipse.emf.cdo.internal.ui.bundle;version="4.6.0
+ ";x-internal:=true,org.eclipse.emf.cdo.internal.ui.dialogs;version="4
+ .6.0"; x-friends:="org.eclipse.emf.cdo.ui.ide,  org.eclipse.emf.cdo.u
+ i.location,  org.eclipse.emf.cdo.tests.ui,  org.eclipse.emf.cdo.dawn.
+ ui,  org.eclipse.emf.cdo.explorer,  org.eclipse.emf.cdo.explorer.ui, 
+  org.eclipse.emf.cdo.ui.team,  org.eclipse.emf.cdo.ui.compare",org.ec
+ lipse.emf.cdo.internal.ui.dnd;version="4.6.0"; x-friends:="org.eclips
+ e.emf.cdo.ui.ide,  org.eclipse.emf.cdo.ui.location,  org.eclipse.emf.
+ cdo.tests.ui,  org.eclipse.emf.cdo.dawn.ui,  org.eclipse.emf.cdo.expl
+ orer,  org.eclipse.emf.cdo.explorer.ui,  org.eclipse.emf.cdo.ui.team,
+   org.eclipse.emf.cdo.ui.compare",org.eclipse.emf.cdo.internal.ui.edi
+ tor;version="4.6.0"; x-friends:="org.eclipse.emf.cdo.ui.ide,  org.ecl
+ ipse.emf.cdo.ui.location,  org.eclipse.emf.cdo.tests.ui,  org.eclipse
+ .emf.cdo.dawn.ui,  org.eclipse.emf.cdo.explorer,  org.eclipse.emf.cdo
+ .explorer.ui,  org.eclipse.emf.cdo.ui.team,  org.eclipse.emf.cdo.ui.c
+ ompare",org.eclipse.emf.cdo.internal.ui.filters;version="4.6.0"; x-fr
+ iends:="org.eclipse.emf.cdo.ui.ide,  org.eclipse.emf.cdo.ui.location,
+   org.eclipse.emf.cdo.tests.ui,  org.eclipse.emf.cdo.dawn.ui,  org.ec
+ lipse.emf.cdo.explorer,  org.eclipse.emf.cdo.explorer.ui,  org.eclips
+ e.emf.cdo.ui.team,  org.eclipse.emf.cdo.ui.compare",org.eclipse.emf.c
+ do.internal.ui.history;version="4.6.0"; x-friends:="org.eclipse.emf.c
+ do.ui.ide,  org.eclipse.emf.cdo.ui.location,  org.eclipse.emf.cdo.tes
+ ts.ui,  org.eclipse.emf.cdo.dawn.ui,  org.eclipse.emf.cdo.explorer,  
+ org.eclipse.emf.cdo.explorer.ui,  org.eclipse.emf.cdo.ui.team,  org.e
+ clipse.emf.cdo.ui.compare",org.eclipse.emf.cdo.internal.ui.messages;v
+ ersion="4.6.0"; x-friends:="org.eclipse.emf.cdo.ui.ide,  org.eclipse.
+ emf.cdo.ui.location,  org.eclipse.emf.cdo.tests.ui,  org.eclipse.emf.
+ cdo.dawn.ui,  org.eclipse.emf.cdo.explorer,  org.eclipse.emf.cdo.expl
+ orer.ui,  org.eclipse.emf.cdo.ui.team,  org.eclipse.emf.cdo.ui.compar
+ e",org.eclipse.emf.cdo.internal.ui.perspectives;version="4.6.0"; x-fr
+ iends:="org.eclipse.emf.cdo.ui.ide,  org.eclipse.emf.cdo.ui.location,
+   org.eclipse.emf.cdo.tests.ui,  org.eclipse.emf.cdo.dawn.ui,  org.ec
+ lipse.emf.cdo.explorer,  org.eclipse.emf.cdo.explorer.ui,  org.eclips
+ e.emf.cdo.ui.team,  org.eclipse.emf.cdo.ui.compare",org.eclipse.emf.c
+ do.internal.ui.preferences;version="4.6.0"; x-friends:="org.eclipse.e
+ mf.cdo.ui.ide,  org.eclipse.emf.cdo.ui.location,  org.eclipse.emf.cdo
+ .tests.ui,  org.eclipse.emf.cdo.dawn.ui,  org.eclipse.emf.cdo.explore
+ r,  org.eclipse.emf.cdo.explorer.ui,  org.eclipse.emf.cdo.ui.team,  o
+ rg.eclipse.emf.cdo.ui.compare",org.eclipse.emf.cdo.internal.ui.transf
+ er;version="4.6.0"; x-friends:="org.eclipse.emf.cdo.ui.ide,  org.ecli
+ pse.emf.cdo.ui.location,  org.eclipse.emf.cdo.tests.ui,  org.eclipse.
+ emf.cdo.dawn.ui,  org.eclipse.emf.cdo.explorer,  org.eclipse.emf.cdo.
+ explorer.ui,  org.eclipse.emf.cdo.ui.team,  org.eclipse.emf.cdo.ui.co
+ mpare",org.eclipse.emf.cdo.internal.ui.views;version="4.6.0"; x-frien
+ ds:="org.eclipse.emf.cdo.ui.ide,  org.eclipse.emf.cdo.ui.location,  o
+ rg.eclipse.emf.cdo.tests.ui,  org.eclipse.emf.cdo.dawn.ui,  org.eclip
+ se.emf.cdo.explorer,  org.eclipse.emf.cdo.explorer.ui,  org.eclipse.e
+ mf.cdo.ui.team,  org.eclipse.emf.cdo.ui.compare",org.eclipse.emf.cdo.
+ ui;version="4.6.0",org.eclipse.emf.cdo.ui.widgets;version="4.6.0"
+Bundle-Version: 4.6.0.v20170121-0907
+Bundle-ClassPath: .
+Ant-Version: Apache Ant 1.9.6
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: %providerName
+Bundle-Name: %pluginName
+Created-By: 1.8.0_121-b13 (Oracle Corporation)
+Bundle-ManifestVersion: 2
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/CDOActionBarContributor.c
+ lass
+SHA1-Digest: yX0JCrkZpUQoi3gxjOO9GxKKkmQ=
+
+Name: org/eclipse/emf/cdo/internal/ui/views/CDOWatchListView$Transacti
+ onHandler.class
+SHA1-Digest: phgqVYVXFMwgIEobots7CFDCcAU=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/CDOEditor$22.class
+SHA1-Digest: gwSXM0De5YJd+YGuJdNkq09+F/s=
+
+Name: icons/full/elcl16/unlock.gif
+SHA1-Digest: JmZSmK8ctAYZ0DOL0aBsuIO1iKc=
+
+Name: org/eclipse/emf/cdo/internal/ui/history/Commit.class
+SHA1-Digest: Kh3EPQyo8HJCOxTKSb32w6DhlPw=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/ChangePasswordAction.cla
+ ss
+SHA1-Digest: 6QOC1T2bzGGe3BhxlfoYgilsFZU=
+
+Name: org/eclipse/emf/cdo/ui/widgets/TimeSlider.class
+SHA1-Digest: EsLH5Un1v5VuxP86EH7F/V05TNE=
+
+Name: org/eclipse/emf/cdo/internal/ui/dialogs/PackageRegistryDialog$1.
+ class
+SHA1-Digest: KCDCXDhKlQp9zRPZioHQeGDfzN8=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/CDOActionBarContributor$2
+ .class
+SHA1-Digest: O8gldFgwSoTTFu2/3BhlJd3l4FU=
+
+Name: org/eclipse/emf/cdo/internal/ui/dialogs/OpenAuditDialog.class
+SHA1-Digest: sHz0PatNac2/21umzbrPewrgHI4=
+
+Name: org/eclipse/emf/cdo/internal/ui/history/Segment.class
+SHA1-Digest: LOWTc8pPqZIeIeIWRQl6ziWhCKU=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/OpenDurableViewAction.cl
+ ass
+SHA1-Digest: PPpchc1/bviMXRbVzVhnYVPo4og=
+
+Name: org/eclipse/emf/cdo/internal/ui/dialogs/ImportResourceDialog.cla
+ ss
+SHA1-Digest: HZtHIm8Gx/QBUZEWcqEqoAscSUQ=
+
+Name: org/eclipse/emf/cdo/internal/ui/CDOPropertyAdapterFactory.class
+SHA1-Digest: ThjzxxzKulto96KoA/2hvQZJl/s=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/RegisterSinglePackageAct
+ ion.class
+SHA1-Digest: 7/gUfr40QKvcq3c23HTpTPsRVKo=
+
+Name: org/eclipse/emf/cdo/ui/CDOEditorOpener$Registry$1.class
+SHA1-Digest: SxmnX90QrHpD0QznKOtQhXIQ1JM=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/EditingDomainAction.clas
+ s
+SHA1-Digest: jAzGIcZr66UMIwtooyzT/XtKoQU=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/RegisterPackagesAction$1
+ .class
+SHA1-Digest: 94cNeUh98hs4hpaoezOhxo72sWE=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/CDOEditor$1.class
+SHA1-Digest: aoJBASca7K1XHdtb0MSZaFHkjpU=
+
+Name: org/eclipse/emf/cdo/ui/widgets/SessionComposite$2.class
+SHA1-Digest: fK3DBTaLCjwMoTrwbKI/uhxOXVI=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/delegates/NewTextResourc
+ eActionDelegate.class
+SHA1-Digest: W2bU0RDCBWfjDWTFuFLsvTtpf6Y=
+
+Name: org/eclipse/emf/cdo/internal/ui/messages/messages.properties
+SHA1-Digest: nbDlJd5pS6DFr3HXuW9ONfV2mj8=
+
+Name: org/eclipse/emf/cdo/ui/CDOEventHandler$3.class
+SHA1-Digest: qHSW9Ftunq3R2seev8y+EXA7vcI=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/CDOEditor$9.class
+SHA1-Digest: CHAfFxQ26t0T36uoEABFtF/5x98=
+
+Name: org/eclipse/emf/cdo/internal/ui/filters/CDOStateFilter.class
+SHA1-Digest: KqEFnLXE4vw4drLhk7DF+SQamGI=
+
+Name: org/eclipse/emf/cdo/internal/ui/CDOPropertyAdapterFactory$2.clas
+ s
+SHA1-Digest: rHi+kwCTCZrfPLbQ/wA2wxuNs6E=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/CDOEditor$EditingDomainPr
+ oviderAdapter.class
+SHA1-Digest: XSlvqKho6r/43l73pub/F1ybsYw=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/MergeConflictsAction.cla
+ ss
+SHA1-Digest: m6mGNE0aPjJUjrTxQE/GWRSBT9E=
+
+Name: org/eclipse/emf/cdo/ui/widgets/CommitHistoryComposite$LabelProvi
+ der.class
+SHA1-Digest: bNE6y5Lli/sp/SkAwnR6agmIHVU=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/CDOEditor$16.class
+SHA1-Digest: bmdLxvqK/I24g2kS7cz1M8S42A8=
+
+Name: org/eclipse/emf/cdo/ui/CDOEventHandler$4$1.class
+SHA1-Digest: kEBm//WeRgReSUAo3TUxb15NZio=
+
+Name: org/eclipse/emf/cdo/ui/CDOEditorInput.class
+SHA1-Digest: a/UJ334ViQldco6/S7DqTs7F6S8=
+
+Name: org/eclipse/emf/cdo/internal/ui/views/CDOWatchListView$CDOSubscr
+ iptionViewLabelProvider.class
+SHA1-Digest: dZ02lUWHFwC3fsv6AaffQUTsSoM=
+
+Name: icons/full/elcl16/lock.gif
+SHA1-Digest: qzJIh7A/RPhWscguSed2wle5IYA=
+
+Name: org/eclipse/emf/cdo/internal/ui/dialogs/SelectPackageDialog$Pack
+ ageContentProvider.class
+SHA1-Digest: 6WQ+UiRfcG3OLAP3sUHiFnHejPI=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/EditorEditorAdvisor$Persp
+ ective.class
+SHA1-Digest: wsmsvBwMikKx8eRoL0b2ArYEm0c=
+
+Name: org/eclipse/emf/cdo/internal/ui/history/Branch.class
+SHA1-Digest: 7iChLyAm6bclmXd+95Te80JsuY4=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/DisableViewDurabilityAct
+ ion.class
+SHA1-Digest: Pprvlydti4buKYZShzY4xN2N/+I=
+
+Name: org/eclipse/emf/cdo/internal/ui/dialogs/AbstractBranchPointDialo
+ g$1.class
+SHA1-Digest: UW82eiI64fhFL6brk68UVgmbU48=
+
+Name: org/eclipse/emf/cdo/ui/widgets/CommitHistoryComposite$4.class
+SHA1-Digest: IJ/e2b/it/QvHV5d0NCMKbs+cHE=
+
+Name: org/eclipse/emf/cdo/internal/ui/dialogs/SelectClassDialog.class
+SHA1-Digest: O2Blvu4VuoQS4e9L1v0EvNikUSk=
+
+Name: org/eclipse/emf/cdo/internal/ui/handlers/CreateBranchHandler.cla
+ ss
+SHA1-Digest: Q7JYu1bnxntdsih9PIwDd1LYeqE=
+
+Name: org/eclipse/emf/cdo/internal/ui/SupportPropertyTester.class
+SHA1-Digest: sD/gGpUj3RZFVc3WUcJI91QySBA=
+
+Name: org/eclipse/emf/cdo/ui/CDOInteractiveExceptionHandler$ExceptionD
+ ialog.class
+SHA1-Digest: TyFw4DR9BnJWGtfYd9L472cPlCU=
+
+Name: org/eclipse/emf/cdo/internal/ui/CDOEditorInputImpl.class
+SHA1-Digest: kHUlANnxs0WrE8Hb+1VLDfp8pac=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/CommitTransactionAction.
+ class
+SHA1-Digest: znm9HAAQuQNYISi3RquPZtpTd2s=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/EditorEditorAdvisor$Appli
+ cation.class
+SHA1-Digest: zWdjaWiQIvDl89Dn7rTgyZ4qSy0=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/NewResourceNodeAction$Bi
+ nary.class
+SHA1-Digest: m5xv4IYoTBDCC3aI2ONHjmYc6CI=
+
+Name: model/DONT_GENERATE_MODEL.txt
+SHA1-Digest: V2MTb11d0qeHnIUaR2asvoz2Jdo=
+
+Name: org/eclipse/emf/cdo/ui/OverlayImage.class
+SHA1-Digest: zwSWLiOgEV/TyBHiGX86Smq2/EE=
+
+Name: org/eclipse/emf/cdo/internal/ui/views/CDOWatchListView$2.class
+SHA1-Digest: nlnG897FnOfMX4vaGO9CGpaK/Ec=
+
+Name: org/eclipse/emf/cdo/internal/ui/dialogs/SelectClassDialog$4.clas
+ s
+SHA1-Digest: MfP1tGpA350igUGeWHP8dP1zy6s=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/CDOEditor$27.class
+SHA1-Digest: f0S1RrIdQwumDu/FJh5f+qtMuTk=
+
+Name: org/eclipse/emf/cdo/ui/Support$3.class
+SHA1-Digest: z4Anz/JQWs8UzSiOeVkDw20JC1w=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/CDOEditor$NewRootMenuPopu
+ lator$2.class
+SHA1-Digest: 0Rb1UJXtrc/8WsfVuH78O1jJ5pU=
+
+Name: org/eclipse/emf/cdo/ui/CDOTreeExpansionAgent$2.class
+SHA1-Digest: fgSSnW0ZLNsNlP4rZXxZ8OqLSec=
+
+Name: model/editor.genmodel
+SHA1-Digest: L6P2/RT1D76gN048Kpb579dWUBI=
+
+Name: icons/full/obj16/branch.gif
+SHA1-Digest: vpZNM/olvo86A/PfrqtUlaV4KWo=
+
+Name: org/eclipse/emf/cdo/internal/ui/transfer/RepositoryPluginDropAda
+ pter.class
+SHA1-Digest: 9/M0rGyjfzNJFYAk5ORIISyhsfM=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/RegisterFilesystemPackag
+ esAction.class
+SHA1-Digest: V4NibsvOIVd/ozvk3PdnjNmJ9wU=
+
+Name: org/eclipse/emf/cdo/ui/CDOInteractiveExceptionHandler$1.class
+SHA1-Digest: AG/Ewklj/8uS/RxNuf0yPREtcYw=
+
+Name: org/eclipse/emf/cdo/ui/widgets/SelectTimeStampComposite$4.class
+SHA1-Digest: IetEZfeNevv36qfXtxZQhK8yvoQ=
+
+Name: org/eclipse/emf/cdo/ui/CDOEditorUtil$1.class
+SHA1-Digest: SCVjxied6JPSpedSq2JroCqFrP0=
+
+Name: org/eclipse/emf/cdo/internal/ui/dialogs/PackageRegistryDialog$2$
+ 1.class
+SHA1-Digest: 3U9ZJj81OH7bG5AgJBvEmOOveRQ=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/CDOEditor$6.class
+SHA1-Digest: +BYp1Su6GKXAaYlz7JaPpbFXgDo=
+
+Name: org/eclipse/emf/cdo/ui/CDOLabelProvider$1.class
+SHA1-Digest: 8kusz0Dzr74+rArTK6rti68LK6s=
+
+Name: org/eclipse/emf/cdo/ui/widgets/CommitHistoryComposite$Input$Ille
+ galInputException.class
+SHA1-Digest: rBcqrF06xiVxqw4/r73T/C7i0jQ=
+
+Name: org/eclipse/emf/cdo/internal/ui/InteractiveConflictHandlerSelect
+ or$1$1.class
+SHA1-Digest: gAJGzgk7xar8z/bR9G4t4VuG0BA=
+
+Name: org/eclipse/emf/cdo/internal/ui/views/CDOWatchListView$WatchedOb
+ jectsDataRegistry.class
+SHA1-Digest: HFwZsD5vaIAgyi2xmchSYVEavlg=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/CDOEditor$13.class
+SHA1-Digest: dK5pe2fcWg4UWXiAjnKEMQKSWzI=
+
+Name: org/eclipse/emf/cdo/ui/widgets/ComposeBranchPointComposite$5.cla
+ ss
+SHA1-Digest: iu26KUzrC+4YpGLcHuCWj5NOtfo=
+
+Name: org/eclipse/emf/cdo/ui/CDOItemProvider$1.class
+SHA1-Digest: SXtUkBbQMxEe+eulUcaiUY/7weI=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/ImportResourceAction.cla
+ ss
+SHA1-Digest: U0oSRAbW/bFNBHVXa+P2Bc/1YeA=
+
+Name: org/eclipse/emf/cdo/internal/ui/dialogs/ExportResourceDialog$1.c
+ lass
+SHA1-Digest: fkp3z57MSi1Ho7NTOSeAz8xMfVA=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/CDOEditor$ReverseAdapterF
+ actoryContentProvider.class
+SHA1-Digest: +OHlM6Fl++0mBF/pYhFQ/75MnYk=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/delegates/NewResourceNod
+ eActionDelegate.class
+SHA1-Digest: 8nwBdkXwPHxRCcxU9g9mOFCcRv4=
+
+Name: org/eclipse/emf/cdo/ui/widgets/CommitHistoryComposite$1.class
+SHA1-Digest: TVBvMeEAwOVHj8tfZxA2Z1bmvBg=
+
+Name: org/eclipse/emf/cdo/internal/ui/ItemsProcessor$1.class
+SHA1-Digest: vS1IP9EFbc8dHyXcWRsYICCAh3I=
+
+Name: org/eclipse/emf/cdo/ui/widgets/CommitHistoryComposite$LabelProvi
+ der$4.class
+SHA1-Digest: S33P27FcU6WUh56Vfzp7avW2yrk=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/EditorEditorAdvisor$OpenA
+ ction.class
+SHA1-Digest: GHMEjOARvWmnOFnwNy11A6DnLF8=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/OpenViewEditorAction.cla
+ ss
+SHA1-Digest: BVYqLdbl43or84R3P3tM5nYbq0o=
+
+Name: org/eclipse/emf/cdo/ui/widgets/CommitHistoryComposite$Input$1.cl
+ ass
+SHA1-Digest: qZC81CwIN7dWCyqnM9svRpnZ7og=
+
+Name: org/eclipse/emf/cdo/internal/ui/dnd/CDOMergeDropAdapter.class
+SHA1-Digest: z16BJfXLNgUgTw4fwYFMjDYfr38=
+
+Name: org/eclipse/emf/cdo/internal/ui/history/Net.class
+SHA1-Digest: mesjV6js0AzBlxiTG4tN5akwrUc=
+
+Name: icons/full/elcl16/NewCDOResource.gif
+SHA1-Digest: 6cw6rOlCm4jP+b39+B32jCZHyRU=
+
+Name: org/eclipse/emf/cdo/ui/CDOEditorOpener$Default.class
+SHA1-Digest: LzMEGATm0fAW3r9QXJnfBNZrEe0=
+
+Name: org/eclipse/emf/cdo/internal/ui/views/CDOWatchListView$CDOViewRe
+ ferenceCounterManager$CDOViewReferenceCounter.class
+SHA1-Digest: AmAMFR2O7EVc4HREuwG7JePtcfo=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/SwitchTargetAction.class
+SHA1-Digest: QPVy8im9TAHKgiPdTCdWtax4E24=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/DeleteResourceAction$1.c
+ lass
+SHA1-Digest: jhmpABuEPxuWlRwiJiPNlgHd8kI=
+
+Name: org/eclipse/emf/cdo/internal/ui/dialogs/SelectClassDialog$1.clas
+ s
+SHA1-Digest: nSt9R7ZcsbxoXUZG6eLNJTwYE/U=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/CDOEditor$24.class
+SHA1-Digest: A1C+WExzPwiQL+owjYs/7QtpzdI=
+
+Name: org/eclipse/emf/cdo/internal/ui/messages/Messages.class
+SHA1-Digest: DovbviUQl/tyhTJxBfVGTReih+8=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/OpenSessionAction.class
+SHA1-Digest: mP9HI97zquWheUtJDt5E+VthcNY=
+
+Name: org/eclipse/emf/cdo/ui/widgets/SelectTimeStampComposite.class
+SHA1-Digest: nucCS+b0MYseezTDtvG2CgpK/PI=
+
+Name: org/eclipse/emf/cdo/internal/ui/handlers/LockingHandler$LockObje
+ ct.class
+SHA1-Digest: HsTEfhmfpOUmQbFcaVtGjEwvAUI=
+
+Name: org/eclipse/emf/cdo/ui/CDOEditorOpener$Registry.class
+SHA1-Digest: n8nYrE9if8tjj2FUDudPtfKoV9k=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/CDOEditor$1MyContentOutli
+ nePage$1.class
+SHA1-Digest: LyDpNOyHxabTXKwbd2ukZupYunM=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/NewResourceNodeAction.cl
+ ass
+SHA1-Digest: hp4mBOY5+M48HLIK9tJguWThpHQ=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/ManagePackagesAction.cla
+ ss
+SHA1-Digest: yzCpZ7UmtmMPZW/YwO2dCGO/7hk=
+
+Name: org/eclipse/emf/cdo/internal/ui/dialogs/PackageRegistryDialog$3.
+ class
+SHA1-Digest: 1n+NuYSfNR0F8Tzh+41m4F5pXgY=
+
+Name: icons/full/elcl16/import_wiz.gif
+SHA1-Digest: KBgRjdXon6FcAufJ9wYEAVQ3SNw=
+
+Name: org/eclipse/emf/cdo/ui/CDOEditorUtil$OpenEditorAction.class
+SHA1-Digest: r6EqxRG3DlUIen6+vkUb6wpyxuE=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/AbstractLockObjectsActio
+ n$1.class
+SHA1-Digest: 7q/4gT1micTkThL8aSswkMhjpbo=
+
+Name: org/eclipse/emf/cdo/ui/widgets/SelectTimeStampComposite$1.class
+SHA1-Digest: X1iCpn3rFg05Jc1VDmgEA2AIwh4=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/delegates/TransactionalB
+ ackgroundActionDelegate.class
+SHA1-Digest: t8RR4ewf7RjbpGmjZmHxudTHW4I=
+
+Name: org/eclipse/emf/cdo/internal/ui/dialogs/BulkAddDialog$1.class
+SHA1-Digest: HmWaedLQzsSu9FlKb81RduTD80s=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/EnableViewDurabilityActi
+ on$1.class
+SHA1-Digest: /B3ltfnHnM+/wyvOu6YSaR3kKqI=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/CloseSessionAction.class
+SHA1-Digest: UzhlnTFs27sIR0LT6bHxgovsjoU=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/ChangePassiveUpdateActio
+ n.class
+SHA1-Digest: UGIh65LD8OqjhyS8NALJVUBUlng=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/CDOEditor$3.class
+SHA1-Digest: ebYdEldGPCx4eeEyobO2zGy1/5Y=
+
+Name: org/eclipse/emf/cdo/ui/widgets/SessionComposite$4.class
+SHA1-Digest: rdHyxJN4Bdc9pBoJIMSldWqQUyc=
+
+Name: org/eclipse/emf/cdo/internal/ui/perspectives/CDOPerspective.clas
+ s
+SHA1-Digest: XvYT/MXt/HhGhtG76ARM6LsCM7M=
+
+Name: org/eclipse/emf/cdo/ui/CDOEventHandler$5.class
+SHA1-Digest: P07uXFysM19Xm+C7iBgeyDLGPK8=
+
+Name: META-INF/eclipse.inf
+SHA1-Digest: KyT9FF7C7t86NoBoa2kZT3ZJBfw=
+
+Name: org/eclipse/emf/cdo/internal/ui/dialogs/SelectCommitDialog$1.cla
+ ss
+SHA1-Digest: 6plrmVoIKR9QuQXC+xcAMcqT1J0=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/OpenResourceEditorAction
+ .class
+SHA1-Digest: lZyDLow5RSYIMBMNS3Wxk+uA4L4=
+
+Name: org/eclipse/emf/cdo/ui/CDOItemProvider.class
+SHA1-Digest: QuE4S7iBgR7fGtkc37rgrJaw8ME=
+
+Name: org/eclipse/emf/cdo/internal/ui/dialogs/ExportResourceDialog.cla
+ ss
+SHA1-Digest: +p7AH3kdfcNKkFaBo3iMdMszmU8=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/CDOEditor$10.class
+SHA1-Digest: 4Frjcl7qoYTQTeQrhyIDbZUBwVQ=
+
+Name: org/eclipse/emf/cdo/internal/ui/views/CDORemoteSessionsView$2$1.
+ class
+SHA1-Digest: UVfAkcmFTzGWlTDth51hTKAoCq0=
+
+Name: org/eclipse/emf/cdo/internal/ui/handlers/LockingHandler$LockTree
+ .class
+SHA1-Digest: Js1mW//MgyaP5bDWrkJdgaHxtIs=
+
+Name: org/eclipse/emf/cdo/ui/widgets/ComposeBranchPointComposite$2.cla
+ ss
+SHA1-Digest: daFGJyemmCguwl7JU+vMs8KJ+Oo=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/CDOEditor$18.class
+SHA1-Digest: NdfgxIEUlAgKYvbYWM3FGzdJzDs=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/RemoveContainerItemActio
+ n.class
+SHA1-Digest: 4rvUNp1xMFkj2AH9TfMxA41rdWk=
+
+Name: .options
+SHA1-Digest: bVSWlfEjEmOXsehIc5wtb7zAlD0=
+
+Name: org/eclipse/emf/cdo/ui/CDOItemProvider$ElementListener.class
+SHA1-Digest: 4csfhvqtgOc54YSQ1ZexHP15rNI=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/OpenResourceEditorAction
+ $1.class
+SHA1-Digest: aa1XXMtyIIb4VHaDIT0n6IlCxx8=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/TransactionalBackgroundA
+ ction.class
+SHA1-Digest: 3FlIy8k2xoMQIZddX11RNhZt2kg=
+
+Name: org/eclipse/emf/cdo/ui/widgets/CommitHistoryComposite$LabelProvi
+ der$1.class
+SHA1-Digest: WzfDCrGlhXZIjXgZmsTW+85KEPo=
+
+Name: org/eclipse/emf/cdo/internal/ui/dialogs/RollbackTransactionDialo
+ g.class
+SHA1-Digest: LUelN22DfaCKFYVikZAhIA/ESck=
+
+Name: org/eclipse/emf/cdo/internal/ui/views/CDOWatchListView$WatchedOb
+ jectsDataRegistry$WatchedObjectData.class
+SHA1-Digest: pYNqWn6Y1yZ1H9TB/h1DugRYFYM=
+
+Name: org/eclipse/emf/cdo/ui/CDOEditorOpener$Registry$EditorOpenerDesc
+ riptor.class
+SHA1-Digest: 8OcQTe6K+FHV5OEtE4bnfXDEnic=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/CDOEditor$NewRootMenuPopu
+ lator.class
+SHA1-Digest: W92hB5KFKilVjD2Hi9yv+RluV0Y=
+
+Name: org/eclipse/emf/cdo/ui/CDOEditorOpener.class
+SHA1-Digest: BsR0YzxeLHCHbNQP5rgcIqzMypk=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/CDOEditor$21.class
+SHA1-Digest: odOQYBZMV79QZSkbMdxQDuWYC7w=
+
+Name: org/eclipse/emf/cdo/ui/widgets/SelectBranchComposite$2.class
+SHA1-Digest: yoxqB6Gqq/pH+TY2dlzPSi7L8ok=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/ImportRootsAction.class
+SHA1-Digest: xTM2xgmLtROWa34dRcozs7L8aJI=
+
+Name: plugin.properties
+SHA1-Digest: Oc1dBSveTLIVlzzlin1yojoLR/A=
+
+Name: org/eclipse/emf/cdo/ui/CDOInteractiveExceptionHandler.class
+SHA1-Digest: SPz6GxjZP6ju0vLLot8IGj+EF1w=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/CDOActionBarContributor$1
+ .class
+SHA1-Digest: u1ZX50nprlEJ4iD/MhWeGZoPewk=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/RegisterPackagesAction.c
+ lass
+SHA1-Digest: DqfTam+f5+IbhAk+j6/22ATMKDA=
+
+Name: org/eclipse/emf/cdo/internal/ui/views/CDORemoteSessionsView.clas
+ s
+SHA1-Digest: qtXHZonPb4QVbX+T7wDhcQ/aS2g=
+
+Name: org/eclipse/emf/cdo/ui/CDOEventHandler.class
+SHA1-Digest: OYqkb5na/Uxt+Nki4NoghDnyStw=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/MergeBranchPointAction.c
+ lass
+SHA1-Digest: Bsm24DIhdsLz8TVEMWMU9FdGoI0=
+
+Name: org/eclipse/emf/cdo/ui/CDOLabelProvider.class
+SHA1-Digest: FGroy6pSNtpbm2b+CSvwR83UsoE=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/OpenSessionAction$1.clas
+ s
+SHA1-Digest: lnSQTvIYBpcXSDuRnnqKWHJc+OU=
+
+Name: org/eclipse/emf/cdo/internal/ui/AsyncContentProvider$LoadJob.cla
+ ss
+SHA1-Digest: N+zD/71i5OviouzZ7Nf+zomlVJM=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/EditorEditorAdvisor$About
+ Action.class
+SHA1-Digest: Z/9opSwmhsOZIKf+gZB/U7+81Fk=
+
+Name: plugin.xml
+SHA1-Digest: IENAFPwpfbhLXR/nRgmZ8POmyxA=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/CloseViewAction.class
+SHA1-Digest: S/4F3yneCpu75auVtBR8XBbrqRE=
+
+Name: org/eclipse/emf/cdo/ui/widgets/SessionComposite$1.class
+SHA1-Digest: ggyZQ8Nkqa9kOg/aM0IrtaGJ8A8=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/CreateBranchAction.class
+SHA1-Digest: bkmCUEG0Kqq1TKX5RctDj9codhk=
+
+Name: org/eclipse/emf/cdo/ui/widgets/SelectTimeStampComposite$6.class
+SHA1-Digest: hRlvSuOE307QIyF5iY3q/NIYvAs=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/NewTopLevelResourceNodeA
+ ction.class
+SHA1-Digest: 2IkoY5Ez+mSAw0Qc8i2ykq2CDf4=
+
+Name: org/eclipse/emf/cdo/ui/CDOEventHandler$2.class
+SHA1-Digest: y95RXt2wq4mj9M1XRlTCqR/Qxls=
+
+Name: org/eclipse/emf/cdo/internal/ui/dnd/CDOObjectDropAdapter.class
+SHA1-Digest: jTeSUmkmUj6pJkEa6MwrFJt+pF8=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/CDOEditor$8.class
+SHA1-Digest: pkuLl5XY8w4x4O8ORM9n0smgirE=
+
+Name: org/eclipse/emf/cdo/internal/ui/dialogs/ImportResourceDialog$2.c
+ lass
+SHA1-Digest: woycTRsri981dBHAET4IsBj7bq8=
+
+Name: org/eclipse/emf/cdo/internal/ui/handlers/LockingHandler$UnlockOb
+ ject.class
+SHA1-Digest: QmlBihYgqv7MeyvYLUcAKygksic=
+
+Name: org/eclipse/emf/cdo/internal/ui/AsyncContentProvider.class
+SHA1-Digest: WRwlnXbj1Ss6Od7cqo+s+AN9n68=
+
+Name: org/eclipse/emf/cdo/internal/ui/CDOPropertyAdapterFactory$1.clas
+ s
+SHA1-Digest: GF6fusN3/pAcoPJU+CGgCyOn3uw=
+
+Name: org/eclipse/emf/cdo/internal/ui/views/CDOWatchListView$ResetNoti
+ ficationAction.class
+SHA1-Digest: VaTD5n/XFKSCl/gDPMokhZYVqo0=
+
+Name: org/eclipse/emf/cdo/internal/ui/history/NetRenderer$LinePlotter.
+ class
+SHA1-Digest: bdf7VodD3qDl1fVNAJQlA1+aJIA=
+
+Name: model/editor.ecore
+SHA1-Digest: sntszaV47lbpiRQgf3Ufvkw79RU=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/CDOEditor$15.class
+SHA1-Digest: NQ1ZK56/Xt1AQoRkSJNMjiTMWKA=
+
+Name: org/eclipse/emf/cdo/internal/ui/dialogs/SelectPackageDialog$Pack
+ ageLabelProvider.class
+SHA1-Digest: cAENG3OwLpsiBM2Y1vfs46RfO2A=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/CDOEditor$4$1.class
+SHA1-Digest: hOAK4jEDOdJVpvXleo1LA8kHUcc=
+
+Name: org/eclipse/emf/cdo/internal/ui/transfer/RepositoryUIProvider.cl
+ ass
+SHA1-Digest: NreXLKkASWYsHjN1GLvYseXBlYU=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/AbstractOpenViewAction.c
+ lass
+SHA1-Digest: mPtXPai1B5elx1CPD3HfpdWUhFk=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/CDOEditor$8$1.class
+SHA1-Digest: c11Pik61IYnVi9/Ru6mV3icxC7w=
+
+Name: org/eclipse/emf/cdo/ui/widgets/package-info.class
+SHA1-Digest: qHdwlowUXn0hEfgqe3eJaCDwVvA=
+
+Name: org/eclipse/emf/cdo/ui/CDOLabelDecorator$1.class
+SHA1-Digest: h/YUsPm8Gf7y6dljRzbMOShxOck=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/NewResourceNodeAction$Fo
+ lder.class
+SHA1-Digest: FbE5S4iby2VQmbq7sjiaCxbvnGY=
+
+Name: org/eclipse/emf/cdo/ui/widgets/CommitHistoryComposite$3.class
+SHA1-Digest: mRnTKARuZoDK3UmY7+U1nKAx5kc=
+
+Name: org/eclipse/emf/cdo/internal/ui/views/CDOWatchListView.class
+SHA1-Digest: r4SG/cUWITOwVK0MzQqACTFm6lw=
+
+Name: org/eclipse/emf/cdo/internal/ui/preferences/CDOUIPreferencePage$
+ 1.class
+SHA1-Digest: nCpCY69lTzvB/8Yfk9fbUx87IkY=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/ImportResourceAction$1.c
+ lass
+SHA1-Digest: 6owmxSUv9NBS9HFg5ztQchQq6C4=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/ExportResourceAction.cla
+ ss
+SHA1-Digest: Q4iHqE7n6NFtJVp2GXv/9WFaOkA=
+
+Name: org/eclipse/emf/cdo/internal/ui/dialogs/CreateBranchDialog.class
+SHA1-Digest: BN3s5+H9KPsx7Q2EUCWaGjRUlaQ=
+
+Name: org/eclipse/emf/cdo/internal/ui/dialogs/SelectBranchDialog.class
+SHA1-Digest: QFKhfvfrlLJ2SwL5jyfZdgIpEFY=
+
+Name: org/eclipse/emf/cdo/internal/ui/views/CDOWatchListView$CDOViewRe
+ ferenceCounterManager.class
+SHA1-Digest: NNiSaP2ue08soxAyTrc8oj4+J6s=
+
+Name: org/eclipse/emf/cdo/ui/widgets/CommitHistoryComposite$2$1.class
+SHA1-Digest: X7T1kkeUD/JjCZa6DU/+1rHywYw=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/AbstractLockObjectsActio
+ n.class
+SHA1-Digest: 8xj36ylZoLDiSFr45BimyYs7J4Q=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/delegates/ExportResource
+ ActionDelegate.class
+SHA1-Digest: qrYhud1Z972LiUfOflDv6QZcIS0=
+
+Name: org/eclipse/emf/cdo/internal/ui/views/CDOWatchListView$1.class
+SHA1-Digest: Tg7DBSS+5wA4d2tFoXoYfkCIzNM=
+
+Name: org/eclipse/emf/cdo/internal/ui/dialogs/SelectClassDialog$3.clas
+ s
+SHA1-Digest: Gb3YdZqxE4CkHI63Fkm112xDfNs=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/CDOEditor$26.class
+SHA1-Digest: ri+tMQdQuIJqTQmLEQXn56RIyfU=
+
+Name: org/eclipse/emf/cdo/internal/ui/dialogs/BulkAddDialog.class
+SHA1-Digest: U4IYzSlLnLSfMyyH2tHjwIcMlP0=
+
+Name: org/eclipse/emf/cdo/ui/CDOEditorOpener$Default$1.class
+SHA1-Digest: OASfulwcFQ/z6fQ3NoxP+ijWH8U=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/EditorEditorAdvisor$OpenU
+ RIAction.class
+SHA1-Digest: w4FcY5UrREMRdfa08t/vvnPlnFg=
+
+Name: org/eclipse/emf/cdo/ui/Support$2.class
+SHA1-Digest: QA6Lkm895NgDnTtrxpG9wdRMSq0=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/CDOEditor.class
+SHA1-Digest: mzhSBys2vFoXQ4lnVlB7LrntW8M=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/CDOEditor$NewRootMenuPopu
+ lator$1.class
+SHA1-Digest: bwluc8iifF5pMKZbhbY3qg0StUc=
+
+Name: org/eclipse/emf/cdo/ui/CDOTreeExpansionAgent$Listener$1.class
+SHA1-Digest: dsYltogZnfxchHz/C4EG/FzNJR4=
+
+Name: org/eclipse/emf/cdo/ui/CDOTreeExpansionAgent$1.class
+SHA1-Digest: 6N92BdjL23rNYc6RVV5zOwUaXZE=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/ReadLockObjectsAction.cl
+ ass
+SHA1-Digest: pwlGjgAgxW6XyHDxEzprKUftbyc=
+
+Name: org/eclipse/emf/cdo/internal/ui/dialogs/SelectCommitDialog.class
+SHA1-Digest: kY7dZgQwYV5pQ5DewWISf9BOGkQ=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/ImportRootsAction$1.clas
+ s
+SHA1-Digest: zSGrqqw///aVWzK+gX6UpQJcstY=
+
+Name: org/eclipse/emf/cdo/ui/widgets/TimeSlider$2.class
+SHA1-Digest: Kzg/tugDiP+tuB7tyBjBDcgKotw=
+
+Name: org/eclipse/emf/cdo/ui/widgets/SelectTimeStampComposite$3.class
+SHA1-Digest: GAuy6xEZ638qC7kSXBfzvrDOfLw=
+
+Name: org/eclipse/emf/cdo/internal/ui/dialogs/BulkAddDialog$3.class
+SHA1-Digest: im+q0ns8NqZJrVYGga8jQKy2wm4=
+
+Name: org/eclipse/emf/cdo/internal/ui/views/CDORemoteSessionsView$2.cl
+ ass
+SHA1-Digest: aM2iO8FNRYqEfh8JCgZOY/diQiU=
+
+Name: org/eclipse/emf/cdo/internal/ui/history/NetRenderer.class
+SHA1-Digest: wxTrz/fVwBIP4yUY9YxopzL+Cx8=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/CDOEditor$5.class
+SHA1-Digest: sTWsAf+UNLzg5RD2imF6eevg0VM=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/PluginDelegator$Implement
+ ation.class
+SHA1-Digest: AF6Fc7M9b3CMOTtezN0igcSI6GQ=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/delegates/CreateBranchAc
+ tionDelegate.class
+SHA1-Digest: VZ9SJ8pdIcG9BrDSraKBu8Du2dA=
+
+Name: org/eclipse/emf/cdo/ui/CDOEventHandler$7.class
+SHA1-Digest: AxAYb/7K7iYJ9x8yjGGmUYm4UYU=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/delegates/RemoveResource
+ ActionDelegate$1.class
+SHA1-Digest: nOCpBCBDy5WN3GbhonpJtOsC8UA=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/EditorEditorAdvisor$Windo
+ wAdvisor.class
+SHA1-Digest: QBi/mqXaYoVep8n0jMnyWA8WHp4=
+
+Name: org/eclipse/emf/cdo/internal/ui/dialogs/PackageRegistryDialog$EP
+ ackageContentProvider.class
+SHA1-Digest: ZRcy7a4QrAW/YpZY9ozbiv8e8a8=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/CDOEditor$12.class
+SHA1-Digest: o/GcwP7xrSHJvgKLsNPZLYggQuE=
+
+Name: org/eclipse/emf/cdo/internal/ui/views/CDOTimeMachineView.class
+SHA1-Digest: TwMpCGUzixFiz8srQ+G5hKuSVqY=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/WriteLockObjectsAction.c
+ lass
+SHA1-Digest: eXUixuYYKbFCkOr6DPSqCViJ7Gk=
+
+Name: org/eclipse/emf/cdo/internal/ui/views/CDOSessionsView.class
+SHA1-Digest: 60ZCfdQHF8NSDq5eetw+haRDDKI=
+
+Name: org/eclipse/emf/cdo/internal/ui/dialogs/EditObjectDialog.class
+SHA1-Digest: 25n4GY6fwfOIUykz/Lw/vk7qoHM=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/CDOEditor$3$2.class
+SHA1-Digest: UGwwLOdLrc+q+dYA9Rfjl2R8Z7A=
+
+Name: org/eclipse/emf/cdo/ui/widgets/ComposeBranchPointComposite$4.cla
+ ss
+SHA1-Digest: bikFo9RBWF3mQXPOswlKzrXsfTI=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/EditorEditorAdvisor$Windo
+ wActionBarAdvisor.class
+SHA1-Digest: 7rV9aJ7bQ8rF0/3yWeUE6PrCm6Y=
+
+Name: org/eclipse/emf/cdo/ui/widgets/CommitHistoryComposite$Input.clas
+ s
+SHA1-Digest: BsdA3Yq7622zXWItUQMJdFaZB/Y=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/delegates/NewBinaryResou
+ rceActionDelegate.class
+SHA1-Digest: asikUD/ew+SCQG5QzGClK4IUqTY=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/LoadResourceAction.class
+SHA1-Digest: 7mTZpjZt3Xya4AFsgNuGxmRKwH0=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/SessionAction.class
+SHA1-Digest: KMm5ZKVvJfP1+8KICs+CxNW9jqA=
+
+Name: org/eclipse/emf/cdo/ui/CDOEditorInput2.class
+SHA1-Digest: 8wc/475qX2ssHHUBmuhO6WN1gec=
+
+Name: org/eclipse/emf/cdo/ui/widgets/CommitHistoryComposite$LabelProvi
+ der$3.class
+SHA1-Digest: EgtRYShRtIpEQczfJIHdu1FlH84=
+
+Name: org/eclipse/emf/cdo/internal/ui/dialogs/SelectClassDialog$Packag
+ eContentProvider.class
+SHA1-Digest: yxmh3amz1013x6GuWc1S3VGUnGw=
+
+Name: org/eclipse/emf/cdo/ui/Support.class
+SHA1-Digest: sytIncjhQRJuHXAbihXp3fckAKM=
+
+Name: org/eclipse/emf/cdo/internal/ui/handlers/LockingHandler$UnlockTr
+ ee.class
+SHA1-Digest: BVTHy7lAUCr1hLRscWolVhqCZcA=
+
+Name: org/eclipse/emf/cdo/ui/CDOTreeExpansionAgent.class
+SHA1-Digest: 9CIiImNOsKppC55aMs5r8HozVsc=
+
+Name: org/eclipse/emf/cdo/ui/CDOTreeExpansionAgent$Listener.class
+SHA1-Digest: II1MtjR9fvxsUIriyr7P31ttfNw=
+
+Name: org/eclipse/emf/cdo/internal/ui/bundle/OM.class
+SHA1-Digest: XDsDxHY6S9CJWbunf4dYXSts074=
+
+Name: org/eclipse/emf/cdo/internal/ui/CDOLobEditorInput.class
+SHA1-Digest: cKDtx0gx7uNqKWwfI/7RPiemJYs=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/CDOEditor$23.class
+SHA1-Digest: Bow42MJiiWzd6eVrMlkrD5q1zbE=
+
+Name: org/eclipse/emf/cdo/internal/ui/dialogs/OpenSessionDialog.class
+SHA1-Digest: ADIPo1U0KNMczPf15hz2XJMv1e8=
+
+Name: org/eclipse/emf/cdo/ui/CDOItemProvider$EditorRegistryListener.cl
+ ass
+SHA1-Digest: x8Ad4snJEolBzHyQlO4vKo+awMY=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/ResourceNodeAction.class
+SHA1-Digest: 0kOIIX6RShDQ5Ftqx9bfY2+e5o8=
+
+Name: org/eclipse/emf/cdo/ui/CDOEditorUtil.class
+SHA1-Digest: XfTf+EXw8fMPyj30Feibgv7ncLs=
+
+Name: schema/editorOpeners.exsd
+SHA1-Digest: h/iXYIo7hX+Z0BRXvm7X26h+ezA=
+
+Name: org/eclipse/emf/cdo/internal/ui/dialogs/PackageRegistryDialog$2.
+ class
+SHA1-Digest: ZMQxDqxruHNwI+plUsQJEH6i0Oc=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/CDOActionBarContributor$3
+ .class
+SHA1-Digest: 2hz3JY18Zason8KYsrE/YrtLUMw=
+
+Name: org/eclipse/emf/cdo/internal/ui/history/SegmentList.class
+SHA1-Digest: sEoezNbQY7RnTRqKa/KOBWUtBwI=
+
+Name: org/eclipse/emf/cdo/internal/ui/dialogs/SelectBranchPointDialog.
+ class
+SHA1-Digest: q42mBLderHUEFOxpHvZPJ3gXlEg=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/NewTopLevelResourceNodeA
+ ction$Type.class
+SHA1-Digest: 5W1dib+yXqZ+Q2GkNpbPHWSOiWY=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/RemoveAllContainerItemAc
+ tion.class
+SHA1-Digest: 4Pc7AiIMBrARmJK5KXAabhhAJu4=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/RegisterGeneratedPackage
+ sAction.class
+SHA1-Digest: eXr3ROa4hd7fRWd0KdbAevY7siw=
+
+Name: org/eclipse/emf/cdo/ui/CDOInvalidRootAgent$1.class
+SHA1-Digest: IIm4X/SrqtCPD9wnc6NuBAeO2eA=
+
+Name: org/eclipse/emf/cdo/internal/ui/dialogs/PackageRegistryDialog$1$
+ 1.class
+SHA1-Digest: 3jnmNF7oe3PM7c5PHnnaks45T98=
+
+Name: org/eclipse/emf/cdo/internal/ui/views/CDOWatchListView$CDOSubscr
+ iptionAdapter.class
+SHA1-Digest: NTHscZWV+rcNywwv57anTGCPGAk=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/CDOEditor$2.class
+SHA1-Digest: 2DyUBOylft9v1WyrNNRUn4q6rtU=
+
+Name: org/eclipse/emf/cdo/ui/widgets/SessionComposite$3.class
+SHA1-Digest: CMP3JfPIFtPYq6HV07D2P/VEIlY=
+
+Name: org/eclipse/emf/cdo/ui/CDOEventHandler$4.class
+SHA1-Digest: HQca4LuHJDlk4wWiMnbDLq69Gcs=
+
+Name: icons/full/elcl16/NewCDOBinaryResource.gif
+SHA1-Digest: XaPM6Ptp9kmDLS09YwE2TOdNEUI=
+
+Name: org/eclipse/emf/cdo/internal/ui/dialogs/PackageRegistryDialog$EP
+ ackageLabelProvider.class
+SHA1-Digest: Qd//Wx65I4I1s4qBRycyZNMYjz8=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/CDOEditor$SafeTreeViewer.
+ class
+SHA1-Digest: 6eZ16CW+eyFBhOm9Yhf0k1X9c4s=
+
+Name: icons/full/elcl16/delete_edit.gif
+SHA1-Digest: ORJe0sG1BDPf20zkd9DI+HUjfk8=
+
+Name: org/eclipse/emf/cdo/internal/ui/CDOLobStorage.class
+SHA1-Digest: GKMWjBAaG8MdCvUx8ls6wtVzGRk=
+
+Name: org/eclipse/emf/cdo/ui/widgets/ComposeBranchPointComposite$1.cla
+ ss
+SHA1-Digest: sinxcKErGtlvYkiQo73yF4YccFs=
+
+Name: about.html
+SHA1-Digest: mLkmRLtG3amkcY0I7KSYZX6qKhs=
+
+Name: org/eclipse/emf/cdo/internal/ui/filters/CDOObjectFilter.class
+SHA1-Digest: zqbcbMOIB4YNTofIKP8/s3ZdLaQ=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/ResourceNodeNameInputVal
+ idator.class
+SHA1-Digest: JHxl7TmebOdD+oIlHGoJebfIqCI=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/CDOEditor$17.class
+SHA1-Digest: TwaDlyv0syUYnVgn1Xj6GaUG0ec=
+
+Name: org/eclipse/emf/cdo/ui/widgets/AuditScale.class
+SHA1-Digest: gB0RR21e1rw/Hp1xzjiEU/VwCpY=
+
+Name: org/eclipse/emf/cdo/internal/ui/views/CDOWatchListView$CDOObject
+ Container.class
+SHA1-Digest: 88KiPP5X2ntI1ySyEuQaB4NdvFg=
+
+Name: org/eclipse/emf/cdo/internal/ui/views/CDOSessionsView$ResourceOp
+ ener.class
+SHA1-Digest: JJ3y/mng/iDMw1W86EgarIKG0g4=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/DeleteResourceAction.cla
+ ss
+SHA1-Digest: 9YTG0IWnaDDIH2FafEo4S2KaJnc=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/delegates/ImportResource
+ ActionDelegate.class
+SHA1-Digest: 7CDjo+OQtiKgEyhCJELWp5ayWxM=
+
+Name: org/eclipse/emf/cdo/internal/ui/dialogs/SelectClassDialog$Packag
+ eLabelProvider.class
+SHA1-Digest: Qf2Qc+a4ydkvr+acEjkmAEwYGNQ=
+
+Name: org/eclipse/emf/cdo/ui/widgets/SelectBranchComposite.class
+SHA1-Digest: l26WylabCeevafEUiRx1pj2+BuY=
+
+Name: org/eclipse/emf/cdo/internal/ui/transfer/RepositoryTransferDragL
+ istener.class
+SHA1-Digest: +VzDfeXWjKPEd4fnSccVeiNmgag=
+
+Name: org/eclipse/emf/cdo/internal/ui/dialogs/PackageRegistryDialog.cl
+ ass
+SHA1-Digest: e8vjo0+Z3StPVYswvTU/D01ZFoY=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/CDOEditor$20.class
+SHA1-Digest: jf2cM5y/s9/u+LkNap5HgBBY1fg=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/AutoReleaseLockExemption
+ Action.class
+SHA1-Digest: AYGAZTyUyl0AmIfJPmZ+3EvBV4Y=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/AbstractViewAction.class
+SHA1-Digest: KQUhh4LmnyRKhpq2Dl8z4ptSCGI=
+
+Name: org/eclipse/emf/cdo/internal/ui/dialogs/SelectClassDialog$ClassL
+ abelProvider.class
+SHA1-Digest: 6OX4Gy/e8rGHKbBeZkZ8rgfAxT4=
+
+Name: org/eclipse/emf/cdo/ui/widgets/SelectBranchComposite$1.class
+SHA1-Digest: xG95eIT9Z2GtsqfdIatU8+xzeVA=
+
+Name: org/eclipse/emf/cdo/internal/ui/dialogs/SelectPackageDialog.clas
+ s
+SHA1-Digest: 6RzROwHXyHQffhNXAumkqfgB4qU=
+
+Name: icons/full/obj16/CDOModelFile.gif
+SHA1-Digest: 5A9hLu9KtIvz4dYaoVJkV/GpnLo=
+
+Name: org/eclipse/emf/cdo/internal/ui/views/CDOWatchListView$3.class
+SHA1-Digest: JgjPMDe4r72XC2e/+1n2n2V+lAo=
+
+Name: org/eclipse/emf/cdo/internal/ui/InteractiveConflictHandlerSelect
+ or.class
+SHA1-Digest: j1fT2t1bocaChl9uOJOuyKW5NF8=
+
+Name: org/eclipse/emf/cdo/internal/ui/dialogs/SelectClassDialog$5.clas
+ s
+SHA1-Digest: mN9vodzcTtrueXwf9FRqJhR5nSY=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/CDOEditor$28.class
+SHA1-Digest: Kv7aMH6RoVye9YertAibqIJCsfU=
+
+Name: org/eclipse/emf/cdo/ui/CDOInvalidRootAgent.class
+SHA1-Digest: gEGjUkMr5yzkpAHEu/TWbMhsKhI=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/EnableViewDurabilityActi
+ on.class
+SHA1-Digest: xkj97G78eso+bJ9/Fbv+zMPhRGo=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/delegates/RenameResource
+ ActionDelegate.class
+SHA1-Digest: HIGrPSb+DL8eDm1yK/M2esMkgNw=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/CDOEditor$20$1.class
+SHA1-Digest: R09Y8geExkPduy6FaGWKlqLywIY=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/CDOEditor$NewRootMenuPopu
+ lator$3.class
+SHA1-Digest: fOkBqvnxDJ2Sy+IBmkeRI0a3Me4=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/CDOEditor$22$1.class
+SHA1-Digest: JH/gACuOkLt3TYaCgzlvQ8821I0=
+
+Name: org/eclipse/emf/cdo/ui/package-info.class
+SHA1-Digest: 3y0j5zarno8kqmG2PAbDwAEKYRk=
+
+Name: org/eclipse/emf/cdo/internal/ui/bundle/OM$Activator.class
+SHA1-Digest: gmuHGq5W8tNpb2QdL3/N6uz1sqc=
+
+Name: org/eclipse/emf/cdo/internal/ui/InteractiveConflictHandlerSelect
+ or$1.class
+SHA1-Digest: tEzIH0VVPpf8qT3bnd5YqzHCpBE=
+
+Name: org/eclipse/emf/cdo/internal/ui/dialogs/SelectClassDialog$ClassC
+ ontentProvider$1.class
+SHA1-Digest: 4t0XlMm1E//moPBb7eIXbpJNf/I=
+
+Name: org/eclipse/emf/cdo/ui/CDOEditorUtil$1CDOEditorInputWithEditingD
+ omain.class
+SHA1-Digest: NtOdkoPf/b0Ddnh1sYJqx5L0ug4=
+
+Name: org/eclipse/emf/cdo/internal/ui/preferences/CDOPreferencePage.cl
+ ass
+SHA1-Digest: 9QqlzU2H4GGP73lzIOU00mxbZF0=
+
+Name: org/eclipse/emf/cdo/ui/widgets/SelectTimeStampComposite$5.class
+SHA1-Digest: Azc2fK80gQ7CUd3LjRJ6UmctAWc=
+
+Name: org/eclipse/emf/cdo/ui/CDOEventHandler$1.class
+SHA1-Digest: YbBlpPrGLPEhvZ/dmOVLF7rv/8Q=
+
+Name: org/eclipse/emf/cdo/ui/CDOEditorUtil$2.class
+SHA1-Digest: Js1eq7cc5njA3hL+xWO1Xp4Xjq4=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/AbstractContainerAction.
+ class
+SHA1-Digest: Y9atTzzYiOU0EuZ/OVMj2eRN7Kw=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/delegates/NewResourceFol
+ derActionDelegate.class
+SHA1-Digest: oywZ0TUOw69IDvlCMoJpqHlCTnU=
+
+Name: icons/full/elcl16/export_wiz.gif
+SHA1-Digest: LQPT2QoQELD7YcZiJV2Viw4nKYo=
+
+Name: org/eclipse/emf/cdo/internal/ui/dialogs/ImportResourceDialog$1.c
+ lass
+SHA1-Digest: wsiUVmaHtJyF1hWsRaLs49rGaQY=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/CDOEditor$7.class
+SHA1-Digest: P4nO/rlZm2fqYBMGRuK8SJFaC/s=
+
+Name: org/eclipse/emf/cdo/ui/widgets/CommitHistoryComposite.class
+SHA1-Digest: fgPaZZNGFJrYkytz7zNZW2zFfB0=
+
+Name: org/eclipse/emf/cdo/internal/ui/ItemsProcessor.class
+SHA1-Digest: jNMM9RPBjcGyWHQQHzteywtdKLQ=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/CDOEditor$14.class
+SHA1-Digest: /kL2g1NR/bmPsmFZDVeU7QOLWLk=
+
+Name: org/eclipse/emf/cdo/internal/ui/views/CDOWatchListView$ResetAllN
+ otificationAction.class
+SHA1-Digest: 8dVB94+ZVG23LbUwCLXzZL2D6EE=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/OpenViewAction.class
+SHA1-Digest: HCwi9c9DS4e0A31X5mPTDP18yeY=
+
+Name: org/eclipse/emf/cdo/ui/widgets/ComposeBranchPointComposite$6.cla
+ ss
+SHA1-Digest: 5uBgDHUgBj2ZaHfYTwYNQ70HVAw=
+
+Name: org/eclipse/emf/cdo/internal/ui/views/CDOWatchListView$WatchedOb
+ jectsDataRegistry$1.class
+SHA1-Digest: trNihDX22UcuDb4aSwTtBLrQUbU=
+
+Name: org/eclipse/emf/cdo/internal/ui/transfer/RepositoryUIProvider$Fa
+ ctory.class
+SHA1-Digest: 9sTOpR0ehrjziwLXWd8sG7C8zb0=
+
+Name: org/eclipse/emf/cdo/internal/ui/handlers/LockingHandler.class
+SHA1-Digest: sOQHot6dmcT1xIiOpIK9yOfxap4=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/NewResourceNodeAction$Mo
+ del.class
+SHA1-Digest: uTmRlekPwT3tnIvEujmT98SdGzA=
+
+Name: org/eclipse/emf/cdo/ui/widgets/CommitHistoryComposite$2.class
+SHA1-Digest: fAX8vTuEePyct1r1ay4eM1GVPBI=
+
+Name: org/eclipse/emf/cdo/internal/ui/views/CDOSessionsView$1.class
+SHA1-Digest: bWmGuhrNxbSiT7tJSuFf/AVlzN4=
+
+Name: org/eclipse/emf/cdo/ui/widgets/CommitHistoryComposite$LabelProvi
+ der$5.class
+SHA1-Digest: FsXeHAe4Q0BfvSkzt6HDtzzlRsU=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/EditorEditorAdvisor.class
+SHA1-Digest: NqD/SppFYAIMAxeUiDI0SLbqq4c=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/CDOEditor$1MyContentOutli
+ nePage.class
+SHA1-Digest: juZUn/Eeig0HZ0B7ioIXFiINqF4=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/RegisterGeneratedPackage
+ sAction$EPackageFactoryValidator.class
+SHA1-Digest: SnzaQUGr1Ogc4IWWmWZkoA7fCkQ=
+
+Name: org/eclipse/emf/cdo/internal/ui/dialogs/SelectClassDialog$2.clas
+ s
+SHA1-Digest: sn7MPzAs/64hmxj7ChtZ1Ni7V8s=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/CDOEditor$25.class
+SHA1-Digest: rUvdOMIvq8KZ4CCN1BNOSwESCZQ=
+
+Name: icons/full/elcl16/NewCDOTextResource.gif
+SHA1-Digest: CwVhcDiac/QxbIvaI3C6+Zu8Mp8=
+
+Name: org/eclipse/emf/cdo/internal/ui/dialogs/SelectClassDialog$ClassC
+ ontentProvider.class
+SHA1-Digest: iHknVp/MIiopDZBU/TNwU6SQdt4=
+
+Name: icons/full/elcl16/NewCDOResourceFolder.gif
+SHA1-Digest: CqnyYQZ5HqfNOrSl9dJks0XXkRU=
+
+Name: org/eclipse/emf/cdo/internal/ui/dialogs/CreateBranchDialog$1.cla
+ ss
+SHA1-Digest: pR/H7ywXLt75wgCN2KN89TAl0Ds=
+
+Name: org/eclipse/emf/cdo/ui/Support$1.class
+SHA1-Digest: 9n2pD0AXJJv5yG+Q1AW2R9oNu9Y=
+
+Name: org/eclipse/emf/cdo/ui/widgets/SessionComposite.class
+SHA1-Digest: nCZeufDmgCV3hUnGTM735XEjv9A=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/OpenAuditAction.class
+SHA1-Digest: 9dLwjD2111I6jAQ3dVy6qdaowSI=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/delegates/NewResourceAct
+ ionDelegate.class
+SHA1-Digest: 6H6F6LqV1ibVvBFg92eq0/kzknQ=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/OpenTransactionAction.cl
+ ass
+SHA1-Digest: sHoz+BF/a2e5MWpOtnHzZt1RzNs=
+
+Name: org/eclipse/emf/cdo/internal/ui/dialogs/OpenDurableViewDialog.cl
+ ass
+SHA1-Digest: joM7Zxky9QrYknQ5kC3S6N8S0Oo=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/delegates/RemoveResource
+ ActionDelegate.class
+SHA1-Digest: 4j/SmVuUU0rItwe+kLsCrTswYoo=
+
+Name: org/eclipse/emf/cdo/ui/widgets/TimeSlider$1.class
+SHA1-Digest: 5OVgSoniKiRyAkKT8eaqZLMntZw=
+
+Name: org/eclipse/emf/cdo/ui/widgets/SelectTimeStampComposite$2.class
+SHA1-Digest: W6goiS/ar5UhkTnkeNmh49CKAig=
+
+Name: org/eclipse/emf/cdo/internal/ui/dialogs/BulkAddDialog$2.class
+SHA1-Digest: AQlczaWFy8k62YZmKJFWmnbMYCc=
+
+Name: org/eclipse/emf/cdo/internal/ui/views/CDORemoteSessionsView$1.cl
+ ass
+SHA1-Digest: 9TgWubNASRt2wHfDmVb6/cNrCQk=
+
+Name: org/eclipse/emf/cdo/ui/widgets/ComposeBranchPointComposite.class
+SHA1-Digest: 2KurUaCt0nfBiTtH1EwlyRIBrXk=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/CDOEditor$4.class
+SHA1-Digest: rbOOhUkArkcTIB/7VuFg8NevqZM=
+
+Name: org/eclipse/emf/cdo/ui/CDOEventHandler$6.class
+SHA1-Digest: mP9U12HdIJ3tX+T1KnyNTCIjMmQ=
+
+Name: org/eclipse/emf/cdo/internal/ui/dialogs/SelectCommitDialog$2.cla
+ ss
+SHA1-Digest: paqRRj+kGHyHfuP5WWfbaoGRNR4=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/PluginDelegator.class
+SHA1-Digest: IpzWv4gZzI0LzFODmcnn1YeogGA=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/CDOEditor$11.class
+SHA1-Digest: RcinQsTEFMdUuEO7QqUBpAx0lMQ=
+
+Name: org/eclipse/emf/cdo/ui/CDOLabelDecorator.class
+SHA1-Digest: S1GoMtuEVWUYogPWi69FD1p3r68=
+
+Name: org/eclipse/emf/cdo/internal/ui/handlers/CreateBranchHandler$Tag
+ Handler.class
+SHA1-Digest: 99q7TOE55DwyiUExhedDw8VU25k=
+
+Name: org/eclipse/emf/cdo/internal/ui/history/Track.class
+SHA1-Digest: /NADFO5guytWhyruc9Og9BWCBwg=
+
+Name: org/eclipse/emf/cdo/internal/ui/dialogs/AbstractBranchPointDialo
+ g.class
+SHA1-Digest: 99xAb0gC7Ai3K9Xa7bV4Ij6YPmM=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/ChangePassiveUpdateActio
+ n$1.class
+SHA1-Digest: YHfePoXd7Eaij1XRTX8oX5aOP/c=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/CDOEditor$3$1.class
+SHA1-Digest: ZQ7SOKgJ8tTbIIv+WebY4KrhXIc=
+
+Name: org/eclipse/emf/cdo/ui/widgets/ComposeBranchPointComposite$3.cla
+ ss
+SHA1-Digest: fZNrjRqe/PIXIvT9qeqNK3QItQY=
+
+Name: org/eclipse/emf/cdo/internal/ui/views/CDOWatchListView$CDOObject
+ ContainerContentProvider.class
+SHA1-Digest: SPi5urcR4sziXMz6uSdQq9TDaw4=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/CDOEditor$19.class
+SHA1-Digest: FTwvj8VepwmW1P7YFsEukUimVak=
+
+Name: org/eclipse/emf/cdo/ui/widgets/CommitHistoryComposite$ContentPro
+ vider.class
+SHA1-Digest: +/vCqU0YczhiSWDovtP0fMM0kz8=
+
+Name: org/eclipse/emf/cdo/internal/ui/preferences/CDOUIPreferencePage.
+ class
+SHA1-Digest: ta+kmquHA6t1sAl27JjBPHjc6w4=
+
+Name: org/eclipse/emf/cdo/internal/ui/InteractiveConflictHandlerSelect
+ or$1$1$1.class
+SHA1-Digest: uag7B+t12iDfgPQhfUH/ZL2qHfg=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/NewResourceNodeAction$Te
+ xt.class
+SHA1-Digest: dRXSE0stqgDjaxjgkK1QleoZW78=
+
+Name: org/eclipse/emf/cdo/ui/widgets/CommitHistoryComposite$LabelProvi
+ der$2.class
+SHA1-Digest: ecs6ikgXCHvKB94C5hzkJ1nng6Y=
+
+Name: org/eclipse/emf/cdo/internal/ui/views/CDOWatchListView$CDOObject
+ Container$ViewDeactivationListener.class
+SHA1-Digest: fjuCLGuJo3BjKz0pmqksQFfeubA=
+
+Name: org/eclipse/emf/cdo/internal/ui/actions/RollbackTransactionActio
+ n.class
+SHA1-Digest: acdR04ZtFuXHzveNB0yimYZR8m4=
+
+Name: org/eclipse/emf/cdo/internal/ui/editor/CDOEditor$CreateRootActio
+ n.class
+SHA1-Digest: xXNj3Rgnn3RyaoNKGi9APMVysYw=
+

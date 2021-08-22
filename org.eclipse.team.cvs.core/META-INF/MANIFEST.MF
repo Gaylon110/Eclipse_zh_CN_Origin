@@ -1,0 +1,1091 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.team.cvs.core; singleton:=true
+Archiver-Version: Plexus Archiver
+Built-By: genie.releng
+Require-Bundle: org.eclipse.core.runtime;bundle-version="[3.2.0,4.0.0)
+ ",org.eclipse.core.resources;bundle-version="[3.3.0,4.0.0)",org.eclip
+ se.team.core;bundle-version="[3.6.0,4.0.0)",org.eclipse.core.filesyst
+ em;bundle-version="[1.1.0,2.0.0)",com.jcraft.jsch;bundle-version="[0.
+ 1.50,1.0.0)",org.eclipse.jsch.core;bundle-version="[1.0.0,2.0.0)",org
+ .eclipse.core.net;bundle-version="[1.0.0,2.0.0)",org.eclipse.equinox.
+ security;bundle-version="[1.0.0,2.0.0)"
+Bundle-ManifestVersion: 2
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/platfo
+ rm/eclipse.platform.team.git;path="bundles/org.eclipse.team.cvs.core"
+ ;tag="I20170127-2200";commitId=b5e569cad6155c865fde17b246bffd10859c5e
+ 3a
+Bundle-Vendor: %providerName
+Import-Package: com.ibm.icu.text,com.ibm.icu.util
+Export-Package: org.eclipse.team.internal.ccvs.core;x-friends:="org.ec
+ lipse.team.cvs.ssh2,org.eclipse.team.cvs.ui",org.eclipse.team.interna
+ l.ccvs.core.client;x-friends:="org.eclipse.team.cvs.ssh2,org.eclipse.
+ team.cvs.ui",org.eclipse.team.internal.ccvs.core.client.listeners;x-f
+ riends:="org.eclipse.team.cvs.ssh2,org.eclipse.team.cvs.ui",org.eclip
+ se.team.internal.ccvs.core.connection;x-friends:="org.eclipse.team.cv
+ s.ssh2,org.eclipse.team.cvs.ui",org.eclipse.team.internal.ccvs.core.f
+ ilehistory;x-friends:="org.eclipse.team.cvs.ssh2,org.eclipse.team.cvs
+ .ui",org.eclipse.team.internal.ccvs.core.filesystem;x-friends:="org.e
+ clipse.team.cvs.ssh2,org.eclipse.team.cvs.ui",org.eclipse.team.intern
+ al.ccvs.core.mapping;x-friends:="org.eclipse.team.cvs.ssh2,org.eclips
+ e.team.cvs.ui",org.eclipse.team.internal.ccvs.core.resources;x-friend
+ s:="org.eclipse.team.cvs.ssh2,org.eclipse.team.cvs.ui",org.eclipse.te
+ am.internal.ccvs.core.syncinfo;x-friends:="org.eclipse.team.cvs.ssh2,
+ org.eclipse.team.cvs.ui",org.eclipse.team.internal.ccvs.core.util;x-f
+ riends:="org.eclipse.team.cvs.ssh2,org.eclipse.team.cvs.ui"
+Bundle-Name: %pluginName
+Bundle-Version: 3.4.100.v20170128-0234
+Bundle-Localization: plugin
+Bundle-Activator: org.eclipse.team.internal.ccvs.core.CVSProviderPlugi
+ n
+Created-By: Apache Maven 3.3.3
+Build-Jdk: 1.8.0_102
+
+Name: org/eclipse/team/internal/ccvs/core/client/listeners/TagListener
+ .class
+SHA-256-Digest: TLk4eKxp4yEs6N96gYSdrC6Sp0yuvisKfE4xlSGCm2U=
+
+Name: plugin.xml
+SHA-256-Digest: Vx0pj6fCSqCLs1PvBi1ENdmvYDretZ42KF1o+7POdHk=
+
+Name: org/eclipse/team/internal/ccvs/core/util/MoveDeleteHook.class
+SHA-256-Digest: J6gPru2wv4Kw/AUPatXCa+/ufILQ120vmwKQv3OqgA0=
+
+Name: org/eclipse/team/internal/ccvs/core/CVSProjectSetCapability$Load
+ Info.class
+SHA-256-Digest: Of8Nur0T4H+zvI381jHT4ZHSsyp9HrUOdxGQi94JXnE=
+
+Name: org/eclipse/team/internal/ccvs/core/resources/FileModificationMa
+ nager$1.class
+SHA-256-Digest: vKZ1wOJIcFC4ku5oJPxjLhdrj7+91UQKdSMJcrlMApI=
+
+Name: org/eclipse/team/internal/ccvs/core/client/Command$KSubstOption.
+ class
+SHA-256-Digest: 1gPHU4qXLaIvzGCl4uMQVqYkSEUZIktoRnbvlMbfmLg=
+
+Name: org/eclipse/team/internal/ccvs/core/util/KnownRepositories$Notif
+ ication.class
+SHA-256-Digest: npc+gAYqng/qdZfDsgGQdzyBpeIUNhUTTvI82LfQV5Q=
+
+Name: org/eclipse/team/internal/ccvs/core/ICVSRemoteResource.class
+SHA-256-Digest: fZ8xX2z6t5aOSt1FP35HxQvGAWqxxyAzSEFvKQuFR80=
+
+Name: org/eclipse/team/internal/ccvs/core/EditorsInfo.class
+SHA-256-Digest: aS8pd71HYFuCG9YxP7oMLKpTu3kd+7hYbSfev4V0Mbw=
+
+Name: org/eclipse/team/internal/ccvs/core/resources/EclipseSynchronize
+ r$3.class
+SHA-256-Digest: YKIpru3IpY20W0B2RqDUPczPIo9HVtRGRQLbJBdvcsM=
+
+Name: org/eclipse/team/internal/ccvs/core/resources/EclipseResource$1.
+ class
+SHA-256-Digest: v37UMTzl7NDkXOsFOqGnSeL/T49Ow/54iNz+vhkBrro=
+
+Name: org/eclipse/team/internal/ccvs/core/util/ResourceStateChangeList
+ eners$5.class
+SHA-256-Digest: I7zz+zVYdJhMIUY4S98ZUhk243tJkyloZth8IBMblMI=
+
+Name: org/eclipse/team/internal/ccvs/core/CVSProjectSetCapability$2.cl
+ ass
+SHA-256-Digest: aiPUDMWq2bkg169XJo6dU2/548L+fyCUxSOuY90UQrA=
+
+Name: org/eclipse/team/internal/ccvs/core/CVSWorkspaceSubscriber$3.cla
+ ss
+SHA-256-Digest: VUPptD2klB3OHl9AzSQhv+8iNceKQAxetLByFIOUSek=
+
+Name: org/eclipse/team/internal/ccvs/core/CVSSyncInfo.class
+SHA-256-Digest: 60yUzhof4c6u5bD/Ch39eyqSil6uId+PrzX0oihwrsI=
+
+Name: org/eclipse/team/internal/ccvs/core/client/RemoveEntryHandler.cl
+ ass
+SHA-256-Digest: GJwNI/C4ztKy4sZPJ20zw20e7FdD1wBkCbywTexSIu8=
+
+Name: org/eclipse/team/internal/ccvs/core/resources/EclipseFile.class
+SHA-256-Digest: gxHqv9FHeOqux36Mz0b1bx4UmP+Q5ptgEBGNynnTUl4=
+
+Name: org/eclipse/team/internal/ccvs/core/client/Command$GlobalOption.
+ class
+SHA-256-Digest: qAsMa9y8mKQTFKLeFdTye4LAoOtwkE1ZTzHz+Xuuku8=
+
+Name: org/eclipse/team/internal/ccvs/core/resources/UpdateContentCachi
+ ngService.class
+SHA-256-Digest: S58sUuKo4F/A53A1D5zCdx8b30rF2TVFDYEjzlvrJuk=
+
+Name: org/eclipse/team/internal/ccvs/core/resources/EclipseSynchronize
+ r.class
+SHA-256-Digest: l2Lh9r9c36jsn4GhkYQKIC9bXHKPhIezKpxhhaY2dcY=
+
+Name: org/eclipse/team/internal/ccvs/core/client/Add$1.class
+SHA-256-Digest: cR6SnC6FkGBARJ61jFIcfQU4Wscl1uxUNphmVlSTr/0=
+
+Name: org/eclipse/team/internal/ccvs/core/client/Diff.class
+SHA-256-Digest: XZdP4pHKU2YcXxXQumRbBzp1/5GlyPTuJqHTSG0n448=
+
+Name: org/eclipse/team/internal/ccvs/core/client/listeners/IConsoleLis
+ tener.class
+SHA-256-Digest: gWTupor3zZ5FpMCmt0ynzrs+EdX122FBWZhZxiWiJos=
+
+Name: org/eclipse/team/internal/ccvs/core/client/ValidRequests.class
+SHA-256-Digest: BHet4PdFjABbnvnwhJVQ97VJvuMrhC11W12VZ77qKDc=
+
+Name: org/eclipse/team/internal/ccvs/core/client/FileStructureVisitor.
+ class
+SHA-256-Digest: aq2aRxF2Kxt7PtyBPJJC2187cKliUpstmPYsGtc01ik=
+
+Name: org/eclipse/team/internal/ccvs/core/syncinfo/MutableFolderSyncIn
+ fo.class
+SHA-256-Digest: JJowzMeg965zjj7xhhxmNOH5wUzdSC53bfi1OxC6m1o=
+
+Name: org/eclipse/team/internal/ccvs/core/resources/EclipseFolder$2.cl
+ ass
+SHA-256-Digest: JePzFeeUwBPDssDOwCinbikeZTgeWI2/wvdf+CAbjX0=
+
+Name: .api_description
+SHA-256-Digest: 7h3RM6OvIf5/R3UrgCGaVkgpu4wbdhKNK2Kx+fX0uQc=
+
+Name: org/eclipse/team/internal/ccvs/core/CVSTeamProviderType$AutoShar
+ eJob.class
+SHA-256-Digest: RL7bStRNSYwdxl12IT9+nHwXXZKAgmFuBXOCjT7yI24=
+
+Name: org/eclipse/team/internal/ccvs/core/util/CVSDateFormatter.class
+SHA-256-Digest: DybY+4qSYV2gtNxCJGquzyHaz5Wa0gCJrHgrV1wWStY=
+
+Name: org/eclipse/team/internal/ccvs/core/client/listeners/RDiffSummar
+ yListener$IFileDiffListener.class
+SHA-256-Digest: 0qg8Blslbrj8IFTNdUtMRESHQnWTGVM4IqfgYyL5PUs=
+
+Name: org/eclipse/team/internal/ccvs/core/CVSException.class
+SHA-256-Digest: XTFUqY57A+PN0ahcXVYsgtjtNQDI420bsJmvQTG0CzE=
+
+Name: org/eclipse/team/internal/ccvs/core/filesystem/RLogTreeBuilder.c
+ lass
+SHA-256-Digest: ISPW1lkzEVs31lreUbzhaQhQPjvhVlj5rmvGMaSEy8g=
+
+Name: org/eclipse/team/internal/ccvs/core/client/SyncUpdate.class
+SHA-256-Digest: 44jI0bPFQMKXCTVtlXxBhmBtiolmc1mhnw/yOW4yrfY=
+
+Name: org/eclipse/team/internal/ccvs/core/syncinfo/ResourceSyncInfo.cl
+ ass
+SHA-256-Digest: RAJSujGQ1anCE1uA4znIB29LpeY4LH7tkmcig54Ec74=
+
+Name: org/eclipse/team/internal/ccvs/core/ICVSRunnable.class
+SHA-256-Digest: BFnXoYbVpM1aXgsBYQo4w9X5EPirXEBlkBYcRjn0Rog=
+
+Name: org/eclipse/team/internal/ccvs/core/messages.properties
+SHA-256-Digest: 9tmrq0h0XXEEXfEUvVIpEsFFgxbV/DzOCqIgn0F5I9g=
+
+Name: org/eclipse/team/internal/ccvs/core/ICVSRemoteFolder.class
+SHA-256-Digest: Bd3jLrar+hr2/gyauLXZvWwBjX1hzG9Q8JWNnqDyULo=
+
+Name: org/eclipse/team/internal/ccvs/core/client/listeners/ILogEntryLi
+ stener.class
+SHA-256-Digest: YwqFNqsYg9Bx0Yy6kEXrpGKZxZ9cepR5tdh9wig8J8A=
+
+Name: org/eclipse/team/internal/ccvs/core/util/ResourceStateChangeList
+ eners$Notification.class
+SHA-256-Digest: Tn4mQCdZ1FM1pFYvx5y/2f+c9hxfGdf8868wFqwlIII=
+
+Name: org/eclipse/team/internal/ccvs/core/IUserInfo.class
+SHA-256-Digest: rwZzEdzXMD5+Nq0SX1m1NVAB2Ike8iusikgbk2V00W4=
+
+Name: org/eclipse/team/internal/ccvs/core/CVSTeamProvider.class
+SHA-256-Digest: WcPpGPhpHRAV30gWt35zyuW5lZo7VHHgsoFEvegz9Ec=
+
+Name: org/eclipse/team/internal/ccvs/core/client/Checkout.class
+SHA-256-Digest: +FMb1XNTeCfjcf5fgmKf0uMWDgrDlOKmIZQ3H33CH/o=
+
+Name: org/eclipse/team/internal/ccvs/core/util/MoveDeleteHook$1.class
+SHA-256-Digest: aa009xhI4YWgUncH3a36VAOlMCod7sfUUBZtd3DBBjs=
+
+Name: org/eclipse/team/internal/ccvs/core/resources/RemoteFolderTreeBu
+ ilder$1.class
+SHA-256-Digest: 1tL3782Eztyte8n7JdTg5IoJvuigsvMjGSk1/pyWxWU=
+
+Name: org/eclipse/team/internal/ccvs/core/ICVSFolder.class
+SHA-256-Digest: 3UyKP5kiB397xbt/aLsBmwvxjesjVJeYW36HewPrfvg=
+
+Name: org/eclipse/team/internal/ccvs/core/connection/CVSRepositoryLoca
+ tion$1.class
+SHA-256-Digest: W56/lpiuk9Y9y310bjW/jpghjQxGWPvt8GgPxq2loV4=
+
+Name: org/eclipse/team/internal/ccvs/core/connection/UserInfo.class
+SHA-256-Digest: /ajFkQ4DZjeTy2bwsIhrlKtzdZJWHFnbXcgq9dVh7d8=
+
+Name: org/eclipse/team/internal/ccvs/core/ICVSResource.class
+SHA-256-Digest: IjcPwwxZHV0HLHvAFvV5HDHnoI91HDwrMS2EE5enY7w=
+
+Name: org/eclipse/team/internal/ccvs/core/client/ConsoleListeners$2.cl
+ ass
+SHA-256-Digest: yGlsYLTxxLhne7Xp2KYRbGjJbea6LJe7fhshwzB/kh8=
+
+Name: org/eclipse/team/internal/ccvs/core/ICVSResourceVisitor.class
+SHA-256-Digest: 6FBoMsf52VIIJL6LVFBt3TRNCBcV+HhJLqnszxPAPwo=
+
+Name: org/eclipse/team/internal/ccvs/core/client/ImportStructureVisito
+ r.class
+SHA-256-Digest: Xf8GNT7R1wCvQQbbmZ6ln2biKcc4nvxnCqRYNGzSb2g=
+
+Name: org/eclipse/team/internal/ccvs/core/client/CheckoutWithOverwrite
+ $CreatedResponseHandler.class
+SHA-256-Digest: dEgLTRxe3YKLKioGWvGUf3rOhmOFL9WnRwyPFYhOUnk=
+
+Name: org/eclipse/team/internal/ccvs/core/client/Update.class
+SHA-256-Digest: +x9HJpwZDS/8WAYyqas3tXa5wjJbFKFHzbYRCLMccNk=
+
+Name: org/eclipse/team/internal/ccvs/core/CVSTeamProvider$3.class
+SHA-256-Digest: 79aqEpHFV8eokIbeGqj1NzCp9gvZanbZ1EJZzY2hc6M=
+
+Name: org/eclipse/team/internal/ccvs/core/connection/Connection.class
+SHA-256-Digest: 85c/922BtIPF+X4UEQeTZDiZyifHT08ml6eQatTO7xM=
+
+Name: org/eclipse/team/internal/ccvs/core/util/ResourceStateChangeList
+ eners.class
+SHA-256-Digest: CIV1zueorQ6hBJBmlvSF9xu36/WfOkGkOCQClKEQfGE=
+
+Name: org/eclipse/team/internal/ccvs/core/client/Import.class
+SHA-256-Digest: tIPGRP6NRgcuetiriOVHS6HCH/F2ifLAQCkJ7Mo1PpU=
+
+Name: org/eclipse/team/internal/ccvs/core/resources/EclipseFile$3.clas
+ s
+SHA-256-Digest: 6jRFzP5oPlssgPMqHzDjfPvIHKOxiTZpvm2TxaYtGG8=
+
+Name: org/eclipse/team/internal/ccvs/core/resources/CVSEntryLineTag.cl
+ ass
+SHA-256-Digest: j4FKXgs++QVD49WvjqTMSPE6RZrpU6BdYP3eCBrSmes=
+
+Name: org/eclipse/team/internal/ccvs/core/client/RLog.class
+SHA-256-Digest: yaHA9R6cOqjMRnght/tgDG6ZaMbMyj0l1U7ag3YO5/Q=
+
+Name: org/eclipse/team/internal/ccvs/core/syncinfo/CVSDescendantResour
+ ceVariantByteStore.class
+SHA-256-Digest: vqKeXMEovotgUYkAeHN90+/vNnlUp27rbtBCXoFCB8c=
+
+Name: org/eclipse/team/internal/ccvs/core/CVSProjectSetCapability$1.cl
+ ass
+SHA-256-Digest: o7i0MF3acfr1DL2rcydhH2CAlxrfgdvZ3MY9g8UzqG0=
+
+Name: org/eclipse/team/internal/ccvs/core/client/listeners/ModuleDefin
+ itionsListener.class
+SHA-256-Digest: 1g7e1d+lDhknRIBmTFNuDUYTwZFeIkzhfKFYq+ME4Tk=
+
+Name: org/eclipse/team/internal/ccvs/core/CVSStatus.class
+SHA-256-Digest: MQcQW3fisHyO3/y/0Armlrmeb6t1Nzi8rnLn6Wtj+1U=
+
+Name: org/eclipse/team/internal/ccvs/core/client/Session$3.class
+SHA-256-Digest: dvNK226arvcyF+Rx9uG67MdHAfRU+/fB6iYZLuyRDww=
+
+Name: org/eclipse/team/internal/ccvs/core/resources/RemoteFolderTreeBu
+ ilder$2.class
+SHA-256-Digest: Y9+vuEEdl0cvpemDawOM60OcLXIzKzIcOE/7hdnqs9A=
+
+Name: org/eclipse/team/internal/ccvs/core/client/Command.class
+SHA-256-Digest: woHS55nGwLrmy7hgwnslaIBYffvdQpUbG16hV0thldM=
+
+Name: org/eclipse/team/internal/ccvs/core/client/Version$1.class
+SHA-256-Digest: YvGg5ZwyASAjSM3e6K0PVXHf95IlQG8vXzVhPqwptxI=
+
+Name: org/eclipse/team/internal/ccvs/core/connection/CVSRepositoryLoca
+ tion.class
+SHA-256-Digest: 9GYTmNIU5NhcmTZ8Q69XEieDAtjgpaUpu6yaDKv7Inw=
+
+Name: org/eclipse/team/internal/ccvs/core/CVSTeamProvider$4.class
+SHA-256-Digest: tP3Ft3iaRKGwyt96bHuDa5rSg7r95HjY//XM+aapeFc=
+
+Name: org/eclipse/team/internal/ccvs/core/client/ConsoleListeners$3.cl
+ ass
+SHA-256-Digest: 5XdCYI2jXxyzclF2NKNxb+OPOiyyawznJangBUFjBho=
+
+Name: org/eclipse/team/internal/ccvs/core/client/listeners/AdminKSubst
+ Listener.class
+SHA-256-Digest: 9SZTI+UAEKl1xJNv9l+3va5wj65TPHvgIBIoBQdDthE=
+
+Name: org/eclipse/team/internal/ccvs/core/client/StickyHandler.class
+SHA-256-Digest: k4WnJ6/qHNFgPIOdP4E7yG4vZy2coydhy/lMhFkQmLA=
+
+Name: org/eclipse/team/internal/ccvs/core/client/NOOPCommand.class
+SHA-256-Digest: DQdeQ2G5Ikd4xk7+QeihhhVJ6rCN9vcBTMG/JAY5dO8=
+
+Name: org/eclipse/team/internal/ccvs/core/client/listeners/EditorsList
+ ener.class
+SHA-256-Digest: Wfqu9KV5PEYQ8w+rZFkCt2QigPYiZmtD0pKIgNMAkpQ=
+
+Name: org/eclipse/team/internal/ccvs/core/client/Command$QuietOption.c
+ lass
+SHA-256-Digest: RzZFiD6g0CM4c0zYTDtagC2PSfZAHeHOS9Nb3bXAjLU=
+
+Name: org/eclipse/team/internal/ccvs/core/CVSCoreFileModificationValid
+ ator$1.class
+SHA-256-Digest: +9+yksKU7hiIfAo9tVp/Qtn4aslAont10kx8wgsn6M4=
+
+Name: org/eclipse/team/internal/ccvs/core/resources/EclipseFile$2.clas
+ s
+SHA-256-Digest: XQB18/eoj+tSPtUr5stdQYvVMhJmD2VMtx/3b9gXuLc=
+
+Name: org/eclipse/team/internal/ccvs/core/ICVSDecoratorEnablementListe
+ ner.class
+SHA-256-Digest: emAMpCSJRX6HXpmStXRpLCLcxGmNj630xlh9wK9rSbs=
+
+Name: org/eclipse/team/internal/ccvs/core/ICVSStorage.class
+SHA-256-Digest: y5N9huKPoDqjc2HXTu76ZXTj6zQQ+/BgKFuf3v68tiQ=
+
+Name: org/eclipse/team/internal/ccvs/core/CVSSyncTreeSubscriber$CVSSyn
+ cInfoToDiffConverter.class
+SHA-256-Digest: k//Qw2mPqXL57JdyHAVgYHElGc6jZuy4QLQFt7Gsja8=
+
+Name: org/eclipse/team/internal/ccvs/core/client/CheckoutWithOverwrite
+ .class
+SHA-256-Digest: mVI+aQJ9b2hurK+AIYRPLp34kt0wAT5zoSH7QBbhhVU=
+
+Name: org/eclipse/team/internal/ccvs/core/util/StringMatcher$Character
+ Class.class
+SHA-256-Digest: dPI7ZZWNUaRt137Jo21eJ22lcYkYJWC5DDMFOXhefvQ=
+
+Name: org/eclipse/team/internal/ccvs/core/CVSResourceRuleFactory.class
+SHA-256-Digest: Qga/LVaY26NSnDkkYF/KoXEYh5GAKkbEOB7XmpS7O3w=
+
+Name: org/eclipse/team/internal/ccvs/core/resources/SynchronizerSyncIn
+ foCache.class
+SHA-256-Digest: CwJcnGcO13d5AKlLceKk+XYGt4rKYcrP/LXn+TScOBI=
+
+Name: org/eclipse/team/internal/ccvs/core/CVSCompareSubscriber$1.class
+SHA-256-Digest: HoNdaMDGluVBP4QsK5M7GgcLF1yqC/RUY7qSE7TXhB0=
+
+Name: org/eclipse/team/internal/ccvs/core/CVSProjectSetCapability$2$1.
+ class
+SHA-256-Digest: 5YX12aRFsEo1lFnEnEDU0reC0j7jcSPE8N/9MVkZJzA=
+
+Name: org/eclipse/team/internal/ccvs/core/resources/EclipseFolder$1.cl
+ ass
+SHA-256-Digest: wsdAVjqeoXZztCYaMVajqqJu7XFJovqScv0/Iuw3t+A=
+
+Name: org/eclipse/team/internal/ccvs/core/client/Command$LocalOption.c
+ lass
+SHA-256-Digest: xlOVK85BGOqIzJLiAapC71kZsDfDdsAkpFQ5fDGSRh8=
+
+Name: org/eclipse/team/internal/ccvs/core/IServerConnection.class
+SHA-256-Digest: va3CYjTks68snZQJobKBGcr4gfDAhdOdji03EWn7UPY=
+
+Name: org/eclipse/team/internal/ccvs/core/client/PruneFolderVisitor.cl
+ ass
+SHA-256-Digest: LAY7kSSsqEqLgmwF/A696bfvxu1GDTq9UUTjrrzVrvE=
+
+Name: org/eclipse/team/internal/ccvs/core/client/ConsoleListeners.clas
+ s
+SHA-256-Digest: uC/ouhDAXKB0P56GAy7whUiY/XrHAzgQbPn53eFRhQM=
+
+Name: org/eclipse/team/internal/ccvs/core/filesystem/CVSFileSystem.cla
+ ss
+SHA-256-Digest: CxnJhxUC8qCWZgscmbFsYXrSmmRsy18tFgzbMdSVVHU=
+
+Name: org/eclipse/team/internal/ccvs/core/filesystem/RemoteLogger.clas
+ s
+SHA-256-Digest: D4MGf3NLs0LZ2hKOObrmdOaVwsRos6sa8rl4cNXxR8c=
+
+Name: org/eclipse/team/internal/ccvs/core/util/MoveDeleteHook$4$1.clas
+ s
+SHA-256-Digest: aGvzxbWYNjJd//KHe2cd4lmZ4e228M7/iVWaPnNd0Cc=
+
+Name: org/eclipse/team/internal/ccvs/core/ICVSRepositoryLocation.class
+SHA-256-Digest: OnA3NEI2bvkb8CVGg0U+uNRqB5fEDNzmJZvLaJwt3yY=
+
+Name: org/eclipse/team/internal/ccvs/core/resources/RemoteFile.class
+SHA-256-Digest: GhsAOfU52ZgnjtqdGNCJL5dksIdJ2+FqPECfV3cVv4o=
+
+Name: org/eclipse/team/internal/ccvs/core/resources/RemoteFolderMember
+ Fetcher.class
+SHA-256-Digest: LMvL3upgcu2Pz/FwoAitB/qYZDK/cGG9NYh7hMBNSCA=
+
+Name: org/eclipse/team/internal/ccvs/core/Policy.class
+SHA-256-Digest: sS1cjB9hxL5Ba+hjCqmNazeVLYI7Q9VF/c5WbV39VbQ=
+
+Name: org/eclipse/team/internal/ccvs/core/client/NewEntryHandler.class
+SHA-256-Digest: Vk2/qTuw/WZaqi86tSWNULamk19UjWKsfmoz8pIJsQU=
+
+Name: org/eclipse/team/internal/ccvs/core/util/MoveDeleteHook$2.class
+SHA-256-Digest: Ism/a63Z44ZBJJ68f8DQpW3GcvW206156Kg/JCyL4ys=
+
+Name: org/eclipse/team/internal/ccvs/core/client/ModuleExpansionHandle
+ r.class
+SHA-256-Digest: UhTpc32VZxYwZH8UuEC3F6EAvxQmMwclhunMsD6nT+4=
+
+Name: org/eclipse/team/internal/ccvs/core/connection/CVSCommunicationE
+ xception.class
+SHA-256-Digest: MvKdXx+kQrJh72+JrQQ6RjlhqpnRy0UvgQ1Kdp+2zmQ=
+
+Name: org/eclipse/team/internal/ccvs/core/resources/SessionPropertySyn
+ cInfoCache.class
+SHA-256-Digest: T979FTkUBhD9FS95WKjd/b7IluniRIj+troFSzOa9/0=
+
+Name: org/eclipse/team/internal/ccvs/core/resources/EclipseFolder.clas
+ s
+SHA-256-Digest: hQtRCpULQTP8+Y1OgPICmiVilBMwHO1bZRxfGE7m1BM=
+
+Name: org/eclipse/team/internal/ccvs/core/client/Log.class
+SHA-256-Digest: saDaxZhI2dj/lE4SHOJB7EgkpmCQSJy6FZAgDaWVPr8=
+
+Name: org/eclipse/team/internal/ccvs/core/util/ResourceStateChangeList
+ eners$4.class
+SHA-256-Digest: MGf+LqeXQmY1RPSMUXyCifAGclrKyEG4SZr0C6HtzW4=
+
+Name: org/eclipse/team/internal/ccvs/core/CVSTeamProvider$2.class
+SHA-256-Digest: hHhIzeIyJ+Oado8RVycm7Xz9zXE15d4GrTHbHQRaCdI=
+
+Name: org/eclipse/team/internal/ccvs/core/client/Version.class
+SHA-256-Digest: R6TbNs+uASCwmXqCEFdNznyzzgn+kNAY9SEvT348Nj8=
+
+Name: org/eclipse/team/internal/ccvs/core/client/listeners/IUpdateMess
+ ageListener.class
+SHA-256-Digest: ciCz8i79WEoeGIcS/WC0xNnJH17duMq3f7zaNksfKtw=
+
+Name: org/eclipse/team/internal/ccvs/core/connection/PServerConnection
+ Method.class
+SHA-256-Digest: uhY8HNQJy3514sut8KPpzXYQdv3wOlhwheigREJIdms=
+
+Name: org/eclipse/team/internal/ccvs/core/resources/EclipseFile$1.clas
+ s
+SHA-256-Digest: 9iSUTOOpV51KMBV9+mX17H5B8BAUaFP9SW0P0LzDLMI=
+
+Name: org/eclipse/team/internal/ccvs/core/util/KnownRepositories$1.cla
+ ss
+SHA-256-Digest: 7sPrAxplRREZ0dD/EARfsFXPJGhL+XnBnKfVOQwRw84=
+
+Name: org/eclipse/team/internal/ccvs/core/IUserAuthenticator.class
+SHA-256-Digest: WTV8ogCxMWgmvOWaHOgau0aUHNYaLslWUm55jklxzPA=
+
+Name: org/eclipse/team/internal/ccvs/core/resources/FileContentCaching
+ Service.class
+SHA-256-Digest: 1cXeU5sTRnQFb3pK4gb8xUrq8PbOeTaUYJcoUS8SDqE=
+
+Name: org/eclipse/team/internal/ccvs/core/client/ConsoleListeners$4.cl
+ ass
+SHA-256-Digest: 7cIDovTry32WZ+EBRyUetwR/qGG0gk+MvKOhU5kHbqs=
+
+Name: org/eclipse/team/internal/ccvs/core/syncinfo/CVSResourceVariantT
+ ree.class
+SHA-256-Digest: ZZDazi115gNUl347I5Z9/bAH4ETVpVn+s9D3uGwYifY=
+
+Name: org/eclipse/team/internal/ccvs/core/util/StringMatcher.class
+SHA-256-Digest: SntIRyqymDqwgmZNKen+8Xljhykao6RQz6UaJbhDKoM=
+
+Name: org/eclipse/team/internal/ccvs/core/client/Admin.class
+SHA-256-Digest: CVrH3Jo9TZDSQBJWjzU7wH/nfJLXMyUTZ+MWOfcPsmk=
+
+Name: org/eclipse/team/internal/ccvs/core/resources/EclipseSynchronize
+ r$4.class
+SHA-256-Digest: ZiBu2zyc3HD6eH/GDVh91NrIBYhJYk6qmZ0dFV1mnIk=
+
+Name: org/eclipse/team/internal/ccvs/core/client/listeners/LogListener
+ .class
+SHA-256-Digest: 7AwAsH+jE4XcYEgQzSRxrsQuc5e097bkIW635iHJD6k=
+
+Name: org/eclipse/team/internal/ccvs/core/util/SyncFileWriter.class
+SHA-256-Digest: ZIyoN2bi/GOfF+TDVHmr26oej+yNZnsivBlI5Jn4beg=
+
+Name: org/eclipse/team/internal/ccvs/core/IResourceStateChangeListener
+ .class
+SHA-256-Digest: lf5K5/bires0V53+uBglYZ3+46j76K2X4fdySsCSoWI=
+
+Name: org/eclipse/team/internal/ccvs/core/client/RTag.class
+SHA-256-Digest: 2QKfI7BfUPsKUCD0BqUU4qnriPEunqa9aHHa6UUgWbE=
+
+Name: org/eclipse/team/internal/ccvs/core/resources/RemoteFile$LogEntr
+ yListener.class
+SHA-256-Digest: 1aGX537+KREXqTxGlB3xpcp+3Vq6FLWx8ecMr6/KrpQ=
+
+Name: org/eclipse/team/internal/ccvs/core/client/listeners/AdminKSubst
+ Listener$1.class
+SHA-256-Digest: UFDDo7/mN+Xn3/hYtvNaXyfXx7pZvINQJTvQAHFeWW0=
+
+Name: org/eclipse/team/internal/ccvs/core/client/Status.class
+SHA-256-Digest: vDQG+cW48GEQ+RPp8SQNWclEsCrbwdg1aDosrBQslHw=
+
+Name: org/eclipse/team/internal/ccvs/core/resources/EclipseSynchronize
+ r$1.class
+SHA-256-Digest: 0Y73p6T8anWFjqVSYHFl9e6BLLV2r6jTcq8vUc0p7/U=
+
+Name: org/eclipse/team/internal/ccvs/core/resources/UpdateContentCachi
+ ngService$SandboxUpdatedHandler.class
+SHA-256-Digest: 3fL8IKiM+SiPluC9+T2hcLLOYSRe/+XeW2uYL52lWeM=
+
+Name: org/eclipse/team/internal/ccvs/core/Policy$1.class
+SHA-256-Digest: P/jUQKZ0vt3lBTug3FlDqrin3kLXIUZJBTofrR1J17s=
+
+Name: org/eclipse/team/internal/ccvs/core/filehistory/CVSFileHistory.c
+ lass
+SHA-256-Digest: 4GJCY6tYXJiHpzn+TrYVI4r/E/qSyFRNZJLBSf4VL5Y=
+
+Name: org/eclipse/team/internal/ccvs/core/filehistory/CVSResourceVaria
+ ntFileRevision.class
+SHA-256-Digest: Cx57NXQE09uEJD+95Lq4BGV7d/ZCRBUryIBWfyJ77y0=
+
+Name: org/eclipse/team/internal/ccvs/core/CVSWorkspaceSubscriber$1.cla
+ ss
+SHA-256-Digest: HclYAi2yCg0m2NlXpchlFg7FQ5kZGOByMz96v2oZWz8=
+
+Name: org/eclipse/team/internal/ccvs/core/ICVSRemoteFile.class
+SHA-256-Digest: xIU3sSd3SVatsozdPGz84r1fxcqzpVFqPC5ksjIIlUY=
+
+Name: org/eclipse/team/internal/ccvs/core/util/KnownRepositories.class
+SHA-256-Digest: 7tf/4+qqKKmoAwwWsjX4FBsAYpDiMtaX81jv+Ejoz7c=
+
+Name: org/eclipse/team/internal/ccvs/core/client/ByteCountOutputStream
+ .class
+SHA-256-Digest: sgoKda4dPV2/qR43ZSBV7VXIjnzb561Npx69OxkwMdE=
+
+Name: org/eclipse/team/internal/ccvs/core/syncinfo/CVSBaseResourceVari
+ antTree.class
+SHA-256-Digest: OUbCda9t40DOXXiL88Bg7BnzO9nRHZ0m9e5wTlMqPx4=
+
+Name: org/eclipse/team/internal/ccvs/core/resources/RemoteFolder$1.cla
+ ss
+SHA-256-Digest: 0ZQji6k2hfAioIxOD7K4VbL/kiZ0XwQG6iuq5rVSazQ=
+
+Name: org/eclipse/team/internal/ccvs/core/client/Request.class
+SHA-256-Digest: twgFY/nydtx4f6/0VoemEJ0ehjIMcfZ9lCd22G11Uxo=
+
+Name: org/eclipse/team/internal/ccvs/core/connection/PServerConnection
+ .class
+SHA-256-Digest: o/TcEaXxWgkW5BsVy6GtKSkEo6IQANPP75uh4ZojVmo=
+
+Name: org/eclipse/team/internal/ccvs/core/CVSMergeSubscriber$MergeBase
+ Tree.class
+SHA-256-Digest: u0hHWwWL69oVIM7BqI7zsh4droyhLg5lLmfDH9heiW8=
+
+Name: org/eclipse/team/internal/ccvs/core/client/AbstractMessageComman
+ d.class
+SHA-256-Digest: aieirJw+7DMu90gPHK+uW1oq+WWzfr25wyeDyRwPuVw=
+
+Name: org/eclipse/team/internal/ccvs/core/client/RemovedHandler.class
+SHA-256-Digest: 9MGecQd0I7sTSa12yk7w9nVNJEc7meLTZodgUtZY+OI=
+
+Name: org/eclipse/team/internal/ccvs/core/resources/EclipseSynchronize
+ r$2.class
+SHA-256-Digest: /AACn/SvFskQCF3xQYJPHZMM/H+iEzfJ8RWBGq/7pK0=
+
+Name: org/eclipse/team/internal/ccvs/core/filehistory/CVSFileRevision.
+ class
+SHA-256-Digest: k/+HJ+kdqXkRfUnRhDltQnBzrIGzFSPdEbujT+0IQeQ=
+
+Name: org/eclipse/team/internal/ccvs/core/CVSTeamProviderType$1.class
+SHA-256-Digest: NyRphT7qgpsynP3h48sjMZJNa/9RZbiWMsvuKgEm8yE=
+
+Name: org/eclipse/team/internal/ccvs/core/IConnectionMethod.class
+SHA-256-Digest: JNGoF912o4bcVDBklvm/Rz1IrBdRL8OUqYvdfw9FmQ4=
+
+Name: org/eclipse/team/internal/ccvs/core/CVSWorkspaceSubscriber$2.cla
+ ss
+SHA-256-Digest: JHZ33xHZdKpHVyrpHIhHGpkbUNxEm9i39HLIUG1NT6w=
+
+Name: org/eclipse/team/internal/ccvs/core/client/listeners/RDiffSummar
+ yListener.class
+SHA-256-Digest: JNmfskOlwarop3qTgn4aRL0RnQq9j0tw0k7Wgwzx404=
+
+Name: org/eclipse/team/internal/ccvs/core/client/TemplateHandler.class
+SHA-256-Digest: 9ayFi4ZLQrZ71SsOWbZNsf5PvbfWqSZMetAYjkq7lJI=
+
+Name: org/eclipse/team/internal/ccvs/core/resources/CVSWorkspaceRoot.c
+ lass
+SHA-256-Digest: KCS/pgDlTpk9vSO6sR/kaHO2UuSv9yj7ls2vCUbd2X0=
+
+Name: org/eclipse/team/internal/ccvs/core/CVSProviderPlugin.class
+SHA-256-Digest: eMex91VobhNaeVRAGOgKSXxLgQggVwZlYktMVRmlK/0=
+
+Name: org/eclipse/team/internal/ccvs/core/mapping/CVSActiveChangeSet.c
+ lass
+SHA-256-Digest: 2gIZcfZomTBKisbTD+WTJTvnarPWtZVPA8xN9u52MeE=
+
+Name: org/eclipse/team/internal/ccvs/core/client/DiffStructureVisitor.
+ class
+SHA-256-Digest: UcPoGbRtzeVUJ1rhqifm27Eu5gVPqGM2TM5v07em76M=
+
+Name: org/eclipse/team/internal/ccvs/core/client/Tag.class
+SHA-256-Digest: 7HH1dZtbqeFH+HwkvsqM/M8VRtPeWthh4nqRL8oT7po=
+
+Name: org/eclipse/team/internal/ccvs/core/CVSProjectSetCapability.clas
+ s
+SHA-256-Digest: UDYfIaezsCRzq9U09SZ+h2uK35j8ZqsHfKyt4XTfyWU=
+
+Name: org/eclipse/team/internal/ccvs/core/CVSSyncTreeSubscriber.class
+SHA-256-Digest: 6pkha/vXKl3jDHGrb6h1/qk3+m8yn8wn47kmKyt79FE=
+
+Name: org/eclipse/team/internal/ccvs/core/util/Util.class
+SHA-256-Digest: p+PMySJZRDAg9ngJZw2AWIRUV3UteNm0ftsEAq4juwU=
+
+Name: org/eclipse/team/internal/ccvs/core/ICVSFile.class
+SHA-256-Digest: JJJS01aqF+VvN7mY5qJs+tSJOnFS9eJ07ok6opJPQxo=
+
+Name: org/eclipse/team/internal/ccvs/core/mapping/ChangeSetModelProvid
+ er.class
+SHA-256-Digest: u84kK4PyysV5LUkuilLEpcBcWITsA6RkJ4qKLVJbl+4=
+
+Name: org/eclipse/team/internal/ccvs/core/client/CommandOutputListener
+ .class
+SHA-256-Digest: 0/4PTm2kz9HKppc3NrQ50Gse6EgZenbVp0CKcqbt0QM=
+
+Name: org/eclipse/team/internal/ccvs/core/filehistory/CVSFileHistoryPr
+ ovider.class
+SHA-256-Digest: jfZmPP+BznuPwabmg/2GQDcMN7irxjHsOuJmHMzJlcw=
+
+Name: org/eclipse/team/internal/ccvs/core/CVSMessages.class
+SHA-256-Digest: V/t/Sk96rpV5QNJOtBF8JClFRtndulHZbcVe7QrUba4=
+
+Name: org/eclipse/team/internal/ccvs/core/resources/FileModificationMa
+ nager.class
+SHA-256-Digest: sKuoeYvhn1+vZZtLMlg2vCYeGJYimyzPeECsElBd2uc=
+
+Name: org/eclipse/team/internal/ccvs/core/client/RemoteCommand.class
+SHA-256-Digest: KqQQ2fQFQL8ZA8VeOJC6sAUn7eufzeKwuEHX5zYpp3I=
+
+Name: org/eclipse/team/internal/ccvs/core/syncinfo/MutableResourceSync
+ Info.class
+SHA-256-Digest: Zh/DJ5NDSbfH9vHHJMT8xcvwrkdH0Q0bvLNt0TP84uw=
+
+Name: org/eclipse/team/internal/ccvs/core/connection/ExtConnectionMeth
+ od.class
+SHA-256-Digest: YjkUZUGb9O1DZGI5Lr00iZTVWQK9WTArTTrXAkB4nTo=
+
+Name: org/eclipse/team/internal/ccvs/core/util/ResponsiveSocketFactory
+ $1.class
+SHA-256-Digest: E18IlPInq3EmIS3QZWHQp/9MVAdHvZlxVGURI4/hN6o=
+
+Name: org/eclipse/team/internal/ccvs/core/util/SyncFileWriter$2.class
+SHA-256-Digest: II9y1/o83dMsTea12dvKRLJWptNdmruElkkzoY6JCtI=
+
+Name: org/eclipse/team/internal/ccvs/core/syncinfo/ReentrantLock.class
+SHA-256-Digest: PUTj5sYM+n++fZbvgVrW0NZYZCxTQk77a5jGoZK4Jw0=
+
+Name: org/eclipse/team/internal/ccvs/core/syncinfo/MultiTagResourceVar
+ iantTree.class
+SHA-256-Digest: o2wrbA1Q5R0fBptQshnNAVb38ml3nEY7zxGdXFkix3o=
+
+Name: org/eclipse/team/internal/ccvs/core/resources/RemoteFolderSandbo
+ x.class
+SHA-256-Digest: ExtSUumLg1x3ykJWOhbuY4HBQlfTvyTq+v4zbTmMmK0=
+
+Name: org/eclipse/team/internal/ccvs/core/util/ResourceStateChangeList
+ eners$2.class
+SHA-256-Digest: 0A4pfDdoHKts/RROghYgN1lIptKCjrhhlscy5xG2Kjk=
+
+Name: org/eclipse/team/internal/ccvs/core/CVSRepositoryLocationMatcher
+ .class
+SHA-256-Digest: /99u8BKY1yyRv/igJ/LcgPya/HAtxKE2r4t4+zYv5r4=
+
+Name: org/eclipse/team/internal/ccvs/core/util/KnownRepositories$2.cla
+ ss
+SHA-256-Digest: d9Yip5ljtawt8AhXy4Al6s5rNAJk4xihvl8xlwMg/U8=
+
+Name: org/eclipse/team/internal/ccvs/core/client/listeners/IMessagePat
+ terns.class
+SHA-256-Digest: KhoeIqBT1yJOxnSiRLxWIvPfbygkp2XG7zH/oy7GLZk=
+
+Name: org/eclipse/team/internal/ccvs/core/CVSTeamProvider$1.class
+SHA-256-Digest: uw32k2IPMiSXcL6oWrU2A1DTfh5uwp/ZkyJfCACvISM=
+
+Name: org/eclipse/team/internal/ccvs/core/client/listeners/AnnotateLis
+ tener.class
+SHA-256-Digest: MEwsdiZ1D0EUduK2s5QcziYNxDmCTFF2Ywc2TNjIWFE=
+
+Name: org/eclipse/team/internal/ccvs/core/connection/CVSAuthentication
+ Exception.class
+SHA-256-Digest: OJaS4M3ozeWtcCvNqzSKxIqGHwJGYICkhdkM6UVRNOU=
+
+Name: org/eclipse/team/internal/ccvs/core/client/NOOPVisitor.class
+SHA-256-Digest: hLbOWdA+W/HChg/9PmqqUOHJ+bA3Dv5pD7dmf37PJ34=
+
+Name: org/eclipse/team/internal/ccvs/core/util/FileNameMatcher.class
+SHA-256-Digest: Pl3xehet0gcgeUH1kr+2oCbfGx0jy/aj3x9aLXm+dik=
+
+Name: org/eclipse/team/internal/ccvs/core/CVSCoreFileModificationValid
+ ator.class
+SHA-256-Digest: PK9uavTAfo48TN7XdDjsB5H9sWvgVa9ozFB8Coobb5c=
+
+Name: org/eclipse/team/internal/ccvs/core/ICVSFileModificationValidato
+ r.class
+SHA-256-Digest: RpWPoAXLv8i1kLGT7dAcZVSPDtNg585uMR9eBLywecw=
+
+Name: org/eclipse/team/internal/ccvs/core/client/ValidRequestsHandler.
+ class
+SHA-256-Digest: HR0L6GUS+Xa7CJGBQNmxR41fU+PtNZzOlgYISdfmjcs=
+
+Name: org/eclipse/team/internal/ccvs/core/CVSAnnotateBlock.class
+SHA-256-Digest: uRd9tc/0VMGd3/1whfSz//HwzAnXP3+1UypLkO1JXm4=
+
+Name: org/eclipse/team/internal/ccvs/core/resources/EclipseResource.cl
+ ass
+SHA-256-Digest: ZrxO+UYRkXNGIxUA3SIbJAJQQlq/7yQk/vd2RJZeGa8=
+
+Name: org/eclipse/team/internal/ccvs/core/client/Session$1.class
+SHA-256-Digest: 3XhqjjPkL3KZR5IjGu7j0wey0fz13hJzXwYQdxQle3U=
+
+Name: org/eclipse/team/internal/ccvs/core/client/Commit.class
+SHA-256-Digest: uTxWruDEkO3C9MCNnKqxOIKYwWmfx2Yu/dG56pcdg4g=
+
+Name: org/eclipse/team/internal/ccvs/core/util/BuildCleanupListener.cl
+ ass
+SHA-256-Digest: lWtl//Pb9Dt3ZA0lEmuU+znVwEQhfTAJTfTOMJ7YFmE=
+
+Name: org/eclipse/team/internal/ccvs/core/client/StaticHandler.class
+SHA-256-Digest: A1v+n8pmtN2AOaP6tVW+iS/lT9fI/7qYofaZlbpYW3k=
+
+Name: org/eclipse/team/internal/ccvs/core/CVSMergeSubscriber$2.class
+SHA-256-Digest: Cqzf4W8IiYwxRg1zd/tEcv0VmsVve09iDannV4uXAns=
+
+Name: org/eclipse/team/internal/ccvs/core/resources/RemoteFolderTreeBu
+ ilder$3.class
+SHA-256-Digest: wJyWRKjpQ34y+F9bvh/e0Kicdx2fR8p/WLtyuXX0m5I=
+
+Name: org/eclipse/team/internal/ccvs/core/client/listeners/LogListener
+ $VersionInfo.class
+SHA-256-Digest: sYsThVbXYnIAggrmqIQ38n7Rms4JJVh8PF1ZBoMjAOU=
+
+Name: org/eclipse/team/internal/ccvs/core/client/Command$1.class
+SHA-256-Digest: fJ99Rf5XWZ75kv4wPE6kFjeE+SiPZIV9xn9FNrttJVg=
+
+Name: org/eclipse/team/internal/ccvs/core/CVSWorkspaceSubscriber.class
+SHA-256-Digest: gLP9q9ijBmB3rVVw9qmbW9q2T0p3mjHE3V5o8XWosZQ=
+
+Name: org/eclipse/team/internal/ccvs/core/client/listeners/UpdateListe
+ ner.class
+SHA-256-Digest: BJmoRtceMOc4MOg6T5do994v9SwWpprG8t+ona2wkPE=
+
+Name: org/eclipse/team/internal/ccvs/core/client/MTHandler.class
+SHA-256-Digest: TAUlmdFQSpDw5rsnoSU0jZ1o+zYPgsAWM2mvk/nFSno=
+
+Name: .options
+SHA-256-Digest: 4k2z7n2HUhk1BsLofkwrJJqSMYzg4dYf26HGuaFYFN0=
+
+Name: org/eclipse/team/internal/ccvs/core/util/MoveDeleteHook$4.class
+SHA-256-Digest: 0ZRPtqrbi1XwFKA5MbBnWRls2a0AKO33IcfYZ3xpfsY=
+
+Name: org/eclipse/team/internal/ccvs/core/client/Add.class
+SHA-256-Digest: NiUpnHqZd0R17GuIY7TBoW9M9v+dQ9YIhZ7GrU/BFPg=
+
+Name: org/eclipse/team/internal/ccvs/core/client/Command$Option.class
+SHA-256-Digest: yJSOnMdKmUBXzXUxOeZUdF3avay+mfJhw9v9CYP/e0k=
+
+Name: org/eclipse/team/internal/ccvs/core/client/Replace.class
+SHA-256-Digest: brVkrIkcZOgsRYDPupq4fXWNaPD8NuLykMyCtlJFpZ0=
+
+Name: org/eclipse/team/internal/ccvs/core/client/listeners/StatusListe
+ ner.class
+SHA-256-Digest: lE0IuvlVUpmHN0OM8qB9GkXoH7fo1njNAVpdiNt6tX0=
+
+Name: org/eclipse/team/internal/ccvs/core/client/listeners/ServerMessa
+ geLineMatcher.class
+SHA-256-Digest: Ptj6MGc5D5KIEFAOol893GZMqv44FCIqccQLN7GY99g=
+
+Name: org/eclipse/team/internal/ccvs/core/client/RDiff.class
+SHA-256-Digest: WO0jMaim+d2N63iDD1gWkdppgCnywBJoLrazrMGlja8=
+
+Name: org/eclipse/team/internal/ccvs/core/resources/SessionPropertySyn
+ cInfoCache$1.class
+SHA-256-Digest: prjqzHsUNU0IP9qLm+LGoM2QWh/jkDDu1wdOczFsofw=
+
+Name: org/eclipse/team/internal/ccvs/core/resources/SyncInfoCache.clas
+ s
+SHA-256-Digest: l63g/n78AIwHMWEzswFlgtJzvZiaSYrWJThfBSxI58g=
+
+Name: org/eclipse/team/internal/ccvs/core/util/StringMatcher$Position.
+ class
+SHA-256-Digest: vnl9ckiv95cdxITNGWD3ExdJ8YVSO8l+RaLpLMVwk94=
+
+Name: org/eclipse/team/internal/ccvs/core/util/MoveDeleteHook$3.class
+SHA-256-Digest: xFzZ58WOBV+6fom7iwL8JdVVYt1vGy4B9Klb7lu51n8=
+
+Name: org/eclipse/team/internal/ccvs/core/client/AbstractStructureVisi
+ tor$1.class
+SHA-256-Digest: GuKNhY96CWr9I30jWENXeTom+p3c9tI/sxHS/inx5Gs=
+
+Name: org/eclipse/team/internal/ccvs/core/util/SyncFileChangeListener.
+ class
+SHA-256-Digest: M/pJwEsIp4Gw8FCtQEBx8x31Okiwte6C0QlmDiWjFPQ=
+
+Name: org/eclipse/team/internal/ccvs/core/mapping/CVSCheckedInChangeSe
+ t.class
+SHA-256-Digest: RKfHTFwhdNG3OPWzmrNmOHBKi7owd+a9C8sCmpVg9n0=
+
+Name: org/eclipse/team/internal/ccvs/core/client/TemplateHandler$1.cla
+ ss
+SHA-256-Digest: 2zR7aIAuHY/BHucTRCdE+S4WWKD2T74jbztWTOIM9hM=
+
+Name: org/eclipse/team/internal/ccvs/core/filesystem/CVSFileTree.class
+SHA-256-Digest: 5EeIszECT6T/NJ1o81eTnVWqzIU5PAObRGYfBReuVXU=
+
+Name: about_files/NOTICE
+SHA-256-Digest: eLxVugHqrYr2WWd/80kH/w42L1jzJ90czFu+qwhYfJ4=
+
+Name: org/eclipse/team/internal/ccvs/core/client/listeners/DiffListene
+ r.class
+SHA-256-Digest: h5NcvCwzSDYPfLK4qm1dDTU6z4OqJbjnOFE6qyqOIf4=
+
+Name: about_files/asl-v20.txt
+SHA-256-Digest: z8d0m5b2O9McPEK1xHG/dWgUBT6EfBDz6wA0F7xSPTA=
+
+Name: org/eclipse/team/internal/ccvs/core/CVSTeamProviderType.class
+SHA-256-Digest: hzWW7dLTkA2FAFpEpKtmt+sDNgtHbYingoOig02Lj9w=
+
+Name: org/eclipse/team/internal/ccvs/core/util/SyncFileWriter$1.class
+SHA-256-Digest: zECdv1hacSsUl2fvgrtBTYHHVEfMi5Hyehx/d9mYzKI=
+
+Name: org/eclipse/team/internal/ccvs/core/syncinfo/DeferredResourceCha
+ ngeHandler.class
+SHA-256-Digest: 6NP4oNv94wH/2DsP9gOgZnPY7s0Ci79FdVUTH19Yeo4=
+
+Name: org/eclipse/team/internal/ccvs/core/ILogEntry.class
+SHA-256-Digest: 4l5pS8DhqYDO7vIMw9d56o4E9RxIw49hh3TFWXANEKQ=
+
+Name: org/eclipse/team/internal/ccvs/core/client/ModTimeHandler.class
+SHA-256-Digest: pm0hcQf24sGP/tjhC5nMmqkSXjt47GupgXwhYZfYdO8=
+
+Name: org/eclipse/team/internal/ccvs/core/mapping/ChangeSetAdapterFact
+ ory.class
+SHA-256-Digest: VynBkb32cClwgGmcVNVIkfwXurHyw3UOB2YBuot1xK8=
+
+Name: org/eclipse/team/internal/ccvs/core/util/Util$1.class
+SHA-256-Digest: TU7Uo5faLbAuMwb4gIRHJ2nxNs07YiooVNYb/hXeUSM=
+
+Name: org/eclipse/team/internal/ccvs/core/syncinfo/ReentrantLock$CVSTh
+ readInfo.class
+SHA-256-Digest: KPuQ/cwlnZ4mRUTHTRDgpbS+h414Okx/5nwv41zoTno=
+
+Name: org/eclipse/team/internal/ccvs/core/resources/RemoteFolder.class
+SHA-256-Digest: nE2QdE0mZUGL9YPeIBXBI6oHviIHlBQE7Hhp1sffno4=
+
+Name: org/eclipse/team/internal/ccvs/core/CVSProviderPlugin$1.class
+SHA-256-Digest: YJpw3ekkQWkdgGt6JyNxTFMfh+1YkXiluwSK0dm7vG4=
+
+Name: org/eclipse/team/internal/ccvs/core/ICVSListener.class
+SHA-256-Digest: oL01EKCLwNKhq5hIrWstE7iSykA1A3y7Rxyo8s6Bp90=
+
+Name: org/eclipse/team/internal/ccvs/core/util/ResponsiveSocketFactory
+ .class
+SHA-256-Digest: yDMVXiT96QzuIhqJ1eoz+cIL9PILpCV/4iRj9RLCny8=
+
+Name: org/eclipse/team/internal/ccvs/core/client/UpdateMergableOnly$Me
+ rgableOnlyUpdatedHandler.class
+SHA-256-Digest: zURmwG0/LrCtA3+pinmHQqhcOuIgDHQxaEa553y0TEA=
+
+Name: org/eclipse/team/internal/ccvs/core/util/ResourceStateChangeList
+ eners$3.class
+SHA-256-Digest: gZ/9WxemK0pL4+2YQs/ifZlLdKnFe/QhVW3BSDSHcYE=
+
+Name: org/eclipse/team/internal/ccvs/core/CVSRepositoryLocationMatcher
+ $1.class
+SHA-256-Digest: Jj86gzS5KFT/hNr/kgGBhbHWMg3bYtKPwJ7Fmk37Pjw=
+
+Name: org/eclipse/team/internal/ccvs/core/util/SyncFileChangeListener$
+ 1.class
+SHA-256-Digest: qTNL1v1RA+EsYAgGO63K4pC0nwHMzOhBI3zMRyfDCJg=
+
+Name: org/eclipse/team/internal/ccvs/core/util/PrepareForReplaceVisito
+ r.class
+SHA-256-Digest: SvViCguZmRbZ3iT+3AwgSeNUgSMXJbCRm2zx591l2vI=
+
+Name: org/eclipse/team/internal/ccvs/core/client/ModifiedFileSender.cl
+ ass
+SHA-256-Digest: WkbLb8Q1Yi2Zvq3uTL8EVOXC2SkhzGA8tpq9wQCACFo=
+
+Name: org/eclipse/team/internal/ccvs/core/connection/ExtConnection.cla
+ ss
+SHA-256-Digest: 78n6QQp1wZ7HvzkuYHbHdYS4Q4lF+9Bps3vbGra5dlg=
+
+Name: org/eclipse/team/internal/ccvs/core/resources/RemoteFolderTreeBu
+ ilder$DeltaNode.class
+SHA-256-Digest: Bi+STCvyEiENzRiO5RUd68fsCn71xQcF3PiECtqEo9E=
+
+Name: org/eclipse/team/internal/ccvs/core/CVSTeamProvider$1$1.class
+SHA-256-Digest: hrSerjdVr6vPDp1Nnk2hxjL6u/oZQ0GdLRnG6T7rdY8=
+
+Name: org/eclipse/team/internal/ccvs/core/client/Session$2.class
+SHA-256-Digest: k3s1qOpOn3x0AP5Jnhb28OY7mC2VuY4d8P1KCp3F5YY=
+
+Name: org/eclipse/team/internal/ccvs/core/client/CheckedInHandler.clas
+ s
+SHA-256-Digest: VT+sdj8zVUK6m3RiNyqSVzAkJU94C7lNPGgVJlXsikQ=
+
+Name: org/eclipse/team/internal/ccvs/core/client/TagFileSender.class
+SHA-256-Digest: OcxYXA50D7lqmRGvkJB3r5UqqpGjLKznRpjD7Rf9W5w=
+
+Name: org/eclipse/team/internal/ccvs/core/CVSTag.class
+SHA-256-Digest: JN85IERbAtHxx/mZje9PHvwDymYLZzjGpzWYQQfGp/0=
+
+Name: org/eclipse/team/internal/ccvs/core/filesystem/CVSFileStore.clas
+ s
+SHA-256-Digest: FPU7iseeG71KJfNTdJavxgqYWG8+x2NpgTnV74tY8bU=
+
+Name: org/eclipse/team/internal/ccvs/core/util/ResourceStateChangeList
+ eners$1.class
+SHA-256-Digest: /JvvvhFQ7WfTs5CZ5C1DvY5MfxyMh3IePLIkcYOizBI=
+
+Name: org/eclipse/team/internal/ccvs/core/util/PrepareForReplaceVisito
+ r$1.class
+SHA-256-Digest: YiW36y/DofaWDao3P4S7miHbYclQxw4+80KIXNe/QZY=
+
+Name: org/eclipse/team/internal/ccvs/core/syncinfo/FolderSyncInfo.clas
+ s
+SHA-256-Digest: hHMEjC9e0BSuF/B/S6SXFee7ASRZ0qfNoQlTmf4h5tw=
+
+Name: org/eclipse/team/internal/ccvs/core/resources/RemoteModule.class
+SHA-256-Digest: pIXoMNtagplL7avz+HeiZuHQ9zrx7fLRx5ICxUqQ8T0=
+
+Name: org/eclipse/team/internal/ccvs/core/util/MoveDeleteHook$5.class
+SHA-256-Digest: VIT+KGTXVEFTZw12dzdj0/GSzjMQ9hDrDQ+lEKBHrME=
+
+Name: plugin.properties
+SHA-256-Digest: ioeIWtMptceOtJ9FonW3cT22zGU+0tnMpGalqKht5Ag=
+
+Name: org/eclipse/team/internal/ccvs/core/syncinfo/BaserevInfo.class
+SHA-256-Digest: ZZ1LZQFnDI7qiuXYAFDwbaUbNKM+685TdVKw0t4Uhus=
+
+Name: org/eclipse/team/internal/ccvs/core/client/CopyHandler.class
+SHA-256-Digest: 6WFq17TKQnaQpcKm2AM/TbSVIk9IilShjEMLVHFPa8Q=
+
+Name: org/eclipse/team/internal/ccvs/core/filesystem/CVSURI.class
+SHA-256-Digest: vraMavmGeNefpgARF1VZGzahTuCb4R6iPGnTJ8OA2+Q=
+
+Name: org/eclipse/team/internal/ccvs/core/resources/UpdateContentCachi
+ ngService$1.class
+SHA-256-Digest: ISThsscIaxtrzSp5kWiIKY+dqD40feND4ugjrAMdWj8=
+
+Name: org/eclipse/team/internal/ccvs/core/client/CRLFDetectInputStream
+ .class
+SHA-256-Digest: RFgWu71kbZ/WrQfpzAdoTd7UhNI5Nr34v+UGKs8c0hk=
+
+Name: org/eclipse/team/internal/ccvs/core/client/ConsoleListeners$1.cl
+ ass
+SHA-256-Digest: F/hhJWIwyu0eDgEnuV3wN/Wim1DhUj5J09SMdQvY7Iw=
+
+Name: org/eclipse/team/internal/ccvs/core/connection/CVSServerExceptio
+ n.class
+SHA-256-Digest: QesRUBW9CPe/M/UQEqRuVWNMw/V3Qs1JxOI3os+knRA=
+
+Name: org/eclipse/team/internal/ccvs/core/client/listeners/ICommandOut
+ putListener.class
+SHA-256-Digest: OXX6DGnqia//2JibxkPOlFyjDrwqWEdKLO9tILpkpRQ=
+
+Name: org/eclipse/team/internal/ccvs/core/resources/RemoteFolderTree.c
+ lass
+SHA-256-Digest: Z8ity6fEaLUJlMx62RsDOakk1zoovNCEZRZ+pw7bZik=
+
+Name: org/eclipse/team/internal/ccvs/core/client/Session.class
+SHA-256-Digest: waPpS4856xaddRBVbEHZihpSVS2iydn6K8hnFi06wsw=
+
+Name: org/eclipse/team/internal/ccvs/core/filehistory/CVSLocalFileRevi
+ sion.class
+SHA-256-Digest: quWmiTgZanyylr8MzRyTImbUlSx7Ii+eHDfmVL/jbQA=
+
+Name: org/eclipse/team/internal/ccvs/core/client/Remove.class
+SHA-256-Digest: 6+FJfxBnW8Ab90f5oagJdTs4SyUngtOoYIDNSaaQbOA=
+
+Name: org/eclipse/team/internal/ccvs/core/CVSTeamProvider$5.class
+SHA-256-Digest: Iu//0Zqnk1Ao6VAwfKGURm35LYKqZ6tXwWOjUTy3ruU=
+
+Name: org/eclipse/team/internal/ccvs/core/filesystem/LogEntryCache.cla
+ ss
+SHA-256-Digest: Cy8sJFy3Mn3FbfFySYdVPlU63GWHob8DIG5jKuSry5g=
+
+Name: org/eclipse/team/internal/ccvs/core/client/UpdatedHandler.class
+SHA-256-Digest: HHv2TMrF/roHoBcR+6ZOVxR+HR1+v9KhIW1aoc+adSw=
+
+Name: org/eclipse/team/internal/ccvs/core/client/AbstractStructureVisi
+ tor.class
+SHA-256-Digest: L0p/idPXKiVron/FkOlyXiSi7UnYbQeukJ21KKX+gII=
+
+Name: org/eclipse/team/internal/ccvs/core/CVSCompareSubscriber.class
+SHA-256-Digest: vNdlq7xH8It3B3bZzs/fc1OJID1XMiNMQmnE7QS8vjo=
+
+Name: org/eclipse/team/internal/ccvs/core/client/Annotate.class
+SHA-256-Digest: J5eXBrO/K1061PvPz3TFE6bahXtFrSqcpBc1McWlQJ8=
+
+Name: org/eclipse/team/internal/ccvs/core/resources/RemoteResource.cla
+ ss
+SHA-256-Digest: vBZksQ41q0SL+IYNXfK3lMXaaK/yeYKWF8vjoAPQ8cE=
+
+Name: org/eclipse/team/internal/ccvs/core/resources/UpdateContentCachi
+ ngService$SandboxUpdate.class
+SHA-256-Digest: o3Q1pMG+kyuLv1KDX/ol6FhIFSZinYLda1AI8yBbMgM=
+
+Name: org/eclipse/team/internal/ccvs/core/client/listeners/IStatusList
+ ener.class
+SHA-256-Digest: ig9Idh0CvMj8CI57d323Cf09+j8BY4EAP2iyS3VRS5g=
+
+Name: org/eclipse/team/internal/ccvs/core/resources/UpdateContentCachi
+ ngService$1$1.class
+SHA-256-Digest: R8OOWFamfbCbuXETcDEHAIxCfuGTgzeQi7lbPGG1vSQ=
+
+Name: org/eclipse/team/internal/ccvs/core/CVSMergeSubscriber$1.class
+SHA-256-Digest: mdHce4VZgg/YYHOAQTjNiRriu0MSL8OAt+J0+Srgu8A=
+
+Name: org/eclipse/team/internal/ccvs/core/util/BuildCleanupListener$1.
+ class
+SHA-256-Digest: nqF6arK/tadz5dChul7+XorJHAr6tCC69EJDOkCUH3U=
+
+Name: org/eclipse/team/internal/ccvs/core/resources/RemoteFolderTreeBu
+ ilder.class
+SHA-256-Digest: 7LpK7GcgajXJfvNg9Zq+Nz+Rx5eLPF62It/ffjG+dZM=
+
+Name: org/eclipse/team/internal/ccvs/core/client/listeners/LogEntry.cl
+ ass
+SHA-256-Digest: yJ0GFqt29OQw3inNTUI/vu0AhgQfRRkUgf2IrshRacg=
+
+Name: org/eclipse/team/internal/ccvs/core/CVSRevisionNumberCompareCrit
+ eria.class
+SHA-256-Digest: 2DWBGiFwboz0HifLOQdBT7uhWmq7xuKbGgiRXM8ROkc=
+
+Name: org/eclipse/team/internal/ccvs/core/mapping/ChangeSetResourceMap
+ ping.class
+SHA-256-Digest: coaDV2NAPYggM4i3S7mT1zL6h8zKRsHou9P+FokG57E=
+
+Name: org/eclipse/team/internal/ccvs/core/client/AddStructureVisitor.c
+ lass
+SHA-256-Digest: omISECvpyN+D2POmlnsWXq9mMjeCOYkJUAaKhnZAMgU=
+
+Name: org/eclipse/team/internal/ccvs/core/client/UpdateMergableOnly.cl
+ ass
+SHA-256-Digest: preL4RHTuqReuvWMfwO89whnCvo9zCe325wno8tNilI=
+
+Name: about.html
+SHA-256-Digest: 8nhoUnM0evVB9AfsnjHvun2iyblWVw/1Ff15woccDxE=
+
+Name: org/eclipse/team/internal/ccvs/core/CVSMergeSyncInfo.class
+SHA-256-Digest: 5cTauqslGTd5G3URmp9+r4/L148Ac57jixBcyZ++NM0=
+
+Name: org/eclipse/team/internal/ccvs/core/client/Replace$CreatedRespon
+ seHandler.class
+SHA-256-Digest: nFfLouR4HIWVuDoSb6eVJlbl24jQF98OG9brP2cJDas=
+
+Name: org/eclipse/team/internal/ccvs/core/CVSMergeSubscriber.class
+SHA-256-Digest: vOYnoXuKvK8bULR/ToRvBIBlEBgkj2xYg9/+K+Wp8o8=
+
+Name: org/eclipse/team/internal/ccvs/core/syncinfo/NotifyInfo.class
+SHA-256-Digest: FjGsHg4LGOU/gvdayudnnw4uYoHkJuwWnxHVPGTebvA=
+
+Name: org/eclipse/team/internal/ccvs/core/client/UpdateMergableOnly$Me
+ rgeUpdateListener.class
+SHA-256-Digest: NUgiE31fcT+ov92XGiZS4iMnFGuOyNpSGHnmakBY7JY=
+
+Name: org/eclipse/team/internal/ccvs/core/client/Editors.class
+SHA-256-Digest: rhyz+xvLyH55IqGfHlbz/7mnDVBcB5QrueaMVkL6yqI=
+
+Name: org/eclipse/team/internal/ccvs/core/client/NotifiedHandler.class
+SHA-256-Digest: 9BXjOnroBf3qwKVD/857WI4+2AoL8XWkocTV2gpeVlM=
+
+Name: org/eclipse/team/internal/ccvs/core/resources/EclipseResource$2.
+ class
+SHA-256-Digest: KsHbaP8lTjA/ad7EG7sIo4xVqBfDj7p4Dt6NOkIL2P0=
+
+Name: org/eclipse/team/internal/ccvs/core/client/ExpandModules.class
+SHA-256-Digest: 0wFGJ01o4+044LLGleUFMu/9pBtbct9ikMSjZ0dRlYs=
+
+Name: org/eclipse/team/internal/ccvs/core/mapping/CVSActiveChangeSetCo
+ llector.class
+SHA-256-Digest: uMI+Fk0+FYDwwQXGWE6R48+0bY7lh0/NRjRpTqhjB6Q=
+
+Name: org/eclipse/team/internal/ccvs/core/mapping/UnassignedDiffChange
+ Set.class
+SHA-256-Digest: k1Mi16mTP+R0YrxBGPNVxEa1CGNj5XzrueFTuA8DX2E=
+
+Name: org/eclipse/team/internal/ccvs/core/client/ResponseHandler.class
+SHA-256-Digest: ybMFaJXNarBLH9LjkVgjRx+xRhTB3CgzPTfaLgZD6bA=
+

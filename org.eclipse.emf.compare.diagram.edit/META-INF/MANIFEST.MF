@@ -1,0 +1,31 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.eclipse.emf.compare.diagram.edit;singleton:=true
+Bundle-Version: 2.5.1.201709090201
+Bundle-ClassPath: org.eclipse.emf.compare.diagram.edit_2.5.1.201709090201.jar
+Bundle-Activator: org.eclipse.emf.compare.diagram.internal.extensions.provider.ExtensionsEditPlugin$Implementation
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Export-Package: org.eclipse.emf.compare.diagram.internal,
+  org.eclipse.emf.compare.diagram.internal.extensions.provider;x-internal:=true,
+  org.eclipse.emf.compare.diagram.internal.extensions.provider.spec;x-friends:="org.eclipse.emf.compare.diagram.papyrus.tests",
+  org.eclipse.emf.compare.diagram.internal.matchs.provider.spec;x-friends:="org.eclipse.emf.compare.diagram.papyrus.tests",
+  org.eclipse.emf.compare.diagram.internal.tooltips;x-internal:=true
+Require-Bundle: org.eclipse.core.runtime,
+  org.eclipse.emf.compare.diagram;visibility:=reexport,
+  org.eclipse.emf.edit;visibility:=reexport,
+  org.eclipse.emf.compare;visibility:=reexport,
+  org.eclipse.emf.compare.edit;visibility:=reexport,
+  org.eclipse.emf.ecore;visibility:=reexport,
+  org.eclipse.emf.ecore.edit;visibility:=reexport,
+  org.eclipse.gmf.runtime.notation;bundle-version="1.2.0",
+  org.eclipse.gmf.runtime.notation.edit;bundle-version="1.4.0"
+Built-By: genie.emfcompare
+Build-Jdk: 1.8.0_131
+Created-By: Apache Maven 3.3.9
+Archiver-Version: Plexus Archiver
+Import-Package: com.google.common.base;version="[15.0.0,22.0.0)",
+  com.google.common.collect;version="[15.0.0,22.0.0)"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

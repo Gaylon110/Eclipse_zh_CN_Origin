@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+
+<!--
+ Copyright (c) 2013, 2016 Obeo and others.
+ All rights reserved. This program and the accompanying materials
+ are made available under the terms of the Eclipse Public License v1.0
+ which accompanies this distribution, and is available at
+ http://www.eclipse.org/legal/epl-v10.html
+ 
+ Contributors:
+     Obeo - initial API and implementation
+     Stefan Dirix - bug 466552
+-->
+
+<plugin>
+   <extension-point id="postProcessor" name="Post Processor" schema="schema/postProcessor.exsd"/>
+   <extension-point id="merger" name="Merger" schema="schema/merger.exsd"/>
+   <extension-point id="loadOnDemandPolicy" name="Load on Demand Policy" schema="schema/loadOnDemandPolicy.exsd"/>
+   <extension-point id="matchEngine" name="Match Engine" schema="schema/matchEngine.exsd"/>
+   <extension-point id="diffEngine" name="Diff Engine" schema="schema/diffEngine.exsd"/>
+   <extension-point id="equiEngine" name="Equivalences Engine" schema="schema/equiEngine.exsd"/>
+   <extension-point id="conflictsDetector" name="Conflicts Detector" schema="schema/conflictsDetector.exsd"/>
+   <extension-point id="reqEngine" name="Requirements Engine" schema="schema/reqEngine.exsd"/>
+   <extension-point id="weightProvider" name="Weight Provider" schema="schema/weightProvider.exsd"/>
+   
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.eclipse.org/emf/compare"
+            class="org.eclipse.emf.compare.ComparePackage"
+            genModel="platform:/plugin/org.eclipse.emf.compare/model/compare.genmodel"/>
+   </extension>
+   
+   <extension
+         point="org.eclipse.emf.compare.rcp.merger">
+      <merger
+            class="org.eclipse.emf.compare.merge.ResourceAttachmentChangeMerger"
+            ranking="10">
+      </merger>
+      <merger
+            class="org.eclipse.emf.compare.merge.AdditiveResourceAttachmentChangeMerger"
+            ranking="10">
+      </merger>
+      <merger
+            class="org.eclipse.emf.compare.merge.ReferenceChangeMerger"
+            ranking="10">
+      </merger>
+      <merger
+            class="org.eclipse.emf.compare.merge.AdditiveReferenceChangeMerger"
+            ranking="10">
+      </merger>
+      <merger
+            class="org.eclipse.emf.compare.merge.AttributeChangeMerger"
+            ranking="10">
+      </merger>
+      <merger
+            class="org.eclipse.emf.compare.merge.FeatureMapChangeMerger"
+            ranking="10">
+      </merger>
+      <merger
+            class="org.eclipse.emf.compare.merge.PseudoConflictMerger"
+            ranking="75">
+      </merger>
+      <merger
+            class="org.eclipse.emf.compare.merge.ConflictMerger"
+            ranking="100">
+      </merger>
+      <merger
+            class="org.eclipse.emf.compare.merge.AdditiveConflictMerger"
+            ranking="100">
+      </merger>
+   </extension>
+   <extension
+         point="org.eclipse.core.contenttype.contentTypes">
+      <content-type
+            id="org.eclipse.emf.compare.content.type"
+            name="EMF Compare"
+            priority="normal">
+      </content-type>
+   </extension>
+   <extension
+         point="org.eclipse.emf.compare.rcp.matchEngine">
+      <engineFactory
+            class="org.eclipse.emf.compare.rcp.internal.match.DefaultRCPMatchEngineFactory"
+            description="Default implementation of the Matching engine provided by EMF Compare. Any user-provided engine should have a ranking &gt; 0."
+            label="Default Match engine"
+            ranking="0">
+      </engineFactory>
+   </extension>
+   <extension
+         point="org.eclipse.emf.compare.rcp.diffEngine">
+      <descriptor
+            id="org.eclipse.emf.compare.rcp.default.diffEngine"
+            description="Default implementation of the differences engine provided by EMF Compare"
+            impl="org.eclipse.emf.compare.diff.DefaultDiffEngine"
+            label="Default Difference Engine"
+            ranking="100">
+      </descriptor>
+   </extension>
+   <extension
+         point="org.eclipse.emf.compare.rcp.equiEngine">
+      <descriptor
+            description="Default implementation of the equivalences engine provided by EMF Compare."
+            id="org.eclipse.emf.compare.rcp.default.equiEngine"
+            impl="org.eclipse.emf.compare.equi.DefaultEquiEngine"
+            label="Default Equivalence Engine"
+            ranking="100">
+      </descriptor>
+   </extension>
+   <extension
+         point="org.eclipse.emf.compare.rcp.conflictsDetector">
+      <descriptor
+            description="Default implementation of the conflict detector provided by EMF Compare."
+            id="org.eclipse.emf.compare.rcp.default.conflictDetector"
+            impl="org.eclipse.emf.compare.conflict.DefaultConflictDetector"
+            label="Default Conflict Detector"
+            ranking="100">
+      </descriptor>
+      <descriptor
+            description="Faster and more scalable conflict detector provided by EMF Compare."
+            id="org.eclipse.emf.compare.rcp.fast.conflictDetector"
+            impl="org.eclipse.emf.compare.conflict.MatchBasedConflictDetector"
+            label="Scalable Conflict Detector"
+            ranking="100">
+      </descriptor>
+   </extension>
+   <extension
+         point="org.eclipse.emf.compare.rcp.reqEngine">
+      <descriptor
+            description="Default implementation of the requierements engine provided by EMF Compare."
+            id="org.eclipse.emf.compare.rcp.default.reqEngine"
+            impl="org.eclipse.emf.compare.req.DefaultReqEngine"
+            label="Default Requirement Engine"
+            ranking="100">
+      </descriptor>
+   </extension>
+   <extension
+         point="org.eclipse.emf.compare.rcp.weightProvider">
+      <provider
+            class="org.eclipse.emf.compare.match.eobject.DefaultWeightProvider"
+            description="Default implementation of the weight provider provided by EMF Compare."
+            id="org.eclipse.emf.compare.rcp.default.weightProvider"
+            label="Default Weight Provider"
+            nsURI=".*"
+            ranking="100">
+      </provider>
+      <provider
+            class="org.eclipse.emf.compare.match.eobject.EcoreWeightProvider"
+            description="Ecore implementation of the weight provider provided by EMF Compare."
+            id="org.eclipse.emf.compare.rcp.ecore.weightProvider"
+            label="Ecore Weight Provider"
+            nsURI="http://www.eclipse.org/emf/2002/Ecore"
+            ranking="101">
+      </provider>
+   </extension>
+   <extension
+         point="org.eclipse.core.expressions.propertyTesters">
+      <propertyTester
+            class="org.eclipse.emf.compare.rcp.internal.preferences.PreferencesPropertyTester"
+            id="org.eclipse.emf.compare.rcp.preferencesTester"
+            namespace="org.eclipse.emf.compare"
+            properties="preferenceValueEquals"
+            type="java.lang.Object">
+      </propertyTester>
+   </extension>
+   
+</plugin>

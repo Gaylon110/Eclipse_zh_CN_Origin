@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %Bundle-Name
+Bundle-SymbolicName: org.eclipse.recommenders.jayes
+Bundle-Version: 2.5.2.v20180401-1226
+Bundle-ClassPath: org.eclipse.recommenders.jayes_2.5.2.v20180401-1226.jar
+Bundle-Vendor: %Bundle-Vendor
+Export-Package: org.eclipse.recommenders.jayes;uses:="org.eclipse.recommenders.jayes.factor",
+  org.eclipse.recommenders.jayes.factor;uses:="org.eclipse.recommenders.jayes.factor.arraywrapper,org.eclipse.recommenders.jayes",
+  org.eclipse.recommenders.jayes.factor.arraywrapper,
+  org.eclipse.recommenders.jayes.inference;uses:="org.eclipse.recommenders.jayes,org.eclipse.recommenders.jayes.factor",
+  org.eclipse.recommenders.jayes.inference.jtree;
+   uses:="org.eclipse.recommenders.jayes.util,
+    org.eclipse.recommenders.jayes.inference,
+    org.eclipse.recommenders.jayes,
+    org.eclipse.recommenders.jayes.util.triangulation",
+  org.eclipse.recommenders.jayes.sampling;uses:="org.eclipse.recommenders.jayes",
+  org.eclipse.recommenders.jayes.util;uses:="org.eclipse.recommenders.jayes.factor.arraywrapper,org.eclipse.recommenders.jayes",
+  org.eclipse.recommenders.jayes.util.sharing;uses:="org.eclipse.recommenders.jayes.factor.arraywrapper",
+  org.eclipse.recommenders.jayes.util.triangulation;uses:="org.eclipse.recommenders.jayes.util"
+Created-By: Apache Maven 3.5.2
+Automatic-Module-Name: org.eclipse.recommenders.jayes
+Eclipse-SourceReferences: scm:git:https://git.eclipse.org/r/recommenders/org.eclipse.recommenders;path="plugins/org.eclipse.recommenders.jayes";tag="v2.5.2";commitId=720a805d454015a5f4b61a4f778170b278d7e6ff
+Built-By: genie.recommenders
+Build-Jdk: 1.8.0_162
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

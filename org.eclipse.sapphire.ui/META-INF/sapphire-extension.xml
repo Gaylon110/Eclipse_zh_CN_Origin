@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+ ******************************************************************************
+ * Copyright (c) 2016 Oracle and Liferay
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *    Konstantin Komissarchik - initial implementation and ongoing maintenance
+ *    Gregory Amerson - [358295] Need access to selection in list property editor
+ *    Gregory Amerson - [377136] Add Sapphire.Diagram.Node to possible contexts for Sapphire.Add  
+ *    Gregory Amerson - [346172] Support zoom, print and save as image actions in the diagram editor
+ ******************************************************************************
+-->
+
+<extension xmlns="http://www.eclipse.org/sapphire/xmlns/extension">
+    <service>
+        <context>Sapphire.Property.Instance</context>
+        <id>Sapphire.UI.Definition.Java.TypeReferenceService</id>
+        <overrides>Sapphire.Java.TypeReferenceService</overrides>
+        <overrides>Sapphire.Java.JDT.TypeReferenceService</overrides>
+        <implementation>org.eclipse.sapphire.ui.def.internal.JavaTypeReferenceServiceForSdef</implementation>
+        <condition>org.eclipse.sapphire.ui.def.internal.JavaTypeReferenceServiceForSdef$Condition</condition>
+    </service>
+    <action>
+        <id>Sapphire.Add</id>
+        <context>Sapphire.ListPropertyEditor</context>
+        <context>Sapphire.EditorPage.Outline.Node</context>
+        <context>Sapphire.Diagram.Editor</context>
+        <context>Sapphire.Diagram.Node</context>
+        <context>Sapphire.Diagram.Node.Shape</context>
+        <label>${ Handlers.Size == 1 ? Concat( &quot;add &quot;, Handlers[ 0 ].Label ) : &quot;add&quot; }</label>
+        <image>org/eclipse/sapphire/ui/actions/Add.png</image>
+        <group>Sapphire.AddDeleteGroup</group>
+        <key-binding>SHIFT+CONTROL+ALT+n</key-binding>
+        <description>Adds an entity. A common use is to add a new element to the model.</description>
+    </action>
+    <action>
+        <id>Sapphire.Assist</id>
+        <context>Sapphire.ValuePropertyEditor</context>
+        <context>Sapphire.ElementPropertyEditor</context>
+        <context>Sapphire.ListPropertyEditor</context>
+        <label>assist</label>
+        <key-binding>SHIFT+CONTROL+ALT+i</key-binding>
+        <description>Shows property editor assistance popup. The popup can also be accessed by clicking on the small decorator image (either a light builb, an error marker or a warning marker) that appears next to the property editor.</description>
+        <context>Sapphire.WithDirective</context>
+    </action>
+    <action>
+        <id>Sapphire.Browse</id>
+        <context>Sapphire.ValuePropertyEditor</context>
+        <label>browse</label>
+        <image>org/eclipse/sapphire/ui/actions/Browse.png</image>
+        <image>org/eclipse/sapphire/ui/actions/BrowseMini.png</image>
+        <key-binding>SHIFT+CONTROL+ALT+l</key-binding>
+        <description>Browses among possible values for a property.</description>
+    </action>
+    <action>
+        <id>Sapphire.Create</id>
+        <context>Sapphire.ValuePropertyEditor</context>
+        <label>create</label>
+        <image>org/eclipse/sapphire/ui/actions/Create.png</image>
+        <image>org/eclipse/sapphire/ui/actions/CreateMini.png</image>
+        <location>after:Sapphire.Browse</location>
+        <key-binding>SHIFT+CONTROL+ALT+c</key-binding>
+        <description>Creates the entity referenced by the property value.</description>
+    </action>
+    <action>
+        <id>Sapphire.Delete</id>
+        <label>delete</label>
+        <image>org/eclipse/sapphire/ui/actions/Delete.png</image>
+        <location>after:Sapphire.Add</location>
+        <group>Sapphire.AddDeleteGroup</group>
+        <key-binding>DEL</key-binding>
+        <description>Deletes an entity. A common use is to delete an element from the model.</description>
+        <context>Sapphire.ListPropertyEditor</context>
+        <context>Sapphire.EditorPage.Outline</context>
+        <context>Sapphire.EditorPage.Outline.Node</context>
+        <context>Sapphire.Diagram.Node</context>
+        <context>Sapphire.Diagram.Node.Shape</context>
+        <context>Sapphire.Diagram.Connection</context>
+        <context>Sapphire.Diagram.MultipleParts</context>
+    </action>
+    <action>
+        <id>Sapphire.Help</id>
+        <context>Sapphire.EditorPage</context>
+        <context>Sapphire.Section</context>
+        <label>help</label>
+        <image>org/eclipse/sapphire/ui/actions/Help.gif</image>
+        <description>Shows help content for the entity.</description>
+    </action>
+    <action>
+        <id>Sapphire.Jump</id>
+        <context>Sapphire.ValuePropertyEditor</context>
+        <context>Sapphire.ListPropertyEditor</context>
+        <label>jump</label>
+        <key-binding>SHIFT+CONTROL+ALT+j</key-binding>
+        <description>Shows the entity referenced by the property value. A common use is to open a file or another resource type referenced by a path held by the property.</description>
+    </action>
+    <action>
+        <id>Sapphire.DoubleTap</id>
+        <label>double tap</label>
+        <context>Sapphire.Diagram.Node.Shape.Hidden</context>
+    </action>
+    <action>
+        <id>Sapphire.Move.Down</id>
+        <context>Sapphire.ListPropertyEditor</context>
+        <context>Sapphire.EditorPage.Outline.Node</context>
+        <context>Sapphire.Diagram.Node.Shape</context>
+        <label>move down</label>
+        <image>org/eclipse/sapphire/ui/actions/MoveDown.png</image>
+        <location>after:Sapphire.Add</location>
+        <location>after:Sapphire.Delete</location>
+        <location>after:Sapphire.Move.Up</location>
+        <group>Sapphire.MoveGroup</group>
+        <key-binding>SHIFT+CONTROL+ALT+ARROW_DOWN</key-binding>
+        <description>Moves an entity down, from the perspective of how the entity appears on the screen. A common use is to move a model element one position towards the end of the list, swapping places with the following element.</description>
+    </action>
+    <action>
+        <id>Sapphire.Move.Left</id>
+        <context>Sapphire.ListPropertyEditor</context>
+        <label>move left</label>
+        <image>org/eclipse/sapphire/ui/actions/MoveLeft.png</image>
+        <description>Moves an entity to the left, from the perspective of how the entity appears on the screen.</description>
+        <group>Sapphire.MoveGroup</group>
+    </action>
+    <action>
+        <id>Sapphire.Move.Right</id>
+        <context>Sapphire.ListPropertyEditor</context>
+        <label>move right</label>
+        <image>org/eclipse/sapphire/ui/actions/MoveRight.png</image>
+        <description>Moves an entity to the right, from the perspective of how the entity appears on the screen.</description>
+        <group>Sapphire.MoveGroup</group>
+    </action>
+    <action>
+        <id>Sapphire.Move.Up</id>
+        <context>Sapphire.ListPropertyEditor</context>
+        <context>Sapphire.EditorPage.Outline.Node</context>
+        <context>Sapphire.Diagram.Node.Shape</context>
+        <label>move up</label>
+        <image>org/eclipse/sapphire/ui/actions/MoveUp.png</image>
+        <location>after:Sapphire.Add</location>
+        <location>after:Sapphire.Delete</location>
+        <group>Sapphire.MoveGroup</group>
+        <key-binding>SHIFT+CONTROL+ALT+ARROW_UP</key-binding>
+        <description>Moves an entity up, from the perspective of how the entity appears on the screen. A common use is to move a model element one position towards the beginning of the list, swapping places with the preceding element.</description>
+    </action>
+    <action>
+        <id>Sapphire.ShowNextError</id>
+        <label>show next error</label>
+        <image>org/eclipse/sapphire/ui/Error.png</image>
+        <key-binding>SHIFT+CONTROL+ALT+e</key-binding>
+        <description>Shows the next validation error.</description>
+        <context>Sapphire.EditorPage.Outline.Node</context>
+    </action>
+    <action>
+        <id>Sapphire.ShowNextWarning</id>
+        <label>show next warning</label>
+        <image>org/eclipse/sapphire/ui/Warning.png</image>
+        <key-binding>SHIFT+CONTROL+ALT+w</key-binding>
+        <description>Shows the next validation warning.</description>
+        <location>after:Sapphire.ShowNextError</location>
+        <context>Sapphire.EditorPage.Outline.Node</context>
+    </action>
+    <action>
+        <id>Sapphire.ShowInSource</id>
+        <context>Sapphire.EditorPage.Outline.Node</context>
+        <label>show in source</label>
+        <image>org/eclipse/sapphire/ui/actions/ShowInSource.png</image>
+        <description>Shows the model element associated with a given part in the corresponding source editor.</description>
+        <location>after:Sapphire.Delete</location>
+        <location>after:Sapphire.Diagram.DeleteAllBendPoints</location>
+        <location>after:Sapphire.ShowNextError</location>
+        <location>after:Sapphire.ShowNextWarning</location>
+        <context>Sapphire.Diagram.Node</context>
+        <context>Sapphire.Diagram.Connection</context>
+        <context>Sapphire.Diagram.Node.Shape</context>
+    </action>
+    <action>
+        <id>Sapphire.ShowInPropertiesView</id>
+        <label>show in properties view</label>
+        <image>org/eclipse/sapphire/ui/actions/ShowInPropertiesView.png</image>
+        <location>after:Sapphire.ShowInSource</location>
+        <context>Sapphire.Diagram.Editor</context>
+        <context>Sapphire.Diagram.Node</context>
+        <context>Sapphire.Diagram.Node.Shape</context>
+        <context>Sapphire.Diagram.Connection</context>
+    </action>
+    <action>
+        <id>Sapphire.Restore.Defaults</id>
+        <context>Sapphire.Section</context>
+        <label>restore defaults</label>
+        <image>org/eclipse/sapphire/ui/actions/RestoreDefaults.png</image>
+        <description>Restores properties in a section to their default values. For value properties, it means setting the property to null. For list properties, it means clearing the list.</description>
+    </action>
+    <action>
+        <id>Sapphire.Outline.CollapseAll</id>
+        <context>Sapphire.EditorPage.Outline.Header</context>
+        <label>collapse all</label>
+        <image>org/eclipse/sapphire/ui/actions/CollapseAll.png</image>
+        <description>Collapses all nodes in the content outline.</description>
+    </action>
+    <action>
+        <id>Sapphire.Outline.ExpandAll</id>
+        <context>Sapphire.EditorPage.Outline.Header</context>
+        <label>expand all</label>
+        <image>org/eclipse/sapphire/ui/actions/ExpandAll.png</image>
+        <description>Expands all nodes in the content outline.</description>
+    </action>    
+    <action>
+        <id>Sapphire.Outline.Hide</id>
+        <context>Sapphire.EditorPage</context>
+        <label>hide outline</label>
+        <type>toggle</type>
+        <image>org/eclipse/sapphire/ui/actions/HideOutline.png</image>
+        <description>Hides the content outline that is embedded in an editor page. This is a toggle action. It can be used to show the embedded outline after it has been hidden.</description>
+        <location>before:Sapphire.Help</location>
+    </action>
+    <action>
+        <id>Sapphire.Diagram.Grid.Toggle</id>
+        <context>Sapphire.Diagram.Editor</context>
+        <label>show grid</label>
+        <type>toggle</type>
+        <description>Show or hide the grid</description>
+        <location>after:Sapphire.Diagram.SelectAllNodes</location>
+        <group>Sapphire.Diagram.Appearance</group>       
+    </action>
+    <action>
+        <id>Sapphire.Diagram.Guides.Toggle</id>
+        <context>Sapphire.Diagram.Editor</context>
+        <label>show guides</label>
+        <type>toggle</type>
+        <description>Show or hide the guides</description>
+        <location>after:Sapphire.Diagram.Grid.Toggle</location>
+        <group>Sapphire.Diagram.Appearance</group>       
+    </action>
+    <action>
+        <id>Sapphire.Diagram.Layout</id>
+        <context>Sapphire.Diagram.Editor</context>
+        <label>layout</label>
+        <description>Apply auto layout to diagram</description>
+        <location>after:Sapphire.Diagram.Guides.Toggle</location>
+        <group>Sapphire.Diagram.Appearance</group>       
+    </action>
+    <action>
+        <id>Sapphire.Diagram.Zoom.In</id>
+        <label>zoom in</label>
+        <image>org/eclipse/sapphire/ui/actions/ZoomIn.gif</image>
+        <description>Zoom in the diagram.</description>
+        <location>after:Sapphire.Diagram.Layout</location>
+        <group>Sapphire.Diagram.Zoom</group>
+        <context>Sapphire.Diagram.Editor</context>
+        <context>Sapphire.Diagram.Header</context>
+    </action>
+    <action>
+        <id>Sapphire.Diagram.Zoom.Out</id>
+        <label>zoom out</label>
+        <image>org/eclipse/sapphire/ui/actions/ZoomOut.gif</image>
+        <description>Zoom out the diagram.</description>
+        <location>after:Sapphire.Diagram.Zoom.In</location>
+        <group>Sapphire.Diagram.Zoom</group>
+        <context>Sapphire.Diagram.Editor</context>
+        <context>Sapphire.Diagram.Header</context>
+    </action>
+    <action>
+        <id>Sapphire.Diagram.Zoom.Actual</id>
+        <label>zoom actual</label>
+        <image>org/eclipse/sapphire/ui/actions/ZoomActual.gif</image>
+        <description>Zoom the diagram to actual size.</description>
+        <location>after:Sapphire.Diagram.Zoom.Out</location>
+        <group>Sapphire.Diagram.Zoom</group>
+        <context>Sapphire.Diagram.Editor</context>
+        <context>Sapphire.Diagram.Header</context>
+    </action>
+    <action>
+        <id>Sapphire.Diagram.Node.Default</id>
+        <context>Sapphire.Diagram.Node</context>
+        <label>default action</label>
+    </action>
+    <action>
+        <id>Sapphire.Diagram.DeleteAllBendPoints</id>
+        <context>Sapphire.Diagram.Connection</context>
+        <label>delete all bend points</label>
+        <image>org/eclipse/sapphire/ui/actions/DeleteBendPoints.png</image>
+        <description>Deletes all bend points from a connection.</description>
+        <location>after:Sapphire.Delete</location>
+        <group>Sapphire.AddDeleteGroup</group>
+        <context>Sapphire.Diagram.MultipleParts</context>
+    </action>
+    <action>
+        <id>Sapphire.Diagram.SelectAll</id>
+        <context>Sapphire.Diagram.Editor</context>
+        <label>select all</label>
+        <key-binding>CONTROL+a</key-binding>
+        <key-binding-behavior>propagated</key-binding-behavior>
+        <description>Select all edit parts in the diagram</description>
+        <location>after:Sapphire.Add</location>
+        <group>Sapphire.Diagram.SelectAll</group>
+    </action>
+    <action>
+        <id>Sapphire.Diagram.SelectAllNodes</id>
+        <context>Sapphire.Diagram.Editor</context>
+        <label>select all nodes</label>
+        <description>Select all node edit parts in the diagram</description>
+        <location>after:Sapphire.Diagram.SelectAll</location>
+        <group>Sapphire.Diagram.SelectAll</group>
+    </action>
+    <action>
+        <id>Sapphire.Diagram.SaveAsImage</id>
+        <label>save as image</label>
+        <image>org/eclipse/sapphire/ui/actions/SaveAsImage.gif</image>
+        <description>Save the diagram as an image.</description>
+        <location>after:Sapphire.Diagram.SelectAllNodes</location>
+        <group>Sapphire.Diagram.Export</group>
+        <context>Sapphire.Diagram.Editor</context>
+        <context>Sapphire.Diagram.Header</context>
+    </action>
+    <action>
+        <id>Sapphire.Diagram.Print</id>
+        <label>print</label>
+        <image>org/eclipse/sapphire/ui/actions/Print.gif</image>
+        <description>Print the diagram.</description>
+        <location>after:Sapphire.Diagram.SaveAsImage</location>
+        <group>Sapphire.Diagram.Export</group>
+        <context>Sapphire.Diagram.Editor</context>
+        <context>Sapphire.Diagram.Header</context>
+    </action>
+    <action>
+        <id>Sapphire.Diagram.Connect</id>
+        <context>Sapphire.Diagram.Node</context>
+        <label>connect</label>
+        <image>org/eclipse/sapphire/ui/actions/connection.png</image>
+        <description>Create connection with the current node as the connection source.</description>
+        <group>Sapphire.AddDeleteGroup</group>
+        <location>after:Sapphire.Delete</location>
+    </action>
+    <action-handler>
+        <action>Sapphire.Browse</action>
+        <impl>org.eclipse.sapphire.ui.forms.swt.AbsoluteFilePathBrowseActionHandler</impl>
+        <id>Sapphire.Browse.File.Absolute</id>
+        <description>Opens the native file browse dialog. Activates if the property is a value property, has @AbsolutePath annotation and has @ValidFileSystemResourceType annotation that specifies file type.</description>
+        <condition>org.eclipse.sapphire.ui.forms.swt.internal.AbsoluteFilePathBrowseActionHandlerCondition</condition>
+    </action-handler>
+    <action-handler>
+        <action>Sapphire.Browse</action>
+        <impl>org.eclipse.sapphire.ui.forms.swt.AbsoluteFolderPathBrowseActionHandler</impl>
+        <id>Sapphire.Browse.Folder.Absolute</id>
+        <description>Opens the native folder browse dialog. Activates if the property is a value property, has @AbsolutePath annotation and has @ValidFileSystemResourceType annotation that specifies folder type.</description>
+        <condition>org.eclipse.sapphire.ui.forms.swt.internal.AbsoluteFolderPathBrowseActionHandlerCondition</condition>
+    </action-handler>
+    <action-handler>
+        <action>Sapphire.Browse</action>
+        <impl>org.eclipse.sapphire.ui.forms.swt.RelativePathBrowseActionHandler</impl>
+        <id>Sapphire.Browse.Path.Relative</id>
+        <description>Opens a browse dialog for a relative path to a file or a folder. Activates if the property is a value property and has a RelativePathService.</description>
+        <condition>org.eclipse.sapphire.ui.forms.swt.internal.RelativePathBrowseActionHandlerCondition</condition>
+    </action-handler>
+    <action-handler>
+        <action>Sapphire.Browse</action>
+        <impl>org.eclipse.sapphire.ui.forms.swt.internal.PossibleValuesBrowseActionHandler</impl>
+        <id>Sapphire.Browse.Possible</id>
+        <description>Opens a browse dialog listing possible values for the property. Activates if the property is a value property and has either @PossibleValuesProvider, @PossibleValues or @PossibleValuesFromModel annotation.</description>
+        <condition>org.eclipse.sapphire.ui.forms.swt.internal.PossibleValuesBrowseActionHandlerCondition</condition>
+    </action-handler>
+    <action-handler>
+        <action>Sapphire.Browse</action>
+        <id>Sapphire.Browse.Color</id>
+        <description>Opens a color browse dialog. Activates if the property is a value property of type Color.</description>
+        <condition>org.eclipse.sapphire.ui.forms.swt.internal.ColorBrowseActionHandler$Condition</condition>
+        <impl>org.eclipse.sapphire.ui.forms.swt.internal.ColorBrowseActionHandler</impl>
+    </action-handler>
+    <action-handler>
+        <action>Sapphire.Browse</action>
+        <id>Sapphire.Browse.Calendar</id>
+        <description>Opens a calendar to allow date selection. Activates if the property is a value property of type Date.</description>
+        <condition>org.eclipse.sapphire.ui.forms.swt.internal.CalendarBrowseActionHandler$Condition</condition>
+        <impl>org.eclipse.sapphire.ui.forms.swt.internal.CalendarBrowseActionHandler</impl>
+    </action-handler>
+    <action-handler>
+        <action>Sapphire.Help</action>
+        <impl>org.eclipse.sapphire.ui.forms.swt.internal.HelpActionHandler</impl>
+        <id>Sapphire.Help</id>
+        <description>Shows the documentation associated with a given UI part using Eclipse context help view.</description>
+        <condition>org.eclipse.sapphire.ui.forms.swt.internal.HelpActionHandlerCondition</condition>
+    </action-handler>
+    <action-handler>
+        <action>Sapphire.Jump</action>
+        <impl>org.eclipse.sapphire.ui.forms.swt.internal.RelativePathJumpActionHandler</impl>
+        <id>Sapphire.Jump.Path.Relative</id>
+        <description>Opens the file specified by a relative path using the associated Eclipse editor. Activates if the property is a value property and has a RelativePathService.</description>
+        <condition>org.eclipse.sapphire.ui.forms.swt.internal.RelativePathJumpActionHandlerCondition</condition>
+    </action-handler>
+    <action-handler>
+        <action>Sapphire.Jump</action>
+        <impl>org.eclipse.sapphire.ui.forms.swt.internal.UrlJumpActionHandler</impl>
+        <id>Sapphire.Jump.URL</id>
+        <description>Opens the specified URL using an external web browser. Activates if the property is of type URL.</description>
+        <condition>org.eclipse.sapphire.ui.forms.swt.internal.UrlJumpActionHandlerCondition</condition>
+    </action-handler>
+    <action-handler>
+        <action>Sapphire.Restore.Defaults</action>
+        <impl>org.eclipse.sapphire.ui.forms.swt.internal.RestoreDefaultsActionHandler</impl>
+        <id>Sapphire.Restore.Defaults</id>
+        <description>Opens a dialog showing all properties in the section with non-default values. The user can select which of those properties to restore to their default state.</description>
+        <condition>org.eclipse.sapphire.ui.forms.swt.internal.RestoreDefaultsActionHandlerCondition</condition>
+    </action-handler>
+    <action-handler>
+        <action>Sapphire.Outline.CollapseAll</action>
+        <id>Sapphire.Outline.CollapseAll</id>
+        <description>Collapses all nodes in the content outline.</description>
+        <impl>org.eclipse.sapphire.ui.forms.internal.OutlineCollapseAllActionHandler</impl>
+    </action-handler>
+    <action-handler>
+        <action>Sapphire.Delete</action>
+        <impl>org.eclipse.sapphire.ui.forms.internal.OutlineNodeDeleteActionHandler</impl>
+        <id>Sapphire.Outline.Delete</id>
+        <description>Deletes the model element associated with a given content outline node. Activates if the UI part is a content outline or a content outline node. All affected nodes must have the same parent and that parent must be a list property.</description>
+        <context>Sapphire.EditorPage.Outline</context>
+        <context>Sapphire.EditorPage.Outline.Node</context>
+        <condition>org.eclipse.sapphire.ui.forms.internal.OutlineNodeDeleteActionHandlerCondition</condition>
+    </action-handler>
+    <action-handler>
+        <action>Sapphire.Outline.ExpandAll</action>
+        <id>Sapphire.Outline.ExpandAll</id>
+        <description>Expands all nodes in the content outline.</description>
+        <impl>org.eclipse.sapphire.ui.forms.internal.OutlineExpandAllActionHandler</impl>
+    </action-handler>
+    <action-handler>
+        <action>Sapphire.Move.Down</action>
+        <impl>org.eclipse.sapphire.ui.forms.internal.OutlineNodeMoveDownActionHandler</impl>
+        <id>Sapphire.Outline.Move.Down</id>
+        <description>Moves the model element one position towards the end of the containing list, swapping places with the following element. Activates if the UI part is a content outline node. The affected node must have a list property parent.</description>
+        <condition>org.eclipse.sapphire.ui.forms.internal.OutlineNodeListMemberActionHandlerCondition</condition>
+    </action-handler>
+    <action-handler>
+        <action>Sapphire.Move.Up</action>
+        <impl>org.eclipse.sapphire.ui.forms.internal.OutlineNodeMoveUpActionHandler</impl>
+        <id>Sapphire.Outline.Move.Up</id>
+        <description>Moves the model element one position towards the beginning of the containing list, swapping places with the preceding element. Activates if the UI part is a content outline node. The affected node must have a list property parent.</description>
+        <condition>org.eclipse.sapphire.ui.forms.internal.OutlineNodeListMemberActionHandlerCondition</condition>
+    </action-handler>
+    <action-handler>
+        <action>Sapphire.ShowInSource</action>
+        <impl>org.eclipse.sapphire.ui.forms.internal.OutlineNodeShowInSourceActionHandler</impl>
+        <id>Sapphire.Outline.ShowInSource</id>
+        <description>Shows the model element associated with a given content outline node in the corresponding source editor.</description>
+        <context>Sapphire.EditorPage.Outline.Node</context>
+        <condition>org.eclipse.sapphire.ui.forms.internal.OutlineNodeShowInSourceActionHandlerCondition</condition>
+    </action-handler>
+    <action-handler>
+        <action>Sapphire.ShowNextError</action>
+        <id>Sapphire.ShowNextError.Outline</id>
+        <description>Shows the next validation error.</description>
+        <context>Sapphire.EditorPage.Outline.Node</context>
+        <impl>org.eclipse.sapphire.ui.forms.internal.OutlineNodeShowNextErrorActionHandler</impl>
+    </action-handler>
+    <action-handler>
+        <action>Sapphire.ShowNextWarning</action>
+        <id>Sapphire.ShowNextWarning.Outline</id>
+        <description>Shows the next validation warning</description>
+        <context>Sapphire.EditorPage.Outline.Node</context>
+        <impl>org.eclipse.sapphire.ui.forms.internal.OutlineNodeShowNextWarningActionHandler</impl>
+    </action-handler>
+    <action-handler>
+        <action>Sapphire.ShowInSource</action>
+        <impl>org.eclipse.sapphire.ui.diagram.actions.DiagramShowInSourceActionHandler</impl>
+        <id>Sapphire.Diagram.ShowInSource</id>
+        <description>Shows the model element associated with a given diagram node in the corresponding source editor.</description>
+        <context>Sapphire.Diagram.Node</context>
+        <context>Sapphire.Diagram.Connection</context>
+        <context>Sapphire.Diagram.Node.Shape</context>
+        <condition>org.eclipse.sapphire.ui.diagram.actions.internal.DiagramShowInSourceActionHandlerCondition</condition>
+    </action-handler>
+    <action-handler>
+        <action>Sapphire.Delete</action>
+        <impl>org.eclipse.sapphire.ui.diagram.actions.DiagramDeleteActionHandler</impl>
+        <id>Sapphire.Diagram.Delete</id>
+        <description>Deletes the model element associated with a given diagram node or connection.</description>
+        <context>Sapphire.Diagram.Node</context>
+        <context>Sapphire.Diagram.Node.Shape</context>
+        <context>Sapphire.Diagram.Connection</context>
+        <context>Sapphire.Diagram.MultipleParts</context>
+    </action-handler>
+    <action-handler>
+        <action>Sapphire.Diagram.Grid.Toggle</action>
+        <impl>org.eclipse.sapphire.ui.diagram.actions.ToggleDiagramGridActionHandler</impl>
+        <id>Sapphire.Diagram.Grid.Toggle</id>
+        <description>Show/Hide diagram grid</description>
+    </action-handler>
+    <action-handler>
+        <action>Sapphire.Diagram.Guides.Toggle</action>
+        <impl>org.eclipse.sapphire.ui.diagram.actions.ToggleDiagramGuidesActionHandler</impl>
+        <id>Sapphire.Diagram.Guides.Toggle</id>
+        <description>Show/Hide guides</description>
+    </action-handler>
+    <action-handler>
+        <action>Sapphire.Diagram.DeleteAllBendPoints</action>
+        <impl>org.eclipse.sapphire.ui.diagram.actions.DeleteAllBendPointsForConnectionActionHandler</impl>
+        <id>Sapphire.Diagram.DeleteAllBendPoints.Connection</id>
+        <context>Sapphire.Diagram.Connection</context>
+    </action-handler>
+    <action-handler>
+        <action>Sapphire.Diagram.DeleteAllBendPoints</action>
+        <impl>org.eclipse.sapphire.ui.diagram.actions.DeleteAllBendPointsForMultiplePartsActionHandler</impl>
+        <id>Sapphire.Diagram.DeleteAllBendPoints.MultipleParts</id>
+        <context>Sapphire.Diagram.MultipleParts</context>
+    </action-handler>
+    <action-handler>
+        <action>Sapphire.Diagram.SelectAll</action>
+        <impl>org.eclipse.sapphire.ui.diagram.actions.DiagramSelectAllActionHandler</impl>
+        <id>Sapphire.Diagram.SelectAll</id>
+        <context>Sapphire.Diagram.Editor</context>
+    </action-handler>
+    <action-handler>
+        <action>Sapphire.Diagram.SelectAllNodes</action>
+        <impl>org.eclipse.sapphire.ui.diagram.actions.DiagramSelectAllNodesActionHandler</impl>
+        <id>Sapphire.Diagram.SelectAllNodes</id>
+        <context>Sapphire.Diagram.Editor</context>
+    </action-handler>
+    <action-handler>
+        <action>Sapphire.Diagram.Zoom.In</action>
+        <id>Sapphire.Diagram.Zoom.In</id>
+        <context>Sapphire.Diagram.Editor</context>
+        <context>Sapphire.Diagram.Header</context>
+        <impl>org.eclipse.sapphire.ui.diagram.actions.ZoomInDiagramActionHandler</impl>
+    </action-handler>
+    <action-handler>
+        <action>Sapphire.Diagram.Zoom.Out</action>
+        <id>Sapphire.Diagram.Zoom.Out</id>
+        <context>Sapphire.Diagram.Editor</context>
+        <context>Sapphire.Diagram.Header</context>
+        <impl>org.eclipse.sapphire.ui.diagram.actions.ZoomOutDiagramActionHandler</impl>
+    </action-handler>
+    <action-handler>
+        <action>Sapphire.Diagram.Zoom.Actual</action>
+        <id>Sapphire.Diagram.Zoom.Actual</id>
+        <context>Sapphire.Diagram.Editor</context>
+        <context>Sapphire.Diagram.Header</context>
+        <impl>org.eclipse.sapphire.ui.diagram.actions.ZoomActualDiagramActionHandler</impl>
+    </action-handler>
+    <action-handler>  
+        <context>Sapphire.Diagram.Editor</context>
+        <context>Sapphire.Diagram.Node</context>
+        <context>Sapphire.Diagram.Node.Shape</context>
+        <context>Sapphire.Diagram.Connection</context>                
+        <impl>org.eclipse.sapphire.ui.diagram.actions.ShowPropertiesPageHandler</impl>
+        <action>Sapphire.ShowInPropertiesView</action>
+        <id>Sapphire.Diagram.ShowInPropertiesView</id>
+        <condition>org.eclipse.sapphire.ui.diagram.actions.internal.ShowPropertiesPageCondition</condition>        
+    </action-handler>    
+    <action-handler>
+        <action>Sapphire.Move.Down</action>
+        <impl>org.eclipse.sapphire.ui.diagram.actions.MoveShapeDownActionHandler</impl>
+        <id>Sapphire.Diagram.MoveShapeDown</id>
+        <description>Moves the model element one position towards the end of the containing list, swapping places with the following element. Activates if selected part is a child of a shape factory.</description>
+        <context>Sapphire.Diagram.Node.Shape</context>
+        <condition>org.eclipse.sapphire.ui.diagram.actions.internal.MoveShapeActionHandlerCondition</condition>
+    </action-handler>    
+    <action-handler>
+        <action>Sapphire.Move.Up</action>
+        <impl>org.eclipse.sapphire.ui.diagram.actions.MoveShapeUpActionHandler</impl>
+        <id>Sapphire.Diagram.MoveShapeUp</id>
+        <description>Moves the model element one position towards the beginning of the containing list, swapping places with the preceding element. Activates if selected part is a child of a shape factory.</description>
+        <context>Sapphire.Diagram.Node.Shape</context>
+        <condition>org.eclipse.sapphire.ui.diagram.actions.internal.MoveShapeActionHandlerCondition</condition>
+    </action-handler>    
+    <action-handler-factory>
+        <action>Sapphire.Add</action>
+        <impl>org.eclipse.sapphire.ui.forms.internal.OutlineNodeAddActionHandlerFactory</impl>
+        <description>Creates an add action handler for every possible member element type for all lists whose members are shown as child nodes beneath the content outline node in question.</description>
+        <context>Sapphire.EditorPage.Outline.Node</context>
+        <condition>org.eclipse.sapphire.ui.forms.internal.OutlineNodeAddActionHandlerCondition</condition>
+    </action-handler-factory>
+    <action-handler-factory>
+        <action>Sapphire.Add</action>
+        <impl>org.eclipse.sapphire.ui.diagram.actions.DiagramNodeAddActionHandlerFactory</impl>
+        <description>Creates an add action handler for every node type.</description>
+        <context>Sapphire.Diagram.Editor</context>
+    </action-handler-factory>  
+    <action-handler-factory>
+        <action>Sapphire.Add</action>
+        <impl>org.eclipse.sapphire.ui.diagram.actions.DiagramNodeAddShapeFactory</impl>
+        <description>Creates an add action handler for every shape factory.</description>
+        <context>Sapphire.Diagram.Node</context>
+        <context>Sapphire.Diagram.Node.Shape</context>
+    </action-handler-factory>
+    <presentation-style>
+        <id>Sapphire.Actuator.Link</id>
+        <part-type>Sapphire.Actuator</part-type>
+    </presentation-style>
+    <presentation-style>
+        <id>Sapphire.Actuator.Button</id>
+        <part-type>Sapphire.Actuator</part-type>
+    </presentation-style>
+    <presentation-style>
+        <id>Sapphire.PropertyEditor.PopUpListField</id>
+        <part-type>Sapphire.PropertyEditor</part-type>
+    </presentation-style>
+    <presentation-style>
+        <id>Sapphire.PropertyEditor.PopUpListField.Editable</id>
+        <part-type>Sapphire.PropertyEditor</part-type>
+    </presentation-style>
+    <presentation-style>
+        <id>Sapphire.PropertyEditor.PopUpListField.Strict</id>
+        <part-type>Sapphire.PropertyEditor</part-type>
+    </presentation-style>
+    <service>
+        <context>Sapphire.Element.Instance</context>
+        <description>ConversionService implementation for String to ImageData conversions.</description>
+        <id>Sapphire.ConversionService.StringToImageData</id>
+        <implementation>org.eclipse.sapphire.ui.def.internal.StringToImageDataConversionService</implementation>
+    </service>
+    <service>
+        <id>Sapphire.ListSelectionService</id>
+        <context>Sapphire.Part</context>
+        <implementation>org.eclipse.sapphire.ui.ListSelectionService</implementation>
+        <condition>org.eclipse.sapphire.ui.internal.ListSelectionServiceCondition</condition>
+        <description>ListSelectionService is a conduit between the presentation layer and anything that needs to observe or change the selection in a list property editor.</description>
+    </service>
+    <service>
+        <condition>org.eclipse.sapphire.ui.internal.TextSelectionServiceCondition</condition>
+        <context>Sapphire.Part</context>
+        <id>Sapphire.TextSelectionService</id>
+        <implementation>org.eclipse.sapphire.ui.TextSelectionService</implementation>
+        <description>TextSelectionService is a conduit between the presentation layer and anything that needs to observe or change the selection in a text property editor.</description>
+    </service>
+    <service>
+        <id>Sapphire.ProblemsTraversalService</id>
+        <context>Sapphire.Part</context>
+        <description>Produces a problem-annotated traversal order through the content outline, which can be used to find the next error or warning from any location in the content outline. An implementation of this service is provided with Sapphire. This service is not intended to be implemented by adopters.</description>
+        <implementation>org.eclipse.sapphire.ui.forms.ProblemsTraversalService</implementation>
+        <condition>org.eclipse.sapphire.ui.forms.internal.ProblemsTraversalServiceCondition</condition>
+    </service>
+    <service>
+        <id>Sapphire.Diagrams.ConnectionService.Standard</id>
+        <context>Sapphire.Part</context>
+        <implementation>org.eclipse.sapphire.ui.diagram.StandardConnectionService</implementation>
+        <condition>org.eclipse.sapphire.ui.diagram.StandardConnectionService$Condition</condition>
+    </service>    
+    <function>
+        <name>Part</name>
+        <impl>org.eclipse.sapphire.ui.internal.PartFunction</impl>
+        <description>Returns the context part.</description>
+        <signature></signature>
+    </function>
+    <function>
+        <description>Returns the validation result of a part.</description>
+        <impl>org.eclipse.sapphire.ui.internal.PartValidationFunction</impl>
+        <name>Validation</name>
+        <signature>
+            <parameter>org.eclipse.sapphire.ui.SapphirePart</parameter>
+        </signature>
+    </function>
+    <function>
+        <name>Enabled</name>
+        <impl>org.eclipse.sapphire.ui.internal.PropertyEditorEnabledFunction</impl>
+        <description>Determines if the property associated with the property editor is enabled. Can only be used in the context of a property editor.</description>
+        <signature></signature>
+    </function>
+    <function>
+        <description>Returns the parent of the given part.</description>
+        <impl>org.eclipse.sapphire.ui.internal.PartParentFunction</impl>
+        <name>Parent</name>
+        <signature>
+            <parameter>org.eclipse.sapphire.ui.SapphirePart</parameter>
+        </signature>
+    </function>
+    <function>
+        <name>State</name>
+        <description>Returns the root element of editor page's persisted state, allowing access to various state properties. This is particularly useful when the persisted state is extended with custom properties wired to custom actions, as it allows any EL-enabled facility to integrate with the custom state property.</description>
+        <impl>org.eclipse.sapphire.ui.internal.StateFunction</impl>
+    </function>
+    <presentation-style>
+        <id>Sapphire.PropertyEditor.RadioButtonGroup</id>
+        <part-type>Sapphire.PropertyEditor</part-type>
+    </presentation-style>
+    <presentation-style>
+        <id>Sapphire.PropertyEditor.RadioButtonGroup.Horizontal</id>
+        <part-type>Sapphire.PropertyEditor</part-type>
+    </presentation-style>
+    <presentation-style>
+        <id>Sapphire.PropertyEditor.RadioButtonGroup.Vertical</id>
+        <part-type>Sapphire.PropertyEditor</part-type>
+    </presentation-style>
+    <presentation-style>
+        <id>Sapphire.PropertyEditor.Scale</id>
+        <part-type>Sapphire.PropertyEditor</part-type>
+    </presentation-style>
+</extension>

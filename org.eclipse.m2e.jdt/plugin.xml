@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (c) 2007, 2008 Sonatype, Inc.
+  All rights reserved. This program and the accompanying materials
+  are made available under the terms of the Eclipse Public License v1.0
+  which accompanies this distribution, and is available at
+  http://www.eclipse.org/legal/epl-v10.html
+-->
+<?eclipse version="3.2"?>
+<plugin>
+   <extension-point id="classifierClasspathProviders" name="%extension-point.classifierClasspathProviders.name" schema="schema/classifierClasspathProviders.exsd"/>
+
+   <extension
+         point="org.eclipse.m2e.core.lifecycleMappings">
+      <lifecycleMapping
+            class="org.eclipse.m2e.jdt.internal.JarLifecycleMapping"
+            id="org.eclipse.m2e.jdt.JarLifecycleMapping"
+            name="%lifecycleMapping.jar.name">
+      </lifecycleMapping>
+   </extension>
+
+   <extension point="org.eclipse.jdt.core.classpathContainerInitializer"
+              id="maven2ClasspathContainer"
+              name="%m2.classpath-container.name">
+      <classpathContainerInitializer
+            id="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER"
+            class="org.eclipse.m2e.jdt.internal.MavenClasspathContainerInitializer"/>
+   </extension>
+   
+   <extension point="org.eclipse.jdt.launching.classpathProviders">
+      <classpathProvider 
+          id="org.eclipse.m2e.launchconfig.classpathProvider"
+          class="org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider"/>
+      <classpathProvider 
+          id="org.eclipse.m2e.launchconfig.sourcepathProvider"
+          class="org.eclipse.m2e.jdt.internal.launch.MavenSourcePathProvider"/>
+   </extension>
+
+   <extension point="org.eclipse.m2e.core.projectConfigurators">
+      <configurator
+            class="org.eclipse.m2e.jdt.internal.JavaProjectConfigurator"
+            id="org.eclipse.m2e.jdt.javaConfigurator"
+            name="%configurator.jdt.name">
+      </configurator>
+   </extension>
+   
+   <extension point="org.eclipse.jdt.core.classpathVariableInitializer">
+      <classpathVariableInitializer variable="M2_REPO" readOnly="true"
+          class="org.eclipse.m2e.jdt.internal.MavenClasspathVariableInitializer"/>
+   </extension>
+
+   <extension point="org.eclipse.core.runtime.adapters">
+      <factory adaptableType="org.eclipse.jdt.core.IPackageFragmentRoot"
+               class="org.eclipse.m2e.jdt.internal.JavaElementsAdapterFactory">
+         <adapter type="org.eclipse.m2e.core.embedder.ArtifactKey"/>
+         <adapter type="org.eclipse.core.runtime.IPath"/>
+         <adapter type="org.eclipse.m2e.core.project.IMavenProjectFacade"/>
+      </factory>
+      <factory adaptableType="org.eclipse.jdt.core.IJavaProject"
+               class="org.eclipse.m2e.jdt.internal.JavaElementsAdapterFactory">
+         <adapter type="org.eclipse.m2e.core.embedder.ArtifactKey"/>
+         <adapter type="org.eclipse.core.runtime.IPath"/>
+         <adapter type="org.eclipse.m2e.core.project.IMavenProjectFacade"/>
+      </factory>
+   </extension>
+   
+   <extension
+         point="org.eclipse.m2e.core.lifecycleMappingMetadataSource">
+   </extension>
+   <extension
+         point="org.eclipse.m2e.core.projectConversionParticipants">
+      <projectConversionParticipant
+            class="org.eclipse.m2e.jdt.internal.JavaProjectConversionParticipant"
+            id="org.eclipse.m2e.jdt.javaProjectConversionParticipant"
+            name="%java.conversion.participant.name"
+            nature="org.eclipse.jdt.core.javanature">
+      </projectConversionParticipant>
+      
+      <conversionParticipantConfiguration 
+      		conversionParticipantId="org.eclipse.m2e.jdt.javaProjectConversionParticipant"
+      		compatiblePackagings="jar" 
+      	 />   
+   </extension>
+   <extension
+         point="org.eclipse.m2e.jdt.classifierClasspathProviders">
+      <classifierClasspathProvider
+            class="org.eclipse.m2e.jdt.internal.launch.BlankClassifierClasspathProvider"
+            id="org.eclipse.m2e.jdt.mainClassifierClasspathProvider"
+            name="Main Classifier Classpath Provider">
+      </classifierClasspathProvider>
+      <classifierClasspathProvider
+            class="org.eclipse.m2e.jdt.internal.launch.NullClassifierClasspathProvider"
+            id="org.eclipse.m2e.jdt.nullClassifierClasspathProvider"
+            name="Null Classifier Classpath Provider">
+      </classifierClasspathProvider>
+      <classifierClasspathProvider
+            class="org.eclipse.m2e.jdt.internal.launch.TestsClassifierClasspathProvider"
+            id="org.eclipse.m2e.jdt.testsClassifierClasspathProvider"
+            name="Tests Classifier Classpath Provider">
+      </classifierClasspathProvider>
+   </extension>
+</plugin>

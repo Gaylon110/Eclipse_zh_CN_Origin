@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.jdt.core.classpathContainerInitializer">
+      <classpathContainerInitializer
+            class="org.eclipse.fx.ide.jdt.core.internal.JavaFXClasspathContainerInitializer"
+            id="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER">
+      </classpathContainerInitializer>
+      <classpathContainerInitializer
+            class="org.eclipse.fx.ide.jdt.core.internal.MobileClasspathContainer"
+            id="org.eclipse.fx.ide.jdt.core.MOBILE_CONTAINER">
+      </classpathContainerInitializer>
+   </extension>
+   <extension
+         point="org.eclipse.jdt.launching.executionEnvironments">
+      <ruleParticipant
+            class="org.eclipse.fx.ide.jdt.core.internal.FXAccessRuleParticipant"
+            id="org.eclipse.fx.ide.jdt.core.fxrule">
+      </ruleParticipant>
+   </extension>
+   <extension
+         point="org.eclipse.jdt.launching.libraryLocationResolvers">
+      <resolver
+            class="org.eclipse.fx.ide.jdt.core.internal.FXLibraryLocationResolver">
+      </resolver>
+   </extension>
+</plugin>

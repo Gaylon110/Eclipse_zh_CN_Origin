@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension-point id="modelVersion" name="ModelVersion" schema="schema/modelVersion.exsd"/>
+   <extension-point id="ignoreDatatype" name="Ignore Datatype" schema="schema/ignoreDatatype.exsd"/>
+   <extension-point id="singletonIdResolver" name="Singleton ID Resolver" schema="schema/singletonIdResolver.exsd"/>
+   <extension-point id="serializationOptions" name="Serialization Options" schema="schema/serializationOptions.exsd"/>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://eclipse.org/emf/emfstore/common/model"
+            class="org.eclipse.emf.emfstore.internal.common.model.ModelPackage"
+            genModel="model/common.genmodel"/>
+   </extension>
+</plugin>

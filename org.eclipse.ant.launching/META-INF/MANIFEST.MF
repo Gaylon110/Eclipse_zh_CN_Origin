@@ -1,0 +1,257 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.ant.launching;singleton:=true
+Archiver-Version: Plexus Archiver
+Built-By: genie.releng
+Require-Bundle: org.eclipse.core.runtime;bundle-version="[3.5.0,4.0.0)
+ ",org.eclipse.debug.core;bundle-version="[3.9.0,4.0.0)",org.eclipse.j
+ dt.launching;bundle-version="[3.5.0,4.0.0)",org.eclipse.core.variable
+ s;bundle-version="[3.2.0,4.0.0)",org.eclipse.ant.core;bundle-version=
+ "[3.2.0,4.0.0)",org.apache.ant;bundle-version="1.9.4",org.eclipse.cor
+ e.externaltools;bundle-version="[1.0.0,2.0.0)",org.eclipse.text;bundl
+ e-version="[3.5.0,4.0.0)",org.eclipse.jdt.core;bundle-version="[3.5.0
+ ,4.0.0)",org.eclipse.core.resources;bundle-version="[3.5.0,4.0.0)"
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/platfo
+ rm/eclipse.platform.git;path="ant/org.eclipse.ant.launching";tag="M20
+ 171108-0500";commitId=710dd4c6972cb70c9605d3248dfb80738ee74c40
+Bundle-Vendor: %providerName
+Import-Package: com.ibm.icu.text
+Export-Package: org.eclipse.ant.internal.launching;x-friends:="org.ecl
+ ipse.ant.ui,org.eclipse.ant.tests.ui",org.eclipse.ant.internal.launch
+ ing.debug;x-friends:="org.eclipse.ant.ui,org.eclipse.ant.tests.ui",or
+ g.eclipse.ant.internal.launching.debug.model;x-friends:="org.eclipse.
+ ant.ui,org.eclipse.ant.tests.ui",org.eclipse.ant.internal.launching.l
+ aunchConfigurations;x-friends:="org.eclipse.ant.ui,org.eclipse.ant.te
+ sts.ui",org.eclipse.ant.internal.launching.remote;x-internal:=true,or
+ g.eclipse.ant.internal.launching.remote.inputhandler;x-internal:=true
+ ,org.eclipse.ant.internal.launching.remote.logger;x-internal:=true,or
+ g.eclipse.ant.internal.launching.runtime.logger;x-friends:="org.eclip
+ se.ant.ui",org.eclipse.ant.launching
+Bundle-Name: %pluginName
+Bundle-Version: 1.2.1.v20171108-0853
+Bundle-Localization: plugin
+Bundle-Activator: org.eclipse.ant.internal.launching.AntLaunching
+Created-By: Apache Maven 3.3.3
+Build-Jdk: 1.8.0_131
+
+Name: plugin.xml
+SHA-256-Digest: hsj8BeulNV+ibg8xPeq8NZx1q09/lRz59obTxIKJm3g=
+
+Name: org/eclipse/ant/internal/launching/debug/IAntDebugController.cla
+ ss
+SHA-256-Digest: Mg+7RdkID01fxP1aCCqB3H8Okj1tXGjkF2vbGv10jos=
+
+Name: org/eclipse/ant/internal/launching/debug/model/AntProperties.cla
+ ss
+SHA-256-Digest: M5606dtz3gHh0R56j2Wn1fMS38Fw8IQo6BA6PjAlVlU=
+
+Name: org/eclipse/ant/internal/launching/debug/AntDebugMessages.class
+SHA-256-Digest: DOr15GYS0tjjyxkkP/2A8aD4UzK4cskgzQDxXBzJpNg=
+
+Name: org/eclipse/ant/internal/launching/LinkDescriptor.class
+SHA-256-Digest: 6UYHVpSRROWXS7bmj4fQYRcWXwEKEn+YhXlPkCkZZcQ=
+
+Name: lib/loggers.jar
+SHA-256-Digest: CkB3byvCg1VmkxUzxpATJl49G9ZJ7X4LiMt2duanM6Q=
+
+Name: org/eclipse/ant/internal/launching/launchConfigurations/RemoteAn
+ tRuntimeProcess.class
+SHA-256-Digest: 3hu0n5CBaaR+oYGp6hhZT6xiOIZpaKO+GMfdPCc4XR4=
+
+Name: org/eclipse/ant/internal/launching/launchConfigurations/AntLaunc
+ hDelegate.class
+SHA-256-Digest: P2K3PC7q1XWUltmGlnvkWGZujvfwi7ilHd1350wCE7w=
+
+Name: org/eclipse/ant/internal/launching/launchConfigurations/AntLaunc
+ hDelegate$2.class
+SHA-256-Digest: X9GkUUvJf2/9T2db/zveUlAWkO2nSiN56SR+qYN2zJ4=
+
+Name: org/eclipse/ant/internal/launching/launchConfigurations/AntJavaL
+ aunchDelegate.class
+SHA-256-Digest: xceQH9Pd50BDlX7Oj4OTete+FAm5xUHzDdgJbQCAsiw=
+
+Name: plugin.properties
+SHA-256-Digest: m1s8bzraLYEKd8KW8eiWl65XplVaA7J8mG16qKjT9xM=
+
+Name: org/eclipse/ant/internal/launching/debug/AntSourcePathComputerDe
+ legate.class
+SHA-256-Digest: Qq9WJLVrc2hj/ZkfU1YYqgncatHX35iViLnrBt/HEXc=
+
+Name: org/eclipse/ant/internal/launching/launchConfigurations/Contribu
+ tedClasspathEntriesEntry.class
+SHA-256-Digest: 04+J5Eo2wi2v85+zVfGhGcXQPRjLthdQdnL08zg/ro0=
+
+Name: org/eclipse/ant/internal/launching/launchConfigurations/AntMigra
+ tionDelegate.class
+SHA-256-Digest: rapaB3i7lokgG7+ZVTOAQNqKPL9SzxbxyqlYd7G2P9I=
+
+Name: org/eclipse/ant/internal/launching/AntLaunch.class
+SHA-256-Digest: x+dDRcXyjJYGg+J+JTpGUA0WRQCujGMjWqHVFW+P+K8=
+
+Name: org/eclipse/ant/internal/launching/debug/model/AntThread.class
+SHA-256-Digest: 4xzwKZcnYPmby8NaEhTqI/J+LAYlIoeeMIM7QJNaplg=
+
+Name: .api_description
+SHA-256-Digest: t+2+TXewwhJU7oH9QcwDM37MtQQ3YP3nnoz94iZF8Ro=
+
+Name: org/eclipse/ant/internal/launching/debug/model/AntProperty.class
+SHA-256-Digest: u8fFIbWRkoGeSBluJXDVIpRRcPP7ZjjLMIDKNivSnSg=
+
+Name: org/eclipse/ant/internal/launching/launchConfigurations/AntClass
+ pathProvider.class
+SHA-256-Digest: KeiVH7saWHSPUnabWrKJ3JX/JDqAE7oDyk6nqkwTKPo=
+
+Name: org/eclipse/ant/internal/launching/launchConfigurations/AntStrea
+ msProxy.class
+SHA-256-Digest: jzrdug38nwrjNL+BlZ8Te01sd8HuBIp4Ju0bRFf+tho=
+
+Name: org/eclipse/ant/internal/launching/launchConfigurations/AntLaunc
+ hConfigurationMessages.class
+SHA-256-Digest: qwerb8794OdCVZFYJgeZgQvjXBb8bAvlmsx4sPH4rHs=
+
+Name: org/eclipse/ant/internal/launching/debug/model/DebugModelMessage
+ s.properties
+SHA-256-Digest: MlUyky+nw+6rsnxyC8sMpvMiffx9EYnuWgfzMznMYcA=
+
+Name: lib/antdebug.jar
+SHA-256-Digest: 85nm07p244cWDHxtbbnNvTQjvLNyr54PGCIrUpt5nx4=
+
+Name: org/eclipse/ant/internal/launching/launchConfigurations/AntStrea
+ mMonitor.class
+SHA-256-Digest: TwAUQ37fOlRhlWh5DbJdNFMfMacf5gQDRxL3RtCaPJM=
+
+Name: org/eclipse/ant/launching/IAntLaunchConstants.class
+SHA-256-Digest: qtHCvzcYMVBZgdXrb5tQkz6+YICNvZgN//sEmvdwRXs=
+
+Name: org/eclipse/ant/internal/launching/launchConfigurations/AntHomeC
+ lasspathEntry.class
+SHA-256-Digest: DE7A1DSekwTFs9+0N674R1j+YjVv2lPiPi+GAdysMkw=
+
+Name: org/eclipse/ant/internal/launching/debug/model/AntLineBreakpoint
+ $1.class
+SHA-256-Digest: iqj+N1WM2q2m6IxdPQ+Ob39AgRWKIsW3FmBu+7RQ36g=
+
+Name: org/eclipse/ant/internal/launching/debug/AntSourceContainer.clas
+ s
+SHA-256-Digest: MtsNqLyaNRPGz5pgiEdGTvvmV7nOlWNTWWuXaL6toYA=
+
+Name: org/eclipse/ant/internal/launching/debug/model/AntLineBreakpoint
+ .class
+SHA-256-Digest: wWPI0hHHGQKL+WF8jfCwJi7pZN+xRd/WMz8SktuWkWY=
+
+Name: org/eclipse/ant/internal/launching/IAntLaunchingPreferenceConsta
+ nts.class
+SHA-256-Digest: iOo7DVfnQ9HzB00sADS+OMpybtqtEvWnTCxTioNDLB4=
+
+Name: org/eclipse/ant/internal/launching/launchConfigurations/MessageI
+ ds.class
+SHA-256-Digest: 1MDR9y5EMERlgBDojwvj036tDiNa/DflZF43psB6np8=
+
+Name: org/eclipse/ant/internal/launching/launchConfigurations/AntLaunc
+ hConfigurationMessages.properties
+SHA-256-Digest: 7rGTXpeBz56J55zuixU5l+O9rirAogkIDIhvSjnqQo4=
+
+Name: org/eclipse/ant/internal/launching/debug/IAntDebugConstants.clas
+ s
+SHA-256-Digest: SfQrlogshTACB4zlg9Pv8WNQ5pU6fh/0IkfwbnAFeuI=
+
+Name: org/eclipse/ant/internal/launching/debug/model/AntPropertiesValu
+ e.class
+SHA-256-Digest: cN/zT9bUwyX+/NsX3M2aAduRqkGWgTWWt9bSx8QoskI=
+
+Name: org/eclipse/ant/internal/launching/debug/model/RemoteAntDebugBui
+ ldListener.class
+SHA-256-Digest: qXTRQnvPn3Vqg94qXvcP6uuy0pIBno4FQM2txxGKu5o=
+
+Name: org/eclipse/ant/internal/launching/debug/model/DebugModelMessage
+ s.class
+SHA-256-Digest: vvVe73YdLDHYQHOXDEhwcUdhjLfrIjr28CCQjMlFNV0=
+
+Name: org/eclipse/ant/internal/launching/AntCoreModelMessages.properti
+ es
+SHA-256-Digest: Gwe2+YC1Mip/kqs5/ykoZsfI3H70dnCYcDNgxxn+8W0=
+
+Name: org/eclipse/ant/internal/launching/debug/model/AntValue.class
+SHA-256-Digest: OvNC0aKSsq8LYTLIlix9O3KnPbDcITMVtnGwvLfYg6s=
+
+Name: org/eclipse/ant/internal/launching/debug/model/AntDebugTarget.cl
+ ass
+SHA-256-Digest: K35YIM5D1WmPbJsaLbvjh8e/Nw4rM0VaRuedW5zT8DU=
+
+Name: org/eclipse/ant/internal/launching/AntLaunchingPreferenceInitial
+ izer.class
+SHA-256-Digest: FNWsIa5Yg6RC6EnPdm2J8OZTug2ktGqYcTcPj5x5GPM=
+
+Name: org/eclipse/ant/internal/launching/AntLaunchingUtil.class
+SHA-256-Digest: upnqeVasJU70AFEm/7dIlifl5JEunlrsBnI+d2k7UCg=
+
+Name: about.html
+SHA-256-Digest: MExobQaM4PahYy9q9TcY3QvASIfPrTH9mCG58uLLWec=
+
+Name: org/eclipse/ant/internal/launching/debug/model/AntStackFrame.cla
+ ss
+SHA-256-Digest: 7K3xJkozNOy53vX2TVLx4QMh+Uo2XBEAnTFKko74CY0=
+
+Name: org/eclipse/ant/internal/launching/launchConfigurations/RemoteAn
+ tBuildListener$ServerConnection.class
+SHA-256-Digest: UX7KLf3oaULiQQyvpQswvKo0BOSsYgCuhH2fdTv7VDg=
+
+Name: org/eclipse/ant/internal/launching/AntLaunching.class
+SHA-256-Digest: 4YgGDLuCD3K2qf2SyTwSVUBYXGJL2QGYh3yDz+HgDas=
+
+Name: org/eclipse/ant/internal/launching/AntCoreModelMessages.class
+SHA-256-Digest: nNgvEcEHNCxgtxp/yeR/3vfV7gti1BO3scrcdsGfERM=
+
+Name: org/eclipse/ant/internal/launching/launchConfigurations/RemoteAn
+ tBuildListener$ListenerSafeRunnable.class
+SHA-256-Digest: odF5q5ESkc38PhcdtcRQcAGNFvaszhlOgDSCldGqcm4=
+
+Name: lib/remote.jar
+SHA-256-Digest: UciwUJxjRrGCXfgR5CLWLPiK5OX4ccRqB732iL6Q4K8=
+
+Name: org/eclipse/ant/internal/launching/launchConfigurations/RemoteAn
+ tProcessFactory.class
+SHA-256-Digest: xrVgSdV5bQA+0gba2TPF777C9DnkIEmgS4NTqwhDmak=
+
+Name: org/eclipse/ant/internal/launching/debug/AntSourceLookupParticip
+ ant.class
+SHA-256-Digest: hYF+IqdUjccnIjxvEbBcFJmlDeJb9ZrWnoHuDqnP0wQ=
+
+Name: org/eclipse/ant/internal/launching/launchConfigurations/AntLaunc
+ hDelegate$1.class
+SHA-256-Digest: jPWAiyh8XCw8HS/FbOsAU5hy2ahj+4ka0rSfFjZPz6Q=
+
+Name: org/eclipse/ant/internal/launching/launchConfigurations/Contribu
+ tedClasspathEntriesEntry$1.class
+SHA-256-Digest: b+DWLszyFy8ffjl6NmsDAUC1Q4RfQJFxNkKXR49xkoU=
+
+Name: org/eclipse/ant/internal/launching/debug/model/AntDebugElement.c
+ lass
+SHA-256-Digest: w5BsbhMMx4Balac4bBQMm/ZgqGk57tER6HgDeum0TNE=
+
+Name: org/eclipse/ant/internal/launching/debug/model/RemoteAntDebugBui
+ ldListener$ReaderThread.class
+SHA-256-Digest: hbkRaLUHiCliNohrYJc4hWnqcmYzeMpP2lC3Bkgu/Gs=
+
+Name: org/eclipse/ant/internal/launching/launchConfigurations/RemoteAn
+ tBuildListener.class
+SHA-256-Digest: i1DdZ3pLNt0rPAJUAw4DfEL2afY7pKuNT8gmSFCAeqU=
+
+Name: org/eclipse/ant/internal/launching/debug/AntSourceLookupDirector
+ .class
+SHA-256-Digest: unlad02jLJtAnlcmvYa3boIDe7uHsV0OrzaqjRS4BUA=
+
+Name: org/eclipse/ant/internal/launching/debug/model/DebugMessageIds.c
+ lass
+SHA-256-Digest: 3PPgPHw8VzR8Sghq2Tsy/bjHkQOT+f8mts60hRkQgQY=
+
+Name: org/eclipse/ant/internal/launching/debug/AntDebugMessages.proper
+ ties
+SHA-256-Digest: Zoa/ngYOpT87CZkfGI5HbKIi/1nmycKMMyYsSJxct7M=
+
+Name: org/eclipse/ant/internal/launching/launchConfigurations/AntProce
+ ss.class
+SHA-256-Digest: +1FBqyjWYlIHODGOnFaiWyx5dTGapfrludBNmpvz7a8=
+

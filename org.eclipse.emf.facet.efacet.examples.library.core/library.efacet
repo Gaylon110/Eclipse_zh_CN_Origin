@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="ASCII"?>
+
+<!--
+  Copyright (c) 2012 CEA LIST.
+
+  All rights reserved. This program and the accompanying materials
+  are made available under the terms of the Eclipse Public License v1.0
+  which accompanies this distribution, and is available at
+  http://www.eclipse.org/legal/epl-v10.html
+
+  Contributors:
+     Nicolas Bros (Mia-Software) - Bug 371367 - Hierarchical FacetSets
+     Nicolas Bros (Mia-Software) - Bug 376941 - [EFacet] Facet operation arguments in Facet model
+     Vincent Lorenzo (CEA-LIST) - Bug 373255 - Add tooltips providing a documentation for the selected elements in the Select ETypedElement Dialog
+-->
+
+<efacet:FacetSet xmi:version="2.0" 
+      xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" 
+      xmlns:efacet="http://www.eclipse.org/emf/facet/efacet/0.2.incubation/efacet" 
+      xmlns:query="http://www.eclipse.org/emf/facet/efacet/0.2.incubation/efacet/query" 
+      xmlns:javaQuery2="http://www.eclipse.org/emf/facet/query/java/0.2.incubation" 
+      xmlns:library="http://www.eclipse.org/emf/facet/examples/library/0.2.incubation/library" 
+      name="org.eclipse.emf.facet.efacet.examples.library.core.facet"
+      documentation="FacetSet for the Library models">
+
+  <eSubpackages xsi:type="efacet:FacetSet" name="writer" documentation="FacetSet for the Writer object">
+    <eClassifiers xsi:type="efacet:Facet" name="WriterExt" documentation="Extends the Writer object">
+      <extendedMetaclass href="http://www.eclipse.org/emf/facet/examples/library/0.2.incubation/library#//Writer"/>
+      <facetElements xsi:type="efacet:FacetAttribute" name="isProlific" derived="true" documentation="true if the author wrote more than 8 books">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <query xsi:type="query:OperationCallQuery">
+        	<operation href="#//writer/WriterExt/isInProlificnessInterval"/>
+        	<arguments xsi:type="query:IntegerLiteralQuery" value="9"/>
+        	<arguments xsi:type="query:IntegerLiteralQuery" value="2147483647"/>
+        </query>
+      </facetElements>
+      <facetElements xsi:type="efacet:FacetAttribute" name="isVeryProlific" derived="true" documentation="true if the author wrote more than 13 books">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <query xsi:type="query:OperationCallQuery">
+        	<operation href="#//writer/WriterExt/isInProlificnessInterval"/>
+        	<arguments xsi:type="query:IntegerLiteralQuery" value="14"/>
+        	<arguments xsi:type="query:IntegerLiteralQuery" value="2147483647"/>
+        </query>
+      </facetElements>
+      <facetElements xsi:type="efacet:FacetAttribute" name="isExtremelyProlific" derived="true" documentation="true if the author wrote more than 18 books">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <query xsi:type="query:OperationCallQuery">
+        	<operation href="#//writer/WriterExt/isInProlificnessInterval"/>
+        	<arguments xsi:type="query:IntegerLiteralQuery" value="19"/>
+        	<arguments xsi:type="query:IntegerLiteralQuery" value="2147483647"/>
+        </query>
+      </facetElements>
+      <facetElements xsi:type="efacet:FacetAttribute" name="isUnproductive" derived="true" documentation="true is the author wrote less than 3 books">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <query xsi:type="query:OperationCallQuery">
+        	<operation href="#//writer/WriterExt/isInProlificnessInterval"/>
+        	<arguments xsi:type="query:IntegerLiteralQuery" value="0"/>
+        	<arguments xsi:type="query:IntegerLiteralQuery" value="2"/>
+        </query>
+      </facetElements>
+      <facetOperations xsi:type="efacet:FacetOperation" name="isInProlificnessInterval" lowerBound="1" documentation="Returns true if the author is in the prolificness interval">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eParameters name="lowerBound" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        <eParameters name="upperBound" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        <query xsi:type="javaQuery2:JavaQuery" implementationClassName="org.eclipse.emf.facet.efacet.examples.library.core.internal.queries.IsInProlificnessInterval"/>
+      </facetOperations>
+      <facetElements xsi:type="efacet:FacetReference" name="booksWritten" derived="true" upperBound="-1" documentation="The list of the books">
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/facet/examples/library/0.2.incubation/library#//Book"/>
+        <query xsi:type="javaQuery2:JavaQuery" implementationClassName="org.eclipse.emf.facet.efacet.examples.library.core.internal.queries.BooksWritten"/>
+      </facetElements>
+      <facetElements xsi:type="efacet:FacetAttribute" name="numberOfBooksWritten" derived="true" documentation="the number of books written by the author">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        <query xsi:type="javaQuery2:JavaQuery" implementationClassName="org.eclipse.emf.facet.efacet.examples.library.core.internal.queries.NumberOfBooksWritten"/>
+      </facetElements>
+      <facetOperations xsi:type="efacet:FacetOperation" name="getNameWithPrefix" lowerBound="1" documentation="Returns the name of the author with the prefix 'author'">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <query xsi:type="query:OperationCallQuery">
+        	<operation href="#//writer/WriterExt/concatenateNameWithPrefix"/>
+        	<arguments xsi:type="query:StringLiteralQuery" value="[== author ==] "/>
+        </query>
+      </facetOperations>
+      <facetOperations xsi:type="efacet:FacetOperation" name="concatenateNameWithPrefix" lowerBound="1" documentation="Returns the name of the author with the prefix">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eParameters name="prefix" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <query xsi:type="javaQuery2:JavaQuery" implementationClassName="org.eclipse.emf.facet.efacet.examples.library.core.internal.queries.ConcatenateNameWithPrefixQuery"/>
+      </facetOperations>
+    </eClassifiers>
+
+    <eClassifiers xsi:type="efacet:Facet" name="ProlificWriter" conformanceTypedElement="//writer/WriterExt/isProlific" documentation="Facet for prolific writer">
+      <extendedMetaclass href="http://www.eclipse.org/emf/facet/examples/library/0.2.incubation/library#//Writer"/>
+    </eClassifiers>
+
+    <eClassifiers xsi:type="efacet:Facet" name="UnproductiveWriter" conformanceTypedElement="//writer/WriterExt/isUnproductive" documentation="Facet for unproductive writer">
+      <extendedMetaclass href="http://www.eclipse.org/emf/facet/examples/library/0.2.incubation/library#//Writer"/>
+    </eClassifiers>
+  </eSubpackages>
+
+  <eSubpackages xsi:type="efacet:FacetSet" name="book" documentation="FacetSet for the Book objects">
+    <eClassifiers xsi:type="efacet:Facet" name="BookExt" documentation="Extends the Book object">
+      <extendedMetaclass href="http://www.eclipse.org/emf/facet/examples/library/0.2.incubation/library#//Book"/>
+      <facetElements xsi:type="efacet:FacetAttribute" name="titleLength" derived="true"  documentation="the length of the title">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        <query xsi:type="javaQuery2:JavaQuery" implementationClassName="org.eclipse.emf.facet.efacet.examples.library.core.internal.queries.TitleLength"/>
+      </facetElements>
+      <facetElements xsi:type="efacet:FacetAttribute" name="hasLongTitle" derived="true" documentation="true if the name is long">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <query xsi:type="javaQuery2:JavaQuery" implementationClassName="org.eclipse.emf.facet.efacet.examples.library.core.internal.queries.HasLongTitle"/>
+      </facetElements>
+      <facetElements xsi:type="efacet:FacetAttribute" name="hasShortTitle" derived="true" documentation="true if the name is short">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <query xsi:type="javaQuery2:JavaQuery" implementationClassName="org.eclipse.emf.facet.efacet.examples.library.core.internal.queries.HasShortTitle"/>
+      </facetElements>
+      <facetElements xsi:type="efacet:FacetAttribute" name="bookCover" derived="true" documentation="The cover of the book">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/facet/custom/0.2.incubation/custom_primitive_types#//Image"/>
+        <query xsi:type="javaQuery2:JavaQuery" implementationClassName="org.eclipse.emf.facet.efacet.examples.library.core.internal.queries.BookCover"/>
+      </facetElements>
+      <facetOperations xsi:type="efacet:FacetOperation" name="getBookCover" lowerBound="1" documentation="Returns the cover of the book">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/facet/custom/0.2.incubation/custom_primitive_types#//Image"/>
+        <query xsi:type="query:OperationCallQuery">
+        	<operation href="#//book/BookExt/getImage"/>
+        	<arguments xsi:type="query:StringLiteralQuery" value="icons/cover.jpg"/>
+        </query>
+      </facetOperations>
+      <facetOperations xsi:type="efacet:FacetOperation" name="getImage" lowerBound="1" documentation="Returns the image of the book">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/facet/custom/0.2.incubation/custom_primitive_types#//Image"/>
+        <eParameters name="path" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <query xsi:type="javaQuery2:JavaQuery" implementationClassName="org.eclipse.emf.facet.efacet.examples.library.core.internal.queries.GetImageQuery"/>
+      </facetOperations>
+    </eClassifiers>
+
+    <eClassifiers xsi:type="efacet:Facet" name="LongTitledBook" conformanceTypedElement="//book/BookExt/hasLongTitle" documentation="the LongTitleBook facet">
+      <extendedMetaclass href="http://www.eclipse.org/emf/facet/examples/library/0.2.incubation/library#//Book"/>
+    </eClassifiers>
+
+    <eClassifiers xsi:type="efacet:Facet" name="ShortTitledBook" conformanceTypedElement="//book/BookExt/hasShortTitle" documentation="The ShortTitleBook facet">
+      <extendedMetaclass href="http://www.eclipse.org/emf/facet/examples/library/0.2.incubation/library#//Book"/>
+    </eClassifiers>
+
+  </eSubpackages>
+
+</efacet:FacetSet>

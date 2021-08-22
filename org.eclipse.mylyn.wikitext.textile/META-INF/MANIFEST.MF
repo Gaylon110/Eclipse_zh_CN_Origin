@@ -1,0 +1,280 @@
+Manifest-Version: 1.0
+Bundle-Description: Mylyn WikiText provides an extensible framework an
+ d tools for parsing, editing and presenting lightweight markup. WikiT
+ ext has parsers for AsciiDoc, CommonMark, Markdown, MediaWiki, Textil
+ e, Confluence, Creole, HTML, TracWiki and TWiki markup, and        ca
+ n be extended to support other languages. WikiText provides Ant tasks
+  for converting lightweight markup to HTML, Eclipse Help, DocBook, DI
+ TA and XSL-FO. WikiText also provides an editor for editing such mark
+ up within Eclipse, and integrates with        the Mylyn task editor c
+ ausing it to be markup-aware. WikiText provides API for integrating w
+ iki markup capabilities into Eclipse, RCP, stand-alone and server-sid
+ e applications.
+Bundle-License: https://www.eclipse.org/legal/epl-2.0/
+Bundle-SymbolicName: org.eclipse.mylyn.wikitext.textile
+Built-By: jenkins
+Bnd-LastModified: 1614384515886
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-DocURL: http://eclipse.org/mylyn
+Bundle-Vendor: Eclipse Mylyn
+Import-Package: com.google.common.base;version="[21.0,22.0)",org.eclip
+ se.mylyn.wikitext.parser;version="[3.0,4)",org.eclipse.mylyn.wikitext
+ .parser.builder;version="[3.0,4)",org.eclipse.mylyn.wikitext.parser.m
+ arkup;version="[3.0,4)",org.eclipse.mylyn.wikitext.parser.markup.bloc
+ k;version="[3.0,4)",org.eclipse.mylyn.wikitext.parser.markup.phrase;v
+ ersion="[3.0,4)",org.eclipse.mylyn.wikitext.parser.markup.token;versi
+ on="[3.0,4)",org.eclipse.mylyn.wikitext.parser.outline;version="[3.0,
+ 4)",org.eclipse.mylyn.wikitext.parser.util;version="[3.0,4)",org.ecli
+ pse.mylyn.wikitext.textile,org.eclipse.mylyn.wikitext.textile.interna
+ l,org.eclipse.mylyn.wikitext.textile.internal.block,org.eclipse.mylyn
+ .wikitext.textile.internal.phrase,org.eclipse.mylyn.wikitext.textile.
+ internal.token,org.eclipse.mylyn.wikitext.validation;version="[3.0,4)
+ "
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-3.2.0.201605172007
+Export-Package: org.eclipse.mylyn.wikitext.textile.internal;x-internal
+ :=true;uses:="org.eclipse.mylyn.wikitext.parser,org.eclipse.mylyn.wik
+ itext.parser.builder,org.eclipse.mylyn.wikitext.parser.markup,org.ecl
+ ipse.mylyn.wikitext.parser.util";version="3.0.39",org.eclipse.mylyn.w
+ ikitext.textile.internal.block;x-internal:=true;uses:="org.eclipse.my
+ lyn.wikitext.parser,org.eclipse.mylyn.wikitext.parser.markup,org.ecli
+ pse.mylyn.wikitext.parser.markup.block";version="3.0.39",org.eclipse.
+ mylyn.wikitext.textile.internal.phrase;x-internal:=true;uses:="org.ec
+ lipse.mylyn.wikitext.parser,org.eclipse.mylyn.wikitext.parser.markup"
+ ;version="3.0.39",org.eclipse.mylyn.wikitext.textile.internal.token;x
+ -internal:=true;uses:="org.eclipse.mylyn.wikitext.parser.markup";vers
+ ion="3.0.39",org.eclipse.mylyn.wikitext.textile.internal.validation;x
+ -internal:=true;uses:="org.eclipse.mylyn.wikitext.parser.markup,org.e
+ clipse.mylyn.wikitext.validation";version="3.0.39",org.eclipse.mylyn.
+ wikitext.textile;uses:="org.eclipse.mylyn.wikitext.parser,org.eclipse
+ .mylyn.wikitext.parser.markup";version="3.0.39"
+Bundle-Name: Mylyn WikiText Textile
+Bundle-Version: 3.0.39.20210227000941
+Build-Jdk: 1.8.0_202
+Created-By: Apache Maven Bundle Plugin
+
+Name: org/eclipse/mylyn/wikitext/textile/internal/block/ParagraphBlock
+ .class
+SHA-256-Digest: F/dlUQprdCxZHiacBbAN2OSkgNcqYKjYdRxwdzmbKSk=
+
+Name: org/eclipse/mylyn/wikitext/textile/internal/block/NotextileTagBl
+ ock.class
+SHA-256-Digest: Ornnj0w6MLSM/OcLONB1qub6rmVuR5rzJfMCPWCB/Ug=
+
+Name: org/eclipse/mylyn/wikitext/textile/internal/phrase/HyperlinkPhra
+ seModifier$1.class
+SHA-256-Digest: Tf3/onYaSQW1+CQYPwngk3sbT8FrHNyu4UPjqrfEtwQ=
+
+Name: org/eclipse/mylyn/wikitext/textile/internal/TextileDocumentBuild
+ er$ContentBlock.class
+SHA-256-Digest: 2mO9gUHBdD1tltbyq96tC1duQw666yIxpkNll6IEVFA=
+
+Name: org/eclipse/mylyn/wikitext/textile/internal/TextileDocumentBuild
+ er$1.class
+SHA-256-Digest: +/G34jWqUAlrD9vJQt/0jVdd8ExYBPAx/eTucXufDrk=
+
+Name: org/eclipse/mylyn/wikitext/textile/internal/TextileDocumentBuild
+ er$DefinitionItemBlock.class
+SHA-256-Digest: aCp9vWqXHYVcgrIsu0nb3XV1Jn0+8LpqHQ0TOkmwFn8=
+
+Name: plugin.properties
+SHA-256-Digest: xQVuNLloyLJgOtxGBPu81kTDZRPkYjfDoBUuvzVdQRU=
+
+Name: org/eclipse/mylyn/wikitext/textile/internal/Textile.class
+SHA-256-Digest: Mlzr7B/m0inda+OtAS8KZ/LECg76smYCBIIMB5hl0wM=
+
+Name: org/eclipse/mylyn/wikitext/textile/internal/block/TableBlock.cla
+ ss
+SHA-256-Digest: 7S5E9F5v3b4kkLhfBAjNWP5UUvBtLEXTm6roiN8jgms=
+
+Name: org/eclipse/mylyn/wikitext/textile/internal/phrase/HyperlinkPhra
+ seModifier.class
+SHA-256-Digest: OCJRWIxM90NQsbKMhrQSGF13MOZpNNJx7hif80gFau0=
+
+Name: org/eclipse/mylyn/wikitext/textile/internal/block/ListBlock$1.cl
+ ass
+SHA-256-Digest: 9y72EITqW6D9DiotXmyy9uIWu7AT212JPt9YcNdrcv8=
+
+Name: org/eclipse/mylyn/wikitext/textile/TextileLanguage.class
+SHA-256-Digest: UDcn51h7W7cKlcqZN3qC9lY91Pcl8n2Y8kHAqGev41A=
+
+Name: org/eclipse/mylyn/wikitext/textile/internal/token/FootnoteRefere
+ nceReplacementToken$1.class
+SHA-256-Digest: oJA2BFQrWiiJPRrqgT3Mw8zzZKhcWOwdkHJ+aKCw0CE=
+
+Name: org/eclipse/mylyn/wikitext/textile/internal/TextileDocumentBuild
+ er$SpanBlock.class
+SHA-256-Digest: EVzzZQIouJnr1phdONv1RP5347XiZzBoVnjtVCu2oMs=
+
+Name: org/eclipse/mylyn/wikitext/textile/language_de.properties
+SHA-256-Digest: wvHzaR3+CeMaXnHiLukCAebA7JJ1hzlP1pEhD6ei5vc=
+
+Name: org/eclipse/mylyn/wikitext/textile/internal/TextileDocumentBuild
+ er$TableCellBlock.class
+SHA-256-Digest: 12LVz4uWfaV0bbjFiKQMJSw66AM5giXYSj7OyBUv1nI=
+
+Name: org/eclipse/mylyn/wikitext/textile/internal/block/CommentBlock.c
+ lass
+SHA-256-Digest: 8O2fgvpbkEkwbU+DkYDBaR4oCzTX2lCSgH+3JFVyxpw=
+
+Name: org/eclipse/mylyn/wikitext/textile/internal/phrase/SimpleTextile
+ PhraseModifier.class
+SHA-256-Digest: Hkr+tyOf3MSCl+I7vD7UoLAZSz+nhh9T3HpMH7ZVVXU=
+
+Name: org/eclipse/mylyn/wikitext/textile/internal/TextileDocumentBuild
+ er$TextileBlock.class
+SHA-256-Digest: wf+XLVLhtZZ0dojRpL0qLaza3huVtgxoVi6e6Hf0ygg=
+
+Name: org/eclipse/mylyn/wikitext/textile/internal/block/HeadingBlock.c
+ lass
+SHA-256-Digest: X4DQpW3InuZvHX9i5gOXwiSrproRQBdMGpzUfAZpVeo=
+
+Name: org/eclipse/mylyn/wikitext/textile/internal/TextileDocumentBuild
+ er.class
+SHA-256-Digest: N/WAHwSTQSkz7okaUYfkI+tJTVl+bS6dFpuLKTW1ZgI=
+
+Name: org/eclipse/mylyn/wikitext/textile/internal/block/QuoteBlock.cla
+ ss
+SHA-256-Digest: IVb0e6hFyoVC88XMaTysjXXY2zPghvuZkzieVUm0BFA=
+
+Name: org/eclipse/mylyn/wikitext/textile/internal/block/ListBlock.clas
+ s
+SHA-256-Digest: ++wHYB5Vdc8Ht9OKo4mUVLZD3UirL9hCpfTVoZfGSuM=
+
+Name: org/eclipse/mylyn/wikitext/textile/internal/phrase/EscapeTextile
+ PhraseModifier.class
+SHA-256-Digest: d8Gx8tTYgvAHC8fBH9ZyMnK3bGbU1e1Wu+z9gZPXdNo=
+
+Name: org/eclipse/mylyn/wikitext/textile/internal/phrase/TagEscapeText
+ ilePhraseModifier.class
+SHA-256-Digest: qz/e6CABpf1y1bO8N06v5RWum/ghZkIgZrp2esCebtc=
+
+Name: services/org.eclipse.mylyn.wikitext.parser.markup.MarkupLanguage
+SHA-256-Digest: fk5ScC1gacmMcXyn0ylKgsSdrYve1ECSBYToxAwwPWg=
+
+Name: org/eclipse/mylyn/wikitext/textile/internal/block/PreformattedBl
+ ock.class
+SHA-256-Digest: 1cJfu7VNPG7Kae3jlFMl7GAobBHnAkBUqVtJ7FjxnzA=
+
+Name: org/eclipse/mylyn/wikitext/textile/internal/TextileDocumentBuild
+ er$ParagraphBlock.class
+SHA-256-Digest: RW4W2N1dLZ+k78tb8VtC6Fd4rF0kRuO7NAQcGdjx2Dc=
+
+Name: org/eclipse/mylyn/wikitext/textile/internal/phrase/ImageTextileP
+ hraseModifier$ImagePhraseModifierProcessor.class
+SHA-256-Digest: KzwmrLhR7sPe7oitHm4QzGMaPaz41c0ifZfMHsb/OMY=
+
+Name: org/eclipse/mylyn/wikitext/textile/internal/phrase/SimpleTextile
+ PhraseModifier$1.class
+SHA-256-Digest: 8+21wMaC5rXX8BjYXRVntBYABZPxZBd02khL9eDxIKg=
+
+Name: org/eclipse/mylyn/wikitext/textile/internal/block/FootnoteBlock.
+ class
+SHA-256-Digest: f48Tvvu73eZamzNU0vJpeWMeclQ9NRGZco9ym0RkcRE=
+
+Name: org/eclipse/mylyn/wikitext/textile/internal/validation/BlockWhit
+ espaceRule.class
+SHA-256-Digest: bUlv9M3rZzJh3Xu03o1oPGUhFZFay0WCc6YD2RhNrGk=
+
+Name: org/eclipse/mylyn/wikitext/textile/internal/validation/TextileRe
+ ferenceValidationRule.class
+SHA-256-Digest: mbmcnAh7Jxlc15cq118MrfPhRgsxBdtqdGyOygJ5RCo=
+
+Name: org/eclipse/mylyn/wikitext/textile/internal/validation/Messages.
+ class
+SHA-256-Digest: ByJi6AvZwt/JTbJiZ5MY+pOFgXMdWR1eTE5WNUCrTt0=
+
+Name: org/eclipse/mylyn/wikitext/textile/internal/TextileDocumentBuild
+ er$TextileImplicitParagraphBlock.class
+SHA-256-Digest: +29aH9kRqGJFXt8moEi6r55L3HjFwx9AWRYLP0CQMRU=
+
+Name: org/eclipse/mylyn/wikitext/textile/language_fr.properties
+SHA-256-Digest: EVYqIGSuNBnrrUZje2owDCT4E6RvQ1wqLOr/oMQFYW4=
+
+Name: org/eclipse/mylyn/wikitext/textile/internal/block/DefinitionList
+ Block.class
+SHA-256-Digest: DRzmv+p7JkxHnjCXAAuSTUYDY0LQQu4D1zfIcQR5lTY=
+
+Name: org/eclipse/mylyn/wikitext/textile/language.properties
+SHA-256-Digest: u3Py/K+cTHbpHx3zgDNUw2TidjICsDSy2P3LQoX8Eng=
+
+Name: org/eclipse/mylyn/wikitext/textile/internal/TextileContentState.
+ class
+SHA-256-Digest: pRDq/hRXv+OL79L0AgIqaXTiHmsNUtchUe8rYDeyTqw=
+
+Name: org/eclipse/mylyn/wikitext/textile/internal/token/FootnoteRefere
+ nceReplacementToken.class
+SHA-256-Digest: BpBIAM5RFSWbcVBUK94rzr5HCiuLNzKHT+oFs6IKfCY=
+
+Name: org/eclipse/mylyn/wikitext/textile/internal/validation/messages.
+ properties
+SHA-256-Digest: 3PKjBjcv3jqXpICrCMqWhEpp6v8Pgzr9lkX+DFpL88Y=
+
+Name: org/eclipse/mylyn/wikitext/textile/internal/phrase/SimpleTextile
+ PhraseModifier$Mode.class
+SHA-256-Digest: q54HcO9b4qspKIEyDjDwHG2VgPxQ5MFgQQnX43gJI0A=
+
+Name: org/eclipse/mylyn/wikitext/textile/internal/token/FootnoteRefere
+ nceReplacementToken$FootnoteReferenceReplacementTokenProcessor.class
+SHA-256-Digest: +j47Z3z8kk4I95OtKLq8AF6L55ImWYS8Sfkl4v+yVcc=
+
+Name: org/eclipse/mylyn/wikitext/textile/internal/block/ListBlock$List
+ State.class
+SHA-256-Digest: 9AKhT14M0uy178umG87x6hRXUkqzUbjEIp4xpgcsKSs=
+
+Name: org/eclipse/mylyn/wikitext/textile/internal/phrase/SimpleTextile
+ PhraseModifier$SimplePhraseModifierProcessor.class
+SHA-256-Digest: wy9mbcRZMh5g4B+2vPHbFRRDU/MTlz0waaQlFcvd8hk=
+
+Name: org/eclipse/mylyn/wikitext/textile/internal/token/EntityReplacem
+ entToken.class
+SHA-256-Digest: X+14faZnpTXDS6AkmDiBcb9eyqDwhfxr/VJzmeWJFd8=
+
+Name: org/eclipse/mylyn/wikitext/textile/internal/phrase/HyperlinkPhra
+ seModifier$HyperlinkProcessor.class
+SHA-256-Digest: xcUJ1k4kpyNKs6oSfDgnd1s3606W02EX1wrGHNLeiR4=
+
+Name: about.html
+SHA-256-Digest: GWwWKwDoEPbqRj3Nm004u/ySxB5XSz/ODMj6p56lw8o=
+
+Name: org/eclipse/mylyn/wikitext/textile/internal/token/EntityReplacem
+ entToken$1.class
+SHA-256-Digest: gThdaN55BiNSV4XdB4FfiGH6/bfj1FTLpc4V/rStHSI=
+
+Name: org/eclipse/mylyn/wikitext/textile/internal/block/TableOfContent
+ sBlock.class
+SHA-256-Digest: qtWwACtAKcTttZanONXp/K9AZeoJJIIm58SNxXoupQ4=
+
+Name: org/eclipse/mylyn/wikitext/textile/internal/phrase/ImageTextileP
+ hraseModifier$1.class
+SHA-256-Digest: CXk31Wsn7Up7Vb568/RPD8nnYwQSQzpPjIs0IwO/IK8=
+
+Name: org/eclipse/mylyn/wikitext/textile/internal/block/CodeBlock.clas
+ s
+SHA-256-Digest: Js0ijbgr3qN/Uj9QlAiEGjkoLgUZTPO/hHz2C2yGOs8=
+
+Name: org/eclipse/mylyn/wikitext/textile/internal/block/NotextileBlock
+ .class
+SHA-256-Digest: /TrxdTArVMPyJt6Ud17UeytkeX+3aRqvdo1FosBIfVk=
+
+Name: org/eclipse/mylyn/wikitext/textile/internal/phrase/ImageTextileP
+ hraseModifier.class
+SHA-256-Digest: UwGsA5Us929ncJtnllL8bJdzdxeAObvXAlO6YuJMrWI=
+
+Name: org/eclipse/mylyn/wikitext/textile/internal/TextileDocumentBuild
+ er$LinkBlock.class
+SHA-256-Digest: RKILhIzpfMy8CS57qaU0fjZ2O28+6che8tTEPExMutM=
+
+Name: META-INF/maven/org.eclipse.mylyn.docs/org.eclipse.mylyn.wikitext
+ .textile/pom.xml
+SHA-256-Digest: 5fLnwOrOmWj/V059y/fpyqe8LnhWUaTBjUyQAdXcJ9U=
+
+Name: org/eclipse/mylyn/wikitext/textile/internal/block/TextileGlossar
+ yBlock.class
+SHA-256-Digest: nfSp6J+2GQmhLYywE7ACFGD6vuA6IBr615uPhONzZcg=
+
+Name: META-INF/maven/org.eclipse.mylyn.docs/org.eclipse.mylyn.wikitext
+ .textile/pom.properties
+SHA-256-Digest: RRZcfewY7goAyutxvBP1S/9TNbA3WWU5K3esFfHKCp4=
+

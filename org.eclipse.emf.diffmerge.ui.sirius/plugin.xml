@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<!--
+  Copyright (c) 2010-2018 Thales Global Services S.A.S.
+  This program and the accompanying materials are made
+  available under the terms of the Eclipse Public License 2.0
+  which is available at https://www.eclipse.org/legal/epl-2.0/
+  
+  SPDX-License-Identifier: EPL-2.0
+  
+   Contributors:
+  Thales Global Services S.A.S - initial API and implementation
+-->
+<plugin>
+   <extension
+         point="org.eclipse.emf.diffmerge.ui.modelComparisonContext">
+      <scopeDefinition
+            factory="org.eclipse.emf.diffmerge.ui.sirius.SiriusScopeDefinitionFactory">
+      </scopeDefinition>
+      <comparisonMethod
+            factory="org.eclipse.emf.diffmerge.ui.sirius.SiriusComparisonMethodFactory">
+      </comparisonMethod>
+   </extension>
+   <extension
+         point="org.eclipse.core.contenttype.contentTypes">
+      <content-type
+            base-type="org.eclipse.emf.ecore.xmi"
+            file-extensions="aird,airdfragment"
+            id="org.eclipse.emf.diffmerge.sirius.aird.content-type"
+            name="%content-type.name"
+            priority="normal">
+      </content-type>
+   </extension>
+
+</plugin>

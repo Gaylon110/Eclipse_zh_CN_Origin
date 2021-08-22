@@ -1,0 +1,230 @@
+<h1>Table of Contents</h1>
+__TOC__
+
+== How to programmatically open a table ==
+First, you must add these plug-ins to your plug-in dependencies:
+* org.eclipse.emf.facet.widgets.table.ui
+* org.eclipse.emf.facet.widgets.table.ui.nattable
+* org.eclipse.emf.facet.widgets.table.ui.workbench
+* org.eclipse.emf.facet.widgets.table.metamodel
+
+Use:
+<pre>
+ITableEditorFactory.DEFAULT.openOn(elements, editingDomain, description, tableConfiguration, context, parameter);
+</pre>
+* elements : a list of model elements to show as rows in the table
+* editingDomain : pass an EMF EditingDomain if you want the table to be editable, or <code>null</code> otherwise
+* description : a descriptive string to be displayed at the top of the table editor
+* tableConfiguration, context, parameter : for configuring the table (see section about table configurations). Can be <code>null</code>.
+
+=== In your own Composite container ===
+The NatTableWidget can be used in any Composite. If the widget is not provided with an IEditingDomainProvider, a default one will be used.
+
+<pre>
+ITableWidgetFactory.INSTANCE.createTableWidget(parentComposite, editingDomainProvider, tableInstance, menuManager);
+</pre>
+* parentComposite : the SWT Composite in which the table will be created
+* editingDomainProvider : provides an editing domain for enabling editing in the table
+* tableInstance : an instance of the Table model element, that represents the table's data model
+* menuManager : a menu manager used for creating the table's context menu
+
+The ''ITableWidget'' returned by the factory proposes many API methods to manipulate the table. Among which:
+* addRows : add model elements as new rows to the table
+* createNewElement : create a new model element using an [[#Instantiation_methods|instantiation method]] defined in a table configuration
+* save, saveAs : serialize the table into a XMI model file
+* removeLine : remove the selected lines
+* selectAll : select every cell in the table
+* openLoadCustomizationDialog : open the '''load customizations''' dialog to let the user choose customizations
+* openLoadFacetSetsDialog : open the '''load facet sets''' dialog to let the user choose FacetSets
+* selectCell : select a given cell
+* editSelectedCell : go into edit mode for the currently selected cell
+* selectRows : select the given rows
+* addColumns : add the given ETypedElements as new columns
+* ...
+
+== Table model ==
+A table is fully described by its model : see the metaclass ''Table'' in ''org.eclipse.emf.facet.widgets.table.metamodel''. This means that when a table is saved, this model is serialized to an XMI file. This model contains all information needed to represent a table:
+* the list of rows (each row points to the EObject it represents) with their height
+* the list of columns (each column points to the ETypedElement it represents) with their width
+* the loaded customizations and FacetSets
+* ...
+
+== Table configuration model ==
+
+A second model is used to define a table configuration. The main metaclass is ''TableConfiguration'' in ''org.eclipse.emf.facet.widgets.table.metamodel''. ''TableConfiguration'' has the following references:
+* canBePresentedInTheTable : a Facet element that takes an EObject and returns a boolean to decide whether this table accepts the EObject. If it doesn't, then the user won't be able to add this element to the table (using the drag and drop feature). 
+*  forcedCellEditors : references cell editors from a model of cell editors (see the section about cell editors). These cell editors will take precedence over any other cell editors defined elsewhere.
+* instantiationMethods : each instantiation method defines a Facet operation that creates and returns an EObject when called.
+* defaultColumns : a list of ETypedElements to show as columns by default
+* defaultFacets : a list of Facets to load by default (deprecated)
+* defaultCustomizations : a list of customizations to load by default
+
+This table configuration can be passed to ''TableWidgetUtils#createTableInstance'' to create a table instance with this configuration. 
+
+=== Instantiation methods ===
+An '''InstantiationMethod''' has:
+* a name
+* a description
+* a reference to an EOperation that will be called to instantiate a new EObject
+
+To define an instantiation method, you must create a Facet that extends the metaclass that will be the context when creating new model elements. 
+
+For example, write the file ''/org.eclipse.emf.facet.widgets.table.examples.library.core/resources/instantiation.efacet'' contains:
+<pre>
+<?xml version="1.0" encoding="ASCII"?>
+<efacet:FacetSet xmi:version="2.0"
+	xmlns:xmi="http://www.omg.org/XMI"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+	xmlns:efacet="http://www.eclipse.org/emf/facet/efacet/0.2.incubation/efacet"
+	xmlns:javaQuery="http://www.eclipse.org/emf/facet/query/java/0.2.incubation/javaquery"
+	name="org.eclipse.emf.facet.widgets.table.examples.library.core.instantiation"
+	nsURI="http://www.eclispe.org/emf/facet/widgets/table/examples/library/core/instanciation"
+	nsPrefix="instantiation">
+  <eClassifiers xsi:type="efacet:Facet" name="org.eclipse.emf.facet.widgets.table.examples.library.core.instantiation">
+    <extendedMetaclass href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+    <facetOperations name="createWriter" ordered="false" unique="false" lowerBound="1">
+      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/facet/examples/library/0.2.incubation/library#//Writer"/>
+      <eParameters name="tableParameter" ordered="false" unique="false" lowerBound="0">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+      </eParameters>
+      <eParameters name="editingDomain" ordered="false" unique="false" lowerBound="0">
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+      </eParameters>
+      <query xsi:type="javaQuery:JavaQuery" implementationClassName="org.eclipse.emf.facet.widgets.table.examples.library.core.internal.query.eobject.CreateWriter"/>
+    </facetOperations>
+  </eClassifiers>
+</efacet:FacetSet>
+</pre>
+
+The FacetOperation has to have two EJavaObject parameters : one for the table parameter, and the other one for the editing domain.  
+
+Then you need to write the Java query implementation that does the actual instantiation. The "source" is the Facet's extendedMetaclass, the return type is the FacetOperation's eType, and the "editingDomain" parameter you receive is the one you defined in your FacetOperation. The query should not modify the model directly, but it should instead do all modifications through the editing domain so that changes can be canceled:
+<pre>
+package org.eclipse.emf.facet.widgets.table.examples.library.core.internal.query.eobject;
+
+import org.eclipse.emf.common.command.Command;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.emf.facet.efacet.core.exception.DerivedTypedElementException;
+import org.eclipse.emf.facet.efacet.examples.library.metamodel.library.LibraryFactory;
+import org.eclipse.emf.facet.efacet.examples.library.metamodel.library.LibraryPackage;
+import org.eclipse.emf.facet.efacet.examples.library.metamodel.library.Writer;
+import org.eclipse.emf.facet.efacet.metamodel.v0_2_0.efacet.ParameterValue;
+import org.eclipse.emf.facet.query.java.core.IParameterValueList2;
+import org.eclipse.emf.facet.widgets.celleditors.ICommandFactoriesRegistry;
+import org.eclipse.emf.facet.widgets.celleditors.ICommandFactory;
+
+public class CreateWriter implements org.eclipse.emf.facet.query.java.core.IJavaQuery2<EObject, Writer> {
+
+	public Writer evaluate(final EObject source,
+			final IParameterValueList2 parameterValues,
+			final org.eclipse.emf.facet.efacet.core.IFacetManager facetManager)
+			throws DerivedTypedElementException {
+		Writer result = null;
+		final ParameterValue editingDomParam = parameterValues
+				.getParameterValueByName("editingDomain"); //$NON-NLS-1$
+		if (source == null) {
+			throw new DerivedTypedElementException(
+					"The source must not be null"); //$NON-NLS-1$
+		}
+		if (editingDomParam == null) {
+			throw new DerivedTypedElementException(
+					"An editing domain parameter must exists."); //$NON-NLS-1$
+		}
+		if (!(editingDomParam.getValue() instanceof EditingDomain)) {
+			throw new DerivedTypedElementException(
+					"An editing domain parameter must not be null."); //$NON-NLS-1$
+		}
+		final EditingDomain editingDomain = (EditingDomain) editingDomParam
+				.getValue();
+		final ICommandFactory cmdFactory = ICommandFactoriesRegistry.INSTANCE
+				.getCommandFactoryFor(editingDomain);
+		result = LibraryFactory.eINSTANCE.createWriter();
+		final Command command = cmdFactory.createAddCommand(editingDomain,
+				source, LibraryPackage.eINSTANCE.getLibrary_Writers(),
+				result);
+		editingDomain.getCommandStack().execute(command);
+		return result;
+	}
+	
+}
+</pre>
+
+
+Then you have to write a table configuration. For example ''/org.eclipse.emf.facet.widgets.table.examples.library.core/resources/writers.tableconfiguration'' contains an instantiation method and references the instantiation operation defined in the above ''instantiation.efacet'':
+<pre>
+<tableconfiguration:TableConfiguration
+	xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+	xmlns:tableconfiguration="http://www.eclipse.org/emf/facet/widgets/table/0.2.0.incubation/tableconfiguration">
+  <instantiationMethod name="Create Writer" description="The action will instantiate a new writer and link it to the library.">
+    <instantiationOperation href="instantiation.efacet#//InstantiationMethods/createWriter"/>
+  </instantiationMethod>
+</tableconfiguration:TableConfiguration>
+</pre>
+
+== How to add your own cell editors ==
+=== unary features ===
+Cell editors for unary features must be defined in classes that implement the <code>IModelCellEditor</code> interface. You must implement two methods:
+* <code>activateCell(…)</code> : This method must create a SWT Control under the given parent Composite.
+* <code>getValue()</code> : This method must return the value currently in the control. This is the value that will be assigned to the feature.
+
+When the user accepts the change, you must call the <code>commit()</code> method on <code>IModelCellEditHandler</code> so that the value is set on the feature.
+
+If the user cancels the edition, you should simply call <code>dispose()</code> on your cell editor control.
+=== n-ary features ===
+Cell editors for n-ary features must be defined in classes that implement the <code>INaryFeatureCellEditor</code> interface.
+
+You must implement the <code>activateCell(…)</code> method, to create the SWT Control for the cell editor under the given parent Composite.
+
+For editing n-ary features, you don't call the <code>commit()</code> method. Instead, you should directly execute commands on the given <code>EditingDomain</code> to edit the feature. The commands should be created using the command factory. For example:
+<pre>
+ICommandFactory commandFactory = ICommandFactoriesRegistry.INSTANCE.getCommandFactoryFor(editingDomain);
+Command removeCommand = commandFactory.createRemoveCommand(editingDomain, eObject, feature, element);
+</pre> 
+
+=== model ===
+Once you have implemented your cell editors, you can reference them in a celleditors model:
+* Do '''New > Other''', and select '''ModelCellEditors model'''
+* Open the model with the '''ModelCellEditors model editor''', which is customized to help you edit this kind of models
+* Add definitions for your cell editors:
+** '''Basic Cell Editor''' for editing attributes
+** '''Unary Reference Cell Editor''' for editing attributes
+** '''Nary Feature Cell Editor''' for editing n-nary references or attributes
+* For each definition, you must set:
+** the ''cell id'' is a unique identifier for the cell editor
+** the ''cell type'' is an EClassifier (EClass or EDataType), that defines which type this cell editor can edit. You can set it to '''EObject''' if you want it to edit all references, or '''EDataType''' if you want it to edit all attributes.
+** ''cell editor impl'' is the full qualified name of a Java class that implements the cell editor.
+
+=== extension point ===
+Then, use the ''celleditors'' extension point to register a model of cell editors. For example:
+<pre>
+<extension point="org.eclipse.emf.facet.widgets.celleditors.celleditors">
+  <cellEditorsModel path="my.modelcelleditors"/>
+</extension>
+</pre>
+
+=== example ===
+For a full working example, you can look at plug-in ''org.eclipse.emf.facet.widgets.celleditors.ecore''.
+
+== How to register custom Command factories ==
+
+If you are using a specific editing domain that requires custom Commands, you can register a Command factory:
+* Create a class that implements <code>ICommandFactory</code>
+* The <code>handles(…)</code> method should return <code>true</code> if the Command factory should handle the given editing domain.
+* All the <code>create*Command(…)</code> should be implemented, and return a Command that does the same thing as the original EMF.Edit command of the same name (see <code>DefaultCommandFactory</code> for an example).
+* Then register the command factory using extension point <code>org.eclipse.emf.facet.widgets.celleditors.commandFactories</code>.
+
+<font size="-2">
+Copyright (c) 2010, 2012 CEA LIST.
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the Eclipse Public License v1.0
+which accompanies this distribution, and is available at
+http://www.eclipse.org/legal/epl-v10.html.
+Contributors:
+	Nicolas Bros (Mia-Software)
+	Nicolas Guyomar (Mia-Software)
+	Gregoire Dupe (Mia-Software) - Bug 388422 - Queries for InstanciationMethod needs to have 2 parameters
+</font>

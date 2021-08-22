@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension-point id="clients" name="OAuth Clients" schema="schema/org.eclipse.userstorage.oauth.clients.exsd"/>
+
+   <extension point="org.eclipse.ui.preferencePages">
+      <page
+            category="org.eclipse.userstorage.ui.PreferencePage"
+            class="org.eclipse.userstorage.internal.oauth.ui.OAuthAccountsPreferencePage"
+            id="org.eclipse.userstorage.ui.oauth.credentials"
+            name="Linked Accounts">
+         <keywordReference
+               id="org.eclipse.userstorage.keyword.uss"/>
+         <keywordReference
+               id="org.eclipse.userstorage.keyword.accounts"/>
+         <keywordReference
+               id="org.eclipse.userstorage.keyword.eclipseuss"/>
+      </page>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:help?after=additions">
+         <menu
+               icon="icons/UserAccount.png"
+               id="org.eclipse.userstorage.accounts"
+               label="Eclipse User Storage">
+            <command
+                  commandId="org.eclipse.ui.browser.openBrowser"
+                  label="Open My Account"
+                  style="push"
+                  tooltip="Open the Eclipse Account page">
+               <parameter
+                     name="url"
+                     value="https://accounts.eclipse.org">
+               </parameter>
+            </command>
+            <separator
+                  name="actions">
+            </separator>
+            <separator
+                  name="accounts"
+                  visible="true">
+            </separator>
+            <dynamic
+                  class="org.eclipse.userstorage.internal.oauth.ui.AccountDetails"
+                  id="org.eclipse.userstorage.ui.oauth.signout">
+            </dynamic>
+            <separator
+                  name="additions"
+                  visible="true">
+            </separator>
+         </menu>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="org.eclipse.userstorage.accounts"
+               label="Eclipse User Storage">
+         <command
+               commandId="org.eclipse.userstorage.ui.showPullDown"
+               id="org.eclipse.userstorage.accounts"
+               icon="icons/UserAccount.png"
+               tooltip="Eclipse User Storage"
+               style="pulldown">
+            <parameter
+                  name="intoolbar"
+                  value="true">
+            </parameter>
+         </command>
+         </toolbar>
+      </menuContribution>
+   </extension>
+</plugin>

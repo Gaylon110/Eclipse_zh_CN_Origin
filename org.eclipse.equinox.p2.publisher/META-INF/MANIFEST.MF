@@ -1,0 +1,198 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.equinox.p2.publisher;singleton:=true
+Archiver-Version: Plexus Archiver
+Built-By: genie.releng
+Require-Bundle: org.eclipse.equinox.common;bundle-version="[3.5.0,4.0.
+ 0)",org.eclipse.osgi;bundle-version="3.8.0"
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/equino
+ x/rt.equinox.p2.git;path="bundles/org.eclipse.equinox.p2.publisher";t
+ ag="I20170514-1120";commitId=3ee9b476d4b2fc280f80cafb6c953f9adc6caf6a
+Bundle-Vendor: %providerName
+Import-Package: org.eclipse.equinox.app;version="1.0.0";resolution:=op
+ tional,org.eclipse.equinox.internal.p2.artifact.repository,org.eclips
+ e.equinox.internal.p2.artifact.repository.simple,org.eclipse.equinox.
+ internal.p2.core.helpers,org.eclipse.equinox.internal.p2.metadata,org
+ .eclipse.equinox.internal.p2.metadata.expression,org.eclipse.equinox.
+ internal.p2.metadata.index,org.eclipse.equinox.internal.p2.metadata.r
+ epository,org.eclipse.equinox.internal.p2.repository.helpers,org.ecli
+ pse.equinox.p2.core;version="[2.0.0,3.0.0)",org.eclipse.equinox.p2.me
+ tadata;version="[2.0.0,3.0.0)",org.eclipse.equinox.p2.metadata.expres
+ sion;version="[2.0.0,3.0.0)",org.eclipse.equinox.p2.metadata.index;ve
+ rsion="[2.0.0,3.0.0)",org.eclipse.equinox.p2.query;version="[2.0.0,3.
+ 0.0)",org.eclipse.equinox.p2.repository;version="[2.0.0,3.0.0)",org.e
+ clipse.equinox.p2.repository.artifact;version="[2.0.0,3.0.0)",org.ecl
+ ipse.equinox.p2.repository.artifact.spi;version="[2.0.0,3.0.0)",org.e
+ clipse.equinox.p2.repository.metadata;version="[2.0.0,3.0.0)",org.ecl
+ ipse.osgi.service.resolver;version="1.2.0",org.eclipse.osgi.util;vers
+ ion="1.1.0",org.osgi.framework;version="1.6.0",org.osgi.service.appli
+ cation;version="1.1.0"
+Export-Package: org.eclipse.equinox.internal.p2.publisher; x-friends:=
+ "org.eclipse.equinox.p2.directorywatcher,  org.eclipse.equinox.p2.tou
+ chpoint.eclipse,  org.eclipse.equinox.p2.ui.sdk,  org.eclipse.equinox
+ .p2.updatesite,  org.eclipse.equinox.p2.publisher.eclipse",org.eclips
+ e.equinox.p2.publisher; x-friends:="org.eclipse.equinox.p2.directoryw
+ atcher,  org.eclipse.equinox.p2.touchpoint.eclipse,  org.eclipse.equi
+ nox.p2.updatesite,  org.eclipse.pde.publishing,  org.eclipse.equinox.
+ p2.publisher.eclipse",org.eclipse.equinox.p2.publisher.actions; x-fri
+ ends:="org.eclipse.equinox.p2.updatesite,  org.eclipse.equinox.p2.dir
+ ectorywatcher,  org.eclipse.pde.publishing,  org.eclipse.equinox.p2.p
+ ublisher.eclipse",org.eclipse.equinox.spi.p2.publisher;x-friends:="or
+ g.eclipse.equinox.p2.updatesite,org.eclipse.equinox.p2.publisher.ecli
+ pse"
+Bundle-Name: %bundleName
+Bundle-Version: 1.4.200.v20170511-1216
+Bundle-Localization: plugin
+Bundle-Activator: org.eclipse.equinox.internal.p2.publisher.Activator
+Created-By: Apache Maven 3.3.3
+Build-Jdk: 1.8.0_121
+
+Name: org/eclipse/equinox/p2/publisher/actions/ICapabilityAdvice.class
+SHA-256-Digest: AVaGgvC9YVKK4Vbs5OAvC/KALRLdTj7aMEheQ48bogA=
+
+Name: org/eclipse/equinox/p2/publisher/actions/QueryableFilterAdvice.c
+ lass
+SHA-256-Digest: 54p5zswdY8gjvMkl3A9jDK29T9trCr/5rtIdvbUxGJk=
+
+Name: org/eclipse/equinox/spi/p2/publisher/PublisherHelper.class
+SHA-256-Digest: ww71UVo7yYKkDQ53+zEsn0qkrB/KPfsfUN7rpRHWPSA=
+
+Name: org/eclipse/equinox/p2/publisher/IPublisherAdvice.class
+SHA-256-Digest: i2d7hbNURClSW+WWSNgZ9z6ytrLzS/DpUwlhqztZNkA=
+
+Name: org/eclipse/equinox/p2/publisher/PublisherInfo.class
+SHA-256-Digest: JmJ5Tp3JQTWdtIkcL8+2fUiAt6GlvKoG0/HNMCeXy2o=
+
+Name: org/eclipse/equinox/p2/publisher/actions/ILicenseAdvice.class
+SHA-256-Digest: 7RLLsyUjUUXG1JMIrwiJxT4MDCyjWhy5JG1afAAEJR8=
+
+Name: org/eclipse/equinox/p2/publisher/actions/IFilterAdvice.class
+SHA-256-Digest: liSJEZPfQdcdLH9bmzVmqCiBAYVDsLgrqw6/hY4ytI4=
+
+Name: org/eclipse/equinox/internal/p2/publisher/FileSetDescriptor.clas
+ s
+SHA-256-Digest: uEu0Jt7rDZc9zGeJgmhUQkzN5VEP+h5kyDotgYzViQ8=
+
+Name: org/eclipse/equinox/p2/publisher/AbstractAdvice.class
+SHA-256-Digest: v8pSkpriUqdlmpiw41SiogqbzMGn1FEVRdzgx4PNNLE=
+
+Name: org/eclipse/equinox/p2/publisher/Publisher.class
+SHA-256-Digest: 19VMpTWzkaCM6qPy4yKjKAxXg3Dc/MIJ9+4/Uo75nDA=
+
+Name: org/eclipse/equinox/spi/p2/publisher/LocalizationHelper$1.class
+SHA-256-Digest: h62GY79HQjdMQK6uTEV+/CbyiqS4PWkkxNp/3R9Cvpg=
+
+Name: org/eclipse/equinox/p2/publisher/IPublisherInfo.class
+SHA-256-Digest: WHgpXsfiMnqSicHYFh1q85tqmfjKb6vOSe4uY5FLpU8=
+
+Name: org/eclipse/equinox/p2/publisher/actions/RootIUResultFilterAdvic
+ e.class
+SHA-256-Digest: 8W6AR8XEaCNKeixOZsjT7LoKkp5eZSHQzurb/dE89LY=
+
+Name: org/eclipse/equinox/p2/publisher/actions/IRootFilesAdvice.class
+SHA-256-Digest: ZoxpKCrSrpXy5xpmLRe29J2H1b7HLlQDFO4OEqxz4sk=
+
+Name: plugin.properties
+SHA-256-Digest: SnXMGCf4UxRDj72JWbmTPpKDt8N1q6P6r5gerNbaLCg=
+
+Name: org/eclipse/equinox/p2/publisher/AdviceFileParser.class
+SHA-256-Digest: +YH/bE5zW4yWyoRT7EfpByKvDIfFrmQ9zyLhJIdE5Ps=
+
+Name: org/eclipse/equinox/p2/publisher/actions/JREAction.class
+SHA-256-Digest: qP+Qsjr2kWe/Mx1i+F7yC7Pb1AgM4sFxdWDiCIFzuVs=
+
+Name: org/eclipse/equinox/p2/publisher/actions/RootFilesAction.class
+SHA-256-Digest: 4ayiWF7PjL1GfdBKPWS2V55o6ZerB4Dcwa5oQPPk/eI=
+
+Name: org/eclipse/equinox/p2/publisher/PublisherResult.class
+SHA-256-Digest: o7Gs6pGAhwV3kDdXmbwHDoqLEy0fCOY4iQyHn2yiKvE=
+
+Name: about.html
+SHA-256-Digest: 0RM1x9lTJa7T8YkysaegPuBIeaEvSZypRDfXoMpsJAU=
+
+Name: org/eclipse/equinox/internal/p2/publisher/Messages.class
+SHA-256-Digest: iXIl6S5Q5Pp9lStjLhAVhCHeOMCwexVYAW7g01csqaw=
+
+Name: org/eclipse/equinox/p2/publisher/actions/IPropertyAdvice.class
+SHA-256-Digest: HMAaQcjR85IoNEPA+7aWiM3G5Hj81tFk5Y6VpSnC5Xo=
+
+Name: org/eclipse/equinox/internal/p2/publisher/Activator.class
+SHA-256-Digest: K0WhSiNzreInDBLNrSzt8s92WwMiq1D48dzCCDBWvEY=
+
+Name: org/eclipse/equinox/p2/publisher/actions/ITouchpointAdvice.class
+SHA-256-Digest: +GJh6zF2c58wCqbfrfqxnDaJtFNrrXck6fki7CI593s=
+
+Name: org/eclipse/equinox/spi/p2/publisher/LocalizationHelper.class
+SHA-256-Digest: 2ldn8dYb43a7DYxyR6rO6/QD1S58uvRyGBc0n9QB97w=
+
+Name: .api_description
+SHA-256-Digest: Z7rJS2YIACVSNQ6nvgAGpvTlNjhEay1dIZwE56/RGZ4=
+
+Name: org/eclipse/equinox/p2/publisher/actions/IFeatureRootAdvice.clas
+ s
+SHA-256-Digest: EKCtGR5CdT2XnMuvQlVpoAF+mbCdEjuOAy1YSR8NDHs=
+
+Name: org/eclipse/equinox/spi/p2/publisher/LocalizationHelper$FileFilt
+ er.class
+SHA-256-Digest: R3uZYHfhcQZmCS0iAr0joXfeC09TivT65fD/g076hEU=
+
+Name: org/eclipse/equinox/p2/publisher/actions/IVersionAdvice.class
+SHA-256-Digest: Fi9XpvO8Tgh+0O0Yq4PQqt0b0kbuwsJevgTBpANq4PE=
+
+Name: org/eclipse/equinox/p2/publisher/AbstractPublisherApplication.cl
+ ass
+SHA-256-Digest: TlvUTFs6LRS2oWhdo7Q0mEBtxD9ypkgRu/Npr9MA4fo=
+
+Name: org/eclipse/equinox/p2/publisher/actions/RootIUAdvice.class
+SHA-256-Digest: OcQ/paq2E8GZoebs2vU6OXDAgBVkXW/FqxoxNC6YuJk=
+
+Name: org/eclipse/equinox/p2/publisher/actions/JREAction$1.class
+SHA-256-Digest: 2u98U+VXKharL7L+Hi+4CWb6YLuETu3+d9rEDNntim4=
+
+Name: org/eclipse/equinox/p2/publisher/IPublisherResult.class
+SHA-256-Digest: HVGXz9CHYt5TZX/PXMIWUVSqESFEFS7YBBg15rsG/Mo=
+
+Name: org/eclipse/equinox/p2/publisher/AbstractPublisherAction.class
+SHA-256-Digest: zakQRCHkLwV+jpt5uSGR/sZ9Ms/EkRftOetcd9fG4MQ=
+
+Name: org/eclipse/equinox/p2/publisher/actions/IRootIUAdvice.class
+SHA-256-Digest: g8vo4ZuhIdU7zxvpBbQPVKUr+7/H3rwHJAxlBWrEHQs=
+
+Name: org/eclipse/equinox/p2/publisher/actions/RootIUAction.class
+SHA-256-Digest: IRRmt9uWDrVTvx4Qi34Uxad1klzEQvON/njekBd0DxQ=
+
+Name: org/eclipse/equinox/p2/publisher/actions/RootFilesAdvice.class
+SHA-256-Digest: UCDI+67oTj4GrLJ57LB5a+YwKy0ZJaNYeGIfjnutifY=
+
+Name: org/eclipse/equinox/internal/p2/publisher/QuotedTokenizer.class
+SHA-256-Digest: 8N8mccWO29TTkuSvy4COHd3u+Uzz0KEl2oBmf9Vs4og=
+
+Name: org/eclipse/equinox/p2/publisher/IPublisherAction.class
+SHA-256-Digest: IfzrGT3JDMYG7w3DenCJc/xFfcFuHkxxeBHey3JNcaE=
+
+Name: org/eclipse/equinox/p2/publisher/actions/IUpdateDescriptorAdvice
+ .class
+SHA-256-Digest: 36mp0Yq38Oc6+DktsCFTFDzfC6AWsAQZJbwGfbswhtQ=
+
+Name: org/eclipse/equinox/p2/publisher/actions/MergeResultsAction.clas
+ s
+SHA-256-Digest: q0ecdH2x2zxL0xul4jNUCjAn6H31fDm2cft+l6etI7s=
+
+Name: org/eclipse/equinox/internal/p2/publisher/messages.properties
+SHA-256-Digest: MEI6U10a1fZrvggn89/KTueWTVUfTujl5CaNVFc6+IU=
+
+Name: org/eclipse/equinox/p2/publisher/AdviceFileAdvice.class
+SHA-256-Digest: z+ykrgZUQ5jXfiKUEwkx349oN3eRneEt1grYCUKzArA=
+
+Name: org/eclipse/equinox/p2/publisher/Publisher$ArtifactProcess.class
+SHA-256-Digest: Ur/LS3aW9mWhCH5yogZaWlyO4mhowp6tWe6Hrd5PqzA=
+
+Name: org/eclipse/equinox/p2/publisher/actions/VersionAdvice.class
+SHA-256-Digest: Dx2Ldtg71eKyC8TAXr4rma9ggOXEsU0M+8ekrEhYnQU=
+
+Name: org/eclipse/equinox/p2/publisher/actions/IAdditionalInstallableU
+ nitAdvice.class
+SHA-256-Digest: TvxmbwN5yjQja/kuecY8LNHkRBlSS3PCvJG/PMg/XUs=
+

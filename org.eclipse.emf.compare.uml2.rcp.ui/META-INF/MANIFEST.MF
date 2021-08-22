@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.eclipse.emf.compare.uml2.rcp.ui;singleton:=true
+Bundle-Version: 2.6.0.201709090201
+Bundle-ClassPath: org.eclipse.emf.compare.uml2.rcp.ui_2.6.0.201709090201.jar
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Export-Package: org.eclipse.emf.compare.uml2.rcp.ui.internal.accessor;x-internal:=true,
+  org.eclipse.emf.compare.uml2.rcp.ui.internal.accessor.factory;x-internal:=true,
+  org.eclipse.emf.compare.uml2.rcp.ui.internal.structuremergeviewer.filters;x-friends:="org.eclipse.emf.compare.diagram.papyrus.tests,org.eclipse.emf.compare.uml2.rcp.ui.tests"
+Require-Bundle: org.eclipse.emf.edit.ui;bundle-version="2.5.0",
+  org.eclipse.emf.compare.uml2.edit;bundle-version="2.5.0",
+  org.eclipse.emf.compare;bundle-version="3.4.0",
+  org.eclipse.swt;bundle-version="3.5.0",
+  org.eclipse.emf.compare.rcp.ui;bundle-version="4.3.0",
+  org.eclipse.core.runtime;bundle-version="3.5.0",
+  org.eclipse.uml2.uml;bundle-version="5.0.0",
+  org.eclipse.emf.compare.edit;bundle-version="3.0.0"
+Build-Jdk: 1.8.0_131
+Bundle-ActivationPolicy: lazy
+Import-Package: com.google.common.base;version="[15.0.0,22.0.0)",
+  com.google.common.collect;version="[15.0.0,22.0.0)"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Created-By: Apache Maven 3.3.9
+Built-By: genie.emfcompare
+Archiver-Version: Plexus Archiver

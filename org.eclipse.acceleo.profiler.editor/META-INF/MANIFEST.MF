@@ -1,0 +1,34 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.eclipse.acceleo.profiler.editor;singleton:=true
+Bundle-Version: 3.7.2.201708211328
+Bundle-ClassPath: org.eclipse.acceleo.profiler.editor_3.7.2.201708211328.jar
+Bundle-Activator: org.eclipse.acceleo.profiler.presentation.ProfilerEditorPlugin$Implementation
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Export-Package: org.eclipse.acceleo.profiler.editor;x-internal:=true,
+  org.eclipse.acceleo.profiler.presentation;
+   uses:="org.eclipse.jface.action,
+    org.eclipse.emf.ecore.presentation,
+    org.eclipse.emf.edit.ui.provider,
+    org.eclipse.emf.common.util,
+    org.eclipse.ui.views.contentoutline,
+    org.eclipse.emf.common,
+    org.eclipse.jface.viewers,
+    org.eclipse.emf.common.notify,
+    org.eclipse.emf.common.ui"
+Require-Bundle: org.eclipse.core.runtime,
+  org.eclipse.core.resources;visibility:=reexport,
+  org.eclipse.acceleo.profiler.edit;visibility:=reexport,
+  org.eclipse.emf.ecore.xmi;visibility:=reexport,
+  org.eclipse.emf.edit.ui;visibility:=reexport,
+  org.eclipse.ui.ide;visibility:=reexport,
+  org.eclipse.emf.ecore.editor
+Built-By: genie.acceleo
+Build-Jdk: 1.8.0_131
+Eclipse-SourceReferences: scm:git:http://git.eclipse.org/gitroot/acceleo/org.eclipse.acceleo.git;path="plugins/org.eclipse.acceleo.profiler.editor";commitId=c1297f0d95d70142edcff106ca61898357fe7002
+Created-By: Apache Maven 3.1.1
+Archiver-Version: Plexus Archiver
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
